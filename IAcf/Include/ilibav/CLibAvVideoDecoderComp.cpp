@@ -23,10 +23,6 @@
 #include "ilibav/CLibAvVideoDecoderComp.h"
 
 
-// STL includes
-#include <cstring>
-
-
 // Qt includes
 #include <QtCore/QStringList>
 
@@ -255,7 +251,7 @@ void CLibAvVideoDecoderComp::CancelTask(int taskId)
 		m_imageTasks.remove(taskId);
 		m_audioTasks.remove(taskId);
 
-		if (m_imageTasks.empty() && m_audioTasks.empty()){
+		if (m_imageTasks.isEmpty() && m_audioTasks.isEmpty()){
 			m_nextTaskId = 0;
 		}
 	}
@@ -331,7 +327,7 @@ bool CLibAvVideoDecoderComp::OpenMediumUrl(const QString& url, bool /*autoPlay*/
 
 	CloseMedium();
 
-	if (		(av_open_input_file(&m_formatContextPtr, url.toStdString().c_str(), NULL, 0, NULL) != 0) ||
+	if (		(av_open_input_file(&m_formatContextPtr, url.toLocal8Bit(), NULL, 0, NULL) != 0) ||
 				(m_formatContextPtr == NULL)){
 		SendInfoMessage(MI_CANNOT_OPEN, QString("Cannot open media file ") + url);
 

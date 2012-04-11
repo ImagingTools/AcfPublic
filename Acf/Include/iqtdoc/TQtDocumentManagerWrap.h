@@ -54,17 +54,17 @@ public:
 	virtual void OnSaveSettings(QSettings& settings) const;
 
 	// pseudo-reimplemented (idoc::CSingleDocumentManagerBase)
-	virtual QString GetSaveFilePath(const std::string& documentTypeId) const;
+	virtual QString GetSaveFilePath(const QByteArray& documentTypeId) const;
 
 protected:
 	/**
 		Creates the filter for the file selection dialog.
 		\param	documentTypeIdPtr	optional ID of document type if only filter for single document type should be created.
 	*/
-	QString CreateFileDialogFilter(const std::string* documentTypeIdPtr = NULL, int flags = 0) const;
+	QString CreateFileDialogFilter(const QByteArray* documentTypeIdPtr = NULL, int flags = 0) const;
 
 	void UpdateLastDirectory(const QString& filePath) const;
-	virtual QStringList GetOpenFilePathesFromDialog(const std::string* documentTypeIdPtr) const;
+	virtual QStringList GetOpenFilePathesFromDialog(const QByteArray* documentTypeIdPtr) const;
 
 private:
 	mutable QString m_lastDirectory;
@@ -98,7 +98,7 @@ void TQtDocumentManagerWrap<Base, Gui>::OnSaveSettings(QSettings& settings) cons
 // pseudo-reimplemented (idoc::CSingleDocumentManagerBase)
 
 template <class Base, class Gui>
-QString TQtDocumentManagerWrap<Base, Gui>::GetSaveFilePath(const std::string& documentTypeId) const
+QString TQtDocumentManagerWrap<Base, Gui>::GetSaveFilePath(const QByteArray& documentTypeId) const
 {
 	QString filter = CreateFileDialogFilter(&documentTypeId, iser::IFileLoader::QF_FILE | iser::IFileLoader::QF_SAVE);
 
@@ -113,7 +113,7 @@ QString TQtDocumentManagerWrap<Base, Gui>::GetSaveFilePath(const std::string& do
 // protected methods
 
 template <class Base, class Gui>
-QString TQtDocumentManagerWrap<Base, Gui>::CreateFileDialogFilter(const std::string* documentTypeIdPtr, int flags) const
+QString TQtDocumentManagerWrap<Base, Gui>::CreateFileDialogFilter(const QByteArray* documentTypeIdPtr, int flags) const
 {
 	QString retVal;
 
@@ -156,7 +156,7 @@ void TQtDocumentManagerWrap<Base, Gui>::UpdateLastDirectory(const QString& fileP
 
 
 template <class Base, class Gui>
-QStringList TQtDocumentManagerWrap<Base, Gui>::GetOpenFilePathesFromDialog(const std::string* documentTypeIdPtr) const
+QStringList TQtDocumentManagerWrap<Base, Gui>::GetOpenFilePathesFromDialog(const QByteArray* documentTypeIdPtr) const
 {
 	QString filter = CreateFileDialogFilter(documentTypeIdPtr, iser::IFileLoader::QF_FILE | iser::IFileLoader::QF_LOAD);
 

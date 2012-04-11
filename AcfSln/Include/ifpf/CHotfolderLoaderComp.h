@@ -76,7 +76,7 @@ protected:
 				const QString& filePath) const;
 
 private:
-	I_ATTR(std::string, m_monitorSessionsParamIdAttrPtr);
+	I_ATTR(QByteArray, m_monitorSessionsParamIdAttrPtr);
 };
 
 

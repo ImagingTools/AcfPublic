@@ -23,10 +23,6 @@
 #include "iqt/CXmlFileWriteArchive.h"
 
 
-// STL includes
-#include <sstream>
-
-
 // Qt includes
 #include <QtXml/QDomNodeList>
 #include <QtCore/QTextStream>
@@ -83,11 +79,11 @@ bool CXmlFileWriteArchive::OpenDocument(const QString& filePath)
 	bool retVal = true;
 
 	m_file.setFileName(filePath);
-	m_file.open(QIODevice::WriteOnly);
+	m_file.open(QIODevice::WriteOnly | QIODevice::Text);
 
 	m_document.clear();
 
-	m_currentParent = m_document.createElement(QString::fromStdString(m_rootTag.GetId()));
+	m_currentParent = m_document.createElement(m_rootTag.GetId());
 
 	m_document.appendChild(m_currentParent);
 
@@ -109,7 +105,7 @@ bool CXmlFileWriteArchive::IsTagSkippingSupported() const
 
 bool CXmlFileWriteArchive::BeginTag(const iser::CArchiveTag& tag)
 {
-	QDomElement newElement = m_document.createElement(QString::fromStdString(tag.GetId()));
+	QDomElement newElement = m_document.createElement(tag.GetId());
 
 	m_currentParent.appendChild(newElement);
 
@@ -123,7 +119,7 @@ bool CXmlFileWriteArchive::BeginTag(const iser::CArchiveTag& tag)
 
 bool CXmlFileWriteArchive::BeginMultiTag(const iser::CArchiveTag& tag, const iser::CArchiveTag& /*subTag*/, int& count)
 {
-	QDomElement newElement = m_document.createElement(QString::fromStdString(tag.GetId()));
+	QDomElement newElement = m_document.createElement(tag.GetId());
 
 	newElement.setAttribute("count", count);
 	m_currentParent.appendChild(newElement);
@@ -217,9 +213,9 @@ bool CXmlFileWriteArchive::Process(double& value)
 }
 
 
-bool CXmlFileWriteArchive::Process(std::string& value)
+bool CXmlFileWriteArchive::Process(QByteArray& value)
 {
-	return PushTextNode(QString::fromStdString(value));
+	return PushTextNode(value);
 }
 
 
@@ -231,9 +227,9 @@ bool CXmlFileWriteArchive::Process(QString& value)
 
 bool CXmlFileWriteArchive::ProcessData(void* dataPtr, int size)
 {
-	std::string encodedString = istd::CBase64::ConvertToBase64(dataPtr, size);
+	QByteArray encodedString = istd::CBase64::ConvertToBase64(dataPtr, size);
 
-	return PushTextNode(QString::fromStdString(encodedString));
+	return PushTextNode(encodedString);
 }
 
 

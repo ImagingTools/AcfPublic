@@ -56,7 +56,7 @@ public:
 		Get the ID of the property with the given index \c propertyIndex.
 		Property ID must be unique in the property set.
 	*/
-	virtual std::string GetPropertyId(int propertyIndex) const = 0;
+	virtual QByteArray GetPropertyId(int propertyIndex) const = 0;
 
 	/**
 		Get the description of the property with the given index \c propertyIndex
@@ -74,8 +74,8 @@ public:
 	*/
 	virtual void InsertProperty(
 				iser::IObject* objectPtr,
-				const std::string& propertyId,
-				const std::string& propertyDescription,
+				const QByteArray& propertyId,
+				const QByteArray& propertyDescription,
 				int propertyFlags,
 				bool releaseFlag) = 0;
 };

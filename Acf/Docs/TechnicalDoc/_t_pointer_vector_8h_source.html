@@ -29,8 +29,8 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define istd_TPointerVector_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes </span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QVector&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="istd_8h.html">istd/istd.h</a>&quot;</span>
@@ -106,7 +106,7 @@
 <a name="l00136"></a>00136        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#ad2f6719f910021a8c9df158ec3a6a526" title="Insert element at specified position.">InsertElementAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a4817377ae68dced25202f277ff1cf32a">ElementType</a>&amp; element);
 <a name="l00137"></a>00137 
 <a name="l00138"></a>00138 <span class="keyword">private</span>:
-<a name="l00139"></a>00139        <span class="keyword">typedef</span> std::vector&lt;ElementType&gt; Elements;
+<a name="l00139"></a>00139        <span class="keyword">typedef</span> QVector&lt;ElementType&gt; Elements;
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141        Elements m_elements;
 <a name="l00142"></a>00142 };
@@ -130,7 +130,7 @@
 <a name="l00160"></a>00160 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
 <a name="l00161"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a934245e49f45d6b43c108532d3b71ff8">00161</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a934245e49f45d6b43c108532d3b71ff8" title="Check if there is element stored in this set.">TPointerVector&lt;Pointer, AccessAdapter&gt;::IsEmpty</a>()<span class="keyword"> const</span>
 <a name="l00162"></a>00162 <span class="keyword"></span>{
-<a name="l00163"></a>00163        <span class="keywordflow">return</span> m_elements.empty();
+<a name="l00163"></a>00163        <span class="keywordflow">return</span> m_elements.isEmpty();
 <a name="l00164"></a>00164 }
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166 

@@ -24,8 +24,8 @@
 #define istd_TPointerVector_included
 
 
-// STL includes 
-#include <vector>
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "istd/istd.h"
@@ -158,7 +158,7 @@ public:
 	void InsertElementAt(int index, const ElementType& element);
 
 private:
-	typedef std::vector<ElementType> Elements;
+	typedef QVector<ElementType> Elements;
 
 	Elements m_elements;
 };
@@ -182,7 +182,7 @@ inline TPointerVector<Pointer, AccessAdapter>::TPointerVector(const TPointerVect
 template <typename Pointer, class AccessAdapter>
 inline bool TPointerVector<Pointer, AccessAdapter>::IsEmpty() const
 {
-	return m_elements.empty();
+	return m_elements.isEmpty();
 }
 
 

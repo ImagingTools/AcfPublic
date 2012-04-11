@@ -59,7 +59,7 @@ bool CVisualRegistryComp::SerializeComponentsLayout(iser::IArchive& archive)
 
 	if (archive.IsStoring()){
 		for (Ids::const_iterator iter = ids.begin(); iter != ids.end(); ++iter){
-			std::string elementId = *iter;
+			QByteArray elementId = *iter;
 
 			i2d::CVector2d position(0, 0);
 			QString componentNote;
@@ -86,7 +86,7 @@ bool CVisualRegistryComp::SerializeComponentsLayout(iser::IArchive& archive)
 		for (int i = 0; i < positionsCount; ++i){
 			retVal = retVal && archive.BeginTag(elementTag);
 			
-			std::string elementId;
+			QByteArray elementId;
 			i2d::CVector2d position;
 			QString componentNote;
 
@@ -129,7 +129,7 @@ bool CVisualRegistryComp::SerializeUserData(iser::IArchive& archive)
 
 // reimplemented (IComponentNoteController)
 
-QString CVisualRegistryComp::GetComponentNote(const std::string& componentName)
+QString CVisualRegistryComp::GetComponentNote(const QByteArray& componentName)
 {
 	const ElementInfo* elementInfoPtr = GetElementInfo(componentName);
 	if (elementInfoPtr != NULL){
@@ -143,7 +143,7 @@ QString CVisualRegistryComp::GetComponentNote(const std::string& componentName)
 }
 
 
-void CVisualRegistryComp::SetComponentNote(const std::string& componentName, const QString& componentNote)
+void CVisualRegistryComp::SetComponentNote(const QByteArray& componentName, const QString& componentNote)
 {
 	const ElementInfo* elementInfoPtr = GetElementInfo(componentName);
 	if (elementInfoPtr == NULL){
@@ -162,7 +162,7 @@ void CVisualRegistryComp::SetComponentNote(const std::string& componentName, con
 // reimplemented (icomp::IRegistry)
 
 CVisualRegistryComp::ElementInfo* CVisualRegistryComp::InsertElementInfo(
-			const std::string& elementId,
+			const QByteArray& elementId,
 			const icomp::CComponentAddress& address,
 			bool ensureElementCreated)
 {
@@ -177,17 +177,16 @@ CVisualRegistryComp::ElementInfo* CVisualRegistryComp::InsertElementInfo(
 	else{
 		SendErrorMessage(
 					MI_CANNOT_CREATE_ELEMENT,
-					tr("Cannot create %1 (%2: %3)").
-								arg(elementId.c_str()).
-								arg(address.GetPackageId().c_str()).
-								arg(address.GetComponentId().c_str()));
+					tr("Cannot create %1 (%2)").
+								arg(QString(elementId)).
+								arg(address.ToString()));
 	}
 
 	return infoPtr;
 }
 
 
-bool CVisualRegistryComp::RenameElement(const std::string& oldElementId, const std::string& newElementId)
+bool CVisualRegistryComp::RenameElement(const QByteArray& oldElementId, const QByteArray& newElementId)
 {
 	i2d::CVector2d oldPosition;
 	const ElementInfo* oldElementInfoPtr = GetElementInfo(oldElementId);
@@ -231,7 +230,7 @@ bool CVisualRegistryComp::Serialize(iser::IArchive& archive)
 
 bool CVisualRegistryComp::SerializeComponentInfo(
 			iser::IArchive& archive,
-			std::string& componentRole,
+			QByteArray& componentRole,
 			i2d::CVector2d& position,
 			QString& componentNote)
 {
@@ -269,7 +268,7 @@ bool CVisualRegistryComp::SerializeComponentInfo(
 // reimplemented (icomp::CRegistry)
 
 icomp::IRegistryElement* CVisualRegistryComp::CreateRegistryElement(
-			const std::string& elementId,
+			const QByteArray& elementId,
 			const icomp::CComponentAddress& address) const
 {
 	Element* registryElementPtr = new Element;

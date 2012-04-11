@@ -24,9 +24,8 @@
 #define icomp_TAttributeStaticInfo_included
 
 
-// STL includes
+// Qt includes
 #include <QtCore/QMap>
-
 
 // ACF includes
 #include "istd/CClassInfo.h"
@@ -45,30 +44,30 @@ class TAttributeStaticInfo: virtual public IRealAttributeStaticInfo
 public:
 	TAttributeStaticInfo(
 				icomp::CBaseComponentStaticInfo& staticInfo,
-				const std::string& id,
-				const std::string& description,
+				const QByteArray& id,
+				const QByteArray& description,
 				const Attribute* defaultValuePtr,
 				int flags,
 				const istd::CClassInfo& relatedInterfaceInfo);
 
 	// reimplemented (icomp::IRealAttributeStaticInfo)
-	virtual const std::string& GetAttributeId() const;
-	virtual void AddRelatedMetaId(int metaGroupId, const std::string& id, int flags);
+	virtual const QByteArray& GetAttributeId() const;
+	virtual void AddRelatedMetaId(int metaGroupId, const QByteArray& id, int flags);
 
 	// reimplemented (icomp::IAttributeStaticInfo)
-	virtual const std::string& GetAttributeDescription() const;
+	virtual const QByteArray& GetAttributeDescription() const;
 	virtual const iser::IObject* GetAttributeDefaultValue() const;
-	virtual std::string GetAttributeTypeName() const;
+	virtual QByteArray GetAttributeTypeName() const;
 	virtual IElementStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const;
 	virtual int GetAttributeFlags() const;
 
 private:
-	std::string m_id;
-	std::string m_description;
+	QByteArray m_id;
+	QByteArray m_description;
 	const Attribute* m_defaultValuePtr;
 	int m_attributeFlags;
 
-	typedef QMap<std::string, int> IdsToFlagsMap;
+	typedef QMap<QByteArray, int> IdsToFlagsMap;
 	typedef QMap<int, IdsToFlagsMap> RelatedIdsMap;
 	RelatedIdsMap m_relatedInterfacesMap;
 };
@@ -79,8 +78,8 @@ private:
 template <class Attribute>
 TAttributeStaticInfo<Attribute>::TAttributeStaticInfo(
 			icomp::CBaseComponentStaticInfo& staticInfo,
-			const std::string& id,
-			const std::string& description,
+			const QByteArray& id,
+			const QByteArray& description,
 			const Attribute* defaultValuePtr,
 			int flags,
 			const istd::CClassInfo& relatedInterfaceInfo)
@@ -100,14 +99,14 @@ TAttributeStaticInfo<Attribute>::TAttributeStaticInfo(
 // reimplemented (icomp::IRealAttributeStaticInfo)
 
 template <class Attribute>
-const std::string& TAttributeStaticInfo<Attribute>::GetAttributeId() const
+const QByteArray& TAttributeStaticInfo<Attribute>::GetAttributeId() const
 {
 	return m_id;
 }
 
 
 template <class Attribute>
-void TAttributeStaticInfo<Attribute>::AddRelatedMetaId(int metaGroupId, const std::string& id, int flags)
+void TAttributeStaticInfo<Attribute>::AddRelatedMetaId(int metaGroupId, const QByteArray& id, int flags)
 {
 	IdsToFlagsMap& groupMap = m_relatedInterfacesMap[metaGroupId];
 
@@ -132,7 +131,7 @@ void TAttributeStaticInfo<Attribute>::AddRelatedMetaId(int metaGroupId, const st
 // reimplemented (icomp::IAttributeStaticInfo)
 
 template <class Attribute>
-const std::string& TAttributeStaticInfo<Attribute>::GetAttributeDescription() const
+const QByteArray& TAttributeStaticInfo<Attribute>::GetAttributeDescription() const
 {
 	return m_description;
 }
@@ -146,7 +145,7 @@ const iser::IObject* TAttributeStaticInfo<Attribute>::GetAttributeDefaultValue()
 
 
 template <class Attribute>
-std::string TAttributeStaticInfo<Attribute>::GetAttributeTypeName() const
+QByteArray TAttributeStaticInfo<Attribute>::GetAttributeTypeName() const
 {
 	return Attribute::GetTypeName();
 }
@@ -164,7 +163,7 @@ IElementStaticInfo::Ids TAttributeStaticInfo<Attribute>::GetRelatedMetaIds(int m
 		for (		IdsToFlagsMap::const_iterator iter = groupMap.begin();
 					iter != groupMap.end();
 					++iter){
-						const std::string& id = iter.key();
+						const QByteArray& id = iter.key();
 			int idFlags = iter.value();
 
 			if (((idFlags & flagsMask) == flags)){

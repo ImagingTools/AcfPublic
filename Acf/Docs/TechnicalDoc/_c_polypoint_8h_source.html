@@ -29,68 +29,67 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define i2d_CPolypoint_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QVector&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_archive_tag_8h.html">iser/CArchiveTag.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_vector2d_8h.html">i2d/CVector2d.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_archive_tag_8h.html">iser/CArchiveTag.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_vector2d_8h.html">i2d/CVector2d.h</a>&quot;</span>
+<a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="keyword">namespace </span>i2d
-<a name="l00017"></a>00017 {
+<a name="l00015"></a>00015 <span class="keyword">namespace </span>i2d
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="classi2d_1_1_c_polypoint.html">00020</a> <span class="keyword">class </span><a class="code" href="classi2d_1_1_c_polypoint.html">CPolypoint</a>: <span class="keyword">public</span> iser::ISerializable
-<a name="l00021"></a>00021 {
-<a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a>00023        <a class="code" href="classi2d_1_1_c_polypoint.html#a83746e7ebacb4ce16704be5834ef6339">CPolypoint</a>();
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025        <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polypoint.html#abfeee7b9c0530bfb9edd99a3e6bae04b">Insert</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; vector);
-<a name="l00026"></a>00026        <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polypoint.html#a2b45306c9da492925b14ad72be054d40">Clear</a>();
-<a name="l00027"></a>00027        const ::std::vector&lt;i2d::CVector2d&gt;&amp; <a class="code" href="classi2d_1_1_c_polypoint.html#a78e16736c4764b548bd051f1d71909e2">GetPoints</a>() <span class="keyword">const</span>;
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polypoint.html#a403658023d97353d4720ab74899ba2c4" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">private</span>:
-<a name="l00033"></a>00033        ::std::vector&lt;i2d::CVector2d&gt; m_points;
-<a name="l00034"></a>00034 };
+<a name="l00019"></a><a class="code" href="classi2d_1_1_c_polypoint.html">00019</a> <span class="keyword">class </span><a class="code" href="classi2d_1_1_c_polypoint.html">CPolypoint</a>: <span class="keyword">public</span> iser::ISerializable
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021 <span class="keyword">public</span>:
+<a name="l00022"></a>00022        <a class="code" href="classi2d_1_1_c_polypoint.html#a83746e7ebacb4ce16704be5834ef6339">CPolypoint</a>();
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024        <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polypoint.html#abfeee7b9c0530bfb9edd99a3e6bae04b">Insert</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; vector);
+<a name="l00025"></a>00025        <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polypoint.html#a2b45306c9da492925b14ad72be054d40">Clear</a>();
+<a name="l00026"></a>00026        const ::QVector&lt;i2d::CVector2d&gt;&amp; <a class="code" href="classi2d_1_1_c_polypoint.html#adac0a035cc9fd2211848313acd5f7fe3">GetPoints</a>() <span class="keyword">const</span>;
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_polypoint.html#a403658023d97353d4720ab74899ba2c4" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">private</span>:
+<a name="l00032"></a>00032        ::QVector&lt;i2d::CVector2d&gt; m_points;
+<a name="l00033"></a>00033 };
+<a name="l00034"></a>00034 
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="comment">// inline methods</span>
-<a name="l00038"></a>00038 
-<a name="l00039"></a><a class="code" href="classi2d_1_1_c_polypoint.html#a83746e7ebacb4ce16704be5834ef6339">00039</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_polypoint.html#a83746e7ebacb4ce16704be5834ef6339">CPolypoint::CPolypoint</a>()
-<a name="l00040"></a>00040 {
-<a name="l00041"></a>00041 }
+<a name="l00036"></a>00036 <span class="comment">// inline methods</span>
+<a name="l00037"></a>00037 
+<a name="l00038"></a><a class="code" href="classi2d_1_1_c_polypoint.html#a83746e7ebacb4ce16704be5834ef6339">00038</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_polypoint.html#a83746e7ebacb4ce16704be5834ef6339">CPolypoint::CPolypoint</a>()
+<a name="l00039"></a>00039 {
+<a name="l00040"></a>00040 }
+<a name="l00041"></a>00041 
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 
-<a name="l00044"></a><a class="code" href="classi2d_1_1_c_polypoint.html#abfeee7b9c0530bfb9edd99a3e6bae04b">00044</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polypoint.html#abfeee7b9c0530bfb9edd99a3e6bae04b">CPolypoint::Insert</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; vector)
-<a name="l00045"></a>00045 {
-<a name="l00046"></a>00046        m_points.push_back(vector);
-<a name="l00047"></a>00047 }
+<a name="l00043"></a><a class="code" href="classi2d_1_1_c_polypoint.html#abfeee7b9c0530bfb9edd99a3e6bae04b">00043</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polypoint.html#abfeee7b9c0530bfb9edd99a3e6bae04b">CPolypoint::Insert</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; vector)
+<a name="l00044"></a>00044 {
+<a name="l00045"></a>00045        m_points.push_back(vector);
+<a name="l00046"></a>00046 }
+<a name="l00047"></a>00047 
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 
-<a name="l00050"></a><a class="code" href="classi2d_1_1_c_polypoint.html#a2b45306c9da492925b14ad72be054d40">00050</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polypoint.html#a2b45306c9da492925b14ad72be054d40">CPolypoint::Clear</a>()
-<a name="l00051"></a>00051 {
-<a name="l00052"></a>00052        m_points.clear();
-<a name="l00053"></a>00053 }
+<a name="l00049"></a><a class="code" href="classi2d_1_1_c_polypoint.html#a2b45306c9da492925b14ad72be054d40">00049</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_polypoint.html#a2b45306c9da492925b14ad72be054d40">CPolypoint::Clear</a>()
+<a name="l00050"></a>00050 {
+<a name="l00051"></a>00051        m_points.clear();
+<a name="l00052"></a>00052 }
+<a name="l00053"></a>00053 
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 
-<a name="l00056"></a><a class="code" href="classi2d_1_1_c_polypoint.html#a78e16736c4764b548bd051f1d71909e2">00056</a> <span class="keyword">inline</span> const ::std::vector&lt;i2d::CVector2d&gt;&amp; <a class="code" href="classi2d_1_1_c_polypoint.html#a78e16736c4764b548bd051f1d71909e2">CPolypoint::GetPoints</a>()<span class="keyword"> const</span>
-<a name="l00057"></a>00057 <span class="keyword"></span>{
-<a name="l00058"></a>00058        <span class="keywordflow">return</span> m_points;
-<a name="l00059"></a>00059 }
+<a name="l00055"></a><a class="code" href="classi2d_1_1_c_polypoint.html#adac0a035cc9fd2211848313acd5f7fe3">00055</a> <span class="keyword">inline</span> const ::QVector&lt;i2d::CVector2d&gt;&amp; <a class="code" href="classi2d_1_1_c_polypoint.html#adac0a035cc9fd2211848313acd5f7fe3">CPolypoint::GetPoints</a>()<span class="keyword"> const</span>
+<a name="l00056"></a>00056 <span class="keyword"></span>{
+<a name="l00057"></a>00057        <span class="keywordflow">return</span> m_points;
+<a name="l00058"></a>00058 }
+<a name="l00059"></a>00059 
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 } <span class="comment">// namespace i2d</span>
+<a name="l00061"></a>00061 } <span class="comment">// namespace i2d</span>
+<a name="l00062"></a>00062 
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="preprocessor">#endif // !i2d_CPolypoint_included</span>
-<a name="l00066"></a>00066 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 <span class="preprocessor">#endif // !i2d_CPolypoint_included</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

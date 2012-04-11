@@ -104,13 +104,13 @@
 <a name="l00077"></a>00077        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a88405540569440d3cb98c1bedbe92ddf">UpdateInterfaceList</a>();
 <a name="l00078"></a>00078        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#ac2373fb7bc294eff65f08dbf1f79f24c">UpdateAllLists</a>();
 <a name="l00079"></a>00079 
-<a name="l00083"></a>00083        <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">icomp::IMetaInfoManager::ComponentAddresses</a> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a60b7162d99110a87588dc39878076a8b" title="Get component list, that match to the filter criteria.">GetFilteredComponentAdresses</a>() <span class="keyword">const</span>;
+<a name="l00083"></a>00083        <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">icomp::IMetaInfoManager::ComponentAddresses</a> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a60b7162d99110a87588dc39878076a8b" title="Get component list, that match to the filter criteria.">GetFilteredComponentAdresses</a>() <span class="keyword">const</span>;
 <a name="l00084"></a>00084 
 <a name="l00085"></a>00085        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a56bc42e302a3172f686969c3deac6ffe">IsInterfaceSupportedByComponent</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>&amp; interfaceInfo, <span class="keyword">const</span> QTreeWidgetItem&amp; item) <span class="keyword">const</span>;
 <a name="l00086"></a>00086 
 <a name="l00090"></a>00090        QPixmap <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a44dacd103072715f68a9c2e5fc6ca8fc" title="Create the drag preview for the component.">CreateComponentDragPixmap</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a> &amp;address) <span class="keyword">const</span>;
 <a name="l00091"></a>00091 
-<a name="l00092"></a>00092        <a class="code" href="structicmpstr_1_1_c_package_overview_comp_1_1_root_info.html">RootInfo</a>&amp; <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a8a9ca77b3736d032f88c58a389722480">EnsureRoot</a>(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">icomp::IComponentStaticInfo</a>* staticInfoPtr);
+<a name="l00092"></a>00092        <a class="code" href="structicmpstr_1_1_c_package_overview_comp_1_1_root_info.html">RootInfo</a>&amp; <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a39b9d80b568c6001ca3230ffb2bf4ce0">EnsureRoot</a>(<span class="keyword">const</span> QByteArray&amp; path, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">icomp::IComponentStaticInfo</a>* staticInfoPtr);
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#aab7328d596d6fdd9417d02a912e70c00">SetCommandNames</a>();
 <a name="l00095"></a>00095 
@@ -225,13 +225,13 @@
 <a name="l00204"></a>00204        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_packagesCommand;
 <a name="l00205"></a>00205        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_reloadCommand;
 <a name="l00206"></a>00206 
-<a name="l00207"></a>00207        <span class="keyword">typedef</span> QMap&lt;std::string, RootInfo&gt; RootInfos;
+<a name="l00207"></a>00207        <span class="keyword">typedef</span> QMap&lt;QByteArray, RootInfo&gt; RootInfos;
 <a name="l00208"></a>00208        RootInfos m_roots;
 <a name="l00209"></a>00209 
 <a name="l00210"></a>00210        RegistryObserver m_registryObserver;
 <a name="l00211"></a>00211        ConfigObserver m_configObserver;
 <a name="l00212"></a>00212 
-<a name="l00213"></a>00213        <span class="keyword">typedef</span> std::set&lt;std::string&gt; InterfaceFilter;
+<a name="l00213"></a>00213        <span class="keyword">typedef</span> QSet&lt;QByteArray&gt; InterfaceFilter;
 <a name="l00214"></a>00214        InterfaceFilter m_interfaceFilter;
 <a name="l00215"></a>00215        QStringList m_keywordsFilter;
 <a name="l00216"></a>00216 
@@ -242,7 +242,7 @@
 <a name="l00221"></a>00221        <span class="keyword">typedef</span> QMap&lt;QString, QTreeWidget*&gt; CategoryWidgetsMap;
 <a name="l00222"></a>00222        CategoryWidgetsMap m_categoryWidgetsMap;
 <a name="l00223"></a>00223 
-<a name="l00224"></a>00224        <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">icomp::IMetaInfoManager::ComponentAddresses</a> m_shownAddresses;
+<a name="l00224"></a>00224        <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">icomp::IMetaInfoManager::ComponentAddresses</a> m_shownAddresses;
 <a name="l00225"></a>00225 
 <a name="l00226"></a>00226        <span class="keywordtype">int</span> m_currentPackageGroupIndex;
 <a name="l00227"></a>00227        <span class="keywordtype">bool</span> m_startDrag;

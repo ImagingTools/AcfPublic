@@ -23,10 +23,6 @@
 #include "iqt/CBitmapLoaderComp.h"
 
 
-// STL includes
-#include <algorithm>
-
-
 // Qt includes
 #include <QtCore/QFileInfo>
 #include <QtCore/QByteArray>

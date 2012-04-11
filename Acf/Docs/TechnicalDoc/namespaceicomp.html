@@ -24,7 +24,8 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">icomp Namespace Reference<div class="ingroups"><a class="el" href="group___main.html">Main concepts and implementations</a> &#124; <a class="el" href="group___component_concept.html">Component concept</a></div></div>  </div>
 </div>
@@ -134,17 +135,20 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_subelement_static_info.html">TSubelementStaticInfo</a></td></tr>
 <tr><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a2e9c5b3f483b27a3dbd390798812dd42">CIntAttribute</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a8b0216a085980d12e60d9a66764a97fc">CDoubleAttribute</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#aabced1d32c941bc1bc0820b04bdbca97">CBoolAttribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a7a97baa626cbe19dbcf51760d974ffd2">CIntegerAttribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#afc71fb7a40b243943e76f1e36322b4ec">CRealAttribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a1fcd474ee984c8067dc65f3f5ebb7e36">CBooleanAttribute</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a13767d93be75cf3593a4b0bef02c6831">CStringAttribute</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a1a5b78266bc6d2dc552b41a94f5b80c3">CStdStringAttribute</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a3fac49d7b6b1176bfdb11a7e5c4a8ec9">CMultiIntAttribute</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a9d590d9d09073e9e6589b6947529a9c5">CMultiDoubleAttribute</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a2188a94be4eb593ef40bf51833bf6d09">CMultiBoolAttribute</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#af3726b2cb90c9c12e449a27d17ed0cba">CMultiStringAttribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt; QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a97fc5d054b20605049466e07efde54a1">CIdAttribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#ad56a49d55c906568b857958eed740600">CIntegerListAttribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a833bca691b1565887b6d7d87125fbae2">CRealListAttribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a84fd27bf28b0b2498350da9ed48d7095">CBooleanListAttribute</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a7f0238135fe61df7092584a7839e82f8">CStringListAttribute</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a><br class="typebreak"/>
-&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#ac4f3810d7815442242c51bd82b3ae7da">CMultiStdStringAttribute</a></td></tr>
+&lt; QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#aedd957caf1f344d978ee81e7257ba077">CIdListAttribute</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceicomp.html#a26abc726c1a0a3f61e96dc22f82799f9">qHash</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Package with interfaces and class used for components concept. </p>
@@ -154,138 +158,123 @@ Typedefs</h2></td></tr>
 <li>iser </li>
 </ul>
 </div><hr/><h2>Typedef Documentation</h2>
-<a class="anchor" id="aabced1d32c941bc1bc0820b04bdbca97"></a><!-- doxytag: member="icomp::CBoolAttribute" ref="aabced1d32c941bc1bc0820b04bdbca97" args="" -->
+<a class="anchor" id="a1fcd474ee984c8067dc65f3f5ebb7e36"></a><!-- doxytag: member="icomp::CBooleanAttribute" ref="a1fcd474ee984c8067dc65f3f5ebb7e36" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt;bool&gt; <a class="el" href="namespaceicomp.html#aabced1d32c941bc1bc0820b04bdbca97">icomp::CBoolAttribute</a></td>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt;bool&gt; <a class="el" href="namespaceicomp.html#a1fcd474ee984c8067dc65f3f5ebb7e36">icomp::CBooleanAttribute</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00138">138</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00169">169</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8b0216a085980d12e60d9a66764a97fc"></a><!-- doxytag: member="icomp::CDoubleAttribute" ref="a8b0216a085980d12e60d9a66764a97fc" args="" -->
+<a class="anchor" id="a84fd27bf28b0b2498350da9ed48d7095"></a><!-- doxytag: member="icomp::CBooleanListAttribute" ref="a84fd27bf28b0b2498350da9ed48d7095" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt;double&gt; <a class="el" href="namespaceicomp.html#a8b0216a085980d12e60d9a66764a97fc">icomp::CDoubleAttribute</a></td>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;bool&gt; <a class="el" href="namespaceicomp.html#a84fd27bf28b0b2498350da9ed48d7095">icomp::CBooleanListAttribute</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00137">137</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00245">245</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2e9c5b3f483b27a3dbd390798812dd42"></a><!-- doxytag: member="icomp::CIntAttribute" ref="a2e9c5b3f483b27a3dbd390798812dd42" args="" -->
+<a class="anchor" id="a97fc5d054b20605049466e07efde54a1"></a><!-- doxytag: member="icomp::CIdAttribute" ref="a97fc5d054b20605049466e07efde54a1" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt;int&gt; <a class="el" href="namespaceicomp.html#a2e9c5b3f483b27a3dbd390798812dd42">icomp::CIntAttribute</a></td>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt;QByteArray&gt; <a class="el" href="namespaceicomp.html#a97fc5d054b20605049466e07efde54a1">icomp::CIdAttribute</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00136">136</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00171">171</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2188a94be4eb593ef40bf51833bf6d09"></a><!-- doxytag: member="icomp::CMultiBoolAttribute" ref="a2188a94be4eb593ef40bf51833bf6d09" args="" -->
+<a class="anchor" id="aedd957caf1f344d978ee81e7257ba077"></a><!-- doxytag: member="icomp::CIdListAttribute" ref="aedd957caf1f344d978ee81e7257ba077" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;bool&gt; <a class="el" href="namespaceicomp.html#a2188a94be4eb593ef40bf51833bf6d09">icomp::CMultiBoolAttribute</a></td>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;QByteArray&gt; <a class="el" href="namespaceicomp.html#aedd957caf1f344d978ee81e7257ba077">icomp::CIdListAttribute</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00211">211</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00247">247</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9d590d9d09073e9e6589b6947529a9c5"></a><!-- doxytag: member="icomp::CMultiDoubleAttribute" ref="a9d590d9d09073e9e6589b6947529a9c5" args="" -->
+<a class="anchor" id="a7a97baa626cbe19dbcf51760d974ffd2"></a><!-- doxytag: member="icomp::CIntegerAttribute" ref="a7a97baa626cbe19dbcf51760d974ffd2" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;double&gt; <a class="el" href="namespaceicomp.html#a9d590d9d09073e9e6589b6947529a9c5">icomp::CMultiDoubleAttribute</a></td>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt;int&gt; <a class="el" href="namespaceicomp.html#a7a97baa626cbe19dbcf51760d974ffd2">icomp::CIntegerAttribute</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00210">210</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00167">167</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3fac49d7b6b1176bfdb11a7e5c4a8ec9"></a><!-- doxytag: member="icomp::CMultiIntAttribute" ref="a3fac49d7b6b1176bfdb11a7e5c4a8ec9" args="" -->
+<a class="anchor" id="ad56a49d55c906568b857958eed740600"></a><!-- doxytag: member="icomp::CIntegerListAttribute" ref="ad56a49d55c906568b857958eed740600" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;int&gt; <a class="el" href="namespaceicomp.html#a3fac49d7b6b1176bfdb11a7e5c4a8ec9">icomp::CMultiIntAttribute</a></td>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;int&gt; <a class="el" href="namespaceicomp.html#ad56a49d55c906568b857958eed740600">icomp::CIntegerListAttribute</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00209">209</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00243">243</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac4f3810d7815442242c51bd82b3ae7da"></a><!-- doxytag: member="icomp::CMultiStdStringAttribute" ref="ac4f3810d7815442242c51bd82b3ae7da" args="" -->
+<a class="anchor" id="afc71fb7a40b243943e76f1e36322b4ec"></a><!-- doxytag: member="icomp::CRealAttribute" ref="afc71fb7a40b243943e76f1e36322b4ec" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;std::string&gt; <a class="el" href="namespaceicomp.html#ac4f3810d7815442242c51bd82b3ae7da">icomp::CMultiStdStringAttribute</a></td>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt;double&gt; <a class="el" href="namespaceicomp.html#afc71fb7a40b243943e76f1e36322b4ec">icomp::CRealAttribute</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00213">213</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00168">168</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af3726b2cb90c9c12e449a27d17ed0cba"></a><!-- doxytag: member="icomp::CMultiStringAttribute" ref="af3726b2cb90c9c12e449a27d17ed0cba" args="" -->
+<a class="anchor" id="a833bca691b1565887b6d7d87125fbae2"></a><!-- doxytag: member="icomp::CRealListAttribute" ref="a833bca691b1565887b6d7d87125fbae2" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;QString&gt; <a class="el" href="namespaceicomp.html#af3726b2cb90c9c12e449a27d17ed0cba">icomp::CMultiStringAttribute</a></td>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;double&gt; <a class="el" href="namespaceicomp.html#a833bca691b1565887b6d7d87125fbae2">icomp::CRealListAttribute</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00212">212</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1a5b78266bc6d2dc552b41a94f5b80c3"></a><!-- doxytag: member="icomp::CStdStringAttribute" ref="a1a5b78266bc6d2dc552b41a94f5b80c3" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_attribute.html">TAttribute</a>&lt;std::string&gt; <a class="el" href="namespaceicomp.html#a1a5b78266bc6d2dc552b41a94f5b80c3">icomp::CStdStringAttribute</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00140">140</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00244">244</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -300,7 +289,42 @@ Typedefs</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00139">139</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_8h_source.html#l00170">170</a> of file <a class="el" href="_t_attribute_8h_source.html">TAttribute.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f0238135fe61df7092584a7839e82f8"></a><!-- doxytag: member="icomp::CStringListAttribute" ref="a7f0238135fe61df7092584a7839e82f8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classicomp_1_1_t_multi_attribute.html">TMultiAttribute</a>&lt;QString&gt; <a class="el" href="namespaceicomp.html#a7f0238135fe61df7092584a7839e82f8">icomp::CStringListAttribute</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_multi_attribute_8h_source.html#l00246">246</a> of file <a class="el" href="_t_multi_attribute_8h_source.html">TMultiAttribute.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a26abc726c1a0a3f61e96dc22f82799f9"></a><!-- doxytag: member="icomp::qHash" ref="a26abc726c1a0a3f61e96dc22f82799f9" args="(const icomp::CComponentAddress &amp;address)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int icomp::qHash </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_component_address_8h_source.html#l00106">106</a> of file <a class="el" href="_c_component_address_8h_source.html">CComponentAddress.h</a>.</p>
 
 </div>
 </div>

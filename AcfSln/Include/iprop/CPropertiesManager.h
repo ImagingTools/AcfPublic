@@ -52,8 +52,8 @@ public:
 	*/
 	struct PropertyInfo
 	{
-		std::string propertyId;
-		std::string propertyDescription;
+		QByteArray propertyId;
+		QByteArray propertyDescription;
 		int propertyFlags;
 
 		istd::TOptDelPtr<iser::IObject> objectPtr; 
@@ -64,7 +64,7 @@ public:
 	/**
 		Get property info object for a given property ID.
 	*/
-	PropertyInfo* GetPropertyInfo(const std::string& propertyId) const;
+	PropertyInfo* GetPropertyInfo(const QByteArray& propertyId) const;
 
 	/**
 		Register a new property type.
@@ -75,12 +75,12 @@ public:
 	// reimplemented (iprop::IPropertiesManager)
 	virtual int GetPropertiesCount() const;
 	virtual iser::IObject* GetProperty(int propertyIndex) const;
-	virtual std::string GetPropertyId(int propertyIndex) const;
+	virtual QByteArray GetPropertyId(int propertyIndex) const;
 	virtual QString GetPropertyDescription(int propertyIndex) const;
 	virtual void InsertProperty(
 				iser::IObject* objectPtr,
-				const std::string& propertyId,
-				const std::string& propertyDescription,
+				const QByteArray& propertyId,
+				const QByteArray& propertyDescription,
 				int propertyFlags,
 				bool releaseFlag);
 

@@ -29,9 +29,9 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ibase_CTextFileLogComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;fstream&gt;</span>
-<a name="l00007"></a>00007 
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QFile&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QTextStream&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
@@ -53,7 +53,7 @@
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_c_text_file_log_comp.html" title="Message container displaying messages as log list.">CTextFileLogComp</a>);
 <a name="l00030"></a>00030               I_ASSIGN(m_fileNameCompPtr, <span class="stringliteral">&quot;LogFile&quot;</span>, <span class="stringliteral">&quot;Name of the log file&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;LogFile&quot;</span>);
 <a name="l00031"></a>00031               <a class="code" href="classibase_1_1_c_text_file_log_comp.html#a2df70545cccf3ae255ae38403711009b">I_ASSIGN_TO</a>(m_fileNameModelCompPtr, m_fileNameCompPtr, <span class="keyword">true</span>);
-<a name="l00032"></a>00032               I_ASSIGN(m_isAppendAttrPtr, <span class="stringliteral">&quot;AppendToExisting&quot;</span>, <span class="stringliteral">&quot;Don&#39;t overwrite existing log file&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
+<a name="l00032"></a>00032               I_ASSIGN(m_isAppendAttrPtr, <span class="stringliteral">&quot;AppendToExisting&quot;</span>, <span class="stringliteral">&quot;Don&#39;t overwrite existing log file&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00033"></a>00033        I_END_COMPONENT;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        <a class="code" href="classibase_1_1_c_text_file_log_comp.html#acadef390a249af4ace1e1cd3fc3c1e69">CTextFileLogComp</a>();
@@ -75,32 +75,33 @@
 <a name="l00051"></a>00051        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_fileNameModelCompPtr);
 <a name="l00052"></a>00052        I_ATTR(<span class="keywordtype">bool</span>, m_isAppendAttrPtr);
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054        std::wofstream m_outputFileStream;
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="keyword">class </span>FilePathObserver: <span class="keyword">public</span> imod::CSingleModelObserverBase
-<a name="l00057"></a>00057        {
-<a name="l00058"></a>00058        <span class="keyword">public</span>:
-<a name="l00059"></a>00059               <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer.">imod::CSingleModelObserverBase</a> <a class="code" href="classibase_1_1_c_text_file_log_comp.html#a3eb24e2bc1392315b530ae9fc5ed6990">BaseClass</a>;
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061               FilePathObserver(<a class="code" href="classibase_1_1_c_text_file_log_comp.html" title="Message container displaying messages as log list.">CTextFileLogComp</a>&amp; parent);
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="keyword">protected</span>:
-<a name="l00064"></a>00064               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00065"></a>00065               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067        <span class="keyword">private</span>:
-<a name="l00068"></a>00068               <a class="code" href="classibase_1_1_c_text_file_log_comp.html" title="Message container displaying messages as log list.">CTextFileLogComp</a>&amp; m_parent;
-<a name="l00069"></a>00069        };
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071        FilePathObserver m_filePathObserver;
-<a name="l00072"></a>00072 };
-<a name="l00073"></a>00073 
+<a name="l00054"></a>00054        QFile m_outputFile;
+<a name="l00055"></a>00055        QTextStream m_outputFileStream;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="keyword">class </span>FilePathObserver: <span class="keyword">public</span> imod::CSingleModelObserverBase
+<a name="l00058"></a>00058        {
+<a name="l00059"></a>00059        <span class="keyword">public</span>:
+<a name="l00060"></a>00060               <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer.">imod::CSingleModelObserverBase</a> <a class="code" href="classibase_1_1_c_text_file_log_comp.html#a3eb24e2bc1392315b530ae9fc5ed6990">BaseClass</a>;
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062               FilePathObserver(<a class="code" href="classibase_1_1_c_text_file_log_comp.html" title="Message container displaying messages as log list.">CTextFileLogComp</a>&amp; parent);
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <span class="keyword">protected</span>:
+<a name="l00065"></a>00065               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00066"></a>00066               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="keyword">private</span>:
+<a name="l00069"></a>00069               <a class="code" href="classibase_1_1_c_text_file_log_comp.html" title="Message container displaying messages as log list.">CTextFileLogComp</a>&amp; m_parent;
+<a name="l00070"></a>00070        };
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072        FilePathObserver m_filePathObserver;
+<a name="l00073"></a>00073 };
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075 } <span class="comment">// namespace ibase</span>
-<a name="l00076"></a>00076 
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 } <span class="comment">// namespace ibase</span>
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="preprocessor">#endif // !ibase_CTextFileLogComp_included</span>
-<a name="l00079"></a>00079 <span class="preprocessor"></span>
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <span class="preprocessor">#endif // !ibase_CTextFileLogComp_included</span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

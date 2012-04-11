@@ -79,10 +79,10 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a87cac9890335a0a4d45b7c553f95dbec">CSelectableParamsSetComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a90cb2ee3f8504c557c0bb614348d7319">GetParameter</a> (const std::string &amp;id) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get any parameter.  <a href="#a90cb2ee3f8504c557c0bb614348d7319"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a35e8091a8a77fa6ee10dcd0c991dfa87">GetEditableParameter</a> (const std::string &amp;id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to editable parameter.  <a href="#a35e8091a8a77fa6ee10dcd0c991dfa87"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ab90d2803adb8ab9463229c2988b1a326">GetParameter</a> (const QByteArray &amp;id) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get any parameter.  <a href="#ab90d2803adb8ab9463229c2988b1a326"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ab52d4e76358cc7d5c1716b81bc519587">GetEditableParameter</a> (const QByteArray &amp;id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to editable parameter.  <a href="#ab52d4e76358cc7d5c1716b81bc519587"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a9102de3ef0cb0802961861b61f9372e1">GetSelectionConstraints</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#a9102de3ef0cb0802961861b61f9372e1"></a><br/></td></tr>
@@ -106,8 +106,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#ab2a4536ea0eaf0d78b6f401c43896bcb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ac237183a634a2997b744f6b221d3ac50">GetOptionDescription</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description for a option with the index <code>index</code>.  <a href="#ac237183a634a2997b744f6b221d3ac50"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a0c56e9e9a3f32b33353a5474ef7f05ea">GetOptionId</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#a0c56e9e9a3f32b33353a5474ef7f05ea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#abae0be7119a71db9c22a391aa35c8b98">GetOptionId</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#abae0be7119a71db9c22a391aa35c8b98"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a0e31b9e305ff327511f8fd4eb2e8458b">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#aa9ffbc562af98f798c912a7bb7b53447">OnComponentDestroyed</a> ()</td></tr>
 </table>
@@ -191,14 +191,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a35e8091a8a77fa6ee10dcd0c991dfa87"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::GetEditableParameter" ref="a35e8091a8a77fa6ee10dcd0c991dfa87" args="(const std::string &amp;id)" -->
+<a class="anchor" id="ab52d4e76358cc7d5c1716b81bc519587"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::GetEditableParameter" ref="ab52d4e76358cc7d5c1716b81bc519587" args="(const QByteArray &amp;id)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a>* iprm::CSelectableParamsSetComp::GetEditableParameter </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -215,7 +215,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to parameter instance or NULL if there is no editable parameter with this ID. </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_params_set.html#abe32cd17c17f50cd3382cc64988c2a5f">iprm::IParamsSet</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_params_set.html#a2eb6b638293e7b23e93f84e928bbd071">iprm::IParamsSet</a>.</p>
 
 </div>
 </div>
@@ -240,12 +240,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0c56e9e9a3f32b33353a5474ef7f05ea"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::GetOptionId" ref="a0c56e9e9a3f32b33353a5474ef7f05ea" args="(int index) const " -->
+<a class="anchor" id="abae0be7119a71db9c22a391aa35c8b98"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::GetOptionId" ref="abae0be7119a71db9c22a391aa35c8b98" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string iprm::CSelectableParamsSetComp::GetOptionId </td>
+          <td class="memname">virtual QByteArray iprm::CSelectableParamsSetComp::GetOptionId </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -259,7 +259,7 @@ Protected Member Functions</h2></td></tr>
 <p>The option ID must be unique, if flag SCF_SUPPORT_UNIQUE_ID is set. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1b" title="Flags for control constraints behavior.">SelectionConstraintsFlags</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a2d9228f4e01880b48336deafeaa6393a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -304,14 +304,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a90cb2ee3f8504c557c0bb614348d7319"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::GetParameter" ref="a90cb2ee3f8504c557c0bb614348d7319" args="(const std::string &amp;id) const " -->
+<a class="anchor" id="ab90d2803adb8ab9463229c2988b1a326"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::GetParameter" ref="ab90d2803adb8ab9463229c2988b1a326" args="(const QByteArray &amp;id) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a>* iprm::CSelectableParamsSetComp::GetParameter </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -328,7 +328,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to parameter instance or NULL if there is no parameter with this ID. </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_params_set.html#a3db09637386433fd8da452a736234379">iprm::IParamsSet</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_params_set.html#a526c5d6481768d3b6c2e73a2abbd58b3">iprm::IParamsSet</a>.</p>
 
 </div>
 </div>

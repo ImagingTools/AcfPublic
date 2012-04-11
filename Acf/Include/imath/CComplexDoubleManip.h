@@ -24,10 +24,7 @@
 #define imath_CComplexDoubleManip_included
 
 
-// STL includes
-#include <cmath>
-#include <limits>
-
+// ACF includes
 #include "istd/CRange.h"
 
 #include "imath/CFixedPointManip.h"

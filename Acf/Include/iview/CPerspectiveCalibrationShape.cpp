@@ -24,8 +24,8 @@
 
 
 // Qt includes
+#include <QtCore/qmath.h>
 #include <QtGui/QPainter>
-
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
@@ -105,7 +105,7 @@ void CPerspectiveCalibrationShape::Draw(QPainter& drawContext) const
 		istd::TChangeNotifier<iview::IRuler> topRulerPtr(NULL);
 
 		if (rulersAccessorPtr != NULL){
-			if (::fabs(logAxisX.GetX()) >= ::fabs(logAxisX.GetY())){
+			if (qAbs(logAxisX.GetX()) >= qAbs(logAxisX.GetY())){
 				leftRulerPtr.SetPtr(rulersAccessorPtr->GetLeftRulerPtr());
 				topRulerPtr.SetPtr(rulersAccessorPtr->GetTopRulerPtr());
 			}
@@ -164,7 +164,7 @@ void CPerspectiveCalibrationShape::Draw(QPainter& drawContext) const
 
 				int levels[2];
 				double minGridDistance = calibInfoPtr->GetMinGridDistance() / scale;
-				double grid = pow(10.0, int(ceil(log10(minGridDistance))));
+				double grid = qPow(10.0, int(ceil(log10(minGridDistance))));
 				if (grid * 0.5 < minGridDistance){
 					levels[0] = 5;
 					levels[1] = 10;

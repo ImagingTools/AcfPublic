@@ -24,8 +24,8 @@
 #define iipr_IFeaturesProvider_included
 
 
-// STL includes
-#include <vector>
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "istd/IChangeable.h"
@@ -44,7 +44,7 @@ class IFeature;
 class IFeaturesProvider: virtual public istd::IChangeable
 {
 public:
-	typedef std::vector<const iipr::IFeature*> Features;
+	typedef QVector<const iipr::IFeature*> Features;
 
 	/**
 		Get container features.

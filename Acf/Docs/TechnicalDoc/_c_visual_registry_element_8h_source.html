@@ -56,8 +56,8 @@
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a073aecc840690707fb7900d2ec39a080">GetRegistry</a>() <span class="keyword">const</span>;
 <a name="l00031"></a>00031        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a3a12f32245c99e9115a326ec7d7cae90">GetAddress</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keyword">const</span> std::string&amp; <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a62679b10fe4d4b6b1b197df17f20f734">GetName</a>() <span class="keyword">const</span>;
-<a name="l00033"></a>00033        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#ad0f6d1990b2d01b39796d46c79e8fa18">SetName</a>(<span class="keyword">const</span> std::string&amp; name);
+<a name="l00032"></a>00032        <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a0f669f037051a1ecc2e5eb08437a472f">GetName</a>() <span class="keyword">const</span>;
+<a name="l00033"></a>00033        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#ac72fdcef07d5fdb5090d929dbbf3fff9">SetName</a>(<span class="keyword">const</span> QByteArray&amp; name);
 <a name="l00034"></a>00034        <span class="keyword">const</span> QString&amp; <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a1f65617a43e93a7fb1699581a57a670e">GetNote</a>() <span class="keyword">const</span>;
 <a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#aae8573245887a177d58e64e2e31b11a1">SetNote</a>(<span class="keyword">const</span> QString&amp; note);
 <a name="l00036"></a>00036 
@@ -92,7 +92,7 @@
 <a name="l00065"></a>00065        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_center;
 <a name="l00066"></a>00066        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* m_registryPtr;
 <a name="l00067"></a>00067        <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a> m_addess;
-<a name="l00068"></a>00068        std::string m_name;
+<a name="l00068"></a>00068        QByteArray m_name;
 <a name="l00069"></a>00069        QString m_note;
 <a name="l00070"></a>00070 };
 <a name="l00071"></a>00071 
@@ -111,7 +111,7 @@
 <a name="l00084"></a>00084 }
 <a name="l00085"></a>00085 
 <a name="l00086"></a>00086 
-<a name="l00087"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a62679b10fe4d4b6b1b197df17f20f734">00087</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a62679b10fe4d4b6b1b197df17f20f734">CVisualRegistryElement::GetName</a>()<span class="keyword"> const</span>
+<a name="l00087"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a0f669f037051a1ecc2e5eb08437a472f">00087</a> <span class="keyword">inline</span> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html#a0f669f037051a1ecc2e5eb08437a472f">CVisualRegistryElement::GetName</a>()<span class="keyword"> const</span>
 <a name="l00088"></a>00088 <span class="keyword"></span>{
 <a name="l00089"></a>00089        <span class="keywordflow">return</span> m_name;
 <a name="l00090"></a>00090 }

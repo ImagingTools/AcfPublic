@@ -24,9 +24,8 @@
 #define ibase_TContainer_included
 
 
-// STL includes
-#include <vector>
-
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "istd/IContainerInfo.h"
@@ -42,7 +41,7 @@ namespace ibase
 /**
 	Common implementation of an abstract container. 
 */
-template <typename ItemClass, typename ContainerClass = std::vector<ItemClass> >
+template <typename ItemClass, typename ContainerClass = QVector<ItemClass> >
 class TContainer: virtual public istd::IContainerInfo
 {
 public:
@@ -177,7 +176,7 @@ int TContainer<ItemClass, ContainerClass>::GetItemsCount() const
 template <typename ItemClass, typename ContainerClass>
 bool TContainer<ItemClass, ContainerClass>::IsEmpty() const
 {
-	return m_items.empty();
+	return m_items.isEmpty();
 }
 
 

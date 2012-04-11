@@ -29,52 +29,53 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ibase_IObjectQueue_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;string&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QByteArray&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QVector&gt;</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span>
-<a name="l00010"></a>00010 
+<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">namespace </span>ibase
-<a name="l00013"></a>00013 {
-<a name="l00014"></a>00014 
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="keyword">namespace </span>ibase
+<a name="l00014"></a>00014 {
 <a name="l00015"></a>00015 
-<a name="l00019"></a><a class="code" href="classibase_1_1_i_object_queue.html">00019</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_object_queue.html" title="Interface allowing to manage queue of some objects.">IObjectQueue</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
-<a name="l00020"></a>00020 {
-<a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a><a class="code" href="classibase_1_1_i_object_queue.html#a83963305da6b9d614f1bd0c8122e2b8e">00022</a>        <span class="keyword">typedef</span> std::vector&lt;istd::IChangeable*&gt; <a class="code" href="classibase_1_1_i_object_queue.html#a83963305da6b9d614f1bd0c8122e2b8e">ObjectList</a>;
-<a name="l00023"></a>00023 
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_object_queue.html#af01fc4bd306f81c6568a2ee703dba6ce" title="Get number of objects in this queue.">GetObjectsCount</a>(<span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
-<a name="l00029"></a>00029 
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_object_queue.html#ab5ab003bf24ed4300feefae34c3db255" title="Remove all objects from queue.">ClearQueue</a>() = 0;
-<a name="l00034"></a>00034 
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#a17d9723f719c5481bd5007ecff104704" title="Create object at the front of this queue.">CreateFrontObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#ac352f491017aacc91b832f86fbe9e808" title="Create object at the end of this queue.">CreateBackObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
-<a name="l00049"></a>00049 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_object_queue.html#ac4a9cabb54dd826c8330590cb17efcbe" title="Remove object at the front of this queue.">RemoveFrontObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_object_queue.html#ab4332f3d3ef4b2ded6dcbe105c383bf1" title="Remove object at the end of this queue.">RemoveBackObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
-<a name="l00064"></a>00064 
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#a769aa8614a1306e573b7a4d17411ccac" title="Get object at the front of queue.">GetFrontObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#abd4480983ca82d89a135c7bdb40955d7" title="Get object at the end of queue.">GetBackObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
-<a name="l00077"></a>00077 
-<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_object_queue.html#a51db2998275335a180c8e08a00c24fa0" title="Find set of objects.">SelectObjects</a>(
-<a name="l00082"></a>00082                             <a class="code" href="classibase_1_1_i_object_queue.html#a83963305da6b9d614f1bd0c8122e2b8e">ObjectList</a>&amp; result,
-<a name="l00083"></a>00083                             <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>,
-<a name="l00084"></a>00084                             <span class="keywordtype">int</span> offsetPos = 0,
-<a name="l00085"></a>00085                             <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
-<a name="l00086"></a>00086 
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#abffe19a31b79d5508d820fd3f5c0cad6" title="Get object at the front of queue and remove it from queue.">PopFrontObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#ae5b17c4b26ff3544ae9a8f5cc3a28e08" title="Get object at the end of queue and remove it from queue.">PopBackObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> std::string* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
-<a name="l00101"></a>00101 };
-<a name="l00102"></a>00102 
+<a name="l00016"></a>00016 
+<a name="l00020"></a><a class="code" href="classibase_1_1_i_object_queue.html">00020</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_object_queue.html" title="Interface allowing to manage queue of some objects.">IObjectQueue</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022 <span class="keyword">public</span>:
+<a name="l00023"></a><a class="code" href="classibase_1_1_i_object_queue.html#a85331f124b4c98b1e87ce1f4595a089d">00023</a>        <span class="keyword">typedef</span> QVector&lt;istd::IChangeable*&gt; <a class="code" href="classibase_1_1_i_object_queue.html#a85331f124b4c98b1e87ce1f4595a089d">ObjectList</a>;
+<a name="l00024"></a>00024 
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_object_queue.html#a5dae0e1bcc284b86dd00b0f167a1f0f2" title="Get number of objects in this queue.">GetObjectsCount</a>(<span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
+<a name="l00030"></a>00030 
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_object_queue.html#ab5ab003bf24ed4300feefae34c3db255" title="Remove all objects from queue.">ClearQueue</a>() = 0;
+<a name="l00035"></a>00035 
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#ac5032c22dd3e7169ae7beb655dc0740b" title="Create object at the front of this queue.">CreateFrontObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#a4b0fe0129cab86a68cb5e9f8770cf256" title="Create object at the end of this queue.">CreateBackObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00050"></a>00050 
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_object_queue.html#a518b516fc763f53e94f17734462f5c7a" title="Remove object at the front of this queue.">RemoveFrontObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_object_queue.html#ac8e0cb5b6e099313036938d678fddecc" title="Remove object at the end of this queue.">RemoveBackObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00065"></a>00065 
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#a4b8d4c0d20fb53e1cf07b47b8fc229c8" title="Get object at the front of queue.">GetFrontObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#a3bbc827969869feeefd8500cf688cbd1" title="Get object at the end of queue.">GetBackObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
+<a name="l00078"></a>00078 
+<a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_object_queue.html#a64603c45a552473966ec70f90015259b" title="Find set of objects.">SelectObjects</a>(
+<a name="l00083"></a>00083                             <a class="code" href="classibase_1_1_i_object_queue.html#a85331f124b4c98b1e87ce1f4595a089d">ObjectList</a>&amp; result,
+<a name="l00084"></a>00084                             <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>,
+<a name="l00085"></a>00085                             <span class="keywordtype">int</span> offsetPos = 0,
+<a name="l00086"></a>00086                             <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
+<a name="l00087"></a>00087 
+<a name="l00094"></a>00094        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#a934a0b6639326662a9ec870e1d2c2c15" title="Get object at the front of queue and remove it from queue.">PopFrontObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classibase_1_1_i_object_queue.html#a34cd1473ad4c55afea35b76f35bd51d0" title="Get object at the end of queue and remove it from queue.">PopBackObject</a>(<span class="keywordtype">int</span> offsetPos = 0, <span class="keyword">const</span> QByteArray* typeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00102"></a>00102 };
 <a name="l00103"></a>00103 
-<a name="l00104"></a>00104 } <span class="comment">// namespace ibase</span>
-<a name="l00105"></a>00105 
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 } <span class="comment">// namespace ibase</span>
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107 <span class="preprocessor">#endif // !ibase_IObjectQueue_included</span>
-<a name="l00108"></a>00108 <span class="preprocessor"></span>
-<a name="l00109"></a>00109 
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 <span class="preprocessor">#endif // !ibase_IObjectQueue_included</span>
+<a name="l00109"></a>00109 <span class="preprocessor"></span>
+<a name="l00110"></a>00110 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

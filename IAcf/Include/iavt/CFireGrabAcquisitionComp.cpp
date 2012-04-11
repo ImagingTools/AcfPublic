@@ -23,11 +23,8 @@
 #include "iavt/CFireGrabAcquisitionComp.h"
 
 
-// STL includes
-#include <cstring>
-
+// ACF includes
 #include "istd/TChangeNotifier.h"
-
 #include "iprm/IParamsSet.h"
 
 

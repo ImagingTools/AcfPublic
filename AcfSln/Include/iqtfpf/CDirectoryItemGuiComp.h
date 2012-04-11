@@ -80,7 +80,7 @@ private:
 
 private:
 	I_REF(iprm::IParamsManager, m_inputDirectoriesParamsManagerCompPtr);
-	I_ATTR(std::string, m_directoryPathIdAttrPtr);
+	I_ATTR(QByteArray, m_directoryPathIdAttrPtr);
 
 	QString m_directoryPath;
 	QString m_hotfolderInputName;

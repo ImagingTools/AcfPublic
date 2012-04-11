@@ -24,12 +24,11 @@
 #define icmpstr_IRegistryConsistInfo_included
 
 
-// STL includes
-#include <string>
-
 // Qt includes
+#include <QtCore/QByteArray>
 #include <QtGui/QIcon>
 
+// ACF includes
 #include "istd/IPolymorphic.h"
 
 #include "icomp/IRegistry.h"
@@ -91,7 +90,7 @@ public:
 		\param	reasonConsumerPtr	optional consumer of messages explaining reason of calculated result.
 	*/
 	virtual bool IsElementValid(
-				const std::string& elementName,
+				const QByteArray& elementName,
 				const icomp::IRegistry& registry,
 				bool ignoreUndef,
 				bool allReasons,
@@ -107,8 +106,8 @@ public:
 		\param	reasonConsumerPtr	optional consumer of messages explaining reason of calculated result.
 	*/
 	virtual bool IsAttributeValid(
-				const std::string& attributeName,
-				const std::string& elementName,
+				const QByteArray& attributeName,
+				const QByteArray& elementName,
 				const icomp::IRegistry& registry,
 				bool ignoreUndef,
 				bool allReasons,

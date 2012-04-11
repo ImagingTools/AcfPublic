@@ -52,9 +52,9 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QThread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#a364543b749eab712908103acc67bc8a4">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#aebbdd36f95b963eeaf5743378ee43bd9">ItemProcessor</a> (<a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp.html">CHotfolderProcessingComp</a> &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const std::string &amp;itemUuid)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#a49f25d4d64f7e675a0a6c7e08ffb23ce">ItemProcessor</a> (<a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp.html">CHotfolderProcessingComp</a> &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const QByteArray &amp;itemUuid)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#ae36f393ac0883594511f83e456fbebe4">GetProcessingState</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#a3fc97b8ef239348665f9095a112a5781">GetItemUuid</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#a05805c8074c3f589469cdac5fce785f1">GetItemUuid</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QDateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#ac08ff8a99a673845556185b172ea20a0">GetStartTime</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#a068dd6cfa6ca864cebd4d29c5e596815">GetProcessingTime</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html#a1b61ec6db63a674cd1e57858a26d2de3">Cancel</a> ()</td></tr>
@@ -83,7 +83,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aebbdd36f95b963eeaf5743378ee43bd9"></a><!-- doxytag: member="iqtfpf::CHotfolderProcessingComp::ItemProcessor::ItemProcessor" ref="aebbdd36f95b963eeaf5743378ee43bd9" args="(CHotfolderProcessingComp &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const std::string &amp;itemUuid)" -->
+<a class="anchor" id="a49f25d4d64f7e675a0a6c7e08ffb23ce"></a><!-- doxytag: member="iqtfpf::CHotfolderProcessingComp::ItemProcessor::ItemProcessor" ref="a49f25d4d64f7e675a0a6c7e08ffb23ce" args="(CHotfolderProcessingComp &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const QByteArray &amp;itemUuid)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -108,7 +108,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>itemUuid</em>&#160;</td>
         </tr>
         <tr>
@@ -139,12 +139,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3fc97b8ef239348665f9095a112a5781"></a><!-- doxytag: member="iqtfpf::CHotfolderProcessingComp::ItemProcessor::GetItemUuid" ref="a3fc97b8ef239348665f9095a112a5781" args="() const " -->
+<a class="anchor" id="a05805c8074c3f589469cdac5fce785f1"></a><!-- doxytag: member="iqtfpf::CHotfolderProcessingComp::ItemProcessor::GetItemUuid" ref="a05805c8074c3f589469cdac5fce785f1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string iqtfpf::CHotfolderProcessingComp::ItemProcessor::GetItemUuid </td>
+          <td class="memname">QByteArray iqtfpf::CHotfolderProcessingComp::ItemProcessor::GetItemUuid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

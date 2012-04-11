@@ -49,19 +49,17 @@ Inheritance diagram for iser::CXmlReadArchiveBase:</div>
  <div class="center">
   <img src="classiser_1_1_c_xml_read_archive_base.png" usemap="#iser::CXmlReadArchiveBase_map" alt=""/>
   <map id="iser::CXmlReadArchiveBase_map" name="iser::CXmlReadArchiveBase_map">
-<area href="classiser_1_1_c_text_read_archive_base.html" title="Common archive implementation of text-based reading archives." alt="iser::CTextReadArchiveBase" shape="rect" coords="167,224,492,248"/>
-<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="502,224,827,248"/>
-<area href="classiser_1_1_c_read_archive_base.html" title="Basic implementation of an abstract archive for data reading." alt="iser::CReadArchiveBase" shape="rect" coords="167,168,492,192"/>
-<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="167,112,492,136"/>
-<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,325,80"/>
-<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="335,56,660,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,325,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="335,0,660,24"/>
-<area href="classiser_1_1_t_xml_stream_read_archive_base.html" title="Base implementation of a reading archive for XML format using a stream implementation." alt="iser::TXmlStreamReadArchiveBase&lt; StreamClass &gt;" shape="rect" coords="0,336,325,360"/>
-<area href="classiser_1_1_t_xml_stream_read_archive_base.html" alt="iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;" shape="rect" coords="335,336,660,360"/>
-<area href="classiser_1_1_t_xml_stream_read_archive_base.html" alt="iser::TXmlStreamReadArchiveBase&lt; std::istringstream &gt;" shape="rect" coords="670,336,995,360"/>
-<area href="classiser_1_1_c_xml_file_read_archive.html" title="Simple implementation of archive reading from XML file." alt="iser::CXmlFileReadArchive" shape="rect" coords="335,392,660,416"/>
-<area href="classiser_1_1_c_xml_string_read_archive.html" title="Simple implementation for reading of a XML from a string." alt="iser::CXmlStringReadArchive" shape="rect" coords="670,392,995,416"/>
+<area href="classiser_1_1_c_text_read_archive_base.html" title="Common archive implementation of text-based reading archives." alt="iser::CTextReadArchiveBase" shape="rect" coords="110,224,320,248"/>
+<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="330,224,540,248"/>
+<area href="classiser_1_1_c_read_archive_base.html" title="Basic implementation of an abstract archive for data reading." alt="iser::CReadArchiveBase" shape="rect" coords="110,168,320,192"/>
+<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="110,112,320,136"/>
+<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,210,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="220,56,430,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,210,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="220,0,430,24"/>
+<area href="classiser_1_1_c_xml_stream_read_archive_base.html" title="Base implementation of a reading archive for XML format using a stream implementation." alt="iser::CXmlStreamReadArchiveBase" shape="rect" coords="220,336,430,360"/>
+<area href="classiser_1_1_c_xml_file_read_archive.html" title="Simple implementation of archive reading from XML file." alt="iser::CXmlFileReadArchive" shape="rect" coords="110,392,320,416"/>
+<area href="classiser_1_1_c_xml_string_read_archive.html" title="Simple implementation for reading of a XML from a string." alt="iser::CXmlStringReadArchive" shape="rect" coords="330,392,540,416"/>
 </map>
  </div></div>
 
@@ -83,8 +81,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of archive tag containing set of subelements of the same type.  <a href="#a1691fbe3480c5bf84e765d34bd04a2a4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a8c6f65d1907f96396bf99111a84505cb">EndTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;tag)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">End of archive tag.  <a href="#a8c6f65d1907f96396bf99111a84505cb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a271110aaa3127100fe929228a6f2d646">Process</a> (std::string &amp;value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a271110aaa3127100fe929228a6f2d646"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a0da0feeea9b39935cc00c917218fdb63">Process</a> (QByteArray &amp;value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a0da0feeea9b39935cc00c917218fdb63"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a73ad1ce0033435af12353296fb48c1f9">Process</a> (QString &amp;value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a73ad1ce0033435af12353296fb48c1f9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -93,8 +91,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a4a30d56c741b7c6b7dbf3edb7f57e825">InternEndTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;tag, bool &amp;wasTagSkipped)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended implementation of <a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a8c6f65d1907f96396bf99111a84505cb" title="End of archive tag.">EndTag()</a> with additional flag signalizing that tag is skipped.  <a href="#a4a30d56c741b7c6b7dbf3edb7f57e825"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a43c286a574c8bcdcfe3c044026e5c73a">SerializeXmlHeader</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a5af7e7deab8b50ac5bc1c8036aa2105c">ReadToDelimeter</a> (const std::string &amp;delimeters, std::string &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input stream till one of specified delimeters is found.  <a href="#a5af7e7deab8b50ac5bc1c8036aa2105c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#afcd36fa68d1b5fa29982409e784376fa">ReadToDelimeter</a> (const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input stream till one of specified delimeters is found.  <a href="#afcd36fa68d1b5fa29982409e784376fa"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_base.html">Base</a> class for XML based reading archives. </p>
@@ -114,7 +112,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiser_1_1_c_text_read_archive_base.html#a5f7a8e08d107d57438daa5b64a30c114">iser::CTextReadArchiveBase</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#acf96cd0875838798aa3db29037a56954">iser::CXmlFileReadArchive</a>, <a class="el" href="classiser_1_1_c_xml_string_read_archive.html#a79307e56c78b3cc42a7784ea397e011c">iser::CXmlStringReadArchive</a>, <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a2f48b7867e6e06a8648ccf0d6260b89e">iser::TXmlStreamReadArchiveBase&lt; StreamClass &gt;</a>, <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a2f48b7867e6e06a8648ccf0d6260b89e">iser::TXmlStreamReadArchiveBase&lt; std::istringstream &gt;</a>, and <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a2f48b7867e6e06a8648ccf0d6260b89e">iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a3d19f857933715cb86a2fdd953c17284">iser::CXmlFileReadArchive</a>, <a class="el" href="classiser_1_1_c_xml_string_read_archive.html#a8c62baff520ba68d0e22aa98297c3908">iser::CXmlStringReadArchive</a>, and <a class="el" href="classiser_1_1_c_xml_stream_read_archive_base.html#a0070490328f58be01324f603cf1adfd3">iser::CXmlStreamReadArchiveBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_xml_read_archive_base_8h_source.html#l00022">22</a> of file <a class="el" href="_c_xml_read_archive_base_8h_source.html">CXmlReadArchiveBase.h</a>.</p>
 
@@ -319,14 +317,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a271110aaa3127100fe929228a6f2d646"></a><!-- doxytag: member="iser::CXmlReadArchiveBase::Process" ref="a271110aaa3127100fe929228a6f2d646" args="(std::string &amp;value)" -->
+<a class="anchor" id="a0da0feeea9b39935cc00c917218fdb63"></a><!-- doxytag: member="iser::CXmlReadArchiveBase::Process" ref="a0da0feeea9b39935cc00c917218fdb63" args="(QByteArray &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iser::CXmlReadArchiveBase::Process </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -336,7 +334,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Process primitive type. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_archive.html#abb1b7f1e8834da9a12dc0b5d4029c4cd">iser::IArchive</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_archive.html#a9ab344643d656de3adccacb6d894c882">iser::IArchive</a>.</p>
 
 </div>
 </div>
@@ -361,20 +359,20 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5af7e7deab8b50ac5bc1c8036aa2105c"></a><!-- doxytag: member="iser::CXmlReadArchiveBase::ReadToDelimeter" ref="a5af7e7deab8b50ac5bc1c8036aa2105c" args="(const std::string &amp;delimeters, std::string &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)=0" -->
+<a class="anchor" id="afcd36fa68d1b5fa29982409e784376fa"></a><!-- doxytag: member="iser::CXmlReadArchiveBase::ReadToDelimeter" ref="afcd36fa68d1b5fa29982409e784376fa" args="(const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iser::CXmlReadArchiveBase::ReadToDelimeter </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>delimeters</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
@@ -409,7 +407,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#aa291554c858a8108b0be3eb64a09d79e">iser::TXmlStreamReadArchiveBase&lt; StreamClass &gt;</a>, <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#aa291554c858a8108b0be3eb64a09d79e">iser::TXmlStreamReadArchiveBase&lt; std::istringstream &gt;</a>, and <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#aa291554c858a8108b0be3eb64a09d79e">iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classiser_1_1_c_xml_stream_read_archive_base.html#ac4e4df82bfbe6438b9379f865a85531e">iser::CXmlStreamReadArchiveBase</a>.</p>
 
 </div>
 </div>

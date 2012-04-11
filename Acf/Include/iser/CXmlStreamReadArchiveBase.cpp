@@ -20,58 +20,14 @@
 ********************************************************************************/
 
 
-#ifndef iser_TXmlStreamReadArchiveBase_included
-#define iser_TXmlStreamReadArchiveBase_included
-
-
-// ACF includes
-#include "iser/CXmlReadArchiveBase.h"
+#include "iser/CXmlStreamReadArchiveBase.h"
 
 
 namespace iser
 {
 
 
-/**
-	Base implementation of a reading archive for XML format using a stream implementation.
-*/
-template <class StreamClass>
-class TXmlStreamReadArchiveBase: public CXmlReadArchiveBase
-{
-public:
-	typedef CXmlReadArchiveBase BaseClass;
-
-	int GetLastReadLine() const;
-
-protected:
-	TXmlStreamReadArchiveBase(const CArchiveTag& rootTag = s_acfRootTag);
-
-	// reimplemented (iser::CXmlReadArchiveBase)
-	virtual bool ReadToDelimeter(
-				const std::string& delimeters,
-				std::string& result,
-				bool skipDelimeter = true,
-				char* foundDelimeterPtr = NULL);
-
-	// reimplemented (istd::ILogger)
-	virtual void DecorateMessage(
-				istd::IInformation::InformationCategory category,
-				int id,
-				int flags,
-				QString& message,
-				QString& messageSource) const;
-
-protected:
-	StreamClass m_stream;
-	char m_lastReadChar;
-	bool m_useLastReadChar;
-
-	int m_lastReadLine;
-};
-
-
-template <class StreamClass>
-int TXmlStreamReadArchiveBase<StreamClass>::GetLastReadLine() const
+int CXmlStreamReadArchiveBase::GetLastReadLine() const
 {
 	return m_lastReadLine;
 }
@@ -79,8 +35,7 @@ int TXmlStreamReadArchiveBase<StreamClass>::GetLastReadLine() const
 
 // protected methods
 
-template <class StreamClass>
-TXmlStreamReadArchiveBase<StreamClass>::TXmlStreamReadArchiveBase(const CArchiveTag& rootTag)
+CXmlStreamReadArchiveBase::CXmlStreamReadArchiveBase(const CArchiveTag& rootTag)
 :	BaseClass(rootTag),
 	m_useLastReadChar(false),
 	m_lastReadLine(0)
@@ -90,29 +45,28 @@ TXmlStreamReadArchiveBase<StreamClass>::TXmlStreamReadArchiveBase(const CArchive
 
 // reimplemented (iser::CXmlReadArchiveBase)
 
-template <class StreamClass>
-bool TXmlStreamReadArchiveBase<StreamClass>::ReadToDelimeter(
-			const std::string& delimeters,
-			std::string& result,
+bool CXmlStreamReadArchiveBase::ReadToDelimeter(
+			const QByteArray& delimeters,
+			QByteArray& result,
 			bool skipDelimeter,
 			char* foundDelimeterPtr)
 {
 	int cutFromPos = -2;
 	int cutToPos = -2;
 
-	std::string readString;
+	QByteArray readString;
 
 	if (!m_useLastReadChar){
-		m_stream.get(m_lastReadChar);
+		m_stream >> m_lastReadChar;
 
 		if (m_lastReadChar == '\n'){
 			++m_lastReadLine;
 		}
 	}
 
-	while (!m_stream.fail()){
-		std::string::size_type foundPosition = delimeters.find(m_lastReadChar);
-		if (foundPosition != std::string::npos){
+	while (!m_stream.atEnd()){
+		int foundPosition = delimeters.indexOf(m_lastReadChar);
+		if (foundPosition >= 0){
 			m_useLastReadChar = !skipDelimeter;
 
 			if (cutFromPos < 0){
@@ -129,7 +83,7 @@ bool TXmlStreamReadArchiveBase<StreamClass>::ReadToDelimeter(
 				cutToPos = int(readString.size());
 			}
 
-			result = readString.substr(cutFromPos, cutToPos - cutFromPos);
+			result = readString.mid(cutFromPos, cutToPos - cutFromPos);
 
 			if (foundDelimeterPtr != NULL){
 				*foundDelimeterPtr = delimeters.at(foundPosition);
@@ -148,7 +102,7 @@ bool TXmlStreamReadArchiveBase<StreamClass>::ReadToDelimeter(
 			}
 		}
 
-		m_stream.get(m_lastReadChar);
+		m_stream >> m_lastReadChar;
 
 		if (m_lastReadChar == '\n'){
 			++m_lastReadLine;
@@ -161,8 +115,7 @@ bool TXmlStreamReadArchiveBase<StreamClass>::ReadToDelimeter(
 
 // reimplemented (istd::ILogger)
 
-template <class StreamClass>
-void TXmlStreamReadArchiveBase<StreamClass>::DecorateMessage(
+void CXmlStreamReadArchiveBase::DecorateMessage(
 			istd::IInformation::InformationCategory category,
 			int id,
 			int flags,
@@ -176,8 +129,5 @@ void TXmlStreamReadArchiveBase<StreamClass>::DecorateMessage(
 
 
 } // namespace iser
-
-
-#endif // !iser_TXmlStreamReadArchiveBase_included
 
 

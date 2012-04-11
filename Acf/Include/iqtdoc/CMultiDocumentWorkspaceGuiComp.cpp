@@ -190,8 +190,8 @@ void CMultiDocumentWorkspaceGuiComp::OnViewsCountChanged()
 istd::IChangeable* CMultiDocumentWorkspaceGuiComp::OpenDocument(
 			const QString& filePath,
 			bool createView,
-			const std::string& viewTypeId,
-			std::string& documentTypeId)
+			const QByteArray& viewTypeId,
+			QByteArray& documentTypeId)
 {
 	bool allowViewRepeating = true;
 	if (m_allowViewRepeatingAttrPtr.IsValid()){
@@ -314,7 +314,7 @@ void CMultiDocumentWorkspaceGuiComp::CloseAllDocuments()
 }
 
 
-QStringList CMultiDocumentWorkspaceGuiComp::GetOpenFilePaths(const std::string* documentTypeIdPtr) const
+QStringList CMultiDocumentWorkspaceGuiComp::GetOpenFilePaths(const QByteArray* documentTypeIdPtr) const
 {
 	QStringList files = GetOpenFilePathesFromDialog(documentTypeIdPtr);
 

@@ -64,7 +64,7 @@ protected:
 
 	// reimplemented (iproc::IProgressManager)
 	virtual int BeginProgressSession(
-				const std::string& progressId,
+				const QByteArray& progressId,
 				const QString& description,
 				bool isCancelable);
 	virtual bool IsCanceled(int sessionId) const;

@@ -52,8 +52,8 @@ public:
 
 	TProperty(
 				IPropertiesManager* propertyOwnerPtr,
-				const std::string& propertyName,
-				const std::string& propertyDescription,
+				const QByteArray& propertyName,
+				const QByteArray& propertyDescription,
 				int propertyFlags,
 				int changeFlags = 0,
 				const ValueType& defaultValue = ValueType());
@@ -66,13 +66,13 @@ public:
 	virtual const iser::IObject* GetDefaultPropertyPtr() const;
 
 	// reimplemented (iser::IObject)
-	virtual std::string GetFactoryId() const;
+	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
 	// static methods
-	static const std::string& GetTypeName();
+	static const QByteArray& GetTypeName();
 
 protected:
 	Value m_value;
@@ -80,7 +80,7 @@ protected:
 	mutable istd::TDelPtr<PropertyType> m_defaultPropertyValuePtr;
 
 private:
-	static const std::string s_typeName;
+	static const QByteArray s_typeName;
 };
 
 
@@ -96,8 +96,8 @@ TProperty<Value>::TProperty()
 template <typename Value>
 TProperty<Value>::TProperty(
 				IPropertiesManager* propertyOwnerPtr,
-				const std::string& propertyName,
-				const std::string& propertyDescription,
+				const QByteArray& propertyName,
+				const QByteArray& propertyDescription,
 				int propertyFlags,
 				int changeFlags,
 				const ValueType& defaultValue)
@@ -151,7 +151,7 @@ const iser::IObject* TProperty<Value>::GetDefaultPropertyPtr() const
 // reimplemented (iser::IObject)
 
 template <typename Value>
-std::string TProperty<Value>::GetFactoryId() const
+QByteArray TProperty<Value>::GetFactoryId() const
 {
 	return s_typeName;
 }
@@ -178,7 +178,7 @@ bool TProperty<Value>::Serialize(iser::IArchive& archive)
 // static methods
 
 template <typename Value>
-const std::string& TProperty<Value>::GetTypeName()
+const QByteArray& TProperty<Value>::GetTypeName()
 {
 	return s_typeName;
 }
@@ -187,7 +187,7 @@ const std::string& TProperty<Value>::GetTypeName()
 // private static properties
 
 template <typename Value>
-const std::string TProperty<Value>::s_typeName(istd::CClassInfo::GetName<TProperty<Value> >());
+const QByteArray TProperty<Value>::s_typeName(istd::CClassInfo::GetName<TProperty<Value> >());
 
 
 // typedefs
@@ -196,7 +196,7 @@ typedef TProperty<double> CDoubleProperty;
 typedef TProperty<bool> CBoolProperty;
 typedef TProperty<int> CIntProperty;
 typedef TProperty<QString> CStringProperty;
-typedef TProperty<std::string> CStdStringProperty;
+typedef TProperty<QByteArray> CStdStringProperty;
 
 
 } // namespace iprop

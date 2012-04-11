@@ -49,9 +49,9 @@
 <a name="l00026"></a>00026 <span class="keyword">public</span>:
 <a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ac9bbc82c23c938299e0ac69cd8d69c89" title="Do extremum features analyze.">DoDerivativeProcessing</a>(<span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>&amp; source, <span class="keywordtype">double</span> filterLength, <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>&amp; results);
 <a name="l00031"></a>00031 
-<a name="l00035"></a>00035        <span class="keyword">const</span> std::string&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a446d473424596e7185e3baedfca44035" title="Get parameter ID used to extract caliper parameter object from parameter set.">GetFilterParamsId</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a2e3eccf6a79c5a8c066d381b5650ac92" title="Get parameter ID used to extract caliper parameter object from parameter set.">GetFilterParamsId</a>() <span class="keyword">const</span>;
 <a name="l00036"></a>00036 
-<a name="l00041"></a>00041        <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ae5b6dc2b60a25a67419aeefa039bc91b" title="Set parameter ID used to extract caliper parameter object from parameter set.">SetFilterParamsId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);
+<a name="l00041"></a>00041        <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a46137174a88b447ec9f62e72aa3be75c" title="Set parameter ID used to extract caliper parameter object from parameter set.">SetFilterParamsId</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (iproc::IProcessor)</span>
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#aab9377a4639fbe9b9d9649beb06392c4">DoProcessing</a>(
@@ -74,19 +74,19 @@
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#acaa2fddf52ca73f302a3b00ee6436947" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063 <span class="keyword">private</span>:
-<a name="l00064"></a>00064        std::string m_filterParamsId;
+<a name="l00064"></a>00064        QByteArray m_filterParamsId;
 <a name="l00065"></a>00065 };
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 <span class="comment">// inline methods</span>
 <a name="l00069"></a>00069 
-<a name="l00070"></a><a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a446d473424596e7185e3baedfca44035">00070</a> <span class="keyword">inline</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a446d473424596e7185e3baedfca44035" title="Get parameter ID used to extract caliper parameter object from parameter set.">CRectDerivativeProcessor::GetFilterParamsId</a>()<span class="keyword"> const</span>
+<a name="l00070"></a><a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a2e3eccf6a79c5a8c066d381b5650ac92">00070</a> <span class="keyword">inline</span> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a2e3eccf6a79c5a8c066d381b5650ac92" title="Get parameter ID used to extract caliper parameter object from parameter set.">CRectDerivativeProcessor::GetFilterParamsId</a>()<span class="keyword"> const</span>
 <a name="l00071"></a>00071 <span class="keyword"></span>{
 <a name="l00072"></a>00072        <span class="keywordflow">return</span> m_filterParamsId;
 <a name="l00073"></a>00073 }
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 
-<a name="l00076"></a><a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ae5b6dc2b60a25a67419aeefa039bc91b">00076</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#ae5b6dc2b60a25a67419aeefa039bc91b" title="Set parameter ID used to extract caliper parameter object from parameter set.">CRectDerivativeProcessor::SetFilterParamsId</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)
+<a name="l00076"></a><a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a46137174a88b447ec9f62e72aa3be75c">00076</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_rect_derivative_processor.html#a46137174a88b447ec9f62e72aa3be75c" title="Set parameter ID used to extract caliper parameter object from parameter set.">CRectDerivativeProcessor::SetFilterParamsId</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>)
 <a name="l00077"></a>00077 {
 <a name="l00078"></a>00078        m_filterParamsId = id;
 <a name="l00079"></a>00079 }

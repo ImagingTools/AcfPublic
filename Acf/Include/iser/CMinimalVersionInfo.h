@@ -24,9 +24,8 @@
 #define iser_CMinimalVersionInfo_included
 
 
-// STL includes
+// Qt includes
 #include <QtCore/QMap>
-
 
 // ACF includes
 #include "iser/IVersionInfo.h"

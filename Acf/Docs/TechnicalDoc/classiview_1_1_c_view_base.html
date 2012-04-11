@@ -150,7 +150,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform that layer was invalidated.  <a href="#aa8e314ac74abc8eab6abe444ac50edde"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a8486099a3cf6d16c449cd0ca71b3b532">GetSelectedShapesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of selected shapes.  <a href="#a8486099a3cf6d16c449cd0ca71b3b532"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a349cb946cf22fed9657e989eabbebf90">InsertSelectedShapes</a> (<a class="el" href="classiview_1_1_i_selectable.html#aed3594205db6fc2b392b98a5925d8332">SelectedShapes</a> &amp;result) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a349cb946cf22fed9657e989eabbebf90">InsertSelectedShapes</a> (<a class="el" href="classiview_1_1_i_selectable.html#a73125fedcaf820642f92feb60b68a1c6">SelectedShapes</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of selected shapes.  <a href="#a349cb946cf22fed9657e989eabbebf90"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a67f749afdc5248e053ccd042b4cef984">DeselectAllShapes</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all shapes to be deselected.  <a href="#a67f749afdc5248e053ccd042b4cef984"></a><br/></td></tr>
@@ -196,7 +196,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_color_shema.html">IColorShema</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a72a7210a6b3919fc551c687d3586dc9f">GetDefaultColorShema</a> () const =0</td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classiview_1_1_i_layer.html">ILayer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">Layers</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QVector&lt; <a class="el" href="classiview_1_1_i_layer.html">ILayer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">Layers</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#aff05357e24e5b452deb06371a7e44ef8">DrawLayers</a> (QPainter &amp;drawContext, int firstLayer, int lastLayer)</td></tr>
@@ -239,8 +239,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset invalidated box.  <a href="#ad4821cc006b7d1431286b76c4d882724"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#af8c91b5b5011c05e188cfbbb1ca92041">SetKeysState</a> (int state)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set state of keys.  <a href="#af8c91b5b5011c05e188cfbbb1ca92041"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">Layers</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">GetLayers</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">Layers</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ab4981199785b4833cf8bb1767754bd1d">GetLayers</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">Layers</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">GetLayers</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">Layers</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ab4981199785b4833cf8bb1767754bd1d">GetLayers</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a200fade6ffa4bb6eceac14d2b8e7114e">SetMousePointer</a> (<a class="el" href="classiview_1_1_i_selectable.html#a77236c5f1938e017c69bddfa21c3fe26">MousePointerMode</a> mode)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mouse pointer.  <a href="#a200fade6ffa4bb6eceac14d2b8e7114e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ac6f80b0a19a2a9acc8e1ec0fd58e3f8c">UpdateRectArea</a> (const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;rect)=0</td></tr>
@@ -269,12 +269,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afada7c436ffbc6ea9a1c911bb341b9a7"></a><!-- doxytag: member="iview::CViewBase::Layers" ref="afada7c436ffbc6ea9a1c911bb341b9a7" args="" -->
+<a class="anchor" id="a3042dda5daa2a7a6e5f41b8219fc01f7"></a><!-- doxytag: member="iview::CViewBase::Layers" ref="a3042dda5daa2a7a6e5f41b8219fc01f7" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;<a class="el" href="classiview_1_1_i_layer.html">ILayer</a>*&gt; <a class="el" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">iview::CViewBase::Layers</a><code> [protected]</code></td>
+          <td class="memname">typedef QVector&lt;<a class="el" href="classiview_1_1_i_layer.html">ILayer</a>*&gt; <a class="el" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">iview::CViewBase::Layers</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -943,7 +943,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">CViewBase::Layers</a> &amp; iview::CViewBase::GetLayers </td>
+          <td class="memname">const <a class="el" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">CViewBase::Layers</a> &amp; iview::CViewBase::GetLayers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, protected]</code></td>
@@ -961,7 +961,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">CViewBase::Layers</a> &amp; iview::CViewBase::GetLayers </td>
+          <td class="memname"><a class="el" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">CViewBase::Layers</a> &amp; iview::CViewBase::GetLayers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [inline, protected]</code></td>
@@ -1213,7 +1213,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void iview::CViewBase::InsertSelectedShapes </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiview_1_1_i_selectable.html#aed3594205db6fc2b392b98a5925d8332">SelectedShapes</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiview_1_1_i_selectable.html#a73125fedcaf820642f92feb60b68a1c6">SelectedShapes</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>

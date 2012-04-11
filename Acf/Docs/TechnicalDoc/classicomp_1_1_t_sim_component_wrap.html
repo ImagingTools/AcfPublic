@@ -72,12 +72,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#ad3f600f68d1d422180991935f17ced7d">TSimComponentWrap</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a8c9c875e4e186c3b5076f72710d9d5f4">InitComponent</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialilze component after setting all its attributes and references.  <a href="#a8c9c875e4e186c3b5076f72710d9d5f4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a96819d670ee3fa7dc1b3015fb4c787fe">GetSubcomponent</a> (const std::string &amp;componentId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to subcomponent using its ID.  <a href="#a96819d670ee3fa7dc1b3015fb4c787fe"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a778c7258da1fefd15133dca825cfb4fc">GetSubcomponentContext</a> (const std::string &amp;componentId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to context of subcomponent using its ID.  <a href="#a778c7258da1fefd15133dca825cfb4fc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a0f5ac17b1616b1fd982053204071b595">CreateSubcomponent</a> (const std::string &amp;componentId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of subcomponent using its ID.  <a href="#a0f5ac17b1616b1fd982053204071b595"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a2b64d31fbbb64e874a9605ab598904ca">GetSubcomponent</a> (const QByteArray &amp;componentId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to subcomponent using its ID.  <a href="#a2b64d31fbbb64e874a9605ab598904ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a3069c1960279b7af10b10ca2c2cc72a8">GetSubcomponentContext</a> (const QByteArray &amp;componentId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to context of subcomponent using its ID.  <a href="#a3069c1960279b7af10b10ca2c2cc72a8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a6efa28a4353503b1ffad2b9e059daa23">CreateSubcomponent</a> (const QByteArray &amp;componentId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of subcomponent using its ID.  <a href="#a6efa28a4353503b1ffad2b9e059daa23"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e">OnSubcomponentDeleted</a> (const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *subcomponentPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if subcomponent is removed from memory.  <a href="#a6f3df92db1b808ecaef7fca81fa6559e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a8decdf8cc986e669aa9c384060c8f80c">GetParentComponent</a> (bool ownerOnly=false) const </td></tr>
@@ -152,7 +152,7 @@ template&lt;class Base &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a0f5ac17b1616b1fd982053204071b595"></a><!-- doxytag: member="icomp::TSimComponentWrap::CreateSubcomponent" ref="a0f5ac17b1616b1fd982053204071b595" args="(const std::string &amp;componentId) const " -->
+<a class="anchor" id="a6efa28a4353503b1ffad2b9e059daa23"></a><!-- doxytag: member="icomp::TSimComponentWrap::CreateSubcomponent" ref="a6efa28a4353503b1ffad2b9e059daa23" args="(const QByteArray &amp;componentId) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -161,7 +161,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classicomp_1_1_i_component.html">IComponent</a> * <a class="el" href="classicomp_1_1_t_sim_component_wrap.html">icomp::TSimComponentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::CreateSubcomponent </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentId</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -171,7 +171,7 @@ template&lt;class Base &gt; </div>
 
 <p>Create instance of subcomponent using its ID. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a483b17de55177634c9563977773e829d">icomp::ICompositeComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a5f1d5c145632068d67dc0b1772c6b590">icomp::ICompositeComponent</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_sim_component_wrap_8h_source.html#l00089">89</a> of file <a class="el" href="_t_sim_component_wrap_8h_source.html">TSimComponentWrap.h</a>.</p>
 
@@ -214,7 +214,7 @@ template&lt;class Base &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a96819d670ee3fa7dc1b3015fb4c787fe"></a><!-- doxytag: member="icomp::TSimComponentWrap::GetSubcomponent" ref="a96819d670ee3fa7dc1b3015fb4c787fe" args="(const std::string &amp;componentId) const " -->
+<a class="anchor" id="a2b64d31fbbb64e874a9605ab598904ca"></a><!-- doxytag: member="icomp::TSimComponentWrap::GetSubcomponent" ref="a2b64d31fbbb64e874a9605ab598904ca" args="(const QByteArray &amp;componentId) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -223,7 +223,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classicomp_1_1_i_component.html">IComponent</a> * <a class="el" href="classicomp_1_1_t_sim_component_wrap.html">icomp::TSimComponentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetSubcomponent </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentId</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -233,7 +233,7 @@ template&lt;class Base &gt; </div>
 
 <p>Get access to subcomponent using its ID. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a89e7c4653846d3f67fbfc6eeefd8e894">icomp::ICompositeComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a80efce246703e0e10137eb95a639bcd6">icomp::ICompositeComponent</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_sim_component_wrap_8h_source.html#l00069">69</a> of file <a class="el" href="_t_sim_component_wrap_8h_source.html">TSimComponentWrap.h</a>.</p>
 
@@ -241,7 +241,7 @@ template&lt;class Base &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a778c7258da1fefd15133dca825cfb4fc"></a><!-- doxytag: member="icomp::TSimComponentWrap::GetSubcomponentContext" ref="a778c7258da1fefd15133dca825cfb4fc" args="(const std::string &amp;componentId) const " -->
+<a class="anchor" id="a3069c1960279b7af10b10ca2c2cc72a8"></a><!-- doxytag: member="icomp::TSimComponentWrap::GetSubcomponentContext" ref="a3069c1960279b7af10b10ca2c2cc72a8" args="(const QByteArray &amp;componentId) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -250,7 +250,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> * <a class="el" href="classicomp_1_1_t_sim_component_wrap.html">icomp::TSimComponentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetSubcomponentContext </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentId</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -261,7 +261,7 @@ template&lt;class Base &gt; </div>
 <p>Get access to context of subcomponent using its ID. </p>
 <p>Please note, that this does'n create component instance. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#a290fbf4cc388f69513a1196291e9b768">icomp::ICompositeComponent</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_composite_component.html#afe55d679f52e98fe974dae0724ca3efa">icomp::ICompositeComponent</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_sim_component_wrap_8h_source.html#l00082">82</a> of file <a class="el" href="_t_sim_component_wrap_8h_source.html">TSimComponentWrap.h</a>.</p>
 

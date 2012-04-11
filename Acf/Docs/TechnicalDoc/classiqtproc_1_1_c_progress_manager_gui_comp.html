@@ -85,8 +85,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#aec08aedd2e1f6c144434f6afd335d8c5">UpdateProgressBar</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#a1b5b216de1397e5be6557a9919d11fa4">OnCancelable</a> (bool cancelState)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when state of cancel operation has changed.  <a href="#a1b5b216de1397e5be6557a9919d11fa4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#aa60aab2e4d0083f4f76a027cc109c50c">BeginProgressSession</a> (const std::string &amp;progressId, const QString &amp;description, bool isCancelable)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin progress report session.  <a href="#aa60aab2e4d0083f4f76a027cc109c50c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#ab0aab4ea08ed73facdae4da93cf1ba44">BeginProgressSession</a> (const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin progress report session.  <a href="#ab0aab4ea08ed73facdae4da93cf1ba44"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#a36c1f395defe8b209b897c8a8e495e2e">IsCanceled</a> (int sessionId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this processing operation should be canceled.  <a href="#a36c1f395defe8b209b897c8a8e495e2e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#a08fd58045b2383be0c3703749cdac3a8">OnEndChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr)</td></tr>
@@ -148,14 +148,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aa60aab2e4d0083f4f76a027cc109c50c"></a><!-- doxytag: member="iqtproc::CProgressManagerGuiComp::BeginProgressSession" ref="aa60aab2e4d0083f4f76a027cc109c50c" args="(const std::string &amp;progressId, const QString &amp;description, bool isCancelable)" -->
+<a class="anchor" id="ab0aab4ea08ed73facdae4da93cf1ba44"></a><!-- doxytag: member="iqtproc::CProgressManagerGuiComp::BeginProgressSession" ref="ab0aab4ea08ed73facdae4da93cf1ba44" args="(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iqtproc::CProgressManagerGuiComp::BeginProgressSession </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>progressId</em>, </td>
         </tr>
         <tr>
@@ -182,7 +182,7 @@ Protected Member Functions</h2></td></tr>
 <p>Begin progress report session. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>session ID or negative value if failed. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a084a06474f73d78a52e5ea7683b00fa6">iproc::CDelegatedProgressManager</a>.</p>
+<p>Reimplemented from <a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a3af41e165d64686bdc5b8b220a48cbbf">iproc::CDelegatedProgressManager</a>.</p>
 
 </div>
 </div>

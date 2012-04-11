@@ -1734,8 +1734,8 @@
       <type>virtual int</type>
       <name>BeginProgressSession</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>ab3157909718a9aa6e2db8b9343bc2d2c</anchor>
-      <arglist>(const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)</arglist>
+      <anchor>abf9909229acad8e2e7f8a5edb7c9adfa</anchor>
+      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -2051,10 +2051,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>a7da5d8e32c04f90ac563539895f872b9</anchor>
+      <anchor>a5b8fc9d964db7fa904d2642d2e246599</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -2554,8 +2554,8 @@
       <type>virtual bool</type>
       <name>ReadToDelimeter</name>
       <anchorfile>classizlib_1_1_c_gz_xml_read_archive.html</anchorfile>
-      <anchor>a0cd685833a66a3e3238851ff27bba4ae</anchor>
-      <arglist>(const std::string &amp;delimeters, std::string &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)</arglist>
+      <anchor>a430b1ffe12af69dfb451de4b7252afde</anchor>
+      <arglist>(const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2601,8 +2601,8 @@
       <type>virtual bool</type>
       <name>WriteString</name>
       <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
-      <anchor>a20b259b8c34702ebe76367fbdb144a86</anchor>
-      <arglist>(const std::string &amp;value)</arglist>
+      <anchor>aed64c43c20af5ee1bee80abe4e2825d1</anchor>
+      <arglist>(const QByteArray &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="namespace">

@@ -62,11 +62,11 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_i_factory.html">TIFactory</a>&lt; Interface &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_single_factory.html#accf9af6fd79a1645ce6b53cfb9af07e5">FactoryInterface</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_single_factory.html#a90528b81c6e158265b36add77691d500">TSingleFactory</a> (const std::string &amp;keyId)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">IFactoryInfo::KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_single_factory.html#a034139c33f0a71ac70c946af48d2210e">GetFactoryKeys</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_single_factory.html#a418d142e0a0cdeabde5e8f6de1f961db">TSingleFactory</a> (const QByteArray &amp;keyId)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_factory_info.html#ac357ea42763cc3625d85f4cce9fb2312">IFactoryInfo::KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_single_factory.html#a034139c33f0a71ac70c946af48d2210e">GetFactoryKeys</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all posible keys for this factory.  <a href="#a034139c33f0a71ac70c946af48d2210e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_single_factory.html#aaa571980090ad676cc1d3537d413a446">CreateInstance</a> (const std::string &amp;keyId=&quot;&quot;) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#aaa571980090ad676cc1d3537d413a446"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_single_factory.html#a1a12446248db3c999c4f53c1b4e2083c">CreateInstance</a> (const QByteArray &amp;keyId=&quot;&quot;) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#a1a12446248db3c999c4f53c1b4e2083c"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Interface, class Implementation&gt;<br/>
@@ -111,7 +111,7 @@ template&lt;class Interface , class Implementation &gt; </div>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a90528b81c6e158265b36add77691d500"></a><!-- doxytag: member="istd::TSingleFactory::TSingleFactory" ref="a90528b81c6e158265b36add77691d500" args="(const std::string &amp;keyId)" -->
+<a class="anchor" id="a418d142e0a0cdeabde5e8f6de1f961db"></a><!-- doxytag: member="istd::TSingleFactory::TSingleFactory" ref="a418d142e0a0cdeabde5e8f6de1f961db" args="(const QByteArray &amp;keyId)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -120,7 +120,7 @@ template&lt;class Interface , class Implementation &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classistd_1_1_t_single_factory.html">istd::TSingleFactory</a>&lt; Interface, Implementation &gt;::<a class="el" href="classistd_1_1_t_single_factory.html">TSingleFactory</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>keyId</em></td><td>)</td>
           <td><code> [explicit]</code></td>
         </tr>
@@ -133,7 +133,7 @@ template&lt;class Interface , class Implementation &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aaa571980090ad676cc1d3537d413a446"></a><!-- doxytag: member="istd::TSingleFactory::CreateInstance" ref="aaa571980090ad676cc1d3537d413a446" args="(const std::string &amp;keyId=&quot;&quot;) const " -->
+<a class="anchor" id="a1a12446248db3c999c4f53c1b4e2083c"></a><!-- doxytag: member="istd::TSingleFactory::CreateInstance" ref="a1a12446248db3c999c4f53c1b4e2083c" args="(const QByteArray &amp;keyId=&quot;&quot;) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -142,7 +142,7 @@ template&lt;class Interface , class Implementation &gt; </div>
         <tr>
           <td class="memname">Interface * <a class="el" href="classistd_1_1_t_single_factory.html">istd::TSingleFactory</a>&lt; Interface, Implementation &gt;::CreateInstance </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>keyId</em> = <code>&quot;&quot;</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -159,7 +159,7 @@ template&lt;class Interface , class Implementation &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to created object or NULL if it was not possible to create it or keyId does not exist. </dd></dl>
 
-<p>Implements <a class="el" href="classistd_1_1_t_i_factory.html#a400950fe4afc558f397d73c0dbdee4e1">istd::TIFactory&lt; Interface &gt;</a>.</p>
+<p>Implements <a class="el" href="classistd_1_1_t_i_factory.html#aea6a16de1033bdec7265e27d1ec4f91e">istd::TIFactory&lt; Interface &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_single_factory_8h_source.html#l00063">63</a> of file <a class="el" href="_t_single_factory_8h_source.html">TSingleFactory.h</a>.</p>
 
@@ -174,7 +174,7 @@ template&lt;class Interface , class Implementation &gt; </div>
 template&lt;class Interface , class Implementation &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">IFactoryInfo::KeyList</a> <a class="el" href="classistd_1_1_t_single_factory.html">istd::TSingleFactory</a>&lt; Interface, Implementation &gt;::GetFactoryKeys </td>
+          <td class="memname"><a class="el" href="classistd_1_1_i_factory_info.html#ac357ea42763cc3625d85f4cce9fb2312">IFactoryInfo::KeyList</a> <a class="el" href="classistd_1_1_t_single_factory.html">istd::TSingleFactory</a>&lt; Interface, Implementation &gt;::GetFactoryKeys </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>

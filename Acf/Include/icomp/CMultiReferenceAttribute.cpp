@@ -29,7 +29,7 @@ namespace icomp
 
 // reimplemented (iser::IObject)
 
-std::string CMultiReferenceAttribute::GetFactoryId() const
+QByteArray CMultiReferenceAttribute::GetFactoryId() const
 {
 	return GetTypeName();
 }
@@ -37,9 +37,9 @@ std::string CMultiReferenceAttribute::GetFactoryId() const
 
 // static methods
 
-std::string CMultiReferenceAttribute::GetTypeName()
+QByteArray CMultiReferenceAttribute::GetTypeName()
 {
-	return "icomp::CMultiReferenceAttribute";
+	return "Reference[]";
 }
 
 

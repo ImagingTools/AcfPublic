@@ -24,9 +24,8 @@
 #define icomp_IRegistriesManager_included
 
 
-// STL includes
-#include <string>
-
+// Qt includes
+#include <QtCore/QByteArray>
 
 // ACF includes
 #include "istd/istd.h"

@@ -24,9 +24,10 @@
 #define icomp_CMultiReferenceAttribute_included
 
 
-// STL includes
-#include <string>
+// Qt includes
+#include <QtCore/QByteArray>
 
+// ACF includes
 #include "icomp/TMultiAttribute.h"
 
 
@@ -37,10 +38,10 @@ namespace icomp
 /**
 	Special attribute used to store list of referenced component ID's.
 */
-class CMultiReferenceAttribute: public CMultiStdStringAttribute
+class CMultiReferenceAttribute: public CIdListAttribute
 {
 public:
-	typedef CMultiStdStringAttribute BaseClass;
+	typedef CIdListAttribute BaseClass;
 
 	enum DefaultAttributeFlags
 	{
@@ -50,13 +51,13 @@ public:
 
 	CMultiReferenceAttribute(){}
 	CMultiReferenceAttribute(const CMultiReferenceAttribute& attribute):BaseClass(attribute){}
-	CMultiReferenceAttribute(int elementsCount, std::string* valuesPtr):BaseClass(elementsCount, valuesPtr){}
+	CMultiReferenceAttribute(int elementsCount, QByteArray* valuesPtr):BaseClass(elementsCount, valuesPtr){}
 
 	// reimplemented (iser::IObject)
-	std::string GetFactoryId() const;
+	QByteArray GetFactoryId() const;
 
 	// static methods
-	static std::string GetTypeName();
+	static QByteArray GetTypeName();
 };
 
 

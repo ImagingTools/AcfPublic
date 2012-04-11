@@ -52,8 +52,8 @@ public:
 
 	TObjectProperty(
 				IPropertiesManager* propertyOwnerPtr,
-				const std::string& propertyName,
-				const std::string& propertyDescription,
+				const QByteArray& propertyName,
+				const QByteArray& propertyDescription,
 				int propertyFlags,
 				int changeFlags = 0,
 				const ValueType& defaultValue = ValueType());
@@ -66,13 +66,13 @@ public:
 	virtual const iser::IObject* GetDefaultPropertyPtr() const;
 
 	// reimplemented (iser::IObject)
-	virtual std::string GetFactoryId() const;
+	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
 	// static methods
-	static const std::string& GetTypeName();
+	static const QByteArray& GetTypeName();
 
 protected:
 	iser::TCopySerializedWrap<Value> m_value;
@@ -80,7 +80,7 @@ protected:
 	mutable istd::TDelPtr<PropertyType> m_defaultPropertyValuePtr;
 
 private:
-	static const std::string s_typeName;
+	static const QByteArray s_typeName;
 };
 
 
@@ -96,8 +96,8 @@ TObjectProperty<Value>::TObjectProperty()
 template <typename Value>
 TObjectProperty<Value>::TObjectProperty(
 				IPropertiesManager* propertyOwnerPtr,
-				const std::string& propertyName,
-				const std::string& propertyDescription,
+				const QByteArray& propertyName,
+				const QByteArray& propertyDescription,
 				int propertyFlags,
 				int changeFlags,
 				const ValueType& defaultValue)
@@ -150,7 +150,7 @@ const iser::IObject* TObjectProperty<Value>::GetDefaultPropertyPtr() const
 // reimplemented (iser::IObject)
 
 template <typename Value>
-std::string TObjectProperty<Value>::GetFactoryId() const
+QByteArray TObjectProperty<Value>::GetFactoryId() const
 {
 	return s_typeName;
 }
@@ -177,7 +177,7 @@ bool TObjectProperty<Value>::Serialize(iser::IArchive& archive)
 // static methods
 
 template <typename Value>
-const std::string& TObjectProperty<Value>::GetTypeName()
+const QByteArray& TObjectProperty<Value>::GetTypeName()
 {
 	return s_typeName;
 }
@@ -186,7 +186,7 @@ const std::string& TObjectProperty<Value>::GetTypeName()
 // private static properties
 
 template <typename Value>
-const std::string TObjectProperty<Value>::s_typeName(istd::CClassInfo::GetName<TObjectProperty<Value> >());
+const QByteArray TObjectProperty<Value>::s_typeName(istd::CClassInfo::GetName<TObjectProperty<Value> >());
 
 
 } // namespace iprop

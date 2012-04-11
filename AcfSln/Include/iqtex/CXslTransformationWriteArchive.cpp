@@ -23,9 +23,6 @@
 #include "iqtex/CXslTransformationWriteArchive.h"
 
 
-// STL includes
-#include <sstream>
-
 // Qt includes
 #include <QtCore/QTextStream>
 #include <QtXml/QDomNodeList>
@@ -102,7 +99,7 @@ bool CXslTransformationWriteArchive::Flush()
 	if (m_file.isOpen()){
 		if (!m_xslFilePath.isEmpty()){
 			QFile xslFile(m_xslFilePath);
-			if (!xslFile.open(QFile::ReadOnly)){
+			if (!xslFile.open(QIODevice::ReadOnly | QIODevice::Text)){
 				return false;
 			}
 			QXmlQuery query(QXmlQuery::XSLT20);
@@ -138,13 +135,13 @@ bool CXslTransformationWriteArchive::OpenDocument(const QString& filePath, const
 	bool retVal = true;
 
 	m_file.setFileName(filePath);
-	m_file.open(QIODevice::WriteOnly);
+	m_file.open(QIODevice::WriteOnly | QIODevice::Text);
 
 	m_xslFilePath = xslFilePath;
 
 	m_document.clear();
 
-	m_currentParent = m_document.createElement(m_rootTag.GetId().c_str());
+	m_currentParent = m_document.createElement(m_rootTag.GetId());
 
 	m_document.appendChild(m_currentParent);
 
@@ -166,7 +163,7 @@ bool CXslTransformationWriteArchive::IsTagSkippingSupported() const
 
 bool CXslTransformationWriteArchive::BeginTag(const iser::CArchiveTag& tag)
 {
-	QDomElement newElement = m_document.createElement(QString::fromStdString(tag.GetId()));
+	QDomElement newElement = m_document.createElement(tag.GetId());
 
 	m_currentParent.appendChild(newElement);
 
@@ -180,7 +177,7 @@ bool CXslTransformationWriteArchive::BeginTag(const iser::CArchiveTag& tag)
 
 bool CXslTransformationWriteArchive::BeginMultiTag(const iser::CArchiveTag& tag, const iser::CArchiveTag& /*subTag*/, int& count)
 {
-	QDomElement newElement = m_document.createElement(QString::fromStdString(tag.GetId()));
+	QDomElement newElement = m_document.createElement(tag.GetId());
 
 	newElement.setAttribute("count", count);
 	m_currentParent.appendChild(newElement);
@@ -274,9 +271,9 @@ bool CXslTransformationWriteArchive::Process(double& value)
 }
 
 
-bool CXslTransformationWriteArchive::Process(std::string& value)
+bool CXslTransformationWriteArchive::Process(QByteArray& value)
 {
-	return PushTextNode(QString::fromStdString(value));
+	return PushTextNode(value);
 }
 
 
@@ -288,9 +285,9 @@ bool CXslTransformationWriteArchive::Process(QString& value)
 
 bool CXslTransformationWriteArchive::ProcessData(void* dataPtr, int size)
 {
-	std::string encodedString = istd::CBase64::ConvertToBase64(dataPtr, size);
+	QByteArray encodedString = istd::CBase64::ConvertToBase64(dataPtr, size);
 
-	return PushTextNode(QString::fromStdString(encodedString));
+	return PushTextNode(encodedString);
 }
 
 

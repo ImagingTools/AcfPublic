@@ -38,12 +38,10 @@ CSearchFeature::CSearchFeature(
 			double weight,
 			const i2d::CVector2d& position,
 			double angle,
-			const i2d::CVector2d& scale,
-			int index)
+			const i2d::CVector2d& scale)
 :	BaseClass(weight),
 	m_scale(scale),
-	m_angle(angle),
-	m_index(index)
+	m_angle(angle)
 {
 	BaseClass::SetPosition(position);
 }
@@ -58,12 +56,6 @@ double CSearchFeature::GetAngle() const
 const i2d::CVector2d& CSearchFeature::GetScale() const
 {
 	return m_scale;
-}
-
-
-int CSearchFeature::GetIndex() const
-{
-	return m_index;
 }
 
 
@@ -84,11 +76,6 @@ bool CSearchFeature::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.BeginTag(scaleTag);
 	retVal = retVal && m_scale.Serialize(archive);
 	retVal = retVal && archive.EndTag(scaleTag);
-
-	static iser::CArchiveTag indexTag("Index", "Index of found model");
-	retVal = retVal && archive.BeginTag(indexTag);
-	retVal = retVal && archive.Process(m_index);
-	retVal = retVal && archive.EndTag(indexTag);
 
 	return retVal;
 }

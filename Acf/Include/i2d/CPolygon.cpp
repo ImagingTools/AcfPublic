@@ -43,7 +43,7 @@ bool CPolygon::InsertNode(const i2d::CVector2d& node)
 
 bool CPolygon::InsertNode(int index, const i2d::CVector2d& node)
 {
-	::std::vector<i2d::CVector2d>::iterator iter = m_nodes.begin();
+	::QVector<i2d::CVector2d>::iterator iter = m_nodes.begin();
 	iter += index;
 	m_nodes.insert(iter, node);
 
@@ -59,7 +59,7 @@ void CPolygon::Clear()
 
 bool CPolygon::RemoveNode(int index)
 {
-	::std::vector<i2d::CVector2d>::iterator iter = m_nodes.begin();
+	::QVector<i2d::CVector2d>::iterator iter = m_nodes.begin();
 	iter += index;
 	m_nodes.erase(iter);
 

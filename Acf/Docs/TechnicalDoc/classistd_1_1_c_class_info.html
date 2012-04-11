@@ -58,12 +58,12 @@ Inheritance diagram for istd::CClassInfo:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a08d083ebc8096da7be0790086918b3eb">CClassInfo</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a5974bc8ef3116b44846ffafdcaddaa3f">CClassInfo</a> (const std::type_info &amp;info)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a649f575b1d5cb8da4e0ba916a3d47aa0">CClassInfo</a> (const std::string &amp;name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#ace10069398fe2b0eee15ab3f92a75de1">CClassInfo</a> (const QByteArray &amp;name)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a34748dd09c2ffb5a0a4997f11fb42931">CClassInfo</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> &amp;object)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a253efb15b1a1c31979bc93110287c099">IsValid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this class info object is valid.  <a href="#a253efb15b1a1c31979bc93110287c099"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14">GetName</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get undecorated and platform undependent class name.  <a href="#aa933e42f37d56bdd4236e0833b1adb14"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const QByteArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e">GetName</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get undecorated and platform undependent class name.  <a href="#a50153ca3d3239acbba2d116abc88852e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#acaed9c22fe1af105a444c8bf6a708637">IsVoid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this class information represents void type.  <a href="#acaed9c22fe1af105a444c8bf6a708637"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#adf934af254454700be4cc5d94ed8fd42">IsConst</a> () const </td></tr>
@@ -92,19 +92,19 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classistd_1_1_c_class_info.html">CClassInfo</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a46bdcff7600b3b3ed435662e3503bf53">GetInfo</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get class name defined as template parameter.  <a href="#a46bdcff7600b3b3ed435662e3503bf53"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class C &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a07046e0fb1d20e1d67c6f6e5e1c0ae82">GetName</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get class name defined as template parameter.  <a href="#a07046e0fb1d20e1d67c6f6e5e1c0ae82"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#aa3b720662ff6266f4c872ac127c1c59d">GetName</a> (const std::type_info &amp;info)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get class name from RTTI.  <a href="#aa3b720662ff6266f4c872ac127c1c59d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a1b96095032c8483279d8a84a28bc92be">GetName</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> &amp;object)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get class name of polymorphic object.  <a href="#a1b96095032c8483279d8a84a28bc92be"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#aa420abf60099b2c65a374f238a5f13eb">GetUndecoratedName</a> (const std::string &amp;rawName)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get undecorated class name from raw name.  <a href="#aa420abf60099b2c65a374f238a5f13eb"></a><br/></td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#aa2f84c674b3f698034ca38bb3adabc68">GetName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get class name defined as template parameter.  <a href="#aa2f84c674b3f698034ca38bb3adabc68"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#a5398912a83e7e69db8cdce2b888531e3">GetName</a> (const std::type_info &amp;info)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get class name from RTTI.  <a href="#a5398912a83e7e69db8cdce2b888531e3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#af9d1b73d4b3a27ee2e863185ef5c1d8b">GetName</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> &amp;object)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get class name of polymorphic object.  <a href="#af9d1b73d4b3a27ee2e863185ef5c1d8b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_class_info.html#ae65e2e926d35a71a6a6c15ce28c711a0">GetUndecoratedName</a> (const QByteArray &amp;rawName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get undecorated class name from raw name.  <a href="#ae65e2e926d35a71a6a6c15ce28c711a0"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents platform independent type info and provide set of static class manipulation functions. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00022">22</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00024">24</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a08d083ebc8096da7be0790086918b3eb"></a><!-- doxytag: member="istd::CClassInfo::CClassInfo" ref="a08d083ebc8096da7be0790086918b3eb" args="()" -->
 <div class="memitem">
@@ -120,7 +120,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00117">117</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00119">119</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -139,18 +139,18 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00122">122</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00124">124</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a649f575b1d5cb8da4e0ba916a3d47aa0"></a><!-- doxytag: member="istd::CClassInfo::CClassInfo" ref="a649f575b1d5cb8da4e0ba916a3d47aa0" args="(const std::string &amp;name)" -->
+<a class="anchor" id="ace10069398fe2b0eee15ab3f92a75de1"></a><!-- doxytag: member="istd::CClassInfo::CClassInfo" ref="ace10069398fe2b0eee15ab3f92a75de1" args="(const QByteArray &amp;name)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">istd::CClassInfo::CClassInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td><code> [inline, explicit]</code></td>
         </tr>
@@ -158,7 +158,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00128">128</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00130">130</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -177,7 +177,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00134">134</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00136">136</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -218,7 +218,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get class with enabled or disabled const attribute. </p>
 
-<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00114">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>.</p>
+<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00113">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>.</p>
 
 </div>
 </div>
@@ -240,16 +240,16 @@ template&lt;class C &gt; </div>
 
 <p>Get class name defined as template parameter. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00208">208</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00210">210</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa933e42f37d56bdd4236e0833b1adb14"></a><!-- doxytag: member="istd::CClassInfo::GetName" ref="aa933e42f37d56bdd4236e0833b1adb14" args="() const " -->
+<a class="anchor" id="a50153ca3d3239acbba2d116abc88852e"></a><!-- doxytag: member="istd::CClassInfo::GetName" ref="a50153ca3d3239acbba2d116abc88852e" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; istd::CClassInfo::GetName </td>
+          <td class="memname">const QByteArray &amp; istd::CClassInfo::GetName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline]</code></td>
@@ -261,20 +261,20 @@ template&lt;class C &gt; </div>
 <p>Get undecorated and platform undependent class name. </p>
 <p>This name has format "namespace::class_name", for example "iser::ISerializable". </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00146">146</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00148">148</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00114">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>, <a class="el" href="_c_sim_component_context_base_8h_source.html#l00093">icomp::CSimComponentContextBase::InsertMultiAttr()</a>, <a class="el" href="_c_class_info_8h_source.html#l00159">IsType()</a>, <a class="el" href="_c_class_info_8h_source.html#l00165">operator=()</a>, <a class="el" href="_t_attribute_static_info_8h_source.html#l00058">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>, and <a class="el" href="_t_interface_registrator_8h_source.html#l00032">icomp::TInterfaceRegistrator&lt; Interface &gt;::TInterfaceRegistrator()</a>.</p>
+<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00113">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>, <a class="el" href="_c_sim_component_context_base_8h_source.html#l00093">icomp::CSimComponentContextBase::InsertMultiAttr()</a>, <a class="el" href="_c_class_info_8h_source.html#l00161">IsType()</a>, <a class="el" href="_c_class_info_8h_source.html#l00167">operator=()</a>, <a class="el" href="_t_attribute_static_info_8h_source.html#l00057">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>, and <a class="el" href="_t_interface_registrator_8h_source.html#l00032">icomp::TInterfaceRegistrator&lt; Interface &gt;::TInterfaceRegistrator()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a07046e0fb1d20e1d67c6f6e5e1c0ae82"></a><!-- doxytag: member="istd::CClassInfo::GetName" ref="a07046e0fb1d20e1d67c6f6e5e1c0ae82" args="()" -->
+<a class="anchor" id="aa2f84c674b3f698034ca38bb3adabc68"></a><!-- doxytag: member="istd::CClassInfo::GetName" ref="aa2f84c674b3f698034ca38bb3adabc68" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class C &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::string istd::CClassInfo::GetName </td>
+          <td class="memname">QByteArray istd::CClassInfo::GetName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [static]</code></td>
@@ -285,18 +285,18 @@ template&lt;class C &gt; </div>
 
 <p>Get class name defined as template parameter. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00217">217</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00219">219</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>References <a class="el" href="classistd_1_1_c_class_info.html#aa420abf60099b2c65a374f238a5f13eb">GetUndecoratedName()</a>.</p>
+<p>References <a class="el" href="classistd_1_1_c_class_info.html#ae65e2e926d35a71a6a6c15ce28c711a0">GetUndecoratedName()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa3b720662ff6266f4c872ac127c1c59d"></a><!-- doxytag: member="istd::CClassInfo::GetName" ref="aa3b720662ff6266f4c872ac127c1c59d" args="(const std::type_info &amp;info)" -->
+<a class="anchor" id="a5398912a83e7e69db8cdce2b888531e3"></a><!-- doxytag: member="istd::CClassInfo::GetName" ref="a5398912a83e7e69db8cdce2b888531e3" args="(const std::type_info &amp;info)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string istd::CClassInfo::GetName </td>
+          <td class="memname">static QByteArray istd::CClassInfo::GetName </td>
           <td>(</td>
           <td class="paramtype">const std::type_info &amp;&#160;</td>
           <td class="paramname"><em>info</em></td><td>)</td>
@@ -310,12 +310,12 @@ template&lt;class C &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1b96095032c8483279d8a84a28bc92be"></a><!-- doxytag: member="istd::CClassInfo::GetName" ref="a1b96095032c8483279d8a84a28bc92be" args="(const istd::IPolymorphic &amp;object)" -->
+<a class="anchor" id="af9d1b73d4b3a27ee2e863185ef5c1d8b"></a><!-- doxytag: member="istd::CClassInfo::GetName" ref="af9d1b73d4b3a27ee2e863185ef5c1d8b" args="(const istd::IPolymorphic &amp;object)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string istd::CClassInfo::GetName </td>
+          <td class="memname">static QByteArray istd::CClassInfo::GetName </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> &amp;&#160;</td>
           <td class="paramname"><em>object</em></td><td>)</td>
@@ -367,14 +367,14 @@ template&lt;class C &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa420abf60099b2c65a374f238a5f13eb"></a><!-- doxytag: member="istd::CClassInfo::GetUndecoratedName" ref="aa420abf60099b2c65a374f238a5f13eb" args="(const std::string &amp;rawName)" -->
+<a class="anchor" id="ae65e2e926d35a71a6a6c15ce28c711a0"></a><!-- doxytag: member="istd::CClassInfo::GetUndecoratedName" ref="ae65e2e926d35a71a6a6c15ce28c711a0" args="(const QByteArray &amp;rawName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string istd::CClassInfo::GetUndecoratedName </td>
+          <td class="memname">static QByteArray istd::CClassInfo::GetUndecoratedName </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>rawName</em></td><td>)</td>
           <td><code> [static]</code></td>
         </tr>
@@ -384,7 +384,7 @@ template&lt;class C &gt; </div>
 
 <p>Get undecorated class name from raw name. </p>
 
-<p>Referenced by <a class="el" href="_c_class_info_8h_source.html#l00217">GetName()</a>.</p>
+<p>Referenced by <a class="el" href="_c_class_info_8h_source.html#l00219">GetName()</a>.</p>
 
 </div>
 </div>
@@ -404,7 +404,7 @@ template&lt;class C &gt; </div>
 
 <p>Check if this class information represents const class. </p>
 
-<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00114">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>.</p>
+<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00113">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>.</p>
 
 </div>
 </div>
@@ -442,9 +442,9 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00159">159</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00161">161</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>References <a class="el" href="_c_class_info_8h_source.html#l00146">GetName()</a>.</p>
+<p>References <a class="el" href="_c_class_info_8h_source.html#l00148">GetName()</a>.</p>
 
 </div>
 </div>
@@ -465,9 +465,9 @@ template&lt;class C &gt; </div>
 <p>Check if this class info object is valid. </p>
 <p>It is valid if stored RTTI type info is set. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00140">140</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00142">142</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00114">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>, and <a class="el" href="_t_attribute_static_info_8h_source.html#l00058">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>.</p>
+<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00113">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>, and <a class="el" href="_t_attribute_static_info_8h_source.html#l00057">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>.</p>
 
 </div>
 </div>
@@ -487,9 +487,9 @@ template&lt;class C &gt; </div>
 
 <p>Check if this class information represents void type. </p>
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00152">152</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00154">154</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00114">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>, <a class="el" href="_t_attribute_static_info_8h_source.html#l00058">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>, and <a class="el" href="_t_interface_registrator_8h_source.html#l00032">icomp::TInterfaceRegistrator&lt; Interface &gt;::TInterfaceRegistrator()</a>.</p>
+<p>Referenced by <a class="el" href="_t_subelement_static_info_8h_source.html#l00113">icomp::TSubelementStaticInfo&lt; ComponentType &gt;::GetComponentInterface()</a>, <a class="el" href="_t_attribute_static_info_8h_source.html#l00057">icomp::TAttributeStaticInfo&lt; Attribute &gt;::TAttributeStaticInfo()</a>, and <a class="el" href="_t_interface_registrator_8h_source.html#l00032">icomp::TInterfaceRegistrator&lt; Interface &gt;::TInterfaceRegistrator()</a>.</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00187">187</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00189">189</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -527,7 +527,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00193">193</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00195">195</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -546,9 +546,9 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00165">165</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00167">167</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
-<p>References <a class="el" href="_c_class_info_8h_source.html#l00146">GetName()</a>.</p>
+<p>References <a class="el" href="_c_class_info_8h_source.html#l00148">GetName()</a>.</p>
 
 </div>
 </div>
@@ -567,7 +567,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00173">173</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00175">175</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -586,7 +586,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00181">181</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00183">183</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>
@@ -605,7 +605,7 @@ template&lt;class C &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00199">199</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_class_info_8h_source.html#l00201">201</a> of file <a class="el" href="_c_class_info_8h_source.html">CClassInfo.h</a>.</p>
 
 </div>
 </div>

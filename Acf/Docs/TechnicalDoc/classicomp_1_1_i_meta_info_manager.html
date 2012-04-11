@@ -62,29 +62,28 @@ Public Types</h2></td></tr>
 <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a9b6818ea2ee2385a8216f49aef6a14caa188a6fe4944a4ea45503873768b2a520">CTF_COMPOSITE</a> =  1 &lt;&lt; IComponentStaticInfo::CT_COMPOSITE, 
 <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a9b6818ea2ee2385a8216f49aef6a14caa15594ca56ac70e36ac74a0e9ea3f8a3b">CTF_ALL</a> =  CTF_REAL | CTF_COMPOSITE
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::set<br class="typebreak"/>
-&lt; <a class="el" href="classicomp_1_1_c_component_address.html">CComponentAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">ComponentAddresses</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; <a class="el" href="classicomp_1_1_c_component_address.html">CComponentAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">ComponentAddresses</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">ComponentAddresses</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_meta_info_manager.html#a46425bee260914706997333a1a362b1c">GetComponentAddresses</a> (int typeFlag=CTF_ALL) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">ComponentAddresses</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_meta_info_manager.html#a46425bee260914706997333a1a362b1c">GetComponentAddresses</a> (int typeFlag=CTF_ALL) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get addresses of known components.  <a href="#a46425bee260914706997333a1a362b1c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_meta_info_manager.html#ab51244bfad9c8e709eea3b2233856c2f">GetComponentMetaInfo</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">CComponentAddress</a> &amp;address) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to static info of some component.  <a href="#ab51244bfad9c8e709eea3b2233856c2f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_meta_info_manager.html#a88918c073f8f85aa86623b76fec96ac8">GetPackageMetaInfo</a> (const std::string &amp;packageId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to static info of a package.  <a href="#a88918c073f8f85aa86623b76fec96ac8"></a><br/></td></tr>
+<a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_meta_info_manager.html#aa5358cba88536a79f65a451ac9023526">GetPackageMetaInfo</a> (const QByteArray &amp;packageId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to static info of a package.  <a href="#aa5358cba88536a79f65a451ac9023526"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_i_meta_info_manager_8h_source.html#l00015">15</a> of file <a class="el" href="_i_meta_info_manager_8h_source.html">IMetaInfoManager.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a3910cc2d0502d41961d1c0560a94ddb2"></a><!-- doxytag: member="icomp::IMetaInfoManager::ComponentAddresses" ref="a3910cc2d0502d41961d1c0560a94ddb2" args="" -->
+<a class="anchor" id="a5cec64ff37d3ef338014d19e48ee5cab"></a><!-- doxytag: member="icomp::IMetaInfoManager::ComponentAddresses" ref="a5cec64ff37d3ef338014d19e48ee5cab" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;<a class="el" href="classicomp_1_1_c_component_address.html">CComponentAddress</a>&gt; <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">icomp::IMetaInfoManager::ComponentAddresses</a></td>
+          <td class="memname">typedef QSet&lt;<a class="el" href="classicomp_1_1_c_component_address.html">CComponentAddress</a>&gt; <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">icomp::IMetaInfoManager::ComponentAddresses</a></td>
         </tr>
       </table>
 </div>
@@ -126,7 +125,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a3910cc2d0502d41961d1c0560a94ddb2">ComponentAddresses</a> icomp::IMetaInfoManager::GetComponentAddresses </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">ComponentAddresses</a> icomp::IMetaInfoManager::GetComponentAddresses </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>typeFlag</em> = <code>CTF_ALL</code></td><td>)</td>
@@ -170,14 +169,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a88918c073f8f85aa86623b76fec96ac8"></a><!-- doxytag: member="icomp::IMetaInfoManager::GetPackageMetaInfo" ref="a88918c073f8f85aa86623b76fec96ac8" args="(const std::string &amp;packageId) const =0" -->
+<a class="anchor" id="aa5358cba88536a79f65a451ac9023526"></a><!-- doxytag: member="icomp::IMetaInfoManager::GetPackageMetaInfo" ref="aa5358cba88536a79f65a451ac9023526" args="(const QByteArray &amp;packageId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a>* icomp::IMetaInfoManager::GetPackageMetaInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>packageId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -194,7 +193,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>static info of the package or NULL, if no package for specified ID was found. </dd></dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_environment_manager_base.html#ac733a848457e4917e1996275d61072a5">icomp::CEnvironmentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_environment_manager_base.html#ad303a7716589a2ee264803f729ac2043">icomp::CEnvironmentManagerBase</a>.</p>
 
 </div>
 </div>

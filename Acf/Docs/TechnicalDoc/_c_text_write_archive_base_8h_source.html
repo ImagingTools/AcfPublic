@@ -29,9 +29,9 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iser_CTextWriteArchiveBase_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;sstream&gt;</span>
-<a name="l00007"></a>00007 
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QTextStream&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QIODevice&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_write_archive_base_8h.html">iser/CWriteArchiveBase.h</a>&quot;</span>
@@ -77,26 +77,24 @@
 <a name="l00053"></a>00053 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;
 <a name="l00054"></a><a class="code" href="classiser_1_1_c_text_write_archive_base.html#a9b26efa925067ace5289e6999958f562">00054</a> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_text_write_archive_base.html#a9b26efa925067ace5289e6999958f562">CTextWriteArchiveBase::ProcessInternal</a>(<span class="keyword">const</span> Type&amp; value)
 <a name="l00055"></a>00055 {
-<a name="l00056"></a>00056        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
+<a name="l00056"></a>00056        QByteArray string;
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058        std::ostringstream stream;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060        stream &lt;&lt; value;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        std::string str(stream.str());
+<a name="l00058"></a>00058        {
+<a name="l00059"></a>00059               QTextStream stream(&amp;<span class="keywordtype">string</span>,  QIODevice::WriteOnly);
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061               stream &lt;&lt; value;
+<a name="l00062"></a>00062        }
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064        retVal = retVal &amp;&amp; <a class="code" href="classiser_1_1_c_text_write_archive_base.html#a1a0ce1d50d6d98967c69bb27648e6704" title="Process primitive type.">Process</a>(str);
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="keywordflow">return</span> retVal;
-<a name="l00067"></a>00067 }
-<a name="l00068"></a>00068 
+<a name="l00064"></a>00064        <span class="keywordflow">return</span> <a class="code" href="classiser_1_1_c_text_write_archive_base.html#a1a0ce1d50d6d98967c69bb27648e6704" title="Process primitive type.">Process</a>(<span class="keywordtype">string</span>);
+<a name="l00065"></a>00065 }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 } <span class="comment">// namespace iser</span>
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070 } <span class="comment">// namespace iser</span>
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="preprocessor">#endif // !iser_CTextWriteArchiveBase_included</span>
-<a name="l00074"></a>00074 <span class="preprocessor"></span>
-<a name="l00075"></a>00075 
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#endif // !iser_CTextWriteArchiveBase_included</span>
+<a name="l00072"></a>00072 <span class="preprocessor"></span>
+<a name="l00073"></a>00073 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

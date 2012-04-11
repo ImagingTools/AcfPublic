@@ -55,7 +55,7 @@ protected:
 	virtual void OnComponentCreated();
 
 private:
-	I_ATTR(std::string, m_filterParamsIdAttrPtr);
+	I_ATTR(QByteArray, m_filterParamsIdAttrPtr);
 };
 
 

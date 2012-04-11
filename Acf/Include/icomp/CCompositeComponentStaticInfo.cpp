@@ -43,7 +43,7 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 	for (		IRegistry::ExportedInterfacesMap::const_iterator interfaceIter = interfacesMap.begin();
 				interfaceIter != interfacesMap.end();
 				++interfaceIter){
-		const std::string& interfaceName = interfaceIter.key();
+		const QByteArray& interfaceName = interfaceIter.key();
 
 		RegisterInterfaceExtractor(interfaceName, NULL);
 	}
@@ -53,11 +53,11 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 	for (		IRegistry::ExportedComponentsMap::const_iterator subcomponentIter = exportedComponentsMap.begin();
 				subcomponentIter != exportedComponentsMap.end();
 				++subcomponentIter){
-		const std::string& subcomponentId = subcomponentIter.key();
-		const std::string& elementId = subcomponentIter.value();
+		const QByteArray& subcomponentId = subcomponentIter.key();
+		const QByteArray& elementId = subcomponentIter.value();
 
-		std::string baseId;
-		std::string subId;
+		QByteArray baseId;
+		QByteArray subId;
 		istd::CIdManipBase::SplitId(elementId, baseId, subId);
 
 		const IRegistry::ElementInfo* elementInfoPtr = GetElementInfoFromRegistry(registry, baseId, manager);
@@ -70,7 +70,7 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 			continue;
 		}
 
-		if (!subId.empty()){
+		if (!subId.isEmpty()){
 			subMetaInfoPtr = subMetaInfoPtr->GetSubelementInfo(subId);
 			if (subMetaInfoPtr == NULL){
 				continue;
@@ -85,7 +85,7 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 	for (		IRegistry::Ids::const_iterator embeddedIter = embeddedComponentIds.begin();
 				embeddedIter != embeddedComponentIds.end();
 				++embeddedIter){
-		const std::string& embeddedComponentId = *embeddedIter;
+		const QByteArray& embeddedComponentId = *embeddedIter;
 
 		const IRegistry* embeddedRegistryPtr = registry.GetEmbeddedRegistry(embeddedComponentId);
 		if (embeddedRegistryPtr == NULL){
@@ -100,7 +100,7 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 	for (		IRegistry::Ids::const_iterator elementIter = elementIds.begin();
 				elementIter != elementIds.end();
 				++elementIter){
-		const std::string& elementId = *elementIter;
+		const QByteArray& elementId = *elementIter;
 		const IRegistry::ElementInfo* elementInfoPtr = registry.GetElementInfo(elementId);
 		if (elementInfoPtr == NULL){
 			continue;
@@ -117,9 +117,9 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 		for (		IRegistryElement::Ids::iterator attrIter = attributeIds.begin();
 					attrIter != attributeIds.end();
 					++attrIter){
-			const std::string& attrId = *attrIter;
+			const QByteArray& attrId = *attrIter;
 			const IRegistryElement::AttributeInfo* attrInfoPtr = element.GetAttributeInfo(attrId);
-			if ((attrInfoPtr == NULL) || attrInfoPtr->exportId.empty()){
+			if ((attrInfoPtr == NULL) || attrInfoPtr->exportId.isEmpty()){
 				continue;
 			}
 
@@ -174,7 +174,7 @@ int CCompositeComponentStaticInfo::GetComponentType() const
 }
 
 
-const IComponentStaticInfo* CCompositeComponentStaticInfo::GetEmbeddedComponentInfo(const std::string& embeddedId) const
+const IComponentStaticInfo* CCompositeComponentStaticInfo::GetEmbeddedComponentInfo(const QByteArray& embeddedId) const
 {
 	EmbeddedComponentInfos::iterator infoIter = m_embeddedComponentInfos.find(embeddedId);
 	if (infoIter != m_embeddedComponentInfos.end()){
@@ -201,11 +201,11 @@ const QString& CCompositeComponentStaticInfo::GetKeywords() const
 
 const IRegistry::ElementInfo* CCompositeComponentStaticInfo::GetElementInfoFromRegistry(
 			const IRegistry& registry,
-			const std::string& elementId,
+			const QByteArray& elementId,
 			const icomp::IRegistriesManager& manager) const
 {
-	std::string baseId;
-	std::string subId;
+	QByteArray baseId;
+	QByteArray subId;
 	if (istd::CIdManipBase::SplitId(elementId, baseId, subId)){
 		const IRegistry::ElementInfo* subElementInfoPtr = registry.GetElementInfo(baseId);
 		if (subElementInfoPtr != NULL){
@@ -243,7 +243,7 @@ CCompositeComponentStaticInfo::AttrAsOptionalDelegator::AttrAsOptionalDelegator(
 }
 
 
-const std::string& CCompositeComponentStaticInfo::AttrAsOptionalDelegator::GetAttributeDescription() const
+const QByteArray& CCompositeComponentStaticInfo::AttrAsOptionalDelegator::GetAttributeDescription() const
 {
 	return m_slave.GetAttributeDescription();
 }
@@ -255,7 +255,7 @@ const iser::IObject* CCompositeComponentStaticInfo::AttrAsOptionalDelegator::Get
 }
 
 
-std::string CCompositeComponentStaticInfo::AttrAsOptionalDelegator::GetAttributeTypeName() const
+QByteArray CCompositeComponentStaticInfo::AttrAsOptionalDelegator::GetAttributeTypeName() const
 {
 	return m_slave.GetAttributeTypeName();
 }

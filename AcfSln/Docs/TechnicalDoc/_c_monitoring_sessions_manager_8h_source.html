@@ -28,47 +28,45 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ifpf_CMonitoringSessionsManager_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="comment">// AcfSln includes</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_monitoring_session_manager_8h.html">ifpf/IMonitoringSessionManager.h</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_c_monitoring_session_8h.html">ifpf/CMonitoringSession.h</a>&quot;</span>
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>ifpf
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021 
-<a name="l00022"></a><a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html">00022</a> <span class="keyword">class </span><a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html">CMonitoringSessionsManager</a>:
-<a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable,
-<a name="l00024"></a>00024                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifpf::<a class="code" href="classifpf_1_1_i_monitoring_session_manager.html" title="Common interface for a monitoring session&#39;s manager.">IMonitoringSessionManager</a>
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a>00027        <span class="comment">// reimplemented (ifpf::IMonitoringSessionManager)</span>
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a38cb724d2d31f325b9766de4a856fdf7" title="Clear all session data.">ResetSessions</a>();
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <a class="code" href="classifpf_1_1_i_monitoring_session.html" title="Common interface for a monitoring session for a directory.">ifpf::IMonitoringSession</a>* <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a07230f06dd00ec829f105e104ab0dfd3" title="Get monitoring session for the given monitor and directory path.">GetSession</a>(<span class="keyword">const</span> QString&amp; directoryPath) <span class="keyword">const</span>;
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a5154ede64a3751ba93a1063a6d2f3858">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keyword">private</span>:
-<a name="l00035"></a>00035        <span class="keyword">typedef</span> QMap&lt;QString, istd::TDelPtr&lt;ifpf::CMonitoringSession&gt; &gt; MonitoringSessionsMap;
-<a name="l00036"></a>00036        <span class="keyword">mutable</span> MonitoringSessionsMap m_monitorSessionsMap;
-<a name="l00037"></a>00037 };
-<a name="l00038"></a>00038 
+<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="comment">// AcfSln includes</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_monitoring_session_manager_8h.html">ifpf/IMonitoringSessionManager.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_monitoring_session_8h.html">ifpf/CMonitoringSession.h</a>&quot;</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keyword">namespace </span>ifpf
+<a name="l00017"></a>00017 {
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html">00020</a> <span class="keyword">class </span><a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html">CMonitoringSessionsManager</a>:
+<a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable,
+<a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifpf::<a class="code" href="classifpf_1_1_i_monitoring_session_manager.html" title="Common interface for a monitoring session&#39;s manager.">IMonitoringSessionManager</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024 <span class="keyword">public</span>:
+<a name="l00025"></a>00025        <span class="comment">// reimplemented (ifpf::IMonitoringSessionManager)</span>
+<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a38cb724d2d31f325b9766de4a856fdf7" title="Clear all session data.">ResetSessions</a>();
+<a name="l00027"></a>00027        <span class="keyword">virtual</span> <a class="code" href="classifpf_1_1_i_monitoring_session.html" title="Common interface for a monitoring session for a directory.">ifpf::IMonitoringSession</a>* <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a07230f06dd00ec829f105e104ab0dfd3" title="Get monitoring session for the given monitor and directory path.">GetSession</a>(<span class="keyword">const</span> QString&amp; directoryPath) <span class="keyword">const</span>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifpf_1_1_c_monitoring_sessions_manager.html#a5154ede64a3751ba93a1063a6d2f3858">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">private</span>:
+<a name="l00033"></a>00033        <span class="keyword">typedef</span> QMap&lt;QString, istd::TDelPtr&lt;ifpf::CMonitoringSession&gt; &gt; MonitoringSessionsMap;
+<a name="l00034"></a>00034        <span class="keyword">mutable</span> MonitoringSessionsMap m_monitorSessionsMap;
+<a name="l00035"></a>00035 };
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 } <span class="comment">// namespace ifpf</span>
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 } <span class="comment">// namespace ifpf</span>
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="preprocessor">#endif // !ifpf_CMonitoringSessionsManager_included</span>
-<a name="l00044"></a>00044 <span class="preprocessor"></span>
-<a name="l00045"></a>00045 
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="preprocessor">#endif // !ifpf_CMonitoringSessionsManager_included</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00043"></a>00043 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

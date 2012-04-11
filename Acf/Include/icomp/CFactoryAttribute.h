@@ -24,9 +24,8 @@
 #define icomp_CFactoryAttribute_included
 
 
-// STL includes
-#include <string>
-
+// Qt includes
+#include <QtCore/QByteArray>
 
 // ACF includes
 #include "icomp/CReferenceAttribute.h"
@@ -52,13 +51,13 @@ public:
 
 	CFactoryAttribute(){}
 	CFactoryAttribute(const CFactoryAttribute& attribute):BaseClass(attribute){}
-	explicit CFactoryAttribute(const std::string& value):BaseClass(value){}
+	explicit CFactoryAttribute(const QByteArray& value):BaseClass(value){}
 
 	// reimplemented (iser::IObject)
-	std::string GetFactoryId() const;
+	QByteArray GetFactoryId() const;
 
 	// static methods
-	static std::string GetTypeName();
+	static QByteArray GetTypeName();
 };
 
 

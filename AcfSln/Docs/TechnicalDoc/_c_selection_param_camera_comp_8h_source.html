@@ -28,7 +28,7 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iprm_CSelectionParamCameraComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
@@ -90,8 +90,8 @@
 <a name="l00064"></a>00064               <a class="code" href="classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html#a7384e0a73cb825875442be5673a4959e">JoinParamsSet</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* origParamsPtr, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* selectedParamsPtr);
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066               <span class="comment">// reimplemented (iprm::IParamsSet)</span>
-<a name="l00067"></a>00067               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>* <a class="code" href="classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html#a7c33a9f09183491068814c98714914b7">GetParameter</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00068"></a>00068               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>* <a class="code" href="classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html#afa0ef8b8eeca848144c35076f3964b49">GetEditableParameter</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);
+<a name="l00067"></a>00067               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>* <a class="code" href="classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html#aa32a1637f5d484d318bbeb2fb07da3af">GetParameter</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00068"></a>00068               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>* <a class="code" href="classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html#ac8e6e4fb91b90c666e14eb3f67e0276f">GetEditableParameter</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070               <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00071"></a>00071               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html#aabab34973c711f33087145e8aa8a81f7">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
@@ -102,7 +102,7 @@
 <a name="l00076"></a>00076        };
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 <span class="keyword">private</span>:
-<a name="l00079"></a>00079        I_ATTR(std::string, m_selectionIdAttrPtr);
+<a name="l00079"></a>00079        I_ATTR(QByteArray, m_selectionIdAttrPtr);
 <a name="l00080"></a>00080        I_ATTR(<span class="keywordtype">int</span>, m_defaultIndexAttrPtr);
 <a name="l00081"></a>00081        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html">iprm::IParamsManager</a>, m_paramsManagerCompPtr);
 <a name="l00082"></a>00082 

@@ -24,8 +24,8 @@
 #define istd_TVarArray_included
 
 
-// STL includes
-#include <vector>
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "istd/CVarIndex.h"
@@ -165,7 +165,7 @@ protected:
 	void UpdateElementsSize();
 
 private:
-	typedef std::vector<Element> Elements;
+	typedef QVector<Element> Elements;
 	Elements m_elements;
 
 	SizesType m_sizes;

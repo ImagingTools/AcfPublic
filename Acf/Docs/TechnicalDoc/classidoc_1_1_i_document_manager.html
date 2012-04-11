@@ -90,9 +90,8 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags describing possible operations.  <a href="classidoc_1_1_i_document_manager.html#a89e647a0fda1965099fc82077d3be520">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QString, <br class="typebreak"/>
-std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from file path to ducument type ID's.  <a href="#a0f475260ad4256042f71dc309f56d2ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QString, QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#ad2308086fe7ddbed930cb6cbcf5d7f70">FileToTypeMap</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from file path to ducument type ID's.  <a href="#ad2308086fe7ddbed930cb6cbcf5d7f70"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a7519e0784c64f6ae6c51df23faf70321">GetAllowedOperationFlags</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr=NULL) const =0</td></tr>
@@ -111,15 +110,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the active document.  <a href="#a54da788776d56b109f91251fd8e3687f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a53febd1a6f0bc272173af3afd93cbca5">GetDocumentFromView</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> &amp;view, <a class="el" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a> *documentInfoPtr=NULL) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the document assigned to view.  <a href="#a53febd1a6f0bc272173af3afd93cbca5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a67b5019ddacfcb2a8fef21e36cdd1fd8">AddViewToDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;document, const std::string &amp;viewTypeId=std::string())=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new view to the document.  <a href="#a67b5019ddacfcb2a8fef21e36cdd1fd8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a415ab9abd38841db354894b89dea664f">GetDocumentTypeId</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;document) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of document type managed by this object.  <a href="#a415ab9abd38841db354894b89dea664f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a47e60ea13da22040a06b7425a82134a7">FileNew</a> (const std::string &amp;documentTypeId, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> **newDocumentPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new document with the document ID <code>documentTypeId</code>.  <a href="#a47e60ea13da22040a06b7425a82134a7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a310f01527df3677b0a64c38957437fd1">FileOpen</a> (const std::string *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, <a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a> *loadedMapPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens document(s) from the file list.  <a href="#a310f01527df3677b0a64c38957437fd1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a404be3aa6734a8a787b764d76fb94250">FileSave</a> (int documentIndex=-1, bool requestFileName=false, <a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a> *savedMapPtr=NULL)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#ad626d15a5c04be5618df76bfd1cbf6aa">AddViewToDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;document, const QByteArray &amp;viewTypeId=QByteArray())=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new view to the document.  <a href="#ad626d15a5c04be5618df76bfd1cbf6aa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a9f1e9fb07d00c26834e2e4e71a6be94d">GetDocumentTypeId</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;document) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of document type managed by this object.  <a href="#a9f1e9fb07d00c26834e2e4e71a6be94d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a020453dc791e153882ec96bdad062056">FileNew</a> (const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> **newDocumentPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new document with the document ID <code>documentTypeId</code>.  <a href="#a020453dc791e153882ec96bdad062056"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a954ae1ff95dcdd12f06cc041ca58fbb5">FileOpen</a> (const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, <a class="el" href="classidoc_1_1_i_document_manager.html#ad2308086fe7ddbed930cb6cbcf5d7f70">FileToTypeMap</a> *loadedMapPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens document(s) from the file list.  <a href="#a954ae1ff95dcdd12f06cc041ca58fbb5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a404be3aa6734a8a787b764d76fb94250">FileSave</a> (int documentIndex=-1, bool requestFileName=false, <a class="el" href="classidoc_1_1_i_document_manager.html#ad2308086fe7ddbed930cb6cbcf5d7f70">FileToTypeMap</a> *savedMapPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save active document.  <a href="#a404be3aa6734a8a787b764d76fb94250"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a333b6a7c4cc31479099a1f35de46b777">FileClose</a> (int documentIndex=-1, bool *ignoredPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close current view.  <a href="#a333b6a7c4cc31479099a1f35de46b777"></a><br/></td></tr>
@@ -127,14 +126,14 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide set of user actions needed to manage documents in MVC (Model View Controller) concept. </p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00029">29</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00028">28</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a0f475260ad4256042f71dc309f56d2ca"></a><!-- doxytag: member="idoc::IDocumentManager::FileToTypeMap" ref="a0f475260ad4256042f71dc309f56d2ca" args="" -->
+<a class="anchor" id="ad2308086fe7ddbed930cb6cbcf5d7f70"></a><!-- doxytag: member="idoc::IDocumentManager::FileToTypeMap" ref="ad2308086fe7ddbed930cb6cbcf5d7f70" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef QMap&lt;QString, std::string&gt; <a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">idoc::IDocumentManager::FileToTypeMap</a></td>
+          <td class="memname">typedef QMap&lt;QString, QByteArray&gt; <a class="el" href="classidoc_1_1_i_document_manager.html#ad2308086fe7ddbed930cb6cbcf5d7f70">idoc::IDocumentManager::FileToTypeMap</a></td>
         </tr>
       </table>
 </div>
@@ -142,7 +141,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Map from file path to ducument type ID's. </p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00068">68</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00067">67</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -176,7 +175,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00037">37</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00036">36</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -207,12 +206,12 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00056">56</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00055">55</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a67b5019ddacfcb2a8fef21e36cdd1fd8"></a><!-- doxytag: member="idoc::IDocumentManager::AddViewToDocument" ref="a67b5019ddacfcb2a8fef21e36cdd1fd8" args="(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())=0" -->
+<a class="anchor" id="ad626d15a5c04be5618df76bfd1cbf6aa"></a><!-- doxytag: member="idoc::IDocumentManager::AddViewToDocument" ref="ad626d15a5c04be5618df76bfd1cbf6aa" args="(const istd::IChangeable &amp;document, const QByteArray &amp;viewTypeId=QByteArray())=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -225,8 +224,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>viewTypeId</em> = <code>std::string()</code>&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>viewTypeId</em> = <code>QByteArray()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -247,7 +246,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Created view object </dd></dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ad2c2e32e53324c10493fbe29863237bd">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a25eaa73f10819e9bf514878cea340b34">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a349487edca2a13c53fa45d824c1b9646">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a832d6d9a8ebfd58caddb7aa1f35a55ec">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -285,18 +284,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aafbd5258e1649b7f4755f29e740da1cd">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a24bf55bef8ff4e7e70cdfc18fc70032f">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a24bf55bef8ff4e7e70cdfc18fc70032f">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aafbd5258e1649b7f4755f29e740da1cd">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a47e60ea13da22040a06b7425a82134a7"></a><!-- doxytag: member="idoc::IDocumentManager::FileNew" ref="a47e60ea13da22040a06b7425a82134a7" args="(const std::string &amp;documentTypeId, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)=0" -->
+<a class="anchor" id="a020453dc791e153882ec96bdad062056"></a><!-- doxytag: member="idoc::IDocumentManager::FileNew" ref="a020453dc791e153882ec96bdad062056" args="(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool idoc::IDocumentManager::FileNew </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em>, </td>
         </tr>
         <tr>
@@ -308,7 +307,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>viewTypeId</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
@@ -338,18 +337,18 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if success. </dd></dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a223a3266b43a743fceca7db286db71c8">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ae1f534dcfe6bf1a882348294a6229efa">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a6adff9952e92fdac46f02c74ae443cf0">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ad426e58e1cfc2b562d355af81022a895">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a310f01527df3677b0a64c38957437fd1"></a><!-- doxytag: member="idoc::IDocumentManager::FileOpen" ref="a310f01527df3677b0a64c38957437fd1" args="(const std::string *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)=0" -->
+<a class="anchor" id="a954ae1ff95dcdd12f06cc041ca58fbb5"></a><!-- doxytag: member="idoc::IDocumentManager::FileOpen" ref="a954ae1ff95dcdd12f06cc041ca58fbb5" args="(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool idoc::IDocumentManager::FileOpen </td>
           <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>documentTypeIdPtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
@@ -367,13 +366,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>viewTypeId</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#ad2308086fe7ddbed930cb6cbcf5d7f70">FileToTypeMap</a> *&#160;</td>
           <td class="paramname"><em>loadedMapPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -397,7 +396,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a49ed49df7d07d88c68c49fc56fd4dff4">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a9adc2a2410f1b3d208ad6de331e0e514">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ada6b87bc29c9681aec7581629524206d">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a62296534d07168f3bbbb199da7f328d4">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -420,7 +419,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#a0f475260ad4256042f71dc309f56d2ca">FileToTypeMap</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_manager.html#ad2308086fe7ddbed930cb6cbcf5d7f70">FileToTypeMap</a> *&#160;</td>
           <td class="paramname"><em>savedMapPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -441,7 +440,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#abca4fa8cd902b2a58e4a49bdf64034fe">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a796ff18e1f4a3339776748cf6f202d77">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a796ff18e1f4a3339776748cf6f202d77">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#abca4fa8cd902b2a58e4a49bdf64034fe">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -462,7 +461,7 @@ Public Member Functions</h2></td></tr>
 <p>Return the active document. </p>
 <p>If no document is active, the function return a <code>NULL</code> </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a880d1109e938cab5998c2f5a624e98e7">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a03e17b3904ffe9ded0a3d890cff906ae">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a03e17b3904ffe9ded0a3d890cff906ae">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a880d1109e938cab5998c2f5a624e98e7">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -521,7 +520,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aa9acc522f08cc0f8e5db2ea837394aeb">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#aea463deee4c47bbc0d3b2d4d7427d362">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#aea463deee4c47bbc0d3b2d4d7427d362">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aa9acc522f08cc0f8e5db2ea837394aeb">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -560,7 +559,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to assigned document, or <code>NULL</code> if no document for this view exists. </dd></dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a01634956a7aeb28454da1dd39479d873">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a0350d61de1dadb7359a7a38116cff428">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a0350d61de1dadb7359a7a38116cff428">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a01634956a7aeb28454da1dd39479d873">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -580,16 +579,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Get number of opened documents. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a811b5b030cebefbd9fc632de6790d3a6">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#afb9db1665a85266bbbbc1f28a7dacc0d">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#afb9db1665a85266bbbbc1f28a7dacc0d">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a811b5b030cebefbd9fc632de6790d3a6">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a415ab9abd38841db354894b89dea664f"></a><!-- doxytag: member="idoc::IDocumentManager::GetDocumentTypeId" ref="a415ab9abd38841db354894b89dea664f" args="(const istd::IChangeable &amp;document) const =0" -->
+<a class="anchor" id="a9f1e9fb07d00c26834e2e4e71a6be94d"></a><!-- doxytag: member="idoc::IDocumentManager::GetDocumentTypeId" ref="a9f1e9fb07d00c26834e2e4e71a6be94d" args="(const istd::IChangeable &amp;document) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string idoc::IDocumentManager::GetDocumentTypeId </td>
+          <td class="memname">virtual QByteArray idoc::IDocumentManager::GetDocumentTypeId </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
           <td class="paramname"><em>document</em></td><td>)</td>
@@ -602,7 +601,7 @@ Public Member Functions</h2></td></tr>
 <p>Get ID of document type managed by this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>ID of document type or empty string if no document is found. </dd></dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a4e33402af95fc7f7ee8b651525b561e0">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a67fc53f78d3f1af7baaf92dd3eec204c">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a12c3dc0bfbeb5580d3e3a5199abf9f14">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a84e74fd9738155e70a2f2396bcc41dd3">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -623,7 +622,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return undo mananger for document <code>documenPtr</code>. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a04036f71da6ca102349becff20464885">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a5ebab9267bd8b2a1d40e2d72a92f0188">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a5ebab9267bd8b2a1d40e2d72a92f0188">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a04036f71da6ca102349becff20464885">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -654,7 +653,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get single view using its and document indices. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ae4ae3ca1bce6fbc623b8d7e935898d9e">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#af089a1445b4716642297b6b8a90d7819">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#af089a1445b4716642297b6b8a90d7819">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ae4ae3ca1bce6fbc623b8d7e935898d9e">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -675,7 +674,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get number of view for specified document. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ab28d9dbe4b45272255f2b3f20acef9be">idoc::CMultiDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a1fa2be3890315f2753296df7ba179097">idoc::CSingleDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a1fa2be3890315f2753296df7ba179097">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ab28d9dbe4b45272255f2b3f20acef9be">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>

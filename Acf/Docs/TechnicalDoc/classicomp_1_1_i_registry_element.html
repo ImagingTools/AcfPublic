@@ -70,7 +70,7 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#acf042457ccccd5a4f00f8b840a2dfe4b">ElementFlags</a> { <a class="el" href="classicomp_1_1_i_registry_element.html#acf042457ccccd5a4f00f8b840a2dfe4ba5fac9427da0260475ba2230f16b22413">EF_AUTO_INSTANCE</a> =  0x0001
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#ac62e79cf494e0d11c8a2f8757d577996">Ids</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#aa2927c794355dbaac82da8e3b77d0a98">Ids</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
 &lt; <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#a84b9d1ca8a1ccbdf3f9306a74ae56b17">AttributePtr</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -79,22 +79,22 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of this registry element.  <a href="#a903ec24e7a3be924678f340e948d45c0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#afb588669e8ab74482ab16cb74d5dcc2b">SetElementFlags</a> (quint32 flags)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flags of this registry element.  <a href="#afb588669e8ab74482ab16cb74d5dcc2b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry_element.html#ac62e79cf494e0d11c8a2f8757d577996">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#a947554393887bd9570bc85390d36200a">GetAttributeIds</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry_element.html#aa2927c794355dbaac82da8e3b77d0a98">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#a947554393887bd9570bc85390d36200a">GetAttributeIds</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID list of existing attributes.  <a href="#a947554393887bd9570bc85390d36200a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html">AttributeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#a15ec104bd82cf085db3ace9c15a48a83">InsertAttributeInfo</a> (const std::string &amp;attributeId, const std::string &amp;attributeType)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new attribute info object to collection of attributes.  <a href="#a15ec104bd82cf085db3ace9c15a48a83"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#a93c81ba408f855c847534e31c28b84dd">CreateAttribute</a> (const std::string &amp;attributeType) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create attribute object for specified ID.  <a href="#a93c81ba408f855c847534e31c28b84dd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html">AttributeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#ad2407b661603e684f6b7e5dcb7715b08">GetAttributeInfo</a> (const std::string &amp;attributeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored attribute info structure.  <a href="#ad2407b661603e684f6b7e5dcb7715b08"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#ab785f9bf1901c3723f8ee5f246741071">RemoveAttribute</a> (const std::string &amp;attributeId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes attribute info structure from this collection.  <a href="#ab785f9bf1901c3723f8ee5f246741071"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html">AttributeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#a4a115baf8b0a41883c3ed68df5c6b9e4">InsertAttributeInfo</a> (const QByteArray &amp;attributeId, const QByteArray &amp;attributeType)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new attribute info object to collection of attributes.  <a href="#a4a115baf8b0a41883c3ed68df5c6b9e4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#a965ec3a96475f53c776c576a9fcba2e1">CreateAttribute</a> (const QByteArray &amp;attributeType) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create attribute object for specified ID.  <a href="#a965ec3a96475f53c776c576a9fcba2e1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html">AttributeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#ab31cc9b90f1580760ba82f0fd76b93df">GetAttributeInfo</a> (const QByteArray &amp;attributeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored attribute info structure.  <a href="#ab31cc9b90f1580760ba82f0fd76b93df"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry_element.html#a798e740fb19238be19634853b407cc34">RemoveAttribute</a> (const QByteArray &amp;attributeId)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes attribute info structure from this collection.  <a href="#a798e740fb19238be19634853b407cc34"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents element of registry describing component parameters. </p>
 <p>Registry reflects state of registry files. </p>
 
-<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00031">31</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00030">30</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a84b9d1ca8a1ccbdf3f9306a74ae56b17"></a><!-- doxytag: member="icomp::IRegistryElement::AttributePtr" ref="a84b9d1ca8a1ccbdf3f9306a74ae56b17" args="" -->
 <div class="memitem">
@@ -107,22 +107,22 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00035">35</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00034">34</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac62e79cf494e0d11c8a2f8757d577996"></a><!-- doxytag: member="icomp::IRegistryElement::Ids" ref="ac62e79cf494e0d11c8a2f8757d577996" args="" -->
+<a class="anchor" id="aa2927c794355dbaac82da8e3b77d0a98"></a><!-- doxytag: member="icomp::IRegistryElement::Ids" ref="aa2927c794355dbaac82da8e3b77d0a98" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt; std::string&gt; <a class="el" href="classicomp_1_1_i_registry_element.html#ac62e79cf494e0d11c8a2f8757d577996">icomp::IRegistryElement::Ids</a></td>
+          <td class="memname">typedef QSet&lt; QByteArray&gt; <a class="el" href="classicomp_1_1_i_registry_element.html#aa2927c794355dbaac82da8e3b77d0a98">icomp::IRegistryElement::Ids</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00034">34</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00033">33</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
 
 </div>
 </div>
@@ -149,7 +149,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00037">37</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00036">36</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
 
 </div>
 </div>
@@ -171,19 +171,19 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00046">46</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_element_8h_source.html#l00045">45</a> of file <a class="el" href="_i_registry_element_8h_source.html">IRegistryElement.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a93c81ba408f855c847534e31c28b84dd"></a><!-- doxytag: member="icomp::IRegistryElement::CreateAttribute" ref="a93c81ba408f855c847534e31c28b84dd" args="(const std::string &amp;attributeType) const =0" -->
+<a class="anchor" id="a965ec3a96475f53c776c576a9fcba2e1"></a><!-- doxytag: member="icomp::IRegistryElement::CreateAttribute" ref="a965ec3a96475f53c776c576a9fcba2e1" args="(const QByteArray &amp;attributeType) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a>* icomp::IRegistryElement::CreateAttribute </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeType</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -193,7 +193,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Create attribute object for specified ID. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry_element.html#afbc09ee19cda7d671a9fcbfc8ade2e4f">icomp::CRegistryElement</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry_element.html#a3de4b4e4537a133ec977da07abfc11ec">icomp::CRegistryElement</a>.</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry_element.html#ac62e79cf494e0d11c8a2f8757d577996">Ids</a> icomp::IRegistryElement::GetAttributeIds </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry_element.html#aa2927c794355dbaac82da8e3b77d0a98">Ids</a> icomp::IRegistryElement::GetAttributeIds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -217,14 +217,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad2407b661603e684f6b7e5dcb7715b08"></a><!-- doxytag: member="icomp::IRegistryElement::GetAttributeInfo" ref="ad2407b661603e684f6b7e5dcb7715b08" args="(const std::string &amp;attributeId) const =0" -->
+<a class="anchor" id="ab31cc9b90f1580760ba82f0fd76b93df"></a><!-- doxytag: member="icomp::IRegistryElement::GetAttributeInfo" ref="ab31cc9b90f1580760ba82f0fd76b93df" args="(const QByteArray &amp;attributeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html">AttributeInfo</a>* icomp::IRegistryElement::GetAttributeInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -234,7 +234,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get access to stored attribute info structure. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry_element.html#a855d7bd1d5ce3bf3962b78ecbe8d3213">icomp::CRegistryElement</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry_element.html#a0005223147c1848e6954185bbc578c5a">icomp::CRegistryElement</a>.</p>
 
 </div>
 </div>
@@ -259,20 +259,20 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a15ec104bd82cf085db3ace9c15a48a83"></a><!-- doxytag: member="icomp::IRegistryElement::InsertAttributeInfo" ref="a15ec104bd82cf085db3ace9c15a48a83" args="(const std::string &amp;attributeId, const std::string &amp;attributeType)=0" -->
+<a class="anchor" id="a4a115baf8b0a41883c3ed68df5c6b9e4"></a><!-- doxytag: member="icomp::IRegistryElement::InsertAttributeInfo" ref="a4a115baf8b0a41883c3ed68df5c6b9e4" args="(const QByteArray &amp;attributeId, const QByteArray &amp;attributeType)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html">AttributeInfo</a>* icomp::IRegistryElement::InsertAttributeInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeType</em>&#160;</td>
         </tr>
         <tr>
@@ -293,18 +293,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry_element.html#a9deb70e720ba3bcc7209e73c6a7e9474">icomp::CRegistryElement</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry_element.html#a83f563734ecf207b21ab7a188d84ee4e">icomp::CRegistryElement</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab785f9bf1901c3723f8ee5f246741071"></a><!-- doxytag: member="icomp::IRegistryElement::RemoveAttribute" ref="ab785f9bf1901c3723f8ee5f246741071" args="(const std::string &amp;attributeId)=0" -->
+<a class="anchor" id="a798e740fb19238be19634853b407cc34"></a><!-- doxytag: member="icomp::IRegistryElement::RemoveAttribute" ref="a798e740fb19238be19634853b407cc34" args="(const QByteArray &amp;attributeId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool icomp::IRegistryElement::RemoveAttribute </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -314,7 +314,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Removes attribute info structure from this collection. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry_element.html#a43a5a71447914ecee1cb12651f905b56">icomp::CRegistryElement</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry_element.html#ac978fab2635340db1bb7fc204f22f602">icomp::CRegistryElement</a>.</p>
 
 </div>
 </div>

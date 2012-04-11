@@ -124,7 +124,7 @@
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140        <span class="comment">// reimplemented (iview::ISelectable)</span>
 <a name="l00141"></a>00141        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#a8486099a3cf6d16c449cd0ca71b3b532" title="Get count of selected shapes.">GetSelectedShapesCount</a>() <span class="keyword">const</span>;
-<a name="l00142"></a>00142        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a349cb946cf22fed9657e989eabbebf90" title="Get set of selected shapes.">InsertSelectedShapes</a>(<a class="code" href="classiview_1_1_i_selectable.html#aed3594205db6fc2b392b98a5925d8332">SelectedShapes</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00142"></a>00142        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a349cb946cf22fed9657e989eabbebf90" title="Get set of selected shapes.">InsertSelectedShapes</a>(<a class="code" href="classiview_1_1_i_selectable.html#a73125fedcaf820642f92feb60b68a1c6">SelectedShapes</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00143"></a>00143        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a67f749afdc5248e053ccd042b4cef984" title="Set all shapes to be deselected.">DeselectAllShapes</a>();
 <a name="l00144"></a>00144     <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#a8e572cd22e81ad50df4dbacb08c74ba1" title="Get state of system keys.">GetKeysState</a>() <span class="keyword">const</span>;
 <a name="l00145"></a>00145        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#ad9b844f881178df49de7a079d09e77b3" title="Get actual edit mode.">GetEditMode</a>() <span class="keyword">const</span>;
@@ -164,7 +164,7 @@
 <a name="l00179"></a>00179        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorShema</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#a72a7210a6b3919fc551c687d3586dc9f">GetDefaultColorShema</a>() <span class="keyword">const</span> = 0;
 <a name="l00180"></a>00180 
 <a name="l00181"></a>00181 <span class="keyword">protected</span>:
-<a name="l00182"></a><a class="code" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">00182</a>        <span class="keyword">typedef</span> std::vector&lt;ILayer*&gt; <a class="code" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">Layers</a>;
+<a name="l00182"></a><a class="code" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">00182</a>        <span class="keyword">typedef</span> QVector&lt;ILayer*&gt; <a class="code" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">Layers</a>;
 <a name="l00183"></a>00183 
 <a name="l00190"></a>00190        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#aff05357e24e5b452deb06371a7e44ef8" title="Draw Background layer.">DrawLayers</a>(QPainter&amp; drawContext, <span class="keywordtype">int</span> firstLayer, <span class="keywordtype">int</span> lastLayer);
 <a name="l00191"></a>00191        
@@ -207,8 +207,8 @@
 <a name="l00283"></a>00283 
 <a name="l00287"></a>00287        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#af8c91b5b5011c05e188cfbbb1ca92041" title="Set state of keys.">SetKeysState</a>(<span class="keywordtype">int</span> state);
 <a name="l00288"></a>00288 
-<a name="l00289"></a>00289        <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">Layers</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">GetLayers</a>() <span class="keyword">const</span>;
-<a name="l00290"></a>00290        <a class="code" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">Layers</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">GetLayers</a>();
+<a name="l00289"></a>00289        <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">Layers</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">GetLayers</a>() <span class="keyword">const</span>;
+<a name="l00290"></a>00290        <a class="code" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">Layers</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">GetLayers</a>();
 <a name="l00291"></a>00291 
 <a name="l00292"></a>00292        <span class="comment">// abstract methods</span>
 <a name="l00293"></a>00293 
@@ -237,7 +237,7 @@
 <a name="l00322"></a>00322        <span class="keywordtype">bool</span> m_isViewDraggable;
 <a name="l00323"></a>00323        <span class="keywordtype">bool</span> m_isDraggable;
 <a name="l00324"></a>00324 
-<a name="l00325"></a>00325        std::vector&lt;iview::IViewEventObserver*&gt; m_viewListeners;
+<a name="l00325"></a>00325        QVector&lt;iview::IViewEventObserver*&gt; m_viewListeners;
 <a name="l00326"></a>00326 
 <a name="l00327"></a>00327        <a class="code" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a>* m_focusedLayerPtr;
 <a name="l00328"></a>00328        <span class="keywordtype">int</span> m_backgroundLayerIndex;
@@ -247,7 +247,7 @@
 <a name="l00332"></a>00332        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_invalidatedBox;
 <a name="l00333"></a>00333        <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a> m_fitArea;
 <a name="l00334"></a>00334 
-<a name="l00335"></a>00335        <a class="code" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">Layers</a> m_layers;
+<a name="l00335"></a>00335        <a class="code" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">Layers</a> m_layers;
 <a name="l00336"></a>00336 
 <a name="l00337"></a>00337        <span class="keywordtype">int</span> m_lastBackgroundLayerIndex;
 <a name="l00338"></a>00338 
@@ -481,13 +481,13 @@
 <a name="l00566"></a>00566 }
 <a name="l00567"></a>00567 
 <a name="l00568"></a>00568 
-<a name="l00569"></a><a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">00569</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">CViewBase::Layers</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">CViewBase::GetLayers</a>()<span class="keyword"> const</span>
+<a name="l00569"></a><a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">00569</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">CViewBase::Layers</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">CViewBase::GetLayers</a>()<span class="keyword"> const</span>
 <a name="l00570"></a>00570 <span class="keyword"></span>{
 <a name="l00571"></a>00571        <span class="keywordflow">return</span> m_layers;
 <a name="l00572"></a>00572 }
 <a name="l00573"></a>00573 
 <a name="l00574"></a>00574 
-<a name="l00575"></a><a class="code" href="classiview_1_1_c_view_base.html#ab4981199785b4833cf8bb1767754bd1d">00575</a> <span class="keyword">inline</span> <a class="code" href="classiview_1_1_c_view_base.html#afada7c436ffbc6ea9a1c911bb341b9a7">CViewBase::Layers</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">CViewBase::GetLayers</a>()
+<a name="l00575"></a><a class="code" href="classiview_1_1_c_view_base.html#ab4981199785b4833cf8bb1767754bd1d">00575</a> <span class="keyword">inline</span> <a class="code" href="classiview_1_1_c_view_base.html#a3042dda5daa2a7a6e5f41b8219fc01f7">CViewBase::Layers</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adbe2fbb2bfdb84856bf9802d1df3a288">CViewBase::GetLayers</a>()
 <a name="l00576"></a>00576 {
 <a name="l00577"></a>00577        <span class="keywordflow">return</span> m_layers;
 <a name="l00578"></a>00578 }

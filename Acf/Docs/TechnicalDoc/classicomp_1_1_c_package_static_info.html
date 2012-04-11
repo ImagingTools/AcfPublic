@@ -66,12 +66,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#aa08572fd5886082fdc2641a236e5bf7c">CPackageStaticInfo</a> (const QString &amp;description, const QString &amp;keywords)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a641ab720baf4720a39a940c85d332ff8">Reset</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a8dce38b172b48b5361bc9638eaef558e">SerializeMeta</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a7c8443c3e65e2969c094a730f3df3f48">RegisterEmbeddedComponentInfo</a> (const std::string &amp;embeddedId, const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *componentInfoPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register embedded component static info.  <a href="#a7c8443c3e65e2969c094a730f3df3f48"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a9257adbb72d3db1b8cbafff795195081">RegisterEmbeddedComponentInfo</a> (const QByteArray &amp;embeddedId, const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *componentInfoPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register embedded component static info.  <a href="#a9257adbb72d3db1b8cbafff795195081"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#add2266fbf497723c99d4f17229c543af">GetEmbeddedComponentInfo</a> (const std::string &amp;embeddedId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#add2266fbf497723c99d4f17229c543af"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a3fc6a8ebc16ac9af0e1b8fd699da626d">GetMetaIds</a> (int metaGroupId) const </td></tr>
+<a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#af04fc4e27d5fb19b39d854e4631991d0">GetEmbeddedComponentInfo</a> (const QByteArray &amp;embeddedId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#af04fc4e27d5fb19b39d854e4631991d0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ab19a96597868e1f1adc89a62e1570c74">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a3fc6a8ebc16ac9af0e1b8fd699da626d">GetMetaIds</a> (int metaGroupId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of meta IDs associated with some meta key.  <a href="#a3fc6a8ebc16ac9af0e1b8fd699da626d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_package_static_info.html#a647fdefa3ff03b4d56075d92f05be256">GetDescription</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of this component.  <a href="#a647fdefa3ff03b4d56075d92f05be256"></a><br/></td></tr>
@@ -148,14 +148,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="add2266fbf497723c99d4f17229c543af"></a><!-- doxytag: member="icomp::CPackageStaticInfo::GetEmbeddedComponentInfo" ref="add2266fbf497723c99d4f17229c543af" args="(const std::string &amp;embeddedId) const " -->
+<a class="anchor" id="af04fc4e27d5fb19b39d854e4631991d0"></a><!-- doxytag: member="icomp::CPackageStaticInfo::GetEmbeddedComponentInfo" ref="af04fc4e27d5fb19b39d854e4631991d0" args="(const QByteArray &amp;embeddedId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a>* icomp::CPackageStaticInfo::GetEmbeddedComponentInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>embeddedId</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -172,9 +172,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classicomp_1_1_c_package_static_info.html#a3fc6a8ebc16ac9af0e1b8fd699da626d" title="Get list of meta IDs associated with some meta key.">GetMetaIds()</a> and <a class="el" href="classicomp_1_1_i_component_static_info.html#ad81479e87967938dbcfdf09433c265eba5c8bd8a1af78edbf4d5ec817c6d302ba" title="ID of group for embedded types.">MGI_EMBEDDED_COMPONENTS</a>. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a815d02162e404f916539f8469f841033">icomp::CComponentStaticInfoBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a7903b47a5a90a0af514af9a0454614e0">icomp::CComponentStaticInfoBase</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classicomp_1_1_c_composite_package_static_info.html#a548466615b1dc5736f40862ffd91a210">icomp::CCompositePackageStaticInfo</a>.</p>
+<p>Reimplemented in <a class="el" href="classicomp_1_1_c_composite_package_static_info.html#ae40288ab8c7f40468b580685db11d800">icomp::CCompositePackageStaticInfo</a>.</p>
 
 </div>
 </div>
@@ -196,7 +196,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_static_info_base.html#abc528ae2a18afe7b4a5fe91398f0f2bf">icomp::CComponentStaticInfoBase</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_component_registrator_8h_source.html#l00047">icomp::TComponentRegistrator&lt; Component &gt;::TComponentRegistrator()</a>.</p>
+<p>Referenced by <a class="el" href="_t_component_registrator_8h_source.html#l00046">icomp::TComponentRegistrator&lt; Component &gt;::TComponentRegistrator()</a>.</p>
 
 </div>
 </div>
@@ -205,7 +205,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a> icomp::CPackageStaticInfo::GetMetaIds </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ab19a96597868e1f1adc89a62e1570c74">Ids</a> icomp::CPackageStaticInfo::GetMetaIds </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaGroupId</em></td><td>)</td>
@@ -224,14 +224,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7c8443c3e65e2969c094a730f3df3f48"></a><!-- doxytag: member="icomp::CPackageStaticInfo::RegisterEmbeddedComponentInfo" ref="a7c8443c3e65e2969c094a730f3df3f48" args="(const std::string &amp;embeddedId, const IComponentStaticInfo *componentInfoPtr)" -->
+<a class="anchor" id="a9257adbb72d3db1b8cbafff795195081"></a><!-- doxytag: member="icomp::CPackageStaticInfo::RegisterEmbeddedComponentInfo" ref="a9257adbb72d3db1b8cbafff795195081" args="(const QByteArray &amp;embeddedId, const IComponentStaticInfo *componentInfoPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void icomp::CPackageStaticInfo::RegisterEmbeddedComponentInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>embeddedId</em>, </td>
         </tr>
         <tr>
@@ -258,7 +258,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="_t_component_registrator_8h_source.html#l00047">icomp::TComponentRegistrator&lt; Component &gt;::TComponentRegistrator()</a>.</p>
+<p>Referenced by <a class="el" href="_t_component_registrator_8h_source.html#l00046">icomp::TComponentRegistrator&lt; Component &gt;::TComponentRegistrator()</a>.</p>
 
 </div>
 </div>

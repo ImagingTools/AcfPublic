@@ -20,9 +20,12 @@
 ********************************************************************************/
 
 
-#ifndef iser_TXmlStreamWriteArchiveBase_included
-#define iser_TXmlStreamWriteArchiveBase_included
+#ifndef iser_CXmlStreamWriteArchiveBase_included
+#define iser_CXmlStreamWriteArchiveBase_included
 
+
+// Qt includes
+#include <QtCore/QTextStream>
 
 // ACF includes
 #include "iser/CXmlWriteArchiveBase.h"
@@ -35,57 +38,27 @@ namespace iser
 /**
 	Base implementation of archive for writing in XML format using a stream implementation.
 */
-template <class StreamClass>
-class TXmlStreamWriteArchiveBase: public CXmlWriteArchiveBase
+class CXmlStreamWriteArchiveBase: public CXmlWriteArchiveBase
 {
 public:
 	typedef CXmlWriteArchiveBase BaseClass;
 
-	virtual ~TXmlStreamWriteArchiveBase();
+	virtual ~CXmlStreamWriteArchiveBase();
 
 protected:
-	TXmlStreamWriteArchiveBase(const IVersionInfo* versionInfoPtr, const CArchiveTag& rootTag);
+	CXmlStreamWriteArchiveBase(const IVersionInfo* versionInfoPtr, const CArchiveTag& rootTag);
 
 	// reimplemented (iser::CXmlWriteArchiveBase)
-	virtual bool WriteString(const std::string& value);
+	virtual bool WriteString(const QByteArray& value);
 
 protected:
-	StreamClass m_stream;
+	QTextStream m_stream;
 };
-
-
-// public methods
-
-template <class StreamClass>
-TXmlStreamWriteArchiveBase<StreamClass>::~TXmlStreamWriteArchiveBase()
-{
-	Flush();
-}
-
-
-// protected methods
-
-template <class StreamClass>
-TXmlStreamWriteArchiveBase<StreamClass>::TXmlStreamWriteArchiveBase(const IVersionInfo* versionInfoPtr, const CArchiveTag& rootTag)
-:	BaseClass(versionInfoPtr, rootTag)
-{
-}
-
-
-// reimplemented (iser::CXmlWriteArchiveBase)
-
-template <class StreamClass>
-bool TXmlStreamWriteArchiveBase<StreamClass>::WriteString(const std::string& value)
-{
-	m_stream << value;
-
-	return !m_stream.fail();
-}
 
 
 } // namespace iser
 
 
-#endif // !iser_TXmlStreamWriteArchiveBase_included
+#endif // !iser_CXmlStreamWriteArchiveBase_included
 
 

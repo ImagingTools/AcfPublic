@@ -46,9 +46,6 @@
 #define ilibav_CLibAvVideoDecoderComp_included
 
 
-// STL includes
-#include <vector>
-
 // LIBAV includes
 extern "C"{
 #define inline _inline
@@ -56,6 +53,9 @@ extern "C"{
 #include "libavformat/avformat.h"
 #undef inline
 }
+
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "ibase/TLoggerCompWrap.h"
@@ -232,7 +232,7 @@ private:
 	int16_t* m_audioOutputBuffer;
 	bool m_ignoreFirstAudioFrame;
 
-	std::vector<quint8> m_imageBuffer;
+	QVector<quint8> m_imageBuffer;
 
 	AVPacket m_packet;
 	int m_bytesRemaining;

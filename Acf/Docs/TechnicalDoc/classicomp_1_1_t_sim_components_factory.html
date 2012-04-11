@@ -72,10 +72,10 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_components_factory.html#a76506db64dc768ff27fdcc87b0f5c012">TSimComponentsFactory</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">istd::IFactoryInfo::KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_components_factory.html#a7b445f7879dc76d5827fd50c0eefafb4">GetFactoryKeys</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_factory_info.html#ac357ea42763cc3625d85f4cce9fb2312">istd::IFactoryInfo::KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_components_factory.html#a7b445f7879dc76d5827fd50c0eefafb4">GetFactoryKeys</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all posible keys for this factory.  <a href="#a7b445f7879dc76d5827fd50c0eefafb4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">icomp::IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_components_factory.html#a7c63abe108df4bd06bd2b55f2cf21bd6">CreateInstance</a> (const std::string &amp;keyId=&quot;&quot;) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#a7c63abe108df4bd06bd2b55f2cf21bd6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">icomp::IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_sim_components_factory.html#ada15c91942cdd712c48b0b524be8fb1c">CreateInstance</a> (const QByteArray &amp;keyId=&quot;&quot;) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#ada15c91942cdd712c48b0b524be8fb1c"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Base&gt;<br/>
@@ -127,7 +127,7 @@ template&lt;class Base &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7c63abe108df4bd06bd2b55f2cf21bd6"></a><!-- doxytag: member="icomp::TSimComponentsFactory::CreateInstance" ref="a7c63abe108df4bd06bd2b55f2cf21bd6" args="(const std::string &amp;keyId=&quot;&quot;) const " -->
+<a class="anchor" id="ada15c91942cdd712c48b0b524be8fb1c"></a><!-- doxytag: member="icomp::TSimComponentsFactory::CreateInstance" ref="ada15c91942cdd712c48b0b524be8fb1c" args="(const QByteArray &amp;keyId=&quot;&quot;) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -136,7 +136,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classicomp_1_1_i_component.html">icomp::IComponent</a> * <a class="el" href="classicomp_1_1_t_sim_components_factory.html">icomp::TSimComponentsFactory</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::CreateInstance </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>keyId</em> = <code>&quot;&quot;</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -153,7 +153,7 @@ template&lt;class Base &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to created object or NULL if it was not possible to create it or keyId does not exist. </dd></dl>
 
-<p>Implements <a class="el" href="classistd_1_1_t_i_factory.html#a400950fe4afc558f397d73c0dbdee4e1">istd::TIFactory&lt; icomp::IComponent &gt;</a>.</p>
+<p>Implements <a class="el" href="classistd_1_1_t_i_factory.html#aea6a16de1033bdec7265e27d1ec4f91e">istd::TIFactory&lt; icomp::IComponent &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_sim_components_factory_8h_source.html#l00064">64</a> of file <a class="el" href="_t_sim_components_factory_8h_source.html">TSimComponentsFactory.h</a>.</p>
 
@@ -168,7 +168,7 @@ template&lt;class Base &gt; </div>
 template&lt;class Base &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">istd::IFactoryInfo::KeyList</a> <a class="el" href="classicomp_1_1_t_sim_components_factory.html">icomp::TSimComponentsFactory</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetFactoryKeys </td>
+          <td class="memname"><a class="el" href="classistd_1_1_i_factory_info.html#ac357ea42763cc3625d85f4cce9fb2312">istd::IFactoryInfo::KeyList</a> <a class="el" href="classicomp_1_1_t_sim_components_factory.html">icomp::TSimComponentsFactory</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetFactoryKeys </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>

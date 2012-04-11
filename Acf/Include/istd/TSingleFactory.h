@@ -24,8 +24,8 @@
 #define istd_TSingleFactory_included
 
 
-// STL includes
-#include <string>
+// Qt includes
+#include <QtCore/QByteArray>
 
 // ACF includes
 #include "istd/TIFactory.h"
@@ -45,23 +45,23 @@ public:
 	typedef Implementation ImplementationType;
 	typedef TIFactory<Interface> FactoryInterface;
 
-	explicit TSingleFactory(const std::string& keyId);
+	explicit TSingleFactory(const QByteArray& keyId);
 
 	// reimplemented (istd::IFactoryInfo)
 	virtual IFactoryInfo::KeyList GetFactoryKeys() const;
 
 	// reimplemented (istd::TIFactory)
-	virtual Interface* CreateInstance(const std::string& keyId = "") const;
+	virtual Interface* CreateInstance(const QByteArray& keyId = "") const;
 
 private:
-	std::string m_keyId;
+	QByteArray m_keyId;
 };
 
 
 // public methods
 
 template <class Interface, class Implementation>
-TSingleFactory<Interface, Implementation>::TSingleFactory(const std::string& keyId)
+TSingleFactory<Interface, Implementation>::TSingleFactory(const QByteArray& keyId)
 :	m_keyId(keyId)
 {
 
@@ -82,9 +82,9 @@ IFactoryInfo::KeyList TSingleFactory<Interface, Implementation>::GetFactoryKeys(
 
 
 template <class Interface, class Implementation>
-Interface* TSingleFactory<Interface, Implementation>::CreateInstance(const std::string& keyId) const
+Interface* TSingleFactory<Interface, Implementation>::CreateInstance(const QByteArray& keyId) const
 {
-	if (keyId.empty() || (keyId == m_keyId)){
+	if (keyId.isEmpty() || (keyId == m_keyId)){
 		return new Implementation;
 	}
 

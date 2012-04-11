@@ -23,9 +23,6 @@
 #include "iqt/CRegistryCodeSaverComp.h"
 
 
-// STL includes
-#include <fstream>
-
 // Qt includes
 #include <QtCore/QObject>
 #include <QtCore/QDir>
@@ -75,7 +72,7 @@ int CRegistryCodeSaverComp::SaveToFile(const istd::IChangeable& data, const QStr
 
 	Addresses realAddresses;
 	Addresses composedAddresses;
-	std::string className;
+	QByteArray className;
 	QString baseFilePath;
 	if (		!AppendAddresses(*registryPtr, realAddresses, composedAddresses) ||
 				!ExtractInfoFromFile(filePath, className, baseFilePath)){
@@ -88,22 +85,32 @@ int CRegistryCodeSaverComp::SaveToFile(const istd::IChangeable& data, const QStr
 	}
 
 	if ((workingMode == WM_SOURCES) || (workingMode == WM_SOURCES_AND_WM_DEPENDENCIES)){
-		QString headerFilePath = baseFilePath + QString(".h");
-		std::ofstream stream(filePath.toStdString().c_str());
-		std::ofstream headerStream(headerFilePath.toStdString().c_str());
+		QFile headerFile(baseFilePath + ".h");
+		QFile codeFile(filePath);
 
+		if (		!codeFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text) ||
+					!headerFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)){
+			return StateFailed;
+		}
+
+		QTextStream headerStream(&headerFile);
+		QTextStream codeStream(&codeFile);
 		if (		!WriteHeader(className, *registryPtr, composedAddresses, realAddresses, headerStream) ||
-					!WriteIncludes(className, realAddresses, stream) ||
-					!WriteClassDefinitions(className, *registryPtr, composedAddresses, realAddresses, stream)){
+					!WriteIncludes(className, realAddresses, codeStream) ||
+					!WriteClassDefinitions(className, *registryPtr, composedAddresses, realAddresses, codeStream)){
 			return StateFailed;
 		}
 	}
 
 	if ((workingMode == WM_DEPENDENCIES) || (workingMode == WM_SOURCES_AND_WM_DEPENDENCIES)){
-		QString depsFilePath = baseFilePath + QString(".pri");
-		std::ofstream stream(depsFilePath.toStdString().c_str());
+		QFile depsFile(baseFilePath + ".pri");
 
-		if (!WriteDependencies(className, composedAddresses, realAddresses, stream)){
+		if (!depsFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)){
+			return StateFailed;
+		}
+
+		QTextStream depsStream(&depsFile);
+		if (!WriteDependencies(className, composedAddresses, realAddresses, depsStream)){
 			return StateFailed;
 		}
 	}
@@ -215,7 +222,7 @@ QString CRegistryCodeSaverComp::GetOptionDescription(int index) const
 }
 
 
-std::string CRegistryCodeSaverComp::GetOptionId(int index) const
+QByteArray CRegistryCodeSaverComp::GetOptionId(int index) const
 {
 	switch (index){
 	case WM_DEPENDENCIES:
@@ -245,13 +252,13 @@ bool CRegistryCodeSaverComp::AppendAddresses(
 	for (		icomp::IRegistry::Ids::const_iterator elementIter = ids.begin();
 				elementIter != ids.end();
 				++elementIter){
-		const std::string& componentId = *elementIter;
+		const QByteArray& componentId = *elementIter;
 
 		const icomp::IRegistry::ElementInfo* infoPtr = registry.GetElementInfo(componentId);
 		I_ASSERT(infoPtr != NULL);	// used element ID was returned by registry, info must exist.
 
-		const std::string& packageId = infoPtr->address.GetPackageId();
-		if (packageId.empty()){
+		const QByteArray& packageId = infoPtr->address.GetPackageId();
+		if (packageId.isEmpty()){
 			continue;	// skip embedded components
 		}
 
@@ -286,7 +293,7 @@ bool CRegistryCodeSaverComp::AppendAddresses(
 		default:
 			SendErrorMessage(
 						MI_UNDEFINED_PACKAGE,
-						QObject::tr("Package '%1' is undefined").arg(packageId.c_str()));
+						QObject::tr("Package '%1' is undefined").arg(QString(packageId)));
 			return false;
 		}
 	}
@@ -311,7 +318,7 @@ CRegistryCodeSaverComp::Ids CRegistryCodeSaverComp::ExtractPackageIds(const Addr
 }
 
 
-CRegistryCodeSaverComp::Ids CRegistryCodeSaverComp::ExtractComponentIds(const Addresses& addresses, const std::string& packageId) const
+CRegistryCodeSaverComp::Ids CRegistryCodeSaverComp::ExtractComponentIds(const Addresses& addresses, const QByteArray& packageId) const
 {
 	Ids retVal;
 
@@ -330,19 +337,19 @@ CRegistryCodeSaverComp::Ids CRegistryCodeSaverComp::ExtractComponentIds(const Ad
 
 
 bool CRegistryCodeSaverComp::WriteHeader(
-			const std::string& className,
+			const QByteArray& className,
 			const icomp::IRegistry& registry,
 			const Addresses& composedAddresses,
 			const Addresses& realAddresses,
-			std::ofstream& stream) const
+			QTextStream& stream) const
 {
-	std::string includeDefine = className + "_included";
+	QByteArray includeDefine = className + "_included";
 
 	stream << "#ifndef " << includeDefine;
 
 	NextLine(stream);
 	stream << "#define " << includeDefine;
-	stream << std::endl << std::endl;
+	stream << "\n\n";
 
 	NextLine(stream);
 	stream << "// ACF includes";
@@ -365,7 +372,7 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	NextLine(stream);
 	stream << "#include \"icomp/CEnvironmentManagerBase.h\"";
 
-	stream << std::endl << std::endl;
+	stream << "\n\n";
 
 	QString description = registry.GetDescription();
 	if (!description.isEmpty()){
@@ -373,7 +380,7 @@ bool CRegistryCodeSaverComp::WriteHeader(
 		stream << "/**";
 
 		NextLine(stream);
-		stream << "\t" << description.toStdString() << ".";
+		stream << "\t" << description.toLocal8Bit() << ".";
 
 		NextLine(stream);
 		stream << "*/";
@@ -394,12 +401,12 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	NextLine(stream);
 	stream << "template <class InterfaceType>";
 	NextLine(stream);
-	stream << "InterfaceType* GetInterface(const std::string& subId = \"\"){return GetComponentInterface<InterfaceType>(subId);}";
-	stream << std::endl;
+	stream << "InterfaceType* GetInterface(const QByteArray& subId = \"\"){return GetComponentInterface<InterfaceType>(subId);}";
+	stream << "\n";
 
 	NextLine(stream);
 	stream << className << "();";
-	stream << std::endl;
+	stream << "\n";
 
 	ChangeIndent(-1);
 	NextLine(stream);
@@ -411,8 +418,8 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	}
 
 	Ids composedPackageIds = ExtractPackageIds(composedAddresses);
-	if (m_registriesManagerCompPtr.IsValid() && !composedPackageIds.empty()){
-		stream << std::endl;
+	if (m_registriesManagerCompPtr.IsValid() && !composedPackageIds.isEmpty()){
+		stream << "\n";
 
 		NextLine(stream);
 		stream << "//\tcomposited packages";
@@ -420,14 +427,14 @@ bool CRegistryCodeSaverComp::WriteHeader(
 		for (		Ids::const_iterator packageIter = composedPackageIds.begin();
 					packageIter != composedPackageIds.end();
 					++packageIter){
-			const std::string& packageId = *packageIter;
-			if (packageId.empty()){
+			const QByteArray& packageId = *packageIter;
+			if (packageId.isEmpty()){
 				continue;
 			}
 
-			std::string packageName = GetPackageName(packageId);
+			QByteArray packageName = GetPackageName(packageId);
 
-			stream << std::endl;
+			stream << "\n";
 
 			NextLine(stream);
 			stream << "class C" << packageName << ": public icomp::CCompositePackageStaticInfo";
@@ -446,14 +453,14 @@ bool CRegistryCodeSaverComp::WriteHeader(
 			for (		Ids::const_iterator componentIter = componentIds.begin();
 						componentIter != componentIds.end();
 						++componentIter){
-				const std::string& componentId = *componentIter;
+				const QByteArray& componentId = *componentIter;
 
 				icomp::CComponentAddress address(packageId, componentId);
 
 				const icomp::IRegistry* registryPtr = m_registriesManagerCompPtr->GetRegistry(address, &registry);
 
 				if (registryPtr != NULL){
-					stream << std::endl;
+					stream << "\n";
 					if (!WriteRegistryClassDeclaration(className, "C" + componentId + "Registry", *registryPtr, stream)){
 						return false;
 					}
@@ -471,8 +478,8 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	}
 
 	Ids realPackageIds = ExtractPackageIds(realAddresses);
-	if (!realPackageIds.empty()){
-		stream << std::endl;
+	if (!realPackageIds.isEmpty()){
+		stream << "\n";
 
 		NextLine(stream);
 		stream << "//\treal packages";
@@ -480,14 +487,14 @@ bool CRegistryCodeSaverComp::WriteHeader(
 		for (		Ids::const_iterator packageIter = realPackageIds.begin();
 					packageIter != realPackageIds.end();
 					++packageIter){
-			const std::string& packageId = *packageIter;
-			if (packageId.empty()){
+			const QByteArray& packageId = *packageIter;
+			if (packageId.isEmpty()){
 				continue;
 			}
 
-			std::string packageName = GetPackageName(packageId);
+			QByteArray packageName = GetPackageName(packageId);
 
-			stream << std::endl;
+			stream << "\n";
 
 			NextLine(stream);
 			stream << "class C" << packageName << ": public icomp::CPackageStaticInfo";
@@ -501,7 +508,7 @@ bool CRegistryCodeSaverComp::WriteHeader(
 
 			NextLine(stream);
 			stream << "typedef icomp::CPackageStaticInfo BaseClass;";
-			stream << std::endl;
+			stream << "\n";
 
 			NextLine(stream);
 			stream << "C" << packageName << "();";
@@ -512,7 +519,7 @@ bool CRegistryCodeSaverComp::WriteHeader(
 		}
 	}
 
-	stream << std::endl;
+	stream << "\n";
 
 	NextLine(stream);
 	stream << "class CLocalEnvironmentManager: public icomp::CEnvironmentManagerBase";
@@ -524,18 +531,18 @@ bool CRegistryCodeSaverComp::WriteHeader(
 
 	NextLine(stream);
 	stream << "typedef icomp::CEnvironmentManagerBase BaseClass;";
-	stream << std::endl;
+	stream << "\n";
 
 	NextLine(stream);
 	stream << "CLocalEnvironmentManager();";
-	stream << std::endl;
+	stream << "\n";
 
 	NextLine(stream);
 	stream << "// reimplemented (icomp::IRegistriesManager)";
 	NextLine(stream);
 	stream << "virtual const icomp::IRegistry* GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr = NULL) const;";
 
-	stream << std::endl;
+	stream << "\n";
 	ChangeIndent(-1);
 	NextLine(stream);
 	stream << "protected:";
@@ -545,46 +552,46 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	stream << "typedef istd::TDelPtr<icomp::IRegistry> RegistryPtr;";
 	stream << "typedef QMap<icomp::CComponentAddress, RegistryPtr> RegistriesMap;";
 
-	stream << std::endl;
+	stream << "\n";
 	ChangeIndent(-1);
 	NextLine(stream);
 	stream << "private:";
 	ChangeIndent(1);
 
-	if (!realPackageIds.empty()){
+	if (!realPackageIds.isEmpty()){
 		for (		Ids::const_iterator packageInstanceIter = realPackageIds.begin();
 					packageInstanceIter != realPackageIds.end();
 					++packageInstanceIter){
-			const std::string& packageId = *packageInstanceIter;
-			if (packageId.empty()){
+			const QByteArray& packageId = *packageInstanceIter;
+			if (packageId.isEmpty()){
 				continue;
 			}
 
-			std::string packageName = GetPackageName(packageId);
+			QByteArray packageName = GetPackageName(packageId);
 
 			NextLine(stream);
 			stream << "C" << packageName << " m_sub" << packageName << ";";
 		}
 
-		stream << std::endl;
+		stream << "\n";
 	}
 
-	if (!composedPackageIds.empty()){
+	if (!composedPackageIds.isEmpty()){
 		for (		Ids::const_iterator registerPackageIter = composedPackageIds.begin();
 					registerPackageIter != composedPackageIds.end();
 					++registerPackageIter){
-			const std::string& packageId = *registerPackageIter;
-			if (packageId.empty()){
+			const QByteArray& packageId = *registerPackageIter;
+			if (packageId.isEmpty()){
 				continue;
 			}
 
-			std::string packageName = GetPackageName(packageId);
+			QByteArray packageName = GetPackageName(packageId);
 
 			NextLine(stream);
 			stream << "istd::TDelPtr<icomp::IComponentStaticInfo> m_package" << packageId << "InfoPtr;";
 		}
 
-		stream << std::endl;
+		stream << "\n";
 	}
 
 	NextLine(stream);
@@ -593,7 +600,7 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	ChangeIndent(-1);
 	NextLine(stream);
 	stream << "};";
-	stream << std::endl;
+	stream << "\n";
 
 	ChangeIndent(-1);
 	NextLine(stream);
@@ -607,57 +614,57 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	NextLine(stream);
 	stream << "};";
 
-	stream << std::endl << std::endl;
+	stream << "\n\n";
 
 	NextLine(stream);
 	stream << "#endif // !" << includeDefine;
 
-	stream << std::endl << std::endl;
+	stream << "\n\n";
 
-	return !stream.fail();
+	return stream.status() == QTextStream::Ok;
 }
 
 
 bool CRegistryCodeSaverComp::WriteIncludes(
-			const std::string& className,
+			const QByteArray& className,
 			const Addresses& addresses,
-			std::ofstream& stream) const
+			QTextStream& stream) const
 {
-	stream << "#include \"" << className << ".h\"" << std::endl;
-	stream << std::endl << std::endl;
-	stream << "// ACF includes" << std::endl;
-	stream << "#include \"icomp/TAttribute.h\"" << std::endl;
-	stream << "#include \"icomp/TMultiAttribute.h\"" << std::endl;
-	stream << "#include \"icomp/CRegistryElement.h\"" << std::endl;
-	stream << "#include \"icomp/CCompositePackageStaticInfo.h\"" << std::endl;
+	stream << "#include \"" << className << ".h\"" << "\n";
+	stream << "\n\n";
+	stream << "// ACF includes" << "\n";
+	stream << "#include \"icomp/TAttribute.h\"" << "\n";
+	stream << "#include \"icomp/TMultiAttribute.h\"" << "\n";
+	stream << "#include \"icomp/CRegistryElement.h\"" << "\n";
+	stream << "#include \"icomp/CCompositePackageStaticInfo.h\"" << "\n";
 
 	Ids packageIds = ExtractPackageIds(addresses);
-	if (!packageIds.empty()){
-		stream << std::endl;
-		stream << "// ACF component includes" << std::endl;
+	if (!packageIds.isEmpty()){
+		stream << "\n";
+		stream << "// ACF component includes" << "\n";
 
 		for (		Ids::const_iterator packageIter = packageIds.begin();
 					packageIter != packageIds.end();
 					++packageIter){
-			const std::string& packageId = *packageIter;
-			if (packageId.empty()){
+			const QByteArray& packageId = *packageIter;
+			if (packageId.isEmpty()){
 				continue;
 			}
 
-			stream << "#include \"" << packageId << "/" << packageId << ".h\"" << std::endl;
+			stream << "#include \"" << packageId << "/" << packageId << ".h\"" << "\n";
 		}
 	}
 
-	return !stream.fail();
+	return stream.status() == QTextStream::Ok;
 }
 
 
 bool CRegistryCodeSaverComp::WriteClassDefinitions(
-			const std::string& className,
+			const QByteArray& className,
 			const icomp::IRegistry& registry,
 			const Addresses& composedAddresses,
 			const Addresses& realAddresses,
-			std::ofstream& stream) const
+			QTextStream& stream) const
 {
 	NextLine(stream);
 	stream << className << "::" << className << "()";
@@ -672,23 +679,23 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 	stream << "static CMainRegistry mainRegistry;";
 	NextLine(stream);
 	stream << "static CLocalEnvironmentManager localEnvironmentManager;";
-	stream << std::endl;
+	stream << "\n";
 	NextLine(stream);
 	stream << "m_mainContextPtr.SetPtr(new icomp::CCompositeComponentContext(&mainElement, &localEnvironmentManager, &mainRegistry, &localEnvironmentManager, NULL));";
-	stream << std::endl;
+	stream << "\n";
 	NextLine(stream);
 	stream << "SetComponentContext(m_mainContextPtr.GetPtr(), NULL, false);";
 
 	ChangeIndent(-1);
 	NextLine(stream);
 	stream << "}";
-	stream << std::endl << std::endl;
+	stream << "\n\n";
 
 	if (!WriteRegistryClassBody(className, "CMainRegistry", registry, stream)){
 		return false;
 	}
 
-	stream << std::endl << std::endl;
+	stream << "\n\n";
 
 	Ids composedPackageIds = ExtractPackageIds(composedAddresses);
 
@@ -696,23 +703,23 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 		for (		Ids::const_iterator packageIter = composedPackageIds.begin();
 					packageIter != composedPackageIds.end();
 					++packageIter){
-			const std::string& packageId = *packageIter;
-			if (packageId.empty()){
+			const QByteArray& packageId = *packageIter;
+			if (packageId.isEmpty()){
 				continue;
 			}
 
-			std::string packageName = GetPackageName(packageId);
+			QByteArray packageName = GetPackageName(packageId);
 
 			NextLine(stream);
 			stream << "// Embedded class C" << packageName;
 
-			stream << std::endl;
+			stream << "\n";
 
 			NextLine(stream);
 			stream << className << "::C" << packageName << "::C" << packageName << "(const icomp::IComponentEnvironmentManager* managerPtr)";
 			NextLine(stream);
 			stream << ":\ticomp::CCompositePackageStaticInfo(\"" << packageId << "\", managerPtr)";
-			stream << std::endl;
+			stream << "\n";
 
 
 			NextLine(stream);
@@ -723,7 +730,7 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 			for (		Ids::const_iterator instanceRegIter = componentIds.begin();
 						instanceRegIter != componentIds.end();
 						++instanceRegIter){
-				const std::string& componentId = *instanceRegIter;
+				const QByteArray& componentId = *instanceRegIter;
 
 				NextLine(stream);
 				stream << "RegisterEmbeddedComponent(\"" << componentId << "\");";
@@ -733,12 +740,12 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 			NextLine(stream);
 			stream << "}";
 
-			stream << std::endl << std::endl;
+			stream << "\n\n";
 
 			for (		Ids::const_iterator componentIter = componentIds.begin();
 						componentIter != componentIds.end();
 						++componentIter){
-				const std::string& componentId = *componentIter;
+				const QByteArray& componentId = *componentIter;
 
 				icomp::CComponentAddress address(packageId, componentId);
 
@@ -748,7 +755,7 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 						return false;
 					}
 
-					stream << std::endl << std::endl;
+					stream << "\n\n";
 				}
 			}
 		}
@@ -759,17 +766,17 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 	for (		Ids::const_iterator packageIter = realPackageIds.begin();
 				packageIter != realPackageIds.end();
 				++packageIter){
-		const std::string& packageId = *packageIter;
-		if (packageId.empty()){
+		const QByteArray& packageId = *packageIter;
+		if (packageId.isEmpty()){
 			continue;
 		}
 
-		std::string packageName = GetPackageName(packageId);
+		QByteArray packageName = GetPackageName(packageId);
 
 		NextLine(stream);
 		stream << "// Embedded class C" << packageName;
 
-		stream << std::endl;
+		stream << "\n";
 
 		NextLine(stream);
 		stream << className << "::C" << packageName << "::C" << packageName << "()";
@@ -782,9 +789,9 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 		for (		Ids::const_iterator instanceRegIter = componentIds.begin();
 					instanceRegIter != componentIds.end();
 					++instanceRegIter){
-			const std::string& componentId = *instanceRegIter;
+			const QByteArray& componentId = *instanceRegIter;
 
-			std::string infoName = "info" + componentId;
+			QByteArray infoName = "info" + componentId;
 
 			NextLine(stream);
 			stream << "const icomp::IComponentStaticInfo& " << infoName << " = " << packageId << "::" << componentId << "::InitStaticInfo(NULL);";
@@ -797,13 +804,13 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 		NextLine(stream);
 		stream << "}";
 
-		stream << std::endl << std::endl;
+		stream << "\n\n";
 	}
 
 	NextLine(stream);
 	stream << "// Embedded class CLocalEnvironmentManager";
 
-	stream << std::endl;
+	stream << "\n";
 
 	NextLine(stream);
 	stream << className << "::CLocalEnvironmentManager::CLocalEnvironmentManager()";
@@ -812,27 +819,27 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 	stream << "{";
 	ChangeIndent(1);
 
-	if (!realPackageIds.empty()){
+	if (!realPackageIds.isEmpty()){
 		NextLine(stream);
 		stream << "// register real components";
 
 		for (		Ids::const_iterator registerRealIter = realPackageIds.begin();
 					registerRealIter != realPackageIds.end();
 					++registerRealIter){
-			const std::string& packageId = *registerRealIter;
-			if (packageId.empty()){
+			const QByteArray& packageId = *registerRealIter;
+			if (packageId.isEmpty()){
 				continue;
 			}
 
-			std::string packageName = GetPackageName(packageId);
+			QByteArray packageName = GetPackageName(packageId);
 
 			NextLine(stream);
 			stream << "RegisterEmbeddedComponentInfo(\"" << packageId << "\", &m_sub" << packageName << ");";
 		}
 	}
 
-	if (!composedAddresses.empty()){
-		stream << std::endl;
+	if (!composedAddresses.isEmpty()){
+		stream << "\n";
 
 		NextLine(stream);
 		stream << "// create map for all known registries";
@@ -846,8 +853,8 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 		}
 	}
 
-	if (!composedPackageIds.empty()){
-		stream << std::endl;
+	if (!composedPackageIds.isEmpty()){
+		stream << "\n";
 
 		NextLine(stream);
 		stream << "// register composed packages";
@@ -855,16 +862,16 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 		for (		Ids::const_iterator registerPackageIter = composedPackageIds.begin();
 					registerPackageIter != composedPackageIds.end();
 					++registerPackageIter){
-			const std::string& packageId = *registerPackageIter;
-			if (packageId.empty()){
+			const QByteArray& packageId = *registerPackageIter;
+			if (packageId.isEmpty()){
 				continue;
 			}
 
 			if (registerPackageIter != composedPackageIds.begin()){
-				stream << std::endl;
+				stream << "\n";
 			}
 
-			std::string packageName = GetPackageName(packageId);
+			QByteArray packageName = GetPackageName(packageId);
 
 			NextLine(stream);
 			stream << "m_package" << packageId << "InfoPtr.SetPtr(new C" << packageName << "(this));";
@@ -883,11 +890,11 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 	NextLine(stream);
 	stream << "}";
 
-	stream << std::endl << std::endl;
+	stream << "\n\n";
 
 	NextLine(stream);
 	stream << "// reimplemented (icomp::IRegistriesManager)";
-	stream << std::endl;
+	stream << "\n";
 	NextLine(stream);
 	stream << "const icomp::IRegistry* " << className << "::CLocalEnvironmentManager::GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr) const";
 	NextLine(stream);
@@ -914,17 +921,17 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 	NextLine(stream);
 	stream << "}";
 
-	stream << std::endl << std::endl;
+	stream << "\n\n";
 
-	return !stream.fail();
+	return stream.status() == QTextStream::Ok;
 }
 
 
 bool CRegistryCodeSaverComp::WriteDependencies(
-			const std::string& className,
+			const QByteArray& className,
 			const Addresses& composedAddresses,
 			const Addresses& realAddresses,
-			std::ofstream& stream) const
+			QTextStream& stream) const
 {
 	if (!m_packagesManagerCompPtr.IsValid()){
 		return false;
@@ -935,26 +942,26 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 		baseDir.setPath(m_baseDependenciesPathCompPtr->GetPath());
 	}
 
-	stream << "#dependencies of class " << className << std::endl;
-	if (!composedAddresses.empty() && !realAddresses.empty()){
+	stream << "#dependencies of class " << className << "\n";
+	if (!composedAddresses.isEmpty() && !realAddresses.isEmpty()){
 		stream << "ARXC_DEPENDENCIES +=";
 
 		for (		Addresses::const_iterator addressIter = composedAddresses.begin();
 					addressIter != composedAddresses.end();
 					++addressIter){
 			const icomp::CComponentAddress& address = *addressIter;
-			const std::string& packageId = address.GetPackageId();
+			const QByteArray& packageId = address.GetPackageId();
 
 			QString packagePath = m_packagesManagerCompPtr->GetPackagePath(packageId);
 			if (packagePath.isEmpty()){
 				SendErrorMessage(
 							MI_UNKNOWN_PACKAGE,
-							QObject::tr("Composed package '%1' cannot be found").arg(packageId.c_str()));
+							QObject::tr("Composed package '%1' cannot be found").arg(QString(packageId)));
 				return false;
 			}
 
-			stream << " \\" << std::endl;
-			stream << "\t" << baseDir.relativeFilePath(packagePath).toStdString() << "/" << address.GetComponentId() << ".arx";
+			stream << " \\" << "\n";
+			stream << "\t" << baseDir.relativeFilePath(packagePath).toLocal8Bit() << "/" << address.GetComponentId() << ".arx";
 		}
 
 		Ids packageIdsList;
@@ -968,18 +975,18 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 		for (		Ids::const_iterator packageIter = packageIdsList.begin();
 					packageIter != packageIdsList.end();
 					++packageIter){
-			const std::string& packageId = *packageIter;
+			const QByteArray& packageId = *packageIter;
 
 			QString packagePath = m_packagesManagerCompPtr->GetPackagePath(packageId);
 			if (packagePath.isEmpty()){
 				SendErrorMessage(
 							MI_UNKNOWN_PACKAGE,
-							QObject::tr("Package '%1' cannot be found").arg(packageId.c_str()));
+							QObject::tr("Package '%1' cannot be found").arg(QString(packageId)));
 				return false;
 			}
 
-			stream << " \\" << std::endl;
-			stream << "\t" << baseDir.relativeFilePath(packagePath).toStdString();
+			stream << " \\" << "\n";
+			stream << "\t" << baseDir.relativeFilePath(packagePath).toLocal8Bit();
 		}
 	}
 
@@ -990,12 +997,12 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 					++pathIter){
 			const QString& configFilePath = *pathIter;
 
-			stream << " \\" << std::endl;
-			stream << "\t" << baseDir.relativeFilePath(configFilePath).toStdString();
+			stream << " \\" << "\n";
+			stream << "\t" << baseDir.relativeFilePath(configFilePath).toLocal8Bit();
 		}
 	}
 
-	stream << std::endl;
+	stream << "\n";
 
 	return true;
 }
@@ -1003,15 +1010,15 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 
 bool CRegistryCodeSaverComp::WriteRegistryInfo(
 			const icomp::IRegistry& registry,
-			const std::string& registryCallPrefix,
-			std::ofstream& stream) const
+			const QByteArray& registryCallPrefix,
+			QTextStream& stream) const
 {
 	icomp::IRegistry::Ids ids = registry.GetElementIds();
-	if (!ids.empty()){
+	if (!ids.isEmpty()){
 		for (		icomp::IRegistry::Ids::const_iterator elementIter = ids.begin();
 					elementIter != ids.end();
 					++elementIter){
-			const std::string& componentId = *elementIter;
+			const QByteArray& componentId = *elementIter;
 
 			const icomp::IRegistry::ElementInfo* infoPtr = registry.GetElementInfo(componentId);
 			I_ASSERT(infoPtr != NULL);	// used element ID was returned by registry, info must exist.
@@ -1026,14 +1033,14 @@ bool CRegistryCodeSaverComp::WriteRegistryInfo(
 	}
 
 	const icomp::IRegistry::ExportedInterfacesMap& interfacesMap = registry.GetExportedInterfacesMap();
-	if (!interfacesMap.empty()){
+	if (!interfacesMap.isEmpty()){
 		NextLine(stream);
 		stream << "// interface export";
 		for (		icomp::IRegistry::ExportedInterfacesMap::const_iterator interfaceIter = interfacesMap.begin();
 					interfaceIter != interfacesMap.end();
 					++interfaceIter){
-			const std::string& interfaceName = interfaceIter.key();
-			const std::string& componentName = interfaceIter.value();
+			const QByteArray& interfaceName = interfaceIter.key();
+			const QByteArray& componentName = interfaceIter.value();
 
 			NextLine(stream);
 			stream << registryCallPrefix << "SetElementInterfaceExported(";
@@ -1047,15 +1054,15 @@ bool CRegistryCodeSaverComp::WriteRegistryInfo(
 	}
 
 	const icomp::IRegistry::ExportedComponentsMap& componentsMap = registry.GetExportedComponentsMap();
-	if (!componentsMap.empty()){
-		stream << std::endl;
+	if (!componentsMap.isEmpty()){
+		stream << "\n";
 		NextLine(stream);
 		stream << "// component export";
 		for (		icomp::IRegistry::ExportedComponentsMap::const_iterator componentIter = componentsMap.begin();
 					componentIter != componentsMap.end();
 					++componentIter){
-			const std::string& exportedName = componentIter.key();
-			const std::string& componentName = componentIter.value();
+			const QByteArray& exportedName = componentIter.key();
+			const QByteArray& componentName = componentIter.value();
 
 			NextLine(stream);
 			stream << registryCallPrefix << "SetElementExported(";
@@ -1071,13 +1078,13 @@ bool CRegistryCodeSaverComp::WriteRegistryInfo(
 	for (		icomp::IRegistry::Ids::const_iterator embeddedIter = embeddedIds.begin();
 				embeddedIter != embeddedIds.end();
 				++embeddedIter){
-		const std::string& id = *embeddedIter;
+		const QByteArray& id = *embeddedIter;
 
 		const icomp::IRegistry* embeddedRegistryPtr = registry.GetEmbeddedRegistry(id);
 		if (embeddedRegistryPtr != NULL){
-			stream << std::endl;
+			stream << "\n";
 
-			std::string embeddedRegName = "embedded" + id + "Ptr";
+			QByteArray embeddedRegName = "embedded" + id + "Ptr";
 
 			NextLine(stream);
 			stream << "icomp::IRegistry* " << embeddedRegName << " = " << registryCallPrefix << "InsertEmbeddedRegistry(\"" << id << "\");";
@@ -1095,18 +1102,18 @@ bool CRegistryCodeSaverComp::WriteRegistryInfo(
 		}
 	}
 
-	return !stream.fail();
+	return stream.status() == QTextStream::Ok;
 }
 
 
 bool CRegistryCodeSaverComp::WriteComponentInfo(
 			const icomp::IRegistry& /*registry*/,
-			const std::string& registryCallPrefix,
-			const std::string& componentId,
+			const QByteArray& registryCallPrefix,
+			const QByteArray& componentId,
 			const icomp::IRegistry::ElementInfo& componentInfo,
-			std::ofstream& stream) const
+			QTextStream& stream) const
 {
-	std::string elementInfoName = "info" + componentId + "Ptr";
+	QByteArray elementInfoName = "info" + componentId + "Ptr";
 
 	if (componentInfo.elementPtr.IsValid()){
 		icomp::IRegistryElement& component = *componentInfo.elementPtr;
@@ -1115,7 +1122,7 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 		quint32 componentFlags = component.GetElementFlags();
 
 		NextLine(stream);
-		if (!attributeIds.empty() || (componentFlags != 0)){
+		if (!attributeIds.isEmpty() || (componentFlags != 0)){
 			stream << "icomp::IRegistry::ElementInfo* " << elementInfoName << " = ";
 		}
 
@@ -1128,7 +1135,7 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 		NextLine(stream);
 		stream << "\t\t\ttrue);";
 
-		if (!attributeIds.empty() || (componentFlags != 0)){
+		if (!attributeIds.isEmpty() || (componentFlags != 0)){
 			NextLine(stream);
 			stream << "if ((" << elementInfoName << " != NULL) && " << elementInfoName << "->elementPtr.IsValid()){";
 			ChangeIndent(1);
@@ -1138,26 +1145,26 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 				stream << elementInfoName << "->elementPtr->SetElementFlags(" << componentFlags << ");";
 			}
 
-			if (!attributeIds.empty()){
+			if (!attributeIds.isEmpty()){
 				if (componentFlags != 0){
-					stream << std::endl;
+					stream << "\n";
 				}
 
 				for (		icomp::IRegistryElement::Ids::const_iterator attributeIter = attributeIds.begin();
 							attributeIter != attributeIds.end();
 							++attributeIter){
-					const std::string& attributeId = *attributeIter;
+					const QByteArray& attributeId = *attributeIter;
 
 					const icomp::IRegistryElement::AttributeInfo* attrInfoPtr = component.GetAttributeInfo(attributeId);
 
 					if (attributeIter != attributeIds.begin()){
-						stream << std::endl;
+						stream << "\n";
 					}
 
 					NextLine(stream);
 					stream << "// create and set attribute value for '" << attributeId << "'";
 					if (attrInfoPtr != NULL){
-						std::string attributeInfoName = "attrInfo" + attributeId + "Ptr";
+						QByteArray attributeInfoName = "attrInfo" + attributeId + "Ptr";
 
 						bool isAttributeValid = attrInfoPtr->attributePtr.IsValid();
 
@@ -1169,7 +1176,7 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 						stream << "if (" << attributeInfoName << " != NULL){";
 						ChangeIndent(1);
 
-						if (!attrInfoPtr->exportId.empty()){
+						if (!attrInfoPtr->exportId.isEmpty()){
 							NextLine(stream);
 							stream << attributeInfoName << "->exportId = \"" << attrInfoPtr->exportId << "\";";
 						}
@@ -1189,35 +1196,35 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 
 			ChangeIndent(-1);
 			NextLine(stream);
-			stream << "}" << std::endl;
+			stream << "}" << "\n";
 		}
 	}
 
-	return !stream.fail();
+	return stream.status() == QTextStream::Ok;
 }
 
 
 bool CRegistryCodeSaverComp::WriteAttribute(
-			const std::string& attributeId,
-			const std::string& componentId,
-			const std::string& attributeInfoName,
+			const QByteArray& attributeId,
+			const QByteArray& componentId,
+			const QByteArray& attributeInfoName,
 			const iser::IObject& attribute,
-			std::ofstream& stream) const
+			QTextStream& stream) const
 {
-	NextLine(stream);
-	stream << attributeInfoName << "->attributePtr.SetPtr(new " << attribute.GetFactoryId() << ");";
+	QByteArray attributeType;
+	QByteArray valueString;
+	QList<QByteArray> valueStrings;
 
-	NextLine(stream);
-	stream << "I_ASSERT(" << attributeInfoName << "->attributePtr.IsValid());";
-	stream << std::endl;
-
-	std::string attributeType;
-	std::string valueString;
-	std::list<std::string> valueStrings;
-
-	std::string attributeName = "attr" + attributeId + "Ptr";
+	QByteArray attributeName = "attr" + attributeId + "Ptr";
 
 	if (GetAttributeValue(attributeId, componentId, attribute, valueString, attributeType)){
+		NextLine(stream);
+		stream << attributeInfoName << "->attributePtr.SetPtr(new " << attributeType << ");";
+
+		NextLine(stream);
+		stream << "I_ASSERT(" << attributeInfoName << "->attributePtr.IsValid());";
+		stream << "\n";
+
 		NextLine(stream);
 		stream << attributeType << "* " << attributeName << " = dynamic_cast<" << attributeType << "*>(" << attributeInfoName << "->attributePtr.GetPtr());";
 		NextLine(stream);
@@ -1226,16 +1233,23 @@ bool CRegistryCodeSaverComp::WriteAttribute(
 		stream << attributeName << "->SetValue(" << valueString << ");";
 	}
 	else if (GetMultiAttributeValue(attributeId, componentId, attribute, valueStrings, attributeType)){
-		if (!valueStrings.empty()){
+		NextLine(stream);
+		stream << attributeInfoName << "->attributePtr.SetPtr(new " << attributeType << ");";
+
+		NextLine(stream);
+		stream << "I_ASSERT(" << attributeInfoName << "->attributePtr.IsValid());";
+		stream << "\n";
+
+		if (!valueStrings.isEmpty()){
 			NextLine(stream);
 			stream << attributeType << "* n" << attributeInfoName << " = dynamic_cast<" << attributeType << "*>(" << attributeInfoName << "->attributePtr.GetPtr());";
 			NextLine(stream);
 			stream << "I_ASSERT(n" << attributeInfoName << " != NULL);";
-			stream << std::endl;
+			stream << "\n";
 			NextLine(stream);
 			stream << "n" << attributeInfoName << "->Reset();";
 
-			for (		std::list<std::string>::const_iterator iter = valueStrings.begin();
+			for (		QList<QByteArray>::const_iterator iter = valueStrings.begin();
 						iter != valueStrings.end();
 						++iter){
 				NextLine(stream);
@@ -1246,7 +1260,7 @@ bool CRegistryCodeSaverComp::WriteAttribute(
 	else{
 		SendErrorMessage(
 					MI_UNDEFINED_ATTR_TYPE,
-					QObject::tr("Unknown attribute type: %1").arg(attributeType.c_str()));
+					QObject::tr("Unknown attribute type: %1").arg(QString(attributeType)));
 		return false;
 	}
 
@@ -1255,10 +1269,10 @@ bool CRegistryCodeSaverComp::WriteAttribute(
 
 
 bool CRegistryCodeSaverComp::WriteRegistryClassDeclaration(
-			const std::string& /*baseClassName*/,
-			const std::string& registryClassName,
+			const QByteArray& /*baseClassName*/,
+			const QByteArray& registryClassName,
 			const icomp::IRegistry& registry,
-			std::ofstream& stream) const
+			QTextStream& stream) const
 {
 	QString description = registry.GetDescription();
 
@@ -1267,7 +1281,7 @@ bool CRegistryCodeSaverComp::WriteRegistryClassDeclaration(
 		stream << "/**";
 
 		NextLine(stream);
-		stream << "\t" << description.toStdString() << ".";
+		stream << "\t" << description.toLocal8Bit() << ".";
 
 		NextLine(stream);
 		stream << "*/";
@@ -1294,15 +1308,15 @@ bool CRegistryCodeSaverComp::WriteRegistryClassDeclaration(
 
 
 bool CRegistryCodeSaverComp::WriteRegistryClassBody(
-			const std::string& baseClassName,
-			const std::string& registryClassName,
+			const QByteArray& baseClassName,
+			const QByteArray& registryClassName,
 			const icomp::IRegistry& registry,
-			std::ofstream& stream) const
+			QTextStream& stream) const
 {
 	NextLine(stream);
 	stream << "// Embedded class " << registryClassName;
 
-	stream << std::endl;
+	stream << "\n";
 
 	NextLine(stream);
 	stream << baseClassName << "::" << registryClassName << "::" << registryClassName << "()";
@@ -1324,32 +1338,32 @@ bool CRegistryCodeSaverComp::WriteRegistryClassBody(
 
 
 bool CRegistryCodeSaverComp::GetAttributeValue(
-			const std::string& attributeId,
-			const std::string& componentId,
+			const QByteArray& attributeId,
+			const QByteArray& componentId,
 			const iser::ISerializable& attribute,
-			std::string& valueString,
-			std::string& typeName) const
+			QByteArray& valueString,
+			QByteArray& typeName) const
 {
-	const icomp::CBoolAttribute* boolAttribute = dynamic_cast<const icomp::CBoolAttribute*>(&attribute);
+	const icomp::CBooleanAttribute* boolAttribute = dynamic_cast<const icomp::CBooleanAttribute*>(&attribute);
 	if (boolAttribute != NULL){
 		valueString = boolAttribute->GetValue()? "true": "false";
-		typeName = "icomp::CBoolAttribute";
+		typeName = "icomp::CBooleanAttribute";
 
 		return true;
 	}
 
-	const icomp::CDoubleAttribute* doubleAttribute = dynamic_cast<const icomp::CDoubleAttribute*>(&attribute);
+	const icomp::CRealAttribute* doubleAttribute = dynamic_cast<const icomp::CRealAttribute*>(&attribute);
 	if (doubleAttribute != NULL){
-		valueString = QString("%1").arg(doubleAttribute->GetValue()).toStdString();
-		typeName = "icomp::CDoubleAttribute";
+		valueString = QString("%1").arg(doubleAttribute->GetValue()).toLocal8Bit();
+		typeName = "icomp::CRealAttribute";
 
 		return true;
 	}
 
-	const icomp::CIntAttribute* intAttribute = dynamic_cast<const icomp::CIntAttribute*>(&attribute);
+	const icomp::CIntegerAttribute* intAttribute = dynamic_cast<const icomp::CIntegerAttribute*>(&attribute);
 	if (intAttribute != NULL){
-		valueString = QString("%1").arg(intAttribute->GetValue()).toStdString();
-		typeName = "icomp::CIntAttribute";
+		valueString = QString("%1").arg(intAttribute->GetValue()).toLocal8Bit();
+		typeName = "icomp::CIntegerAttribute";
 
 		return true;
 	}
@@ -1362,10 +1376,25 @@ bool CRegistryCodeSaverComp::GetAttributeValue(
 		return true;
 	}
 
-	const icomp::CStdStringAttribute* stdStringAttributePtr = dynamic_cast<const icomp::CStdStringAttribute*>(&attribute);
-	if (stdStringAttributePtr != NULL){		
-		valueString = GetStdStringLiteral(stdStringAttributePtr->GetValue());
-		typeName = "icomp::CStdStringAttribute";
+	const icomp::CIdAttribute* idAttributePtr = dynamic_cast<const icomp::CIdAttribute*>(&attribute);
+	if (idAttributePtr != NULL){
+		valueString = GetIdValueLiteral(idAttributePtr->GetValue());
+
+		const icomp::CFactoryAttribute* factoryAttributePtr = dynamic_cast<const icomp::CFactoryAttribute*>(&attribute);
+		if (factoryAttributePtr != NULL){
+			typeName = "icomp::CFactoryAttribute";
+
+			return true;
+		}
+
+		const icomp::CReferenceAttribute* referenceAttributePtr = dynamic_cast<const icomp::CReferenceAttribute*>(&attribute);
+		if (referenceAttributePtr != NULL){
+			typeName = "icomp::CReferenceAttribute";
+
+			return true;
+		}
+
+		typeName = "icomp::CIdAttribute";
 
 		return true;
 	}
@@ -1375,65 +1404,79 @@ bool CRegistryCodeSaverComp::GetAttributeValue(
 
 
 bool CRegistryCodeSaverComp::GetMultiAttributeValue(
-			const std::string& attributeId,
-			const std::string& componentId,
+			const QByteArray& attributeId,
+			const QByteArray& componentId,
 			const iser::ISerializable& attribute,
-			std::list<std::string>& valueStrings,
-			std::string& typeName) const
+			QList<QByteArray>& valueStrings,
+			QByteArray& typeName) const
 {
 	valueStrings.clear();
 
-	const icomp::CMultiBoolAttribute* boolListAttribute = dynamic_cast<const icomp::CMultiBoolAttribute*>(&attribute);
-	if (boolListAttribute != NULL){
-		for (int index = 0; index < boolListAttribute->GetValuesCount(); index++){
-			valueStrings.push_back(boolListAttribute->GetValueAt(index)? "true": "false");
+	const icomp::CBooleanListAttribute* boolAttribute = dynamic_cast<const icomp::CBooleanListAttribute*>(&attribute);
+	if (boolAttribute != NULL){
+		for (int index = 0; index < boolAttribute->GetValuesCount(); index++){
+			valueStrings.push_back(boolAttribute->GetValueAt(index)? "true": "false");
 		}
 
-		typeName = "icomp::CMultiBoolAttribute";
+		typeName = "icomp::CBooleanListAttribute";
 
 		return true;
 	}
 
-	const icomp::CMultiIntAttribute* intListAttribute = dynamic_cast<const icomp::CMultiIntAttribute*>(&attribute);
-	if (intListAttribute != NULL){
-		for (int index = 0; index < intListAttribute->GetValuesCount(); index++){
-			valueStrings.push_back(QString("%1").arg(intListAttribute->GetValueAt(index)).toStdString());
+	const icomp::CIntegerListAttribute* intAttribute = dynamic_cast<const icomp::CIntegerListAttribute*>(&attribute);
+	if (intAttribute != NULL){
+		for (int index = 0; index < intAttribute->GetValuesCount(); index++){
+			valueStrings.push_back(QString("%1").arg(intAttribute->GetValueAt(index)).toLocal8Bit());
 		}
 
-		typeName = "icomp::CMultiIntAttribute";
+		typeName = "icomp::CIntegerListAttribute";
 
 		return true;
 	}
 
-	const icomp::CMultiDoubleAttribute* doubleListAttribute = dynamic_cast<const icomp::CMultiDoubleAttribute*>(&attribute);
-	if (doubleListAttribute != NULL){
-		for (int index = 0; index < doubleListAttribute->GetValuesCount(); index++){
-			valueStrings.push_back(QString("%1").arg(doubleListAttribute->GetValueAt(index)).toStdString());
+	const icomp::CRealListAttribute* doubleAttribute = dynamic_cast<const icomp::CRealListAttribute*>(&attribute);
+	if (doubleAttribute != NULL){
+		for (int index = 0; index < doubleAttribute->GetValuesCount(); index++){
+			valueStrings.push_back(QString("%1").arg(doubleAttribute->GetValueAt(index)).toLocal8Bit());
 		}
 
-		typeName = "icomp::CMultiDoubleAttribute";
+		typeName = "icomp::CRealListAttribute";
 
 		return true;
 	}
 
-	const icomp::CMultiStringAttribute* stringListAttribute = dynamic_cast<const icomp::CMultiStringAttribute*>(&attribute);
-	if (stringListAttribute != NULL){
-		for (int index = 0; index < stringListAttribute->GetValuesCount(); index++){
-			valueStrings.push_back("QObject::tr(" + GetStringLiteral(stringListAttribute->GetValueAt(index)) + ", \"" + componentId + "/" + attributeId + "\")");
+	const icomp::CStringListAttribute* stringAttributePtr = dynamic_cast<const icomp::CStringListAttribute*>(&attribute);
+	if (stringAttributePtr != NULL){
+		for (int index = 0; index < stringAttributePtr->GetValuesCount(); index++){
+			valueStrings.push_back("QObject::tr(" + GetStringLiteral(stringAttributePtr->GetValueAt(index)) + ", \"" + componentId + "/" + attributeId + "\")");
 		}
 
-		typeName = "icomp::CMultiStringAttribute";
+		typeName = "icomp::CStringListAttribute";
 
 		return true;
 	}
 
-	const icomp::CMultiStdStringAttribute* multiStdStringAttributePtr = dynamic_cast<const icomp::CMultiStdStringAttribute*>(&attribute);
-	if (multiStdStringAttributePtr != NULL){
-		for (int index = 0; index < multiStdStringAttributePtr->GetValuesCount(); index++){
-			valueStrings.push_back(GetStdStringLiteral(multiStdStringAttributePtr->GetValueAt(index)));
+	const icomp::CIdListAttribute* idAttributePtr = dynamic_cast<const icomp::CIdListAttribute*>(&attribute);
+	if (idAttributePtr != NULL){
+		for (int index = 0; index < idAttributePtr->GetValuesCount(); index++){
+			valueStrings.push_back(GetIdValueLiteral(idAttributePtr->GetValueAt(index)));
 		}
 
-		typeName = "icomp::CMultiStdStringAttribute";
+		const icomp::CMultiFactoryAttribute* factoryAttributePtr = dynamic_cast<const icomp::CMultiFactoryAttribute*>(&attribute);
+		if (factoryAttributePtr != NULL){
+			typeName = "icomp::CMultiFactoryAttribute";
+
+			return true;
+		}
+
+		const icomp::CMultiReferenceAttribute* referenceAttributePtr = dynamic_cast<const icomp::CMultiReferenceAttribute*>(&attribute);
+		if (referenceAttributePtr != NULL){
+			typeName = "icomp::CMultiReferenceAttribute";
+
+			return true;
+		}
+
+		typeName = "icomp::CIdListAttribute";
 
 		return true;
 	}
@@ -1442,15 +1485,15 @@ bool CRegistryCodeSaverComp::GetMultiAttributeValue(
 }
 
 
-bool CRegistryCodeSaverComp::NextLine(std::ofstream& stream) const
+bool CRegistryCodeSaverComp::NextLine(QTextStream& stream) const
 {
-	stream << std::endl;
+	stream << "\n";
 
 	for (int i = 0; i < m_indentCount; ++i){
 		stream << "\t";
 	}
 
-	return !stream.fail();
+	return stream.status() == QTextStream::Ok;
 }
 
 
@@ -1464,22 +1507,22 @@ int CRegistryCodeSaverComp::ChangeIndent(int difference) const
 }
 
 
-bool CRegistryCodeSaverComp::ExtractInfoFromFile(const QString& filePath, std::string& className, QString& headerFilePath) const
+bool CRegistryCodeSaverComp::ExtractInfoFromFile(const QString& filePath, QByteArray& className, QString& headerFilePath) const
 {
 	QFileInfo fileInfo(filePath);
 
-	className = fileInfo.baseName().toStdString();
+	className = fileInfo.baseName().toLocal8Bit();
 
-	headerFilePath = fileInfo.absolutePath() + "/" + QString::fromStdString(className);
+	headerFilePath = fileInfo.absolutePath() + "/" + className;
 	headerFilePath = QDir::toNativeSeparators(headerFilePath);
 
-	return (!className.empty());
+	return (!className.isEmpty());
 }
 
 
-std::string CRegistryCodeSaverComp::GetPackageName(const std::string& packageId) const
+QByteArray CRegistryCodeSaverComp::GetPackageName(const QByteArray& packageId) const
 {
-	if ((packageId.length() >= 3) && (packageId.substr(packageId.length() - 3) == "Pck")){
+	if (packageId.endsWith("Pck")){
 		return packageId;
 	}
 	else{
@@ -1488,11 +1531,11 @@ std::string CRegistryCodeSaverComp::GetPackageName(const std::string& packageId)
 }
 
 
-std::string CRegistryCodeSaverComp::GetStringLiteral(const QString& text) const
+QByteArray CRegistryCodeSaverComp::GetStringLiteral(const QString& text) const
 {
 	static const char* hexCiphers = "0123456789ABCDEF";
 
-	std::string retVal("\"");
+	QByteArray retVal("\"");
 
 	for (		QString::const_iterator iter = text.begin();
 				iter != text.end();
@@ -1542,16 +1585,16 @@ std::string CRegistryCodeSaverComp::GetStringLiteral(const QString& text) const
 }
 
 
-std::string CRegistryCodeSaverComp::GetStdStringLiteral(const std::string& text) const
+QByteArray CRegistryCodeSaverComp::GetIdValueLiteral(const QByteArray& text) const
 {
 	static const char* hexCiphers = "0123456789ABCDEF";
 
-	std::string retVal("\"");
+	QByteArray retVal("\"");
 
-	for (		std::string::const_iterator iter = text.begin();
+	for (		QByteArray::const_iterator iter = text.begin();
 				iter != text.end();
 				++iter){
-		std::string::value_type c = *iter;
+		QByteArray::value_type c = *iter;
 
 		if (c == '\a'){
 			retVal += "\\a";

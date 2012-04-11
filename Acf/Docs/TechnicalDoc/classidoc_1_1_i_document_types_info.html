@@ -74,33 +74,33 @@ Public Types</h2></td></tr>
 <a class="el" href="classidoc_1_1_i_document_types_info.html#ae8b0ff0e5ccdac21fc231fd0173fcb2cabcb82105454c0b0080ce1a0a7e7f72f8">SF_DEFAULT</a> =  0xffff
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for supported types of operation with the document.  <a href="classidoc_1_1_i_document_types_info.html#ae8b0ff0e5ccdac21fc231fd0173fcb2c">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QVector&lt; QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#acb66d5689b7476281d062b66568a063a">IsFeatureSupported</a> (int featureFlags, const std::string &amp;documentTypeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the feature(s) is supported by this document template.  <a href="#acb66d5689b7476281d062b66568a063a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#a3b488790b3e7c62c13abf5d502e496bb">GetDocumentTypeIds</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#aa877c8b903c95a2d94138df7674adeeb">IsFeatureSupported</a> (int featureFlags, const QByteArray &amp;documentTypeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the feature(s) is supported by this document template.  <a href="#aa877c8b903c95a2d94138df7674adeeb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#a3b488790b3e7c62c13abf5d502e496bb">GetDocumentTypeIds</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a3b488790b3e7c62c13abf5d502e496bb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#a75e446de24ac14da9104436130fac5b2">GetDocumentTypeName</a> (const std::string &amp;documentTypeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some document type ID.  <a href="#a75e446de24ac14da9104436130fac5b2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#a4e7f972d10d706a5efe11b184601d0d2">GetDocumentFileTypeInfo</a> (const std::string &amp;documentTypeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file type information object for some selected document type.  <a href="#a4e7f972d10d706a5efe11b184601d0d2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#ae8e1a3bda31441f2c7e1cf37f64f0c53">GetDocumentTypeIdsForFile</a> (const QString &amp;filePath) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#a9a0476c469498d8456573a730a3a7d7e">GetDocumentTypeName</a> (const QByteArray &amp;documentTypeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some document type ID.  <a href="#a9a0476c469498d8456573a730a3a7d7e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#ac41e8a8af9fef09682eb4c9d75ed7d74">GetDocumentFileTypeInfo</a> (const QByteArray &amp;documentTypeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file type information object for some selected document type.  <a href="#ac41e8a8af9fef09682eb4c9d75ed7d74"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#ae8e1a3bda31441f2c7e1cf37f64f0c53">GetDocumentTypeIdsForFile</a> (const QString &amp;filePath) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#ae8e1a3bda31441f2c7e1cf37f64f0c53"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#a8634a4fcd5c54b13baf57899cd7a13e7">GetDefaultDirectory</a> (const QString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default directory for specified document type.  <a href="#a8634a4fcd5c54b13baf57899cd7a13e7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_types_info.html#a255f03be37a16f5f69310b250f43234b">GetDefaultDirectory</a> (const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default directory for specified document type.  <a href="#a255f03be37a16f5f69310b250f43234b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide information about different document types. </p>
 
-<p>Definition at line <a class="el" href="_i_document_types_info_8h_source.html#l00026">26</a> of file <a class="el" href="_i_document_types_info_8h_source.html">IDocumentTypesInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_types_info_8h_source.html#l00022">22</a> of file <a class="el" href="_i_document_types_info_8h_source.html">IDocumentTypesInfo.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a6860664a39d08fc7f4c061a65754303b"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::Ids" ref="a6860664a39d08fc7f4c061a65754303b" args="" -->
+<a class="anchor" id="ad27b000c2b9dd09e63ccd4af882c3817"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::Ids" ref="ad27b000c2b9dd09e63ccd4af882c3817" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;std::string&gt; <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">idoc::IDocumentTypesInfo::Ids</a></td>
+          <td class="memname">typedef QVector&lt;QByteArray&gt; <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">idoc::IDocumentTypesInfo::Ids</a></td>
         </tr>
       </table>
 </div>
@@ -108,7 +108,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a660e086706eeed80e2a7ae00306c3468">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</a>, and <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a660e086706eeed80e2a7ae00306c3468">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_document_types_info_8h_source.html#l00029">29</a> of file <a class="el" href="_i_document_types_info_8h_source.html">IDocumentTypesInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_types_info_8h_source.html#l00025">25</a> of file <a class="el" href="_i_document_types_info_8h_source.html">IDocumentTypesInfo.h</a>.</p>
 
 </div>
 </div>
@@ -139,12 +139,12 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_document_types_info_8h_source.html#l00034">34</a> of file <a class="el" href="_i_document_types_info_8h_source.html">IDocumentTypesInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_types_info_8h_source.html#l00030">30</a> of file <a class="el" href="_i_document_types_info_8h_source.html">IDocumentTypesInfo.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8634a4fcd5c54b13baf57899cd7a13e7"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::GetDefaultDirectory" ref="a8634a4fcd5c54b13baf57899cd7a13e7" args="(const QString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const =0" -->
+<a class="anchor" id="a255f03be37a16f5f69310b250f43234b"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::GetDefaultDirectory" ref="a255f03be37a16f5f69310b250f43234b" args="(const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -157,7 +157,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>documentTypeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -178,18 +178,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a1898c8fd0c1770b42aab15269d2d4f27">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a755e8169e2a710870f7e118b148ceaef">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a02273094745694fbfcf8ba512dd1f344">idoc::CTmplBasedDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a4eddbd1b6aae7d49799596a18c92d193">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a9267e276ce03cefb682ac01235ac2e01">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#ad0a93693455eef75dcd2eeb49a7eade9">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4e7f972d10d706a5efe11b184601d0d2"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::GetDocumentFileTypeInfo" ref="a4e7f972d10d706a5efe11b184601d0d2" args="(const std::string &amp;documentTypeId) const =0" -->
+<a class="anchor" id="ac41e8a8af9fef09682eb4c9d75ed7d74"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::GetDocumentFileTypeInfo" ref="ac41e8a8af9fef09682eb4c9d75ed7d74" args="(const QByteArray &amp;documentTypeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a>* idoc::IDocumentTypesInfo::GetDocumentFileTypeInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -205,7 +205,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2c186899b0066e465ff0c860c052c49b">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a40bc84914e319a0e650df4feeb7ba82e">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a02f779b49e130531a212defa1542ea4f">idoc::CTmplBasedDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#ab427f8ccd5827ace1926b3993ca1d77a">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a46910a714e74fd3d899027514a721e81">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#ae4db74119c01ac88d231f44a3a385788">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a> idoc::IDocumentTypesInfo::GetDocumentTypeIds </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a> idoc::IDocumentTypesInfo::GetDocumentTypeIds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -234,7 +234,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a> idoc::IDocumentTypesInfo::GetDocumentTypeIdsForFile </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a> idoc::IDocumentTypesInfo::GetDocumentTypeIdsForFile </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
@@ -250,14 +250,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a75e446de24ac14da9104436130fac5b2"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::GetDocumentTypeName" ref="a75e446de24ac14da9104436130fac5b2" args="(const std::string &amp;documentTypeId) const =0" -->
+<a class="anchor" id="a9a0476c469498d8456573a730a3a7d7e"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::GetDocumentTypeName" ref="a9a0476c469498d8456573a730a3a7d7e" args="(const QByteArray &amp;documentTypeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QString idoc::IDocumentTypesInfo::GetDocumentTypeName </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -273,11 +273,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a5438ea881b29767b75b48c59b9d49d67">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a5a16c12114b3cda980ae4214b65acb8d">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a02d91805662b780dcdc8339973c3928b">idoc::CTmplBasedDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2b76df2b569c11e8c5891cdf9961545a">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ab001914b4a5c5368ecef0cea93f758ab">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#acf218584bffc04b5c93346208d1da05c">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acb66d5689b7476281d062b66568a063a"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::IsFeatureSupported" ref="acb66d5689b7476281d062b66568a063a" args="(int featureFlags, const std::string &amp;documentTypeId) const =0" -->
+<a class="anchor" id="aa877c8b903c95a2d94138df7674adeeb"></a><!-- doxytag: member="idoc::IDocumentTypesInfo::IsFeatureSupported" ref="aa877c8b903c95a2d94138df7674adeeb" args="(int featureFlags, const QByteArray &amp;documentTypeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -290,7 +290,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em>&#160;</td>
         </tr>
         <tr>
@@ -304,7 +304,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return <code>true</code>, if the feature(s) is supported by this document template. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#af762cd6be44415c970675bee13401ddd">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#add86c3cc0946b7357a80bfafaceead28">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a8dc6514abbb1c605cc79ab2c6c6bad86">idoc::CTmplBasedDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a3edfc383a06584be11b1fbbb164dcf4c">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a8f114a7307b76eec8ecb2c96a118c1b6">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a71075057c8c586240b4b568edbff2fce">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>

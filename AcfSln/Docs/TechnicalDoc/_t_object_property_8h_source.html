@@ -53,8 +53,8 @@
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <a class="code" href="classiprop_1_1_t_object_property.html#aa71701d0e2b738435005410c470ec688">TObjectProperty</a>(
 <a name="l00032"></a>00032                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
-<a name="l00033"></a>00033                             <span class="keyword">const</span> std::string&amp; propertyName,
-<a name="l00034"></a>00034                             <span class="keyword">const</span> std::string&amp; propertyDescription,
+<a name="l00033"></a>00033                             <span class="keyword">const</span> QByteArray&amp; propertyName,
+<a name="l00034"></a>00034                             <span class="keyword">const</span> QByteArray&amp; propertyDescription,
 <a name="l00035"></a>00035                             <span class="keywordtype">int</span> propertyFlags,
 <a name="l00036"></a>00036                             <span class="keywordtype">int</span> changeFlags = 0,
 <a name="l00037"></a>00037                             <span class="keyword">const</span> <a class="code" href="classiprop_1_1_t_object_property.html#a7639b27ea56c2a15884503717703165e">ValueType</a>&amp; defaultValue = <a class="code" href="classiprop_1_1_t_object_property.html#a7639b27ea56c2a15884503717703165e">ValueType</a>());
@@ -67,13 +67,13 @@
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_object_property.html#aad3f882ae384e43d03ee13ee4f174f5d">GetDefaultPropertyPtr</a>() <span class="keyword">const</span>;
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (iser::IObject)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> std::string <a class="code" href="classiprop_1_1_t_object_property.html#a34d3ab534550d8eda0bdc68d253b6bda">GetFactoryId</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprop_1_1_t_object_property.html#a25f3e0a6d698cdc39ff4fc5e1d38d659">GetFactoryId</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052        <span class="comment">// static methods</span>
-<a name="l00053"></a>00053        <span class="keyword">static</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiprop_1_1_t_object_property.html#a7e4f756334e5757e22f40b210b56b5bd">GetTypeName</a>();
+<a name="l00053"></a>00053        <span class="keyword">static</span> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprop_1_1_t_object_property.html#a44d2daef0c68b35461bd28bb577248a4">GetTypeName</a>();
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055 <span class="keyword">protected</span>:
 <a name="l00056"></a><a class="code" href="classiprop_1_1_t_object_property.html#af58684533d196c2f7b87d5f55d647ee2">00056</a>        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_t_copy_serialized_wrap.html">iser::TCopySerializedWrap&lt;Value&gt;</a> <a class="code" href="classiprop_1_1_t_object_property.html#af58684533d196c2f7b87d5f55d647ee2">m_value</a>;
@@ -81,7 +81,7 @@
 <a name="l00058"></a><a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">00058</a>        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;PropertyType&gt;</a> <a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">m_defaultPropertyValuePtr</a>;
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060 <span class="keyword">private</span>:
-<a name="l00061"></a>00061        <span class="keyword">static</span> <span class="keyword">const</span> std::string s_typeName;
+<a name="l00061"></a>00061        <span class="keyword">static</span> <span class="keyword">const</span> QByteArray s_typeName;
 <a name="l00062"></a>00062 };
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 
@@ -95,10 +95,10 @@
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00075"></a><a class="code" href="classiprop_1_1_t_object_property.html#ae153b95d99e7f095151e80ab0a6ce6f2">00075</a> <a class="code" href="classiprop_1_1_t_object_property.html#aa71701d0e2b738435005410c470ec688">TObjectProperty&lt;Value&gt;::TObjectProperty</a>(
+<a name="l00075"></a><a class="code" href="classiprop_1_1_t_object_property.html#afb76d06416d02298da59228820805a3d">00075</a> <a class="code" href="classiprop_1_1_t_object_property.html#aa71701d0e2b738435005410c470ec688">TObjectProperty&lt;Value&gt;::TObjectProperty</a>(
 <a name="l00076"></a>00076                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
-<a name="l00077"></a>00077                             <span class="keyword">const</span> std::string&amp; propertyName,
-<a name="l00078"></a>00078                             <span class="keyword">const</span> std::string&amp; propertyDescription,
+<a name="l00077"></a>00077                             <span class="keyword">const</span> QByteArray&amp; propertyName,
+<a name="l00078"></a>00078                             <span class="keyword">const</span> QByteArray&amp; propertyDescription,
 <a name="l00079"></a>00079                             <span class="keywordtype">int</span> propertyFlags,
 <a name="l00080"></a>00080                             <span class="keywordtype">int</span> changeFlags,
 <a name="l00081"></a>00081                             <span class="keyword">const</span> <a class="code" href="classiprop_1_1_t_object_property.html#a7639b27ea56c2a15884503717703165e">ValueType</a>&amp; defaultValue)
@@ -151,7 +151,7 @@
 <a name="l00128"></a>00128 <span class="comment">// reimplemented (iser::IObject)</span>
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00131"></a><a class="code" href="classiprop_1_1_t_object_property.html#a34d3ab534550d8eda0bdc68d253b6bda">00131</a> std::string <a class="code" href="classiprop_1_1_t_object_property.html#a34d3ab534550d8eda0bdc68d253b6bda">TObjectProperty&lt;Value&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
+<a name="l00131"></a><a class="code" href="classiprop_1_1_t_object_property.html#a25f3e0a6d698cdc39ff4fc5e1d38d659">00131</a> QByteArray <a class="code" href="classiprop_1_1_t_object_property.html#a25f3e0a6d698cdc39ff4fc5e1d38d659">TObjectProperty&lt;Value&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
 <a name="l00132"></a>00132 <span class="keyword"></span>{
 <a name="l00133"></a>00133        <span class="keywordflow">return</span> s_typeName;
 <a name="l00134"></a>00134 }
@@ -178,7 +178,7 @@
 <a name="l00155"></a>00155 <span class="comment">// static methods</span>
 <a name="l00156"></a>00156 
 <a name="l00157"></a>00157 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00158"></a><a class="code" href="classiprop_1_1_t_object_property.html#a7e4f756334e5757e22f40b210b56b5bd">00158</a> <span class="keyword">const</span> std::string&amp; <a class="code" href="classiprop_1_1_t_object_property.html#a7e4f756334e5757e22f40b210b56b5bd">TObjectProperty&lt;Value&gt;::GetTypeName</a>()
+<a name="l00158"></a><a class="code" href="classiprop_1_1_t_object_property.html#a44d2daef0c68b35461bd28bb577248a4">00158</a> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprop_1_1_t_object_property.html#a44d2daef0c68b35461bd28bb577248a4">TObjectProperty&lt;Value&gt;::GetTypeName</a>()
 <a name="l00159"></a>00159 {
 <a name="l00160"></a>00160        <span class="keywordflow">return</span> s_typeName;
 <a name="l00161"></a>00161 }
@@ -187,7 +187,7 @@
 <a name="l00164"></a>00164 <span class="comment">// private static properties</span>
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00167"></a>00167 <span class="keyword">const</span> std::string <a class="code" href="classiprop_1_1_t_object_property.html" title="Template implementation of an atomic property.">TObjectProperty&lt;Value&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#aa933e42f37d56bdd4236e0833b1adb14">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_object_property.html" title="Template implementation of an atomic property.">TObjectProperty&lt;Value&gt;</a> &gt;());
+<a name="l00167"></a>00167 <span class="keyword">const</span> QByteArray <a class="code" href="classiprop_1_1_t_object_property.html" title="Template implementation of an atomic property.">TObjectProperty&lt;Value&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_object_property.html" title="Template implementation of an atomic property.">TObjectProperty&lt;Value&gt;</a> &gt;());
 <a name="l00168"></a>00168 
 <a name="l00169"></a>00169 
 <a name="l00170"></a>00170 } <span class="comment">// namespace iprop</span>

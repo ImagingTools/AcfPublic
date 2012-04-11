@@ -80,13 +80,13 @@ Protected Types</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classizlib_1_1_c_gz_xml_write_archive.html#a20b259b8c34702ebe76367fbdb144a86">WriteString</a> (const std::string &amp;value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classizlib_1_1_c_gz_xml_write_archive.html#aed64c43c20af5ee1bee80abe4e2825d1">WriteString</a> (const QByteArray &amp;value)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>ZLIB compressed implementation of archive for writing in XML format. </p>
 <p>This implementation doesn't use any external parser, it uses ZLIB library for file compressing. It creates <code>counter</code> attribute indicating number of subtags for each mutli tag node. Compressed XML file in this format are needed by <code><a class="el" href="classizlib_1_1_c_gz_xml_read_archive.html" title="ZLIB compressed implementation of simple archive reading from XML file.">izlib::CGzXmlReadArchive</a></code>. </p>
 
-<p>Definition at line <a class="el" href="_c_gz_xml_write_archive_8h_source.html#l00029">29</a> of file <a class="el" href="_c_gz_xml_write_archive_8h_source.html">CGzXmlWriteArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gz_xml_write_archive_8h_source.html#l00026">26</a> of file <a class="el" href="_c_gz_xml_write_archive_8h_source.html">CGzXmlWriteArchive.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aa4cf73320dfedfaffe0531e98b9371e6"></a><!-- doxytag: member="izlib::CGzXmlWriteArchive::BaseClass" ref="aa4cf73320dfedfaffe0531e98b9371e6" args="" -->
 <div class="memitem">
@@ -101,7 +101,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_xml_write_archive_base.html#a68d95eaf8d8731b3946d2cb73379d6d6">iser::CXmlWriteArchiveBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_gz_xml_write_archive_8h_source.html#l00034">34</a> of file <a class="el" href="_c_gz_xml_write_archive_8h_source.html">CGzXmlWriteArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gz_xml_write_archive_8h_source.html#l00031">31</a> of file <a class="el" href="_c_gz_xml_write_archive_8h_source.html">CGzXmlWriteArchive.h</a>.</p>
 
 </div>
 </div>
@@ -116,7 +116,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_gz_xml_write_archive_8h_source.html#l00035">35</a> of file <a class="el" href="_c_gz_xml_write_archive_8h_source.html">CGzXmlWriteArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gz_xml_write_archive_8h_source.html#l00032">32</a> of file <a class="el" href="_c_gz_xml_write_archive_8h_source.html">CGzXmlWriteArchive.h</a>.</p>
 
 </div>
 </div>
@@ -138,7 +138,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_gz_xml_write_archive_8h_source.html#l00045">45</a> of file <a class="el" href="_c_gz_xml_write_archive_8h_source.html">CGzXmlWriteArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gz_xml_write_archive_8h_source.html#l00042">42</a> of file <a class="el" href="_c_gz_xml_write_archive_8h_source.html">CGzXmlWriteArchive.h</a>.</p>
 
 </div>
 </div>
@@ -199,14 +199,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a20b259b8c34702ebe76367fbdb144a86"></a><!-- doxytag: member="izlib::CGzXmlWriteArchive::WriteString" ref="a20b259b8c34702ebe76367fbdb144a86" args="(const std::string &amp;value)" -->
+<a class="anchor" id="aed64c43c20af5ee1bee80abe4e2825d1"></a><!-- doxytag: member="izlib::CGzXmlWriteArchive::WriteString" ref="aed64c43c20af5ee1bee80abe4e2825d1" args="(const QByteArray &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool izlib::CGzXmlWriteArchive::WriteString </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -214,7 +214,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_xml_write_archive_base.html#a13d59f133de51efb33894576d58ffae2">iser::CXmlWriteArchiveBase</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_xml_write_archive_base.html#ab2dc2a95f01c33511904e38015001b06">iser::CXmlWriteArchiveBase</a>.</p>
 
 </div>
 </div>

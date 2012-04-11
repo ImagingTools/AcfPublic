@@ -103,56 +103,56 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#a1182f7234db35c7f29ad5b2ab9dedfa6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#af71759f290c7e5b1f16d8cff378a1dcd">GetOptionDescription</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description for a option with the index <code>index</code>.  <a href="#af71759f290c7e5b1f16d8cff378a1dcd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acee9d8e97705b5be838d47180fdb6f68">GetOptionId</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#acee9d8e97705b5be838d47180fdb6f68"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a3ba7b6e83be38ecac09feed86033bf38">GetOptionId</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#a3ba7b6e83be38ecac09feed86033bf38"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::set<br class="typebreak"/>
-&lt; <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a0f21ed2944c1cb76d1b2a8bfc9c1171d">Ids</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet<br class="typebreak"/>
+&lt; <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a07708fb861ee817af147477240e915b7">Ids</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a9c6b505aa6a67bf5101cc4c7167c7b0a">AppendAddresses</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;realAddresses, <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;composedAddresses) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a9c6b505aa6a67bf5101cc4c7167c7b0a">AppendAddresses</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;realAddresses, <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;composedAddresses) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of used addresses used by this registry and its subcomponents.  <a href="#a9c6b505aa6a67bf5101cc4c7167c7b0a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a0f21ed2944c1cb76d1b2a8bfc9c1171d">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acd3576b40b87c57ee19924ec7c185818">ExtractPackageIds</a> (const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;addresses) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a0f21ed2944c1cb76d1b2a8bfc9c1171d">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7d0e37631cfab81bca7ea8cb170b47f8">ExtractComponentIds</a> (const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;addresses, const std::string &amp;packageId) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a65f4bf6ac3ff21f4e46403a65177adf2">WriteHeader</a> (const std::string &amp;className, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;composedAddresses, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;realAddresses, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acfaf19220043ccbb4ba1bbc9b1644dda">WriteIncludes</a> (const std::string &amp;className, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;addresses, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a70c8e82047a263333a3472c8b8ad5bae">WriteClassDefinitions</a> (const std::string &amp;className, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;composedAddresses, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;realAddresses, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#adbd50ff871c020f41fb243cdafad440b">WriteDependencies</a> (const std::string &amp;className, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;composedAddresses, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;realAddresses, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a66c015a9e5836fa478e29157d0c88815">WriteRegistryInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const std::string &amp;registryCallPrefix, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a3a9df1b6d9e3c24dc33afed045ef3634">WriteComponentInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const std::string &amp;registryCallPrefix, const std::string &amp;componentId, const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> &amp;componentInfo, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a524cbc528954ecf4dfa9186191514a62">WriteAttribute</a> (const std::string &amp;attributeId, const std::string &amp;componentId, const std::string &amp;attributeName, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a76a02f7785de7a567c0afa28abb394ef">WriteRegistryClassDeclaration</a> (const std::string &amp;baseClassName, const std::string &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aea3ca9a0a8ee7bbdf0f0370d0ee7c0ff">WriteRegistryClassBody</a> (const std::string &amp;baseClassName, const std::string &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, std::ofstream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a3af00e07834462736ccb341398b9e461">GetAttributeValue</a> (const std::string &amp;attributeId, const std::string &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ab0e563f22e9c7d2c93298a59d537f7d2">GetMultiAttributeValue</a> (const std::string &amp;attributeId, const std::string &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#abc3f67fe2aea4221e43609ba0c796f79">NextLine</a> (std::ofstream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a07708fb861ee817af147477240e915b7">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acd3576b40b87c57ee19924ec7c185818">ExtractPackageIds</a> (const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;addresses) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a07708fb861ee817af147477240e915b7">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a29dc4536caadaaec2f9d0181a7c81480">ExtractComponentIds</a> (const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;addresses, const QByteArray &amp;packageId) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a1af3938e9ba36d0e3ada30283497b89c">WriteHeader</a> (const QByteArray &amp;className, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;composedAddresses, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;realAddresses, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7a6eb67b1df3297199efee6245bfb346">WriteIncludes</a> (const QByteArray &amp;className, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;addresses, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ad775fc207b3cf8496c1a1f96d7e7891b">WriteClassDefinitions</a> (const QByteArray &amp;className, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;composedAddresses, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;realAddresses, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a429efce75ab5957bde4e32d7246ea736">WriteDependencies</a> (const QByteArray &amp;className, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;composedAddresses, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;realAddresses, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ac8511fd03658de141a8dbb2fafe78f22">WriteRegistryInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;registryCallPrefix, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a4deef8e9091a4a352627de2d67090ffc">WriteComponentInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;registryCallPrefix, const QByteArray &amp;componentId, const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> &amp;componentInfo, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ae5b1f189e5243bf04e1b0406f7c8446c">WriteAttribute</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a574076656cfcb9debf8a94fbb92cff79">WriteRegistryClassDeclaration</a> (const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a0b43345d5127767d8fe8bbbbec744276">WriteRegistryClassBody</a> (const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ac783f724d67e8cc71d625a9630089aa8">GetAttributeValue</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a8c597428d400d0cb3241ad90896378c7">GetMultiAttributeValue</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a281e822e66afc348fe7b90de8bfd6ed9">NextLine</a> (QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a54b58cce3dcc8f83ed7b62ab59d79181">ChangeIndent</a> (int difference) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a98e43b1aae2b6d542ad45c62d2dbf951">ExtractInfoFromFile</a> (const QString &amp;filePath, std::string &amp;className, QString &amp;baseFilePath) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a9d1e307b8f803a7cd3499765e34ca1a1">GetPackageName</a> (const std::string &amp;packageId) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a1829081a8b5a56ff67d042a66c4fdb25">GetStringLiteral</a> (const QString &amp;text) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some wide string as C++ string literal.  <a href="#a1829081a8b5a56ff67d042a66c4fdb25"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a41afc3520d3b52a6ec01c0a8ac568148">GetStdStringLiteral</a> (const std::string &amp;text) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some string as C++ string literal.  <a href="#a41afc3520d3b52a6ec01c0a8ac568148"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a89ea2bad71e57a26c840055723541edf">ExtractInfoFromFile</a> (const QString &amp;filePath, QByteArray &amp;className, QString &amp;baseFilePath) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a561ad6b7cdafa2318ee085dabb2840a6">GetPackageName</a> (const QByteArray &amp;packageId) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a67c5a72d1dd9908a390fae256abc5b3a">GetStringLiteral</a> (const QString &amp;text) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some wide string as C++ string literal.  <a href="#a67c5a72d1dd9908a390fae256abc5b3a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aa6a43424ffb38cf493481f9cd6f4a2da">GetIdValueLiteral</a> (const QByteArray &amp;text) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some string as C++ string literal.  <a href="#aa6a43424ffb38cf493481f9cd6f4a2da"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Save registry as C++ code (it generates C++ class with the same functionality) and/or dependencies list. </p>
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="aaee15d81763f4eb9e228a7061d2ae97a"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::Addresses" ref="aaee15d81763f4eb9e228a7061d2ae97a" args="" -->
+<a class="anchor" id="a7bb84acab4ca7dde1c6b55750694c659"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::Addresses" ref="a7bb84acab4ca7dde1c6b55750694c659" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;<a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a>&gt; <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">iqt::CRegistryCodeSaverComp::Addresses</a><code> [protected]</code></td>
+          <td class="memname">typedef QSet&lt;<a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a>&gt; <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">iqt::CRegistryCodeSaverComp::Addresses</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00088">88</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00089">89</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -169,22 +169,22 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0f21ed2944c1cb76d1b2a8bfc9c1171d"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::Ids" ref="a0f21ed2944c1cb76d1b2a8bfc9c1171d" args="" -->
+<a class="anchor" id="a07708fb861ee817af147477240e915b7"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::Ids" ref="a07708fb861ee817af147477240e915b7" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;std::string&gt; <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a0f21ed2944c1cb76d1b2a8bfc9c1171d">iqt::CRegistryCodeSaverComp::Ids</a><code> [protected]</code></td>
+          <td class="memname">typedef QSet&lt;QByteArray&gt; <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a07708fb861ee817af147477240e915b7">iqt::CRegistryCodeSaverComp::Ids</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00089">89</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00090">90</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4">iser::IFileLoader</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -241,7 +241,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00046">46</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00047">47</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -276,13 +276,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>realAddresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>composedAddresses</em>&#160;</td>
         </tr>
         <tr>
@@ -315,20 +315,20 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7d0e37631cfab81bca7ea8cb170b47f8"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::ExtractComponentIds" ref="a7d0e37631cfab81bca7ea8cb170b47f8" args="(const Addresses &amp;addresses, const std::string &amp;packageId) const " -->
+<a class="anchor" id="a29dc4536caadaaec2f9d0181a7c81480"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::ExtractComponentIds" ref="a29dc4536caadaaec2f9d0181a7c81480" args="(const Addresses &amp;addresses, const QByteArray &amp;packageId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a0f21ed2944c1cb76d1b2a8bfc9c1171d">Ids</a> iqt::CRegistryCodeSaverComp::ExtractComponentIds </td>
+          <td class="memname"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a07708fb861ee817af147477240e915b7">Ids</a> iqt::CRegistryCodeSaverComp::ExtractComponentIds </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>addresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>packageId</em>&#160;</td>
         </tr>
         <tr>
@@ -342,7 +342,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a98e43b1aae2b6d542ad45c62d2dbf951"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::ExtractInfoFromFile" ref="a98e43b1aae2b6d542ad45c62d2dbf951" args="(const QString &amp;filePath, std::string &amp;className, QString &amp;baseFilePath) const " -->
+<a class="anchor" id="a89ea2bad71e57a26c840055723541edf"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::ExtractInfoFromFile" ref="a89ea2bad71e57a26c840055723541edf" args="(const QString &amp;filePath, QByteArray &amp;className, QString &amp;baseFilePath) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -355,7 +355,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
           <td class="paramname"><em>className</em>, </td>
         </tr>
         <tr>
@@ -380,9 +380,9 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a0f21ed2944c1cb76d1b2a8bfc9c1171d">Ids</a> iqt::CRegistryCodeSaverComp::ExtractPackageIds </td>
+          <td class="memname"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a07708fb861ee817af147477240e915b7">Ids</a> iqt::CRegistryCodeSaverComp::ExtractPackageIds </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>addresses</em></td><td>)</td>
           <td> const<code> [protected]</code></td>
         </tr>
@@ -392,20 +392,20 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3af00e07834462736ccb341398b9e461"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetAttributeValue" ref="a3af00e07834462736ccb341398b9e461" args="(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const " -->
+<a class="anchor" id="ac783f724d67e8cc71d625a9630089aa8"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetAttributeValue" ref="ac783f724d67e8cc71d625a9630089aa8" args="(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const iser::ISerializable &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::GetAttributeValue </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentId</em>, </td>
         </tr>
         <tr>
@@ -417,13 +417,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
           <td class="paramname"><em>valueString</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
           <td class="paramname"><em>typeName</em>&#160;</td>
         </tr>
         <tr>
@@ -509,20 +509,39 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab0e563f22e9c7d2c93298a59d537f7d2"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetMultiAttributeValue" ref="ab0e563f22e9c7d2c93298a59d537f7d2" args="(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const " -->
+<a class="anchor" id="aa6a43424ffb38cf493481f9cd6f4a2da"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetIdValueLiteral" ref="aa6a43424ffb38cf493481f9cd6f4a2da" args="(const QByteArray &amp;text) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray iqt::CRegistryCodeSaverComp::GetIdValueLiteral </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get some string as C++ string literal. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8c597428d400d0cb3241ad90896378c7"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetMultiAttributeValue" ref="a8c597428d400d0cb3241ad90896378c7" args="(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const iser::ISerializable &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::GetMultiAttributeValue </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentId</em>, </td>
         </tr>
         <tr>
@@ -534,13 +553,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::list&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramtype">QList&lt; QByteArray &gt; &amp;&#160;</td>
           <td class="paramname"><em>valueStrings</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
           <td class="paramname"><em>typeName</em>&#160;</td>
         </tr>
         <tr>
@@ -575,12 +594,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acee9d8e97705b5be838d47180fdb6f68"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetOptionId" ref="acee9d8e97705b5be838d47180fdb6f68" args="(int index) const " -->
+<a class="anchor" id="a3ba7b6e83be38ecac09feed86033bf38"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetOptionId" ref="a3ba7b6e83be38ecac09feed86033bf38" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string iqt::CRegistryCodeSaverComp::GetOptionId </td>
+          <td class="memname">virtual QByteArray iqt::CRegistryCodeSaverComp::GetOptionId </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -594,7 +613,7 @@ Protected Member Functions</h2></td></tr>
 <p>The option ID must be unique, if flag SCF_SUPPORT_UNIQUE_ID is set. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1b" title="Flags for control constraints behavior.">SelectionConstraintsFlags</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a2d9228f4e01880b48336deafeaa6393a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -639,14 +658,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9d1e307b8f803a7cd3499765e34ca1a1"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetPackageName" ref="a9d1e307b8f803a7cd3499765e34ca1a1" args="(const std::string &amp;packageId) const " -->
+<a class="anchor" id="a561ad6b7cdafa2318ee085dabb2840a6"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetPackageName" ref="a561ad6b7cdafa2318ee085dabb2840a6" args="(const QByteArray &amp;packageId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string iqt::CRegistryCodeSaverComp::GetPackageName </td>
+          <td class="memname">QByteArray iqt::CRegistryCodeSaverComp::GetPackageName </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>packageId</em></td><td>)</td>
           <td> const<code> [protected]</code></td>
         </tr>
@@ -656,31 +675,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a41afc3520d3b52a6ec01c0a8ac568148"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetStdStringLiteral" ref="a41afc3520d3b52a6ec01c0a8ac568148" args="(const std::string &amp;text) const " -->
+<a class="anchor" id="a67c5a72d1dd9908a390fae256abc5b3a"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetStringLiteral" ref="a67c5a72d1dd9908a390fae256abc5b3a" args="(const QString &amp;text) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string iqt::CRegistryCodeSaverComp::GetStdStringLiteral </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td> const<code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get some string as C++ string literal. </p>
-
-</div>
-</div>
-<a class="anchor" id="a1829081a8b5a56ff67d042a66c4fdb25"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetStringLiteral" ref="a1829081a8b5a56ff67d042a66c4fdb25" args="(const QString &amp;text) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string iqt::CRegistryCodeSaverComp::GetStringLiteral </td>
+          <td class="memname">QByteArray iqt::CRegistryCodeSaverComp::GetStringLiteral </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>text</em></td><td>)</td>
@@ -833,14 +833,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abc3f67fe2aea4221e43609ba0c796f79"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::NextLine" ref="abc3f67fe2aea4221e43609ba0c796f79" args="(std::ofstream &amp;stream) const " -->
+<a class="anchor" id="a281e822e66afc348fe7b90de8bfd6ed9"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::NextLine" ref="a281e822e66afc348fe7b90de8bfd6ed9" args="(QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::NextLine </td>
           <td>(</td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em></td><td>)</td>
           <td> const<code> [protected]</code></td>
         </tr>
@@ -883,26 +883,26 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a524cbc528954ecf4dfa9186191514a62"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteAttribute" ref="a524cbc528954ecf4dfa9186191514a62" args="(const std::string &amp;attributeId, const std::string &amp;componentId, const std::string &amp;attributeName, const iser::IObject &amp;attribute, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="ae5b1f189e5243bf04e1b0406f7c8446c"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteAttribute" ref="ae5b1f189e5243bf04e1b0406f7c8446c" args="(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const iser::IObject &amp;attribute, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::WriteAttribute </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeName</em>, </td>
         </tr>
         <tr>
@@ -914,7 +914,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -928,14 +928,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a70c8e82047a263333a3472c8b8ad5bae"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteClassDefinitions" ref="a70c8e82047a263333a3472c8b8ad5bae" args="(const std::string &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="ad775fc207b3cf8496c1a1f96d7e7891b"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteClassDefinitions" ref="ad775fc207b3cf8496c1a1f96d7e7891b" args="(const QByteArray &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::WriteClassDefinitions </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>className</em>, </td>
         </tr>
         <tr>
@@ -947,19 +947,19 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>composedAddresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>realAddresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -973,7 +973,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3a9df1b6d9e3c24dc33afed045ef3634"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteComponentInfo" ref="a3a9df1b6d9e3c24dc33afed045ef3634" args="(const icomp::IRegistry &amp;registry, const std::string &amp;registryCallPrefix, const std::string &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="a4deef8e9091a4a352627de2d67090ffc"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteComponentInfo" ref="a4deef8e9091a4a352627de2d67090ffc" args="(const icomp::IRegistry &amp;registry, const QByteArray &amp;registryCallPrefix, const QByteArray &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -986,13 +986,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>registryCallPrefix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentId</em>, </td>
         </tr>
         <tr>
@@ -1004,7 +1004,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -1018,32 +1018,32 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adbd50ff871c020f41fb243cdafad440b"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteDependencies" ref="adbd50ff871c020f41fb243cdafad440b" args="(const std::string &amp;className, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="a429efce75ab5957bde4e32d7246ea736"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteDependencies" ref="a429efce75ab5957bde4e32d7246ea736" args="(const QByteArray &amp;className, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::WriteDependencies </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>className</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>composedAddresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>realAddresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -1057,14 +1057,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a65f4bf6ac3ff21f4e46403a65177adf2"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteHeader" ref="a65f4bf6ac3ff21f4e46403a65177adf2" args="(const std::string &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="a1af3938e9ba36d0e3ada30283497b89c"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteHeader" ref="a1af3938e9ba36d0e3ada30283497b89c" args="(const QByteArray &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::WriteHeader </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>className</em>, </td>
         </tr>
         <tr>
@@ -1076,19 +1076,19 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>composedAddresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>realAddresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -1102,26 +1102,26 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acfaf19220043ccbb4ba1bbc9b1644dda"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteIncludes" ref="acfaf19220043ccbb4ba1bbc9b1644dda" args="(const std::string &amp;className, const Addresses &amp;addresses, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="a7a6eb67b1df3297199efee6245bfb346"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteIncludes" ref="a7a6eb67b1df3297199efee6245bfb346" args="(const QByteArray &amp;className, const Addresses &amp;addresses, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::WriteIncludes </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>className</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aaee15d81763f4eb9e228a7061d2ae97a">Addresses</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>addresses</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -1135,20 +1135,20 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aea3ca9a0a8ee7bbdf0f0370d0ee7c0ff"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteRegistryClassBody" ref="aea3ca9a0a8ee7bbdf0f0370d0ee7c0ff" args="(const std::string &amp;baseClassName, const std::string &amp;registryClassName, const icomp::IRegistry &amp;registry, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="a0b43345d5127767d8fe8bbbbec744276"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteRegistryClassBody" ref="a0b43345d5127767d8fe8bbbbec744276" args="(const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const icomp::IRegistry &amp;registry, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::WriteRegistryClassBody </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>baseClassName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>registryClassName</em>, </td>
         </tr>
         <tr>
@@ -1160,7 +1160,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -1174,20 +1174,20 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a76a02f7785de7a567c0afa28abb394ef"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteRegistryClassDeclaration" ref="a76a02f7785de7a567c0afa28abb394ef" args="(const std::string &amp;baseClassName, const std::string &amp;registryClassName, const icomp::IRegistry &amp;registry, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="a574076656cfcb9debf8a94fbb92cff79"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteRegistryClassDeclaration" ref="a574076656cfcb9debf8a94fbb92cff79" args="(const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const icomp::IRegistry &amp;registry, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::WriteRegistryClassDeclaration </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>baseClassName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>registryClassName</em>, </td>
         </tr>
         <tr>
@@ -1199,7 +1199,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -1213,7 +1213,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a66c015a9e5836fa478e29157d0c88815"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteRegistryInfo" ref="a66c015a9e5836fa478e29157d0c88815" args="(const icomp::IRegistry &amp;registry, const std::string &amp;registryCallPrefix, std::ofstream &amp;stream) const " -->
+<a class="anchor" id="ac8511fd03658de141a8dbb2fafe78f22"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::WriteRegistryInfo" ref="ac8511fd03658de141a8dbb2fafe78f22" args="(const icomp::IRegistry &amp;registry, const QByteArray &amp;registryCallPrefix, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1226,13 +1226,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>registryCallPrefix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>

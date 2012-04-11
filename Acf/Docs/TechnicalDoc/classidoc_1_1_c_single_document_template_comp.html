@@ -66,14 +66,14 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a01c29c76c88954fc0afadcbdfcad415a">I_ASSIGN_TO</a> (m_modelCompFact, m_documentCompFact, true)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a6b44575f77b5eef9bae2c4ef2206edcd">GetFileLoader</a> (const std::string &amp;documentTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#a6b44575f77b5eef9bae2c4ef2206edcd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a5199b1eaf800d35b3578fa5eec029a9a">CreateDocument</a> (const std::string &amp;documentTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document instance for document type <code>documentTypeId</code>.  <a href="#a5199b1eaf800d35b3578fa5eec029a9a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#aeda8fc727c3cd466e002d946f4efb7c1">CreateView</a> (const std::string &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr, const std::string &amp;viewTypeId=std::string()) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a view instance for document <code>document</code> of type <code>viewTypeId</code>.  <a href="#aeda8fc727c3cd466e002d946f4efb7c1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a5fbffcdd0097cf81bc4215b25f54a97a">CreateUndoManager</a> (const std::string &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an undo manger for a given document <code>documentPtr</code>.  <a href="#a5fbffcdd0097cf81bc4215b25f54a97a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a9fd758135f102c593980f27e59c75891">GetFileLoader</a> (const QByteArray &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#a9fd758135f102c593980f27e59c75891"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#af7495d708afa102d31d049418f789437">CreateDocument</a> (const QByteArray &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document instance for document type <code>documentTypeId</code>.  <a href="#af7495d708afa102d31d049418f789437"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#ae2732f441e6e6b4202dcde4ffb7135b0">CreateView</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a view instance for document <code>document</code> of type <code>viewTypeId</code>.  <a href="#ae2732f441e6e6b4202dcde4ffb7135b0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a7ad572c770ec184ca29df3094f66ec1d">CreateUndoManager</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an undo manger for a given document <code>documentPtr</code>.  <a href="#a7ad572c770ec184ca29df3094f66ec1d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a31b84cfe3d171fa7e4cda64d0dfec015">ExtractViewInterface</a> (<a class="el" href="classicomp_1_1_i_component.html">icomp::IComponent</a> *componentPtr) const </td></tr>
@@ -117,14 +117,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5199b1eaf800d35b3578fa5eec029a9a"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateComp::CreateDocument" ref="a5199b1eaf800d35b3578fa5eec029a9a" args="(const std::string &amp;documentTypeId) const " -->
+<a class="anchor" id="af7495d708afa102d31d049418f789437"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateComp::CreateDocument" ref="af7495d708afa102d31d049418f789437" args="(const QByteArray &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* idoc::CSingleDocumentTemplateComp::CreateDocument </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -140,18 +140,18 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#af265b394f4399b7274b61597c4fca624">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#ad8dd16801bac9fbc5138e34164020260">idoc::IDocumentTemplate</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5fbffcdd0097cf81bc4215b25f54a97a"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateComp::CreateUndoManager" ref="a5fbffcdd0097cf81bc4215b25f54a97a" args="(const std::string &amp;documentTypeId, istd::IChangeable *documentPtr) const " -->
+<a class="anchor" id="a7ad572c770ec184ca29df3094f66ec1d"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateComp::CreateUndoManager" ref="a7ad572c770ec184ca29df3094f66ec1d" args="(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a>* idoc::CSingleDocumentTemplateComp::CreateUndoManager </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em>, </td>
         </tr>
         <tr>
@@ -179,18 +179,18 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to created instance of undo manager or NULL, if creating of undo manager was impossible. </dd></dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#a6fc207924b066569c1c47f1407cf4b03">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#ad00822bcbfe425552f57cb49cad4c1dc">idoc::IDocumentTemplate</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aeda8fc727c3cd466e002d946f4efb7c1"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateComp::CreateView" ref="aeda8fc727c3cd466e002d946f4efb7c1" args="(const std::string &amp;documentTypeId, istd::IChangeable *documentPtr, const std::string &amp;viewTypeId=std::string()) const " -->
+<a class="anchor" id="ae2732f441e6e6b4202dcde4ffb7135b0"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateComp::CreateView" ref="ae2732f441e6e6b4202dcde4ffb7135b0" args="(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* idoc::CSingleDocumentTemplateComp::CreateView </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em>, </td>
         </tr>
         <tr>
@@ -202,8 +202,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>viewTypeId</em> = <code>std::string()</code>&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>viewTypeId</em> = <code>QByteArray()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,7 +224,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#aaccb7039d04e3f8277e4f01ecd3c8c00">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#aa9dc2ddd9889c79f373dd6c1b5324690">idoc::IDocumentTemplate</a>.</p>
 
 </div>
 </div>
@@ -250,14 +250,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6b44575f77b5eef9bae2c4ef2206edcd"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateComp::GetFileLoader" ref="a6b44575f77b5eef9bae2c4ef2206edcd" args="(const std::string &amp;documentTypeId) const " -->
+<a class="anchor" id="a9fd758135f102c593980f27e59c75891"></a><!-- doxytag: member="idoc::CSingleDocumentTemplateComp::GetFileLoader" ref="a9fd758135f102c593980f27e59c75891" args="(const QByteArray &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a>* idoc::CSingleDocumentTemplateComp::GetFileLoader </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -273,7 +273,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#ad59ff45c30342761796803a89ad00b35">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#ad599f3c2f78399f4f28a2e6b4bfe2e0d">idoc::IDocumentTemplate</a>.</p>
 
 </div>
 </div>

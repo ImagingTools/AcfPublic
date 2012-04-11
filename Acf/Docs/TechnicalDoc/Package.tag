@@ -114,8 +114,8 @@
     <name>CLine2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_line2d_8h</filename>
-    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CLine2d</class>
     <namespace>i2d</namespace>
   </compound>
@@ -1370,6 +1370,13 @@
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">icomp::CComponentAddress</class>
     <namespace>icomp</namespace>
+    <member kind="function">
+      <type>int</type>
+      <name>qHash</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a26abc726c1a0a3f61e96dc22f82799f9</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CComponentBase.h</name>
@@ -1817,23 +1824,23 @@
     <namespace>icomp</namespace>
     <member kind="typedef">
       <type>TAttribute&lt; int &gt;</type>
-      <name>CIntAttribute</name>
+      <name>CIntegerAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a2e9c5b3f483b27a3dbd390798812dd42</anchor>
+      <anchor>a7a97baa626cbe19dbcf51760d974ffd2</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TAttribute&lt; double &gt;</type>
-      <name>CDoubleAttribute</name>
+      <name>CRealAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a8b0216a085980d12e60d9a66764a97fc</anchor>
+      <anchor>afc71fb7a40b243943e76f1e36322b4ec</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TAttribute&lt; bool &gt;</type>
-      <name>CBoolAttribute</name>
+      <name>CBooleanAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>aabced1d32c941bc1bc0820b04bdbca97</anchor>
+      <anchor>a1fcd474ee984c8067dc65f3f5ebb7e36</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -1844,10 +1851,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; std::string &gt;</type>
-      <name>CStdStringAttribute</name>
+      <type>TAttribute&lt; QByteArray &gt;</type>
+      <name>CIdAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a1a5b78266bc6d2dc552b41a94f5b80c3</anchor>
+      <anchor>a97fc5d054b20605049466e07efde54a1</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1964,37 +1971,37 @@
     <namespace>icomp</namespace>
     <member kind="typedef">
       <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CMultiIntAttribute</name>
+      <name>CIntegerListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
+      <anchor>ad56a49d55c906568b857958eed740600</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TMultiAttribute&lt; double &gt;</type>
-      <name>CMultiDoubleAttribute</name>
+      <name>CRealListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a9d590d9d09073e9e6589b6947529a9c5</anchor>
+      <anchor>a833bca691b1565887b6d7d87125fbae2</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TMultiAttribute&lt; bool &gt;</type>
-      <name>CMultiBoolAttribute</name>
+      <name>CBooleanListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a2188a94be4eb593ef40bf51833bf6d09</anchor>
+      <anchor>a84fd27bf28b0b2498350da9ed48d7095</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TMultiAttribute&lt; QString &gt;</type>
-      <name>CMultiStringAttribute</name>
+      <name>CStringListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>af3726b2cb90c9c12e449a27d17ed0cba</anchor>
+      <anchor>a7f0238135fe61df7092584a7839e82f8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiAttribute&lt; std::string &gt;</type>
-      <name>CMultiStdStringAttribute</name>
+      <type>TMultiAttribute&lt; QByteArray &gt;</type>
+      <name>CIdListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ac4f3810d7815442242c51bd82b3ae7da</anchor>
+      <anchor>aedd957caf1f344d978ee81e7257ba077</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3517,7 +3524,7 @@
     <name>CXmlFileReadArchive.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>iser_2_c_xml_file_read_archive_8h</filename>
-    <includes id="_t_xml_stream_read_archive_base_8h" name="TXmlStreamReadArchiveBase.h" local="yes" imported="no">iser/TXmlStreamReadArchiveBase.h</includes>
+    <includes id="_c_xml_stream_read_archive_base_8h" name="CXmlStreamReadArchiveBase.h" local="yes" imported="no">iser/CXmlStreamReadArchiveBase.h</includes>
     <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
     <class kind="class">iser::CXmlFileReadArchive</class>
     <namespace>iser</namespace>
@@ -3537,7 +3544,7 @@
     <name>CXmlFileWriteArchive.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>iser_2_c_xml_file_write_archive_8h</filename>
-    <includes id="_t_xml_stream_write_archive_base_8h" name="TXmlStreamWriteArchiveBase.h" local="yes" imported="no">iser/TXmlStreamWriteArchiveBase.h</includes>
+    <includes id="_c_xml_stream_write_archive_base_8h" name="CXmlStreamWriteArchiveBase.h" local="yes" imported="no">iser/CXmlStreamWriteArchiveBase.h</includes>
     <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
     <class kind="class">iser::CXmlFileWriteArchive</class>
     <namespace>iser</namespace>
@@ -4876,10 +4883,26 @@
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
+    <name>CXmlStreamReadArchiveBase.h</name>
+    <path>C:/Temp/Acf/Include/iser/</path>
+    <filename>_c_xml_stream_read_archive_base_8h</filename>
+    <includes id="_c_xml_read_archive_base_8h" name="CXmlReadArchiveBase.h" local="yes" imported="no">iser/CXmlReadArchiveBase.h</includes>
+    <class kind="class">iser::CXmlStreamReadArchiveBase</class>
+    <namespace>iser</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXmlStreamWriteArchiveBase.h</name>
+    <path>C:/Temp/Acf/Include/iser/</path>
+    <filename>_c_xml_stream_write_archive_base_8h</filename>
+    <includes id="_c_xml_write_archive_base_8h" name="CXmlWriteArchiveBase.h" local="yes" imported="no">iser/CXmlWriteArchiveBase.h</includes>
+    <class kind="class">iser::CXmlStreamWriteArchiveBase</class>
+    <namespace>iser</namespace>
+  </compound>
+  <compound kind="file">
     <name>CXmlStringReadArchive.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_c_xml_string_read_archive_8h</filename>
-    <includes id="_t_xml_stream_read_archive_base_8h" name="TXmlStreamReadArchiveBase.h" local="yes" imported="no">iser/TXmlStreamReadArchiveBase.h</includes>
+    <includes id="_c_xml_stream_read_archive_base_8h" name="CXmlStreamReadArchiveBase.h" local="yes" imported="no">iser/CXmlStreamReadArchiveBase.h</includes>
     <class kind="class">iser::CXmlStringReadArchive</class>
     <namespace>iser</namespace>
   </compound>
@@ -4887,7 +4910,7 @@
     <name>CXmlStringWriteArchive.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_c_xml_string_write_archive_8h</filename>
-    <includes id="_t_xml_stream_write_archive_base_8h" name="TXmlStreamWriteArchiveBase.h" local="yes" imported="no">iser/TXmlStreamWriteArchiveBase.h</includes>
+    <includes id="_c_xml_stream_write_archive_base_8h" name="CXmlStreamWriteArchiveBase.h" local="yes" imported="no">iser/CXmlStreamWriteArchiveBase.h</includes>
     <class kind="class">iser::CXmlStringWriteArchive</class>
     <namespace>iser</namespace>
   </compound>
@@ -4990,22 +5013,6 @@
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <class kind="class">iser::TVersionInfoSerializer</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TXmlStreamReadArchiveBase.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_t_xml_stream_read_archive_base_8h</filename>
-    <includes id="_c_xml_read_archive_base_8h" name="CXmlReadArchiveBase.h" local="yes" imported="no">iser/CXmlReadArchiveBase.h</includes>
-    <class kind="class">iser::TXmlStreamReadArchiveBase</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TXmlStreamWriteArchiveBase.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_t_xml_stream_write_archive_base_8h</filename>
-    <includes id="_c_xml_write_archive_base_8h" name="CXmlWriteArchiveBase.h" local="yes" imported="no">iser/CXmlWriteArchiveBase.h</includes>
-    <class kind="class">iser::TXmlStreamWriteArchiveBase</class>
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
@@ -7610,10 +7617,10 @@
       <arglist>(const i2d::CVector2d &amp;center, double radius) const </arglist>
     </member>
     <member kind="function">
-      <type>::std::pair&lt; double, double &gt;</type>
+      <type>QPair&lt; double, double &gt;</type>
       <name>GetAlphaAndCastDistance</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a34121df4f85eef30b8b9c921618bc392</anchor>
+      <anchor>a15c8793ced6713c4710755aa0c24aff7</anchor>
       <arglist>(const i2d::CVector2d &amp;point) const </arglist>
     </member>
     <member kind="function">
@@ -8256,10 +8263,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>const ::std::vector&lt; i2d::CVector2d &gt; &amp;</type>
+      <type>const ::QVector&lt; i2d::CVector2d &gt; &amp;</type>
       <name>GetPoints</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a78e16736c4764b548bd051f1d71909e2</anchor>
+      <anchor>adac0a035cc9fd2211848313acd5f7fe3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11244,8 +11251,8 @@
       <type>virtual int</type>
       <name>GetObjectsCount</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a8dbd1f1c24bb964fb34e64daa339188a</anchor>
-      <arglist>(const std::string *typeIdPtr=NULL) const </arglist>
+      <anchor>a3d6a709a7a3783c70fa05a631f4f874a</anchor>
+      <arglist>(const QByteArray *typeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -11258,64 +11265,64 @@
       <type>virtual istd::IChangeable *</type>
       <name>CreateFrontObject</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a0dc974c84bd29637159539aef228f2b8</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)</arglist>
+      <anchor>ac061843c169585df824231a30355d476</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CreateBackObject</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>ab73b4383c8d72cb2588f39b3a8ff3e4e</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)</arglist>
+      <anchor>a2c143f4ac91e9ba2bbd21d1c93a6110e</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveFrontObject</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a49a1579abd1e6efc4b7648eb7250be47</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)</arglist>
+      <anchor>a42a0c55371b4ec19c4430bf8f2afef3f</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveBackObject</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a5165c319b692548837b82031dd1d30d6</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)</arglist>
+      <anchor>a293ba93c8fcb5812275977bdbb987b64</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>GetFrontObject</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a030632b18cc9b564db2179f9642ac812</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL) const </arglist>
+      <anchor>a7b9bc6916cc764f24aeeaa47e04f19c3</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>GetBackObject</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>aaad91ae0c4641810274e19cf263e94df</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL) const </arglist>
+      <anchor>abd85ae0dec90f84c157300c5dbe35ef9</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SelectObjects</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a5572f42a0f2adc64cef75b0a879cf40c</anchor>
-      <arglist>(ObjectList &amp;result, bool doAppend=false, int offsetPos=0, const std::string *typeIdPtr=NULL) const </arglist>
+      <anchor>a6586a632207cc65c8ff32a62dabdef58</anchor>
+      <arglist>(ObjectList &amp;result, bool doAppend=false, int offsetPos=0, const QByteArray *typeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>PopFrontObject</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a517d2b4d2474e01cb2f9e185a6e9d955</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)</arglist>
+      <anchor>a996662c49a4f36436b36a26a92601e63</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>PopBackObject</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
-      <anchor>a6613b80a7e6ebe8f83dabe166ac562f6</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)</arglist>
+      <anchor>a151ecadd722c99b51457a3885c9cf461</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -11445,10 +11452,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>ab848924c7dd3ff557ca4ccb40cd59e29</anchor>
+      <anchor>a02ab5a71e6291259398587fd2cbc9a3a</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -12141,10 +12148,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; MessagePtr &gt;</type>
+      <type>QVector&lt; MessagePtr &gt;</type>
       <name>Messages</name>
       <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>aca3800f565c96e50a48cd06cac3d304c</anchor>
+      <anchor>a026c15e28b79ce00e90acf6adb7bb8c7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -12188,18 +12195,18 @@
     <filename>classibase_1_1_i_object_queue.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="typedef">
-      <type>std::vector&lt; istd::IChangeable * &gt;</type>
+      <type>QVector&lt; istd::IChangeable * &gt;</type>
       <name>ObjectList</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>a83963305da6b9d614f1bd0c8122e2b8e</anchor>
+      <anchor>a85331f124b4c98b1e87ce1f4595a089d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetObjectsCount</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>af01fc4bd306f81c6568a2ee703dba6ce</anchor>
-      <arglist>(const std::string *typeIdPtr=NULL) const =0</arglist>
+      <anchor>a5dae0e1bcc284b86dd00b0f167a1f0f2</anchor>
+      <arglist>(const QByteArray *typeIdPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -12212,64 +12219,64 @@
       <type>virtual istd::IChangeable *</type>
       <name>CreateFrontObject</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>a17d9723f719c5481bd5007ecff104704</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)=0</arglist>
+      <anchor>ac5032c22dd3e7169ae7beb655dc0740b</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IChangeable *</type>
       <name>CreateBackObject</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>ac352f491017aacc91b832f86fbe9e808</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)=0</arglist>
+      <anchor>a4b0fe0129cab86a68cb5e9f8770cf256</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>RemoveFrontObject</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>ac4a9cabb54dd826c8330590cb17efcbe</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)=0</arglist>
+      <anchor>a518b516fc763f53e94f17734462f5c7a</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>RemoveBackObject</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>ab4332f3d3ef4b2ded6dcbe105c383bf1</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)=0</arglist>
+      <anchor>ac8e0cb5b6e099313036938d678fddecc</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IChangeable *</type>
       <name>GetFrontObject</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>a769aa8614a1306e573b7a4d17411ccac</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL) const =0</arglist>
+      <anchor>a4b8d4c0d20fb53e1cf07b47b8fc229c8</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IChangeable *</type>
       <name>GetBackObject</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>abd4480983ca82d89a135c7bdb40955d7</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL) const =0</arglist>
+      <anchor>a3bbc827969869feeefd8500cf688cbd1</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SelectObjects</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>a51db2998275335a180c8e08a00c24fa0</anchor>
-      <arglist>(ObjectList &amp;result, bool doAppend=false, int offsetPos=0, const std::string *typeIdPtr=NULL) const =0</arglist>
+      <anchor>a64603c45a552473966ec70f90015259b</anchor>
+      <arglist>(ObjectList &amp;result, bool doAppend=false, int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IChangeable *</type>
       <name>PopFrontObject</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>abffe19a31b79d5508d820fd3f5c0cad6</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)=0</arglist>
+      <anchor>a934a0b6639326662a9ec870e1d2c2c15</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IChangeable *</type>
       <name>PopBackObject</name>
       <anchorfile>classibase_1_1_i_object_queue.html</anchorfile>
-      <anchor>ae5b17c4b26ff3544ae9a8f5cc3a28e08</anchor>
-      <arglist>(int offsetPos=0, const std::string *typeIdPtr=NULL)=0</arglist>
+      <anchor>a34cd1473ad4c55afea35b76f35bd51d0</anchor>
+      <arglist>(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12478,12 +12485,12 @@
     <name>ibase::TFactorisableContainer</name>
     <filename>classibase_1_1_t_factorisable_container.html</filename>
     <templarg></templarg>
-    <base>TSerializableContainer&lt; std::pair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, std::string &gt; &gt;</base>
+    <base>TSerializableContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;</base>
     <member kind="typedef">
-      <type>std::pair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, std::string &gt;</type>
+      <type>QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt;</type>
       <name>ItemClass</name>
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
-      <anchor>a004b5dd33e4e0f1c28edb4846f600ead</anchor>
+      <anchor>a33abea88e39fdb40dc5c0a2a00b1d09b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -12511,15 +12518,15 @@
       <type>InterfaceClass *</type>
       <name>InsertElement</name>
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
-      <anchor>a3678c368502c8a297e829dcab838379c</anchor>
-      <arglist>(int index, const std::string &amp;elementFactoryKey)</arglist>
+      <anchor>a88ed17094a5d7d018d85c8315f56fb19</anchor>
+      <arglist>(int index, const QByteArray &amp;elementFactoryKey)</arglist>
     </member>
     <member kind="function">
       <type>InterfaceClass *</type>
       <name>AddElement</name>
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
-      <anchor>a23507ea776c9e4d5c29ade81c6737e3d</anchor>
-      <arglist>(const std::string &amp;elementFactoryKey)</arglist>
+      <anchor>aff23e7c8f245489b1327c6ad9c64a64e</anchor>
+      <arglist>(const QByteArray &amp;elementFactoryKey)</arglist>
     </member>
     <member kind="function">
       <type>InterfaceClass *</type>
@@ -12536,10 +12543,10 @@
       <arglist>(const InterfaceClass &amp;elementRef) const </arglist>
     </member>
     <member kind="function">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetElementKey</name>
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
-      <anchor>af7a54e32aea931f2fc1422d32c66ef39</anchor>
+      <anchor>a1e74258c6fd0f93cd371d8002023902b</anchor>
       <arglist>(int elementIndex) const </arglist>
     </member>
     <member kind="function">
@@ -12560,8 +12567,8 @@
       <type>virtual InterfaceClass *</type>
       <name>CreateElement</name>
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
-      <anchor>aa39bd3d8a4cf96eca129917b992d7515</anchor>
-      <arglist>(const std::string &amp;itemKey)</arglist>
+      <anchor>a9929e7f23c3d66eb1aaecc906882e78b</anchor>
+      <arglist>(const QByteArray &amp;itemKey)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -12965,10 +12972,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::list&lt; IMessageContainer::MessagePtr &gt;</type>
+      <type>QList&lt; IMessageContainer::MessagePtr &gt;</type>
       <name>MessageList</name>
       <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>aef90c2e7302c0ca0f3d1478edce66722</anchor>
+      <anchor>a6d8e1d6fd4b5f344d1597894974f6c7d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -14993,15 +15000,15 @@
       <type>bool</type>
       <name>SetAttributeToItem</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a7b2392e4f6b4a45932e201a6f425c8d3</anchor>
-      <arglist>(QTreeWidgetItem &amp;attributeItem, const icomp::IRegistry &amp;registry, const std::string &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool *hasErrorPtr=NULL, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
+      <anchor>a9f06d7d5c1c65644f80b7bfd39610b8f</anchor>
+      <arglist>(QTreeWidgetItem &amp;attributeItem, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool *hasErrorPtr=NULL, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SetInterfaceToItem</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>af27630e2cdf136592e352be0718cef02</anchor>
-      <arglist>(QTreeWidgetItem &amp;item, const icomp::IRegistry &amp;registry, const std::string &amp;elementId, const std::string &amp;interfaceName, bool useFullPath, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
+      <anchor>a4ee414e78fe2e6b4ebe4edaea6e9302f</anchor>
+      <arglist>(QTreeWidgetItem &amp;item, const icomp::IRegistry &amp;registry, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool useFullPath, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -15021,8 +15028,8 @@
       <type>void</type>
       <name>CreateExportedComponentsTree</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a23c5140c70662ea09e5fce1c7edbc8b6</anchor>
-      <arglist>(const std::string &amp;elementId, const std::string &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
+      <anchor>a7da243c4b64ed168c8299107d9a2ed0f</anchor>
+      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -15228,8 +15235,8 @@
       <type>QStringList</type>
       <name>GetExportAliases</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a6810222934e125a1638e94e40a220bf4</anchor>
-      <arglist>(const std::string &amp;attributeName) const </arglist>
+      <anchor>aa1fefc5b9d7bed8cb7b68541e29e8290</anchor>
+      <arglist>(const QByteArray &amp;attributeName) const </arglist>
     </member>
     <member kind="function">
       <type>const icomp::IComponentStaticInfo *</type>
@@ -15242,15 +15249,15 @@
       <type>const iser::IObject *</type>
       <name>GetAttributeObject</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a7e45846ddeb269c477d99c342aa78c93</anchor>
-      <arglist>(const std::string &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
+      <anchor>a1c13e5ed6c40adc8f9a3135fe6f206ea</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
     </member>
     <member kind="function">
       <type>const icomp::IAttributeStaticInfo *</type>
       <name>GetAttributeStaticInfo</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a8312e0769b2a7b98c78f29ede82716f8</anchor>
-      <arglist>(const std::string &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
+      <anchor>a3b8e49be8c2c336f5dd00a067956afcc</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const icomp::IComponentEnvironmentManager *</type>
@@ -15267,17 +15274,17 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QMap&lt; std::string, AttrInfo &gt;</type>
+      <type>QMap&lt; QByteArray, AttrInfo &gt;</type>
       <name>ElementIdToAttrInfoMap</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>acf46f12a4b3667f1672a914df6963f65</anchor>
+      <anchor>ac361b95692c72cbb3aeef09d3b5a5ac9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QMap&lt; std::string, ElementIdToAttrInfoMap &gt;</type>
+      <type>QMap&lt; QByteArray, ElementIdToAttrInfoMap &gt;</type>
       <name>AttrInfosMap</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a7f05157058e511a407b86f3617aac62a</anchor>
+      <anchor>a36733e528a191d82bcf37ba50e4c0a02</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -15479,8 +15486,8 @@
       <type></type>
       <name>CMultiAttributeDelegateWidget</name>
       <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
-      <anchor>aca1ad13f7b6282d01593700f961fd054</anchor>
-      <arglist>(QItemDelegate &amp;itemDelegate, const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, QWidget *parentWidget, const std::string &amp;attributeId, int attributeFlags)</arglist>
+      <anchor>ab60b0365ea63a57c18b69998600f9bc0</anchor>
+      <arglist>(QItemDelegate &amp;itemDelegate, const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, QWidget *parentWidget, const QByteArray &amp;attributeId, int attributeFlags)</arglist>
     </member>
     <member kind="function">
       <type>QString</type>
@@ -15511,8 +15518,8 @@
       <type></type>
       <name>CMultiAttributeEditor</name>
       <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>acadc5608f2647c50e5931f488a34cecd</anchor>
-      <arglist>(const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, const std::string &amp;attributeId, int attributeFlags)</arglist>
+      <anchor>aca88f10c53941fe8bddfde47f13d2fc3</anchor>
+      <arglist>(const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, const QByteArray &amp;attributeId, int attributeFlags)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -15729,8 +15736,8 @@
       <type>RootInfo &amp;</type>
       <name>EnsureRoot</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a8a9ca77b3736d032f88c58a389722480</anchor>
-      <arglist>(const std::string &amp;path, const icomp::CComponentAddress &amp;address, const icomp::IComponentStaticInfo *staticInfoPtr)</arglist>
+      <anchor>a39b9d80b568c6001ca3230ffb2bf4ce0</anchor>
+      <arglist>(const QByteArray &amp;path, const icomp::CComponentAddress &amp;address, const icomp::IComponentStaticInfo *staticInfoPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -15844,8 +15851,8 @@
       <type>virtual QString</type>
       <name>GetPackageInfoPath</name>
       <anchorfile>classicmpstr_1_1_c_packages_loader_ext_comp.html</anchorfile>
-      <anchor>af45430cd25c2ce5ca015f27a7b26bc8a</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>a5476d7ad2980641c05d8090e9987383e</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -16016,22 +16023,22 @@
       <type>virtual bool</type>
       <name>IsElementValid</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a1779ee4eacdaa5d0e956fe6bbe2787a0</anchor>
-      <arglist>(const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a7958bfdf6e0c5e4c9d1c0c4309b11b48</anchor>
+      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsElementWithInfoValid</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a0ddcf9638f6bc38bb1b818832e6435f5</anchor>
-      <arglist>(const std::string &amp;elementName, const icomp::IRegistry::ElementInfo &amp;elementInfo, const icomp::IComponentStaticInfo *metaInfoPtr, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a6359ce0e4a9587d849e108c20efc991b</anchor>
+      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry::ElementInfo &amp;elementInfo, const icomp::IComponentStaticInfo *metaInfoPtr, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsAttributeValid</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a8bc5f3a4b960d7ceb42688c660a57a3d</anchor>
-      <arglist>(const std::string &amp;attributeName, const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a082168fddbf0cb6a31adda38b7bf1052</anchor>
+      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QIcon</type>
@@ -16044,29 +16051,29 @@
       <type>icomp::IRegistry::Ids</type>
       <name>GetCompatibleIds</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a8c2e1dc24b5abdfeab4d8d3239a435f7</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, bool subcomponentsFlag) const </arglist>
+      <anchor>aabd9268d97cb708be0bd758a3fd4981d</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, bool subcomponentsFlag) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckAttributeCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>abba5bf44fb90ebd55aa4e07ee1a4201e</anchor>
-      <arglist>(const iser::IObject &amp;attribute, const icomp::IAttributeStaticInfo &amp;attributeMetaInfo, const std::string &amp;attributeName, const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a27e136826b79669b85acf92e7ee726d0</anchor>
+      <arglist>(const iser::IObject &amp;attribute, const icomp::IAttributeStaticInfo &amp;attributeMetaInfo, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckPointedElementCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a3a9c6aeed0f2467c93fcadb4b1c17783</anchor>
-      <arglist>(const std::string &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>af26f46f22501c16c7b3172119f037794</anchor>
+      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckPointedElementInfoCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>af55f0203180a6d281286570bdfb2fb32</anchor>
-      <arglist>(const std::string &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const std::string &amp;attributeName, const std::string &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>afe00743278665acf958796abc43285e4</anchor>
+      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16459,29 +16466,29 @@
       <type>virtual QString</type>
       <name>GetComponentNote</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a680acbb03b1ccd9d46de5c77cfb7d101</anchor>
-      <arglist>(const std::string &amp;componentName)</arglist>
+      <anchor>a138d3108735b0cf7ec6e18879c58b7cf</anchor>
+      <arglist>(const QByteArray &amp;componentName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetComponentNote</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a9ce15af1be0d0954f56053bcc3042a60</anchor>
-      <arglist>(const std::string &amp;componentName, const QString &amp;componentNote)</arglist>
+      <anchor>a9c85896362923ae38b839f02bcb24910</anchor>
+      <arglist>(const QByteArray &amp;componentName, const QString &amp;componentNote)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ElementInfo *</type>
       <name>InsertElementInfo</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>ad070b94556df11118a8fcaf3c6f13dc4</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
+      <anchor>ad21351e11beed921a256a622daa05800</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RenameElement</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a280a90d3801dac98f0d9aada68fa5905</anchor>
-      <arglist>(const std::string &amp;oldElementId, const std::string &amp;newElementId)</arglist>
+      <anchor>ada53ee410f808da8f0b2efc738dc461d</anchor>
+      <arglist>(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -16515,15 +16522,15 @@
       <type>bool</type>
       <name>SerializeComponentInfo</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a45438b48b2d595100151f5c8676e39f1</anchor>
-      <arglist>(iser::IArchive &amp;archive, std::string &amp;componentName, i2d::CVector2d &amp;position, QString &amp;note)</arglist>
+      <anchor>a12448f6dd30f6ac32503d8c6c79742e9</anchor>
+      <arglist>(iser::IArchive &amp;archive, QByteArray &amp;componentName, i2d::CVector2d &amp;position, QString &amp;note)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual icomp::IRegistryElement *</type>
       <name>CreateRegistryElement</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>aa00d6811aa94b0e990bdca55470c7fab</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address) const </arglist>
+      <anchor>a40ad86788e501d3944b8cf7b441cd8e7</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16560,18 +16567,18 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetName</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a62679b10fe4d4b6b1b197df17f20f734</anchor>
+      <anchor>a0f669f037051a1ecc2e5eb08437a472f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetName</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>ad0f6d1990b2d01b39796d46c79e8fa18</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
+      <anchor>ac72fdcef07d5fdb5090d929dbbf3fff9</anchor>
+      <arglist>(const QByteArray &amp;name)</arglist>
     </member>
     <member kind="function">
       <type>const QString &amp;</type>
@@ -16873,22 +16880,22 @@
       <type>void</type>
       <name>AddConnector</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>aec38c8b1a50e3d7c496e9c24218d6936</anchor>
-      <arglist>(CRegistryElementShape &amp;sourceShape, const std::string &amp;referenceComponentId, const std::string &amp;attributeId, bool isFactory=false)</arglist>
+      <anchor>ada7ffbb9e2cbdc8534a6793dc2dd8eef</anchor>
+      <arglist>(CRegistryElementShape &amp;sourceShape, const QByteArray &amp;referenceComponentId, const QByteArray &amp;attributeId, bool isFactory=false)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>icomp::IRegistryElement *</type>
       <name>TryCreateComponent</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>aa42d946fa400c88063332ac0c3200865</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
+      <anchor>a38db8b13925b822b0fed67eb4248072c</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>ConnectReferences</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a191044044f99962ee7394bd0857f1545</anchor>
-      <arglist>(const std::string &amp;componentRole)</arglist>
+      <anchor>a3ba75a073ed97de195fafd149fd95e30</anchor>
+      <arglist>(const QByteArray &amp;componentRole)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -17012,15 +17019,15 @@
       <type>virtual QString</type>
       <name>GetComponentNote</name>
       <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>a69f51967ccb7e7d6b4e48956a6c9816b</anchor>
-      <arglist>(const std::string &amp;componentName)=0</arglist>
+      <anchor>aa36105a11bdd50bdac9f4659b9e38a7c</anchor>
+      <arglist>(const QByteArray &amp;componentName)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetComponentNote</name>
       <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>a8f80cf84e97e582ba45cd71993a05bc2</anchor>
-      <arglist>(const std::string &amp;componentName, const QString &amp;componentNote)=0</arglist>
+      <anchor>a9cfb7f69388ded543f2ef52dde43e5f5</anchor>
+      <arglist>(const QByteArray &amp;componentName, const QString &amp;componentNote)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17040,10 +17047,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QMap&lt; std::string, const icomp::IRegistry::ElementInfo * &gt;</type>
+      <type>QMap&lt; QByteArray, const icomp::IRegistry::ElementInfo * &gt;</type>
       <name>Elements</name>
       <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
-      <anchor>a4a7379e18bb110424f4141314a7528d3</anchor>
+      <anchor>aec5620326a5b18eae0eef42c47d78744</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -17069,8 +17076,8 @@
       <type>virtual QString</type>
       <name>GetPackageInfoPath</name>
       <anchorfile>classicmpstr_1_1_i_external_meta_info_manager.html</anchorfile>
-      <anchor>ac429cd4cb914d8a84f8f30a35f2f30f6</anchor>
-      <arglist>(const std::string &amp;packageId) const =0</arglist>
+      <anchor>ae4efa950ebfe0690cf92b66e8eefc261</anchor>
+      <arglist>(const QByteArray &amp;packageId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
@@ -17126,15 +17133,15 @@
       <type>virtual bool</type>
       <name>IsElementValid</name>
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>ae82dcc68bd6a730d9b330929c385778d</anchor>
-      <arglist>(const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
+      <anchor>a7a5f49e5acecb6c03518b6c68fc167db</anchor>
+      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsAttributeValid</name>
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a1a92226a697d9aebb07a9d91f5d7e8be</anchor>
-      <arglist>(const std::string &amp;attributeName, const std::string &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
+      <anchor>a111097da538f262f69ee108da356b051</anchor>
+      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QIcon</type>
@@ -17233,23 +17240,23 @@
     <class kind="class">icomp::TSubelementStaticInfo</class>
     <member kind="typedef">
       <type>TAttribute&lt; int &gt;</type>
-      <name>CIntAttribute</name>
+      <name>CIntegerAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a2e9c5b3f483b27a3dbd390798812dd42</anchor>
+      <anchor>a7a97baa626cbe19dbcf51760d974ffd2</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TAttribute&lt; double &gt;</type>
-      <name>CDoubleAttribute</name>
+      <name>CRealAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a8b0216a085980d12e60d9a66764a97fc</anchor>
+      <anchor>afc71fb7a40b243943e76f1e36322b4ec</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TAttribute&lt; bool &gt;</type>
-      <name>CBoolAttribute</name>
+      <name>CBooleanAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>aabced1d32c941bc1bc0820b04bdbca97</anchor>
+      <anchor>a1fcd474ee984c8067dc65f3f5ebb7e36</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -17260,46 +17267,53 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; std::string &gt;</type>
-      <name>CStdStringAttribute</name>
+      <type>TAttribute&lt; QByteArray &gt;</type>
+      <name>CIdAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a1a5b78266bc6d2dc552b41a94f5b80c3</anchor>
+      <anchor>a97fc5d054b20605049466e07efde54a1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CMultiIntAttribute</name>
+      <name>CIntegerListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a3fac49d7b6b1176bfdb11a7e5c4a8ec9</anchor>
+      <anchor>ad56a49d55c906568b857958eed740600</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TMultiAttribute&lt; double &gt;</type>
-      <name>CMultiDoubleAttribute</name>
+      <name>CRealListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a9d590d9d09073e9e6589b6947529a9c5</anchor>
+      <anchor>a833bca691b1565887b6d7d87125fbae2</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TMultiAttribute&lt; bool &gt;</type>
-      <name>CMultiBoolAttribute</name>
+      <name>CBooleanListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a2188a94be4eb593ef40bf51833bf6d09</anchor>
+      <anchor>a84fd27bf28b0b2498350da9ed48d7095</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TMultiAttribute&lt; QString &gt;</type>
-      <name>CMultiStringAttribute</name>
+      <name>CStringListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>af3726b2cb90c9c12e449a27d17ed0cba</anchor>
+      <anchor>a7f0238135fe61df7092584a7839e82f8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiAttribute&lt; std::string &gt;</type>
-      <name>CMultiStdStringAttribute</name>
+      <type>TMultiAttribute&lt; QByteArray &gt;</type>
+      <name>CIdListAttribute</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ac4f3810d7815442242c51bd82b3ae7da</anchor>
+      <anchor>aedd957caf1f344d978ee81e7257ba077</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>qHash</name>
+      <anchorfile>namespaceicomp.html</anchorfile>
+      <anchor>a26abc726c1a0a3f61e96dc22f82799f9</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17332,22 +17346,22 @@
       <type>virtual void</type>
       <name>RegisterInterfaceExtractor</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>abe5f8bd996285e144cca0db5ae035a33</anchor>
-      <arglist>(const std::string &amp;interfaceName, InterfaceExtractorPtr extractorPtr)</arglist>
+      <anchor>adc0e2a7be17c9169abe4d91cd6f76bc9</anchor>
+      <arglist>(const QByteArray &amp;interfaceName, InterfaceExtractorPtr extractorPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RegisterAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>aea5446f0f0360a369d4d629605864240</anchor>
-      <arglist>(const std::string &amp;attributeId, const IAttributeStaticInfo *attributeInfoPtr)</arglist>
+      <anchor>a99ad51e734efc5d87b64041a8ee13c9b</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const IAttributeStaticInfo *attributeInfoPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RegisterSubelementInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a7a81013c4d322d00f4bd8505e63bf9da</anchor>
-      <arglist>(const std::string &amp;subcomponentId, const IElementStaticInfo *staticInfoPtr)</arglist>
+      <anchor>a5c0579d121aa747cdf6ce907e095f12b</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId, const IElementStaticInfo *staticInfoPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
@@ -17360,22 +17374,22 @@
       <type>virtual void *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>af4f6c552932600e60737319351c3dc6a</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const std::string &amp;subId) const </arglist>
+      <anchor>a68a084ab8e07a58f94228c8c814255c3</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const QByteArray &amp;subId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IAttributeStaticInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>aec976e0a49319d8f48eafa216cec211e</anchor>
-      <arglist>(const std::string &amp;attributeId) const </arglist>
+      <anchor>a9aa6ddd8155e67d62a5775a4360b8861</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IElementStaticInfo *</type>
       <name>GetSubelementInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>ad5f6112769956287cdf7186a8c3d0c61</anchor>
-      <arglist>(const std::string &amp;subcomponentId) const </arglist>
+      <anchor>a6025bd16a9dd7b0744f9e6f1ce5e706a</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -17400,8 +17414,8 @@
       <type></type>
       <name>CComponentAddress</name>
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
-      <anchor>a3ddd8ce222d3b0cbdb3f58b0f776a26b</anchor>
-      <arglist>(const std::string &amp;packageId, const std::string &amp;componentId)</arglist>
+      <anchor>accd971b51bb41d999e962051f87967d2</anchor>
+      <arglist>(const QByteArray &amp;packageId, const QByteArray &amp;componentId)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -17411,32 +17425,32 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetPackageId</name>
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
-      <anchor>a2fd4791136b2e6865bd19854bcfcef0f</anchor>
+      <anchor>a160604e5e3ece676e684b691007e97cd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetPackageId</name>
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
-      <anchor>a631bfafbbcf347f2415e520e18c840c3</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>ae3f65f156b877bfbe862585de09bac68</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetComponentId</name>
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
-      <anchor>a99c0c9f6382010653cdb01ba3993b7d5</anchor>
+      <anchor>af56be9ef24367d399d7767edf449dc0b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetComponentId</name>
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
-      <anchor>a9aa414c575081d3c61f60f703e5629bf</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>a74be6ee534d5dc392bb3152f269c6330</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function">
       <type>QString</type>
@@ -17473,6 +17487,13 @@
       <anchor>a77e4dc5ff47a36134f4f441444ca3b44</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="friend">
+      <type>friend int</type>
+      <name>qHash</name>
+      <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
+      <anchor>a1f3323e0eebe7920d64abb009cfd6477</anchor>
+      <arglist>(const CComponentAddress &amp;address)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icomp::CComponentBase</name>
@@ -17496,8 +17517,8 @@
       <type>virtual void *</type>
       <name>GetInterface</name>
       <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>a5f581772b199cee4b2f1d2afb432230a</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)</arglist>
+      <anchor>a5c82f92937a5e8cc8b48c849e5f1387d</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, const QByteArray &amp;subId=&quot;&quot;)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
@@ -17557,14 +17578,14 @@
       <type></type>
       <name>CComponentContext</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>ad153a6091ccab6a16442a707f0d0ce88</anchor>
-      <arglist>(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IComponentContext *parentPtr=NULL, const std::string &amp;contextId=&quot;&quot;)</arglist>
+      <anchor>af12383ba7933a87e063d920a822c7104</anchor>
+      <arglist>(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IComponentContext *parentPtr=NULL, const QByteArray &amp;contextId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetContextId</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>ac706a76999b6e4b10523159d72938bdb</anchor>
+      <anchor>a09b48548eb60613ea9a4a91bdf552a85</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17592,8 +17613,8 @@
       <type>virtual const iser::IObject *</type>
       <name>GetAttribute</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>a33ca64f2364db3674fe83f7c303bbed7</anchor>
-      <arglist>(const std::string &amp;attributeId, int *definitionLevelPtr=NULL) const </arglist>
+      <anchor>af4bfeff376a73676c94bb238810800d7</anchor>
+      <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17643,15 +17664,15 @@
       <type>virtual const IAttributeStaticInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>a6f653ac91657a34384bd2a9d25c5537f</anchor>
-      <arglist>(const std::string &amp;attributeId) const </arglist>
+      <anchor>ab978d535c8da47da144a556d066f0454</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>a815d02162e404f916539f8469f841033</anchor>
-      <arglist>(const std::string &amp;embeddedId) const </arglist>
+      <anchor>a7903b47a5a90a0af514af9a0454614e0</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
@@ -17671,8 +17692,8 @@
       <type>virtual const IElementStaticInfo *</type>
       <name>GetSubelementInfo</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>ad33590843a4f3a292b33dba391f3a0e2</anchor>
-      <arglist>(const std::string &amp;subcomponentId) const </arglist>
+      <anchor>a2b26b96fe471edeaf1dc3f62589d64b2</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -17705,8 +17726,8 @@
       <type>InterfaceType *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>acfd9433e2835be1e70e0e806d7dff546</anchor>
-      <arglist>(const std::string &amp;subId=&quot;&quot;)</arglist>
+      <anchor>a70ea59c51a850a3b02118abdcba423fd</anchor>
+      <arglist>(const QByteArray &amp;subId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -17726,22 +17747,22 @@
       <type>virtual IComponent *</type>
       <name>GetSubcomponent</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a00d9992c0359610958f464288ad62b1a</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
+      <anchor>ac4a448704257dddc5d76665995b98352</anchor>
+      <arglist>(const QByteArray &amp;componentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
       <name>GetSubcomponentContext</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>ab0cdbdad182cec424317cd5c95ec9f37</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
+      <anchor>a2185bdf00bead214a3892d4884edd647</anchor>
+      <arglist>(const QByteArray &amp;componentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
       <name>CreateSubcomponent</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a2ae0866b3c2fd2cf811773df953945a6</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
+      <anchor>a8d1b830697db6dff9ab9b8d045abdbe3</anchor>
+      <arglist>(const QByteArray &amp;componentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -17761,8 +17782,8 @@
       <type>virtual void *</type>
       <name>GetInterface</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a1b8f1f341efddce8037e70f3bd37c89f</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)</arglist>
+      <anchor>af3ca584789d2b47cdd3306b31e79560a</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, const QByteArray &amp;subId=&quot;&quot;)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
@@ -17796,8 +17817,8 @@
       <type>bool</type>
       <name>CreateSubcomponentInfo</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a3cd7d69a5104e6c38a8fc1d141484600</anchor>
-      <arglist>(const std::string &amp;componentId, ContextPtr &amp;subContextPtr, ComponentPtr *subComponentPtr, bool isOwned) const </arglist>
+      <anchor>a3d528e931c8035196e32c81e486f6c15</anchor>
+      <arglist>(const QByteArray &amp;componentId, ContextPtr &amp;subContextPtr, ComponentPtr *subComponentPtr, bool isOwned) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -17870,8 +17891,8 @@
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
-      <anchor>ae47b8328c333b1fb5448ef4e8bb3e72f</anchor>
-      <arglist>(const std::string &amp;embeddedId) const </arglist>
+      <anchor>a8c9fde74335bcb0f87bdc8cf4b93906e</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
@@ -17891,8 +17912,8 @@
       <type>const IRegistry::ElementInfo *</type>
       <name>GetElementInfoFromRegistry</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
-      <anchor>a38c4fbe58fa971cbe00793506e9bdf97</anchor>
-      <arglist>(const IRegistry &amp;registry, const std::string &amp;elementId, const icomp::IRegistriesManager &amp;manager) const </arglist>
+      <anchor>ab990196bb8bbaf597148b25b68f885d9</anchor>
+      <arglist>(const IRegistry &amp;registry, const QByteArray &amp;elementId, const icomp::IRegistriesManager &amp;manager) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17907,10 +17928,10 @@
       <arglist>(const IAttributeStaticInfo *slavePtr, const iser::IObject *defaultValuePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual const QByteArray &amp;</type>
       <name>GetAttributeDescription</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>aa619237e282cb41d6671e9abbe615cde</anchor>
+      <anchor>a2d2732554db71c24db333b024a1f0900</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17921,10 +17942,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetAttributeTypeName</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>add48bae8c9c4cd97c0c2fc01697256d5</anchor>
+      <anchor>a8d3a9e46e5a64e86fa89f8781dd04bb2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17957,22 +17978,22 @@
       <type></type>
       <name>CCompositePackageStaticInfo</name>
       <anchorfile>classicomp_1_1_c_composite_package_static_info.html</anchorfile>
-      <anchor>a915c5aa0f336cd9553ab8c810731341b</anchor>
-      <arglist>(const std::string &amp;packageId, const icomp::IComponentEnvironmentManager *managerPtr)</arglist>
+      <anchor>a06e370d9c7564d94bfd722ac0f75de09</anchor>
+      <arglist>(const QByteArray &amp;packageId, const icomp::IComponentEnvironmentManager *managerPtr)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>RegisterEmbeddedComponent</name>
       <anchorfile>classicomp_1_1_c_composite_package_static_info.html</anchorfile>
-      <anchor>a2a50641d8f562a893c969e7800ce7931</anchor>
-      <arglist>(const std::string &amp;componentId)</arglist>
+      <anchor>af14319c52d0c66a6fa68a3051f2c9e51</anchor>
+      <arglist>(const QByteArray &amp;componentId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_composite_package_static_info.html</anchorfile>
-      <anchor>a548466615b1dc5736f40862ffd91a210</anchor>
-      <arglist>(const std::string &amp;embeddedId) const </arglist>
+      <anchor>ae40288ab8c7f40468b580685db11d800</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -18005,15 +18026,15 @@
       <type>virtual int</type>
       <name>GetPackageType</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>a480bd52a1c68d754538bffd1a51e8422</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>ae1c201fe2bff2b816c52ac58ed993b0c</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetPackagePath</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>a1838811dbd79395a56fb41425a450761</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>a1afe76f8a32befcb63dfb9ee2fa2b489</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IRegistry *</type>
@@ -18040,8 +18061,8 @@
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetPackageMetaInfo</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>ac733a848457e4917e1996275d61072a5</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>ad303a7716589a2ee264803f729ac2043</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18091,21 +18112,21 @@
       <type></type>
       <name>CFactoryAttribute</name>
       <anchorfile>classicomp_1_1_c_factory_attribute.html</anchorfile>
-      <anchor>a4cfaba350535e2756d6560fb17644fb6</anchor>
-      <arglist>(const std::string &amp;value)</arglist>
+      <anchor>a6618e76838e48effa88d030b3aeefb7c</anchor>
+      <arglist>(const QByteArray &amp;value)</arglist>
     </member>
     <member kind="function">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_factory_attribute.html</anchorfile>
-      <anchor>a97509157c44d0c838638b14911954b13</anchor>
+      <anchor>a2e7c922e95eabd42f546836285046c87</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_c_factory_attribute.html</anchorfile>
-      <anchor>a1ad902ecdd91c19bd0c23935e3d65700</anchor>
+      <anchor>af9ca8d2db91c8e6a27e37b4c26dc2bd9</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -18117,8 +18138,8 @@
       <type>static Interface *</type>
       <name>ExtractInterface</name>
       <anchorfile>classicomp_1_1_c_interface_manip_base.html</anchorfile>
-      <anchor>a85e2e8be34b3d6d89d415cb77505c039</anchor>
-      <arglist>(IComponent *componentPtr, const std::string &amp;subId=&quot;&quot;)</arglist>
+      <anchor>a270a220afadea23fd51a2286e0873878</anchor>
+      <arglist>(IComponent *componentPtr, const QByteArray &amp;subId=&quot;&quot;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18168,21 +18189,21 @@
       <type></type>
       <name>CMultiFactoryAttribute</name>
       <anchorfile>classicomp_1_1_c_multi_factory_attribute.html</anchorfile>
-      <anchor>a31109a2cc5e85b3a1797222879b5bca4</anchor>
-      <arglist>(int elementsCount, std::string *valuesPtr)</arglist>
+      <anchor>a1e28d385abef4395fed42d576f89937d</anchor>
+      <arglist>(int elementsCount, QByteArray *valuesPtr)</arglist>
     </member>
     <member kind="function">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_multi_factory_attribute.html</anchorfile>
-      <anchor>a43cca0a2185a2017b126944a8a400db8</anchor>
+      <anchor>a99c986ca92b5c84454108fd637945c25</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_c_multi_factory_attribute.html</anchorfile>
-      <anchor>a1a2080734b1be654ecbe0b85480a1adc</anchor>
+      <anchor>a2664ab5614d2b3d09939aa8e7e7d996d</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -18209,10 +18230,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CMultiStdStringAttribute</type>
+      <type>CIdListAttribute</type>
       <name>BaseClass</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>a18d6b8e663582945d0ec5646032a1315</anchor>
+      <anchor>a21ec393d8727707ae761da4e93b8e31c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -18233,21 +18254,21 @@
       <type></type>
       <name>CMultiReferenceAttribute</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>a62f81649b4fb0417c708419552cdfb01</anchor>
-      <arglist>(int elementsCount, std::string *valuesPtr)</arglist>
+      <anchor>ac4af96f463fcd4dc1d862e6a94383ac0</anchor>
+      <arglist>(int elementsCount, QByteArray *valuesPtr)</arglist>
     </member>
     <member kind="function">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>ace5f0fde26ee35d1bd3c3228e8663b10</anchor>
+      <anchor>a1c038fb3519924d9144114937dea7f24</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>ac156160e13b068b5c90c555eef2ff6e7</anchor>
+      <anchor>a786b0367a2e08d298c3840087242062b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -18287,15 +18308,15 @@
       <type>virtual void</type>
       <name>RegisterEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
-      <anchor>a7c8443c3e65e2969c094a730f3df3f48</anchor>
-      <arglist>(const std::string &amp;embeddedId, const IComponentStaticInfo *componentInfoPtr)</arglist>
+      <anchor>a9257adbb72d3db1b8cbafff795195081</anchor>
+      <arglist>(const QByteArray &amp;embeddedId, const IComponentStaticInfo *componentInfoPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
-      <anchor>add2266fbf497723c99d4f17229c543af</anchor>
-      <arglist>(const std::string &amp;embeddedId) const </arglist>
+      <anchor>af04fc4e27d5fb19b39d854e4631991d0</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -18342,10 +18363,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CStdStringAttribute</type>
+      <type>CIdAttribute</type>
       <name>BaseClass</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>a38bc4721d82f394312a0d69a61d6475f</anchor>
+      <anchor>af7407ffc1a6148d65211c38a8bfcbedb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -18366,21 +18387,21 @@
       <type></type>
       <name>CReferenceAttribute</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>a86d459c9360065c5760fcd22523bb59c</anchor>
-      <arglist>(const std::string &amp;value)</arglist>
+      <anchor>afaf4a72142da99215b44897bd146f5ea</anchor>
+      <arglist>(const QByteArray &amp;value)</arglist>
     </member>
     <member kind="function">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>a5d4f65765ab8400b0d953476b8f06d0c</anchor>
+      <anchor>a3004a18bfba5b0ceba61676496dbc509</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>a6a57c568c28e2ac8ff246ea6903a2ca7</anchor>
+      <anchor>a5af019251c023dedfee6a8d437664cb9</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -18399,29 +18420,29 @@
       <type>virtual const ElementInfo *</type>
       <name>GetElementInfo</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a1b6cd67d0311fbfcc0119d06c27baed4</anchor>
-      <arglist>(const std::string &amp;elementId) const </arglist>
+      <anchor>a12f74492ce02367e95250ce469b18964</anchor>
+      <arglist>(const QByteArray &amp;elementId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ElementInfo *</type>
       <name>InsertElementInfo</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>aa64a31dda214378e87a6af9784853431</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
+      <anchor>a8b4f27336913e9fa867eaacbaba629a2</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveElementInfo</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>ad145c1a36e339cecfd5778817c3bd4c7</anchor>
-      <arglist>(const std::string &amp;elementId)</arglist>
+      <anchor>aa6dbf2eb58e86d103f92e772942f7f79</anchor>
+      <arglist>(const QByteArray &amp;elementId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RenameElement</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a99e4e58f8ed6b32245cc7d2e057ffbd5</anchor>
-      <arglist>(const std::string &amp;oldElementId, const std::string &amp;newElementId)</arglist>
+      <anchor>aa232db834c5c8e24530c4b43ad011d73</anchor>
+      <arglist>(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -18434,29 +18455,29 @@
       <type>virtual IRegistry *</type>
       <name>GetEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a69b82fae32a25ea6bd2619ef1eddbf64</anchor>
-      <arglist>(const std::string &amp;registryId) const </arglist>
+      <anchor>a77174911aba508901f130efeb8b25824</anchor>
+      <arglist>(const QByteArray &amp;registryId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IRegistry *</type>
       <name>InsertEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a693ee90c3fa39b92f457dab9c34ffd35</anchor>
-      <arglist>(const std::string &amp;registryId)</arglist>
+      <anchor>ab6d97013c85838ea50f8a2eff5a6c8b4</anchor>
+      <arglist>(const QByteArray &amp;registryId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>afd26a7a7f3148428961507edd72e2353</anchor>
-      <arglist>(const std::string &amp;registryId)</arglist>
+      <anchor>afc5a2c04f329e38ae6f7eb227616495f</anchor>
+      <arglist>(const QByteArray &amp;registryId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RenameEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a647d14d5ae3d24a36cbad3e6662940c6</anchor>
-      <arglist>(const std::string &amp;oldRegistryId, const std::string &amp;newRegistryId)</arglist>
+      <anchor>a04fd65717000df9bd9b352ca9fd81e17</anchor>
+      <arglist>(const QByteArray &amp;oldRegistryId, const QByteArray &amp;newRegistryId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ExportedInterfacesMap &amp;</type>
@@ -18476,15 +18497,15 @@
       <type>virtual void</type>
       <name>SetElementInterfaceExported</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a643f73dca816de49fc3659296eeaddb0</anchor>
-      <arglist>(const std::string &amp;elementId, const std::string &amp;interfaceName, bool state=true)</arglist>
+      <anchor>a999f44d683d151934a3bfbeb75a2bf23</anchor>
+      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetElementExported</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>afdfb1855fb832b5ed7ceff42c783a64c</anchor>
-      <arglist>(const std::string &amp;exportId, const std::string &amp;elementId)</arglist>
+      <anchor>a1e4ac43d8dc579ac0c577137a1780913</anchor>
+      <arglist>(const QByteArray &amp;exportId, const QByteArray &amp;elementId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
@@ -18539,8 +18560,8 @@
       <type>virtual icomp::IRegistryElement *</type>
       <name>CreateRegistryElement</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a1b783ff9cc8de17cd4f14859b1cbaa0f</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address) const </arglist>
+      <anchor>a9d0b0048b2da27a5cf4a9de781b54aa8</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -18586,8 +18607,8 @@
       <type>virtual AttributeInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a43d3fb94ed602ddf69774eefd5278bdc</anchor>
-      <arglist>(const std::string &amp;attributeId)</arglist>
+      <anchor>a45f4474eba1554f4cca8c3d1312631c3</anchor>
+      <arglist>(const QByteArray &amp;attributeId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual quint32</type>
@@ -18614,29 +18635,29 @@
       <type>virtual AttributeInfo *</type>
       <name>InsertAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a9deb70e720ba3bcc7209e73c6a7e9474</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;attributeType)</arglist>
+      <anchor>a83f563734ecf207b21ab7a188d84ee4e</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;attributeType)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IObject *</type>
       <name>CreateAttribute</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>afbc09ee19cda7d671a9fcbfc8ade2e4f</anchor>
-      <arglist>(const std::string &amp;attributeType) const </arglist>
+      <anchor>a3de4b4e4537a133ec977da07abfc11ec</anchor>
+      <arglist>(const QByteArray &amp;attributeType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const AttributeInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a855d7bd1d5ce3bf3962b78ecbe8d3213</anchor>
-      <arglist>(const std::string &amp;attributeId) const </arglist>
+      <anchor>a0005223147c1848e6954185bbc578c5a</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveAttribute</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a43a5a71447914ecee1cb12651f905b56</anchor>
-      <arglist>(const std::string &amp;attributeId)</arglist>
+      <anchor>ac978fab2635340db1bb7fc204f22f602</anchor>
+      <arglist>(const QByteArray &amp;attributeId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -18653,8 +18674,8 @@
       <type></type>
       <name>CRelatedInfoRegistrator</name>
       <anchorfile>classicomp_1_1_c_related_info_registrator.html</anchorfile>
-      <anchor>a5860c5dba33f80368efcf9ac916822f3</anchor>
-      <arglist>(IRealAttributeStaticInfo &amp;baseAttributeInfo, int metaGroupId, const std::string &amp;id, int flags)</arglist>
+      <anchor>a30960e4a99fb0673d8f403d89fff6d2e</anchor>
+      <arglist>(IRealAttributeStaticInfo &amp;baseAttributeInfo, int metaGroupId, const QByteArray &amp;id, int flags)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18680,71 +18701,71 @@
       <type>bool</type>
       <name>SetAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>ae47c201b5a3de5747a2966fa48eb5292</anchor>
-      <arglist>(const std::string &amp;attributeId, const iser::IObject *attributePtr)</arglist>
+      <anchor>a74f789777478b44a15793a67056b5679</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const iser::IObject *attributePtr)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetRef</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>aeb796e52120f997b4251c4cdc0a7f84f</anchor>
-      <arglist>(const std::string &amp;referenceId, IComponent *componentPtr, const std::string &amp;subelementId=&quot;&quot;)</arglist>
+      <anchor>a920b964f324885314661d61d4fc6d31d</anchor>
+      <arglist>(const QByteArray &amp;referenceId, IComponent *componentPtr, const QByteArray &amp;subelementId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>InsertMultiRef</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a9bdb9bc0e6fc8e9ac727877b79094fdf</anchor>
-      <arglist>(const std::string &amp;referenceId, IComponent *componentPtr, const std::string &amp;subelementId=&quot;&quot;)</arglist>
+      <anchor>a8386f796b5b751b4aae0154ecb04f20f</anchor>
+      <arglist>(const QByteArray &amp;referenceId, IComponent *componentPtr, const QByteArray &amp;subelementId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetFactory</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a53ee813969d8229e31ca73dcdd3cadbc</anchor>
-      <arglist>(const std::string &amp;factoryId, const ComponentsFactory *factoryPtr)</arglist>
+      <anchor>a6e66b21b83fdbebe1b176d430fc090b8</anchor>
+      <arglist>(const QByteArray &amp;factoryId, const ComponentsFactory *factoryPtr)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetBoolAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a1aef81ba1b5aa07787c69694bf67aa53</anchor>
-      <arglist>(const std::string &amp;attributeId, bool value)</arglist>
+      <anchor>a72dadb0248b9fe30f535d86c4e094f1d</anchor>
+      <arglist>(const QByteArray &amp;attributeId, bool value)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetIntAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a3a81bf78189b158dfea47dbe0af5c673</anchor>
-      <arglist>(const std::string &amp;attributeId, int value)</arglist>
+      <anchor>acd5ad9ccc815b181cd2c6aaf681def20</anchor>
+      <arglist>(const QByteArray &amp;attributeId, int value)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetDoubleAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>abe37f75a37eb79a84866410469020306</anchor>
-      <arglist>(const std::string &amp;attributeId, double value)</arglist>
+      <anchor>ac58657bf3c08ae1865d51dc2e92df34e</anchor>
+      <arglist>(const QByteArray &amp;attributeId, double value)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetStringAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>aea347b15811bebc7be057afd7e47a101</anchor>
-      <arglist>(const std::string &amp;attributeId, const QString &amp;value)</arglist>
+      <anchor>a86f91ab1974823920127a1367c1d5951</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QString &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetSingleAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>add58ad14f3e7c227bf99b866ac5656e8</anchor>
-      <arglist>(const std::string &amp;attributeId, const Attribute &amp;attribute)</arglist>
+      <anchor>a67601a151d153012917cd7ca76a3f3a8</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const Attribute &amp;attribute)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>InsertMultiAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a6183bcd0fcdf5943440267e0ad39d941</anchor>
-      <arglist>(const std::string &amp;attributeId, const Attribute &amp;attribute)</arglist>
+      <anchor>a688776b9ccd01ff4a667bb4f03d6e83d</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const Attribute &amp;attribute)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IRegistryElement &amp;</type>
@@ -18771,29 +18792,29 @@
       <type>virtual const iser::IObject *</type>
       <name>GetAttribute</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a2af61a56bab2e905fb8908c9f7e0cd48</anchor>
-      <arglist>(const std::string &amp;attributeId, int *definitionLevelPtr=NULL) const </arglist>
+      <anchor>a2dcb50d9dbdb80d3c127aed93c6fbe89</anchor>
+      <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QMap&lt; std::string, IComponent * &gt;</type>
+      <type>QMap&lt; QByteArray, IComponent * &gt;</type>
       <name>ComponentsMap</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a09185ab68aa758bbaee0bee24ee0e471</anchor>
+      <anchor>a3b3f2cfbe337154cde593f12f5391e5f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QMap&lt; std::string, const ComponentsFactory * &gt;</type>
+      <type>QMap&lt; QByteArray, const ComponentsFactory * &gt;</type>
       <name>FactoriesMap</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a6a3e2d7fdebc62399236c079287230a9</anchor>
+      <anchor>a3fe5412e806817ea83165992b05c632f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsAttributeTypeCorrect</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a215433dea2f120f3f505ebe4c6f948e3</anchor>
-      <arglist>(const std::string &amp;attributeId)</arglist>
+      <anchor>a8237cfada666133531229f82fb97d6e2</anchor>
+      <arglist>(const QByteArray &amp;attributeId)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>ComponentsMap</type>
@@ -18863,10 +18884,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual const QByteArray &amp;</type>
       <name>GetAttributeDescription</name>
       <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>ad8a8d405ab807a83eb70dbe32140c4aa</anchor>
+      <anchor>a09e50179a6ed9b58e0bdb22e930a902f</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -18877,10 +18898,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetAttributeTypeName</name>
       <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>ace2fcb22fe103d605039c2f2dba30ae0</anchor>
+      <anchor>a733e48286d0d6c83359604d3c6819990</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -18913,8 +18934,8 @@
       <type>virtual void *</type>
       <name>GetInterface</name>
       <anchorfile>classicomp_1_1_i_component.html</anchorfile>
-      <anchor>a62a9d2071e6afb0965827cb908c7a1ba</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)=0</arglist>
+      <anchor>ac081336b0e23bf323972601368910213</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, const QByteArray &amp;subId=&quot;&quot;)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const IComponentContext *</type>
@@ -18960,8 +18981,8 @@
       <type>virtual const iser::IObject *</type>
       <name>GetAttribute</name>
       <anchorfile>classicomp_1_1_i_component_context.html</anchorfile>
-      <anchor>ad8a89438c056a623d96d6037301b729e</anchor>
-      <arglist>(const std::string &amp;attributeId, int *definitionLevelPtr=NULL) const =0</arglist>
+      <anchor>a64139316ee985bfb1882e23b09ed8af0</anchor>
+      <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18986,8 +19007,8 @@
       <type>virtual void *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_i_component_interface_extractor.html</anchorfile>
-      <anchor>a2bd070cefe8b08bc8e076ee2b06dbc33</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const std::string &amp;subId) const =0</arglist>
+      <anchor>a149a3f42a339a288b146814e1c50b78b</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const QByteArray &amp;subId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19047,15 +19068,15 @@
       <type>virtual const IAttributeStaticInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>a995ab05a5bcb225da773a4fe2830c496</anchor>
-      <arglist>(const std::string &amp;attributeId) const =0</arglist>
+      <anchor>a07a70c398447a9ce12d7685a5202fd3f</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>a27cda16cac1f1560ea60b72db8286633</anchor>
-      <arglist>(const std::string &amp;embeddedId) const =0</arglist>
+      <anchor>a1abd07fd0996f34072622f25954c686e</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const QString &amp;</type>
@@ -19080,22 +19101,22 @@
       <type>virtual IComponent *</type>
       <name>GetSubcomponent</name>
       <anchorfile>classicomp_1_1_i_composite_component.html</anchorfile>
-      <anchor>a89e7c4653846d3f67fbfc6eeefd8e894</anchor>
-      <arglist>(const std::string &amp;componentId) const =0</arglist>
+      <anchor>a80efce246703e0e10137eb95a639bcd6</anchor>
+      <arglist>(const QByteArray &amp;componentId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const IComponentContext *</type>
       <name>GetSubcomponentContext</name>
       <anchorfile>classicomp_1_1_i_composite_component.html</anchorfile>
-      <anchor>a290fbf4cc388f69513a1196291e9b768</anchor>
-      <arglist>(const std::string &amp;componentId) const =0</arglist>
+      <anchor>afe55d679f52e98fe974dae0724ca3efa</anchor>
+      <arglist>(const QByteArray &amp;componentId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IComponent *</type>
       <name>CreateSubcomponent</name>
       <anchorfile>classicomp_1_1_i_composite_component.html</anchorfile>
-      <anchor>a483b17de55177634c9563977773e829d</anchor>
-      <arglist>(const std::string &amp;componentId) const =0</arglist>
+      <anchor>a5f1d5c145632068d67dc0b1772c6b590</anchor>
+      <arglist>(const QByteArray &amp;componentId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -19134,18 +19155,18 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::set&lt; std::string &gt;</type>
+      <type>QSet&lt; QByteArray &gt;</type>
       <name>Ids</name>
       <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
-      <anchor>ad9eeb4c9eaa1c720a75ef5939f6e5b90</anchor>
+      <anchor>ab19a96597868e1f1adc89a62e1570c74</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const IElementStaticInfo *</type>
       <name>GetSubelementInfo</name>
       <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
-      <anchor>a7612abddac7e7bbd40c8fcfcce677708</anchor>
-      <arglist>(const std::string &amp;subcomponentId) const =0</arglist>
+      <anchor>a65860027853d03374e9398ebb1c86b4d</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
@@ -19196,10 +19217,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::set&lt; QString &gt;</type>
+      <type>QSet&lt; QString &gt;</type>
       <name>PathList</name>
       <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
-      <anchor>ab875e7b7ad569f8d8f0bb65623054a51</anchor>
+      <anchor>a3bf3fc24912a554eead1799c46ab65d7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -19239,10 +19260,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::set&lt; CComponentAddress &gt;</type>
+      <type>QSet&lt; CComponentAddress &gt;</type>
       <name>ComponentAddresses</name>
       <anchorfile>classicomp_1_1_i_meta_info_manager.html</anchorfile>
-      <anchor>a3910cc2d0502d41961d1c0560a94ddb2</anchor>
+      <anchor>a5cec64ff37d3ef338014d19e48ee5cab</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -19263,8 +19284,8 @@
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetPackageMetaInfo</name>
       <anchorfile>classicomp_1_1_i_meta_info_manager.html</anchorfile>
-      <anchor>a88918c073f8f85aa86623b76fec96ac8</anchor>
-      <arglist>(const std::string &amp;packageId) const =0</arglist>
+      <anchor>aa5358cba88536a79f65a451ac9023526</anchor>
+      <arglist>(const QByteArray &amp;packageId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19306,15 +19327,15 @@
       <type>virtual int</type>
       <name>GetPackageType</name>
       <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
-      <anchor>a3e615375ca1f15a86c3d211ea6f9acb4</anchor>
-      <arglist>(const std::string &amp;packageId) const =0</arglist>
+      <anchor>a489872ddafc607271ed465f634eadb97</anchor>
+      <arglist>(const QByteArray &amp;packageId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetPackagePath</name>
       <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
-      <anchor>a8a8c5db8374895ec5c1fc098d67d6b84</anchor>
-      <arglist>(const std::string &amp;packageId) const =0</arglist>
+      <anchor>acac74e117d7a35eac88b51d5105c4244</anchor>
+      <arglist>(const QByteArray &amp;packageId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19322,18 +19343,18 @@
     <filename>classicomp_1_1_i_real_attribute_static_info.html</filename>
     <base virtualness="virtual">icomp::IAttributeStaticInfo</base>
     <member kind="function" virtualness="pure">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual const QByteArray &amp;</type>
       <name>GetAttributeId</name>
       <anchorfile>classicomp_1_1_i_real_attribute_static_info.html</anchorfile>
-      <anchor>a3d7a7a61cb294dc2f73cebac60f9c12f</anchor>
+      <anchor>ac5dc202409dff163b254b9559e993397</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>AddRelatedMetaId</name>
       <anchorfile>classicomp_1_1_i_real_attribute_static_info.html</anchorfile>
-      <anchor>a453b360e2f666040cbecbc2854066726</anchor>
-      <arglist>(int metaGroupId, const std::string &amp;id, int flags)=0</arglist>
+      <anchor>a72c5160a59507c7da8aaaa1b666ac9c0</anchor>
+      <arglist>(int metaGroupId, const QByteArray &amp;id, int flags)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19403,10 +19424,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::set&lt; std::string &gt;</type>
+      <type>QSet&lt; QByteArray &gt;</type>
       <name>Ids</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>aed80af95f532fac70d5299da4722ce57</anchor>
+      <anchor>a63050c3d6b81fdbcf1e0296a04ec2c90</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -19417,17 +19438,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QMap&lt; std::string, std::string &gt;</type>
+      <type>QMap&lt; QByteArray, QByteArray &gt;</type>
       <name>ExportedInterfacesMap</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a60829593c3db433d452a0f7470916082</anchor>
+      <anchor>a6e5b9f6f38330d397dc61498ce1e4093</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QMap&lt; std::string, std::string &gt;</type>
+      <type>QMap&lt; QByteArray, QByteArray &gt;</type>
       <name>ExportedComponentsMap</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>aa283fa0298b8d71b7de1347f989b0c0c</anchor>
+      <anchor>ad6772897f1dfa66ced1d0b8b819cd186</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -19441,29 +19462,29 @@
       <type>virtual const ElementInfo *</type>
       <name>GetElementInfo</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a3b125fe313fe17b46f0ba42089fa9959</anchor>
-      <arglist>(const std::string &amp;elementId) const =0</arglist>
+      <anchor>a3ac209d02f2e77514e0359c1afe37e43</anchor>
+      <arglist>(const QByteArray &amp;elementId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual ElementInfo *</type>
       <name>InsertElementInfo</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>ad6f76aeb00e66b4954e4abe7ac66f0e0</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)=0</arglist>
+      <anchor>a3f3718c3d19e04b4c6700e90297813f5</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>RemoveElementInfo</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a6aa30c89a927428df1d020975eda81e5</anchor>
-      <arglist>(const std::string &amp;elementId)=0</arglist>
+      <anchor>ac093dbdc7c7e64feb11564c36c8b8062</anchor>
+      <arglist>(const QByteArray &amp;elementId)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>RenameElement</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>ad87f142252218a9804d30088a2704abd</anchor>
-      <arglist>(const std::string &amp;oldElementId, const std::string &amp;newElementId)=0</arglist>
+      <anchor>a262c7282f565ae50b22f90e092b91681</anchor>
+      <arglist>(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
@@ -19476,29 +19497,29 @@
       <type>virtual IRegistry *</type>
       <name>GetEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>ab3b095f6e818d1bc29868871e7a384af</anchor>
-      <arglist>(const std::string &amp;registryId) const =0</arglist>
+      <anchor>ab7aaadcba19434b49ebc9b08cc5725eb</anchor>
+      <arglist>(const QByteArray &amp;registryId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IRegistry *</type>
       <name>InsertEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a6c19dfea5eca4094d348297d45b58712</anchor>
-      <arglist>(const std::string &amp;registryId)=0</arglist>
+      <anchor>a457760368d21fdcc55d10b740e57451f</anchor>
+      <arglist>(const QByteArray &amp;registryId)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>RemoveEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>ad57c6604507452a261debde2429dc053</anchor>
-      <arglist>(const std::string &amp;registryId)=0</arglist>
+      <anchor>a1da007e84c53ebd75820f4b9f692af33</anchor>
+      <arglist>(const QByteArray &amp;registryId)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>RenameEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a996586212f5891dbb265929caee78c52</anchor>
-      <arglist>(const std::string &amp;oldRegistryId, const std::string &amp;newRegistryId)=0</arglist>
+      <anchor>ae6616a6ff1d00b4831fb20dedbc6ae7b</anchor>
+      <arglist>(const QByteArray &amp;oldRegistryId, const QByteArray &amp;newRegistryId)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ExportedInterfacesMap &amp;</type>
@@ -19518,15 +19539,15 @@
       <type>virtual void</type>
       <name>SetElementInterfaceExported</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>ac37f5352329264b81afd5d44b21791d4</anchor>
-      <arglist>(const std::string &amp;elementId, const std::string &amp;interfaceName, bool state=true)=0</arglist>
+      <anchor>aac89df2d3cb0b397b2cfbae023696da3</anchor>
+      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool state=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetElementExported</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a0f288778e210c9aec24300e2d427cd62</anchor>
-      <arglist>(const std::string &amp;exportId, const std::string &amp;elementId)=0</arglist>
+      <anchor>ad1f23885aff0a3848c5c715193205695</anchor>
+      <arglist>(const QByteArray &amp;exportId, const QByteArray &amp;elementId)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const QString &amp;</type>
@@ -19611,10 +19632,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::set&lt; std::string &gt;</type>
+      <type>QSet&lt; QByteArray &gt;</type>
       <name>Ids</name>
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>ac62e79cf494e0d11c8a2f8757d577996</anchor>
+      <anchor>aa2927c794355dbaac82da8e3b77d0a98</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -19649,29 +19670,29 @@
       <type>virtual AttributeInfo *</type>
       <name>InsertAttributeInfo</name>
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>a15ec104bd82cf085db3ace9c15a48a83</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;attributeType)=0</arglist>
+      <anchor>a4a115baf8b0a41883c3ed68df5c6b9e4</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;attributeType)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iser::IObject *</type>
       <name>CreateAttribute</name>
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>a93c81ba408f855c847534e31c28b84dd</anchor>
-      <arglist>(const std::string &amp;attributeType) const =0</arglist>
+      <anchor>a965ec3a96475f53c776c576a9fcba2e1</anchor>
+      <arglist>(const QByteArray &amp;attributeType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const AttributeInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>ad2407b661603e684f6b7e5dcb7715b08</anchor>
-      <arglist>(const std::string &amp;attributeId) const =0</arglist>
+      <anchor>ab31cc9b90f1580760ba82f0fd76b93df</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>RemoveAttribute</name>
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>ab785f9bf1901c3723f8ee5f246741071</anchor>
-      <arglist>(const std::string &amp;attributeId)=0</arglist>
+      <anchor>a798e740fb19238be19634853b407cc34</anchor>
+      <arglist>(const QByteArray &amp;attributeId)=0</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -19685,17 +19706,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>exportId</name>
       <anchorfile>structicomp_1_1_i_registry_element_1_1_attribute_info.html</anchorfile>
-      <anchor>adbf0968672f1c51ae843802f707a5dab</anchor>
+      <anchor>a103c0f1b7b662ac680afe1077b8d04dc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>attributeTypeName</name>
       <anchorfile>structicomp_1_1_i_registry_element_1_1_attribute_info.html</anchorfile>
-      <anchor>ab58aad01f8471a089210d45a34e041b1</anchor>
+      <anchor>a829421ecf58ad7ba9f9b5aa894d02e5b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -19796,10 +19817,10 @@
       <arglist>(const Value &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a98aa51935005cf51d4810a3f3e683b54</anchor>
+      <anchor>a92bb29d17d5071dae4f257b1eb5cc44a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19809,11 +19830,46 @@
       <anchor>ad99aedb4eb7abf946b0edc904d246341</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="function" static="yes">
-      <type>static std::string</type>
+    <member kind="function">
+      <type>QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a11211164cc1618eea3d04fa47c273f5f</anchor>
+      <anchor>a7d2701920956442ca9cedd2935ccd38f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
+      <anchor>af2ea94e1db979f91daa9024811aa5a5d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
+      <anchor>aaf08b5cfc3630ee627777a543fbda610</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
+      <anchor>a2ebdbfac7183b806e49e3bf107ceb138</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
+      <anchor>a2c13e49615ac1548c2215db2020c89a2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
+      <anchor>ac1000074cad417e0189757734873b310</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -19901,28 +19957,28 @@
       <type></type>
       <name>TAttributeStaticInfo</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>aa5be552087ce6f6cd0d9353abeb41c95</anchor>
-      <arglist>(icomp::CBaseComponentStaticInfo &amp;staticInfo, const std::string &amp;id, const std::string &amp;description, const Attribute *defaultValuePtr, int flags, const istd::CClassInfo &amp;relatedInterfaceInfo)</arglist>
+      <anchor>a701b7c79eb0fc5a48c5bbfdd1c53c8ea</anchor>
+      <arglist>(icomp::CBaseComponentStaticInfo &amp;staticInfo, const QByteArray &amp;id, const QByteArray &amp;description, const Attribute *defaultValuePtr, int flags, const istd::CClassInfo &amp;relatedInterfaceInfo)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual const QByteArray &amp;</type>
       <name>GetAttributeId</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a53e611df438e0fd82b62c9185e160bd7</anchor>
+      <anchor>af5bc53001563061cd594ee745adc1293</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddRelatedMetaId</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a8abc6b0b88290eedcc64c99e55a97929</anchor>
-      <arglist>(int metaGroupId, const std::string &amp;id, int flags)</arglist>
+      <anchor>a2e953655f0e5cfaa0c09a0a68599ddb9</anchor>
+      <arglist>(int metaGroupId, const QByteArray &amp;id, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const std::string &amp;</type>
+      <type>virtual const QByteArray &amp;</type>
       <name>GetAttributeDescription</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>ab5f79373bc844b87302b768277b72ef8</anchor>
+      <anchor>aff40f2e7c6dde21ba9bacf86f405303e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19933,10 +19989,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetAttributeTypeName</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>acec70912a52b02668e28593b8c294ef3</anchor>
+      <anchor>a2a74c2f0f60c15a68d73097abaec5db8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19983,8 +20039,8 @@
       <type></type>
       <name>TComponentRegistrator</name>
       <anchorfile>classicomp_1_1_t_component_registrator.html</anchorfile>
-      <anchor>aba6dde835c3f0871eb5b6c654659f2f1</anchor>
-      <arglist>(const std::string &amp;componentId, icomp::CPackageStaticInfo &amp;packageStaticInfo, const QString &amp;description, const QString &amp;keywords)</arglist>
+      <anchor>a46512e7be9f03bf65254fbec5a2bf008</anchor>
+      <arglist>(const QByteArray &amp;componentId, icomp::CPackageStaticInfo &amp;packageStaticInfo, const QString &amp;description, const QString &amp;keywords)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
@@ -20135,8 +20191,8 @@
       <type>virtual Interface *</type>
       <name>CreateInstance</name>
       <anchorfile>classicomp_1_1_t_factory_member.html</anchorfile>
-      <anchor>ae6fa3aa559628c5fc08692ad6ba09970</anchor>
-      <arglist>(const std::string &amp;keyId=&quot;&quot;) const </arglist>
+      <anchor>ad53dda6ed5f363ca9f7e0d23c0e22f48</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual KeyList</type>
@@ -20149,8 +20205,8 @@
       <type>static Interface *</type>
       <name>ExtractInterface</name>
       <anchorfile>classicomp_1_1_t_factory_member.html</anchorfile>
-      <anchor>a48e09ece8599caad2636a5a7f1434a9a</anchor>
-      <arglist>(istd::IPolymorphic *instancePtr, const std::string &amp;subId=&quot;&quot;)</arglist>
+      <anchor>a9371b39dd866ac17fc4f263523199603</anchor>
+      <arglist>(istd::IPolymorphic *instancePtr, const QByteArray &amp;subId=&quot;&quot;)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -20325,10 +20381,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a0670e6d2938a20cfb9bcb5048cda90c9</anchor>
+      <anchor>a5686b663690be39098262db5469c8fe8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20338,18 +20394,53 @@
       <anchor>a8f5501147cb3282be1873454817c45d7</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="function" static="yes">
-      <type>static std::string</type>
+    <member kind="function">
+      <type>QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>aa1a0f334aa274dcb0a08affb9d61e9c1</anchor>
+      <anchor>a605079361ad59e621fbbc7fe06842658</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ab2186a60f1fae36160d2972d082231c5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a3480a41eec13df40514ba324bfca9051</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a42fae8a10c72c2d1aa93c633e0ecb831</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ad775948eda2451a712b621a0a419846b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ab5e8333cc76fb65e7464e01bdbded9e2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; Wrap &gt;</type>
+      <type>QVector&lt; Wrap &gt;</type>
       <name>m_values</name>
       <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a1a0ff63fde5364b80d8a3efd6a1247db</anchor>
+      <anchor>a7071721db197760b6a38a95c6afd7695</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -20484,8 +20575,8 @@
       <type>static Interface *</type>
       <name>ExtractInterface</name>
       <anchorfile>classicomp_1_1_t_multi_factory_member.html</anchorfile>
-      <anchor>adb0e87dab3a61080f3802442b5459818</anchor>
-      <arglist>(IComponent *componentPtr, const std::string &amp;subId=&quot;&quot;)</arglist>
+      <anchor>ae90954db265ecf7bd52299b82f6bfebb</anchor>
+      <arglist>(IComponent *componentPtr, const QByteArray &amp;subId=&quot;&quot;)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -20673,8 +20764,8 @@
       <type>virtual icomp::IComponent *</type>
       <name>CreateInstance</name>
       <anchorfile>classicomp_1_1_t_sim_components_factory.html</anchorfile>
-      <anchor>a7c63abe108df4bd06bd2b55f2cf21bd6</anchor>
-      <arglist>(const std::string &amp;keyId=&quot;&quot;) const </arglist>
+      <anchor>ada15c91942cdd712c48b0b524be8fb1c</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20716,22 +20807,22 @@
       <type>virtual IComponent *</type>
       <name>GetSubcomponent</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a96819d670ee3fa7dc1b3015fb4c787fe</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
+      <anchor>a2b64d31fbbb64e874a9605ab598904ca</anchor>
+      <arglist>(const QByteArray &amp;componentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
       <name>GetSubcomponentContext</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a778c7258da1fefd15133dca825cfb4fc</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
+      <anchor>a3069c1960279b7af10b10ca2c2cc72a8</anchor>
+      <arglist>(const QByteArray &amp;componentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
       <name>CreateSubcomponent</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a0f5ac17b1616b1fd982053204071b595</anchor>
-      <arglist>(const std::string &amp;componentId) const </arglist>
+      <anchor>a6efa28a4353503b1ffad2b9e059daa23</anchor>
+      <arglist>(const QByteArray &amp;componentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -20766,22 +20857,22 @@
       <type></type>
       <name>TSubelementStaticInfo</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
-      <anchor>a40f0cf2d9c4617bd2e9626be3048b15e</anchor>
-      <arglist>(const std::string &amp;name, CBaseComponentStaticInfo &amp;owner)</arglist>
+      <anchor>aadc0b7ea0d4057d6e73b46e40d07740d</anchor>
+      <arglist>(const QByteArray &amp;name, CBaseComponentStaticInfo &amp;owner)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RegisterInterfaceExtractor</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
-      <anchor>a7b72697d410e5c30012634efab1d619b</anchor>
-      <arglist>(const std::string &amp;interfaceName, InterfaceExtractorPtr extractorPtr)</arglist>
+      <anchor>a43a388c823cab48f585d52af5e7d9a6a</anchor>
+      <arglist>(const QByteArray &amp;interfaceName, InterfaceExtractorPtr extractorPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IElementStaticInfo *</type>
       <name>GetSubelementInfo</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
-      <anchor>a6f761a24baa764c7cf9f9d7e6d9f89b4</anchor>
-      <arglist>(const std::string &amp;subcomponentId) const </arglist>
+      <anchor>a8460f8b764c6a1b58bb8ee12eba28a45</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -20794,8 +20885,8 @@
       <type>virtual void *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
-      <anchor>aaa481193b3a7e4307bdfc514bb4a229d</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const std::string &amp;subId) const </arglist>
+      <anchor>a90fbd827f7809886e4b42d1aa5db22e8</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const QByteArray &amp;subId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20813,8 +20904,8 @@
       <type></type>
       <name>Registrator</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info_1_1_registrator.html</anchorfile>
-      <anchor>a413690308046257c35b65ed4933c0169</anchor>
-      <arglist>(TSubelementStaticInfo &amp;staticInfo, const std::string &amp;interfaceName, ExtractorPtr extractorPtr)</arglist>
+      <anchor>a0dda10d782c29fa3ce681bc1af27f4f0</anchor>
+      <arglist>(TSubelementStaticInfo &amp;staticInfo, const QByteArray &amp;interfaceName, ExtractorPtr extractorPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -20853,8 +20944,8 @@
       <type>virtual bool</type>
       <name>IsFeatureSupported</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>add86c3cc0946b7357a80bfafaceead28</anchor>
-      <arglist>(int featureFlags, const std::string &amp;documentTypeId) const </arglist>
+      <anchor>a8f114a7307b76eec8ecb2c96a118c1b6</anchor>
+      <arglist>(int featureFlags, const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -20867,15 +20958,15 @@
       <type>virtual QString</type>
       <name>GetDocumentTypeName</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a5a16c12114b3cda980ae4214b65acb8d</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>ab001914b4a5c5368ecef0cea93f758ab</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IFileTypeInfo *</type>
       <name>GetDocumentFileTypeInfo</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a40bc84914e319a0e650df4feeb7ba82e</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>a46910a714e74fd3d899027514a721e81</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -20888,57 +20979,57 @@
       <type>virtual QString</type>
       <name>GetDefaultDirectory</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a755e8169e2a710870f7e118b148ceaef</anchor>
-      <arglist>(const QString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </arglist>
+      <anchor>a9267e276ce03cefb682ac01235ac2e01</anchor>
+      <arglist>(const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>af416b4338e0042f350e65f8b4eb30c5b</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>abb197624f79b6dcd0bc845db7e246afa</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetViewTypeName</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a5e60c7ced74d95838232d86bf16dd0a3</anchor>
-      <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const </arglist>
+      <anchor>a9bcebdd6d008815161e161c86b2b0897</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const QByteArray &amp;viewTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IFileLoader *</type>
       <name>GetFileLoader</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a91792fbef4bf82c0ae28566fb39b748c</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>a1e783c28138db0bb7e6fc021f0327c78</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a02e706dd44b350c57a5a8edfe1d4cf55</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>aca5446c4f52dce8c618f416c40906756</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>
       <name>CreateView</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a30025396a4c7ad91679b7838c7e95bf3</anchor>
-      <arglist>(const std::string &amp;documentTypeId, istd::IChangeable *documentPtr, const std::string &amp;viewTypeId=std::string()) const </arglist>
+      <anchor>a4c96ba0b8e6b0d193ddf3a4ce0995a60</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual imod::IUndoManager *</type>
       <name>CreateUndoManager</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>ab3bcd37dde5758b0abfaee9c4530b214</anchor>
-      <arglist>(const std::string &amp;documentTypeId, istd::IChangeable *documentPtr) const </arglist>
+      <anchor>ac214e1013ac2ab0db5a0a3b58a6fcfe4</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IDocumentStateComparator *</type>
       <name>CreateStateComparator</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a15e297359ac98c67b47d6a94ccf0ab95</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>a1641715a993a699fd838d452b958857d</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -21069,29 +21160,29 @@
       <type>virtual istd::IPolymorphic *</type>
       <name>AddViewToDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>ad2c2e32e53324c10493fbe29863237bd</anchor>
-      <arglist>(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())</arglist>
+      <anchor>a832d6d9a8ebfd58caddb7aa1f35a55ec</anchor>
+      <arglist>(const istd::IChangeable &amp;document, const QByteArray &amp;viewTypeId=QByteArray())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetDocumentTypeId</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a4e33402af95fc7f7ee8b651525b561e0</anchor>
+      <anchor>a84e74fd9738155e70a2f2396bcc41dd3</anchor>
       <arglist>(const istd::IChangeable &amp;document) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>FileNew</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a223a3266b43a743fceca7db286db71c8</anchor>
-      <arglist>(const std::string &amp;documentTypeId, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)</arglist>
+      <anchor>ad426e58e1cfc2b562d355af81022a895</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>FileOpen</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a49ed49df7d07d88c68c49fc56fd4dff4</anchor>
-      <arglist>(const std::string *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)</arglist>
+      <anchor>a62296534d07168f3bbbb199da7f328d4</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -21136,10 +21227,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::list&lt; ViewPtr &gt;</type>
+      <type>QList&lt; ViewPtr &gt;</type>
       <name>Views</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a7ee664b4bd105384c8955e040346fe12</anchor>
+      <anchor>a323464bacb46ca087abe82d5686f77c0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -21153,8 +21244,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a1a26118af4491a94efb94cc9c8ae2d39</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const std::string &amp;viewTypeId, std::string &amp;documentTypeId)</arglist>
+      <anchor>a40ab2ca8dab4bd7a2dd1939a97eac17b</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -21195,8 +21286,8 @@
       <type>SingleDocumentData *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a0c1d058a94124320e040c4c4c247639c</anchor>
-      <arglist>(const std::string &amp;documentTypeId, bool createView, const std::string &amp;viewTypeId) const </arglist>
+      <anchor>ab9f46603ec9fb42b17b32ddbc13a8a8e</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -21223,15 +21314,15 @@
       <type>virtual QStringList</type>
       <name>GetOpenFilePaths</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a6c9777f0de18c1189bd0a61f8a02e991</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL) const =0</arglist>
+      <anchor>a9d03420d4b2bc7866bdd4de16ac17aaa</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>af09cabcc409815cb801c712fccc45faf</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>aec2496b47f95b9594b3a0b9116f07470</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -21249,8 +21340,8 @@
       <type></type>
       <name>SingleDocumentData</name>
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
-      <anchor>a84afecc20df0fae4a852297fa41efcd6</anchor>
-      <arglist>(CMultiDocumentManagerBase *parentPtr, const std::string &amp;documentTypeId, istd::IChangeable *documentPtr, imod::IUndoManager *undoManagerPtr, IDocumentStateComparator *stateComparatorPtr)</arglist>
+      <anchor>ad86292ea102c224747fcbee1a9bdd964</anchor>
+      <arglist>(CMultiDocumentManagerBase *parentPtr, const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr, imod::IUndoManager *undoManagerPtr, IDocumentStateComparator *stateComparatorPtr)</arglist>
     </member>
     <member kind="variable">
       <type>CMultiDocumentManagerBase *</type>
@@ -21454,29 +21545,29 @@
       <type>virtual istd::IPolymorphic *</type>
       <name>AddViewToDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a25eaa73f10819e9bf514878cea340b34</anchor>
-      <arglist>(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())</arglist>
+      <anchor>a349487edca2a13c53fa45d824c1b9646</anchor>
+      <arglist>(const istd::IChangeable &amp;document, const QByteArray &amp;viewTypeId=QByteArray())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetDocumentTypeId</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a67fc53f78d3f1af7baaf92dd3eec204c</anchor>
+      <anchor>a12c3dc0bfbeb5580d3e3a5199abf9f14</anchor>
       <arglist>(const istd::IChangeable &amp;document) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>FileNew</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>ae1f534dcfe6bf1a882348294a6229efa</anchor>
-      <arglist>(const std::string &amp;documentTypeId, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)</arglist>
+      <anchor>a6adff9952e92fdac46f02c74ae443cf0</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>FileOpen</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a9adc2a2410f1b3d208ad6de331e0e514</anchor>
-      <arglist>(const std::string *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)</arglist>
+      <anchor>ada6b87bc29c9681aec7581629524206d</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -21496,15 +21587,15 @@
       <type>virtual bool</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>aaf6f0600eb14cc95b5926a1069495e0a</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const std::string &amp;viewTypeId, std::string &amp;documentTypeId)</arglist>
+      <anchor>a9a59002019b6ee89d2cb70be3e28d6c5</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>NewDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a5a3fdd948c3fb552650ed9b08e4fe1af</anchor>
-      <arglist>(const std::string &amp;documentTypeId, bool createView, const std::string &amp;viewTypeId)</arglist>
+      <anchor>a31d620e94ee71b4232135661391b40c7</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -21538,15 +21629,15 @@
       <type>virtual QString</type>
       <name>GetOpenFilePath</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a279e79164ccee4f4b2351b4614f1b777</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL) const =0</arglist>
+      <anchor>a9fd08b6acefee07d11db5113f385effa</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>ae95d5ffa911de72d42c552956f4006bb</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>aec2461dc19bdd7095aa76a4c29717449</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -21561,10 +21652,10 @@
     <filename>classidoc_1_1_c_single_document_template_base.html</filename>
     <base virtualness="virtual">idoc::IDocumentTemplate</base>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetDocumentTypeId</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>abbb33951e7fdc864f75cb722fccf5054</anchor>
+      <anchor>ad1c91e6d71716adc2a7d1289302e5e65</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21578,8 +21669,8 @@
       <type>virtual void</type>
       <name>SetDocumentTypeId</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a985f7d103a0844c728e181ea84ed562d</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>a2cfb1fd7c2f06e1bd9822cbf2b183346</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -21592,8 +21683,8 @@
       <type>virtual void</type>
       <name>SetViewTypeId</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a4f30c50a92f943e73d4dfcb8f593d529</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>adaa7e4ff52c78ac8e832ad8ca066def5</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -21613,8 +21704,8 @@
       <type>virtual bool</type>
       <name>IsFeatureSupported</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>af762cd6be44415c970675bee13401ddd</anchor>
-      <arglist>(int featureFlags, const std::string &amp;documentTypeId) const </arglist>
+      <anchor>a3edfc383a06584be11b1fbbb164dcf4c</anchor>
+      <arglist>(int featureFlags, const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -21627,15 +21718,15 @@
       <type>virtual QString</type>
       <name>GetDocumentTypeName</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a5438ea881b29767b75b48c59b9d49d67</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>a2b76df2b569c11e8c5891cdf9961545a</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IFileTypeInfo *</type>
       <name>GetDocumentFileTypeInfo</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a2c186899b0066e465ff0c860c052c49b</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>ab427f8ccd5827ace1926b3993ca1d77a</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -21648,43 +21739,43 @@
       <type>virtual QString</type>
       <name>GetDefaultDirectory</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a1898c8fd0c1770b42aab15269d2d4f27</anchor>
-      <arglist>(const QString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </arglist>
+      <anchor>a4eddbd1b6aae7d49799596a18c92d193</anchor>
+      <arglist>(const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a2c81c1791751fde5ead7d0a73b3c2ea2</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>aec90e64e2749294b8a980a3a1aed20f6</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetViewTypeName</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a8b9c14358dde37c4b1fd96163e06bec4</anchor>
-      <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const </arglist>
+      <anchor>a94d51607b0b03695f1efda77b66af470</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const QByteArray &amp;viewTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IDocumentStateComparator *</type>
       <name>CreateStateComparator</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a12c0a1f3478d159b420f63a03466b10c</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>adde1c42dacdf061858a228be21f01277</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsDocumentTypeSupported</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>a8da29592b5068cc84e3335143cf5155a</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>aaafc949fe4df5ac424ed1460e9a0f5e5</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsViewTypeSupported</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>ad7ee33cffc5ef048104fad823a7c6b44</anchor>
-      <arglist>(const std::string &amp;viewTypeId) const </arglist>
+      <anchor>a55f45c947c8bbfbe96a6fca897556b10</anchor>
+      <arglist>(const QByteArray &amp;viewTypeId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21717,29 +21808,29 @@
       <type>virtual iser::IFileLoader *</type>
       <name>GetFileLoader</name>
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>a6b44575f77b5eef9bae2c4ef2206edcd</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>a9fd758135f102c593980f27e59c75891</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>a5199b1eaf800d35b3578fa5eec029a9a</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>af7495d708afa102d31d049418f789437</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>
       <name>CreateView</name>
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>aeda8fc727c3cd466e002d946f4efb7c1</anchor>
-      <arglist>(const std::string &amp;documentTypeId, istd::IChangeable *documentPtr, const std::string &amp;viewTypeId=std::string()) const </arglist>
+      <anchor>ae2732f441e6e6b4202dcde4ffb7135b0</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const </arglist>
     </member>
     <member kind="function">
       <type>imod::IUndoManager *</type>
       <name>CreateUndoManager</name>
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>a5fbffcdd0097cf81bc4215b25f54a97a</anchor>
-      <arglist>(const std::string &amp;documentTypeId, istd::IChangeable *documentPtr) const </arglist>
+      <anchor>a7ad572c770ec184ca29df3094f66ec1d</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>
@@ -21778,8 +21869,8 @@
       <type>virtual bool</type>
       <name>IsFeatureSupported</name>
       <anchorfile>classidoc_1_1_c_tmpl_based_document_manager_base.html</anchorfile>
-      <anchor>a8dc6514abbb1c605cc79ab2c6c6bad86</anchor>
-      <arglist>(int featureFlags, const std::string &amp;documentTypeId) const </arglist>
+      <anchor>a71075057c8c586240b4b568edbff2fce</anchor>
+      <arglist>(int featureFlags, const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -21792,15 +21883,15 @@
       <type>virtual QString</type>
       <name>GetDocumentTypeName</name>
       <anchorfile>classidoc_1_1_c_tmpl_based_document_manager_base.html</anchorfile>
-      <anchor>a02d91805662b780dcdc8339973c3928b</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>acf218584bffc04b5c93346208d1da05c</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IFileTypeInfo *</type>
       <name>GetDocumentFileTypeInfo</name>
       <anchorfile>classidoc_1_1_c_tmpl_based_document_manager_base.html</anchorfile>
-      <anchor>a02f779b49e130531a212defa1542ea4f</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>ae4db74119c01ac88d231f44a3a385788</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -21813,8 +21904,8 @@
       <type>virtual QString</type>
       <name>GetDefaultDirectory</name>
       <anchorfile>classidoc_1_1_c_tmpl_based_document_manager_base.html</anchorfile>
-      <anchor>a02273094745694fbfcf8ba512dd1f344</anchor>
-      <arglist>(const QString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </arglist>
+      <anchor>ad0a93693455eef75dcd2eeb49a7eade9</anchor>
+      <arglist>(const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const idoc::IDocumentTemplate *</type>
@@ -21910,10 +22001,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QMap&lt; QString, std::string &gt;</type>
+      <type>QMap&lt; QString, QByteArray &gt;</type>
       <name>FileToTypeMap</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a0f475260ad4256042f71dc309f56d2ca</anchor>
+      <anchor>ad2308086fe7ddbed930cb6cbcf5d7f70</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -21976,29 +22067,29 @@
       <type>virtual istd::IPolymorphic *</type>
       <name>AddViewToDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a67b5019ddacfcb2a8fef21e36cdd1fd8</anchor>
-      <arglist>(const istd::IChangeable &amp;document, const std::string &amp;viewTypeId=std::string())=0</arglist>
+      <anchor>ad626d15a5c04be5618df76bfd1cbf6aa</anchor>
+      <arglist>(const istd::IChangeable &amp;document, const QByteArray &amp;viewTypeId=QByteArray())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetDocumentTypeId</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a415ab9abd38841db354894b89dea664f</anchor>
+      <anchor>a9f1e9fb07d00c26834e2e4e71a6be94d</anchor>
       <arglist>(const istd::IChangeable &amp;document) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>FileNew</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a47e60ea13da22040a06b7425a82134a7</anchor>
-      <arglist>(const std::string &amp;documentTypeId, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)=0</arglist>
+      <anchor>a020453dc791e153882ec96bdad062056</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>FileOpen</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a310f01527df3677b0a64c38957437fd1</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const std::string &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)=0</arglist>
+      <anchor>a954ae1ff95dcdd12f06cc041ca58fbb5</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -22026,10 +22117,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>documentTypeId</name>
       <anchorfile>structidoc_1_1_i_document_manager_1_1_document_info.html</anchorfile>
-      <anchor>a017ed6df669dc5c201428e1e3c73cf28</anchor>
+      <anchor>a02da5e779b5e085067259f2e226b019e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -22067,50 +22158,50 @@
       <type>virtual Ids</type>
       <name>GetViewTypeIds</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a0343f3438b62ab79a59c94d32dcb83cc</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>ac47a4a85191e7f4a6bb293c489611d7b</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetViewTypeName</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>ab4324c0b053058c289087d4446b3547a</anchor>
-      <arglist>(const std::string &amp;documentTypeId, const std::string &amp;viewTypeId) const =0</arglist>
+      <anchor>a6e18d91dcb96dc27af931e526d5992c2</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const QByteArray &amp;viewTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iser::IFileLoader *</type>
       <name>GetFileLoader</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>ad59ff45c30342761796803a89ad00b35</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>ad599f3c2f78399f4f28a2e6b4bfe2e0d</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>af265b394f4399b7274b61597c4fca624</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>ad8dd16801bac9fbc5138e34164020260</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IPolymorphic *</type>
       <name>CreateView</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>aaccb7039d04e3f8277e4f01ecd3c8c00</anchor>
-      <arglist>(const std::string &amp;documentTypeId, istd::IChangeable *documentPtr, const std::string &amp;viewTypeId=std::string()) const =0</arglist>
+      <anchor>aa9dc2ddd9889c79f373dd6c1b5324690</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual imod::IUndoManager *</type>
       <name>CreateUndoManager</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a6fc207924b066569c1c47f1407cf4b03</anchor>
-      <arglist>(const std::string &amp;documentTypeId, istd::IChangeable *documentPtr) const =0</arglist>
+      <anchor>ad00822bcbfe425552f57cb49cad4c1dc</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IDocumentStateComparator *</type>
       <name>CreateStateComparator</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a9f05a5dd90dccd082594df5821727a58</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>ad403afe3844b2d35c4c70257ed9e79b9</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22142,18 +22233,18 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; std::string &gt;</type>
+      <type>QVector&lt; QByteArray &gt;</type>
       <name>Ids</name>
       <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
-      <anchor>a6860664a39d08fc7f4c061a65754303b</anchor>
+      <anchor>ad27b000c2b9dd09e63ccd4af882c3817</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsFeatureSupported</name>
       <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
-      <anchor>acb66d5689b7476281d062b66568a063a</anchor>
-      <arglist>(int featureFlags, const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>aa877c8b903c95a2d94138df7674adeeb</anchor>
+      <arglist>(int featureFlags, const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
@@ -22166,15 +22257,15 @@
       <type>virtual QString</type>
       <name>GetDocumentTypeName</name>
       <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
-      <anchor>a75e446de24ac14da9104436130fac5b2</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>a9a0476c469498d8456573a730a3a7d7e</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iser::IFileTypeInfo *</type>
       <name>GetDocumentFileTypeInfo</name>
       <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
-      <anchor>a4e7f972d10d706a5efe11b184601d0d2</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const =0</arglist>
+      <anchor>ac41e8a8af9fef09682eb4c9d75ed7d74</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
@@ -22187,8 +22278,8 @@
       <type>virtual QString</type>
       <name>GetDefaultDirectory</name>
       <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
-      <anchor>a8634a4fcd5c54b13baf57899cd7a13e7</anchor>
-      <arglist>(const QString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const =0</arglist>
+      <anchor>a255f03be37a16f5f69310b250f43234b</anchor>
+      <arglist>(const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22325,10 +22416,10 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
     <class kind="struct">iimg::CBitmapRegion::PixelRange</class>
     <member kind="typedef">
-      <type>std::vector&lt; PixelRange &gt;</type>
+      <type>QVector&lt; PixelRange &gt;</type>
       <name>PixelRanges</name>
       <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>abcffd855c377d8ea8080839a5b60cfec</anchor>
+      <anchor>abfdce528ac4e3a07818036e3e7e387c0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -23884,10 +23975,10 @@
     <name>imath::CVarVector</name>
     <filename>classimath_1_1_c_var_vector.html</filename>
     <member kind="typedef">
-      <type>std::vector&lt; double &gt;</type>
+      <type>QVector&lt; double &gt;</type>
       <name>Elements</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
-      <anchor>afc00e6f432209e05a2bda17464f459cf</anchor>
+      <anchor>a2f2aa27019a7b50df25303ddd19af9d1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -23929,8 +24020,8 @@
       <type>bool</type>
       <name>SetElementsCount</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
-      <anchor>a4b6d3430253028c34f55903ca9ec7148</anchor>
-      <arglist>(int size, double value=0)</arglist>
+      <anchor>aca78a8571389dbfcb2dcb5c7c476fb0e</anchor>
+      <arglist>(int count, double value=0)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -27271,15 +27362,15 @@
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>
       <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
-      <anchor>a62b0a11ad967c9b521cfe160df94d606</anchor>
-      <arglist>(const std::string &amp;id) const </arglist>
+      <anchor>a9a0b9c21d014982646d887135e159ecb</anchor>
+      <arglist>(const QByteArray &amp;id) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::ISerializable *</type>
       <name>GetEditableParameter</name>
       <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
-      <anchor>a158cc7f295dbe26fe01f332258cf3299</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>aa96d056de18654f96303eb916fa632a8</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -27673,10 +27764,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
-      <anchor>a874f8498e372b68542c0e2f407936685</anchor>
+      <anchor>af7bb147231b51043030bd37efac88964</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -27690,8 +27781,8 @@
       <type>virtual bool</type>
       <name>InsertOption</name>
       <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
-      <anchor>a22a82253c6a36f09a6f344205e77bb0c</anchor>
-      <arglist>(QString &amp;optionName, const std::string &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)</arglist>
+      <anchor>a761ed39e3af95733402e096cc57cbbc7</anchor>
+      <arglist>(QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -27849,10 +27940,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a2065a91e40ce46d7be2bfc7b386a5151</anchor>
+      <anchor>a42ef743ef676f52d8adf082ecb0fda26</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -27908,8 +27999,8 @@
       <type>virtual bool</type>
       <name>SetEditableParameter</name>
       <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
-      <anchor>a6df4209d8f3602b04cab3f96b29a2e65</anchor>
-      <arglist>(const std::string &amp;id, iser::ISerializable *parameterPtr, bool releaseFlag=false)</arglist>
+      <anchor>ae51ba53a63535f47a82ec1d50c44bff7</anchor>
+      <arglist>(const QByteArray &amp;id, iser::ISerializable *parameterPtr, bool releaseFlag=false)</arglist>
     </member>
     <member kind="function">
       <type>const ParameterInfos &amp;</type>
@@ -27922,15 +28013,15 @@
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>
       <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
-      <anchor>ab182a85fa1d25493fcac898c4f17ba63</anchor>
-      <arglist>(const std::string &amp;id) const </arglist>
+      <anchor>aa2998713fe5e13a493ce02ecb0ac86cf</anchor>
+      <arglist>(const QByteArray &amp;id) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::ISerializable *</type>
       <name>GetEditableParameter</name>
       <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
-      <anchor>acd515f10d054275b201e4a672afd7065</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>adf00c286d910c1e9bbc29c81254c8396</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -27957,8 +28048,8 @@
       <type>const ParameterInfo *</type>
       <name>FindParameterInfo</name>
       <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
-      <anchor>a2927813d65948849bdaa13f2b98b77f9</anchor>
-      <arglist>(const std::string &amp;parameterId) const </arglist>
+      <anchor>a99e9277eb229d179f1f133654538d399</anchor>
+      <arglist>(const QByteArray &amp;parameterId) const </arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -27968,14 +28059,14 @@
       <type></type>
       <name>ParameterInfo</name>
       <anchorfile>structiprm_1_1_c_params_set_1_1_parameter_info.html</anchorfile>
-      <anchor>a7725cdbe7afe30b569969aa1244693bd</anchor>
-      <arglist>(const std::string &amp;parameterId, iser::ISerializable *parameterPtr, bool releaseFlag=false)</arglist>
+      <anchor>ae09d441a0ad2729e59e8717f332438e7</anchor>
+      <arglist>(const QByteArray &amp;parameterId, iser::ISerializable *parameterPtr, bool releaseFlag=false)</arglist>
     </member>
     <member kind="variable">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>parameterId</name>
       <anchorfile>structiprm_1_1_c_params_set_1_1_parameter_info.html</anchorfile>
-      <anchor>aac18da395cdfa2246f0b8d255d43ae8f</anchor>
+      <anchor>acb567bee6cad5c6f13f0f340b07c7fb7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -28012,15 +28103,15 @@
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a90cb2ee3f8504c557c0bb614348d7319</anchor>
-      <arglist>(const std::string &amp;id) const </arglist>
+      <anchor>ab90d2803adb8ab9463229c2988b1a326</anchor>
+      <arglist>(const QByteArray &amp;id) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::ISerializable *</type>
       <name>GetEditableParameter</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a35e8091a8a77fa6ee10dcd0c991dfa87</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>ab52d4e76358cc7d5c1716b81bc519587</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ISelectionConstraints *</type>
@@ -28093,10 +28184,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a0c56e9e9a3f32b33353a5474ef7f05ea</anchor>
+      <anchor>abae0be7119a71db9c22a391aa35c8b98</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -28155,10 +28246,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
-      <anchor>a593f4006e0e6f7daade9d6942299e007</anchor>
+      <anchor>ad9c9a0d04561c8a23a4b32e986c8869c</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -28220,8 +28311,8 @@
       <type>bool</type>
       <name>SetSelectedOptionIndexById</name>
       <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>a51a14f00c8b3921cd66ec990459dc167</anchor>
-      <arglist>(const std::string &amp;selectedOptionId)</arglist>
+      <anchor>a5f61ce2072b272183a608469dcbbe148</anchor>
+      <arglist>(const QByteArray &amp;selectedOptionId)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -28251,10 +28342,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetParameterTypeId</name>
       <anchorfile>classiprm_1_1_c_variable_param_comp.html</anchorfile>
-      <anchor>aa0138680104e75cea095bc1ad440875a</anchor>
+      <anchor>aecd43d1c0dae2a2c09123ba536ba6483</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28268,8 +28359,8 @@
       <type>virtual bool</type>
       <name>AssignTypeId</name>
       <anchorfile>classiprm_1_1_c_variable_param_comp.html</anchorfile>
-      <anchor>a56e411d74670c22b8405878b3f5465d0</anchor>
-      <arglist>(const std::string &amp;typeId)</arglist>
+      <anchor>afaae535e0f4b37c8354745e97808969f</anchor>
+      <arglist>(const QByteArray &amp;typeId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -28486,8 +28577,8 @@
       <type>virtual bool</type>
       <name>InsertOption</name>
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
-      <anchor>a4fda59f5bcb250e24232a0016a81ef28</anchor>
-      <arglist>(QString &amp;optionName, const std::string &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)=0</arglist>
+      <anchor>ac86b1bb9a30fc6474e82322d4b52ade4</anchor>
+      <arglist>(QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28606,15 +28697,15 @@
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>
       <anchorfile>classiprm_1_1_i_params_set.html</anchorfile>
-      <anchor>a3db09637386433fd8da452a736234379</anchor>
-      <arglist>(const std::string &amp;id) const =0</arglist>
+      <anchor>a526c5d6481768d3b6c2e73a2abbd58b3</anchor>
+      <arglist>(const QByteArray &amp;id) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iser::ISerializable *</type>
       <name>GetEditableParameter</name>
       <anchorfile>classiprm_1_1_i_params_set.html</anchorfile>
-      <anchor>abe32cd17c17f50cd3382cc64988c2a5f</anchor>
-      <arglist>(const std::string &amp;id)=0</arglist>
+      <anchor>a2eb6b638293e7b23e93f84e928bbd071</anchor>
+      <arglist>(const QByteArray &amp;id)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28686,10 +28777,10 @@
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a2d9228f4e01880b48336deafeaa6393a</anchor>
+      <anchor>a5498d1707cbd1845247a77edd24f9841</anchor>
       <arglist>(int index) const =0</arglist>
     </member>
   </compound>
@@ -28749,10 +28840,10 @@
     <filename>classiprm_1_1_i_variable_param.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
-      <type>std::set&lt; std::string &gt;</type>
+      <type>QSet&lt; QByteArray &gt;</type>
       <name>TypeIds</name>
       <anchorfile>classiprm_1_1_i_variable_param.html</anchorfile>
-      <anchor>adf99f67a55a03d4df4054b752e957766</anchor>
+      <anchor>a2dc438b59573ce7fd4b9a2d9e27d19b5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -28763,10 +28854,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetParameterTypeId</name>
       <anchorfile>classiprm_1_1_i_variable_param.html</anchorfile>
-      <anchor>ae37d54a74f3c268fbb32684365927ff2</anchor>
+      <anchor>a7dadbf6421ee9c1946040ec3160bbe2d</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -28780,8 +28871,8 @@
       <type>virtual bool</type>
       <name>AssignTypeId</name>
       <anchorfile>classiprm_1_1_i_variable_param.html</anchorfile>
-      <anchor>a09d03ec12c861f2d7c3ad8a1b28e38d0</anchor>
-      <arglist>(const std::string &amp;typeId)=0</arglist>
+      <anchor>afd80f4487a414d81cca0eb4c5b1772fe</anchor>
+      <arglist>(const QByteArray &amp;typeId)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28807,15 +28898,15 @@
       <type></type>
       <name>TParamsPtr</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
-      <anchor>a3c35bfc4a19630ab2ff6418c953f9b76</anchor>
-      <arglist>(const IParamsSet *parameterSetPtr, const std::string &amp;parameterId)</arglist>
+      <anchor>adb773ae44336c81b8c6a0bcb23543bcb</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const QByteArray &amp;parameterId)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>Init</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
-      <anchor>ad33aed37039667b8b245e76815d4a525</anchor>
-      <arglist>(const IParamsSet *parameterSetPtr, const std::string &amp;parameterId)</arglist>
+      <anchor>a041d2c09d20bde2fc913ab6d5cd7ec0e</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const QByteArray &amp;parameterId)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -28935,8 +29026,8 @@
       <type></type>
       <name>CDelegatedProgressManager</name>
       <anchorfile>classiproc_1_1_c_delegated_progress_manager.html</anchorfile>
-      <anchor>af130eee9fc13ce559f2c94c369b0f307</anchor>
-      <arglist>(IProgressManager *slaveManagerPtr, const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)</arglist>
+      <anchor>a8eb0c2e7b96978e95e0c7eeb8215d9b6</anchor>
+      <arglist>(IProgressManager *slaveManagerPtr, const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
@@ -28956,8 +29047,8 @@
       <type>virtual int</type>
       <name>BeginProgressSession</name>
       <anchorfile>classiproc_1_1_c_delegated_progress_manager.html</anchorfile>
-      <anchor>a084a06474f73d78a52e5ea7683b00fa6</anchor>
-      <arglist>(const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)</arglist>
+      <anchor>a3af41e165d64686bdc5b8b220a48cbbf</anchor>
+      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -29070,10 +29161,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
-      <anchor>a4964a2062e5fa1799adc5b969bcd1355</anchor>
+      <anchor>a3171f4a1f484f2e144f357cdee5d9f61</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -29311,8 +29402,8 @@
       <type>virtual int</type>
       <name>BeginProgressSession</name>
       <anchorfile>classiproc_1_1_i_progress_manager.html</anchorfile>
-      <anchor>a9dc83742bf9e811e9a32e006c16cf491</anchor>
-      <arglist>(const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)=0</arglist>
+      <anchor>a69a96edef7ceaa8508b4159c00d0c614</anchor>
+      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable=false)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -30581,8 +30672,8 @@
       <type>InterfaceType *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classiqt_1_1_c_component_accessor.html</anchorfile>
-      <anchor>a0ed214d7d2e8b23254a1ced9c4955405</anchor>
-      <arglist>(const std::string &amp;componentId=std::string())</arglist>
+      <anchor>afce2c4eb5b54419af9c680a6bbdb12fa</anchor>
+      <arglist>(const QByteArray &amp;componentId=QByteArray())</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30981,15 +31072,15 @@
       <type>virtual int</type>
       <name>GetPackageType</name>
       <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a29fc5fb5ce684187f775775ac8879448</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>a00dbae572e8fca352efdce9e4461fb99</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetPackagePath</name>
       <anchorfile>classiqt_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a020bdae6e4bfe597089251399ba5eac3</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>ace8e1b16f346f0ff7b975bd0b302949a</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const icomp::IRegistry *</type>
@@ -31070,8 +31161,8 @@
       <type>virtual ElementInfo *</type>
       <name>InsertElementInfo</name>
       <anchorfile>classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html</anchorfile>
-      <anchor>ac240fa5334f244f2b7c06c2045040c01</anchor>
-      <arglist>(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
+      <anchor>a3ae640ef8c08d229b46db19dfc0140a2</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31170,15 +31261,15 @@
       <type>virtual int</type>
       <name>GetPackageType</name>
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>acf1483bb1a89349d88dd8774cd2e3528</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>a3870fffb6915b51a337052d5316ba57b</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetPackagePath</name>
       <anchorfile>classiqt_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a5c363c91230977aabad552f405eb14f6</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>a2afba6e762e4b3b30f84551b4ccef21c</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual PathList</type>
@@ -31382,24 +31473,24 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>acee9d8e97705b5be838d47180fdb6f68</anchor>
+      <anchor>a3ba7b6e83be38ecac09feed86033bf38</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::set&lt; icomp::CComponentAddress &gt;</type>
+      <type>QSet&lt; icomp::CComponentAddress &gt;</type>
       <name>Addresses</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aaee15d81763f4eb9e228a7061d2ae97a</anchor>
+      <anchor>a7bb84acab4ca7dde1c6b55750694c659</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::set&lt; std::string &gt;</type>
+      <type>QSet&lt; QByteArray &gt;</type>
       <name>Ids</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a0f21ed2944c1cb76d1b2a8bfc9c1171d</anchor>
+      <anchor>a07708fb861ee817af147477240e915b7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -31420,92 +31511,92 @@
       <type>Ids</type>
       <name>ExtractComponentIds</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a7d0e37631cfab81bca7ea8cb170b47f8</anchor>
-      <arglist>(const Addresses &amp;addresses, const std::string &amp;packageId) const </arglist>
+      <anchor>a29dc4536caadaaec2f9d0181a7c81480</anchor>
+      <arglist>(const Addresses &amp;addresses, const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteHeader</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a65f4bf6ac3ff21f4e46403a65177adf2</anchor>
-      <arglist>(const std::string &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const </arglist>
+      <anchor>a1af3938e9ba36d0e3ada30283497b89c</anchor>
+      <arglist>(const QByteArray &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteIncludes</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>acfaf19220043ccbb4ba1bbc9b1644dda</anchor>
-      <arglist>(const std::string &amp;className, const Addresses &amp;addresses, std::ofstream &amp;stream) const </arglist>
+      <anchor>a7a6eb67b1df3297199efee6245bfb346</anchor>
+      <arglist>(const QByteArray &amp;className, const Addresses &amp;addresses, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteClassDefinitions</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a70c8e82047a263333a3472c8b8ad5bae</anchor>
-      <arglist>(const std::string &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const </arglist>
+      <anchor>ad775fc207b3cf8496c1a1f96d7e7891b</anchor>
+      <arglist>(const QByteArray &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteDependencies</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>adbd50ff871c020f41fb243cdafad440b</anchor>
-      <arglist>(const std::string &amp;className, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, std::ofstream &amp;stream) const </arglist>
+      <anchor>a429efce75ab5957bde4e32d7246ea736</anchor>
+      <arglist>(const QByteArray &amp;className, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteRegistryInfo</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a66c015a9e5836fa478e29157d0c88815</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const std::string &amp;registryCallPrefix, std::ofstream &amp;stream) const </arglist>
+      <anchor>ac8511fd03658de141a8dbb2fafe78f22</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;registryCallPrefix, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteComponentInfo</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a3a9df1b6d9e3c24dc33afed045ef3634</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const std::string &amp;registryCallPrefix, const std::string &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, std::ofstream &amp;stream) const </arglist>
+      <anchor>a4deef8e9091a4a352627de2d67090ffc</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;registryCallPrefix, const QByteArray &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteAttribute</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a524cbc528954ecf4dfa9186191514a62</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const std::string &amp;attributeName, const iser::IObject &amp;attribute, std::ofstream &amp;stream) const </arglist>
+      <anchor>ae5b1f189e5243bf04e1b0406f7c8446c</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const iser::IObject &amp;attribute, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteRegistryClassDeclaration</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a76a02f7785de7a567c0afa28abb394ef</anchor>
-      <arglist>(const std::string &amp;baseClassName, const std::string &amp;registryClassName, const icomp::IRegistry &amp;registry, std::ofstream &amp;stream) const </arglist>
+      <anchor>a574076656cfcb9debf8a94fbb92cff79</anchor>
+      <arglist>(const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const icomp::IRegistry &amp;registry, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteRegistryClassBody</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aea3ca9a0a8ee7bbdf0f0370d0ee7c0ff</anchor>
-      <arglist>(const std::string &amp;baseClassName, const std::string &amp;registryClassName, const icomp::IRegistry &amp;registry, std::ofstream &amp;stream) const </arglist>
+      <anchor>a0b43345d5127767d8fe8bbbbec744276</anchor>
+      <arglist>(const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const icomp::IRegistry &amp;registry, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>GetAttributeValue</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a3af00e07834462736ccb341398b9e461</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::string &amp;valueString, std::string &amp;typeName) const </arglist>
+      <anchor>ac783f724d67e8cc71d625a9630089aa8</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const iser::ISerializable &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>GetMultiAttributeValue</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ab0e563f22e9c7d2c93298a59d537f7d2</anchor>
-      <arglist>(const std::string &amp;attributeId, const std::string &amp;componentId, const iser::ISerializable &amp;attribute, std::list&lt; std::string &gt; &amp;valueStrings, std::string &amp;typeName) const </arglist>
+      <anchor>a8c597428d400d0cb3241ad90896378c7</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const iser::ISerializable &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>NextLine</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>abc3f67fe2aea4221e43609ba0c796f79</anchor>
-      <arglist>(std::ofstream &amp;stream) const </arglist>
+      <anchor>a281e822e66afc348fe7b90de8bfd6ed9</anchor>
+      <arglist>(QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
@@ -31518,29 +31609,29 @@
       <type>bool</type>
       <name>ExtractInfoFromFile</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a98e43b1aae2b6d542ad45c62d2dbf951</anchor>
-      <arglist>(const QString &amp;filePath, std::string &amp;className, QString &amp;baseFilePath) const </arglist>
+      <anchor>a89ea2bad71e57a26c840055723541edf</anchor>
+      <arglist>(const QString &amp;filePath, QByteArray &amp;className, QString &amp;baseFilePath) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetPackageName</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a9d1e307b8f803a7cd3499765e34ca1a1</anchor>
-      <arglist>(const std::string &amp;packageId) const </arglist>
+      <anchor>a561ad6b7cdafa2318ee085dabb2840a6</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetStringLiteral</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a1829081a8b5a56ff67d042a66c4fdb25</anchor>
+      <anchor>a67c5a72d1dd9908a390fae256abc5b3a</anchor>
       <arglist>(const QString &amp;text) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>std::string</type>
-      <name>GetStdStringLiteral</name>
+      <type>QByteArray</type>
+      <name>GetIdValueLiteral</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a41afc3520d3b52a6ec01c0a8ac568148</anchor>
-      <arglist>(const std::string &amp;text) const </arglist>
+      <anchor>aa6a43424ffb38cf493481f9cd6f4a2da</anchor>
+      <arglist>(const QByteArray &amp;text) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31691,25 +31782,25 @@
       <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::vector&lt; TagInfo &gt;</type>
+      <type>QList&lt; TagInfo &gt;</type>
       <name>OpenTagsList</name>
       <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
-      <anchor>af3d4bdbf29a574da2bfd9b07d2f6ce7a</anchor>
+      <anchor>aa36715de6a5bd70d633e01e0db6e5965</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnterTag</name>
       <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
-      <anchor>abc20283b30a8d5111ce018b67e157f24</anchor>
-      <arglist>(const std::string &amp;tagId)</arglist>
+      <anchor>a7c8e1554775fa9e33dd748641acb6ae5</anchor>
+      <arglist>(const QByteArray &amp;tagId)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>LeaveTag</name>
       <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
-      <anchor>a94621c6a9944a655b148ad2abbbb124a</anchor>
-      <arglist>(const std::string &amp;tagId)</arglist>
+      <anchor>a8943bdd7b5029e5cd8dafa30f7741ea5</anchor>
+      <arglist>(const QByteArray &amp;tagId)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
@@ -31761,14 +31852,14 @@
       <type></type>
       <name>TagInfo</name>
       <anchorfile>structiqt_1_1_c_settings_archive_base_1_1_tag_info.html</anchorfile>
-      <anchor>a4fcadf44274774da355aff4f184bbdb0</anchor>
-      <arglist>(const std::string &amp;tagId, int siblingsCount)</arglist>
+      <anchor>ad249786b7f02af3a292098b229d2bebc</anchor>
+      <arglist>(const QByteArray &amp;tagId, int siblingsCount)</arglist>
     </member>
     <member kind="variable">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>tagId</name>
       <anchorfile>structiqt_1_1_c_settings_archive_base_1_1_tag_info.html</anchorfile>
-      <anchor>a19d42eaa30a8b22e3612e75f35ef50f2</anchor>
+      <anchor>acd95840f751a0abd5001f81b0b31ed67</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -31830,8 +31921,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_settings_read_archive.html</anchorfile>
-      <anchor>a712545a8b1069e910051efd4d3bd0d35</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>aade95d4c832919ec442ac17641c8ca04</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -31940,8 +32031,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_settings_write_archive.html</anchorfile>
-      <anchor>a9213f84c9eaf6715a98c4eb3c11f3704</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>a10443a9fbb4f074da6d68e0495ddac49</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32127,10 +32218,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>aa1d884f3c1623bcaa1181557c06c0660</anchor>
+      <anchor>a893bebc2b1f9e6c4471407e70c7ee373</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -32269,8 +32360,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a751524a6ff01bb05babec290de358294</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>a7248c8f77d7dc033fbc84cbf9948d02f</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32458,8 +32549,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>ae9477b09e18d574e53bc951c1ef99c9d</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>a9f53d7547ee9a7571d95f962fe257b4f</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -34539,8 +34630,8 @@
       <type>void</type>
       <name>OnOpenDocument</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>af50dfa3ac91828e47005738594eab88f</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL)</arglist>
+      <anchor>a5bdf243d1f2b70895d513140a9f6b205</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -34644,8 +34735,8 @@
       <type>void</type>
       <name>OnNewDocument</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>aeb833c20c7891c6c2c50a93efccb6b05</anchor>
-      <arglist>(const std::string &amp;documentTypeId)</arglist>
+      <anchor>a136a9974b0dff66b335cdb9d544d4789</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -34877,8 +34968,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>OpenDocument</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a0a61fa927a39e5df083a27ed117a628a</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const std::string &amp;viewTypeId, std::string &amp;documentTypeId)</arglist>
+      <anchor>ac61bdc23e3d416bb7cbcadb2c9fd92cf</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -34919,8 +35010,8 @@
       <type>virtual QStringList</type>
       <name>GetOpenFilePaths</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a11a19957f0807f0debab20e3f1c30ff2</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL) const </arglist>
+      <anchor>aba241565614a5f0cdd15db5e400a2aa3</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -35046,8 +35137,8 @@
       <type>virtual QString</type>
       <name>GetOpenFilePath</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a3f8a8556adf39d569aa8794963ebeb7a</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL) const </arglist>
+      <anchor>a0510c271f790b7ae3bc2e5fae0189237</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -35164,15 +35255,15 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a92ce6680824d350062e26a18072596fd</anchor>
-      <arglist>(const std::string &amp;documentTypeId) const </arglist>
+      <anchor>af75f33d5dabd8a3cfd63574c9d2b441b</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
       <name>CreateFileDialogFilter</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a97667173992d64a70098adfcabeb1c95</anchor>
-      <arglist>(const std::string *documentTypeIdPtr=NULL, int flags=0) const </arglist>
+      <anchor>aeabce0560cb6f0587d6785942c270868</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL, int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -35185,8 +35276,8 @@
       <type>virtual QStringList</type>
       <name>GetOpenFilePathesFromDialog</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a41fdd5bf63f8f7ce2e6ac32607a96a5b</anchor>
-      <arglist>(const std::string *documentTypeIdPtr) const </arglist>
+      <anchor>ace0fc087941a8d914cee714832b23cac</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr) const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -38644,8 +38735,8 @@
       <type>void</type>
       <name>DoDocumentProcessing</name>
       <anchorfile>classiqtproc_1_1_c_document_processing_command_comp.html</anchorfile>
-      <anchor>aa3809e965912e40cb7be7fffb84444b3</anchor>
-      <arglist>(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)</arglist>
+      <anchor>add043490ed8155ea47f48524097ae70f</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38663,8 +38754,8 @@
       <type>void</type>
       <name>DoDocumentProcessing</name>
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp.html</anchorfile>
-      <anchor>afb35da4c479edec2f299240fe86ccd94</anchor>
-      <arglist>(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)</arglist>
+      <anchor>aaa5bdab3b2034a1e2c683b9f8b8eca46</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38734,8 +38825,8 @@
       <type>virtual void</type>
       <name>DoDocumentProcessing</name>
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>ad153c1bfe80cd1c712353efe3f1271f8</anchor>
-      <arglist>(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)=0</arglist>
+      <anchor>ac31f9b9ef6b745055c731d6753734c91</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -38920,8 +39011,8 @@
       <type>virtual int</type>
       <name>BeginProgressSession</name>
       <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>aa60aab2e4d0083f4f76a027cc109c50c</anchor>
-      <arglist>(const std::string &amp;progressId, const QString &amp;description, bool isCancelable)</arglist>
+      <anchor>ab0aab4ea08ed73facdae4da93cf1ba44</anchor>
+      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -39027,6 +39118,8 @@
     <class kind="class">iser::CXmlFileReadArchive</class>
     <class kind="class">iser::CXmlFileWriteArchive</class>
     <class kind="class">iser::CXmlReadArchiveBase</class>
+    <class kind="class">iser::CXmlStreamReadArchiveBase</class>
+    <class kind="class">iser::CXmlStreamWriteArchiveBase</class>
     <class kind="class">iser::CXmlStringReadArchive</class>
     <class kind="class">iser::CXmlStringWriteArchive</class>
     <class kind="class">iser::CXmlWriteArchiveBase</class>
@@ -39040,8 +39133,6 @@
     <class kind="class">iser::IVersionInfo</class>
     <class kind="class">iser::TCopySerializedWrap</class>
     <class kind="class">iser::TVersionInfoSerializer</class>
-    <class kind="class">iser::TXmlStreamReadArchiveBase</class>
-    <class kind="class">iser::TXmlStreamWriteArchiveBase</class>
   </compound>
   <compound kind="class">
     <name>iser::CArchiveBase</name>
@@ -39091,14 +39182,14 @@
       <type></type>
       <name>CArchiveTag</name>
       <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
-      <anchor>a6bd7b71acd667548adba4c18bdfa0da9</anchor>
-      <arglist>(const std::string &amp;id, const std::string &amp;comment, bool isTagSkippingUsed=false)</arglist>
+      <anchor>add980dc48e9207dbecae9b13dafb6ebb</anchor>
+      <arglist>(const QByteArray &amp;id, const QByteArray &amp;comment, bool isTagSkippingUsed=false)</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetId</name>
       <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
-      <anchor>af480803423f0ca01aaaed1771e492707</anchor>
+      <anchor>ab6a139374abb7fab82f744c81274d92d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -39109,10 +39200,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetComment</name>
       <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
-      <anchor>a8575db3c341198f716effb48f0a337d0</anchor>
+      <anchor>ac2879adf17e924e83dfb1025efc602ed</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -39254,8 +39345,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a4d85b41a9246d58bf0592c67295a969b</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>a9142837f1839412299c5ea8764b9fdbb</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39384,8 +39475,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a57f64daf9d0c6e539601ef2861a84aab</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>a767eae20b44b814d160714cc5e371cfc</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39417,8 +39508,8 @@
       <type></type>
       <name>CBitMemoryReadArchive</name>
       <anchorfile>classiser_1_1_c_bit_memory_read_archive.html</anchorfile>
-      <anchor>abd2752336396b3fc695ba2aeabcc8a17</anchor>
-      <arglist>(const std::vector&lt; quint8 &gt; &amp;data, bool serializeHeader=true)</arglist>
+      <anchor>a8bccbcf3491eb269d0cb23d0f4108a16</anchor>
+      <arglist>(const QVector&lt; quint8 &gt; &amp;data, bool serializeHeader=true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -39862,10 +39953,10 @@
       <arglist>(void *data, int size)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::vector&lt; unsigned char &gt;</type>
+      <type>QVector&lt; unsigned char &gt;</type>
       <name>DataBuffer</name>
       <anchorfile>classiser_1_1_c_memory_write_archive.html</anchorfile>
-      <anchor>afc5638a9bdea778fb4bfc9e7f8d46b40</anchor>
+      <anchor>a7efaf5d04dbbd78b143e60712915f332</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -40394,29 +40485,29 @@
       <type>static void</type>
       <name>EncodeXml</name>
       <anchorfile>classiser_1_1_c_xml_document_info_base.html</anchorfile>
-      <anchor>afa1e0341e2ccb647db2e5118676712f3</anchor>
-      <arglist>(const std::string &amp;text, std::string &amp;xmlText)</arglist>
+      <anchor>a3defa4b83700bf3498d879a3ea610cf7</anchor>
+      <arglist>(const QByteArray &amp;text, QByteArray &amp;xmlText)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>DecodeXml</name>
       <anchorfile>classiser_1_1_c_xml_document_info_base.html</anchorfile>
-      <anchor>aca7800569056e09df9926d29c09c9140</anchor>
-      <arglist>(const std::string &amp;xmlText, std::string &amp;text)</arglist>
+      <anchor>aaaa4e0af601ba99e9dc28ecc8127c4ea</anchor>
+      <arglist>(const QByteArray &amp;xmlText, QByteArray &amp;text)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>EncodeXml</name>
       <anchorfile>classiser_1_1_c_xml_document_info_base.html</anchorfile>
-      <anchor>a73a2ef95fa7ff676cd8651315ee9e5e2</anchor>
-      <arglist>(const QString &amp;text, std::string &amp;xmlText)</arglist>
+      <anchor>a1370e5745feb18355dfed774e5135b88</anchor>
+      <arglist>(const QString &amp;text, QByteArray &amp;xmlText)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>DecodeXml</name>
       <anchorfile>classiser_1_1_c_xml_document_info_base.html</anchorfile>
-      <anchor>a1227a1e01022feb39a84ef060566ffac</anchor>
-      <arglist>(const std::string &amp;xmlText, QString &amp;text)</arglist>
+      <anchor>a4f9879add93085a5c76dd47c6d35e02b</anchor>
+      <arglist>(const QByteArray &amp;xmlText, QString &amp;text)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const QString &amp;</type>
@@ -40473,13 +40564,13 @@
   <compound kind="class">
     <name>iser::CXmlFileReadArchive</name>
     <filename>classiser_1_1_c_xml_file_read_archive.html</filename>
-    <base>TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</base>
+    <base>iser::CXmlStreamReadArchiveBase</base>
     <base>iser::CFileArchiveInfo</base>
     <member kind="typedef">
-      <type>TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</type>
+      <type>CXmlStreamReadArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>acf96cd0875838798aa3db29037a56954</anchor>
+      <anchor>a3d19f857933715cb86a2fdd953c17284</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -40507,13 +40598,13 @@
   <compound kind="class">
     <name>iser::CXmlFileWriteArchive</name>
     <filename>classiser_1_1_c_xml_file_write_archive.html</filename>
-    <base>TXmlStreamWriteArchiveBase&lt; std::ofstream &gt;</base>
+    <base>iser::CXmlStreamWriteArchiveBase</base>
     <base>iser::CFileArchiveInfo</base>
     <member kind="typedef">
-      <type>TXmlStreamWriteArchiveBase&lt; std::ofstream &gt;</type>
+      <type>CXmlStreamWriteArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a23c681cb488f59e2c750e8c8256b8ca9</anchor>
+      <anchor>aa4a371732c93de5fb126fde5ed0d8d82</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -40529,6 +40620,13 @@
       <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
       <anchor>a8b7daa0886557b32a02ff7109d79438b</anchor>
       <arglist>(const QString &amp;filePath, const IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CXmlFileWriteArchive</name>
+      <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
+      <anchor>afb47e650fcbb9bb8c51b474f063d0fa8</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40593,8 +40691,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a271110aaa3127100fe929228a6f2d646</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>a0da0feeea9b39935cc00c917218fdb63</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40628,38 +40726,125 @@
       <type>virtual bool</type>
       <name>ReadToDelimeter</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a5af7e7deab8b50ac5bc1c8036aa2105c</anchor>
-      <arglist>(const std::string &amp;delimeters, std::string &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)=0</arglist>
+      <anchor>afcd36fa68d1b5fa29982409e784376fa</anchor>
+      <arglist>(const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iser::CXmlStreamReadArchiveBase</name>
+    <filename>classiser_1_1_c_xml_stream_read_archive_base.html</filename>
+    <base>iser::CXmlReadArchiveBase</base>
+    <member kind="typedef">
+      <type>CXmlReadArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiser_1_1_c_xml_stream_read_archive_base.html</anchorfile>
+      <anchor>a0070490328f58be01324f603cf1adfd3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetLastReadLine</name>
+      <anchorfile>classiser_1_1_c_xml_stream_read_archive_base.html</anchorfile>
+      <anchor>a5a08f9d6843c59476be9211295de9699</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CXmlStreamReadArchiveBase</name>
+      <anchorfile>classiser_1_1_c_xml_stream_read_archive_base.html</anchorfile>
+      <anchor>ae569e6e15572338b89a2d1609cf76e7b</anchor>
+      <arglist>(const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadToDelimeter</name>
+      <anchorfile>classiser_1_1_c_xml_stream_read_archive_base.html</anchorfile>
+      <anchor>ac4e4df82bfbe6438b9379f865a85531e</anchor>
+      <arglist>(const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classiser_1_1_c_xml_stream_read_archive_base.html</anchorfile>
+      <anchor>a1539394f8e0667919ba2745d78c9f2a2</anchor>
+      <arglist>(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QTextStream</type>
+      <name>m_stream</name>
+      <anchorfile>classiser_1_1_c_xml_stream_read_archive_base.html</anchorfile>
+      <anchor>ab88f5999cb1f23b35cea8e9b8bfbbba3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iser::CXmlStreamWriteArchiveBase</name>
+    <filename>classiser_1_1_c_xml_stream_write_archive_base.html</filename>
+    <base>iser::CXmlWriteArchiveBase</base>
+    <member kind="typedef">
+      <type>CXmlWriteArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
+      <anchor>a39c23c45709199616da41aef3a9c894f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CXmlStreamWriteArchiveBase</name>
+      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
+      <anchor>ac798772d4727b214476429e8320773ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CXmlStreamWriteArchiveBase</name>
+      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
+      <anchor>ab32116cd20112fee0176665fd563e265</anchor>
+      <arglist>(const IVersionInfo *versionInfoPtr, const CArchiveTag &amp;rootTag)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>WriteString</name>
+      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
+      <anchor>a67e61c9531ab843fa82382a3d74cabf9</anchor>
+      <arglist>(const QByteArray &amp;value)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QTextStream</type>
+      <name>m_stream</name>
+      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
+      <anchor>a60135e20b2d38ccc2306273e4bb3684c</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iser::CXmlStringReadArchive</name>
     <filename>classiser_1_1_c_xml_string_read_archive.html</filename>
-    <base>TXmlStreamReadArchiveBase&lt; std::istringstream &gt;</base>
+    <base>iser::CXmlStreamReadArchiveBase</base>
     <member kind="typedef">
-      <type>TXmlStreamReadArchiveBase&lt; std::istringstream &gt;</type>
+      <type>CXmlStreamReadArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_xml_string_read_archive.html</anchorfile>
-      <anchor>a79307e56c78b3cc42a7784ea397e011c</anchor>
+      <anchor>a8c62baff520ba68d0e22aa98297c3908</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CXmlStringReadArchive</name>
       <anchorfile>classiser_1_1_c_xml_string_read_archive.html</anchorfile>
-      <anchor>abbfe57ab6ec5f90eaee7c67281ec06b7</anchor>
-      <arglist>(const std::string &amp;inputString, bool serializeHeader=true, const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+      <anchor>a30d29f1e60f9a85b29387235fde93221</anchor>
+      <arglist>(const QByteArray &amp;inputString, bool serializeHeader=true, const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iser::CXmlStringWriteArchive</name>
     <filename>classiser_1_1_c_xml_string_write_archive.html</filename>
-    <base>TXmlStreamWriteArchiveBase&lt; std::ostringstream &gt;</base>
+    <base>iser::CXmlStreamWriteArchiveBase</base>
     <member kind="typedef">
-      <type>TXmlStreamWriteArchiveBase&lt; std::ostringstream &gt;</type>
+      <type>CXmlStreamWriteArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
-      <anchor>a26947b82f48f6c7e1347297142dad595</anchor>
+      <anchor>a7a549469db83c25284b1cfdf8df6180b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -40670,10 +40855,17 @@
       <arglist>(const IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual</type>
+      <name>~CXmlStringWriteArchive</name>
+      <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
+      <anchor>a07f3e0309aaa2453190f188ddfd9b132</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QByteArray &amp;</type>
       <name>GetString</name>
       <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
-      <anchor>a4a606938ba2064b00526103cbe528935</anchor>
+      <anchor>a751c181c55e66da79b03e5df0b27cd12</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -40721,8 +40913,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>a1dd1f7097917117d2b9cacd9d9e652f4</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>a32eef62d0acba17d9589f08dacb2313f</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40763,8 +40955,8 @@
       <type>virtual bool</type>
       <name>WriteString</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>a13d59f133de51efb33894576d58ffae2</anchor>
-      <arglist>(const std::string &amp;value)=0</arglist>
+      <anchor>ab2dc2a95f01c33511904e38015001b06</anchor>
+      <arglist>(const QByteArray &amp;value)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40901,8 +41093,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
-      <anchor>abb1b7f1e8834da9a12dc0b5d4029c4cd</anchor>
-      <arglist>(std::string &amp;value)=0</arglist>
+      <anchor>a9ab344643d656de3adccacb6d894c882</anchor>
+      <arglist>(QByteArray &amp;value)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -41132,10 +41324,10 @@
     <filename>classiser_1_1_i_object.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classiser_1_1_i_object.html</anchorfile>
-      <anchor>a0f9e26783fb2dac0fdcb7126268bb7cb</anchor>
+      <anchor>abae3ddcb3be9fcd24ec21b87445e5d7e</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -41303,116 +41495,6 @@
       <arglist></arglist>
     </member>
   </compound>
-  <compound kind="class">
-    <name>iser::TXmlStreamReadArchiveBase</name>
-    <filename>classiser_1_1_t_xml_stream_read_archive_base.html</filename>
-    <templarg>StreamClass</templarg>
-    <base>iser::CXmlReadArchiveBase</base>
-    <member kind="typedef">
-      <type>CXmlReadArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>a2f48b7867e6e06a8648ccf0d6260b89e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetLastReadLine</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>a9ec0c2e2b208bd58bc884350fbc35548</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>TXmlStreamReadArchiveBase</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>a9053e90dfff92f0770b7997d3d100881</anchor>
-      <arglist>(const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ReadToDelimeter</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>aa291554c858a8108b0be3eb64a09d79e</anchor>
-      <arglist>(const std::string &amp;delimeters, std::string &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DecorateMessage</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>a886a5d8acc02d641c36417f76ceca696</anchor>
-      <arglist>(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>StreamClass</type>
-      <name>m_stream</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>abc5a5cca111781a3864fabf3aa0ce5a5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>char</type>
-      <name>m_lastReadChar</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>ab81d628e807989c0b14ebd02fce1294c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_useLastReadChar</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>a90baea74dd7ec54964bd87802f12f4b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_lastReadLine</name>
-      <anchorfile>classiser_1_1_t_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>a8e4912bc3d4227e5a0d83f7db4877dc2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::TXmlStreamWriteArchiveBase</name>
-    <filename>classiser_1_1_t_xml_stream_write_archive_base.html</filename>
-    <templarg>StreamClass</templarg>
-    <base>iser::CXmlWriteArchiveBase</base>
-    <member kind="typedef">
-      <type>CXmlWriteArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_t_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>a5925f723787356bfa4ec63e510c6f86a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~TXmlStreamWriteArchiveBase</name>
-      <anchorfile>classiser_1_1_t_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>a32445a27f7cbde4a68c02643e222c2a3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>TXmlStreamWriteArchiveBase</name>
-      <anchorfile>classiser_1_1_t_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>ab0495963309ca76de22f17e5ee830cc5</anchor>
-      <arglist>(const IVersionInfo *versionInfoPtr, const CArchiveTag &amp;rootTag)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>WriteString</name>
-      <anchorfile>classiser_1_1_t_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>a3fc5cc705a977546337873afb8a8a10b</anchor>
-      <arglist>(const std::string &amp;value)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>StreamClass</type>
-      <name>m_stream</name>
-      <anchorfile>classiser_1_1_t_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>a9b498d0bc508ca6ac1b40e7142935121</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
   <compound kind="namespace">
     <name>istd</name>
     <filename>namespaceistd.html</filename>
@@ -41539,18 +41621,18 @@
     <name>istd::CBase64</name>
     <filename>classistd_1_1_c_base64.html</filename>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>ConvertToBase64</name>
       <anchorfile>classistd_1_1_c_base64.html</anchorfile>
-      <anchor>ad32c96ef115685949f7b0d7e811d1b59</anchor>
+      <anchor>a615c2878d3d0be549162b5b03acdf165</anchor>
       <arglist>(const void *dataPtrPtr, int size)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::vector&lt; quint8 &gt;</type>
+      <type>static QVector&lt; quint8 &gt;</type>
       <name>ConvertFromBase64</name>
       <anchorfile>classistd_1_1_c_base64.html</anchorfile>
-      <anchor>a3511de8844233487e8ee5b369c6e0881</anchor>
-      <arglist>(const std::string &amp;base64String)</arglist>
+      <anchor>a4e9dcf0fbd5355530e05560241e957f4</anchor>
+      <arglist>(const QByteArray &amp;base64String)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41654,8 +41736,8 @@
       <type></type>
       <name>CClassInfo</name>
       <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
-      <anchor>a649f575b1d5cb8da4e0ba916a3d47aa0</anchor>
-      <arglist>(const std::string &amp;name)</arglist>
+      <anchor>ace10069398fe2b0eee15ab3f92a75de1</anchor>
+      <arglist>(const QByteArray &amp;name)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -41672,10 +41754,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetName</name>
       <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
-      <anchor>aa933e42f37d56bdd4236e0833b1adb14</anchor>
+      <anchor>a50153ca3d3239acbba2d116abc88852e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -41784,42 +41866,42 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>GetName</name>
       <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
-      <anchor>a07046e0fb1d20e1d67c6f6e5e1c0ae82</anchor>
+      <anchor>aa2f84c674b3f698034ca38bb3adabc68</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>GetName</name>
       <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
-      <anchor>aa3b720662ff6266f4c872ac127c1c59d</anchor>
+      <anchor>a5398912a83e7e69db8cdce2b888531e3</anchor>
       <arglist>(const std::type_info &amp;info)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>GetName</name>
       <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
-      <anchor>a1b96095032c8483279d8a84a28bc92be</anchor>
+      <anchor>af9d1b73d4b3a27ee2e863185ef5c1d8b</anchor>
       <arglist>(const istd::IPolymorphic &amp;object)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>GetUndecoratedName</name>
       <anchorfile>classistd_1_1_c_class_info.html</anchorfile>
-      <anchor>aa420abf60099b2c65a374f238a5f13eb</anchor>
-      <arglist>(const std::string &amp;rawName)</arglist>
+      <anchor>ae65e2e926d35a71a6a6c15ce28c711a0</anchor>
+      <arglist>(const QByteArray &amp;rawName)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>istd::CCrcCalculator</name>
     <filename>classistd_1_1_c_crc_calculator.html</filename>
     <member kind="typedef">
-      <type>std::vector&lt; quint8 &gt;</type>
+      <type>QVector&lt; quint8 &gt;</type>
       <name>ByteStream</name>
       <anchorfile>classistd_1_1_c_crc_calculator.html</anchorfile>
-      <anchor>a335385002ed800814f4e0b98e836faef</anchor>
+      <anchor>a4a13d939888dab2ba2d9c815b8dfbbc6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" static="yes">
@@ -42186,15 +42268,15 @@
       <type>static bool</type>
       <name>SplitId</name>
       <anchorfile>classistd_1_1_c_id_manip_base.html</anchorfile>
-      <anchor>a9b40e9b17dd107f62f37dd5d12eaac90</anchor>
-      <arglist>(const std::string &amp;complexId, std::string &amp;baseId, std::string &amp;subId)</arglist>
+      <anchor>a01718089c436f29e33dfabed760bdd68</anchor>
+      <arglist>(const QByteArray &amp;complexId, QByteArray &amp;baseId, QByteArray &amp;subId)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
+      <type>static QByteArray</type>
       <name>JoinId</name>
       <anchorfile>classistd_1_1_c_id_manip_base.html</anchorfile>
-      <anchor>a01b2ef64564eaf1863a4724c50cdfe2f</anchor>
-      <arglist>(const std::string &amp;baseId, const std::string &amp;subId)</arglist>
+      <anchor>ab541ad2a4f71fa10e11dc1a31e5dcbe2</anchor>
+      <arglist>(const QByteArray &amp;baseId, const QByteArray &amp;subId)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42336,10 +42418,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; int &gt;::iterator</type>
+      <type>QVector&lt; int &gt;::iterator</type>
       <name>Iterator</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
-      <anchor>af5fcdf4af24b06f775e251d376b22220</anchor>
+      <anchor>a214068ec741e23f9a31c672463a10c15</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -42732,10 +42814,10 @@
     <filename>classistd_1_1_i_factory_info.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="typedef">
-      <type>std::vector&lt; std::string &gt;</type>
+      <type>QVector&lt; QByteArray &gt;</type>
       <name>KeyList</name>
       <anchorfile>classistd_1_1_i_factory_info.html</anchorfile>
-      <anchor>aab83351df8d41d74fc28c49f2bf77b49</anchor>
+      <anchor>ac357ea42763cc3625d85f4cce9fb2312</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -43085,10 +43167,10 @@
       <arglist>(const IndexType &amp;index)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::vector&lt; Element &gt;</type>
+      <type>QVector&lt; Element &gt;</type>
       <name>Elements</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
-      <anchor>ae3ed6a04a6cb64172b3d8170923073d5</anchor>
+      <anchor>abdcab1871532ba4f912a22efb0afb55a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -43614,8 +43696,8 @@
       <type>virtual InterfaceType *</type>
       <name>CreateInstance</name>
       <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>af703d765a2e594de6d1d387f78675b78</anchor>
-      <arglist>(const std::string &amp;keyId=&quot;&quot;) const </arglist>
+      <anchor>a45f6ecf9f96a23eb589b65bab07f33da</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>istd::TOptDelPtr&lt; FactoryInterface &gt;</type>
@@ -43625,10 +43707,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::list&lt; FactoryPtr &gt;</type>
+      <type>QList&lt; FactoryPtr &gt;</type>
       <name>FactoryList</name>
       <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>aa37f5c93f27ee46fd2e22964e9f2ebff</anchor>
+      <anchor>aff46fb3fb33f4c5ede14d5359599a368</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -43746,8 +43828,8 @@
       <type>virtual Interface *</type>
       <name>CreateInstance</name>
       <anchorfile>classistd_1_1_t_i_factory.html</anchorfile>
-      <anchor>a400950fe4afc558f397d73c0dbdee4e1</anchor>
-      <arglist>(const std::string &amp;keyId=&quot;&quot;) const =0</arglist>
+      <anchor>aea6a16de1033bdec7265e27d1ec4f91e</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43829,10 +43911,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::set&lt; KeyType &gt;</type>
+      <type>QSet&lt; KeyType &gt;</type>
       <name>Keys</name>
       <anchorfile>classistd_1_1_t_i_map.html</anchorfile>
-      <anchor>ac89fc7482e9d9efc20b4e9b4c7bb5e00</anchor>
+      <anchor>a2ffdd04af81f7945dfe18e9ecd3acf78</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -45016,8 +45098,8 @@
       <type></type>
       <name>TSingleFactory</name>
       <anchorfile>classistd_1_1_t_single_factory.html</anchorfile>
-      <anchor>a90528b81c6e158265b36add77691d500</anchor>
-      <arglist>(const std::string &amp;keyId)</arglist>
+      <anchor>a418d142e0a0cdeabde5e8f6de1f961db</anchor>
+      <arglist>(const QByteArray &amp;keyId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IFactoryInfo::KeyList</type>
@@ -45030,8 +45112,8 @@
       <type>virtual Interface *</type>
       <name>CreateInstance</name>
       <anchorfile>classistd_1_1_t_single_factory.html</anchorfile>
-      <anchor>aaa571980090ad676cc1d3537d413a446</anchor>
-      <arglist>(const std::string &amp;keyId=&quot;&quot;) const </arglist>
+      <anchor>a1a12446248db3c999c4f53c1b4e2083c</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -48651,10 +48733,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; i2d::CVector2d &gt;</type>
+      <type>QVector&lt; i2d::CVector2d &gt;</type>
       <name>m_references</name>
       <anchorfile>classiview_1_1_c_interactive_polygon_shape.html</anchorfile>
-      <anchor>a7464b2ba92bfc9fa7172d45577169072</anchor>
+      <anchor>a8e9438fd9eca55490cdef5fb09db6190</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -50380,10 +50462,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; i2d::CVector2d &gt;</type>
+      <type>QVector&lt; i2d::CVector2d &gt;</type>
       <name>m_references</name>
       <anchorfile>classiview_1_1_c_polygon_calibration_shape.html</anchorfile>
-      <anchor>adec4f4a80039287b4ee6085ed5aab046</anchor>
+      <anchor>a19285853b417e1fee91856a9ee5a0114</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -52197,10 +52279,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::vector&lt; ILayer * &gt;</type>
+      <type>QVector&lt; ILayer * &gt;</type>
       <name>Layers</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>afada7c436ffbc6ea9a1c911bb341b9a7</anchor>
+      <anchor>a3042dda5daa2a7a6e5f41b8219fc01f7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -52923,10 +53005,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; const QPen * &gt;</type>
+      <type>QVector&lt; const QPen * &gt;</type>
       <name>PensPtrSet</name>
       <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a7fda5b6bd511d8804eae542560b23de7</anchor>
+      <anchor>ad322f2f49b9ca2ee75195d1c9d667040</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -53289,10 +53371,10 @@
     <filename>classiview_1_1_i_ruler.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="typedef">
-      <type>::std::pair&lt; double, double &gt;</type>
+      <type>QPair&lt; double, double &gt;</type>
       <name>Mark</name>
       <anchorfile>classiview_1_1_i_ruler.html</anchorfile>
-      <anchor>ac9262aa56dd5b1208b458fb9df0603fb</anchor>
+      <anchor>a2c229795a2b0b1845d02dab4cb6dcabc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -53460,10 +53542,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::set&lt; IInteractiveShape * &gt;</type>
+      <type>QSet&lt; IInteractiveShape * &gt;</type>
       <name>SelectedShapes</name>
       <anchorfile>classiview_1_1_i_selectable.html</anchorfile>
-      <anchor>aed3594205db6fc2b392b98a5925d8332</anchor>
+      <anchor>a73125fedcaf820642f92feb60b68a1c6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">

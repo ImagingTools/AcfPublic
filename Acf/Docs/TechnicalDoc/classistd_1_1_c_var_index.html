@@ -57,8 +57,7 @@ Inheritance diagram for istd::CVarIndex:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a81306d941102cfb8a398c1d2d00fb987">IndexType</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; int &gt;<br class="typebreak"/>
-::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#af5fcdf4af24b06f775e251d376b22220">Iterator</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QVector&lt; int &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a214068ec741e23f9a31c672463a10c15">Iterator</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#af8d274a57a4b05e290f270ece083c360">CVarIndex</a> ()</td></tr>
@@ -104,9 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total number of elements if this index is treated as size.  <a href="#a5a43034f53233a7c926711f2fcd22fd1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#af2605dafa7e5d1f1c015a8515c661500">GetMinDimensionsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimal number of dimensions needed to to represent this index.  <a href="#af2605dafa7e5d1f1c015a8515c661500"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_var_index.html#af5fcdf4af24b06f775e251d376b22220">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a4068e7ead8704fbf7eca8256e1d253fd">Begin</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_var_index.html#a214068ec741e23f9a31c672463a10c15">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a4068e7ead8704fbf7eca8256e1d253fd">Begin</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get begin value of element access iterator.  <a href="#a4068e7ead8704fbf7eca8256e1d253fd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_var_index.html#af5fcdf4af24b06f775e251d376b22220">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#ae689ede5f1939a1aca684c51ecea1f6c">End</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_var_index.html#a214068ec741e23f9a31c672463a10c15">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#ae689ede5f1939a1aca684c51ecea1f6c">End</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get end value of element access iterator.  <a href="#ae689ede5f1939a1aca684c51ecea1f6c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#abf7f2e697b24e7d8e78f7826e940ae51">operator[]</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to single index components.  <a href="#abf7f2e697b24e7d8e78f7826e940ae51"></a><br/></td></tr>
@@ -141,12 +140,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af5fcdf4af24b06f775e251d376b22220"></a><!-- doxytag: member="istd::CVarIndex::Iterator" ref="af5fcdf4af24b06f775e251d376b22220" args="" -->
+<a class="anchor" id="a214068ec741e23f9a31c672463a10c15"></a><!-- doxytag: member="istd::CVarIndex::Iterator" ref="a214068ec741e23f9a31c672463a10c15" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;int&gt;::iterator <a class="el" href="classistd_1_1_c_var_index.html#af5fcdf4af24b06f775e251d376b22220">istd::CVarIndex::Iterator</a></td>
+          <td class="memname">typedef QVector&lt;int&gt;::iterator <a class="el" href="classistd_1_1_c_var_index.html#a214068ec741e23f9a31c672463a10c15">istd::CVarIndex::Iterator</a></td>
         </tr>
       </table>
 </div>
@@ -242,7 +241,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Convert fixed-size index to this object. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00331">331</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00375">375</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +251,7 @@ template&lt;int Dimensions&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_c_var_index.html#af5fcdf4af24b06f775e251d376b22220">CVarIndex::Iterator</a> istd::CVarIndex::Begin </td>
+          <td class="memname"><a class="el" href="classistd_1_1_c_var_index.html#a214068ec741e23f9a31c672463a10c15">CVarIndex::Iterator</a> istd::CVarIndex::Begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline]</code></td>
@@ -342,7 +341,7 @@ template&lt;int Dimensions&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_c_var_index.html#af5fcdf4af24b06f775e251d376b22220">CVarIndex::Iterator</a> istd::CVarIndex::End </td>
+          <td class="memname"><a class="el" href="classistd_1_1_c_var_index.html#a214068ec741e23f9a31c672463a10c15">CVarIndex::Iterator</a> istd::CVarIndex::End </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline]</code></td>
@@ -668,7 +667,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00316">316</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00338">338</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -704,7 +703,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00310">310</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00321">321</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -723,7 +722,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00322">322</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00355">355</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>

@@ -68,8 +68,8 @@
 <a name="l00041"></a>00041        <span class="keywordtype">void</span> <a class="code" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#a1b5b216de1397e5be6557a9919d11fa4" title="Called when state of cancel operation has changed.">OnCancelable</a>(<span class="keywordtype">bool</span> cancelState);
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (iproc::IProgressManager)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#aa60aab2e4d0083f4f76a027cc109c50c" title="Begin progress report session.">BeginProgressSession</a>(
-<a name="l00045"></a>00045                             <span class="keyword">const</span> std::string&amp; progressId,
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#ab0aab4ea08ed73facdae4da93cf1ba44" title="Begin progress report session.">BeginProgressSession</a>(
+<a name="l00045"></a>00045                             <span class="keyword">const</span> QByteArray&amp; progressId,
 <a name="l00046"></a>00046                             <span class="keyword">const</span> QString&amp; description,
 <a name="l00047"></a>00047                             <span class="keywordtype">bool</span> isCancelable);
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#a36c1f395defe8b209b897c8a8e495e2e" title="Check if this processing operation should be canceled.">IsCanceled</a>(<span class="keywordtype">int</span> sessionId) <span class="keyword">const</span>;

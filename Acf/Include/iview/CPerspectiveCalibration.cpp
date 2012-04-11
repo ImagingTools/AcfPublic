@@ -23,9 +23,6 @@
 #include "iview/CPerspectiveCalibration.h"
 
 
-// STL includes
-#include <math.h>
-
 // ACF includes
 #include "imath/CVarMatrix.h"
 

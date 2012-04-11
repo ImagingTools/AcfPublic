@@ -23,9 +23,6 @@
 #include "iqtfpf/CHotfolderProcessingComp.h"
 
 
-// STL includes
-#include <algorithm>
-
 // Qt includes
 #include <QtCore/QDir>
 #include <QtGui/QApplication>
@@ -125,7 +122,7 @@ void CHotfolderProcessingComp::OnProcessingTimer()
 
 				QString inputFilePath = processingItemPtr->GetInputFile();
 				QString outputFilePath = processingItemPtr->GetOutputFile();
-				std::string itemUuid = processingItemPtr->GetItemUuid();
+				QByteArray itemUuid = processingItemPtr->GetItemUuid();
 
 				m_pendingProcessors.PushBack(new ItemProcessor(*this, inputFilePath, outputFilePath, itemUuid));
 			}
@@ -190,7 +187,7 @@ void CHotfolderProcessingComp::CancelAllProcessingItems()
 }
 
 
-ifpf::IHotfolderProcessingItem* CHotfolderProcessingComp::GetItemFromId(const std::string& itemUuid) const
+ifpf::IHotfolderProcessingItem* CHotfolderProcessingComp::GetItemFromId(const QByteArray& itemUuid) const
 {
 	I_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
 	if (!m_hotfolderProcessingInfoCompPtr.IsValid()){
@@ -237,7 +234,7 @@ CHotfolderProcessingComp::ItemProcessor::ItemProcessor(
 			CHotfolderProcessingComp& parent,
 			const QString& inputFilePath,
 			const QString& outputFilePath,
-			const std::string& itemUuid)
+			const QByteArray& itemUuid)
 	:m_parent(parent),
 	m_inputFilePath(inputFilePath),
 	m_outputFilePath(outputFilePath),
@@ -254,7 +251,7 @@ int CHotfolderProcessingComp::ItemProcessor::GetProcessingState() const
 }
 
 
-std::string CHotfolderProcessingComp::ItemProcessor::GetItemUuid() const
+QByteArray CHotfolderProcessingComp::ItemProcessor::GetItemUuid() const
 {
 	return m_itemUuid;
 }

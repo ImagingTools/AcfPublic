@@ -23,11 +23,6 @@
 #include "imath/CDoubleManip.h"
 
 
-// STL includes
-#include <cmath>
-#include <sstream>
-
-
 namespace imath
 {
 

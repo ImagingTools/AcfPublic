@@ -29,7 +29,7 @@ namespace icomp
 
 // reimplemented (iser::IObject)
 
-std::string CMultiFactoryAttribute::GetFactoryId() const
+QByteArray CMultiFactoryAttribute::GetFactoryId() const
 {
 	return GetTypeName();
 }
@@ -37,9 +37,9 @@ std::string CMultiFactoryAttribute::GetFactoryId() const
 
 // static methods
 
-std::string CMultiFactoryAttribute::GetTypeName()
+QByteArray CMultiFactoryAttribute::GetTypeName()
 {
-	return "icomp::CMultiFactoryAttribute";
+	return "Factory[]";
 }
 
 

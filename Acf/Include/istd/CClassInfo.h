@@ -25,8 +25,10 @@
 
 
 // STL includes
-#include <string>
 #include <typeinfo>
+
+// Qt includes
+#include <QtCore/QByteArray>
 
 // ACF includes
 #include "istd/IPolymorphic.h"
@@ -46,7 +48,7 @@ class CClassInfo: virtual public istd::IPolymorphic
 public:
 	CClassInfo();
 	explicit CClassInfo(const std::type_info& info);
-	explicit CClassInfo(const std::string& name);
+	explicit CClassInfo(const QByteArray& name);
 	explicit CClassInfo(const istd::IPolymorphic& object);
 
 	/**
@@ -58,7 +60,7 @@ public:
 		Get undecorated and platform undependent class name.
 		This name has format "namespace::class_name", for example "iser::ISerializable".
 	*/
-	const std::string& GetName() const;
+	const QByteArray& GetName() const;
 
 	/**
 		Check if this class information represents void type.
@@ -114,23 +116,23 @@ public:
 		Get class name defined as template parameter.
 	*/
 	template <class C>
-	static std::string GetName();
+	static QByteArray GetName();
 	/**
 		Get class name from RTTI.
 	*/
-	static std::string GetName(const std::type_info& info);
+	static QByteArray GetName(const std::type_info& info);
 	/**
 		Get class name of polymorphic object.
 	*/
-	static std::string GetName(const istd::IPolymorphic& object);
+	static QByteArray GetName(const istd::IPolymorphic& object);
 
 	/**
 		Get undecorated class name from raw name.
 	*/
-	static std::string GetUndecoratedName(const std::string& rawName);
+	static QByteArray GetUndecoratedName(const QByteArray& rawName);
 
 private:
-	std::string m_name;
+	QByteArray m_name;
 };
 
 
@@ -147,7 +149,7 @@ inline CClassInfo::CClassInfo(const std::type_info& info)
 }
 
 
-inline CClassInfo::CClassInfo(const std::string& name)
+inline CClassInfo::CClassInfo(const QByteArray& name)
 :	m_name(GetUndecoratedName(name))
 {
 }
@@ -161,11 +163,11 @@ inline CClassInfo::CClassInfo(const istd::IPolymorphic& object)
 
 inline bool CClassInfo::IsValid() const
 {
-	return !m_name.empty();
+	return !m_name.isEmpty();
 }
 
 
-inline const std::string& CClassInfo::GetName() const
+inline const QByteArray& CClassInfo::GetName() const
 {
 	return m_name;
 }
@@ -236,7 +238,7 @@ CClassInfo CClassInfo::GetInfo()
 
 
 template <class C>
-std::string CClassInfo::GetName()
+QByteArray CClassInfo::GetName()
 {
 	return GetUndecoratedName(typeid(C).name());
 }

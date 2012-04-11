@@ -24,10 +24,9 @@
 #define icomp_IRegistryElement_included
 
 
-// STL includes
-#include <set>
-#include <string>
-
+// Qt includes
+#include <QtCore/QByteArray>
+#include <QtCore/QSet>
 
 // ACF includes
 #include "istd/istd.h"
@@ -53,7 +52,7 @@ class IComponentStaticInfo;
 class IRegistryElement: virtual public iser::ISerializable
 {
 public:
-	typedef std::set< std::string> Ids;
+	typedef QSet< QByteArray> Ids;
 	typedef istd::TDelPtr<iser::IObject> AttributePtr;
 
 	enum ChangeFlags
@@ -79,8 +78,8 @@ public:
 	struct AttributeInfo
 	{
 		AttributePtr attributePtr;
-		std::string exportId;
-		std::string attributeTypeName;
+		QByteArray exportId;
+		QByteArray attributeTypeName;
 	};
 
 	/**
@@ -104,22 +103,22 @@ public:
 		\param	attributeId		unique ID of new attribute.
 		\param	createAttribute	if it is true, new attribute instance will be created.
 	*/
-	virtual AttributeInfo* InsertAttributeInfo(const std::string& attributeId, const std::string& attributeType) = 0;
+	virtual AttributeInfo* InsertAttributeInfo(const QByteArray& attributeId, const QByteArray& attributeType) = 0;
 
 	/**
 		Create attribute object for specified ID.
 	*/
-	virtual iser::IObject* CreateAttribute(const std::string& attributeType) const = 0;
+	virtual iser::IObject* CreateAttribute(const QByteArray& attributeType) const = 0;
 
 	/**
 		Get access to stored attribute info structure.
 	*/
-	virtual const AttributeInfo* GetAttributeInfo(const std::string& attributeId) const = 0;
+	virtual const AttributeInfo* GetAttributeInfo(const QByteArray& attributeId) const = 0;
 
 	/**
 		Removes attribute info structure from this collection.
 	*/
-	virtual bool RemoveAttribute(const std::string& attributeId) = 0;
+	virtual bool RemoveAttribute(const QByteArray& attributeId) = 0;
 };
 
 

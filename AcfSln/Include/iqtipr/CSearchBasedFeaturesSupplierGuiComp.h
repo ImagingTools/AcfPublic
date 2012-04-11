@@ -54,7 +54,6 @@ public:
 
 	enum ColumnType
 	{
-		CT_INDEX,
 		CT_SCORE,
 		CT_X,
 		CT_Y,

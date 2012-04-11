@@ -27,9 +27,6 @@
 // ZLIB includes
 #include "zlib.h"
 
-// STL includes
-#include <fstream>
-
 // ACF includes
 #include <QtCore/QString>
 #include "iser/CXmlWriteArchiveBase.h"
@@ -69,7 +66,7 @@ protected:
 	};
 
 	// reimplemented (iser::CXmlWriteArchiveBase)
-	virtual bool WriteString(const std::string& value);
+	virtual bool WriteString(const QByteArray& value);
 
 private:
 	gzFile m_file;

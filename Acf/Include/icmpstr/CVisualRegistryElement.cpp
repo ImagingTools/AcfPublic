@@ -43,7 +43,7 @@ CVisualRegistryElement::CVisualRegistryElement()
 }
 
 
-void CVisualRegistryElement::SetName(const std::string& name)
+void CVisualRegistryElement::SetName(const QByteArray& name)
 {
 	m_name = name;
 }

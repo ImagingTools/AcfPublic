@@ -130,7 +130,7 @@ bool CSimpleLoginComp::Logout()
 // reimplemented (iauth::IRightsProvider)
 
 bool CSimpleLoginComp::HasRight(
-			const std::string& operationId,
+			const QByteArray& operationId,
 			bool beQuiet) const
 {
 	int groupId = 0;

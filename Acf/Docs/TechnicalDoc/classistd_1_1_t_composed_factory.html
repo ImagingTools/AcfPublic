@@ -65,18 +65,18 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#ac7983de55ffa7ee52fb802052f36fd03">RegisterFactory</a> (<a class="el" href="classistd_1_1_t_composed_factory.html#a13696347c79fff4a75fdca6bbf80de00">FactoryInterface</a> *factoryPtr, bool releaseFlag=false)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers object factory <code>factoryPtr</code> that will be mapped to the <code>keyId</code>.  <a href="#ac7983de55ffa7ee52fb802052f36fd03"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">IFactoryInfo::KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#a0f1f288241853476137c31da068092f1">GetFactoryKeys</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_factory_info.html#ac357ea42763cc3625d85f4cce9fb2312">IFactoryInfo::KeyList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#a0f1f288241853476137c31da068092f1">GetFactoryKeys</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all posible keys for this factory.  <a href="#a0f1f288241853476137c31da068092f1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#af703d765a2e594de6d1d387f78675b78">CreateInstance</a> (const std::string &amp;keyId=&quot;&quot;) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#af703d765a2e594de6d1d387f78675b78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#a45f6ecf9f96a23eb589b65bab07f33da">CreateInstance</a> (const QByteArray &amp;keyId=&quot;&quot;) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#a45f6ecf9f96a23eb589b65bab07f33da"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr</a><br class="typebreak"/>
 &lt; <a class="el" href="classistd_1_1_t_composed_factory.html#a13696347c79fff4a75fdca6bbf80de00">FactoryInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#a6b8f54351be42b9c1ae13400d5a6d274">FactoryPtr</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::list&lt; <a class="el" href="classistd_1_1_t_composed_factory.html#a6b8f54351be42b9c1ae13400d5a6d274">FactoryPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#aa37f5c93f27ee46fd2e22964e9f2ebff">FactoryList</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QList&lt; <a class="el" href="classistd_1_1_t_composed_factory.html#a6b8f54351be42b9c1ae13400d5a6d274">FactoryPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#aff46fb3fb33f4c5ede14d5359599a368">FactoryList</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_composed_factory.html#aa37f5c93f27ee46fd2e22964e9f2ebff">FactoryList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#afa44671fdccb37ee8d1fd287a9632f0c">m_factoryList</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_composed_factory.html#aff46fb3fb33f4c5ede14d5359599a368">FactoryList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_composed_factory.html#afa44671fdccb37ee8d1fd287a9632f0c">m_factoryList</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class InterfaceType&gt;<br/>
@@ -103,14 +103,14 @@ template&lt;class InterfaceType&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa37f5c93f27ee46fd2e22964e9f2ebff"></a><!-- doxytag: member="istd::TComposedFactory::FactoryList" ref="aa37f5c93f27ee46fd2e22964e9f2ebff" args="" -->
+<a class="anchor" id="aff46fb3fb33f4c5ede14d5359599a368"></a><!-- doxytag: member="istd::TComposedFactory::FactoryList" ref="aff46fb3fb33f4c5ede14d5359599a368" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class InterfaceType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::list&lt;<a class="el" href="classistd_1_1_t_composed_factory.html#a6b8f54351be42b9c1ae13400d5a6d274">FactoryPtr</a>&gt; <a class="el" href="classistd_1_1_t_composed_factory.html">istd::TComposedFactory</a>&lt; <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> &gt;::<a class="el" href="classistd_1_1_t_composed_factory.html#aa37f5c93f27ee46fd2e22964e9f2ebff">FactoryList</a><code> [protected]</code></td>
+          <td class="memname">typedef QList&lt;<a class="el" href="classistd_1_1_t_composed_factory.html#a6b8f54351be42b9c1ae13400d5a6d274">FactoryPtr</a>&gt; <a class="el" href="classistd_1_1_t_composed_factory.html">istd::TComposedFactory</a>&lt; <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> &gt;::<a class="el" href="classistd_1_1_t_composed_factory.html#aff46fb3fb33f4c5ede14d5359599a368">FactoryList</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -138,7 +138,7 @@ template&lt;class InterfaceType&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af703d765a2e594de6d1d387f78675b78"></a><!-- doxytag: member="istd::TComposedFactory::CreateInstance" ref="af703d765a2e594de6d1d387f78675b78" args="(const std::string &amp;keyId=&quot;&quot;) const " -->
+<a class="anchor" id="a45f6ecf9f96a23eb589b65bab07f33da"></a><!-- doxytag: member="istd::TComposedFactory::CreateInstance" ref="a45f6ecf9f96a23eb589b65bab07f33da" args="(const QByteArray &amp;keyId=&quot;&quot;) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -147,7 +147,7 @@ template&lt;class InterfaceType &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> * <a class="el" href="classistd_1_1_t_composed_factory.html">istd::TComposedFactory</a>&lt; <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> &gt;::CreateInstance </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>keyId</em> = <code>&quot;&quot;</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -164,7 +164,7 @@ template&lt;class InterfaceType &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to created object or NULL if it was not possible to create it or keyId does not exist. </dd></dl>
 
-<p>Implements <a class="el" href="classistd_1_1_t_i_factory.html#a400950fe4afc558f397d73c0dbdee4e1">istd::TIFactory&lt; InterfaceType &gt;</a>.</p>
+<p>Implements <a class="el" href="classistd_1_1_t_i_factory.html#aea6a16de1033bdec7265e27d1ec4f91e">istd::TIFactory&lt; InterfaceType &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_composed_factory_8h_source.html#l00089">89</a> of file <a class="el" href="_t_composed_factory_8h_source.html">TComposedFactory.h</a>.</p>
 
@@ -179,7 +179,7 @@ template&lt;class InterfaceType &gt; </div>
 template&lt;class InterfaceType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_i_factory_info.html#aab83351df8d41d74fc28c49f2bf77b49">IFactoryInfo::KeyList</a> <a class="el" href="classistd_1_1_t_composed_factory.html">istd::TComposedFactory</a>&lt; <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> &gt;::GetFactoryKeys </td>
+          <td class="memname"><a class="el" href="classistd_1_1_i_factory_info.html#ac357ea42763cc3625d85f4cce9fb2312">IFactoryInfo::KeyList</a> <a class="el" href="classistd_1_1_t_composed_factory.html">istd::TComposedFactory</a>&lt; <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> &gt;::GetFactoryKeys </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -246,7 +246,7 @@ template&lt;class InterfaceType &gt; </div>
 template&lt;class InterfaceType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_t_composed_factory.html#aa37f5c93f27ee46fd2e22964e9f2ebff">FactoryList</a> <a class="el" href="classistd_1_1_t_composed_factory.html">istd::TComposedFactory</a>&lt; <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> &gt;::<a class="el" href="classistd_1_1_t_composed_factory.html#afa44671fdccb37ee8d1fd287a9632f0c">m_factoryList</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="classistd_1_1_t_composed_factory.html#aff46fb3fb33f4c5ede14d5359599a368">FactoryList</a> <a class="el" href="classistd_1_1_t_composed_factory.html">istd::TComposedFactory</a>&lt; <a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a> &gt;::<a class="el" href="classistd_1_1_t_composed_factory.html#afa44671fdccb37ee8d1fd287a9632f0c">m_factoryList</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>

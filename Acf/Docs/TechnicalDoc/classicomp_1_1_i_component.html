@@ -132,8 +132,8 @@ Inheritance diagram for icomp::IComponent:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1">GetParentComponent</a> (bool ownerOnly=false) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent of this component.  <a href="#adca938957e64be16768c0cf32c4bf1e1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component.html#a62a9d2071e6afb0965827cb908c7a1ba">GetInterface</a> (const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to specified component interface.  <a href="#a62a9d2071e6afb0965827cb908c7a1ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component.html#ac081336b0e23bf323972601368910213">GetInterface</a> (const <a class="el" href="classistd_1_1_c_class_info.html">istd::CClassInfo</a> &amp;interfaceType, const QByteArray &amp;subId=&quot;&quot;)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to specified component interface.  <a href="#ac081336b0e23bf323972601368910213"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component.html#aee8a0c5e74e964fa34c091bc282a9060">GetComponentContext</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component context describing all application-specified component information loaded from components registry.  <a href="#aee8a0c5e74e964fa34c091bc282a9060"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component.html#a21eef55c84e916f8e7fc20049728a141">SetComponentContext</a> (const <a class="el" href="classicomp_1_1_i_component_context.html">icomp::IComponentContext</a> *contextPtr, const <a class="el" href="classicomp_1_1_i_composite_component.html">ICompositeComponent</a> *parentPtr, bool isParentOwner)=0</td></tr>
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Main component interface. </p>
 
-<p>Definition at line <a class="el" href="_i_component_8h_source.html#l00032">32</a> of file <a class="el" href="_i_component_8h_source.html">IComponent.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_component_8h_source.html#l00031">31</a> of file <a class="el" href="_i_component_8h_source.html">IComponent.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="aee8a0c5e74e964fa34c091bc282a9060"></a><!-- doxytag: member="icomp::IComponent::GetComponentContext" ref="aee8a0c5e74e964fa34c091bc282a9060" args="() const =0" -->
 <div class="memitem">
@@ -166,7 +166,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a62a9d2071e6afb0965827cb908c7a1ba"></a><!-- doxytag: member="icomp::IComponent::GetInterface" ref="a62a9d2071e6afb0965827cb908c7a1ba" args="(const istd::CClassInfo &amp;interfaceType, const std::string &amp;subId=&quot;&quot;)=0" -->
+<a class="anchor" id="ac081336b0e23bf323972601368910213"></a><!-- doxytag: member="icomp::IComponent::GetInterface" ref="ac081336b0e23bf323972601368910213" args="(const istd::CClassInfo &amp;interfaceType, const QByteArray &amp;subId=&quot;&quot;)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -179,7 +179,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>subId</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -200,9 +200,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_composite_component.html#a1b8f1f341efddce8037e70f3bd37c89f">icomp::CCompositeComponent</a>, and <a class="el" href="classicomp_1_1_c_component_base.html#a5f581772b199cee4b2f1d2afb432230a">icomp::CComponentBase</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_composite_component.html#af3ca584789d2b47cdd3306b31e79560a">icomp::CCompositeComponent</a>, and <a class="el" href="classicomp_1_1_c_component_base.html#a5c82f92937a5e8cc8b48c849e5f1387d">icomp::CComponentBase</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_component_base_8h_source.html#l00424">CompCastPtr()</a>, and <a class="el" href="_c_interface_manip_base_8h_source.html#l00034">icomp::CInterfaceManipBase::ExtractInterface()</a>.</p>
+<p>Referenced by <a class="el" href="_c_component_base_8h_source.html#l00424">CompCastPtr()</a>, and <a class="el" href="_c_interface_manip_base_8h_source.html#l00033">icomp::CInterfaceManipBase::ExtractInterface()</a>.</p>
 
 </div>
 </div>

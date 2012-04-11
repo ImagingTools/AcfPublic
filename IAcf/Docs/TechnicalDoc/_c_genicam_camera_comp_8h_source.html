@@ -31,7 +31,7 @@
 <a name="l00005"></a>00005 <span class="comment">// GigEVision includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;gige_cpp/IGigEVisionAPI.h&quot;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="comment">// STL includes</span>
+<a name="l00008"></a>00008 <span class="comment">// Qt includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
@@ -151,7 +151,7 @@
 <a name="l00128"></a>00128        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#ad2febe27e69ab9d11e2dcbec498da76e">GetOptionsCount</a>() <span class="keyword">const</span>;
 <a name="l00129"></a>00129        <span class="keyword">virtual</span> QString <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a7785390d04d02e546763246152fee4b6">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00130"></a>00130        <span class="keyword">virtual</span> QString <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a874ea60d6a2e7eb493ddd87083834cbe">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00131"></a>00131        <span class="keyword">virtual</span> std::string <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a7da5d8e32c04f90ac563539895f872b9">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00131"></a>00131        <span class="keyword">virtual</span> QByteArray <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a5b8fc9d964db7fa904d2642d2e246599">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00132"></a>00132 
 <a name="l00133"></a>00133 <span class="keyword">protected</span>:
 <a name="l00134"></a><a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">00134</a>        <span class="keyword">struct </span><a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>
@@ -199,12 +199,12 @@
 <a name="l00176"></a>00176        <span class="keywordtype">void</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a4ea3ed595409af72643acc5258d8e09e">OnCameraEventLog</a>(<span class="keywordtype">int</span> type, QString message);
 <a name="l00177"></a>00177 
 <a name="l00178"></a>00178 <span class="keyword">private</span>:
-<a name="l00179"></a>00179        I_ATTR(std::string, m_urlParamsIdAttrPtr);
-<a name="l00180"></a>00180        I_ATTR(std::string, m_selectionParamIdPtr);
-<a name="l00181"></a>00181        I_ATTR(std::string, m_exposureParamsIdAttrPtr);
-<a name="l00182"></a>00182        I_ATTR(std::string, m_triggerParamsIdAttrPtr);
-<a name="l00183"></a>00183        I_ATTR(std::string, m_adjustParamsIdAttrPtr);
-<a name="l00184"></a>00184        I_ATTR(std::string, m_roiParamIdPtr);
+<a name="l00179"></a>00179        I_ATTR(QByteArray, m_urlParamsIdAttrPtr);
+<a name="l00180"></a>00180        I_ATTR(QByteArray, m_selectionParamIdPtr);
+<a name="l00181"></a>00181        I_ATTR(QByteArray, m_exposureParamsIdAttrPtr);
+<a name="l00182"></a>00182        I_ATTR(QByteArray, m_triggerParamsIdAttrPtr);
+<a name="l00183"></a>00183        I_ATTR(QByteArray, m_adjustParamsIdAttrPtr);
+<a name="l00184"></a>00184        I_ATTR(QByteArray, m_roiParamIdPtr);
 <a name="l00185"></a>00185        I_ATTR(<span class="keywordtype">double</span>, m_timeoutAttrPtr);
 <a name="l00186"></a>00186        I_ATTR(<span class="keywordtype">double</span>, m_findDevicesTimeAttrPtr);
 <a name="l00187"></a>00187        I_ATTR(<span class="keywordtype">double</span>, m_triggerToleranceAttrPtr);

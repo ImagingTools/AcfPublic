@@ -88,7 +88,7 @@ void CSingleDocumentWorkspaceGuiComp::UpdateTitle()
 
 // reimplemented (idoc::CSingleDocumentManagerBase)
 
-QString CSingleDocumentWorkspaceGuiComp::GetOpenFilePath(const std::string* documentTypeIdPtr) const
+QString CSingleDocumentWorkspaceGuiComp::GetOpenFilePath(const QByteArray* documentTypeIdPtr) const
 {
 	QStringList files = GetOpenFilePathesFromDialog(documentTypeIdPtr);
 
@@ -219,7 +219,7 @@ void CSingleDocumentWorkspaceGuiComp::OnComponentCreated()
 	if (m_documentTemplateCompPtr.IsValid()){
 		idoc::IDocumentTemplate::Ids ids = m_documentTemplateCompPtr->GetDocumentTypeIds();
 
-		if (!ids.empty()){
+		if (!ids.isEmpty()){
 			FileNew(ids.front());
 		}
 	}

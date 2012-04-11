@@ -23,13 +23,9 @@
 #include "iview/CPolypointShape.h"
 
 
-// STL includes
-#include <vector>
-
-
 // Qt includes
+#include <QtCore/QVector>
 #include <QtGui/QPainter>
-
 
 // ACF includes
 #include "imod/IModel.h"
@@ -80,9 +76,9 @@ void CPolypointShape::CalcBoundingBox(i2d::CRect& result) const
 		I_ASSERT(&polypoint != NULL);
 
         const IColorShema& colorShema = GetColorShema();
-		const std::vector<i2d::CVector2d>& points = polypoint.GetPoints();
+		const QVector<i2d::CVector2d>& points = polypoint.GetPoints();
 
-		if (!points.empty()){
+		if (!points.isEmpty()){
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 			istd::CIndex2d sp = transform.GetScreenPosition(points[0]);
@@ -121,7 +117,7 @@ void CPolypointShape::Draw(QPainter& drawContext) const
         const IColorShema& colorShema = GetColorShema();
 		const i2d::CRect& clientArea = GetClientRect();
 
-		const std::vector<i2d::CVector2d>& points = polypoint.GetPoints();
+		const QVector<i2d::CVector2d>& points = polypoint.GetPoints();
 
 		int pointsCount = points.size();
 		for (int pointIndex = 0; pointIndex < pointsCount; ++pointIndex){

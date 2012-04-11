@@ -25,11 +25,10 @@
 
 
 // Qt includes
+#include <QtCore/QMap>
 #include <QtCore/QDir>
 
-// STL includes
-#include <QtCore/QMap>
-
+// ACF includes
 #include "istd/TDelPtr.h"
 
 #include "iser/IFileLoader.h"
@@ -77,8 +76,8 @@ public:
 
 	// reimplemented (icomp::IPackagesManager)
 	virtual bool LoadPackages(const QString& configFilePath = QString());
-	virtual int GetPackageType(const std::string& packageId) const;
-	virtual QString GetPackagePath(const std::string& packageId) const;
+	virtual int GetPackageType(const QByteArray& packageId) const;
+	virtual QString GetPackagePath(const QByteArray& packageId) const;
 
 	// reimplemented (icomp::IExtRegistriesManager)
 	virtual PathList GetConfigurationPathList(PathType pathType) const;
@@ -103,13 +102,13 @@ private:
 	/**
 		Map package ID to package file path.
 	*/
-	typedef QMap<std::string, QString> RealPackagesMap;
+	typedef QMap<QByteArray, QString> RealPackagesMap;
 	RealPackagesMap m_realPackagesMap;
 
 	/**
 		Map package ID to directory.
 	*/
-	typedef QMap<std::string, QDir> CompositePackagesMap;
+	typedef QMap<QByteArray, QDir> CompositePackagesMap;
 	CompositePackagesMap m_compositePackagesMap;
 
 	typedef istd::TDelPtr<icomp::IRegistry> RegistryPtr;

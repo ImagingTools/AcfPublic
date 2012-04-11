@@ -24,9 +24,8 @@
 #define i2d_CPolygon_included
 
 
-// STL includes
-#include <vector>
-
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "iser/CArchiveTag.h"
@@ -107,7 +106,7 @@ protected:
 	virtual void SetNodesCount(int nodesCount);
 
 private:
-	std::vector<i2d::CVector2d> m_nodes;
+	QVector<i2d::CVector2d> m_nodes;
 };
 
 

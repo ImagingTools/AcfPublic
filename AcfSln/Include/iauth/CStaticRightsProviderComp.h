@@ -24,9 +24,9 @@
 #define iauth_CStaticRightsProviderComp_included
 
 
-// STL includes
-#include <set>
-#include <string>
+// Qt includes
+#include <QtCore/QByteArray>
+#include <QtCore/QSet>
 
 // ACF includes
 #include "icomp/CComponentBase.h"
@@ -56,7 +56,7 @@ public:
 
 	// reimeplemented (IRightsProvider)
 	virtual bool HasRight(
-					const std::string& operationId,
+					const QByteArray& operationId,
 					bool beQuiet = false) const;
 
 protected:
@@ -69,7 +69,7 @@ private:
 	I_MULTIATTR(QString, m_rightsOnAttrPtr);
 	I_MULTIATTR(QString, m_rightsOffAttrPtr);
 
-	typedef std::set<std::string> RightsList;
+	typedef QSet<QByteArray> RightsList;
 
 	RightsList m_rightsOn;
 	RightsList m_rightsOff;

@@ -67,28 +67,28 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ad76c3a99c3685bbdc9648db056bd7631">DefaultAttributeFlags</a> { <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ad76c3a99c3685bbdc9648db056bd7631ab170787af1f1d3d1370e93a676e53ccf">DAF_OBLIGATORY</a> =  IAttributeStaticInfo::AF_OBLIGATORY | IAttributeStaticInfo::AF_MULTIPLE | IAttributeStaticInfo::AF_REFERENCE, 
 <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ad76c3a99c3685bbdc9648db056bd7631ab8eac9b33795724fa1661a45fe08926d">DAF_OPTIONAL</a> =  IAttributeStaticInfo::AF_NULLABLE | IAttributeStaticInfo::AF_MULTIPLE | IAttributeStaticInfo::AF_REFERENCE
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceicomp.html#ac4f3810d7815442242c51bd82b3ae7da">CMultiStdStringAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a18d6b8e663582945d0ec5646032a1315">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceicomp.html#aedd957caf1f344d978ee81e7257ba077">CIdListAttribute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a21ec393d8727707ae761da4e93b8e31c">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#abeb1719a747c2ea02097070aaaa6a0a1">CMultiReferenceAttribute</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a0f3f93cb26b71dacc4e5dcbc5c3c06fd">CMultiReferenceAttribute</a> (const <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html">CMultiReferenceAttribute</a> &amp;attribute)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a62f81649b4fb0417c708419552cdfb01">CMultiReferenceAttribute</a> (int elementsCount, std::string *valuesPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ace5f0fde26ee35d1bd3c3228e8663b10">GetFactoryId</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ac4af96f463fcd4dc1d862e6a94383ac0">CMultiReferenceAttribute</a> (int elementsCount, QByteArray *valuesPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a1c038fb3519924d9144114937dea7f24">GetFactoryId</a> () const </td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#ac156160e13b068b5c90c555eef2ff6e7">GetTypeName</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a786b0367a2e08d298c3840087242062b">GetTypeName</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Special attribute used to store list of referenced component ID's. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00018">18</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00019">19</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a18d6b8e663582945d0ec5646032a1315"></a><!-- doxytag: member="icomp::CMultiReferenceAttribute::BaseClass" ref="a18d6b8e663582945d0ec5646032a1315" args="" -->
+<a class="anchor" id="a21ec393d8727707ae761da4e93b8e31c"></a><!-- doxytag: member="icomp::CMultiReferenceAttribute::BaseClass" ref="a21ec393d8727707ae761da4e93b8e31c" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="namespaceicomp.html#ac4f3810d7815442242c51bd82b3ae7da">CMultiStdStringAttribute</a> <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a18d6b8e663582945d0ec5646032a1315">icomp::CMultiReferenceAttribute::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="namespaceicomp.html#aedd957caf1f344d978ee81e7257ba077">CIdListAttribute</a> <a class="el" href="classicomp_1_1_c_multi_reference_attribute.html#a21ec393d8727707ae761da4e93b8e31c">icomp::CMultiReferenceAttribute::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -98,7 +98,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#ae7db61803faee911d282b1a5173154dd">icomp::CMultiFactoryAttribute</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00021">21</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00022">22</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -126,7 +126,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#ae768587d32e5cd426f2acef99f1d6ef1">icomp::CMultiFactoryAttribute</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00023">23</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00024">24</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -145,7 +145,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00029">29</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00030">30</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
 
 </div>
 </div>
@@ -164,11 +164,11 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00030">30</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00031">31</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a62f81649b4fb0417c708419552cdfb01"></a><!-- doxytag: member="icomp::CMultiReferenceAttribute::CMultiReferenceAttribute" ref="a62f81649b4fb0417c708419552cdfb01" args="(int elementsCount, std::string *valuesPtr)" -->
+<a class="anchor" id="ac4af96f463fcd4dc1d862e6a94383ac0"></a><!-- doxytag: member="icomp::CMultiReferenceAttribute::CMultiReferenceAttribute" ref="ac4af96f463fcd4dc1d862e6a94383ac0" args="(int elementsCount, QByteArray *valuesPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -181,7 +181,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramtype">QByteArray *&#160;</td>
           <td class="paramname"><em>valuesPtr</em>&#160;</td>
         </tr>
         <tr>
@@ -193,17 +193,17 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00031">31</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_reference_attribute_8h_source.html#l00032">32</a> of file <a class="el" href="_c_multi_reference_attribute_8h_source.html">CMultiReferenceAttribute.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ace5f0fde26ee35d1bd3c3228e8663b10"></a><!-- doxytag: member="icomp::CMultiReferenceAttribute::GetFactoryId" ref="ace5f0fde26ee35d1bd3c3228e8663b10" args="() const " -->
+<a class="anchor" id="a1c038fb3519924d9144114937dea7f24"></a><!-- doxytag: member="icomp::CMultiReferenceAttribute::GetFactoryId" ref="a1c038fb3519924d9144114937dea7f24" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string icomp::CMultiReferenceAttribute::GetFactoryId </td>
+          <td class="memname">QByteArray icomp::CMultiReferenceAttribute::GetFactoryId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -212,18 +212,18 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_t_multi_attribute.html#a0670e6d2938a20cfb9bcb5048cda90c9">icomp::TMultiAttribute&lt; Value &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_t_multi_attribute.html#a5686b663690be39098262db5469c8fe8">icomp::TMultiAttribute&lt; Value &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#a43cca0a2185a2017b126944a8a400db8">icomp::CMultiFactoryAttribute</a>.</p>
+<p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#a99c986ca92b5c84454108fd637945c25">icomp::CMultiFactoryAttribute</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac156160e13b068b5c90c555eef2ff6e7"></a><!-- doxytag: member="icomp::CMultiReferenceAttribute::GetTypeName" ref="ac156160e13b068b5c90c555eef2ff6e7" args="()" -->
+<a class="anchor" id="a786b0367a2e08d298c3840087242062b"></a><!-- doxytag: member="icomp::CMultiReferenceAttribute::GetTypeName" ref="a786b0367a2e08d298c3840087242062b" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string icomp::CMultiReferenceAttribute::GetTypeName </td>
+          <td class="memname">static QByteArray icomp::CMultiReferenceAttribute::GetTypeName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [static]</code></td>
@@ -232,9 +232,9 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_t_multi_attribute.html#aa1a0f334aa274dcb0a08affb9d61e9c1">icomp::TMultiAttribute&lt; Value &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_t_multi_attribute.html#ab5e8333cc76fb65e7464e01bdbded9e2">icomp::TMultiAttribute&lt; Value &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#a1a2080734b1be654ecbe0b85480a1adc">icomp::CMultiFactoryAttribute</a>.</p>
+<p>Reimplemented in <a class="el" href="classicomp_1_1_c_multi_factory_attribute.html#a2664ab5614d2b3d09939aa8e7e7d996d">icomp::CMultiFactoryAttribute</a>.</p>
 
 </div>
 </div>

@@ -23,12 +23,10 @@
 #include "iser/CBinaryReadArchiveBase.h"
 
 
-// STL includes
-#include <vector>
-
 // Qt includes
 #include <QtCore/QObject>
 #include <QtCore/QString>
+#include <QtCore/QVector>
 
 // ACF includes
 #include "iser/CArchiveTag.h"
@@ -52,7 +50,7 @@ bool CBinaryReadArchiveBase::BeginTag(const CArchiveTag& tag)
 			SendLogMessage(
 						istd::IInformation::IC_ERROR,
 						MI_TAG_ERROR,
-						QObject::tr("Bad tag begin code, is %1, should be %2 (tag '%3')").arg(readId).arg(tag.GetBinaryId()).arg(QString::fromStdString(tag.GetId())),
+						QObject::tr("Bad tag begin code, is %1, should be %2 (tag '%3')").arg(readId).arg(tag.GetBinaryId()).arg(QString(tag.GetId())),
 						"iser::CBinaryReadArchiveBase",
 						istd::IInformation::ITF_SYSTEM);
 		}
@@ -78,7 +76,7 @@ bool CBinaryReadArchiveBase::EndTag(const CArchiveTag& tag)
 			SendLogMessage(
 						istd::IInformation::IC_ERROR,
 						MI_TAG_ERROR,
-						QObject::tr("Bad tag begin code, is %1, should be %2 (tag '%3')").arg(~readId).arg(tag.GetBinaryId()).arg(QString::fromStdString(tag.GetId())),
+						QObject::tr("Bad tag begin code, is %1, should be %2 (tag '%3')").arg(~readId).arg(tag.GetBinaryId()).arg(QString(tag.GetId())),
 						"iser::CBinaryReadArchiveBase",
 						istd::IInformation::ITF_SYSTEM);
 		}
@@ -162,7 +160,7 @@ bool CBinaryReadArchiveBase::Process(double& value)
 }
 
 
-bool CBinaryReadArchiveBase::Process(std::string& value)
+bool CBinaryReadArchiveBase::Process(QByteArray& value)
 {			
 	int stringLength;
 
@@ -183,12 +181,12 @@ bool CBinaryReadArchiveBase::Process(std::string& value)
 				return false;
 			}
 
-			std::vector<char> buffer(stringLength + 1, 0);
+			QVector<char> buffer(stringLength + 1, 0);
 
 			retVal = ProcessData(&buffer[0], stringLength * int(sizeof(char)));	
 
 			if (retVal){
-				value = std::string(&buffer[0]);
+				value = QByteArray(&buffer[0]);
 			}
 		}
 		else {
@@ -222,7 +220,7 @@ bool CBinaryReadArchiveBase::Process(QString& value)
 				return false;
 			}
 
-			std::vector<wchar_t> buffer(stringLength + 1, 0);
+			QVector<wchar_t> buffer(stringLength + 1, 0);
 
 			retVal = ProcessData(&buffer[0], stringLength * int(sizeof(wchar_t)));	
 

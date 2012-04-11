@@ -76,47 +76,47 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Change flags.  <a href="classicomp_1_1_i_registry.html#a8322a59df1735f4c7ff97cc66bc6e22a">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">Ids</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a63050c3d6b81fdbcf1e0296a04ec2c90">Ids</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
 &lt; <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a9990a41d29aa4f1eaf0f719b546e1031">ElementPtr</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; std::string, <br class="typebreak"/>
-std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">ExportedInterfacesMap</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map assigning interface ID (undecorated) to component ID exporting this interface.  <a href="#a60829593c3db433d452a0f7470916082"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; std::string, <br class="typebreak"/>
-std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">ExportedComponentsMap</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map assigning exported sub-component names to internal subcomponent ID's.  <a href="#aa283fa0298b8d71b7de1347f989b0c0c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QByteArray, <br class="typebreak"/>
+QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">ExportedInterfacesMap</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map assigning interface ID (undecorated) to component ID exporting this interface.  <a href="#a6e5b9f6f38330d397dc61498ce1e4093"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QByteArray, <br class="typebreak"/>
+QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ad6772897f1dfa66ced1d0b8b819cd186">ExportedComponentsMap</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map assigning exported sub-component names to internal subcomponent ID's.  <a href="#ad6772897f1dfa66ced1d0b8b819cd186"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#adb5a8799173714fa43a51830334cf6f8">GetElementIds</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#a63050c3d6b81fdbcf1e0296a04ec2c90">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#adb5a8799173714fa43a51830334cf6f8">GetElementIds</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID list of existing elements.  <a href="#adb5a8799173714fa43a51830334cf6f8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a3b125fe313fe17b46f0ba42089fa9959">GetElementInfo</a> (const std::string &amp;elementId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored attribute info structure.  <a href="#a3b125fe313fe17b46f0ba42089fa9959"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ad6f76aeb00e66b4954e4abe7ac66f0e0">InsertElementInfo</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, bool ensureElementCreated=true)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new attribute info object to collection of attributes.  <a href="#ad6f76aeb00e66b4954e4abe7ac66f0e0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a6aa30c89a927428df1d020975eda81e5">RemoveElementInfo</a> (const std::string &amp;elementId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes attribute info structure from this collection.  <a href="#a6aa30c89a927428df1d020975eda81e5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ad87f142252218a9804d30088a2704abd">RenameElement</a> (const std::string &amp;oldElementId, const std::string &amp;newElementId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename an registry element.  <a href="#ad87f142252218a9804d30088a2704abd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a525328a7610b9337f72408bb5d9aaa3d">GetEmbeddedRegistryIds</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a3ac209d02f2e77514e0359c1afe37e43">GetElementInfo</a> (const QByteArray &amp;elementId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored attribute info structure.  <a href="#a3ac209d02f2e77514e0359c1afe37e43"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a3f3718c3d19e04b4c6700e90297813f5">InsertElementInfo</a> (const QByteArray &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, bool ensureElementCreated=true)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new attribute info object to collection of attributes.  <a href="#a3f3718c3d19e04b4c6700e90297813f5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ac093dbdc7c7e64feb11564c36c8b8062">RemoveElementInfo</a> (const QByteArray &amp;elementId)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes attribute info structure from this collection.  <a href="#ac093dbdc7c7e64feb11564c36c8b8062"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a262c7282f565ae50b22f90e092b91681">RenameElement</a> (const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename an registry element.  <a href="#a262c7282f565ae50b22f90e092b91681"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html#a63050c3d6b81fdbcf1e0296a04ec2c90">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a525328a7610b9337f72408bb5d9aaa3d">GetEmbeddedRegistryIds</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of IDs of embedded registries.  <a href="#a525328a7610b9337f72408bb5d9aaa3d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ab3b095f6e818d1bc29868871e7a384af">GetEmbeddedRegistry</a> (const std::string &amp;registryId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to embedded registry using its ID.  <a href="#ab3b095f6e818d1bc29868871e7a384af"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a6c19dfea5eca4094d348297d45b58712">InsertEmbeddedRegistry</a> (const std::string &amp;registryId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert embedded registry with specified ID.  <a href="#a6c19dfea5eca4094d348297d45b58712"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ad57c6604507452a261debde2429dc053">RemoveEmbeddedRegistry</a> (const std::string &amp;registryId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove embedded registry with specified ID.  <a href="#ad57c6604507452a261debde2429dc053"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a996586212f5891dbb265929caee78c52">RenameEmbeddedRegistry</a> (const std::string &amp;oldRegistryId, const std::string &amp;newRegistryId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename a embedded registry.  <a href="#a996586212f5891dbb265929caee78c52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ab7aaadcba19434b49ebc9b08cc5725eb">GetEmbeddedRegistry</a> (const QByteArray &amp;registryId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to embedded registry using its ID.  <a href="#ab7aaadcba19434b49ebc9b08cc5725eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a457760368d21fdcc55d10b740e57451f">InsertEmbeddedRegistry</a> (const QByteArray &amp;registryId)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert embedded registry with specified ID.  <a href="#a457760368d21fdcc55d10b740e57451f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a1da007e84c53ebd75820f4b9f692af33">RemoveEmbeddedRegistry</a> (const QByteArray &amp;registryId)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove embedded registry with specified ID.  <a href="#a1da007e84c53ebd75820f4b9f692af33"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ae6616a6ff1d00b4831fb20dedbc6ae7b">RenameEmbeddedRegistry</a> (const QByteArray &amp;oldRegistryId, const QByteArray &amp;newRegistryId)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename a embedded registry.  <a href="#ae6616a6ff1d00b4831fb20dedbc6ae7b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">ExportedInterfacesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a0de57529293ec2ac09705d4572e0d699">GetExportedInterfacesMap</a> () const =0</td></tr>
+<a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">ExportedInterfacesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a0de57529293ec2ac09705d4572e0d699">GetExportedInterfacesMap</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to information structure of exported interfaces.  <a href="#a0de57529293ec2ac09705d4572e0d699"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">ExportedComponentsMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aebcebe3775a74fba1d616527e8219a0b">GetExportedComponentsMap</a> () const =0</td></tr>
+<a class="el" href="classicomp_1_1_i_registry.html#ad6772897f1dfa66ced1d0b8b819cd186">ExportedComponentsMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aebcebe3775a74fba1d616527e8219a0b">GetExportedComponentsMap</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to map used to convert exported sub-components to internal sub-component ID's.  <a href="#aebcebe3775a74fba1d616527e8219a0b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ac37f5352329264b81afd5d44b21791d4">SetElementInterfaceExported</a> (const std::string &amp;elementId, const std::string &amp;interfaceName, bool state=true)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable exporting single or all interfaces of component.  <a href="#ac37f5352329264b81afd5d44b21791d4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a0f288778e210c9aec24300e2d427cd62">SetElementExported</a> (const std::string &amp;exportId, const std::string &amp;elementId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set element to be exported.  <a href="#a0f288778e210c9aec24300e2d427cd62"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#aac89df2d3cb0b397b2cfbae023696da3">SetElementInterfaceExported</a> (const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool state=true)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable exporting single or all interfaces of component.  <a href="#aac89df2d3cb0b397b2cfbae023696da3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#ad1f23885aff0a3848c5c715193205695">SetElementExported</a> (const QByteArray &amp;exportId, const QByteArray &amp;elementId)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set element to be exported.  <a href="#ad1f23885aff0a3848c5c715193205695"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a49f696d174367810f97d9d1f71780e9c">GetDescription</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of this registry.  <a href="#a49f696d174367810f97d9d1f71780e9c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_registry.html#a7681f47389b966a9a67e738ae6b85e1b">SetDescription</a> (const QString &amp;description)=0</td></tr>
@@ -130,7 +130,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Interface representing information stored in component registry. </p>
 <p>Registry is model representating smallest component topology unit. Registry can be imagined as representation of arx files. </p>
 
-<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00031">31</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00030">30</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a9990a41d29aa4f1eaf0f719b546e1031"></a><!-- doxytag: member="icomp::IRegistry::ElementPtr" ref="a9990a41d29aa4f1eaf0f719b546e1031" args="" -->
 <div class="memitem">
@@ -143,16 +143,16 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00035">35</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00034">34</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa283fa0298b8d71b7de1347f989b0c0c"></a><!-- doxytag: member="icomp::IRegistry::ExportedComponentsMap" ref="aa283fa0298b8d71b7de1347f989b0c0c" args="" -->
+<a class="anchor" id="ad6772897f1dfa66ced1d0b8b819cd186"></a><!-- doxytag: member="icomp::IRegistry::ExportedComponentsMap" ref="ad6772897f1dfa66ced1d0b8b819cd186" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef QMap&lt;std::string, std::string&gt; <a class="el" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">icomp::IRegistry::ExportedComponentsMap</a></td>
+          <td class="memname">typedef QMap&lt;QByteArray, QByteArray&gt; <a class="el" href="classicomp_1_1_i_registry.html#ad6772897f1dfa66ced1d0b8b819cd186">icomp::IRegistry::ExportedComponentsMap</a></td>
         </tr>
       </table>
 </div>
@@ -160,16 +160,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Map assigning exported sub-component names to internal subcomponent ID's. </p>
 
-<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00066">66</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00065">65</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a60829593c3db433d452a0f7470916082"></a><!-- doxytag: member="icomp::IRegistry::ExportedInterfacesMap" ref="a60829593c3db433d452a0f7470916082" args="" -->
+<a class="anchor" id="a6e5b9f6f38330d397dc61498ce1e4093"></a><!-- doxytag: member="icomp::IRegistry::ExportedInterfacesMap" ref="a6e5b9f6f38330d397dc61498ce1e4093" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef QMap&lt;std::string, std::string&gt; <a class="el" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">icomp::IRegistry::ExportedInterfacesMap</a></td>
+          <td class="memname">typedef QMap&lt;QByteArray, QByteArray&gt; <a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">icomp::IRegistry::ExportedInterfacesMap</a></td>
         </tr>
       </table>
 </div>
@@ -177,22 +177,22 @@ Public Member Functions</h2></td></tr>
 
 <p>Map assigning interface ID (undecorated) to component ID exporting this interface. </p>
 
-<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00061">61</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00060">60</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aed80af95f532fac70d5299da4722ce57"></a><!-- doxytag: member="icomp::IRegistry::Ids" ref="aed80af95f532fac70d5299da4722ce57" args="" -->
+<a class="anchor" id="a63050c3d6b81fdbcf1e0296a04ec2c90"></a><!-- doxytag: member="icomp::IRegistry::Ids" ref="a63050c3d6b81fdbcf1e0296a04ec2c90" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;std::string&gt; <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">icomp::IRegistry::Ids</a></td>
+          <td class="memname">typedef QSet&lt;QByteArray&gt; <a class="el" href="classicomp_1_1_i_registry.html#a63050c3d6b81fdbcf1e0296a04ec2c90">icomp::IRegistry::Ids</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00034">34</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00033">33</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +226,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00040">40</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_registry_8h_source.html#l00039">39</a> of file <a class="el" href="_i_registry_8h_source.html">IRegistry.h</a>.</p>
 
 </div>
 </div>
@@ -256,7 +256,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">Ids</a> icomp::IRegistry::GetElementIds </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry.html#a63050c3d6b81fdbcf1e0296a04ec2c90">Ids</a> icomp::IRegistry::GetElementIds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -271,14 +271,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3b125fe313fe17b46f0ba42089fa9959"></a><!-- doxytag: member="icomp::IRegistry::GetElementInfo" ref="a3b125fe313fe17b46f0ba42089fa9959" args="(const std::string &amp;elementId) const =0" -->
+<a class="anchor" id="a3ac209d02f2e77514e0359c1afe37e43"></a><!-- doxytag: member="icomp::IRegistry::GetElementInfo" ref="a3ac209d02f2e77514e0359c1afe37e43" args="(const QByteArray &amp;elementId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a>* icomp::IRegistry::GetElementInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>elementId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -288,18 +288,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Get access to stored attribute info structure. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a1b6cd67d0311fbfcc0119d06c27baed4">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a12f74492ce02367e95250ce469b18964">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab3b095f6e818d1bc29868871e7a384af"></a><!-- doxytag: member="icomp::IRegistry::GetEmbeddedRegistry" ref="ab3b095f6e818d1bc29868871e7a384af" args="(const std::string &amp;registryId) const =0" -->
+<a class="anchor" id="ab7aaadcba19434b49ebc9b08cc5725eb"></a><!-- doxytag: member="icomp::IRegistry::GetEmbeddedRegistry" ref="ab7aaadcba19434b49ebc9b08cc5725eb" args="(const QByteArray &amp;registryId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a>* icomp::IRegistry::GetEmbeddedRegistry </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>registryId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -310,7 +310,7 @@ Public Member Functions</h2></td></tr>
 <p>Get access to embedded registry using its ID. </p>
 <p>Embedded registries are used to manage local composite components. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a69b82fae32a25ea6bd2619ef1eddbf64">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a77174911aba508901f130efeb8b25824">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
@@ -319,7 +319,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry.html#aed80af95f532fac70d5299da4722ce57">Ids</a> icomp::IRegistry::GetEmbeddedRegistryIds </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry.html#a63050c3d6b81fdbcf1e0296a04ec2c90">Ids</a> icomp::IRegistry::GetEmbeddedRegistryIds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -341,7 +341,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#aa283fa0298b8d71b7de1347f989b0c0c">ExportedComponentsMap</a>&amp; icomp::IRegistry::GetExportedComponentsMap </td>
+          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#ad6772897f1dfa66ced1d0b8b819cd186">ExportedComponentsMap</a>&amp; icomp::IRegistry::GetExportedComponentsMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -361,7 +361,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#a60829593c3db433d452a0f7470916082">ExportedInterfacesMap</a>&amp; icomp::IRegistry::GetExportedInterfacesMap </td>
+          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">ExportedInterfacesMap</a>&amp; icomp::IRegistry::GetExportedInterfacesMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -396,14 +396,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad6f76aeb00e66b4954e4abe7ac66f0e0"></a><!-- doxytag: member="icomp::IRegistry::InsertElementInfo" ref="ad6f76aeb00e66b4954e4abe7ac66f0e0" args="(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)=0" -->
+<a class="anchor" id="a3f3718c3d19e04b4c6700e90297813f5"></a><!-- doxytag: member="icomp::IRegistry::InsertElementInfo" ref="a3f3718c3d19e04b4c6700e90297813f5" args="(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a>* icomp::IRegistry::InsertElementInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>elementId</em>, </td>
         </tr>
         <tr>
@@ -437,18 +437,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#ac240fa5334f244f2b7c06c2045040c01">iqt::CPackagesLoaderComp::LogingRegistry</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#ad070b94556df11118a8fcaf3c6f13dc4">icmpstr::CVisualRegistryComp</a>, and <a class="el" href="classicomp_1_1_c_registry.html#aa64a31dda214378e87a6af9784853431">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#a3ae640ef8c08d229b46db19dfc0140a2">iqt::CPackagesLoaderComp::LogingRegistry</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#ad21351e11beed921a256a622daa05800">icmpstr::CVisualRegistryComp</a>, and <a class="el" href="classicomp_1_1_c_registry.html#a8b4f27336913e9fa867eaacbaba629a2">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6c19dfea5eca4094d348297d45b58712"></a><!-- doxytag: member="icomp::IRegistry::InsertEmbeddedRegistry" ref="a6c19dfea5eca4094d348297d45b58712" args="(const std::string &amp;registryId)=0" -->
+<a class="anchor" id="a457760368d21fdcc55d10b740e57451f"></a><!-- doxytag: member="icomp::IRegistry::InsertEmbeddedRegistry" ref="a457760368d21fdcc55d10b740e57451f" args="(const QByteArray &amp;registryId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a>* icomp::IRegistry::InsertEmbeddedRegistry </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>registryId</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -459,18 +459,18 @@ Public Member Functions</h2></td></tr>
 <p>Insert embedded registry with specified ID. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>instance of new created embedded registry. </dd></dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a693ee90c3fa39b92f457dab9c34ffd35">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#ab6d97013c85838ea50f8a2eff5a6c8b4">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6aa30c89a927428df1d020975eda81e5"></a><!-- doxytag: member="icomp::IRegistry::RemoveElementInfo" ref="a6aa30c89a927428df1d020975eda81e5" args="(const std::string &amp;elementId)=0" -->
+<a class="anchor" id="ac093dbdc7c7e64feb11564c36c8b8062"></a><!-- doxytag: member="icomp::IRegistry::RemoveElementInfo" ref="ac093dbdc7c7e64feb11564c36c8b8062" args="(const QByteArray &amp;elementId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool icomp::IRegistry::RemoveElementInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>elementId</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -480,18 +480,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Removes attribute info structure from this collection. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#ad145c1a36e339cecfd5778817c3bd4c7">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#aa6dbf2eb58e86d103f92e772942f7f79">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad57c6604507452a261debde2429dc053"></a><!-- doxytag: member="icomp::IRegistry::RemoveEmbeddedRegistry" ref="ad57c6604507452a261debde2429dc053" args="(const std::string &amp;registryId)=0" -->
+<a class="anchor" id="a1da007e84c53ebd75820f4b9f692af33"></a><!-- doxytag: member="icomp::IRegistry::RemoveEmbeddedRegistry" ref="a1da007e84c53ebd75820f4b9f692af33" args="(const QByteArray &amp;registryId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool icomp::IRegistry::RemoveEmbeddedRegistry </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>registryId</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -502,24 +502,24 @@ Public Member Functions</h2></td></tr>
 <p>Remove embedded registry with specified ID. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if registry could be removed. </dd></dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#afd26a7a7f3148428961507edd72e2353">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#afc5a2c04f329e38ae6f7eb227616495f">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad87f142252218a9804d30088a2704abd"></a><!-- doxytag: member="icomp::IRegistry::RenameElement" ref="ad87f142252218a9804d30088a2704abd" args="(const std::string &amp;oldElementId, const std::string &amp;newElementId)=0" -->
+<a class="anchor" id="a262c7282f565ae50b22f90e092b91681"></a><!-- doxytag: member="icomp::IRegistry::RenameElement" ref="a262c7282f565ae50b22f90e092b91681" args="(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool icomp::IRegistry::RenameElement </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>oldElementId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>newElementId</em>&#160;</td>
         </tr>
         <tr>
@@ -540,24 +540,24 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a280a90d3801dac98f0d9aada68fa5905">icmpstr::CVisualRegistryComp</a>, and <a class="el" href="classicomp_1_1_c_registry.html#a99e4e58f8ed6b32245cc7d2e057ffbd5">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#ada53ee410f808da8f0b2efc738dc461d">icmpstr::CVisualRegistryComp</a>, and <a class="el" href="classicomp_1_1_c_registry.html#aa232db834c5c8e24530c4b43ad011d73">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a996586212f5891dbb265929caee78c52"></a><!-- doxytag: member="icomp::IRegistry::RenameEmbeddedRegistry" ref="a996586212f5891dbb265929caee78c52" args="(const std::string &amp;oldRegistryId, const std::string &amp;newRegistryId)=0" -->
+<a class="anchor" id="ae6616a6ff1d00b4831fb20dedbc6ae7b"></a><!-- doxytag: member="icomp::IRegistry::RenameEmbeddedRegistry" ref="ae6616a6ff1d00b4831fb20dedbc6ae7b" args="(const QByteArray &amp;oldRegistryId, const QByteArray &amp;newRegistryId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool icomp::IRegistry::RenameEmbeddedRegistry </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>oldRegistryId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>newRegistryId</em>&#160;</td>
         </tr>
         <tr>
@@ -578,7 +578,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a647d14d5ae3d24a36cbad3e6662940c6">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a04fd65717000df9bd9b352ca9fd81e17">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
@@ -603,20 +603,20 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0f288778e210c9aec24300e2d427cd62"></a><!-- doxytag: member="icomp::IRegistry::SetElementExported" ref="a0f288778e210c9aec24300e2d427cd62" args="(const std::string &amp;exportId, const std::string &amp;elementId)=0" -->
+<a class="anchor" id="ad1f23885aff0a3848c5c715193205695"></a><!-- doxytag: member="icomp::IRegistry::SetElementExported" ref="ad1f23885aff0a3848c5c715193205695" args="(const QByteArray &amp;exportId, const QByteArray &amp;elementId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void icomp::IRegistry::SetElementExported </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>exportId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>elementId</em>&#160;</td>
         </tr>
         <tr>
@@ -637,24 +637,24 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#afdfb1855fb832b5ed7ceff42c783a64c">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a1e4ac43d8dc579ac0c577137a1780913">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac37f5352329264b81afd5d44b21791d4"></a><!-- doxytag: member="icomp::IRegistry::SetElementInterfaceExported" ref="ac37f5352329264b81afd5d44b21791d4" args="(const std::string &amp;elementId, const std::string &amp;interfaceName, bool state=true)=0" -->
+<a class="anchor" id="aac89df2d3cb0b397b2cfbae023696da3"></a><!-- doxytag: member="icomp::IRegistry::SetElementInterfaceExported" ref="aac89df2d3cb0b397b2cfbae023696da3" args="(const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool state=true)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void icomp::IRegistry::SetElementInterfaceExported </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>elementId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>interfaceName</em>, </td>
         </tr>
         <tr>
@@ -682,7 +682,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a643f73dca816de49fc3659296eeaddb0">icomp::CRegistry</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_registry.html#a999f44d683d151934a3bfbeb75a2bf23">icomp::CRegistry</a>.</p>
 
 </div>
 </div>

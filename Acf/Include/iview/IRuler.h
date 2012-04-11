@@ -24,9 +24,8 @@
 #define iview_IRuler_included
 
 
-// STL includes
-#include <utility>
-
+// Qt includes
+#include <QtCore/QPair>
 
 // ACF includes
 #include "istd/IChangeable.h"
@@ -46,7 +45,7 @@ namespace iview
 class IRuler: virtual public istd::IChangeable
 {
 public:
-	typedef ::std::pair<double, double> Mark;
+	typedef QPair<double, double> Mark;
 
 	/**
 		Set levels count to 0 and remove all marks.

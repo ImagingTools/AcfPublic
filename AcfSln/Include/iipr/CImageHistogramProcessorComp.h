@@ -63,7 +63,7 @@ private:
 					imeas::IDiscreteDataSequence& histogram) const;
 
 private:
-	I_ATTR(std::string, m_aoiParamIdAttrPtr);
+	I_ATTR(QByteArray, m_aoiParamIdAttrPtr);
 };
 
 

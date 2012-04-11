@@ -24,13 +24,9 @@
 #define icomp_IExtPackagesManager_included
 
 
-// STL includes
-#include <set>
-
-
 // Qt includes
 #include <QtCore/QString>
-
+#include <QtCore/QSet>
 
 // ACF includes
 #include "icomp/IPackagesManager.h"
@@ -63,7 +59,7 @@ public:
 	/**
 		List of pathes.
 	*/
-	typedef std::set<QString> PathList;
+	typedef QSet<QString> PathList;
 
 	/**
 		Get list of files used for configuration.

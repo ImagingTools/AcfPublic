@@ -24,8 +24,8 @@
 #define istd_CIdManipBase_included
 
 
-// STL includes
-#include <string>
+// Qt includes
+#include <QtCore/QByteArray>
 
 // ACF includes
 #include "istd.h"
@@ -41,11 +41,11 @@ public:
 	/**
 		Split component ID into separated ID's.
 	*/
-	static bool SplitId(const std::string& complexId, std::string& baseId, std::string& subId);
+	static bool SplitId(const QByteArray& complexId, QByteArray& baseId, QByteArray& subId);
 	/**
 		Join base component ID and sub ID into composed component ID.
 	*/
-	static std::string JoinId(const std::string& baseId, const std::string& subId);
+	static QByteArray JoinId(const QByteArray& baseId, const QByteArray& subId);
 };
 
 

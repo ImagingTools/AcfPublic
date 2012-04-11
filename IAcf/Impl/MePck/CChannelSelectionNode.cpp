@@ -137,9 +137,9 @@ QString CChannelSelectionNode::GetOptionDescription(int /*index*/) const
 }
 
 
-std::string CChannelSelectionNode::GetOptionId(int /*index*/) const
+QByteArray CChannelSelectionNode::GetOptionId(int /*index*/) const
 {
-	return std::string();
+	return QByteArray();
 }
 
 

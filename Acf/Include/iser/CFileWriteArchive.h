@@ -24,10 +24,9 @@
 #define iser_CFileWriteArchive_included
 
 
-// STL includes
-#include <fstream>
-#include <vector>
-
+// Qt includes
+#include <QtCore/QVector>
+#include <QtCore/QFile>
 
 // ACF includes
 #include "iser/CBinaryWriteArchiveBase.h"
@@ -86,11 +85,11 @@ protected:
 	};
 	
 private:
-	std::ofstream m_stream;
+	QFile m_file;
 
 	bool m_supportTagSkipping;
 
-	typedef std::vector<TagStackElement> TagStack;
+	typedef QVector<TagStackElement> TagStack;
 
 	TagStack m_tagStack;
 };

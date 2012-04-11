@@ -64,13 +64,13 @@
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_attribute.html#ad33d47a655c0becf4b3ecf7be4e67c58">SetValue</a>(<span class="keyword">const</span> Value&amp; value);
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iser::IObject)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> std::string <a class="code" href="classicomp_1_1_t_attribute.html#a98aa51935005cf51d4810a3f3e683b54">GetFactoryId</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#a92bb29d17d5071dae4f257b1eb5cc44a">GetFactoryId</a>() <span class="keyword">const</span>;
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_t_attribute.html#ad99aedb4eb7abf946b0edc904d246341" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// static methods</span>
-<a name="l00051"></a>00051        <span class="keyword">static</span> std::string <a class="code" href="classicomp_1_1_t_attribute.html#a11211164cc1618eea3d04fa47c273f5f">GetTypeName</a>();
+<a name="l00051"></a>00051        <span class="keyword">static</span> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#ac1000074cad417e0189757734873b310">GetTypeName</a>();
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 <span class="keyword">protected</span>:
 <a name="l00054"></a><a class="code" href="classicomp_1_1_t_attribute.html#a190bdd62d7fe4e7c3755f96f47064c61">00054</a>        Value <a class="code" href="classicomp_1_1_t_attribute.html#a190bdd62d7fe4e7c3755f96f47064c61">m_value</a>;
@@ -116,7 +116,7 @@
 <a name="l00094"></a>00094 <span class="comment">// reimplemented (iser::IObject)</span>
 <a name="l00095"></a>00095 
 <a name="l00096"></a>00096 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00097"></a><a class="code" href="classicomp_1_1_t_attribute.html#a98aa51935005cf51d4810a3f3e683b54">00097</a> std::string <a class="code" href="classicomp_1_1_t_attribute.html#a98aa51935005cf51d4810a3f3e683b54">TAttribute&lt;Value&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
+<a name="l00097"></a><a class="code" href="classicomp_1_1_t_attribute.html#a92bb29d17d5071dae4f257b1eb5cc44a">00097</a> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#a92bb29d17d5071dae4f257b1eb5cc44a">TAttribute&lt;Value&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
 <a name="l00098"></a>00098 <span class="keyword"></span>{
 <a name="l00099"></a>00099        <span class="keywordflow">return</span> GetTypeName();
 <a name="l00100"></a>00100 }
@@ -143,31 +143,62 @@
 <a name="l00121"></a>00121 <span class="comment">// static methods</span>
 <a name="l00122"></a>00122 
 <a name="l00123"></a>00123 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00124"></a><a class="code" href="classicomp_1_1_t_attribute.html#a11211164cc1618eea3d04fa47c273f5f">00124</a> std::string <a class="code" href="classicomp_1_1_t_attribute.html#a11211164cc1618eea3d04fa47c273f5f">TAttribute&lt;Value&gt;::GetTypeName</a>()
+<a name="l00124"></a><a class="code" href="classicomp_1_1_t_attribute.html#ac1000074cad417e0189757734873b310">00124</a> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#ac1000074cad417e0189757734873b310">TAttribute&lt;Value&gt;::GetTypeName</a>()
 <a name="l00125"></a>00125 {
-<a name="l00126"></a>00126        <span class="keywordflow">if</span> (<span class="keyword">typeid</span>(Value) == <span class="keyword">typeid</span>(std::string)){
-<a name="l00127"></a>00127               <span class="keywordflow">return</span> <span class="stringliteral">&quot;icomp::TAttribute&lt;std::string&gt;&quot;</span>;
-<a name="l00128"></a>00128        }
+<a name="l00126"></a>00126        <span class="keywordflow">return</span> istd::CClassInfo::GetName&lt;TAttribute&lt;Value&gt; &gt;();
+<a name="l00127"></a>00127 }
+<a name="l00128"></a>00128 
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130        <span class="keywordflow">return</span> istd::CClassInfo::GetName&lt;TAttribute&lt;Value&gt; &gt;();
-<a name="l00131"></a>00131 }
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133 
-<a name="l00134"></a>00134 <span class="comment">// typedefs</span>
+<a name="l00130"></a>00130 <span class="keyword">template</span> &lt;&gt;
+<a name="l00131"></a><a class="code" href="classicomp_1_1_t_attribute.html#a7d2701920956442ca9cedd2935ccd38f">00131</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#ac1000074cad417e0189757734873b310">TAttribute&lt;int&gt;::GetTypeName</a>()
+<a name="l00132"></a>00132 {
+<a name="l00133"></a>00133        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Integer&quot;</span>;
+<a name="l00134"></a>00134 }
 <a name="l00135"></a>00135 
-<a name="l00136"></a><a class="code" href="namespaceicomp.html#a2e9c5b3f483b27a3dbd390798812dd42">00136</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;int&gt;</a> <a class="code" href="namespaceicomp.html#a2e9c5b3f483b27a3dbd390798812dd42">CIntAttribute</a>;
-<a name="l00137"></a><a class="code" href="namespaceicomp.html#a8b0216a085980d12e60d9a66764a97fc">00137</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;double&gt;</a> <a class="code" href="namespaceicomp.html#a8b0216a085980d12e60d9a66764a97fc">CDoubleAttribute</a>;
-<a name="l00138"></a><a class="code" href="namespaceicomp.html#aabced1d32c941bc1bc0820b04bdbca97">00138</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;bool&gt;</a> <a class="code" href="namespaceicomp.html#aabced1d32c941bc1bc0820b04bdbca97">CBoolAttribute</a>;
-<a name="l00139"></a><a class="code" href="namespaceicomp.html#a13767d93be75cf3593a4b0bef02c6831">00139</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;QString&gt;</a> <a class="code" href="namespaceicomp.html#a13767d93be75cf3593a4b0bef02c6831">CStringAttribute</a>;
-<a name="l00140"></a><a class="code" href="namespaceicomp.html#a1a5b78266bc6d2dc552b41a94f5b80c3">00140</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;std::string&gt;</a> <a class="code" href="namespaceicomp.html#a1a5b78266bc6d2dc552b41a94f5b80c3">CStdStringAttribute</a>;
-<a name="l00141"></a>00141 
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137 <span class="keyword">template</span> &lt;&gt;
+<a name="l00138"></a><a class="code" href="classicomp_1_1_t_attribute.html#af2ea94e1db979f91daa9024811aa5a5d">00138</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#ac1000074cad417e0189757734873b310">TAttribute&lt;double&gt;::GetTypeName</a>()
+<a name="l00139"></a>00139 {
+<a name="l00140"></a>00140        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Real&quot;</span>;
+<a name="l00141"></a>00141 }
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143 } <span class="comment">// namespace icomp</span>
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146 <span class="preprocessor">#endif // !icomp_TAttribute_included</span>
-<a name="l00147"></a>00147 <span class="preprocessor"></span>
-<a name="l00148"></a>00148 
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144 <span class="keyword">template</span> &lt;&gt;
+<a name="l00145"></a><a class="code" href="classicomp_1_1_t_attribute.html#aaf08b5cfc3630ee627777a543fbda610">00145</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#ac1000074cad417e0189757734873b310">TAttribute&lt;bool&gt;::GetTypeName</a>()
+<a name="l00146"></a>00146 {
+<a name="l00147"></a>00147        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Boolean&quot;</span>;
+<a name="l00148"></a>00148 }
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151 <span class="keyword">template</span> &lt;&gt;
+<a name="l00152"></a><a class="code" href="classicomp_1_1_t_attribute.html#a2ebdbfac7183b806e49e3bf107ceb138">00152</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#ac1000074cad417e0189757734873b310">TAttribute&lt;QString&gt;::GetTypeName</a>()
+<a name="l00153"></a>00153 {
+<a name="l00154"></a>00154        <span class="keywordflow">return</span> <span class="stringliteral">&quot;String&quot;</span>;
+<a name="l00155"></a>00155 }
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158 <span class="keyword">template</span> &lt;&gt;
+<a name="l00159"></a><a class="code" href="classicomp_1_1_t_attribute.html#a2c13e49615ac1548c2215db2020c89a2">00159</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classicomp_1_1_t_attribute.html#ac1000074cad417e0189757734873b310">TAttribute&lt;QByteArray&gt;::GetTypeName</a>()
+<a name="l00160"></a>00160 {
+<a name="l00161"></a>00161        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Id&quot;</span>;
+<a name="l00162"></a>00162 }
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165 <span class="comment">// typedefs</span>
+<a name="l00166"></a>00166 
+<a name="l00167"></a><a class="code" href="namespaceicomp.html#a7a97baa626cbe19dbcf51760d974ffd2">00167</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;int&gt;</a> <a class="code" href="namespaceicomp.html#a7a97baa626cbe19dbcf51760d974ffd2">CIntegerAttribute</a>;
+<a name="l00168"></a><a class="code" href="namespaceicomp.html#afc71fb7a40b243943e76f1e36322b4ec">00168</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;double&gt;</a> <a class="code" href="namespaceicomp.html#afc71fb7a40b243943e76f1e36322b4ec">CRealAttribute</a>;
+<a name="l00169"></a><a class="code" href="namespaceicomp.html#a1fcd474ee984c8067dc65f3f5ebb7e36">00169</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;bool&gt;</a> <a class="code" href="namespaceicomp.html#a1fcd474ee984c8067dc65f3f5ebb7e36">CBooleanAttribute</a>;
+<a name="l00170"></a><a class="code" href="namespaceicomp.html#a13767d93be75cf3593a4b0bef02c6831">00170</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;QString&gt;</a> <a class="code" href="namespaceicomp.html#a13767d93be75cf3593a4b0bef02c6831">CStringAttribute</a>;
+<a name="l00171"></a><a class="code" href="namespaceicomp.html#a97fc5d054b20605049466e07efde54a1">00171</a> <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;QByteArray&gt;</a> <a class="code" href="namespaceicomp.html#a97fc5d054b20605049466e07efde54a1">CIdAttribute</a>;
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174 } <span class="comment">// namespace icomp</span>
+<a name="l00175"></a>00175 
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177 <span class="preprocessor">#endif // !icomp_TAttribute_included</span>
+<a name="l00178"></a>00178 <span class="preprocessor"></span>
+<a name="l00179"></a>00179 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -24,9 +24,11 @@
 #define imath_TFulcrumGridFunctionBase_included
 
 
-#include <algorithm>
-#include <vector>
+// Qt includes
+#include <QtCore/QtAlgorithms>
+#include <QtCore/QVector>
 
+// ACF includes
 #include "istd/TChangeNotifier.h"
 #include "istd/TCachedUpdateManagerWrap.h"
 
@@ -170,8 +172,8 @@ protected:
 private:
 	Fulcrums m_fulcrums;
 
-	typedef std::vector<double> LayerPositions;
-	typedef std::vector<LayerPositions> Layers;
+	typedef QVector<double> LayerPositions;
+	typedef QVector<LayerPositions> Layers;
 
 	Layers m_layers;
 };
@@ -326,7 +328,7 @@ int TFulcrumGridFunctionBase<Argument, Result, Fulcrums>::InsertLayer(int dimens
 
 	double prevPosition = position;
 	double nextPosition = position;
-	if (!positions.empty()){
+	if (!positions.isEmpty()){
 		if (layerIndex >= 0){
 			prevPosition = positions[layerIndex];
 		}
@@ -496,7 +498,7 @@ void TFulcrumGridFunctionBase<Argument, Result, Fulcrums>::SortFulcrums()
 	for (Layers::iterator iter = m_layers.begin(); iter != m_layers.end(); ++iter){
 		LayerPositions& positions = *iter;
 
-		std::sort(positions.begin(), positions.end());
+		qSort(positions.begin(), positions.end());
 	}
 }
 

@@ -29,8 +29,8 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define istd_TArray_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QVector&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_t_index_8h.html">istd/TIndex.h</a>&quot;</span>
@@ -116,17 +116,17 @@
 <a name="l00145"></a>00145        Element&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index);
 <a name="l00146"></a>00146 
 <a name="l00147"></a>00147 <span class="keyword">protected</span>:
-<a name="l00148"></a><a class="code" href="classistd_1_1_t_array.html#ae3ed6a04a6cb64172b3d8170923073d5">00148</a>        <span class="keyword">typedef</span> std::vector&lt;Element&gt; <a class="code" href="classistd_1_1_t_array.html#ae3ed6a04a6cb64172b3d8170923073d5">Elements</a>;
+<a name="l00148"></a><a class="code" href="classistd_1_1_t_array.html#abdcab1871532ba4f912a22efb0afb55a">00148</a>        <span class="keyword">typedef</span> QVector&lt;Element&gt; <a class="code" href="classistd_1_1_t_array.html#abdcab1871532ba4f912a22efb0afb55a">Elements</a>;
 <a name="l00149"></a>00149 
 <a name="l00153"></a>00153        <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_t_array.html#a34cd8cd35899ef5895a3da2aa57990d1" title="Get index of element in one dimensional array.">GetElementIndex</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index) <span class="keyword">const</span>;
 <a name="l00157"></a>00157        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#a3011cec53e6786086e1abc7cdd627636" title="Update size of elements to size changes.">UpdateElementsSize</a>();
 <a name="l00158"></a>00158 
-<a name="l00159"></a>00159        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#af3dbbe63b0c2c99b4aea461ca79b1d29">DeepCopy</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_array.html#ae3ed6a04a6cb64172b3d8170923073d5">Elements</a>&amp; elements, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">SizesType</a>&amp; sizes);
+<a name="l00159"></a>00159        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#af3dbbe63b0c2c99b4aea461ca79b1d29">DeepCopy</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_array.html#abdcab1871532ba4f912a22efb0afb55a">Elements</a>&amp; elements, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">SizesType</a>&amp; sizes);
 <a name="l00160"></a>00160 
 <a name="l00161"></a>00161 <span class="keyword">private</span>:
 <a name="l00162"></a>00162        <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">SizesType</a> m_sizes;
 <a name="l00163"></a>00163 
-<a name="l00164"></a>00164        <a class="code" href="classistd_1_1_t_array.html#ae3ed6a04a6cb64172b3d8170923073d5">Elements</a> m_elements;
+<a name="l00164"></a>00164        <a class="code" href="classistd_1_1_t_array.html#abdcab1871532ba4f912a22efb0afb55a">Elements</a> m_elements;
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166        <span class="keyword">static</span> Iterator s_endIterator;
 <a name="l00167"></a>00167 };
@@ -335,7 +335,7 @@
 <a name="l00370"></a>00370 
 <a name="l00371"></a>00371 
 <a name="l00372"></a>00372 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00373"></a><a class="code" href="classistd_1_1_t_array.html#af3dbbe63b0c2c99b4aea461ca79b1d29">00373</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#af3dbbe63b0c2c99b4aea461ca79b1d29">TArray&lt;Element, Dimensions&gt;::DeepCopy</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_array.html#ae3ed6a04a6cb64172b3d8170923073d5">Elements</a>&amp; elements, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">SizesType</a>&amp; sizes)
+<a name="l00373"></a><a class="code" href="classistd_1_1_t_array.html#af3dbbe63b0c2c99b4aea461ca79b1d29">00373</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#af3dbbe63b0c2c99b4aea461ca79b1d29">TArray&lt;Element, Dimensions&gt;::DeepCopy</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_array.html#abdcab1871532ba4f912a22efb0afb55a">Elements</a>&amp; elements, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">SizesType</a>&amp; sizes)
 <a name="l00374"></a>00374 {
 <a name="l00375"></a>00375        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<span class="keywordtype">int</span>(elements.size()) == sizes[0] * sizes[1]);
 <a name="l00376"></a>00376 

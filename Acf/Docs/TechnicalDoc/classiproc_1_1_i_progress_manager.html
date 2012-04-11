@@ -57,8 +57,8 @@ Inheritance diagram for iproc::IProgressManager:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_progress_manager.html#a9dc83742bf9e811e9a32e006c16cf491">BeginProgressSession</a> (const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin progress report session.  <a href="#a9dc83742bf9e811e9a32e006c16cf491"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_progress_manager.html#a69a96edef7ceaa8508b4159c00d0c614">BeginProgressSession</a> (const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable=false)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin progress report session.  <a href="#a69a96edef7ceaa8508b4159c00d0c614"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_progress_manager.html#a3201e2e0260e32a42874b8cc042e383e">EndProgressSession</a> (int sessionId)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close progress report session.  <a href="#a3201e2e0260e32a42874b8cc042e383e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_progress_manager.html#a6e720c0999d4e150595b10f9d876b175">OnProgress</a> (int sessionId, double currentProgress)=0</td></tr>
@@ -69,16 +69,16 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Consume information about progress of some process. </p>
 
-<p>Definition at line <a class="el" href="_i_progress_manager_8h_source.html#l00019">19</a> of file <a class="el" href="_i_progress_manager_8h_source.html">IProgressManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_progress_manager_8h_source.html#l00020">20</a> of file <a class="el" href="_i_progress_manager_8h_source.html">IProgressManager.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a9dc83742bf9e811e9a32e006c16cf491"></a><!-- doxytag: member="iproc::IProgressManager::BeginProgressSession" ref="a9dc83742bf9e811e9a32e006c16cf491" args="(const std::string &amp;progressId, const QString &amp;description, bool isCancelable=false)=0" -->
+<a class="anchor" id="a69a96edef7ceaa8508b4159c00d0c614"></a><!-- doxytag: member="iproc::IProgressManager::BeginProgressSession" ref="a69a96edef7ceaa8508b4159c00d0c614" args="(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable=false)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iproc::IProgressManager::BeginProgressSession </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>progressId</em>, </td>
         </tr>
         <tr>
@@ -105,7 +105,7 @@ Public Member Functions</h2></td></tr>
 <p>Begin progress report session. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>session ID or negative value if failed. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a084a06474f73d78a52e5ea7683b00fa6">iproc::CDelegatedProgressManager</a>, and <a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#aa60aab2e4d0083f4f76a027cc109c50c">iqtproc::CProgressManagerGuiComp</a>.</p>
+<p>Implemented in <a class="el" href="classiproc_1_1_c_delegated_progress_manager.html#a3af41e165d64686bdc5b8b220a48cbbf">iproc::CDelegatedProgressManager</a>, and <a class="el" href="classiqtproc_1_1_c_progress_manager_gui_comp.html#ab0aab4ea08ed73facdae4da93cf1ba44">iqtproc::CProgressManagerGuiComp</a>.</p>
 
 </div>
 </div>

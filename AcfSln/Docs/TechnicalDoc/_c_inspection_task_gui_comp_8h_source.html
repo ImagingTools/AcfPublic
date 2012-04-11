@@ -28,9 +28,9 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtinsp_CInspectionTaskGuiComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;set&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QSet&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &lt;QtCore/QString&gt;</span>
@@ -140,7 +140,7 @@
 <a name="l00114"></a>00114        <span class="keyword">typedef</span> QMap&lt;int, int&gt; GuiMap;
 <a name="l00115"></a>00115        GuiMap m_tabToStackIndexMap;       <span class="comment">// map GUI index (for editors) to stack index (for preview GUI)</span>
 <a name="l00116"></a>00116        GuiMap m_stackIndexToTabMap;       <span class="comment">// map stack index (for preview GUI) to GUI index (for editors)</span>
-<a name="l00117"></a>00117        <span class="keyword">typedef</span> std::set&lt;imod::IModelEditor*&gt; EditorsList;
+<a name="l00117"></a>00117        <span class="keyword">typedef</span> QSet&lt;imod::IModelEditor*&gt; EditorsList;
 <a name="l00118"></a>00118        EditorsList m_editorsList;
 <a name="l00119"></a>00119 };
 <a name="l00120"></a>00120 

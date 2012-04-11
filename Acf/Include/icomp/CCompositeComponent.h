@@ -24,10 +24,11 @@
 #define icomp_CCompositeComponent_included
 
 
-// STL includes
+// Qt includes
+#include <QtCore/QByteArray>
 #include <QtCore/QMap>
-#include <string>
 
+// ACF includes
 #include "istd/CClassInfo.h"
 
 #include "icomp/ICompositeComponent.h"
@@ -52,7 +53,7 @@ public:
 	virtual ~CCompositeComponent();
 
 	template <class InterfaceType>
-	InterfaceType* GetComponentInterface(const std::string& subId = "");
+	InterfaceType* GetComponentInterface(const QByteArray& subId = "");
 
 	/**
 		Begin of blocking of automatic component initialization.
@@ -64,14 +65,14 @@ public:
 	bool EndAutoInitBlock();
 
 	// reimplemented (icomp::ICompositeComponent)
-	virtual IComponent* GetSubcomponent(const std::string& componentId) const;
-	virtual const IComponentContext* GetSubcomponentContext(const std::string& componentId) const;
-	virtual IComponent* CreateSubcomponent(const std::string& componentId) const;
+	virtual IComponent* GetSubcomponent(const QByteArray& componentId) const;
+	virtual const IComponentContext* GetSubcomponentContext(const QByteArray& componentId) const;
+	virtual IComponent* CreateSubcomponent(const QByteArray& componentId) const;
 	virtual void OnSubcomponentDeleted(const IComponent* subcomponentPtr);
 
 	// reimplemented (icomp::IComponent)
 	virtual const ICompositeComponent* GetParentComponent(bool ownerOnly = false) const;
-	virtual void* GetInterface(const istd::CClassInfo& interfaceType, const std::string& subId = "");
+	virtual void* GetInterface(const istd::CClassInfo& interfaceType, const QByteArray& subId = "");
 	virtual const IComponentContext* GetComponentContext() const;
 	virtual void SetComponentContext(
 				const icomp::IComponentContext* contextPtr,
@@ -91,7 +92,7 @@ protected:
 		\return					true if success.
 	*/
 	bool CreateSubcomponentInfo(
-				const std::string& componentId,
+				const QByteArray& componentId,
 				ContextPtr& subContextPtr,
 				ComponentPtr* subComponentPtr,
 				bool isOwned) const;
@@ -122,7 +123,7 @@ private:
 		bool isContextInitialized;
 	};
 
-	typedef QMap< std::string, ComponentInfo > ComponentMap;
+	typedef QMap< QByteArray, ComponentInfo > ComponentMap;
 
 	mutable ComponentMap m_componentMap;
 
@@ -138,7 +139,7 @@ private:
 // inline methods
 
 template <class InterfaceType>
-inline InterfaceType* CCompositeComponent::GetComponentInterface(const std::string& subId)
+inline InterfaceType* CCompositeComponent::GetComponentInterface(const QByteArray& subId)
 {
 	static istd::CClassInfo info(typeid(InterfaceType));
 

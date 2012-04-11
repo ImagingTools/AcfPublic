@@ -29,8 +29,8 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtprm_CComposedParamsSetGuiComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;set&gt;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QSet&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtCore/QString&gt;</span>
@@ -115,7 +115,7 @@
 <a name="l00088"></a>00088        I_ATTR(<span class="keywordtype">bool</span>, m_showAllShapesAttrPtr);
 <a name="l00089"></a>00089        I_ATTR(<span class="keywordtype">int</span>, m_designTypeAttrPtr);
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091        <span class="keyword">typedef</span> std::set&lt;imod::IModelEditor*&gt; ConnectedEditors;
+<a name="l00091"></a>00091        <span class="keyword">typedef</span> QSet&lt;imod::IModelEditor*&gt; ConnectedEditors;
 <a name="l00092"></a>00092        ConnectedEditors m_connectedEditors;
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094        <span class="keywordtype">int</span> m_currentGuiIndex;

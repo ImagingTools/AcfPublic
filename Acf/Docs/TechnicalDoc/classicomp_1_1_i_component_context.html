@@ -67,8 +67,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get component static info associated with this context.  <a href="#a2d500d118ea9b12d802dea24f021b7a8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_context.html#a682893e732fbc972bb51a1a45455aafe">GetParentContext</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to parent component context.  <a href="#a682893e732fbc972bb51a1a45455aafe"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_context.html#ad8a89438c056a623d96d6037301b729e">GetAttribute</a> (const std::string &amp;attributeId, int *definitionLevelPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get attribute using its ID.  <a href="#ad8a89438c056a623d96d6037301b729e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_context.html#a64139316ee985bfb1882e23b09ed8af0">GetAttribute</a> (const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get attribute using its ID.  <a href="#a64139316ee985bfb1882e23b09ed8af0"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide session context of component. </p>
@@ -76,14 +76,14 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_component_context_8h_source.html#l00033">33</a> of file <a class="el" href="_i_component_context_8h_source.html">IComponentContext.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad8a89438c056a623d96d6037301b729e"></a><!-- doxytag: member="icomp::IComponentContext::GetAttribute" ref="ad8a89438c056a623d96d6037301b729e" args="(const std::string &amp;attributeId, int *definitionLevelPtr=NULL) const =0" -->
+<a class="anchor" id="a64139316ee985bfb1882e23b09ed8af0"></a><!-- doxytag: member="icomp::IComponentContext::GetAttribute" ref="a64139316ee985bfb1882e23b09ed8af0" args="(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a>* icomp::IComponentContext::GetAttribute </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
         </tr>
         <tr>
@@ -110,7 +110,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a2af61a56bab2e905fb8908c9f7e0cd48">icomp::CSimComponentContextBase</a>, and <a class="el" href="classicomp_1_1_c_component_context.html#a33ca64f2364db3674fe83f7c303bbed7">icomp::CComponentContext</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_sim_component_context_base.html#a2dcb50d9dbdb80d3c127aed93c6fbe89">icomp::CSimComponentContextBase</a>, and <a class="el" href="classicomp_1_1_c_component_context.html#af4bfeff376a73676c94bb238810800d7">icomp::CComponentContext</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_multi_attribute_member_8h_source.html#l00061">icomp::TMultiAttributeMember&lt; Attribute &gt;::Init()</a>, and <a class="el" href="_t_attribute_member_8h_source.html#l00076">icomp::TAttributeMember&lt; Attribute &gt;::Init()</a>.</p>
 

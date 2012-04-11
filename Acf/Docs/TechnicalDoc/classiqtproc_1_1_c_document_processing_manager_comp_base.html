@@ -83,8 +83,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#a33d98e4fcbc2f0a1bcde4071bbfa1041"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#af2a80304d31b65cdcc6bf2de0a4db20f">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a51d09590da36a6e9ab9f0acda10a5608">OnComponentDestroyed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ad153c1bfe80cd1c712353efe3f1271f8">DoDocumentProcessing</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *inputDocumentPtr, const std::string &amp;documentTypeId)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the current document.  <a href="#ad153c1bfe80cd1c712353efe3f1271f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#ac31f9b9ef6b745055c731d6753734c91">DoDocumentProcessing</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *inputDocumentPtr, const QByteArray &amp;documentTypeId)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the current document.  <a href="#ac31f9b9ef6b745055c731d6753734c91"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a2aa39ee74f25fd2b57e8e7703dc97943">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
@@ -135,7 +135,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad153c1bfe80cd1c712353efe3f1271f8"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::DoDocumentProcessing" ref="ad153c1bfe80cd1c712353efe3f1271f8" args="(const istd::IChangeable *inputDocumentPtr, const std::string &amp;documentTypeId)=0" -->
+<a class="anchor" id="ac31f9b9ef6b745055c731d6753734c91"></a><!-- doxytag: member="iqtproc::CDocumentProcessingManagerCompBase::DoDocumentProcessing" ref="ac31f9b9ef6b745055c731d6753734c91" args="(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -148,7 +148,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em>&#160;</td>
         </tr>
         <tr>
@@ -162,7 +162,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Process the current document. </p>
 
-<p>Implemented in <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp.html#afb35da4c479edec2f299240fe86ccd94">iqtproc::CDocumentProcessingManagerComp</a>, and <a class="el" href="classiqtproc_1_1_c_document_processing_command_comp.html#aa3809e965912e40cb7be7fffb84444b3">iqtproc::CDocumentProcessingCommandComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp.html#aaa5bdab3b2034a1e2c683b9f8b8eca46">iqtproc::CDocumentProcessingManagerComp</a>, and <a class="el" href="classiqtproc_1_1_c_document_processing_command_comp.html#add043490ed8155ea47f48524097ae70f">iqtproc::CDocumentProcessingCommandComp</a>.</p>
 
 </div>
 </div>

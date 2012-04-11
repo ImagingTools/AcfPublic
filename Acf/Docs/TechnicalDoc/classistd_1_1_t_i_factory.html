@@ -64,8 +64,8 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef Interface&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_factory.html#a4a533e49b6efed0c5a2cc5fa02729bcd">InterfaceType</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_factory.html#a400950fe4afc558f397d73c0dbdee4e1">CreateInstance</a> (const std::string &amp;keyId=&quot;&quot;) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#a400950fe4afc558f397d73c0dbdee4e1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_factory.html#aea6a16de1033bdec7265e27d1ec4f91e">CreateInstance</a> (const QByteArray &amp;keyId=&quot;&quot;) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of the object, mapped to the keyId <code>keyId</code>.  <a href="#aea6a16de1033bdec7265e27d1ec4f91e"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Interface&gt;<br/>
@@ -95,7 +95,7 @@ template&lt;class Interface&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a400950fe4afc558f397d73c0dbdee4e1"></a><!-- doxytag: member="istd::TIFactory::CreateInstance" ref="a400950fe4afc558f397d73c0dbdee4e1" args="(const std::string &amp;keyId=&quot;&quot;) const =0" -->
+<a class="anchor" id="aea6a16de1033bdec7265e27d1ec4f91e"></a><!-- doxytag: member="istd::TIFactory::CreateInstance" ref="aea6a16de1033bdec7265e27d1ec4f91e" args="(const QByteArray &amp;keyId=&quot;&quot;) const =0" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -104,7 +104,7 @@ template&lt;class Interface&gt; </div>
         <tr>
           <td class="memname">virtual Interface* <a class="el" href="classistd_1_1_t_i_factory.html">istd::TIFactory</a>&lt; Interface &gt;::CreateInstance </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>keyId</em> = <code>&quot;&quot;</code></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -121,7 +121,7 @@ template&lt;class Interface&gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to created object or NULL if it was not possible to create it or keyId does not exist. </dd></dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_t_factory_member.html#ae6fa3aa559628c5fc08692ad6ba09970">icomp::TFactoryMember&lt; Interface &gt;</a>, <a class="el" href="classistd_1_1_t_composed_factory.html#af703d765a2e594de6d1d387f78675b78">istd::TComposedFactory&lt; InterfaceType &gt;</a>, <a class="el" href="classistd_1_1_t_composed_factory.html#af703d765a2e594de6d1d387f78675b78">istd::TComposedFactory&lt; Interface &gt;</a>, <a class="el" href="classicomp_1_1_t_sim_components_factory.html#a7c63abe108df4bd06bd2b55f2cf21bd6">icomp::TSimComponentsFactory&lt; Base &gt;</a>, and <a class="el" href="classistd_1_1_t_single_factory.html#aaa571980090ad676cc1d3537d413a446">istd::TSingleFactory&lt; Interface, Implementation &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_t_factory_member.html#ad53dda6ed5f363ca9f7e0d23c0e22f48">icomp::TFactoryMember&lt; Interface &gt;</a>, <a class="el" href="classistd_1_1_t_composed_factory.html#a45f6ecf9f96a23eb589b65bab07f33da">istd::TComposedFactory&lt; InterfaceType &gt;</a>, <a class="el" href="classistd_1_1_t_composed_factory.html#a45f6ecf9f96a23eb589b65bab07f33da">istd::TComposedFactory&lt; Interface &gt;</a>, <a class="el" href="classicomp_1_1_t_sim_components_factory.html#ada15c91942cdd712c48b0b524be8fb1c">icomp::TSimComponentsFactory&lt; Base &gt;</a>, and <a class="el" href="classistd_1_1_t_single_factory.html#a1a12446248db3c999c4f53c1b4e2083c">istd::TSingleFactory&lt; Interface, Implementation &gt;</a>.</p>
 
 </div>
 </div>

@@ -79,12 +79,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#a457a12ebb3ff0113d92e02f9311d856c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a3f50417a9ddd697534cd0419ed062fe4">GetOptionDescription</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description for a option with the index <code>index</code>.  <a href="#a3f50417a9ddd697534cd0419ed062fe4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a874f8498e372b68542c0e2f407936685">GetOptionId</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#a874f8498e372b68542c0e2f407936685"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#af7bb147231b51043030bd37efac88964">GetOptionId</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#af7bb147231b51043030bd37efac88964"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a0d6f3e60aebc039a47e3caa8ef4a39f4">RemoveOption</a> (int index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an option at the given index.  <a href="#a0d6f3e60aebc039a47e3caa8ef4a39f4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a22a82253c6a36f09a6f344205e77bb0c">InsertOption</a> (QString &amp;optionName, const std::string &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an option with the at the given option name and ID.  <a href="#a22a82253c6a36f09a6f344205e77bb0c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a761ed39e3af95733402e096cc57cbbc7">InsertOption</a> (QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an option with the at the given option name and ID.  <a href="#a761ed39e3af95733402e096cc57cbbc7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager_comp.html#a7db7074ab688ee4dc76c1a6b6919dabd">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a7db7074ab688ee4dc76c1a6b6919dabd"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -154,12 +154,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a874f8498e372b68542c0e2f407936685"></a><!-- doxytag: member="iprm::COptionsManagerComp::GetOptionId" ref="a874f8498e372b68542c0e2f407936685" args="(int index) const " -->
+<a class="anchor" id="af7bb147231b51043030bd37efac88964"></a><!-- doxytag: member="iprm::COptionsManagerComp::GetOptionId" ref="af7bb147231b51043030bd37efac88964" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string iprm::COptionsManagerComp::GetOptionId </td>
+          <td class="memname">virtual QByteArray iprm::COptionsManagerComp::GetOptionId </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -173,7 +173,7 @@ Protected Member Functions</h2></td></tr>
 <p>The option ID must be unique, if flag SCF_SUPPORT_UNIQUE_ID is set. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1b" title="Flags for control constraints behavior.">SelectionConstraintsFlags</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a2d9228f4e01880b48336deafeaa6393a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -218,7 +218,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a22a82253c6a36f09a6f344205e77bb0c"></a><!-- doxytag: member="iprm::COptionsManagerComp::InsertOption" ref="a22a82253c6a36f09a6f344205e77bb0c" args="(QString &amp;optionName, const std::string &amp;optionId, const QString &amp;optionDescription=QString(), int index=&#45;1)" -->
+<a class="anchor" id="a761ed39e3af95733402e096cc57cbbc7"></a><!-- doxytag: member="iprm::COptionsManagerComp::InsertOption" ref="a761ed39e3af95733402e096cc57cbbc7" args="(QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -231,7 +231,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>optionId</em>, </td>
         </tr>
         <tr>
@@ -257,7 +257,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Insert an option with the at the given option name and ID. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a4fda59f5bcb250e24232a0016a81ef28">iprm::IOptionsManager</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#ac86b1bb9a30fc6474e82322d4b52ade4">iprm::IOptionsManager</a>.</p>
 
 </div>
 </div>

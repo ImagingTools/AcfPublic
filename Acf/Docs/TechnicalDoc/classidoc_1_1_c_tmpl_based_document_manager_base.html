@@ -69,18 +69,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a04a8dc0bb71bbcd62eda7871a6b2ade8">CTmplBasedDocumentManagerBase</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#af413284ebba9b4cabc42aea35c962371">GetAllowedOperationFlags</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of allowed operations.  <a href="#af413284ebba9b4cabc42aea35c962371"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a8dc6514abbb1c605cc79ab2c6c6bad86">IsFeatureSupported</a> (int featureFlags, const std::string &amp;documentTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the feature(s) is supported by this document template.  <a href="#a8dc6514abbb1c605cc79ab2c6c6bad86"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a082e64c2e0932a5455ea3c568c907709">GetDocumentTypeIds</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a71075057c8c586240b4b568edbff2fce">IsFeatureSupported</a> (int featureFlags, const QByteArray &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code>, if the feature(s) is supported by this document template.  <a href="#a71075057c8c586240b4b568edbff2fce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a082e64c2e0932a5455ea3c568c907709">GetDocumentTypeIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a082e64c2e0932a5455ea3c568c907709"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a02d91805662b780dcdc8339973c3928b">GetDocumentTypeName</a> (const std::string &amp;documentTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some document type ID.  <a href="#a02d91805662b780dcdc8339973c3928b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a02f779b49e130531a212defa1542ea4f">GetDocumentFileTypeInfo</a> (const std::string &amp;documentTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file type information object for some selected document type.  <a href="#a02f779b49e130531a212defa1542ea4f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a0a4a8a7c6ddc1a90855c250be0fad73f">GetDocumentTypeIdsForFile</a> (const QString &amp;filePath) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#acf218584bffc04b5c93346208d1da05c">GetDocumentTypeName</a> (const QByteArray &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some document type ID.  <a href="#acf218584bffc04b5c93346208d1da05c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#ae4db74119c01ac88d231f44a3a385788">GetDocumentFileTypeInfo</a> (const QByteArray &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file type information object for some selected document type.  <a href="#ae4db74119c01ac88d231f44a3a385788"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a0a4a8a7c6ddc1a90855c250be0fad73f">GetDocumentTypeIdsForFile</a> (const QString &amp;filePath) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a0a4a8a7c6ddc1a90855c250be0fad73f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a02273094745694fbfcf8ba512dd1f344">GetDefaultDirectory</a> (const QString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default directory for specified document type.  <a href="#a02273094745694fbfcf8ba512dd1f344"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#ad0a93693455eef75dcd2eeb49a7eade9">GetDefaultDirectory</a> (const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default directory for specified document type.  <a href="#ad0a93693455eef75dcd2eeb49a7eade9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
@@ -131,7 +131,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a02273094745694fbfcf8ba512dd1f344"></a><!-- doxytag: member="idoc::CTmplBasedDocumentManagerBase::GetDefaultDirectory" ref="a02273094745694fbfcf8ba512dd1f344" args="(const QString &amp;sugestedDir=&quot;&quot;, const std::string *documentTypeIdPtr=NULL) const " -->
+<a class="anchor" id="ad0a93693455eef75dcd2eeb49a7eade9"></a><!-- doxytag: member="idoc::CTmplBasedDocumentManagerBase::GetDefaultDirectory" ref="ad0a93693455eef75dcd2eeb49a7eade9" args="(const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -144,7 +144,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>documentTypeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -165,18 +165,18 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a8634a4fcd5c54b13baf57899cd7a13e7">idoc::IDocumentTypesInfo</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a255f03be37a16f5f69310b250f43234b">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a02f779b49e130531a212defa1542ea4f"></a><!-- doxytag: member="idoc::CTmplBasedDocumentManagerBase::GetDocumentFileTypeInfo" ref="a02f779b49e130531a212defa1542ea4f" args="(const std::string &amp;documentTypeId) const " -->
+<a class="anchor" id="ae4db74119c01ac88d231f44a3a385788"></a><!-- doxytag: member="idoc::CTmplBasedDocumentManagerBase::GetDocumentFileTypeInfo" ref="ae4db74119c01ac88d231f44a3a385788" args="(const QByteArray &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a>* idoc::CTmplBasedDocumentManagerBase::GetDocumentFileTypeInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -192,7 +192,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a4e7f972d10d706a5efe11b184601d0d2">idoc::IDocumentTypesInfo</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#ac41e8a8af9fef09682eb4c9d75ed7d74">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>
@@ -217,7 +217,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a> idoc::CTmplBasedDocumentManagerBase::GetDocumentTypeIds </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a> idoc::CTmplBasedDocumentManagerBase::GetDocumentTypeIds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -237,7 +237,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#a6860664a39d08fc7f4c061a65754303b">Ids</a> idoc::CTmplBasedDocumentManagerBase::GetDocumentTypeIdsForFile </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a> idoc::CTmplBasedDocumentManagerBase::GetDocumentTypeIdsForFile </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em></td><td>)</td>
@@ -253,14 +253,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a02d91805662b780dcdc8339973c3928b"></a><!-- doxytag: member="idoc::CTmplBasedDocumentManagerBase::GetDocumentTypeName" ref="a02d91805662b780dcdc8339973c3928b" args="(const std::string &amp;documentTypeId) const " -->
+<a class="anchor" id="acf218584bffc04b5c93346208d1da05c"></a><!-- doxytag: member="idoc::CTmplBasedDocumentManagerBase::GetDocumentTypeName" ref="acf218584bffc04b5c93346208d1da05c" args="(const QByteArray &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QString idoc::CTmplBasedDocumentManagerBase::GetDocumentTypeName </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -276,11 +276,11 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a75e446de24ac14da9104436130fac5b2">idoc::IDocumentTypesInfo</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a9a0476c469498d8456573a730a3a7d7e">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8dc6514abbb1c605cc79ab2c6c6bad86"></a><!-- doxytag: member="idoc::CTmplBasedDocumentManagerBase::IsFeatureSupported" ref="a8dc6514abbb1c605cc79ab2c6c6bad86" args="(int featureFlags, const std::string &amp;documentTypeId) const " -->
+<a class="anchor" id="a71075057c8c586240b4b568edbff2fce"></a><!-- doxytag: member="idoc::CTmplBasedDocumentManagerBase::IsFeatureSupported" ref="a71075057c8c586240b4b568edbff2fce" args="(int featureFlags, const QByteArray &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -293,7 +293,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em>&#160;</td>
         </tr>
         <tr>
@@ -307,7 +307,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return <code>true</code>, if the feature(s) is supported by this document template. </p>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#acb66d5689b7476281d062b66568a063a">idoc::IDocumentTypesInfo</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#aa877c8b903c95a2d94138df7674adeeb">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>

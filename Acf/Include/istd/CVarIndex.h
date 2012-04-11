@@ -24,8 +24,8 @@
 #define istd_CVarIndex_included
 
 
-// STL includes
-#include <vector>
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "istd/TIndex.h"
@@ -42,7 +42,7 @@ class CVarIndex
 {
 public:
 	typedef int IndexType;
-	typedef std::vector<int>::iterator Iterator;
+	typedef QVector<int>::iterator Iterator;
 
 	/**
 		Default constructor without member initialization.
@@ -201,7 +201,7 @@ public:
 	CVarIndex& operator-=(const CVarIndex& index);
 
 private:
-	std::vector<int> m_elements;
+	QVector<int> m_elements;
 };
 
 
@@ -221,7 +221,7 @@ inline int CVarIndex::GetDimensionsCount() const
 
 inline bool CVarIndex::SetDimensionsCount(int count)
 {
-	m_elements.resize(count, 0);
+	m_elements.resize(count);
 
 	return true;
 }
@@ -325,25 +325,69 @@ inline int& CVarIndex::operator[](int index)
 
 inline bool CVarIndex::operator<(const CVarIndex& index) const
 {
-	return m_elements < index.m_elements;
+	int count = m_elements.size();
+	int indexCount = index.m_elements.size();
+	int commonSize = qMin(count, indexCount);
+	for (int i = 0; i < commonSize; ++i){
+		int element = m_elements[i];
+		int indexElement = index.m_elements[i];
+		if (element != indexElement){
+			return element < indexElement;
+		}
+	}
+
+	return count < indexCount;
 }
 
 
 inline bool CVarIndex::operator>(const CVarIndex& index) const
 {
-	return m_elements > index.m_elements;
+	int count = m_elements.size();
+	int indexCount = index.m_elements.size();
+	int commonSize = qMin(count, indexCount);
+	for (int i = 0; i < commonSize; ++i){
+		int element = m_elements[i];
+		int indexElement = index.m_elements[i];
+		if (element != indexElement){
+			return element > indexElement;
+		}
+	}
+
+	return count > indexCount;
 }
 
 
 inline bool CVarIndex::operator<=(const CVarIndex& index) const
 {
-	return m_elements <= index.m_elements;
+	int count = m_elements.size();
+	int indexCount = index.m_elements.size();
+	int commonSize = qMin(count, indexCount);
+	for (int i = 0; i < commonSize; ++i){
+		int element = m_elements[i];
+		int indexElement = index.m_elements[i];
+		if (element != indexElement){
+			return element < indexElement;
+		}
+	}
+
+	return count <= indexCount;
 }
 
 
 inline bool CVarIndex::operator>=(const CVarIndex& index) const
 {
-	return m_elements >= index.m_elements;
+	int count = m_elements.size();
+	int indexCount = index.m_elements.size();
+	int commonSize = qMin(count, indexCount);
+	for (int i = 0; i < commonSize; ++i){
+		int element = m_elements[i];
+		int indexElement = index.m_elements[i];
+		if (element != indexElement){
+			return element > indexElement;
+		}
+	}
+
+	return count >= indexCount;
 }
 
 

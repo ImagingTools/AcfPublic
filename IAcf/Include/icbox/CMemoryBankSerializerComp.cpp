@@ -23,9 +23,6 @@
 #include "icbox/CMemoryBankSerializerComp.h"
 
 
-// STL includes
-#include <cstring>
-
 // Windows API
 #include <windows.h>
 
@@ -102,7 +99,7 @@ int CMemoryBankSerializerComp::LoadFromFile(istd::IChangeable& data, const QStri
 			return StateFailed;
 		}
 
-		std::vector<quint8> buffer(blockSize, 0);
+		QVector<quint8> buffer(blockSize, 0);
 		if (ReadFromMem(sizeof(blockSize), &buffer[0], blockSize) || (blockSize > 0xffff)){
 			iser::CMemoryReadArchive archive(&buffer, blockSize);
 
@@ -201,8 +198,8 @@ bool CMemoryBankSerializerComp::EnsurePartitionOpened() const
 
 	if (*m_memoryBankIdAttrPtr != 3){
 		quint8 password[16] = {0};
-		const std::string& passwordStr = (*m_accessKeyAttrPtr).toStdString();
-		std::memcpy(password, passwordStr.data(), qMin(sizeof(password), passwordStr.size()));
+		const QByteArray& passwordStr = (*m_accessKeyAttrPtr).toLocal8Bit();
+		std::memcpy(password, passwordStr.data(), qMin(int(sizeof(password)), passwordStr.size()));
 
 		if (CheckError((*m_isAdminKeyAttrPtr)? ::CBIOS_APWLogin(password): ::CBIOS_UPWLogin(password))){
 			return false;
@@ -240,8 +237,8 @@ bool CMemoryBankSerializerComp::ReadFromMem(int offset, void* bufferPtr, int siz
 		return !CheckError(::CBIOS_ReadRAM3(offset, size, bufferPtr, password));
 	}
 	else{
-		const std::string& passwordStr = (*m_accessKeyAttrPtr).toStdString();
-		std::memcpy(password, passwordStr.data(), qMin(sizeof(password), passwordStr.size()));
+		const QByteArray& passwordStr = (*m_accessKeyAttrPtr).toLocal8Bit();
+		std::memcpy(password, passwordStr.data(), qMin(int(sizeof(password)), passwordStr.size()));
 
 		if (*m_memoryBankIdAttrPtr == 1){
 			return !CheckError(::CBIOS_ReadRAM1(offset, size, bufferPtr, password));
@@ -262,8 +259,8 @@ bool CMemoryBankSerializerComp::WriteToMem(int offset, const void* bufferPtr, in
 		return !CheckError(::CBIOS_WriteRAM3(offset, size, (PVOID)bufferPtr, password));
 	}
 	else{
-		const std::string& passwordStr = (*m_accessKeyAttrPtr).toStdString();
-		std::memcpy(password, passwordStr.data(), qMin(sizeof(password), passwordStr.size()));
+		const QByteArray& passwordStr = (*m_accessKeyAttrPtr).toLocal8Bit();
+		std::memcpy(password, passwordStr.data(), qMin(int(sizeof(password)), passwordStr.size()));
 
 		if (*m_memoryBankIdAttrPtr == 1){
 			return !CheckError(::CBIOS_WriteRAM1(offset, size, (PVOID)bufferPtr, password));

@@ -23,8 +23,8 @@
 #include "iipr/CConvolutionProcessorComp.h"
 
 
-// STL includes
-#include <vector>
+// Qt includes
+#include <QtCore/QVector>
 
 
 namespace iipr
@@ -50,7 +50,7 @@ template <	typename PixelType,
 bool DoConvolution(
 			const iimg::IBitmap& inputImage,
 			const istd::CIndex2d& kernelSize,
-			std::vector<KernelElement> fastAccessElements,
+			QVector<KernelElement> fastAccessElements,
 			iimg::IBitmap& outputImage)
 {
 	I_ASSERT(kernelSize.GetX() > 0);
@@ -157,7 +157,7 @@ bool CConvolutionProcessorComp::ParamProcessImage(
 	istd::CIndex2d index;
 	for (index[1] = 0; index[1] < kernelSize[1]; ++index[1]){
 		for (index[0] = 0; index[0] < kernelSize[0]; ++index[0]){
-			double absValue = std::fabs(paramsPtr->GetKernelElement(index));
+			double absValue = qAbs(paramsPtr->GetKernelElement(index));
 			if (absValue > maxKernelAbsValue){
 				maxKernelAbsValue = absValue;
 			}
@@ -186,7 +186,7 @@ bool CConvolutionProcessorComp::ParamProcessImage(
 		return false;
 	}
 
-	std::vector<KernelElement> fastAccessElements;
+	QVector<KernelElement> fastAccessElements;
 
 	for (index[1] = 0; index[1] < kernelSize[1]; ++index[1]){
 		for (index[0] = 0; index[0] < kernelSize[0]; ++index[0]){

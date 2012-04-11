@@ -24,12 +24,9 @@
 #define icmpstr_IElementSelectionInfo_included
 
 
-// STL includes
-#include <set>
-
 // Qt includes
+#include <QtCore/QSet>
 #include <QtGui/QIcon>
-
 
 // ACF includes
 #include "istd/IChangeable.h"
@@ -57,7 +54,7 @@ public:
 		CF_SELECTION = 1 << 31
 	};
 
-	typedef QMap<std::string, const icomp::IRegistry::ElementInfo*> Elements;
+	typedef QMap<QByteArray, const icomp::IRegistry::ElementInfo*> Elements;
 
 	/**
 		Get registry containing selected element.

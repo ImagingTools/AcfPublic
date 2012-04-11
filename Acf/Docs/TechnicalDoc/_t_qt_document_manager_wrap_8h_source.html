@@ -56,13 +56,13 @@
 <a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#af5a2a46082ba3bf9e24b7fc67f117f42">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="comment">// pseudo-reimplemented (idoc::CSingleDocumentManagerBase)</span>
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a92ce6680824d350062e26a18072596fd">GetSaveFilePath</a>(<span class="keyword">const</span> std::string&amp; documentTypeId) <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#af75f33d5dabd8a3cfd63574c9d2b441b">GetSaveFilePath</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span>;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keyword">protected</span>:
-<a name="l00042"></a>00042        QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a97667173992d64a70098adfcabeb1c95" title="Creates the filter for the file selection dialog.">CreateFileDialogFilter</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keywordtype">int</span> flags = 0) <span class="keyword">const</span>;
+<a name="l00042"></a>00042        QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#aeabce0560cb6f0587d6785942c270868" title="Creates the filter for the file selection dialog.">CreateFileDialogFilter</a>(<span class="keyword">const</span> QByteArray* documentTypeIdPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keywordtype">int</span> flags = 0) <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a1c0fafc28f0fc600e622b10ada008a49">UpdateLastDirectory</a>(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> QStringList <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a41fdd5bf63f8f7ce2e6ac32607a96a5b">GetOpenFilePathesFromDialog</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr) <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> QStringList <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ace0fc087941a8d914cee714832b23cac">GetOpenFilePathesFromDialog</a>(<span class="keyword">const</span> QByteArray* documentTypeIdPtr) <span class="keyword">const</span>;
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="keyword">private</span>:
 <a name="l00048"></a>00048        <span class="keyword">mutable</span> QString m_lastDirectory;
@@ -96,7 +96,7 @@
 <a name="l00076"></a>00076 <span class="comment">// pseudo-reimplemented (idoc::CSingleDocumentManagerBase)</span>
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base, <span class="keyword">class</span> Gui&gt;
-<a name="l00079"></a><a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a92ce6680824d350062e26a18072596fd">00079</a> QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a92ce6680824d350062e26a18072596fd">TQtDocumentManagerWrap&lt;Base, Gui&gt;::GetSaveFilePath</a>(<span class="keyword">const</span> std::string&amp; documentTypeId)<span class="keyword"> const</span>
+<a name="l00079"></a><a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#af75f33d5dabd8a3cfd63574c9d2b441b">00079</a> QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#af75f33d5dabd8a3cfd63574c9d2b441b">TQtDocumentManagerWrap&lt;Base, Gui&gt;::GetSaveFilePath</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId)<span class="keyword"> const</span>
 <a name="l00080"></a>00080 <span class="keyword"></span>{
 <a name="l00081"></a>00081        QString filter = CreateFileDialogFilter(&amp;documentTypeId, <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb" title="Operations with specified file name should be considered.">iser::IFileLoader::QF_FILE</a> | <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81" title="No loading operation should be considered.">iser::IFileLoader::QF_SAVE</a>);
 <a name="l00082"></a>00082 
@@ -111,7 +111,7 @@
 <a name="l00091"></a>00091 <span class="comment">// protected methods</span>
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base, <span class="keyword">class</span> Gui&gt;
-<a name="l00094"></a><a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a97667173992d64a70098adfcabeb1c95">00094</a> QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a97667173992d64a70098adfcabeb1c95" title="Creates the filter for the file selection dialog.">TQtDocumentManagerWrap&lt;Base, Gui&gt;::CreateFileDialogFilter</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr, <span class="keywordtype">int</span> flags)<span class="keyword"> const</span>
+<a name="l00094"></a><a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#aeabce0560cb6f0587d6785942c270868">00094</a> QString <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#aeabce0560cb6f0587d6785942c270868" title="Creates the filter for the file selection dialog.">TQtDocumentManagerWrap&lt;Base, Gui&gt;::CreateFileDialogFilter</a>(<span class="keyword">const</span> QByteArray* documentTypeIdPtr, <span class="keywordtype">int</span> flags)<span class="keyword"> const</span>
 <a name="l00095"></a>00095 <span class="keyword"></span>{
 <a name="l00096"></a>00096        QString retVal;
 <a name="l00097"></a>00097 
@@ -154,7 +154,7 @@
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base, <span class="keyword">class</span> Gui&gt;
-<a name="l00137"></a><a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a41fdd5bf63f8f7ce2e6ac32607a96a5b">00137</a> QStringList <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a41fdd5bf63f8f7ce2e6ac32607a96a5b">TQtDocumentManagerWrap&lt;Base, Gui&gt;::GetOpenFilePathesFromDialog</a>(<span class="keyword">const</span> std::string* documentTypeIdPtr)<span class="keyword"> const</span>
+<a name="l00137"></a><a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ace0fc087941a8d914cee714832b23cac">00137</a> QStringList <a class="code" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ace0fc087941a8d914cee714832b23cac">TQtDocumentManagerWrap&lt;Base, Gui&gt;::GetOpenFilePathesFromDialog</a>(<span class="keyword">const</span> QByteArray* documentTypeIdPtr)<span class="keyword"> const</span>
 <a name="l00138"></a>00138 <span class="keyword"></span>{
 <a name="l00139"></a>00139        QString filter = CreateFileDialogFilter(documentTypeIdPtr, <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb" title="Operations with specified file name should be considered.">iser::IFileLoader::QF_FILE</a> | <a class="code" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df" title="No saving operation should be considered.">iser::IFileLoader::QF_LOAD</a>);
 <a name="l00140"></a>00140 

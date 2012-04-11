@@ -24,8 +24,9 @@
 #define istd_TCascadedMap_included
 
 
-// STL includes
-#include <vector>
+// Qt includes
+#include <QtCore/QPair>
+#include <QtCore/QVector>
 #include <QtCore/QMap>
 
 // ACF includes
@@ -142,8 +143,8 @@ private:
 	const TIMap<Key, Value>* m_parentPtr;
 
 	typedef QMap<KeyType, int> IndicesMap;
-	typedef std::pair<KeyType, ValueType> Pair;
-	typedef std::vector<Pair> PairList;
+	typedef QPair<KeyType, ValueType> Pair;
+	typedef QVector<Pair> PairList;
 
 	mutable IndicesMap m_positionsMap;
 	mutable PairList m_pairList;

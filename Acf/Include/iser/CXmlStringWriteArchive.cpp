@@ -33,6 +33,10 @@ CXmlStringWriteArchive::CXmlStringWriteArchive(
 			const CArchiveTag& rootTag)
 :	BaseClass(versionInfoPtr, rootTag)
 {
+	m_buffer.open(QIODevice::WriteOnly | QIODevice::Text);
+
+	m_stream.setDevice(&m_buffer);
+
 	SerializeXmlHeader();
 
 	if (serializeHeader){
@@ -41,14 +45,15 @@ CXmlStringWriteArchive::CXmlStringWriteArchive(
 }
 
 
-std::string CXmlStringWriteArchive::GetString() const
+CXmlStringWriteArchive::~CXmlStringWriteArchive()
 {
-	if (const_cast<CXmlStringWriteArchive*>(this)->Flush()){
-		return m_stream.str();
-	}
-	else{
-		return "";
-	}
+	m_stream.setDevice(NULL);
+}
+
+
+const QByteArray& CXmlStringWriteArchive::GetString() const
+{
+	return m_buffer.data();
 }
 
 

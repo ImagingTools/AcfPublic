@@ -58,9 +58,9 @@ public:
 	void InitComponent();
 
 	// reimplemented (icomp::ICompositeComponent)
-	virtual IComponent* GetSubcomponent(const std::string& componentId) const;
-	virtual const IComponentContext* GetSubcomponentContext(const std::string& componentId) const;
-	virtual IComponent* CreateSubcomponent(const std::string& componentId) const;
+	virtual IComponent* GetSubcomponent(const QByteArray& componentId) const;
+	virtual const IComponentContext* GetSubcomponentContext(const QByteArray& componentId) const;
+	virtual IComponent* CreateSubcomponent(const QByteArray& componentId) const;
 	virtual void OnSubcomponentDeleted(const IComponent* subcomponentPtr);
 
 	// reimplemented (icomp::IComponent)
@@ -88,7 +88,7 @@ void TSimComponentWrap<Base>::InitComponent()
 // reimplemented (icomp::ICompositeComponent)
 
 template <class Base>
-IComponent* TSimComponentWrap<Base>::GetSubcomponent(const std::string& componentId) const
+IComponent* TSimComponentWrap<Base>::GetSubcomponent(const QByteArray& componentId) const
 {
 	BaseClass2::ComponentsMap::const_iterator iter = BaseClass2::m_componentsMap.find(componentId);
 
@@ -101,14 +101,14 @@ IComponent* TSimComponentWrap<Base>::GetSubcomponent(const std::string& componen
 
 
 template <class Base>
-const IComponentContext* TSimComponentWrap<Base>::GetSubcomponentContext(const std::string& /*componentId*/) const
+const IComponentContext* TSimComponentWrap<Base>::GetSubcomponentContext(const QByteArray& /*componentId*/) const
 {
 	return NULL;
 }
 
 
 template <class Base>
-IComponent* TSimComponentWrap<Base>::CreateSubcomponent(const std::string& componentId) const
+IComponent* TSimComponentWrap<Base>::CreateSubcomponent(const QByteArray& componentId) const
 {
 	FactoriesMap::const_iterator iter = m_factoriesMap.find(componentId);
 	if (iter != m_factoriesMap.end()){

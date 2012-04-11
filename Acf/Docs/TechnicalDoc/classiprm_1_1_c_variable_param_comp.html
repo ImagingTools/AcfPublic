@@ -62,14 +62,14 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#aeeb53d42c3942e10b1c855402b66db14">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_variable_param.html#adf99f67a55a03d4df4054b752e957766">TypeIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#a00ade0c8085951bc95ebb52144f012de">GetKnownTypeIds</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_variable_param.html#a2dc438b59573ce7fd4b9a2d9e27d19b5">TypeIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#a00ade0c8085951bc95ebb52144f012de">GetKnownTypeIds</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get lilst of all known type ID's.  <a href="#a00ade0c8085951bc95ebb52144f012de"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#aa0138680104e75cea095bc1ad440875a">GetParameterTypeId</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type ID of current stored parameter.  <a href="#aa0138680104e75cea095bc1ad440875a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#aecd43d1c0dae2a2c09123ba536ba6483">GetParameterTypeId</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type ID of current stored parameter.  <a href="#aecd43d1c0dae2a2c09123ba536ba6483"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#a56f924f1b0c79976ae2506c7652e58c7">GetParameter</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current parameter.  <a href="#a56f924f1b0c79976ae2506c7652e58c7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#a56e411d74670c22b8405878b3f5465d0">AssignTypeId</a> (const std::string &amp;typeId)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign type ID to this object.  <a href="#a56e411d74670c22b8405878b3f5465d0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#afaae535e0f4b37c8354745e97808969f">AssignTypeId</a> (const QByteArray &amp;typeId)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign type ID to this object.  <a href="#afaae535e0f4b37c8354745e97808969f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#a65e305c0e6db58df7f85ade3b7785abf">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a65e305c0e6db58df7f85ade3b7785abf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_variable_param_comp.html#a309d31c093f16e2dbc6027b6b468918f">GetMinimalVersion</a> (int versionId) const </td></tr>
@@ -95,14 +95,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a56e411d74670c22b8405878b3f5465d0"></a><!-- doxytag: member="iprm::CVariableParamComp::AssignTypeId" ref="a56e411d74670c22b8405878b3f5465d0" args="(const std::string &amp;typeId)" -->
+<a class="anchor" id="afaae535e0f4b37c8354745e97808969f"></a><!-- doxytag: member="iprm::CVariableParamComp::AssignTypeId" ref="afaae535e0f4b37c8354745e97808969f" args="(const QByteArray &amp;typeId)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iprm::CVariableParamComp::AssignTypeId </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>typeId</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <p>Assign type ID to this object. </p>
 <p>Assigning of type ID creates internal instance of parameter object. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_variable_param.html#a09d03ec12c861f2d7c3ad8a1b28e38d0">iprm::IVariableParam</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_variable_param.html#afd80f4487a414d81cca0eb4c5b1772fe">iprm::IVariableParam</a>.</p>
 
 </div>
 </div>
@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_variable_param.html#adf99f67a55a03d4df4054b752e957766">TypeIds</a> iprm::CVariableParamComp::GetKnownTypeIds </td>
+          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_variable_param.html#a2dc438b59573ce7fd4b9a2d9e27d19b5">TypeIds</a> iprm::CVariableParamComp::GetKnownTypeIds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -180,12 +180,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa0138680104e75cea095bc1ad440875a"></a><!-- doxytag: member="iprm::CVariableParamComp::GetParameterTypeId" ref="aa0138680104e75cea095bc1ad440875a" args="() const " -->
+<a class="anchor" id="aecd43d1c0dae2a2c09123ba536ba6483"></a><!-- doxytag: member="iprm::CVariableParamComp::GetParameterTypeId" ref="aecd43d1c0dae2a2c09123ba536ba6483" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string iprm::CVariableParamComp::GetParameterTypeId </td>
+          <td class="memname">virtual QByteArray iprm::CVariableParamComp::GetParameterTypeId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -197,7 +197,7 @@ Public Member Functions</h2></td></tr>
 <p>Get type ID of current stored parameter. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>type ID of current stored parameter or empty string if no type is assigned. </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_variable_param.html#ae37d54a74f3c268fbb32684365927ff2">iprm::IVariableParam</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_variable_param.html#a7dadbf6421ee9c1946040ec3160bbe2d">iprm::IVariableParam</a>.</p>
 
 </div>
 </div>

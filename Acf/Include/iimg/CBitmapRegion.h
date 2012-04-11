@@ -24,9 +24,8 @@
 #define iimg_CBitmapRegion_included
 
 
-// STL includes
-#include <vector>
-
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "i2d/CRectangle.h"
@@ -57,7 +56,7 @@ public:
 		const void* pixelBufferPtr;
 	};
 
-	typedef std::vector<PixelRange> PixelRanges;
+	typedef QVector<PixelRange> PixelRanges;
 
 	CBitmapRegion(const IBitmap* bitmapPtr = NULL);
 
@@ -85,8 +84,8 @@ private:
 
 private:
 	const IBitmap* m_bitmapPtr;
-	std::vector<PixelRanges> m_rangesContainer;
-	std::vector<const PixelRanges*> m_lineRangePtr;
+	QVector<PixelRanges> m_rangesContainer;
+	QVector<const PixelRanges*> m_lineRangePtr;
 	i2d::CRectangle m_boundingBox;
 	bool m_isEmpty;
 };

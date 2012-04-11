@@ -64,9 +64,9 @@ QString CSelectionConstraintsComp::GetOptionDescription(int index) const
 }
 
 
-std::string CSelectionConstraintsComp::GetOptionId(int /*index*/) const
+QByteArray CSelectionConstraintsComp::GetOptionId(int /*index*/) const
 {
-	return std::string();
+	return QByteArray();
 }
 
 

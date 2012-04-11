@@ -57,8 +57,8 @@ Inheritance diagram for icomp::CComponentContext:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#ad153a6091ccab6a16442a707f0d0ce88">CComponentContext</a> (const <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> *elementPtr, const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *staticInfoPtr, const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *parentPtr=NULL, const std::string &amp;contextId=&quot;&quot;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#ac706a76999b6e4b10523159d72938bdb">GetContextId</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#af12383ba7933a87e063d920a822c7104">CComponentContext</a> (const <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> *elementPtr, const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *staticInfoPtr, const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *parentPtr=NULL, const QByteArray &amp;contextId=&quot;&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const QByteArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#a09b48548eb60613ea9a4a91bdf552a85">GetContextId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#a6009a60fd7152af36a9387b6985639be">GetRegistryElement</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component registry element object.  <a href="#a6009a60fd7152af36a9387b6985639be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
@@ -66,16 +66,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get component static info associated with this context.  <a href="#a3471112b2b2c529f92edbc5d3c757e55"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#af74fee5cbfd4ee48283b18c8102fa1fc">GetParentContext</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to parent component context.  <a href="#af74fee5cbfd4ee48283b18c8102fa1fc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#a33ca64f2364db3674fe83f7c303bbed7">GetAttribute</a> (const std::string &amp;attributeId, int *definitionLevelPtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get attribute using its ID.  <a href="#a33ca64f2364db3674fe83f7c303bbed7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#af4bfeff376a73676c94bb238810800d7">GetAttribute</a> (const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get attribute using its ID.  <a href="#af4bfeff376a73676c94bb238810800d7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_base.html">Base</a> implementation of component session context. </p>
 <p>This implementation uses <a class="el" href="classicomp_1_1_i_registry_element.html" title="Represents element of registry describing component parameters.">icomp::IRegistryElement</a> to generate lilst of attributes. Please note that resolving of exported attribute is done. </p>
 
-<p>Definition at line <a class="el" href="_c_component_context_8h_source.html#l00026">26</a> of file <a class="el" href="_c_component_context_8h_source.html">CComponentContext.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_context_8h_source.html#l00025">25</a> of file <a class="el" href="_c_component_context_8h_source.html">CComponentContext.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad153a6091ccab6a16442a707f0d0ce88"></a><!-- doxytag: member="icomp::CComponentContext::CComponentContext" ref="ad153a6091ccab6a16442a707f0d0ce88" args="(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IComponentContext *parentPtr=NULL, const std::string &amp;contextId=&quot;&quot;)" -->
+<a class="anchor" id="af12383ba7933a87e063d920a822c7104"></a><!-- doxytag: member="icomp::CComponentContext::CComponentContext" ref="af12383ba7933a87e063d920a822c7104" args="(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IComponentContext *parentPtr=NULL, const QByteArray &amp;contextId=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -100,7 +100,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>contextId</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -115,14 +115,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a33ca64f2364db3674fe83f7c303bbed7"></a><!-- doxytag: member="icomp::CComponentContext::GetAttribute" ref="a33ca64f2364db3674fe83f7c303bbed7" args="(const std::string &amp;attributeId, int *definitionLevelPtr=NULL) const " -->
+<a class="anchor" id="af4bfeff376a73676c94bb238810800d7"></a><!-- doxytag: member="icomp::CComponentContext::GetAttribute" ref="af4bfeff376a73676c94bb238810800d7" args="(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a>* icomp::CComponentContext::GetAttribute </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
         </tr>
         <tr>
@@ -149,16 +149,16 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_component_context.html#ad8a89438c056a623d96d6037301b729e">icomp::IComponentContext</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_component_context.html#a64139316ee985bfb1882e23b09ed8af0">icomp::IComponentContext</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac706a76999b6e4b10523159d72938bdb"></a><!-- doxytag: member="icomp::CComponentContext::GetContextId" ref="ac706a76999b6e4b10523159d72938bdb" args="() const " -->
+<a class="anchor" id="a09b48548eb60613ea9a4a91bdf552a85"></a><!-- doxytag: member="icomp::CComponentContext::GetContextId" ref="a09b48548eb60613ea9a4a91bdf552a85" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; icomp::CComponentContext::GetContextId </td>
+          <td class="memname">const QByteArray &amp; icomp::CComponentContext::GetContextId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline]</code></td>
@@ -167,7 +167,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_component_context_8h_source.html#l00057">57</a> of file <a class="el" href="_c_component_context_8h_source.html">CComponentContext.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_context_8h_source.html#l00056">56</a> of file <a class="el" href="_c_component_context_8h_source.html">CComponentContext.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_component_clone_wrap_8h_source.html#l00027">icomp::TComponentCloneWrap&lt; BaseClass &gt;::CloneMe()</a>, and <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00082">ibase::TLoggerCompWrap&lt; Base &gt;::DecorateMessage()</a>.</p>
 

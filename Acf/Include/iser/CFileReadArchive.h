@@ -24,9 +24,9 @@
 #define iser_CFileReadArchive_included
 
 
-// STL includes
-#include <vector>
-#include <fstream>
+// Qt includes
+#include <QtCore/QVector>
+#include <QtCore/QFile>
 
 // ACF includes
 #include "iser/CBinaryReadArchiveBase.h"
@@ -85,11 +85,11 @@ protected:
 				QString& messageSource) const;
 
 private:
-	std::ifstream m_stream;
+	QFile m_file;
 
 	bool m_supportTagSkipping;
 
-	typedef std::vector<TagStackElement> TagStack;
+	typedef QVector<TagStackElement> TagStack;
 
 	TagStack m_tagStack;
 };

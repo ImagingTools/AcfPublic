@@ -24,10 +24,11 @@
 #define iser_CXmlFileWriteArchive_included
 
 
-// STL includes
-#include <fstream>
+// Qt includes
+#include <QtCore/QFile>
 
-#include "iser/TXmlStreamWriteArchiveBase.h"
+// ACF includes
+#include "iser/CXmlStreamWriteArchiveBase.h"
 #include "iser/CFileArchiveInfo.h"
 
 
@@ -44,11 +45,11 @@ namespace iser
 	\ingroup Persistence
 */
 class CXmlFileWriteArchive:
-			public TXmlStreamWriteArchiveBase<std::ofstream>,
+			public CXmlStreamWriteArchiveBase,
 			public CFileArchiveInfo
 {
 public:
-	typedef TXmlStreamWriteArchiveBase<std::ofstream> BaseClass;
+	typedef CXmlStreamWriteArchiveBase BaseClass;
 	typedef CFileArchiveInfo BaseClass2;
 
 	explicit CXmlFileWriteArchive(
@@ -56,6 +57,10 @@ public:
 				const IVersionInfo* versionInfoPtr = NULL,
 				bool serializeHeader = true,
 				const CArchiveTag& rootTag = s_acfRootTag);
+	virtual ~CXmlFileWriteArchive();
+
+private:
+	QFile m_file;
 };
 
 

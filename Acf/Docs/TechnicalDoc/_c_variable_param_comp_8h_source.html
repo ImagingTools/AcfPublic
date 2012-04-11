@@ -53,10 +53,10 @@
 <a name="l00026"></a>00026        I_END_COMPONENT;
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028        <span class="comment">// reimplemented (iprm::IParamsSet)</span>
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_variable_param.html#adf99f67a55a03d4df4054b752e957766">TypeIds</a> <a class="code" href="classiprm_1_1_c_variable_param_comp.html#a00ade0c8085951bc95ebb52144f012de" title="Get lilst of all known type ID&#39;s.">GetKnownTypeIds</a>() <span class="keyword">const</span>;
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> std::string <a class="code" href="classiprm_1_1_c_variable_param_comp.html#aa0138680104e75cea095bc1ad440875a" title="Get type ID of current stored parameter.">GetParameterTypeId</a>() <span class="keyword">const</span>;
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_variable_param.html#a2dc438b59573ce7fd4b9a2d9e27d19b5">TypeIds</a> <a class="code" href="classiprm_1_1_c_variable_param_comp.html#a00ade0c8085951bc95ebb52144f012de" title="Get lilst of all known type ID&#39;s.">GetKnownTypeIds</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprm_1_1_c_variable_param_comp.html#aecd43d1c0dae2a2c09123ba536ba6483" title="Get type ID of current stored parameter.">GetParameterTypeId</a>() <span class="keyword">const</span>;
 <a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* <a class="code" href="classiprm_1_1_c_variable_param_comp.html#a56f924f1b0c79976ae2506c7652e58c7" title="Get current parameter.">GetParameter</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_variable_param_comp.html#a56e411d74670c22b8405878b3f5465d0" title="Assign type ID to this object.">AssignTypeId</a>(<span class="keyword">const</span> std::string&amp; typeId);
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_variable_param_comp.html#afaae535e0f4b37c8354745e97808969f" title="Assign type ID to this object.">AssignTypeId</a>(<span class="keyword">const</span> QByteArray&amp; typeId);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_variable_param_comp.html#a65e305c0e6db58df7f85ade3b7785abf" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
@@ -66,7 +66,7 @@
 <a name="l00039"></a>00039        I_MULTIFACT(<a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>, m_factoriesFact);
 <a name="l00040"></a>00040        I_MULTIATTR(QString, m_factoryIdsAttrPtr);
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042        std::string m_paramTypeId;
+<a name="l00042"></a>00042        QByteArray m_paramTypeId;
 <a name="l00043"></a>00043        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iser::ISerializable&gt;</a> m_paramPtr;
 <a name="l00044"></a>00044 };
 <a name="l00045"></a>00045 

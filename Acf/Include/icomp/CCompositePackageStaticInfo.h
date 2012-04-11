@@ -24,9 +24,8 @@
 #define icomp_CCompositePackageStaticInfo_included
 
 
-// STL includes
+// Qt includes
 #include <QtCore/QMap>
-
 
 // ACF includes
 #include "istd/TDelPtr.h"
@@ -51,13 +50,13 @@ public:
 	typedef CPackageStaticInfo BaseClass;
 
 	CCompositePackageStaticInfo(
-				const std::string& packageId,
+				const QByteArray& packageId,
 				const icomp::IComponentEnvironmentManager* managerPtr);
 
-	void RegisterEmbeddedComponent(const std::string& componentId);
+	void RegisterEmbeddedComponent(const QByteArray& componentId);
 
 	//	reimplemented (icomp::IComponentStaticInfo)
-	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const std::string& embeddedId) const;
+	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const QByteArray& embeddedId) const;
 	virtual Ids GetMetaIds(int metaGroupId) const;
 
 private:
@@ -69,10 +68,10 @@ private:
 		bool isInitialized;
 	};
 
-	typedef QMap<std::string, ComponentInfo> EmbeddedComponentInfos;
+	typedef QMap<QByteArray, ComponentInfo> EmbeddedComponentInfos;
 	mutable EmbeddedComponentInfos m_embeddedComponentInfos;
 
-	std::string m_packageId;
+	QByteArray m_packageId;
 	const icomp::IComponentEnvironmentManager& m_envManager;
 };
 

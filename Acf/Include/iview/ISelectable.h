@@ -24,9 +24,8 @@
 #define iview_ISelectable_included
 
 
-// STL includes
-#include <set>
-
+// Qt includes
+#include <QtCore/QSet>
 
 // ACF includes
 #include "istd/CIndex2d.h"
@@ -44,7 +43,7 @@ class IInteractiveShape;
 class ISelectable: public ITouchable
 {
 public:
-	typedef std::set<IInteractiveShape*> SelectedShapes;
+	typedef QSet<IInteractiveShape*> SelectedShapes;
 
 	/**
 		Defines possible states of mouse pointer.

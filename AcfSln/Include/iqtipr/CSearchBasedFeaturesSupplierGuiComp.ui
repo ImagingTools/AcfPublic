@@ -75,11 +75,6 @@
        <widget class="QTreeWidget" name="ResultsList">
         <column>
          <property name="text">
-          <string>Index</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
           <string>Score (%)</string>
          </property>
         </column>

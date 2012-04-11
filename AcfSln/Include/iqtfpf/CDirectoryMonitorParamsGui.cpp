@@ -226,7 +226,7 @@ void CDirectoryMonitorParamsGui::on_AcceptPatternsList_itemSelectionChanged()
 {
 	QList<QTreeWidgetItem*> selectedItems = AcceptPatternsList->selectedItems();
 
-	RemoveAcceptPatternButton->setEnabled(!selectedItems.empty());
+	RemoveAcceptPatternButton->setEnabled(!selectedItems.isEmpty());
 }
 
 
@@ -254,7 +254,7 @@ void CDirectoryMonitorParamsGui::on_IgnorePatternsList_itemSelectionChanged()
 {
 	QList<QTreeWidgetItem*> selectedItems = IgnorePatternsList->selectedItems();
 
-	RemoveIgnorePatternButton->setEnabled(!selectedItems.empty());
+	RemoveIgnorePatternButton->setEnabled(!selectedItems.isEmpty());
 }
 
 
@@ -282,7 +282,7 @@ void CDirectoryMonitorParamsGui::RemoveSelectedPatterns(QTreeWidget* treeView)
 {
 	QList<QTreeWidgetItem*> selectedItems = treeView->selectedItems();
 
-	if (!selectedItems.empty()){
+	if (!selectedItems.isEmpty()){
 		for (QList<QTreeWidgetItem*>::iterator index = selectedItems.begin(); index != selectedItems.end(); index++){
 			QTreeWidgetItem* itemPtr = treeView->takeTopLevelItem(AcceptPatternsList->indexOfTopLevelItem(*index));
 

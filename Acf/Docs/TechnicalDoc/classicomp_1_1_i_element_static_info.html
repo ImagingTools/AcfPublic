@@ -77,32 +77,32 @@ Public Types</h2></td></tr>
 <a class="el" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c">MGI_SUBELEMENTS</a>, 
 <a class="el" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233ac2334816c8eab4cf035dea3a49a49865">MGI_LAST</a> =  MGI_SUBELEMENTS
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_element_static_info.html#ab19a96597868e1f1adc89a62e1570c74">Ids</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_element_static_info.html">IElementStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_element_static_info.html#a7612abddac7e7bbd40c8fcfcce677708">GetSubelementInfo</a> (const std::string &amp;subcomponentId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#a7612abddac7e7bbd40c8fcfcce677708"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_element_static_info.html#a989651fb00da877c874e9ddad6d204d5">GetMetaIds</a> (int metaGroupId) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_element_static_info.html">IElementStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_element_static_info.html#a65860027853d03374e9398ebb1c86b4d">GetSubelementInfo</a> (const QByteArray &amp;subcomponentId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#a65860027853d03374e9398ebb1c86b4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ab19a96597868e1f1adc89a62e1570c74">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_element_static_info.html#a989651fb00da877c874e9ddad6d204d5">GetMetaIds</a> (int metaGroupId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of meta IDs associated with some meta key.  <a href="#a989651fb00da877c874e9ddad6d204d5"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This interface provide static information about element meta info. </p>
 <p>Elements are defined as weaker abstraction of components, without attributes etc. </p>
 
-<p>Definition at line <a class="el" href="_i_element_static_info_8h_source.html#l00023">23</a> of file <a class="el" href="_i_element_static_info_8h_source.html">IElementStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_element_static_info_8h_source.html#l00022">22</a> of file <a class="el" href="_i_element_static_info_8h_source.html">IElementStaticInfo.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="ad9eeb4c9eaa1c720a75ef5939f6e5b90"></a><!-- doxytag: member="icomp::IElementStaticInfo::Ids" ref="ad9eeb4c9eaa1c720a75ef5939f6e5b90" args="" -->
+<a class="anchor" id="ab19a96597868e1f1adc89a62e1570c74"></a><!-- doxytag: member="icomp::IElementStaticInfo::Ids" ref="ab19a96597868e1f1adc89a62e1570c74" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;std::string&gt; <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">icomp::IElementStaticInfo::Ids</a></td>
+          <td class="memname">typedef QSet&lt;QByteArray&gt; <a class="el" href="classicomp_1_1_i_element_static_info.html#ab19a96597868e1f1adc89a62e1570c74">icomp::IElementStaticInfo::Ids</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_element_static_info_8h_source.html#l00042">42</a> of file <a class="el" href="_i_element_static_info_8h_source.html">IElementStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_element_static_info_8h_source.html#l00041">41</a> of file <a class="el" href="_i_element_static_info_8h_source.html">IElementStaticInfo.h</a>.</p>
 
 </div>
 </div>
@@ -133,7 +133,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classicomp_1_1_i_component_static_info.html#ad81479e87967938dbcfdf09433c265eb">icomp::IComponentStaticInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_element_static_info_8h_source.html#l00026">26</a> of file <a class="el" href="_i_element_static_info_8h_source.html">IElementStaticInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_element_static_info_8h_source.html#l00025">25</a> of file <a class="el" href="_i_element_static_info_8h_source.html">IElementStaticInfo.h</a>.</p>
 
 </div>
 </div>
@@ -143,7 +143,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ad9eeb4c9eaa1c720a75ef5939f6e5b90">Ids</a> icomp::IElementStaticInfo::GetMetaIds </td>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_element_static_info.html#ab19a96597868e1f1adc89a62e1570c74">Ids</a> icomp::IElementStaticInfo::GetMetaIds </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaGroupId</em></td><td>)</td>
@@ -160,14 +160,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7612abddac7e7bbd40c8fcfcce677708"></a><!-- doxytag: member="icomp::IElementStaticInfo::GetSubelementInfo" ref="a7612abddac7e7bbd40c8fcfcce677708" args="(const std::string &amp;subcomponentId) const =0" -->
+<a class="anchor" id="a65860027853d03374e9398ebb1c86b4d"></a><!-- doxytag: member="icomp::IElementStaticInfo::GetSubelementInfo" ref="a65860027853d03374e9398ebb1c86b4d" args="(const QByteArray &amp;subcomponentId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_element_static_info.html">IElementStaticInfo</a>* icomp::IElementStaticInfo::GetSubelementInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>subcomponentId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -184,7 +184,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classicomp_1_1_i_element_static_info.html#a989651fb00da877c874e9ddad6d204d5" title="Get list of meta IDs associated with some meta key.">GetMetaIds()</a> and <a class="el" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233abaf22287d19fad04e25b37f5e239317c" title="ID of group for component subelements.">MGI_SUBELEMENTS</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_base_component_static_info.html#ad5f6112769956287cdf7186a8c3d0c61">icomp::CBaseComponentStaticInfo</a>, <a class="el" href="classicomp_1_1_t_subelement_static_info.html#a6f761a24baa764c7cf9f9d7e6d9f89b4">icomp::TSubelementStaticInfo&lt; ComponentType &gt;</a>, and <a class="el" href="classicomp_1_1_c_component_static_info_base.html#ad33590843a4f3a292b33dba391f3a0e2">icomp::CComponentStaticInfoBase</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_base_component_static_info.html#a6025bd16a9dd7b0744f9e6f1ce5e706a">icomp::CBaseComponentStaticInfo</a>, <a class="el" href="classicomp_1_1_t_subelement_static_info.html#a8460f8b764c6a1b58bb8ee12eba28a45">icomp::TSubelementStaticInfo&lt; ComponentType &gt;</a>, and <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a2b26b96fe471edeaf1dc3f62589d64b2">icomp::CComponentStaticInfoBase</a>.</p>
 
 </div>
 </div>

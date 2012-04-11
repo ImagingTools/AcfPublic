@@ -85,11 +85,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_static_info.html#ab2d06f90f3c1da907c627caf800e08c9">GetComponentType</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get information about component type.  <a href="#ab2d06f90f3c1da907c627caf800e08c9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_static_info.html#a995ab05a5bcb225da773a4fe2830c496">GetAttributeInfo</a> (const std::string &amp;attributeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of attributes.  <a href="#a995ab05a5bcb225da773a4fe2830c496"></a><br/></td></tr>
+<a class="el" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_static_info.html#a07a70c398447a9ce12d7685a5202fd3f">GetAttributeInfo</a> (const QByteArray &amp;attributeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of attributes.  <a href="#a07a70c398447a9ce12d7685a5202fd3f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_static_info.html#a27cda16cac1f1560ea60b72db8286633">GetEmbeddedComponentInfo</a> (const std::string &amp;embeddedId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#a27cda16cac1f1560ea60b72db8286633"></a><br/></td></tr>
+<a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_static_info.html#a1abd07fd0996f34072622f25954c686e">GetEmbeddedComponentInfo</a> (const QByteArray &amp;embeddedId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of interfaces for specific slot.  <a href="#a1abd07fd0996f34072622f25954c686e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_static_info.html#a550f1aa69500d4c55b8ee81a1cfe12a2">GetDescription</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of this component.  <a href="#a550f1aa69500d4c55b8ee81a1cfe12a2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_i_component_static_info.html#a7cf80bab3e8578c069f92105a781edce">GetKeywords</a> () const =0</td></tr>
@@ -159,14 +159,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a995ab05a5bcb225da773a4fe2830c496"></a><!-- doxytag: member="icomp::IComponentStaticInfo::GetAttributeInfo" ref="a995ab05a5bcb225da773a4fe2830c496" args="(const std::string &amp;attributeId) const =0" -->
+<a class="anchor" id="a07a70c398447a9ce12d7685a5202fd3f"></a><!-- doxytag: member="icomp::IComponentStaticInfo::GetAttributeInfo" ref="a07a70c398447a9ce12d7685a5202fd3f" args="(const QByteArray &amp;attributeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a>* icomp::IComponentStaticInfo::GetAttributeInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -176,7 +176,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get set of attributes. </p>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_base_component_static_info.html#aec976e0a49319d8f48eafa216cec211e">icomp::CBaseComponentStaticInfo</a>, and <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a6f653ac91657a34384bd2a9d25c5537f">icomp::CComponentStaticInfoBase</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_base_component_static_info.html#a9aa6ddd8155e67d62a5775a4360b8861">icomp::CBaseComponentStaticInfo</a>, and <a class="el" href="classicomp_1_1_c_component_static_info_base.html#ab978d535c8da47da144a556d066f0454">icomp::CComponentStaticInfoBase</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_sim_component_context_base_8h_source.html#l00152">icomp::CSimComponentContextBase::IsAttributeTypeCorrect()</a>.</p>
 
@@ -222,14 +222,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a27cda16cac1f1560ea60b72db8286633"></a><!-- doxytag: member="icomp::IComponentStaticInfo::GetEmbeddedComponentInfo" ref="a27cda16cac1f1560ea60b72db8286633" args="(const std::string &amp;embeddedId) const =0" -->
+<a class="anchor" id="a1abd07fd0996f34072622f25954c686e"></a><!-- doxytag: member="icomp::IComponentStaticInfo::GetEmbeddedComponentInfo" ref="a1abd07fd0996f34072622f25954c686e" args="(const QByteArray &amp;embeddedId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a>* icomp::IComponentStaticInfo::GetEmbeddedComponentInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>embeddedId</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -246,7 +246,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classicomp_1_1_i_element_static_info.html#a989651fb00da877c874e9ddad6d204d5" title="Get list of meta IDs associated with some meta key.">GetMetaIds()</a> and <a class="el" href="classicomp_1_1_i_component_static_info.html#ad81479e87967938dbcfdf09433c265eba5c8bd8a1af78edbf4d5ec817c6d302ba" title="ID of group for embedded types.">MGI_EMBEDDED_COMPONENTS</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classicomp_1_1_c_package_static_info.html#add2266fbf497723c99d4f17229c543af">icomp::CPackageStaticInfo</a>, <a class="el" href="classicomp_1_1_c_composite_component_static_info.html#ae47b8328c333b1fb5448ef4e8bb3e72f">icomp::CCompositeComponentStaticInfo</a>, <a class="el" href="classicomp_1_1_c_composite_package_static_info.html#a548466615b1dc5736f40862ffd91a210">icomp::CCompositePackageStaticInfo</a>, and <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a815d02162e404f916539f8469f841033">icomp::CComponentStaticInfoBase</a>.</p>
+<p>Implemented in <a class="el" href="classicomp_1_1_c_package_static_info.html#af04fc4e27d5fb19b39d854e4631991d0">icomp::CPackageStaticInfo</a>, <a class="el" href="classicomp_1_1_c_composite_component_static_info.html#a8c9fde74335bcb0f87bdc8cf4b93906e">icomp::CCompositeComponentStaticInfo</a>, <a class="el" href="classicomp_1_1_c_composite_package_static_info.html#ae40288ab8c7f40468b580685db11d800">icomp::CCompositePackageStaticInfo</a>, and <a class="el" href="classicomp_1_1_c_component_static_info_base.html#a7903b47a5a90a0af514af9a0454614e0">icomp::CComponentStaticInfoBase</a>.</p>
 
 </div>
 </div>

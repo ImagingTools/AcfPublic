@@ -101,7 +101,7 @@ protected:
 	bool HasDocumentTemplate() const;
 	void UpdateUndoMenu();
 
-	void OnNewDocument(const std::string& documentTypeId);
+	void OnNewDocument(const QByteArray& documentTypeId);
 
 	virtual bool SerializeRecentFileList(iser::IArchive& archive);
 	virtual void UpdateRecentFileList(const idoc::IDocumentManager::FileToTypeMap& fileToTypeMap);
@@ -133,7 +133,7 @@ protected Q_SLOTS:
 	void OnOpen();
 	void OnSave();
 	void OnSaveAs();
-	void OnOpenDocument(const std::string* documentTypeIdPtr = NULL);
+	void OnOpenDocument(const QByteArray* documentTypeIdPtr = NULL);
 	void OnQuit();
 	void OnUndo();
 	void OnRedo();
@@ -147,7 +147,7 @@ private:
 	public:
 		typedef iqtgui::CHierarchicalCommand BaseClass;
 
-		NewDocumentCommand(CMainWindowGuiComp* parentPtr, const std::string& documentTypeId): m_parent(*parentPtr), m_documentTypeId(documentTypeId){}
+		NewDocumentCommand(CMainWindowGuiComp* parentPtr, const QByteArray& documentTypeId): m_parent(*parentPtr), m_documentTypeId(documentTypeId){}
 
 		// reimplemented (ibase::ICommand)
 		virtual bool Execute(istd::IPolymorphic* /*contextPtr*/)
@@ -159,7 +159,7 @@ private:
 
 	private:
 		CMainWindowGuiComp& m_parent;
-		std::string m_documentTypeId;
+		QByteArray m_documentTypeId;
 	};
 
 	class RecentFileCommand: public iqtgui::CHierarchicalCommand
@@ -227,7 +227,7 @@ private:
 	iqtgui::CHierarchicalCommand m_openDocumentFolderCommand;
 
 	typedef istd::TDelPtr<iqtgui::CHierarchicalCommand> RecentGroupCommandPtr;
-	typedef QMap<std::string, RecentGroupCommandPtr> RecentFilesMap;
+	typedef QMap<QByteArray, RecentGroupCommandPtr> RecentFilesMap;
 	RecentFilesMap m_recentFilesMap;
 
 	I_REF(ibase::IApplicationInfo, m_applicationInfoCompPtr);

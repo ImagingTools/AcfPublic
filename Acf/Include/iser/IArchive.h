@@ -24,9 +24,8 @@
 #define iser_IArchive_included
 
 
-// STL includes
-#include <string>
-
+// Qt includes
+#include <QtCore/QByteArray>
 
 // Qt includes
 #include <QtCore/QString>
@@ -164,7 +163,7 @@ public:
 	/**
 		Process primitive type.
 	 */
-	virtual bool Process(std::string& value) = 0;
+	virtual bool Process(QByteArray& value) = 0;
 
 	/**
 		Process primitive type.

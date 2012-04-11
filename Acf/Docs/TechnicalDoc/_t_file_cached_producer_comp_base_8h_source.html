@@ -31,8 +31,8 @@
 <a name="l00004"></a>00004 <span class="comment">// Old C includes</span>
 <a name="l00005"></a>00005 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="comment">// STL includes</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00007"></a>00007 <span class="comment">// Qt includes</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtCore/QList&gt;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
@@ -82,8 +82,8 @@
 <a name="l00069"></a>00069        I_TREF(<a class="code" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">LockedProducerType</a>, m_slaveCacheEngineCompPtr);
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071        <span class="keyword">typedef</span> QMap&lt;Key, QString&gt; KeyToFileNameMap;
-<a name="l00072"></a>00072        <span class="keyword">typedef</span> std::list&lt;Key&gt; RecentlyUsedKeys;
-<a name="l00073"></a>00073        <span class="keyword">typedef</span> std::set&lt;const CacheObject*&gt; OwnedObjects;
+<a name="l00072"></a>00072        <span class="keyword">typedef</span> QList&lt;Key&gt; RecentlyUsedKeys;
+<a name="l00073"></a>00073        <span class="keyword">typedef</span> QSet&lt;const CacheObject*&gt; OwnedObjects;
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075        <span class="keyword">mutable</span> KeyToFileNameMap m_keyToFileNameMap;
 <a name="l00076"></a>00076        <span class="keyword">mutable</span> RecentlyUsedKeys m_recentlyUsedKeys;
@@ -206,7 +206,7 @@
 <a name="l00193"></a>00193               <span class="keywordflow">if</span> (foundIter != m_keyToFileNameMap.end()){
 <a name="l00194"></a>00194                      <span class="keyword">const</span> QString&amp; cacheFilePath = foundIter.value();
 <a name="l00195"></a>00195 
-<a name="l00196"></a>00196                      <span class="keywordflow">if</span> (<span class="keyword">remove</span>(cacheFilePath.toStdString().c_str()) != 0){
+<a name="l00196"></a>00196                      <span class="keywordflow">if</span> (<span class="keyword">remove</span>(cacheFilePath.toLocal8Bit()) != 0){
 <a name="l00197"></a>00197                             OnCacheFileRemoved(key, cacheFilePath);
 <a name="l00198"></a>00198                      }
 <a name="l00199"></a>00199 

@@ -23,9 +23,7 @@
 #include "idoc/CSingleDocumentManagerBase.h"
 
 
-// STL includes
-#include <algorithm>
-
+// ACF includes
 #include "istd/TChangeNotifier.h"
 
 #include "imod/IModel.h"
@@ -115,7 +113,7 @@ istd::IChangeable* CSingleDocumentManagerBase::GetDocumentFromView(const istd::I
 }
 
 
-istd::IPolymorphic* CSingleDocumentManagerBase::AddViewToDocument(const istd::IChangeable& document, const std::string& viewTypeId)
+istd::IPolymorphic* CSingleDocumentManagerBase::AddViewToDocument(const istd::IChangeable& document, const QByteArray& viewTypeId)
 {
 	const IDocumentTemplate* documentTemplatePtr = GetDocumentTemplate();
 	if (documentTemplatePtr != NULL){
@@ -142,20 +140,20 @@ istd::IPolymorphic* CSingleDocumentManagerBase::AddViewToDocument(const istd::IC
 }
 
 
-std::string CSingleDocumentManagerBase::GetDocumentTypeId(const istd::IChangeable& document) const
+QByteArray CSingleDocumentManagerBase::GetDocumentTypeId(const istd::IChangeable& document) const
 {
 	if (&document == m_documentPtr.GetPtr()){
 		return m_documentTypeId;
 	}
 
-	return std::string();
+	return QByteArray();
 }
 
 
 bool CSingleDocumentManagerBase::FileNew(
-			const std::string& documentTypeId, 
+			const QByteArray& documentTypeId, 
 			bool createView, 
-			const std::string& viewTypeId,
+			const QByteArray& viewTypeId,
 			istd::IChangeable** newDocumentPtr)
 {
 	istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED);
@@ -185,10 +183,10 @@ bool CSingleDocumentManagerBase::FileNew(
 
 
 bool CSingleDocumentManagerBase::FileOpen(
-			const std::string* documentTypeIdPtr,
+			const QByteArray* documentTypeIdPtr,
 			const QString* fileNamePtr,
 			bool createView,
-			const std::string& viewTypeId,
+			const QByteArray& viewTypeId,
 			FileToTypeMap* loadedMapPtr)
 {
 	bool retVal = true;
@@ -203,7 +201,7 @@ bool CSingleDocumentManagerBase::FileOpen(
 	}
 
 	if (!fileName.isEmpty()){
-		std::string documentTypeId;
+		QByteArray documentTypeId;
 		if (OpenDocument(fileName, createView, viewTypeId, documentTypeId)){
 			if (loadedMapPtr != NULL){
 				loadedMapPtr->operator[](fileName) = documentTypeId;
@@ -302,8 +300,8 @@ void CSingleDocumentManagerBase::FileClose(int /*documentIndex*/, bool* ignoredP
 bool CSingleDocumentManagerBase::OpenDocument(
 			const QString& filePath,
 			bool createView,
-			const std::string& viewTypeId,
-			std::string& documentTypeId)
+			const QByteArray& viewTypeId,
+			QByteArray& documentTypeId)
 {
 	const IDocumentTemplate* documentTemplatePtr = GetDocumentTemplate();
 	if (filePath.isEmpty() || (documentTemplatePtr == NULL)){
@@ -348,7 +346,7 @@ bool CSingleDocumentManagerBase::OpenDocument(
 
 	IDocumentTemplate::Ids documentIds = documentTemplatePtr->GetDocumentTypeIdsForFile(filePath);
 
-	if (!documentIds.empty()){
+	if (!documentIds.isEmpty()){
 		documentTypeId = documentIds.front();
 
 		istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED);
@@ -380,9 +378,9 @@ bool CSingleDocumentManagerBase::OpenDocument(
 
 
 bool CSingleDocumentManagerBase::NewDocument(
-			const std::string& documentTypeId, 
+			const QByteArray& documentTypeId, 
 			bool createView, 
-			const std::string& viewTypeId)
+			const QByteArray& viewTypeId)
 {
 	const IDocumentTemplate* documentTemplatePtr = GetDocumentTemplate();
 

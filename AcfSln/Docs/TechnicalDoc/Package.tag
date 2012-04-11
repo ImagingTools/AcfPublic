@@ -1324,10 +1324,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiProperty&lt; std::string &gt;</type>
+      <type>TMultiProperty&lt; QByteArray &gt;</type>
       <name>CMultiStdStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>a9670397b1ae3057c7580f96565f8b712</anchor>
+      <anchor>a98edf16a10baca64c26c9873cf45e385</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1375,10 +1375,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TProperty&lt; std::string &gt;</type>
+      <type>TProperty&lt; QByteArray &gt;</type>
       <name>CStdStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>a76ebd1cb146656b08028463f4eeac6bd</anchor>
+      <anchor>ae3d8ffc89d60cdbbf33e654d0ce03140</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2044,8 +2044,8 @@
       <type>virtual bool</type>
       <name>HasRight</name>
       <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
-      <anchor>a22414a04cb66c3edfea7aba79634ecfb</anchor>
-      <arglist>(const std::string &amp;operationId, bool beQuiet=false) const </arglist>
+      <anchor>a94812d711f92f249af51fdcd55749ca0</anchor>
+      <arglist>(const QByteArray &amp;operationId, bool beQuiet=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2078,8 +2078,8 @@
       <type>virtual bool</type>
       <name>HasRight</name>
       <anchorfile>classiauth_1_1_c_static_rights_provider_comp.html</anchorfile>
-      <anchor>a13568df730012f0248054dd9a86aa266</anchor>
-      <arglist>(const std::string &amp;operationId, bool beQuiet=false) const </arglist>
+      <anchor>ae9d0c52ee050da1b21b9528f47de00cd</anchor>
+      <arglist>(const QByteArray &amp;operationId, bool beQuiet=false) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -2201,8 +2201,8 @@
       <type>virtual bool</type>
       <name>HasRight</name>
       <anchorfile>classiauth_1_1_c_user_login_comp.html</anchorfile>
-      <anchor>a48800a1d7fbffbee165054f84d81cd5a</anchor>
-      <arglist>(const std::string &amp;operationId, bool beQuiet=false) const </arglist>
+      <anchor>ad77cc98b12023d098519264b2f0210c0</anchor>
+      <arglist>(const QByteArray &amp;operationId, bool beQuiet=false) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2348,8 +2348,8 @@
       <type>virtual bool</type>
       <name>HasRight</name>
       <anchorfile>classiauth_1_1_i_rights_provider.html</anchorfile>
-      <anchor>a71b48e0f11e625e3a55f0a1ea294d43c</anchor>
-      <arglist>(const std::string &amp;operationId, bool beQuiet=false) const =0</arglist>
+      <anchor>a39db44e078eb5bbfb78fc39c7c4b76e8</anchor>
+      <arglist>(const QByteArray &amp;operationId, bool beQuiet=false) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2766,15 +2766,15 @@
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>
       <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
-      <anchor>a7c33a9f09183491068814c98714914b7</anchor>
-      <arglist>(const std::string &amp;id) const </arglist>
+      <anchor>aa32a1637f5d484d318bbeb2fb07da3af</anchor>
+      <arglist>(const QByteArray &amp;id) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::ISerializable *</type>
       <name>GetEditableParameter</name>
       <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
-      <anchor>afa0ef8b8eeca848144c35076f3964b49</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>ac8e6e4fb91b90c666e14eb3f67e0276f</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2787,14 +2787,14 @@
   <compound kind="class">
     <name>icam::CSnapBitmapSupplierComp</name>
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; std::pair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ae66705cdf0b4267f2b6438fcf5b31825</anchor>
+      <anchor>abf21d4ced5925945119c0b2a232a3eae</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -3356,10 +3356,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetItemUuid</name>
       <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a626b3aaa7b99dc105b371badef19cff4</anchor>
+      <anchor>a424b49070110413e1ee7632905f11ab6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4344,10 +4344,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetItemUuid</name>
       <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>ac20815259ab38bc9b3cf3b4ad2a74212</anchor>
+      <anchor>a523ef6cbab3376b29269c6ac71836b74</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -5389,17 +5389,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::vector&lt; Point &gt;</type>
+      <type>QVector&lt; Point &gt;</type>
       <name>Points</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a24559d656470188cd7b8544a50146d2f</anchor>
+      <anchor>abf01d2e12804cca814361cc85e3ec29e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::vector&lt; Ray &gt;</type>
+      <type>QVector&lt; Ray &gt;</type>
       <name>Rays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>ae4913fda706279f64eb20b0889fcb3bb</anchor>
+      <anchor>a5430fcfe2feb8d0410eb25233711776e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -5558,14 +5558,14 @@
   <compound kind="class">
     <name>iipr::CDelegatedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; std::pair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aeea0adeff277f6a55e382db5a3e085b7</anchor>
+      <anchor>ab4b38cd324f13e21d1ce80f32fe599d8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -6159,14 +6159,14 @@
   <compound kind="class">
     <name>iipr::CProcessedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; std::pair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; std::pair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ac24f27d3c78232e579fbd18def0e61a2</anchor>
+      <anchor>a4e87e9bfe3c3368aa73d9f8beea9d813</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -6233,18 +6233,18 @@
       <arglist>(const imeas::IDataSequence &amp;source, double filterLength, imeas::IDataSequence &amp;results)</arglist>
     </member>
     <member kind="function">
-      <type>const std::string &amp;</type>
+      <type>const QByteArray &amp;</type>
       <name>GetFilterParamsId</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a446d473424596e7185e3baedfca44035</anchor>
+      <anchor>a2e3eccf6a79c5a8c066d381b5650ac92</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetFilterParamsId</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>ae5b6dc2b60a25a67419aeefa039bc91b</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>a46137174a88b447ec9f62e72aa3be75c</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -7178,10 +7178,10 @@
     <filename>classiipr_1_1_i_features_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="typedef">
-      <type>std::vector&lt; const iipr::IFeature * &gt;</type>
+      <type>QVector&lt; const iipr::IFeature * &gt;</type>
       <name>Features</name>
       <anchorfile>classiipr_1_1_i_features_provider.html</anchorfile>
-      <anchor>a7bc363cb37d59685e631224feba31523</anchor>
+      <anchor>a75ba10a77a4c648b5a2b1d4a554168d3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -9325,10 +9325,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiProperty&lt; std::string &gt;</type>
+      <type>TMultiProperty&lt; QByteArray &gt;</type>
       <name>CMultiStdStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>a9670397b1ae3057c7580f96565f8b712</anchor>
+      <anchor>a98edf16a10baca64c26c9873cf45e385</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -9360,10 +9360,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TProperty&lt; std::string &gt;</type>
+      <type>TProperty&lt; QByteArray &gt;</type>
       <name>CStdStringProperty</name>
       <anchorfile>namespaceiprop.html</anchorfile>
-      <anchor>a76ebd1cb146656b08028463f4eeac6bd</anchor>
+      <anchor>ae3d8ffc89d60cdbbf33e654d0ce03140</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -9439,8 +9439,8 @@
       <type>PropertyInfo *</type>
       <name>GetPropertyInfo</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a322849498d28097e5298824f3cfc2914</anchor>
-      <arglist>(const std::string &amp;propertyId) const </arglist>
+      <anchor>aa51598cd17a9710d5efe77e37f033281</anchor>
+      <arglist>(const QByteArray &amp;propertyId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -9457,10 +9457,10 @@
       <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetPropertyId</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a839f698b011a8c0398ec96c5467f2683</anchor>
+      <anchor>a5cc12c150297e64abe86c7a034d12178</anchor>
       <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9474,8 +9474,8 @@
       <type>virtual void</type>
       <name>InsertProperty</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a097683f6c8805e9497cdcbce2def8041</anchor>
-      <arglist>(iser::IObject *objectPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, bool releaseFlag)</arglist>
+      <anchor>a45a286ac7bcff84fd183c4bcb9efd297</anchor>
+      <arglist>(iser::IObject *objectPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, bool releaseFlag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -9510,17 +9510,17 @@
     <name>iprop::CPropertiesManager::PropertyInfo</name>
     <filename>structiprop_1_1_c_properties_manager_1_1_property_info.html</filename>
     <member kind="variable">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>propertyId</name>
       <anchorfile>structiprop_1_1_c_properties_manager_1_1_property_info.html</anchorfile>
-      <anchor>a6d1e1f89c9eff7fb833a010ef3f27a83</anchor>
+      <anchor>a7aed79eab1765b96bd4e3c1f8071c595</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>propertyDescription</name>
       <anchorfile>structiprop_1_1_c_properties_manager_1_1_property_info.html</anchorfile>
-      <anchor>aabf7ed62c73bc6cc9c396cd3322f76cd</anchor>
+      <anchor>acea24de499d1c36adddb3c66b08496ff</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -9553,8 +9553,8 @@
       <type></type>
       <name>CPropertyBase</name>
       <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
-      <anchor>aa1184eda864c9103d23519679d139695</anchor>
-      <arglist>(IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0)</arglist>
+      <anchor>a6876d0b0a2ea98e93dce5d0fdd10d1d9</anchor>
+      <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject *</type>
@@ -9597,10 +9597,10 @@
       <arglist>(int propertyIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetPropertyId</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a254e852f43e291befc3ef52e30a69d0b</anchor>
+      <anchor>aff67b7b0a40bedf98acda47ca5720d27</anchor>
       <arglist>(int propertyIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -9614,8 +9614,8 @@
       <type>virtual void</type>
       <name>InsertProperty</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a9e4fc381ff4c92672a110f3d386b32bd</anchor>
-      <arglist>(iser::IObject *objectPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, bool releaseFlag)=0</arglist>
+      <anchor>a365365ce2c71f76182d5e60b7be9a4dc</anchor>
+      <arglist>(iser::IObject *objectPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, bool releaseFlag)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9694,8 +9694,8 @@
       <type></type>
       <name>TMultiProperty</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a30f901491e4539344c8a1ce407f1004b</anchor>
-      <arglist>(IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyId, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
+      <anchor>a96e67b552bc89aac467a0f04aaa4afe1</anchor>
+      <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlags=0, int elementsCount=0, Value *valuesPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -9782,10 +9782,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>aa67c33a692cc29174c392b037f7d2b1d</anchor>
+      <anchor>a2be4859b6d0a3138a4824bc794efe385</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9796,10 +9796,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static const QByteArray &amp;</type>
       <name>GetTypeName</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a3e16b47698a3c04f35dddbba0c827792</anchor>
+      <anchor>a53c009560a3a0ece77dbd6684cd6f6f0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -9847,8 +9847,8 @@
       <type></type>
       <name>TObjectProperty</name>
       <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
-      <anchor>ae153b95d99e7f095151e80ab0a6ce6f2</anchor>
-      <arglist>(IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyName, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
+      <anchor>afb76d06416d02298da59228820805a3d</anchor>
+      <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyName, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
     </member>
     <member kind="function">
       <type>const Value &amp;</type>
@@ -9879,10 +9879,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
-      <anchor>a34d3ab534550d8eda0bdc68d253b6bda</anchor>
+      <anchor>a25f3e0a6d698cdc39ff4fc5e1d38d659</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9893,10 +9893,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static const QByteArray &amp;</type>
       <name>GetTypeName</name>
       <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
-      <anchor>a7e4f756334e5757e22f40b210b56b5bd</anchor>
+      <anchor>a44d2daef0c68b35461bd28bb577248a4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -9951,8 +9951,8 @@
       <type></type>
       <name>TProperty</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
-      <anchor>afabbcaadb5afd24fe864e30a73a13139</anchor>
-      <arglist>(IPropertiesManager *propertyOwnerPtr, const std::string &amp;propertyName, const std::string &amp;propertyDescription, int propertyFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
+      <anchor>a55c58705f3fbcc58b1a310648af7b584</anchor>
+      <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyName, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
     </member>
     <member kind="function">
       <type>const Value &amp;</type>
@@ -9983,10 +9983,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
-      <anchor>a800b050ed8ae99b2750eb645c0beec95</anchor>
+      <anchor>aa537b1a6c12543413eff827f6ba2a13f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9997,10 +9997,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::string &amp;</type>
+      <type>static const QByteArray &amp;</type>
       <name>GetTypeName</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
-      <anchor>a85a3de5fc9c167a0c87442e0d6b30a71</anchor>
+      <anchor>ac379a7694c670b782ee473975496a562</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -10857,8 +10857,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>ad867ce018527190b84e7f55523c98fb5</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>a6a5f38873e1f4cfa18eb97ec4d7ba043</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -11053,8 +11053,8 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a820455041d4ef5c4553c1bb049d3f13c</anchor>
-      <arglist>(std::string &amp;value)</arglist>
+      <anchor>ab3706afb7581e38e3052bb9f907d1a84</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -11617,8 +11617,8 @@
       <type></type>
       <name>ItemProcessor</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>aebbdd36f95b963eeaf5743378ee43bd9</anchor>
-      <arglist>(CHotfolderProcessingComp &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const std::string &amp;itemUuid)</arglist>
+      <anchor>a49f25d4d64f7e675a0a6c7e08ffb23ce</anchor>
+      <arglist>(CHotfolderProcessingComp &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const QByteArray &amp;itemUuid)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -11628,10 +11628,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::string</type>
+      <type>QByteArray</type>
       <name>GetItemUuid</name>
       <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>a3fc97b8ef239348665f9095a112a5781</anchor>
+      <anchor>a05805c8074c3f589469cdac5fce785f1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -14313,10 +14313,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::string</type>
+      <type>virtual QByteArray</type>
       <name>GetOptionId</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>a4e59c44bd85d683ceb2126ab66fa547f</anchor>
+      <anchor>a240b19c9591683f080aa7c423ce29293</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

@@ -46,13 +46,13 @@ bool CEnvironmentManagerBase::LoadPackages(const QString& /*configFilePath*/)
 }
 
 
-int CEnvironmentManagerBase::GetPackageType(const std::string& /*packageId*/) const
+int CEnvironmentManagerBase::GetPackageType(const QByteArray& /*packageId*/) const
 {
 	return PT_UNKNOWN;
 }
 
 
-QString CEnvironmentManagerBase::GetPackagePath(const std::string& /*packageId*/) const
+QString CEnvironmentManagerBase::GetPackagePath(const QByteArray& /*packageId*/) const
 {
 	return QString();
 }
@@ -62,7 +62,7 @@ QString CEnvironmentManagerBase::GetPackagePath(const std::string& /*packageId*/
 
 const IRegistry* CEnvironmentManagerBase::GetRegistry(const CComponentAddress& address, const IRegistry* contextRegistryPtr) const
 {
-	if ((contextRegistryPtr != NULL) && address.GetPackageId().empty()){
+	if ((contextRegistryPtr != NULL) && address.GetPackageId().isEmpty()){
 		return contextRegistryPtr->GetEmbeddedRegistry(address.GetComponentId());
 	}
 
@@ -80,7 +80,7 @@ CEnvironmentManagerBase::ComponentAddresses CEnvironmentManagerBase::GetComponen
 	for (		Ids::const_iterator packageIter = packageIds.begin();
 				packageIter != packageIds.end();
 				++packageIter){
-		const std::string packageName = *packageIter;
+		const QByteArray packageName = *packageIter;
 
 		const IComponentStaticInfo* packageInfoPtr = GetEmbeddedComponentInfo(packageName);
 		if (packageInfoPtr != NULL){
@@ -92,7 +92,7 @@ CEnvironmentManagerBase::ComponentAddresses CEnvironmentManagerBase::GetComponen
 			for (		Ids::const_iterator componentIter = componentIds.begin();
 						componentIter != componentIds.end();
 						++componentIter){
-				const std::string componentName = *componentIter;
+				const QByteArray componentName = *componentIter;
 
 				const IComponentStaticInfo* componentInfoPtr = GetEmbeddedComponentInfo(componentName);
 				if (componentInfoPtr != NULL){
@@ -123,7 +123,7 @@ const IComponentStaticInfo* CEnvironmentManagerBase::GetComponentMetaInfo(const 
 }
 
 
-const IComponentStaticInfo* CEnvironmentManagerBase::GetPackageMetaInfo(const std::string& packageId) const
+const IComponentStaticInfo* CEnvironmentManagerBase::GetPackageMetaInfo(const QByteArray& packageId) const
 {
 	return GetEmbeddedComponentInfo(packageId);
 }

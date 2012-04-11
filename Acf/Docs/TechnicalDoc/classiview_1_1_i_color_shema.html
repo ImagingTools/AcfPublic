@@ -130,7 +130,7 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a type of ticker.  <a href="classiview_1_1_i_color_shema.html#adb917a7a31141b77860d5329e3f693fe">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; const QPen * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#a7fda5b6bd511d8804eae542560b23de7">PensPtrSet</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QVector&lt; const QPen * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#ad322f2f49b9ca2ee75195d1c9d667040">PensPtrSet</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#af1a82475de0f50cb6021bcd96b0b6a32">Assign</a> (const <a class="el" href="classiview_1_1_i_color_shema.html">IColorShema</a> &amp;colorShema)=0</td></tr>
@@ -140,8 +140,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#aa8ab22300c12b7a59cb992e5a1239520">SetBrush</a> (<a class="el" href="classiview_1_1_i_color_shema.html#a4788050ee4a1296518ffc95972f370e9">StandardBrush</a> brushType, const QBrush &amp;brush)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QFont &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#af78574909ab9198aa12aef3f191a5ec7">GetFont</a> (<a class="el" href="classiview_1_1_i_color_shema.html#a73b0cc4ab2f15e0403df974d2abc42a4">StandardFont</a> fontType) const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#a082feaaee850f648252ee155e2d6d7b8">SetFont</a> (<a class="el" href="classiview_1_1_i_color_shema.html#a73b0cc4ab2f15e0403df974d2abc42a4">StandardFont</a> fontType, const QFont &amp;font)=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_color_shema.html#a7fda5b6bd511d8804eae542560b23de7">PensPtrSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#a1a371d9aa5396e6a39d5739afeda33c8">GetPensPtrSet</a> (<a class="el" href="classiview_1_1_i_color_shema.html#a127cda44e66438411ebb1bdc9d1cc3cd">StandardPensSet</a> pensSetType) const =0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#ae5dbc862a951d287a9ff908c2b5dcc06">SetPensPtrSet</a> (<a class="el" href="classiview_1_1_i_color_shema.html#a127cda44e66438411ebb1bdc9d1cc3cd">StandardPensSet</a> pensSetType, const <a class="el" href="classiview_1_1_i_color_shema.html#a7fda5b6bd511d8804eae542560b23de7">PensPtrSet</a> &amp;pensSet)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_color_shema.html#ad322f2f49b9ca2ee75195d1c9d667040">PensPtrSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#a1a371d9aa5396e6a39d5739afeda33c8">GetPensPtrSet</a> (<a class="el" href="classiview_1_1_i_color_shema.html#a127cda44e66438411ebb1bdc9d1cc3cd">StandardPensSet</a> pensSetType) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#ae5dbc862a951d287a9ff908c2b5dcc06">SetPensPtrSet</a> (<a class="el" href="classiview_1_1_i_color_shema.html#a127cda44e66438411ebb1bdc9d1cc3cd">StandardPensSet</a> pensSetType, const <a class="el" href="classiview_1_1_i_color_shema.html#ad322f2f49b9ca2ee75195d1c9d667040">PensPtrSet</a> &amp;pensSet)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#a87fd73ae193bcb2df9d09b2e99202ff4">DrawTicker</a> (QPainter &amp;drawContext, <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> point, <a class="el" href="classiview_1_1_i_color_shema.html#adb917a7a31141b77860d5329e3f693fe">TickerType</a> tickerType) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a ticker.  <a href="#a87fd73ae193bcb2df9d09b2e99202ff4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_color_shema.html#a67b5789bd202df172f7932085cdec9d3">GetTickerBox</a> (<a class="el" href="classiview_1_1_i_color_shema.html#adb917a7a31141b77860d5329e3f693fe">TickerType</a> tickerType) const =0</td></tr>
@@ -152,20 +152,20 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Defines set of standard pens, brushes and simple management of unions. </p>
 
-<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00032">32</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00028">28</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a7fda5b6bd511d8804eae542560b23de7"></a><!-- doxytag: member="iview::IColorShema::PensPtrSet" ref="a7fda5b6bd511d8804eae542560b23de7" args="" -->
+<a class="anchor" id="ad322f2f49b9ca2ee75195d1c9d667040"></a><!-- doxytag: member="iview::IColorShema::PensPtrSet" ref="ad322f2f49b9ca2ee75195d1c9d667040" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;const QPen*&gt; <a class="el" href="classiview_1_1_i_color_shema.html#a7fda5b6bd511d8804eae542560b23de7">iview::IColorShema::PensPtrSet</a></td>
+          <td class="memname">typedef QVector&lt;const QPen*&gt; <a class="el" href="classiview_1_1_i_color_shema.html#ad322f2f49b9ca2ee75195d1c9d667040">iview::IColorShema::PensPtrSet</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00132">132</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00128">128</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
 
 </div>
 </div>
@@ -205,7 +205,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00059">59</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00055">55</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
 
 </div>
 </div>
@@ -228,7 +228,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00072">72</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00068">68</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
 
 </div>
 </div>
@@ -289,7 +289,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00035">35</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00031">31</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
 
 </div>
 </div>
@@ -312,7 +312,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00077">77</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00073">73</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +378,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00084">84</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_color_shema_8h_source.html#l00080">80</a> of file <a class="el" href="_i_color_shema_8h_source.html">IColorShema.h</a>.</p>
 
 </div>
 </div>
@@ -522,7 +522,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classiview_1_1_i_color_shema.html#a7fda5b6bd511d8804eae542560b23de7">PensPtrSet</a>&amp; iview::IColorShema::GetPensPtrSet </td>
+          <td class="memname">virtual const <a class="el" href="classiview_1_1_i_color_shema.html#ad322f2f49b9ca2ee75195d1c9d667040">PensPtrSet</a>&amp; iview::IColorShema::GetPensPtrSet </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_color_shema.html#a127cda44e66438411ebb1bdc9d1cc3cd">StandardPensSet</a>&#160;</td>
           <td class="paramname"><em>pensSetType</em></td><td>)</td>
@@ -657,7 +657,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiview_1_1_i_color_shema.html#a7fda5b6bd511d8804eae542560b23de7">PensPtrSet</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiview_1_1_i_color_shema.html#ad322f2f49b9ca2ee75195d1c9d667040">PensPtrSet</a> &amp;&#160;</td>
           <td class="paramname"><em>pensSet</em>&#160;</td>
         </tr>
         <tr>

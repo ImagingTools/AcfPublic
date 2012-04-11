@@ -127,9 +127,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QGraphicsItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ab4983960912bb930939ece9112da0416">AddShapeToScene</a> (<a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *elementPtr) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of shape representing some element.  <a href="#ab4983960912bb930939ece9112da0416"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ad856af3c00a1fcf929106fead92704fa">AddConnectorsToScene</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#aec38c8b1a50e3d7c496e9c24218d6936">AddConnector</a> (<a class="el" href="classicmpstr_1_1_c_registry_element_shape.html">CRegistryElementShape</a> &amp;sourceShape, const std::string &amp;referenceComponentId, const std::string &amp;attributeId, bool isFactory=false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#aa42d946fa400c88063332ac0c3200865">TryCreateComponent</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a191044044f99962ee7394bd0857f1545">ConnectReferences</a> (const std::string &amp;componentRole)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ada7ffbb9e2cbdc8534a6793dc2dd8eef">AddConnector</a> (<a class="el" href="classicmpstr_1_1_c_registry_element_shape.html">CRegistryElementShape</a> &amp;sourceShape, const QByteArray &amp;referenceComponentId, const QByteArray &amp;attributeId, bool isFactory=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a38db8b13925b822b0fed67eb4248072c">TryCreateComponent</a> (const QByteArray &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a3ba75a073ed97de195fafd149fd95e30">ConnectReferences</a> (const QByteArray &amp;componentRole)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a5a5fa5717d66268ddff72cb4f07ba067">UpdateComponentSelection</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#afe83e2d92ab9da4d0704940b321bec2f">DoRetranslate</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a3c7fe27cca21ea3e8fc47bdbf355fb3a">OnDropObject</a> (const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</td></tr>
@@ -149,7 +149,7 @@ Friends</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00049">49</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00047">47</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a3b8dadc23a7b177f65d5418e2a53b9c4"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::BaseClass" ref="a3b8dadc23a7b177f65d5418e2a53b9c4" args="" -->
 <div class="memitem">
@@ -164,7 +164,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_scenographer_comp_base.html#a02a20bbe0464bc2d49f569fe75fd9a31">iqt2d::TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00059">59</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00057">57</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -194,7 +194,7 @@ Friends</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00094">94</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00092">92</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aec38c8b1a50e3d7c496e9c24218d6936"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::AddConnector" ref="aec38c8b1a50e3d7c496e9c24218d6936" args="(CRegistryElementShape &amp;sourceShape, const std::string &amp;referenceComponentId, const std::string &amp;attributeId, bool isFactory=false)" -->
+<a class="anchor" id="ada7ffbb9e2cbdc8534a6793dc2dd8eef"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::AddConnector" ref="ada7ffbb9e2cbdc8534a6793dc2dd8eef" args="(CRegistryElementShape &amp;sourceShape, const QByteArray &amp;referenceComponentId, const QByteArray &amp;attributeId, bool isFactory=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -229,13 +229,13 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>referenceComponentId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>attributeId</em>, </td>
         </tr>
         <tr>
@@ -292,14 +292,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a191044044f99962ee7394bd0857f1545"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::ConnectReferences" ref="a191044044f99962ee7394bd0857f1545" args="(const std::string &amp;componentRole)" -->
+<a class="anchor" id="a3ba75a073ed97de195fafd149fd95e30"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::ConnectReferences" ref="a3ba75a073ed97de195fafd149fd95e30" args="(const QByteArray &amp;componentRole)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void icmpstr::CVisualRegistryScenographerComp::ConnectReferences </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentRole</em></td><td>)</td>
           <td><code> [protected]</code></td>
         </tr>
@@ -443,7 +443,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00226">226</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00224">224</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +461,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00232">232</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00230">230</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -874,14 +874,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa42d946fa400c88063332ac0c3200865"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::TryCreateComponent" ref="aa42d946fa400c88063332ac0c3200865" args="(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)" -->
+<a class="anchor" id="a38db8b13925b822b0fed67eb4248072c"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::TryCreateComponent" ref="a38db8b13925b822b0fed67eb4248072c" args="(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a>* icmpstr::CVisualRegistryScenographerComp::TryCreateComponent </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>elementId</em>, </td>
         </tr>
         <tr>
@@ -977,7 +977,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00179">179</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00177">177</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>

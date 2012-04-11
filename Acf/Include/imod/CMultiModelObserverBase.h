@@ -24,8 +24,8 @@
 #define imod_CMultiModelObserverBase_included
 
 
-// STL includes
-#include <vector>
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "imod/IModel.h"
@@ -67,7 +67,7 @@ protected:
 	virtual void OnUpdate(IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
 
 private:
-	typedef std::vector<IModel*> Models;
+	typedef QVector<IModel*> Models;
 
 	Models m_models;
 };

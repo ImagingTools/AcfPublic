@@ -38,7 +38,7 @@
 <div class="title">iser::CXmlFileReadArchive Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iser::CXmlFileReadArchive" --><!-- doxytag: inherits="TXmlStreamReadArchiveBase&lt; std::ifstream &gt;,iser::CFileArchiveInfo" -->
+<!-- doxytag: class="iser::CXmlFileReadArchive" --><!-- doxytag: inherits="iser::CXmlStreamReadArchiveBase,iser::CFileArchiveInfo" -->
 <p>Simple implementation of archive reading from XML file.  
  <a href="classiser_1_1_c_xml_file_read_archive.html#details">More...</a></p>
 
@@ -49,19 +49,19 @@ Inheritance diagram for iser::CXmlFileReadArchive:</div>
  <div class="center">
   <img src="classiser_1_1_c_xml_file_read_archive.png" usemap="#iser::CXmlFileReadArchive_map" alt=""/>
   <map id="iser::CXmlFileReadArchive_map" name="iser::CXmlFileReadArchive_map">
-<area href="classiser_1_1_t_xml_stream_read_archive_base.html" alt="iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;" shape="rect" coords="308,336,606,360"/>
-<area href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo." alt="iser::CFileArchiveInfo" shape="rect" coords="770,336,1068,360"/>
-<area href="classiser_1_1_c_xml_read_archive_base.html" title="Base class for XML based reading archives." alt="iser::CXmlReadArchiveBase" shape="rect" coords="308,280,606,304"/>
-<area href="classiser_1_1_i_file_archive_info.html" title="Simple informative interface allowing to get access to current processed file by file archives..." alt="iser::IFileArchiveInfo" shape="rect" coords="770,280,1068,304"/>
-<area href="classiser_1_1_c_text_read_archive_base.html" title="Common archive implementation of text-based reading archives." alt="iser::CTextReadArchiveBase" shape="rect" coords="154,224,452,248"/>
-<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="462,224,760,248"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="770,224,1068,248"/>
-<area href="classiser_1_1_c_read_archive_base.html" title="Basic implementation of an abstract archive for data reading." alt="iser::CReadArchiveBase" shape="rect" coords="154,168,452,192"/>
-<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="154,112,452,136"/>
-<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,298,80"/>
-<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="308,56,606,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,298,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="308,0,606,24"/>
+<area href="classiser_1_1_c_xml_stream_read_archive_base.html" title="Base implementation of a reading archive for XML format using a stream implementation." alt="iser::CXmlStreamReadArchiveBase" shape="rect" coords="220,336,430,360"/>
+<area href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo." alt="iser::CFileArchiveInfo" shape="rect" coords="550,336,760,360"/>
+<area href="classiser_1_1_c_xml_read_archive_base.html" title="Base class for XML based reading archives." alt="iser::CXmlReadArchiveBase" shape="rect" coords="220,280,430,304"/>
+<area href="classiser_1_1_i_file_archive_info.html" title="Simple informative interface allowing to get access to current processed file by file archives..." alt="iser::IFileArchiveInfo" shape="rect" coords="550,280,760,304"/>
+<area href="classiser_1_1_c_text_read_archive_base.html" title="Common archive implementation of text-based reading archives." alt="iser::CTextReadArchiveBase" shape="rect" coords="110,224,320,248"/>
+<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="330,224,540,248"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="550,224,760,248"/>
+<area href="classiser_1_1_c_read_archive_base.html" title="Basic implementation of an abstract archive for data reading." alt="iser::CReadArchiveBase" shape="rect" coords="110,168,320,192"/>
+<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="110,112,320,136"/>
+<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,210,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="220,56,430,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,210,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="220,0,430,24"/>
 </map>
  </div></div>
 
@@ -69,9 +69,7 @@ Inheritance diagram for iser::CXmlFileReadArchive:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html">TXmlStreamReadArchiveBase</a><br class="typebreak"/>
-&lt; std::ifstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_file_read_archive.html#acf96cd0875838798aa3db29037a56954">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiser_1_1_c_xml_stream_read_archive_base.html">CXmlStreamReadArchiveBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a3d19f857933715cb86a2fdd953c17284">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiser_1_1_c_file_archive_info.html">CFileArchiveInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a2660fd7a9f7b27d6cd3470655329c5f4">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -85,22 +83,22 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Simple implementation of archive reading from XML file. </p>
 <p>This imlementation doesn't use any external parser. It uses only single pass and is very fast, but it doesn't support of tags skipping and it needs <code>counter</code> attribute indicating number of subtags for each mutli tag node. XML file in this format can be created using <code><a class="el" href="classiser_1_1_c_xml_file_write_archive.html" title="Simple implementation of archive for writing in XML format.">iser::CXmlFileWriteArchive</a></code>. </p>
 
-<p>Definition at line <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html#l00027">27</a> of file <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html">CXmlFileReadArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html#l00026">26</a> of file <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html">CXmlFileReadArchive.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="acf96cd0875838798aa3db29037a56954"></a><!-- doxytag: member="iser::CXmlFileReadArchive::BaseClass" ref="acf96cd0875838798aa3db29037a56954" args="" -->
+<a class="anchor" id="a3d19f857933715cb86a2fdd953c17284"></a><!-- doxytag: member="iser::CXmlFileReadArchive::BaseClass" ref="a3d19f857933715cb86a2fdd953c17284" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html">TXmlStreamReadArchiveBase</a>&lt;std::ifstream&gt; <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#acf96cd0875838798aa3db29037a56954">iser::CXmlFileReadArchive::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiser_1_1_c_xml_stream_read_archive_base.html">CXmlStreamReadArchiveBase</a> <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#a3d19f857933715cb86a2fdd953c17284">iser::CXmlFileReadArchive::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a2f48b7867e6e06a8648ccf0d6260b89e">iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiser_1_1_c_xml_stream_read_archive_base.html#a0070490328f58be01324f603cf1adfd3">iser::CXmlStreamReadArchiveBase</a>.</p>
 
-<p>Definition at line <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html#l00032">32</a> of file <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html">CXmlFileReadArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html#l00031">31</a> of file <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html">CXmlFileReadArchive.h</a>.</p>
 
 </div>
 </div>
@@ -115,7 +113,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html#l00033">33</a> of file <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html">CXmlFileReadArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html#l00032">32</a> of file <a class="el" href="iser_2_c_xml_file_read_archive_8h_source.html">CXmlFileReadArchive.h</a>.</p>
 
 </div>
 </div>
@@ -199,7 +197,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Decorate message parts before outputting. </p>
 
-<p>Reimplemented from <a class="el" href="classiser_1_1_t_xml_stream_read_archive_base.html#a886a5d8acc02d641c36417f76ceca696">iser::TXmlStreamReadArchiveBase&lt; std::ifstream &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiser_1_1_c_xml_stream_read_archive_base.html#a1539394f8e0667919ba2745d78c9f2a2">iser::CXmlStreamReadArchiveBase</a>.</p>
 
 </div>
 </div>

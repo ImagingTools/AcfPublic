@@ -23,9 +23,6 @@
 #include "imeas/CHistogramStatisticsProcessorComp.h"
 
 
-// STL includes
-#include <cmath>
-
  // ACF includes
 #include "istd/TChangeNotifier.h"
 

@@ -48,7 +48,7 @@
 <a name="l00025"></a>00025        <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a5f7313e6332ce0be38a4b0b27ed386ef">CHotfolderProcessingItem</a>();
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027        <span class="comment">// reimplemented (ifpf::IHotfolderProcessingItem)</span>
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> std::string <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a626b3aaa7b99dc105b371badef19cff4" title="Return the unique identifier for a processing item.">GetItemUuid</a>() <span class="keyword">const</span>;
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> QByteArray <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a424b49070110413e1ee7632905f11ab6" title="Return the unique identifier for a processing item.">GetItemUuid</a>() <span class="keyword">const</span>;
 <a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#aef870897ca5480a8fbbc2106757e3f5c" title="Get the processing state for the item.">GetProcessingState</a>() <span class="keyword">const</span>;
 <a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a5e92b99831f8d7a04209a0a812f02460" title="Set the processing state for the item.">SetProcessingState</a>(<span class="keywordtype">int</span> processingState);
 <a name="l00031"></a>00031        <span class="keyword">virtual</span> QString <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a864e38503a96049e8f21bc8c20e8d784" title="Get file path, of the file which must be processed.">GetInputFile</a>() <span class="keyword">const</span>;
@@ -70,7 +70,7 @@
 <a name="l00047"></a>00047        <span class="keywordtype">double</span> m_processingTime;
 <a name="l00048"></a>00048        QDateTime m_startTime;
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="keyword">mutable</span> std::string m_itemId;
+<a name="l00050"></a>00050        <span class="keyword">mutable</span> QByteArray m_itemId;
 <a name="l00051"></a>00051 };
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 

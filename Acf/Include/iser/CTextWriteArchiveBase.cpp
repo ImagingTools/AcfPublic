@@ -33,7 +33,7 @@ namespace iser
 
 bool CTextWriteArchiveBase::Process(bool& value)
 {
-	std::string elementText = value? "true": "false";
+	QByteArray elementText = value? "true": "false";
 
 	return Process(elementText);
 }
@@ -107,7 +107,7 @@ bool CTextWriteArchiveBase::Process(double& value)
 
 bool CTextWriteArchiveBase::ProcessData(void* dataPtr, int size)
 {
-	std::string encodedString = istd::CBase64::ConvertToBase64(dataPtr, size);
+	QByteArray encodedString = istd::CBase64::ConvertToBase64(dataPtr, size);
 
 	return Process(encodedString);
 }

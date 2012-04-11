@@ -56,7 +56,7 @@ Inheritance diagram for istd::TIMap&lt; Key, Value &gt;:</div>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef Key&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef Value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">ValueType</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; <a class="el" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#ac89fc7482e9d9efc20b4e9b4c7bb5e00">Keys</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; <a class="el" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#a2ffdd04af81f7945dfe18e9ecd3acf78">Keys</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#a31828ff86f1d2c94baee97d7ab6231cf">GetElementsCount</a> () const =0</td></tr>
@@ -69,7 +69,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find index index of specified key.  <a href="#a4dc5ba136f4439f51b57f5f23258d22b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">ValueType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#aa5ea8dfdc94ccae0a42fc41dc7dba433">FindElement</a> (const <a class="el" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a> &amp;key) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find value element associated with specified key.  <a href="#aa5ea8dfdc94ccae0a42fc41dc7dba433"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#a30180e5f3b98ac1c01c1a7eaa436e455">GetKeys</a> (<a class="el" href="classistd_1_1_t_i_map.html#ac89fc7482e9d9efc20b4e9b4c7bb5e00">Keys</a> &amp;result, bool doAppend=false) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#a30180e5f3b98ac1c01c1a7eaa436e455">GetKeys</a> (<a class="el" href="classistd_1_1_t_i_map.html#a2ffdd04af81f7945dfe18e9ecd3acf78">Keys</a> &amp;result, bool doAppend=false) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of keys stored in this map.  <a href="#a30180e5f3b98ac1c01c1a7eaa436e455"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_i_map.html#af236dfd738ca9502c8d5fe777c886f80">GetKeyAt</a> (int index) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get key value at specified index.  <a href="#af236dfd738ca9502c8d5fe777c886f80"></a><br/></td></tr>
@@ -81,22 +81,22 @@ Public Member Functions</h2></td></tr>
 class istd::TIMap&lt; Key, Value &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="_t_i_map_8h_source.html#l00016">16</a> of file <a class="el" href="_t_i_map_8h_source.html">TIMap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_i_map_8h_source.html#l00017">17</a> of file <a class="el" href="_t_i_map_8h_source.html">TIMap.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="ac89fc7482e9d9efc20b4e9b4c7bb5e00"></a><!-- doxytag: member="istd::TIMap::Keys" ref="ac89fc7482e9d9efc20b4e9b4c7bb5e00" args="" -->
+<a class="anchor" id="a2ffdd04af81f7945dfe18e9ecd3acf78"></a><!-- doxytag: member="istd::TIMap::Keys" ref="a2ffdd04af81f7945dfe18e9ecd3acf78" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Key, typename Value&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;<a class="el" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&gt; <a class="el" href="classistd_1_1_t_i_map.html">istd::TIMap</a>&lt; Key, Value &gt;::<a class="el" href="classistd_1_1_t_i_map.html#ac89fc7482e9d9efc20b4e9b4c7bb5e00">Keys</a></td>
+          <td class="memname">typedef QSet&lt;<a class="el" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&gt; <a class="el" href="classistd_1_1_t_i_map.html">istd::TIMap</a>&lt; Key, Value &gt;::<a class="el" href="classistd_1_1_t_i_map.html#a2ffdd04af81f7945dfe18e9ecd3acf78">Keys</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_i_map_8h_source.html#l00021">21</a> of file <a class="el" href="_t_i_map_8h_source.html">TIMap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_i_map_8h_source.html#l00022">22</a> of file <a class="el" href="_t_i_map_8h_source.html">TIMap.h</a>.</p>
 
 </div>
 </div>
@@ -113,7 +113,7 @@ template&lt;typename Key, typename Value&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_i_map_8h_source.html#l00019">19</a> of file <a class="el" href="_t_i_map_8h_source.html">TIMap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_i_map_8h_source.html#l00020">20</a> of file <a class="el" href="_t_i_map_8h_source.html">TIMap.h</a>.</p>
 
 </div>
 </div>
@@ -130,7 +130,7 @@ template&lt;typename Key, typename Value&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_i_map_8h_source.html#l00020">20</a> of file <a class="el" href="_t_i_map_8h_source.html">TIMap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_i_map_8h_source.html#l00021">21</a> of file <a class="el" href="_t_i_map_8h_source.html">TIMap.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +236,7 @@ template&lt;typename Key, typename Value&gt; </div>
         <tr>
           <td class="memname">virtual void <a class="el" href="classistd_1_1_t_i_map.html">istd::TIMap</a>&lt; Key, Value &gt;::GetKeys </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_t_i_map.html#ac89fc7482e9d9efc20b4e9b4c7bb5e00">Keys</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_t_i_map.html#a2ffdd04af81f7945dfe18e9ecd3acf78">Keys</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>

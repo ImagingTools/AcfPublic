@@ -138,19 +138,19 @@
 <a name="l00111"></a>00111        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1ef26478c8b5b803e9d4f91678bb9a17">AfterSubcomponentsChange</a>();
 <a name="l00112"></a>00112 
 <a name="l00113"></a>00113 <span class="keyword">protected</span>:
-<a name="l00114"></a>00114        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7b2392e4f6b4a45932e201a6f425c8d3">SetAttributeToItem</a>(
+<a name="l00114"></a>00114        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a9f06d7d5c1c65644f80b7bfd39610b8f">SetAttributeToItem</a>(
 <a name="l00115"></a>00115                             QTreeWidgetItem&amp; attributeItem,
 <a name="l00116"></a>00116                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00117"></a>00117                             <span class="keyword">const</span> std::string&amp; attributeId,
+<a name="l00117"></a>00117                             <span class="keyword">const</span> QByteArray&amp; attributeId,
 <a name="l00118"></a>00118                             <span class="keyword">const</span> ElementIdToAttrInfoMap&amp; infos,
 <a name="l00119"></a>00119                             <span class="keywordtype">bool</span>* hasErrorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00120"></a>00120                             <span class="keywordtype">bool</span>* hasWarningPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00121"></a>00121                             <span class="keywordtype">bool</span>* hasExportPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00122"></a>00122        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#af27630e2cdf136592e352be0718cef02">SetInterfaceToItem</a>(
+<a name="l00122"></a>00122        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a4ee414e78fe2e6b4ebe4edaea6e9302f">SetInterfaceToItem</a>(
 <a name="l00123"></a>00123                             QTreeWidgetItem&amp; item,
 <a name="l00124"></a>00124                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00125"></a>00125                             <span class="keyword">const</span> std::string&amp; elementId,
-<a name="l00126"></a>00126                             <span class="keyword">const</span> std::string&amp; interfaceName,
+<a name="l00125"></a>00125                             <span class="keyword">const</span> QByteArray&amp; elementId,
+<a name="l00126"></a>00126                             <span class="keyword">const</span> QByteArray&amp; interfaceName,
 <a name="l00127"></a>00127                             <span class="keywordtype">bool</span> useFullPath,
 <a name="l00128"></a>00128                             <span class="keywordtype">bool</span>* hasWarningPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00129"></a>00129                             <span class="keywordtype">bool</span>* hasExportPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
@@ -163,9 +163,9 @@
 <a name="l00136"></a>00136                             <span class="keywordtype">int</span> meaning,
 <a name="l00137"></a>00137                             <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00138"></a>00138 
-<a name="l00139"></a>00139        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a23c5140c70662ea09e5fce1c7edbc8b6">CreateExportedComponentsTree</a>(
-<a name="l00140"></a>00140                             <span class="keyword">const</span> std::string&amp; elementId,
-<a name="l00141"></a>00141                             <span class="keyword">const</span> std::string&amp; globalElementId,
+<a name="l00139"></a>00139        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7da243c4b64ed168c8299107d9a2ed0f">CreateExportedComponentsTree</a>(
+<a name="l00140"></a>00140                             <span class="keyword">const</span> QByteArray&amp; elementId,
+<a name="l00141"></a>00141                             <span class="keyword">const</span> QByteArray&amp; globalElementId,
 <a name="l00142"></a>00142                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>* elementMetaInfoPtr,
 <a name="l00143"></a>00143                             QTreeWidgetItem&amp; item,
 <a name="l00144"></a>00144                             <span class="keywordtype">bool</span>* hasWarningPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
@@ -200,11 +200,11 @@
 <a name="l00173"></a>00173               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setModelData(QWidget* editor, QAbstractItemModel* model, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
 <a name="l00174"></a>00174 
 <a name="l00175"></a>00175        <span class="keyword">protected</span>:
-<a name="l00176"></a>00176               <span class="keywordtype">bool</span> SetComponentExportEditor(<span class="keyword">const</span> std::string&amp; attributeId, <span class="keyword">const</span> QString&amp; defaultValue, QWidget&amp; editor) <span class="keyword">const</span>;
-<a name="l00177"></a>00177               <span class="keywordtype">bool</span> SetAttributeExportEditor(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> std::string&amp; exportId, QWidget&amp; editor) <span class="keyword">const</span>;
-<a name="l00178"></a>00178               <span class="keywordtype">bool</span> SetAttributeValueEditor(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keywordtype">int</span> propertyMining, QWidget&amp; editor) <span class="keyword">const</span>;
+<a name="l00176"></a>00176               <span class="keywordtype">bool</span> SetComponentExportEditor(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> QString&amp; defaultValue, QWidget&amp; editor) <span class="keyword">const</span>;
+<a name="l00177"></a>00177               <span class="keywordtype">bool</span> SetAttributeExportEditor(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QByteArray&amp; exportId, QWidget&amp; editor) <span class="keyword">const</span>;
+<a name="l00178"></a>00178               <span class="keywordtype">bool</span> SetAttributeValueEditor(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>, <span class="keywordtype">int</span> propertyMining, QWidget&amp; editor) <span class="keyword">const</span>;
 <a name="l00179"></a>00179 
-<a name="l00180"></a>00180               <span class="keywordtype">bool</span> SetComponentExportData(<span class="keyword">const</span> std::string&amp; attributeId, <span class="keyword">const</span> QWidget&amp; editor) <span class="keyword">const</span>;
+<a name="l00180"></a>00180               <span class="keywordtype">bool</span> SetComponentExportData(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> QWidget&amp; editor) <span class="keyword">const</span>;
 <a name="l00181"></a>00181 
 <a name="l00182"></a>00182        <span class="keyword">private</span>:
 <a name="l00183"></a>00183               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html">CAttributeEditorComp</a>&amp; m_parent;
@@ -233,7 +233,7 @@
 <a name="l00206"></a>00206        AttributeItemDelegate m_attributeItemDelegate;
 <a name="l00207"></a>00207        RegistryObserver m_registryObserver;
 <a name="l00208"></a>00208 
-<a name="l00209"></a>00209        <span class="keyword">typedef</span> QMap&lt;std::string, QString&gt; AttributeTypesMap;
+<a name="l00209"></a>00209        <span class="keyword">typedef</span> QMap&lt;QByteArray, QString&gt; AttributeTypesMap;
 <a name="l00210"></a>00210        AttributeTypesMap m_attributeTypesMap;
 <a name="l00211"></a>00211        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iqtgui::CTreeWidgetFilter&gt;</a> m_attributesTreeFilter;
 <a name="l00212"></a>00212        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iqtgui::CTreeWidgetFilter&gt;</a> m_interfacesTreeFilter;
@@ -259,7 +259,7 @@
 <a name="l00232"></a>00232                      valuesString += <span class="stringliteral">&quot;;&quot;</span>;
 <a name="l00233"></a>00233               }
 <a name="l00234"></a>00234 
-<a name="l00235"></a>00235               valuesString += QString::fromStdString(attribute.GetValueAt(index));
+<a name="l00235"></a>00235               valuesString += attribute.GetValueAt(index);
 <a name="l00236"></a>00236        }
 <a name="l00237"></a>00237 
 <a name="l00238"></a>00238        <span class="keywordflow">return</span> valuesString;

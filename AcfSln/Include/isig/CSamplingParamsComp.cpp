@@ -23,9 +23,6 @@
 #include "isig/CSamplingParamsComp.h"
 
 
-// STL includes
-#include <cmath>
-
 // ACF includes
 #include "istd/TChangeNotifier.h"
 

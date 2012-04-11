@@ -43,7 +43,7 @@ bool CPackagesLoaderExtComp::RegisterPackagesDir(const QString& path)
 				++iter){
 		QFileInfo fileInfo(*iter);
 
-		std::string packageName(fileInfo.baseName().toStdString());
+		QByteArray packageName(fileInfo.baseName().toLocal8Bit());
 
 		QDir componentInfoDir = packagesDir;
 		componentInfoDir.cd(*iter);
@@ -57,7 +57,7 @@ bool CPackagesLoaderExtComp::RegisterPackagesDir(const QString& path)
 
 // reimplemented (icmpstr::IExternalMetaInfoManager)
 
-QString CPackagesLoaderExtComp::GetPackageInfoPath(const std::string& packageId) const
+QString CPackagesLoaderExtComp::GetPackageInfoPath(const QByteArray& packageId) const
 {
 	PackageInfosMap::const_iterator foundPackageIter = m_packageInfosMap.find(packageId);
 	if (foundPackageIter != m_packageInfosMap.end()){
@@ -72,7 +72,7 @@ QString CPackagesLoaderExtComp::GetComponentInfoPath(const icomp::CComponentAddr
 {
 	PackageInfosMap::const_iterator foundPackageIter = m_packageInfosMap.find(address.GetPackageId());
 	if (foundPackageIter != m_packageInfosMap.end()){
-		return foundPackageIter.value().filePath(address.GetComponentId().c_str());
+		return foundPackageIter.value().filePath(address.GetComponentId());
 	}
 
 	return "";

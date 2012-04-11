@@ -221,7 +221,7 @@ void COptionsManagerGuiComp::OnEditingFinished()
 
 		iprm::IOptionsManager* optionManagerPtr = CompCastPtr<iprm::IOptionsManager>(GetObjectPtr());
 		if (optionManagerPtr != NULL && addNewOption){
-			optionManagerPtr->InsertOption(newOptionName, newOptionName.toStdString());
+			optionManagerPtr->InsertOption(newOptionName, newOptionName.toLocal8Bit());
 		}
 	}
 }

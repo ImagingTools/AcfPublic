@@ -60,13 +60,13 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#abcffd855c377d8ea8080839a5b60cfec">PixelRanges</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QVector&lt; <a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">PixelRanges</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a42d2ffebae7eca34d038088abcdb48d7">CBitmapRegion</a> (const <a class="el" href="classiimg_1_1_i_bitmap.html">IBitmap</a> *bitmapPtr=NULL)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ab321459a10fef69da3a538a293ffc9ac">CreateFromGeometry</a> (const <a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;geometry)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from the geometrical object.  <a href="#ab321459a10fef69da3a538a293ffc9ac"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#abcffd855c377d8ea8080839a5b60cfec">PixelRanges</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ae632bef52c5e3d6c7e61916fb89cda23">GetPixelRanges</a> (int lineIndex) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">PixelRanges</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ae632bef52c5e3d6c7e61916fb89cda23">GetPixelRanges</a> (int lineIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of pixel ranges per given line.  <a href="#ae632bef52c5e3d6c7e61916fb89cda23"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a0b7534151852fbe28d0230b7f3c9ebc8">GetBoundingBox</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#af5339e3fb1b62a062b69d0a6cf878449">ResetBitmapRegion</a> ()</td></tr>
@@ -76,20 +76,20 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Representation of a 2D-region as container of bitmap line scans. </p>
 
-<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00024">24</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00023">23</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="abcffd855c377d8ea8080839a5b60cfec"></a><!-- doxytag: member="iimg::CBitmapRegion::PixelRanges" ref="abcffd855c377d8ea8080839a5b60cfec" args="" -->
+<a class="anchor" id="abfdce528ac4e3a07818036e3e7e387c0"></a><!-- doxytag: member="iimg::CBitmapRegion::PixelRanges" ref="abfdce528ac4e3a07818036e3e7e387c0" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;<a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a>&gt; <a class="el" href="classiimg_1_1_c_bitmap_region.html#abcffd855c377d8ea8080839a5b60cfec">iimg::CBitmapRegion::PixelRanges</a></td>
+          <td class="memname">typedef QVector&lt;<a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a>&gt; <a class="el" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">iimg::CBitmapRegion::PixelRanges</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00038">38</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00037">37</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
 
 </div>
 </div>
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00075">75</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00074">74</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
 
 </div>
 </div>
@@ -170,7 +170,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#abcffd855c377d8ea8080839a5b60cfec">PixelRanges</a>* iimg::CBitmapRegion::GetPixelRanges </td>
+          <td class="memname">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">PixelRanges</a>* iimg::CBitmapRegion::GetPixelRanges </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>lineIndex</em></td><td>)</td>

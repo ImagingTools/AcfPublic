@@ -58,50 +58,50 @@ Inheritance diagram for ibase::IObjectQueue:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector<br class="typebreak"/>
-&lt; <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a83963305da6b9d614f1bd0c8122e2b8e">ObjectList</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QVector<br class="typebreak"/>
+&lt; <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a85331f124b4c98b1e87ce1f4595a089d">ObjectList</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#af01fc4bd306f81c6568a2ee703dba6ce">GetObjectsCount</a> (const std::string *typeIdPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of objects in this queue.  <a href="#af01fc4bd306f81c6568a2ee703dba6ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a5dae0e1bcc284b86dd00b0f167a1f0f2">GetObjectsCount</a> (const QByteArray *typeIdPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of objects in this queue.  <a href="#a5dae0e1bcc284b86dd00b0f167a1f0f2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#ab5ab003bf24ed4300feefae34c3db255">ClearQueue</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all objects from queue.  <a href="#ab5ab003bf24ed4300feefae34c3db255"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a17d9723f719c5481bd5007ecff104704">CreateFrontObject</a> (int offsetPos=0, const std::string *typeIdPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create object at the front of this queue.  <a href="#a17d9723f719c5481bd5007ecff104704"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#ac352f491017aacc91b832f86fbe9e808">CreateBackObject</a> (int offsetPos=0, const std::string *typeIdPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create object at the end of this queue.  <a href="#ac352f491017aacc91b832f86fbe9e808"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#ac4a9cabb54dd826c8330590cb17efcbe">RemoveFrontObject</a> (int offsetPos=0, const std::string *typeIdPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove object at the front of this queue.  <a href="#ac4a9cabb54dd826c8330590cb17efcbe"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#ab4332f3d3ef4b2ded6dcbe105c383bf1">RemoveBackObject</a> (int offsetPos=0, const std::string *typeIdPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove object at the end of this queue.  <a href="#ab4332f3d3ef4b2ded6dcbe105c383bf1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a769aa8614a1306e573b7a4d17411ccac">GetFrontObject</a> (int offsetPos=0, const std::string *typeIdPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object at the front of queue.  <a href="#a769aa8614a1306e573b7a4d17411ccac"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#abd4480983ca82d89a135c7bdb40955d7">GetBackObject</a> (int offsetPos=0, const std::string *typeIdPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object at the end of queue.  <a href="#abd4480983ca82d89a135c7bdb40955d7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a51db2998275335a180c8e08a00c24fa0">SelectObjects</a> (<a class="el" href="classibase_1_1_i_object_queue.html#a83963305da6b9d614f1bd0c8122e2b8e">ObjectList</a> &amp;result, bool doAppend=false, int offsetPos=0, const std::string *typeIdPtr=NULL) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find set of objects.  <a href="#a51db2998275335a180c8e08a00c24fa0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#abffe19a31b79d5508d820fd3f5c0cad6">PopFrontObject</a> (int offsetPos=0, const std::string *typeIdPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object at the front of queue and remove it from queue.  <a href="#abffe19a31b79d5508d820fd3f5c0cad6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#ae5b17c4b26ff3544ae9a8f5cc3a28e08">PopBackObject</a> (int offsetPos=0, const std::string *typeIdPtr=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object at the end of queue and remove it from queue.  <a href="#ae5b17c4b26ff3544ae9a8f5cc3a28e08"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#ac5032c22dd3e7169ae7beb655dc0740b">CreateFrontObject</a> (int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create object at the front of this queue.  <a href="#ac5032c22dd3e7169ae7beb655dc0740b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a4b0fe0129cab86a68cb5e9f8770cf256">CreateBackObject</a> (int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create object at the end of this queue.  <a href="#a4b0fe0129cab86a68cb5e9f8770cf256"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a518b516fc763f53e94f17734462f5c7a">RemoveFrontObject</a> (int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove object at the front of this queue.  <a href="#a518b516fc763f53e94f17734462f5c7a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#ac8e0cb5b6e099313036938d678fddecc">RemoveBackObject</a> (int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove object at the end of this queue.  <a href="#ac8e0cb5b6e099313036938d678fddecc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a4b8d4c0d20fb53e1cf07b47b8fc229c8">GetFrontObject</a> (int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object at the front of queue.  <a href="#a4b8d4c0d20fb53e1cf07b47b8fc229c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a3bbc827969869feeefd8500cf688cbd1">GetBackObject</a> (int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object at the end of queue.  <a href="#a3bbc827969869feeefd8500cf688cbd1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a64603c45a552473966ec70f90015259b">SelectObjects</a> (<a class="el" href="classibase_1_1_i_object_queue.html#a85331f124b4c98b1e87ce1f4595a089d">ObjectList</a> &amp;result, bool doAppend=false, int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find set of objects.  <a href="#a64603c45a552473966ec70f90015259b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a934a0b6639326662a9ec870e1d2c2c15">PopFrontObject</a> (int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object at the front of queue and remove it from queue.  <a href="#a934a0b6639326662a9ec870e1d2c2c15"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_object_queue.html#a34cd1473ad4c55afea35b76f35bd51d0">PopBackObject</a> (int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object at the end of queue and remove it from queue.  <a href="#a34cd1473ad4c55afea35b76f35bd51d0"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface allowing to manage queue of some objects. </p>
 
-<p>Definition at line <a class="el" href="_i_object_queue_8h_source.html#l00019">19</a> of file <a class="el" href="_i_object_queue_8h_source.html">IObjectQueue.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_object_queue_8h_source.html#l00020">20</a> of file <a class="el" href="_i_object_queue_8h_source.html">IObjectQueue.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a83963305da6b9d614f1bd0c8122e2b8e"></a><!-- doxytag: member="ibase::IObjectQueue::ObjectList" ref="a83963305da6b9d614f1bd0c8122e2b8e" args="" -->
+<a class="anchor" id="a85331f124b4c98b1e87ce1f4595a089d"></a><!-- doxytag: member="ibase::IObjectQueue::ObjectList" ref="a85331f124b4c98b1e87ce1f4595a089d" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>*&gt; <a class="el" href="classibase_1_1_i_object_queue.html#a83963305da6b9d614f1bd0c8122e2b8e">ibase::IObjectQueue::ObjectList</a></td>
+          <td class="memname">typedef QVector&lt;<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>*&gt; <a class="el" href="classibase_1_1_i_object_queue.html#a85331f124b4c98b1e87ce1f4595a089d">ibase::IObjectQueue::ObjectList</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_object_queue_8h_source.html#l00022">22</a> of file <a class="el" href="_i_object_queue_8h_source.html">IObjectQueue.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_object_queue_8h_source.html#l00023">23</a> of file <a class="el" href="_i_object_queue_8h_source.html">IObjectQueue.h</a>.</p>
 
 </div>
 </div>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac352f491017aacc91b832f86fbe9e808"></a><!-- doxytag: member="ibase::IObjectQueue::CreateBackObject" ref="ac352f491017aacc91b832f86fbe9e808" args="(int offsetPos=0, const std::string *typeIdPtr=NULL)=0" -->
+<a class="anchor" id="a4b0fe0129cab86a68cb5e9f8770cf256"></a><!-- doxytag: member="ibase::IObjectQueue::CreateBackObject" ref="a4b0fe0129cab86a68cb5e9f8770cf256" args="(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -139,7 +139,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -161,11 +161,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#ab73b4383c8d72cb2588f39b3a8ff3e4e">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a2c143f4ac91e9ba2bbd21d1c93a6110e">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a17d9723f719c5481bd5007ecff104704"></a><!-- doxytag: member="ibase::IObjectQueue::CreateFrontObject" ref="a17d9723f719c5481bd5007ecff104704" args="(int offsetPos=0, const std::string *typeIdPtr=NULL)=0" -->
+<a class="anchor" id="ac5032c22dd3e7169ae7beb655dc0740b"></a><!-- doxytag: member="ibase::IObjectQueue::CreateFrontObject" ref="ac5032c22dd3e7169ae7beb655dc0740b" args="(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -178,7 +178,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -200,11 +200,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a0dc974c84bd29637159539aef228f2b8">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#ac061843c169585df824231a30355d476">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abd4480983ca82d89a135c7bdb40955d7"></a><!-- doxytag: member="ibase::IObjectQueue::GetBackObject" ref="abd4480983ca82d89a135c7bdb40955d7" args="(int offsetPos=0, const std::string *typeIdPtr=NULL) const =0" -->
+<a class="anchor" id="a3bbc827969869feeefd8500cf688cbd1"></a><!-- doxytag: member="ibase::IObjectQueue::GetBackObject" ref="a3bbc827969869feeefd8500cf688cbd1" args="(int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -217,7 +217,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -238,11 +238,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#aaad91ae0c4641810274e19cf263e94df">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#abd85ae0dec90f84c157300c5dbe35ef9">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a769aa8614a1306e573b7a4d17411ccac"></a><!-- doxytag: member="ibase::IObjectQueue::GetFrontObject" ref="a769aa8614a1306e573b7a4d17411ccac" args="(int offsetPos=0, const std::string *typeIdPtr=NULL) const =0" -->
+<a class="anchor" id="a4b8d4c0d20fb53e1cf07b47b8fc229c8"></a><!-- doxytag: member="ibase::IObjectQueue::GetFrontObject" ref="a4b8d4c0d20fb53e1cf07b47b8fc229c8" args="(int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -255,7 +255,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -276,18 +276,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a030632b18cc9b564db2179f9642ac812">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a7b9bc6916cc764f24aeeaa47e04f19c3">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af01fc4bd306f81c6568a2ee703dba6ce"></a><!-- doxytag: member="ibase::IObjectQueue::GetObjectsCount" ref="af01fc4bd306f81c6568a2ee703dba6ce" args="(const std::string *typeIdPtr=NULL) const =0" -->
+<a class="anchor" id="a5dae0e1bcc284b86dd00b0f167a1f0f2"></a><!-- doxytag: member="ibase::IObjectQueue::GetObjectsCount" ref="a5dae0e1bcc284b86dd00b0f167a1f0f2" args="(const QByteArray *typeIdPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int ibase::IObjectQueue::GetObjectsCount </td>
           <td>(</td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -303,11 +303,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a8dbd1f1c24bb964fb34e64daa339188a">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a3d6a709a7a3783c70fa05a631f4f874a">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae5b17c4b26ff3544ae9a8f5cc3a28e08"></a><!-- doxytag: member="ibase::IObjectQueue::PopBackObject" ref="ae5b17c4b26ff3544ae9a8f5cc3a28e08" args="(int offsetPos=0, const std::string *typeIdPtr=NULL)=0" -->
+<a class="anchor" id="a34cd1473ad4c55afea35b76f35bd51d0"></a><!-- doxytag: member="ibase::IObjectQueue::PopBackObject" ref="a34cd1473ad4c55afea35b76f35bd51d0" args="(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -320,7 +320,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -342,11 +342,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a6613b80a7e6ebe8f83dabe166ac562f6">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a151ecadd722c99b51457a3885c9cf461">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abffe19a31b79d5508d820fd3f5c0cad6"></a><!-- doxytag: member="ibase::IObjectQueue::PopFrontObject" ref="abffe19a31b79d5508d820fd3f5c0cad6" args="(int offsetPos=0, const std::string *typeIdPtr=NULL)=0" -->
+<a class="anchor" id="a934a0b6639326662a9ec870e1d2c2c15"></a><!-- doxytag: member="ibase::IObjectQueue::PopFrontObject" ref="a934a0b6639326662a9ec870e1d2c2c15" args="(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -359,7 +359,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -381,11 +381,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a517d2b4d2474e01cb2f9e185a6e9d955">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a996662c49a4f36436b36a26a92601e63">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab4332f3d3ef4b2ded6dcbe105c383bf1"></a><!-- doxytag: member="ibase::IObjectQueue::RemoveBackObject" ref="ab4332f3d3ef4b2ded6dcbe105c383bf1" args="(int offsetPos=0, const std::string *typeIdPtr=NULL)=0" -->
+<a class="anchor" id="ac8e0cb5b6e099313036938d678fddecc"></a><!-- doxytag: member="ibase::IObjectQueue::RemoveBackObject" ref="ac8e0cb5b6e099313036938d678fddecc" args="(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -398,7 +398,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -420,11 +420,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a5165c319b692548837b82031dd1d30d6">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a293ba93c8fcb5812275977bdbb987b64">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac4a9cabb54dd826c8330590cb17efcbe"></a><!-- doxytag: member="ibase::IObjectQueue::RemoveFrontObject" ref="ac4a9cabb54dd826c8330590cb17efcbe" args="(int offsetPos=0, const std::string *typeIdPtr=NULL)=0" -->
+<a class="anchor" id="a518b516fc763f53e94f17734462f5c7a"></a><!-- doxytag: member="ibase::IObjectQueue::RemoveFrontObject" ref="a518b516fc763f53e94f17734462f5c7a" args="(int offsetPos=0, const QByteArray *typeIdPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -437,7 +437,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -459,18 +459,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a49a1579abd1e6efc4b7648eb7250be47">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a42a0c55371b4ec19c4430bf8f2afef3f">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a51db2998275335a180c8e08a00c24fa0"></a><!-- doxytag: member="ibase::IObjectQueue::SelectObjects" ref="a51db2998275335a180c8e08a00c24fa0" args="(ObjectList &amp;result, bool doAppend=false, int offsetPos=0, const std::string *typeIdPtr=NULL) const =0" -->
+<a class="anchor" id="a64603c45a552473966ec70f90015259b"></a><!-- doxytag: member="ibase::IObjectQueue::SelectObjects" ref="a64603c45a552473966ec70f90015259b" args="(ObjectList &amp;result, bool doAppend=false, int offsetPos=0, const QByteArray *typeIdPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ibase::IObjectQueue::SelectObjects </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classibase_1_1_i_object_queue.html#a83963305da6b9d614f1bd0c8122e2b8e">ObjectList</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classibase_1_1_i_object_queue.html#a85331f124b4c98b1e87ce1f4595a089d">ObjectList</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
@@ -488,7 +488,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramtype">const QByteArray *&#160;</td>
           <td class="paramname"><em>typeIdPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -502,7 +502,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Find set of objects. </p>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a5572f42a0f2adc64cef75b0a879cf40c">ibase::CObjectQueueComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_object_queue_comp.html#a6586a632207cc65c8ff32a62dabdef58">ibase::CObjectQueueComp</a>.</p>
 
 </div>
 </div>

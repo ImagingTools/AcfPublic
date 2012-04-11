@@ -50,11 +50,11 @@
 <a name="l00023"></a><a class="code" href="classicmpstr_1_1_c_multi_attribute_delegate_widget.html#a3f872252151218561bc51ed574d40d30">00023</a>        <span class="keyword">typedef</span> QWidget <a class="code" href="classicmpstr_1_1_c_multi_attribute_delegate_widget.html#a3f872252151218561bc51ed574d40d30">BaseClass</a>;
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00026"></a>00026        <a class="code" href="classicmpstr_1_1_c_multi_attribute_delegate_widget.html#aca1ad13f7b6282d01593700f961fd054">CMultiAttributeDelegateWidget</a>(
+<a name="l00026"></a>00026        <a class="code" href="classicmpstr_1_1_c_multi_attribute_delegate_widget.html#ab60b0365ea63a57c18b69998600f9bc0">CMultiAttributeDelegateWidget</a>(
 <a name="l00027"></a>00027                             QItemDelegate&amp; itemDelegate,
 <a name="l00028"></a>00028                             <span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_c_element_selection_info_manager_base.html">CElementSelectionInfoManagerBase</a>&amp; elementSelectionInfoManager,
 <a name="l00029"></a>00029                             QWidget* parentWidget,
-<a name="l00030"></a>00030                             <span class="keyword">const</span> std::string&amp; attributeId,
+<a name="l00030"></a>00030                             <span class="keyword">const</span> QByteArray&amp; attributeId,
 <a name="l00031"></a>00031                             <span class="keywordtype">int</span> attributeFlags);
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        QString <a class="code" href="classicmpstr_1_1_c_multi_attribute_delegate_widget.html#a7fb4add51b500797d9ddf522404a76c3">GetText</a>() <span class="keyword">const</span>;
@@ -66,7 +66,7 @@
 <a name="l00039"></a>00039 <span class="keyword">private</span>:
 <a name="l00040"></a>00040        QItemDelegate&amp; m_itemDelegate;
 <a name="l00041"></a>00041        QLineEdit* m_textEditor;
-<a name="l00042"></a>00042        std::string m_attributeId;
+<a name="l00042"></a>00042        QByteArray m_attributeId;
 <a name="l00043"></a>00043        <span class="keywordtype">int</span> m_attributeFlags;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        <span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_c_element_selection_info_manager_base.html">CElementSelectionInfoManagerBase</a>&amp; m_elementSelectionInfoManager;

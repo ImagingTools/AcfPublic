@@ -24,9 +24,8 @@
 #define icomp_CCompositeComponentStaticInfo_included
 
 
-// STL includes
+// Qt includes
 #include <QtCore/QMap>
-
 
 // ACF includes
 #include "istd/TDelPtr.h"
@@ -57,7 +56,7 @@ public:
 
 	//	reimplemented (icomp::IComponentStaticInfo)
 	virtual int GetComponentType() const;
-	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const std::string& embeddedId) const;
+	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const QByteArray& embeddedId) const;
 	virtual const QString& GetDescription() const;
 	virtual const QString& GetKeywords() const;
 
@@ -67,7 +66,7 @@ protected:
 	*/
 	const IRegistry::ElementInfo* GetElementInfoFromRegistry(
 				const IRegistry& registry,
-				const std::string& elementId,
+				const QByteArray& elementId,
 				const icomp::IRegistriesManager& manager) const;
 
 	class AttrAsOptionalDelegator: virtual public IAttributeStaticInfo
@@ -77,9 +76,9 @@ protected:
 					const IAttributeStaticInfo* slavePtr,
 					const iser::IObject* defaultValuePtr);
 
-		virtual const std::string& GetAttributeDescription() const;
+		virtual const QByteArray& GetAttributeDescription() const;
 		virtual const iser::IObject* GetAttributeDefaultValue() const;
-		virtual std::string GetAttributeTypeName() const;
+		virtual QByteArray GetAttributeTypeName() const;
 		virtual IElementStaticInfo::Ids GetRelatedMetaIds(int metaGroupId, int flags, int flagsMask) const;
 		virtual int GetAttributeFlags() const;
 
@@ -94,7 +93,7 @@ private:
 	AttrReplacers m_attrReplacers;
 
 	typedef istd::TDelPtr<icomp::CCompositeComponentStaticInfo> ComponentInfoPtr;
-	typedef QMap<std::string, ComponentInfoPtr> EmbeddedComponentInfos;
+	typedef QMap<QByteArray, ComponentInfoPtr> EmbeddedComponentInfos;
 	mutable EmbeddedComponentInfos m_embeddedComponentInfos;
 
 	QString m_description;

@@ -49,19 +49,17 @@ Inheritance diagram for iser::CXmlWriteArchiveBase:</div>
  <div class="center">
   <img src="classiser_1_1_c_xml_write_archive_base.png" usemap="#iser::CXmlWriteArchiveBase_map" alt=""/>
   <map id="iser::CXmlWriteArchiveBase_map" name="iser::CXmlWriteArchiveBase_map">
-<area href="classiser_1_1_c_text_write_archive_base.html" title="Common archive implementation of text-based storing archives." alt="iser::CTextWriteArchiveBase" shape="rect" coords="169,224,498,248"/>
-<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="508,224,837,248"/>
-<area href="classiser_1_1_c_write_archive_base.html" title="Basic implementation of an abstract archive for data writting." alt="iser::CWriteArchiveBase" shape="rect" coords="169,168,498,192"/>
-<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="169,112,498,136"/>
-<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,329,80"/>
-<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="339,56,668,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,329,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="339,0,668,24"/>
-<area href="classiser_1_1_t_xml_stream_write_archive_base.html" title="Base implementation of archive for writing in XML format using a stream implementation." alt="iser::TXmlStreamWriteArchiveBase&lt; StreamClass &gt;" shape="rect" coords="0,336,329,360"/>
-<area href="classiser_1_1_t_xml_stream_write_archive_base.html" alt="iser::TXmlStreamWriteArchiveBase&lt; std::ofstream &gt;" shape="rect" coords="339,336,668,360"/>
-<area href="classiser_1_1_t_xml_stream_write_archive_base.html" alt="iser::TXmlStreamWriteArchiveBase&lt; std::ostringstream &gt;" shape="rect" coords="678,336,1007,360"/>
-<area href="classiser_1_1_c_xml_file_write_archive.html" title="Simple implementation of archive for writing in XML format." alt="iser::CXmlFileWriteArchive" shape="rect" coords="339,392,668,416"/>
-<area href="classiser_1_1_c_xml_string_write_archive.html" title="Simple implementation of archive for writing of XML given as a string." alt="iser::CXmlStringWriteArchive" shape="rect" coords="678,392,1007,416"/>
+<area href="classiser_1_1_c_text_write_archive_base.html" title="Common archive implementation of text-based storing archives." alt="iser::CTextWriteArchiveBase" shape="rect" coords="110,224,320,248"/>
+<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="330,224,540,248"/>
+<area href="classiser_1_1_c_write_archive_base.html" title="Basic implementation of an abstract archive for data writting." alt="iser::CWriteArchiveBase" shape="rect" coords="110,168,320,192"/>
+<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="110,112,320,136"/>
+<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,210,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="220,56,430,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,210,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="220,0,430,24"/>
+<area href="classiser_1_1_c_xml_stream_write_archive_base.html" title="Base implementation of archive for writing in XML format using a stream implementation." alt="iser::CXmlStreamWriteArchiveBase" shape="rect" coords="220,336,430,360"/>
+<area href="classiser_1_1_c_xml_file_write_archive.html" title="Simple implementation of archive for writing in XML format." alt="iser::CXmlFileWriteArchive" shape="rect" coords="110,392,320,416"/>
+<area href="classiser_1_1_c_xml_string_write_archive.html" title="Simple implementation of archive for writing of XML given as a string." alt="iser::CXmlStringWriteArchive" shape="rect" coords="330,392,540,416"/>
 </map>
  </div></div>
 
@@ -80,8 +78,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of archive tag containing set of subelements of the same type.  <a href="#af8df321e9c4c694a987dd090278988cf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a64d00fe3fec35dcf628b31deae7f2669">EndTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;tag)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">End of archive tag.  <a href="#a64d00fe3fec35dcf628b31deae7f2669"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a1dd1f7097917117d2b9cacd9d9e652f4">Process</a> (std::string &amp;value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a1dd1f7097917117d2b9cacd9d9e652f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a32eef62d0acba17d9589f08dacb2313f">Process</a> (QByteArray &amp;value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a32eef62d0acba17d9589f08dacb2313f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a4ce0fe3ae09f5da2e4e206863eb28c52">Process</a> (QString &amp;value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process primitive type.  <a href="#a4ce0fe3ae09f5da2e4e206863eb28c52"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -90,7 +88,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a9c15387c8100e8995edd0b0e5f688c1e">Flush</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a1ace58b3e3f014f6c02a21aba8586f7a">MakeIndent</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#ac4b7fbdc3a3e3c6f5bdfc193ea04e614">SerializeXmlHeader</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a13d59f133de51efb33894576d58ffae2">WriteString</a> (const std::string &amp;value)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_write_archive_base.html#ab2dc2a95f01c33511904e38015001b06">WriteString</a> (const QByteArray &amp;value)=0</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_base.html">Base</a> class for XML storing archives. </p>
@@ -110,7 +108,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiser_1_1_c_text_write_archive_base.html#a79de89b4efd8a08390e58d1edd4bb616">iser::CTextWriteArchiveBase</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiser_1_1_c_xml_file_write_archive.html#a23c681cb488f59e2c750e8c8256b8ca9">iser::CXmlFileWriteArchive</a>, <a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a26947b82f48f6c7e1347297142dad595">iser::CXmlStringWriteArchive</a>, <a class="el" href="classiser_1_1_t_xml_stream_write_archive_base.html#a5925f723787356bfa4ec63e510c6f86a">iser::TXmlStreamWriteArchiveBase&lt; StreamClass &gt;</a>, <a class="el" href="classiser_1_1_t_xml_stream_write_archive_base.html#a5925f723787356bfa4ec63e510c6f86a">iser::TXmlStreamWriteArchiveBase&lt; std::ofstream &gt;</a>, and <a class="el" href="classiser_1_1_t_xml_stream_write_archive_base.html#a5925f723787356bfa4ec63e510c6f86a">iser::TXmlStreamWriteArchiveBase&lt; std::ostringstream &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classiser_1_1_c_xml_file_write_archive.html#aa4a371732c93de5fb126fde5ed0d8d82">iser::CXmlFileWriteArchive</a>, <a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a7a549469db83c25284b1cfdf8df6180b">iser::CXmlStringWriteArchive</a>, and <a class="el" href="classiser_1_1_c_xml_stream_write_archive_base.html#a39c23c45709199616da41aef3a9c894f">iser::CXmlStreamWriteArchiveBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_xml_write_archive_base_8h_source.html#l00020">20</a> of file <a class="el" href="_c_xml_write_archive_base_8h_source.html">CXmlWriteArchiveBase.h</a>.</p>
 
@@ -297,14 +295,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1dd1f7097917117d2b9cacd9d9e652f4"></a><!-- doxytag: member="iser::CXmlWriteArchiveBase::Process" ref="a1dd1f7097917117d2b9cacd9d9e652f4" args="(std::string &amp;value)" -->
+<a class="anchor" id="a32eef62d0acba17d9589f08dacb2313f"></a><!-- doxytag: member="iser::CXmlWriteArchiveBase::Process" ref="a32eef62d0acba17d9589f08dacb2313f" args="(QByteArray &amp;value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iser::CXmlWriteArchiveBase::Process </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -314,7 +312,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Process primitive type. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_archive.html#abb1b7f1e8834da9a12dc0b5d4029c4cd">iser::IArchive</a>.</p>
+<p>Implements <a class="el" href="classiser_1_1_i_archive.html#a9ab344643d656de3adccacb6d894c882">iser::IArchive</a>.</p>
 
 </div>
 </div>
@@ -355,14 +353,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a13d59f133de51efb33894576d58ffae2"></a><!-- doxytag: member="iser::CXmlWriteArchiveBase::WriteString" ref="a13d59f133de51efb33894576d58ffae2" args="(const std::string &amp;value)=0" -->
+<a class="anchor" id="ab2dc2a95f01c33511904e38015001b06"></a><!-- doxytag: member="iser::CXmlWriteArchiveBase::WriteString" ref="ab2dc2a95f01c33511904e38015001b06" args="(const QByteArray &amp;value)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iser::CXmlWriteArchiveBase::WriteString </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td><code> [protected, pure virtual]</code></td>
         </tr>
@@ -370,7 +368,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classiser_1_1_t_xml_stream_write_archive_base.html#a3fc5cc705a977546337873afb8a8a10b">iser::TXmlStreamWriteArchiveBase&lt; StreamClass &gt;</a>, <a class="el" href="classiser_1_1_t_xml_stream_write_archive_base.html#a3fc5cc705a977546337873afb8a8a10b">iser::TXmlStreamWriteArchiveBase&lt; std::ofstream &gt;</a>, and <a class="el" href="classiser_1_1_t_xml_stream_write_archive_base.html#a3fc5cc705a977546337873afb8a8a10b">iser::TXmlStreamWriteArchiveBase&lt; std::ostringstream &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classiser_1_1_c_xml_stream_write_archive_base.html#a67e61c9531ab843fa82382a3d74cabf9">iser::CXmlStreamWriteArchiveBase</a>.</p>
 
 </div>
 </div>

@@ -47,7 +47,7 @@ public:
 	CHotfolderProcessingItem();
 
 	// reimplemented (ifpf::IHotfolderProcessingItem)
-	virtual std::string GetItemUuid() const;
+	virtual QByteArray GetItemUuid() const;
 	virtual int GetProcessingState() const;
 	virtual void SetProcessingState(int processingState);
 	virtual QString GetInputFile() const;
@@ -69,7 +69,7 @@ private:
 	double m_processingTime;
 	QDateTime m_startTime;
 
-	mutable std::string m_itemId;
+	mutable QByteArray m_itemId;
 };
 
 

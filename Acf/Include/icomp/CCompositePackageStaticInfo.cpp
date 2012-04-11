@@ -32,7 +32,7 @@ namespace icomp
 
 
 CCompositePackageStaticInfo::CCompositePackageStaticInfo(
-			const std::string& packageId,
+			const QByteArray& packageId,
 			const icomp::IComponentEnvironmentManager* managerPtr)
 
 :	m_packageId(packageId),
@@ -42,7 +42,7 @@ CCompositePackageStaticInfo::CCompositePackageStaticInfo(
 }
 
 
-void CCompositePackageStaticInfo::RegisterEmbeddedComponent(const std::string& componentId)
+void CCompositePackageStaticInfo::RegisterEmbeddedComponent(const QByteArray& componentId)
 {
 	m_embeddedComponentInfos[componentId];
 }
@@ -50,7 +50,7 @@ void CCompositePackageStaticInfo::RegisterEmbeddedComponent(const std::string& c
 
 //	reimplemented (icomp::IComponentStaticInfo)
 
-const IComponentStaticInfo* CCompositePackageStaticInfo::GetEmbeddedComponentInfo(const std::string& embeddedId) const
+const IComponentStaticInfo* CCompositePackageStaticInfo::GetEmbeddedComponentInfo(const QByteArray& embeddedId) const
 {
 	EmbeddedComponentInfos::iterator infoIter = m_embeddedComponentInfos.find(embeddedId);
 	if (infoIter != m_embeddedComponentInfos.end()){

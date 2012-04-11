@@ -24,9 +24,10 @@
 #define icomp_CRelatedInfoRegistrator_included
 
 
-// STL includes
-#include <string>
+// Qt includes
+#include <QtCore/QByteArray>
 
+// ACF includes
 #include "icomp/IRealAttributeStaticInfo.h"
 
 
@@ -40,7 +41,7 @@ public:
 	CRelatedInfoRegistrator(
 				IRealAttributeStaticInfo& baseAttributeInfo,
 				int metaGroupId,
-				const std::string& id,
+				const QByteArray& id,
 				int flags);
 };
 
@@ -50,7 +51,7 @@ public:
 inline CRelatedInfoRegistrator::CRelatedInfoRegistrator(
 			IRealAttributeStaticInfo& baseAttributeInfo,
 			int metaGroupId,
-			const std::string& id,
+			const QByteArray& id,
 			int flags)
 {
 	baseAttributeInfo.AddRelatedMetaId(metaGroupId, id, flags);

@@ -28,8 +28,8 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iipr_CDelegatedBitmapSupplierComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;utility&gt;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QPair&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_model_8h.html">imod/IModel.h</a>&quot;</span>
@@ -46,12 +46,12 @@
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
 <a name="l00025"></a><a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html">00025</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html" title="Image supplier delegating the calls to another one or accessing some bitmap object directly...">CDelegatedBitmapSupplierComp</a>:
-<a name="l00026"></a>00026                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; std::pair&lt;const i2d::ITransformation2d*, const iimg::IBitmap*&gt; &gt;,
+<a name="l00026"></a>00026                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; QPair&lt;const i2d::ITransformation2d*, const iimg::IBitmap*&gt; &gt;,
 <a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">IBitmapProvider</a>,
 <a name="l00028"></a>00028                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
 <a name="l00029"></a>00029 {
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a><a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#aeea0adeff277f6a55e382db5a3e085b7">00031</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; std::pair&lt;const i2d::ITransformation2d*, const iimg::IBitmap*&gt;</a> &gt; <a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#aeea0adeff277f6a55e382db5a3e085b7">BaseClass</a>;
+<a name="l00031"></a><a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#ab4b38cd324f13e21d1ce80f32fe599d8">00031</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; QPair&lt;const i2d::ITransformation2d*, const iimg::IBitmap*&gt;</a> &gt; <a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#ab4b38cd324f13e21d1ce80f32fe599d8">BaseClass</a>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html" title="Image supplier delegating the calls to another one or accessing some bitmap object directly...">CDelegatedBitmapSupplierComp</a>);
 <a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">IBitmapProvider</a>);

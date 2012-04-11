@@ -44,9 +44,9 @@
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021        <a class="code" href="classiprm_1_1_t_params_ptr.html#a69c5a48c381617251c08e2e32263fadb">TParamsPtr</a>();
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023        <a class="code" href="classiprm_1_1_t_params_ptr.html#a69c5a48c381617251c08e2e32263fadb">TParamsPtr</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* parameterSetPtr, <span class="keyword">const</span> std::string&amp; parameterId);
+<a name="l00023"></a>00023        <a class="code" href="classiprm_1_1_t_params_ptr.html#a69c5a48c381617251c08e2e32263fadb">TParamsPtr</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* parameterSetPtr, <span class="keyword">const</span> QByteArray&amp; parameterId);
 <a name="l00024"></a>00024 
-<a name="l00028"></a>00028        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_t_params_ptr.html#ad33aed37039667b8b245e76815d4a525" title="Initialize the pointer with the given parameter set and parameter ID.">Init</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* parameterSetPtr, <span class="keyword">const</span> std::string&amp; parameterId);
+<a name="l00028"></a>00028        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_t_params_ptr.html#a041d2c09d20bde2fc913ab6d5cd7ec0e" title="Initialize the pointer with the given parameter set and parameter ID.">Init</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* parameterSetPtr, <span class="keyword">const</span> QByteArray&amp; parameterId);
 <a name="l00029"></a>00029 };
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 
@@ -60,19 +60,19 @@
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ParameterInterace&gt;
-<a name="l00042"></a><a class="code" href="classiprm_1_1_t_params_ptr.html#a3c35bfc4a19630ab2ff6418c953f9b76">00042</a> <a class="code" href="classiprm_1_1_t_params_ptr.html#a69c5a48c381617251c08e2e32263fadb">TParamsPtr&lt;ParameterInterace&gt;::TParamsPtr</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* parameterSetPtr, <span class="keyword">const</span> std::string&amp; parameterId)
+<a name="l00042"></a><a class="code" href="classiprm_1_1_t_params_ptr.html#adb773ae44336c81b8c6a0bcb23543bcb">00042</a> <a class="code" href="classiprm_1_1_t_params_ptr.html#a69c5a48c381617251c08e2e32263fadb">TParamsPtr&lt;ParameterInterace&gt;::TParamsPtr</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* parameterSetPtr, <span class="keyword">const</span> QByteArray&amp; parameterId)
 <a name="l00043"></a>00043 {
 <a name="l00044"></a>00044        Init(parameterSetPtr, parameterId);
 <a name="l00045"></a>00045 }
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ParameterInterace&gt;
-<a name="l00049"></a><a class="code" href="classiprm_1_1_t_params_ptr.html#ad33aed37039667b8b245e76815d4a525">00049</a> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_t_params_ptr.html#ad33aed37039667b8b245e76815d4a525" title="Initialize the pointer with the given parameter set and parameter ID.">TParamsPtr&lt;ParameterInterace&gt;::Init</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* parameterSetPtr, <span class="keyword">const</span> std::string&amp; parameterId)
+<a name="l00049"></a><a class="code" href="classiprm_1_1_t_params_ptr.html#a041d2c09d20bde2fc913ab6d5cd7ec0e">00049</a> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_t_params_ptr.html#a041d2c09d20bde2fc913ab6d5cd7ec0e" title="Initialize the pointer with the given parameter set and parameter ID.">TParamsPtr&lt;ParameterInterace&gt;::Init</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">IParamsSet</a>* parameterSetPtr, <span class="keyword">const</span> QByteArray&amp; parameterId)
 <a name="l00050"></a>00050 {
 <a name="l00051"></a>00051        BaseClass::Reset();
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="keywordflow">if</span> (parameterSetPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> &amp;&amp; !parameterId.empty()){
-<a name="l00054"></a>00054               <span class="keyword">const</span> ParameterInterace* parameterPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>ParameterInterace*<span class="keyword">&gt;</span>(parameterSetPtr-&gt;<a class="code" href="classiprm_1_1_i_params_set.html#a3db09637386433fd8da452a736234379" title="Get any parameter.">GetParameter</a>(parameterId));
+<a name="l00053"></a>00053        <span class="keywordflow">if</span> (parameterSetPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> &amp;&amp; !parameterId.isEmpty()){
+<a name="l00054"></a>00054               <span class="keyword">const</span> ParameterInterace* parameterPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>ParameterInterace*<span class="keyword">&gt;</span>(parameterSetPtr-&gt;<a class="code" href="classiprm_1_1_i_params_set.html#a526c5d6481768d3b6c2e73a2abbd58b3" title="Get any parameter.">GetParameter</a>(parameterId));
 <a name="l00055"></a>00055               <span class="keywordflow">if</span> (parameterPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00056"></a>00056                      BaseClass::SetPtr(const_cast&lt;ParameterInterace*&gt;(parameterPtr));
 <a name="l00057"></a>00057               }

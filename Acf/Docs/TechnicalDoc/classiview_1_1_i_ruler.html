@@ -57,8 +57,7 @@ Inheritance diagram for iview::IRuler:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef ::std::pair&lt; double, <br class="typebreak"/>
-double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_ruler.html#ac9262aa56dd5b1208b458fb9df0603fb">Mark</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QPair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_ruler.html#a2c229795a2b0b1845d02dab4cb6dcabc">Mark</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_ruler.html#abd901a4213cb7668a0d49ce0a9aa0e37">Reset</a> ()=0</td></tr>
@@ -75,29 +74,29 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserve marks space to optimize insert operation.  <a href="#a8430bac0ff850124b9f4435d862f795a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_ruler.html#ad6834b5703f58c23c13bbcabab853009">GetMarksCount</a> (int levelIndex) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of marks on specified level.  <a href="#ad6834b5703f58c23c13bbcabab853009"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_ruler.html#ac9262aa56dd5b1208b458fb9df0603fb">Mark</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_ruler.html#af61978cdc814d78816f09c1b1bf45751">GetMark</a> (int markIndex, int levelIndex) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_ruler.html#a2c229795a2b0b1845d02dab4cb6dcabc">Mark</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_ruler.html#af61978cdc814d78816f09c1b1bf45751">GetMark</a> (int markIndex, int levelIndex) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a mark.  <a href="#af61978cdc814d78816f09c1b1bf45751"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_ruler.html#a1012d410cf20e6f56b8a6b088fe3bd00">InsertMark</a> (int levelIndex, const <a class="el" href="classiview_1_1_i_ruler.html#ac9262aa56dd5b1208b458fb9df0603fb">Mark</a> &amp;mark)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_ruler.html#a1012d410cf20e6f56b8a6b088fe3bd00">InsertMark</a> (int levelIndex, const <a class="el" href="classiview_1_1_i_ruler.html#a2c229795a2b0b1845d02dab4cb6dcabc">Mark</a> &amp;mark)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new mark.  <a href="#a1012d410cf20e6f56b8a6b088fe3bd00"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for ruler implementation. </p>
 <p>Ruler allow to set a values at different positions on different levels. Level 0 is the most important. </p>
 
-<p>Definition at line <a class="el" href="_i_ruler_8h_source.html#l00024">24</a> of file <a class="el" href="_i_ruler_8h_source.html">IRuler.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_ruler_8h_source.html#l00023">23</a> of file <a class="el" href="_i_ruler_8h_source.html">IRuler.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="ac9262aa56dd5b1208b458fb9df0603fb"></a><!-- doxytag: member="iview::IRuler::Mark" ref="ac9262aa56dd5b1208b458fb9df0603fb" args="" -->
+<a class="anchor" id="a2c229795a2b0b1845d02dab4cb6dcabc"></a><!-- doxytag: member="iview::IRuler::Mark" ref="a2c229795a2b0b1845d02dab4cb6dcabc" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef ::std::pair&lt;double, double&gt; <a class="el" href="classiview_1_1_i_ruler.html#ac9262aa56dd5b1208b458fb9df0603fb">iview::IRuler::Mark</a></td>
+          <td class="memname">typedef QPair&lt;double, double&gt; <a class="el" href="classiview_1_1_i_ruler.html#a2c229795a2b0b1845d02dab4cb6dcabc">iview::IRuler::Mark</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_ruler_8h_source.html#l00027">27</a> of file <a class="el" href="_i_ruler_8h_source.html">IRuler.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_ruler_8h_source.html#l00026">26</a> of file <a class="el" href="_i_ruler_8h_source.html">IRuler.h</a>.</p>
 
 </div>
 </div>
@@ -144,7 +143,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiview_1_1_i_ruler.html#ac9262aa56dd5b1208b458fb9df0603fb">Mark</a> iview::IRuler::GetMark </td>
+          <td class="memname">virtual <a class="el" href="classiview_1_1_i_ruler.html#a2c229795a2b0b1845d02dab4cb6dcabc">Mark</a> iview::IRuler::GetMark </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>markIndex</em>, </td>
@@ -219,7 +218,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiview_1_1_i_ruler.html#ac9262aa56dd5b1208b458fb9df0603fb">Mark</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiview_1_1_i_ruler.html#a2c229795a2b0b1845d02dab4cb6dcabc">Mark</a> &amp;&#160;</td>
           <td class="paramname"><em>mark</em>&#160;</td>
         </tr>
         <tr>

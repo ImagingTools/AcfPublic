@@ -24,9 +24,8 @@
 #define imeas_CGeneralDataSequence_included
 
 
-// STL includes
-#include <vector>
-
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "istd/TSmartPtr.h"
@@ -88,7 +87,7 @@ public:
 	virtual istd::IChangeable* CloneMe() const;
 
 private:
-	typedef std::vector<double> Samples;
+	typedef QVector<double> Samples;
 	Samples m_samples;
 
 	int m_channelsCount;

@@ -139,7 +139,7 @@
 <a name="l00140"></a><a class="code" href="classiview_1_1_c_scale_calibration.html#a9816ead3652aa21ef89e8ab9314d6cf0">00140</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_scale_calibration.html#a9816ead3652aa21ef89e8ab9314d6cf0" title="Check, if this calibration is identity.">CScaleCalibration::IsIdentity</a>()<span class="keyword"> const</span>
 <a name="l00141"></a>00141 <span class="keyword"></span>{
 <a name="l00142"></a>00142        <span class="keywordflow">return</span> (m_viewCenter.<a class="code" href="classimath_1_1_t_vector.html#ad8390c9581503f636c54a075506f6cda" title="Return euclidian length square.">GetLength2</a>() &lt; <a class="code" href="istd_8h.html#a49340b5f40cbeb5e59fd8153798a2980" title="Some very small number.">I_EPSILON</a>) &amp;&amp;
-<a name="l00143"></a>00143                      (::fabs(m_scaleFactor) &lt; <a class="code" href="istd_8h.html#a49340b5f40cbeb5e59fd8153798a2980" title="Some very small number.">I_EPSILON</a>);
+<a name="l00143"></a>00143                      (qAbs(m_scaleFactor) &lt; <a class="code" href="istd_8h.html#a49340b5f40cbeb5e59fd8153798a2980" title="Some very small number.">I_EPSILON</a>);
 <a name="l00144"></a>00144 }
 <a name="l00145"></a>00145 
 <a name="l00146"></a>00146 

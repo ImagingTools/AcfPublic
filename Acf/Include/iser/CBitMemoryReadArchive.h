@@ -24,8 +24,8 @@
 #define iser_CBitMemoryReadArchive_included
 
 
-// STL includes
-#include <vector>
+// Qt includes
+#include <QtCore/QVector>
 
 // ACF includes
 #include "iser/CMemoryReadArchive.h"
@@ -48,7 +48,7 @@ public:
 	/**
 		Constructs a bit stream from a vector of bytes. 
 	*/
-	CBitMemoryReadArchive(const std::vector<quint8>& data, 	bool serializeHeader = true);
+	CBitMemoryReadArchive(const QVector<quint8>& data, 	bool serializeHeader = true);
 
 	CBitMemoryReadArchive(
 				const void* bufferPtr,

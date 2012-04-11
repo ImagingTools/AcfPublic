@@ -75,10 +75,10 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprm_1_1_c_params_set.html">CParamsSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#aa1c85d8b8b605d30d71147e6342067bd">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#a62b0a11ad967c9b521cfe160df94d606">GetParameter</a> (const std::string &amp;id) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get any parameter.  <a href="#a62b0a11ad967c9b521cfe160df94d606"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#a158cc7f295dbe26fe01f332258cf3299">GetEditableParameter</a> (const std::string &amp;id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to editable parameter.  <a href="#a158cc7f295dbe26fe01f332258cf3299"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#a9a0b9c21d014982646d887135e159ecb">GetParameter</a> (const QByteArray &amp;id) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get any parameter.  <a href="#a9a0b9c21d014982646d887135e159ecb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#aa96d056de18654f96303eb916fa632a8">GetEditableParameter</a> (const QByteArray &amp;id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to editable parameter.  <a href="#aa96d056de18654f96303eb916fa632a8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#ade37ab75af00285d62e7fc472f8aa1aa">GetHierarchicalFlags</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags describing supported features of this hierarchical graph.  <a href="#ade37ab75af00285d62e7fc472f8aa1aa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#ae176b751f210122711056ff8f1098a99">GetChildsCount</a> () const </td></tr>
@@ -196,14 +196,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a158cc7f295dbe26fe01f332258cf3299"></a><!-- doxytag: member="iprm::CComposedParamsSetComp::GetEditableParameter" ref="a158cc7f295dbe26fe01f332258cf3299" args="(const std::string &amp;id)" -->
+<a class="anchor" id="aa96d056de18654f96303eb916fa632a8"></a><!-- doxytag: member="iprm::CComposedParamsSetComp::GetEditableParameter" ref="aa96d056de18654f96303eb916fa632a8" args="(const QByteArray &amp;id)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a>* iprm::CComposedParamsSetComp::GetEditableParameter </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -220,7 +220,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to parameter instance or NULL if there is no editable parameter with this ID. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classiprm_1_1_c_params_set.html#acd515f10d054275b201e4a672afd7065">iprm::CParamsSet</a>.</p>
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_params_set.html#adf00c286d910c1e9bbc29c81254c8396">iprm::CParamsSet</a>.</p>
 
 </div>
 </div>
@@ -245,14 +245,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a62b0a11ad967c9b521cfe160df94d606"></a><!-- doxytag: member="iprm::CComposedParamsSetComp::GetParameter" ref="a62b0a11ad967c9b521cfe160df94d606" args="(const std::string &amp;id) const " -->
+<a class="anchor" id="a9a0b9c21d014982646d887135e159ecb"></a><!-- doxytag: member="iprm::CComposedParamsSetComp::GetParameter" ref="a9a0b9c21d014982646d887135e159ecb" args="(const QByteArray &amp;id) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a>* iprm::CComposedParamsSetComp::GetParameter </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -269,7 +269,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to parameter instance or NULL if there is no parameter with this ID. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classiprm_1_1_c_params_set.html#ab182a85fa1d25493fcac898c4f17ba63">iprm::CParamsSet</a>.</p>
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_params_set.html#aa2998713fe5e13a493ce02ecb0ac86cf">iprm::CParamsSet</a>.</p>
 
 </div>
 </div>

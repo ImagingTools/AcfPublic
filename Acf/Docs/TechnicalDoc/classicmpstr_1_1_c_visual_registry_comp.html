@@ -79,14 +79,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a8c37dea315a97051b35d420aca77dafb">SerializeComponentsLayout</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a80f526e8ed3def36bf2e1fe918e7c6dd">SerializeRegistry</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#acfcfcc44cf58e8e5835ee73e2825af38">SerializeUserData</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a680acbb03b1ccd9d46de5c77cfb7d101">GetComponentNote</a> (const std::string &amp;componentName)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the note text to the component with the given name <code>componentName</code>.  <a href="#a680acbb03b1ccd9d46de5c77cfb7d101"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a9ce15af1be0d0954f56053bcc3042a60">SetComponentNote</a> (const std::string &amp;componentName, const QString &amp;componentNote)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>.  <a href="#a9ce15af1be0d0954f56053bcc3042a60"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#ad070b94556df11118a8fcaf3c6f13dc4">InsertElementInfo</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, bool ensureElementCreated=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new attribute info object to collection of attributes.  <a href="#ad070b94556df11118a8fcaf3c6f13dc4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a280a90d3801dac98f0d9aada68fa5905">RenameElement</a> (const std::string &amp;oldElementId, const std::string &amp;newElementId)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename an registry element.  <a href="#a280a90d3801dac98f0d9aada68fa5905"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a138d3108735b0cf7ec6e18879c58b7cf">GetComponentNote</a> (const QByteArray &amp;componentName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the note text to the component with the given name <code>componentName</code>.  <a href="#a138d3108735b0cf7ec6e18879c58b7cf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a9c85896362923ae38b839f02bcb24910">SetComponentNote</a> (const QByteArray &amp;componentName, const QString &amp;componentNote)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>.  <a href="#a9c85896362923ae38b839f02bcb24910"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#ad21351e11beed921a256a622daa05800">InsertElementInfo</a> (const QByteArray &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, bool ensureElementCreated=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new attribute info object to collection of attributes.  <a href="#ad21351e11beed921a256a622daa05800"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#ada53ee410f808da8f0b2efc738dc461d">RenameElement</a> (const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename an registry element.  <a href="#ada53ee410f808da8f0b2efc738dc461d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a88a64ae45ead12a9b565ee086aaa8980">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a88a64ae45ead12a9b565ee086aaa8980"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
@@ -100,9 +100,9 @@ Protected Types</h2></td></tr>
 <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a9a4b2ce9c07b921f9f36b4effb1e33d7">IconPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a716ecd018a52c7ae5e305d062b63e105">IconMap</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a45438b48b2d595100151f5c8676e39f1">SerializeComponentInfo</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, std::string &amp;componentName, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, QString &amp;note)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#aa00d6811aa94b0e990bdca55470c7fab">CreateRegistryElement</a> (const std::string &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to create instance of registry element.  <a href="#aa00d6811aa94b0e990bdca55470c7fab"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a12448f6dd30f6ac32503d8c6c79742e9">SerializeComponentInfo</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, QByteArray &amp;componentName, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, QString &amp;note)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a40ad86788e501d3944b8cf7b441cd8e7">CreateRegistryElement</a> (const QByteArray &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to create instance of registry element.  <a href="#a40ad86788e501d3944b8cf7b441cd8e7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -210,14 +210,14 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aa00d6811aa94b0e990bdca55470c7fab"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::CreateRegistryElement" ref="aa00d6811aa94b0e990bdca55470c7fab" args="(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address) const " -->
+<a class="anchor" id="a40ad86788e501d3944b8cf7b441cd8e7"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::CreateRegistryElement" ref="a40ad86788e501d3944b8cf7b441cd8e7" args="(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a>* icmpstr::CVisualRegistryComp::CreateRegistryElement </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>elementId</em>, </td>
         </tr>
         <tr>
@@ -237,18 +237,18 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called to create instance of registry element. </p>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_registry.html#a1b783ff9cc8de17cd4f14859b1cbaa0f">icomp::CRegistry</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_registry.html#a9d0b0048b2da27a5cf4a9de781b54aa8">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a680acbb03b1ccd9d46de5c77cfb7d101"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::GetComponentNote" ref="a680acbb03b1ccd9d46de5c77cfb7d101" args="(const std::string &amp;componentName)" -->
+<a class="anchor" id="a138d3108735b0cf7ec6e18879c58b7cf"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::GetComponentNote" ref="a138d3108735b0cf7ec6e18879c58b7cf" args="(const QByteArray &amp;componentName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QString icmpstr::CVisualRegistryComp::GetComponentNote </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentName</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -258,18 +258,18 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get the note text to the component with the given name <code>componentName</code>. </p>
 
-<p>Implements <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a69f51967ccb7e7d6b4e48956a6c9816b">icmpstr::IComponentNoteController</a>.</p>
+<p>Implements <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#aa36105a11bdd50bdac9f4659b9e38a7c">icmpstr::IComponentNoteController</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad070b94556df11118a8fcaf3c6f13dc4"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::InsertElementInfo" ref="ad070b94556df11118a8fcaf3c6f13dc4" args="(const std::string &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)" -->
+<a class="anchor" id="ad21351e11beed921a256a622daa05800"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::InsertElementInfo" ref="ad21351e11beed921a256a622daa05800" args="(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">ElementInfo</a>* icmpstr::CVisualRegistryComp::InsertElementInfo </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>elementId</em>, </td>
         </tr>
         <tr>
@@ -303,24 +303,24 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_registry.html#aa64a31dda214378e87a6af9784853431">icomp::CRegistry</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_registry.html#a8b4f27336913e9fa867eaacbaba629a2">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a280a90d3801dac98f0d9aada68fa5905"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::RenameElement" ref="a280a90d3801dac98f0d9aada68fa5905" args="(const std::string &amp;oldElementId, const std::string &amp;newElementId)" -->
+<a class="anchor" id="ada53ee410f808da8f0b2efc738dc461d"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::RenameElement" ref="ada53ee410f808da8f0b2efc738dc461d" args="(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool icmpstr::CVisualRegistryComp::RenameElement </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>oldElementId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>newElementId</em>&#160;</td>
         </tr>
         <tr>
@@ -341,7 +341,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classicomp_1_1_c_registry.html#a99e4e58f8ed6b32245cc7d2e057ffbd5">icomp::CRegistry</a>.</p>
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_registry.html#aa232db834c5c8e24530c4b43ad011d73">icomp::CRegistry</a>.</p>
 
 </div>
 </div>
@@ -368,7 +368,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a45438b48b2d595100151f5c8676e39f1"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::SerializeComponentInfo" ref="a45438b48b2d595100151f5c8676e39f1" args="(iser::IArchive &amp;archive, std::string &amp;componentName, i2d::CVector2d &amp;position, QString &amp;note)" -->
+<a class="anchor" id="a12448f6dd30f6ac32503d8c6c79742e9"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::SerializeComponentInfo" ref="a12448f6dd30f6ac32503d8c6c79742e9" args="(iser::IArchive &amp;archive, QByteArray &amp;componentName, i2d::CVector2d &amp;position, QString &amp;note)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -381,7 +381,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentName</em>, </td>
         </tr>
         <tr>
@@ -458,14 +458,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9ce15af1be0d0954f56053bcc3042a60"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::SetComponentNote" ref="a9ce15af1be0d0954f56053bcc3042a60" args="(const std::string &amp;componentName, const QString &amp;componentNote)" -->
+<a class="anchor" id="a9c85896362923ae38b839f02bcb24910"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::SetComponentNote" ref="a9c85896362923ae38b839f02bcb24910" args="(const QByteArray &amp;componentName, const QString &amp;componentNote)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void icmpstr::CVisualRegistryComp::SetComponentNote </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>componentName</em>, </td>
         </tr>
         <tr>
@@ -485,7 +485,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Add a note <code>componentNote</code> to the component with the given name <code>componentName</code>. </p>
 
-<p>Implements <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a8f80cf84e97e582ba45cd71993a05bc2">icmpstr::IComponentNoteController</a>.</p>
+<p>Implements <a class="el" href="classicmpstr_1_1_i_component_note_controller.html#a9cfb7f69388ded543f2ef52dde43e5f5">icmpstr::IComponentNoteController</a>.</p>
 
 </div>
 </div>

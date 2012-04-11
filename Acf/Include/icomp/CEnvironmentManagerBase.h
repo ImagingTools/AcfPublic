@@ -42,8 +42,8 @@ public:
 
 	// reimplemented (icomp::IPackagesManager)
 	virtual bool LoadPackages(const QString& configFilePath = QString());
-	virtual int GetPackageType(const std::string& packageId) const;
-	virtual QString GetPackagePath(const std::string& packageId) const;
+	virtual int GetPackageType(const QByteArray& packageId) const;
+	virtual QString GetPackagePath(const QByteArray& packageId) const;
 
 	// reimplemented (icomp::IRegistriesManager)
 	virtual const IRegistry* GetRegistry(const CComponentAddress& address, const IRegistry* contextRegistryPtr = NULL) const;
@@ -51,7 +51,7 @@ public:
 	// reimplemented (icomp::IMetaInfoManager)
 	virtual ComponentAddresses GetComponentAddresses(int typeFlag = CTF_ALL) const;
 	virtual const IComponentStaticInfo* GetComponentMetaInfo(const CComponentAddress& address) const;
-	virtual const IComponentStaticInfo* GetPackageMetaInfo(const std::string& packageId) const;
+	virtual const IComponentStaticInfo* GetPackageMetaInfo(const QByteArray& packageId) const;
 };
 
 

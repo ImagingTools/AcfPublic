@@ -24,9 +24,8 @@
 #define iproc_TMorphLockedProducerBase_included
 
 
-// STL includes
-#include <list>
-
+// Qt includes
+#include <QtCore/QList>
 
 // ACF includes
 #include "istd/TDelPtr.h"
@@ -86,7 +85,7 @@ private:
 		int lockedCount;
 	};
 
-	typedef std::list<ListElement> CachedList;
+	typedef QList<ListElement> CachedList;
 
 	CachedList m_cachedList;
 };
@@ -122,7 +121,7 @@ void TMorphLockedProducerBase<Key, CacheObject, SourceObject>::SetMaxCumulatedWe
 template <class Key, class CacheObject, class SourceObject>
 const CacheObject* TMorphLockedProducerBase<Key, CacheObject, SourceObject>::ProduceLockedObject(const Key& key)
 {
-	typename CachedList::iterator foundIter = std::find(m_cachedList.begin(), m_cachedList.end(), key);
+	typename CachedList::iterator foundIter = qFind(m_cachedList.begin(), m_cachedList.end(), key);
 	if (foundIter != m_cachedList.end()){
 		foundIter->lockedCount++;
 
