@@ -60,7 +60,7 @@ protected:
 	virtual void SetNodesCount(int count);
 
 private:
-	typedef ::QVector<NodeData> NodesData;
+	typedef QVector<NodeData> NodesData;
 	NodesData m_nodesData;
 };
 

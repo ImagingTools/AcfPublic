@@ -8263,10 +8263,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>const ::QVector&lt; i2d::CVector2d &gt; &amp;</type>
+      <type>const QVector&lt; i2d::CVector2d &gt; &amp;</type>
       <name>GetPoints</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>adac0a035cc9fd2211848313acd5f7fe3</anchor>
+      <anchor>aedd9eb3cdfd66e24ea7fd02dc7ff0442</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -23576,11 +23576,11 @@
       <arglist>(const QString &amp;text, double &amp;result) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>double(*</type>
+      <type>int(*</type>
       <name>RoundingFuntionPtr</name>
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
-      <anchor>a1ce4e3155cb2cd1881c0cd9edcaa379c</anchor>
-      <arglist>)(double value)</arglist>
+      <anchor>acb69866b0de8ae17f865da8d700a1233</anchor>
+      <arglist>)(qreal value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual qint32</type>
@@ -23602,13 +23602,6 @@
       <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
       <anchor>a10b5c3be06a284084c5cb56e599c671d</anchor>
       <arglist>(const double &amp;value, int precision) const </arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static double</type>
-      <name>NormalRoundFuntion</name>
-      <anchorfile>classimath_1_1_c_fixed_point_manip.html</anchorfile>
-      <anchor>a8f4b537ed998948edf0ff5eae4fb0bd8</anchor>
-      <arglist>(double value)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40867,6 +40860,13 @@
       <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
       <anchor>a751c181c55e66da79b03e5df0b27cd12</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>Flush</name>
+      <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
+      <anchor>a329091b3cb5ccb6a51d94302008fea1b</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

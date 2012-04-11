@@ -32,7 +32,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iser::CXmlStringWriteArchive Class Reference<div class="ingroups"><a class="el" href="group___persistence.html">Persistence concept.</a></div></div>  </div>
 </div>
@@ -71,6 +72,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a187e5a2beaa0e381343c15079e2b75b4">CXmlStringWriteArchive</a> (const <a class="el" href="classiser_1_1_i_version_info.html">IVersionInfo</a> *versionInfoPtr=NULL, bool serializeHeader=true, const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;rootTag=<a class="el" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a07f3e0309aaa2453190f188ddfd9b132">~CXmlStringWriteArchive</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QByteArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a751c181c55e66da79b03e5df0b27cd12">GetString</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the archive and get the created XML string.  <a href="#a751c181c55e66da79b03e5df0b27cd12"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a329091b3cb5ccb6a51d94302008fea1b">Flush</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Force internal buffer to flush.  <a href="#a329091b3cb5ccb6a51d94302008fea1b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Simple implementation of archive for writing of XML given as a string. </p>
@@ -145,6 +151,26 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a329091b3cb5ccb6a51d94302008fea1b"></a><!-- doxytag: member="iser::CXmlStringWriteArchive::Flush" ref="a329091b3cb5ccb6a51d94302008fea1b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iser::CXmlStringWriteArchive::Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Force internal buffer to flush. </p>
+
+<p>Reimplemented from <a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a9c15387c8100e8995edd0b0e5f688c1e">iser::CXmlWriteArchiveBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a751c181c55e66da79b03e5df0b27cd12"></a><!-- doxytag: member="iser::CXmlStringWriteArchive::GetString" ref="a751c181c55e66da79b03e5df0b27cd12" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -158,6 +184,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Close the archive and get the created XML string. </p>
 
 </div>
 </div>

@@ -45,13 +45,13 @@ public:
 
 	void Insert(const i2d::CVector2d& vector);
 	void Clear();
-	const ::QVector<i2d::CVector2d>& GetPoints() const;
+	const QVector<i2d::CVector2d>& GetPoints() const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
 private:
-	::QVector<i2d::CVector2d> m_points;
+	QVector<i2d::CVector2d> m_points;
 };
 
 
@@ -74,7 +74,7 @@ inline void CPolypoint::Clear()
 }
 
 
-inline const ::QVector<i2d::CVector2d>& CPolypoint::GetPoints() const
+inline const QVector<i2d::CVector2d>& CPolypoint::GetPoints() const
 {
 	return m_points;
 }

@@ -22,8 +22,8 @@
 
 #include "istd/CCrcCalculator.h"
 
-// STL includes
-#include <fstream>
+// Qt includes
+#include <QFile>
 
 // ACF includes
 #include <QtCore/QString>
@@ -64,23 +64,18 @@ quint32 CCrcCalculator::GetCrcFromStream(const ByteStream& byteStream)
 
 quint32 CCrcCalculator::GetCrcFromFile(const QString& fileName)
 {
-	std::ifstream file;
+	QFile file(fileName);
 
 	quint32 crcValue = 0xFFFFFFFF;
 
-	file.open(fileName.toLocal8Bit().constData(), std::fstream::in | std::fstream::binary);
-	if (file.is_open()){
+	if (file.open(QIODevice::ReadOnly)){
 		char buffer[1024];
-		int readBytes = file.read(buffer, sizeof(buffer)).gcount();
-		while (readBytes){
+		while (!file.atEnd()){
+			int readBytes = int(file.read(buffer, sizeof(buffer)));
 			for (int byteIndex = 0; byteIndex < readBytes; ++byteIndex){
 				UpdateCrc(buffer[byteIndex], crcValue);
 			}
-
-			readBytes = file.read(buffer, sizeof(buffer)).gcount();
 		}
-
-		file.close();
 	}
 
 	return ~crcValue;

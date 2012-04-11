@@ -25,6 +25,7 @@
 
 
 // Qt includes
+#include <QtCore/qmath.h>
 #include <QtCore/QtGlobal>
 
 // ACF includes
@@ -215,7 +216,7 @@ inline double CVector2d::GetCrossProductZ(const imath::TVector<2>& vector) const
 
 inline double CVector2d::GetAngle() const
 {
-	return ::atan2(GetY(), GetX());
+	return qAtan2(GetY(), GetX());
 }
 
 

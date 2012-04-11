@@ -70,9 +70,10 @@ Public Types</h2></td></tr>
 &lt; <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_position2d.html">i2d::CPosition2d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a100fbd5f25ec9a83cce865b0010fe202">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a0d4a130c29974b20675d22f256485394">CSearchFeature</a> (double weight, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, double angle, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;scale)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a03478642f8a0f9b73f1b9a2a1a0a2eff">CSearchFeature</a> (double weight, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, double angle, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;scale, int index=-1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a1f8e680c24cd7adcc7ffa5555904d623">GetAngle</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#aac77c713ab574967a412a0c7884361ab">GetScale</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a1b9b60d3ee8b06a83b64ddab6a369bce">GetIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a3736d0349b7ce9cebda91144f73b2e96">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -93,12 +94,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiipr_1_1_t_feature_wrap.html#aa081947fc097182ae70c0ea804c402b1">iipr::TFeatureWrap&lt; i2d::CPosition2d &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_search_feature_8h_source.html#l00023">23</a> of file <a class="el" href="_c_search_feature_8h_source.html">CSearchFeature.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_search_feature_8h_source.html#l00022">22</a> of file <a class="el" href="_c_search_feature_8h_source.html">CSearchFeature.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0d4a130c29974b20675d22f256485394"></a><!-- doxytag: member="iipr::CSearchFeature::CSearchFeature" ref="a0d4a130c29974b20675d22f256485394" args="(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale)" -->
+<a class="anchor" id="a03478642f8a0f9b73f1b9a2a1a0a2eff"></a><!-- doxytag: member="iipr::CSearchFeature::CSearchFeature" ref="a03478642f8a0f9b73f1b9a2a1a0a2eff" args="(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, int index=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -124,7 +125,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>scale</em>&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -144,6 +151,22 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">double iipr::CSearchFeature::GetAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b9b60d3ee8b06a83b64ddab6a369bce"></a><!-- doxytag: member="iipr::CSearchFeature::GetIndex" ref="a1b9b60d3ee8b06a83b64ddab6a369bce" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iipr::CSearchFeature::GetIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

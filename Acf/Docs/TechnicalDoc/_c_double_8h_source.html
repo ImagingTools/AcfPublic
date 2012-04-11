@@ -265,7 +265,7 @@
 <a name="l00262"></a>00262 {
 <a name="l00263"></a>00263        <span class="keywordtype">double</span> scale = qPow(10.0, precision);
 <a name="l00264"></a>00264 
-<a name="l00265"></a>00265        <span class="keywordflow">return</span> std::floor(value * scale + 0.5) / scale;
+<a name="l00265"></a>00265        <span class="keywordflow">return</span> qFloor(value * scale + 0.5) / scale;
 <a name="l00266"></a>00266 }
 <a name="l00267"></a>00267 
 <a name="l00268"></a>00268 
@@ -273,7 +273,7 @@
 <a name="l00270"></a>00270 {
 <a name="l00271"></a>00271        <span class="keywordtype">double</span> scale = qPow(10.0, precision);
 <a name="l00272"></a>00272 
-<a name="l00273"></a>00273        <span class="keywordflow">return</span> std::floor(value1 * scale + 0.5) == std::floor(value2 * scale + 0.5);
+<a name="l00273"></a>00273        <span class="keywordflow">return</span> qFloor(value1 * scale + 0.5) == qFloor(value2 * scale + 0.5);
 <a name="l00274"></a>00274 }
 <a name="l00275"></a>00275 
 <a name="l00276"></a>00276 
@@ -281,7 +281,7 @@
 <a name="l00278"></a>00278 {
 <a name="l00279"></a>00279        <span class="keywordtype">double</span> scale = qPow(10.0, precision);
 <a name="l00280"></a>00280 
-<a name="l00281"></a>00281        <span class="keywordflow">return</span> std::floor(value * scale) / scale;
+<a name="l00281"></a>00281        <span class="keywordflow">return</span> qFloor(value * scale) / scale;
 <a name="l00282"></a>00282 }
 <a name="l00283"></a>00283 
 <a name="l00284"></a>00284 
@@ -289,7 +289,7 @@
 <a name="l00286"></a>00286 {
 <a name="l00287"></a>00287        <span class="keywordtype">double</span> scale = qPow(10.0, precision);
 <a name="l00288"></a>00288 
-<a name="l00289"></a>00289        <span class="keywordflow">return</span> std::floor(value1 * scale) == std::floor(value2 * scale);
+<a name="l00289"></a>00289        <span class="keywordflow">return</span> qFloor(value1 * scale) == qFloor(value2 * scale);
 <a name="l00290"></a>00290 }
 <a name="l00291"></a>00291 
 <a name="l00292"></a>00292 
@@ -297,7 +297,7 @@
 <a name="l00294"></a>00294 {
 <a name="l00295"></a>00295        <span class="keywordtype">double</span> scale = qPow(10.0, precision);
 <a name="l00296"></a>00296 
-<a name="l00297"></a>00297        <span class="keywordflow">return</span> std::ceil(value * scale) / scale;
+<a name="l00297"></a>00297        <span class="keywordflow">return</span> qCeil(value * scale) / scale;
 <a name="l00298"></a>00298 }
 <a name="l00299"></a>00299 
 <a name="l00300"></a>00300 
@@ -305,7 +305,7 @@
 <a name="l00302"></a>00302 {
 <a name="l00303"></a>00303        <span class="keywordtype">double</span> scale = qPow(10.0, precision);
 <a name="l00304"></a>00304 
-<a name="l00305"></a>00305        <span class="keywordflow">return</span> std::ceil(value1 * scale) == std::ceil(value2 * scale);
+<a name="l00305"></a>00305        <span class="keywordflow">return</span> qCeil(value1 * scale) == qCeil(value2 * scale);
 <a name="l00306"></a>00306 }
 <a name="l00307"></a>00307 
 <a name="l00308"></a>00308 

@@ -25,7 +25,6 @@
 
 // Qt includes
 #include <QtGui/QMessageBox>
-#include <QElapsedTimer>
 
 // ACF includes
 #include "imath/CVarVector.h"
@@ -69,21 +68,6 @@ void CSearchBasedFeaturesSupplierGuiComp::on_SaveParamsButton_clicked()
 // protected methods
 
 // reimplemented (iqtinsp::TSupplierGuiCompBase)
-
-
-bool CSearchBasedFeaturesSupplierGuiComp::DoTest()
-{
-	QElapsedTimer timer;
-	timer.start();
-
-	bool retVal = BaseClass::DoTest();
-
-	quint64 time = timer.elapsed();
-	TimeLabel->setText(QString::number(time));
-
-	return retVal;
-}
-
 
 QWidget* CSearchBasedFeaturesSupplierGuiComp::GetParamsWidget() const
 {
@@ -166,12 +150,12 @@ void CSearchBasedFeaturesSupplierGuiComp::UpdateGui(int updateFlags)
 					const iipr::CSearchFeature* searchFeaturePtr = dynamic_cast<const iipr::CSearchFeature*>(foundFeatures[featureIndex]);
 					if (searchFeaturePtr != NULL){
 						QTreeWidgetItem* modelItemPtr = new QTreeWidgetItem;
-						modelItemPtr->setText(CT_SCORE, QString::number(searchFeaturePtr->GetWeight() * 100, 'f', 2));
-						modelItemPtr->setText(CT_X, QString::number(searchFeaturePtr->GetPosition().GetX(), 'f', 2));
-						modelItemPtr->setText(CT_Y, QString::number(searchFeaturePtr->GetPosition().GetY(), 'f', 2));
-						modelItemPtr->setText(CT_ANGLE, QString::number(imath::GetDegreeFromRadian(searchFeaturePtr->GetAngle()), 'f', 2));
-						modelItemPtr->setText(CT_X_SCALE, QString::number(searchFeaturePtr->GetScale().GetX(), 'f', 2));
-						modelItemPtr->setText(CT_Y_SCALE, QString::number(searchFeaturePtr->GetScale().GetY(), 'f', 2));
+						modelItemPtr->setText(CT_SCORE, QString::number(searchFeaturePtr->GetWeight() * 100));
+						modelItemPtr->setText(CT_X, QString::number(searchFeaturePtr->GetPosition().GetX()));
+						modelItemPtr->setText(CT_Y, QString::number(searchFeaturePtr->GetPosition().GetY()));
+						modelItemPtr->setText(CT_ANGLE, QString::number(imath::GetDegreeFromRadian(searchFeaturePtr->GetAngle())));
+						modelItemPtr->setText(CT_X_SCALE, QString::number(searchFeaturePtr->GetScale().GetX()));
+						modelItemPtr->setText(CT_Y_SCALE, QString::number(searchFeaturePtr->GetScale().GetY()));
 
 						ResultsList->addTopLevelItem(modelItemPtr);
 
@@ -214,8 +198,6 @@ void CSearchBasedFeaturesSupplierGuiComp::UpdateGui(int updateFlags)
 void CSearchBasedFeaturesSupplierGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
-
-	ResultsList->header()->setResizeMode(QHeaderView::ResizeToContents);
 }
 
 

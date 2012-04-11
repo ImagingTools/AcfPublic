@@ -105,11 +105,11 @@
 <a name="l00079"></a>00079 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PixelComponentType&gt;
 <a name="l00080"></a>00080 <span class="keyword">typename</span> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#a092e365c0b415ddef7c5c5ad2babac30">TImagePixelInterpolator&lt;PixelComponentType&gt;::PixelComponent</a> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html">TImagePixelInterpolator&lt;PixelComponentType&gt;::GetBilinearInterpolated</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">int</span> componentIndex)<span class="keyword"> const</span>
 <a name="l00081"></a>00081 <span class="keyword"></span>{
-<a name="l00082"></a>00082        <span class="keywordtype">int</span> cx = int(::ceil(x));
-<a name="l00083"></a>00083        <span class="keywordtype">int</span> cy = int(::ceil(y));
+<a name="l00082"></a>00082        <span class="keywordtype">int</span> cx = int(qCeil(x));
+<a name="l00083"></a>00083        <span class="keywordtype">int</span> cy = int(qCeil(y));
 <a name="l00084"></a>00084 
-<a name="l00085"></a>00085        <span class="keywordtype">int</span> fx = int(::floor(x));
-<a name="l00086"></a>00086        <span class="keywordtype">int</span> fy = int(::floor(y));
+<a name="l00085"></a>00085        <span class="keywordtype">int</span> fx = int(qFloor(x));
+<a name="l00086"></a>00086        <span class="keywordtype">int</span> fy = int(qFloor(y));
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088        <span class="keywordtype">double</span> dx = cx - x;
 <a name="l00089"></a>00089        <span class="keywordtype">double</span> dy = cy - y;
