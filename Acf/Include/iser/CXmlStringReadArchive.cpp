@@ -38,7 +38,7 @@ CXmlStringReadArchive::CXmlStringReadArchive(
 	if (m_buffer.open(QIODevice::ReadOnly | QIODevice::Text)){
 		m_stream.setDevice(&m_buffer);
 
-		SerializeXmlHeader();
+		ReadXmlHeader();
 
 		if (serializeHeader){
 			SerializeAcfHeader();

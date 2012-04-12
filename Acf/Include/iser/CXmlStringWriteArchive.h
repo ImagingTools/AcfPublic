@@ -28,7 +28,7 @@
 #include <QtCore/QBuffer>
 
 // ACF includes
-#include "iser/CXmlStreamWriteArchiveBase.h"
+#include "iser/CXmlWriteArchiveBase.h"
 
 
 namespace iser
@@ -40,10 +40,10 @@ namespace iser
 
 	\ingroup Persistence
 */
-class CXmlStringWriteArchive: public CXmlStreamWriteArchiveBase
+class CXmlStringWriteArchive: public CXmlWriteArchiveBase
 {
 public:
-	typedef CXmlStreamWriteArchiveBase BaseClass;
+	typedef CXmlWriteArchiveBase BaseClass;
 
 	CXmlStringWriteArchive(
 				const IVersionInfo* versionInfoPtr = NULL,
@@ -57,12 +57,13 @@ public:
 	virtual const QByteArray& GetString() const;
 
 protected:
-	/**
-		Force internal buffer to flush.
-	*/
-	void Flush();
+	void EnsureArchiveClosed();
+
+	// reimplemented (iser::CXmlWriteArchiveBase)
+	virtual bool WriteString(const QByteArray& value);
 
 private:
+	QTextStream m_stream;
 	QBuffer m_buffer;
 };
 

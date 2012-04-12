@@ -478,7 +478,7 @@ bool CXmlReadArchiveBase::InternEndTag(const CArchiveTag& tag, bool& wasTagSkipp
 }
 
 
-bool CXmlReadArchiveBase::SerializeXmlHeader()
+bool CXmlReadArchiveBase::ReadXmlHeader()
 {
 	bool retVal = true;
 
@@ -499,6 +499,12 @@ bool CXmlReadArchiveBase::SerializeXmlHeader()
 	}
 
 	return retVal;
+}
+
+
+bool CXmlReadArchiveBase::ReadXmlFooter()
+{
+	return EndTag(m_rootTag);
 }
 
 

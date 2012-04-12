@@ -68,7 +68,8 @@ protected:
 	*/
 	bool InternEndTag(const CArchiveTag& tag, bool& wasTagSkipped);
 
-	virtual bool SerializeXmlHeader();
+	virtual bool ReadXmlHeader();
+	virtual bool ReadXmlFooter();
 
 	// abstract methods
 	/**

@@ -90,7 +90,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a4a9d2af9844fbd7666d5e3230ef800cc">CXmlReadArchiveBase</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;rootTag)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a4a30d56c741b7c6b7dbf3edb7f57e825">InternEndTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;tag, bool &amp;wasTagSkipped)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended implementation of <a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a8c6f65d1907f96396bf99111a84505cb" title="End of archive tag.">EndTag()</a> with additional flag signalizing that tag is skipped.  <a href="#a4a30d56c741b7c6b7dbf3edb7f57e825"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a43c286a574c8bcdcfe3c044026e5c73a">SerializeXmlHeader</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a88e1f1b386a059b6c87480d7a8d7f46a">ReadXmlHeader</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a933622a64e6c8ee5b78fc47b4ccd8e71">ReadXmlFooter</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_read_archive_base.html#afcd36fa68d1b5fa29982409e784376fa">ReadToDelimeter</a> (const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input stream till one of specified delimeters is found.  <a href="#afcd36fa68d1b5fa29982409e784376fa"></a><br/></td></tr>
 </table>
@@ -411,12 +412,28 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a43c286a574c8bcdcfe3c044026e5c73a"></a><!-- doxytag: member="iser::CXmlReadArchiveBase::SerializeXmlHeader" ref="a43c286a574c8bcdcfe3c044026e5c73a" args="()" -->
+<a class="anchor" id="a933622a64e6c8ee5b78fc47b4ccd8e71"></a><!-- doxytag: member="iser::CXmlReadArchiveBase::ReadXmlFooter" ref="a933622a64e6c8ee5b78fc47b4ccd8e71" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iser::CXmlReadArchiveBase::SerializeXmlHeader </td>
+          <td class="memname">virtual bool iser::CXmlReadArchiveBase::ReadXmlFooter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a88e1f1b386a059b6c87480d7a8d7f46a"></a><!-- doxytag: member="iser::CXmlReadArchiveBase::ReadXmlHeader" ref="a88e1f1b386a059b6c87480d7a8d7f46a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iser::CXmlReadArchiveBase::ReadXmlHeader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected, virtual]</code></td>

@@ -55,30 +55,29 @@
 <a name="l00031"></a>00031 <span class="keyword">protected</span>:
 <a name="l00032"></a>00032        <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#a394dcb0ee0693355a12bf29b93654557">CXmlWriteArchiveBase</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_i_version_info.html" title="Provides access to version information.">IVersionInfo</a>* versionInfoPtr, <span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; rootTag);
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#a9c15387c8100e8995edd0b0e5f688c1e">Flush</a>();
-<a name="l00035"></a>00035        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#a1ace58b3e3f014f6c02a21aba8586f7a">MakeIndent</a>();
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#ac4b7fbdc3a3e3c6f5bdfc193ea04e614">SerializeXmlHeader</a>();
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// abstract methods</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#ab2dc2a95f01c33511904e38015001b06">WriteString</a>(<span class="keyword">const</span> QByteArray&amp; value) = 0;
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="keyword">private</span>:
-<a name="l00043"></a>00043        <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a> m_rootTag;
+<a name="l00034"></a>00034        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#a1ace58b3e3f014f6c02a21aba8586f7a">MakeIndent</a>();
+<a name="l00035"></a>00035 
+<a name="l00039"></a>00039        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#a3b679826c63fd8fdbf5b21a34bbc4a4e" title="Write XML header.">WriteXmlHeader</a>();
+<a name="l00043"></a>00043        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#ae6ec522a1b678e5036de890fa81ab9c4" title="Write XML footer.">WriteXmlFooter</a>();
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045        <span class="keywordtype">int</span> m_indent;
-<a name="l00046"></a>00046        <span class="keywordtype">bool</span> m_isHeaderSerialized;
+<a name="l00045"></a>00045        <span class="comment">// abstract methods</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_xml_write_archive_base.html#ab2dc2a95f01c33511904e38015001b06">WriteString</a>(<span class="keyword">const</span> QByteArray&amp; value) = 0;
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048        <span class="keywordtype">bool</span> m_isSeparatorNeeded;
-<a name="l00049"></a>00049 };
+<a name="l00048"></a>00048 <span class="keyword">private</span>:
+<a name="l00049"></a>00049        <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a> m_rootTag;
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 } <span class="comment">// namespace iser</span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iser_CXmlWriteArchiveBase_included</span>
-<a name="l00056"></a>00056 <span class="preprocessor"></span>
-<a name="l00057"></a>00057 
+<a name="l00051"></a>00051        <span class="keywordtype">int</span> m_indent;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        <span class="keywordtype">bool</span> m_isSeparatorNeeded;
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 } <span class="comment">// namespace iser</span>
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 <span class="preprocessor">#endif // !iser_CXmlWriteArchiveBase_included</span>
+<a name="l00061"></a>00061 <span class="preprocessor"></span>
+<a name="l00062"></a>00062 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

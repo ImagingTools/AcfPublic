@@ -121,21 +121,8 @@ CXmlWriteArchiveBase::CXmlWriteArchiveBase(const IVersionInfo* versionInfoPtr, c
 :	BaseClass(versionInfoPtr),
 	m_rootTag(rootTag),
 	m_indent(0),
-	m_isHeaderSerialized(false),
 	m_isSeparatorNeeded(false)
 {
-}
-
-
-bool CXmlWriteArchiveBase::Flush()
-{
-	if (m_isHeaderSerialized){
-		m_isHeaderSerialized = false;
-
-		return EndTag(m_rootTag);
-	}
-
-	return true;
 }
 
 
@@ -145,16 +132,20 @@ bool CXmlWriteArchiveBase::MakeIndent()
 }
 
 
-bool CXmlWriteArchiveBase::SerializeXmlHeader()
+bool CXmlWriteArchiveBase::WriteXmlHeader()
 {
 	bool retVal = true;
 
 	retVal = retVal && WriteString("<?xml version=\"1.0\"?>\n");
 	retVal = retVal && BeginTag(m_rootTag);
 
-	m_isHeaderSerialized = true;
-
 	return retVal;
+}
+
+
+bool CXmlWriteArchiveBase::WriteXmlFooter()
+{
+	return EndTag(m_rootTag);
 }
 
 

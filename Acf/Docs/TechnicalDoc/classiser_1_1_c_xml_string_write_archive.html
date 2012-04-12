@@ -38,7 +38,7 @@
 <div class="title">iser::CXmlStringWriteArchive Class Reference<div class="ingroups"><a class="el" href="group___persistence.html">Persistence concept.</a></div></div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iser::CXmlStringWriteArchive" --><!-- doxytag: inherits="iser::CXmlStreamWriteArchiveBase" -->
+<!-- doxytag: class="iser::CXmlStringWriteArchive" --><!-- doxytag: inherits="iser::CXmlWriteArchiveBase" -->
 <p>Simple implementation of archive for writing of XML given as a string.  
  <a href="classiser_1_1_c_xml_string_write_archive.html#details">More...</a></p>
 
@@ -49,16 +49,15 @@ Inheritance diagram for iser::CXmlStringWriteArchive:</div>
  <div class="center">
   <img src="classiser_1_1_c_xml_string_write_archive.png" usemap="#iser::CXmlStringWriteArchive_map" alt=""/>
   <map id="iser::CXmlStringWriteArchive_map" name="iser::CXmlStringWriteArchive_map">
-<area href="classiser_1_1_c_xml_stream_write_archive_base.html" title="Base implementation of archive for writing in XML format using a stream implementation." alt="iser::CXmlStreamWriteArchiveBase" shape="rect" coords="220,336,430,360"/>
-<area href="classiser_1_1_c_xml_write_archive_base.html" title="Base class for XML storing archives." alt="iser::CXmlWriteArchiveBase" shape="rect" coords="220,280,430,304"/>
-<area href="classiser_1_1_c_text_write_archive_base.html" title="Common archive implementation of text-based storing archives." alt="iser::CTextWriteArchiveBase" shape="rect" coords="110,224,320,248"/>
-<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="330,224,540,248"/>
-<area href="classiser_1_1_c_write_archive_base.html" title="Basic implementation of an abstract archive for data writting." alt="iser::CWriteArchiveBase" shape="rect" coords="110,168,320,192"/>
-<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="110,112,320,136"/>
-<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,210,80"/>
-<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="220,56,430,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,210,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="220,0,430,24"/>
+<area href="classiser_1_1_c_xml_write_archive_base.html" title="Base class for XML storing archives." alt="iser::CXmlWriteArchiveBase" shape="rect" coords="186,280,362,304"/>
+<area href="classiser_1_1_c_text_write_archive_base.html" title="Common archive implementation of text-based storing archives." alt="iser::CTextWriteArchiveBase" shape="rect" coords="93,224,269,248"/>
+<area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="279,224,455,248"/>
+<area href="classiser_1_1_c_write_archive_base.html" title="Basic implementation of an abstract archive for data writting." alt="iser::CWriteArchiveBase" shape="rect" coords="93,168,269,192"/>
+<area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="93,112,269,136"/>
+<area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,176,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="186,56,362,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,176,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="186,0,362,24"/>
 </map>
  </div></div>
 
@@ -66,7 +65,7 @@ Inheritance diagram for iser::CXmlStringWriteArchive:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiser_1_1_c_xml_stream_write_archive_base.html">CXmlStreamWriteArchiveBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a7a549469db83c25284b1cfdf8df6180b">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiser_1_1_c_xml_write_archive_base.html">CXmlWriteArchiveBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a168ce70e40c057036418db2eb456a6a1">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a187e5a2beaa0e381343c15079e2b75b4">CXmlStringWriteArchive</a> (const <a class="el" href="classiser_1_1_i_version_info.html">IVersionInfo</a> *versionInfoPtr=NULL, bool serializeHeader=true, const <a class="el" href="classiser_1_1_c_archive_tag.html">CArchiveTag</a> &amp;rootTag=<a class="el" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>)</td></tr>
@@ -75,26 +74,26 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the archive and get the created XML string.  <a href="#a751c181c55e66da79b03e5df0b27cd12"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a329091b3cb5ccb6a51d94302008fea1b">Flush</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Force internal buffer to flush.  <a href="#a329091b3cb5ccb6a51d94302008fea1b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a44afad3a47f77d7c1de9694a12c937a0">EnsureArchiveClosed</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a885cf7c3c4460ebe2bf7dcc1e74b6611">WriteString</a> (const QByteArray &amp;value)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Simple implementation of archive for writing of XML given as a string. </p>
 
 <p>Definition at line <a class="el" href="_c_xml_string_write_archive_8h_source.html#l00021">21</a> of file <a class="el" href="_c_xml_string_write_archive_8h_source.html">CXmlStringWriteArchive.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a7a549469db83c25284b1cfdf8df6180b"></a><!-- doxytag: member="iser::CXmlStringWriteArchive::BaseClass" ref="a7a549469db83c25284b1cfdf8df6180b" args="" -->
+<a class="anchor" id="a168ce70e40c057036418db2eb456a6a1"></a><!-- doxytag: member="iser::CXmlStringWriteArchive::BaseClass" ref="a168ce70e40c057036418db2eb456a6a1" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiser_1_1_c_xml_stream_write_archive_base.html">CXmlStreamWriteArchiveBase</a> <a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a7a549469db83c25284b1cfdf8df6180b">iser::CXmlStringWriteArchive::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiser_1_1_c_xml_write_archive_base.html">CXmlWriteArchiveBase</a> <a class="el" href="classiser_1_1_c_xml_string_write_archive.html#a168ce70e40c057036418db2eb456a6a1">iser::CXmlStringWriteArchive::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiser_1_1_c_xml_stream_write_archive_base.html#a39c23c45709199616da41aef3a9c894f">iser::CXmlStreamWriteArchiveBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a68d95eaf8d8731b3946d2cb73379d6d6">iser::CXmlWriteArchiveBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_xml_string_write_archive_8h_source.html#l00024">24</a> of file <a class="el" href="_c_xml_string_write_archive_8h_source.html">CXmlStringWriteArchive.h</a>.</p>
 
@@ -151,12 +150,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a329091b3cb5ccb6a51d94302008fea1b"></a><!-- doxytag: member="iser::CXmlStringWriteArchive::Flush" ref="a329091b3cb5ccb6a51d94302008fea1b" args="()" -->
+<a class="anchor" id="a44afad3a47f77d7c1de9694a12c937a0"></a><!-- doxytag: member="iser::CXmlStringWriteArchive::EnsureArchiveClosed" ref="a44afad3a47f77d7c1de9694a12c937a0" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iser::CXmlStringWriteArchive::Flush </td>
+          <td class="memname">void iser::CXmlStringWriteArchive::EnsureArchiveClosed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected]</code></td>
@@ -164,10 +163,6 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Force internal buffer to flush. </p>
-
-<p>Reimplemented from <a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a9c15387c8100e8995edd0b0e5f688c1e">iser::CXmlWriteArchiveBase</a>.</p>
 
 </div>
 </div>
@@ -186,6 +181,25 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Close the archive and get the created XML string. </p>
+
+</div>
+</div>
+<a class="anchor" id="a885cf7c3c4460ebe2bf7dcc1e74b6611"></a><!-- doxytag: member="iser::CXmlStringWriteArchive::WriteString" ref="a885cf7c3c4460ebe2bf7dcc1e74b6611" args="(const QByteArray &amp;value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iser::CXmlStringWriteArchive::WriteString </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classiser_1_1_c_xml_write_archive_base.html#ab2dc2a95f01c33511904e38015001b06">iser::CXmlWriteArchiveBase</a>.</p>
 
 </div>
 </div>

@@ -50,27 +50,28 @@
 <a name="l00032"></a><a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a2660fd7a9f7b27d6cd3470655329c5f4">00032</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo.">CFileArchiveInfo</a> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a2660fd7a9f7b27d6cd3470655329c5f4">BaseClass2</a>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="keyword">explicit</span> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#a4f11eb02f5239f489ed0f3566a873efd">CXmlFileReadArchive</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>, <span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; rootTag = <a class="code" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>);
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keyword">protected</span>:
-<a name="l00037"></a>00037        <span class="comment">// reimplemented (istd::ILogger)</span>
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#ad7f18837aa04ae51675f9cf0fd2389c5" title="Decorate message parts before outputting.">DecorateMessage</a>(
-<a name="l00039"></a>00039                             <a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a> category,
-<a name="l00040"></a>00040                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
-<a name="l00041"></a>00041                             <span class="keywordtype">int</span> flags,
-<a name="l00042"></a>00042                             QString&amp; message,
-<a name="l00043"></a>00043                             QString&amp; messageSource) <span class="keyword">const</span>;
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">private</span>:
-<a name="l00046"></a>00046        QFile m_file;
-<a name="l00047"></a>00047 };
-<a name="l00048"></a>00048 
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#ad06c6cbaed12b4cd24996fb1a49fe739">~CXmlFileReadArchive</a>();
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keyword">protected</span>:
+<a name="l00038"></a>00038        <span class="comment">// reimplemented (istd::ILogger)</span>
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_xml_file_read_archive.html#ad7f18837aa04ae51675f9cf0fd2389c5" title="Decorate message parts before outputting.">DecorateMessage</a>(
+<a name="l00040"></a>00040                             <a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a> category,
+<a name="l00041"></a>00041                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
+<a name="l00042"></a>00042                             <span class="keywordtype">int</span> flags,
+<a name="l00043"></a>00043                             QString&amp; message,
+<a name="l00044"></a>00044                             QString&amp; messageSource) <span class="keyword">const</span>;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">private</span>:
+<a name="l00047"></a>00047        QFile m_file;
+<a name="l00048"></a>00048 };
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 } <span class="comment">// namespace iser</span>
-<a name="l00051"></a>00051 
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 } <span class="comment">// namespace iser</span>
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif // !iser_CXmlFileReadArchive_included</span>
-<a name="l00054"></a>00054 <span class="preprocessor"></span>
-<a name="l00055"></a>00055 
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="preprocessor">#endif // !iser_CXmlFileReadArchive_included</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span>
+<a name="l00056"></a>00056 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

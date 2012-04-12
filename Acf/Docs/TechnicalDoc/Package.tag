@@ -3544,7 +3544,7 @@
     <name>CXmlFileWriteArchive.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>iser_2_c_xml_file_write_archive_8h</filename>
-    <includes id="_c_xml_stream_write_archive_base_8h" name="CXmlStreamWriteArchiveBase.h" local="yes" imported="no">iser/CXmlStreamWriteArchiveBase.h</includes>
+    <includes id="_c_xml_write_archive_base_8h" name="CXmlWriteArchiveBase.h" local="yes" imported="no">iser/CXmlWriteArchiveBase.h</includes>
     <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
     <class kind="class">iser::CXmlFileWriteArchive</class>
     <namespace>iser</namespace>
@@ -4891,14 +4891,6 @@
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
-    <name>CXmlStreamWriteArchiveBase.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_c_xml_stream_write_archive_base_8h</filename>
-    <includes id="_c_xml_write_archive_base_8h" name="CXmlWriteArchiveBase.h" local="yes" imported="no">iser/CXmlWriteArchiveBase.h</includes>
-    <class kind="class">iser::CXmlStreamWriteArchiveBase</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
     <name>CXmlStringReadArchive.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_c_xml_string_read_archive_8h</filename>
@@ -4910,7 +4902,7 @@
     <name>CXmlStringWriteArchive.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_c_xml_string_write_archive_8h</filename>
-    <includes id="_c_xml_stream_write_archive_base_8h" name="CXmlStreamWriteArchiveBase.h" local="yes" imported="no">iser/CXmlStreamWriteArchiveBase.h</includes>
+    <includes id="_c_xml_write_archive_base_8h" name="CXmlWriteArchiveBase.h" local="yes" imported="no">iser/CXmlWriteArchiveBase.h</includes>
     <class kind="class">iser::CXmlStringWriteArchive</class>
     <namespace>iser</namespace>
   </compound>
@@ -39112,7 +39104,6 @@
     <class kind="class">iser::CXmlFileWriteArchive</class>
     <class kind="class">iser::CXmlReadArchiveBase</class>
     <class kind="class">iser::CXmlStreamReadArchiveBase</class>
-    <class kind="class">iser::CXmlStreamWriteArchiveBase</class>
     <class kind="class">iser::CXmlStringReadArchive</class>
     <class kind="class">iser::CXmlStringWriteArchive</class>
     <class kind="class">iser::CXmlWriteArchiveBase</class>
@@ -40580,6 +40571,13 @@
       <anchor>a4f11eb02f5239f489ed0f3566a873efd</anchor>
       <arglist>(const QString &amp;filePath, bool serializeHeader=true, const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CXmlFileReadArchive</name>
+      <anchorfile>classiser_1_1_c_xml_file_read_archive.html</anchorfile>
+      <anchor>ad06c6cbaed12b4cd24996fb1a49fe739</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DecorateMessage</name>
@@ -40591,13 +40589,13 @@
   <compound kind="class">
     <name>iser::CXmlFileWriteArchive</name>
     <filename>classiser_1_1_c_xml_file_write_archive.html</filename>
-    <base>iser::CXmlStreamWriteArchiveBase</base>
+    <base>iser::CXmlWriteArchiveBase</base>
     <base>iser::CFileArchiveInfo</base>
     <member kind="typedef">
-      <type>CXmlStreamWriteArchiveBase</type>
+      <type>CXmlWriteArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>aa4a371732c93de5fb126fde5ed0d8d82</anchor>
+      <anchor>a13efb5c43b79ffca81c177993a568c80</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -40620,6 +40618,13 @@
       <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
       <anchor>afb47e650fcbb9bb8c51b474f063d0fa8</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>WriteString</name>
+      <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
+      <anchor>affb533c675413fd6ded1b1033912ec91</anchor>
+      <arglist>(const QByteArray &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40710,9 +40715,16 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>SerializeXmlHeader</name>
+      <name>ReadXmlHeader</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a43c286a574c8bcdcfe3c044026e5c73a</anchor>
+      <anchor>a88e1f1b386a059b6c87480d7a8d7f46a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadXmlFooter</name>
+      <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
+      <anchor>a933622a64e6c8ee5b78fc47b4ccd8e71</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
@@ -40771,46 +40783,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iser::CXmlStreamWriteArchiveBase</name>
-    <filename>classiser_1_1_c_xml_stream_write_archive_base.html</filename>
-    <base>iser::CXmlWriteArchiveBase</base>
-    <member kind="typedef">
-      <type>CXmlWriteArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>a39c23c45709199616da41aef3a9c894f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CXmlStreamWriteArchiveBase</name>
-      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>ac798772d4727b214476429e8320773ee</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>CXmlStreamWriteArchiveBase</name>
-      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>ab32116cd20112fee0176665fd563e265</anchor>
-      <arglist>(const IVersionInfo *versionInfoPtr, const CArchiveTag &amp;rootTag)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>WriteString</name>
-      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>a67e61c9531ab843fa82382a3d74cabf9</anchor>
-      <arglist>(const QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QTextStream</type>
-      <name>m_stream</name>
-      <anchorfile>classiser_1_1_c_xml_stream_write_archive_base.html</anchorfile>
-      <anchor>a60135e20b2d38ccc2306273e4bb3684c</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iser::CXmlStringReadArchive</name>
     <filename>classiser_1_1_c_xml_string_read_archive.html</filename>
     <base>iser::CXmlStreamReadArchiveBase</base>
@@ -40832,12 +40804,12 @@
   <compound kind="class">
     <name>iser::CXmlStringWriteArchive</name>
     <filename>classiser_1_1_c_xml_string_write_archive.html</filename>
-    <base>iser::CXmlStreamWriteArchiveBase</base>
+    <base>iser::CXmlWriteArchiveBase</base>
     <member kind="typedef">
-      <type>CXmlStreamWriteArchiveBase</type>
+      <type>CXmlWriteArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
-      <anchor>a7a549469db83c25284b1cfdf8df6180b</anchor>
+      <anchor>a168ce70e40c057036418db2eb456a6a1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -40863,10 +40835,17 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>Flush</name>
+      <name>EnsureArchiveClosed</name>
       <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
-      <anchor>a329091b3cb5ccb6a51d94302008fea1b</anchor>
+      <anchor>a44afad3a47f77d7c1de9694a12c937a0</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>WriteString</name>
+      <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
+      <anchor>a885cf7c3c4460ebe2bf7dcc1e74b6611</anchor>
+      <arglist>(const QByteArray &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40932,13 +40911,6 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>Flush</name>
-      <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>a9c15387c8100e8995edd0b0e5f688c1e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
       <name>MakeIndent</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
       <anchor>a1ace58b3e3f014f6c02a21aba8586f7a</anchor>
@@ -40946,9 +40918,16 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>SerializeXmlHeader</name>
+      <name>WriteXmlHeader</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>ac4b7fbdc3a3e3c6f5bdfc193ea04e614</anchor>
+      <anchor>a3b679826c63fd8fdbf5b21a34bbc4a4e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteXmlFooter</name>
+      <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
+      <anchor>ae6ec522a1b678e5036de890fa81ab9c4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
