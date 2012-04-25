@@ -141,7 +141,7 @@ int CGenicamCameraComp::DoProcessing(
 			double timeDiff = imageTimestamp.GetTimeTo(*triggerTimerPtr) - *m_triggerDifferenceAttrPtr;
 
 			if (timeDiff < -*m_triggerToleranceAttrPtr){	// image older than trigger
-				SendWarningMessage(MI_DEVICE_INTERN, tr("Camera %1: image dropped becouse of time difference %2 ms").arg(deviceInfoPtr->cameraId).arg(timeDiff * 1000));
+				SendWarningMessage(MI_DEVICE_INTERN, tr("Camera %1: image dropped because of time difference %2 ms").arg(deviceInfoPtr->cameraId).arg(timeDiff * 1000));
 				deviceInfoPtr->devicePtr->PopImage(imageInfoPtr);	
 				continue;	// this frame was skipped, we have to get next one
 			}
@@ -471,7 +471,7 @@ bool CGenicamCameraComp::SynchronizeCameraParams(const iprm::IParamsSet* paramsP
 		}
 
 		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineSelector", "Line1") && retVal;
-		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineMode", "Output") && retVal;
+		//retVal = deviceInfo.devicePtr->SetStringNodeValue("LineMode", "Output") && retVal;
 		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineSource", "ExposureActive") && retVal;
 
 		if (roiParamsPtr != NULL){

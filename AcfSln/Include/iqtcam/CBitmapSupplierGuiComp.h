@@ -24,6 +24,10 @@
 #define iqtcam_CBitmapSupplierGuiComp_included
 
 
+// Qt includes
+#include <QTimer>
+
+
 // ACF includes
 #include "iser/IFileLoader.h"
 #include "imod/IObserver.h"
@@ -56,11 +60,15 @@ public:
 		I_ASSIGN(m_bitmapLoaderCompPtr, "BitmapLoader", "Saves bitmap to file", false, "BitmapLoader");
 	I_END_COMPONENT;
 
+	CBitmapSupplierGuiComp();
+
 protected Q_SLOTS:
 	void on_SnapImageButton_clicked();
+	void on_LiveImageButton_toggled(bool checked);
 	void on_SaveImageButton_clicked();
 	void on_LoadParamsButton_clicked();
 	void on_SaveParamsButton_clicked();
+	void OnTimerReady();
 
 protected:
 	// reimplemented (iqtgui::CGuiComponentBase)
@@ -83,6 +91,8 @@ private:
 	I_REF(iser::IFileLoader, m_bitmapLoaderCompPtr);
 
 	imod::TModelWrap<iqt::CBitmap> m_bitmap;
+
+	QTimer m_timer;
 };
 
 
