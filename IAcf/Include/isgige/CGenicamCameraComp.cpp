@@ -588,7 +588,12 @@ void CGenicamCameraComp::OnComponentCreated()
 
 		m_ipAddressToIndexMap[devicePtr->GetIpAddress()] = i;
 
-		devicePtr->SetImageBufferFrameCount(10);
+		if (m_imageBufferSizeAttrPtr.IsValid()){
+			devicePtr->SetImageBufferFrameCount(qMax(1, *m_imageBufferSizeAttrPtr));
+		}
+		else{
+			devicePtr->SetImageBufferFrameCount(1);
+		}
 
 		if (*m_connectOnStartAttrPtr){
 			deviceInfoPtr->EnsureConnected();
