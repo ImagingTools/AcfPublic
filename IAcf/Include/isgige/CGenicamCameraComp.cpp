@@ -217,7 +217,9 @@ istd::CRange CGenicamCameraComp::GetEenDelayRange() const
 
 bool CGenicamCameraComp::IsTriggerModeSupported(int triggerMode) const
 {
-	return (triggerMode >= isig::ITriggerParams::TM_CONTINUOUS) && (triggerMode <= isig::ITriggerParams::TM_FALLING_EDGE);
+	return (triggerMode == isig::ITriggerParams::TM_SOFTWARE) || 
+		(triggerMode >= isig::ITriggerParams::TM_CONTINUOUS) && 
+		(triggerMode <= isig::ITriggerParams::TM_FALLING_EDGE);
 }
 
 
