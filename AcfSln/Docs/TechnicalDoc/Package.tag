@@ -10552,12 +10552,26 @@
       <anchor>a52d8572b4c335331a5659a09962a39f9</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CBitmapSupplierGuiComp</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>af6c71083a8dc0e40c727fb6a86f203e2</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SnapImageButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>a9b82dcb61bb1e63a97c070ba2fb34866</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LiveImageButton_toggled</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a56566f25be437675769a456a4bccd1e7</anchor>
+      <arglist>(bool checked)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -10578,6 +10592,13 @@
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>a62609bf9f1b449ee327a9916d67159dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnTimerReady</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>affc4ca7daa0ee5876766e393af981885</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -12977,6 +12998,13 @@
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a7bf25c1f1f62003be3ff7ec952b1221a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DoTest</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a583321ecb2e59de097ca7ffdc80fdff4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

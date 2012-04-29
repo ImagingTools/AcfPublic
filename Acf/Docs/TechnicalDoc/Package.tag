@@ -24436,6 +24436,13 @@
       <arglist>(double scalar)</arglist>
     </member>
     <member kind="function">
+      <type>CVarVector &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
+      <anchor>a89b2678815c96cccf5addb02019089c8</anchor>
+      <arglist>(const CVarVector &amp;vector)</arglist>
+    </member>
+    <member kind="function">
       <type>double</type>
       <name>operator[]</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
