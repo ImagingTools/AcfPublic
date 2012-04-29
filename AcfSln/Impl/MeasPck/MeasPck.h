@@ -38,6 +38,7 @@
 #include "imeas/CHistogramStatisticsProcessorComp.h"
 #include "imeas/CNumericParamsComp.h"
 #include "imeas/CNumericConstraintsComp.h"
+#include "imeas/CLinearAdjustParamsComp.h"
 
 
 /**
@@ -89,6 +90,7 @@ typedef icomp::TModelCompWrap< icomp::TMakeComponentWrap<
 typedef imeas::CHistogramStatisticsProcessorComp HistogramStatisticsProcessor;
 typedef icomp::TModelCompWrap<imeas::CNumericParamsComp> NumericParams;
 typedef imeas::CNumericConstraintsComp NumericConstraints;
+typedef icomp::TModelCompWrap<imeas::CLinearAdjustParamsComp> LinearAdjustParams;
 
 
 } // namespace MeasPck

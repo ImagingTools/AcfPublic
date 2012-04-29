@@ -93,14 +93,14 @@
 <a name="l00073"></a>00073 <span class="keyword">protected</span>:
 <a name="l00077"></a>00077        <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a27f397d19dfc159862f00e93a8a3fbe0" title="Find the next text node and move the current node to the next sibling.">PushTextNode</a>(<span class="keyword">const</span> QString&amp; text);
 <a name="l00078"></a>00078 
-<a name="l00079"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#ac8a19d6ea12ba88cc05ec63120235618">00079</a>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#ac8a19d6ea12ba88cc05ec63120235618">SendLogMessage</a>(
-<a name="l00080"></a>00080               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> category,
+<a name="l00079"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a08a1ee5118547b8548167632a04a1482">00079</a>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a08a1ee5118547b8548167632a04a1482">SendLogMessage</a>(
+<a name="l00080"></a>00080               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category,
 <a name="l00081"></a>00081               <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00082"></a>00082               <span class="keyword">const</span> QString&amp; message,
 <a name="l00083"></a>00083               <span class="keyword">const</span> QString&amp; messageSource,
 <a name="l00084"></a>00084               <span class="keywordtype">int</span> flags = 0)<span class="keyword"> const</span>
 <a name="l00085"></a>00085 <span class="keyword">       </span>{
-<a name="l00086"></a>00086               <span class="keywordflow">return</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#ac8a19d6ea12ba88cc05ec63120235618">iser::CWriteArchiveBase::SendLogMessage</a>(category, <span class="keywordtype">id</span>, message, messageSource, flags);
+<a name="l00086"></a>00086               <span class="keywordflow">return</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a08a1ee5118547b8548167632a04a1482">iser::CWriteArchiveBase::SendLogMessage</a>(category, <span class="keywordtype">id</span>, message, messageSource, flags);
 <a name="l00087"></a>00087        }
 <a name="l00088"></a>00088 <span class="keyword">private</span>:
 <a name="l00089"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a7fd677761e10234f7e5b9e03363ce1a3">00089</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a7fd677761e10234f7e5b9e03363ce1a3">WriteArchiveMessageHandler</a>;

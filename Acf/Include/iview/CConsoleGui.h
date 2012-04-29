@@ -101,7 +101,7 @@ public Q_SLOTS:
 	virtual void OnZoomOut();
 	virtual void OnZoomReset();
 	virtual void OnZoomToFit(bool state);
-	virtual void OnFitContentstoView();
+	virtual void OnFitContentsToView();
 	virtual void OnPointsNone();
 	virtual void OnPoinsMove();
 	virtual void OnPointsAdd();
@@ -123,7 +123,7 @@ protected:
 	void UpdateScrollbarsValues();
 
 	// reimplemented (iview::CConsoleBase)
-	virtual void UpdateCursorInfo(const BaseClass::CursorInfo& info);
+	virtual void UpdateCursorInfo(const i2d::CVector2d& pixelPos, const i2d::CVector2d& logicalPos, const QString& infoText);
 	virtual void UpdateEditModeButtons();
 	virtual void UpdateButtonsState();
 	virtual void UpdateComponentsPosition();

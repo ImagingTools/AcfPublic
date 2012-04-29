@@ -30,7 +30,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_t_commands_provider_comp_wrap_8h.html">ibase/TCommandsProviderCompWrap.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_i_commands_provider_8h.html">ibase/ICommandsProvider.h</a>&quot;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&quot;</span>
 <a name="l00009"></a>00009 
@@ -44,15 +44,15 @@
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
 <a name="l00019"></a><a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html">00019</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html">CViewProviderGuiComp</a>: 
-<a name="l00020"></a>00020                      <span class="keyword">public</span> ibase::TCommandsProviderCompWrap&lt;
-<a name="l00021"></a>00021                                           iqtgui::TGuiComponentBase&lt;iview::CConsoleGui&gt; &gt;,
+<a name="l00020"></a>00020                      <span class="keyword">public</span> iqtgui::TGuiComponentBase&lt;iview::CConsoleGui&gt;,
+<a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::ICommandsProvider,
 <a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00025"></a>00025        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_commands_provider_comp_wrap.html" title="Generic macro for ICommandsProvider implementation.">ibase::TCommandsProviderCompWrap</a>&lt;
-<a name="l00026"></a><a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#aa7729973864dc12890ee7957535c490b">00026</a>                             <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;iview::CConsoleGui&gt;</a> &gt; <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#aa7729973864dc12890ee7957535c490b">BaseClass</a>;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html">CViewProviderGuiComp</a>);  
+<a name="l00025"></a><a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a8b23d37e2179b3996b6ad136f47f81ed">00025</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;iview::CConsoleGui&gt;</a> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a8b23d37e2179b3996b6ad136f47f81ed">BaseClass</a>;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html">CViewProviderGuiComp</a>);  
+<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
 <a name="l00029"></a>00029               I_REGISTER_INTERFACE(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>);
 <a name="l00030"></a>00030               I_ASSIGN(m_viewIdAttrPtr, <span class="stringliteral">&quot;ViewId&quot;</span>, <span class="stringliteral">&quot;ID allowing identifying this view&quot;</span>, <span class="keyword">true</span>, 0);
 <a name="l00031"></a>00031               I_ASSIGN(m_useAntialiasingAttrPtr, <span class="stringliteral">&quot;UseAntialiasing&quot;</span>, <span class="stringliteral">&quot;Enables using of antialiasing&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);

@@ -33,6 +33,7 @@
 
 #include "iqt/iqt.h"
 
+#include "iview/IColorShema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -240,9 +241,9 @@ void CInteractiveArrowShape::ResetPoints() const
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase)
+// reimplemented (iview::CShapeBase)
 
-void CInteractiveArrowShape::CalcBoundingBox(i2d::CRect& result) const
+i2d::CRect CInteractiveArrowShape::CalcBoundingBox() const
 {
 	I_ASSERT(IsDisplayConnected());
 
@@ -250,21 +251,22 @@ void CInteractiveArrowShape::CalcBoundingBox(i2d::CRect& result) const
 
 	const IColorShema& colorShema = GetColorShema();
 
-	i2d::CRect bbox(m_points[0], ibase::CSize(1, 1));
+	i2d::CRect boundingBox(m_points[0], ibase::CSize(1, 1));
 	for (int i = 1; i < 4; ++i){
-		bbox.Union(m_points[i]);
+		boundingBox.Union(m_points[i]);
 	}
 
 	if (IsSelected() && IsEditablePosition()){
-		bbox.Expand(colorShema.GetTickerBox(IColorShema::TT_MOVE));
+		boundingBox.Expand(colorShema.GetTickerBox(IColorShema::TT_MOVE));
 	}
 
-	result = bbox;
+	boundingBox.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
 
-	result.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
-
+	return boundingBox;
 }
 
+
+// reimplemented (iview::CInteractiveShapeBase)
 
 void CInteractiveArrowShape::BeginLogDrag(const i2d::CVector2d& reference)
 {

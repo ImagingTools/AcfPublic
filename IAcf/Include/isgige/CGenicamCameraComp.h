@@ -37,17 +37,17 @@
 #include "iprm/ISelectionConstraints.h"
 #include "iprm/ISelectionParam.h"
 #include "iprm/IFileNameParam.h"
-#include "iprm/ILinearAdjustParams.h"
-#include "iproc/IBitmapAcquisition.h"
 #include "iproc/TSyncProcessorWrap.h"
 
-// IACF includes
+// ACF-Solutions includes
+#include "imeas/ILinearAdjustParams.h"
+#include "icam/IBitmapAcquisition.h"
 #include "icam/IExposureConstraints.h"
 #include "icam/IExposureParams.h"
-
 #include "isig/ITriggerParams.h"
 #include "isig/ITriggerConstraints.h"
 
+// IACF includes
 #include "isgige/CGenicamCameraSingleton.h"
 
 
@@ -74,7 +74,7 @@ protected:
 	I_REF(iprm::ISelectionParam, m_defaultSelectionParamCompPtr);
 	I_REF(icam::IExposureParams, m_defaultExposureParamsCompPtr);
 	I_REF(isig::ITriggerParams, m_defaultTriggerParamsCompPtr);
-	I_REF(iprm::ILinearAdjustParams, m_defaultAdjustParamsCompPtr);
+	I_REF(imeas::ILinearAdjustParams, m_defaultAdjustParamsCompPtr);
 	I_REF(i2d::CRectangle, m_defaultRoiParamCompPtr);
 };
 
@@ -85,7 +85,7 @@ protected:
 class CGenicamCameraComp:
 			public QObject,
 			public CGenicamCameraCompBase,
-			public iproc::TSyncProcessorWrap<iproc::IBitmapAcquisition>,
+			public iproc::TSyncProcessorWrap<icam::IBitmapAcquisition>,
 			virtual public icam::IExposureConstraints,
 			virtual public isig::ITriggerConstraints,
 			virtual public iprm::ISelectionConstraints
@@ -96,7 +96,7 @@ public:
 	typedef CGenicamCameraCompBase BaseClass;
 
 	I_BEGIN_COMPONENT(CGenicamCameraComp);
-		I_REGISTER_INTERFACE(iproc::IBitmapAcquisition);
+		I_REGISTER_INTERFACE(icam::IBitmapAcquisition);
 		I_REGISTER_INTERFACE(icam::IExposureConstraints);
 		I_REGISTER_INTERFACE(isig::ITriggerConstraints);
 		I_REGISTER_INTERFACE(iprm::ISelectionConstraints);
@@ -111,7 +111,6 @@ public:
 		I_ASSIGN(m_triggerDifferenceAttrPtr, "TriggerDifference", "Time difference between trigger signal and image time stamp used for synchronized trigger (in seconds)", true, 0.01);
 		I_ASSIGN(m_triggerToleranceAttrPtr, "TriggerTolerance", "Tolerance of trigger time difference used for synchronized trigger (in seconds)", true, 0.02);
 		I_ASSIGN(m_connectOnStartAttrPtr, "ConnectOnStart", "If true connection on start will be done, if false only connection on demand is done", true, true);
-		I_ASSIGN(m_imageBufferSizeAttrPtr, "BufferSize", "Size of the image buffer", false, 1);
 	I_END_COMPONENT;
 
 	enum MessageId
@@ -127,7 +126,7 @@ public:
 	CGenicamCameraComp();
 	virtual ~CGenicamCameraComp();
 
-	// reimplemented (iproc::IBitmapAcquisition)
+	// reimplemented (icam::IBitmapAcquisition)
 	virtual istd::CIndex2d GetBitmapSize(const iprm::IParamsSet* paramsPtr) const;
 
 	// reimplemented (iproc::IProcessor)
@@ -184,7 +183,7 @@ protected:
 	DeviceInfo* GetDeviceByParams(const iprm::IParamsSet* paramsPtr) const;
 
 	int GetTriggerModeByParams(const iprm::IParamsSet* paramsPtr) const;
-	const iprm::ILinearAdjustParams* GetAdjustFromParams(const iprm::IParamsSet* paramsPtr) const;
+	const imeas::ILinearAdjustParams* GetAdjustFromParams(const iprm::IParamsSet* paramsPtr) const;
 	const i2d::CRectangle* GetRoiFromParams(const iprm::IParamsSet* paramsPtr) const;
 	const icam::IExposureParams* GetEposureTimeFromParams(const iprm::IParamsSet* paramsPtr) const;
 
@@ -210,7 +209,6 @@ private:
 	I_ATTR(double, m_triggerToleranceAttrPtr);
 	I_ATTR(double, m_triggerDifferenceAttrPtr);
 	I_ATTR(bool, m_connectOnStartAttrPtr);
-	I_ATTR(int, m_imageBufferSizeAttrPtr);
 
 	typedef istd::TPointerVector<DeviceInfo> DeviceInfos;
 	DeviceInfos m_deviceInfos;

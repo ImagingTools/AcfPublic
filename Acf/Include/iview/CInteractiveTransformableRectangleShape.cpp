@@ -34,6 +34,7 @@
 
 #include "iqt/iqt.h"
 
+#include "iview/IColorShema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -546,27 +547,6 @@ i2d::CAffine2d CInteractiveTransformableRectangleShape::CalcRotatedTransform(
 
 // reimplemented (iview::CInteractiveShapeBase)
 
-void CInteractiveTransformableRectangleShape::CalcBoundingBox(i2d::CRect& result) const
-{
-	I_ASSERT(IsDisplayConnected());
-
-    const IColorShema& colorShema = GetColorShema();
-	const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_NORMAL: IColorShema::TT_INACTIVE);
-
-	EnsureValidNodes();
-	const istd::CIndex2d* nodes = GetNodes();
-
-	i2d::CRect bbox(nodes[EN_NODE1], nodes[EN_NODE1]);
-	for (int nodeIndex = 0; nodeIndex <= EN_LAST; ++nodeIndex){
-		bbox.Union(nodes[nodeIndex]);
-	}
-
-	result = bbox.GetExpanded(tickerBox);
-
-	result.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
-}
-
-
 void CInteractiveTransformableRectangleShape::BeginLogDrag(const i2d::CVector2d& reference)
 {
 	const imod::IModel* modelPtr = GetModelPtr();
@@ -588,6 +568,30 @@ void CInteractiveTransformableRectangleShape::SetLogDragPosition(const i2d::CVec
 
 		EndModelChanges();
 	}
+}
+
+
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CInteractiveTransformableRectangleShape::CalcBoundingBox() const
+{
+	I_ASSERT(IsDisplayConnected());
+
+    const IColorShema& colorShema = GetColorShema();
+	const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_NORMAL: IColorShema::TT_INACTIVE);
+
+	EnsureValidNodes();
+	const istd::CIndex2d* nodes = GetNodes();
+
+	i2d::CRect boundingBox(nodes[EN_NODE1], nodes[EN_NODE1]);
+	for (int nodeIndex = 0; nodeIndex <= EN_LAST; ++nodeIndex){
+		boundingBox.Union(nodes[nodeIndex]);
+	}
+
+	boundingBox.Expand(tickerBox);
+	boundingBox.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
+
+	return boundingBox;
 }
 
 

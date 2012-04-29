@@ -73,7 +73,7 @@ Public Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aac0a6fdae2aa33634e8f5c6d9ae882d5">OnZoomOut</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#add0132820aaa70052c58316ab4c59b1f">OnZoomReset</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aac1fc55e4cefa92daa74d5611897aaa4">OnZoomToFit</a> (bool state)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#aef8126c9527ebcf572dd571866a2f8be">OnFitContentstoView</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a1be61cbb30370122625b6a5d3595680f">OnFitContentsToView</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a4f512ffd3f22563d2ba0e1500e9d77b1">OnPointsNone</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#acc8be9bd57a59b41d9944ee0228dbbcb">OnPoinsMove</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a4cdd578f3b80fabb2423f21907b6e1a3">OnPointsAdd</a> ()</td></tr>
@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a449b6f542830be21da32068ff8c4b6c0">UpdateZoomInOutState</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#af1d787905207f1c2243074aff63d06de">UpdateScrollbarsValues</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a04272f090a119a9365f98eed816c2260">UpdateCursorInfo</a> (const <a class="el" href="structiview_1_1_c_console_base_1_1_cursor_info.html">BaseClass::CursorInfo</a> &amp;info)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0b3f091a8637911aba40254d69d7898e">UpdateCursorInfo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;pixelPos, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logicalPos, const QString &amp;infoText)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a75c16cbc934985f8b3d01c70f2828ac9">UpdateEditModeButtons</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update state of edit mode buttons.  <a href="#a75c16cbc934985f8b3d01c70f2828ac9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a1d94bc193c34b382af2171ac8293b65f">UpdateButtonsState</a> ()</td></tr>
@@ -344,12 +344,12 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aef8126c9527ebcf572dd571866a2f8be"></a><!-- doxytag: member="iview::CConsoleGui::OnFitContentstoView" ref="aef8126c9527ebcf572dd571866a2f8be" args="()" -->
+<a class="anchor" id="a1be61cbb30370122625b6a5d3595680f"></a><!-- doxytag: member="iview::CConsoleGui::OnFitContentsToView" ref="a1be61cbb30370122625b6a5d3595680f" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::CConsoleGui::OnFitContentstoView </td>
+          <td class="memname">virtual void iview::CConsoleGui::OnFitContentsToView </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [virtual, slot]</code></td>
@@ -816,22 +816,38 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a04272f090a119a9365f98eed816c2260"></a><!-- doxytag: member="iview::CConsoleGui::UpdateCursorInfo" ref="a04272f090a119a9365f98eed816c2260" args="(const BaseClass::CursorInfo &amp;info)" -->
+<a class="anchor" id="a0b3f091a8637911aba40254d69d7898e"></a><!-- doxytag: member="iview::CConsoleGui::UpdateCursorInfo" ref="a0b3f091a8637911aba40254d69d7898e" args="(const i2d::CVector2d &amp;pixelPos, const i2d::CVector2d &amp;logicalPos, const QString &amp;infoText)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iview::CConsoleGui::UpdateCursorInfo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structiview_1_1_c_console_base_1_1_cursor_info.html">BaseClass::CursorInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>info</em></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>pixelPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>logicalPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>infoText</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#aab6cd580e31799edbbd0729888cd2ba9">iview::CConsoleBase</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a85b84d18b840cebd1744a6ff2e01f31b">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>

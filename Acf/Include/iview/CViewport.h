@@ -30,7 +30,6 @@
 #include <QtGui/QCursor>
 #include <QtGui/QPainter>
 
-
 // ACF includes
 #include "iimg/IBitmap.h"
 
@@ -49,11 +48,13 @@ namespace iview
 
 
 class CViewport:
+			public QWidget,
 			public CCalibratedViewBase,
 			virtual public IViewEventObserver
 {
 public:
 	typedef CCalibratedViewBase BaseClass;
+	typedef QWidget BaseClass2;
 
 	CViewport(CConsoleBase* framePtr, QWidget* parent = NULL);
 	virtual ~CViewport();
@@ -98,6 +99,11 @@ public:
 	virtual void ConnectCalibrationShape(iview::IShape* shapePtr);
 
 protected:
+	virtual void SetBackgroundBufferValid(bool state = true);
+	virtual void OnBoundingBoxChanged();
+	virtual void OnResize();
+	virtual bool CanBeMoved() const;
+
 	// reimplemented (QWidget)
 	virtual void paintEvent(QPaintEvent* event);
 	virtual void resizeEvent (QResizeEvent* event);
@@ -109,20 +115,14 @@ protected:
 	virtual void SetMousePointer(MousePointerMode mode);
 	void UpdateRectArea(const i2d::CRect& rect);
 
-	// static methods
-	int GetKeysState(const QMouseEvent& event);
-
-protected:
-	virtual void SetBackgroundBufferValid(bool state = true);
-	virtual void OnBoundingBoxChanged();
-	virtual void OnResize();
-	virtual bool CanBeMoved() const;
-
 	// reimplemented (CViewBase)
-	virtual void CalcBoundingBox() const;
+	virtual i2d::CRect CalcBoundingBox() const;
 
 	// reimplemented (IDisplay)
 	virtual void OnAreaInvalidated(const i2d::CRect& beforeBox, const i2d::CRect& afterBox);
+
+	// static methods
+	int GetKeysState(const QMouseEvent& event);
 
 private:
 	QCursor m_mousePointerModes[MPM_LAST + 1];

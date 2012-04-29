@@ -33,7 +33,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QList&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_information_8h.html">istd/IInformation.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_information_provider_8h.html">istd/IInformationProvider.h</a>&quot;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_change_notifier_8h.html">istd/TChangeNotifier.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_archive_8h.html">iser/IArchive.h</a>&quot;</span>
@@ -69,10 +69,10 @@
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a0e6b48fc72490f4a02a98e3e171ca062">ClearMessages</a>();
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="comment">// pseudo-reimplemented (ibase::IMessageConsumer)</span>
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#aa1632451a1f784c75f9fd97b4615b41b">IsMessageSupported</a>(
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a4d79a2987d21d42847d1cd14e91be61a">IsMessageSupported</a>(
 <a name="l00049"></a>00049                             <span class="keywordtype">int</span> messageCategory = -1,
 <a name="l00050"></a>00050                             <span class="keywordtype">int</span> messageId = -1,
-<a name="l00051"></a>00051                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a>* messagePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00051"></a>00051                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>* messagePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
 <a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#aeaa3bd93b11e51c3376f79699a04dc2a">AddMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">IMessageConsumer::MessagePtr</a>&amp; messagePtr);
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054        <span class="comment">// pseudo-reimplemented (ibase::IHierarchicalMessageContainer)</span>
@@ -242,10 +242,10 @@
 <a name="l00218"></a>00218 
 <a name="l00219"></a>00219 
 <a name="l00220"></a>00220 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00221"></a><a class="code" href="classibase_1_1_t_message_container_wrap.html#aa1632451a1f784c75f9fd97b4615b41b">00221</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#aa1632451a1f784c75f9fd97b4615b41b">TMessageContainerWrap&lt;Base&gt;::IsMessageSupported</a>(
+<a name="l00221"></a><a class="code" href="classibase_1_1_t_message_container_wrap.html#a4d79a2987d21d42847d1cd14e91be61a">00221</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_message_container_wrap.html#a4d79a2987d21d42847d1cd14e91be61a">TMessageContainerWrap&lt;Base&gt;::IsMessageSupported</a>(
 <a name="l00222"></a>00222                      <span class="keywordtype">int</span> <span class="comment">/*messageCategory*/</span>,
 <a name="l00223"></a>00223                      <span class="keywordtype">int</span> <span class="comment">/*messageId*/</span>,
-<a name="l00224"></a>00224                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a>* <span class="comment">/*messagePtr*/</span>)<span class="keyword"> const</span>
+<a name="l00224"></a>00224                      <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>* <span class="comment">/*messagePtr*/</span>)<span class="keyword"> const</span>
 <a name="l00225"></a>00225 <span class="keyword"></span>{
 <a name="l00226"></a>00226        <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00227"></a>00227 }
@@ -264,7 +264,7 @@
 <a name="l00240"></a>00240               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::TChangeNotifier&lt;IMessageContainer&gt;</a> changePtr(
 <a name="l00241"></a>00241                                    <span class="keyword">this</span>,
 <a name="l00242"></a>00242                                    <a class="code" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9a6f90281c66532a5a0c83da226e3f470e">IMessageContainer::CF_MESSAGE_ADDED</a>,
-<a name="l00243"></a>00243                                    const_cast&lt;istd::IInformation*&gt;(messagePtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#a3a7cff9d381bbad6c0743f1c8ed95a12" title="Get access to pointed object.">GetPtr</a>()));
+<a name="l00243"></a>00243                                    const_cast&lt;istd::IInformationProvider*&gt;(messagePtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#a3a7cff9d381bbad6c0743f1c8ed95a12" title="Get access to pointed object.">GetPtr</a>()));
 <a name="l00244"></a>00244 
 <a name="l00245"></a>00245               m_messages.push_back(messagePtr);
 <a name="l00246"></a>00246 
@@ -282,7 +282,7 @@
 <a name="l00258"></a>00258                      <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::TChangeNotifier&lt;IMessageContainer&gt;</a> changePtr(
 <a name="l00259"></a>00259                                           <span class="keyword">this</span>,
 <a name="l00260"></a>00260                                           <a class="code" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9af6c8498da8eec2fafe45d980c7f5a2cf">IMessageContainer::CF_MESSAGE_REMOVED</a>,
-<a name="l00261"></a>00261                                           const_cast&lt;istd::IInformation*&gt;(messageToRemovePtr.GetPtr()));
+<a name="l00261"></a>00261                                           const_cast&lt;istd::IInformationProvider*&gt;(messageToRemovePtr.GetPtr()));
 <a name="l00262"></a>00262 
 <a name="l00263"></a>00263                      <span class="keywordtype">int</span> removeCategory = messageToRemovePtr-&gt;GetInformationCategory();
 <a name="l00264"></a>00264                      <span class="keywordflow">if</span> (removeCategory &gt;= m_worstCategory){

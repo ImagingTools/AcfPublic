@@ -34,7 +34,9 @@
 
 #include "iser/IFileLoader.h"
 
+#include "iqtgui/IVisualStatusProvider.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
+
 #include "iqtgui/Generated/ui_CLogGuiComp.h"
 
 
@@ -46,22 +48,26 @@ namespace iqtgui
 	Message container displaying messages as log list.
 */
 class CLogGuiComp:
-	public iqtgui::TDesignerGuiObserverCompBase<
-				Ui::CLogGuiComp, ibase::IMessageContainer>
+			public iqtgui::TDesignerGuiObserverCompBase<Ui::CLogGuiComp, ibase::IMessageContainer>,
+			virtual public IVisualStatusProvider
 {
 	Q_OBJECT
 
 public:
-	typedef iqtgui::TDesignerGuiObserverCompBase<
-				Ui::CLogGuiComp, ibase::IMessageContainer> BaseClass;
+	typedef iqtgui::TDesignerGuiObserverCompBase<Ui::CLogGuiComp, ibase::IMessageContainer> BaseClass;
 
 	I_BEGIN_COMPONENT(CLogGuiComp);
+		I_REGISTER_INTERFACE(iqtgui::IVisualStatusProvider);
 		I_ASSIGN(m_fileLoaderCompPtr, "Exporter", "File loader used for log export", false, "Exporter");
 		I_ASSIGN(m_defaultModeAttrPtr, "DefaultMode", "Default display mode,\n 0 - info,\n 1 - warning,\n 2 - error", true, 0);
 		I_ASSIGN(m_showLogDescriptionAttrPtr, "ShowLogDescription", "Sets the log tables description visible", false, false);
 	I_END_COMPONENT;
 
 	CLogGuiComp();
+
+	// reimplemented (istd::IVisualStatusProvider)
+	virtual QIcon GetStatusIcon() const;
+	virtual QString GetStatusText() const;
 
 protected:
 	enum ColumnType
@@ -74,10 +80,10 @@ protected:
 
 	enum MessageMode
 	{
-		MM_INFO = istd::IInformation::IC_INFO,
-		MM_WARNING = istd::IInformation::IC_WARNING,
-		MM_ERROR = istd::IInformation::IC_ERROR,
-		MM_ALL = istd::IInformation::IC_CRITICAL
+		MM_INFO = istd::IInformationProvider::IC_INFO,
+		MM_WARNING = istd::IInformationProvider::IC_WARNING,
+		MM_ERROR = istd::IInformationProvider::IC_ERROR,
+		MM_ALL = istd::IInformationProvider::IC_CRITICAL
 	};
 
 	enum DataRole
@@ -89,13 +95,13 @@ protected:
 	/**
 		Create GUI item corresponding to specified message.
 	*/
-	virtual QTreeWidgetItem* CreateGuiItem(const istd::IInformation& message);
+	virtual QTreeWidgetItem* CreateGuiItem(const istd::IInformationProvider& message);
 	virtual void UpdateItemState(QTreeWidgetItem& item) const;
 
 	/**
 		Get icons corresponding to specified MessageMode
 	*/
-	virtual QIcon GetIcon(istd::IInformation::InformationCategory mode);
+	virtual QIcon GetIcon(istd::IInformationProvider::InformationCategory mode);
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
@@ -132,10 +138,6 @@ private:
 	I_REF(iser::IFileLoader, m_fileLoaderCompPtr);
 	I_ATTR(int, m_defaultModeAttrPtr);
 	I_ATTR(bool, m_showLogDescriptionAttrPtr);
-
-	QIcon m_infoIcon;
-	QIcon m_warningIcon;
-	QIcon m_errorIcon;
 
 	int m_currentMessageMode;
 };

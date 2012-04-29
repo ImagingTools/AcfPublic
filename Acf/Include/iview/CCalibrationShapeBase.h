@@ -61,7 +61,7 @@ protected:
 	*/
 	virtual const i2d::ITransformation2d& GetIsomorphCalib() const;
 
-	// reimplemented (iview::TShapeBase)
+	// reimplemented (iview::CShapeBase)
 	virtual int GetDisplayChangesMask();
 
 private:
@@ -80,7 +80,7 @@ inline const i2d::ITransformation2d& CCalibrationShapeBase::GetIsomorphCalib() c
 }
 
 
-// reimplemented (iview::TShapeBase)
+// reimplemented (iview::CShapeBase)
 
 inline int CCalibrationShapeBase::GetDisplayChangesMask()
 {

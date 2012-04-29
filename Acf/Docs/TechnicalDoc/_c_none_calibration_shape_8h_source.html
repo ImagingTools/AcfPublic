@@ -57,18 +57,20 @@
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classiview_1_1_c_none_calibration_shape.html#ab529109eb6ccbfc9065f181c29ef1e2e" title="Get access to calibration.">GetCalibrationPtr</a>() <span class="keyword">const</span>;
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a2fccf9d3bbec6fb618fc53bd9c84ae00" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#aa121b4e05b51323f36b578d4414debef">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a3d4edd390cf662ce49ff79b6fbe901a5">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
-<a name="l00043"></a>00043 };
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 } <span class="comment">// namespace iview</span>
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#aa121b4e05b51323f36b578d4414debef">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a3d4edd390cf662ce49ff79b6fbe901a5">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a2645caefa06f23809fc18d932319c9d5" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045 };
+<a name="l00046"></a>00046 
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="preprocessor">#endif // !iview_CNoneCalibrationShape_included</span>
-<a name="l00050"></a>00050 <span class="preprocessor"></span>
-<a name="l00051"></a>00051 
+<a name="l00048"></a>00048 } <span class="comment">// namespace iview</span>
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iview_CNoneCalibrationShape_included</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span>
+<a name="l00053"></a>00053 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

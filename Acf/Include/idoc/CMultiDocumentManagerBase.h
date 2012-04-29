@@ -31,11 +31,11 @@
 #include "istd/TPointerVector.h"
 #include "istd/TDelPtr.h"
 
-#include "imod/IUndoManager.h"
 #include "imod/CSingleModelObserverBase.h"
 
-#include "idoc/CTmplBasedDocumentManagerBase.h"
+#include "idoc/IUndoManager.h"
 #include "idoc/IDocumentStateComparator.h"
+#include "idoc/CTmplBasedDocumentManagerBase.h"
 
 
 namespace idoc
@@ -48,7 +48,7 @@ public:
 	CMultiDocumentManagerBase();
 
 	// reimplemented (idoc::IDocumentManager)
-	virtual imod::IUndoManager* GetUndoManagerForDocument(const istd::IChangeable* documentPtr) const;
+	virtual idoc::IUndoManager* GetUndoManagerForDocument(const istd::IChangeable* documentPtr) const;
 	virtual int GetDocumentsCount() const;
 	virtual istd::IChangeable& GetDocumentFromIndex(int index, DocumentInfo* documentInfoPtr = NULL) const;
 	virtual int GetViewsCount(int documentIndex) const;
@@ -76,7 +76,7 @@ public:
 
 protected:
 	typedef istd::TDelPtr<istd::IChangeable> DocumentPtr;
-	typedef istd::TDelPtr<imod::IUndoManager> UndoManagerPtr;
+	typedef istd::TDelPtr<idoc::IUndoManager> UndoManagerPtr;
 	typedef istd::TDelPtr<IDocumentStateComparator> StateComparatorPtr;
 	typedef istd::TDelPtr<istd::IPolymorphic> ViewPtr;
 	typedef QList<ViewPtr> Views;
@@ -87,7 +87,7 @@ protected:
 					CMultiDocumentManagerBase* parentPtr,
 					const QByteArray& documentTypeId,
 					istd::IChangeable* documentPtr,
-					imod::IUndoManager* undoManagerPtr,
+					idoc::IUndoManager* undoManagerPtr,
 					IDocumentStateComparator* stateComparatorPtr)
 		{
 			this->parentPtr = parentPtr;

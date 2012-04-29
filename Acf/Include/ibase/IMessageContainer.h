@@ -28,7 +28,7 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "istd/IInformation.h"
+#include "istd/IInformationProvider.h"
 #include "istd/TIHierarchical.h"
 
 #include "iser/ISerializable.h"
@@ -72,7 +72,7 @@ public:
 
 	/**
 		Get worst message category.
-		\sa IInformation::InformationCategory
+		\sa IInformationProvider::InformationCategory
 	*/
 	virtual int GetWorstCategory() const = 0;
 

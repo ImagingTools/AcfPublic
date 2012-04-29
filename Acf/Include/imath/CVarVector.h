@@ -25,6 +25,7 @@
 
 
 // Qt includes
+#include <QtCore/qmath.h>
 #include <QtCore/QVector>
 
 // ACF includes
@@ -225,8 +226,6 @@ public:
 	CVarVector& operator*=(double scalar);
 	CVarVector& operator/=(double scalar);
 
-	CVarVector& operator=(const CVarVector& vector);
-
 	double operator[](int i) const;
 	double& operator[](int i);
 
@@ -396,7 +395,7 @@ inline double CVarVector::GetLength2() const
 
 inline double CVarVector::GetLength() const
 {
-	return std::sqrt(GetLength2());
+	return qSqrt(GetLength2());
 }
 
 
@@ -408,7 +407,7 @@ inline double CVarVector::GetDistance2(const CVarVector& vector) const
 
 inline double CVarVector::GetDistance(const CVarVector& vector) const
 {
-	return std::sqrt(GetDistance2(vector));
+	return qSqrt(GetDistance2(vector));
 }
 
 
@@ -537,15 +536,6 @@ inline CVarVector& CVarVector::operator/=(double scalar)
 	for (int i = 0; i < elementsCount; ++i){
 		m_elements[i] /= scalar;
 	}
-
-	return *this;
-}
-
-
-inline CVarVector& CVarVector::operator=(const CVarVector& vector)
-{
-	SetElementsCount(vector.GetElementsCount(), 0);
-	SetElementsFrom(vector);
 
 	return *this;
 }

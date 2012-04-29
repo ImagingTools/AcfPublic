@@ -33,9 +33,9 @@
 #include "i2d/ICalibrationProvider.h"
 #include "iimg/IBitmap.h"
 #include "iproc/TSupplierCompWrap.h"
-#include "iproc/IBitmapAcquisition.h"
 
 // ACF-Solutions includes
+#include "icam/IBitmapAcquisition.h"
 #include "iipr/IBitmapProvider.h"
 
 
@@ -75,7 +75,7 @@ protected:
 private:
 	I_FACT(iimg::IBitmap, m_bitmapCompFact);
 
-	I_REF(iproc::IBitmapAcquisition, m_bitmapAcquisitionCompPtr);
+	I_REF(IBitmapAcquisition, m_bitmapAcquisitionCompPtr);
 	I_REF(i2d::ITransformation2d, m_calibrationCompPtr);
 };
 

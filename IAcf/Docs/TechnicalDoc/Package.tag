@@ -391,7 +391,7 @@
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
-    <base virtualness="virtual">TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
+    <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiavt_1_1_c_fire_grab_acquisition_comp.html</anchorfile>
@@ -726,7 +726,7 @@
     <name>ilibav::CLibAvVideoDecoderComp</name>
     <filename>classilibav_1_1_c_lib_av_video_decoder_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iproc::IBitmapAcquisition</base>
+    <base virtualness="virtual">icam::IBitmapAcquisition</base>
     <base virtualness="virtual">imeas::ISampleAcquisition</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="enumeration">
@@ -1065,7 +1065,7 @@
     <filename>classiocv_1_1_c_ocv_acquisition_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
-    <base virtualness="virtual">TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
+    <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
@@ -1151,13 +1151,13 @@
   <compound kind="class">
     <name>iocv::COcvVideoControllerComp</name>
     <filename>classiocv_1_1_c_ocv_video_controller_comp.html</filename>
-    <base>TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;</base>
+    <base>TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
-      <type>iproc::TSyncProcessorCompBase&lt; iproc::IBitmapAcquisition &gt;</type>
+      <type>iproc::TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>afd188dd4b515c867ca3c440d8a034cdb</anchor>
+      <anchor>a8e0559a348a337b132488b6520d4117e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -1905,7 +1905,7 @@
     <filename>classisgige_1_1_c_genicam_camera_comp.html</filename>
     <base>QObject</base>
     <base>isgige::CGenicamCameraCompBase</base>
-    <base>TSyncProcessorWrap&lt; iproc::IBitmapAcquisition &gt;</base>
+    <base>TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">iprm::ISelectionConstraints</base>
@@ -2086,10 +2086,10 @@
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>const iprm::ILinearAdjustParams *</type>
+      <type>const imeas::ILinearAdjustParams *</type>
       <name>GetAdjustFromParams</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
-      <anchor>a2a78a87c07ae0230d7e3b5d883262506</anchor>
+      <anchor>a6c589249d5e8a250a07b98e3696a5537</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">

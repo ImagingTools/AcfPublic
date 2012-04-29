@@ -61,9 +61,11 @@ protected:
 	void CalcPoints(const i2d::CRectangle& rectangle, const iview::CScreenTransform& transform) const;
 
 	// reimplemented (iview::CInteractiveShapeBase)
-	virtual void CalcBoundingBox(i2d::CRect& result) const;
 	virtual void BeginLogDrag(const i2d::CVector2d& reference);
 	virtual void SetLogDragPosition(const i2d::CVector2d& position);
+
+	// reimplemented (iview::CInteractiveShapeBase)
+	virtual i2d::CRect CalcBoundingBox() const;
 
 	enum EditNode
 	{

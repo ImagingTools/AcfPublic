@@ -31,7 +31,6 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -54,9 +53,6 @@ Inheritance diagram for iview::CConsoleBase:</div>
 
 <p><a href="classiview_1_1_c_console_base-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiview_1_1_c_console_base_1_1_cursor_info.html">CursorInfo</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf">FitMode</a> { <br/>
@@ -132,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate menu commands.  <a href="#a81739f98a77b72a9a7b8265e4395fee4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#a2fe06d42bcca7429c3a047e63ae90848">SetStatusText</a> (const QString &amp;message)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display specified text in status window.  <a href="#a2fe06d42bcca7429c3a047e63ae90848"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#aab6cd580e31799edbbd0729888cd2ba9">UpdateCursorInfo</a> (const <a class="el" href="structiview_1_1_c_console_base_1_1_cursor_info.html">CursorInfo</a> &amp;info)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#a85b84d18b840cebd1744a6ff2e01f31b">UpdateCursorInfo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;pixelPos, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logicalPos, const QString &amp;infoText)=0</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#a093c5a4411f7a19c7bb14c5b50d8687b">OnSelectChange</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> &amp;shape, bool state)=0</td></tr>
@@ -1144,22 +1140,38 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aab6cd580e31799edbbd0729888cd2ba9"></a><!-- doxytag: member="iview::CConsoleBase::UpdateCursorInfo" ref="aab6cd580e31799edbbd0729888cd2ba9" args="(const CursorInfo &amp;info)=0" -->
+<a class="anchor" id="a85b84d18b840cebd1744a6ff2e01f31b"></a><!-- doxytag: member="iview::CConsoleBase::UpdateCursorInfo" ref="a85b84d18b840cebd1744a6ff2e01f31b" args="(const i2d::CVector2d &amp;pixelPos, const i2d::CVector2d &amp;logicalPos, const QString &amp;infoText)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iview::CConsoleBase::UpdateCursorInfo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structiview_1_1_c_console_base_1_1_cursor_info.html">CursorInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>info</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>pixelPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>logicalPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>infoText</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_console_gui.html#a04272f090a119a9365f98eed816c2260">iview::CConsoleGui</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_console_gui.html#a0b3f091a8637911aba40254d69d7898e">iview::CConsoleGui</a>.</p>
 
 </div>
 </div>
@@ -1213,7 +1225,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_base_8h_source.html#l00217">217</a> of file <a class="el" href="_c_console_base_8h_source.html">CConsoleBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_base_8h_source.html#l00200">200</a> of file <a class="el" href="_c_console_base_8h_source.html">CConsoleBase.h</a>.</p>
 
 </div>
 </div>

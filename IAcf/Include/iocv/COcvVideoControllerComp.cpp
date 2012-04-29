@@ -48,7 +48,7 @@ COcvVideoControllerComp::COcvVideoControllerComp()
 }
 
 
-// reimplemented (iproc::IBitmapAcquisition)
+// reimplemented (icam::IBitmapAcquisition)
 
 istd::CIndex2d COcvVideoControllerComp::GetBitmapSize(const iprm::IParamsSet* /*paramsPtr*/) const
 {

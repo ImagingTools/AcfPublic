@@ -38,7 +38,7 @@
 <a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_scene_controller_8h.html">i2d/ISceneController.h</a>&quot;</span>
 <a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_commands_provider_comp_wrap_8h.html">ibase/TCommandsProviderCompWrap.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_commands_provider_8h.html">ibase/ICommandsProvider.h</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_drop_consumer_8h.html">iqtgui/IDropConsumer.h</a>&quot;</span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_comp_base_8h.html">iqtgui/TDesignerGuiCompBase.h</a>&quot;</span>
@@ -53,32 +53,32 @@
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 
 <a name="l00028"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html">00028</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html">CSceneProviderGuiComp</a>: 
-<a name="l00029"></a>00029                      <span class="keyword">public</span> ibase::TCommandsProviderCompWrap&lt;
-<a name="l00030"></a>00030                                           iqtgui::TDesignerGuiCompBase&lt;Ui::CSceneProviderGuiComp&gt; &gt;,
+<a name="l00029"></a>00029                      <span class="keyword">public</span> iqtgui::TDesignerGuiCompBase&lt;Ui::CSceneProviderGuiComp&gt;,
+<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::ICommandsProvider,
 <a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>,
 <a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ISceneController
 <a name="l00033"></a>00033 {
 <a name="l00034"></a>00034        Q_OBJECT
 <a name="l00035"></a>00035 <span class="keyword">public</span>:
-<a name="l00036"></a>00036        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_commands_provider_comp_wrap.html" title="Generic macro for ICommandsProvider implementation.">ibase::TCommandsProviderCompWrap</a>&lt;
-<a name="l00037"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a9d260afd9bf3dde9d40e179d0627f9ba">00037</a>                             <a class="code" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase&lt;Ui::CSceneProviderGuiComp&gt;</a> &gt;<a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a9d260afd9bf3dde9d40e179d0627f9ba">BaseClass</a>;
-<a name="l00038"></a>00038 
-<a name="l00039"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411">00039</a>        <span class="keyword">enum</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411">BackgroundMode</a>
-<a name="l00040"></a>00040        {
-<a name="l00044"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a51f06582cb52fadb9be2fd213ef09a5e">00044</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a51f06582cb52fadb9be2fd213ef09a5e" title="Standard window backround.">BM_NORMAL</a>,
-<a name="l00045"></a>00045 
-<a name="l00049"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a480ba06a6a810a6a1da34ac5f6ebbfb3">00049</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a480ba06a6a810a6a1da34ac5f6ebbfb3" title="Filled with solid color.">BM_SOLID</a>,
-<a name="l00050"></a>00050 
-<a name="l00054"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a6614875fa8b16ac92a5915e7b4df3352">00054</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a6614875fa8b16ac92a5915e7b4df3352" title="Grid of horizontal and vertical lines.">BM_GRID</a>,
-<a name="l00055"></a>00055 
-<a name="l00059"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a93aa7d9de9a1da7de24a541781722313">00059</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a93aa7d9de9a1da7de24a541781722313" title="Checkerboard pattern.">BM_CHECKERBOARD</a>,
-<a name="l00060"></a>00060 
-<a name="l00064"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a85be5ca7081f2205d119ad2dcec74790">00064</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a85be5ca7081f2205d119ad2dcec74790" title="Dot grid.">BM_DOT_GRID</a>,
-<a name="l00065"></a>00065 
-<a name="l00069"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a41141e9095932418ba40b66a81b993cc">00069</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a41141e9095932418ba40b66a81b993cc" title="Transparent background.">BM_TRANSPARENT</a>
-<a name="l00070"></a>00070        };
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html">CSceneProviderGuiComp</a>);
+<a name="l00036"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ac598d435b94b6f15664b487a2e5cef92">00036</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase&lt;Ui::CSceneProviderGuiComp&gt;</a> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#ac598d435b94b6f15664b487a2e5cef92">BaseClass</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411">00038</a>        <span class="keyword">enum</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411">BackgroundMode</a>
+<a name="l00039"></a>00039        {
+<a name="l00043"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a51f06582cb52fadb9be2fd213ef09a5e">00043</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a51f06582cb52fadb9be2fd213ef09a5e" title="Standard window backround.">BM_NORMAL</a>,
+<a name="l00044"></a>00044 
+<a name="l00048"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a480ba06a6a810a6a1da34ac5f6ebbfb3">00048</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a480ba06a6a810a6a1da34ac5f6ebbfb3" title="Filled with solid color.">BM_SOLID</a>,
+<a name="l00049"></a>00049 
+<a name="l00053"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a6614875fa8b16ac92a5915e7b4df3352">00053</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a6614875fa8b16ac92a5915e7b4df3352" title="Grid of horizontal and vertical lines.">BM_GRID</a>,
+<a name="l00054"></a>00054 
+<a name="l00058"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a93aa7d9de9a1da7de24a541781722313">00058</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a93aa7d9de9a1da7de24a541781722313" title="Checkerboard pattern.">BM_CHECKERBOARD</a>,
+<a name="l00059"></a>00059 
+<a name="l00063"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a85be5ca7081f2205d119ad2dcec74790">00063</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a85be5ca7081f2205d119ad2dcec74790" title="Dot grid.">BM_DOT_GRID</a>,
+<a name="l00064"></a>00064 
+<a name="l00068"></a><a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a41141e9095932418ba40b66a81b993cc">00068</a>               <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a81a01f01da7e486fc4ca0b254285c411a41141e9095932418ba40b66a81b993cc" title="Transparent background.">BM_TRANSPARENT</a>
+<a name="l00069"></a>00069        };
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html">CSceneProviderGuiComp</a>);
+<a name="l00072"></a>00072               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
 <a name="l00073"></a>00073               I_REGISTER_INTERFACE(<a class="code" href="classiqt2d_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>);
 <a name="l00074"></a>00074               I_REGISTER_INTERFACE(<a class="code" href="classi2d_1_1_i_scene_controller.html" title="Interface for scene manipulation and query the restrictions.">i2d::ISceneController</a>);
 <a name="l00075"></a>00075               I_ASSIGN(m_allowWidgetResizeAttrPtr, <span class="stringliteral">&quot;AllowWidgetResize&quot;</span>, <span class="stringliteral">&quot;Allow resize of QWidet object (should be disabled if this GUI size is managed by layout)&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
@@ -113,7 +113,7 @@
 <a name="l00104"></a>00104        <span class="comment">// reimplemented (i2d::ISceneController)</span>
 <a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a99bcab0b0136138ba8be24d747032b4b" title="Get the restriction flags, to tell the scene manipulator, what can be changed on the scene...">GetSceneRestrictionFlags</a>() <span class="keyword">const</span>;
 <a name="l00106"></a>00106        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_i_scene_controller.html#a702c6c5d1be8e066e7e9ba64e3a43ba1" title="Vieport scale fitting mode.">FitMode</a> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a623ea846e71186566815293c1b8eb28f" title="Get vieport scale fitting mode.">GetFitMode</a>() <span class="keyword">const</span>;
-<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a24743d228cabe721c0587d975cf6e589">SetFitMode</a>(<a class="code" href="classi2d_1_1_i_scene_controller.html#a702c6c5d1be8e066e7e9ba64e3a43ba1" title="Vieport scale fitting mode.">FitMode</a> fitMode);
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a24743d228cabe721c0587d975cf6e589" title="Set vieport scale fitting mode.">SetFitMode</a>(<a class="code" href="classi2d_1_1_i_scene_controller.html#a702c6c5d1be8e066e7e9ba64e3a43ba1" title="Vieport scale fitting mode.">FitMode</a> fitMode);
 <a name="l00108"></a>00108        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a5274c3e0cd0b9f110729e342e15bf72c" title="Check if full screen mode is enabled.">IsFullScreenMode</a>() <span class="keyword">const</span>;
 <a name="l00109"></a>00109        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a0e246b8ae1f64e7900c709f4078e372b" title="Set full screen mode on/off.">SetFullScreenMode</a>(<span class="keywordtype">bool</span> isFullScreen);
 <a name="l00110"></a>00110        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiqt2d_1_1_c_scene_provider_gui_comp.html#a80846249422b3a0ad81d497f4f1b7fe1" title="Get actual scale factor.">GetScale</a>() <span class="keyword">const</span>;

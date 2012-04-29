@@ -66,8 +66,8 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ae564e69410fb8c7ca9c0957dbe2e3f46">CMultiDocumentManagerBase</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a04036f71da6ca102349becff20464885">GetUndoManagerForDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return undo mananger for document <code>documenPtr</code>.  <a href="#a04036f71da6ca102349becff20464885"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a56ec17722c614707554f4eff5c9236fe">GetUndoManagerForDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return undo mananger for document <code>documenPtr</code>.  <a href="#a56ec17722c614707554f4eff5c9236fe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a811b5b030cebefbd9fc632de6790d3a6">GetDocumentsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of opened documents.  <a href="#a811b5b030cebefbd9fc632de6790d3a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aa9acc522f08cc0f8e5db2ea837394aeb">GetDocumentFromIndex</a> (int index, <a class="el" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a> *documentInfoPtr=NULL) const </td></tr>
@@ -97,7 +97,7 @@ Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
 &lt; <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a7dbf28615fc9937b79b9e79434d7d071">DocumentPtr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
-&lt; <a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a735b96322ebbf3fa3c41f6ccb5f14b3c">UndoManagerPtr</a></td></tr>
+&lt; <a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#adc7bcebcefafc920f64ad1d4b0ef9f97">UndoManagerPtr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
 &lt; <a class="el" href="classidoc_1_1_i_document_state_comparator.html">IDocumentStateComparator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a20299919d8427bb89ee77c210222ae26">StateComparatorPtr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
@@ -166,12 +166,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a735b96322ebbf3fa3c41f6ccb5f14b3c"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::UndoManagerPtr" ref="a735b96322ebbf3fa3c41f6ccb5f14b3c" args="" -->
+<a class="anchor" id="adc7bcebcefafc920f64ad1d4b0ef9f97"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::UndoManagerPtr" ref="adc7bcebcefafc920f64ad1d4b0ef9f97" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt;<a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a>&gt; <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a735b96322ebbf3fa3c41f6ccb5f14b3c">idoc::CMultiDocumentManagerBase::UndoManagerPtr</a><code> [protected]</code></td>
+          <td class="memname">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt;<a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a>&gt; <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#adc7bcebcefafc920f64ad1d4b0ef9f97">idoc::CMultiDocumentManagerBase::UndoManagerPtr</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -770,12 +770,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a04036f71da6ca102349becff20464885"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::GetUndoManagerForDocument" ref="a04036f71da6ca102349becff20464885" args="(const istd::IChangeable *documentPtr) const " -->
+<a class="anchor" id="a56ec17722c614707554f4eff5c9236fe"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::GetUndoManagerForDocument" ref="a56ec17722c614707554f4eff5c9236fe" args="(const istd::IChangeable *documentPtr) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a>* idoc::CMultiDocumentManagerBase::GetUndoManagerForDocument </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a>* idoc::CMultiDocumentManagerBase::GetUndoManagerForDocument </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
           <td class="paramname"><em>documentPtr</em></td><td>)</td>
@@ -787,7 +787,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return undo mananger for document <code>documenPtr</code>. </p>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_manager.html#af2c2a3d41345392f1239adf475252e5b">idoc::IDocumentManager</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_manager.html#a021e458740e1ee3003e210edea7984db">idoc::IDocumentManager</a>.</p>
 
 </div>
 </div>

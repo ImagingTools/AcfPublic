@@ -89,14 +89,14 @@ Inheritance diagram for istd::ILogger:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#aa2d219834352507b1192c91f901a4074">IsLogConsumed</a> (const <a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">IInformation::InformationCategory</a> *categoryPtr=NULL, const int *flagsPtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any log message is consumed.  <a href="#aa2d219834352507b1192c91f901a4074"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#a0dc098a83c45a8701a8a710764e009fd">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">IInformation::InformationCategory</a> category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send any message to log.  <a href="#a0dc098a83c45a8701a8a710764e009fd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#a880404a3500d83e8d2260d5304e16ce1">IsLogConsumed</a> (const <a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">IInformationProvider::InformationCategory</a> *categoryPtr=0, const int *flagsPtr=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any log message is consumed.  <a href="#a880404a3500d83e8d2260d5304e16ce1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#ac9045cc3d95a7b501480155f548bbe1a">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">IInformationProvider::InformationCategory</a> category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send any message to log.  <a href="#ac9045cc3d95a7b501480155f548bbe1a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#aa6cfc1f34aaa724b22d96efc6ad74f89">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">IInformation::InformationCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#aa6cfc1f34aaa724b22d96efc6ad74f89"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_logger.html#ad9178a2782e19c2b0db83c77688a4bb5">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">IInformationProvider::InformationCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#ad9178a2782e19c2b0db83c77688a4bb5"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for classes sending some log info. </p>
@@ -104,14 +104,14 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00021">21</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aa6cfc1f34aaa724b22d96efc6ad74f89"></a><!-- doxytag: member="istd::ILogger::DecorateMessage" ref="aa6cfc1f34aaa724b22d96efc6ad74f89" args="(IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
+<a class="anchor" id="ad9178a2782e19c2b0db83c77688a4bb5"></a><!-- doxytag: member="istd::ILogger::DecorateMessage" ref="ad9178a2782e19c2b0db83c77688a4bb5" args="(IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void istd::ILogger::DecorateMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">IInformation::InformationCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">IInformationProvider::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
@@ -149,27 +149,27 @@ Protected Member Functions</h2></td></tr>
 
 <p>Decorate message parts before outputting. </p>
 
-<p>Reimplemented in <a class="el" href="classiser_1_1_c_file_read_archive.html#a71cd49dc5155b91c74f099a8d3719686">iser::CFileReadArchive</a>, <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a99eb35689d537aa5b76fb1b80bde3909">ibase::TLoggerCompWrap&lt; Base &gt;</a>, <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a99eb35689d537aa5b76fb1b80bde3909">ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</a>, <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#ad7f18837aa04ae51675f9cf0fd2389c5">iser::CXmlFileReadArchive</a>, and <a class="el" href="classiser_1_1_c_xml_stream_read_archive_base.html#a1539394f8e0667919ba2745d78c9f2a2">iser::CXmlStreamReadArchiveBase</a>.</p>
+<p>Reimplemented in <a class="el" href="classiser_1_1_c_file_read_archive.html#a34680fe1778bfb8001ed16af4429fb13">iser::CFileReadArchive</a>, <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#aa16a2ae14c9d8978160bd588e30bf114">ibase::TLoggerCompWrap&lt; Base &gt;</a>, <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#aa16a2ae14c9d8978160bd588e30bf114">ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</a>, <a class="el" href="classiser_1_1_c_xml_file_read_archive.html#ad0c2d3fa96572c4629212954db6eeeff">iser::CXmlFileReadArchive</a>, and <a class="el" href="classiser_1_1_c_xml_stream_read_archive_base.html#a30093f60dc76eb75d520377fa351e845">iser::CXmlStreamReadArchiveBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00084">84</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa2d219834352507b1192c91f901a4074"></a><!-- doxytag: member="istd::ILogger::IsLogConsumed" ref="aa2d219834352507b1192c91f901a4074" args="(const IInformation::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const " -->
+<a class="anchor" id="a880404a3500d83e8d2260d5304e16ce1"></a><!-- doxytag: member="istd::ILogger::IsLogConsumed" ref="a880404a3500d83e8d2260d5304e16ce1" args="(const IInformationProvider::InformationCategory *categoryPtr=0, const int *flagsPtr=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool istd::ILogger::IsLogConsumed </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">IInformation::InformationCategory</a> *&#160;</td>
-          <td class="paramname"><em>categoryPtr</em> = <code>NULL</code>, </td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">IInformationProvider::InformationCategory</a> *&#160;</td>
+          <td class="paramname"><em>categoryPtr</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int *&#160;</td>
-          <td class="paramname"><em>flagsPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>flagsPtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -183,20 +183,20 @@ Protected Member Functions</h2></td></tr>
 <p>Check if any log message is consumed. </p>
 <p>Default implementation retuns false. </p>
 
-<p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#ab1908f7efbbe85a94ce37540366d4a16">ibase::TLoggerWrap&lt; Base &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#ab1908f7efbbe85a94ce37540366d4a16">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#a7a17ab335b721fe778a2803a3511feb9">ibase::TLoggerWrap&lt; Base &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#a7a17ab335b721fe778a2803a3511feb9">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00063">63</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0dc098a83c45a8701a8a710764e009fd"></a><!-- doxytag: member="istd::ILogger::SendLogMessage" ref="a0dc098a83c45a8701a8a710764e009fd" args="(IInformation::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const " -->
+<a class="anchor" id="ac9045cc3d95a7b501480155f548bbe1a"></a><!-- doxytag: member="istd::ILogger::SendLogMessage" ref="ac9045cc3d95a7b501480155f548bbe1a" args="(IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool istd::ILogger::SendLogMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">IInformation::InformationCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">IInformationProvider::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
@@ -245,7 +245,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if it was possible to send this message and it is 'consumed'. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#a186f9b47aa440fdd2890c9c576361a02">ibase::TLoggerWrap&lt; Base &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#a186f9b47aa440fdd2890c9c576361a02">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#a42ada63e4c0cc1f6a07e1340ccd208f0">ibase::TLoggerWrap&lt; Base &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#a42ada63e4c0cc1f6a07e1340ccd208f0">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_logger_8h_source.html#l00071">71</a> of file <a class="el" href="_i_logger_8h_source.html">ILogger.h</a>.</p>
 

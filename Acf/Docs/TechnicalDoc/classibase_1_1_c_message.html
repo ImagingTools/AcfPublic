@@ -37,8 +37,8 @@
 <div class="title">ibase::CMessage Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::CMessage" --><!-- doxytag: inherits="istd::IInformation,iser::ISerializable" -->
-<p>Basic implementation of the <a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> interface.  
+<!-- doxytag: class="ibase::CMessage" --><!-- doxytag: inherits="istd::IInformationProvider,iser::ISerializable" -->
+<p>Basic implementation of the <a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> interface.  
  <a href="classibase_1_1_c_message.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_message_8h_source.html">CMessage.h</a>&gt;</code></p>
@@ -48,11 +48,12 @@ Inheritance diagram for ibase::CMessage:</div>
  <div class="center">
   <img src="classibase_1_1_c_message.png" usemap="#ibase::CMessage_map" alt=""/>
   <map id="ibase::CMessage_map" name="ibase::CMessage_map">
-<area href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object." alt="istd::IInformation" shape="rect" coords="0,112,110,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="120,112,230,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,56,110,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="120,56,230,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="120,0,230,24"/>
+<area href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object." alt="istd::IInformationProvider" shape="rect" coords="0,112,151,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="161,112,312,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,151,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="161,56,312,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,151,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="161,0,312,24"/>
 </map>
  </div></div>
 
@@ -61,27 +62,27 @@ Inheritance diagram for ibase::CMessage:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#aafe338d5d93b99a4d95e5359bf4a237c">CMessage</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#abf295ce1c8e500e01120985ddc230510">CMessage</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> category, int id, const QString &amp;text, const QString &amp;source, int flags=0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a50969820ae95d0dc6196f88f81163cbe">SetCategory</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> category)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#adf7c2025d9211a8cd5fcbba8133946f7">CMessage</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category, int id, const QString &amp;text, const QString &amp;source, int flags=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#ad2c8d0d032bd845dbb140cea70e3309b">SetCategory</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a94d850108fd32ace9f0571fdfa905a6d">SetText</a> (const QString &amp;text)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a107d513e8c5fd4efe193f2ef5c4f86e1">SetSource</a> (const QString &amp;source)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QDateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a8a94e20e4c25f6a2480cf952f6b313fc">GetTimeStamp</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional time stamp of the message.  <a href="#a8a94e20e4c25f6a2480cf952f6b313fc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">InformationCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a784847d5f2ed287f47d3dc481c68f19e">GetInformationCategory</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get category of the message.  <a href="#a784847d5f2ed287f47d3dc481c68f19e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QDateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#abac5eddd946d801440f959aeb0e5bfa9">GetInformationTimeStamp</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional time stamp of the information.  <a href="#abac5eddd946d801440f959aeb0e5bfa9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">InformationCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a93daa6d9b157408aa8fdfb640dee5aae">GetInformationCategory</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get category of the information.  <a href="#a93daa6d9b157408aa8fdfb640dee5aae"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a51558dcbf12955d02fb22c4ff7d9591c">GetInformationId</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get binary ID of the message using to automatical identification of this message type.  <a href="#a51558dcbf12955d02fb22c4ff7d9591c"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get binary ID of the information using to automatical identification of this information type.  <a href="#a51558dcbf12955d02fb22c4ff7d9591c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a98d8823175baad2e2eee6202a4829bf7">GetInformationDescription</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the text of the message.  <a href="#a98d8823175baad2e2eee6202a4829bf7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#ac80697cfb7e63c1af7764b59deb0f4ff">GetSource</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the source of the message.  <a href="#ac80697cfb7e63c1af7764b59deb0f4ff"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a8810882695e887bcb971fb3f6a098658">GetFlags</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of the message.  <a href="#a8810882695e887bcb971fb3f6a098658"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the text description of the information.  <a href="#a98d8823175baad2e2eee6202a4829bf7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#abf52593cb762a131246066078619f1d3">GetInformationSource</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the source of the information.  <a href="#abf52593cb762a131246066078619f1d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a5d5e0d8843a8ca9fbc8ded421df1c164">GetInformationFlags</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of the information.  <a href="#a5d5e0d8843a8ca9fbc8ded421df1c164"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a2cfd9251b94e5f9a6fd5b4bfd281bb19">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a2cfd9251b94e5f9a6fd5b4bfd281bb19"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a3ae15fe15868d6c3b162ae2af65e2e5b">m_category</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">m_category</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a552ee2f7fed1f70c6040715d545ecdea">m_id</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a75fe3a47012fc321a0b7e772373dc858">m_text</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a62a05af22aed3111bbd39f731947f034">m_source</a></td></tr>
@@ -89,7 +90,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QDateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a296bd9e63e88fa79f2f691319de5f84e">m_timeStamp</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Basic implementation of the <a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> interface. </p>
+<div class="textblock"><p>Basic implementation of the <a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> interface. </p>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00021">21</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -109,14 +110,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abf295ce1c8e500e01120985ddc230510"></a><!-- doxytag: member="ibase::CMessage::CMessage" ref="abf295ce1c8e500e01120985ddc230510" args="(istd::IInformation::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0)" -->
+<a class="anchor" id="adf7c2025d9211a8cd5fcbba8133946f7"></a><!-- doxytag: member="ibase::CMessage::CMessage" ref="adf7c2025d9211a8cd5fcbba8133946f7" args="(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">ibase::CMessage::CMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
@@ -155,12 +156,12 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8810882695e887bcb971fb3f6a098658"></a><!-- doxytag: member="ibase::CMessage::GetFlags" ref="a8810882695e887bcb971fb3f6a098658" args="() const " -->
+<a class="anchor" id="a93daa6d9b157408aa8fdfb640dee5aae"></a><!-- doxytag: member="ibase::CMessage::GetInformationCategory" ref="a93daa6d9b157408aa8fdfb640dee5aae" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ibase::CMessage::GetFlags </td>
+          <td class="memname"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> ibase::CMessage::GetInformationCategory </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, virtual]</code></td>
@@ -169,35 +170,10 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get flags of the message. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd>InformationFlags </dd></dl>
+<p>Get category of the information. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">InformationCategory</a> </dd></dl>
 
-<p>Implements <a class="el" href="classistd_1_1_i_information.html#af08b1a0c3e43d36cc826da870afc0cd4">istd::IInformation</a>.</p>
-
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00093">93</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
-
-<p>References <a class="el" href="_c_message_8h_source.html#l00053">m_flags</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a784847d5f2ed287f47d3dc481c68f19e"></a><!-- doxytag: member="ibase::CMessage::GetInformationCategory" ref="a784847d5f2ed287f47d3dc481c68f19e" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> ibase::CMessage::GetInformationCategory </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get category of the message. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">InformationCategory</a> </dd></dl>
-
-<p>Implements <a class="el" href="classistd_1_1_i_information.html#a8ed3328b28bd6aa7dd27c62fecae4b8b">istd::IInformation</a>.</p>
+<p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">istd::IInformationProvider</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00069">69</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
@@ -219,13 +195,39 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get the text of the message. </p>
+<p>Get the text description of the information. </p>
+<p>If there is no description provided it contains empty string. </p>
 
-<p>Implements <a class="el" href="classistd_1_1_i_information.html#ab9947b71191ad594f2b62e4b9902dc09">istd::IInformation</a>.</p>
+<p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a1bc354203a118ec6e2fde585d8b1f2af">istd::IInformationProvider</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00081">81</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
 <p>References <a class="el" href="_c_message_8h_source.html#l00051">m_text</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d5e0d8843a8ca9fbc8ded421df1c164"></a><!-- doxytag: member="ibase::CMessage::GetInformationFlags" ref="a5d5e0d8843a8ca9fbc8ded421df1c164" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ibase::CMessage::GetInformationFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get flags of the information. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd>InformationFlags </dd></dl>
+
+<p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a12942cf75ec0a5dcbffeb002ac54694c">istd::IInformationProvider</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00093">93</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+
+<p>References <a class="el" href="_c_message_8h_source.html#l00053">m_flags</a>.</p>
 
 </div>
 </div>
@@ -243,9 +245,10 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get binary ID of the message using to automatical identification of this message type. </p>
+<p>Get binary ID of the information using to automatical identification of this information type. </p>
+<p>If there is no information ID it returns negative value. </p>
 
-<p>Implements <a class="el" href="classistd_1_1_i_information.html#a43ce6d76fb597e4d58d469853fe5b320">istd::IInformation</a>.</p>
+<p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#acc2814cc1acd8063451bd125031e55d5">istd::IInformationProvider</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00075">75</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
@@ -253,12 +256,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac80697cfb7e63c1af7764b59deb0f4ff"></a><!-- doxytag: member="ibase::CMessage::GetSource" ref="ac80697cfb7e63c1af7764b59deb0f4ff" args="() const " -->
+<a class="anchor" id="abf52593cb762a131246066078619f1d3"></a><!-- doxytag: member="ibase::CMessage::GetInformationSource" ref="abf52593cb762a131246066078619f1d3" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QString ibase::CMessage::GetSource </td>
+          <td class="memname">QString ibase::CMessage::GetInformationSource </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, virtual]</code></td>
@@ -267,9 +270,10 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get the source of the message. </p>
+<p>Get the source of the information. </p>
+<p>If there is no source information provided it contains empty string. </p>
 
-<p>Implements <a class="el" href="classistd_1_1_i_information.html#a229955c5ded1e2948e362aef83832f26">istd::IInformation</a>.</p>
+<p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a5d9a8e363087d8a769b506e323bc8cf6">istd::IInformationProvider</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00087">87</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
@@ -277,12 +281,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8a94e20e4c25f6a2480cf952f6b313fc"></a><!-- doxytag: member="ibase::CMessage::GetTimeStamp" ref="a8a94e20e4c25f6a2480cf952f6b313fc" args="() const " -->
+<a class="anchor" id="abac5eddd946d801440f959aeb0e5bfa9"></a><!-- doxytag: member="ibase::CMessage::GetInformationTimeStamp" ref="abac5eddd946d801440f959aeb0e5bfa9" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QDateTime ibase::CMessage::GetTimeStamp </td>
+          <td class="memname">QDateTime ibase::CMessage::GetInformationTimeStamp </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, virtual]</code></td>
@@ -291,9 +295,10 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get optional time stamp of the message. </p>
+<p>Get optional time stamp of the information. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>time stamp associated with this information, or null QDateTime object, if there is no associated time stamp. </dd></dl>
 
-<p>Implements <a class="el" href="classistd_1_1_i_information.html#ae83d6db7abeb1a09327080adfbbe3b06">istd::IInformation</a>.</p>
+<p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a20f38eec5cd18588d78853cb0edc50c5">istd::IInformationProvider</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00063">63</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
@@ -324,14 +329,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a50969820ae95d0dc6196f88f81163cbe"></a><!-- doxytag: member="ibase::CMessage::SetCategory" ref="a50969820ae95d0dc6196f88f81163cbe" args="(istd::IInformation::InformationCategory category)" -->
+<a class="anchor" id="ad2c8d0d032bd845dbb140cea70e3309b"></a><!-- doxytag: member="ibase::CMessage::SetCategory" ref="ad2c8d0d032bd845dbb140cea70e3309b" args="(istd::IInformationProvider::InformationCategory category)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ibase::CMessage::SetCategory </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -376,12 +381,12 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a3ae15fe15868d6c3b162ae2af65e2e5b"></a><!-- doxytag: member="ibase::CMessage::m_category" ref="a3ae15fe15868d6c3b162ae2af65e2e5b" args="" -->
+<a class="anchor" id="a873e5360d1660b9ef75032b51798f5d3"></a><!-- doxytag: member="ibase::CMessage::m_category" ref="a873e5360d1660b9ef75032b51798f5d3" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> <a class="el" href="classibase_1_1_c_message.html#a3ae15fe15868d6c3b162ae2af65e2e5b">ibase::CMessage::m_category</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> <a class="el" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">ibase::CMessage::m_category</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -406,7 +411,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00053">53</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00093">GetFlags()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00093">GetInformationFlags()</a>.</p>
 
 </div>
 </div>
@@ -440,7 +445,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00052">52</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00087">GetSource()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00087">GetInformationSource()</a>.</p>
 
 </div>
 </div>
@@ -474,7 +479,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_message_8h_source.html#l00055">55</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00063">GetTimeStamp()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00063">GetInformationTimeStamp()</a>.</p>
 
 </div>
 </div>

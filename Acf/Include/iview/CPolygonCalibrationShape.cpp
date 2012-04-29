@@ -28,13 +28,15 @@
 
 
 // ACF includes
-#include "i2d/CPolygon.h"
 #include "imod/TModelWrap.h"
+
+#include "i2d/ITransformation2d.h"
+#include "i2d/CPolygon.h"
 
 #include "iqt/iqt.h"
 
+#include "iview/IColorShema.h"
 #include "iview/CScreenTransform.h"
-#include "i2d/ITransformation2d.h"
 
 
 namespace iview
@@ -57,7 +59,7 @@ bool CPolygonCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::MouseB
 	imod::IModel* modelPtr = GetModelPtr();
 	i2d::CPolygon* polygonPtr = dynamic_cast<i2d::CPolygon*>(modelPtr);
 	if (IsDisplayConnected() && (polygonPtr != NULL)){
-		const iview::IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 
 		if (downFlag){
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
@@ -79,7 +81,7 @@ bool CPolygonCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::MouseB
 
 			case iview::ISelectable::EM_MOVE:
 				{
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_MOVE);
+					const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_MOVE);
 
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& logPos = polygonPtr->GetNode(i);
@@ -105,7 +107,7 @@ bool CPolygonCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::MouseB
 					calib.GetInvPositionAt(logLast, viewLast);
 					istd::CIndex2d screenLast = transform.GetScreenPosition(viewLast);
 
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_INSERT);
+					const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_INSERT);
 
 					if (tickerBox.IsInside(position - screenLast)){
 						BeginModelChanges();
@@ -138,7 +140,7 @@ bool CPolygonCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::MouseB
 
 			case iview::ISelectable::EM_REMOVE:
 				if (nodesCount > 2){
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_DELETE);
+					const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_DELETE);
 
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& logPos = polygonPtr->GetNode(i);
@@ -231,12 +233,12 @@ void CPolygonCalibrationShape::Draw(QPainter& drawContext) const
             }
             else{
                 if (m_isFirstVisible && (nodesCount > 0)){
-					const iview::IColorShema& colorShema = GetColorShema();
+					const IColorShema& colorShema = GetColorShema();
 
 					i2d::CVector2d viewPos;
 					calib.GetInvPositionAt(polygonPtr->GetNode(0), viewPos);
-                    istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
-                    colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INACTIVE);
+					istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
+					colorShema.DrawTicker(drawContext, screenPos, IColorShema::TT_INACTIVE);
                 }
             }
         }
@@ -292,64 +294,6 @@ bool CPolygonCalibrationShape::IsDraggable() const
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase)
-
-void CPolygonCalibrationShape::CalcBoundingBox(i2d::CRect& result) const
-{
-    const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
-    if (IsDisplayConnected() && (polygonPtr != NULL)){
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const i2d::ITransformation2d& calib = GetIsomorphCalib();
-        const iview::IColorShema& colorShema = GetColorShema();
-
-		int nodesCount = polygonPtr->GetNodesCount();
-
-		if (nodesCount > 0){
-			i2d::CVector2d firstView;
-			calib.GetInvPositionAt(polygonPtr->GetNode(0), firstView);
-			istd::CIndex2d screenPos = transform.GetScreenPosition(firstView);
-			i2d::CRect boundingBox(screenPos, screenPos);
-			for (int i = 1; i < nodesCount; i++){
-				calib.GetInvPositionAt(polygonPtr->GetNode(i), firstView);
-				screenPos = transform.GetScreenPosition(firstView);
-				boundingBox.Union(screenPos);
-			}
-
-			iview::IColorShema::TickerType tickerType;
-
-			if (IsSelected()){
-				int editMode = GetEditMode();
-				switch (editMode){
-				case iview::ISelectable::EM_MOVE:
-					tickerType = iview::IColorShema::TT_MOVE;
-					break;
-
-				case iview::ISelectable::EM_ADD:
-					tickerType = iview::IColorShema::TT_INSERT;
-					break;
-
-				case iview::ISelectable::EM_REMOVE:
-					tickerType = iview::IColorShema::TT_DELETE;
-					break;
-
-				default:
-					BaseClass::CalcBoundingBox(result);
-					return;
-				}
-			}
-			else{
-				tickerType = iview::IColorShema::TT_INACTIVE;
-			}
-
-			result = boundingBox.GetExpanded(colorShema.GetTickerBox(tickerType));
-			return;
-		}
-	}
-
-	result.Reset();
-}
-
-
 // protected methods
 
 i2d::CVector2d CPolygonCalibrationShape::GetSegmentMiddle(int index) const
@@ -377,15 +321,15 @@ void CPolygonCalibrationShape::DrawCurve(QPainter& drawContext) const
 		if (nodesCount > 0){
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 			const i2d::ITransformation2d& calib = GetIsomorphCalib();
-			const iview::IColorShema& colorShema = GetColorShema();
+			const IColorShema& colorShema = GetColorShema();
 
 			drawContext.save();
 			
 			if (IsSelected()){
-				drawContext.setPen(colorShema.GetPen(iview::IColorShema::SP_SELECTED));
+				drawContext.setPen(colorShema.GetPen(IColorShema::SP_SELECTED));
 			}
 			else{
-				drawContext.setPen(colorShema.GetPen(iview::IColorShema::SP_NORMAL));
+				drawContext.setPen(colorShema.GetPen(IColorShema::SP_NORMAL));
 			}
 
 			i2d::CVector2d viewFirst;
@@ -423,7 +367,7 @@ void CPolygonCalibrationShape::DrawArea(QPainter& drawContext) const
 		if (nodesCount > 2){
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 			const i2d::ITransformation2d& calib = GetIsomorphCalib();
-			const iview::IColorShema& colorShema = GetColorShema();
+			const IColorShema& colorShema = GetColorShema();
 
 			if (m_screenPoints.size() != nodesCount){
 				m_screenPoints.resize(nodesCount);
@@ -436,10 +380,10 @@ void CPolygonCalibrationShape::DrawArea(QPainter& drawContext) const
 			}
 
 			if (IsSelected()){
-				drawContext.setBrush(colorShema.GetBrush(iview::IColorShema::SB_HALF_TRANSPARENT));
+				drawContext.setBrush(colorShema.GetBrush(IColorShema::SB_HALF_TRANSPARENT));
 			}
 			else{
-				drawContext.setBrush(colorShema.GetBrush(iview::IColorShema::SB_HALF_TRANSPARENT2));
+				drawContext.setBrush(colorShema.GetBrush(IColorShema::SB_HALF_TRANSPARENT2));
 			}
 			
 			drawContext.drawPolygon(m_screenPoints);
@@ -463,7 +407,7 @@ void CPolygonCalibrationShape::DrawSelectionElements(QPainter& drawContext) cons
 		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 		istd::CIndex2d screenPos;
 
-        const iview::IColorShema& colorShema = GetColorShema();
+        const IColorShema& colorShema = GetColorShema();
 		int nodesCount = polygon.GetNodesCount();
 		int editMode = GetEditMode();
 
@@ -481,7 +425,7 @@ void CPolygonCalibrationShape::DrawSelectionElements(QPainter& drawContext) cons
 				calib.GetInvPositionAt(polygon.GetNode(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_MOVE);
+				colorShema.DrawTicker(drawContext, screenPos, IColorShema::TT_MOVE);
 			}
 			break;
 
@@ -492,7 +436,7 @@ void CPolygonCalibrationShape::DrawSelectionElements(QPainter& drawContext) cons
 					calib.GetInvPositionAt(polygon.GetNode(i), viewPos);
 					istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-					colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_DELETE);
+					colorShema.DrawTicker(drawContext, screenPos, IColorShema::TT_DELETE);
 				}
 			}
 			break;
@@ -503,7 +447,7 @@ void CPolygonCalibrationShape::DrawSelectionElements(QPainter& drawContext) cons
 				calib.GetInvPositionAt(polygon.GetNode(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_SELECTED_INACTIVE);
+				colorShema.DrawTicker(drawContext, screenPos, IColorShema::TT_SELECTED_INACTIVE);
 			}
 			break;
 		}
@@ -514,7 +458,7 @@ void CPolygonCalibrationShape::DrawSelectionElements(QPainter& drawContext) cons
 				calib.GetInvPositionAt(GetSegmentMiddle(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INSERT);
+				colorShema.DrawTicker(drawContext, screenPos, IColorShema::TT_INSERT);
 			}
 		}
 	}
@@ -527,7 +471,7 @@ bool CPolygonCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (IsDisplayConnected() && (polygonPtr != NULL)){
-        const iview::IColorShema& colorShema = GetColorShema();
+        const IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
@@ -548,8 +492,8 @@ bool CPolygonCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 		case iview::ISelectable::EM_MOVE:
 			{
 				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()?
-								iview::IColorShema::TT_MOVE:
-								iview::IColorShema::TT_INACTIVE);
+								IColorShema::TT_MOVE:
+								IColorShema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
 					i2d::CVector2d viewPos;
 					calib.GetInvPositionAt(polygonPtr->GetNode(i), viewPos);
@@ -564,8 +508,8 @@ bool CPolygonCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 		case iview::ISelectable::EM_REMOVE:
 			{
 				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()?
-								iview::IColorShema::TT_DELETE:
-								iview::IColorShema::TT_INACTIVE);
+								IColorShema::TT_DELETE:
+								IColorShema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
 					i2d::CVector2d viewPos;
 					calib.GetInvPositionAt(polygonPtr->GetNode(i), viewPos);
@@ -580,8 +524,8 @@ bool CPolygonCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
         case iview::ISelectable::EM_ADD:
 			{
 				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()?
-								iview::IColorShema::TT_INSERT:
-								iview::IColorShema::TT_INACTIVE);
+								IColorShema::TT_INSERT:
+								IColorShema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
 					i2d::CVector2d viewPos;
 					calib.GetInvPositionAt(GetSegmentMiddle(i), viewPos);
@@ -614,7 +558,7 @@ bool CPolygonCalibrationShape::IsCurveTouched(istd::CIndex2d position) const
 			}
 		}
 
-        const iview::IColorShema& colorShema = GetColorShema();
+        const IColorShema& colorShema = GetColorShema();
         int nodesCount = polygon.GetNodesCount();
         if (nodesCount > 0){
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
@@ -742,6 +686,62 @@ void CPolygonCalibrationShape::SetLogDragPosition(const i2d::CVector2d& position
 
 		EndModelChanges();
 	}
+}
+
+
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CPolygonCalibrationShape::CalcBoundingBox() const
+{
+    const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
+    if (IsDisplayConnected() && (polygonPtr != NULL)){
+		const iview::CScreenTransform& transform = GetLogToScreenTransform();
+		const i2d::ITransformation2d& calib = GetIsomorphCalib();
+        const IColorShema& colorShema = GetColorShema();
+
+		int nodesCount = polygonPtr->GetNodesCount();
+
+		if (nodesCount > 0){
+			i2d::CVector2d firstView;
+			calib.GetInvPositionAt(polygonPtr->GetNode(0), firstView);
+			istd::CIndex2d screenPos = transform.GetScreenPosition(firstView);
+			i2d::CRect boundingBox(screenPos, screenPos);
+			for (int i = 1; i < nodesCount; i++){
+				calib.GetInvPositionAt(polygonPtr->GetNode(i), firstView);
+				screenPos = transform.GetScreenPosition(firstView);
+				boundingBox.Union(screenPos);
+			}
+
+			IColorShema::TickerType tickerType;
+
+			if (IsSelected()){
+				int editMode = GetEditMode();
+				switch (editMode){
+				case iview::ISelectable::EM_MOVE:
+					tickerType = IColorShema::TT_MOVE;
+					break;
+
+				case iview::ISelectable::EM_ADD:
+					tickerType = IColorShema::TT_INSERT;
+					break;
+
+				case iview::ISelectable::EM_REMOVE:
+					tickerType = IColorShema::TT_DELETE;
+					break;
+
+				default:
+					return BaseClass::CalcBoundingBox();
+				}
+			}
+			else{
+				tickerType = IColorShema::TT_INACTIVE;
+			}
+
+			return boundingBox.GetExpanded(colorShema.GetTickerBox(tickerType));
+		}
+	}
+
+	return i2d::CRect();
 }
 
 

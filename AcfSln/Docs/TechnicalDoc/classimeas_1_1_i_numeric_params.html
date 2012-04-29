@@ -47,10 +47,11 @@ Inheritance diagram for imeas::INumericParams:</div>
  <div class="center">
   <img src="classimeas_1_1_i_numeric_params.png" usemap="#imeas::INumericParams_map" alt=""/>
   <map id="imeas::INumericParams_map" name="imeas::INumericParams_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,180,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,180,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,180,24"/>
-<area href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericParams interface." alt="imeas::CNumericParamsComp" shape="rect" coords="0,224,180,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="107,112,311,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="107,56,311,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="107,0,311,24"/>
+<area href="classimeas_1_1_c_linear_adjust_params_comp.html" title="Basic implementation of component of linear adjust parameters." alt="imeas::CLinearAdjustParamsComp" shape="rect" coords="0,224,204,248"/>
+<area href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericParams interface." alt="imeas::CNumericParamsComp" shape="rect" coords="214,224,418,248"/>
 </map>
  </div></div>
 
@@ -62,8 +63,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter constraints describing possible parameter values.  <a href="#afa55b2b65c2f6a8ec416946e0bd66098"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_params.html#afd7f4c73268082073507c567b99c942e">GetValues</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of numeric values.  <a href="#afd7f4c73268082073507c567b99c942e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_params.html#a27d4d5aa0dcab0c3d16a06291292edc3">SetValues</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;lengths)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set list of numeric values.  <a href="#a27d4d5aa0dcab0c3d16a06291292edc3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_params.html#a96566d3dc2c14dd3d4b9ccfe3b28edcd">SetValues</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;values)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set list of numeric values.  <a href="#a96566d3dc2c14dd3d4b9ccfe3b28edcd"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>General parameter set containing list of numeric values. </p>
@@ -86,7 +87,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get parameter constraints describing possible parameter values. </p>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a3273fd702b83cce7a8c1726c32e53979">imeas::CNumericParamsComp</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#ad0a3a8228216de79bea9cc5cf28bd451">imeas::CLinearAdjustParamsComp</a>, and <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a3273fd702b83cce7a8c1726c32e53979">imeas::CNumericParamsComp</a>.</p>
 
 </div>
 </div>
@@ -106,11 +107,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Get list of numeric values. </p>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a6408fdd043081e24ee799851ecda6c1a">imeas::CNumericParamsComp</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#aadb1fe9949f274e21a4085433ab62ebc">imeas::CLinearAdjustParamsComp</a>, and <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a6408fdd043081e24ee799851ecda6c1a">imeas::CNumericParamsComp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a27d4d5aa0dcab0c3d16a06291292edc3"></a><!-- doxytag: member="imeas::INumericParams::SetValues" ref="a27d4d5aa0dcab0c3d16a06291292edc3" args="(const imath::CVarVector &amp;lengths)=0" -->
+<a class="anchor" id="a96566d3dc2c14dd3d4b9ccfe3b28edcd"></a><!-- doxytag: member="imeas::INumericParams::SetValues" ref="a96566d3dc2c14dd3d4b9ccfe3b28edcd" args="(const imath::CVarVector &amp;values)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -118,7 +119,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool imeas::INumericParams::SetValues </td>
           <td>(</td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;&#160;</td>
-          <td class="paramname"><em>lengths</em></td><td>)</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
       </table>
@@ -127,7 +128,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set list of numeric values. </p>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#aa747c9c6926364864f666ed36efde643">imeas::CNumericParamsComp</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#a398e789a27935aef97383f4758b7bf99">imeas::CLinearAdjustParamsComp</a>, and <a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a21e824ffb758654ec6dda03d9ed40647">imeas::CNumericParamsComp</a>.</p>
 
 </div>
 </div>

@@ -26,11 +26,14 @@
 // Qt includes
 #include <QtGui/QPainter>
 
-
 // ACF includes
 #include "imod/IModel.h"
+
 #include "i2d/CLine2d.h"
+
 #include "iqt/iqt.h"
+
+#include "iview/IColorShema.h"
 
 
 namespace iview
@@ -306,36 +309,6 @@ void CInteractiveRectangleShape::CalcPoints(const i2d::CRectangle& rectangle, co
 
 // reimplemented (iview::CInteractiveShapeBase)
 
-void CInteractiveRectangleShape::CalcBoundingBox(i2d::CRect& result) const
-{
-	I_ASSERT(IsDisplayConnected());
-
-	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
-	if (framePtr != NULL){
-		const IColorShema& colorShema = GetColorShema();
-		if (!m_arePointsValid){
-			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-
-			CalcPoints(*framePtr, transform);
-		}
-
-		i2d::CRect bbox(m_corners[0][0], m_corners[0][0]);
-		bbox.Union(m_corners[0][1]);
-		bbox.Union(m_corners[1][0]);
-		bbox.Union(m_corners[1][1]);
-
-		const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_MOVE: IColorShema::TT_INACTIVE);
-		
-		result = bbox.GetExpanded(tickerBox);
-
-		result.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
-	}
-	else{
-		result.Reset();
-	}
-}
-
-
 void CInteractiveRectangleShape::BeginLogDrag(const i2d::CVector2d& reference)
 {
 	m_referencePosition = reference;
@@ -356,6 +329,38 @@ void CInteractiveRectangleShape::SetLogDragPosition(const i2d::CVector2d& positi
 
 		EndModelChanges();
 	}
+}
+
+
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CInteractiveRectangleShape::CalcBoundingBox() const
+{
+	I_ASSERT(IsDisplayConnected());
+
+	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
+	if (framePtr != NULL){
+		const IColorShema& colorShema = GetColorShema();
+		if (!m_arePointsValid){
+			const iview::CScreenTransform& transform = GetLogToScreenTransform();
+
+			CalcPoints(*framePtr, transform);
+		}
+
+		i2d::CRect boundingBox(m_corners[0][0], m_corners[0][0]);
+		boundingBox.Union(m_corners[0][1]);
+		boundingBox.Union(m_corners[1][0]);
+		boundingBox.Union(m_corners[1][1]);
+
+		const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_MOVE: IColorShema::TT_INACTIVE);
+		
+		boundingBox.Expand(tickerBox);
+		boundingBox.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
+
+		return boundingBox;
+	}
+
+	return i2d::CRect();
 }
 
 

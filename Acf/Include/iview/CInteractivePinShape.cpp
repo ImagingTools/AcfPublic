@@ -23,15 +23,13 @@
 #include "iview/CInteractivePinShape.h"
 
 
-
-#include "i2d/CPosition2d.h"
-#include "iview/CScreenTransform.h"
-
-#include "iview/iview.h"
-
-
 // ACF includes
 #include "imod/IModel.h"
+
+#include "i2d/CPosition2d.h"
+
+#include "iview/IColorShema.h"
+#include "iview/CScreenTransform.h"
 
 
 namespace iview
@@ -49,9 +47,8 @@ CInteractivePinShape::CInteractivePinShape()
 
 ITouchable::TouchState CInteractivePinShape::IsTouched(istd::CIndex2d position) const
 {
-	i2d::CRect boundingBox;
-	CInteractivePinShape::CalcBoundingBox(boundingBox);
-	if (boundingBox.IsInside(position) != 0){
+	i2d::CRect boundingBox = CInteractivePinShape::CalcBoundingBox();
+	if (boundingBox.IsInside(position)){
 		if (IsEditablePosition()){
 			return TS_TICKER;
 		}
@@ -163,9 +160,9 @@ bool CInteractivePinShape::OnMouseMove(istd::CIndex2d position)
 
 // protected methods
 
-// reimplemented (iview::CInteractiveShapeBase)
+// reimplemented (iview::CShapeBase)
 
-void CInteractivePinShape::CalcBoundingBox(i2d::CRect& result) const
+i2d::CRect CInteractivePinShape::CalcBoundingBox() const
 {
 	I_ASSERT(IsDisplayConnected());
 
@@ -190,12 +187,15 @@ void CInteractivePinShape::CalcBoundingBox(i2d::CRect& result) const
 		}
 
 		const i2d::CRect& tickerBox = colorShema.GetTickerBox(tickerType);
-		result = tickerBox.GetTranslated(sp);
+
+		return tickerBox.GetTranslated(sp);
 	}
 
-	result.Reset();
+	return i2d::CRect();
 }
 
+
+// reimplemented (iview::CInteractiveShapeBase)
 
 void CInteractivePinShape::BeginLogDrag(const i2d::CVector2d& reference)
 {

@@ -106,7 +106,7 @@
 <a name="l00079"></a>00079                             <span class="keywordflow">if</span> (isBackground){
 <a name="l00080"></a>00080                                    <a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>* shapeImplPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>*<span class="keyword">&gt;</span>(shapePtr);
 <a name="l00081"></a>00081                                    <span class="keywordflow">if</span> (shapeImplPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00082"></a>00082                                           shapeImplPtr-&gt;<a class="code" href="classiview_1_1_t_shape_base.html#a128b98ab3a895b500a76d33ba1559df5">AssignToLayer</a>(<a class="code" href="classiview_1_1_i_layer.html#a4bbfda5b29830e2cfcbce8e55fe5c003a3e7d51f136e82893efdd50e575d22d4a" title="Layer with inactive shapes.">iview::ILayer::LT_INACTIVE</a>);
+<a name="l00082"></a>00082                                           shapeImplPtr-&gt;<a class="code" href="classiview_1_1_c_shape_base.html#ae3fe6e71efedb1e491b2aac41e9f1854">AssignToLayer</a>(<a class="code" href="classiview_1_1_i_view_layer.html#ab844c082e493b088ae3b3afc42b98240a7b29917dec76648b1e1213216ca8bd37" title="Layer with inactive shapes.">iview::IViewLayer::LT_INACTIVE</a>);
 <a name="l00083"></a>00083                                    }
 <a name="l00084"></a>00084                             }
 <a name="l00085"></a>00085 
@@ -141,7 +141,7 @@
 <a name="l00114"></a>00114                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; shapesCount; ++i){
 <a name="l00115"></a>00115                             <a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr = shapes.<a class="code" href="classistd_1_1_t_pointer_vector.html#a60d0768b01159b4893f6d41aeb79a1f1" title="Get pointer at specified index.">GetAt</a>(i);
 <a name="l00116"></a>00116                             <span class="keywordflow">if</span> (shapePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00117"></a>00117                                    viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_observer.html#aca1acc27c4434a4122d6c4a0c984fa79" title="Disconnect shape object from view.">DisconnectShape</a>(shapePtr);
+<a name="l00117"></a>00117                                    viewPtr-&gt;<a class="code" href="classiview_1_1_i_shape_observer.html#a6ece3e91cb68370f38b3f6092e7ca1d0" title="Disconnect shape object from view.">DisconnectShape</a>(shapePtr);
 <a name="l00118"></a>00118                             }
 <a name="l00119"></a>00119                      }
 <a name="l00120"></a>00120               }

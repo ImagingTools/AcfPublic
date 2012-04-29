@@ -58,8 +58,8 @@
 <a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a9c492066b26162c18d0195d329d45e6f" title="Send verbose message.">SendVerboseMessage</a>(<span class="keyword">const</span> QString&amp; message, <span class="keyword">const</span> QString&amp; messageSource = QString()) <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (istd::ILogger)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a99eb35689d537aa5b76fb1b80bde3909" title="Decorate message parts before outputting.">DecorateMessage</a>(
-<a name="l00046"></a>00046                             <a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a> category,
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#aa16a2ae14c9d8978160bd588e30bf114" title="Decorate message parts before outputting.">DecorateMessage</a>(
+<a name="l00046"></a>00046                             <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category,
 <a name="l00047"></a>00047                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00048"></a>00048                             <span class="keywordtype">int</span> flags,
 <a name="l00049"></a>00049                             QString&amp; message,
@@ -95,8 +95,8 @@
 <a name="l00079"></a>00079 <span class="comment">// reimplemented (istd::ILogger)</span>
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00082"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a99eb35689d537aa5b76fb1b80bde3909">00082</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#a99eb35689d537aa5b76fb1b80bde3909" title="Decorate message parts before outputting.">TLoggerCompWrap&lt;Base&gt;::DecorateMessage</a>(
-<a name="l00083"></a>00083                      <a class="code" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a> category,
+<a name="l00082"></a><a class="code" href="classibase_1_1_t_logger_comp_wrap.html#aa16a2ae14c9d8978160bd588e30bf114">00082</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html#aa16a2ae14c9d8978160bd588e30bf114" title="Decorate message parts before outputting.">TLoggerCompWrap&lt;Base&gt;::DecorateMessage</a>(
+<a name="l00083"></a>00083                      <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category,
 <a name="l00084"></a>00084                      <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00085"></a>00085                      <span class="keywordtype">int</span> flags,
 <a name="l00086"></a>00086                      QString&amp; message,

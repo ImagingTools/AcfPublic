@@ -83,18 +83,18 @@
 <a name="l00056"></a>00056        <span class="comment">// reimplemented (iview::ITouchable)</span>
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_interactive_label_shape.html#aac85188c28cd22045edfdc73a21c420a" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_label_shape.html#a468b0a68d6bd9bf65b580c91b5bfbf74" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="keyword">protected</span>:
-<a name="l00063"></a><a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71">00063</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71">EditMode</a>
-<a name="l00064"></a>00064        {
-<a name="l00065"></a><a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71a62799d9f9cb47fde35a120776c9a132f">00065</a>               <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71a62799d9f9cb47fde35a120776c9a132f">EM_NONE</a>,
-<a name="l00066"></a><a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71adeeb00ec109905c3fad2bc8a36df752d">00066</a>               <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71adeeb00ec109905c3fad2bc8a36df752d">EM_POSITION</a>,
-<a name="l00067"></a><a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71ad7c89f76124dd555f714eb4c2c689c7b">00067</a>               <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71ad7c89f76124dd555f714eb4c2c689c7b">EM_OFFSET</a>
-<a name="l00068"></a>00068        };
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_label_shape.html#aab33e385ac91a6ff48534ffc1d5dbc05">CalculateTextOriginSize</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; textBox) <span class="keyword">const</span>;
+<a name="l00059"></a>00059 <span class="keyword">protected</span>:
+<a name="l00060"></a><a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71">00060</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71">EditMode</a>
+<a name="l00061"></a>00061        {
+<a name="l00062"></a><a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71a62799d9f9cb47fde35a120776c9a132f">00062</a>               <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71a62799d9f9cb47fde35a120776c9a132f">EM_NONE</a>,
+<a name="l00063"></a><a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71adeeb00ec109905c3fad2bc8a36df752d">00063</a>               <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71adeeb00ec109905c3fad2bc8a36df752d">EM_POSITION</a>,
+<a name="l00064"></a><a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71ad7c89f76124dd555f714eb4c2c689c7b">00064</a>               <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ac13f63790f06b652ab1dec6266695b71ad7c89f76124dd555f714eb4c2c689c7b">EM_OFFSET</a>
+<a name="l00065"></a>00065        };
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_label_shape.html#aab33e385ac91a6ff48534ffc1d5dbc05">CalculateTextOriginSize</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; textBox) <span class="keyword">const</span>;
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_interactive_label_shape.html#ad80aca2f5432b1907b39f0188219501a" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 <span class="keyword">private</span>:
 <a name="l00073"></a>00073        <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_referenceOffset;

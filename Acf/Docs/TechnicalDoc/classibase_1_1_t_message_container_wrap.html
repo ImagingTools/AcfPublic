@@ -78,14 +78,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aaa613df1d9dcdbcc621e9badc899fe46">GetWorstCategory</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html#a026c15e28b79ce00e90acf6adb7bb8c7">IMessageContainer::Messages</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a783de0b2ef703a6e00d0f860383f3147">GetMessages</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a0e6b48fc72490f4a02a98e3e171ca062">ClearMessages</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aa1632451a1f784c75f9fd97b4615b41b">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *messagePtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aeaa3bd93b11e51c3376f79699a04dc2a">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">IMessageConsumer::MessagePtr</a> &amp;messagePtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a4d79a2987d21d42847d1cd14e91be61a">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *messagePtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#aeaa3bd93b11e51c3376f79699a04dc2a">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">IMessageConsumer::MessagePtr</a> &amp;messagePtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a4bd90c7e0c8244ef0fea34bf7ec08ede">GetChildsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html">IMessageContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a6ac518f8a9f2415dc794903bb6acb9b2">GetChild</a> (int index) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QList<br class="typebreak"/>
-&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">IMessageContainer::MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a6d8e1d6fd4b5f344d1597894974f6c7d">MessageList</a></td></tr>
+&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">IMessageContainer::MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a6d8e1d6fd4b5f344d1597894974f6c7d">MessageList</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classibase_1_1_t_message_container_wrap.html#a6d8e1d6fd4b5f344d1597894974f6c7d">MessageList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_message_container_wrap.html#ad489aa402d1186a09b86033faad396c6">m_messages</a></td></tr>
@@ -127,7 +127,7 @@ template&lt;class Base &gt; </div>
 template&lt;class Base &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef QList&lt;<a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">IMessageContainer::MessagePtr</a>&gt; <a class="el" href="classibase_1_1_t_message_container_wrap.html">ibase::TMessageContainerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classibase_1_1_t_message_container_wrap.html#a6d8e1d6fd4b5f344d1597894974f6c7d">MessageList</a><code> [protected]</code></td>
+          <td class="memname">typedef QList&lt;<a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">IMessageContainer::MessagePtr</a>&gt; <a class="el" href="classibase_1_1_t_message_container_wrap.html">ibase::TMessageContainerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::<a class="el" href="classibase_1_1_t_message_container_wrap.html#a6d8e1d6fd4b5f344d1597894974f6c7d">MessageList</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -211,7 +211,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classibase_1_1_t_message_container_wrap.html">ibase::TMessageContainerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::AddMessage </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">IMessageConsumer::MessagePtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">IMessageConsumer::MessagePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>messagePtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -338,7 +338,7 @@ template&lt;class Base &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa1632451a1f784c75f9fd97b4615b41b"></a><!-- doxytag: member="ibase::TMessageContainerWrap::IsMessageSupported" ref="aa1632451a1f784c75f9fd97b4615b41b" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformation *messagePtr=NULL) const " -->
+<a class="anchor" id="a4d79a2987d21d42847d1cd14e91be61a"></a><!-- doxytag: member="ibase::TMessageContainerWrap::IsMessageSupported" ref="a4d79a2987d21d42847d1cd14e91be61a" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformationProvider *messagePtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -359,7 +359,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *&#160;</td>
           <td class="paramname"><em>messagePtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>

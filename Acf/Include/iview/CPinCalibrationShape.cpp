@@ -32,6 +32,7 @@
 
 #include "i2d/CPosition2d.h"
 
+#include "iview/IColorShema.h"
 #include "iview/CPinCalibrationShape.h"
 #include "iview/CScreenTransform.h"
 
@@ -49,8 +50,7 @@ CPinCalibrationShape::CPinCalibrationShape()
 
 iview::ITouchable::TouchState CPinCalibrationShape::IsTouched(istd::CIndex2d position) const
 {
-	i2d::CRect boundingBox;
-	CPinCalibrationShape::CalcBoundingBox(boundingBox);
+	i2d::CRect boundingBox = CPinCalibrationShape::CalcBoundingBox();
 	if (boundingBox.IsInside(position) != 0){
 		return TS_TICKER;
 	}
@@ -66,7 +66,7 @@ void CPinCalibrationShape::Draw(QPainter& drawContext) const
 {
 	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetModelPtr());
 	if (IsDisplayConnected() && (pinPtr != NULL)){
-	    const iview::IColorShema& colorShema = GetColorShema();
+	    const IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
@@ -76,14 +76,14 @@ void CPinCalibrationShape::Draw(QPainter& drawContext) const
 
 		if (IsSelected()){
 			if (IsEditablePosition()){
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_MOVE);
+				colorShema.DrawTicker(drawContext, screenPos, IColorShema::TT_MOVE);
 			}
 			else{
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_SELECTED_INACTIVE);
+				colorShema.DrawTicker(drawContext, screenPos, IColorShema::TT_SELECTED_INACTIVE);
 			}
 		}
 		else{
-			colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INACTIVE);
+			colorShema.DrawTicker(drawContext, screenPos, IColorShema::TT_INACTIVE);
 		}
 	}
 }
@@ -113,7 +113,7 @@ bool CPinCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButto
 	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetModelPtr());
 	if (IsDisplayConnected() && (pinPtr != NULL)){
 		if (downFlag){
-			const iview::IColorShema& colorShema = GetColorShema();
+			const IColorShema& colorShema = GetColorShema();
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 			const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
@@ -121,7 +121,7 @@ bool CPinCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButto
 			i2d::CVector2d viewPos;
 			calib.GetInvPositionAt(logPos, viewPos);
 			istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
-			const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_MOVE);
+			const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_MOVE);
 			if (tickerBox.IsInside(position - screenPos)){
 				i2d::CVector2d logMouse;
 				calib.GetPositionAt(transform.GetClientPosition(position), logMouse);
@@ -172,41 +172,6 @@ bool CPinCalibrationShape::OnMouseMove(istd::CIndex2d position)
 
 // reimplemented (iview::CInteractiveShapeBase)
 
-void CPinCalibrationShape::CalcBoundingBox(i2d::CRect& result) const
-{
-	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetModelPtr());
-	if (IsDisplayConnected() && (pinPtr != NULL)){
-		const iview::IColorShema& colorShema = GetColorShema();
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const i2d::ITransformation2d& calib = GetIsomorphCalib();
-
-		const i2d::CVector2d& logPos = pinPtr->GetPosition();
-		i2d::CVector2d viewPos;
-		calib.GetInvPositionAt(logPos, viewPos);
-		istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
-
-		iview::IColorShema::TickerType tickerType;
-		if (IsSelected()){
-			if (IsEditablePosition()){
-				tickerType = iview::IColorShema::TT_MOVE;
-			}
-			else{
-				tickerType = iview::IColorShema::TT_SELECTED_INACTIVE;
-			}
-		}
-		else{
-			tickerType = iview::IColorShema::TT_INACTIVE;
-		}
-
-		const i2d::CRect& tickerBox = colorShema.GetTickerBox(tickerType);
-		result = tickerBox.GetTranslated(screenPos);
-	}
-	else{
-		result.Reset();
-	}
-}
-
-
 void CPinCalibrationShape::BeginLogDrag(const i2d::CVector2d& reference)
 {
 	const imod::IModel* modelPtr = GetModelPtr();
@@ -234,6 +199,43 @@ void CPinCalibrationShape::SetLogDragPosition(const i2d::CVector2d& position)
 			EndModelChanges();
 		}
 	}
+}
+
+
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CPinCalibrationShape::CalcBoundingBox() const
+{
+	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetModelPtr());
+	if (IsDisplayConnected() && (pinPtr != NULL)){
+		const IColorShema& colorShema = GetColorShema();
+		const iview::CScreenTransform& transform = GetLogToScreenTransform();
+		const i2d::ITransformation2d& calib = GetIsomorphCalib();
+
+		const i2d::CVector2d& logPos = pinPtr->GetPosition();
+		i2d::CVector2d viewPos;
+		calib.GetInvPositionAt(logPos, viewPos);
+		istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
+
+		IColorShema::TickerType tickerType;
+		if (IsSelected()){
+			if (IsEditablePosition()){
+				tickerType = IColorShema::TT_MOVE;
+			}
+			else{
+				tickerType = IColorShema::TT_SELECTED_INACTIVE;
+			}
+		}
+		else{
+			tickerType = IColorShema::TT_INACTIVE;
+		}
+
+		const i2d::CRect& tickerBox = colorShema.GetTickerBox(tickerType);
+
+		return tickerBox.GetTranslated(screenPos);
+	}
+
+	return i2d::CRect();
 }
 
 

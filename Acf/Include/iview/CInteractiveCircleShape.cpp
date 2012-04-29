@@ -31,6 +31,7 @@
 
 #include "i2d/CCircle.h"
 
+#include "iview/IColorShema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -271,9 +272,11 @@ ITouchable::TouchState CInteractiveCircleShape::IsTouched(istd::CIndex2d positio
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase)
+// protected methods
 
-void CInteractiveCircleShape::CalcBoundingBox(i2d::CRect& result) const
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CInteractiveCircleShape::CalcBoundingBox() const
 {
 	I_ASSERT(IsDisplayConnected());
 
@@ -294,19 +297,15 @@ void CInteractiveCircleShape::CalcBoundingBox(i2d::CRect& result) const
 		const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_NORMAL: IColorShema::TT_INACTIVE);
 
 		i2d::CRect boundingBox(
-						int(center.GetX() - radius * scale.GetX()), int(center.GetY() - radius * scale.GetY()),
-						int(center.GetX() + radius * scale.GetX()), int(center.GetY() + radius * scale.GetY()));
+					int(center.GetX() - radius * scale.GetX() - 1), int(center.GetY() - radius * scale.GetY() + 1),
+					int(center.GetX() + radius * scale.GetX() - 1), int(center.GetY() + radius * scale.GetY() + 1));
 
-		result = boundingBox.GetExpanded(tickerBox);
-		result.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
+		boundingBox.Expand(tickerBox);
 
-		if (!result.IsValid()){
-			result = tickerBox;
-		}
+		return boundingBox;
 	}
-	else{
-		result.Reset();
-	}
+
+	return i2d::CRect();
 }
 
 

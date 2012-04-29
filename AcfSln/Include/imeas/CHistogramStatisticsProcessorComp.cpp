@@ -23,9 +23,11 @@
 #include "imeas/CHistogramStatisticsProcessorComp.h"
 
 
+// Qt includes
+#include <QtCore/qmath.h>
+
  // ACF includes
 #include "istd/TChangeNotifier.h"
-
 
 // ACF-Solutions includes
 #include "imeas/IDataSequence.h"
@@ -145,7 +147,7 @@ bool CHistogramStatisticsProcessorComp::CalculateChannelStatistics(
 		standardDeviation += sample * (sampleIndex - average) * (sampleIndex - average);
 	}
 
-	standardDeviation = std::sqrt(standardDeviation);
+	standardDeviation = qSqrt(standardDeviation);
 
 	dataStatistics.CreateStatistics(average, median, standardDeviation, boundaries);
 

@@ -67,16 +67,16 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a3e4c7a761dfbfac09c8ea42d792ed756">CStreamLogCompBase</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a1afe84ff8614bc78e87c9ebe9c6cc37b">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *messagePtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some messge is supported.  <a href="#a1afe84ff8614bc78e87c9ebe9c6cc37b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a919237d2ce02c9d1ff77635d74f34880">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">MessagePtr</a> &amp;messagePtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a9e5fe09bc8cd289b4595b3b44f8aa256">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *messagePtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some messge is supported.  <a href="#a9e5fe09bc8cd289b4595b3b44f8aa256"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a919237d2ce02c9d1ff77635d74f34880">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">MessagePtr</a> &amp;messagePtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a message item to the container.  <a href="#a919237d2ce02c9d1ff77635d74f34880"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a7f4fdc988215a65e8c11eb107afb3a3f">WriteMessageToStream</a> (const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> &amp;message)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write formatted the message to the output stream.  <a href="#a7f4fdc988215a65e8c11eb107afb3a3f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a47b4b97eb597676db226dc87254f9756">GenerateMessageText</a> (const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> &amp;message) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate formatted message text for the output.  <a href="#a47b4b97eb597676db226dc87254f9756"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a6f6e02a49a58a0cd850e956230302e09">WriteMessageToStream</a> (const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> &amp;message)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write formatted the message to the output stream.  <a href="#a6f6e02a49a58a0cd850e956230302e09"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a18ab4ad999df860f51bd2e7019e459f3">GenerateMessageText</a> (const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> &amp;message) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate formatted message text for the output.  <a href="#a18ab4ad999df860f51bd2e7019e459f3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#ab8abbb08ee84cff30316189ff03b8ddf">WriteText</a> (const QString &amp;text)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a text line to the output stream.  <a href="#ab8abbb08ee84cff30316189ff03b8ddf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a23fabb0113f9e6990eca7bd3967b2a5f">NewLine</a> ()=0</td></tr>
@@ -130,7 +130,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void ibase::CStreamLogCompBase::AddMessage </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">MessagePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>messagePtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -144,14 +144,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a47b4b97eb597676db226dc87254f9756"></a><!-- doxytag: member="ibase::CStreamLogCompBase::GenerateMessageText" ref="a47b4b97eb597676db226dc87254f9756" args="(const istd::IInformation &amp;message) const " -->
+<a class="anchor" id="a18ab4ad999df860f51bd2e7019e459f3"></a><!-- doxytag: member="ibase::CStreamLogCompBase::GenerateMessageText" ref="a18ab4ad999df860f51bd2e7019e459f3" args="(const istd::IInformationProvider &amp;message) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QString ibase::CStreamLogCompBase::GenerateMessageText </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> &amp;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td> const<code> [protected, virtual]</code></td>
         </tr>
@@ -163,7 +163,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1afe84ff8614bc78e87c9ebe9c6cc37b"></a><!-- doxytag: member="ibase::CStreamLogCompBase::IsMessageSupported" ref="a1afe84ff8614bc78e87c9ebe9c6cc37b" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformation *messagePtr=NULL) const " -->
+<a class="anchor" id="a9e5fe09bc8cd289b4595b3b44f8aa256"></a><!-- doxytag: member="ibase::CStreamLogCompBase::IsMessageSupported" ref="a9e5fe09bc8cd289b4595b3b44f8aa256" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformationProvider *messagePtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -182,7 +182,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *&#160;</td>
           <td class="paramname"><em>messagePtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -201,16 +201,16 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a>. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>ID of message as defined in <a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> or -1 if undefined. </td></tr>
+    <tr><td class="paramname">messageId</td><td>ID of message as defined in <a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> or -1 if undefined. </td></tr>
     <tr><td class="paramname">messagePtr</td><td>optional message object, or NULL if undefined. Please note, this object will not be stored by receiver. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classibase_1_1_i_message_consumer.html#a7ea687c817844fbc1b2e31526ca592a2">ibase::IMessageConsumer</a>.</p>
+<p>Implements <a class="el" href="classibase_1_1_i_message_consumer.html#ad60ff234c5745a0b3029f5f326106ed5">ibase::IMessageConsumer</a>.</p>
 
 </div>
 </div>
@@ -254,14 +254,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7f4fdc988215a65e8c11eb107afb3a3f"></a><!-- doxytag: member="ibase::CStreamLogCompBase::WriteMessageToStream" ref="a7f4fdc988215a65e8c11eb107afb3a3f" args="(const istd::IInformation &amp;message)" -->
+<a class="anchor" id="a6f6e02a49a58a0cd850e956230302e09"></a><!-- doxytag: member="ibase::CStreamLogCompBase::WriteMessageToStream" ref="a6f6e02a49a58a0cd850e956230302e09" args="(const istd::IInformationProvider &amp;message)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void ibase::CStreamLogCompBase::WriteMessageToStream </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> &amp;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>

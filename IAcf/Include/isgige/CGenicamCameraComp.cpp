@@ -56,7 +56,7 @@ CGenicamCameraComp::~CGenicamCameraComp()
 }
 
 
-// reimplemented (iproc::IBitmapAcquisition)
+// reimplemented (icam::IBitmapAcquisition)
 
 istd::CIndex2d CGenicamCameraComp::GetBitmapSize(const iprm::IParamsSet* paramsPtr) const
 {
@@ -141,7 +141,7 @@ int CGenicamCameraComp::DoProcessing(
 			double timeDiff = imageTimestamp.GetTimeTo(*triggerTimerPtr) - *m_triggerDifferenceAttrPtr;
 
 			if (timeDiff < -*m_triggerToleranceAttrPtr){	// image older than trigger
-				SendWarningMessage(MI_DEVICE_INTERN, tr("Camera %1: image dropped because of time difference %2 ms").arg(deviceInfoPtr->cameraId).arg(timeDiff * 1000));
+				SendWarningMessage(MI_DEVICE_INTERN, tr("Camera %1: image dropped becouse of time difference %2 ms").arg(deviceInfoPtr->cameraId).arg(timeDiff * 1000));
 				deviceInfoPtr->devicePtr->PopImage(imageInfoPtr);	
 				continue;	// this frame was skipped, we have to get next one
 			}
@@ -217,9 +217,7 @@ istd::CRange CGenicamCameraComp::GetEenDelayRange() const
 
 bool CGenicamCameraComp::IsTriggerModeSupported(int triggerMode) const
 {
-	return (triggerMode == isig::ITriggerParams::TM_SOFTWARE) || 
-		(triggerMode >= isig::ITriggerParams::TM_CONTINUOUS) && 
-		(triggerMode <= isig::ITriggerParams::TM_FALLING_EDGE);
+	return (triggerMode >= isig::ITriggerParams::TM_CONTINUOUS) && (triggerMode <= isig::ITriggerParams::TM_FALLING_EDGE);
 }
 
 
@@ -344,10 +342,10 @@ int CGenicamCameraComp::GetTriggerModeByParams(const iprm::IParamsSet* paramsPtr
 }
 
 
-const iprm::ILinearAdjustParams* CGenicamCameraComp::GetAdjustFromParams(const iprm::IParamsSet* paramsPtr) const
+const imeas::ILinearAdjustParams* CGenicamCameraComp::GetAdjustFromParams(const iprm::IParamsSet* paramsPtr) const
 {
 	if (m_adjustParamsIdAttrPtr.IsValid()){
-		const iprm::ILinearAdjustParams* adjustParamsPtr = dynamic_cast<const iprm::ILinearAdjustParams*>(paramsPtr->GetParameter(*m_adjustParamsIdAttrPtr));
+		const imeas::ILinearAdjustParams* adjustParamsPtr = dynamic_cast<const imeas::ILinearAdjustParams*>(paramsPtr->GetParameter(*m_adjustParamsIdAttrPtr));
 		if (adjustParamsPtr != NULL){
 			return adjustParamsPtr;
 		}
@@ -423,7 +421,7 @@ bool CGenicamCameraComp::SynchronizeCameraParams(const iprm::IParamsSet* paramsP
 
 	const i2d::CRectangle* roiParamsPtr = GetRoiFromParams(paramsPtr);
 	const icam::IExposureParams* exposureParamsPtr = GetEposureTimeFromParams(paramsPtr);
-	const iprm::ILinearAdjustParams* adjustParamsPtr = GetAdjustFromParams(paramsPtr);
+	const imeas::ILinearAdjustParams* adjustParamsPtr = GetAdjustFromParams(paramsPtr);
 	int triggerMode = GetTriggerModeByParams(paramsPtr);
 
 	bool needLock = false;
@@ -471,7 +469,7 @@ bool CGenicamCameraComp::SynchronizeCameraParams(const iprm::IParamsSet* paramsP
 		}
 
 		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineSelector", "Line1") && retVal;
-		//retVal = deviceInfo.devicePtr->SetStringNodeValue("LineMode", "Output") && retVal;
+		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineMode", "Output") && retVal;
 		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineSource", "ExposureActive") && retVal;
 
 		if (roiParamsPtr != NULL){
@@ -590,12 +588,7 @@ void CGenicamCameraComp::OnComponentCreated()
 
 		m_ipAddressToIndexMap[devicePtr->GetIpAddress()] = i;
 
-		if (m_imageBufferSizeAttrPtr.IsValid()){
-			devicePtr->SetImageBufferFrameCount(qMax(1, *m_imageBufferSizeAttrPtr));
-		}
-		else{
-			devicePtr->SetImageBufferFrameCount(1);
-		}
+		devicePtr->SetImageBufferFrameCount(10);
 
 		if (*m_connectOnStartAttrPtr){
 			deviceInfoPtr->EnsureConnected();
@@ -618,18 +611,18 @@ void CGenicamCameraComp::OnComponentDestroyed()
 
 void CGenicamCameraComp::OnCameraEventLog(int type, QString message)
 {
-	istd::IInformation::InformationCategory category = istd::IInformation::IC_CRITICAL;
+	istd::IInformationProvider::InformationCategory category = istd::IInformationProvider::IC_CRITICAL;
 	switch (type){
 	case gige_EM_TYPE_INFO:
-		category = istd::IInformation::IC_INFO;
+		category = istd::IInformationProvider::IC_INFO;
 		break;
 
 	case gige_EM_TYPE_WARNING:
-		category = istd::IInformation::IC_WARNING;
+		category = istd::IInformationProvider::IC_WARNING;
 		break;
 
 	case gige_EM_TYPE_ERROR:
-		category = istd::IInformation::IC_ERROR;
+		category = istd::IInformationProvider::IC_ERROR;
 		break;
 	}
 

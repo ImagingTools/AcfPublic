@@ -67,33 +67,31 @@
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (iview::ITouchable)</span>
 <a name="l00041"></a>00041        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a9d4e81ca0f165350cd7553ed36c06c9e" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a30da6933f079a5f179fb65d8eb675214" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00043"></a>00043 <span class="keyword">protected</span>:
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a8a1f1aa1a90093096099c71a794b13ff">DrawAnnulus</a>(QPainter&amp; painter, <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> center, <span class="keywordtype">int</span> minRadius1, <span class="keywordtype">int</span> maxRadius1, <span class="keywordtype">bool</span> fillFlag = <span class="keyword">true</span>) <span class="keyword">const</span>;
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="keyword">protected</span>:
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a8a1f1aa1a90093096099c71a794b13ff">DrawAnnulus</a>(QPainter&amp; painter, <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> center, <span class="keywordtype">int</span> minRadius1, <span class="keywordtype">int</span> maxRadius1, <span class="keywordtype">bool</span> fillFlag = <span class="keyword">true</span>) <span class="keyword">const</span>;
+<a name="l00046"></a>00046        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a88b56449c7bb3fe2c52cb249674f0f36" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">protected</span>:
+<a name="l00049"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a968feca74a6cfabfa1d455998072e330">00049</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a968feca74a6cfabfa1d455998072e330">m_isCenterVisible</a>;
 <a name="l00050"></a>00050 
-<a name="l00051"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a968feca74a6cfabfa1d455998072e330">00051</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a968feca74a6cfabfa1d455998072e330">m_isCenterVisible</a>;
-<a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#abc3940808dba5f4562c29543984e76d6">00053</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#abc3940808dba5f4562c29543984e76d6">m_editRadiusMode</a>;
-<a name="l00054"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a7bcc7e1de52554534fca5286c26d8c68">00054</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a7bcc7e1de52554534fca5286c26d8c68">m_isEditableRadius</a>;
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="comment">// true when the outer radius is being edited</span>
-<a name="l00057"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#aaf298efd3f2a7e2e60b6f12a5357283d">00057</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#aaf298efd3f2a7e2e60b6f12a5357283d">m_editRadius2Mode</a>;
-<a name="l00058"></a>00058        <span class="comment">// true when the outer radius is editable</span>
-<a name="l00059"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a13423a0d491bc6e958e7141733a66bcf">00059</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a13423a0d491bc6e958e7141733a66bcf">m_isEditableRadius2</a>;
-<a name="l00060"></a>00060 };
-<a name="l00061"></a>00061 
+<a name="l00051"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#abc3940808dba5f4562c29543984e76d6">00051</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#abc3940808dba5f4562c29543984e76d6">m_editRadiusMode</a>;
+<a name="l00052"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a7bcc7e1de52554534fca5286c26d8c68">00052</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a7bcc7e1de52554534fca5286c26d8c68">m_isEditableRadius</a>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054        <span class="comment">// true when the outer radius is being edited</span>
+<a name="l00055"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#aaf298efd3f2a7e2e60b6f12a5357283d">00055</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#aaf298efd3f2a7e2e60b6f12a5357283d">m_editRadius2Mode</a>;
+<a name="l00056"></a>00056        <span class="comment">// true when the outer radius is editable</span>
+<a name="l00057"></a><a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a13423a0d491bc6e958e7141733a66bcf">00057</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_annulus_shape.html#a13423a0d491bc6e958e7141733a66bcf">m_isEditableRadius2</a>;
+<a name="l00058"></a>00058 };
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 } <span class="comment">// namespace iview</span>
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063 } <span class="comment">// namespace iview</span>
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="preprocessor">#endif // !iview_CInteractiveAnnulusShape_included</span>
-<a name="l00067"></a>00067 <span class="preprocessor"></span>
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif // !iview_CInteractiveAnnulusShape_included</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span>
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

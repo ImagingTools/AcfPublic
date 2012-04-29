@@ -35,7 +35,7 @@ namespace iview
 // public methods
 
 CViewport::CViewport(CConsoleBase* framePtr, QWidget* parent)
-	:BaseClass(parent),
+:	BaseClass2(parent),
 	m_pixelPositionFormatter(0),
 	m_logicalPositionFormatter(2),
 	m_framePtr(framePtr)
@@ -69,13 +69,10 @@ CViewport::~CViewport()
 }
 
 
-
 CConsoleBase* CViewport::GetFramePtr() const
 {
 	return m_framePtr;
 }
-
-
 
 
 void CViewport::UpdateFitTransform()
@@ -183,61 +180,22 @@ bool CViewport::OnMouseMove(istd::CIndex2d position)
 {
 	bool retVal = BaseClass::OnMouseMove(position);
 
-	CConsoleBase::CursorInfo info;
-
-	// pixel position
-	const iview::CScreenTransform& transform = GetTransform();
-	info.pixelPos = transform.GetClientPosition(position);
-
-	// color info
+	// info text
+	QString infoText;
 	int backgroundLayerIndex = GetBackgroundLayerIndex();
 	if (backgroundLayerIndex >= 0){
-		const iview::CSingleLayer* layerPtr = dynamic_cast<const iview::CSingleLayer*>(&GetLayer(backgroundLayerIndex));
-		if (layerPtr != NULL){
-			const iview::CImageShape* backgroundShapePtr = dynamic_cast<const iview::CImageShape*>(layerPtr->GetShapePtr());
-			if (m_framePtr->IsPixelValueVisible() && backgroundShapePtr != NULL){
-				const iimg::IBitmap* bitmapPtr = dynamic_cast<const iimg::IBitmap*>(backgroundShapePtr->GetModelPtr());
-				if (bitmapPtr != NULL){
-					istd::CIndex2d bitmapPos = info.pixelPos.ToIndex2d();
-					ibase::CSize bitmapSize = bitmapPtr->GetImageSize();
-					if (			(bitmapPos.GetX() >= 0) &&
-									(bitmapPos.GetY() >= 0) &&
-									(bitmapPos.GetX() < bitmapSize.GetX()) &&
-									(bitmapPos.GetY() < bitmapSize.GetY())){
-						int pixelMode = bitmapPtr->GetPixelFormat();
-
-						icmm::CVarColor pixelValue = bitmapPtr->GetColorAt(bitmapPos);
-						
-						switch (pixelMode){
-							case iimg::IBitmap::PF_GRAY:
-							{
-								info.pixelBrightness = pixelValue[0] * 100;
-								break;
-							}
-
-							case iimg::IBitmap::PF_RGB:
-							{
-								info.red = pixelValue[0] * 100;
-								info.green = pixelValue[1] * 100;
-								info.blue = pixelValue[2] * 100;
-								break;
-							}
-
-							case iimg::IBitmap::PF_RGBA:
-							{
-								info.red = pixelValue[0] * 100;
-								info.green = pixelValue[1] * 100;
-								info.blue = pixelValue[2] * 100;
-								info.alpha = pixelValue[3] * 100;
-								break;
-							}
-						}
-					}
-				}
-			}
+		if (m_framePtr->IsPixelValueVisible()){
+			const iview::IViewLayer& backgroundLayer = GetLayer(backgroundLayerIndex);
+			infoText = backgroundLayer.GetShapeDescriptionAt(position);
 		}
 	}
 
+	// pixel position
+	i2d::CVector2d pixelPosition;
+	const iview::CScreenTransform& transform = GetTransform();
+	pixelPosition = transform.GetClientPosition(position);
+
+	// logical position
 	i2d::CVector2d logPosition;
 	if (m_framePtr->IsMmPositionVisible()){
 		const iview::CScreenTransform& logToScreenTransform = GetLogToScreenTransform();
@@ -245,14 +203,14 @@ bool CViewport::OnMouseMove(istd::CIndex2d position)
 		const i2d::ITransformation2d* calibrationPtr = GetCalibration();
 		const i2d::ITransformation2d* isomorphCalibPtr = dynamic_cast<const i2d::ITransformation2d*>(calibrationPtr);
 		if (isomorphCalibPtr != NULL){
-			isomorphCalibPtr->GetPositionAt(info.pixelPos, info.logicalPos);
+			isomorphCalibPtr->GetPositionAt(pixelPosition, logPosition);
 		}
 		else{
-			info.logicalPos = logToScreenTransform.GetClientPosition(position);
+			logPosition = logToScreenTransform.GetClientPosition(position);
 		}
 	}
 
-	m_framePtr->UpdateCursorInfo(info);
+	m_framePtr->UpdateCursorInfo(pixelPosition, logPosition, infoText);
 
 	return retVal;
 }
@@ -272,6 +230,63 @@ void CViewport::ConnectCalibrationShape(iview::IShape* shapePtr)
 
 
 // protected methods
+
+void CViewport::SetBackgroundBufferValid(bool state)
+{
+	BaseClass::SetBackgroundBufferValid(state);
+	if (!state && (m_framePtr != NULL)){
+		int backgroundLayerIndex = GetBackgroundLayerIndex();
+		if (backgroundLayerIndex >= 0){
+			const iview::IViewLayer& layer = GetLayer(backgroundLayerIndex);
+
+			i2d::CRect fitArea = GetFitArea();
+
+			bool isBkActive = !fitArea.IsEmpty();
+			if (isBkActive != m_framePtr->m_isBkActive){
+				m_framePtr->m_isBkActive = isBkActive;
+				if (m_framePtr->m_isZoomToFit){
+					if (isBkActive){
+						UpdateFitTransform();
+					}
+					else{
+						SetZoom(iview::CViewBase::ZM_RESET);
+					}
+				}
+				m_framePtr->UpdateButtonsState();
+			}
+		}
+	}
+}
+
+
+void CViewport::OnBoundingBoxChanged()
+{
+	if (m_framePtr != NULL){
+		m_framePtr->OnBoundingBoxChanged();
+	}
+}
+
+
+void CViewport::OnResize()
+{
+	BaseClass::OnResize();
+
+	UpdateFitTransform();
+	if (m_framePtr != NULL){
+		m_framePtr->UpdateComponentsPosition();
+	}
+}
+
+
+bool CViewport::CanBeMoved() const
+{
+	if (m_framePtr != NULL){
+		return !m_framePtr->m_isZoomToFit && BaseClass::CanBeMoved();
+	}
+
+	return false;
+}
+
 
 // reimplemented Qt (QWidget)
 
@@ -303,7 +318,7 @@ void CViewport::mousePressEvent(QMouseEvent* eventPtr)
 		Update();
 	}
 	else{
-		BaseClass::mousePressEvent(eventPtr);
+		BaseClass2::mousePressEvent(eventPtr);
 	}
 }
 
@@ -323,7 +338,7 @@ void CViewport::mouseReleaseEvent(QMouseEvent* eventPtr)
 		Update();
 	}
 	else{
-		BaseClass::mousePressEvent(eventPtr);
+		BaseClass2::mousePressEvent(eventPtr);
 	}
 }
 
@@ -338,7 +353,7 @@ void CViewport::mouseMoveEvent(QMouseEvent* eventPtr)
 
 	OnMouseMove(pos);
 
-	BaseClass::mouseMoveEvent(eventPtr);
+	BaseClass2::mouseMoveEvent(eventPtr);
 }
 
 
@@ -349,7 +364,7 @@ void CViewport::SetMousePointer(MousePointerMode mode)
 	I_ASSERT(mode >= 0);
 	I_ASSERT(mode < MPM_LAST);
 
-	BaseClass::setCursor(m_mousePointerModes[mode]);
+	BaseClass2::setCursor(m_mousePointerModes[mode]);
 }
 
 
@@ -390,82 +405,27 @@ int CViewport::GetKeysState(const QMouseEvent& mouseEvent)
 }
 
 
-// protected methods
-
-void CViewport::SetBackgroundBufferValid(bool state)
-{
-	BaseClass::SetBackgroundBufferValid(state);
-	if (!state){
-		int backgroundLayerIndex = GetBackgroundLayerIndex();
-		if (backgroundLayerIndex >= 0){
-			const iview::CSingleLayer* layerPtr = dynamic_cast<const iview::CSingleLayer*>(&GetLayer(backgroundLayerIndex));
-			if (layerPtr != NULL){
-				const iview::CImageShape* backgroundPtr = dynamic_cast<const iview::CImageShape*>(layerPtr->GetShapePtr());
-				bool isBkActive = (backgroundPtr != NULL) && !backgroundPtr->GetBoundingBox().IsEmpty();
-				if ((m_framePtr != NULL) && (isBkActive != m_framePtr->m_isBkActive)){
-					m_framePtr->m_isBkActive = isBkActive;
-					if (m_framePtr->m_isZoomToFit){
-						if (isBkActive){
-							UpdateFitTransform();
-						}
-						else{
-							SetZoom(iview::CViewBase::ZM_RESET);
-						}
-					}
-					m_framePtr->UpdateButtonsState();
-				}
-			}
-		}
-	}
-}
-
-
-void CViewport::OnBoundingBoxChanged()
-{
-	if (m_framePtr != NULL){
-		m_framePtr->OnBoundingBoxChanged();
-	}
-}
-
-
-void CViewport::OnResize()
-{
-	BaseClass::OnResize();
-
-	UpdateFitTransform();
-	if (m_framePtr != NULL){
-		m_framePtr->UpdateComponentsPosition();
-	}
-}
-
-
-bool CViewport::CanBeMoved() const
-{
-	if (m_framePtr != NULL){
-		return !m_framePtr->m_isZoomToFit && BaseClass::CanBeMoved();
-	}
-
-	return false;
-}
-
-
 // reimplemented (iview::CViewBase)
 
-void CViewport::CalcBoundingBox() const
+i2d::CRect CViewport::CalcBoundingBox() const
 {
 	if (!m_blockBBoxEvent){
 		m_blockBBoxEvent = true;
 
 		const i2d::CRect& lastBox = GetBoundingBox();
-		BaseClass::CalcBoundingBox();
+
+		i2d::CRect boundingBox = BaseClass::CalcBoundingBox();
+
 		if (lastBox != GetBoundingBox()){
 			const_cast<CViewport*>(this)->OnBoundingBoxChanged();
 		}
 
 		m_blockBBoxEvent = false;
+
+		return boundingBox;
 	}
 	else{
-		BaseClass::CalcBoundingBox();
+		return BaseClass::CalcBoundingBox();
 	}
 }
 

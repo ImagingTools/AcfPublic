@@ -50,7 +50,7 @@ CMultiDocumentManagerBase::CMultiDocumentManagerBase()
 
 // reimplemented (idoc::IDocumentManager)
 
-imod::IUndoManager* CMultiDocumentManagerBase::GetUndoManagerForDocument(const istd::IChangeable* documentPtr) const
+idoc::IUndoManager* CMultiDocumentManagerBase::GetUndoManagerForDocument(const istd::IChangeable* documentPtr) const
 {
 	int documentsCount = GetDocumentsCount();
 	for (int i = 0; i < documentsCount; ++i){
@@ -466,7 +466,7 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
 			infoPtr->filePath = filePath;
 			infoPtr->documentTypeId = documentTypeId;
 
-			istd::CChangeNotifier documentNotifier(infoPtr->documentPtr.GetPtr(), imod::IUndoManager::CF_NO_UNDO);
+			istd::CChangeNotifier documentNotifier(infoPtr->documentPtr.GetPtr(), istd::IChangeable::CF_NO_UNDO);
 
 			iser::IFileLoader* loaderPtr = documentTemplatePtr->GetFileLoader(documentTypeId);
 			if (		(loaderPtr != NULL) &&

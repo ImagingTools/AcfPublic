@@ -62,13 +62,11 @@ public:
 	// reimplemented (iview::ITouchable)
 	virtual TouchState IsTouched(istd::CIndex2d position) const;
 
-	// reimplemented (iview::CInteractiveShapeBase)
-	virtual void CalcBoundingBox(i2d::CRect& result) const;
-
 protected:
 	virtual void DrawAnnulus(QPainter& painter, istd::CIndex2d center, int minRadius1, int maxRadius1, bool fillFlag = true) const;
 
-protected:
+	// reimplemented (iview::CShapeBase)
+	virtual i2d::CRect CalcBoundingBox() const;
 
 	bool m_isCenterVisible;
 

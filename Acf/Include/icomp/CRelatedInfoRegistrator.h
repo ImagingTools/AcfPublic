@@ -46,18 +46,6 @@ public:
 };
 
 
-// public inline methods
-
-inline CRelatedInfoRegistrator::CRelatedInfoRegistrator(
-			IRealAttributeStaticInfo& baseAttributeInfo,
-			int metaGroupId,
-			const QByteArray& id,
-			int flags)
-{
-	baseAttributeInfo.AddRelatedMetaId(metaGroupId, id, flags);
-}
-
-
 } // namespace icomp
 
 

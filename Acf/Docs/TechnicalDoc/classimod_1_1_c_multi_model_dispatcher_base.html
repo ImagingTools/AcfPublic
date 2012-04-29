@@ -49,16 +49,15 @@ Inheritance diagram for imod::CMultiModelDispatcherBase:</div>
  <div class="center">
   <img src="classimod_1_1_c_multi_model_dispatcher_base.png" usemap="#imod::CMultiModelDispatcherBase_map" alt=""/>
   <map id="imod::CMultiModelDispatcherBase_map" name="imod::CMultiModelDispatcherBase_map">
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="915,0,1210,24"/>
-<area href="classicmpstr_1_1_c_component_note_editor_comp.html" alt="icmpstr::CComponentNoteEditorComp" shape="rect" coords="0,112,295,136"/>
-<area href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the 2D-console." alt="iqt2d::CImageViewComp" shape="rect" coords="305,112,600,136"/>
-<area href="classiqtgui_1_1_c_commands_binder_comp.html" title="Component for binding of multiple command providers." alt="iqtgui::CCommandsBinderComp" shape="rect" coords="610,112,905,136"/>
-<area href="classiqtprm_1_1_c_options_manager_gui_comp.html" title="Simple editor for an exclusive option selection." alt="iqtprm::COptionsManagerGuiComp" shape="rect" coords="915,112,1210,136"/>
-<area href="classiqtprm_1_1_c_selection_param_gui_comp.html" title="Simple editor for an exclusive option selection." alt="iqtprm::CSelectionParamGuiComp" shape="rect" coords="1220,112,1515,136"/>
-<area href="classiqtproc_1_1_c_document_processing_manager_comp_base.html" alt="iqtproc::CDocumentProcessingManagerCompBase" shape="rect" coords="1525,112,1820,136"/>
-<area href="classiwiz_1_1_c_composed_state_controller_comp.html" title="Component implementation of a wizard page." alt="iwiz::CComposedStateControllerComp" shape="rect" coords="1830,112,2125,136"/>
-<area href="classiqtproc_1_1_c_document_processing_command_comp.html" title="Component to trigger some processing action for the current document." alt="iqtproc::CDocumentProcessingCommandComp" shape="rect" coords="1372,168,1667,192"/>
-<area href="classiqtproc_1_1_c_document_processing_manager_comp.html" title="Component to trigger document-to-document processing action." alt="iqtproc::CDocumentProcessingManagerComp" shape="rect" coords="1677,168,1972,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,295,24"/>
+<area href="classicmpstr_1_1_c_component_note_editor_comp.html" alt="icmpstr::CComponentNoteEditorComp" shape="rect" coords="305,112,600,136"/>
+<area href="classiqt2d_1_1_c_image_view_comp.html" title="Show observed bitmap on the 2D-console." alt="iqt2d::CImageViewComp" shape="rect" coords="305,168,600,192"/>
+<area href="classiqtgui_1_1_c_commands_binder_comp.html" title="Component for binding of multiple command providers." alt="iqtgui::CCommandsBinderComp" shape="rect" coords="305,224,600,248"/>
+<area href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page..." alt="iqtgui::CTabContainerGuiComp" shape="rect" coords="305,280,600,304"/>
+<area href="classiqtprm_1_1_c_options_manager_gui_comp.html" title="Simple editor for an exclusive option selection." alt="iqtprm::COptionsManagerGuiComp" shape="rect" coords="305,336,600,360"/>
+<area href="classiqtprm_1_1_c_selection_param_gui_comp.html" title="Simple editor for an exclusive option selection." alt="iqtprm::CSelectionParamGuiComp" shape="rect" coords="305,392,600,416"/>
+<area href="classiqtproc_1_1_c_document_processing_manager_comp_base.html" alt="iqtproc::CDocumentProcessingManagerCompBase" shape="rect" coords="305,448,600,472"/>
+<area href="classiwiz_1_1_c_composed_state_controller_comp.html" title="Component implementation of a wizard page." alt="iwiz::CComposedStateControllerComp" shape="rect" coords="305,504,600,528"/>
 </map>
  </div></div>
 
@@ -86,8 +85,9 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Generic implementation of a data model changes notifier. </p>
 <p>You can register several data models objects that you want to observe with RegisterModel method. You will get a notification event on each change in the observed data model via OnModelChanged method call of your notification consumer. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Notification consumer class must implement the method void <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#aa28b9338ca45e28b03cadaf4454f14e8">OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr)</a> to support the notification callback. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan...">imod::CMultiModelBridgeBase</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html#l00026">26</a> of file <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html">CMultiModelDispatcherBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html#l00027">27</a> of file <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html">CMultiModelDispatcherBase.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ac95053e3935765098a79b3dcf127e968"></a><!-- doxytag: member="imod::CMultiModelDispatcherBase::GetObjectAt" ref="ac95053e3935765098a79b3dcf127e968" args="(int modelId) const " -->
 <div class="memitem">
@@ -108,7 +108,7 @@ template&lt;class Object &gt; </div>
 
 <p>Get concrete object instance of the obsered model. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html#l00086">86</a> of file <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html">CMultiModelDispatcherBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html#l00087">87</a> of file <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html">CMultiModelDispatcherBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -145,7 +145,7 @@ template&lt;class Object &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#af5368c8e47a06f7343439f4484d820b8">iqtprm::CSelectionParamGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#a1926015dfa0d2db57c62ab7489c0465b">iqtprm::COptionsManagerGuiComp</a>, <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a2aa39ee74f25fd2b57e8e7703dc97943">iqtproc::CDocumentProcessingManagerCompBase</a>, <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a3955147284cf794a76ee3069896183af">iqt2d::CImageViewComp</a>, <a class="el" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa059cd59fabdcd78ae888eba79471e28">iwiz::CComposedStateControllerComp</a>, <a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#aeb2d73b45d65c9f9666746e44297cf79">icmpstr::CComponentNoteEditorComp</a>, and <a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#a3251e22119e35288f631a0c9ba587ac6">iqtgui::CCommandsBinderComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#af5368c8e47a06f7343439f4484d820b8">iqtprm::CSelectionParamGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#a1926015dfa0d2db57c62ab7489c0465b">iqtprm::COptionsManagerGuiComp</a>, <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#a2aa39ee74f25fd2b57e8e7703dc97943">iqtproc::CDocumentProcessingManagerCompBase</a>, <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#aaac719be4d5f18d9624666b972f5dbde">iqtgui::CTabContainerGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a3955147284cf794a76ee3069896183af">iqt2d::CImageViewComp</a>, <a class="el" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa059cd59fabdcd78ae888eba79471e28">iwiz::CComposedStateControllerComp</a>, <a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#aeb2d73b45d65c9f9666746e44297cf79">icmpstr::CComponentNoteEditorComp</a>, and <a class="el" href="classiqtgui_1_1_c_commands_binder_comp.html#a3251e22119e35288f631a0c9ba587ac6">iqtgui::CCommandsBinderComp</a>.</p>
 
 </div>
 </div>

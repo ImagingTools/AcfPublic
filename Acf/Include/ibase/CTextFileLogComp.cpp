@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/IInformation.h"
+#include "istd/IInformationProvider.h"
 #include "imod/IModel.h"
 
 

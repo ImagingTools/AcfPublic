@@ -52,28 +52,30 @@
 <a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#a5a434a3fcea151060f3388d3e4b69e94" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="keyword">protected</span>:
-<a name="l00031"></a>00031        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#a84a89678a1f9c61ff2bd83a86d454310" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#afeb22b718c7ed369f0c487286a119e04">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#a80db47cc953fba644ac117d13c641d60">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keyword">private</span>:
-<a name="l00037"></a>00037        <span class="keyword">enum</span> EditBound
-<a name="l00038"></a>00038        {
-<a name="l00039"></a>00039               EB_LEFT,
-<a name="l00040"></a>00040               EB_RIGHT,
-<a name="l00041"></a>00041               EB_TOP,
-<a name="l00042"></a>00042               EB_BOTTOM
-<a name="l00043"></a>00043        } m_editBound;
-<a name="l00044"></a>00044 };
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 } <span class="comment">// namespace iview</span>
+<a name="l00031"></a>00031        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#ad8b2f015959457499d8c5061dd670746" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#afeb22b718c7ed369f0c487286a119e04">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#a80db47cc953fba644ac117d13c641d60">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">private</span>:
+<a name="l00039"></a>00039        <span class="keyword">enum</span> EditBound
+<a name="l00040"></a>00040        {
+<a name="l00041"></a>00041               EB_LEFT,
+<a name="l00042"></a>00042               EB_RIGHT,
+<a name="l00043"></a>00043               EB_TOP,
+<a name="l00044"></a>00044               EB_BOTTOM
+<a name="l00045"></a>00045        } m_editBound;
+<a name="l00046"></a>00046 };
+<a name="l00047"></a>00047 
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="preprocessor">#endif // !iview_CInteractivePerspectiveCalibrationShape_included</span>
-<a name="l00051"></a>00051 <span class="preprocessor"></span>
-<a name="l00052"></a>00052 
+<a name="l00049"></a>00049 } <span class="comment">// namespace iview</span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iview_CInteractivePerspectiveCalibrationShape_included</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00054"></a>00054 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

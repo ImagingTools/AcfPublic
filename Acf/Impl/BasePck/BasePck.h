@@ -24,9 +24,7 @@
 #define BasePck_included
 
 
-#include "imod/IUndoManager.h"
 #include "imod/IObserver.h"
-#include "imod/CSerializedUndoManager.h"
 
 #include "iser/CXmlFileReadArchive.h"
 #include "iser/CXmlFileWriteArchive.h"
@@ -40,6 +38,7 @@
 #include "idoc/CCompositeDocumentTemplateComp.h"
 #include "idoc/CDocumentManagerListenerComp.h"
 #include "idoc/CSelectedDocModelBinderComp.h"
+#include "idoc/CSerializedUndoManager.h"
 
 #include "ibase/CComposedLoaderComp.h"
 #include "ibase/CTextFileLoaderComp.h"
@@ -70,7 +69,6 @@
 #include "iprm/CVariableParamComp.h"
 #include "iprm/CFileNameParamComp.h"
 #include "iprm/CEnableableParamComp.h"
-#include "iprm/CLinearAdjustParamsComp.h"
 #include "iprm/CSelectionParamComp.h"
 #include "iprm/CManagerParamsSetShadowerComp.h"
 #include "iprm/CSelectionConstraintsComp.h"
@@ -101,10 +99,6 @@ namespace BasePck
 {
 
 
-typedef icomp::TMakeComponentWrap<
-			imod::CSerializedUndoManager,
-			imod::IUndoManager,
-			imod::IObserver> SerializedUndoManager;
 typedef ibase::CFileTypeInfoComp FileTypeInfo;
 typedef ibase::TFileSerializerComp<iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive> XmlFileSerializer;
 typedef ibase::TFileSerializerComp<iser::CFileReadArchive, iser::CFileWriteArchive> BinaryFileSerializer;
@@ -134,7 +128,6 @@ typedef icomp::TModelCompWrap<iprm::CComposedParamsSetComp> ComposedParamsSet;
 typedef icomp::TModelCompWrap<iprm::CVariableParamComp> VariableParam;
 typedef icomp::TModelCompWrap<iprm::CFileNameParamComp> FileNameParam;
 typedef icomp::TModelCompWrap<iprm::CEnableableParamComp> EnableableParam;
-typedef icomp::TModelCompWrap<iprm::CLinearAdjustParamsComp> LinearAdjustParams;
 typedef icomp::TModelCompWrap<iprm::CSelectionParamComp> SelectionParam;
 typedef iprm::CManagerParamsSetShadowerComp ManagerParamsSetShadower;
 typedef iprm::CSelectionConstraintsComp SelectionConstraints;
@@ -144,6 +137,11 @@ typedef idoc::CSingleDocumentTemplateComp SingleDocumentTemplate;
 typedef idoc::CCompositeDocumentTemplateComp CompositeDocumentTemplate;
 typedef icomp::TModelCompWrap<idoc::CDocumentManagerListenerComp> DocumentManagerListener;
 typedef idoc::CSelectedDocModelBinderComp SelectedDocModelBinder;
+typedef icomp::TMakeComponentWrap<
+			imod::TModelWrap<idoc::CSerializedUndoManager>,
+			idoc::IUndoManager,
+			imod::IObserver,
+			imod::IModel> SerializedUndoManager;
 
 typedef icomp::TModelCompWrap<i2d::CPosition2dComp> Position2d;
 typedef icomp::TModelCompWrap<i2d::CRectangleComp> Rectangle;

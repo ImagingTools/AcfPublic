@@ -54,9 +54,9 @@ Inheritance diagram for icmpstr::CRegistryPropEditorComp::TextLog:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#aab742bf7896dcdda297a053786cd0b25">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *messagePtr=NULL) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some messge is supported.  <a href="#aab742bf7896dcdda297a053786cd0b25"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#aff2fb5b7f38432d593e83ae1ac25730f">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">MessagePtr</a> &amp;messagePtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#a9eae8a44f0b67a4c3d9af5de1ef031d3">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *messagePtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some messge is supported.  <a href="#a9eae8a44f0b67a4c3d9af5de1ef031d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#aff2fb5b7f38432d593e83ae1ac25730f">AddMessage</a> (const <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">MessagePtr</a> &amp;messagePtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a message item to the container.  <a href="#aff2fb5b7f38432d593e83ae1ac25730f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -70,7 +70,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void icmpstr::CRegistryPropEditorComp::TextLog::AddMessage </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">MessagePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>messagePtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -84,7 +84,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aab742bf7896dcdda297a053786cd0b25"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::TextLog::IsMessageSupported" ref="aab742bf7896dcdda297a053786cd0b25" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformation *messagePtr=NULL) const " -->
+<a class="anchor" id="a9eae8a44f0b67a4c3d9af5de1ef031d3"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::TextLog::IsMessageSupported" ref="a9eae8a44f0b67a4c3d9af5de1ef031d3" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformationProvider *messagePtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information.html">istd::IInformation</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *&#160;</td>
           <td class="paramname"><em>messagePtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
@@ -122,16 +122,16 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1" title="Category of message.">istd::IInformation::InformationCategory</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a>. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">messageId</td><td>ID of message as defined in <a class="el" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a> or -1 if undefined. </td></tr>
+    <tr><td class="paramname">messageId</td><td>ID of message as defined in <a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> or -1 if undefined. </td></tr>
     <tr><td class="paramname">messagePtr</td><td>optional message object, or NULL if undefined. Please note, this object will not be stored by receiver. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classibase_1_1_i_message_consumer.html#a7ea687c817844fbc1b2e31526ca592a2">ibase::IMessageConsumer</a>.</p>
+<p>Implements <a class="el" href="classibase_1_1_i_message_consumer.html#ad60ff234c5745a0b3029f5f326106ed5">ibase::IMessageConsumer</a>.</p>
 
 </div>
 </div>

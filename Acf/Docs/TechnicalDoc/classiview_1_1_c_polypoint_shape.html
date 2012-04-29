@@ -33,6 +33,7 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iview::CPolypointShape Class Reference</div>  </div>
@@ -46,19 +47,20 @@ Inheritance diagram for iview::CPolypointShape:</div>
  <div class="center">
   <img src="classiview_1_1_c_polypoint_shape.png" usemap="#iview::CPolypointShape_map" alt=""/>
   <map id="iview::CPolypointShape_map" name="iview::CPolypointShape_map">
-<area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="430,224,635,248"/>
-<area href="classiview_1_1_t_shape_base.html" alt="iview::TShapeBase&lt; IShape &gt;" shape="rect" coords="430,168,635,192"/>
-<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="107,112,312,136"/>
-<area href="classiview_1_1_c_shape_control.html" alt="iview::CShapeControl" shape="rect" coords="430,112,635,136"/>
-<area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="645,112,850,136"/>
+<area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="215,168,420,192"/>
+<area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="0,112,205,136"/>
+<area href="classiview_1_1_c_shape_control.html" alt="iview::CShapeControl" shape="rect" coords="215,112,420,136"/>
+<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="645,112,850,136"/>
 <area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="0,56,205,80"/>
-<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="215,56,420,80"/>
-<area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="430,56,635,80"/>
-<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="645,56,850,80"/>
+<area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="215,56,420,80"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="430,56,635,80"/>
+<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="645,56,850,80"/>
+<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="860,56,1065,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,205,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="215,0,420,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="430,0,635,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="645,0,850,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="860,0,1065,24"/>
 </map>
  </div></div>
 
@@ -72,12 +74,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polypoint_shape.html#a090f5027b891f76e487f60989e862df5">CPolypointShape</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polypoint_shape.html#ab01c9f433bf2eafe076469188a1ad9cd">IsSmallTickersMode</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polypoint_shape.html#a76846a9964429460124ce5503e7bfacd">SetSmallTickersMode</a> (bool state=true)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polypoint_shape.html#a917508cd5cc606316b23a875bd143c96">CalcBoundingBox</a> (<a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#a917508cd5cc606316b23a875bd143c96"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polypoint_shape.html#a81fd4b61e86900408996618d84891720">Draw</a> (QPainter &amp;drawContext) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this shape using draw context.  <a href="#a81fd4b61e86900408996618d84891720"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polypoint_shape.html#a49dd855c4df25de6a5d7b8d555bf272a">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#a49dd855c4df25de6a5d7b8d555bf272a"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polypoint_shape.html#a736fecf391b099c2a0db85af62dfe29b">CalcBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#a736fecf391b099c2a0db85af62dfe29b"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polypoint_shape.html#a5d4d7b3d398d4755a05e4fd102d51d17">m_isSmallTickersMode</a></td></tr>
@@ -96,8 +100,6 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_shape_base.html#a7224e6c066cc0235be3c5fae2da28a87">iview::CShapeBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_polypoint_shape_8h_source.html#l00015">15</a> of file <a class="el" href="_c_polypoint_shape_8h_source.html">CPolypointShape.h</a>.</p>
 
@@ -121,16 +123,15 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a917508cd5cc606316b23a875bd143c96"></a><!-- doxytag: member="iview::CPolypointShape::CalcBoundingBox" ref="a917508cd5cc606316b23a875bd143c96" args="(i2d::CRect &amp;result) const " -->
+<a class="anchor" id="a736fecf391b099c2a0db85af62dfe29b"></a><!-- doxytag: member="iview::CPolypointShape::CalcBoundingBox" ref="a736fecf391b099c2a0db85af62dfe29b" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::CPolypointShape::CalcBoundingBox </td>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> iview::CPolypointShape::CalcBoundingBox </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;&#160;</td>
-          <td class="paramname"><em>result</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -139,7 +140,7 @@ Protected Attributes</h2></td></tr>
 <p>Calculate bounding box. </p>
 <p>You have to implement this method in your shapes implementations. </p>
 
-<p>Implements <a class="el" href="classiview_1_1_t_shape_base.html#ac8122a1550808cea9e3150181e8d6dc5">iview::TShapeBase&lt; IShape &gt;</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_shape_base.html#a778070a9321ab3a7525189254e1b611c">iview::CShapeBase</a>.</p>
 
 </div>
 </div>

@@ -136,72 +136,55 @@
 <a name="l00154"></a>00154 
 <a name="l00158"></a>00158        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a2fe06d42bcca7429c3a047e63ae90848" title="Display specified text in status window.">SetStatusText</a>(<span class="keyword">const</span> QString&amp; message) = 0;
 <a name="l00159"></a>00159 
-<a name="l00160"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html">00160</a>        <span class="keyword">struct </span><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html">CursorInfo</a>
-<a name="l00161"></a>00161        {
-<a name="l00162"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#ab5049f766b3122b9c4debda3dd6632d7">00162</a>               <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#ab5049f766b3122b9c4debda3dd6632d7">CursorInfo</a>()
-<a name="l00163"></a>00163               :      <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a0229744adb5002fad4184d634eaccad6">pixelPos</a>(), <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a7d7f002d3722e34d0595a98f9f9347b7">logicalPos</a>(),
-<a name="l00164"></a>00164                      <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#aa3e9dba40ba928986100a8256659fa2d">pixelBrightness</a>(-1), 
-<a name="l00165"></a>00165                      <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a6b9050c3c8f9db78ebaa2ec454dc1cff">red</a>(-1), <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#af1db97780fcf72caae3356ebf7ac8122">green</a>(-1), <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a062528ad51780ddaf774097eed81f70b">blue</a>(-1)
-<a name="l00166"></a>00166               {}
+<a name="l00160"></a>00160        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a85b84d18b840cebd1744a6ff2e01f31b">UpdateCursorInfo</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; pixelPos, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; logicalPos, <span class="keyword">const</span> QString&amp; infoText) = 0;
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162 <span class="keyword">protected</span>:
+<a name="l00163"></a>00163        <span class="comment">// events</span>
+<a name="l00164"></a>00164        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a093c5a4411f7a19c7bb14c5b50d8687b">OnSelectChange</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape, <span class="keywordtype">bool</span> state) = 0;
+<a name="l00165"></a>00165        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a20c25121739e123a7eb603b917548b08">OnMouseButton</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> state, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>* shapePtr) = 0;
+<a name="l00166"></a>00166        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#ae572753880bc73e2e7a4f4756bf85b5d">OnBoundingBoxChanged</a>() = 0;
 <a name="l00167"></a>00167 
-<a name="l00168"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a0229744adb5002fad4184d634eaccad6">00168</a>               <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a0229744adb5002fad4184d634eaccad6">pixelPos</a>;
-<a name="l00169"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a7d7f002d3722e34d0595a98f9f9347b7">00169</a>               <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a7d7f002d3722e34d0595a98f9f9347b7">logicalPos</a>;
-<a name="l00170"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#aa3e9dba40ba928986100a8256659fa2d">00170</a>               <span class="keywordtype">int</span> <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#aa3e9dba40ba928986100a8256659fa2d">pixelBrightness</a>;
-<a name="l00171"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a6b9050c3c8f9db78ebaa2ec454dc1cff">00171</a>               <span class="keywordtype">int</span> <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a6b9050c3c8f9db78ebaa2ec454dc1cff">red</a>;
-<a name="l00172"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#af1db97780fcf72caae3356ebf7ac8122">00172</a>               <span class="keywordtype">int</span> <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#af1db97780fcf72caae3356ebf7ac8122">green</a>;
-<a name="l00173"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a062528ad51780ddaf774097eed81f70b">00173</a>               <span class="keywordtype">int</span> <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#a062528ad51780ddaf774097eed81f70b">blue</a>;
-<a name="l00174"></a><a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#ad17731dbe1974e72c47e83c177a385b1">00174</a>               <span class="keywordtype">int</span> <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html#ad17731dbe1974e72c47e83c177a385b1">alpha</a>;
-<a name="l00175"></a>00175        };
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#aab6cd580e31799edbbd0729888cd2ba9">UpdateCursorInfo</a>(<span class="keyword">const</span> <a class="code" href="structiview_1_1_c_console_base_1_1_cursor_info.html">CursorInfo</a>&amp; info) = 0;
+<a name="l00168"></a>00168 <span class="keyword">private</span>:
+<a name="l00169"></a>00169        <span class="keywordtype">void</span> Init();
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171        <a class="code" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf" title="Control fitting mode, to fit area of interest (AOI) to display.">FitMode</a> m_fitMode;
+<a name="l00172"></a>00172        <span class="keywordtype">bool</span> m_isRulerVisible;
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174        <span class="keywordtype">bool</span> m_areScollbarsVisible;
+<a name="l00175"></a>00175        <span class="keywordtype">bool</span> m_isStatusVisible;
+<a name="l00176"></a>00176        <span class="keywordtype">bool</span> m_isButtonsPanelVisible;
+<a name="l00177"></a>00177        <span class="keywordtype">bool</span> m_isButtonsPanelVertical;
 <a name="l00178"></a>00178 
-<a name="l00179"></a>00179 <span class="keyword">protected</span>:
-<a name="l00180"></a>00180        <span class="comment">// events</span>
-<a name="l00181"></a>00181        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a093c5a4411f7a19c7bb14c5b50d8687b">OnSelectChange</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape, <span class="keywordtype">bool</span> state) = 0;
-<a name="l00182"></a>00182        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a20c25121739e123a7eb603b917548b08">OnMouseButton</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> state, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>* shapePtr) = 0;
-<a name="l00183"></a>00183        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#ae572753880bc73e2e7a4f4756bf85b5d">OnBoundingBoxChanged</a>() = 0;
-<a name="l00184"></a>00184 
-<a name="l00185"></a>00185 <span class="keyword">private</span>:
-<a name="l00186"></a>00186        <span class="keywordtype">void</span> Init();
-<a name="l00187"></a>00187 
-<a name="l00188"></a>00188        <a class="code" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf" title="Control fitting mode, to fit area of interest (AOI) to display.">FitMode</a> m_fitMode;
-<a name="l00189"></a>00189        <span class="keywordtype">bool</span> m_isRulerVisible;
-<a name="l00190"></a>00190 
-<a name="l00191"></a>00191        <span class="keywordtype">bool</span> m_areScollbarsVisible;
-<a name="l00192"></a>00192        <span class="keywordtype">bool</span> m_isStatusVisible;
-<a name="l00193"></a>00193        <span class="keywordtype">bool</span> m_isButtonsPanelVisible;
-<a name="l00194"></a>00194        <span class="keywordtype">bool</span> m_isButtonsPanelVertical;
+<a name="l00179"></a>00179        <span class="keywordtype">bool</span> m_areZoomsVisible;
+<a name="l00180"></a>00180        <span class="keywordtype">bool</span> m_isZoomToFitVisible;
+<a name="l00181"></a>00181        <span class="keywordtype">bool</span> m_arePolylineButtonsVisible;
+<a name="l00182"></a>00182        <span class="keywordtype">bool</span> m_areUserModeButtonsVisible;
+<a name="l00183"></a>00183        <span class="keywordtype">bool</span> m_isStatusButtonVisible;
+<a name="l00184"></a>00184        <span class="keywordtype">bool</span> m_isScrollbarsButtonVisible;
+<a name="l00185"></a>00185        <span class="keywordtype">bool</span> m_isGridButtonVisible;
+<a name="l00186"></a>00186        <span class="keywordtype">bool</span> m_isRulerButtonVisible;
+<a name="l00187"></a>00187        <span class="keywordtype">bool</span> m_isMmButtonVisible;
+<a name="l00188"></a>00188        <span class="keywordtype">bool</span> m_isUndoButtonVisible;
+<a name="l00189"></a>00189 
+<a name="l00190"></a>00190        <span class="keywordtype">bool</span> m_isPixelPositionVisible;
+<a name="l00191"></a>00191        <span class="keywordtype">bool</span> m_isPixelValueVisible;
+<a name="l00192"></a>00192        <span class="keywordtype">bool</span> m_isMmPositionVisible;
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194        <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a> m_storedTransform;
 <a name="l00195"></a>00195 
-<a name="l00196"></a>00196        <span class="keywordtype">bool</span> m_areZoomsVisible;
-<a name="l00197"></a>00197        <span class="keywordtype">bool</span> m_isZoomToFitVisible;
-<a name="l00198"></a>00198        <span class="keywordtype">bool</span> m_arePolylineButtonsVisible;
-<a name="l00199"></a>00199        <span class="keywordtype">bool</span> m_areUserModeButtonsVisible;
-<a name="l00200"></a>00200        <span class="keywordtype">bool</span> m_isStatusButtonVisible;
-<a name="l00201"></a>00201        <span class="keywordtype">bool</span> m_isScrollbarsButtonVisible;
-<a name="l00202"></a>00202        <span class="keywordtype">bool</span> m_isGridButtonVisible;
-<a name="l00203"></a>00203        <span class="keywordtype">bool</span> m_isRulerButtonVisible;
-<a name="l00204"></a>00204        <span class="keywordtype">bool</span> m_isMmButtonVisible;
-<a name="l00205"></a>00205        <span class="keywordtype">bool</span> m_isUndoButtonVisible;
+<a name="l00196"></a>00196        <span class="keywordtype">bool</span> m_isZoomToFit;
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198        <span class="keywordtype">bool</span> m_isBkActive;
+<a name="l00199"></a>00199 
+<a name="l00200"></a><a class="code" href="classiview_1_1_c_console_base.html#aca5ab6a701842682cce5d5d8c6a33353">00200</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>;
+<a name="l00201"></a>00201 };
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203 
+<a name="l00204"></a>00204 } <span class="comment">// namespace iview</span>
+<a name="l00205"></a>00205 
 <a name="l00206"></a>00206 
-<a name="l00207"></a>00207        <span class="keywordtype">bool</span> m_isPixelPositionVisible;
-<a name="l00208"></a>00208        <span class="keywordtype">bool</span> m_isPixelValueVisible;
-<a name="l00209"></a>00209        <span class="keywordtype">bool</span> m_isMmPositionVisible;
-<a name="l00210"></a>00210 
-<a name="l00211"></a>00211        <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a> m_storedTransform;
-<a name="l00212"></a>00212 
-<a name="l00213"></a>00213        <span class="keywordtype">bool</span> m_isZoomToFit;
-<a name="l00214"></a>00214 
-<a name="l00215"></a>00215        <span class="keywordtype">bool</span> m_isBkActive;
-<a name="l00216"></a>00216 
-<a name="l00217"></a><a class="code" href="classiview_1_1_c_console_base.html#aca5ab6a701842682cce5d5d8c6a33353">00217</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>;
-<a name="l00218"></a>00218 };
-<a name="l00219"></a>00219 
-<a name="l00220"></a>00220 
-<a name="l00221"></a>00221 } <span class="comment">// namespace iview</span>
-<a name="l00222"></a>00222 
-<a name="l00223"></a>00223 
-<a name="l00224"></a>00224 <span class="preprocessor">#endif // !iview_CConsoleBase_included</span>
-<a name="l00225"></a>00225 <span class="preprocessor"></span>
+<a name="l00207"></a>00207 <span class="preprocessor">#endif // !iview_CConsoleBase_included</span>
+<a name="l00208"></a>00208 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

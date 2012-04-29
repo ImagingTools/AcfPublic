@@ -68,59 +68,61 @@
 <a name="l00041"></a>00041        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a0aae3844159e6b23756df0c9a26e7b4b">CalcPoints</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>&amp; line) <span class="keyword">const</span>;
 <a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a5cfa4255a9933046513d0fa652df5c29">ResetPoints</a>() <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a35f9e66e88328568733eb5ec7b0d41fb" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a1694031d1aaaba6ac521ad56abe5a543">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#aab9f773ec5f9dffe96f7b9d0bcb415fd">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// static methods</span>
-<a name="l00050"></a>00050        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a72f71d00cdc255a40484eacd70d08a65">CheckLine</a>(
-<a name="l00051"></a>00051                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; firstPoint,
-<a name="l00052"></a>00052                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; secondPoint,
-<a name="l00053"></a>00053                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; point,
-<a name="l00054"></a>00054                                    <span class="keywordtype">double</span> maxDistance);
-<a name="l00055"></a>00055 
-<a name="l00056"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a31336e7dca81ca0a98a6f3b30f359860">00056</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a31336e7dca81ca0a98a6f3b30f359860">m_referencePosition</a>;
-<a name="l00057"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a12c21760a0073b3a42a25a502d16c8b7">00057</a>        <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a12c21760a0073b3a42a25a502d16c8b7">m_arrowLinesProportion</a>;
-<a name="l00058"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3afe2ff700c656b438e25c5608f69605">00058</a>        <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3afe2ff700c656b438e25c5608f69605">m_maxArrowLines</a>;
-<a name="l00059"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a6ad7d53b0cdc19f46299b1118e85926b">00059</a>        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a6ad7d53b0cdc19f46299b1118e85926b">m_referenceIndex</a>;
-<a name="l00060"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a7551e4e95fd3f8ec0fee10bd31e5ea99">00060</a>        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a7551e4e95fd3f8ec0fee10bd31e5ea99">m_points</a>[4];
-<a name="l00061"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">00061</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a>;
-<a name="l00062"></a>00062 };
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="comment">// inline methods</span>
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ab6116b35860ae6f29d6f08a30ce6a5c0" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a1694031d1aaaba6ac521ad56abe5a543">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#aab9f773ec5f9dffe96f7b9d0bcb415fd">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="comment">// static methods</span>
+<a name="l00052"></a>00052        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a72f71d00cdc255a40484eacd70d08a65">CheckLine</a>(
+<a name="l00053"></a>00053                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; firstPoint,
+<a name="l00054"></a>00054                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; secondPoint,
+<a name="l00055"></a>00055                                    <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; point,
+<a name="l00056"></a>00056                                    <span class="keywordtype">double</span> maxDistance);
+<a name="l00057"></a>00057 
+<a name="l00058"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a31336e7dca81ca0a98a6f3b30f359860">00058</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a31336e7dca81ca0a98a6f3b30f359860">m_referencePosition</a>;
+<a name="l00059"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a12c21760a0073b3a42a25a502d16c8b7">00059</a>        <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a12c21760a0073b3a42a25a502d16c8b7">m_arrowLinesProportion</a>;
+<a name="l00060"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3afe2ff700c656b438e25c5608f69605">00060</a>        <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3afe2ff700c656b438e25c5608f69605">m_maxArrowLines</a>;
+<a name="l00061"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a6ad7d53b0cdc19f46299b1118e85926b">00061</a>        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a6ad7d53b0cdc19f46299b1118e85926b">m_referenceIndex</a>;
+<a name="l00062"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a7551e4e95fd3f8ec0fee10bd31e5ea99">00062</a>        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a7551e4e95fd3f8ec0fee10bd31e5ea99">m_points</a>[4];
+<a name="l00063"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">00063</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a>;
+<a name="l00064"></a>00064 };
+<a name="l00065"></a>00065 
 <a name="l00066"></a>00066 
-<a name="l00067"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3de79ad40691090bdd6b53c64ce78054">00067</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3de79ad40691090bdd6b53c64ce78054">CInteractiveArrowShape::EnsurePointsAreValid</a>()<span class="keyword"> const</span>
-<a name="l00068"></a>00068 <span class="keyword"></span>{
-<a name="l00069"></a>00069        <span class="keywordflow">if</span> (!<a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a>){
-<a name="l00070"></a>00070               <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>* linePtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>*<span class="keyword">&gt;</span>(<a class="code" href="classimod_1_1_c_single_model_observer_base.html#aa829b5502a451e194324e36688d2352b" title="Get access to observed model.">GetModelPtr</a>());
-<a name="l00071"></a>00071               <span class="keywordflow">if</span> (linePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00072"></a>00072                      <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a0aae3844159e6b23756df0c9a26e7b4b">CalcPoints</a>(*linePtr);
-<a name="l00073"></a>00073               }
-<a name="l00074"></a>00074               <span class="keywordflow">else</span>{
-<a name="l00075"></a>00075                      <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a5cfa4255a9933046513d0fa652df5c29">ResetPoints</a>();
-<a name="l00076"></a>00076               }
-<a name="l00077"></a>00077               <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a> = <span class="keyword">true</span>;
-<a name="l00078"></a>00078        }
-<a name="l00079"></a>00079 }
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 
-<a name="l00082"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a42b7c32e2c0841ee1db9841ae8d95168">00082</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3de79ad40691090bdd6b53c64ce78054">CInteractiveArrowShape::EnsurePointsAreValid</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>&amp; line)<span class="keyword"> const</span>
-<a name="l00083"></a>00083 <span class="keyword"></span>{
-<a name="l00084"></a>00084        <span class="keywordflow">if</span> (!<a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a>){
-<a name="l00085"></a>00085               <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a0aae3844159e6b23756df0c9a26e7b4b">CalcPoints</a>(line);
-<a name="l00086"></a>00086               <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a> = <span class="keyword">true</span>;
-<a name="l00087"></a>00087        }
-<a name="l00088"></a>00088 }
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091 } <span class="comment">// namespace iview</span>
+<a name="l00067"></a>00067 <span class="comment">// inline methods</span>
+<a name="l00068"></a>00068 
+<a name="l00069"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3de79ad40691090bdd6b53c64ce78054">00069</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3de79ad40691090bdd6b53c64ce78054">CInteractiveArrowShape::EnsurePointsAreValid</a>()<span class="keyword"> const</span>
+<a name="l00070"></a>00070 <span class="keyword"></span>{
+<a name="l00071"></a>00071        <span class="keywordflow">if</span> (!<a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a>){
+<a name="l00072"></a>00072               <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>* linePtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>*<span class="keyword">&gt;</span>(<a class="code" href="classimod_1_1_c_single_model_observer_base.html#aa829b5502a451e194324e36688d2352b" title="Get access to observed model.">GetModelPtr</a>());
+<a name="l00073"></a>00073               <span class="keywordflow">if</span> (linePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00074"></a>00074                      <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a0aae3844159e6b23756df0c9a26e7b4b">CalcPoints</a>(*linePtr);
+<a name="l00075"></a>00075               }
+<a name="l00076"></a>00076               <span class="keywordflow">else</span>{
+<a name="l00077"></a>00077                      <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a5cfa4255a9933046513d0fa652df5c29">ResetPoints</a>();
+<a name="l00078"></a>00078               }
+<a name="l00079"></a>00079               <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a> = <span class="keyword">true</span>;
+<a name="l00080"></a>00080        }
+<a name="l00081"></a>00081 }
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 
+<a name="l00084"></a><a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a42b7c32e2c0841ee1db9841ae8d95168">00084</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a3de79ad40691090bdd6b53c64ce78054">CInteractiveArrowShape::EnsurePointsAreValid</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>&amp; line)<span class="keyword"> const</span>
+<a name="l00085"></a>00085 <span class="keyword"></span>{
+<a name="l00086"></a>00086        <span class="keywordflow">if</span> (!<a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a>){
+<a name="l00087"></a>00087               <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#a0aae3844159e6b23756df0c9a26e7b4b">CalcPoints</a>(line);
+<a name="l00088"></a>00088               <a class="code" href="classiview_1_1_c_interactive_arrow_shape.html#ad93d26388a8492a4439795162b929b7d">m_arePointsValid</a> = <span class="keyword">true</span>;
+<a name="l00089"></a>00089        }
+<a name="l00090"></a>00090 }
+<a name="l00091"></a>00091 
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 <span class="preprocessor">#endif // !iview_CInteractiveArrowShape_included</span>
-<a name="l00095"></a>00095 <span class="preprocessor"></span>
-<a name="l00096"></a>00096 
+<a name="l00093"></a>00093 } <span class="comment">// namespace iview</span>
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 <span class="preprocessor">#endif // !iview_CInteractiveArrowShape_included</span>
+<a name="l00097"></a>00097 <span class="preprocessor"></span>
+<a name="l00098"></a>00098 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

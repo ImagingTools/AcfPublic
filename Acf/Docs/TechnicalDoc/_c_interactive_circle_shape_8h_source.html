@@ -61,10 +61,10 @@
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (iview::ITouchable)</span>
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_interactive_circle_shape.html#ac6c39052eee8e80d72890a900e371eaf" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_circle_shape.html#a783b29e058d3efb53dbc1edaa232e90e" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">protected</span>:
+<a name="l00037"></a>00037 <span class="keyword">protected</span>:
+<a name="l00038"></a>00038        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_interactive_circle_shape.html#a866daeb8a59555406466a2968f035414" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00040"></a>00040 
 <a name="l00041"></a><a class="code" href="classiview_1_1_c_interactive_circle_shape.html#a80e7a95beec04bae5d738460c0fea05c">00041</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_circle_shape.html#a80e7a95beec04bae5d738460c0fea05c">m_isEditableRadius</a>;
 <a name="l00042"></a><a class="code" href="classiview_1_1_c_interactive_circle_shape.html#a398bfc5d858a0d5161444c3d5f0cb80b">00042</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_circle_shape.html#a398bfc5d858a0d5161444c3d5f0cb80b">m_isCenterVisible</a>;
 <a name="l00043"></a>00043 

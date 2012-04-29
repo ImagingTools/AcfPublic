@@ -79,7 +79,7 @@ CLibAvVideoDecoderComp::~CLibAvVideoDecoderComp()
 }
 
 
-// reimplemented (iproc::IBitmapAcquisition)
+// reimplemented (icam::IBitmapAcquisition)
 
 istd::CIndex2d CLibAvVideoDecoderComp::GetBitmapSize(const iprm::IParamsSet* /*paramsPtr*/) const
 {

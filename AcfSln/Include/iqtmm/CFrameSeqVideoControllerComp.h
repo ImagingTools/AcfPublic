@@ -32,11 +32,11 @@
 #include "iser/IFileLoader.h"
 #include "imod/CSingleModelObserverBase.h"
 #include "icomp/CComponentBase.h"
-#include "iproc/IBitmapAcquisition.h"
 #include "iproc/TSyncProcessorCompBase.h"
 #include "iqt/CFileList.h"
 
 // ACF-Solutions includes
+#include "icam/IBitmapAcquisition.h"
 #include "imm/IVideoController.h"
 
 
@@ -49,14 +49,14 @@ namespace iqtmm
 */
 class CFrameSeqVideoControllerComp:
 			public QObject,
-			public iproc::TSyncProcessorCompBase<iproc::IBitmapAcquisition>,
+			public iproc::TSyncProcessorCompBase<icam::IBitmapAcquisition>,
 			virtual public imm::IVideoController,
 			protected imod::CSingleModelObserverBase
 {
 	Q_OBJECT
 
 public:
-	typedef iproc::TSyncProcessorCompBase<iproc::IBitmapAcquisition> BaseClass;
+	typedef iproc::TSyncProcessorCompBase<icam::IBitmapAcquisition> BaseClass;
 
 	I_BEGIN_COMPONENT(CFrameSeqVideoControllerComp);
 		I_REGISTER_INTERFACE(istd::IChangeable);
@@ -70,7 +70,7 @@ public:
 
 	CFrameSeqVideoControllerComp();
 
-	// reimplemented (iproc::IBitmapAcquisition)
+	// reimplemented (icam::IBitmapAcquisition)
 	virtual istd::CIndex2d GetBitmapSize(const iprm::IParamsSet* paramsPtr) const;
 
 	// reimplemented (iproc::IProcessor)

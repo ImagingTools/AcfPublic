@@ -29,6 +29,7 @@
 // ACF includes
 #include "iproc/ISupplier.h"
 #include "iview/CImageShape.h"
+#include "iview/CViewBase.h"
 
 
 namespace iqtcam
@@ -36,13 +37,6 @@ namespace iqtcam
 
 
 // protected slots
-
-CBitmapSupplierGuiComp::CBitmapSupplierGuiComp()
-{
-	m_timer.setInterval(40);
-	QObject::connect(&m_timer, SIGNAL(timeout()), this, SLOT(OnTimerReady()));
-}
-
 
 void CBitmapSupplierGuiComp::on_SnapImageButton_clicked()
 {
@@ -57,17 +51,6 @@ void CBitmapSupplierGuiComp::on_SnapImageButton_clicked()
 						QObject::tr("Error"),
 						QObject::tr("Snap Error"));
 		}
-	}
-}
-
-
-void CBitmapSupplierGuiComp::on_LiveImageButton_toggled(bool checked)
-{
-	if (checked){
-		m_timer.start();
-	}
-	else{
-		m_timer.stop();
 	}
 }
 
@@ -93,12 +76,6 @@ void CBitmapSupplierGuiComp::on_LoadParamsButton_clicked()
 void CBitmapSupplierGuiComp::on_SaveParamsButton_clicked()
 {
 	SaveParams();
-}
-
-
-void CBitmapSupplierGuiComp::OnTimerReady()
-{
-	on_SnapImageButton_clicked();
 }
 
 
@@ -130,7 +107,7 @@ void CBitmapSupplierGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 {
 	iview::CImageShape* shapePtr = new iview::CImageShape;
 	if (shapePtr != NULL){
-		shapePtr->AssignToLayer(iview::ILayer::LT_BACKGROUND);
+		shapePtr->AssignToLayer(iview::IViewLayer::LT_BACKGROUND);
 
 		result.PushBack(shapePtr);
 
@@ -187,6 +164,23 @@ void CBitmapSupplierGuiComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags
 	}
 	else{
 		m_bitmap.ResetImage();
+	}
+
+	istd::CIndex2d imageSize = m_bitmap.GetImageSize();
+	i2d::CRectangle imageBox(0, 0, imageSize.GetX(), imageSize.GetY());
+
+	const ShapesMap& shapesMap = GetShapesMap();
+	QSet<iqt2d::IViewProvider*> views = shapesMap.keys().toSet();
+	for (		QSet<iqt2d::IViewProvider*>::ConstIterator viewIter = views.begin();
+				viewIter != views.end();
+				++viewIter){
+		iqt2d::IViewProvider* viewProviderPtr = *viewIter;
+		I_ASSERT(viewProviderPtr != NULL);
+
+		iview::CViewBase* viewPtr = dynamic_cast<iview::CViewBase*>(viewProviderPtr->GetView());
+		if (viewPtr != NULL){
+			viewPtr->SetFitArea(imageBox);
+		}
 	}
 
 	BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);

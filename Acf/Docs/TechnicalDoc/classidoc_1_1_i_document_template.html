@@ -70,15 +70,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document instance for document type <code>documentTypeId</code>.  <a href="#ad8dd16801bac9fbc5138e34164020260"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#aa9dc2ddd9889c79f373dd6c1b5324690">CreateView</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a view instance for document <code>document</code> of type <code>viewTypeId</code>.  <a href="#aa9dc2ddd9889c79f373dd6c1b5324690"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ad00822bcbfe425552f57cb49cad4c1dc">CreateUndoManager</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an undo manger for a given document <code>documentPtr</code>.  <a href="#ad00822bcbfe425552f57cb49cad4c1dc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#a870ed43b6775d4b714491a78a5170744">CreateUndoManager</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an undo manger for a given document <code>documentPtr</code>.  <a href="#a870ed43b6775d4b714491a78a5170744"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_state_comparator.html">IDocumentStateComparator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ad403afe3844b2d35c4c70257ed9e79b9">CreateStateComparator</a> (const QByteArray &amp;documentTypeId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document state comparator.  <a href="#ad403afe3844b2d35c4c70257ed9e79b9"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Document template creating and controling views and models. </p>
 
-<p>Definition at line <a class="el" href="_i_document_template_8h_source.html#l00026">26</a> of file <a class="el" href="_i_document_template_8h_source.html">IDocumentTemplate.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_template_8h_source.html#l00027">27</a> of file <a class="el" href="_i_document_template_8h_source.html">IDocumentTemplate.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ad8dd16801bac9fbc5138e34164020260"></a><!-- doxytag: member="idoc::IDocumentTemplate::CreateDocument" ref="ad8dd16801bac9fbc5138e34164020260" args="(const QByteArray &amp;documentTypeId) const =0" -->
 <div class="memitem">
@@ -128,12 +128,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad00822bcbfe425552f57cb49cad4c1dc"></a><!-- doxytag: member="idoc::IDocumentTemplate::CreateUndoManager" ref="ad00822bcbfe425552f57cb49cad4c1dc" args="(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr) const =0" -->
+<a class="anchor" id="a870ed43b6775d4b714491a78a5170744"></a><!-- doxytag: member="idoc::IDocumentTemplate::CreateUndoManager" ref="a870ed43b6775d4b714491a78a5170744" args="(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a>* idoc::IDocumentTemplate::CreateUndoManager </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a>* idoc::IDocumentTemplate::CreateUndoManager </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em>, </td>
@@ -163,7 +163,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to created instance of undo manager or NULL, if creating of undo manager was impossible. </dd></dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ac214e1013ac2ab0db5a0a3b58a6fcfe4">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a7ad572c770ec184ca29df3094f66ec1d">idoc::CSingleDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a9dcad6aa2bd3d877db8b9942ff393d2a">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a23828ae038b03925238bfbebd40fdf37">idoc::CSingleDocumentTemplateComp</a>.</p>
 
 </div>
 </div>

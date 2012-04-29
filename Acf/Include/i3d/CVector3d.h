@@ -30,6 +30,8 @@
 // ACF includes
 #include "imath/TVector.h"
 
+#include "i2d/CVector2d.h"
+
 #include "i3d/i3d.h"
 
 
@@ -55,6 +57,11 @@ public:
 		Copy constructor.
 	 */
 	CVector3d(const imath::TVector<3>& vector);
+
+	/**
+		Contructs 3D vector from 2D.
+	*/
+	CVector3d(const i2d::CVector2d& vector, double z = 0);
 
 	/**
 		Get X position of this vector.
@@ -98,6 +105,11 @@ public:
 	 */
 	CVector3d GetNormalized(double length = 1.0) const;
 
+	/**
+		Get XY part of this 3D vector.
+	*/
+	i2d::CVector2d GetPlaneCasted() const;
+
 	CVector3d operator-() const;
 
 	CVector3d operator+(const imath::TVector<3>& vector) const;
@@ -130,6 +142,14 @@ inline CVector3d::CVector3d(double x, double y, double z)
 inline CVector3d::CVector3d(const imath::TVector<3>& vector)
 :	BaseClass(vector)
 {
+}
+
+
+inline CVector3d::CVector3d(const i2d::CVector2d& vector, double z)
+{
+	operator[](0) = vector.GetX();
+	operator[](1) = vector.GetY();
+	operator[](2) = z;
 }
 
 
@@ -172,6 +192,12 @@ inline void CVector3d::SetZ(double value)
 inline CVector3d CVector3d::GetTranslated(const imath::TVector<3>& vector)
 {
 	return *this + vector;
+}
+
+
+inline i2d::CVector2d CVector3d::GetPlaneCasted() const
+{
+	return i2d::CVector2d(GetX(), GetY());
 }
 
 

@@ -47,23 +47,18 @@ Inheritance diagram for iview::IShapeObserver:</div>
  <div class="center">
   <img src="classiview_1_1_i_shape_observer.png" usemap="#iview::IShapeObserver_map" alt=""/>
   <map id="iview::IShapeObserver_map" name="iview::IShapeObserver_map">
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="640,0,950,24"/>
-<area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="640,112,950,136"/>
-<area href="classiview_1_1_i_layer.html" title="Interface for a logical layer in the console view." alt="iview::ILayer" shape="rect" coords="320,168,630,192"/>
-<area href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations." alt="iview::IShapeView" shape="rect" coords="960,168,1270,192"/>
-<area href="classiview_1_1_i_selectable_layer.html" alt="iview::ISelectableLayer" shape="rect" coords="0,224,310,248"/>
-<area href="classiview_1_1_t_layer_base.html" alt="iview::TLayerBase&lt; ILayer &gt;" shape="rect" coords="320,224,630,248"/>
-<area href="classiview_1_1_t_layer_base.html" alt="iview::TLayerBase&lt; ILayer, IShapeView &gt;" shape="rect" coords="640,224,950,248"/>
-<area href="classiview_1_1_i_logical_view.html" title="Comon interface for all views with logical transform support." alt="iview::ILogicalView" shape="rect" coords="960,224,1270,248"/>
-<area href="classiview_1_1_t_layer_base.html" alt="iview::TLayerBase&lt; ISelectableLayer, IShapeView &gt;" shape="rect" coords="0,280,310,304"/>
-<area href="classiview_1_1_c_single_layer.html" alt="iview::CSingleLayer" shape="rect" coords="320,280,630,304"/>
-<area href="classiview_1_1_t_layer_base_ex.html" alt="iview::TLayerBaseEx&lt; ILayer &gt;" shape="rect" coords="640,280,950,304"/>
-<area href="classiview_1_1_c_view_base.html" alt="iview::CViewBase" shape="rect" coords="960,280,1270,304"/>
-<area href="classiview_1_1_t_layer_base_ex.html" alt="iview::TLayerBaseEx&lt; ISelectableLayer &gt;" shape="rect" coords="0,336,310,360"/>
-<area href="classiview_1_1_c_layer_base.html" alt="iview::CLayerBase" shape="rect" coords="640,336,950,360"/>
-<area href="classiview_1_1_c_calibrated_view_base.html" title="Abstract base class for all calibrated view." alt="iview::CCalibratedViewBase" shape="rect" coords="960,336,1270,360"/>
-<area href="classiview_1_1_c_selectable_layer_base.html" alt="iview::CSelectableLayerBase" shape="rect" coords="0,392,310,416"/>
-<area href="classiview_1_1_c_viewport.html" alt="iview::CViewport" shape="rect" coords="960,392,1270,416"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="139,0,315,24"/>
+<area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="139,112,315,136"/>
+<area href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations." alt="iview::IShapeView" shape="rect" coords="0,168,176,192"/>
+<area href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view." alt="iview::IViewLayer" shape="rect" coords="279,168,455,192"/>
+<area href="classiview_1_1_i_logical_view.html" title="Comon interface for all views with logical transform support." alt="iview::ILogicalView" shape="rect" coords="0,224,176,248"/>
+<area href="classiview_1_1_c_view_layer.html" title="Standard implementation of view layer." alt="iview::CViewLayer" shape="rect" coords="186,224,362,248"/>
+<area href="classiview_1_1_i_selectable_layer.html" alt="iview::ISelectableLayer" shape="rect" coords="372,224,548,248"/>
+<area href="classiview_1_1_c_view_base.html" alt="iview::CViewBase" shape="rect" coords="0,280,176,304"/>
+<area href="classiview_1_1_c_interactive_view_layer.html" alt="iview::CInteractiveViewLayer" shape="rect" coords="186,280,362,304"/>
+<area href="classiview_1_1_c_interactive_view_layer.html" alt="iview::CInteractiveViewLayer" shape="rect" coords="372,280,548,304"/>
+<area href="classiview_1_1_c_calibrated_view_base.html" title="Abstract base class for all calibrated view." alt="iview::CCalibratedViewBase" shape="rect" coords="0,336,176,360"/>
+<area href="classiview_1_1_c_viewport.html" alt="iview::CViewport" shape="rect" coords="0,392,176,416"/>
 </map>
  </div></div>
 
@@ -73,8 +68,8 @@ Inheritance diagram for iview::IShapeObserver:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_observer.html#a74100196d234122bbadeb6ba76c48ac9">OnChangeShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate a shape.  <a href="#a74100196d234122bbadeb6ba76c48ac9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_observer.html#aca1acc27c4434a4122d6c4a0c984fa79">DisconnectShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect shape object from view.  <a href="#aca1acc27c4434a4122d6c4a0c984fa79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_observer.html#a6ece3e91cb68370f38b3f6092e7ca1d0">DisconnectShape</a> (<a class="el" href="classiview_1_1_i_shape.html">IShape</a> *shapePtr)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect shape object from view.  <a href="#a6ece3e91cb68370f38b3f6092e7ca1d0"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for all objects informed about shapes state changes. </p>
@@ -82,12 +77,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_shape_observer_8h_source.html#l00019">19</a> of file <a class="el" href="_i_shape_observer_8h_source.html">IShapeObserver.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aca1acc27c4434a4122d6c4a0c984fa79"></a><!-- doxytag: member="iview::IShapeObserver::DisconnectShape" ref="aca1acc27c4434a4122d6c4a0c984fa79" args="(IShape *shapePtr)=0" -->
+<a class="anchor" id="a6ece3e91cb68370f38b3f6092e7ca1d0"></a><!-- doxytag: member="iview::IShapeObserver::DisconnectShape" ref="a6ece3e91cb68370f38b3f6092e7ca1d0" args="(IShape *shapePtr)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::IShapeObserver::DisconnectShape </td>
+          <td class="memname">virtual bool iview::IShapeObserver::DisconnectShape </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_shape.html">IShape</a> *&#160;</td>
           <td class="paramname"><em>shapePtr</em></td><td>)</td>
@@ -101,7 +96,7 @@ Public Member Functions</h2></td></tr>
 <p>This shape had to be connected using ConnectShape. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if it was possible to disconnect this shape. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a4b5c46e40a2e24967b9e659ed072132d">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a8a424d5ca19a7f3bcb6361715bf7f7e0">iview::CSelectableLayerBase</a>, <a class="el" href="classiview_1_1_c_single_layer.html#a6908cf71792117c01606f5ecbe1ec7eb">iview::CSingleLayer</a>, and <a class="el" href="classiview_1_1_c_layer_base.html#a6555e497dbe44945ff80164fdb531c19">iview::CLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a8da4fadd3f29e929a6358e02a37f033b">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_interactive_view_layer.html#aaf0abcb5b20ca738c95f27c06ccde9e6">iview::CInteractiveViewLayer</a>, and <a class="el" href="classiview_1_1_c_view_layer.html#af03e78892b6fe667f317d4327674d195">iview::CViewLayer</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_scene_extender_comp_base_8h_source.html#l00098">iqt2d::TSceneExtenderCompBase&lt; Base &gt;::RemoveItemsFromScene()</a>.</p>
 
@@ -126,7 +121,7 @@ Public Member Functions</h2></td></tr>
 <p>When you call Update, all invalidated shapes will be repainted. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if it was possible to invalidate this shape. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a5bff9bfb281906cb6a1a317378865827">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a496f3bad406706a00799a92754509bda">iview::CSelectableLayerBase</a>, <a class="el" href="classiview_1_1_c_single_layer.html#a35c9737405a4946b3ea1d9340616e416">iview::CSingleLayer</a>, and <a class="el" href="classiview_1_1_c_layer_base.html#a7b85ee926b8f7278647181787b433613">iview::CLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a5bff9bfb281906cb6a1a317378865827">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_interactive_view_layer.html#aa23930587a2182d5ba6e63ddc9b3ba14">iview::CInteractiveViewLayer</a>, and <a class="el" href="classiview_1_1_c_view_layer.html#a532144bd89dd58f963832b02cf45544e">iview::CViewLayer</a>.</p>
 
 </div>
 </div>

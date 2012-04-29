@@ -31,8 +31,8 @@
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="comment">// IACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_acquisition_8h.html">iproc/IBitmapAcquisition.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="comment">// ACF-Solutions includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_acquisition_8h.html">icam/IBitmapAcquisition.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="keyword">namespace </span>icam
@@ -41,19 +41,19 @@
 <a name="l00015"></a>00015 
 <a name="l00020"></a><a class="code" href="classicam_1_1_c_camera_delegator_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_c_camera_delegator_base.html" title="Implementation of bitmap acquisition delegating all calls to some slave object.">CCameraDelegatorBase</a>:
 <a name="l00021"></a>00021                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00022"></a>00022                      <span class="keyword">public</span> iproc::IBitmapAcquisition
+<a name="l00022"></a>00022                      <span class="keyword">public</span> <a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
 <a name="l00025"></a><a class="code" href="classicam_1_1_c_camera_delegator_base.html#a07c04406f339c50d184593895968adba">00025</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classicam_1_1_c_camera_delegator_base.html#a07c04406f339c50d184593895968adba">BaseClass</a>;
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classicam_1_1_c_camera_delegator_base.html" title="Implementation of bitmap acquisition delegating all calls to some slave object.">CCameraDelegatorBase</a>);
-<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_bitmap_acquisition.html">iproc::IBitmapAcquisition</a>);
+<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>);
 <a name="l00029"></a>00029               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>);
 <a name="l00030"></a>00030               I_ASSIGN(m_slaveCameraCompPtr, <span class="stringliteral">&quot;SlaveCamera&quot;</span>, <span class="stringliteral">&quot;Slave camera object&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;SlaveCamera&quot;</span>);
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (iipr::IBitmapAcquisition)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classicam_1_1_c_camera_delegator_base.html#a40be94de067d960206c5fc30969b9693">GetBitmapSize</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classicam_1_1_c_camera_delegator_base.html#a40be94de067d960206c5fc30969b9693" title="Get size of acquired bitmap fo specified parameters.">GetBitmapSize</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        <span class="comment">// reimplemented (iproc::IProcessor)</span>
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicam_1_1_c_camera_delegator_base.html#af58f534d0e2bcb0130ba433605948dc8">GetProcessorState</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
@@ -81,7 +81,7 @@
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicam_1_1_c_camera_delegator_base.html#adb0055ad220a9145cbb003b1099ef0fc">InitProcessor</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr);
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 <span class="keyword">protected</span>:
-<a name="l00062"></a>00062        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_bitmap_acquisition.html">iproc::IBitmapAcquisition</a>, m_slaveCameraCompPtr);
+<a name="l00062"></a>00062        I_REF(<a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>, m_slaveCameraCompPtr);
 <a name="l00063"></a>00063 };
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065 

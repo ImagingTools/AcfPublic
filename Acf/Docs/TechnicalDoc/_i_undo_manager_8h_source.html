@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/imod/IUndoManager.h Source File</title>
+<title>Include/idoc/IUndoManager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,41 +22,37 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/imod/IUndoManager.h</div>  </div>
+<div class="title">Include/idoc/IUndoManager.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_i_undo_manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef imod_IUndoManager_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define imod_IUndoManager_included</span>
+<a href="_i_undo_manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef idoc_IUndoManager_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define idoc_IUndoManager_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="keyword">namespace </span>imod
+<a name="l00008"></a>00008 <span class="keyword">namespace </span>idoc
 <a name="l00009"></a>00009 {
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00015"></a><a class="code" href="classimod_1_1_i_undo_manager.html">00015</a> <span class="keyword">class </span><a class="code" href="classimod_1_1_i_undo_manager.html" title="Interface providing UNDO/REDO functionality.">IUndoManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
+<a name="l00015"></a><a class="code" href="classidoc_1_1_i_undo_manager.html">00015</a> <span class="keyword">class </span><a class="code" href="classidoc_1_1_i_undo_manager.html" title="Interface providing UNDO/REDO functionality.">IUndoManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a><a class="code" href="classimod_1_1_i_undo_manager.html#a2165061dd31a7c451b87c89dd83558b5">00018</a>        <span class="keyword">enum</span> <a class="code" href="classimod_1_1_i_undo_manager.html#a2165061dd31a7c451b87c89dd83558b5">ChangeFlags</a>{
-<a name="l00022"></a><a class="code" href="classimod_1_1_i_undo_manager.html#a2165061dd31a7c451b87c89dd83558b5ac2b0a971f799e595dab050a7cd8151c0">00022</a>               <a class="code" href="classimod_1_1_i_undo_manager.html#a2165061dd31a7c451b87c89dd83558b5ac2b0a971f799e595dab050a7cd8151c0" title="Used to avoid adding of changes to undo list.">CF_NO_UNDO</a> = 1 &lt;&lt; 5
-<a name="l00023"></a>00023        };
-<a name="l00024"></a>00024 
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_i_undo_manager.html#a4c234458987f54b5d2459f4b153709c5" title="Check, if UNDO operation is available.">IsUndoAvailable</a>() <span class="keyword">const</span> = 0;
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_i_undo_manager.html#a95515845ba1fd2db983edf05b064ae57" title="Check, if REDO operation is available.">IsRedoAvailable</a>() <span class="keyword">const</span> = 0;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_i_undo_manager.html#a13a6d77eedf7fd68934b1404bdb46463" title="Reset all UNDO and REDO steps.">ResetUndo</a>() = 0;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_i_undo_manager.html#a9f14a3d1fb50fdc6c0deb668c4ff2007" title="Process single UNDO step.">DoUndo</a>() = 0;
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_i_undo_manager.html#aecce84541bedf141dd7d5cb9719cc559" title="Process single REDO step.">DoRedo</a>() = 0;
-<a name="l00045"></a>00045 };
+<a name="l00021"></a>00021        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_i_undo_manager.html#a58d3e2482de230120d7033ffe09d4eb7" title="Check, if UNDO operation is available.">IsUndoAvailable</a>() <span class="keyword">const</span> = 0;
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_i_undo_manager.html#a8949afd2b1103e374937172716f1ccb1" title="Check, if REDO operation is available.">IsRedoAvailable</a>() <span class="keyword">const</span> = 0;
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_i_undo_manager.html#a96c811a1aaa3bf72728d25d10fee1d95" title="Reset all UNDO and REDO steps.">ResetUndo</a>() = 0;
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_i_undo_manager.html#a5018681f3cfff4827a9437273dc1c53c" title="Process single UNDO step.">DoUndo</a>() = 0;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_i_undo_manager.html#a7f3163e0828f772914a5587e9f8e2831" title="Process single REDO step.">DoRedo</a>() = 0;
+<a name="l00038"></a>00038 };
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 } <span class="comment">// namespace idoc</span>
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="preprocessor">#endif // !idoc_IUndoManager_included</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span>
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 } <span class="comment">// namespace imod</span>
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif // !imod_IUndoManager_included</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span>
-<a name="l00053"></a>00053 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

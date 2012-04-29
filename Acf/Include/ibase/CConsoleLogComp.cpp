@@ -27,7 +27,7 @@
 #include <iostream>
 
 // ACF includes
-#include "istd/IInformation.h"
+#include "istd/IInformationProvider.h"
 
 
 namespace ibase
@@ -40,7 +40,7 @@ namespace ibase
 
 void CConsoleLogComp::WriteText(const QString& text)
 {
-	std::wcout << text.toStdWString();
+	std::wcout << text.toLocal8Bit().constData();
 }
 
 

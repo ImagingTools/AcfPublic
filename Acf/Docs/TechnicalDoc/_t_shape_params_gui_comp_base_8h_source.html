@@ -88,9 +88,9 @@
 <a name="l00061"></a>00061                             Shape* shapePtr = <span class="keyword">dynamic_cast&lt;</span>Shape*<span class="keyword">&gt;</span>(shapes.<a class="code" href="classistd_1_1_t_pointer_vector.html#a60d0768b01159b4893f6d41aeb79a1f1" title="Get pointer at specified index.">GetAt</a>(shapeIndex));
 <a name="l00062"></a>00062                             <span class="keywordflow">if</span> (shapePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00063"></a>00063                                    <span class="keywordflow">if</span> (modelPtr-&gt;<a class="code" href="classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd" title="Attaches model object to observer observerPtr.">AttachObserver</a>(shapePtr)){
-<a name="l00064"></a>00064                                           <a class="code" href="classiview_1_1_c_shape_control.html">iview::CShapeControl</a>* shapeControllerPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiview_1_1_c_shape_control.html">iview::CShapeControl</a>*<span class="keyword">&gt;</span>(shapePtr);
-<a name="l00065"></a>00065                                           <span class="keywordflow">if</span> (shapeControllerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00066"></a>00066                                                  shapeControllerPtr-&gt;<a class="code" href="classiview_1_1_c_shape_control.html#a99dc049af4897ebc672d203bce7c0a01" title="Make this shape visible.">SetVisible</a>(<span class="keyword">true</span>);
+<a name="l00064"></a>00064                                           <a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>* shapeBasePtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>*<span class="keyword">&gt;</span>(shapePtr);
+<a name="l00065"></a>00065                                           <span class="keywordflow">if</span> (shapeBasePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00066"></a>00066                                                  shapeBasePtr-&gt;<a class="code" href="classiview_1_1_c_shape_base.html#a395f84884da10c1461167cc9182bbbd5" title="Make this shape visible.">SetVisible</a>(<span class="keyword">true</span>);
 <a name="l00067"></a>00067                                           }
 <a name="l00068"></a>00068                                    }
 <a name="l00069"></a>00069                             }
@@ -120,9 +120,9 @@
 <a name="l00093"></a>00093                             <span class="keywordflow">if</span> (shapePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00094"></a>00094                                    modelPtr-&gt;<a class="code" href="classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66" title="Detaches model object from observer observerPtr.">DetachObserver</a>(shapePtr);
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096                                    <a class="code" href="classiview_1_1_c_shape_control.html">iview::CShapeControl</a>* shapeControllerPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiview_1_1_c_shape_control.html">iview::CShapeControl</a>*<span class="keyword">&gt;</span>(shapePtr);
-<a name="l00097"></a>00097                                    <span class="keywordflow">if</span> (shapeControllerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00098"></a>00098                                           shapeControllerPtr-&gt;<a class="code" href="classiview_1_1_c_shape_control.html#a99dc049af4897ebc672d203bce7c0a01" title="Make this shape visible.">SetVisible</a>(<span class="keyword">false</span>);
+<a name="l00096"></a>00096                                    <a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>* shapeBasePtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>*<span class="keyword">&gt;</span>(shapePtr);
+<a name="l00097"></a>00097                                    <span class="keywordflow">if</span> (shapeBasePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00098"></a>00098                                           shapeBasePtr-&gt;<a class="code" href="classiview_1_1_c_shape_base.html#a395f84884da10c1461167cc9182bbbd5" title="Make this shape visible.">SetVisible</a>(<span class="keyword">false</span>);
 <a name="l00099"></a>00099                                    }
 <a name="l00100"></a>00100                             }
 <a name="l00101"></a>00101                      }
@@ -168,9 +168,9 @@
 <a name="l00141"></a>00141               <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr = BaseClass::GetModelPtr();
 <a name="l00142"></a>00142               <span class="keywordflow">if</span> (modelPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00143"></a>00143                      <span class="keywordflow">if</span> (modelPtr-&gt;<a class="code" href="classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd" title="Attaches model object to observer observerPtr.">AttachObserver</a>(shapePtr)){
-<a name="l00144"></a>00144                             <a class="code" href="classiview_1_1_c_shape_control.html">iview::CShapeControl</a>* shapeControllerPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiview_1_1_c_shape_control.html">iview::CShapeControl</a>*<span class="keyword">&gt;</span>(shapePtr);
-<a name="l00145"></a>00145                             <span class="keywordflow">if</span> (shapeControllerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00146"></a>00146                                    shapeControllerPtr-&gt;<a class="code" href="classiview_1_1_c_shape_control.html#a99dc049af4897ebc672d203bce7c0a01" title="Make this shape visible.">SetVisible</a>(<span class="keyword">true</span>);
+<a name="l00144"></a>00144                             <a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>* shapeBasePtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiview_1_1_c_shape_base.html">iview::CShapeBase</a>*<span class="keyword">&gt;</span>(shapePtr);
+<a name="l00145"></a>00145                             <span class="keywordflow">if</span> (shapeBasePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00146"></a>00146                                    shapeBasePtr-&gt;<a class="code" href="classiview_1_1_c_shape_base.html#a395f84884da10c1461167cc9182bbbd5" title="Make this shape visible.">SetVisible</a>(<span class="keyword">true</span>);
 <a name="l00147"></a>00147                             }
 <a name="l00148"></a>00148                      }
 <a name="l00149"></a>00149               }

@@ -36,11 +36,6 @@ I_EXPORT_PACKAGE(
 			IM_PROJECT("ACF") IM_TAG("Basic") IM_COMPANY("ImagingTools") IM_AUTHOR("\"Witold Gantzke\" \"Kirill Lepskiy\""));
 
 I_EXPORT_COMPONENT(
-			SerializedUndoManager,
-			"Provide UNDO manager based on complete object serialization",
-			"UNDO REDO Manager Persistence Serialization" IM_TAG("Model Document"));
-
-I_EXPORT_COMPONENT(
 			FileTypeInfo,
 			"General file type information provider",
 			"Type Information Format" IM_TAG("File"));
@@ -181,11 +176,6 @@ I_EXPORT_COMPONENT(
 			"Parameter Enabled Bool" IM_CATEGORY(I_DATA_MODEL) IM_TAG("Model Parameter"));
 
 I_EXPORT_COMPONENT(
-			LinearAdjustParams,
-			"Parameter with scale and offset for simple linear transformations",
-			"Parameter Enabled Bool" IM_CATEGORY(I_DATA_MODEL) IM_TAG("Model Parameter"));
-
-I_EXPORT_COMPONENT(
 			SelectionParam,
 			"Selection Parameter",
 			"Selection Parameter Integer Index Choice" IM_CATEGORY(I_DATA_MODEL) IM_TAG("Model Parameter"));
@@ -224,6 +214,11 @@ I_EXPORT_COMPONENT(
 			SelectedDocModelBinder,
 			"Connect model with observer if document is active",
 			"Multiple Model Observer Composite Template MVC" IM_CATEGORY(I_APPLICATION_LOGIC) IM_TAG("Document"));
+
+I_EXPORT_COMPONENT(
+			SerializedUndoManager,
+			"Provide UNDO manager based on complete object serialization",
+			"UNDO REDO Manager Persistence Serialization" IM_TAG("Model Document"));
 
 I_EXPORT_COMPONENT(
 			Line,

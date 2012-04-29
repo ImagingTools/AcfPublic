@@ -77,6 +77,7 @@ Inheritance diagram for iview::CViewport:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_c_calibrated_view_base.html">CCalibratedViewBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#aa894e9822e1ecde84212a4be707965d1">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a03b0200176f4dd404cbf9cbb57e90894">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#ae56531f6b06b86d731da0a63ec93de04">CViewport</a> (<a class="el" href="classiview_1_1_c_console_base.html">CConsoleBase</a> *framePtr, QWidget *parent=0)</td></tr>
@@ -103,6 +104,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect visualisation shape for calibration object.  <a href="#a0c59a58bec301b238c6c3291201bbf4a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a55713a630af99f4d977c1d0a758ba562">SetBackgroundBufferValid</a> (bool state=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set validate flag of background buffer.  <a href="#a55713a630af99f4d977c1d0a758ba562"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#ae90d6a53c030cc08208eaa2c49c4aca8">OnBoundingBoxChanged</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#af2a477c38b2b0c2e271be7ca6437fca9">OnResize</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if found that display area was resized.  <a href="#af2a477c38b2b0c2e271be7ca6437fca9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a2a59fec2ddd71d298bf0c17cf3f9da33">CanBeMoved</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is internal used to check, if drag mode is allowed.  <a href="#a2a59fec2ddd71d298bf0c17cf3f9da33"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#afb02b714f3cd7e9c581c6ddb691c1df5">paintEvent</a> (QPaintEvent *event)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#ab0d531efc3662db37c3a01871cd14b58">resizeEvent</a> (QResizeEvent *event)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a0236e7c571e2541f3dc4b0ff55e13bd7">mousePressEvent</a> (QMouseEvent *event)</td></tr>
@@ -112,25 +120,18 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mouse pointer.  <a href="#ac8447fa605c6f5e131ddf4bac1fae5e5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#ac1195a8cdf4494c3d80d354f5ef20683">UpdateRectArea</a> (const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;rect)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start updating specified rectangle area.  <a href="#ac1195a8cdf4494c3d80d354f5ef20683"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#afb7ba17ccf611a6a5c8895cc994be300">GetKeysState</a> (const QMouseEvent &amp;event)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a55713a630af99f4d977c1d0a758ba562">SetBackgroundBufferValid</a> (bool state=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set validate flag of background buffer.  <a href="#a55713a630af99f4d977c1d0a758ba562"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#ae90d6a53c030cc08208eaa2c49c4aca8">OnBoundingBoxChanged</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#af2a477c38b2b0c2e271be7ca6437fca9">OnResize</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if found that display area was resized.  <a href="#af2a477c38b2b0c2e271be7ca6437fca9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a2a59fec2ddd71d298bf0c17cf3f9da33">CanBeMoved</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is internal used to check, if drag mode is allowed.  <a href="#a2a59fec2ddd71d298bf0c17cf3f9da33"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#ab239215f49c9c9828db931f3aec9f771">CalcBoundingBox</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box of all shapes.  <a href="#ab239215f49c9c9828db931f3aec9f771"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a3c9a3a14226cf60734b2fd88c0d5c82d">CalcBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box of all shapes.  <a href="#a3c9a3a14226cf60734b2fd88c0d5c82d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a85b684dbb7dc3ee485dde550815d84c5">OnAreaInvalidated</a> (const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;beforeBox, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;afterBox)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate display area.  <a href="#a85b684dbb7dc3ee485dde550815d84c5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#afb7ba17ccf611a6a5c8895cc994be300">GetKeysState</a> (const QMouseEvent &amp;event)</td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a97d1351fa9266c153d285189ce5e62bf">CConsoleBase</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_viewport_8h_source.html#l00029">29</a> of file <a class="el" href="_c_viewport_8h_source.html">CViewport.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_viewport_8h_source.html#l00028">28</a> of file <a class="el" href="_c_viewport_8h_source.html">CViewport.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aa894e9822e1ecde84212a4be707965d1"></a><!-- doxytag: member="iview::CViewport::BaseClass" ref="aa894e9822e1ecde84212a4be707965d1" args="" -->
 <div class="memitem">
@@ -143,9 +144,24 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a52f5fe4b9523a881eef75f7b978c58f7">iview::CCalibratedViewBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a2a17719564d04962a887cbd811807a4d">iview::CCalibratedViewBase</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_viewport_8h_source.html#l00034">34</a> of file <a class="el" href="_c_viewport_8h_source.html">CViewport.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03b0200176f4dd404cbf9cbb57e90894"></a><!-- doxytag: member="iview::CViewport::BaseClass2" ref="a03b0200176f4dd404cbf9cbb57e90894" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QWidget <a class="el" href="classiview_1_1_c_viewport.html#a03b0200176f4dd404cbf9cbb57e90894">iview::CViewport::BaseClass2</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_viewport_8h_source.html#l00035">35</a> of file <a class="el" href="_c_viewport_8h_source.html">CViewport.h</a>.</p>
 
 </div>
 </div>
@@ -194,12 +210,12 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ab239215f49c9c9828db931f3aec9f771"></a><!-- doxytag: member="iview::CViewport::CalcBoundingBox" ref="ab239215f49c9c9828db931f3aec9f771" args="() const " -->
+<a class="anchor" id="a3c9a3a14226cf60734b2fd88c0d5c82d"></a><!-- doxytag: member="iview::CViewport::CalcBoundingBox" ref="a3c9a3a14226cf60734b2fd88c0d5c82d" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::CViewport::CalcBoundingBox </td>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> iview::CViewport::CalcBoundingBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [protected, virtual]</code></td>
@@ -210,7 +226,7 @@ Friends</h2></td></tr>
 
 <p>Calculate bounding box of all shapes. </p>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_view_base.html#a5b84ce2f48d02f5b3c11dd96701ceb18">iview::CViewBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_view_base.html#a5ff5fca67784243383d277eba1a424bc">iview::CViewBase</a>.</p>
 
 </div>
 </div>

@@ -116,7 +116,7 @@ bool CXmlStreamReadArchiveBase::ReadToDelimeter(
 // reimplemented (istd::ILogger)
 
 void CXmlStreamReadArchiveBase::DecorateMessage(
-			istd::IInformation::InformationCategory category,
+			istd::IInformationProvider::InformationCategory category,
 			int id,
 			int flags,
 			QString& message,

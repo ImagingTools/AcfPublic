@@ -87,8 +87,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if verbose messages are eneabled.  <a href="#a96af7047c6398cedff347122412de28d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a9c492066b26162c18d0195d329d45e6f">SendVerboseMessage</a> (const QString &amp;message, const QString &amp;messageSource=QString()) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send verbose message.  <a href="#a9c492066b26162c18d0195d329d45e6f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a99eb35689d537aa5b76fb1b80bde3909">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#a99eb35689d537aa5b76fb1b80bde3909"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_comp_wrap.html#aa16a2ae14c9d8978160bd588e30bf114">DecorateMessage</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decorate message parts before outputting.  <a href="#aa16a2ae14c9d8978160bd588e30bf114"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -119,7 +119,7 @@ template&lt;class Base&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a99eb35689d537aa5b76fb1b80bde3909"></a><!-- doxytag: member="ibase::TLoggerCompWrap::DecorateMessage" ref="a99eb35689d537aa5b76fb1b80bde3909" args="(istd::IInformation::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
+<a class="anchor" id="aa16a2ae14c9d8978160bd588e30bf114"></a><!-- doxytag: member="ibase::TLoggerCompWrap::DecorateMessage" ref="aa16a2ae14c9d8978160bd588e30bf114" args="(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -128,7 +128,7 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classibase_1_1_t_logger_comp_wrap.html">ibase::TLoggerCompWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::DecorateMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_information.html#afb1da3c08e1f6c8923c820000b2da2e1">istd::IInformation::InformationCategory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em>, </td>
         </tr>
         <tr>
@@ -166,7 +166,7 @@ template&lt;class Base &gt; </div>
 
 <p>Decorate message parts before outputting. </p>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#aa6cfc1f34aaa724b22d96efc6ad74f89">istd::ILogger</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#ad9178a2782e19c2b0db83c77688a4bb5">istd::ILogger</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00082">82</a> of file <a class="el" href="_t_logger_comp_wrap_8h_source.html">TLoggerCompWrap.h</a>.</p>
 
@@ -212,7 +212,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#acdeb4247ab86e7fe2626df198cd0b23e">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">iproc::TSupplierCompWrap&lt; Product &gt;</a>, <a class="el" href="classiqt_1_1_c_copy_processor_comp.html#a3f4e89be171b82c512a22d73e2619120">iqt::CCopyProcessorComp</a>, <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a0b5bcb075bb0966d0be1de557ee201b4">iqt::CPackagesLoaderComp</a>, <a class="el" href="classiqt_1_1_c_registries_manager_comp.html#ac189f878c77be3a6e7db62f8d905f800">iqt::CRegistriesManagerComp</a>, <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a38ea594db0ebdfa99da890128d4a22c7">iproc::CIterativeProcessorComp</a>, <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#af2a80304d31b65cdcc6bf2de0a4db20f">iqtproc::CDocumentProcessingManagerCompBase</a>, and <a class="el" href="classiproc_1_1_c_model_based_processing_trigger_comp.html#a1ddfbca8893ef60ac3b1431a8ffd2130">iproc::CModelBasedProcessingTriggerComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">iproc::TSupplierCompWrap&lt; Product &gt;</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#acdeb4247ab86e7fe2626df198cd0b23e">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_copy_processor_comp.html#a3f4e89be171b82c512a22d73e2619120">iqt::CCopyProcessorComp</a>, <a class="el" href="classiqt_1_1_c_packages_loader_comp.html#a0b5bcb075bb0966d0be1de557ee201b4">iqt::CPackagesLoaderComp</a>, <a class="el" href="classiqt_1_1_c_registries_manager_comp.html#ac189f878c77be3a6e7db62f8d905f800">iqt::CRegistriesManagerComp</a>, <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a38ea594db0ebdfa99da890128d4a22c7">iproc::CIterativeProcessorComp</a>, <a class="el" href="classiqtproc_1_1_c_document_processing_manager_comp_base.html#af2a80304d31b65cdcc6bf2de0a4db20f">iqtproc::CDocumentProcessingManagerCompBase</a>, and <a class="el" href="classiproc_1_1_c_model_based_processing_trigger_comp.html#a1ddfbca8893ef60ac3b1431a8ffd2130">iproc::CModelBasedProcessingTriggerComp</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00106">106</a> of file <a class="el" href="_t_logger_comp_wrap_8h_source.html">TLoggerCompWrap.h</a>.</p>
 

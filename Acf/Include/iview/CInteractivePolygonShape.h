@@ -26,6 +26,7 @@
 
 // Qt includes
 #include <QtCore/QVector>
+#include <QtGui/QPolygon>
 
 // ACF includes
 #include "i2d/CVector2d.h"
@@ -91,9 +92,11 @@ protected:
 	virtual void EnsureValidNodes() const;
 
 	// reimplemented (iview::CInteractiveShapeBase)
-	virtual void CalcBoundingBox(i2d::CRect& result) const;
 	virtual void BeginLogDrag(const i2d::CVector2d& reference);
 	virtual void SetLogDragPosition(const i2d::CVector2d& position);
+
+	// reimplemented (iview::CShapeBase)
+	virtual i2d::CRect CalcBoundingBox() const;
 
 	i2d::CVector2d m_referencePosition;
 	int m_referenceIndex;

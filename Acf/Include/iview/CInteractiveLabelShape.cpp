@@ -27,13 +27,12 @@
 #include <QtGui/QFontMetrics>
 #include <QtGui/QPainter>
 
-
 // ACF includes
 #include "imod/IModel.h"
+
 #include "iqt/iqt.h"
 
-
-
+#include "iview/IColorShema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -260,41 +259,6 @@ ITouchable::TouchState CInteractiveLabelShape::IsTouched(istd::CIndex2d position
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase)
-
-void CInteractiveLabelShape::CalcBoundingBox(i2d::CRect& result) const
-{
-	I_ASSERT(IsDisplayConnected());
-
-	const i2d::CLabel* labelPtr = dynamic_cast<const i2d::CLabel*>(GetModelPtr());
-	if (labelPtr != NULL){
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-
-		i2d::CRect boundingBox;
-		CalculateTextOriginSize(boundingBox);
-		boundingBox.Expand(i2d::CRect(-3, -3, 3, 3));
-
-		const IColorShema& colorShema = GetColorShema();
-		istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
-		istd::CIndex2d offsetSp = sp + m_drawOffset;
-
-		if (IsPositionVisible()){
-			const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_MOVE: IColorShema::TT_INACTIVE);
-			boundingBox.Union(tickerBox.GetTranslated(sp));
-			if(IsEditableOffset())
-				boundingBox.Union(tickerBox.GetTranslated(offsetSp));
-		}
-
-		result = boundingBox;
-	
-		result.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
-	}
-	else{
-		result.Reset();
-	}
-}
-
-
 //	protected methods
 
 void CInteractiveLabelShape::CalculateTextOriginSize(i2d::CRect& textBox) const
@@ -399,6 +363,41 @@ void CInteractiveLabelShape::CalculateTextOriginSize(i2d::CRect& textBox) const
 	else{
 		textBox.Reset();
 	}
+}
+
+
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CInteractiveLabelShape::CalcBoundingBox() const
+{
+	I_ASSERT(IsDisplayConnected());
+
+	const i2d::CLabel* labelPtr = dynamic_cast<const i2d::CLabel*>(GetModelPtr());
+	if (labelPtr != NULL){
+		const iview::CScreenTransform& transform = GetLogToScreenTransform();
+
+		i2d::CRect boundingBox = i2d::CRect::GetEmpty();
+
+		CalculateTextOriginSize(boundingBox);
+		boundingBox.Expand(i2d::CRect(-3, -3, 3, 3));
+
+		const IColorShema& colorShema = GetColorShema();
+		istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
+		istd::CIndex2d offsetSp = sp + m_drawOffset;
+
+		if (IsPositionVisible()){
+			const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_MOVE: IColorShema::TT_INACTIVE);
+			boundingBox.Union(tickerBox.GetTranslated(sp));
+			if(IsEditableOffset())
+				boundingBox.Union(tickerBox.GetTranslated(offsetSp));
+		}
+
+		boundingBox.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
+
+		return boundingBox;
+	}
+
+	return i2d::CRect();
 }
 
 

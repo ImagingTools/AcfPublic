@@ -26,15 +26,15 @@
 // Qt includes
 #include <QtGui/QPainter>
 
-
 // ACF includes
 #include "imod/IModel.h"
+
 #include "i2d/CSpline.h"
 #include "i2d/CSplineSegment.h"
+
 #include "iqt/iqt.h"
 
-
-
+#include "iview/IColorShema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -52,73 +52,7 @@ bool CInteractiveSplineShape::OnAttached(imod::IModel* modelPtr)
 }
 
 
-void CInteractiveSplineShape::CalcBoundingBox(i2d::CRect& result) const
-{
-	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetModelPtr());
-	if (IsDisplayConnected() && (splinePtr != NULL)){
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-        const IColorShema& colorShema = GetColorShema();
-
-		int segmentCount = splinePtr->GetSegmentCount();
-		if (segmentCount > 0){
-			const i2d::CSplineSegment& segment = splinePtr->GetSplineSegment(0);
-
-			istd::CIndex2d sp = transform.GetScreenPosition(segment.GetBezierPointBegin());
-			i2d::CRect boundingBox(sp, sp);
-
-			sp = transform.GetScreenPosition(segment.GetBezierPointEnd());
-			boundingBox.Union(sp);
-
-			for (int i = 1; i < segmentCount; ++i){
-				const i2d::CSplineSegment& segment = splinePtr->GetSplineSegment(i);
-
-				sp = transform.GetScreenPosition(segment.GetBezierPointBegin());
-				boundingBox.Union(sp);
-				sp = transform.GetScreenPosition(segment.GetBezierPointEnd());
-				boundingBox.Union(sp);
-			}
-
-			i2d::CRect polylineBoundingBox;
-			CInteractivePolylineShape::CalcBoundingBox(polylineBoundingBox);
-
-			IColorShema::TickerType tickerType;
-
-			if (IsSelected()){
-				int editMode = GetEditMode();
-				switch (editMode){
-				case ISelectable::EM_NONE:
-					boundingBox.Expand(i2d::CRect(-2, -2, 2, 2));
-				case ISelectable::EM_MOVE:
-					tickerType = IColorShema::TT_MOVE;
-					break;
-
-				case ISelectable::EM_ADD:
-					tickerType = IColorShema::TT_INSERT;
-					break;
-
-				case ISelectable::EM_REMOVE:
-					tickerType = IColorShema::TT_DELETE;
-					break;
-
-				default:
-					tickerType = IColorShema::TT_INACTIVE;
-					break;
-				}
-			}
-			else{
-				tickerType = IColorShema::TT_INACTIVE;
-			}
-
-			const i2d::CRect& tickerBox = colorShema.GetTickerBox(tickerType);
-			result = polylineBoundingBox.GetUnion(boundingBox.GetExpanded(tickerBox));
-
-			return;
-		}
-	}
-
-	result.Reset();
-}
-
+// protected methods
 
 void CInteractiveSplineShape::DrawPolyBezier(QPainter& drawContext, const istd::CIndex2d* pointsPtr, int pointsCount) const
 {
@@ -129,7 +63,7 @@ void CInteractiveSplineShape::DrawPolyBezier(QPainter& drawContext, const istd::
 	drawContext.setBrush(QBrush(QColor(0,0,0,0)));
 
 	if (pointsCount >= 4){
-		QPainterPath qtPatch(iqt::GetQPointF(i2d::CVector2d(pointsPtr[0])));
+		QPainterPath qtPatch(iqt::GetQPoint(pointsPtr[0]));
 		for (int i = 3; i < pointsCount; i += 3){
 			qtPatch.cubicTo(iqt::GetQPoint(pointsPtr[i - 2]),
 							iqt::GetQPoint(pointsPtr[i - 1]),
@@ -222,6 +156,76 @@ bool CInteractiveSplineShape::IsCurveTouched(istd::CIndex2d position) const
 	}
 
 	return false;
+}
+
+
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CInteractiveSplineShape::CalcBoundingBox() const
+{
+	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetModelPtr());
+	if (IsDisplayConnected() && (splinePtr != NULL)){
+		const iview::CScreenTransform& transform = GetLogToScreenTransform();
+        const IColorShema& colorShema = GetColorShema();
+
+		int segmentCount = splinePtr->GetSegmentCount();
+		if (segmentCount > 0){
+			const i2d::CSplineSegment& segment = splinePtr->GetSplineSegment(0);
+
+			istd::CIndex2d sp = transform.GetScreenPosition(segment.GetBezierPointBegin());
+			i2d::CRect boundingBox(sp, sp);
+
+			sp = transform.GetScreenPosition(segment.GetBezierPointEnd());
+			boundingBox.Union(sp);
+
+			for (int i = 1; i < segmentCount; ++i){
+				const i2d::CSplineSegment& segment = splinePtr->GetSplineSegment(i);
+
+				sp = transform.GetScreenPosition(segment.GetBezierPointBegin());
+				boundingBox.Union(sp);
+				sp = transform.GetScreenPosition(segment.GetBezierPointEnd());
+				boundingBox.Union(sp);
+			}
+
+			IColorShema::TickerType tickerType;
+
+			if (IsSelected()){
+				int editMode = GetEditMode();
+				switch (editMode){
+				case ISelectable::EM_NONE:
+					boundingBox.Expand(i2d::CRect(-2, -2, 2, 2));
+				case ISelectable::EM_MOVE:
+					tickerType = IColorShema::TT_MOVE;
+					break;
+
+				case ISelectable::EM_ADD:
+					tickerType = IColorShema::TT_INSERT;
+					break;
+
+				case ISelectable::EM_REMOVE:
+					tickerType = IColorShema::TT_DELETE;
+					break;
+
+				default:
+					tickerType = IColorShema::TT_INACTIVE;
+					break;
+				}
+			}
+			else{
+				tickerType = IColorShema::TT_INACTIVE;
+			}
+
+			const i2d::CRect& tickerBox = colorShema.GetTickerBox(tickerType);
+
+			boundingBox.Expand(tickerBox);
+
+			boundingBox.Union(CInteractivePolylineShape::CalcBoundingBox());
+
+			return boundingBox;
+		}
+	}
+
+	return i2d::CRect();
 }
 
 

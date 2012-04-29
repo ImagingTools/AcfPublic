@@ -45,17 +45,15 @@ Inheritance diagram for iview::ISelectable:</div>
  <div class="center">
   <img src="classiview_1_1_i_selectable.png" usemap="#iview::ISelectable_map" alt=""/>
   <map id="iview::ISelectable_map" name="iview::ISelectable_map">
-<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="160,56,470,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="160,0,470,24"/>
-<area href="classiview_1_1_i_selectable_layer.html" alt="iview::ISelectableLayer" shape="rect" coords="0,168,310,192"/>
-<area href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations." alt="iview::IShapeView" shape="rect" coords="320,168,630,192"/>
-<area href="classiview_1_1_t_layer_base.html" alt="iview::TLayerBase&lt; ISelectableLayer, IShapeView &gt;" shape="rect" coords="0,224,310,248"/>
-<area href="classiview_1_1_i_logical_view.html" title="Comon interface for all views with logical transform support." alt="iview::ILogicalView" shape="rect" coords="320,224,630,248"/>
-<area href="classiview_1_1_t_layer_base_ex.html" alt="iview::TLayerBaseEx&lt; ISelectableLayer &gt;" shape="rect" coords="0,280,310,304"/>
-<area href="classiview_1_1_c_view_base.html" alt="iview::CViewBase" shape="rect" coords="320,280,630,304"/>
-<area href="classiview_1_1_c_selectable_layer_base.html" alt="iview::CSelectableLayerBase" shape="rect" coords="0,336,310,360"/>
-<area href="classiview_1_1_c_calibrated_view_base.html" title="Abstract base class for all calibrated view." alt="iview::CCalibratedViewBase" shape="rect" coords="320,336,630,360"/>
-<area href="classiview_1_1_c_viewport.html" alt="iview::CViewport" shape="rect" coords="320,392,630,416"/>
+<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="93,56,269,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="93,0,269,24"/>
+<area href="classiview_1_1_i_selectable_layer.html" alt="iview::ISelectableLayer" shape="rect" coords="0,168,176,192"/>
+<area href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations." alt="iview::IShapeView" shape="rect" coords="186,168,362,192"/>
+<area href="classiview_1_1_c_interactive_view_layer.html" alt="iview::CInteractiveViewLayer" shape="rect" coords="0,224,176,248"/>
+<area href="classiview_1_1_i_logical_view.html" title="Comon interface for all views with logical transform support." alt="iview::ILogicalView" shape="rect" coords="186,224,362,248"/>
+<area href="classiview_1_1_c_view_base.html" alt="iview::CViewBase" shape="rect" coords="186,280,362,304"/>
+<area href="classiview_1_1_c_calibrated_view_base.html" title="Abstract base class for all calibrated view." alt="iview::CCalibratedViewBase" shape="rect" coords="186,336,362,360"/>
+<area href="classiview_1_1_c_viewport.html" alt="iview::CViewport" shape="rect" coords="186,392,362,416"/>
 </map>
  </div></div>
 
@@ -212,7 +210,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set all shapes to be deselected. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a67f749afdc5248e053ccd042b4cef984">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_selectable_layer_base.html#abe0c853a8149dc071805bf55be32dcd6">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a67f749afdc5248e053ccd042b4cef984">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a4de2f0a169a41cba8057b5b73790a430">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -232,9 +230,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get actual edit mode. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#ad9b844f881178df49de7a079d09e77b3">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_selectable_layer_base.html#add7210d2961f9b3ee3281221ae6dd59f">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#ad9b844f881178df49de7a079d09e77b3">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_view_layer.html#ae09570be82c06111c937ee0ae57f1ffd">iview::CInteractiveViewLayer</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_selectable_layer_base_8h_source.html#l00080">iview::CSelectableLayerBase::GetEditMode()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00146">iview::CInteractiveShapeBase::GetEditMode()</a>.</p>
+<p>Referenced by <a class="el" href="_c_interactive_view_layer_8h_source.html#l00086">iview::CInteractiveViewLayer::GetEditMode()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00145">iview::CInteractiveShapeBase::GetEditMode()</a>.</p>
 
 </div>
 </div>
@@ -254,9 +252,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Get state of system keys. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a8e572cd22e81ad50df4dbacb08c74ba1">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a4d7c1f1bafb8263c068a5d041e150406">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a8e572cd22e81ad50df4dbacb08c74ba1">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a4d12674a8d8234226bb96c1b29c2c6b8">iview::CInteractiveViewLayer</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_selectable_layer_base_8h_source.html#l00071">iview::CSelectableLayerBase::GetKeysState()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00133">iview::CInteractiveShapeBase::GetKeysState()</a>.</p>
+<p>Referenced by <a class="el" href="_c_interactive_view_layer_8h_source.html#l00077">iview::CInteractiveViewLayer::GetKeysState()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00132">iview::CInteractiveShapeBase::GetKeysState()</a>.</p>
 
 </div>
 </div>
@@ -276,7 +274,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get count of selected shapes. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a8486099a3cf6d16c449cd0ca71b3b532">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_selectable_layer_base.html#af9ee98e1a085d196ba26bb9ebdff3a78">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a8486099a3cf6d16c449cd0ca71b3b532">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a89782084b1c2d94159f87e53689b0698">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -297,7 +295,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get set of selected shapes. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a349cb946cf22fed9657e989eabbebf90">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_selectable_layer_base.html#aa540ade4b28651b176490a07d80b13bf">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a349cb946cf22fed9657e989eabbebf90">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a7bef58fb8fb4b6bfdf57362679394457">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -318,7 +316,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Called when shape loose focus. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_i_shape_view.html#aa289ce25d63c67d4a6ebec3438e94a78">iview::IShapeView</a>, and <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a1d1a4243a0a0ff5e927bba50aa3e547a">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_i_shape_view.html#aa289ce25d63c67d4a6ebec3438e94a78">iview::IShapeView</a>, and <a class="el" href="classiview_1_1_c_interactive_view_layer.html#aebdce154d9ac3396536ceb7add026f17">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -339,7 +337,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Called when shape get focus. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_i_shape_view.html#a3e61f1e93c37166330d125e28980ac01">iview::IShapeView</a>, and <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a64965d081d3682aa5aadc7e9ebe4708f">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_i_shape_view.html#a3e61f1e93c37166330d125e28980ac01">iview::IShapeView</a>, and <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a4c72e9f477aaf73b5688d235f7901fcf">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -370,7 +368,7 @@ Public Member Functions</h2></td></tr>
 
 <p>It is called after change shape selection state. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a2daf57d9b63b9a758ba0b13e34ff81b3">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a1aa7f075a6cb8ea47ff421ae348566d8">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a2daf57d9b63b9a758ba0b13e34ff81b3">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_view_layer.html#aaceb8035f40e6ba61870cf68b210b713">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>

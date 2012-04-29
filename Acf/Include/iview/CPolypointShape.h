@@ -41,9 +41,6 @@ public:
 	bool IsSmallTickersMode() const;
 	void SetSmallTickersMode(bool state = true);
 
-	// reimplemented (iview::TShapeBase)
-	virtual void CalcBoundingBox(i2d::CRect& result) const;
-
 	// reimplemented (iview::IShape)
 	virtual void Draw(QPainter& drawContext) const;
 
@@ -51,6 +48,9 @@ public:
 	virtual bool OnAttached(imod::IModel* modelPtr);
 
 protected:
+	// reimplemented (iview::CShapeBase)
+	virtual i2d::CRect CalcBoundingBox() const;
+
 	bool m_isSmallTickersMode;
 };
 

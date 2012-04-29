@@ -28,7 +28,7 @@
 #include <QtCore/QList>
 
 // ACF includes
-#include "istd/IInformation.h"
+#include "istd/IInformationProvider.h"
 #include "istd/TChangeNotifier.h"
 
 #include "iser/IArchive.h"
@@ -70,7 +70,7 @@ public:
 	virtual bool IsMessageSupported(
 				int messageCategory = -1,
 				int messageId = -1,
-				const istd::IInformation* messagePtr = NULL) const;
+				const istd::IInformationProvider* messagePtr = NULL) const;
 	virtual void AddMessage(const IMessageConsumer::MessagePtr& messagePtr);
 
 	// pseudo-reimplemented (ibase::IHierarchicalMessageContainer)
@@ -243,7 +243,7 @@ template <class Base>
 bool TMessageContainerWrap<Base>::IsMessageSupported(
 			int /*messageCategory*/,
 			int /*messageId*/,
-			const istd::IInformation* /*messagePtr*/) const
+			const istd::IInformationProvider* /*messagePtr*/) const
 {
 	return true;
 }
@@ -262,7 +262,7 @@ void TMessageContainerWrap<Base>::AddMessage(const IMessageConsumer::MessagePtr&
 		istd::TChangeNotifier<IMessageContainer> changePtr(
 					this,
 					IMessageContainer::CF_MESSAGE_ADDED,
-					const_cast<istd::IInformation*>(messagePtr.GetPtr()));
+					const_cast<istd::IInformationProvider*>(messagePtr.GetPtr()));
 
 		m_messages.push_back(messagePtr);
 
@@ -280,7 +280,7 @@ void TMessageContainerWrap<Base>::AddMessage(const IMessageConsumer::MessagePtr&
 			istd::TChangeNotifier<IMessageContainer> changePtr(
 						this,
 						IMessageContainer::CF_MESSAGE_REMOVED,
-						const_cast<istd::IInformation*>(messageToRemovePtr.GetPtr()));
+						const_cast<istd::IInformationProvider*>(messageToRemovePtr.GetPtr()));
 
 			int removeCategory = messageToRemovePtr->GetInformationCategory();
 			if (removeCategory >= m_worstCategory){

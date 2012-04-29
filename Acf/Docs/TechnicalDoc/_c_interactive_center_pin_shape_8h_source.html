@@ -55,8 +55,8 @@
 <a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_interactive_center_pin_shape.html#a6a24190ee0b2b6bccb0a4748ad8d03b2" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="keyword">protected</span>:
-<a name="l00031"></a>00031        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_interactive_center_pin_shape.html#a67a50361719a75949fec669d7babbc6b" title="Calculate bounding box.">CalcBoundingBox</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00031"></a>00031        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_interactive_center_pin_shape.html#a36828ddbfd2396c3f67354f73e43f0b9" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a><a class="code" href="classiview_1_1_c_interactive_center_pin_shape.html#ab597ac5fdf9ef5b723d963347dbd133e">00034</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_interactive_center_pin_shape.html#ab597ac5fdf9ef5b723d963347dbd133e">m_referencePosition</a>;
 <a name="l00035"></a>00035 };

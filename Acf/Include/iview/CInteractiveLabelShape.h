@@ -78,9 +78,6 @@ public:
 	// reimplemented (iview::ITouchable)
 	virtual TouchState IsTouched(istd::CIndex2d position) const;
 
-	// reimplemented (iview::CInteractiveShapeBase)
-	virtual void CalcBoundingBox(i2d::CRect& result) const;
-
 protected:
 	enum EditMode
 	{
@@ -90,6 +87,9 @@ protected:
 	};
 
 	void CalculateTextOriginSize(i2d::CRect& textBox) const;
+
+	// reimplemented (iview::CInteractiveShapeBase)
+	virtual i2d::CRect CalcBoundingBox() const;
 
 private:
 	istd::CIndex2d m_referenceOffset;

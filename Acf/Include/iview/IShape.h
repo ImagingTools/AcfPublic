@@ -31,7 +31,7 @@
 #include "i2d/CRect.h"
 
 #include "iview/IVisualizable.h"
-#include "iview/ILayer.h"
+#include "iview/ITouchable.h"
 
 
 namespace iview
@@ -47,7 +47,8 @@ class IColorShema;
 */
 class IShape:
 			virtual public imod::IObserver,
-			virtual public iview::IVisualizable
+			virtual public IVisualizable,
+			virtual public ITouchable
 {
 public:
 	enum ChangeFlags
@@ -57,14 +58,9 @@ public:
 
 	/**
 		Get layer type of this shape object.
-		\sa ILayer::LayerType
+		\sa IViewLayer::LayerType
 	*/
 	virtual int GetLayerType() const = 0;
-
-	/**
-		Get the model object associated with this shape.
-	*/
-	virtual imod::IModel* GetShapeModelPtr() const = 0;
 
 	/**	
 		Return bounding box in client window coordinates.

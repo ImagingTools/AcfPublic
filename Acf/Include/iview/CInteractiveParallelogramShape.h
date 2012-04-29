@@ -124,8 +124,10 @@ protected:
 	virtual void DrawTickers(QPainter& drawContext) const;
 	virtual void DrawFigure(QPainter& drawContext) const;
 
+	// reimplemented (iview::CShapeBase)
+	virtual i2d::CRect CalcBoundingBox() const;
+
 	// reimplemented (iview::CInteractiveShapeBase)
-	virtual void CalcBoundingBox(i2d::CRect& result) const;
 	virtual void BeginLogDrag(const i2d::CVector2d& reference);
 	virtual void SetLogDragPosition(const i2d::CVector2d& position);
 

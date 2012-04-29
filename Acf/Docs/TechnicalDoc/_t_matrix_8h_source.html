@@ -653,7 +653,7 @@
 <a name="l00763"></a>00763 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
 <a name="l00764"></a><a class="code" href="classimath_1_1_t_matrix.html#a8c035ca6116ab81b242e0f2c1bfc1d21">00764</a> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_t_matrix.html#a8c035ca6116ab81b242e0f2c1bfc1d21">TMatrix&lt;Width, Height, Element&gt;::GetFrobeniusNorm</a>()<span class="keyword"> const</span>
 <a name="l00765"></a>00765 <span class="keyword"></span>{
-<a name="l00766"></a>00766        <span class="keywordflow">return</span> std::sqrt(GetFrobeniusNorm2());
+<a name="l00766"></a>00766        <span class="keywordflow">return</span> qSqrt(GetFrobeniusNorm2());
 <a name="l00767"></a>00767 }
 <a name="l00768"></a>00768 
 <a name="l00769"></a>00769 
@@ -722,7 +722,7 @@
 <a name="l00832"></a>00832 
 <a name="l00833"></a>00833               <span class="keywordtype">double</span> element0 = result[<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>(hhIndex, hhIndex)];
 <a name="l00834"></a>00834 
-<a name="l00835"></a>00835               <span class="keywordtype">double</span> hhLength = (element0 &gt;= 0)? std::sqrt(hhNorm2): -sqrt(hhNorm2);       <span class="comment">// destination diagonal value of current processed column, sign is choosen optimal for maximal householder vector length</span>
+<a name="l00835"></a>00835               <span class="keywordtype">double</span> hhLength = (element0 &gt;= 0)? qSqrt(hhNorm2): -sqrt(hhNorm2);    <span class="comment">// destination diagonal value of current processed column, sign is choosen optimal for maximal householder vector length</span>
 <a name="l00836"></a>00836 
 <a name="l00837"></a>00837               <span class="keywordtype">double</span> hhVector0 = element0 + hhLength;   <span class="comment">// element 0 of householder vector, rest of ist will be taken directly from matrix elements</span>
 <a name="l00838"></a>00838               <span class="keywordtype">double</span> hhVectorNorm2 = hhNorm2 + hhVector0 * hhVector0 - element0 * element0;       <span class="comment">// sqare of norm of householder vector, first element replaced from original column norm sqare</span>

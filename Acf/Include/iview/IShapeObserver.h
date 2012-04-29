@@ -53,7 +53,7 @@ public:
 		This shape had to be connected using ConnectShape.
 		\return	true, if it was possible to disconnect this shape.
 	*/
-	virtual void DisconnectShape(IShape* shapePtr) = 0;
+	virtual bool DisconnectShape(IShape* shapePtr) = 0;
 };
 
 

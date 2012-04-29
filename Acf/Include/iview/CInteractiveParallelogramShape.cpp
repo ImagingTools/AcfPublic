@@ -26,7 +26,6 @@
 // Qt includes
 #include <QtGui/QPainter>
 
-
 // ACF includes
 #include "imod/IModel.h"
 
@@ -34,6 +33,7 @@
 
 #include "iqt/iqt.h"
 
+#include "iview/IColorShema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -439,9 +439,9 @@ void CInteractiveParallelogramShape::DrawFigure(QPainter& drawContext) const
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase)
+// reimplemented (iview::CShapeBase)
 
-void CInteractiveParallelogramShape::CalcBoundingBox(i2d::CRect& result) const
+i2d::CRect CInteractiveParallelogramShape::CalcBoundingBox() const
 {
 	I_ASSERT(IsDisplayConnected());
 
@@ -451,16 +451,20 @@ void CInteractiveParallelogramShape::CalcBoundingBox(i2d::CRect& result) const
 	EnsureValidNodes();
 	const istd::CIndex2d* nodes = GetNodes();
 
-	i2d::CRect bbox(nodes[EN_NODE11], nodes[EN_NODE11]);
+	i2d::CRect boundingBox(nodes[EN_NODE11], nodes[EN_NODE11]);
 	for (int nodeIndex = EN_NODE11 + 1; nodeIndex <= EN_LAST; ++nodeIndex){
-		bbox.Union(nodes[nodeIndex]);
+		boundingBox.Union(nodes[nodeIndex]);
 	}
 
-	result = bbox.GetExpanded(tickerBox);
+	boundingBox.Expand(tickerBox);
 
-	result.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
+	boundingBox.Expand(i2d::CRect(istd::CIndex2d(-1, -1), istd::CIndex2d(1, 1)));
+
+	return boundingBox;
 }
 
+
+// reimplemented (iview::CInteractiveShapeBase)
 
 void CInteractiveParallelogramShape::BeginLogDrag(const i2d::CVector2d& reference)
 {

@@ -96,8 +96,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a7519e0784c64f6ae6c51df23faf70321">GetAllowedOperationFlags</a> (const <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr=NULL) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of allowed operations.  <a href="#a7519e0784c64f6ae6c51df23faf70321"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#af2c2a3d41345392f1239adf475252e5b">GetUndoManagerForDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return undo mananger for document <code>documenPtr</code>.  <a href="#af2c2a3d41345392f1239adf475252e5b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a021e458740e1ee3003e210edea7984db">GetUndoManagerForDocument</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return undo mananger for document <code>documenPtr</code>.  <a href="#a021e458740e1ee3003e210edea7984db"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#afd34f9812c513635f1edce6cac29f31c">GetDocumentsCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of opened documents.  <a href="#afd34f9812c513635f1edce6cac29f31c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_manager.html#a486052b088189dbf3a2eb13e4099a0e1">GetDocumentFromIndex</a> (int index, <a class="el" href="structidoc_1_1_i_document_manager_1_1_document_info.html">DocumentInfo</a> *documentInfoPtr=NULL) const =0</td></tr>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide set of user actions needed to manage documents in MVC (Model View Controller) concept. </p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00028">28</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00027">27</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ad2308086fe7ddbed930cb6cbcf5d7f70"></a><!-- doxytag: member="idoc::IDocumentManager::FileToTypeMap" ref="ad2308086fe7ddbed930cb6cbcf5d7f70" args="" -->
 <div class="memitem">
@@ -141,7 +141,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Map from file path to ducument type ID's. </p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00067">67</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00066">66</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -175,7 +175,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00036">36</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00035">35</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -206,7 +206,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00055">55</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_manager_8h_source.html#l00054">54</a> of file <a class="el" href="_i_document_manager_8h_source.html">IDocumentManager.h</a>.</p>
 
 </div>
 </div>
@@ -605,12 +605,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af2c2a3d41345392f1239adf475252e5b"></a><!-- doxytag: member="idoc::IDocumentManager::GetUndoManagerForDocument" ref="af2c2a3d41345392f1239adf475252e5b" args="(const istd::IChangeable *documentPtr) const =0" -->
+<a class="anchor" id="a021e458740e1ee3003e210edea7984db"></a><!-- doxytag: member="idoc::IDocumentManager::GetUndoManagerForDocument" ref="a021e458740e1ee3003e210edea7984db" args="(const istd::IChangeable *documentPtr) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classimod_1_1_i_undo_manager.html">imod::IUndoManager</a>* idoc::IDocumentManager::GetUndoManagerForDocument </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a>* idoc::IDocumentManager::GetUndoManagerForDocument </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
           <td class="paramname"><em>documentPtr</em></td><td>)</td>
@@ -622,7 +622,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return undo mananger for document <code>documenPtr</code>. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a5ebab9267bd8b2a1d40e2d72a92f0188">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a04036f71da6ca102349becff20464885">idoc::CMultiDocumentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ae93bfab36e412b7c63d9569bb84f9182">idoc::CSingleDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a56ec17722c614707554f4eff5c9236fe">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>

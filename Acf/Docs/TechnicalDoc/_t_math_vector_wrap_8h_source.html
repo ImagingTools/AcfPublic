@@ -181,7 +181,7 @@
 <a name="l00206"></a>00206 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00207"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#ab194a84bd18b09162e39add6be71a617">00207</a> <span class="keyword">inline</span> <span class="keyword">typename</span> Base::ElementType <a class="code" href="classimath_1_1_t_math_vector_wrap.html#ab194a84bd18b09162e39add6be71a617" title="Return euclidian length.">TMathVectorWrap&lt;Base&gt;::GetLength</a>()<span class="keyword"> const</span>
 <a name="l00208"></a>00208 <span class="keyword"></span>{
-<a name="l00209"></a>00209        <span class="keywordflow">return</span> std::sqrt(GetLength2());
+<a name="l00209"></a>00209        <span class="keywordflow">return</span> qSqrt(GetLength2());
 <a name="l00210"></a>00210 }
 <a name="l00211"></a>00211 
 <a name="l00212"></a>00212 
@@ -195,7 +195,7 @@
 <a name="l00220"></a>00220 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00221"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#af67dcf3f90e152f9846296ec6d82a98f">00221</a> <span class="keyword">inline</span> <span class="keyword">typename</span> Base::ElementType <a class="code" href="classimath_1_1_t_math_vector_wrap.html#af67dcf3f90e152f9846296ec6d82a98f" title="Return distance between two vectors.">TMathVectorWrap&lt;Base&gt;::GetDistance</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; vector)<span class="keyword"> const</span>
 <a name="l00222"></a>00222 <span class="keyword"></span>{
-<a name="l00223"></a>00223        <span class="keywordflow">return</span> std::sqrt(GetDistance2(vector));
+<a name="l00223"></a>00223        <span class="keywordflow">return</span> qSqrt(GetDistance2(vector));
 <a name="l00224"></a>00224 }
 <a name="l00225"></a>00225 
 <a name="l00226"></a>00226 

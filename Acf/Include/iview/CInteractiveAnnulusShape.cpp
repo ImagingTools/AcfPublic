@@ -26,14 +26,14 @@
 // Qt includes
 #include <QtGui/QPainter>
 
-
 // ACF includes
 #include "imod/IModel.h"
+
 #include "i2d/CAnnulus.h"
+
 #include "iqt/iqt.h"
 
-
-
+#include "iview/IColorShema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -47,7 +47,8 @@ CInteractiveAnnulusShape::CInteractiveAnnulusShape()
 	m_editRadius2Mode = false;
 	m_editRadiusMode = false;
 
-	m_isEditableRadius2 = m_isEditableRadius;
+	m_isEditableRadius2 = true;
+	m_isEditableRadius = true;
 }
 
 
@@ -356,9 +357,29 @@ ITouchable::TouchState CInteractiveAnnulusShape::IsTouched(istd::CIndex2d positi
 }
 
 
-// reimplemented (iview::CInteractiveShapeBase)
+// protected methods
 
-void CInteractiveAnnulusShape::CalcBoundingBox(i2d::CRect& result) const
+void CInteractiveAnnulusShape::DrawAnnulus(QPainter& painter, istd::CIndex2d center, int minRadius, int maxRadius, bool /*fillFlag*/) const
+{
+	I_ASSERT(minRadius <= maxRadius);
+
+	i2d::CRect maxBox1(center.GetX() - maxRadius, center.GetY() - maxRadius, center.GetX() + maxRadius + 1, center.GetY() + maxRadius + 1);
+	i2d::CRect minBox1(center.GetX() - minRadius, center.GetY() - minRadius, center.GetX() + minRadius + 1, center.GetY() + minRadius + 1);
+	i2d::CRect bitmapBox1 = maxBox1.GetIntersection(iqt::GetCRect(painter.clipRegion().boundingRect()));
+
+	QRect tempBitmapRect1(iqt::GetQRect(i2d::CRect(bitmapBox1.GetSize())));
+	QPainterPath painterPatch;
+
+	painterPatch.addEllipse(iqt::GetQRect(minBox1));
+	painterPatch.addEllipse(iqt::GetQRect(maxBox1));
+
+	painter.drawPath(painterPatch);
+}
+
+
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CInteractiveAnnulusShape::CalcBoundingBox() const
 {
 	I_ASSERT(IsDisplayConnected());
 
@@ -377,34 +398,16 @@ void CInteractiveAnnulusShape::CalcBoundingBox(i2d::CRect& result) const
 
 		const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_NORMAL: IColorShema::TT_INACTIVE);
 
-		i2d::CRect boundingBox(	int(center.GetX() - radius * scale.GetX()), int(center.GetY() - radius * scale.GetY()),
-							int(center.GetX() + radius * scale.GetX()), int(center.GetY() + radius * scale.GetY()));
+		i2d::CRect boundingBox(
+					int(center.GetX() - radius * scale.GetX() - 1), int(center.GetY() - radius * scale.GetY() + 1),
+					int(center.GetX() + radius * scale.GetX() - 1), int(center.GetY() + radius * scale.GetY() + 1));
 
-		result = boundingBox.GetExpanded(tickerBox);
+		boundingBox.Expand(tickerBox);
+
+		return boundingBox;
 	}
-	else{
-		result.Reset();
-	}
-}
 
-
-// protected methods
-
-void CInteractiveAnnulusShape::DrawAnnulus(QPainter& painter, istd::CIndex2d center, int minRadius, int maxRadius, bool /*fillFlag*/) const
-{
-	I_ASSERT(minRadius <= maxRadius);
-
-	i2d::CRect maxBox1(center.GetX() - maxRadius, center.GetY() - maxRadius, center.GetX() + maxRadius + 1, center.GetY() + maxRadius + 1);
-	i2d::CRect minBox1(center.GetX() - minRadius, center.GetY() - minRadius, center.GetX() + minRadius + 1, center.GetY() + minRadius + 1);
-	i2d::CRect bitmapBox1 = maxBox1.GetIntersection(iqt::GetCRect(painter.clipRegion().boundingRect()));
-
-	QRect tempBitmapRect1(iqt::GetQRect(i2d::CRect(bitmapBox1.GetSize())));
-	QPainterPath painterPatch;
-
-	painterPatch.addEllipse(iqt::GetQRect(minBox1));
-	painterPatch.addEllipse(iqt::GetQRect(maxBox1));
-
-	painter.drawPath(painterPatch);
+	return i2d::CRect();
 }
 
 

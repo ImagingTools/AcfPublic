@@ -26,7 +26,6 @@
 namespace i2d
 {		
 
-
 // protected methods
 
 // reimplemented (icomp::CComponentBase)

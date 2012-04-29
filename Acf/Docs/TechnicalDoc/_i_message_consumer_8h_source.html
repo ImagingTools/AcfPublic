@@ -30,7 +30,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_i_information_8h.html">istd/IInformation.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_i_information_provider_8h.html">istd/IInformationProvider.h</a>&quot;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_t_smart_ptr_8h.html">istd/TSmartPtr.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
@@ -41,12 +41,12 @@
 <a name="l00019"></a><a class="code" href="classibase_1_1_i_message_consumer.html">00019</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">IMessageConsumer</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
 <a name="l00020"></a>00020 {
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a><a class="code" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">00022</a>        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;const istd::IInformation&gt;</a> <a class="code" href="classibase_1_1_i_message_consumer.html#a16386c008e15580f1274fdbab6498ded">MessagePtr</a>;
+<a name="l00022"></a><a class="code" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">00022</a>        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;const istd::IInformationProvider&gt;</a> <a class="code" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">MessagePtr</a>;
 <a name="l00023"></a>00023 
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_i_message_consumer.html#a7ea687c817844fbc1b2e31526ca592a2" title="Check if some messge is supported.">IsMessageSupported</a>(
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_i_message_consumer.html#ad60ff234c5745a0b3029f5f326106ed5" title="Check if some messge is supported.">IsMessageSupported</a>(
 <a name="l00033"></a>00033                             <span class="keywordtype">int</span> messageCategory = -1,
 <a name="l00034"></a>00034                             <span class="keywordtype">int</span> messageId = -1,
-<a name="l00035"></a>00035                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information.html" title="Common interface for class providing some basic information object.">istd::IInformation</a>* messagePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
+<a name="l00035"></a>00035                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>* messagePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_message_consumer.html#a00ab2d3aa60b88bf13a8c4ac687273cb" title="Adds a message item to the container.">AddMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">MessagePtr</a>&amp; messagePtr) = 0;
 <a name="l00040"></a>00040 };
 <a name="l00041"></a>00041 

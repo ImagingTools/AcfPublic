@@ -36,7 +36,7 @@
 <div class="title">iview::ISelectableLayer Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::ISelectableLayer" --><!-- doxytag: inherits="iview::ILayer,iview::ISelectable" -->
+<!-- doxytag: class="iview::ISelectableLayer" --><!-- doxytag: inherits="iview::IViewLayer,iview::ISelectable" -->
 <p><code>#include &lt;<a class="el" href="_i_selectable_layer_8h_source.html">ISelectableLayer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iview::ISelectableLayer:</div>
@@ -44,16 +44,16 @@ Inheritance diagram for iview::ISelectableLayer:</div>
  <div class="center">
   <img src="classiview_1_1_i_selectable_layer.png" usemap="#iview::ISelectableLayer_map" alt=""/>
   <map id="iview::ISelectableLayer_map" name="iview::ISelectableLayer_map">
-<area href="classiview_1_1_i_layer.html" title="Interface for a logical layer in the console view." alt="iview::ILayer" shape="rect" coords="0,168,310,192"/>
-<area href="classiview_1_1_i_selectable.html" alt="iview::ISelectable" shape="rect" coords="320,168,630,192"/>
-<area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="0,112,310,136"/>
-<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="320,112,630,136"/>
-<area href="classiview_1_1_i_shape_observer.html" title="Common interface for all objects informed about shapes state changes." alt="iview::IShapeObserver" shape="rect" coords="0,56,310,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="320,56,630,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,310,24"/>
-<area href="classiview_1_1_t_layer_base.html" alt="iview::TLayerBase&lt; ISelectableLayer, IShapeView &gt;" shape="rect" coords="160,280,470,304"/>
-<area href="classiview_1_1_t_layer_base_ex.html" alt="iview::TLayerBaseEx&lt; ISelectableLayer &gt;" shape="rect" coords="160,336,470,360"/>
-<area href="classiview_1_1_c_selectable_layer_base.html" alt="iview::CSelectableLayerBase" shape="rect" coords="160,392,470,416"/>
+<area href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view." alt="iview::IViewLayer" shape="rect" coords="93,168,269,192"/>
+<area href="classiview_1_1_i_selectable.html" alt="iview::ISelectable" shape="rect" coords="372,168,548,192"/>
+<area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="0,112,176,136"/>
+<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="186,112,362,136"/>
+<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="372,112,548,136"/>
+<area href="classiview_1_1_i_shape_observer.html" title="Common interface for all objects informed about shapes state changes." alt="iview::IShapeObserver" shape="rect" coords="0,56,176,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="186,56,362,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="372,56,548,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,176,24"/>
+<area href="classiview_1_1_c_interactive_view_layer.html" alt="iview::CInteractiveViewLayer" shape="rect" coords="232,280,408,304"/>
 </map>
  </div></div>
 
@@ -105,7 +105,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set reference position for dragging for all selected shapes. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a605d973e55d024c4b7256cc140f977f4">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a5608508363a9ea81c84df0e39c380054">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Connect active shape object. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#aef42ca4939158f08370c37494fbfbfc8">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a318b75cca23e2616481fc7fb493edadb">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -147,7 +147,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Draw only focused shape. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a96bff1800031528c526d200f0710f78f">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a714a911ca57cdbcc5a4cdc7133d3c767">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -167,7 +167,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Called after dragging process. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#ae7728d57d49908c5565fab0c7b12dca7">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a0973f091b6a54d968dec1b1c5687cd80">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -187,7 +187,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get number of unselected shapes. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a8ad2bce692d93ac68fb4487b637f53be">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a2ae6a8f5875ccb25bc59778ee59c8336">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -226,7 +226,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>touch state for the shape, or <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2ad3c721810a0dd0c07bc84248c5f1060b" title="Nothing is touched.">iview::IInteractiveShape::TS_NONE</a>, when nothing found. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#abb14000a5003af7cd79330d4879c9e85">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a433f6b6d22c9e6f828fbbd418aaf31b6">iview::CInteractiveViewLayer</a>.</p>
 
 <p>Referenced by <a class="el" href="_i_selectable_layer_8h_source.html#l00094">IsTouched()</a>.</p>
 
@@ -252,6 +252,8 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>touch state for the shape, or <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2ad3c721810a0dd0c07bc84248c5f1060b" title="Nothing is touched.">iview::IInteractiveShape::TS_NONE</a>, when nothing found. </dd></dl>
 
 <p>Implements <a class="el" href="classiview_1_1_i_touchable.html#a3ad7b35b9beec48eb098e51098d45b89">iview::ITouchable</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a1bcac8b4c991f32e59f378e7f9e64eb7">iview::CInteractiveViewLayer</a>.</p>
 
 <p>Definition at line <a class="el" href="_i_selectable_layer_8h_source.html#l00094">94</a> of file <a class="el" href="_i_selectable_layer_8h_source.html">ISelectableLayer.h</a>.</p>
 
@@ -293,7 +295,7 @@ Public Member Functions</h2></td></tr>
 <p>Called, when this layer has focus, and mouse button was pushed down or up on this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if this event was consumed. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a406d38dce633b111aa911b7a14ac20b8">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a921370c453dea61c311bdcb809d6d56c">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -315,7 +317,7 @@ Public Member Functions</h2></td></tr>
 <p>Called, when this layer has focus, and mouse was moved. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if this event was consumed. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#a9588893cc656a2c2a57893f6d21a0d89">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a4dced438f65eee8921530c71dc5bf9c4">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -353,7 +355,7 @@ Public Member Functions</h2></td></tr>
 <p>Called, when mouse button was pushed down or up. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if this event was consumed. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#ae20f0dcf619ac9d7d4de241c1f033f77">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a4349d27996cdbb6b7147e12f43fc9e03">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -374,7 +376,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set dragging position for all selected shapes. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_selectable_layer_base.html#ad836fcad0da1eaa973066fb01acfecda">iview::CSelectableLayerBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a0f0e878b9d6871ae18d6a07a0f049421">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
