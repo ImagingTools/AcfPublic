@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2254
+          2302
         </Number>
         <Description>
           ACF
@@ -15,16 +15,30 @@
       </Version>
     </VersionInfos>
   </AcfHeader>
-  <PositionMap count="2">
+  <PositionMap count="4">
     <Element>
       <ComponentName>
-        BitmapDialogLoader
+        SelectionParamGui
       </ComponentName>
       <X>
-        600
+        250
       </X>
       <X>
-        200
+        400
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        ComposedParamsSetGui
+      </ComponentName>
+      <X>
+        250
+      </X>
+      <X>
+        300
       </X>
       <Note>
         
@@ -36,6 +50,20 @@
       </ComponentName>
       <X>
         250
+      </X>
+      <X>
+        200
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        BitmapDialogLoader
+      </ComponentName>
+      <X>
+        600
       </X>
       <X>
         200

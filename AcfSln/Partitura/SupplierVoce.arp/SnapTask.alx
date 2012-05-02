@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2245
+          2302
         </Number>
         <Description>
           ACF
@@ -15,18 +15,7 @@
       </Version>
     </VersionInfos>
   </AcfHeader>
-  <PositionMap count="2">
-    <Element>
-      <ComponentName>
-        Bitmap
-      </ComponentName>
-      <X>
-        575
-      </X>
-      <X>
-        275
-      </X>
-    </Element>
+  <PositionMap count="4">
     <Element>
       <ComponentName>
         ImageTask
@@ -37,6 +26,51 @@
       <X>
         400
       </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        ComposedParamsSet
+      </ComponentName>
+      <X>
+        568
+      </X>
+      <X>
+        523
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        SelectionParam
+      </ComponentName>
+      <X>
+        575
+      </X>
+      <X>
+        650
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        Bitmap
+      </ComponentName>
+      <X>
+        575
+      </X>
+      <X>
+        275
+      </X>
+      <Note>
+        
+      </Note>
     </Element>
   </PositionMap>
 </Acf>
