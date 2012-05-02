@@ -42895,6 +42895,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>IC_NONE</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152ab7b6af3874b959ed3bf91ec86bb59cfc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>IC_INFO</name>
       <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
       <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152a42a989ac6baf47a23c6595f66cb30077</anchor>

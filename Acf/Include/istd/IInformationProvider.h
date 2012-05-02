@@ -47,6 +47,7 @@ public:
 	*/
 	enum InformationCategory
 	{
+		IC_NONE,
 		IC_INFO,
 		IC_WARNING,
 		IC_ERROR,
