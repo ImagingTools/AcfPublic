@@ -89,8 +89,6 @@ public:
 
 	explicit CConsoleGui(QWidget* parent = NULL);
 
-	QStatusBar* GetStatusBar();
-
 	// reimplemented (iview::CConsoleBase)
 	virtual const CViewport& GetView() const;
 	virtual CViewport& GetViewRef();

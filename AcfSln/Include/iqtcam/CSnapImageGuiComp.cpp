@@ -79,7 +79,7 @@ bool CSnapImageGuiComp::SnapImage()
 }
 
 
-// reimplemented (iqt2d::TSceneExtenderCompBase)
+// reimplemented (iqt2d::TViewExtenderCompBase)
 
 void CSnapImageGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 {

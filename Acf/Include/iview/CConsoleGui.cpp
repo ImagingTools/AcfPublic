@@ -45,9 +45,6 @@ namespace iview
 
 CConsoleGui::CConsoleGui(QWidget* parent)
 :	BaseClass(parent),
-	m_positionLabelPtr(NULL),
-	m_positionMmLabelPtr(NULL),
-	m_colorLabelPtr(NULL),
 	m_commands("&View", 100),
 	m_gridVisibleCommand("Grid", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_ONOFF, CGI_CALIBRATION),
 	m_rulerVisibleCommand("Show Ruler", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_ONOFF, CGI_CALIBRATION),
@@ -76,7 +73,7 @@ CConsoleGui::CConsoleGui(QWidget* parent)
 
 	// status bar
 	m_statusBarPtr = new QStatusBar(this);
-
+	
 	m_positionLabelPtr = new QLabel(this);
 	m_positionLabelPtr->setMinimumWidth(100);
 	m_statusBarPtr->addPermanentWidget(m_positionLabelPtr);
@@ -90,7 +87,7 @@ CConsoleGui::CConsoleGui(QWidget* parent)
 	m_statusBarPtr->addPermanentWidget(m_colorLabelPtr);
 
 	m_statusLayoutPtr->addWidget(m_statusBarPtr);
-	
+
 	// main layout
 	m_mainLayoutPtr->addLayout(m_centerLayoutPtr);
 	m_mainLayoutPtr->addLayout(m_statusLayoutPtr);
@@ -119,12 +116,6 @@ CConsoleGui::CConsoleGui(QWidget* parent)
 	UpdateCommands();
 
 	ConnectSignalSlots();
-}
-
-
-QStatusBar* CConsoleGui::GetStatusBar()
-{
-	return m_statusBarPtr;
 }
 
 
@@ -371,34 +362,28 @@ void CConsoleGui::UpdateScrollbarsValues()
 
 void CConsoleGui::UpdateCursorInfo(const i2d::CVector2d& pixelPos, const i2d::CVector2d& logicalPos, const QString& infoText)
 {
-	if (m_positionLabelPtr != NULL){
-		if (IsPixelPositionVisible()){
-			m_positionLabelPtr->setText(tr("X: %1  Y: %2").arg(pixelPos.GetX()).arg(pixelPos.GetY()));		
-			m_positionLabelPtr->show();
-		}
-		else{
-			m_positionLabelPtr->hide();
-		}
+	if (IsPixelPositionVisible()){
+		m_positionLabelPtr->setText(tr("X: %1  Y: %2").arg(pixelPos.GetX()).arg(pixelPos.GetY()));		
+		m_positionLabelPtr->show();
+	}
+	else{
+		m_positionLabelPtr->hide();
 	}
 
-	if (m_positionMmLabelPtr != NULL){
-		if (IsMmPositionVisible()){
-			m_positionMmLabelPtr->setText(tr("LogX: %1mm  LogY: %2mm").arg(logicalPos.GetX()).arg(logicalPos.GetY()));
-			m_positionMmLabelPtr->show();
-		}
-		else{
-			m_positionMmLabelPtr->hide();
-		}
+	if (IsMmPositionVisible()){
+		m_positionMmLabelPtr->setText(tr("LogX: %1mm  LogY: %2mm").arg(logicalPos.GetX()).arg(logicalPos.GetY()));
+		m_positionMmLabelPtr->show();
+	}
+	else{
+		m_positionMmLabelPtr->hide();
 	}
 
-	if (m_colorLabelPtr != NULL){
-		if (IsPixelValueVisible() && !infoText.isEmpty()){
-			m_colorLabelPtr->setText(infoText);
-			m_colorLabelPtr->show();
-		}
-		else{
-			m_colorLabelPtr->hide();
-		}
+	if (IsPixelValueVisible() && !infoText.isEmpty()){
+		m_colorLabelPtr->setText(infoText);
+		m_colorLabelPtr->show();
+	}
+	else{
+		m_colorLabelPtr->hide();
 	}
 }
 

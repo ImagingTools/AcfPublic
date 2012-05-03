@@ -255,8 +255,8 @@
     <namespace>izlib</namespace>
   </compound>
   <compound kind="class">
-    <name>TSceneExtenderCompBase</name>
-    <filename>class_t_scene_extender_comp_base.html</filename>
+    <name>TViewExtenderCompBase</name>
+    <filename>class_t_view_extender_comp_base.html</filename>
   </compound>
   <compound kind="namespace">
     <name>iabc</name>

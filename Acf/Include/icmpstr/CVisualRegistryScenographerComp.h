@@ -50,8 +50,7 @@
 #include "iqtgui/TGuiObserverWrap.h"
 #include "iqtgui/CHierarchicalCommand.h"
 
-#include "iqt2d/TScenographerCompBase.h"
-
+#include "icmpstr/TScenographerCompBase.h"
 #include "icmpstr/IRegistryPreview.h"
 #include "icmpstr/IRegistryConsistInfo.h"
 #include "icmpstr/IElementSelectionInfo.h"
@@ -68,14 +67,14 @@ class CVisualRegistryComp;
 
 class CVisualRegistryScenographerComp:
 			public QObject,
-			public iqt2d::TScenographerCompBase<
+			public icmpstr::TScenographerCompBase<
 						imod::TSingleModelObserverBase<icomp::IRegistry> >,
 			virtual public ibase::ICommandsProvider
 {
 	Q_OBJECT
 
 public:
-	typedef iqt2d::TScenographerCompBase<
+	typedef icmpstr::TScenographerCompBase<
 				imod::TSingleModelObserverBase<icomp::IRegistry> > BaseClass;
 
 	I_BEGIN_COMPONENT(CVisualRegistryScenographerComp);
@@ -154,7 +153,7 @@ protected:
 
 	void DoRetranslate();
 
-	// reimplemented (iqt2d::TScenographerCompBase)
+	// reimplemented (icmpstr::TScenographerCompBase)
 	virtual bool OnDropObject(const QMimeData& data, QGraphicsSceneDragDropEvent* eventPtr);
 	virtual void UpdateScene(int updateFlags);
 

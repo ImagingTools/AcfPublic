@@ -34,7 +34,7 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_shape_control_8h.html">iview/CShapeControl.h</a>&quot;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_scene_extender_comp_base_8h.html">iqt2d/TSceneExtenderCompBase.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_view_extender_comp_base_8h.html">iqt2d/TViewExtenderCompBase.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="keyword">namespace </span>iqt2d
@@ -43,11 +43,11 @@
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ui, <span class="keyword">class</span> Shape, <span class="keyword">class</span> ShapeModel&gt;
 <a name="l00018"></a><a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">00018</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">TShapeParamsGuiCompBase</a>:
-<a name="l00019"></a>00019                      <span class="keyword">public</span> iqt2d::<a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html">TSceneExtenderCompBase</a>&lt;
+<a name="l00019"></a>00019                      <span class="keyword">public</span> iqt2d::<a class="code" href="classiqt2d_1_1_t_view_extender_comp_base.html">TViewExtenderCompBase</a>&lt;
 <a name="l00020"></a>00020                                           iqtgui::TDesignerGuiObserverCompBase&lt;Ui, ShapeModel&gt; &gt;
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a><a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase&lt;iqtgui::TDesignerGuiObserverCompBase&lt;Ui, ShapeModel&gt;</a> &gt; <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a22bd4848cc6063a548e4ec15bf99f84e">BaseClass</a>;
+<a name="l00023"></a><a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a152f7ad72e4d09bb6773146311b2f634">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase&lt;iqtgui::TDesignerGuiObserverCompBase&lt;Ui, ShapeModel&gt;</a> &gt; <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a152f7ad72e4d09bb6773146311b2f634">BaseClass</a>;
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html">TShapeParamsGuiCompBase</a>);
 <a name="l00026"></a>00026               I_ASSIGN(m_unitNameAttrPtr, <span class="stringliteral">&quot;UnitName&quot;</span>, <span class="stringliteral">&quot;Name of geometric units e.g. mm&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;mm&quot;</span>);
@@ -59,11 +59,11 @@
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="keyword">protected</span>:
 <a name="l00034"></a><a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">00034</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_pointer_vector.html" title="Implementation of a pointer container, which controls the live cycle of the pointer object...">BaseClass::Shapes</a> <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">Shapes</a>;
-<a name="l00035"></a><a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">00035</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classiqt2d_1_1_t_scene_extender_comp_base.html#a942f3df3886c1bf51ae766b71d12df8d">BaseClass::ShapesMap</a> <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">ShapesMap</a>;
+<a name="l00035"></a><a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">00035</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classiqt2d_1_1_t_view_extender_comp_base.html#a94eaa20dc87a1f989eec6dce5532497b">BaseClass::ShapesMap</a> <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a27862fab2ed4e52b9f32a2a51d71f5f2">ShapesMap</a>;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a76193d87a7035d882513aecf9e366f18">UpdateShapeView</a>();
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>
+<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="code" href="classistd_1_1_t_pointer_vector.html" title="Implementation of a pointer container, which controls the live cycle of the pointer object...">Shapes</a>&amp; result);
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042        I_ATTR(QString, m_unitNameAttrPtr);
@@ -156,7 +156,7 @@
 <a name="l00129"></a>00129 }
 <a name="l00130"></a>00130 
 <a name="l00131"></a>00131 
-<a name="l00132"></a>00132 <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>
+<a name="l00132"></a>00132 <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
 <a name="l00133"></a>00133 
 <a name="l00134"></a>00134 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ui, <span class="keyword">class</span> Shape, <span class="keyword">class</span> ShapeModel&gt;
 <a name="l00135"></a><a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">00135</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">TShapeParamsGuiCompBase&lt;Ui, Shape, ShapeModel&gt;::CreateShapes</a>(<span class="keywordtype">int</span> <span class="comment">/*sceneId*/</span>, <a class="code" href="classistd_1_1_t_pointer_vector.html" title="Implementation of a pointer container, which controls the live cycle of the pointer object...">Shapes</a>&amp; result)

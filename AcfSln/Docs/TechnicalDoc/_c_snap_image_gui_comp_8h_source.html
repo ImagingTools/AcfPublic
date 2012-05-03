@@ -40,7 +40,7 @@
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_gui_object_8h.html">iqtgui/IGuiObject.h</a>&quot;</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_comp_base_8h.html">iqtgui/TDesignerGuiCompBase.h</a>&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_scene_extender_comp_base_8h.html">iqt2d/TSceneExtenderCompBase.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_view_extender_comp_base_8h.html">iqt2d/TViewExtenderCompBase.h</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_acquisition_8h.html">icam/IBitmapAcquisition.h</a>&quot;</span>
@@ -54,12 +54,12 @@
 <a name="l00028"></a>00028 {
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 
-<a name="l00031"></a><a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html">00031</a> <span class="keyword">class </span><a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html">CSnapImageGuiComp</a>: <span class="keyword">public</span> iqt2d::TSceneExtenderCompBase&lt;iqtgui::TDesignerGuiCompBase&lt;Ui::CSnapImageGuiComp, QWidget&gt; &gt;
+<a name="l00031"></a><a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html">00031</a> <span class="keyword">class </span><a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html">CSnapImageGuiComp</a>: <span class="keyword">public</span> iqt2d::TViewExtenderCompBase&lt;iqtgui::TDesignerGuiCompBase&lt;Ui::CSnapImageGuiComp, QWidget&gt; &gt;
 <a name="l00032"></a>00032 {
 <a name="l00033"></a>00033        Q_OBJECT
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 <span class="keyword">public</span>:
-<a name="l00036"></a><a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a7f9c9ece8874c988de645acef23feaf7">00036</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_scene_extender_comp_base.html">iqt2d::TSceneExtenderCompBase&lt;iqtgui::TDesignerGuiCompBase&lt;Ui::CSnapImageGuiComp, QWidget&gt;</a> &gt; <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a7f9c9ece8874c988de645acef23feaf7">BaseClass</a>;
+<a name="l00036"></a><a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a653b8721fdc4a7f47ef2be29f17fb11a">00036</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase&lt;iqtgui::TDesignerGuiCompBase&lt;Ui::CSnapImageGuiComp, QWidget&gt;</a> &gt; <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a653b8721fdc4a7f47ef2be29f17fb11a">BaseClass</a>;
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        I_BEGIN_COMPONENT(<a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html">CSnapImageGuiComp</a>);
 <a name="l00039"></a>00039               I_ASSIGN(m_bitmapCompPtr, <span class="stringliteral">&quot;Bitmap&quot;</span>, <span class="stringliteral">&quot;Bitmap will be shown&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Bitmap&quot;</span>);
@@ -85,7 +85,7 @@
 <a name="l00059"></a>00059 <span class="keyword">protected</span>:
 <a name="l00060"></a>00060        <span class="keywordtype">bool</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a41d4d06b619c8b4a7768d1bcc603160f">SnapImage</a>();
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="comment">// reimplemented (iqt2d::TSceneExtenderCompBase)</span>
+<a name="l00062"></a>00062        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
 <a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_snap_image_gui_comp.html#a8c9034b06b859bc5f7ab5da4c25b4b9e">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>

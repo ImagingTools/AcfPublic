@@ -34,7 +34,7 @@
 #include "iproc/ISupplier.h"
 #include "iqtgui/IGuiObject.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
-#include "iqt2d/TSceneExtenderCompBase.h"
+#include "iqt2d/TViewExtenderCompBase.h"
 
 #include "iqtinsp/iqtinsp.h"
 
@@ -45,11 +45,11 @@ namespace iqtinsp
 
 template <class UI, class WidgetType = QWidget>
 class TSupplierGuiCompBase:
-			public iqt2d::TSceneExtenderCompBase<
+			public iqt2d::TViewExtenderCompBase<
 						iqtgui::TDesignerGuiObserverCompBase<UI, iproc::ISupplier> >
 {
 public:
-	typedef iqt2d::TSceneExtenderCompBase<
+	typedef iqt2d::TViewExtenderCompBase<
 					iqtgui::TDesignerGuiObserverCompBase<UI, iproc::ISupplier> > BaseClass;
 
 	I_BEGIN_BASE_COMPONENT(TSupplierGuiCompBase);
@@ -100,7 +100,7 @@ protected:
 	virtual void OnGuiModelAttached();
 	virtual void OnGuiModelDetached();
 
-	// reimplemented (iqt2d::TSceneExtenderCompBase)
+	// reimplemented (iqt2d::TViewExtenderCompBase)
 	virtual void CreateShapes(int sceneId, Shapes& result);
 
 	// abstract methods
@@ -319,7 +319,7 @@ void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelDetached()
 }
 
 
-// reimplemented (iqt2d::TSceneExtenderCompBase)
+// reimplemented (iqt2d::TViewExtenderCompBase)
 
 template <class UI, class WidgetType>
 void TSupplierGuiCompBase<UI, WidgetType>::CreateShapes(int /*sceneId*/, Shapes& /*result*/)

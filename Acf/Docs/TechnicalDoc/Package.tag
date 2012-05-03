@@ -1129,7 +1129,7 @@
     <name>CGraphicsConnectorItem.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_graphics_connector_item_8h</filename>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
+    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
     <class kind="class">icmpstr::CGraphicsConnectorItem</class>
     <namespace>icmpstr</namespace>
   </compound>
@@ -1209,7 +1209,7 @@
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_registry_element_shape_8h</filename>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">iqt2d/TObjectShapeBase.h</includes>
+    <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">icmpstr/TObjectShapeBase.h</includes>
     <includes id="_c_visual_registry_element_8h" name="CVisualRegistryElement.h" local="yes" imported="no">icmpstr/CVisualRegistryElement.h</includes>
     <class kind="class">icmpstr::CRegistryElementShape</class>
     <namespace>icmpstr</namespace>
@@ -1246,6 +1246,20 @@
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <class kind="class">icmpstr::CRegistryPropEditorComp</class>
     <class kind="class">icmpstr::CRegistryPropEditorComp::TextLog</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSceneProviderGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_scene_provider_gui_comp_8h</filename>
+    <includes id="_i_scene_controller_8h" name="ISceneController.h" local="yes" imported="no">i2d/ISceneController.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
+    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
+    <class kind="class">icmpstr::CSceneProviderGuiComp</class>
+    <class kind="class">icmpstr::CSceneProviderGuiComp::CScene</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -1288,7 +1302,7 @@
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_t_scenographer_comp_base_8h" name="TScenographerCompBase.h" local="yes" imported="no">iqt2d/TScenographerCompBase.h</includes>
+    <includes id="_t_scenographer_comp_base_8h" name="TScenographerCompBase.h" local="yes" imported="no">icmpstr/TScenographerCompBase.h</includes>
     <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
@@ -1362,6 +1376,44 @@
     <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::IRegistryPreview</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ISceneProvider.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_i_scene_provider_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
+    <class kind="class">icmpstr::ISceneProvider</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TObjectShapeBase.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_t_object_shape_base_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_t_shape_base_8h" name="TShapeBase.h" local="yes" imported="no">icmpstr/TShapeBase.h</includes>
+    <class kind="class">icmpstr::TObjectShapeBase</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TScenographerCompBase.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_t_scenographer_comp_base_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
+    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
+    <class kind="class">icmpstr::TScenographerCompBase</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TShapeBase.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_t_shape_base_8h</filename>
+    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
+    <class kind="class">icmpstr::TShapeBase</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -3752,30 +3804,6 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
-    <name>CSceneControllerGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_scene_controller_gui_comp_8h</filename>
-    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
-    <includes id="_i_scene_controller_8h" name="ISceneController.h" local="yes" imported="no">i2d/ISceneController.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
-    <class kind="class">iqt2d::CSceneControllerGuiComp</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSceneProviderGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_scene_provider_gui_comp_8h</filename>
-    <includes id="_i_scene_controller_8h" name="ISceneController.h" local="yes" imported="no">i2d/ISceneController.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
-    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
-    <class kind="class">iqt2d::CSceneProviderGuiComp</class>
-    <class kind="class">iqt2d::CSceneProviderGuiComp::CScene</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSelectableSceneExtenderComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_selectable_scene_extender_comp_8h</filename>
@@ -3805,15 +3833,6 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
-    <name>ISceneProvider.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_i_scene_provider_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="iqt2d_8h" name="iqt2d.h" local="yes" imported="no">iqt2d/iqt2d.h</includes>
-    <class kind="class">iqt2d::ISceneProvider</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
     <name>IViewExtender.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_i_view_extender_8h</filename>
@@ -3832,70 +3851,41 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
-    <name>TObjectShapeBase.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_t_object_shape_base_8h</filename>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
-    <includes id="_t_shape_base_8h" name="TShapeBase.h" local="yes" imported="no">iqt2d/TShapeBase.h</includes>
-    <class kind="class">iqt2d::TObjectShapeBase</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TSceneExtenderCompBase.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_t_scene_extender_comp_base_8h</filename>
-    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
-    <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
-    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
-    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
-    <class kind="class">iqt2d::TSceneExtenderCompBase</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TSceneExtenderDelegatorCompWrap.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_t_scene_extender_delegator_comp_wrap_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
-    <class kind="class">iqt2d::TSceneExtenderDelegatorCompWrap</class>
-    <namespace>iqt2d</namespace>
-    <member kind="typedef">
-      <type>TSceneExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
-      <name>CSceneExtenderDelegatorComp</name>
-      <anchorfile>namespaceiqt2d.html</anchorfile>
-      <anchor>a02e60426ed5d1ad3884d837f5236c724</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TScenographerCompBase.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_t_scenographer_comp_base_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
-    <class kind="class">iqt2d::TScenographerCompBase</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TShapeBase.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_t_shape_base_8h</filename>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">iqt2d/ISceneProvider.h</includes>
-    <class kind="class">iqt2d::TShapeBase</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
     <name>TShapeParamsGuiCompBase.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_shape_params_gui_comp_base_8h</filename>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_shape_control_8h" name="CShapeControl.h" local="yes" imported="no">iview/CShapeControl.h</includes>
-    <includes id="_t_scene_extender_comp_base_8h" name="TSceneExtenderCompBase.h" local="yes" imported="no">iqt2d/TSceneExtenderCompBase.h</includes>
+    <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="yes" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TViewExtenderCompBase.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_t_view_extender_comp_base_8h</filename>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
+    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
+    <class kind="class">iqt2d::TViewExtenderCompBase</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TViewExtenderDelegatorCompWrap.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_t_view_extender_delegator_comp_wrap_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
+    <class kind="class">iqt2d::TViewExtenderDelegatorCompWrap</class>
+    <namespace>iqt2d</namespace>
+    <member kind="typedef">
+      <type>TViewExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>CViewExtenderDelegatorComp</name>
+      <anchorfile>namespaceiqt2d.html</anchorfile>
+      <anchor>aaa07639b224bf681c5aa50e41400f109</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CDoxygenHelpFileProviderComp.h</name>
@@ -14728,6 +14718,7 @@
     <class kind="class">icmpstr::CRegistryLoaderComp</class>
     <class kind="class">icmpstr::CRegistryPreviewComp</class>
     <class kind="class">icmpstr::CRegistryPropEditorComp</class>
+    <class kind="class">icmpstr::CSceneProviderGuiComp</class>
     <class kind="class">icmpstr::CVisualRegistryComp</class>
     <class kind="class">icmpstr::CVisualRegistryElement</class>
     <class kind="class">icmpstr::CVisualRegistryScenographerComp</class>
@@ -14737,6 +14728,10 @@
     <class kind="class">icmpstr::IExternalMetaInfoManager</class>
     <class kind="class">icmpstr::IRegistryConsistInfo</class>
     <class kind="class">icmpstr::IRegistryPreview</class>
+    <class kind="class">icmpstr::ISceneProvider</class>
+    <class kind="class">icmpstr::TObjectShapeBase</class>
+    <class kind="class">icmpstr::TScenographerCompBase</class>
+    <class kind="class">icmpstr::TShapeBase</class>
   </compound>
   <compound kind="class">
     <name>icmpstr::CAttributeEditorComp</name>
@@ -15419,8 +15414,8 @@
       <type></type>
       <name>CGraphicsConnectorItem</name>
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a1d504d057c59782308d9435a645b8872</anchor>
-      <arglist>(const iqt2d::ISceneProvider &amp;sceneProvider, int connectFlags=0, QGraphicsItem *parent=NULL)</arglist>
+      <anchor>ae0a20de7209754ce79c5c8c41810fff4</anchor>
+      <arglist>(const icmpstr::ISceneProvider &amp;sceneProvider, int connectFlags=0, QGraphicsItem *parent=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -16109,10 +16104,10 @@
     <filename>classicmpstr_1_1_c_registry_element_shape.html</filename>
     <base>TObjectShapeBase&lt; QGraphicsRectItem, CVisualRegistryElement &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TObjectShapeBase&lt; QGraphicsRectItem, CVisualRegistryElement &gt;</type>
+      <type>icmpstr::TObjectShapeBase&lt; QGraphicsRectItem, CVisualRegistryElement &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>aaaac9e0c8451ab14cd7f595ae64070a6</anchor>
+      <anchor>afe07580ce056cae717b8307a6b122543</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -16133,8 +16128,8 @@
       <type></type>
       <name>CRegistryElementShape</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a599a48e70214d6208e12ee32159a6bc0</anchor>
-      <arglist>(const CVisualRegistryScenographerComp *registryViewPtr, const iqt2d::ISceneProvider *providerPtr=NULL)</arglist>
+      <anchor>a765d8a517349edf6f1461b1d4c6a5ab8</anchor>
+      <arglist>(const CVisualRegistryScenographerComp *registryViewPtr, const icmpstr::ISceneProvider *providerPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>QRectF</type>
@@ -16437,6 +16432,397 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>icmpstr::CSceneProviderGuiComp</name>
+    <filename>classicmpstr_1_1_c_scene_provider_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <base virtualness="virtual">icmpstr::ISceneProvider</base>
+    <base virtualness="virtual">i2d::ISceneController</base>
+    <class kind="class">icmpstr::CSceneProviderGuiComp::CScene</class>
+    <member kind="enumeration">
+      <name>BackgroundMode</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a47c91d6e3ead1cfdc34d82377baa724b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_NORMAL</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a47c91d6e3ead1cfdc34d82377baa724bafc68d3c8e62e0483af5da521808859a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_SOLID</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a47c91d6e3ead1cfdc34d82377baa724baa6b141bd3afec7c472b076e920b9ae82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_GRID</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a47c91d6e3ead1cfdc34d82377baa724ba51df2ce255658c352d7be519fc72b4f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_CHECKERBOARD</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a47c91d6e3ead1cfdc34d82377baa724ba7efd4d9a24f1a3372a5873aaf5fefb1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_DOT_GRID</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a47c91d6e3ead1cfdc34d82377baa724ba6220fda529744e6286d74e4c0efb271e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_TRANSPARENT</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a47c91d6e3ead1cfdc34d82377baa724baf6b00fe5c0d1b53ce82737888d501839</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a4b82e25cb9b5ba1717af8bf62066f548</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>zoomChanged</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a67daccf53d94bd418b6df8e2e2271ee5</anchor>
+      <arglist>(double)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSceneProviderGuiComp</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a6a103465bb6e5644eb9db127e409b6e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetIsotropyFactor</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>aa85103097a8a9b629bc1277a20ba8d54</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetIsotropyFactor</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a903626b7abb7c7678d0e3861dfdda07e</anchor>
+      <arglist>(double factor)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a7c35feafb0a2d3dd1fefe11d3db94211</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSceneId</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a9de552749c081c7c9dbfdb85524276fb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QGraphicsScene *</type>
+      <name>GetScene</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a502e2e7cba35fe4b62493cdbb8b7ec1f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetSceneAlignment</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ab28733d3c7cd9cf6c74c490a80c66ab1</anchor>
+      <arglist>(double &amp;distance) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSceneFlags</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>aec6720eefef956cbc8b64ba087ec2f38</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSceneRestrictionFlags</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a34dfb24d8adc67343f808071f211c061</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual FitMode</type>
+      <name>GetFitMode</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a63408f397ad039d73901fbffa4d810b3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetFitMode</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a98bad749f848c2a904f165c43fe1ab44</anchor>
+      <arglist>(FitMode fitMode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsFullScreenMode</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ad8dc3554153b1a14af2b61d12f5a5796</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetFullScreenMode</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a09f39cd2e5fb50445a38d21b28c51d46</anchor>
+      <arglist>(bool isFullScreen)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetScale</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a1a268449e76bd9e69209061d2fc56dcc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetScale</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a42c26ef4d15b92894cdd3d3f44e75293</anchor>
+      <arglist>(int scaleMode=SM_SET, double value=1.0)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnPrint</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a6e7c8ac1c87150a93a6196b8997614bf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnZoomIncrement</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a288aee26504716ba937b35e14bc794c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnZoomDecrement</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>af5a4252fe81d455338a906c72849e20a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnFitToView</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>aba3ad11bf74d6a848f2420b081905e69</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnFitToShapes</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a2083730906fff7f9b49923b536ef5197</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnResetScale</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a020442f517e0484e41a3d164cf1e9d1c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAutoFit</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>abe7041e3fb492ae30868c0f85a42fa18</anchor>
+      <arglist>(bool isAutoScale)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnSelectAllShapes</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a2c734d994a9f91ccb439b6b1d4c2753b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnResize</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a49683b5ebb5c6b6cde811b3df7657c48</anchor>
+      <arglist>(QResizeEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnWheelEvent</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a7372bb5cde03e56c821253083e2f958c</anchor>
+      <arglist>(QGraphicsSceneWheelEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnKeyReleaseEvent</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a432bb5828e2fa52b93f172dc0c1635f3</anchor>
+      <arglist>(QKeyEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseDoubleClickEvent</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a09af7ad720712ab60371f76999ad1297</anchor>
+      <arglist>(QEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ScaleView</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a794fcf4e964dbc6752cf2c9ed4fe52a8</anchor>
+      <arglist>(double scaleFactor)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetFittedScale</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a025ea63f12ae8486069ffeaaf86a4731</anchor>
+      <arglist>(FitMode mode)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>iqtgui::CHierarchicalCommand &amp;</type>
+      <name>GetCommandsRootRef</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>adcc1921aa5f48c6270e9c4066aa6ea87</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>HasDropConsumerForFormat</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a9f532aff55821370feeb83fe5c0632f6</anchor>
+      <arglist>(const QStringList &amp;formats) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DelegateDropEvent</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a283b9f55d219f7061405f9bb08717d35</anchor>
+      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ResetScene</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>abfb44d86142ee260280c86735a5a5728</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a20f65b7fc506be58b9d87ae27aaa2dd9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>afd4996345848426a1cfc53af3abf8551</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnRetranslate</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a31eea4df98270b8ae80a53b9a494b508</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a5eb4a1ed4ec859de744c6a0bf9429068</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>adeef6f1baa220a862cf32a88fed25594</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a685309b26a2cd708dabed4656bd6f843</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CSceneProviderGuiComp::CScene</name>
+    <filename>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</filename>
+    <member kind="typedef">
+      <type>QGraphicsScene</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
+      <anchor>a7efe68bb8b5c61966a179f438359921a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CScene</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
+      <anchor>ab0c1c594aa6def922e6ed4c69d92fbe9</anchor>
+      <arglist>(CSceneProviderGuiComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DrawGrid</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
+      <anchor>a03cdad8754eea1ec6af24c6759162371</anchor>
+      <arglist>(QPainter &amp;painter, const QRectF &amp;rect, bool useDot=false)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>drawBackground</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
+      <anchor>aedcc57241c4176b62fff7024a7f56597</anchor>
+      <arglist>(QPainter *painter, const QRectF &amp;rect)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>dragEnterEvent</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
+      <anchor>a4dc327e7b05e2dbeaf9f33e71aeb6d75</anchor>
+      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>dropEvent</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
+      <anchor>af048c290e6d5cd5cb38bf633e8e39c0f</anchor>
+      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>dragMoveEvent</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
+      <anchor>a394296933e58deb9b7bb5eab916e82aa</anchor>
+      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>icmpstr::CVisualRegistryComp</name>
     <filename>classicmpstr_1_1_c_visual_registry_comp.html</filename>
     <base>QObject</base>
@@ -16680,10 +17066,10 @@
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <class kind="class">icmpstr::CVisualRegistryScenographerComp::EnvironmentObserver</class>
     <member kind="typedef">
-      <type>iqt2d::TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</type>
+      <type>icmpstr::TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a3b8dadc23a7b177f65d5418e2a53b9c4</anchor>
+      <anchor>a98807028813fafb5f343bd8b42c60e41</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -17203,6 +17589,437 @@
       <anchorfile>classicmpstr_1_1_i_registry_preview.html</anchorfile>
       <anchor>ac587ec423b8d3e3b6e9ef699d312797e</anchor>
       <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::ISceneProvider</name>
+    <filename>classicmpstr_1_1_i_scene_provider.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>SceneFlags</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_FIXED_SIZE</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245adee81a2a0fa3944e96e781d1f662b3fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_ALIGNED</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245a6ed7d94c9b5ff12650ac39718ec4cb6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetSceneId</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>a3f24e149134255e6030b5a40657add76</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QGraphicsScene *</type>
+      <name>GetScene</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>ac09c5e76b6688321620cfeefafbe4415</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetSceneAlignment</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>af3fc795bbe91a0a227687a9d0723839f</anchor>
+      <arglist>(double &amp;distance) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetSceneFlags</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>a707b8924f37ade1f5102ca2e20da0274</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::TObjectShapeBase</name>
+    <filename>classicmpstr_1_1_t_object_shape_base.html</filename>
+    <templarg>GraphicsItemClass</templarg>
+    <templarg>ObjectClass</templarg>
+    <base>icmpstr::TShapeBase</base>
+    <base>TSingleModelObserverBase&lt; ObjectClass &gt;</base>
+    <member kind="typedef">
+      <type>TShapeBase&lt; GraphicsItemClass &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ad00993b61767d1e229adc4d44ac5ab11</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; ObjectClass &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a1b67ca20d9bf006d4785967132783363</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TObjectShapeBase</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ac62d4216e3dbdb96aa8d03dc9fc41c79</anchor>
+      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a3967ef9d1790a4bdb85a27c5b860f320</anchor>
+      <arglist>(bool isSelected)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnPositionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ab1b2bd8ac222118c71dff0c559cf4a74</anchor>
+      <arglist>(const QPointF &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>itemChange</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a8966ba6b1d04cf1d2ef745c1e5681d61</anchor>
+      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mousePressEvent</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ac52bce6b8a08b75c49a751814cb8d3b3</anchor>
+      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mouseReleaseEvent</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a389d48028358fc515c793acce9bccbec</anchor>
+      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mouseDoubleClickEvent</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a73dcd1ce65c9108b85d2a07209e7c6c0</anchor>
+      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>aa38243f1b9a880253096d0fb4d64ee62</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>UpdateGraphicsItem</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ab7b096e6f596a53bf1331dbdb25ec99e</anchor>
+      <arglist>(const ObjectClass &amp;object)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::TScenographerCompBase</name>
+    <filename>classicmpstr_1_1_t_scenographer_comp_base.html</filename>
+    <templarg>Observer</templarg>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iqtgui::IDropConsumer</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a3592a0dacc1ae809b7604dad62b721a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Observer</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a019476ae4605116a282fcf3f85c6eaff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TScenographerCompBase</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a346cc785b881e6a0865687a830c4964d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetIgnoreChanges</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a13be93598739068c9e8672deb5c848fd</anchor>
+      <arglist>(int ignoreUpdateFlags)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAcceptedMimeTypes</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>aac0296a00a1bb7a4ceac4c8a98c1b8fa</anchor>
+      <arglist>(const QStringList &amp;mimeTypes)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetAcceptedMimeIds</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a3807ea995e234ed327710f92bcc16b86</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnDropFinished</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a5dd796cf98480104c5eae5df83c10bca</anchor>
+      <arglist>(const QMimeData &amp;mimeData, QEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>ab7d292525b79259aecdf6602a4d8dd2c</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDropObject</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a733fbbc59f075481c04d8289f78737c3</anchor>
+      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateScene</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>acd56fe6ad9dcc4576b8278d73bdedc13</anchor>
+      <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a6498623fd0c52992ca96a467e77ed79d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>ad0a30d8b1705195ce1ecff3463b1ff91</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QGraphicsScene *</type>
+      <name>m_scenePtr</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a4e24d2d0bd8e909d67f38369676d277f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isUpdating</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a88510ba8db107633fb5a1f1ffd46fde2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_ignoreUpdateFlags</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>a4d422054dad3f53a4fd2c60716e684e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QStringList</type>
+      <name>m_acceptedMimeTypes</name>
+      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
+      <anchor>ad5e68a6b3efac11893432ee1550585d4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::TShapeBase</name>
+    <filename>classicmpstr_1_1_t_shape_base.html</filename>
+    <templarg>GraphicsItemClass</templarg>
+    <base>QObject</base>
+    <member kind="enumeration">
+      <name>ColorSheme</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>adb37f975550e5ea266069cd8be2492d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SelectedColor</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>adb37f975550e5ea266069cd8be2492d4a4f884b3d7b931a32410aeaf74f380f85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EditableColor</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>adb37f975550e5ea266069cd8be2492d4afd9c4969f64c4761ebc51f9ff2cb68bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>InactiveColor</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>adb37f975550e5ea266069cd8be2492d4a23b64324649d03e6a5b58f76f31f90df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DefaultColor</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>adb37f975550e5ea266069cd8be2492d4a42c4eff6a251e42cbe140127b78c0669</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>GraphicsItemClass</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>aee3e0d45b8ff2d4aa2bcb57e20a456ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TShapeBase</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>ae05a49a0a7568d04500d86c1a5661b9c</anchor>
+      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPen</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>aab947758d35d34a6fe99bfd0129e6b40</anchor>
+      <arglist>(int colorSheme, const QPen &amp;pen)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QPen</type>
+      <name>GetPen</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>ac1d04b1443ef89f4ff8c5ec02c29cb7b</anchor>
+      <arglist>(int colorSheme) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetBrush</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a162a42318f015b6c41e33c89ef40a64f</anchor>
+      <arglist>(int colorSheme, const QBrush &amp;pen)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QBrush</type>
+      <name>GetBrush</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>ae650176339fa229e9d0331333da6fd88</anchor>
+      <arglist>(int colorSheme) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SwitchColorSheme</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a2726d891662771b491ec857006d6566b</anchor>
+      <arglist>(int colorSheme)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsEditable</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a9d35d412ba88bb7e6b5a76442e4d647b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetEditable</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>aef8dd96943692c410942dda156a73b90</anchor>
+      <arglist>(bool isEditable)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ISceneProvider *</type>
+      <name>GetSceneProvider</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a09bb67f9285d42126fe2294b8059afb0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>GetPosFromLocal</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a2479bbb32e3f1819643ceff4a558442a</anchor>
+      <arglist>(const QPointF &amp;position) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QPointF</type>
+      <name>GetLocalFromPos</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a1b2b890ade200162309cbdf264ac9896</anchor>
+      <arglist>(const i2d::CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a8272ebe7d40e5720c16b0a2545f8cf61</anchor>
+      <arglist>(bool isSelected)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnPositionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a071dae8731f249d895feecf3d34cfad4</anchor>
+      <arglist>(const QPointF &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>itemChange</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a153b4a35041c83a6f4df18387f7bb263</anchor>
+      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>hoverEnterEvent</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a258ec40b12ec5724346b2949e9166864</anchor>
+      <arglist>(QGraphicsSceneHoverEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>hoverLeaveEvent</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>acbda29c594f7c3dccf1a7c63c0e951ec</anchor>
+      <arglist>(QGraphicsSceneHoverEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>paint</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a0e73765a1d3535ac1797971d748c7fb1</anchor>
+      <arglist>(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>paint</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>adc014a2a0e09ef92cd18642fd1e3d02b</anchor>
+      <arglist>(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>paint</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a39fd5e47f354db3203d15a5b448af941</anchor>
+      <arglist>(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -32537,24 +33354,18 @@
     <class kind="class">iqt2d::CRectangleParamsGuiComp</class>
     <class kind="class">iqt2d::CSceneBinderComp</class>
     <class kind="class">iqt2d::CSceneConnectorGuiComp</class>
-    <class kind="class">iqt2d::CSceneControllerGuiComp</class>
-    <class kind="class">iqt2d::CSceneProviderGuiComp</class>
     <class kind="class">iqt2d::CSelectableSceneExtenderComp</class>
     <class kind="class">iqt2d::CViewProviderGuiComp</class>
-    <class kind="class">iqt2d::ISceneProvider</class>
     <class kind="class">iqt2d::IViewExtender</class>
     <class kind="class">iqt2d::IViewProvider</class>
-    <class kind="class">iqt2d::TObjectShapeBase</class>
-    <class kind="class">iqt2d::TSceneExtenderCompBase</class>
-    <class kind="class">iqt2d::TSceneExtenderDelegatorCompWrap</class>
-    <class kind="class">iqt2d::TScenographerCompBase</class>
-    <class kind="class">iqt2d::TShapeBase</class>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
+    <class kind="class">iqt2d::TViewExtenderCompBase</class>
+    <class kind="class">iqt2d::TViewExtenderDelegatorCompWrap</class>
     <member kind="typedef">
-      <type>TSceneExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
-      <name>CSceneExtenderDelegatorComp</name>
+      <type>TViewExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>CViewExtenderDelegatorComp</name>
       <anchorfile>namespaceiqt2d.html</anchorfile>
-      <anchor>a02e60426ed5d1ad3884d837f5236c724</anchor>
+      <anchor>aaa07639b224bf681c5aa50e41400f109</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -33092,458 +33903,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::CSceneControllerGuiComp</name>
-    <filename>classiqt2d_1_1_c_scene_controller_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CSceneControllerGuiComp &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneControllerGuiComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_scene_controller_gui_comp.html</anchorfile>
-      <anchor>a7bf445417adcbcb4c9e827b295de5a24</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnZoomIncrement</name>
-      <anchorfile>classiqt2d_1_1_c_scene_controller_gui_comp.html</anchorfile>
-      <anchor>a015766c8060c506dfadecfd74eb9bea7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnZoomDecrement</name>
-      <anchorfile>classiqt2d_1_1_c_scene_controller_gui_comp.html</anchorfile>
-      <anchor>acc187ec0fc22e6e86bfd618294c71bba</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnResetView</name>
-      <anchorfile>classiqt2d_1_1_c_scene_controller_gui_comp.html</anchorfile>
-      <anchor>a340f6d68a8b49ce7489f0b68c3f744c6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnRotateRight</name>
-      <anchorfile>classiqt2d_1_1_c_scene_controller_gui_comp.html</anchorfile>
-      <anchor>af2b8b557763840aac19b20d41c88cad7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnRotateLeft</name>
-      <anchorfile>classiqt2d_1_1_c_scene_controller_gui_comp.html</anchorfile>
-      <anchor>aaa3d5716731c19d5fbe7c6d2fa986ba8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqt2d_1_1_c_scene_controller_gui_comp.html</anchorfile>
-      <anchor>afa2dba7acc653bcf76ee26d9702570ba</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_c_scene_controller_gui_comp.html</anchorfile>
-      <anchor>a30dc9968a04753fb93b6abb94e8d2727</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CSceneProviderGuiComp</name>
-    <filename>classiqt2d_1_1_c_scene_provider_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <base virtualness="virtual">iqt2d::ISceneProvider</base>
-    <base virtualness="virtual">i2d::ISceneController</base>
-    <class kind="class">iqt2d::CSceneProviderGuiComp::CScene</class>
-    <member kind="enumeration">
-      <name>BackgroundMode</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a81a01f01da7e486fc4ca0b254285c411</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_NORMAL</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a81a01f01da7e486fc4ca0b254285c411a51f06582cb52fadb9be2fd213ef09a5e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_SOLID</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a81a01f01da7e486fc4ca0b254285c411a480ba06a6a810a6a1da34ac5f6ebbfb3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_GRID</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a81a01f01da7e486fc4ca0b254285c411a6614875fa8b16ac92a5915e7b4df3352</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_CHECKERBOARD</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a81a01f01da7e486fc4ca0b254285c411a93aa7d9de9a1da7de24a541781722313</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_DOT_GRID</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a81a01f01da7e486fc4ca0b254285c411a85be5ca7081f2205d119ad2dcec74790</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_TRANSPARENT</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a81a01f01da7e486fc4ca0b254285c411a41141e9095932418ba40b66a81b993cc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ac598d435b94b6f15664b487a2e5cef92</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>zoomChanged</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>add6a64efd2299ac542c266bf42e7f6ae</anchor>
-      <arglist>(double)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CSceneProviderGuiComp</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a90514ef2d427353cf9e5340c2e2a81f3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetIsotropyFactor</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a4798d380e1077674a6de42f122c8821c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetIsotropyFactor</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a9fb8b66f2f662ea6fc948f9246dc207b</anchor>
-      <arglist>(double factor)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>af0bc538aa444d9a8ec0af09f5811dd8c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSceneId</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ad04536b6392ba186a667b41c7855be04</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QGraphicsScene *</type>
-      <name>GetScene</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a62892e8b35a227bd78b4c18ab9ed5c05</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetSceneAlignment</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a678727a4f86f639fc84d8cf85bc8c0ea</anchor>
-      <arglist>(double &amp;distance) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSceneFlags</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>aae1a6933d69d3c5a80f77e0c10615e25</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSceneRestrictionFlags</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a99bcab0b0136138ba8be24d747032b4b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual FitMode</type>
-      <name>GetFitMode</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a623ea846e71186566815293c1b8eb28f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetFitMode</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a24743d228cabe721c0587d975cf6e589</anchor>
-      <arglist>(FitMode fitMode)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsFullScreenMode</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a5274c3e0cd0b9f110729e342e15bf72c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetFullScreenMode</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a0e246b8ae1f64e7900c709f4078e372b</anchor>
-      <arglist>(bool isFullScreen)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetScale</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a80846249422b3a0ad81d497f4f1b7fe1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetScale</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a2af0d2d8d2730fe4af7bee6e8a7ca343</anchor>
-      <arglist>(int scaleMode=SM_SET, double value=1.0)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnPrint</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ab43cae7d4a4e2ac2693ec5f0e9ae097b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnZoomIncrement</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a275863b1832d6c507af9eff06e803fe0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnZoomDecrement</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ab625497dd9b136f24cb5d9a7ee7d747e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnFitToView</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a6f61ecbff3dcfde78a29fc18469af3d8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnFitToShapes</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ad54b13a0c3a6191372bfcab32baee31a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnResetScale</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ae73dca04b8c2b4009921a8696b80de82</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAutoFit</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ae4f969eab9e7db42fb143844135e31a6</anchor>
-      <arglist>(bool isAutoScale)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnSelectAllShapes</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>af2cd4cb23110dfa7ac738c9c54e9486b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnResize</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a6f4a3e39bb4ab12dc65395c1320bd382</anchor>
-      <arglist>(QResizeEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnWheelEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a76fb52e6f9e28c57ff7e744938e178d2</anchor>
-      <arglist>(QGraphicsSceneWheelEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnKeyReleaseEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a643a7bdc1ff08d7b02821d95bb4c1a25</anchor>
-      <arglist>(QKeyEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseDoubleClickEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ab99a042f7c99bfa5cb21fd588788241a</anchor>
-      <arglist>(QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ScaleView</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a10600c58cb364821070365cd305ce279</anchor>
-      <arglist>(double scaleFactor)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetFittedScale</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>aca0033d8c49c02a82e7441420ac489a1</anchor>
-      <arglist>(FitMode mode)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>iqtgui::CHierarchicalCommand &amp;</type>
-      <name>GetCommandsRootRef</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ab309dd5bbe6351fdfca166501798af88</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>HasDropConsumerForFormat</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ae4f024dfb5df0dc80af9995be423cd9c</anchor>
-      <arglist>(const QStringList &amp;formats) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DelegateDropEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>aeeb28c2561c4076b7820f89a0565085e</anchor>
-      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ResetScene</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ade9c4d2175875e0c31b84a4c924ef1b1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ab5edf6564e5e6dd9ebc04c6d5468ff0b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>af3703a56eda005886cfb4d8d7d27ed5b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnRetranslate</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a5e7878399772755a858075f359354d6a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a815aecdc87ccb3ed86d7e94d702a8a65</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a19cdb05f622fc187c67faa269851dc51</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>eventFilter</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a87eb5111faed7b344dc11ea0860d1918</anchor>
-      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CSceneProviderGuiComp::CScene</name>
-    <filename>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</filename>
-    <member kind="typedef">
-      <type>QGraphicsScene</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>aa9151a28fb5ec8180d4b70ec6cc3a1e1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CScene</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>ad5b4d4c351df7f70c1e66bb22aaa0212</anchor>
-      <arglist>(CSceneProviderGuiComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DrawGrid</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>ad938b14bef1c29555e93f8c98d2f8ad1</anchor>
-      <arglist>(QPainter &amp;painter, const QRectF &amp;rect, bool useDot=false)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>drawBackground</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>a665a3f86c0359e9be5a9cb9eda5ae687</anchor>
-      <arglist>(QPainter *painter, const QRectF &amp;rect)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>dragEnterEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>ac5a56de16767a1d8b7eb663a58bb5fe3</anchor>
-      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>dropEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>ac114474c6e08fe13eb31ef109810e19e</anchor>
-      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>dragMoveEvent</name>
-      <anchorfile>classiqt2d_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>a190be32e7fb08676dd13c263a27547d6</anchor>
-      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt2d::CSelectableSceneExtenderComp</name>
     <filename>classiqt2d_1_1_c_selectable_scene_extender_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -33670,57 +34029,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::ISceneProvider</name>
-    <filename>classiqt2d_1_1_i_scene_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>SceneFlags</name>
-      <anchorfile>classiqt2d_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a0ec17fa7d1153804b83a8a8437d57463</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_FIXED_SIZE</name>
-      <anchorfile>classiqt2d_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a0ec17fa7d1153804b83a8a8437d57463af92f843d452f981633e4e79dcbb06f5c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_ALIGNED</name>
-      <anchorfile>classiqt2d_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a0ec17fa7d1153804b83a8a8437d57463ab28108b93b9bf936aa15551fb5bb59bb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetSceneId</name>
-      <anchorfile>classiqt2d_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a5b09d83d80abdb96138b3fc03fd18ec4</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QGraphicsScene *</type>
-      <name>GetScene</name>
-      <anchorfile>classiqt2d_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a5f1caa93d28f19dcaf7508de18a11fd4</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>GetSceneAlignment</name>
-      <anchorfile>classiqt2d_1_1_i_scene_provider.html</anchorfile>
-      <anchor>ad2131d343b55524e67309d83560e6a4e</anchor>
-      <arglist>(double &amp;distance) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetSceneFlags</name>
-      <anchorfile>classiqt2d_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a14318a9b609aa57bf48551ffe09c36e2</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt2d::IViewExtender</name>
     <filename>classiqt2d_1_1_i_view_extender.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -33777,495 +34085,17 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::TObjectShapeBase</name>
-    <filename>classiqt2d_1_1_t_object_shape_base.html</filename>
-    <templarg>GraphicsItemClass</templarg>
-    <templarg>ObjectClass</templarg>
-    <base>iqt2d::TShapeBase</base>
-    <base>TSingleModelObserverBase&lt; ObjectClass &gt;</base>
-    <member kind="typedef">
-      <type>TShapeBase&lt; GraphicsItemClass &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a8d4090eae47a8278fd47fdf63fd64f3f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; ObjectClass &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a8f3eaa4fac8ae681fd3b1b54187948d9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TObjectShapeBase</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a6d68b37c1643506259bc1dd6c33af991</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>af754e02e4357157ef3e1e9f4f42df46c</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPositionChanged</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a4605a44311800b2ea5bfbdda90dd70d8</anchor>
-      <arglist>(const QPointF &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QVariant</type>
-      <name>itemChange</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a102f6f51326ad0ca15f037eff54ce07e</anchor>
-      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mousePressEvent</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a0a63f6afd74186889e37dec3320e871f</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseReleaseEvent</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>aee5822a164a2e0de822f580a93562597</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseDoubleClickEvent</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a237d5239de7231c6cd29e3c6360d0311</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a4108452396e92a8b497503b15940435b</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classiqt2d_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a39a56ce673ee8fe1f1d76b2f1d5df52c</anchor>
-      <arglist>(const ObjectClass &amp;object)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::TSceneExtenderCompBase</name>
-    <filename>classiqt2d_1_1_t_scene_extender_comp_base.html</filename>
-    <templarg>Base</templarg>
-    <base>Base</base>
-    <base virtualness="virtual">iqt2d::IViewExtender</base>
-    <member kind="typedef">
-      <type>Base</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>aa84d65318184c8ebda8617619bbc17ee</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddItemsToScene</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a48c1ec039e146b12a7e1897f47aa7c10</anchor>
-      <arglist>(IViewProvider *providerPtr, int flags)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RemoveItemsFromScene</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>ac3d6f86771fa1fd5d3acc08e47752bb1</anchor>
-      <arglist>(IViewProvider *providerPtr)</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>istd::TPointerVector&lt; iview::IShape &gt;</type>
-      <name>Shapes</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a761c50f2aa84a7ecd0e9ebcd976ae673</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QMap&lt; IViewProvider *, Shapes &gt;</type>
-      <name>ShapesMap</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a942f3df3886c1bf51ae766b71d12df8d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsSceneIdSupported</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>ae24d4f1dde611254d0929942bad37622</anchor>
-      <arglist>(int id) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>const ShapesMap &amp;</type>
-      <name>GetShapesMap</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a32afb4ca5dc03c0f63b0f4d840d0639e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateAllViews</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a3e1552a85bafc3ce11e45d68e5d4142b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>CreateShapes</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_comp_base.html</anchorfile>
-      <anchor>a2cfddc21f2e3a0134525af0b40e01e52</anchor>
-      <arglist>(int sceneId, Shapes &amp;result)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::TSceneExtenderDelegatorCompWrap</name>
-    <filename>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</filename>
-    <templarg></templarg>
-    <base>Base</base>
-    <base virtualness="virtual">iqt2d::IViewExtender</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</anchorfile>
-      <anchor>a4fc6cf3153ee416f55c982ad1b52e52a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddItemsToScene</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</anchorfile>
-      <anchor>a3bff627cd8072c2fd5acb5b37d8b35cf</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RemoveItemsFromScene</name>
-      <anchorfile>classiqt2d_1_1_t_scene_extender_delegator_comp_wrap.html</anchorfile>
-      <anchor>ad01515711fc700a2243b0f05f7bb3703</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::TScenographerCompBase</name>
-    <filename>classiqt2d_1_1_t_scenographer_comp_base.html</filename>
-    <templarg>Observer</templarg>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iqtgui::IDropConsumer</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a02a20bbe0464bc2d49f569fe75fd9a31</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Observer</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>ac4b3b6b7ed7404ddfb79f8640cb2e7cd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TScenographerCompBase</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a9b741e968bafaeaef7a5e408e1f08c8f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetIgnoreChanges</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>af49b9f77acb85f26824d165839fc656c</anchor>
-      <arglist>(int ignoreUpdateFlags)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetAcceptedMimeTypes</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>ac2b82d19458b5926055a3f21eea7a112</anchor>
-      <arglist>(const QStringList &amp;mimeTypes)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetAcceptedMimeIds</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a986e4bc8c0c881b4de9f9a6113ea2f8d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnDropFinished</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>ad4f4049c43b00bd2010281854e0af121</anchor>
-      <arglist>(const QMimeData &amp;mimeData, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>af5d47713a90b12fded7b3f60e4026399</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDropObject</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a2f54ab6502f5e1004dc31f31143760d0</anchor>
-      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateScene</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a26ecefc0c5538724b9e3fc848a7abb37</anchor>
-      <arglist>(int updateFlags)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>ae076125c64bbf8bc076b0f16be877a4a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>ac5f1aa85c937726f75459d7874d5f628</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QGraphicsScene *</type>
-      <name>m_scenePtr</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>aaa15f5b60420b39d1edc512c5ca81297</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_isUpdating</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>abd52eb9955d16929d6c61baf99977ed7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_ignoreUpdateFlags</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a292a74c6bbc72f46451c474dc3b3b29d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QStringList</type>
-      <name>m_acceptedMimeTypes</name>
-      <anchorfile>classiqt2d_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a0f65555274c977d136baa07250c52701</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::TShapeBase</name>
-    <filename>classiqt2d_1_1_t_shape_base.html</filename>
-    <templarg>GraphicsItemClass</templarg>
-    <base>QObject</base>
-    <member kind="enumeration">
-      <name>ColorSheme</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>af9198b5cef6361724c84d794c5ae1039</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SelectedColor</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>af9198b5cef6361724c84d794c5ae1039a90b6138a7a5d8aeb4c6ebb13e6feda35</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>EditableColor</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>af9198b5cef6361724c84d794c5ae1039a37fe000028ebd6e8abc625e2945f36a1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InactiveColor</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>af9198b5cef6361724c84d794c5ae1039aec53425ce3918fd0b5a4db32ecbbb368</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DefaultColor</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>af9198b5cef6361724c84d794c5ae1039a387754dc6dd25eb2d9b10aeda0d2578b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GraphicsItemClass</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>ac11c35eac6ccb711d3af50cafff64987</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TShapeBase</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a3c5c14acc9cd4de0e1de68928e0915a2</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPen</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>ad5f1c31d8c925c0be3bd8557263c1103</anchor>
-      <arglist>(int colorSheme, const QPen &amp;pen)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QPen</type>
-      <name>GetPen</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a86a3e9e43bc8c5586ae23caab1a402ff</anchor>
-      <arglist>(int colorSheme) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetBrush</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>aa13289315c15f1a4bd91042b28cabcb9</anchor>
-      <arglist>(int colorSheme, const QBrush &amp;pen)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QBrush</type>
-      <name>GetBrush</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>aefd3ed8468c46c6be48717f03074a682</anchor>
-      <arglist>(int colorSheme) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SwitchColorSheme</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>ae8027804b0feaf0bbb19a86e14898a97</anchor>
-      <arglist>(int colorSheme)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsEditable</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>ad8b7b4cc875b8d6058752ab58d691fdd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetEditable</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>af75c1f0e07adcd391c687b4f986fd587</anchor>
-      <arglist>(bool isEditable)</arglist>
-    </member>
-    <member kind="function">
-      <type>const ISceneProvider *</type>
-      <name>GetSceneProvider</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a9723f5e620f2ba64c2b8c1728c10f0ca</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>GetPosFromLocal</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a4d08eabc230f58774960ed36784f6bca</anchor>
-      <arglist>(const QPointF &amp;position) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QPointF</type>
-      <name>GetLocalFromPos</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a902346dc9e4f594261c41e88385ee482</anchor>
-      <arglist>(const i2d::CVector2d &amp;position) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>ab442db7d15b4651c164007ef961f720e</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPositionChanged</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>ae25bccae07da9bfed7e8cce4af81e5cb</anchor>
-      <arglist>(const QPointF &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QVariant</type>
-      <name>itemChange</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a357a444a7d4f7c58e0cb7577f8e3b3dc</anchor>
-      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>hoverEnterEvent</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a15729fd3011af09fed22939e2fdf5888</anchor>
-      <arglist>(QGraphicsSceneHoverEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>hoverLeaveEvent</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a89a9ff8818b9f8be6b8e88a56f4995fd</anchor>
-      <arglist>(QGraphicsSceneHoverEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>paint</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>ab2f433b5c65bea87d8b38db555875efd</anchor>
-      <arglist>(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>paint</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>a4e16ab7c64471f2d99ea78d9fe9aebf2</anchor>
-      <arglist>(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>paint</name>
-      <anchorfile>classiqt2d_1_1_t_shape_base.html</anchorfile>
-      <anchor>af5144b764257c4ccfe47298125396e38</anchor>
-      <arglist>(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt2d::TShapeParamsGuiCompBase</name>
     <filename>classiqt2d_1_1_t_shape_params_gui_comp_base.html</filename>
     <templarg>Ui</templarg>
     <templarg>Shape</templarg>
     <templarg>ShapeModel</templarg>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</base>
+    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</type>
+      <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, ShapeModel &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a22bd4848cc6063a548e4ec15bf99f84e</anchor>
+      <anchor>a152f7ad72e4d09bb6773146311b2f634</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34309,6 +34139,104 @@
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
       <anchor>a983c22bfc8806ba26585fbcbe97bf392</anchor>
       <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::TViewExtenderCompBase</name>
+    <filename>classiqt2d_1_1_t_view_extender_comp_base.html</filename>
+    <templarg>Base</templarg>
+    <base>Base</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>aaec9099f0c927c299bb16ba255594773</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>add9429fbb1e0cd102b57fb36df72415d</anchor>
+      <arglist>(IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>abb815f430a25cc753ce2119345c97e99</anchor>
+      <arglist>(IViewProvider *providerPtr)</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TPointerVector&lt; iview::IShape &gt;</type>
+      <name>Shapes</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>a86ad20c3318bd0ae11f071c5404c8774</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; IViewProvider *, Shapes &gt;</type>
+      <name>ShapesMap</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>a94eaa20dc87a1f989eec6dce5532497b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsSceneIdSupported</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>a3975b8a2b3d4350dd9367339b6a1083b</anchor>
+      <arglist>(int id) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const ShapesMap &amp;</type>
+      <name>GetShapesMap</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>aa08af10268f957dd2d89fc108c5506a3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateAllViews</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>a800b8a361c62f39966dd5bbb024618fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>CreateShapes</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>a204c880d497070980e349dea6475e45c</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::TViewExtenderDelegatorCompWrap</name>
+    <filename>classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html</filename>
+    <templarg></templarg>
+    <base>Base</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>a7a4d59713cbb05445e193e2b7b5bdeb8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>aed8fdd01c51fd02c02e86d7e6c721ca3</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>ae968140f3c0b782d4f34366ec9cd4235</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">

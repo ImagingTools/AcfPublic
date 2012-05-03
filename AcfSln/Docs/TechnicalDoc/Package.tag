@@ -1591,14 +1591,6 @@
     <namespace>iqtfpf</namespace>
   </compound>
   <compound kind="file">
-    <name>CHotfolderShape.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_hotfolder_shape_8h</filename>
-    <includes id="_c_visual_hotfolder_workflow_item_8h" name="CVisualHotfolderWorkflowItem.h" local="yes" imported="no">ifpf/CVisualHotfolderWorkflowItem.h</includes>
-    <class kind="class">iqtfpf::CHotfolderShape</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
     <name>CHotfolderTaskManagerComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
     <filename>_c_hotfolder_task_manager_comp_8h</filename>
@@ -1608,14 +1600,6 @@
     <includes id="_i_directory_monitor_8h" name="IDirectoryMonitor.h" local="yes" imported="no">ifpf/IDirectoryMonitor.h</includes>
     <includes id="_i_hotfolder_task_manager_8h" name="IHotfolderTaskManager.h" local="yes" imported="no">ifpf/IHotfolderTaskManager.h</includes>
     <class kind="class">iqtfpf::CHotfolderTaskManagerComp</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CHotfolderWorkflowScenographerComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_hotfolder_workflow_scenographer_comp_8h</filename>
-    <includes id="_i_hotfolder_workflow_8h" name="IHotfolderWorkflow.h" local="yes" imported="no">ifpf/IHotfolderWorkflow.h</includes>
-    <class kind="class">iqtfpf::CHotfolderWorkflowScenographerComp</class>
     <namespace>iqtfpf</namespace>
   </compound>
   <compound kind="file">
@@ -10761,12 +10745,12 @@
   <compound kind="class">
     <name>iqtcam::CSnapImageGuiComp</name>
     <filename>classiqtcam_1_1_c_snap_image_gui_comp.html</filename>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</base>
+    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</type>
+      <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a7f9c9ece8874c988de645acef23feaf7</anchor>
+      <anchor>a653b8721fdc4a7f47ef2be29f17fb11a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -11421,9 +11405,7 @@
     <class kind="class">iqtfpf::CHotfolderContainerGuiComp</class>
     <class kind="class">iqtfpf::CHotfolderGuiComp</class>
     <class kind="class">iqtfpf::CHotfolderProcessingComp</class>
-    <class kind="class">iqtfpf::CHotfolderShape</class>
     <class kind="class">iqtfpf::CHotfolderTaskManagerComp</class>
-    <class kind="class">iqtfpf::CHotfolderWorkflowScenographerComp</class>
     <class kind="class">iqtfpf::CProcessingItemPreviewGuiComp</class>
   </compound>
   <compound kind="class">
@@ -11983,86 +11965,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqtfpf::CHotfolderShape</name>
-    <filename>classiqtfpf_1_1_c_hotfolder_shape.html</filename>
-    <base>TObjectShapeBase&lt; QGraphicsRectItem, ifpf::CVisualHotfolderWorkflowItem &gt;</base>
-    <member kind="typedef">
-      <type>iqt2d::TObjectShapeBase&lt; QGraphicsRectItem, ifpf::CVisualHotfolderWorkflowItem &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>a0837c7b5755941e1d919a3e87bcfc70b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>SelectionChanged</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>aa4b2212038952f0deda20aeec2269972</anchor>
-      <arglist>(bool state)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderShape</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>a037e177a084e27408bd73497dcb40439</anchor>
-      <arglist>(const iqt2d::ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>QRectF</type>
-      <name>GetViewRect</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>adb6107f4560558cb9f9ea903ae8787a8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QRectF</type>
-      <name>boundingRect</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>aa536b867e0feb05adce70a165e5b8b46</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>paint</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>a01639504bff93594c6e0e0063cf54201</anchor>
-      <arglist>(QPainter *painterPtr, const QStyleOptionGraphicsItem *stylePtr, QWidget *widgetPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>a07170c68e8fa3dd9e58666e39373ce32</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SIDE_OFFSET</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>abd95a3ee0c05880f4796819d8ad0f143a3a359918712cf04366249b810ddd0cca</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SHADOW_OFFSET</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>abd95a3ee0c05880f4796819d8ad0f143aa20060c899e24abdc407d4367b3bb608</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>ad5081e31f452609530578e81df04785c</anchor>
-      <arglist>(const ifpf::CVisualHotfolderWorkflowItem &amp;element)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_shape.html</anchorfile>
-      <anchor>a12b139b953ef93bf68944b77428e3a87</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqtfpf::CHotfolderTaskManagerComp</name>
     <filename>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
@@ -12115,54 +12017,6 @@
       <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
       <anchor>a167da5c8a10b7f70fca738bcf79b8f36</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CHotfolderWorkflowScenographerComp</name>
-    <filename>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</filename>
-    <base>QObject</base>
-    <base>TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; ifpf::IHotfolderWorkflow &gt; &gt;</base>
-    <member kind="typedef">
-      <type>iqt2d::TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; ifpf::IHotfolderWorkflow &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</anchorfile>
-      <anchor>a0478ffead386e04df52c6072c6f84fa9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderWorkflowScenographerComp</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</anchorfile>
-      <anchor>ab8dfa985df9cc2683ea5e504e9625418</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>TryCreateHotfolder</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</anchorfile>
-      <anchor>a2cd3306d3a19d1e0a23dc5483de58641</anchor>
-      <arglist>(const QString &amp;hofolderId, const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QGraphicsItem *</type>
-      <name>AddShapeToScene</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</anchorfile>
-      <anchor>aeff04a996e38d1ba1b76a7507510e0d4</anchor>
-      <arglist>(istd::IPolymorphic *elementPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDropObject</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</anchorfile>
-      <anchor>aa0040489c862f3d27fe0b5acb827b215</anchor>
-      <arglist>(const QMimeData &amp;mimeData, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateScene</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_workflow_scenographer_comp.html</anchorfile>
-      <anchor>a9d4932d262c1366c6a6a5bc17c3f39cf</anchor>
-      <arglist>(int updateFlags)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12516,12 +12370,12 @@
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
     <templarg>UI</templarg>
     <templarg>WidgetType</templarg>
-    <base>TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</base>
+    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TSceneExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</type>
+      <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a9b968d56fdbb043a6621bf74ab5f2e7d</anchor>
+      <anchor>afafc39b2e578fb4a77a7e25cb599ba40</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

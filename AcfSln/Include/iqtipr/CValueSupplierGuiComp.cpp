@@ -74,7 +74,7 @@ QWidget* CValueSupplierGuiComp::GetParamsWidget() const
 }
 
 
-// reimplemented (iqt2d::TSceneExtenderCompBase)
+// reimplemented (iqt2d::TViewExtenderCompBase)
 
 void CValueSupplierGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 {

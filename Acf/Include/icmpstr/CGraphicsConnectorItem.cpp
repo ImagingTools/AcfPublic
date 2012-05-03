@@ -42,7 +42,7 @@ namespace icmpstr
 
 
 CGraphicsConnectorItem::CGraphicsConnectorItem(
-			const iqt2d::ISceneProvider& sceneProvider,
+			const icmpstr::ISceneProvider& sceneProvider,
 			int connectFlags,
 			QGraphicsItem* parent)
 :	BaseClass(parent),
