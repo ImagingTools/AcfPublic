@@ -73,6 +73,8 @@ void CViewProviderGuiComp::OnGuiCreated()
 	iview::CConsoleGui* consolePtr = GetQtWidget();
 	I_ASSERT(consolePtr != NULL);
 
+	consolePtr->SetShapeStatusInfo(m_shapeStatusInfoCompPtr.GetPtr());
+
 	// Setup view and its calibration:
 	iview::CViewport& view = consolePtr->GetViewRef();
 	view.SetViewDraggable();
@@ -108,13 +110,6 @@ void CViewProviderGuiComp::OnGuiCreated()
 		useScrollBarCommands = *m_useScollBarCommandsAttrPtr;
 	}
 	consolePtr->SetScrollbarsButtonVisible(useScrollBarCommands);
-
-	// status bar commands
-	bool useStatusBarCommands = false;
-	if (m_useStatusBarCommandsAttrPtr.IsValid()){
-		useStatusBarCommands = *m_useStatusBarCommandsAttrPtr;
-	}
-	consolePtr->SetStatusButtonVisible(useStatusBarCommands);
 }
 
 

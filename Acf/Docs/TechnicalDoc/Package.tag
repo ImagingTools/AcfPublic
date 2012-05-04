@@ -4208,9 +4208,9 @@
     <name>CLogGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_log_gui_comp_8h</filename>
+    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ibase/IMessageContainer.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ibase/CMessage.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtgui::CLogGuiComp</class>
@@ -5533,6 +5533,7 @@
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_c_console_base_8h" name="CConsoleBase.h" local="yes" imported="no">iview/CConsoleBase.h</includes>
     <includes id="_c_viewport_8h" name="CViewport.h" local="yes" imported="no">iview/CViewport.h</includes>
+    <includes id="_i_shape_status_info_8h" name="IShapeStatusInfo.h" local="yes" imported="no">iview/IShapeStatusInfo.h</includes>
     <class kind="class">iview::CConsoleGui</class>
     <namespace>iview</namespace>
   </compound>
@@ -5817,6 +5818,24 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CShapeInfoGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_shape_info_gui_comp_8h</filename>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_i_shape_status_info_8h" name="IShapeStatusInfo.h" local="yes" imported="no">iview/IShapeStatusInfo.h</includes>
+    <class kind="class">iview::CShapeInfoGuiComp</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CShapeStatusInfoComp.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_shape_status_info_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_shape_status_info_8h" name="IShapeStatusInfo.h" local="yes" imported="no">iview/IShapeStatusInfo.h</includes>
+    <class kind="class">iview::CShapeStatusInfoComp</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTransformableRectangleCalibrationShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_transformable_rectangle_calibration_shape_8h</filename>
@@ -5980,6 +5999,15 @@
     <filename>_i_shape_observer_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">iview::IShapeObserver</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IShapeStatusInfo.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_i_shape_status_info_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <class kind="class">iview::IShapeStatusInfo</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -36305,7 +36333,6 @@
     <name>iqtgui::CLogGuiComp</name>
     <filename>classiqtgui_1_1_c_log_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;</base>
-    <base virtualness="virtual">iqtgui::IVisualStatusProvider</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;</type>
       <name>BaseClass</name>
@@ -36481,13 +36508,6 @@
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>a601dad58f6070b29493518478ab7f8e7</anchor>
       <arglist>(const istd::IInformationProvider &amp;message)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateItemState</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a44909e40ef9b41d478dd952b85df1d21</anchor>
-      <arglist>(QTreeWidgetItem &amp;item) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QIcon</type>
@@ -45699,6 +45719,8 @@
     <class kind="class">iview::CScreenTransform</class>
     <class kind="class">iview::CShapeBase</class>
     <class kind="class">iview::CShapeControl</class>
+    <class kind="class">iview::CShapeInfoGuiComp</class>
+    <class kind="class">iview::CShapeStatusInfoComp</class>
     <class kind="class">iview::CTransformableRectangleCalibrationShape</class>
     <class kind="class">iview::CViewBase</class>
     <class kind="class">iview::CViewLayer</class>
@@ -45715,6 +45737,7 @@
     <class kind="class">iview::ISelectableLayer</class>
     <class kind="class">iview::IShape</class>
     <class kind="class">iview::IShapeObserver</class>
+    <class kind="class">iview::IShapeStatusInfo</class>
     <class kind="class">iview::IShapeView</class>
     <class kind="class">iview::ITouchable</class>
     <class kind="class">iview::IViewEventObserver</class>
@@ -46413,20 +46436,6 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>IsStatusVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>ab8b2cb60ac0d80edfd5c57b559ecbf8e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetStatusVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>af7dcd795f128e4eb652632bca40948ea</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
       <name>AreZoomsVisible</name>
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
       <anchor>af978b7fc84a0995b45640902fc2b2421</anchor>
@@ -46479,20 +46488,6 @@
       <name>SetUserModeButtonsVisible</name>
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
       <anchor>a56d02ab8442ab345354993d07586e516</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsStatusButtonVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>a5f920a4d36810c24073a9b5d8d0391e5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetStatusButtonVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>a1ef3952bc0262bcf6130ab2d18424e09</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function">
@@ -46553,48 +46548,6 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>IsPixelPositionVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>a4ddd36a46dacde7cd1d8b4ad58dae16d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPixelPositionVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>a73ab8ea942b5e41deab86b95d0d3f9fd</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsPixelValueVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>ae1706275b05ec28f0bf267a66344e28b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPixelValueVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>aeb12a597311658a923e921e5a94514aa</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsMmPositionVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>aca5338ba00b60d21613669a0a6f77c4a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetMmPositionVisible</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>ae515cb4a1ce73376d73787ab7604fb02</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
       <name>IsBackgroundActive</name>
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
       <anchor>a7296591b320981355219d739c4b9a5f0</anchor>
@@ -46648,13 +46601,6 @@
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
       <anchor>a81739f98a77b72a9a7b8265e4395fee4</anchor>
       <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetStatusText</name>
-      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>a2fe06d42bcca7429c3a047e63ae90848</anchor>
-      <arglist>(const QString &amp;message)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -46806,13 +46752,6 @@
     </member>
     <member kind="slot" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnShowStatus</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ae35e863612890a552eb85ad7a75b259b</anchor>
-      <arglist>(bool state)</arglist>
-    </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnShowGrid</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>aca6731d07a7c868be300934897bf1c91</anchor>
@@ -46866,6 +46805,13 @@
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>aca5387c5a17049d6130ed5ce1e821ea1</anchor>
       <arglist>(QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetShapeStatusInfo</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>ac1b8c003b4521efc9da19589949faec3</anchor>
+      <arglist>(IShapeStatusInfo *shapeStatusInfoPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CViewport &amp;</type>
@@ -46936,13 +46882,6 @@
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a9fa79c8d457cb76686aa81f3018f8edd</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetStatusText</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a3e5a0832fcee4f7636fc05934a6cdefc</anchor>
-      <arglist>(const QString &amp;message)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -47030,13 +46969,6 @@
     </member>
     <member kind="property">
       <type>bool</type>
-      <name>StatusVisible</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a30fbbc3d150ba69335d3d8a074638bdd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="property">
-      <type>bool</type>
       <name>ZoomButtonsVisible</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a5042f51a5008aefd29fa9317e0235aa0</anchor>
@@ -47065,13 +46997,6 @@
     </member>
     <member kind="property">
       <type>bool</type>
-      <name>StatusButtonVisible</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ac6d731773b502a28622eaf28137e741b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="property">
-      <type>bool</type>
       <name>ScrollbarsButtonVisible</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a98b6e957c15b15bf068dbb88af8f191a</anchor>
@@ -47096,27 +47021,6 @@
       <name>MmButtonVisible</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a2e405e690dd05e1fb7478e89f51faa5c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="property">
-      <type>bool</type>
-      <name>PixelPositionVisible</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ac606e0b9ef1051a9f0a380a9d9433ce4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="property">
-      <type>bool</type>
-      <name>PixelValueVisible</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a5611a164dda94f7ee25c78ee23d5dde2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="property">
-      <type>bool</type>
-      <name>MmPositionVisible</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a78f8a6f42873f7628ecca18ae775be59</anchor>
       <arglist></arglist>
     </member>
     <member kind="property">
@@ -51326,6 +51230,80 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iview::CShapeInfoGuiComp</name>
+    <filename>classiview_1_1_c_shape_info_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CShapeInfoGuiComp, IShapeStatusInfo &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CShapeInfoGuiComp, IShapeStatusInfo &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_shape_info_gui_comp.html</anchorfile>
+      <anchor>a0076085b747a181a2b39419cb05a14fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiview_1_1_c_shape_info_gui_comp.html</anchorfile>
+      <anchor>a732990ef07d22e8869f1e08294da0ad9</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CShapeStatusInfoComp</name>
+    <filename>classiview_1_1_c_shape_status_info_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iview::IShapeStatusInfo</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
+      <anchor>af48bf4890526fc28daaac1425c47cb9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetLogicalPosition</name>
+      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
+      <anchor>a2034bb5b056cea0f01a5012fe84727bb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLogicalPosition</name>
+      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
+      <anchor>a64c0354a340b92edbe808a39a78c5a1e</anchor>
+      <arglist>(const i2d::CVector2d &amp;logicalPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetPixelPosition</name>
+      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
+      <anchor>a0975034216406e44a75a1c81d09e6901</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPixelPosition</name>
+      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
+      <anchor>afa147f09799aea2ee110b9b60b6b1ad1</anchor>
+      <arglist>(const i2d::CVector2d &amp;pixelPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInfoText</name>
+      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
+      <anchor>a5a7fa5a502975bfa8c45dd5c77ecfbc0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetInfoText</name>
+      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
+      <anchor>a8f0c8105c0d264adf3605724a024201b</anchor>
+      <arglist>(const QString &amp;infoText)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::CTransformableRectangleCalibrationShape</name>
     <filename>classiview_1_1_c_transformable_rectangle_calibration_shape.html</filename>
     <base>iview::CCalibrationShapeBase</base>
@@ -53782,6 +53760,53 @@
       <anchorfile>classiview_1_1_i_shape_observer.html</anchorfile>
       <anchor>a6ece3e91cb68370f38b3f6092e7ca1d0</anchor>
       <arglist>(IShape *shapePtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::IShapeStatusInfo</name>
+    <filename>classiview_1_1_i_shape_status_info.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetLogicalPosition</name>
+      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
+      <anchor>ad33acbbc505a30906e02e22c9073ebff</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetLogicalPosition</name>
+      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
+      <anchor>ab5e777786890600b0e4e9bca2d0c7c36</anchor>
+      <arglist>(const i2d::CVector2d &amp;logicalPosition)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetPixelPosition</name>
+      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
+      <anchor>a723a20e9584d38c9df303869a19bccce</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetPixelPosition</name>
+      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
+      <anchor>a944259e1c30a131b5854d866c7f46d38</anchor>
+      <arglist>(const i2d::CVector2d &amp;pixelPosition)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetInfoText</name>
+      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
+      <anchor>aab4a929749abe7af41a5290b87b8c18f</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetInfoText</name>
+      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
+      <anchor>a772542f9476455b7654dcf11844f17fd</anchor>
+      <arglist>(const QString &amp;infoText)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

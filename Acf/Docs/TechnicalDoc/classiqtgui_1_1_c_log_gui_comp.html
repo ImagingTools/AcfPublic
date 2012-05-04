@@ -42,7 +42,7 @@
 <div class="title">iqtgui::CLogGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CLogGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;,iqtgui::IVisualStatusProvider" -->
+<!-- doxytag: class="iqtgui::CLogGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;" -->
 <p>Message container displaying messages as log list.  
  <a href="classiqtgui_1_1_c_log_gui_comp.html#details">More...</a></p>
 
@@ -54,11 +54,8 @@ Inheritance diagram for iqtgui::CLogGuiComp:</div>
   <img src="classiqtgui_1_1_c_log_gui_comp.png" usemap="#iqtgui::CLogGuiComp_map" alt=""/>
   <map id="iqtgui::CLogGuiComp_map" name="iqtgui::CLogGuiComp_map">
 <area href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" alt="iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;" shape="rect" coords="4516,448,5635,472"/>
-<area href="classiqtgui_1_1_i_visual_status_provider.html" title="Extends standard information provider to provide additional visual informations." alt="iqtgui::IVisualStatusProvider" shape="rect" coords="5645,448,6764,472"/>
 <area href="classibase_1_1_t_model_observer_comp_wrap.html" alt="ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CLogGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IMessageContainer &gt; &gt; &gt;" shape="rect" coords="4516,392,5635,416"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="5645,392,6764,416"/>
 <area href="classiqtgui_1_1_t_gui_observer_wrap.html" alt="iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CLogGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IMessageContainer &gt; &gt;" shape="rect" coords="4516,336,5635,360"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="5645,336,6764,360"/>
 <area href="classiqtgui_1_1_t_designer_gui_comp_base.html" alt="iqtgui::TDesignerGuiCompBase&lt; Ui::CLogGuiComp, QWidget &gt;" shape="rect" coords="2258,280,3377,304"/>
 <area href="classimod_1_1_t_single_model_observer_base.html" alt="imod::TSingleModelObserverBase&lt; ibase::IMessageContainer &gt;" shape="rect" coords="4516,280,5635,304"/>
 <area href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor." alt="imod::IModelEditor" shape="rect" coords="5645,280,6764,304"/>
@@ -127,7 +124,6 @@ Protected Slots</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QTreeWidgetItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a601dad58f6070b29493518478ab7f8e7">CreateGuiItem</a> (const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> &amp;message)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create GUI item corresponding to specified message.  <a href="#a601dad58f6070b29493518478ab7f8e7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a44909e40ef9b41d478dd952b85df1d21">UpdateItemState</a> (QTreeWidgetItem &amp;item) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QIcon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a67c75f020a32e5b5f6b378bfcef2fe34">GetIcon</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> mode)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get icons corresponding to specified MessageMode.  <a href="#a67c75f020a32e5b5f6b378bfcef2fe34"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#aeed1e50c8be9461a77121f946c7ecd49">OnGuiModelAttached</a> ()</td></tr>
@@ -164,7 +160,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a5fd4bd071b17d67ebfc151794f14c4ea">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -192,7 +188,7 @@ Protected Attributes</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00051">51</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00049">49</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -215,7 +211,7 @@ Protected Attributes</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00067">67</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00065">65</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -242,7 +238,7 @@ Protected Attributes</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00059">59</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00057">57</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -443,7 +439,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get icon describing current status. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_visual_status_provider.html#a361fe72659bb2392222c20404d63e304">iqtgui::IVisualStatusProvider</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a55d38b86be7a29582d534918360f6f03">iqtgui::CGuiComponentBase</a>.</p>
 
 </div>
 </div>
@@ -464,7 +460,7 @@ Protected Attributes</h2></td></tr>
 <p>Get status text. </p>
 <p>Typically it will be used as tool tip. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_visual_status_provider.html#ad053c7a04497eb1f490c02859b9f716c">iqtgui::IVisualStatusProvider</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a09e60aa674f5dce6b8555fdd9c62daf1">iqtgui::CGuiComponentBase</a>.</p>
 
 </div>
 </div>
@@ -606,23 +602,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a44909e40ef9b41d478dd952b85df1d21"></a><!-- doxytag: member="iqtgui::CLogGuiComp::UpdateItemState" ref="a44909e40ef9b41d478dd952b85df1d21" args="(QTreeWidgetItem &amp;item) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtgui::CLogGuiComp::UpdateItemState </td>
-          <td>(</td>
-          <td class="paramtype">QTreeWidgetItem &amp;&#160;</td>
-          <td class="paramname"><em>item</em></td><td>)</td>
-          <td> const<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="a09b464efdd211a6439f0954cbf5180c9"></a><!-- doxytag: member="iqtgui::CLogGuiComp::m_clearAction" ref="a09b464efdd211a6439f0954cbf5180c9" args="" -->
 <div class="memitem">
@@ -635,7 +614,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00112">112</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00109">109</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -650,7 +629,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00111">111</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00108">108</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -665,7 +644,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00113">113</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00110">110</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -680,7 +659,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00109">109</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00106">106</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -695,7 +674,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00110">110</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00107">107</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>

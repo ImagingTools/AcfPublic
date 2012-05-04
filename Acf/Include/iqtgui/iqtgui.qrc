@@ -53,8 +53,6 @@
     <file alias="PointsSub">Resources/Icons/PointsSub.svg</file>
     <file alias="PointsNone">Resources/Icons/PointsNone.svg</file>
     <file alias="PointsMove">Resources/Icons/PointsMove.svg</file>
-    <file alias="Hardware">Resources/Icons/Hardware.svg</file>
-    <file alias="Product">Resources/Icons/Product.svg</file>
   </qresource>
   <qresource prefix="Style">
     <file>Resources/Style/AcfStyle.ass</file>

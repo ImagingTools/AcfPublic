@@ -12105,27 +12105,12 @@
     <name>iqtinsp::CGeneralSupplierGuiComp</name>
     <filename>classiqtinsp_1_1_c_general_supplier_gui_comp.html</filename>
     <base>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iproc::ISupplier &gt;</base>
-    <base virtualness="virtual">iqtgui::IVisualStatusProvider</base>
     <member kind="typedef">
       <type>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iproc::ISupplier &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
       <anchor>ab4cbcaf8324cd8511e57b35f5cbbfbb2</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QIcon</type>
-      <name>GetStatusIcon</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>aebbd1c8f1aaa453e2a06aadae11daf5e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetStatusText</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>a39db26cd8ee702929a87a90dd4a9a188</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -12406,6 +12391,20 @@
       <anchor>a93745769f36d860dc445b1c8319851b4</anchor>
       <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetStatusIcon</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>af8ea052753aa13723cc6e4390af5d3d4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetStatusText</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a0fdfc3e314c6c6f6e51ac0f9e045db5c</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AreParamsEditable</name>
@@ -12468,6 +12467,13 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>ad494e2beac100236a61573856ca6de8c</anchor>
       <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>ab4c020eace12715b61e207418079b09e</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>

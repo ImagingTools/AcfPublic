@@ -61,36 +61,35 @@
 <a name="l00034"></a>00034 };
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Base&gt;
-<a name="l00041"></a><a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html#aed8fdd01c51fd02c02e86d7e6c721ca3">00041</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html#aed8fdd01c51fd02c02e86d7e6c721ca3" title="Called when items should be added to specified scene.">TViewExtenderDelegatorCompWrap&lt;Base&gt;::AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags)
-<a name="l00042"></a>00042 {
-<a name="l00043"></a>00043        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
-<a name="l00044"></a>00044               m_slaveExtenderCompPtr-&gt;AddItemsToScene(providerPtr, flags);
-<a name="l00045"></a>00045        }
-<a name="l00046"></a>00046 }
+<a name="l00037"></a>00037 <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Base&gt;
+<a name="l00040"></a><a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html#aed8fdd01c51fd02c02e86d7e6c721ca3">00040</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html#aed8fdd01c51fd02c02e86d7e6c721ca3" title="Called when items should be added to specified scene.">TViewExtenderDelegatorCompWrap&lt;Base&gt;::AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags)
+<a name="l00041"></a>00041 {
+<a name="l00042"></a>00042        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
+<a name="l00043"></a>00043               m_slaveExtenderCompPtr-&gt;AddItemsToScene(providerPtr, flags);
+<a name="l00044"></a>00044        }
+<a name="l00045"></a>00045 }
+<a name="l00046"></a>00046 
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Base&gt;
-<a name="l00050"></a><a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html#ae968140f3c0b782d4f34366ec9cd4235">00050</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html#ae968140f3c0b782d4f34366ec9cd4235" title="Called when items should be removed from specified scene.">TViewExtenderDelegatorCompWrap&lt;Base&gt;::RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr)
-<a name="l00051"></a>00051 {
-<a name="l00052"></a>00052        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
-<a name="l00053"></a>00053               m_slaveExtenderCompPtr-&gt;RemoveItemsFromScene(providerPtr);
-<a name="l00054"></a>00054        }
-<a name="l00055"></a>00055 }
+<a name="l00048"></a>00048 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Base&gt;
+<a name="l00049"></a><a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html#ae968140f3c0b782d4f34366ec9cd4235">00049</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html#ae968140f3c0b782d4f34366ec9cd4235" title="Called when items should be removed from specified scene.">TViewExtenderDelegatorCompWrap&lt;Base&gt;::RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr)
+<a name="l00050"></a>00050 {
+<a name="l00051"></a>00051        <span class="keywordflow">if</span> (m_slaveExtenderCompPtr.IsValid()){
+<a name="l00052"></a>00052               m_slaveExtenderCompPtr-&gt;RemoveItemsFromScene(providerPtr);
+<a name="l00053"></a>00053        }
+<a name="l00054"></a>00054 }
+<a name="l00055"></a>00055 
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="namespaceiqt2d.html#aaa07639b224bf681c5aa50e41400f109">00058</a> <span class="keyword">typedef</span> <a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html">TViewExtenderDelegatorCompWrap&lt;icomp::CComponentBase&gt;</a> <a class="code" href="namespaceiqt2d.html#aaa07639b224bf681c5aa50e41400f109">CViewExtenderDelegatorComp</a>;
+<a name="l00057"></a><a class="code" href="namespaceiqt2d.html#aaa07639b224bf681c5aa50e41400f109">00057</a> <span class="keyword">typedef</span> <a class="code" href="classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html">TViewExtenderDelegatorCompWrap&lt;icomp::CComponentBase&gt;</a> <a class="code" href="namespaceiqt2d.html#aaa07639b224bf681c5aa50e41400f109">CViewExtenderDelegatorComp</a>;
+<a name="l00058"></a>00058 
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 } <span class="comment">// namespace iqt2d</span>
+<a name="l00060"></a>00060 } <span class="comment">// namespace iqt2d</span>
+<a name="l00061"></a>00061 
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif // !iqt2d_TViewExtenderDelegatorCompWrap_included</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span>
-<a name="l00066"></a>00066 
+<a name="l00063"></a>00063 <span class="preprocessor">#endif // !iqt2d_TViewExtenderDelegatorCompWrap_included</span>
+<a name="l00064"></a>00064 <span class="preprocessor"></span>
+<a name="l00065"></a>00065 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

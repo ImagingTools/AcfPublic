@@ -52,7 +52,7 @@
 <a name="l00028"></a>00028        
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html" title="Component for inserting of a widget into a status bar of the application.">CStatusBarWidgetComp</a>);
 <a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">iqtgui::IMainWindowComponent</a>);
-<a name="l00031"></a>00031               I_ASSIGN(m_statusBarWidgetCompPtr, <span class="stringliteral">&quot;StatusBarWidget&quot;</span>, <span class="stringliteral">&quot;Widget to place into the status bar of the application&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;StatusBarWidget&quot;</span>);
+<a name="l00031"></a>00031               I_ASSIGN_MULTI_0(m_statusBarWidgetsCompPtr, <span class="stringliteral">&quot;StatusBarWidgets&quot;</span>, <span class="stringliteral">&quot;Widgets to place into the status bar of the application&quot;</span>, <span class="keyword">true</span>);
 <a name="l00032"></a>00032        I_END_COMPONENT;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
@@ -60,7 +60,7 @@
 <a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html#a95f80f155dc4bd36bcb27060b340b057" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 <span class="keyword">private</span>:
-<a name="l00039"></a>00039        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_statusBarWidgetCompPtr);
+<a name="l00039"></a>00039        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_statusBarWidgetsCompPtr);
 <a name="l00040"></a>00040 };
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 

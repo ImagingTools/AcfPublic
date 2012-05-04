@@ -87,104 +87,85 @@
 <a name="l00081"></a>00081        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a195b77103d38e9d73582cda8ed84409f">SetButtonsPanelVertical</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
 <a name="l00082"></a>00082        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ab270cff28b854b93f94337f85c5a4f58">AreScrollbarsVisible</a>() <span class="keyword">const</span>;
 <a name="l00083"></a>00083        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#af81b457987ec530a2e27f1168c84dac0">SetScrollbarsVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00084"></a>00084        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ab8b2cb60ac0d80edfd5c57b559ecbf8e">IsStatusVisible</a>() <span class="keyword">const</span>;
-<a name="l00085"></a>00085        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#af7dcd795f128e4eb652632bca40948ea">SetStatusVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087        <span class="comment">// buttons visibility</span>
-<a name="l00088"></a>00088        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#af978b7fc84a0995b45640902fc2b2421">AreZoomsVisible</a>() <span class="keyword">const</span>;
-<a name="l00089"></a>00089        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a23c8174038120d420923e6fb55d510e2">SetZoomsVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00090"></a>00090        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ae2730248ab29bc03b331f23e3e2126e8">IsZoomToFitVisible</a>() <span class="keyword">const</span>;
-<a name="l00091"></a>00091        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#aee89798ce5cfc06dd401dd3a133c70b4">SetZoomToFitVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00092"></a>00092        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a1b4b7875e0419936a7654f805da049c4">ArePolylineButtonsVisible</a>() <span class="keyword">const</span>;
-<a name="l00093"></a>00093        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a3070369f8827feda1be3bb4ac04fc1ce">SetPolylineButtonsVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00094"></a>00094        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ae615347e5667a499f07e7410159485da">AreUserModeButtonsVisible</a>() <span class="keyword">const</span>;
-<a name="l00095"></a>00095        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a56d02ab8442ab345354993d07586e516">SetUserModeButtonsVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00096"></a>00096        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a5f920a4d36810c24073a9b5d8d0391e5">IsStatusButtonVisible</a>() <span class="keyword">const</span>;
-<a name="l00097"></a>00097        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a1ef3952bc0262bcf6130ab2d18424e09">SetStatusButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00098"></a>00098        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#adf6e71c1628819787fa66ef4e2398d08">IsScrollbarsButtonVisible</a>() <span class="keyword">const</span>;
-<a name="l00099"></a>00099        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a2f8390c2b25637bf96b0c34e9b266a84">SetScrollbarsButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00100"></a>00100        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a6513fe05b29b29291357dad0b4729757">IsGridButtonVisible</a>() <span class="keyword">const</span>;
-<a name="l00101"></a>00101        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a9f37b269aff70fa6e389f278cf19c4db">SetGridButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00102"></a>00102        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ade8206a135fb3494a21bb3d5a99b9dab">IsRulerButtonVisible</a>() <span class="keyword">const</span>;
-<a name="l00103"></a>00103        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a2599669284f3264a28711a6c538d9e41">SetRulerButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00104"></a>00104        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#acd882d27398cd2d782bc3f826897b172">IsMmButtonVisible</a>() <span class="keyword">const</span>;
-<a name="l00105"></a>00105        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#aa055148071b926cda010bd0ee50cf006">SetMmButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00106"></a>00106        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a4ddd36a46dacde7cd1d8b4ad58dae16d">IsPixelPositionVisible</a>() <span class="keyword">const</span>;
-<a name="l00107"></a>00107        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a73ab8ea942b5e41deab86b95d0d3f9fd">SetPixelPositionVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00108"></a>00108        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ae1706275b05ec28f0bf267a66344e28b">IsPixelValueVisible</a>() <span class="keyword">const</span>;
-<a name="l00109"></a>00109        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#aeb12a597311658a923e921e5a94514aa">SetPixelValueVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00110"></a>00110        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#aca5338ba00b60d21613669a0a6f77c4a">IsMmPositionVisible</a>() <span class="keyword">const</span>;
-<a name="l00111"></a>00111        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#ae515cb4a1ce73376d73787ab7604fb02">SetMmPositionVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00112"></a>00112 
-<a name="l00116"></a>00116        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a7296591b320981355219d739c4b9a5f0" title="Check if background object is present and active.">IsBackgroundActive</a>() <span class="keyword">const</span>;
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a242e6a3aabec627a8a151b2f3d14a1a3">UpdateView</a>();
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120        <span class="comment">// abstract methods</span>
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085        <span class="comment">// buttons visibility</span>
+<a name="l00086"></a>00086        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#af978b7fc84a0995b45640902fc2b2421">AreZoomsVisible</a>() <span class="keyword">const</span>;
+<a name="l00087"></a>00087        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a23c8174038120d420923e6fb55d510e2">SetZoomsVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00088"></a>00088        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ae2730248ab29bc03b331f23e3e2126e8">IsZoomToFitVisible</a>() <span class="keyword">const</span>;
+<a name="l00089"></a>00089        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#aee89798ce5cfc06dd401dd3a133c70b4">SetZoomToFitVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00090"></a>00090        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a1b4b7875e0419936a7654f805da049c4">ArePolylineButtonsVisible</a>() <span class="keyword">const</span>;
+<a name="l00091"></a>00091        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a3070369f8827feda1be3bb4ac04fc1ce">SetPolylineButtonsVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00092"></a>00092        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ae615347e5667a499f07e7410159485da">AreUserModeButtonsVisible</a>() <span class="keyword">const</span>;
+<a name="l00093"></a>00093        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a56d02ab8442ab345354993d07586e516">SetUserModeButtonsVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00094"></a>00094        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#adf6e71c1628819787fa66ef4e2398d08">IsScrollbarsButtonVisible</a>() <span class="keyword">const</span>;
+<a name="l00095"></a>00095        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a2f8390c2b25637bf96b0c34e9b266a84">SetScrollbarsButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00096"></a>00096        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a6513fe05b29b29291357dad0b4729757">IsGridButtonVisible</a>() <span class="keyword">const</span>;
+<a name="l00097"></a>00097        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a9f37b269aff70fa6e389f278cf19c4db">SetGridButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00098"></a>00098        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#ade8206a135fb3494a21bb3d5a99b9dab">IsRulerButtonVisible</a>() <span class="keyword">const</span>;
+<a name="l00099"></a>00099        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a2599669284f3264a28711a6c538d9e41">SetRulerButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00100"></a>00100        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#acd882d27398cd2d782bc3f826897b172">IsMmButtonVisible</a>() <span class="keyword">const</span>;
+<a name="l00101"></a>00101        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#aa055148071b926cda010bd0ee50cf006">SetMmButtonVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00102"></a>00102 
+<a name="l00106"></a>00106        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a7296591b320981355219d739c4b9a5f0" title="Check if background object is present and active.">IsBackgroundActive</a>() <span class="keyword">const</span>;
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a242e6a3aabec627a8a151b2f3d14a1a3">UpdateView</a>();
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110        <span class="comment">// abstract methods</span>
+<a name="l00111"></a>00111 
+<a name="l00115"></a>00115        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>&amp; <a class="code" href="classiview_1_1_c_console_base.html#a8e5ff5fef1ef39abe96f7f07dd95d4e6" title="Get access to internal view implementation.">GetView</a>() <span class="keyword">const</span> = 0;
+<a name="l00116"></a>00116 
+<a name="l00120"></a>00120        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>&amp; <a class="code" href="classiview_1_1_c_console_base.html#a6b75d35864e307cb98efa1ead7da9655" title="Get access to internal view implementation.">GetViewRef</a>() = 0;
 <a name="l00121"></a>00121 
-<a name="l00125"></a>00125        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>&amp; <a class="code" href="classiview_1_1_c_console_base.html#a8e5ff5fef1ef39abe96f7f07dd95d4e6" title="Get access to internal view implementation.">GetView</a>() <span class="keyword">const</span> = 0;
-<a name="l00126"></a>00126 
-<a name="l00130"></a>00130        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>&amp; <a class="code" href="classiview_1_1_c_console_base.html#a6b75d35864e307cb98efa1ead7da9655" title="Get access to internal view implementation.">GetViewRef</a>() = 0;
-<a name="l00131"></a>00131 
-<a name="l00138"></a>00138        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a42ef55f25f9bd0f71c35427c19f8db38" title="Update state of edit mode buttons.">UpdateEditModeButtons</a>() = 0;
-<a name="l00139"></a>00139        
-<a name="l00143"></a>00143        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#ad0ee11238eeae602cf5c10f18bec6a7f" title="Recalculates enabling flags for buttons.">UpdateButtonsState</a>() = 0;
-<a name="l00144"></a>00144        
-<a name="l00148"></a>00148        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a2099267391ddea5f463ec06acb30d8d3" title="Recalculates position of all components.">UpdateComponentsPosition</a>() = 0;
-<a name="l00149"></a>00149 
-<a name="l00153"></a>00153        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a81739f98a77b72a9a7b8265e4395fee4" title="Recalculate menu commands.">UpdateCommands</a>() = 0;
-<a name="l00154"></a>00154 
-<a name="l00158"></a>00158        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a2fe06d42bcca7429c3a047e63ae90848" title="Display specified text in status window.">SetStatusText</a>(<span class="keyword">const</span> QString&amp; message) = 0;
-<a name="l00159"></a>00159 
-<a name="l00160"></a>00160        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a85b84d18b840cebd1744a6ff2e01f31b">UpdateCursorInfo</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; pixelPos, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; logicalPos, <span class="keyword">const</span> QString&amp; infoText) = 0;
-<a name="l00161"></a>00161 
-<a name="l00162"></a>00162 <span class="keyword">protected</span>:
-<a name="l00163"></a>00163        <span class="comment">// events</span>
-<a name="l00164"></a>00164        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a093c5a4411f7a19c7bb14c5b50d8687b">OnSelectChange</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape, <span class="keywordtype">bool</span> state) = 0;
-<a name="l00165"></a>00165        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a20c25121739e123a7eb603b917548b08">OnMouseButton</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> state, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>* shapePtr) = 0;
-<a name="l00166"></a>00166        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#ae572753880bc73e2e7a4f4756bf85b5d">OnBoundingBoxChanged</a>() = 0;
-<a name="l00167"></a>00167 
-<a name="l00168"></a>00168 <span class="keyword">private</span>:
-<a name="l00169"></a>00169        <span class="keywordtype">void</span> Init();
-<a name="l00170"></a>00170 
-<a name="l00171"></a>00171        <a class="code" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf" title="Control fitting mode, to fit area of interest (AOI) to display.">FitMode</a> m_fitMode;
-<a name="l00172"></a>00172        <span class="keywordtype">bool</span> m_isRulerVisible;
+<a name="l00128"></a>00128        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a42ef55f25f9bd0f71c35427c19f8db38" title="Update state of edit mode buttons.">UpdateEditModeButtons</a>() = 0;
+<a name="l00129"></a>00129        
+<a name="l00133"></a>00133        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#ad0ee11238eeae602cf5c10f18bec6a7f" title="Recalculates enabling flags for buttons.">UpdateButtonsState</a>() = 0;
+<a name="l00134"></a>00134        
+<a name="l00138"></a>00138        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a2099267391ddea5f463ec06acb30d8d3" title="Recalculates position of all components.">UpdateComponentsPosition</a>() = 0;
+<a name="l00139"></a>00139 
+<a name="l00143"></a>00143        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a81739f98a77b72a9a7b8265e4395fee4" title="Recalculate menu commands.">UpdateCommands</a>() = 0;
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#a85b84d18b840cebd1744a6ff2e01f31b">UpdateCursorInfo</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; pixelPos, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; logicalPos, <span class="keyword">const</span> QString&amp; infoText) = 0;
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147 <span class="keyword">protected</span>:
+<a name="l00148"></a>00148        <span class="comment">// events</span>
+<a name="l00149"></a>00149        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a093c5a4411f7a19c7bb14c5b50d8687b">OnSelectChange</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape, <span class="keywordtype">bool</span> state) = 0;
+<a name="l00150"></a>00150        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_console_base.html#a20c25121739e123a7eb603b917548b08">OnMouseButton</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> state, <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>* shapePtr) = 0;
+<a name="l00151"></a>00151        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_console_base.html#ae572753880bc73e2e7a4f4756bf85b5d">OnBoundingBoxChanged</a>() = 0;
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153 <span class="keyword">private</span>:
+<a name="l00154"></a>00154        <span class="keywordtype">void</span> Init();
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156        <a class="code" href="classiview_1_1_c_console_base.html#a2a64e46576f8a55c6c0abf9bac6539bf" title="Control fitting mode, to fit area of interest (AOI) to display.">FitMode</a> m_fitMode;
+<a name="l00157"></a>00157        <span class="keywordtype">bool</span> m_isRulerVisible;
+<a name="l00158"></a>00158 
+<a name="l00159"></a>00159        <span class="keywordtype">bool</span> m_areScollbarsVisible;
+<a name="l00160"></a>00160        <span class="keywordtype">bool</span> m_isButtonsPanelVisible;
+<a name="l00161"></a>00161        <span class="keywordtype">bool</span> m_isButtonsPanelVertical;
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163        <span class="keywordtype">bool</span> m_areZoomsVisible;
+<a name="l00164"></a>00164        <span class="keywordtype">bool</span> m_isZoomToFitVisible;
+<a name="l00165"></a>00165        <span class="keywordtype">bool</span> m_arePolylineButtonsVisible;
+<a name="l00166"></a>00166        <span class="keywordtype">bool</span> m_areUserModeButtonsVisible;
+<a name="l00167"></a>00167        <span class="keywordtype">bool</span> m_isScrollbarsButtonVisible;
+<a name="l00168"></a>00168        <span class="keywordtype">bool</span> m_isGridButtonVisible;
+<a name="l00169"></a>00169        <span class="keywordtype">bool</span> m_isRulerButtonVisible;
+<a name="l00170"></a>00170        <span class="keywordtype">bool</span> m_isMmButtonVisible;
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172        <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a> m_storedTransform;
 <a name="l00173"></a>00173 
-<a name="l00174"></a>00174        <span class="keywordtype">bool</span> m_areScollbarsVisible;
-<a name="l00175"></a>00175        <span class="keywordtype">bool</span> m_isStatusVisible;
-<a name="l00176"></a>00176        <span class="keywordtype">bool</span> m_isButtonsPanelVisible;
-<a name="l00177"></a>00177        <span class="keywordtype">bool</span> m_isButtonsPanelVertical;
-<a name="l00178"></a>00178 
-<a name="l00179"></a>00179        <span class="keywordtype">bool</span> m_areZoomsVisible;
-<a name="l00180"></a>00180        <span class="keywordtype">bool</span> m_isZoomToFitVisible;
-<a name="l00181"></a>00181        <span class="keywordtype">bool</span> m_arePolylineButtonsVisible;
-<a name="l00182"></a>00182        <span class="keywordtype">bool</span> m_areUserModeButtonsVisible;
-<a name="l00183"></a>00183        <span class="keywordtype">bool</span> m_isStatusButtonVisible;
-<a name="l00184"></a>00184        <span class="keywordtype">bool</span> m_isScrollbarsButtonVisible;
-<a name="l00185"></a>00185        <span class="keywordtype">bool</span> m_isGridButtonVisible;
-<a name="l00186"></a>00186        <span class="keywordtype">bool</span> m_isRulerButtonVisible;
-<a name="l00187"></a>00187        <span class="keywordtype">bool</span> m_isMmButtonVisible;
-<a name="l00188"></a>00188        <span class="keywordtype">bool</span> m_isUndoButtonVisible;
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190        <span class="keywordtype">bool</span> m_isPixelPositionVisible;
-<a name="l00191"></a>00191        <span class="keywordtype">bool</span> m_isPixelValueVisible;
-<a name="l00192"></a>00192        <span class="keywordtype">bool</span> m_isMmPositionVisible;
-<a name="l00193"></a>00193 
-<a name="l00194"></a>00194        <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a> m_storedTransform;
-<a name="l00195"></a>00195 
-<a name="l00196"></a>00196        <span class="keywordtype">bool</span> m_isZoomToFit;
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198        <span class="keywordtype">bool</span> m_isBkActive;
-<a name="l00199"></a>00199 
-<a name="l00200"></a><a class="code" href="classiview_1_1_c_console_base.html#aca5ab6a701842682cce5d5d8c6a33353">00200</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>;
-<a name="l00201"></a>00201 };
-<a name="l00202"></a>00202 
-<a name="l00203"></a>00203 
-<a name="l00204"></a>00204 } <span class="comment">// namespace iview</span>
-<a name="l00205"></a>00205 
-<a name="l00206"></a>00206 
-<a name="l00207"></a>00207 <span class="preprocessor">#endif // !iview_CConsoleBase_included</span>
-<a name="l00208"></a>00208 <span class="preprocessor"></span>
+<a name="l00174"></a>00174        <span class="keywordtype">bool</span> m_isZoomToFit;
+<a name="l00175"></a>00175 
+<a name="l00176"></a>00176        <span class="keywordtype">bool</span> m_isBkActive;
+<a name="l00177"></a>00177 
+<a name="l00178"></a><a class="code" href="classiview_1_1_c_console_base.html#aca5ab6a701842682cce5d5d8c6a33353">00178</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>;
+<a name="l00179"></a>00179 };
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182 } <span class="comment">// namespace iview</span>
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185 <span class="preprocessor">#endif // !iview_CConsoleBase_included</span>
+<a name="l00186"></a>00186 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

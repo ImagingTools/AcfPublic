@@ -39,8 +39,7 @@ namespace iqtinsp
 
 
 class CGeneralSupplierGuiComp:
-			public TSupplierGuiCompBase<Ui::CGeneralSupplierGuiComp, iproc::ISupplier>,
-			virtual public iqtgui::IVisualStatusProvider
+			public TSupplierGuiCompBase<Ui::CGeneralSupplierGuiComp, iproc::ISupplier>
 {
 	Q_OBJECT
 
@@ -48,12 +47,7 @@ public:
 	typedef TSupplierGuiCompBase<Ui::CGeneralSupplierGuiComp, iproc::ISupplier> BaseClass;
 
 	I_BEGIN_COMPONENT(CGeneralSupplierGuiComp);
-		I_REGISTER_INTERFACE(iqtgui::IVisualStatusProvider);
 	I_END_COMPONENT;
-
-	// reimplemented (istd::IVisualStatusProvider)
-	virtual QIcon GetStatusIcon() const;
-	virtual QString GetStatusText() const;
 
 protected Q_SLOTS:
 	void on_TestButton_clicked();
@@ -67,10 +61,6 @@ protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
 	virtual void UpdateGui(int updateFlags = 0);
-
-private:
-	QIcon m_statusIcon;
-	QString m_statusText;
 };
 
 
