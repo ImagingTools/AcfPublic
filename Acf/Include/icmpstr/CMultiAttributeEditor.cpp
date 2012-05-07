@@ -96,6 +96,7 @@ void CMultiAttributeEditor::OnItemAdd()
 	itemPtr->setText("");
 
 	m_dialog.AttributeValuesTree->insertItem(insertIndex, itemPtr);
+	m_dialog.AttributeValuesTree->editItem(itemPtr);
 
 	UpdateButtonStates();
 }

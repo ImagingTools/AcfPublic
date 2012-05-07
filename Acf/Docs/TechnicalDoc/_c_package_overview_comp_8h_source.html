@@ -136,127 +136,129 @@
 <a name="l00115"></a>00115        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#aa63cfef6a94570958857d86e16877088">on_FilterGB_toggled</a>(<span class="keywordtype">bool</span> on);
 <a name="l00116"></a>00116        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a1088fc8e23b5fd3d62e474d16fb2677f">on_InterfaceCB_currentIndexChanged</a>(<span class="keywordtype">int</span> index);
 <a name="l00117"></a>00117        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#ac3d81b6e5e0fef49b0af462c51acad84">OnReloadPackages</a>();
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119 <span class="keyword">private</span>:
-<a name="l00120"></a>00120        <span class="keyword">class </span>PackageItemBase: <span class="keyword">public</span> QTreeWidgetItem
-<a name="l00121"></a>00121        {
-<a name="l00122"></a>00122        <span class="keyword">public</span>:
-<a name="l00123"></a>00123               PackageItemBase(
-<a name="l00124"></a>00124                                    <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html">CPackageOverviewComp</a>&amp; parent,
-<a name="l00125"></a>00125                                    <span class="keyword">const</span> QString&amp; description,
-<a name="l00126"></a>00126                                    <span class="keyword">const</span> QIcon&amp; icon = QIcon());
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128               <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; GetDescription() <span class="keyword">const</span>;
+<a name="l00118"></a>00118        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a8a26e40769d565669b31db3c10703e23">on_KeywordClearButton_clicked</a>();
+<a name="l00119"></a>00119        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a8a284cccf99246adb469b7161ef6e438">on_InterfaceClearButton_clicked</a>();
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 <span class="keyword">private</span>:
+<a name="l00122"></a>00122        <span class="keyword">class </span>PackageItemBase: <span class="keyword">public</span> QTreeWidgetItem
+<a name="l00123"></a>00123        {
+<a name="l00124"></a>00124        <span class="keyword">public</span>:
+<a name="l00125"></a>00125               PackageItemBase(
+<a name="l00126"></a>00126                                    <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html">CPackageOverviewComp</a>&amp; parent,
+<a name="l00127"></a>00127                                    <span class="keyword">const</span> QString&amp; description,
+<a name="l00128"></a>00128                                    <span class="keyword">const</span> QIcon&amp; icon = QIcon());
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130        <span class="keyword">protected</span>:
-<a name="l00131"></a>00131               <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html">CPackageOverviewComp</a>&amp; m_parent;
-<a name="l00132"></a>00132               QString m_description;
-<a name="l00133"></a>00133        };
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135        <span class="keyword">class </span>PackageComponentItem: <span class="keyword">public</span> PackageItemBase
-<a name="l00136"></a>00136        {
-<a name="l00137"></a>00137        <span class="keyword">public</span>:
-<a name="l00138"></a>00138               <span class="keyword">typedef</span> PackageItemBase <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a5bb11af954b4b08f97e4ebe20290ec04">BaseClass</a>;
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140               PackageComponentItem(
-<a name="l00141"></a>00141                                    <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html">CPackageOverviewComp</a>&amp; parent,
-<a name="l00142"></a>00142                                    <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address,
-<a name="l00143"></a>00143                                    <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">icomp::IComponentStaticInfo</a>* staticInfoPtr,
-<a name="l00144"></a>00144                                    <span class="keyword">const</span> QIcon&amp; icon);
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146               <span class="keywordtype">bool</span> IsInterfaceSupported(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>&amp; interfaceInfo) <span class="keyword">const</span>;
-<a name="l00147"></a>00147               <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; GetAddress() <span class="keyword">const</span>;
-<a name="l00148"></a>00148 
-<a name="l00149"></a>00149        <span class="keyword">private</span>:
-<a name="l00150"></a>00150               <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a> m_address;
-<a name="l00151"></a>00151        };
-<a name="l00152"></a>00152 
-<a name="l00153"></a>00153        <span class="keyword">class </span>PackageItem: <span class="keyword">public</span> PackageItemBase
-<a name="l00154"></a>00154        {
-<a name="l00155"></a>00155        <span class="keyword">public</span>:
-<a name="l00156"></a>00156               <span class="keyword">typedef</span> PackageItemBase <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a5bb11af954b4b08f97e4ebe20290ec04">BaseClass</a>;
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158               PackageItem(
-<a name="l00159"></a>00159                                    <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>&amp; parent,
-<a name="l00160"></a>00160                                    <span class="keyword">const</span> QString&amp; description,
-<a name="l00161"></a>00161                                    <span class="keyword">const</span> QIcon&amp; icon = QIcon());
-<a name="l00162"></a>00162        };
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164        <span class="keyword">class </span>RegistryObserver: <span class="keyword">public</span> imod::<a class="code" href="classimod_1_1_c_single_model_observer_base.html#af7f23f3ae1c01149765c967520ceb5d4">CSingleModelObserverBase</a>
-<a name="l00165"></a>00165        {
-<a name="l00166"></a>00166        <span class="keyword">public</span>:
-<a name="l00167"></a>00167               RegistryObserver(<a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>* parentPtr);
-<a name="l00168"></a>00168 
-<a name="l00169"></a>00169        <span class="keyword">protected</span>:
-<a name="l00170"></a>00170               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00171"></a>00171               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00172"></a>00172 
-<a name="l00173"></a>00173        <span class="keyword">private</span>:
-<a name="l00174"></a>00174               <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>&amp; m_parent;
-<a name="l00175"></a>00175        };
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177        <span class="keyword">class </span>ConfigObserver: <span class="keyword">public</span> imod::<a class="code" href="classimod_1_1_c_single_model_observer_base.html#af7f23f3ae1c01149765c967520ceb5d4">CSingleModelObserverBase</a>
-<a name="l00178"></a>00178        {
-<a name="l00179"></a>00179        <span class="keyword">public</span>:
-<a name="l00180"></a>00180               ConfigObserver(<a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>* parentPtr);
-<a name="l00181"></a>00181 
-<a name="l00182"></a>00182        <span class="keyword">protected</span>:
-<a name="l00183"></a>00183               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00184"></a>00184               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00185"></a>00185 
-<a name="l00186"></a>00186        <span class="keyword">private</span>:
-<a name="l00187"></a>00187               <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>&amp; m_parent;
-<a name="l00188"></a>00188        };
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190        <span class="keyword">enum</span> GruppingMode
-<a name="l00191"></a>00191        {
-<a name="l00192"></a>00192               GM_NONE,
-<a name="l00193"></a>00193               GM_PACKAGE
-<a name="l00194"></a>00194        };
-<a name="l00195"></a>00195 
-<a name="l00196"></a>00196        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
-<a name="l00197"></a>00197        I_REF(IRegistryConsistInfo, m_consistInfoCompPtr);
-<a name="l00198"></a>00198        I_REF(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>, m_quickHelpViewerCompPtr);
-<a name="l00199"></a>00199        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
-<a name="l00200"></a>00200        I_REF(<a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>, m_configFilePathCompPtr);
-<a name="l00201"></a>00201        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_configFilePathModelCompPtr);
-<a name="l00202"></a>00202 
-<a name="l00203"></a>00203        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
-<a name="l00204"></a>00204        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_packagesCommand;
-<a name="l00205"></a>00205        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_reloadCommand;
-<a name="l00206"></a>00206 
-<a name="l00207"></a>00207        <span class="keyword">typedef</span> QMap&lt;QByteArray, RootInfo&gt; RootInfos;
-<a name="l00208"></a>00208        RootInfos m_roots;
-<a name="l00209"></a>00209 
-<a name="l00210"></a>00210        RegistryObserver m_registryObserver;
-<a name="l00211"></a>00211        ConfigObserver m_configObserver;
-<a name="l00212"></a>00212 
-<a name="l00213"></a>00213        <span class="keyword">typedef</span> QSet&lt;QByteArray&gt; InterfaceFilter;
-<a name="l00214"></a>00214        InterfaceFilter m_interfaceFilter;
-<a name="l00215"></a>00215        QStringList m_keywordsFilter;
-<a name="l00216"></a>00216 
-<a name="l00217"></a>00217        QIcon m_realComponentIcon;
-<a name="l00218"></a>00218        QIcon m_compositeComponentIcon;
-<a name="l00219"></a>00219        QIcon m_mixedComponentIcon;
-<a name="l00220"></a>00220 
-<a name="l00221"></a>00221        <span class="keyword">typedef</span> QMap&lt;QString, QTreeWidget*&gt; CategoryWidgetsMap;
-<a name="l00222"></a>00222        CategoryWidgetsMap m_categoryWidgetsMap;
-<a name="l00223"></a>00223 
-<a name="l00224"></a>00224        <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">icomp::IMetaInfoManager::ComponentAddresses</a> m_shownAddresses;
+<a name="l00130"></a>00130               <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; GetDescription() <span class="keyword">const</span>;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132        <span class="keyword">protected</span>:
+<a name="l00133"></a>00133               <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html">CPackageOverviewComp</a>&amp; m_parent;
+<a name="l00134"></a>00134               QString m_description;
+<a name="l00135"></a>00135        };
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137        <span class="keyword">class </span>PackageComponentItem: <span class="keyword">public</span> PackageItemBase
+<a name="l00138"></a>00138        {
+<a name="l00139"></a>00139        <span class="keyword">public</span>:
+<a name="l00140"></a>00140               <span class="keyword">typedef</span> PackageItemBase <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a5bb11af954b4b08f97e4ebe20290ec04">BaseClass</a>;
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142               PackageComponentItem(
+<a name="l00143"></a>00143                                    <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html">CPackageOverviewComp</a>&amp; parent,
+<a name="l00144"></a>00144                                    <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address,
+<a name="l00145"></a>00145                                    <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">icomp::IComponentStaticInfo</a>* staticInfoPtr,
+<a name="l00146"></a>00146                                    <span class="keyword">const</span> QIcon&amp; icon);
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148               <span class="keywordtype">bool</span> IsInterfaceSupported(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>&amp; interfaceInfo) <span class="keyword">const</span>;
+<a name="l00149"></a>00149               <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; GetAddress() <span class="keyword">const</span>;
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151        <span class="keyword">private</span>:
+<a name="l00152"></a>00152               <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a> m_address;
+<a name="l00153"></a>00153        };
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155        <span class="keyword">class </span>PackageItem: <span class="keyword">public</span> PackageItemBase
+<a name="l00156"></a>00156        {
+<a name="l00157"></a>00157        <span class="keyword">public</span>:
+<a name="l00158"></a>00158               <span class="keyword">typedef</span> PackageItemBase <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a5bb11af954b4b08f97e4ebe20290ec04">BaseClass</a>;
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160               PackageItem(
+<a name="l00161"></a>00161                                    <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>&amp; parent,
+<a name="l00162"></a>00162                                    <span class="keyword">const</span> QString&amp; description,
+<a name="l00163"></a>00163                                    <span class="keyword">const</span> QIcon&amp; icon = QIcon());
+<a name="l00164"></a>00164        };
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166        <span class="keyword">class </span>RegistryObserver: <span class="keyword">public</span> imod::<a class="code" href="classimod_1_1_c_single_model_observer_base.html#af7f23f3ae1c01149765c967520ceb5d4">CSingleModelObserverBase</a>
+<a name="l00167"></a>00167        {
+<a name="l00168"></a>00168        <span class="keyword">public</span>:
+<a name="l00169"></a>00169               RegistryObserver(<a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>* parentPtr);
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171        <span class="keyword">protected</span>:
+<a name="l00172"></a>00172               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00173"></a>00173               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00174"></a>00174 
+<a name="l00175"></a>00175        <span class="keyword">private</span>:
+<a name="l00176"></a>00176               <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>&amp; m_parent;
+<a name="l00177"></a>00177        };
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179        <span class="keyword">class </span>ConfigObserver: <span class="keyword">public</span> imod::<a class="code" href="classimod_1_1_c_single_model_observer_base.html#af7f23f3ae1c01149765c967520ceb5d4">CSingleModelObserverBase</a>
+<a name="l00180"></a>00180        {
+<a name="l00181"></a>00181        <span class="keyword">public</span>:
+<a name="l00182"></a>00182               ConfigObserver(<a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>* parentPtr);
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184        <span class="keyword">protected</span>:
+<a name="l00185"></a>00185               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00186"></a>00186               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188        <span class="keyword">private</span>:
+<a name="l00189"></a>00189               <a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#a6e7340b3f8c46f19c0d5fd2e2fa391ca">CPackageOverviewComp</a>&amp; m_parent;
+<a name="l00190"></a>00190        };
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192        <span class="keyword">enum</span> GruppingMode
+<a name="l00193"></a>00193        {
+<a name="l00194"></a>00194               GM_NONE,
+<a name="l00195"></a>00195               GM_PACKAGE
+<a name="l00196"></a>00196        };
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
+<a name="l00199"></a>00199        I_REF(IRegistryConsistInfo, m_consistInfoCompPtr);
+<a name="l00200"></a>00200        I_REF(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>, m_quickHelpViewerCompPtr);
+<a name="l00201"></a>00201        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
+<a name="l00202"></a>00202        I_REF(<a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>, m_configFilePathCompPtr);
+<a name="l00203"></a>00203        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_configFilePathModelCompPtr);
+<a name="l00204"></a>00204 
+<a name="l00205"></a>00205        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
+<a name="l00206"></a>00206        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_packagesCommand;
+<a name="l00207"></a>00207        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_reloadCommand;
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209        <span class="keyword">typedef</span> QMap&lt;QByteArray, RootInfo&gt; RootInfos;
+<a name="l00210"></a>00210        RootInfos m_roots;
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212        RegistryObserver m_registryObserver;
+<a name="l00213"></a>00213        ConfigObserver m_configObserver;
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215        <span class="keyword">typedef</span> QSet&lt;QByteArray&gt; InterfaceFilter;
+<a name="l00216"></a>00216        InterfaceFilter m_interfaceFilter;
+<a name="l00217"></a>00217        QStringList m_keywordsFilter;
+<a name="l00218"></a>00218 
+<a name="l00219"></a>00219        QIcon m_realComponentIcon;
+<a name="l00220"></a>00220        QIcon m_compositeComponentIcon;
+<a name="l00221"></a>00221        QIcon m_mixedComponentIcon;
+<a name="l00222"></a>00222 
+<a name="l00223"></a>00223        <span class="keyword">typedef</span> QMap&lt;QString, QTreeWidget*&gt; CategoryWidgetsMap;
+<a name="l00224"></a>00224        CategoryWidgetsMap m_categoryWidgetsMap;
 <a name="l00225"></a>00225 
-<a name="l00226"></a>00226        <span class="keywordtype">int</span> m_currentPackageGroupIndex;
-<a name="l00227"></a>00227        <span class="keywordtype">bool</span> m_startDrag;
-<a name="l00228"></a>00228        QPoint m_starDragPosition;
-<a name="l00229"></a>00229 
-<a name="l00230"></a><a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#acce93f48e2b49be54476ce114be4fcb2">00230</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#acce93f48e2b49be54476ce114be4fcb2">CItemDelegate</a>;
-<a name="l00231"></a>00231 };
-<a name="l00232"></a>00232 
-<a name="l00233"></a>00233 
-<a name="l00234"></a>00234 } <span class="comment">// namespace icmpstr</span>
+<a name="l00226"></a>00226        <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">icomp::IMetaInfoManager::ComponentAddresses</a> m_shownAddresses;
+<a name="l00227"></a>00227 
+<a name="l00228"></a>00228        <span class="keywordtype">int</span> m_currentPackageGroupIndex;
+<a name="l00229"></a>00229        <span class="keywordtype">bool</span> m_startDrag;
+<a name="l00230"></a>00230        QPoint m_starDragPosition;
+<a name="l00231"></a>00231 
+<a name="l00232"></a><a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#acce93f48e2b49be54476ce114be4fcb2">00232</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_package_overview_comp.html#acce93f48e2b49be54476ce114be4fcb2">CItemDelegate</a>;
+<a name="l00233"></a>00233 };
+<a name="l00234"></a>00234 
 <a name="l00235"></a>00235 
-<a name="l00236"></a>00236 
-<a name="l00237"></a>00237 <span class="preprocessor">#endif // !icmpstr_CPackageOverviewComp_included</span>
-<a name="l00238"></a>00238 <span class="preprocessor"></span>
+<a name="l00236"></a>00236 } <span class="comment">// namespace icmpstr</span>
+<a name="l00237"></a>00237 
+<a name="l00238"></a>00238 
+<a name="l00239"></a>00239 <span class="preprocessor">#endif // !icmpstr_CPackageOverviewComp_included</span>
+<a name="l00240"></a>00240 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

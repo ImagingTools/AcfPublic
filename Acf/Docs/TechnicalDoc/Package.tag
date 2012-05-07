@@ -15734,6 +15734,20 @@
       <anchor>ac3d81b6e5e0fef49b0af462c51acad84</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_KeywordClearButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a8a26e40769d565669b31db3c10703e23</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_InterfaceClearButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a8a284cccf99246adb469b7161ef6e438</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>GenerateComponentTree</name>
