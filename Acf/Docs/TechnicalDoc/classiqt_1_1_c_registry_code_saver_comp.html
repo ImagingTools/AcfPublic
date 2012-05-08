@@ -125,8 +125,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ae5b1f189e5243bf04e1b0406f7c8446c">WriteAttribute</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a574076656cfcb9debf8a94fbb92cff79">WriteRegistryClassDeclaration</a> (const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a0b43345d5127767d8fe8bbbbec744276">WriteRegistryClassBody</a> (const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTextStream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ac783f724d67e8cc71d625a9630089aa8">GetAttributeValue</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a8c597428d400d0cb3241ad90896378c7">GetMultiAttributeValue</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ad737ac81765bdf7d35bc7713ae4c251a">GetAttributeValue</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#af3b83ac8ccb908c4e40b305d89def9bb">GetMultiAttributeValue</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a281e822e66afc348fe7b90de8bfd6ed9">NextLine</a> (QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a54b58cce3dcc8f83ed7b62ab59d79181">ChangeIndent</a> (int difference) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a89ea2bad71e57a26c840055723541edf">ExtractInfoFromFile</a> (const QString &amp;filePath, QByteArray &amp;className, QString &amp;baseFilePath) const </td></tr>
@@ -392,25 +392,13 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac783f724d67e8cc71d625a9630089aa8"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetAttributeValue" ref="ac783f724d67e8cc71d625a9630089aa8" args="(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const iser::ISerializable &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const " -->
+<a class="anchor" id="ad737ac81765bdf7d35bc7713ae4c251a"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetAttributeValue" ref="ad737ac81765bdf7d35bc7713ae4c251a" args="(const iser::ISerializable &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::GetAttributeValue </td>
           <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>attributeId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>componentId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;&#160;</td>
           <td class="paramname"><em>attribute</em>, </td>
         </tr>
@@ -528,25 +516,13 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8c597428d400d0cb3241ad90896378c7"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetMultiAttributeValue" ref="a8c597428d400d0cb3241ad90896378c7" args="(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const iser::ISerializable &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const " -->
+<a class="anchor" id="af3b83ac8ccb908c4e40b305d89def9bb"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetMultiAttributeValue" ref="af3b83ac8ccb908c4e40b305d89def9bb" args="(const iser::ISerializable &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iqt::CRegistryCodeSaverComp::GetMultiAttributeValue </td>
           <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>attributeId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>componentId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;&#160;</td>
           <td class="paramname"><em>attribute</em>, </td>
         </tr>

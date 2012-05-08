@@ -24,8 +24,13 @@
 #define icomp_TAttributeMember_included
 
 
+// Qt includes
+#include <QtCore/QCoreApplication>
+
+// ACF includes
 #include "icomp/IComponentContext.h"
 #include "icomp/IRealAttributeStaticInfo.h"
+#include "icomp/TAttribute.h"
 
 
 namespace icomp
@@ -38,13 +43,13 @@ namespace icomp
 	Don't use direct this class, use macros I_ATTR and I_ASSIGN instead.
 */
 template <typename Attribute>
-class TAttributeMember
+class TAttributeMemberBase
 {
 public:
 	typedef Attribute AttributeType;
 	typedef void InterfaceType;
 
-	TAttributeMember();
+	TAttributeMemberBase();
 
 	/**
 		Initialize this attribute.
@@ -75,7 +80,7 @@ public:
 	/**
 		Access to object pointed by internal pointer.
 	*/
-	const typename Attribute::ValueType& operator*() const;
+	typename const Attribute::ValueType& operator*() const;
 
 protected:
 	void SetAttribute(const Attribute* attributePtr);
@@ -88,14 +93,14 @@ private:
 // public methods
 
 template <typename Attribute>
-TAttributeMember<Attribute>::TAttributeMember()
+TAttributeMemberBase<Attribute>::TAttributeMemberBase()
 :	m_attributePtr(NULL)
 {
 }
 
 
 template <typename Attribute>
-bool TAttributeMember<Attribute>::Init(
+bool TAttributeMemberBase<Attribute>::Init(
 			const IComponent* ownerPtr,
 			const IRealAttributeStaticInfo& staticInfo,
 			const IComponent** definitionComponentPtr)
@@ -135,28 +140,28 @@ bool TAttributeMember<Attribute>::Init(
 
 
 template <typename Attribute>
-bool TAttributeMember<Attribute>::IsValid() const
+bool TAttributeMemberBase<Attribute>::IsValid() const
 {
 	return (m_attributePtr != NULL);
 }
 
 
 template <typename Attribute>
-const Attribute* TAttributeMember<Attribute>::GetAttributePtr() const
+const Attribute* TAttributeMemberBase<Attribute>::GetAttributePtr() const
 {
 	return m_attributePtr;
 }
 
 
 template <typename Attribute>
-const Attribute* TAttributeMember<Attribute>::operator->() const
+const Attribute* TAttributeMemberBase<Attribute>::operator->() const
 {
 	return m_attributePtr;
 }
 
 
 template <typename Attribute>
-const typename Attribute::ValueType& TAttributeMember<Attribute>::operator*() const
+typename const Attribute::ValueType& TAttributeMemberBase<Attribute>::operator*() const
 {
 	I_ASSERT(m_attributePtr != NULL);	// operator* was called for invalid object, or no IsValid() check was called.
 
@@ -167,10 +172,29 @@ const typename Attribute::ValueType& TAttributeMember<Attribute>::operator*() co
 // protected methods
 
 template <typename Attribute>
-void TAttributeMember<Attribute>::SetAttribute(const Attribute* attributePtr)
+void TAttributeMemberBase<Attribute>::SetAttribute(const Attribute* attributePtr)
 {
 	m_attributePtr = attributePtr;
 }
+
+
+// other constructs used for special template for QString attribute
+
+template <typename Attribute>
+class TAttributeMember: public TAttributeMemberBase<Attribute>
+{
+};
+
+
+template <>
+class TAttributeMember< TAttribute<QString> >: public TAttributeMemberBase< TAttribute<QString> >
+{
+public:
+	QString operator*() const
+	{
+		return QCoreApplication::translate("Attribute", TAttributeMemberBase< TAttribute<QString> >::operator*().toAscii());
+	}
+};
 
 
 } // namespace icomp

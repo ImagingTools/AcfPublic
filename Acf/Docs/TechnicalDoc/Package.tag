@@ -1926,7 +1926,10 @@
     <filename>_t_attribute_member_8h</filename>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_i_real_attribute_static_info_8h" name="IRealAttributeStaticInfo.h" local="yes" imported="no">icomp/IRealAttributeStaticInfo.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <class kind="class">icomp::TAttributeMemberBase</class>
     <class kind="class">icomp::TAttributeMember</class>
+    <class kind="class">icomp::TAttributeMember&lt; TAttribute&lt; QString &gt; &gt;</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -2072,7 +2075,10 @@
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_multi_attribute_member_8h</filename>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
+    <class kind="class">icomp::TMultiAttributeMemberBase</class>
     <class kind="class">icomp::TMultiAttributeMember</class>
+    <class kind="class">icomp::TMultiAttributeMember&lt; TMultiAttribute&lt; QString &gt; &gt;</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -18107,7 +18113,9 @@
     <class kind="class">icomp::IRegistryLoader</class>
     <class kind="class">icomp::IRegistryLoaderProvider</class>
     <class kind="class">icomp::TAttribute</class>
+    <class kind="class">icomp::TAttributeMemberBase</class>
     <class kind="class">icomp::TAttributeMember</class>
+    <class kind="class">icomp::TAttributeMember&lt; TAttribute&lt; QString &gt; &gt;</class>
     <class kind="class">icomp::TAttributeStaticInfo</class>
     <class kind="class">icomp::TComponentCloneWrap</class>
     <class kind="class">icomp::TComponentRegistrator</class>
@@ -18118,7 +18126,9 @@
     <class kind="class">icomp::TMakeComponentWrap</class>
     <class kind="class">icomp::TModelCompWrap</class>
     <class kind="class">icomp::TMultiAttribute</class>
+    <class kind="class">icomp::TMultiAttributeMemberBase</class>
     <class kind="class">icomp::TMultiAttributeMember</class>
+    <class kind="class">icomp::TMultiAttributeMember&lt; TMultiAttribute&lt; QString &gt; &gt;</class>
     <class kind="class">icomp::TMultiFactoryMember</class>
     <class kind="class">icomp::TMultiReferenceMember</class>
     <class kind="class">icomp::TReferenceMember</class>
@@ -20641,7 +20651,7 @@
   <compound kind="class">
     <name>icomp::TAttribute</name>
     <filename>classicomp_1_1_t_attribute.html</filename>
-    <templarg></templarg>
+    <templarg>Value</templarg>
     <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
     <member kind="enumeration">
       <name>DefaultAttributeFlags</name>
@@ -20768,71 +20778,89 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icomp::TAttributeMember</name>
-    <filename>classicomp_1_1_t_attribute_member.html</filename>
+    <name>icomp::TAttributeMemberBase</name>
+    <filename>classicomp_1_1_t_attribute_member_base.html</filename>
     <templarg>Attribute</templarg>
     <member kind="typedef">
       <type>Attribute</type>
       <name>AttributeType</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>a2ad0f7feafb9ac0fea4ac73ef5b9a96f</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a6164f043005f2a5b3b84b098a459252b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>InterfaceType</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>a07285222c08256ffb32271efe8a54ffd</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a77348a366f16cd9fcc5ac2683ee5b1de</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>TAttributeMember</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>a96df462b9134ae1d77cb3ccfcc0f6baa</anchor>
+      <name>TAttributeMemberBase</name>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>ad526b8faee3a62a9e7a9dd5717f1f939</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>Init</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>a0a50d10f1d9a8d1e8da11d51b0b3f61f</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a7b5257350b0f63dd78afd9c56c9be08e</anchor>
       <arglist>(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo, const IComponent **definitionComponentPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>IsValid</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>a58249a76e8379fe8ec2a4a7920da95c8</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a1b34d4e097baa12a13d7722213e506f5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const Attribute *</type>
       <name>GetAttributePtr</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>ac1e5552a2c0dd84f7b64115e4f974208</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a954033811b2adce62f76cc3c8cfaf51c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const Attribute *</type>
       <name>operator-&gt;</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>a6f9477fb127e9b9e2790f40e216ea691</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>ac73004f2f4da9afd9766e2f7a9a5c8b4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const Attribute::ValueType &amp;</type>
       <name>operator*</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>af0c955b2bb3fd42573ec32794937528e</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a45ab1ad4600796dc6aa4cedffe5f6977</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>SetAttribute</name>
-      <anchorfile>classicomp_1_1_t_attribute_member.html</anchorfile>
-      <anchor>ac2728400d28139db311eafefc6b16634</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>af6067c6dfd567f736f06eae27dff865c</anchor>
       <arglist>(const Attribute *attributePtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::TAttributeMember</name>
+    <filename>classicomp_1_1_t_attribute_member.html</filename>
+    <templarg>Attribute</templarg>
+    <base>icomp::TAttributeMemberBase</base>
+  </compound>
+  <compound kind="class">
+    <name>icomp::TAttributeMember&lt; TAttribute&lt; QString &gt; &gt;</name>
+    <filename>classicomp_1_1_t_attribute_member_3_01_t_attribute_3_01_q_string_01_4_01_4.html</filename>
+    <base>TAttributeMemberBase&lt; TAttribute&lt; QString &gt; &gt;</base>
+    <member kind="function">
+      <type>QString</type>
+      <name>operator*</name>
+      <anchorfile>classicomp_1_1_t_attribute_member_3_01_t_attribute_3_01_q_string_01_4_01_4.html</anchorfile>
+      <anchor>af62f88563e61cbb53c3c5ac3e73ac83f</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21343,56 +21371,74 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icomp::TMultiAttributeMember</name>
-    <filename>classicomp_1_1_t_multi_attribute_member.html</filename>
+    <name>icomp::TMultiAttributeMemberBase</name>
+    <filename>classicomp_1_1_t_multi_attribute_member_base.html</filename>
     <templarg>Attribute</templarg>
     <member kind="typedef">
       <type>Attribute</type>
       <name>AttributeType</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute_member.html</anchorfile>
-      <anchor>ac48fb6319b7e58d65aec46d97b616c68</anchor>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>ae4fd40da6bf1eaad4697668b78a3d55e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>void</type>
       <name>InterfaceType</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute_member.html</anchorfile>
-      <anchor>aaac78270e79052fcba6489b52539b77b</anchor>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>a7d59a8d1e5122abcce777a5aee976679</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>TMultiAttributeMember</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute_member.html</anchorfile>
-      <anchor>abe380e2bb8ce52d47aa39223d6583373</anchor>
+      <name>TMultiAttributeMemberBase</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>ac7b8e05e23a90addd70abb08bc520db1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>Init</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute_member.html</anchorfile>
-      <anchor>afc0e2085da2411275b2c7281dd7c7eff</anchor>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>af37ee47a65c0299246c6ce3615b7894f</anchor>
       <arglist>(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo, const IComponent **definitionComponentPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>IsValid</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute_member.html</anchorfile>
-      <anchor>a2991656fc7a990b21f174f306501b77a</anchor>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>abdc8c849a0ed5dedac5da010f2ef4907</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetCount</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute_member.html</anchorfile>
-      <anchor>adc43f091e4dec67fa523b92d1039d663</anchor>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>a1023bfeb8b0c7a216d3f44d25ce16c07</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const Attribute::ValueType &amp;</type>
       <name>operator[]</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute_member.html</anchorfile>
-      <anchor>aa25595805ffe2bd86b5a41cb637a3ccf</anchor>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>afbd4112fcf16ec17c4fd7480e83b624b</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::TMultiAttributeMember</name>
+    <filename>classicomp_1_1_t_multi_attribute_member.html</filename>
+    <templarg>Attribute</templarg>
+    <base>icomp::TMultiAttributeMemberBase</base>
+  </compound>
+  <compound kind="class">
+    <name>icomp::TMultiAttributeMember&lt; TMultiAttribute&lt; QString &gt; &gt;</name>
+    <filename>classicomp_1_1_t_multi_attribute_member_3_01_t_multi_attribute_3_01_q_string_01_4_01_4.html</filename>
+    <base>TMultiAttributeMemberBase&lt; TMultiAttribute&lt; QString &gt; &gt;</base>
+    <member kind="function">
+      <type>QString</type>
+      <name>operator[]</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_3_01_t_multi_attribute_3_01_q_string_01_4_01_4.html</anchorfile>
+      <anchor>a9123cd8365af3fb870b55ef9f2aa2cc3</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -28680,10 +28726,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const QString &amp;</type>
+      <type>virtual QString</type>
       <name>GetParamsSetName</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a3fc3eed18d7389e6e3ade8fa14c31fa5</anchor>
+      <anchor>add63f348396f6e97b119a84b9d5ea9e5</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -29433,10 +29479,10 @@
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const QString &amp;</type>
+      <type>virtual QString</type>
       <name>GetParamsSetName</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a72d03319b94867427442cfb245b6cf51</anchor>
+      <anchor>ae78973406e7c57a6e0fa933ccd895997</anchor>
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -32312,15 +32358,15 @@
       <type>bool</type>
       <name>GetAttributeValue</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ac783f724d67e8cc71d625a9630089aa8</anchor>
-      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const iser::ISerializable &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </arglist>
+      <anchor>ad737ac81765bdf7d35bc7713ae4c251a</anchor>
+      <arglist>(const iser::ISerializable &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>GetMultiAttributeValue</name>
       <anchorfile>classiqt_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a8c597428d400d0cb3241ad90896378c7</anchor>
-      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const iser::ISerializable &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </arglist>
+      <anchor>af3b83ac8ccb908c4e40b305d89def9bb</anchor>
+      <arglist>(const iser::ISerializable &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
