@@ -211,7 +211,15 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get related meta information. </p>
-<p>This information in normally used by references and factories to provide information about related interfaces. </p>
+<p>This information in normally used by references and factories to provide information about related interfaces.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metaGroupId</td><td>ID of data group of asked meta ID's. </td></tr>
+    <tr><td class="paramname">flags</td><td>flag value of element. </td></tr>
+    <tr><td class="paramname">flagsMask</td><td>mask value of element. Each element has flags. Only elements where element_flag &amp; flagsMask == flags will be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_attribute_static_info.html#abb4080e2c50bca861f76b9270c278f51">icomp::IAttributeStaticInfo</a>.</p>
 

@@ -16122,8 +16122,8 @@
       <type>icomp::IRegistry::Ids</type>
       <name>GetCompatibleIds</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aabd9268d97cb708be0bd758a3fd4981d</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, bool subcomponentsFlag) const </arglist>
+      <anchor>a80445013f4628821e2ba95d01d2af920</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, int queryFlags, bool subcomponentsFlag) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -16136,15 +16136,15 @@
       <type>bool</type>
       <name>CheckPointedElementCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>af26f46f22501c16c7b3172119f037794</anchor>
-      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a090c924ce43eb3618c7bc9629337313a</anchor>
+      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckPointedElementInfoCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>afe00743278665acf958796abc43285e4</anchor>
-      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a8ca59728536ab50ec585100288c1de88</anchor>
+      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
