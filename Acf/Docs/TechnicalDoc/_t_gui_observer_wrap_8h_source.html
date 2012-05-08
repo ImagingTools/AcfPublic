@@ -216,7 +216,7 @@
 <a name="l00226"></a>00226 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
 <a name="l00227"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a683527b484df73ed72386338530d2fce">00227</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a683527b484df73ed72386338530d2fce" title="Secure update model.">TGuiObserverWrap&lt;Gui, Observer&gt;::DoUpdateModel</a>()
 <a name="l00228"></a>00228 {
-<a name="l00229"></a>00229        <span class="keywordflow">if</span> (!IsUpdateBlocked() &amp;&amp; Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
+<a name="l00229"></a>00229        <span class="keywordflow">if</span> (!IsUpdateBlocked() &amp;&amp; Observer::IsModelAttached()){
 <a name="l00230"></a>00230               <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html">UpdateBlocker</a> blockUpdates(<span class="keyword">this</span>);
 <a name="l00231"></a>00231 
 <a name="l00232"></a>00232               UpdateModel();

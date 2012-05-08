@@ -261,11 +261,7 @@ void CSurfaceViewComp::OnGuiCreated()
 
 void CSurfaceViewComp::OnParamsChanged(double /*value*/)
 {
-	if (!IsUpdateBlocked()){
-		UpdateBlocker updateBlocker(this);
-
-		UpdateModel();
-	}
+	DoUpdateModel();
 }
 
 

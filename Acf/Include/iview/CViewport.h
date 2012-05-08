@@ -52,6 +52,8 @@ class CViewport:
 			public CCalibratedViewBase,
 			virtual public IViewEventObserver
 {
+	Q_OBJECT
+
 public:
 	typedef CCalibratedViewBase BaseClass;
 	typedef QWidget BaseClass2;
@@ -97,6 +99,12 @@ public:
 
 	// reimplemented (iview::CCalibratedViewBase)
 	virtual void ConnectCalibrationShape(iview::IShape* shapePtr);
+
+Q_SIGNALS:
+	/**
+		Called when some shapes has been changed.
+	*/
+	void ShapesChanged();
 
 protected:
 	virtual void SetBackgroundBufferValid(bool state = true);

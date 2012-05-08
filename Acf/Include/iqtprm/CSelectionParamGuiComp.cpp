@@ -131,8 +131,6 @@ void CSelectionParamGuiComp::OnGuiCreated()
 		}
 
 		QLayout* selectorLayoutPtr = NULL;
-		I_ASSERT(SelectionFrame->layout() == NULL);
-
 		if (labelPosition == LP_LEFT){
 			selectorLayoutPtr = new QHBoxLayout(SelectionFrame);
 			
@@ -195,7 +193,7 @@ void CSelectionParamGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/
 {
 	I_ASSERT(IsGuiCreated());
 
-	if (!IsUpdateBlocked()){
+	if (!IsUpdateBlocked() && IsModelAttached()){
 		UpdateBlocker updateBlocker(this);
 		
 		UpdateGui();
@@ -207,11 +205,7 @@ void CSelectionParamGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/
 
 void CSelectionParamGuiComp::OnSelectionChanged(int /*index*/)
 {
-	if (!IsUpdateBlocked()){
-		UpdateBlocker updateBlocker(this);
-
-		UpdateModel();
-
+	if (DoUpdateModel()){
 		UpdateDescriptionFrame();
 	}
 }

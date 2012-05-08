@@ -121,13 +121,7 @@ void CRectangleParamsGuiComp::UpdateGui(int /*updateFlags*/)
 
 void CRectangleParamsGuiComp::OnParamsChanged(double /*value*/)
 {
-	if (!IsUpdateBlocked()){
-		UpdateBlocker updateBlocker(this);
-
-		UpdateModel();
-
-		UpdateShapeView();
-	}
+	DoUpdateModel();
 }
 
 

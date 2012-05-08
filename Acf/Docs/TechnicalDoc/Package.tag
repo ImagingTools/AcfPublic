@@ -34216,13 +34216,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateShapeView</name>
-      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a76193d87a7035d882513aecf9e366f18</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
       <anchor>a983c22bfc8806ba26585fbcbe97bf392</anchor>
@@ -46740,110 +46733,117 @@
       <anchor>a389ff3c2c9caa342f1d812ea456aaa9c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnZoomIn</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a395894f922ec0a7d9de47b8d3f101267</anchor>
+      <anchor>af3e76ffb99fdac17ad2e387260ff7eb0</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnZoomOut</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>aac0a6fdae2aa33634e8f5c6d9ae882d5</anchor>
+      <anchor>ae8ff24b82ea8ded9b12dc3cfafeea157</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnZoomReset</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>add0132820aaa70052c58316ab4c59b1f</anchor>
+      <anchor>a4286d7143a44813e60ae3487daeacbe8</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnZoomToFit</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>aac1fc55e4cefa92daa74d5611897aaa4</anchor>
+      <anchor>ad6c957f5bd9664648e8f61ddf15d4d8f</anchor>
       <arglist>(bool state)</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnFitContentsToView</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a1be61cbb30370122625b6a5d3595680f</anchor>
+      <anchor>a47b52a9c5f0ea098453085ebf25c4ecb</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnPointsNone</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a4f512ffd3f22563d2ba0e1500e9d77b1</anchor>
+      <anchor>a185e6c68e994eca7246f87fb6ca13387</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnPoinsMove</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>acc8be9bd57a59b41d9944ee0228dbbcb</anchor>
+      <anchor>a8784eb38fcc2909f87e620601b5e6e33</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnPointsAdd</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a4cdd578f3b80fabb2423f21907b6e1a3</anchor>
+      <anchor>a4b7fb8976c7fb4fa871e06a57a19a356</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnPointsSub</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>aeb0096c08a17864eed1f32866d753750</anchor>
+      <anchor>a0eb7451b2d6a54625ea18a346b08b024</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnShowScrollbars</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a6a82cddcca64a44ec2111f5f1d496dfb</anchor>
+      <anchor>a0522ed0a81a2efd4e76c5ced9050a2f5</anchor>
       <arglist>(bool state)</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnShowGrid</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>aca6731d07a7c868be300934897bf1c91</anchor>
+      <anchor>ab00d37cd98944702b080168d30aa4920</anchor>
       <arglist>(bool state)</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnShowRuler</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ad479ec473471b3630f0b0bd1bf744376</anchor>
+      <anchor>a060ad1978347cc388dac527d1a476109</anchor>
       <arglist>(bool state)</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnShowGridInMm</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a78ad36d71114614ed7ca3facb61eed9e</anchor>
+      <anchor>aecff87db4954c911e60b392903bc302c</anchor>
       <arglist>(bool state)</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnHScrollbarChanged</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>aa57f40049f67b1b202ef968061d2666e</anchor>
+      <anchor>aefd2f87d023b8383dbfcf979e6ad51b2</anchor>
       <arglist>(int newPos)</arglist>
     </member>
-    <member kind="slot" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="slot">
+      <type>void</type>
       <name>OnVScrollbarChanged</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a9f9e49fa67f66ddf38320a56c734f6ab</anchor>
+      <anchor>a9a39ce7d750b45e3d69bf677120091bd</anchor>
       <arglist>(int newPos)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>UpdateView</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a147f2bc5a7ad412367a10d2eb0fb5c72</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="signal">
       <type>bool</type>
@@ -52659,6 +52659,13 @@
       <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
       <anchor>a03b0200176f4dd404cbf9cbb57e90894</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>ShapesChanged</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a0d4dcc15ddd97eef75ecd67a3612aff8</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>

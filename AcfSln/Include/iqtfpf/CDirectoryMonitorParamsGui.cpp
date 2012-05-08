@@ -310,11 +310,7 @@ void CDirectoryMonitorParamsGui::ResetEditor()
 
 void CDirectoryMonitorParamsGui::OnModelUpdate()
 {
-	if (!IsUpdateBlocked()){
-		UpdateBlocker updateBlocker(this);
-
-		UpdateModel();
-	}
+	DoUpdateModel();
 }
 
 

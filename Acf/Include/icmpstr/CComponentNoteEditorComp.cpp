@@ -150,13 +150,9 @@ void CComponentNoteEditorComp::on_NoteEditor_textChanged()
 
 void CComponentNoteEditorComp::on_CommitButton_clicked()
 {
-	if (!IsUpdateBlocked() && IsModelAttached(NULL)){
-		UpdateBlocker updateBlocker(this);
+	DoUpdateModel();
 
-		UpdateModel();
-
-		CommitButton->setEnabled(false);
-	}
+	CommitButton->setEnabled(false);
 }
 
 

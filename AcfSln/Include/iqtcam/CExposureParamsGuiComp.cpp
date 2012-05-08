@@ -154,11 +154,7 @@ void CExposureParamsGuiComp::UpdateModel() const
 
 void CExposureParamsGuiComp::OnParamsChanged(double /*value*/)
 {
-	if (!IsUpdateBlocked()){
-		UpdateBlocker blockUpdate(this);
-
-		UpdateModel();
-	}
+	DoUpdateModel();
 }
 
 
