@@ -304,8 +304,8 @@ bool CMultiDocumentManagerBase::FileSave(
 			infoPtr->filePath = filePath;
 			infoPtr->isDirty = false;
 
-			if (infoPtr->stateComparatorPtr.IsValid()){
-				infoPtr->stateComparatorPtr->StoreState(*infoPtr->documentPtr);
+			if (infoPtr->undoManagerPtr.IsValid()){
+				infoPtr->undoManagerPtr->StoreDocumentState();
 			}
 		}
 
@@ -477,8 +477,8 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
 
 				infoPtr->isDirty = false;
 
-				if (infoPtr->stateComparatorPtr.IsValid()){
-					infoPtr->stateComparatorPtr->StoreState(*infoPtr->documentPtr);
+				if (infoPtr->undoManagerPtr.IsValid()){
+					infoPtr->undoManagerPtr->StoreDocumentState();
 				}
 
 				return infoPtr.PopPtr()->documentPtr.GetPtr();
@@ -562,8 +562,7 @@ CMultiDocumentManagerBase::SingleDocumentData* CMultiDocumentManagerBase::Create
 					const_cast<CMultiDocumentManagerBase*>(this),
 					documentTypeId,
 					documentPtr,
-					documentTemplatePtr->CreateUndoManager(documentTypeId, documentPtr),
-					documentTemplatePtr->CreateStateComparator(documentTypeId)));
+					documentTemplatePtr->CreateUndoManager(documentTypeId, documentPtr)));
 
 		if (infoPtr->documentPtr.IsValid()){
 			imod::IModel* documentModelPtr = CompCastPtr<imod::IModel>(documentPtr);
@@ -619,8 +618,8 @@ bool CMultiDocumentManagerBase::RegisterDocument(SingleDocumentData* infoPtr)
 void CMultiDocumentManagerBase::SingleDocumentData::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
 	bool newDirty = true;
-	if (documentPtr.IsValid() && stateComparatorPtr.IsValid()){
-		newDirty = !stateComparatorPtr->CheckStateEquals(*documentPtr);
+	if (documentPtr.IsValid() && undoManagerPtr.IsValid()){
+		newDirty = (undoManagerPtr->GetDocumentChangeFlag() != IDocumentStateComparator::DCF_EQUAL);
 	}
 
 	if (isDirty != newDirty){

@@ -191,7 +191,7 @@ i2d::CRect CInteractivePinShape::CalcBoundingBox() const
 		return tickerBox.GetTranslated(sp);
 	}
 
-	return i2d::CRect();
+	return i2d::CRect::GetEmpty();
 }
 
 

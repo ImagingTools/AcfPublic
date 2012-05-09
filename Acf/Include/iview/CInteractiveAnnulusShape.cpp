@@ -407,7 +407,7 @@ i2d::CRect CInteractiveAnnulusShape::CalcBoundingBox() const
 		return boundingBox;
 	}
 
-	return i2d::CRect();
+	return i2d::CRect::GetEmpty();
 }
 
 

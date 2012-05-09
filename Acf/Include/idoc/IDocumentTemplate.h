@@ -36,7 +36,6 @@
 
 #include "idoc/IUndoManager.h"
 #include "idoc/IDocumentTypesInfo.h"
-#include "idoc/IDocumentStateComparator.h"
 
 
 namespace idoc
@@ -92,11 +91,6 @@ public:
 		\return	pointer to created instance of undo manager or NULL, if creating of undo manager was impossible.
 	*/
 	virtual idoc::IUndoManager* CreateUndoManager(const QByteArray& documentTypeId, istd::IChangeable* documentPtr) const = 0;
-
-	/**
-		Creates a document state comparator.
-	*/
-	virtual IDocumentStateComparator* CreateStateComparator(const QByteArray& documentTypeId) const = 0;
 };
 
 

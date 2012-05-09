@@ -64,7 +64,6 @@ public:
 	virtual QString GetViewTypeName(
 				const QByteArray& documentTypeId,
 				const QByteArray& viewTypeId) const;
-	virtual IDocumentStateComparator* CreateStateComparator(const QByteArray& documentTypeId) const;
 
 protected:
 	bool IsDocumentTypeSupported(const QByteArray& documentTypeId) const;

@@ -397,7 +397,7 @@ i2d::CRect CInteractiveLabelShape::CalcBoundingBox() const
 		return boundingBox;
 	}
 
-	return i2d::CRect();
+	return i2d::CRect::GetEmpty();
 }
 
 

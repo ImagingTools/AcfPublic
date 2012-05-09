@@ -104,6 +104,8 @@ bool CViewLayer::ConnectShape(IShape* shapePtr)
 	shapePtr->OnDisplayChange(CF_ALL);
 
 	i2d::CRect boundingBox = shapePtr->GetBoundingBox();
+	I_ASSERT(boundingBox.IsValid());
+
 	m_shapes[shapePtr] = boundingBox;
 
 	OnAreaInvalidated(i2d::CRect::GetEmpty(), boundingBox);

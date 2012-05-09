@@ -66,51 +66,50 @@
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> QString <a class="code" href="classidoc_1_1_c_single_document_template_base.html#a94d51607b0b03695f1efda77b66af470" title="Get human readable name of some view type ID.">GetViewTypeName</a>(
 <a name="l00043"></a>00043                             <span class="keyword">const</span> QByteArray&amp; documentTypeId,
 <a name="l00044"></a>00044                             <span class="keyword">const</span> QByteArray&amp; viewTypeId) <span class="keyword">const</span>;
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <a class="code" href="classidoc_1_1_i_document_state_comparator.html" title="Allows to store some document state used as reference for comarision.">IDocumentStateComparator</a>* <a class="code" href="classidoc_1_1_c_single_document_template_base.html#adde1c42dacdf061858a228be21f01277" title="Creates a document state comparator.">CreateStateComparator</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span>;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">protected</span>:
-<a name="l00048"></a>00048        <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_template_base.html#aaafc949fe4df5ac424ed1460e9a0f5e5">IsDocumentTypeSupported</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span>;
-<a name="l00049"></a>00049        <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_template_base.html#a55f45c947c8bbfbe96a6fca897556b10">IsViewTypeSupported</a>(<span class="keyword">const</span> QByteArray&amp; viewTypeId) <span class="keyword">const</span>;
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="keyword">private</span>:
-<a name="l00052"></a>00052        QString m_defaultDirectory;
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054        QByteArray m_documentTypeId;
-<a name="l00055"></a>00055        QString m_documentTypeName;
-<a name="l00056"></a>00056        QByteArray m_viewTypeId;
-<a name="l00057"></a>00057        QString m_viewTypeName;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="keywordtype">int</span> m_supportedFeatures;
-<a name="l00060"></a>00060 };
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">protected</span>:
+<a name="l00047"></a>00047        <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_template_base.html#aaafc949fe4df5ac424ed1460e9a0f5e5">IsDocumentTypeSupported</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span>;
+<a name="l00048"></a>00048        <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_template_base.html#a55f45c947c8bbfbe96a6fca897556b10">IsViewTypeSupported</a>(<span class="keyword">const</span> QByteArray&amp; viewTypeId) <span class="keyword">const</span>;
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keyword">private</span>:
+<a name="l00051"></a>00051        QString m_defaultDirectory;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        QByteArray m_documentTypeId;
+<a name="l00054"></a>00054        QString m_documentTypeName;
+<a name="l00055"></a>00055        QByteArray m_viewTypeId;
+<a name="l00056"></a>00056        QString m_viewTypeName;
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058        <span class="keywordtype">int</span> m_supportedFeatures;
+<a name="l00059"></a>00059 };
+<a name="l00060"></a>00060 
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="comment">// inline methods</span>
-<a name="l00064"></a>00064 
-<a name="l00065"></a><a class="code" href="classidoc_1_1_c_single_document_template_base.html#ad1c91e6d71716adc2a7d1289302e5e65">00065</a> <span class="keyword">inline</span> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classidoc_1_1_c_single_document_template_base.html#ad1c91e6d71716adc2a7d1289302e5e65">CSingleDocumentTemplateBase::GetDocumentTypeId</a>()<span class="keyword"> const</span>
-<a name="l00066"></a>00066 <span class="keyword"></span>{
-<a name="l00067"></a>00067        <span class="keywordflow">return</span> m_documentTypeId;
-<a name="l00068"></a>00068 }
+<a name="l00062"></a>00062 <span class="comment">// inline methods</span>
+<a name="l00063"></a>00063 
+<a name="l00064"></a><a class="code" href="classidoc_1_1_c_single_document_template_base.html#ad1c91e6d71716adc2a7d1289302e5e65">00064</a> <span class="keyword">inline</span> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classidoc_1_1_c_single_document_template_base.html#ad1c91e6d71716adc2a7d1289302e5e65">CSingleDocumentTemplateBase::GetDocumentTypeId</a>()<span class="keyword"> const</span>
+<a name="l00065"></a>00065 <span class="keyword"></span>{
+<a name="l00066"></a>00066        <span class="keywordflow">return</span> m_documentTypeId;
+<a name="l00067"></a>00067 }
+<a name="l00068"></a>00068 
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 <span class="comment">// inline protected methods</span>
-<a name="l00072"></a>00072 
-<a name="l00073"></a><a class="code" href="classidoc_1_1_c_single_document_template_base.html#aaafc949fe4df5ac424ed1460e9a0f5e5">00073</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_template_base.html#aaafc949fe4df5ac424ed1460e9a0f5e5">CSingleDocumentTemplateBase::IsDocumentTypeSupported</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId)<span class="keyword"> const</span>
-<a name="l00074"></a>00074 <span class="keyword"></span>{
-<a name="l00075"></a>00075        <span class="keywordflow">return</span> documentTypeId.isEmpty() || (documentTypeId == m_documentTypeId);     <span class="comment">// default or the same type is accepted</span>
-<a name="l00076"></a>00076 }
+<a name="l00070"></a>00070 <span class="comment">// inline protected methods</span>
+<a name="l00071"></a>00071 
+<a name="l00072"></a><a class="code" href="classidoc_1_1_c_single_document_template_base.html#aaafc949fe4df5ac424ed1460e9a0f5e5">00072</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_template_base.html#aaafc949fe4df5ac424ed1460e9a0f5e5">CSingleDocumentTemplateBase::IsDocumentTypeSupported</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId)<span class="keyword"> const</span>
+<a name="l00073"></a>00073 <span class="keyword"></span>{
+<a name="l00074"></a>00074        <span class="keywordflow">return</span> documentTypeId.isEmpty() || (documentTypeId == m_documentTypeId);     <span class="comment">// default or the same type is accepted</span>
+<a name="l00075"></a>00075 }
+<a name="l00076"></a>00076 
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078 
-<a name="l00079"></a><a class="code" href="classidoc_1_1_c_single_document_template_base.html#a55f45c947c8bbfbe96a6fca897556b10">00079</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_template_base.html#a55f45c947c8bbfbe96a6fca897556b10">CSingleDocumentTemplateBase::IsViewTypeSupported</a>(<span class="keyword">const</span> QByteArray&amp; viewTypeId)<span class="keyword"> const</span>
-<a name="l00080"></a>00080 <span class="keyword"></span>{
-<a name="l00081"></a>00081        <span class="keywordflow">return</span> viewTypeId.isEmpty() || (viewTypeId == m_viewTypeId);   <span class="comment">// default or the same type is accepted</span>
-<a name="l00082"></a>00082 }
+<a name="l00078"></a><a class="code" href="classidoc_1_1_c_single_document_template_base.html#a55f45c947c8bbfbe96a6fca897556b10">00078</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_template_base.html#a55f45c947c8bbfbe96a6fca897556b10">CSingleDocumentTemplateBase::IsViewTypeSupported</a>(<span class="keyword">const</span> QByteArray&amp; viewTypeId)<span class="keyword"> const</span>
+<a name="l00079"></a>00079 <span class="keyword"></span>{
+<a name="l00080"></a>00080        <span class="keywordflow">return</span> viewTypeId.isEmpty() || (viewTypeId == m_viewTypeId);   <span class="comment">// default or the same type is accepted</span>
+<a name="l00081"></a>00081 }
+<a name="l00082"></a>00082 
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085 } <span class="comment">// namespace idoc</span>
+<a name="l00084"></a>00084 } <span class="comment">// namespace idoc</span>
+<a name="l00085"></a>00085 
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="preprocessor">#endif // !idoc_CSingleDocumentTemplateBase_included</span>
-<a name="l00089"></a>00089 <span class="preprocessor"></span>
+<a name="l00087"></a>00087 <span class="preprocessor">#endif // !idoc_CSingleDocumentTemplateBase_included</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

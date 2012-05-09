@@ -24,7 +24,8 @@
 #define idoc_IUndoManager_included
 
 
-#include "istd/IChangeable.h"
+// ACF includes
+#include "idoc/IDocumentStateComparator.h"
 
 
 namespace idoc
@@ -34,7 +35,7 @@ namespace idoc
 /**
 	Interface providing UNDO/REDO functionality.
 */
-class IUndoManager: virtual public istd::IChangeable
+class IUndoManager: virtual public IDocumentStateComparator
 {
 public:
 	/**

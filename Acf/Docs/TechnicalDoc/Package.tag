@@ -2186,7 +2186,6 @@
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">idoc/IUndoManager.h</includes>
-    <includes id="_i_document_state_comparator_8h" name="IDocumentStateComparator.h" local="yes" imported="no">idoc/IDocumentStateComparator.h</includes>
     <includes id="_c_tmpl_based_document_manager_base_8h" name="CTmplBasedDocumentManagerBase.h" local="yes" imported="no">idoc/CTmplBasedDocumentManagerBase.h</includes>
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
     <class kind="struct">idoc::CMultiDocumentManagerBase::SingleDocumentData</class>
@@ -2200,15 +2199,6 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
     <class kind="class">idoc::CSelectedDocModelBinderComp</class>
-    <namespace>idoc</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSerializedStateComparator.h</name>
-    <path>C:/Temp/Acf/Include/idoc/</path>
-    <filename>_c_serialized_state_comparator_8h</filename>
-    <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="yes" imported="no">iser/CMemoryWriteArchive.h</includes>
-    <includes id="_i_document_state_comparator_8h" name="IDocumentStateComparator.h" local="yes" imported="no">idoc/IDocumentStateComparator.h</includes>
-    <class kind="class">idoc::CSerializedStateComparator</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -2230,7 +2220,6 @@
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_document_state_comparator_8h" name="IDocumentStateComparator.h" local="yes" imported="no">idoc/IDocumentStateComparator.h</includes>
     <includes id="_c_tmpl_based_document_manager_base_8h" name="CTmplBasedDocumentManagerBase.h" local="yes" imported="no">idoc/CTmplBasedDocumentManagerBase.h</includes>
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
     <namespace>idoc</namespace>
@@ -2298,7 +2287,6 @@
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">idoc/IUndoManager.h</includes>
     <includes id="_i_document_types_info_8h" name="IDocumentTypesInfo.h" local="yes" imported="no">idoc/IDocumentTypesInfo.h</includes>
-    <includes id="_i_document_state_comparator_8h" name="IDocumentStateComparator.h" local="yes" imported="no">idoc/IDocumentStateComparator.h</includes>
     <class kind="class">idoc::IDocumentTemplate</class>
     <namespace>idoc</namespace>
   </compound>
@@ -2341,7 +2329,7 @@
     <name>IUndoManager.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_undo_manager_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_document_state_comparator_8h" name="IDocumentStateComparator.h" local="yes" imported="no">idoc/IDocumentStateComparator.h</includes>
     <class kind="class">idoc::IUndoManager</class>
     <namespace>idoc</namespace>
   </compound>
@@ -21848,7 +21836,6 @@
     <class kind="class">idoc::CDocumentManagerListenerComp</class>
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
     <class kind="class">idoc::CSelectedDocModelBinderComp</class>
-    <class kind="class">idoc::CSerializedStateComparator</class>
     <class kind="class">idoc::CSerializedUndoManager</class>
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateBase</class>
@@ -21958,13 +21945,6 @@
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
       <anchor>a9dcad6aa2bd3d877db8b9942ff393d2a</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IDocumentStateComparator *</type>
-      <name>CreateStateComparator</name>
-      <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a1641715a993a699fd838d452b958857d</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -22148,13 +22128,6 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>istd::TDelPtr&lt; IDocumentStateComparator &gt;</type>
-      <name>StateComparatorPtr</name>
-      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a20299919d8427bb89ee77c210222ae26</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; istd::IPolymorphic &gt;</type>
       <name>ViewPtr</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
@@ -22275,8 +22248,8 @@
       <type></type>
       <name>SingleDocumentData</name>
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
-      <anchor>a0f63a574d2a338305b2a1762368da718</anchor>
-      <arglist>(CMultiDocumentManagerBase *parentPtr, const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr, idoc::IUndoManager *undoManagerPtr, IDocumentStateComparator *stateComparatorPtr)</arglist>
+      <anchor>a76d036e8e4e2119e6cac85087671fea5</anchor>
+      <arglist>(CMultiDocumentManagerBase *parentPtr, const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr, idoc::IUndoManager *undoManagerPtr)</arglist>
     </member>
     <member kind="variable">
       <type>CMultiDocumentManagerBase *</type>
@@ -22297,13 +22270,6 @@
       <name>undoManagerPtr</name>
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
       <anchor>a5edf897e08e69f42f206dddc8bc2382b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>StateComparatorPtr</type>
-      <name>stateComparatorPtr</name>
-      <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
-      <anchor>afccf3633dc7b43a50c26f8389d495b3b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -22404,29 +22370,17 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>idoc::CSerializedStateComparator</name>
-    <filename>classidoc_1_1_c_serialized_state_comparator.html</filename>
-    <base virtualness="virtual">idoc::IDocumentStateComparator</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>StoreState</name>
-      <anchorfile>classidoc_1_1_c_serialized_state_comparator.html</anchorfile>
-      <anchor>a3aec65c16149f95b9bbf5f84fb3e7201</anchor>
-      <arglist>(const istd::IChangeable &amp;document)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CheckStateEquals</name>
-      <anchorfile>classidoc_1_1_c_serialized_state_comparator.html</anchorfile>
-      <anchor>af6f252612a540232ed00617357d293d9</anchor>
-      <arglist>(const istd::IChangeable &amp;document) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>idoc::CSerializedUndoManager</name>
     <filename>classidoc_1_1_c_serialized_undo_manager.html</filename>
     <base>TSingleModelObserverBase&lt; iser::ISerializable &gt;</base>
     <base virtualness="virtual">idoc::IUndoManager</base>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iser::ISerializable &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
+      <anchor>a4f65ffc0c248c749ef1a9ef553b33f2a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CSerializedUndoManager</name>
@@ -22469,6 +22423,20 @@
       <anchor>a4da0243e27432889bbf39224a88e2e4b</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
+      <anchor>a7da1fab13cc26a3fc2d523bf9f694110</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
+      <anchor>abd30d0095abef4105cda83644081f8e5</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
@@ -22482,6 +22450,34 @@
       <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
       <anchor>a9d377b2fe7370184f1e761f414fddb7d</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>HasStoredDocumentState</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
+      <anchor>a7b2cef90de9d2bd36a8d0bea253d40d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>StoreDocumentState</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
+      <anchor>a87a3a51707b3e53413fef352f8d585b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RestoreDocumentState</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
+      <anchor>a58336477597ef11f9ae0862357549885</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual DocumentChangeFlag</type>
+      <name>GetDocumentChangeFlag</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
+      <anchor>a87cdc91c279b2c0675004219ddc749ab</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22752,13 +22748,6 @@
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
       <anchor>a94d51607b0b03695f1efda77b66af470</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, const QByteArray &amp;viewTypeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IDocumentStateComparator *</type>
-      <name>CreateStateComparator</name>
-      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>adde1c42dacdf061858a228be21f01277</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -23138,20 +23127,58 @@
   <compound kind="class">
     <name>idoc::IDocumentStateComparator</name>
     <filename>classidoc_1_1_i_document_state_comparator.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>StoreState</name>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>DocumentChangeFlag</name>
       <anchorfile>classidoc_1_1_i_document_state_comparator.html</anchorfile>
-      <anchor>aec952c7a6306e551d76caf8747c23f30</anchor>
-      <arglist>(const istd::IChangeable &amp;document)=0</arglist>
+      <anchor>a7d9a579cbf925dd38a4c796bfbf533de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DCF_UNKNOWN</name>
+      <anchorfile>classidoc_1_1_i_document_state_comparator.html</anchorfile>
+      <anchor>a7d9a579cbf925dd38a4c796bfbf533dea9b46614c7d55a96d8cb84f5248d12d8a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DCF_EQUAL</name>
+      <anchorfile>classidoc_1_1_i_document_state_comparator.html</anchorfile>
+      <anchor>a7d9a579cbf925dd38a4c796bfbf533deaf5b8f7c61097ce19a0326f74da90792b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DCF_DIFFERENT</name>
+      <anchorfile>classidoc_1_1_i_document_state_comparator.html</anchorfile>
+      <anchor>a7d9a579cbf925dd38a4c796bfbf533dea8d5dea185c7c57f1e903807745042682</anchor>
+      <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>CheckStateEquals</name>
+      <name>HasStoredDocumentState</name>
       <anchorfile>classidoc_1_1_i_document_state_comparator.html</anchorfile>
-      <anchor>a315cb4fb33d4566cb51d89802edd6065</anchor>
-      <arglist>(const istd::IChangeable &amp;document) const =0</arglist>
+      <anchor>a143af5cadda0a848434433192e5b36c1</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>StoreDocumentState</name>
+      <anchorfile>classidoc_1_1_i_document_state_comparator.html</anchorfile>
+      <anchor>ab4f5f60130624e0c3399565760c73fcc</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RestoreDocumentState</name>
+      <anchorfile>classidoc_1_1_i_document_state_comparator.html</anchorfile>
+      <anchor>a56794594283052ef546757571db8760b</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual DocumentChangeFlag</type>
+      <name>GetDocumentChangeFlag</name>
+      <anchorfile>classidoc_1_1_i_document_state_comparator.html</anchorfile>
+      <anchor>a672c7d5d510ec25d6e85d6f02e7c8538</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23199,13 +23226,6 @@
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
       <anchor>a870ed43b6775d4b714491a78a5170744</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual IDocumentStateComparator *</type>
-      <name>CreateStateComparator</name>
-      <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>ad403afe3844b2d35c4c70257ed9e79b9</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23325,7 +23345,7 @@
   <compound kind="class">
     <name>idoc::IUndoManager</name>
     <filename>classidoc_1_1_i_undo_manager.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">idoc::IDocumentStateComparator</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsUndoAvailable</name>

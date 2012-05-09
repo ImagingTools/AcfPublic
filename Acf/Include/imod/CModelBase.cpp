@@ -97,9 +97,7 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 
 void CModelBase::DetachAllObservers()
 {
-	int observersCount = int(m_observers.size());
-
-	for (int observerIndex = 0; observerIndex < observersCount; observerIndex++){
+	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
 		imod::IObserver* observerPtr = m_observers.at(observerIndex);
 		I_ASSERT(observerPtr != NULL);
 		
@@ -112,9 +110,7 @@ void CModelBase::DetachAllObservers()
 
 bool CModelBase::IsAttached(const IObserver* observerPtr) const
 {
-	int observersCount = int(m_observers.size());
-
-	for (int observerIndex = 0; observerIndex < observersCount; observerIndex++){
+	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
 		imod::IObserver* connectedObserverPtr = m_observers.at(observerIndex);
 		I_ASSERT(connectedObserverPtr != NULL);
 
@@ -131,9 +127,7 @@ bool CModelBase::IsAttached(const IObserver* observerPtr) const
 
 void CModelBase::NotifyBeforeUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
-	int observersCount = int(m_observers.size());
-
-	for (int observerIndex = 0; observerIndex < observersCount; observerIndex++){
+	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
 		imod::IObserver* observerPtr = m_observers.at(observerIndex);
 		I_ASSERT(observerPtr != NULL);
 
@@ -144,9 +138,7 @@ void CModelBase::NotifyBeforeUpdate(int updateFlags, istd::IPolymorphic* updateP
 
 void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
-	int observersCount = int(m_observers.size());
-
-	for (int observerIndex = 0; observerIndex < observersCount; observerIndex++){
+	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
 		imod::IObserver* observerPtr = m_observers.at(observerIndex);
 		I_ASSERT(observerPtr != NULL);
 

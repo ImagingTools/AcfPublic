@@ -191,7 +191,7 @@
 <a name="l00201"></a>00201        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(Gui::IsGuiCreated());
 <a name="l00202"></a>00202        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>));
 <a name="l00203"></a>00203 
-<a name="l00204"></a>00204        DoUpdate(CF_INIT_EDITOR);
+<a name="l00204"></a>00204        UpdateEditor(CF_INIT_EDITOR);
 <a name="l00205"></a>00205 }
 <a name="l00206"></a>00206 
 <a name="l00207"></a>00207 
@@ -239,132 +239,132 @@
 <a name="l00249"></a>00249 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
 <a name="l00250"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a806337a93835b5e6b1c577ce85a65674">00250</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a806337a93835b5e6b1c577ce85a65674" title="Updates editor with model data.">TGuiObserverWrap&lt;Gui, Observer&gt;::UpdateEditor</a>(<span class="keywordtype">int</span> updateFlags)
 <a name="l00251"></a>00251 {
-<a name="l00252"></a>00252        <span class="keywordflow">if</span> (!IsUpdateBlocked() &amp;&amp; Gui::IsGuiCreated()){
-<a name="l00253"></a>00253               <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html">UpdateBlocker</a> updateBlocker(<span class="keyword">this</span>);
+<a name="l00252"></a>00252        DoPostponedUpdate(updateFlags);
+<a name="l00253"></a>00253 }
 <a name="l00254"></a>00254 
-<a name="l00255"></a>00255               UpdateGui(updateFlags);
-<a name="l00256"></a>00256        }
-<a name="l00257"></a>00257 }
-<a name="l00258"></a>00258 
-<a name="l00259"></a>00259 
-<a name="l00260"></a>00260 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00261"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a39ad878eb561d7510fa512c9a985a92b">00261</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a39ad878eb561d7510fa512c9a985a92b" title="Updates model from editor.">TGuiObserverWrap&lt;Gui, Observer&gt;::UpdateModel</a>()<span class="keyword"> const</span>
-<a name="l00262"></a>00262 <span class="keyword"></span>{
-<a name="l00263"></a>00263 }
-<a name="l00264"></a>00264 
-<a name="l00265"></a>00265 
-<a name="l00266"></a>00266 <span class="comment">// pseudo-reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00267"></a>00267 
-<a name="l00268"></a>00268 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00269"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#af1ee16cea3b1ae16d82da61fe61b3a09">00269</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#af1ee16cea3b1ae16d82da61fe61b3a09">TGuiObserverWrap&lt;Gui, Observer&gt;::OnGuiShown</a>()
-<a name="l00270"></a>00270 {
-<a name="l00271"></a>00271        Gui::OnGuiShown();
-<a name="l00272"></a>00272 
-<a name="l00273"></a>00273        <span class="keywordflow">if</span> (Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
-<a name="l00274"></a>00274               <span class="keywordflow">if</span> (m_updateOnShow){
-<a name="l00275"></a>00275                      DoUpdate(m_updateOnShowFlags);
-<a name="l00276"></a>00276               }
+<a name="l00255"></a>00255 
+<a name="l00256"></a>00256 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00257"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a39ad878eb561d7510fa512c9a985a92b">00257</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a39ad878eb561d7510fa512c9a985a92b" title="Updates model from editor.">TGuiObserverWrap&lt;Gui, Observer&gt;::UpdateModel</a>()<span class="keyword"> const</span>
+<a name="l00258"></a>00258 <span class="keyword"></span>{
+<a name="l00259"></a>00259 }
+<a name="l00260"></a>00260 
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262 <span class="comment">// pseudo-reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00263"></a>00263 
+<a name="l00264"></a>00264 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00265"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#af1ee16cea3b1ae16d82da61fe61b3a09">00265</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#af1ee16cea3b1ae16d82da61fe61b3a09">TGuiObserverWrap&lt;Gui, Observer&gt;::OnGuiShown</a>()
+<a name="l00266"></a>00266 {
+<a name="l00267"></a>00267        Gui::OnGuiShown();
+<a name="l00268"></a>00268 
+<a name="l00269"></a>00269        <span class="keywordflow">if</span> (Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
+<a name="l00270"></a>00270               <span class="keywordflow">if</span> (m_updateOnShow){
+<a name="l00271"></a>00271                      UpdateEditor(m_updateOnShowFlags);
+<a name="l00272"></a>00272               }
+<a name="l00273"></a>00273 
+<a name="l00274"></a>00274               OnGuiModelShown();
+<a name="l00275"></a>00275        }
+<a name="l00276"></a>00276 }
 <a name="l00277"></a>00277 
-<a name="l00278"></a>00278               OnGuiModelShown();
-<a name="l00279"></a>00279        }
-<a name="l00280"></a>00280 }
-<a name="l00281"></a>00281 
-<a name="l00282"></a>00282 
-<a name="l00283"></a>00283 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00284"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a5e55184b9b6696fc8653cd473127bf34">00284</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a5e55184b9b6696fc8653cd473127bf34">TGuiObserverWrap&lt;Gui, Observer&gt;::OnGuiHidden</a>()
-<a name="l00285"></a>00285 {
-<a name="l00286"></a>00286        Gui::OnGuiHidden();
-<a name="l00287"></a>00287 
-<a name="l00288"></a>00288        <span class="keywordflow">if</span> (Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
-<a name="l00289"></a>00289               OnGuiModelHidden();
-<a name="l00290"></a>00290        }
-<a name="l00291"></a>00291 }
-<a name="l00292"></a>00292 
-<a name="l00293"></a>00293 
-<a name="l00294"></a>00294 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00295"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ad9c99838dff86b005fc5cf32198c332d">00295</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ad9c99838dff86b005fc5cf32198c332d">TGuiObserverWrap&lt;Gui, Observer&gt;::OnGuiCreated</a>()
-<a name="l00296"></a>00296 {
-<a name="l00297"></a>00297        Gui::OnGuiCreated();
-<a name="l00298"></a>00298 
-<a name="l00299"></a>00299        <span class="keywordflow">if</span> (Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
-<a name="l00300"></a>00300               OnGuiModelAttached();
-<a name="l00301"></a>00301        }
-<a name="l00302"></a>00302 }
-<a name="l00303"></a>00303 
-<a name="l00304"></a>00304 
-<a name="l00305"></a>00305 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00306"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ae6d3a0820a47c572289ddd3d07a7da51">00306</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ae6d3a0820a47c572289ddd3d07a7da51">TGuiObserverWrap&lt;Gui, Observer&gt;::OnGuiDestroyed</a>()
-<a name="l00307"></a>00307 {
-<a name="l00308"></a>00308        <span class="keywordflow">if</span> (Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
-<a name="l00309"></a>00309               OnGuiModelDetached();
-<a name="l00310"></a>00310        }
+<a name="l00278"></a>00278 
+<a name="l00279"></a>00279 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00280"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a5e55184b9b6696fc8653cd473127bf34">00280</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a5e55184b9b6696fc8653cd473127bf34">TGuiObserverWrap&lt;Gui, Observer&gt;::OnGuiHidden</a>()
+<a name="l00281"></a>00281 {
+<a name="l00282"></a>00282        Gui::OnGuiHidden();
+<a name="l00283"></a>00283 
+<a name="l00284"></a>00284        <span class="keywordflow">if</span> (Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
+<a name="l00285"></a>00285               OnGuiModelHidden();
+<a name="l00286"></a>00286        }
+<a name="l00287"></a>00287 }
+<a name="l00288"></a>00288 
+<a name="l00289"></a>00289 
+<a name="l00290"></a>00290 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00291"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ad9c99838dff86b005fc5cf32198c332d">00291</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ad9c99838dff86b005fc5cf32198c332d">TGuiObserverWrap&lt;Gui, Observer&gt;::OnGuiCreated</a>()
+<a name="l00292"></a>00292 {
+<a name="l00293"></a>00293        Gui::OnGuiCreated();
+<a name="l00294"></a>00294 
+<a name="l00295"></a>00295        <span class="keywordflow">if</span> (Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
+<a name="l00296"></a>00296               OnGuiModelAttached();
+<a name="l00297"></a>00297        }
+<a name="l00298"></a>00298 }
+<a name="l00299"></a>00299 
+<a name="l00300"></a>00300 
+<a name="l00301"></a>00301 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00302"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ae6d3a0820a47c572289ddd3d07a7da51">00302</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ae6d3a0820a47c572289ddd3d07a7da51">TGuiObserverWrap&lt;Gui, Observer&gt;::OnGuiDestroyed</a>()
+<a name="l00303"></a>00303 {
+<a name="l00304"></a>00304        <span class="keywordflow">if</span> (Observer::IsModelAttached(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
+<a name="l00305"></a>00305               OnGuiModelDetached();
+<a name="l00306"></a>00306        }
+<a name="l00307"></a>00307 
+<a name="l00308"></a>00308        Gui::OnGuiDestroyed();
+<a name="l00309"></a>00309 }
+<a name="l00310"></a>00310 
 <a name="l00311"></a>00311 
-<a name="l00312"></a>00312        Gui::OnGuiDestroyed();
-<a name="l00313"></a>00313 }
-<a name="l00314"></a>00314 
-<a name="l00315"></a>00315 
-<a name="l00316"></a>00316 <span class="comment">// pseudo-reimplemented (imod::IObserver)</span>
-<a name="l00317"></a>00317 
-<a name="l00318"></a>00318 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00319"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a0414b4fb5a17cea42400a88d0df13d5a">00319</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a0414b4fb5a17cea42400a88d0df13d5a">TGuiObserverWrap&lt;Gui, Observer&gt;::AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr)
-<a name="l00320"></a>00320 {
-<a name="l00321"></a>00321        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(modelPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00322"></a>00322        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(Observer::IsModelAttached(modelPtr));
-<a name="l00323"></a>00323 
-<a name="l00324"></a>00324        Observer::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+<a name="l00312"></a>00312 <span class="comment">// pseudo-reimplemented (imod::IObserver)</span>
+<a name="l00313"></a>00313 
+<a name="l00314"></a>00314 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00315"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a0414b4fb5a17cea42400a88d0df13d5a">00315</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#a0414b4fb5a17cea42400a88d0df13d5a">TGuiObserverWrap&lt;Gui, Observer&gt;::AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr)
+<a name="l00316"></a>00316 {
+<a name="l00317"></a>00317        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(modelPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00318"></a>00318        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(Observer::IsModelAttached(modelPtr));
+<a name="l00319"></a>00319 
+<a name="l00320"></a>00320        Observer::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+<a name="l00321"></a>00321 
+<a name="l00322"></a>00322        <span class="keywordflow">if</span> (!Gui::IsGuiCreated()){
+<a name="l00323"></a>00323               <span class="keywordflow">return</span>;
+<a name="l00324"></a>00324        }
 <a name="l00325"></a>00325 
-<a name="l00326"></a>00326        <span class="keywordflow">if</span> (!Gui::IsGuiCreated()){
-<a name="l00327"></a>00327               <span class="keywordflow">return</span>;
-<a name="l00328"></a>00328        }
+<a name="l00326"></a>00326        UpdateEditor(updateFlags);
+<a name="l00327"></a>00327 }
+<a name="l00328"></a>00328 
 <a name="l00329"></a>00329 
-<a name="l00330"></a>00330        DoPostponedUpdate(updateFlags);
-<a name="l00331"></a>00331 }
-<a name="l00332"></a>00332 
-<a name="l00333"></a>00333 
-<a name="l00334"></a>00334 <span class="comment">// pseudo-reimplemented (imod::IModelEditor)</span>
-<a name="l00335"></a>00335 
-<a name="l00336"></a>00336 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00337"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#afee371d7a2c525948e04be390c07076f">00337</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#afee371d7a2c525948e04be390c07076f" title="Returns true if the model data can be changed.">TGuiObserverWrap&lt;Gui, Observer&gt;::IsReadOnly</a>()<span class="keyword"> const</span>
-<a name="l00338"></a>00338 <span class="keyword"></span>{
-<a name="l00339"></a>00339        <span class="keywordflow">return</span> m_isReadOnly;
-<a name="l00340"></a>00340 }
-<a name="l00341"></a>00341 
-<a name="l00342"></a>00342 
-<a name="l00343"></a>00343 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00344"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ab121962cf9345f48d3aa1deedc65422d">00344</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ab121962cf9345f48d3aa1deedc65422d" title="Set flag that the model data can be changed.">TGuiObserverWrap&lt;Gui, Observer&gt;::SetReadOnly</a>(<span class="keywordtype">bool</span> state)
-<a name="l00345"></a>00345 {
-<a name="l00346"></a>00346        m_isReadOnly = state;
-<a name="l00347"></a>00347 }
-<a name="l00348"></a>00348 
-<a name="l00349"></a>00349 
-<a name="l00350"></a>00350 <span class="comment">// private methods</span>
-<a name="l00351"></a>00351 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00352"></a>00352 <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">TGuiObserverWrap&lt;Gui, Observer&gt;::DoPostponedUpdate</a>(<span class="keywordtype">int</span> updateFlags)
-<a name="l00353"></a>00353 {
-<a name="l00354"></a>00354        <span class="comment">// skip update if the UI is not visible:</span>
-<a name="l00355"></a>00355        <span class="keywordflow">if</span> (!Gui::IsGuiShown()){
-<a name="l00356"></a>00356               m_updateOnShow = <span class="keyword">true</span>;
-<a name="l00357"></a>00357               m_updateOnShowFlags = m_updateOnShowFlags | updateFlags;
-<a name="l00358"></a>00358 
-<a name="l00359"></a>00359               <span class="keywordflow">return</span>;
-<a name="l00360"></a>00360        }
+<a name="l00330"></a>00330 <span class="comment">// pseudo-reimplemented (imod::IModelEditor)</span>
+<a name="l00331"></a>00331 
+<a name="l00332"></a>00332 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00333"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#afee371d7a2c525948e04be390c07076f">00333</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#afee371d7a2c525948e04be390c07076f" title="Returns true if the model data can be changed.">TGuiObserverWrap&lt;Gui, Observer&gt;::IsReadOnly</a>()<span class="keyword"> const</span>
+<a name="l00334"></a>00334 <span class="keyword"></span>{
+<a name="l00335"></a>00335        <span class="keywordflow">return</span> m_isReadOnly;
+<a name="l00336"></a>00336 }
+<a name="l00337"></a>00337 
+<a name="l00338"></a>00338 
+<a name="l00339"></a>00339 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00340"></a><a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ab121962cf9345f48d3aa1deedc65422d">00340</a> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html#ab121962cf9345f48d3aa1deedc65422d" title="Set flag that the model data can be changed.">TGuiObserverWrap&lt;Gui, Observer&gt;::SetReadOnly</a>(<span class="keywordtype">bool</span> state)
+<a name="l00341"></a>00341 {
+<a name="l00342"></a>00342        m_isReadOnly = state;
+<a name="l00343"></a>00343 }
+<a name="l00344"></a>00344 
+<a name="l00345"></a>00345 
+<a name="l00346"></a>00346 <span class="comment">// private methods</span>
+<a name="l00347"></a>00347 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00348"></a>00348 <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">TGuiObserverWrap&lt;Gui, Observer&gt;::DoPostponedUpdate</a>(<span class="keywordtype">int</span> updateFlags)
+<a name="l00349"></a>00349 {
+<a name="l00350"></a>00350        <span class="comment">// skip update if the UI is not visible:</span>
+<a name="l00351"></a>00351        <span class="keywordflow">if</span> (!Gui::IsGuiShown()){
+<a name="l00352"></a>00352               m_updateOnShow = <span class="keyword">true</span>;
+<a name="l00353"></a>00353               m_updateOnShowFlags = m_updateOnShowFlags | updateFlags;
+<a name="l00354"></a>00354 
+<a name="l00355"></a>00355               <span class="keywordflow">return</span>;
+<a name="l00356"></a>00356        }
+<a name="l00357"></a>00357 
+<a name="l00358"></a>00358        DoUpdate(updateFlags);
+<a name="l00359"></a>00359 }
+<a name="l00360"></a>00360 
 <a name="l00361"></a>00361 
-<a name="l00362"></a>00362        DoUpdate(updateFlags);
-<a name="l00363"></a>00363 }
-<a name="l00364"></a>00364 
-<a name="l00365"></a>00365 
-<a name="l00366"></a>00366 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
-<a name="l00367"></a>00367 <span class="keywordtype">void</span> TGuiObserverWrap&lt;Gui, Observer&gt;::DoUpdate(<span class="keywordtype">int</span> updateFlags)
-<a name="l00368"></a>00368 {
-<a name="l00369"></a>00369        <span class="keywordtype">bool</span> skipUpdate = <span class="keyword">false</span>;
-<a name="l00370"></a>00370        <span class="keywordflow">if</span> ((m_updateFilter != 0) &amp;&amp; (updateFlags != 0)){
-<a name="l00371"></a>00371               <span class="keywordflow">if</span> ((updateFlags &amp; CF_INIT_EDITOR) == 0){
-<a name="l00372"></a>00372                      skipUpdate = ((m_updateFilter &amp; updateFlags) == 0);
-<a name="l00373"></a>00373               }
-<a name="l00374"></a>00374        }
+<a name="l00362"></a>00362 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Gui, <span class="keyword">class</span> Observer&gt;
+<a name="l00363"></a>00363 <span class="keywordtype">void</span> TGuiObserverWrap&lt;Gui, Observer&gt;::DoUpdate(<span class="keywordtype">int</span> updateFlags)
+<a name="l00364"></a>00364 {
+<a name="l00365"></a>00365        <span class="keywordtype">bool</span> skipUpdate = <span class="keyword">false</span>;
+<a name="l00366"></a>00366        <span class="keywordflow">if</span> ((m_updateFilter != 0) &amp;&amp; (updateFlags != 0)){
+<a name="l00367"></a>00367               <span class="keywordflow">if</span> ((updateFlags &amp; CF_INIT_EDITOR) == 0){
+<a name="l00368"></a>00368                      skipUpdate = ((m_updateFilter &amp; updateFlags) == 0);
+<a name="l00369"></a>00369               }
+<a name="l00370"></a>00370        }
+<a name="l00371"></a>00371 
+<a name="l00372"></a>00372        <span class="keywordflow">if</span> (!skipUpdate){
+<a name="l00373"></a>00373               <span class="keywordflow">if</span> (!IsUpdateBlocked() &amp;&amp; Gui::IsGuiCreated()){
+<a name="l00374"></a>00374                      UpdateBlocker updateBlocker(<span class="keyword">this</span>);
 <a name="l00375"></a>00375 
-<a name="l00376"></a>00376        <span class="keywordflow">if</span> (!skipUpdate){
-<a name="l00377"></a>00377               UpdateEditor(updateFlags);
+<a name="l00376"></a>00376                      UpdateGui(updateFlags);
+<a name="l00377"></a>00377               }
 <a name="l00378"></a>00378        }
 <a name="l00379"></a>00379 
 <a name="l00380"></a>00380        m_updateOnShow = <span class="keyword">false</span>;

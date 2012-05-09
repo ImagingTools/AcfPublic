@@ -250,7 +250,7 @@ i2d::CRect CInteractivePerspectiveCalibrationShape::CalcBoundingBox() const
 		return displayPtr->GetClientRect();
 	}
 
-	return i2d::CRect();
+	return i2d::CRect::GetEmpty();
 }
 
 

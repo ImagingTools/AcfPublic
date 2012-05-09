@@ -49,10 +49,8 @@ namespace idoc
 class CSerializedUndoManager: public imod::TSingleModelObserverBase<iser::ISerializable>, virtual public IUndoManager
 {
 public:
-	/**
-		Default constructor with optional model pointer to set managed model.
-		You can also use standard connection to observed model.
-	*/
+	typedef imod::TSingleModelObserverBase<iser::ISerializable> BaseClass;
+
 	CSerializedUndoManager();
 
 	// reimplemented (idoc::IUndoManager)
@@ -62,10 +60,20 @@ public:
 	virtual bool DoUndo();
 	virtual bool DoRedo();
 
+	// reimplemented (imod::IObserver)
+	virtual bool OnAttached(imod::IModel* modelPtr);
+	virtual bool OnDetached(imod::IModel* modelPtr);
+
 protected:
 	// reimplemented (imod::IObserver)
 	virtual void BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
 	virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+
+	// reimplemented (idoc::IDocumentStateComparator)
+	virtual bool HasStoredDocumentState() const;
+	virtual bool StoreDocumentState();
+	virtual bool RestoreDocumentState();
+	virtual DocumentChangeFlag GetDocumentChangeFlag() const;
 
 private:
 	typedef istd::TDelPtr<iser::CMemoryWriteArchive> UndoArchivePtr;
@@ -74,6 +82,12 @@ private:
 	UndoList m_redoList;
 
 	UndoArchivePtr m_beginStateArchivePtr;
+
+	bool m_hasStoredDocumentState;
+	iser::CMemoryWriteArchive m_storedStateArchive;
+
+	mutable DocumentChangeFlag m_stateChangedFlag;
+	mutable bool m_isStateChangedFlagValid;
 };
 
 

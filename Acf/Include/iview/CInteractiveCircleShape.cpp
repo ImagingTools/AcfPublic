@@ -305,7 +305,7 @@ i2d::CRect CInteractiveCircleShape::CalcBoundingBox() const
 		return boundingBox;
 	}
 
-	return i2d::CRect();
+	return i2d::CRect::GetEmpty();
 }
 
 

@@ -35,7 +35,6 @@
 
 #include "imod/CSingleModelObserverBase.h"
 
-#include "idoc/IDocumentStateComparator.h"
 #include "idoc/CTmplBasedDocumentManagerBase.h"
 
 
@@ -133,7 +132,6 @@ private:
 	QByteArray m_viewTypeId;
 	istd::TDelPtr<istd::IChangeable> m_documentPtr;
 	istd::TDelPtr<idoc::IUndoManager> m_undoManagerPtr;
-	istd::TDelPtr<IDocumentStateComparator> m_stateComparatorPtr;
 	istd::TDelPtr<istd::IPolymorphic> m_viewPtr;
 
 	bool m_isDirty;

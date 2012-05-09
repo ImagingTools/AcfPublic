@@ -293,7 +293,7 @@ i2d::CRect CNoneCalibrationShape::CalcBoundingBox() const
 		return displayPtr->GetClientRect();
 	}
 
-	return i2d::CRect();
+	return i2d::CRect::GetEmpty();
 }
 
 

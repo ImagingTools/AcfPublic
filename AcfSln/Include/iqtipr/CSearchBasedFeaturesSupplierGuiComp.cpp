@@ -119,6 +119,8 @@ void CSearchBasedFeaturesSupplierGuiComp::RemoveItemsFromScene(iqt2d::IViewProvi
 		DisconnectShapes(*viewPtr);
 	}
 
+	m_lastViewPtr = NULL;
+
 	BaseClass::RemoveItemsFromScene(providerPtr);
 }
 
@@ -205,10 +207,7 @@ void CSearchBasedFeaturesSupplierGuiComp::UpdateGui(int updateFlags)
 
 	if (m_lastViewPtr != NULL){
 		ConnectShapes(*m_lastViewPtr);
-
-		m_lastViewPtr->Update();
 	}
-
 }
 
 
