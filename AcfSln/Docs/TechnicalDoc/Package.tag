@@ -610,6 +610,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_crop_processor_comp_8h</filename>
     <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
+    <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageCropProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -618,6 +619,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_histogram_processor_comp_8h</filename>
     <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
+    <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -642,7 +644,7 @@
     <name>CImagePolarTransformProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_polar_transform_processor_comp_8h</filename>
-    <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
+    <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -651,6 +653,13 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_processor_comp_base_8h</filename>
     <class kind="class">iipr::CImageProcessorCompBase</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CImageRegionProcessorCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_image_region_processor_comp_base_8h</filename>
+    <class kind="class">iipr::CImageRegionProcessorCompBase</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -5115,6 +5124,7 @@
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
     <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
     <class kind="class">iipr::CImageProcessorCompBase</class>
+    <class kind="class">iipr::CImageRegionProcessorCompBase</class>
     <class kind="class">iipr::CLineProjectionProcessorComp</class>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
     <class kind="class">iipr::CMultiBitmapCacheComp</class>
@@ -5883,7 +5893,7 @@
   <compound kind="class">
     <name>iipr::CImageCropProcessorComp</name>
     <filename>classiipr_1_1_c_image_crop_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
+    <base>iipr::CImageRegionProcessorCompBase</base>
     <member kind="typedef">
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
@@ -5891,31 +5901,31 @@
       <anchor>a584cdfe173a47336e27482953b2f9489</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
-      <anchor>a20d0f2d9fbeadeffcab0ae6b094c5f18</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>aec96edd847957f0781822a39655881c3</anchor>
+      <arglist>(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iipr::CImageHistogramProcessorComp</name>
     <filename>classiipr_1_1_c_image_histogram_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
+    <base>iipr::CImageRegionProcessorCompBase</base>
     <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
+      <type>CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
-      <anchor>a7e9e8bdbd3ba7feb0ca85e824b3cc9d3</anchor>
+      <anchor>a6bf8d65d09539e687544fea3accca651</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
-      <anchor>adebac71e0c1360a26e6ccfc79627f79d</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>aafaade3ecef5abe420c9b8f86a2a7b58</anchor>
+      <arglist>(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5973,20 +5983,20 @@
   <compound kind="class">
     <name>iipr::CImagePolarTransformProcessorComp</name>
     <filename>classiipr_1_1_c_image_polar_transform_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
+    <base>iipr::CImageRegionProcessorCompBase</base>
     <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
+      <type>CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_polar_transform_processor_comp.html</anchorfile>
-      <anchor>aa578ff557e1f7fca78b1b9a5c164a8eb</anchor>
+      <anchor>a4df9f1b9b4e45caf342ff0d4d583b6df</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_polar_transform_processor_comp.html</anchorfile>
-      <anchor>a5f89719ff9e74d5b3e8a3748bb9232e0</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>af068977fae375955291eb1957408b801</anchor>
+      <arglist>(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6020,6 +6030,32 @@
       <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
       <anchor>a1c34b3884ba43425bffa882b73f1d789</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageRegionProcessorCompBase</name>
+    <filename>classiipr_1_1_c_image_region_processor_comp_base.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
+      <anchor>afa13537de800360da28b6a28ed5e8a43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
+      <anchor>a4684a9de7aa9e5a6179b5d84793f2f47</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ProcessImageRegion</name>
+      <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
+      <anchor>ac23913215c0753e4ffab60715157ffe1</anchor>
+      <arglist>(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -20,16 +20,25 @@
 ********************************************************************************/
 
 
-#ifndef iipr_CImageBinarizeProcessorComp_included
-#define iipr_CImageBinarizeProcessorComp_included
+#ifndef iipr_CImageRegionProcessorCompBase_included
+#define iipr_CImageRegionProcessorCompBase_included
 
 
 // ACF includes
-#include "iimg/IBitmap.h"
 #include "iproc/TSyncProcessorCompBase.h"
 
-// ACF-Solutions includes
-#include "imeas/INumericParams.h"
+
+namespace i2d
+{
+	class ICalibrationProvider;
+	class IObject2d;
+}
+
+
+namespace iimg
+{
+	class IBitmap;
+}
 
 
 namespace iipr
@@ -37,15 +46,16 @@ namespace iipr
 
 
 /**	
-	Processor for image binarization using static threshold.
+	Basic implementation for a image region processor.
 */
-class CImageBinarizeProcessorComp: public iproc::CSyncProcessorCompBase
+class CImageRegionProcessorCompBase: public iproc::CSyncProcessorCompBase
 {
 public:
 	typedef iproc::CSyncProcessorCompBase BaseClass;
 	
-	I_BEGIN_COMPONENT(CImageBinarizeProcessorComp);
-		I_ASSIGN(m_binarizationParamsIdAttrPtr, "BinarizationParameterId", "ID of binarization parameters in the parameter set", false, "BinarizationParameterId");
+	I_BEGIN_BASE_COMPONENT(CImageRegionProcessorCompBase);
+		I_ASSIGN(m_aoiParamIdAttrPtr, "AoiParamId", "ID of the AOI region in the parameter set", false, "AoiParams");
+		I_ASSIGN(m_regionCalibrationProviderCompPtr, "RegionCalibrationProvider", "Calibration object used for tranformation of region parameters from logical to pixel coordinates", false, "RegionCalibrationProvider");
 	I_END_COMPONENT;
 
 	// reimplemented (iproc::IProcessor)
@@ -55,19 +65,26 @@ public:
 				istd::IChangeable* outputPtr,
 				iproc::IProgressManager* progressManagerPtr = NULL);
 
-private:
-	bool ConvertImage(
-				const iimg::IBitmap& inputBitmap,
-				const imeas::INumericParams& thresholdParams,
-				iimg::IBitmap& outputBitmap) const;
+protected:
+	// abstract methods
+	
+	/**
+		Process the defined image region.
+	*/
+	virtual bool ProcessImageRegion(
+				const iimg::IBitmap& input,
+				const iprm::IParamsSet* paramsPtr,
+				const i2d::IObject2d* aoiPtr,
+				istd::IChangeable* outputPtr) const = 0;
 
 private:
-	I_ATTR(QByteArray, m_binarizationParamsIdAttrPtr);
+	I_ATTR(QByteArray, m_aoiParamIdAttrPtr);
+	I_REF(i2d::ICalibrationProvider, m_regionCalibrationProviderCompPtr);
 };
 
 
 } // namespace iipr
 
 
-#endif // !iipr_CImageBinarizeProcessorComp_included
+#endif // !iipr_CImageRegionProcessorCompBase_included
 

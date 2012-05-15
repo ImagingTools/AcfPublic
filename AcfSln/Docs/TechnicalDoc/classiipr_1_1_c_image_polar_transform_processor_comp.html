@@ -32,12 +32,12 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iipr::CImagePolarTransformProcessorComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CImagePolarTransformProcessorComp" --><!-- doxytag: inherits="iproc::TSyncProcessorCompBase" -->
+<!-- doxytag: class="iipr::CImagePolarTransformProcessorComp" --><!-- doxytag: inherits="iipr::CImageRegionProcessorCompBase" -->
 <p>Implementation of a processor for the image histogram calculation.  
  <a href="classiipr_1_1_c_image_polar_transform_processor_comp.html#details">More...</a></p>
 
@@ -48,6 +48,7 @@ Inheritance diagram for iipr::CImagePolarTransformProcessorComp:</div>
  <div class="center">
   <img src="classiipr_1_1_c_image_polar_transform_processor_comp.png" usemap="#iipr::CImagePolarTransformProcessorComp_map" alt=""/>
   <map id="iipr::CImagePolarTransformProcessorComp_map" name="iipr::CImagePolarTransformProcessorComp_map">
+<area href="classiipr_1_1_c_image_region_processor_comp_base.html" title="Basic implementation for a image region processor." alt="iipr::CImageRegionProcessorCompBase" shape="rect" coords="444,280,730,304"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_comp_base.html" alt="iproc::TSyncProcessorCompBase&lt; class, class &gt;" shape="rect" coords="444,224,730,248"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="296,168,582,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap&lt; class &gt;" shape="rect" coords="592,168,878,192"/>
@@ -66,70 +67,75 @@ Inheritance diagram for iipr::CImagePolarTransformProcessorComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceiproc.html#a65c76f6b4ad2de54dfdcfb737b246473">iproc::CSyncProcessorCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#aa578ff557e1f7fca78b1b9a5c164a8eb">BaseClass</a></td></tr>
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#a5f89719ff9e74d5b3e8a3748bb9232e0">DoProcessing</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a> *progressManagerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<a class="el" href="classiipr_1_1_c_image_region_processor_comp_base.html">CImageRegionProcessorCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#a4df9f1b9b4e45caf342ff0d4d583b6df">BaseClass</a></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#af068977fae375955291eb1957408b801">ProcessImageRegion</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;input, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a> *aoiPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the defined image region.  <a href="#af068977fae375955291eb1957408b801"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of a processor for the image histogram calculation. </p>
 
-<p>Definition at line <a class="el" href="_c_image_polar_transform_processor_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_image_polar_transform_processor_comp_8h_source.html">CImagePolarTransformProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_image_polar_transform_processor_comp_8h_source.html#l00016">16</a> of file <a class="el" href="_c_image_polar_transform_processor_comp_8h_source.html">CImagePolarTransformProcessorComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="aa578ff557e1f7fca78b1b9a5c164a8eb"></a><!-- doxytag: member="iipr::CImagePolarTransformProcessorComp::BaseClass" ref="aa578ff557e1f7fca78b1b9a5c164a8eb" args="" -->
+<a class="anchor" id="a4df9f1b9b4e45caf342ff0d4d583b6df"></a><!-- doxytag: member="iipr::CImagePolarTransformProcessorComp::BaseClass" ref="a4df9f1b9b4e45caf342ff0d4d583b6df" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceiproc.html#a65c76f6b4ad2de54dfdcfb737b246473">iproc::CSyncProcessorCompBase</a> <a class="el" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#aa578ff557e1f7fca78b1b9a5c164a8eb">iipr::CImagePolarTransformProcessorComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiipr_1_1_c_image_region_processor_comp_base.html">CImageRegionProcessorCompBase</a> <a class="el" href="classiipr_1_1_c_image_polar_transform_processor_comp.html#a4df9f1b9b4e45caf342ff0d4d583b6df">iipr::CImagePolarTransformProcessorComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_comp_base.html#aba5b8a1659fcb233df925c946248ae58">iproc::TSyncProcessorCompBase&lt; class, class &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiipr_1_1_c_image_region_processor_comp_base.html#afa13537de800360da28b6a28ed5e8a43">iipr::CImageRegionProcessorCompBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_image_polar_transform_processor_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_image_polar_transform_processor_comp_8h_source.html">CImagePolarTransformProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_image_polar_transform_processor_comp_8h_source.html#l00019">19</a> of file <a class="el" href="_c_image_polar_transform_processor_comp_8h_source.html">CImagePolarTransformProcessorComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5f89719ff9e74d5b3e8a3748bb9232e0"></a><!-- doxytag: member="iipr::CImagePolarTransformProcessorComp::DoProcessing" ref="a5f89719ff9e74d5b3e8a3748bb9232e0" args="(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)" -->
+<a class="anchor" id="af068977fae375955291eb1957408b801"></a><!-- doxytag: member="iipr::CImagePolarTransformProcessorComp::ProcessImageRegion" ref="af068977fae375955291eb1957408b801" args="(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int iipr::CImagePolarTransformProcessorComp::DoProcessing </td>
+          <td class="memname">virtual bool iipr::CImagePolarTransformProcessorComp::ProcessImageRegion </td>
           <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>inputPtr</em>, </td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a> *&#160;</td>
+          <td class="paramname"><em>aoiPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
-          <td class="paramname"><em>outputPtr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a> *&#160;</td>
-          <td class="paramname"><em>progressManagerPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+          <td class="paramname"><em>outputPtr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [virtual]</code></td>
+          <td></td><td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Process the defined image region. </p>
+
+<p>Implements <a class="el" href="classiipr_1_1_c_image_region_processor_comp_base.html#ac23913215c0753e4ffab60715157ffe1">iipr::CImageRegionProcessorCompBase</a>.</p>
 
 </div>
 </div>
