@@ -168,6 +168,7 @@ void CSearchBasedFeaturesSupplierGuiComp::UpdateGui(int updateFlags)
 					const iipr::CSearchFeature* searchFeaturePtr = dynamic_cast<const iipr::CSearchFeature*>(foundFeatures[featureIndex]);
 					if (searchFeaturePtr != NULL){
 						QTreeWidgetItem* modelItemPtr = new QTreeWidgetItem;
+						modelItemPtr->setText(CT_INDEX, QString::number(searchFeaturePtr->GetIndex()));
 						modelItemPtr->setText(CT_SCORE, QString::number(searchFeaturePtr->GetWeight() * 100, 'f', 2));
 						modelItemPtr->setText(CT_X, QString::number(searchFeaturePtr->GetPosition().GetX(), 'f', 2));
 						modelItemPtr->setText(CT_Y, QString::number(searchFeaturePtr->GetPosition().GetY(), 'f', 2));
