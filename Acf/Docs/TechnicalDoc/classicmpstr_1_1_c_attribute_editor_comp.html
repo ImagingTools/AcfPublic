@@ -142,11 +142,13 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a79e32636f76494b313a9775f57e58505">UpdateSubcomponentsView</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a9f06d7d5c1c65644f80b7bfd39610b8f">SetAttributeToItem</a> (QTreeWidgetItem &amp;attributeItem, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool *hasErrorPtr=NULL, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a4ee414e78fe2e6b4ebe4edaea6e9302f">SetInterfaceToItem</a> (QTreeWidgetItem &amp;item, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool useFullPath, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a41af6ccf2e52cb2fecd7f347f931b0c0">SetAttributeToItem</a> (QTreeWidgetItem &amp;attributeItem, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a43c87471790c8d21e309c6190bc249c4">SetInterfaceToItem</a> (QTreeWidgetItem &amp;item, <a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">icomp::IRegistry::ExportedInterfacesMap</a> *interfacesMapPtr, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool &amp;hasWarning, bool &amp;hasExport) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a10fec0062e01215bc8e84f807ad9220a">ResetItem</a> (QTreeWidgetItem &amp;item)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a2353ae27a3a95ccc32663723e2fe3f8c">DecodeAttribute</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QString &amp;text, int &amp;meaning) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#abe84b77d79389d96a9417f55565f706f">EncodeAttribute</a> (const QString &amp;text, int meaning, <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;result) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7da243c4b64ed168c8299107d9a2ed0f">CreateExportedComponentsTree</a> (const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a61b2e621f8b43af937e0bf1f8fcd57ea">CreateInterfacesTree</a> (const QByteArray &amp;elementId, const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> *infoPtr, <a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">icomp::IRegistry::ExportedInterfacesMap</a> &amp;registryInterfaces, QTreeWidgetItem *parentItemPtr, bool &amp;hasWarning, bool &amp;hasExport, bool includeSubelement)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#adccaaae8270689783b821601f9d03d0b">CreateExportedComponentsTree</a> (const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool &amp;hasWarning, bool &amp;hasExport) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#abecebea584444d4ef69a39284085492a">OnGuiModelDetached</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#abecebea584444d4ef69a39284085492a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#acb0af3380168193e389704b9e94847a0">UpdateGui</a> (int updateFlags=0)</td></tr>
@@ -368,7 +370,7 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7da243c4b64ed168c8299107d9a2ed0f"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::CreateExportedComponentsTree" ref="a7da243c4b64ed168c8299107d9a2ed0f" args="(const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const " -->
+<a class="anchor" id="adccaaae8270689783b821601f9d03d0b"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::CreateExportedComponentsTree" ref="adccaaae8270689783b821601f9d03d0b" args="(const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool &amp;hasWarning, bool &amp;hasExport) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -399,19 +401,76 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>hasWarningPtr</em> = <code>NULL</code>, </td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasWarning</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>hasExportPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasExport</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a61b2e621f8b43af937e0bf1f8fcd57ea"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::CreateInterfacesTree" ref="a61b2e621f8b43af937e0bf1f8fcd57ea" args="(const QByteArray &amp;elementId, const icomp::IElementStaticInfo *infoPtr, icomp::IRegistry::ExportedInterfacesMap &amp;registryInterfaces, QTreeWidgetItem *parentItemPtr, bool &amp;hasWarning, bool &amp;hasExport, bool includeSubelement)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CAttributeEditorComp::CreateInterfacesTree </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>elementId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_element_static_info.html">icomp::IElementStaticInfo</a> *&#160;</td>
+          <td class="paramname"><em>infoPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">icomp::IRegistry::ExportedInterfacesMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>registryInterfaces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QTreeWidgetItem *&#160;</td>
+          <td class="paramname"><em>parentItemPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasWarning</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasExport</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>includeSubelement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -747,7 +806,24 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9f06d7d5c1c65644f80b7bfd39610b8f"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::SetAttributeToItem" ref="a9f06d7d5c1c65644f80b7bfd39610b8f" args="(QTreeWidgetItem &amp;attributeItem, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool *hasErrorPtr=NULL, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const " -->
+<a class="anchor" id="a10fec0062e01215bc8e84f807ad9220a"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::ResetItem" ref="a10fec0062e01215bc8e84f807ad9220a" args="(QTreeWidgetItem &amp;item)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool icmpstr::CAttributeEditorComp::ResetItem </td>
+          <td>(</td>
+          <td class="paramtype">QTreeWidgetItem &amp;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a41af6ccf2e52cb2fecd7f347f931b0c0"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::SetAttributeToItem" ref="a41af6ccf2e52cb2fecd7f347f931b0c0" args="(QTreeWidgetItem &amp;attributeItem, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -778,20 +854,20 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>hasErrorPtr</em> = <code>NULL</code>, </td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasError</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>hasWarningPtr</em> = <code>NULL</code>, </td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasWarning</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>hasExportPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasExport</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -804,7 +880,7 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4ee414e78fe2e6b4ebe4edaea6e9302f"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::SetInterfaceToItem" ref="a4ee414e78fe2e6b4ebe4edaea6e9302f" args="(QTreeWidgetItem &amp;item, const icomp::IRegistry &amp;registry, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool useFullPath, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const " -->
+<a class="anchor" id="a43c87471790c8d21e309c6190bc249c4"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::SetInterfaceToItem" ref="a43c87471790c8d21e309c6190bc249c4" args="(QTreeWidgetItem &amp;item, icomp::IRegistry::ExportedInterfacesMap *interfacesMapPtr, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool &amp;hasWarning, bool &amp;hasExport) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -817,8 +893,8 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;&#160;</td>
-          <td class="paramname"><em>registry</em>, </td>
+          <td class="paramtype"><a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">icomp::IRegistry::ExportedInterfacesMap</a> *&#160;</td>
+          <td class="paramname"><em>interfacesMapPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -835,20 +911,14 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useFullPath</em>, </td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasWarning</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>hasWarningPtr</em> = <code>NULL</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>hasExportPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>hasExport</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

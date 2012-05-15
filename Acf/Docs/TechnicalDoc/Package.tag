@@ -15045,15 +15045,22 @@
       <type>bool</type>
       <name>SetAttributeToItem</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a9f06d7d5c1c65644f80b7bfd39610b8f</anchor>
-      <arglist>(QTreeWidgetItem &amp;attributeItem, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool *hasErrorPtr=NULL, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
+      <anchor>a41af6ccf2e52cb2fecd7f347f931b0c0</anchor>
+      <arglist>(QTreeWidgetItem &amp;attributeItem, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SetInterfaceToItem</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a4ee414e78fe2e6b4ebe4edaea6e9302f</anchor>
-      <arglist>(QTreeWidgetItem &amp;item, const icomp::IRegistry &amp;registry, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool useFullPath, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
+      <anchor>a43c87471790c8d21e309c6190bc249c4</anchor>
+      <arglist>(QTreeWidgetItem &amp;item, icomp::IRegistry::ExportedInterfacesMap *interfacesMapPtr, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ResetItem</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a10fec0062e01215bc8e84f807ad9220a</anchor>
+      <arglist>(QTreeWidgetItem &amp;item)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -15071,10 +15078,17 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
+      <name>CreateInterfacesTree</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a61b2e621f8b43af937e0bf1f8fcd57ea</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo *infoPtr, icomp::IRegistry::ExportedInterfacesMap &amp;registryInterfaces, QTreeWidgetItem *parentItemPtr, bool &amp;hasWarning, bool &amp;hasExport, bool includeSubelement)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
       <name>CreateExportedComponentsTree</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a7da243c4b64ed168c8299107d9a2ed0f</anchor>
-      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool *hasWarningPtr=NULL, bool *hasExportPtr=NULL) const </arglist>
+      <anchor>adccaaae8270689783b821601f9d03d0b</anchor>
+      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

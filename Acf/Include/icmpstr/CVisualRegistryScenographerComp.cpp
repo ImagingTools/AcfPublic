@@ -33,6 +33,7 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
+#include "istd/CIdManipBase.h"
 
 #include "iser/CXmlStringReadArchive.h"
 #include "iser/CXmlStringWriteArchive.h"
@@ -268,7 +269,7 @@ void CVisualRegistryScenographerComp::AddConnector(
 
 	QByteArray baseId;
 	QByteArray subId;
-	bool isEmbedded = icomp::CInterfaceManipBase::SplitId(referenceComponentId, baseId, subId);
+	bool isEmbedded = istd::CIdManipBase::SplitId(referenceComponentId, baseId, subId);
 
 	QList<QGraphicsItem*> items = m_scenePtr->items();
 	foreach(QGraphicsItem* itemPtr, items){
