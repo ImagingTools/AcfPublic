@@ -1480,6 +1480,13 @@
     </member>
     <member kind="define">
       <type>#define</type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>_c_component_base_8h.html</anchorfile>
+      <anchor>a066dd1fa9d7f8ae60350f54e5fe07f29</anchor>
+      <arglist>(ElementName, InterfaceType, extractorFunction)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
       <name>I_ASSIGN_BASE</name>
       <anchorfile>_c_component_base_8h.html</anchorfile>
       <anchor>a692ec682602616b4f635745d992efccf</anchor>
@@ -2954,13 +2961,20 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CSelectionParam.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_selection_param_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <class kind="class">iprm::CSelectionParam</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectionParamComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_selection_param_comp_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
     <class kind="class">iprm::CSelectionParamComp</class>
     <namespace>iprm</namespace>
   </compound>
@@ -4135,10 +4149,12 @@
     <name>CGuiComponentBase.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_gui_component_base_8h</filename>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
     <class kind="class">iqtgui::CGuiComponentBase</class>
+    <class kind="class">iqtgui::CGuiComponentBase::VisualStatus</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -6365,6 +6381,10 @@
   <compound kind="class">
     <name>SelectionInfoImpl</name>
     <filename>class_selection_info_impl.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>VisualStatus</name>
+    <filename>class_visual_status.html</filename>
   </compound>
   <compound kind="class">
     <name>XmlFileSerializer</name>
@@ -21839,8 +21859,8 @@
       <type></type>
       <name>Registrator</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info_1_1_registrator.html</anchorfile>
-      <anchor>a0dda10d782c29fa3ce681bc1af27f4f0</anchor>
-      <arglist>(TSubelementStaticInfo &amp;staticInfo, const QByteArray &amp;interfaceName, ExtractorPtr extractorPtr)</arglist>
+      <anchor>aa682e8cde9239fb891b2542eff8bd872</anchor>
+      <arglist>(TSubelementStaticInfo &amp;staticInfo, ExtractorPtr extractorPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -28284,6 +28304,7 @@
     <class kind="class">iprm::CParamsSet</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
     <class kind="class">iprm::CSelectionConstraintsComp</class>
+    <class kind="class">iprm::CSelectionParam</class>
     <class kind="class">iprm::CSelectionParamComp</class>
     <class kind="class">iprm::CVariableParamComp</class>
     <class kind="class">iprm::IEnableableParam</class>
@@ -29151,10 +29172,78 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprm::CSelectionParam</name>
+    <filename>classiprm_1_1_c_selection_param.html</filename>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <member kind="function">
+      <type></type>
+      <name>CSelectionParam</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a682856613dedea8993eb43c39494dd28</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSelectionConstraints</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>ac61221fa183aa46fc798f165ac6f83bd</anchor>
+      <arglist>(const ISelectionConstraints *constraintsPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetSelectedOptionById</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a25c45d6ac68349909993e7f2b7e08b23</anchor>
+      <arglist>(const QByteArray &amp;selectedOptionId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ISelectionConstraints *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a34b4ebde658bfe48886ecd737d5fb697</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a83de7a8b64b9a62a5ca877cf8ef03833</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a15a4c0f6a678cbce6057640185ce12e2</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>af49f760d6dc5aa409769052fa22af133</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a9181ff52653483ce16ba8d67268a8e86</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_selectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>aa422b035a4b1f4c7dd838f6963c22b38</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprm::CSelectionParamComp</name>
     <filename>classiprm_1_1_c_selection_param_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <base>iprm::CSelectionParam</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -29162,54 +29251,12 @@
       <anchor>abc5d4d7c5b254aa6cfc937f48c59b1ff</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CSelectionParamComp</name>
-      <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>a2a4053ff3885c40518874e93436bb698</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ISelectionConstraints *</type>
-      <name>GetSelectionConstraints</name>
-      <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>a9f73cd628e20bd8bfb4da5d115da7b06</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>ad1691b45d9b7078ffe8f034c86b4cbeb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>ae6a5de6d998de8d9c9c59ccee4503aef</anchor>
-      <arglist>(int index)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ISelectionParam *</type>
       <name>GetActiveSubselection</name>
       <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
       <anchor>a22fa27d40192dca98d0cc91afdb82c2c</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>a17fcfd6b1127a11292009ad4f54880b1</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SetSelectedOptionIndexById</name>
-      <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>a5f61ce2072b272183a608469dcbbe148</anchor>
-      <arglist>(const QByteArray &amp;selectedOptionId)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -35949,13 +35996,41 @@
     <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iqtgui::IGuiObject</base>
-    <base virtualness="virtual">iqtgui::IVisualStatusProvider</base>
+    <class kind="class">iqtgui::CGuiComponentBase::VisualStatus</class>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>ad1f756b56b4b967ce6af21988a11c31b</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>a6b2579df675948f9b9f5e4d1107a22c1</anchor>
+      <arglist>(VisualStatus)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>a802ecc5a078cc5174be199622d559601</anchor>
+      <arglist>(VisualStatus, IVisualStatusProvider, ExtractVisualStatus)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>ae09fd460f3bf0d4752d4cc952906d68b</anchor>
+      <arglist>(VisualStatus, istd::IChangeable, ExtractVisualStatus)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>a682187ca4ea3410238227018f4d6fcc3</anchor>
+      <arglist>(VisualStatus, imod::IModel, ExtractVisualStatus)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -36006,20 +36081,6 @@
       <anchor>a697d9605707286e48215f8f722b90402</anchor>
       <arglist>(bool *ignoredPtr=NULL)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QIcon</type>
-      <name>GetStatusIcon</name>
-      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>a55d38b86be7a29582d534918360f6f03</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetStatusText</name>
-      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>a09e60aa674f5dce6b8555fdd9c62daf1</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnKeyPressed</name>
@@ -36069,6 +36130,20 @@
       <anchor>a71e5a19907ff118fe8b99280b86c16ff</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetStatusIcon</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>a7bb5acae654dd8033f72f7d3b4dc2ce3</anchor>
+      <arglist>(const QIcon &amp;icon)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetStatusText</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>aaebf9e40fa2b193e2e3f7d4e8ce97877</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>eventFilter</name>
@@ -36089,6 +36164,39 @@
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>ab8c3155f4a124ce0f0e29621cb015b62</anchor>
       <arglist>(QWidget *parentPtr)=0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imod::TModelWrap&lt; VisualStatus &gt;</type>
+      <name>m_visualStatus</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>a95516a7b4cf2482c46b21d2faec812b1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CGuiComponentBase::VisualStatus</name>
+    <filename>classiqtgui_1_1_c_gui_component_base_1_1_visual_status.html</filename>
+    <base virtualness="virtual">iqtgui::IVisualStatusProvider</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetStatusIcon</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base_1_1_visual_status.html</anchorfile>
+      <anchor>a0ab35728d73946d39373167c4102f350</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetStatusText</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base_1_1_visual_status.html</anchorfile>
+      <anchor>a7f7ff7a7e3079648b2038d40de8fd9ae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>CGuiComponentBase</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base_1_1_visual_status.html</anchorfile>
+      <anchor>ab5158dd98a4ba7901b64bff5b45521d9</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36455,20 +36563,6 @@
       <anchor>aeff1c28dc515350045b132af9bccf162</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QIcon</type>
-      <name>GetStatusIcon</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a49073dddbdc6d3239087b0e8c8db87d0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetStatusText</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a7b2e3ad24da4f7aca475800d0b74dfc4</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="enumeration">
       <name>ColumnType</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
@@ -36596,12 +36690,19 @@
       <anchor>a601dad58f6070b29493518478ab7f8e7</anchor>
       <arglist>(const istd::IInformationProvider &amp;message)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QIcon</type>
-      <name>GetIcon</name>
+    <member kind="function" protection="protected">
+      <type>QIcon</type>
+      <name>GetCategoryIcon</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a67c75f020a32e5b5f6b378bfcef2fe34</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory mode)</arglist>
+      <anchor>a2ba7b88befe2a8089e7b945f42fc1acb</anchor>
+      <arglist>(int category) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetCategoryText</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a8c18a841730bc336a27d48570cbd66c1</anchor>
+      <arglist>(int category) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -37192,13 +37293,6 @@
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
       <anchor>a90c8e4fbaec412fd71bfd82c9ce3eeb1</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a3fc0438ab6908c0d8d62ac3d969d0a89</anchor>
-      <arglist>(m_slaveWidgetsVisualCompPtr, m_slaveWidgetsCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>

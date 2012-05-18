@@ -38,8 +38,8 @@
 <div class="title">iprm::CSelectionParamComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iprm::CSelectionParamComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::ISelectionParam" -->
-<p>Basic implementation of selection parameter.  
+<!-- doxytag: class="iprm::CSelectionParamComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::CSelectionParam" -->
+<p>Component level implementation of selection parameter.  
  <a href="classiprm_1_1_c_selection_param_comp.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_selection_param_comp_8h_source.html">CSelectionParamComp.h</a>&gt;</code></p>
@@ -49,11 +49,12 @@ Inheritance diagram for iprm::CSelectionParamComp:</div>
  <div class="center">
   <img src="classiprm_1_1_c_selection_param_comp.png" usemap="#iprm::CSelectionParamComp_map" alt=""/>
   <map id="iprm::CSelectionParamComp_map" name="iprm::CSelectionParamComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,168,171,192"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,224,171,248"/>
+<area href="classiprm_1_1_c_selection_param.html" title="Basic implementation of selection parameter." alt="iprm::CSelectionParam" shape="rect" coords="181,224,352,248"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,168,171,192"/>
 <area href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options." alt="iprm::ISelectionParam" shape="rect" coords="181,168,352,192"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,112,171,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,112,171,136"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="181,112,352,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,56,171,80"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="181,56,352,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="181,0,352,24"/>
 </map>
@@ -66,28 +67,16 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#abc5d4d7c5b254aa6cfc937f48c59b1ff">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#a2a4053ff3885c40518874e93436bb698">CSelectionParamComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#a9f73cd628e20bd8bfb4da5d115da7b06">GetSelectionConstraints</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#a9f73cd628e20bd8bfb4da5d115da7b06"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#ad1691b45d9b7078ffe8f034c86b4cbeb">GetSelectedOptionIndex</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selected index.  <a href="#ad1691b45d9b7078ffe8f034c86b4cbeb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#ae6a5de6d998de8d9c9c59ccee4503aef">SetSelectedOptionIndex</a> (int index)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set index of selected option.  <a href="#ae6a5de6d998de8d9c9c59ccee4503aef"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#a22fa27d40192dca98d0cc91afdb82c2c">GetActiveSubselection</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#a22fa27d40192dca98d0cc91afdb82c2c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#a17fcfd6b1127a11292009ad4f54880b1">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a17fcfd6b1127a11292009ad4f54880b1"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#a5f61ce2072b272183a608469dcbbe148">SetSelectedOptionIndexById</a> (const QByteArray &amp;selectedOptionId)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set selection index according to a given option ID.  <a href="#a5f61ce2072b272183a608469dcbbe148"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param_comp.html#a2648409f66e9562968c9d06f2e8f83ba">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Basic implementation of selection parameter. </p>
+<div class="textblock"><p>Component level implementation of selection parameter. </p>
 
-<p>Definition at line <a class="el" href="_c_selection_param_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_selection_param_comp_8h_source.html">CSelectionParamComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_selection_param_comp_8h_source.html#l00018">18</a> of file <a class="el" href="_c_selection_param_comp_8h_source.html">CSelectionParamComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="abc5d4d7c5b254aa6cfc937f48c59b1ff"></a><!-- doxytag: member="iprm::CSelectionParamComp::BaseClass" ref="abc5d4d7c5b254aa6cfc937f48c59b1ff" args="" -->
 <div class="memitem">
@@ -100,24 +89,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_selection_param_comp_8h_source.html#l00025">25</a> of file <a class="el" href="_c_selection_param_comp_8h_source.html">CSelectionParamComp.h</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2a4053ff3885c40518874e93436bb698"></a><!-- doxytag: member="iprm::CSelectionParamComp::CSelectionParamComp" ref="a2a4053ff3885c40518874e93436bb698" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iprm::CSelectionParamComp::CSelectionParamComp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Definition at line <a class="el" href="_c_selection_param_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_selection_param_comp_8h_source.html">CSelectionParamComp.h</a>.</p>
 
 </div>
 </div>
@@ -139,48 +111,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get subselection for specified option. </p>
 <p>Please note, that returned options tree belongs to selection data model. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a5050ae7fc751c58748ebf67f7562fde1">iprm::ISelectionParam</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad1691b45d9b7078ffe8f034c86b4cbeb"></a><!-- doxytag: member="iprm::CSelectionParamComp::GetSelectedOptionIndex" ref="ad1691b45d9b7078ffe8f034c86b4cbeb" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int iprm::CSelectionParamComp::GetSelectedOptionIndex </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get selected index. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a0a417884429ac3874a717cfbb5a738f6">iprm::ISelectionParam</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9f73cd628e20bd8bfb4da5d115da7b06"></a><!-- doxytag: member="iprm::CSelectionParamComp::GetSelectionConstraints" ref="a9f73cd628e20bd8bfb4da5d115da7b06" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::CSelectionParamComp::GetSelectionConstraints </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get constraints of this parameter. </p>
-<p>Constraints describes some additional information about allowed parameter ranges and related informations. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a663506bb922ab4ac3ebc0bd52d741ff7">iprm::ISelectionParam</a>.</p>
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_selection_param.html#af49f760d6dc5aa409769052fa22af133">iprm::CSelectionParam</a>.</p>
 
 </div>
 </div>
@@ -199,70 +130,6 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a8a79eed0233a1ff69972975180f5210a">icomp::CComponentBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a17fcfd6b1127a11292009ad4f54880b1"></a><!-- doxytag: member="iprm::CSelectionParamComp::Serialize" ref="a17fcfd6b1127a11292009ad4f54880b1" args="(iser::IArchive &amp;archive)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iprm::CSelectionParamComp::Serialize </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
-          <td class="paramname"><em>archive</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Load or store state of this object as a archive stream. </p>
-<p>Type of operation is depending on archive type. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
-
-<p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae6a5de6d998de8d9c9c59ccee4503aef"></a><!-- doxytag: member="iprm::CSelectionParamComp::SetSelectedOptionIndex" ref="ae6a5de6d998de8d9c9c59ccee4503aef" args="(int index)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iprm::CSelectionParamComp::SetSelectedOptionIndex </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set index of selected option. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if selection change was possible. </dd></dl>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a312f0ee035e39cd63d7d1c55b1e3c68a">iprm::ISelectionParam</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5f61ce2072b272183a608469dcbbe148"></a><!-- doxytag: member="iprm::CSelectionParamComp::SetSelectedOptionIndexById" ref="a5f61ce2072b272183a608469dcbbe148" args="(const QByteArray &amp;selectedOptionId)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool iprm::CSelectionParamComp::SetSelectedOptionIndexById </td>
-          <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>selectedOptionId</em></td><td>)</td>
-          <td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set selection index according to a given option ID. </p>
 
 </div>
 </div>

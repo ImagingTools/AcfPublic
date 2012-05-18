@@ -12235,13 +12235,6 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ac91a6820ae21227d970c6af702476598</anchor>
-      <arglist>(m_editorVisualsCompPtr, m_editorsCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a828cf210937586a87b4378141918015f</anchor>
       <arglist>(m_editorVisualModelsCompPtr, m_editorsCompPtr, false)</arglist>
     </member>
@@ -12426,20 +12419,6 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a93745769f36d860dc445b1c8319851b4</anchor>
       <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QIcon</type>
-      <name>GetStatusIcon</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>af8ea052753aa13723cc6e4390af5d3d4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetStatusText</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a0fdfc3e314c6c6f6e51ac0f9e045db5c</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>

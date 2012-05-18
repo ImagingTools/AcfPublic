@@ -70,11 +70,11 @@
 <a name="l00051"></a>00051        <span class="keyword">public</span>:
 <a name="l00052"></a><a class="code" href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html#a6362dcdeb2fd5df58b58ebc499e987de">00052</a>               <span class="keyword">typedef</span> InterfaceType* (*ExtractorPtr)(ComponentType&amp; component);
 <a name="l00053"></a>00053 
-<a name="l00054"></a><a class="code" href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html#a0dda10d782c29fa3ce681bc1af27f4f0">00054</a>               <a class="code" href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html#a0dda10d782c29fa3ce681bc1af27f4f0">Registrator</a>(<a class="code" href="classicomp_1_1_t_subelement_static_info.html">TSubelementStaticInfo</a>&amp; staticInfo,
-<a name="l00055"></a>00055                                    <span class="keyword">const</span> QByteArray&amp; interfaceName,
-<a name="l00056"></a>00056                                    <a class="code" href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html#a6362dcdeb2fd5df58b58ebc499e987de">ExtractorPtr</a> extractorPtr)
-<a name="l00057"></a>00057               {
-<a name="l00058"></a>00058                      staticInfo.<a class="code" href="classicomp_1_1_t_subelement_static_info.html#a43a388c823cab48f585d52af5e7d9a6a" title="Register interface ID for this static component info.">RegisterInterfaceExtractor</a>(interfaceName, reinterpret_cast&lt;InterfaceExtractorPtr&gt;(extractorPtr));
+<a name="l00054"></a><a class="code" href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html#aa682e8cde9239fb891b2542eff8bd872">00054</a>               <a class="code" href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html#aa682e8cde9239fb891b2542eff8bd872">Registrator</a>(<a class="code" href="classicomp_1_1_t_subelement_static_info.html">TSubelementStaticInfo</a>&amp; staticInfo,
+<a name="l00055"></a>00055                                    <a class="code" href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html#a6362dcdeb2fd5df58b58ebc499e987de">ExtractorPtr</a> extractorPtr)
+<a name="l00056"></a>00056               {
+<a name="l00057"></a>00057                      <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a> interfaceInfo = istd::CClassInfo::GetInfo&lt;InterfaceType&gt;();
+<a name="l00058"></a>00058                      staticInfo.<a class="code" href="classicomp_1_1_t_subelement_static_info.html#a43a388c823cab48f585d52af5e7d9a6a" title="Register interface ID for this static component info.">RegisterInterfaceExtractor</a>(interfaceInfo.<a class="code" href="classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e" title="Get undecorated and platform undependent class name.">GetName</a>(), <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classicomp_1_1_t_subelement_static_info.html#aa4329a6d27bd188b6ca11e2997c45f5e">InterfaceExtractorPtr</a><span class="keyword">&gt;</span>(extractorPtr));
 <a name="l00059"></a>00059               }
 <a name="l00060"></a>00060        };
 <a name="l00061"></a>00061 

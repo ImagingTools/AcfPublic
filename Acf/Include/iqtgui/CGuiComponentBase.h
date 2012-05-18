@@ -29,6 +29,8 @@
 #include <QtGui/QIcon>
 
 // ACF includes
+#include "imod/TModelWrap.h"
+
 #include "icomp/CComponentBase.h"
 
 #include "iqtgui/IGuiObject.h"
@@ -45,15 +47,17 @@ namespace iqtgui
 class CGuiComponentBase:
 			public QObject, 
 			public icomp::CComponentBase,
-			virtual public IGuiObject,
-			virtual public IVisualStatusProvider
+			virtual public IGuiObject
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
 
 	I_BEGIN_BASE_COMPONENT(CGuiComponentBase);
 		I_REGISTER_INTERFACE(IGuiObject);
-		I_REGISTER_INTERFACE(IVisualStatusProvider);
+		I_REGISTER_SUBELEMENT(VisualStatus);
+		I_REGISTER_SUBELEMENT_INTERFACE_T(VisualStatus, IVisualStatusProvider, ExtractVisualStatus);
+		I_REGISTER_SUBELEMENT_INTERFACE_T(VisualStatus, istd::IChangeable, ExtractVisualStatus);
+		I_REGISTER_SUBELEMENT_INTERFACE_T(VisualStatus, imod::IModel, ExtractVisualStatus);
 		I_ASSIGN(m_defaultStatusIconPathAttrPtr, "DefaultStatusIcon", "Path of status icon used by default", false, "");
 		I_ASSIGN(m_defaultStatusTextAttrPtr, "DefaultStatusText", "Status text used by default", true, "");
 	I_END_COMPONENT;
@@ -69,11 +73,21 @@ public:
 	virtual QWidget* GetWidget() const;
 	virtual void OnTryClose(bool* ignoredPtr = NULL);
 
-	// reimplemented (iqtgui::IVisualStatusProvider)
-	virtual QIcon GetStatusIcon() const;
-	virtual QString GetStatusText() const;
-
 protected:
+	class VisualStatus: virtual public IVisualStatusProvider
+	{
+	public:
+		// reimplemented (iqtgui::IVisualStatusProvider)
+		virtual QIcon GetStatusIcon() const;
+		virtual QString GetStatusText() const;
+
+		friend class CGuiComponentBase;
+
+	private:
+		QIcon m_statusIcon;
+		QString m_statusText;
+	};
+
 	/**
 		Called from widget event filter when key is pressed.
 		\return	if event was consumed returns true, otherwise false.
@@ -110,6 +124,15 @@ protected:
 	*/
 	virtual void OnGuiDestroyed();
 
+	/**
+		Set status icon;
+	*/
+	void SetStatusIcon(const QIcon& icon);
+	/**
+		Set status text;
+	*/
+	void SetStatusText(const QString& text);
+
 	// reimplemented (QObject)
 	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);
 
@@ -121,6 +144,9 @@ protected:
 		Create slave widget object.
 	*/
 	virtual QWidget* InitWidgetToParent(QWidget* parentPtr) = 0;
+
+	// attributes
+	imod::TModelWrap<VisualStatus> m_visualStatus;
 
 private:
 	void MakeAutoSlotConnection();
@@ -140,7 +166,6 @@ private:
 		CGuiComponentBase& m_parent;
 	};
 
-private:
 	I_ATTR(QString, m_defaultStatusIconPathAttrPtr);
 	I_ATTR(QString, m_defaultStatusTextAttrPtr);
 
@@ -149,6 +174,13 @@ private:
 	LanguageChangeEventFilter m_languageChangeEventFilter;
 
 	QIcon m_defaultStatusIcon;
+
+	// static template methods for subelement access
+	template <class InterfaceType>
+	static InterfaceType* ExtractVisualStatus(CGuiComponentBase& component)
+	{
+		return &component.m_visualStatus;
+	}
 };
 
 
