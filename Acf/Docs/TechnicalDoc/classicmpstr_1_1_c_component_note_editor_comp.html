@@ -92,7 +92,8 @@ Protected Slots</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#aa0d788190aa022ff2668ddfdd0480fd2">UpdateGui</a> (int updateFlags=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#aa0d788190aa022ff2668ddfdd0480fd2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#a28ffe995f1ff52209ae77bb36f315af3">UpdateModel</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#a828f3322b626ef3c895942549a4f734f">UpdateModel</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates model from editor.  <a href="#a828f3322b626ef3c895942549a4f734f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#aadaa8d26bce2855be670b1f0b6f77571">OnGuiModelAttached</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#aadaa8d26bce2855be670b1f0b6f77571"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#aafa11db8c8d63013ef440ad6b0751288">OnGuiModelDetached</a> ()</td></tr>
@@ -288,7 +289,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a28ffe995f1ff52209ae77bb36f315af3"></a><!-- doxytag: member="icmpstr::CComponentNoteEditorComp::UpdateModel" ref="a28ffe995f1ff52209ae77bb36f315af3" args="()" -->
+<a class="anchor" id="a828f3322b626ef3c895942549a4f734f"></a><!-- doxytag: member="icmpstr::CComponentNoteEditorComp::UpdateModel" ref="a828f3322b626ef3c895942549a4f734f" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -296,11 +297,16 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual void icmpstr::CComponentNoteEditorComp::UpdateModel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
+          <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Updates model from editor. </p>
+<p>This method will be called only if GUI is connected and model is attached. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a39ad878eb561d7510fa512c9a985a92b">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CComponentNoteEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt; &gt;</a>.</p>
 
 </div>
 </div>

@@ -15232,8 +15232,8 @@
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>a28ffe995f1ff52209ae77bb36f315af3</anchor>
-      <arglist>()</arglist>
+      <anchor>a828f3322b626ef3c895942549a4f734f</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
