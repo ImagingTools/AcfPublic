@@ -2974,6 +2974,7 @@
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_selection_param_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
     <class kind="class">iprm::CSelectionParamComp</class>
     <namespace>iprm</namespace>
@@ -20811,6 +20812,13 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>Attribute::ValueType</type>
+      <name>AttributeValueType</name>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a62cde3967d11b248cba7bf25518f53a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>void</type>
       <name>InterfaceType</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
@@ -20853,10 +20861,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const Attribute::ValueType &amp;</type>
+      <type>const AttributeValueType &amp;</type>
       <name>operator*</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
-      <anchor>a45ab1ad4600796dc6aa4cedffe5f6977</anchor>
+      <anchor>a9337b825681ac2829b66a2a2df154493</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -21404,6 +21412,13 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>Attribute::ValueType</type>
+      <name>AttributeValueType</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>a68844bea941444c01c9bb0448c7bbfe5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>void</type>
       <name>InterfaceType</name>
       <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
@@ -21439,10 +21454,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const Attribute::ValueType &amp;</type>
+      <type>const AttributeValueType &amp;</type>
       <name>operator[]</name>
       <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
-      <anchor>afbd4112fcf16ec17c4fd7480e83b624b</anchor>
+      <anchor>accd54ff6f8bd572166faeb2b58aaf216</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>

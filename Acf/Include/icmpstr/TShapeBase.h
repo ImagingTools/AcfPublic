@@ -279,7 +279,7 @@ QVariant TShapeBase<GraphicsItemClass>::itemChange(QGraphicsItem::GraphicsItemCh
 
 				innerPosition = innerRect.GetNearestPointTo(innerPosition);
 
-				return innerPosition;
+                return QPointF(innerPosition.GetX(), innerPosition.GetY());
 			}
 		}
 	}

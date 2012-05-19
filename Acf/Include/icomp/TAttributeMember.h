@@ -46,8 +46,9 @@ template <typename Attribute>
 class TAttributeMemberBase
 {
 public:
-	typedef Attribute AttributeType;
-	typedef void InterfaceType;
+    typedef Attribute AttributeType;
+    typedef typename Attribute::ValueType AttributeValueType;
+    typedef void InterfaceType;
 
 	TAttributeMemberBase();
 
@@ -80,7 +81,7 @@ public:
 	/**
 		Access to object pointed by internal pointer.
 	*/
-	typename const Attribute::ValueType& operator*() const;
+    const AttributeValueType& operator*() const;
 
 protected:
 	void SetAttribute(const Attribute* attributePtr);
@@ -161,7 +162,7 @@ const Attribute* TAttributeMemberBase<Attribute>::operator->() const
 
 
 template <typename Attribute>
-typename const Attribute::ValueType& TAttributeMemberBase<Attribute>::operator*() const
+const typename TAttributeMemberBase<Attribute>::AttributeValueType& TAttributeMemberBase<Attribute>::operator*() const
 {
 	I_ASSERT(m_attributePtr != NULL);	// operator* was called for invalid object, or no IsValid() check was called.
 
