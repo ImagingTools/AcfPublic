@@ -49,7 +49,6 @@
 namespace icmpstr
 {
 
-
 class CItemDelegate: public QItemDelegate
 {
 public:
@@ -62,19 +61,20 @@ public:
 
 	CItemDelegate()
 	{
-		m_componentNameFont.setPointSize(10);
+		m_componentNameFont = qApp->font();
+		m_componentNameFont.setPointSize(m_componentNameFont.pointSize() + 2);
 		m_componentNameFont.setBold(true);
-		m_componentDescriptionFont.setPointSize(8);
+		m_componentDescriptionFont = qApp->font();
 
 		m_defaultComponentIcon = QIcon(":/Icons/CompositorIcon.svg").pixmap(QSize(64, 64), QIcon::Disabled);
-}
+	}
 
 	void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const
 	{
 		CPackageOverviewComp::PackageItemBase* selectedItemPtr = dynamic_cast<CPackageOverviewComp::PackageItemBase*>(reinterpret_cast<QTreeWidgetItem*>(index.internalPointer()));
-		if (selectedItemPtr == NULL){ 
+		if (selectedItemPtr == NULL){
 			BaseClass::paint(painter, option, index);
-			
+
 			return;
 		}
 
@@ -82,7 +82,7 @@ public:
 
 		CPackageOverviewComp::PackageItem* packageItemPtr = dynamic_cast<CPackageOverviewComp::PackageItem*>(selectedItemPtr);
 
-	 	QRect mainRect = option.rect;
+		QRect mainRect = option.rect;
 		mainRect.adjust(2 * SIDE_OFFSET, SIDE_OFFSET, 2 * -SIDE_OFFSET, -1);
 
 		if (packageItemPtr != NULL){
@@ -121,10 +121,10 @@ public:
 
 			if (!componentIcon.isNull()){
 				QRectF iconRect(
-							mainRect.left() + SIDE_OFFSET,
-							mainRect.top() + SIDE_OFFSET,
-							iconSize,
-							iconSize);
+					mainRect.left() + SIDE_OFFSET,
+					mainRect.top() + SIDE_OFFSET,
+					iconSize,
+					iconSize);
 
 				componentIcon.paint(painter, iconRect.toRect());
 				mainRect.adjust(mainRect.height() + SIDE_OFFSET, 0, 0, 0);
@@ -133,11 +133,19 @@ public:
 
 		mainRect.adjust(SIDE_OFFSET, 1, 0, -1);
 
+		if (packageItemPtr == NULL && ((option.state & QStyle::State_Selected) == 0)){
+			QColor separatorColor(192,220,255);
+
+			painter->setPen(separatorColor);
+
+			painter->drawLine(mainRect.topLeft(), mainRect.topRight());
+		}
+
 		painter->setPen(option.palette.text().color());
 
 		QString componentName = selectedItemPtr->text(0);
-		
-		QString componentDescription = selectedItemPtr->GetDescription();		
+
+		QString componentDescription = selectedItemPtr->GetDescription();
 
 		painter->setFont(m_componentNameFont);
 		painter->drawText(mainRect, Qt::AlignTop | Qt::AlignLeft | Qt::TextSingleLine, componentName);
@@ -145,8 +153,8 @@ public:
 		if (!componentDescription.isEmpty()){
 			painter->setFont(m_componentDescriptionFont);
 			painter->drawText(
-						mainRect,
-						Qt::AlignBottom | Qt::AlignLeft | Qt::TextSingleLine, componentDescription);
+				mainRect,
+				Qt::AlignBottom | Qt::AlignLeft | Qt::TextSingleLine, componentDescription);
 		}
 	}
 
@@ -198,24 +206,30 @@ private:
 
 		QLinearGradient normalPackageItemGradient(rect.left(), rect.top(), rect.left(), rect.bottom());
 		normalPackageItemGradient.setColorAt(0, startColor);
-		normalPackageItemGradient.setColorAt(0.4, midColor);
-		normalPackageItemGradient.setColorAt(0.5, endColor);
-		normalPackageItemGradient.setColorAt(0.9, startColor);
+		normalPackageItemGradient.setColorAt(0.49, midColor);
+		normalPackageItemGradient.setColorAt(0.52, endColor);
+		normalPackageItemGradient.setColorAt(1.0, startColor);
 		m_normalPackageItemBrush = normalPackageItemGradient;
 
-		QColor startColor3 = QColor(0, 202, 86, 192);
-		QColor endColor3 = startColor3;
-		startColor3.setAlpha(80);
-		endColor3.setAlpha(164);
-
 		QLinearGradient selectedPackageItemGradient(rect.left(), rect.top(), rect.left(), rect.bottom());
-		selectedPackageItemGradient.setColorAt(0, startColor3);
-		selectedPackageItemGradient.setColorAt(0.4, startColor3);
-		selectedPackageItemGradient.setColorAt(0.5, endColor3);
-		selectedPackageItemGradient.setColorAt(0.9, startColor3);
+		selectedPackageItemGradient.setColorAt(0, QColor(40, 250, 145, 192));
+		selectedPackageItemGradient.setColorAt(0.49, QColor(40, 212, 145, 192));
+		selectedPackageItemGradient.setColorAt(0.52, QColor(20, 200, 105, 192));
+		selectedPackageItemGradient.setColorAt(1.0, QColor(20, 250, 105, 192));
 		m_selectedPackageItemBrush = selectedPackageItemGradient;
 
-		m_selectedItemBrush =  QColor(10, 242, 126, 128);
+		QColor transparentColor(Qt::transparent);
+
+		QLinearGradient selectedComponentGradient(rect.left(), rect.top(), rect.right(), rect.top());
+		double iconFactor = 16 / rect.width();
+		double mainFactor = qMax(1.0, 200 / rect.width());
+
+		selectedComponentGradient.setColorAt(0, transparentColor);
+		selectedComponentGradient.setColorAt(iconFactor, transparentColor);
+		selectedComponentGradient.setColorAt(4 * iconFactor, QColor(10, 242, 126));
+		selectedComponentGradient.setColorAt(mainFactor, QColor(10, 242, 126, 128));
+		selectedComponentGradient.setColorAt(1.0, transparentColor);
+		m_selectedItemBrush =  selectedComponentGradient;
 	}
 
 private:
@@ -243,6 +257,7 @@ CPackageOverviewComp::CPackageOverviewComp()
 	m_commands.InsertChild(&m_packagesCommand);
 }
 
+
 // reimplemented (ibase::ICommandsProvider)
 
 const ibase::IHierarchicalCommand* CPackageOverviewComp::GetCommands() const
@@ -266,12 +281,12 @@ void CPackageOverviewComp::OnAttributeSelected(const icomp::IAttributeStaticInfo
 
 		if (isReference || isMultiReference || isFactory || isMultiFactory){
 			icomp::IElementStaticInfo::Ids interfaceNames = attributeStaticInfoPtr->GetRelatedMetaIds(
-						icomp::IComponentStaticInfo::MGI_INTERFACES,
-						0,
-						icomp::IAttributeStaticInfo::AF_NULLABLE);	// Names of the interfaces which must be set
+				icomp::IComponentStaticInfo::MGI_INTERFACES,
+				0,
+				icomp::IAttributeStaticInfo::AF_NULLABLE);	// Names of the interfaces which must be set
 			if (interfaceNames.isEmpty()){
 				interfaceNames = attributeStaticInfoPtr->GetRelatedMetaIds(
-							icomp::IComponentStaticInfo::MGI_INTERFACES, 0, 0);	// All asked interfaces
+					icomp::IComponentStaticInfo::MGI_INTERFACES, 0, 0);	// All asked interfaces
 			}
 
 			if (!interfaceNames.isEmpty()){
@@ -314,7 +329,7 @@ void CPackageOverviewComp::GenerateComponentTree(bool forceUpdate)
 	PackagesList->clear();
 	m_roots.clear();
 
-	QString currentKey = GroupByCB->currentText(); 
+	QString currentKey = GroupByCB->currentText();
 
 	for (		icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
 				addressIter != addresses.end();
@@ -339,20 +354,19 @@ void CPackageOverviewComp::GenerateComponentTree(bool forceUpdate)
 		elementName += address.GetComponentId();
 
 		switch (GroupByCB->currentIndex()){
-		case GM_NONE:
-			groupIds.push_back("");
-			break;
+			case GM_NONE:
+				groupIds.push_back("");
+				break;
 
-		case GM_PACKAGE:
-			if (!address.GetPackageId().isEmpty()){
-				groupIds.push_back(address.GetPackageId());
-			}
+			case GM_PACKAGE:
+				if (!address.GetPackageId().isEmpty()){
+					groupIds.push_back(address.GetPackageId());
+				}
 
-			elementName = address.GetComponentId();
-			break;
+				elementName = address.GetComponentId();
+				break;
 
-		default:
-			{
+			default:{
 				if (metaInfoPtr != NULL){
 					icomp::CComponentMetaDescriptionEncoder encoder(metaInfoPtr->GetKeywords());
 
@@ -446,7 +460,7 @@ void CPackageOverviewComp::UpdateComponentGroups()
 				++addressIter){
 		const icomp::CComponentAddress& address = *addressIter;
 		const icomp::IComponentStaticInfo* metaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(address);
-	
+
 		if (metaInfoPtr != NULL){
 			icomp::CComponentMetaDescriptionEncoder encoder(metaInfoPtr->GetKeywords());
 
@@ -572,21 +586,21 @@ icomp::IMetaInfoManager::ComponentAddresses CPackageOverviewComp::GetFilteredCom
 					if (keyword.contains(filter, Qt::CaseInsensitive)){
 						filterFound = true;
 						break;
+						}
+					}
+
+					if (!filterFound){
+						isFilterMatched = false;
+						break;
 					}
 				}
 
-				if (!filterFound){
-					isFilterMatched = false;
-					break;
+				if (!isFilterMatched){
+					continue;
 				}
 			}
 
-			if (!isFilterMatched){
-				continue;
-			}
-		}
-
-		filteredComponentAdresses.insert(address);
+			filteredComponentAdresses.insert(address);
 	}
 
 	const IElementSelectionInfo* objectPtr = GetObjectPtr();
@@ -639,24 +653,24 @@ icomp::IMetaInfoManager::ComponentAddresses CPackageOverviewComp::GetFilteredCom
 							if (keyword.contains(filter, Qt::CaseInsensitive)){
 								filterFound = true;
 								break;
+								}
+							}
+
+							if (!filterFound){
+								isFilterMatched = false;
+								break;
 							}
 						}
 
-						if (!filterFound){
-							isFilterMatched = false;
-							break;
+						if (!isFilterMatched){
+							continue;
 						}
 					}
 
-					if (!isFilterMatched){
-						continue;
-					}
+					filteredComponentAdresses.insert(icomp::CComponentAddress("", embeddedId));
 				}
-
-				filteredComponentAdresses.insert(icomp::CComponentAddress("", embeddedId));
 			}
 		}
-	}
 
 	return filteredComponentAdresses;
 }
@@ -835,7 +849,7 @@ QPixmap CPackageOverviewComp::CreateComponentDragPixmap(const icomp::CComponentA
 	QPalette palette = componentLabel.palette();
 
 	pixmap.setMask(pixmap.createMaskFromColor(palette.color(QPalette::Window), Qt::MaskInColor));
-	
+
 	QPainter painter(&pixmap);
 	painter.setPen(Qt::DashDotLine);
 	QRectF mainRect = pixmap.rect();
@@ -851,7 +865,7 @@ CPackageOverviewComp::RootInfo& CPackageOverviewComp::EnsureRoot(const QByteArra
 {
 	RootInfo& rootInfo = m_roots[path];
 
-	int componentType = icomp::IComponentStaticInfo::CT_NONE; 
+	int componentType = icomp::IComponentStaticInfo::CT_NONE;
 	if (staticInfoPtr != NULL){
 		componentType = staticInfoPtr->GetComponentType();
 	}
@@ -920,7 +934,7 @@ bool CPackageOverviewComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 	}
 
 	switch (eventPtr->type()){
-		case QEvent::MouseMove:
+	case QEvent::MouseMove:
 		{
 			bool doDrag = false;
 
@@ -957,22 +971,22 @@ bool CPackageOverviewComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 		}
 		break;
 
-		case QEvent::MouseButtonPress:
-			if (mouseEventPtr->button() == Qt::LeftButton && sourceWidgetPtr != NULL){
-				if (!m_startDrag){
-					m_startDrag = true;
+	case QEvent::MouseButtonPress:
+		if (mouseEventPtr->button() == Qt::LeftButton && sourceWidgetPtr != NULL){
+			if (!m_startDrag){
+				m_startDrag = true;
 
-					m_starDragPosition = mouseEventPtr->pos();
-				}
+				m_starDragPosition = mouseEventPtr->pos();
 			}
-			break;
-	
-		case QEvent::MouseButtonRelease:
-			m_startDrag = false;
-			break;
-	
-		default:
-			break;
+		}
+		break;
+
+	case QEvent::MouseButtonRelease:
+		m_startDrag = false;
+		break;
+
+	default:
+		break;
 	}
 
 	return BaseClass::eventFilter(sourcePtr, eventPtr);
@@ -1069,8 +1083,8 @@ void CPackageOverviewComp::OnGuiRetranslate()
 
 	if (m_configFilePathModelCompPtr.IsValid()){
 		if (		!m_configFilePathModelCompPtr->IsAttached(&m_configObserver) &&
-					!m_configFilePathModelCompPtr->AttachObserver(&m_configObserver)){
-			UpdateAllLists();
+			!m_configFilePathModelCompPtr->AttachObserver(&m_configObserver)){
+				UpdateAllLists();
 		}
 	}
 	else{
@@ -1082,10 +1096,10 @@ void CPackageOverviewComp::OnGuiRetranslate()
 // public methods of embedded class PackageItemBase
 
 CPackageOverviewComp::PackageItemBase::PackageItemBase(
-			CPackageOverviewComp& parent,
-			const QString& description,
-			const QIcon& icon)
-:	m_parent(parent),
+	CPackageOverviewComp& parent,
+	const QString& description,
+	const QIcon& icon)
+	:	m_parent(parent),
 	m_description(description)
 {
 	setIcon(0, icon);
@@ -1101,11 +1115,11 @@ const QString& CPackageOverviewComp::PackageItemBase::GetDescription() const
 // public methods of embedded class PackageComponentItem
 
 CPackageOverviewComp::PackageComponentItem::PackageComponentItem(
-			CPackageOverviewComp& parent,
-			const icomp::CComponentAddress& address,
-			const icomp::IComponentStaticInfo* staticInfoPtr,
-			const QIcon& icon)
-:	BaseClass(parent, (staticInfoPtr != NULL) ? staticInfoPtr->GetDescription() : QString(), icon),
+	CPackageOverviewComp& parent,
+	const icomp::CComponentAddress& address,
+	const icomp::IComponentStaticInfo* staticInfoPtr,
+	const QIcon& icon)
+	:	BaseClass(parent, (staticInfoPtr != NULL) ? staticInfoPtr->GetDescription() : QString(), icon),
 	m_address(address)
 {
 	QString toolTip;
@@ -1140,10 +1154,10 @@ const icomp::CComponentAddress& CPackageOverviewComp::PackageComponentItem::GetA
 // public methods of embedded class PackageItem
 
 CPackageOverviewComp::PackageItem::PackageItem(
-			CPackageOverviewComp& parent,
-			const QString& description,
-			const QIcon& icon)
-:	BaseClass(parent, description, icon)
+	CPackageOverviewComp& parent,
+	const QString& description,
+	const QIcon& icon)
+	:	BaseClass(parent, description, icon)
 {
 	setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
 }
