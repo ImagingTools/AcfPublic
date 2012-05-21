@@ -75,7 +75,9 @@ void CProgressManagerGuiComp::OnCancelable(bool cancelState)
 {
 	m_isCancelable = cancelState && *m_showCancelAttrPtr;
 
-	CancelButton->setVisible(m_isCancelable);
+	if (IsGuiCreated()){
+		CancelButton->setVisible(m_isCancelable);
+	}
 }
 
 
@@ -115,12 +117,14 @@ bool CProgressManagerGuiComp::IsCanceled(int sessionId) const
 
 void CProgressManagerGuiComp::OnEndChanges(int changeFlags, istd::IPolymorphic* /*changeParamsPtr*/)
 {
-	if ((changeFlags & CF_SESSIONS_NUMBER) != 0){
-		UpdateVisibleComponents();
-	}
+	if (IsGuiCreated()){
+		if ((changeFlags & CF_SESSIONS_NUMBER) != 0){
+			UpdateVisibleComponents();
+		}
 
-	if ((changeFlags & CF_PROGRESS_CHANGED) != 0){
-		UpdateProgressBar();
+		if ((changeFlags & CF_PROGRESS_CHANGED) != 0){
+			UpdateProgressBar();
+		}
 	}
 }
 
@@ -139,7 +143,7 @@ void CProgressManagerGuiComp::OnGuiCreated()
 		DescriptionLabel->setVisible(false);
 	}
 
-	CancelButton->setVisible(false);
+	CancelButton->setVisible(m_isCancelable);
 
 	UpdateVisibleComponents();
 }
