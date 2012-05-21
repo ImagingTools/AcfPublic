@@ -46,9 +46,9 @@
 <a name="l00024"></a><a class="code" href="classicomp_1_1_t_attribute_member_base.html">00024</a> <span class="keyword">class </span><a class="code" href="classicomp_1_1_t_attribute_member_base.html" title="Pointer to component attribute.">TAttributeMemberBase</a>
 <a name="l00025"></a>00025 {
 <a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a><a class="code" href="classicomp_1_1_t_attribute_member_base.html#a6164f043005f2a5b3b84b098a459252b">00027</a>     <span class="keyword">typedef</span> Attribute <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a6164f043005f2a5b3b84b098a459252b">AttributeType</a>;
-<a name="l00028"></a><a class="code" href="classicomp_1_1_t_attribute_member_base.html#a62cde3967d11b248cba7bf25518f53a2">00028</a>     <span class="keyword">typedef</span> <span class="keyword">typename</span> Attribute::ValueType <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a62cde3967d11b248cba7bf25518f53a2">AttributeValueType</a>;
-<a name="l00029"></a><a class="code" href="classicomp_1_1_t_attribute_member_base.html#a77348a366f16cd9fcc5ac2683ee5b1de">00029</a>     <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a77348a366f16cd9fcc5ac2683ee5b1de">InterfaceType</a>;
+<a name="l00027"></a><a class="code" href="classicomp_1_1_t_attribute_member_base.html#a6164f043005f2a5b3b84b098a459252b">00027</a>        <span class="keyword">typedef</span> Attribute <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a6164f043005f2a5b3b84b098a459252b">AttributeType</a>;
+<a name="l00028"></a><a class="code" href="classicomp_1_1_t_attribute_member_base.html#a62cde3967d11b248cba7bf25518f53a2">00028</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> Attribute::ValueType <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a62cde3967d11b248cba7bf25518f53a2">AttributeValueType</a>;
+<a name="l00029"></a><a class="code" href="classicomp_1_1_t_attribute_member_base.html#a77348a366f16cd9fcc5ac2683ee5b1de">00029</a>        <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a77348a366f16cd9fcc5ac2683ee5b1de">InterfaceType</a>;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <a class="code" href="classicomp_1_1_t_attribute_member_base.html#ad526b8faee3a62a9e7a9dd5717f1f939">TAttributeMemberBase</a>();
 <a name="l00032"></a>00032 
@@ -62,7 +62,7 @@
 <a name="l00053"></a>00053 
 <a name="l00057"></a>00057        <span class="keyword">const</span> Attribute* <a class="code" href="classicomp_1_1_t_attribute_member_base.html#ac73004f2f4da9afd9766e2f7a9a5c8b4" title="Access to internal attribute pointer.">operator-&gt;</a>() <span class="keyword">const</span>;
 <a name="l00058"></a>00058 
-<a name="l00062"></a>00062     <span class="keyword">const</span> <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a62cde3967d11b248cba7bf25518f53a2">AttributeValueType</a>&amp; <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a9337b825681ac2829b66a2a2df154493" title="Access to object pointed by internal pointer.">operator*</a>() <span class="keyword">const</span>;
+<a name="l00062"></a>00062        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a62cde3967d11b248cba7bf25518f53a2">AttributeValueType</a>&amp; <a class="code" href="classicomp_1_1_t_attribute_member_base.html#a9337b825681ac2829b66a2a2df154493" title="Access to object pointed by internal pointer.">operator*</a>() <span class="keyword">const</span>;
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="keyword">protected</span>:
 <a name="l00065"></a>00065        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_attribute_member_base.html#af6067c6dfd567f736f06eae27dff865c">SetAttribute</a>(<span class="keyword">const</span> Attribute* attributePtr);

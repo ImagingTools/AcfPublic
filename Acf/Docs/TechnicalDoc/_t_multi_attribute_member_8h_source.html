@@ -42,9 +42,9 @@
 <a name="l00020"></a><a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html" title="Pointer to component attribute.">TMultiAttributeMemberBase</a>
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a><a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#ae4fd40da6bf1eaad4697668b78a3d55e">00023</a>     <span class="keyword">typedef</span> Attribute <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#ae4fd40da6bf1eaad4697668b78a3d55e">AttributeType</a>;
-<a name="l00024"></a><a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a68844bea941444c01c9bb0448c7bbfe5">00024</a>     <span class="keyword">typedef</span> <span class="keyword">typename</span> Attribute::ValueType <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a68844bea941444c01c9bb0448c7bbfe5">AttributeValueType</a>;
-<a name="l00025"></a><a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a7d59a8d1e5122abcce777a5aee976679">00025</a>     <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a7d59a8d1e5122abcce777a5aee976679">InterfaceType</a>;
+<a name="l00023"></a><a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#ae4fd40da6bf1eaad4697668b78a3d55e">00023</a>        <span class="keyword">typedef</span> Attribute <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#ae4fd40da6bf1eaad4697668b78a3d55e">AttributeType</a>;
+<a name="l00024"></a><a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a68844bea941444c01c9bb0448c7bbfe5">00024</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> Attribute::ValueType <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a68844bea941444c01c9bb0448c7bbfe5">AttributeValueType</a>;
+<a name="l00025"></a><a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a7d59a8d1e5122abcce777a5aee976679">00025</a>        <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a7d59a8d1e5122abcce777a5aee976679">InterfaceType</a>;
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027        <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#ac7b8e05e23a90addd70abb08bc520db1">TMultiAttributeMemberBase</a>();
 <a name="l00028"></a>00028 
@@ -56,7 +56,7 @@
 <a name="l00037"></a>00037 
 <a name="l00041"></a>00041        <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a1023bfeb8b0c7a216d3f44d25ce16c07" title="Get number of attributes.">GetCount</a>() <span class="keyword">const</span>;
 <a name="l00042"></a>00042 
-<a name="l00046"></a>00046     <span class="keyword">const</span> <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a68844bea941444c01c9bb0448c7bbfe5">AttributeValueType</a>&amp; <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#accd54ff6f8bd572166faeb2b58aaf216" title="Access to object pointed by internal pointer.">operator[]</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00046"></a>00046        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#a68844bea941444c01c9bb0448c7bbfe5">AttributeValueType</a>&amp; <a class="code" href="classicomp_1_1_t_multi_attribute_member_base.html#accd54ff6f8bd572166faeb2b58aaf216" title="Access to object pointed by internal pointer.">operator[]</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 <span class="keyword">private</span>:
 <a name="l00049"></a>00049        <span class="keyword">const</span> Attribute* m_attributePtr;
