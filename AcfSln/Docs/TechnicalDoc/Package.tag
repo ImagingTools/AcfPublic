@@ -424,15 +424,6 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
-    <name>CInspectionComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iinsp/</path>
-    <filename>_c_inspection_comp_8h</filename>
-    <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
-    <includes id="_i_inspection_8h" name="IInspection.h" local="yes" imported="no">iinsp/IInspection.h</includes>
-    <class kind="class">iinsp::CInspectionComp</class>
-    <namespace>iinsp</namespace>
-  </compound>
-  <compound kind="file">
     <name>CInspectionTaskComp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_inspection_task_comp_8h</filename>
@@ -451,13 +442,6 @@
     <name>iinsp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>iinsp_8h</filename>
-    <namespace>iinsp</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IInspection.h</name>
-    <path>C:/Temp/AcfSln/Include/iinsp/</path>
-    <filename>_i_inspection_8h</filename>
-    <class kind="class">iinsp::IInspection</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -4638,10 +4622,8 @@
     <filename>namespaceiinsp.html</filename>
     <class kind="class">iinsp::CIdCacheComp</class>
     <class kind="class">iinsp::CInformationProviderCacheComp</class>
-    <class kind="class">iinsp::CInspectionComp</class>
     <class kind="class">iinsp::CInspectionTaskComp</class>
     <class kind="class">iinsp::IIdProvider</class>
-    <class kind="class">iinsp::IInspection</class>
     <class kind="class">iinsp::IInspectionTask</class>
     <class kind="class">iinsp::ITimeStampProvider</class>
   </compound>
@@ -4749,186 +4731,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iinsp::CInspectionComp</name>
-    <filename>classiinsp_1_1_c_inspection_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iinsp::IInspection</base>
-    <base virtualness="virtual">iinsp::IInspectionTask</base>
-    <base virtualness="virtual">istd::IInformationProvider</base>
-    <base protection="protected">imod::CMultiModelBridgeBase</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a4a1c94b1d35b638d310e8bd44cc166f9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_INSPECTION_DONE</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a4a1c94b1d35b638d310e8bd44cc166f9a4c52e92b02c21190fa21be0e63719c52</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_TASKS_COUNT</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a4a1c94b1d35b638d310e8bd44cc166f9ad182eb4409aa36bdcb91fe04e0d9b8a8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_NO_TASK</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a4a1c94b1d35b638d310e8bd44cc166f9a0b9423a355ac02e0ff611e303ec59931</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a4a57a584f3964fbc1aa4d8c5241c78fc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a76dd4ca9d54afe82b9bdceb38cf54819</anchor>
-      <arglist>(m_inspectionModelsCompPtr, m_inspectionsCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTasksCount</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a0d641f45e3847a88d471c71c58207bd9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IInspectionTask *</type>
-      <name>GetTask</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a0ec61c94ebfd828b323a94d50ef93d0f</anchor>
-      <arglist>(int subtaskIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetInspectionParams</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a3588fcc850329586b8b35dfa6194711c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSubtasksCount</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>ad87c3df884b9f0a34a105f11ad42cdfe</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iproc::ISupplier *</type>
-      <name>GetSubtask</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a7c90a4773e6bc217351937872aa6d082</anchor>
-      <arglist>(int subtaskIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InvalidateSupplier</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a1f0724b5b4685c43f1fcdb609d9bacbc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>aeaaff19c8d946e15f538ea01428c2757</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a6acb41875e2210a1689183d8e0b5de4a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorkStatus</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a2e00e13f42ba8987b7692394aa4f0290</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetModelParametersSet</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>ad1962fd6c851ac865c546ed41ba7ed9b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a42599eb689937260f2bd34401680283b</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QDateTime</type>
-      <name>GetInformationTimeStamp</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a9828b9584314146e61119f54c991e418</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual InformationCategory</type>
-      <name>GetInformationCategory</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a144d5443f44aa66fb52fd1ec9af6d876</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetInformationId</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a40897c9242501b74991812c0f3e35ada</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetInformationDescription</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>ac2b7264638f39c2397817d9626ec343c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetInformationSource</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a5a8573f82a1c90e24a880addec471297</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetInformationFlags</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a0d1ad1ff0ae84745a7956e71ba36ea04</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>afd88ee04558e36d9beb4361225cd11ab</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiinsp_1_1_c_inspection_comp.html</anchorfile>
-      <anchor>a6b8ba575bbd4096fef8a95d4c82d9bf9</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iinsp::CInspectionTaskComp</name>
     <filename>classiinsp_1_1_c_inspection_task_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
@@ -4958,6 +4760,55 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a2ef04c15176b03787f0f6c3bc66f7825</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ad0a1c1648634d57c3044bf8a3e904f12</anchor>
+      <arglist>(Parameters)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a5a00131624c687877f065da2f9ee2f82</anchor>
+      <arglist>(Parameters, iprm::IParamsSet, ExtractParameters)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a33790d5725e28a7ccbbd616069e3ae8e</anchor>
+      <arglist>(Parameters, iser::ISerializable, ExtractParameters)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a6f6de4519bd5823ab2d33f518688b9b7</anchor>
+      <arglist>(Parameters, istd::IChangeable, ExtractParameters)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ab3e8598e3e7016db896112703ae1dec1</anchor>
+      <arglist>(Parameters, imod::IModel, ExtractParameters)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a9724d3e300851f1229ba7cdb78b8cd5b</anchor>
+      <arglist>(m_subtaskModelsCompPtr, m_subtasksCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a32952dc3bf4a915c091e1b32b30107cf</anchor>
+      <arglist>(m_generalParamsModelCompPtr, m_generalParamsCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -5008,13 +4859,6 @@
       <anchor>ae17f09b830020cb2017119e8a57b262a</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>ac80722d2ef85459f84449030e20512a8</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -5043,36 +4887,9 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iinsp::IInspection</name>
-    <filename>classiinsp_1_1_i_inspection.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetTasksCount</name>
-      <anchorfile>classiinsp_1_1_i_inspection.html</anchorfile>
-      <anchor>ad20282887ed690d17755c1f877501157</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual IInspectionTask *</type>
-      <name>GetTask</name>
-      <anchorfile>classiinsp_1_1_i_inspection.html</anchorfile>
-      <anchor>a7220c271f00a97512810646a3f249a27</anchor>
-      <arglist>(int subtaskIndex) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetInspectionParams</name>
-      <anchorfile>classiinsp_1_1_i_inspection.html</anchorfile>
-      <anchor>ae9f4b45c65c9e4baa605ceb8ab7b95d0</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iinsp::IInspectionTask</name>
     <filename>classiinsp_1_1_i_inspection_task.html</filename>
     <base virtualness="virtual">iproc::ISupplier</base>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSubtasksCount</name>
