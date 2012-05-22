@@ -28789,6 +28789,13 @@
       <arglist>(int index)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SwapParamsSet</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>af193c485d9ef1b3c0037035dbc18cd9d</anchor>
+      <arglist>(int index1, int index2)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual IParamsSet *</type>
       <name>GetParamsSet</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
@@ -29498,21 +29505,27 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>MF_NAME_FIXED</name>
+      <name>MF_SUPPORT_RENAME</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>af0f7891ab3e905463489162a441f32e6a9b9fa31364a072b2e8c6524cf12e7257</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6ab436acf1abe1fc5c51b79809187d26df</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>MF_NO_INSERT</name>
+      <name>MF_SUPPORT_INSERT</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>af0f7891ab3e905463489162a441f32e6af219625f5f5e4a1d5125c3ecd6353c31</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6ab3a666972d40e17ec3f7540bdc959e59</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>MF_NO_DELETE</name>
+      <name>MF_SUPPORT_DELETE</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>af0f7891ab3e905463489162a441f32e6a40f040a1c9c77e0ae859f3df1cfeae7f</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6aa24bd427372876d5433a1a9e39705b62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MF_SUPPORT_SWAP</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>af0f7891ab3e905463489162a441f32e6af6b4bfb8080f455aaf183be464a007dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -29566,6 +29579,13 @@
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
       <anchor>ac8e5810d12adbb2a28a2a6419caf27d8</anchor>
       <arglist>(int index)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SwapParamsSet</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>a07b93c9af890b569e13d14a8b761b2e8</anchor>
+      <arglist>(int index1, int index2)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual IParamsSet *</type>
@@ -45479,6 +45499,13 @@
       <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
       <anchor>ace05713d228ce99dee02383e4ffbf3da</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Swap</name>
+      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
+      <anchor>acbec1effb9a5398d09ede7db6975b874</anchor>
+      <arglist>(TTransPtr &amp;pointer)</arglist>
     </member>
     <member kind="function">
       <type>CastedType</type>

@@ -69,6 +69,11 @@ public:
 	*/
 	void Reset();
 
+	/**
+		Swap two pointers.
+	*/
+	void Swap(TTransPtr& pointer);
+
 	template <class CastedType>
 	CastedType Cast() const
 	{
@@ -177,6 +182,15 @@ void TTransPtr<Type>::Reset()
 	Detach();
 
 	m_counterPtr = NULL;
+}
+
+
+template <class Type>
+void TTransPtr<Type>::Swap(TTransPtr& pointer)
+{
+	RefCountBase* tempCounterPtr = m_counterPtr;
+	m_counterPtr = pointer.m_counterPtr;
+	pointer.m_counterPtr = tempCounterPtr;
 }
 
 

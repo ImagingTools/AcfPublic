@@ -72,6 +72,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to pointed object.  <a href="#a348f27254154ad5f2e7283a47ef4bcbd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_trans_ptr.html#ace05713d228ce99dee02383e4ffbf3da">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this pointer to NULL.  <a href="#ace05713d228ce99dee02383e4ffbf3da"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_trans_ptr.html#acbec1effb9a5398d09ede7db6975b874">Swap</a> (<a class="el" href="classistd_1_1_t_trans_ptr.html">TTransPtr</a> &amp;pointer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two pointers.  <a href="#acbec1effb9a5398d09ede7db6975b874"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class CastedType &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">CastedType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_trans_ptr.html#ac934238a4fee37066d7c0bb4f5fcad11">Cast</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_trans_ptr.html">TTransPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_trans_ptr.html#a12ba9177b0c9931eea3a0b53b7d63d4b">operator=</a> (const <a class="el" href="classistd_1_1_t_trans_ptr.html">TTransPtr</a> &amp;pointer)</td></tr>
@@ -124,9 +126,9 @@ template&lt;class Type &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00107">107</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00112">112</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
-<p>References <a class="el" href="_t_trans_ptr_8h_source.html#l00100">istd::TTransPtr&lt; Type &gt;::m_counterPtr</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+<p>References <a class="el" href="_t_trans_ptr_8h_source.html#l00105">istd::TTransPtr&lt; Type &gt;::m_counterPtr</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
 </div>
 </div>
@@ -146,7 +148,7 @@ template&lt;class Type &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00115">115</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00120">120</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 </div>
 </div>
@@ -166,7 +168,7 @@ template&lt;class Type &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00199">199</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00213">213</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 </div>
 </div>
@@ -189,7 +191,7 @@ template&lt;class CastedType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00051">51</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00056">56</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +213,7 @@ template&lt;class Type &gt; </div>
 
 <p>Detach counter object without changing of internal counter pointer. </p>
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00205">205</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00219">219</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -236,9 +238,9 @@ template&lt;class Type &gt; </div>
 
 <p>Get internal counter. </p>
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00214">214</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00228">228</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
-<p>References <a class="el" href="_t_trans_ptr_8h_source.html#l00100">istd::TTransPtr&lt; Type &gt;::m_counterPtr</a>.</p>
+<p>References <a class="el" href="_t_trans_ptr_8h_source.html#l00105">istd::TTransPtr&lt; Type &gt;::m_counterPtr</a>.</p>
 
 </div>
 </div>
@@ -260,11 +262,11 @@ template&lt;class Type &gt; </div>
 
 <p>Get access to pointed object. </p>
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00129">129</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00134">134</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_message_container_wrap_8h_source.html#l00231">ibase::TMessageContainerWrap&lt; Base &gt;::AddMessage()</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00051">istd::TTransPtr&lt; IParamsSet &gt;::Cast()</a>, and <a class="el" href="_t_message_container_wrap_8h_source.html#l00103">ibase::TMessageContainerWrap&lt; Base &gt;::Serialize()</a>.</p>
+<p>Referenced by <a class="el" href="_t_message_container_wrap_8h_source.html#l00231">ibase::TMessageContainerWrap&lt; Base &gt;::AddMessage()</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00056">istd::TTransPtr&lt; IParamsSet &gt;::Cast()</a>, and <a class="el" href="_t_message_container_wrap_8h_source.html#l00103">ibase::TMessageContainerWrap&lt; Base &gt;::Serialize()</a>.</p>
 
 </div>
 </div>
@@ -286,7 +288,7 @@ template&lt;class Type &gt; </div>
 
 <p>Get access to pointed object. </p>
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00141">141</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00146">146</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -310,7 +312,7 @@ template&lt;class Type &gt; </div>
 
 <p>Check, whether the object is in valid state. </p>
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00122">122</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00127">127</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -334,7 +336,7 @@ template&lt;class Type &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00177">177</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00191">191</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -356,7 +358,7 @@ template&lt;class Type &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00187">187</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00201">201</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -389,9 +391,9 @@ template&lt;class Type &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classistd_1_1_t_smart_ptr.html#a7bd1b22c0b70bec2057075e76008877b">istd::TSmartPtr&lt; Type, Accessor &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00162">162</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00176">176</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
-<p>References <a class="el" href="_t_trans_ptr_8h_source.html#l00100">istd::TTransPtr&lt; Type &gt;::m_counterPtr</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+<p>References <a class="el" href="_t_trans_ptr_8h_source.html#l00105">istd::TTransPtr&lt; Type &gt;::m_counterPtr</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
 </div>
 </div>
@@ -413,9 +415,34 @@ template&lt;class Type &gt; </div>
 
 <p>Set this pointer to NULL. </p>
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00153">153</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00158">158</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acbec1effb9a5398d09ede7db6975b874"></a><!-- doxytag: member="istd::TTransPtr::Swap" ref="acbec1effb9a5398d09ede7db6975b874" args="(TTransPtr &amp;pointer)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; Type &gt;::Swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_t_trans_ptr.html">TTransPtr</a>&lt; Type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Swap two pointers. </p>
+
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00167">167</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+
+<p>References <a class="el" href="_t_trans_ptr_8h_source.html#l00105">istd::TTransPtr&lt; Type &gt;::m_counterPtr</a>.</p>
 
 </div>
 </div>
@@ -433,9 +460,9 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00100">100</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_trans_ptr_8h_source.html#l00105">105</a> of file <a class="el" href="_t_trans_ptr_8h_source.html">TTransPtr.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_trans_ptr_8h_source.html#l00214">istd::TTransPtr&lt; Type &gt;::GetInternalCounter()</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00162">istd::TTransPtr&lt; Type &gt;::operator=()</a>, and <a class="el" href="_t_trans_ptr_8h_source.html#l00107">istd::TTransPtr&lt; Type &gt;::TTransPtr()</a>.</p>
+<p>Referenced by <a class="el" href="_t_trans_ptr_8h_source.html#l00228">istd::TTransPtr&lt; Type &gt;::GetInternalCounter()</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00176">istd::TTransPtr&lt; Type &gt;::operator=()</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00167">istd::TTransPtr&lt; Type &gt;::Swap()</a>, and <a class="el" href="_t_trans_ptr_8h_source.html#l00112">istd::TTransPtr&lt; Type &gt;::TTransPtr()</a>.</p>
 
 </div>
 </div>
