@@ -6587,8 +6587,8 @@
       <type></type>
       <name>CSearchFeature</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a03478642f8a0f9b73f1b9a2a1a0a2eff</anchor>
-      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, int index=-1)</arglist>
+      <anchor>aaedb91cd8ef447238ab55ce468880194</anchor>
+      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, int index=-1, const QString &amp;id=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -6609,6 +6609,13 @@
       <name>GetIndex</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>a1b9b60d3ee8b06a83b64ddab6a369bce</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetId</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>a900d79d8c73354c11e90644bf312848c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
