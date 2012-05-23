@@ -24,6 +24,7 @@
 
 
 // ACF includes
+#include "istd/TChangeNotifier.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
@@ -36,13 +37,13 @@ namespace iinsp
 
 int CInspectionTaskComp::GetSubtasksCount() const
 {
-	return m_subtasksCompPtr.GetCount();
+	return m_subtasks.size();
 }
 
 
 iproc::ISupplier* CInspectionTaskComp::GetSubtask(int subtaskIndex) const
 {
-	return m_subtasksCompPtr[subtaskIndex];
+	return m_subtasks[subtaskIndex];
 }
 
 
@@ -50,6 +51,8 @@ iproc::ISupplier* CInspectionTaskComp::GetSubtask(int subtaskIndex) const
 
 void CInspectionTaskComp::InvalidateSupplier()
 {
+	istd::CChangeNotifier notifier(this);
+
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
@@ -62,6 +65,8 @@ void CInspectionTaskComp::InvalidateSupplier()
 
 void CInspectionTaskComp::EnsureWorkFinished()
 {
+	istd::CChangeNotifier notifier(this);
+
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
@@ -74,6 +79,8 @@ void CInspectionTaskComp::EnsureWorkFinished()
 
 void CInspectionTaskComp::ClearWorkResults()
 {
+	istd::CChangeNotifier notifier(this);
+
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
@@ -117,12 +124,35 @@ void CInspectionTaskComp::OnComponentCreated()
 	BaseClass::OnComponentCreated();
 
 	int modelsCount = m_subtaskModelsCompPtr.GetCount();
-
 	for (int i = 0; i < modelsCount; ++i){
 		imod::IModel* modelPtr = m_subtaskModelsCompPtr[i];
 		if (modelPtr != NULL){
 			modelPtr->AttachObserver(this);
 		}
+	}
+
+	m_subtasks.clear();
+
+	int subtasksCount = m_subtasksCompPtr.GetCount();
+	for (int i = 0; i < subtasksCount; ++i){
+		if (*m_reduceHierarchyAttrPtr){
+			if (i < m_subtaskInspectionCompPtr.GetCount()){
+				IInspectionTask* inspectionTaskPtr = m_subtaskInspectionCompPtr[i];
+				if (inspectionTaskPtr != NULL){
+					int childTasksCount = inspectionTaskPtr->GetSubtasksCount();
+					for (int childIndex = 0; childIndex < childTasksCount; ++childIndex){
+						iproc::ISupplier* taskPtr = inspectionTaskPtr->GetSubtask(childIndex);
+
+						m_subtasks.push_back(taskPtr);
+					}
+					continue;
+				}
+			}
+		}
+
+		iproc::ISupplier* taskPtr = m_subtasksCompPtr[i];
+
+		m_subtasks.push_back(taskPtr);
 	}
 
 	m_parameters.SetParent(this);
@@ -132,6 +162,8 @@ void CInspectionTaskComp::OnComponentCreated()
 void CInspectionTaskComp::OnComponentDestroyed()
 {
 	m_parameters.SetParent(NULL);
+
+	m_subtasks.clear();
 
 	EnsureModelsDetached();
 
@@ -159,12 +191,11 @@ void CInspectionTaskComp::Parameters::SetParent(CInspectionTaskComp* parentPtr)
 		if (parentPtr != NULL){
 			m_parentPtr = parentPtr;
 
-			int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
-
 			if (m_parentPtr->m_generalParamsModelCompPtr.IsValid()){
 				m_parentPtr->m_generalParamsModelCompPtr->AttachObserver(this);
 			}
 
+			int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
 			for (int i = 0; i < subtasksCount; ++i){
 				const iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
 				if (subtaskPtr != NULL){
@@ -192,7 +223,6 @@ const iser::ISerializable* CInspectionTaskComp::Parameters::GetParameter(const Q
 		}
 
 		int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
-
 		for (int i = 0; i < subtasksCount; ++i){
 			const iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
 			if (subtaskPtr != NULL){
@@ -222,7 +252,6 @@ iser::ISerializable* CInspectionTaskComp::Parameters::GetEditableParameter(const
 		}
 
 		int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
-
 		for (int i = 0; i < subtasksCount; ++i){
 			iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
 			if (subtaskPtr != NULL){
@@ -248,6 +277,8 @@ bool CInspectionTaskComp::Parameters::Serialize(iser::IArchive& archive)
 	bool retVal = true;
 
 	if (m_parentPtr != NULL){
+		istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
+
 		if (*m_parentPtr->m_serializeSuppliersAttrPtr){
 			static iser::CArchiveTag taskListTag("SubtaskList", "List of inspection subtasks");
 			static iser::CArchiveTag taskTag("Subtask", "Single subtask");

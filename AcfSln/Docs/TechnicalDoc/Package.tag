@@ -4800,15 +4800,22 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a9724d3e300851f1229ba7cdb78b8cd5b</anchor>
-      <arglist>(m_subtaskModelsCompPtr, m_subtasksCompPtr, false)</arglist>
+      <anchor>a8632b8377ba3c440a8319c6b06c574b7</anchor>
+      <arglist>(m_subtaskModelsCompPtr, m_subtasksCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a32952dc3bf4a915c091e1b32b30107cf</anchor>
-      <arglist>(m_generalParamsModelCompPtr, m_generalParamsCompPtr, false)</arglist>
+      <anchor>ab3662b80125650011f81e1d91e50231e</anchor>
+      <arglist>(m_subtaskInspectionCompPtr, m_subtasksCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a8476d1be5baf4b4809bc396e3c2cf695</anchor>
+      <arglist>(m_generalParamsModelCompPtr, m_generalParamsCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>

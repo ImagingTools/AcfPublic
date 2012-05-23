@@ -83,8 +83,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a33790d5725e28a7ccbbd616069e3ae8e">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (Parameters, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>, ExtractParameters)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a6f6de4519bd5823ab2d33f518688b9b7">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (Parameters, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractParameters)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#ab3e8598e3e7016db896112703ae1dec1">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (Parameters, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, ExtractParameters)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a9724d3e300851f1229ba7cdb78b8cd5b">I_ASSIGN_TO</a> (m_subtaskModelsCompPtr, m_subtasksCompPtr, false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a32952dc3bf4a915c091e1b32b30107cf">I_ASSIGN_TO</a> (m_generalParamsModelCompPtr, m_generalParamsCompPtr, false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a8632b8377ba3c440a8319c6b06c574b7">I_ASSIGN_TO</a> (m_subtaskModelsCompPtr, m_subtasksCompPtr, true)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#ab3662b80125650011f81e1d91e50231e">I_ASSIGN_TO</a> (m_subtaskInspectionCompPtr, m_subtasksCompPtr, false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a8476d1be5baf4b4809bc396e3c2cf695">I_ASSIGN_TO</a> (m_generalParamsModelCompPtr, m_generalParamsCompPtr, true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a1ff42f2b1fadea9d9b2256bd739b6a0a">GetSubtasksCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of inspection steps (subtasks).  <a href="#a1ff42f2b1fadea9d9b2256bd739b6a0a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html">iproc::ISupplier</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a6939fea0173b71740845be7683c9eb40">GetSubtask</a> (int subtaskIndex) const </td></tr>
@@ -259,7 +260,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9724d3e300851f1229ba7cdb78b8cd5b"></a><!-- doxytag: member="iinsp::CInspectionTaskComp::I_ASSIGN_TO" ref="a9724d3e300851f1229ba7cdb78b8cd5b" args="(m_subtaskModelsCompPtr, m_subtasksCompPtr, false)" -->
+<a class="anchor" id="a8632b8377ba3c440a8319c6b06c574b7"></a><!-- doxytag: member="iinsp::CInspectionTaskComp::I_ASSIGN_TO" ref="a8632b8377ba3c440a8319c6b06c574b7" args="(m_subtaskModelsCompPtr, m_subtasksCompPtr, true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -267,6 +268,39 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">iinsp::CInspectionTaskComp::I_ASSIGN_TO </td>
           <td>(</td>
           <td class="paramtype">m_subtaskModelsCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_subtasksCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">true&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab3662b80125650011f81e1d91e50231e"></a><!-- doxytag: member="iinsp::CInspectionTaskComp::I_ASSIGN_TO" ref="ab3662b80125650011f81e1d91e50231e" args="(m_subtaskInspectionCompPtr, m_subtasksCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iinsp::CInspectionTaskComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_subtaskInspectionCompPtr&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -292,7 +326,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a32952dc3bf4a915c091e1b32b30107cf"></a><!-- doxytag: member="iinsp::CInspectionTaskComp::I_ASSIGN_TO" ref="a32952dc3bf4a915c091e1b32b30107cf" args="(m_generalParamsModelCompPtr, m_generalParamsCompPtr, false)" -->
+<a class="anchor" id="a8476d1be5baf4b4809bc396e3c2cf695"></a><!-- doxytag: member="iinsp::CInspectionTaskComp::I_ASSIGN_TO" ref="a8476d1be5baf4b4809bc396e3c2cf695" args="(m_generalParamsModelCompPtr, m_generalParamsCompPtr, true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -311,7 +345,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">false&#160;</td>
+          <td class="paramtype">true&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
