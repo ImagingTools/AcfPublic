@@ -2101,6 +2101,7 @@
   <compound kind="class">
     <name>iauth::CUser</name>
     <filename>classiauth_1_1_c_user.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CUser</name>

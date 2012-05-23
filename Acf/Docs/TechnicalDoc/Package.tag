@@ -208,7 +208,7 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polypoint_8h</filename>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CPolypoint</class>
     <namespace>i2d</namespace>
@@ -1047,6 +1047,7 @@
     <name>TComposedColor.h</name>
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>_t_composed_color_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_i_double_manip_8h" name="IDoubleManip.h" local="yes" imported="no">imath/IDoubleManip.h</includes>
@@ -1883,6 +1884,7 @@
     <name>TAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_attribute_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
@@ -2032,6 +2034,7 @@
     <name>TMultiAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_multi_attribute_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
@@ -8273,7 +8276,7 @@
   <compound kind="class">
     <name>i2d::CPolypoint</name>
     <filename>classi2d_1_1_c_polypoint.html</filename>
-    <base>iser::ISerializable</base>
+    <base virtualness="virtual">i2d::IObject2d</base>
     <member kind="function">
       <type></type>
       <name>CPolypoint</name>
@@ -8301,6 +8304,48 @@
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
       <anchor>aedd9eb3cdfd66e24ea7fd02dc7ff0442</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CVector2d</type>
+      <name>GetCenter</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a17d495856781a74182f986b04a969a5c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>MoveCenterTo</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a9beb63dc77f466e256779350a0f4ac70</anchor>
+      <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a902c1469a1610d8c7c07d944122a5d8a</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>af0d98aba8231c48b55bd6ad7e2013811</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>ad3c6bc6bfb666119ebd4ccbeddf3b668</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a41b73765b86e80db00f49eb9d3381f45</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

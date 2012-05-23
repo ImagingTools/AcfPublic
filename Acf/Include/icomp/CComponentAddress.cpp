@@ -23,6 +23,9 @@
 #include "icomp/CComponentAddress.h"
 
 
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
@@ -61,6 +64,8 @@ bool CComponentAddress::Serialize(iser::IArchive& archive)
 {
 	static iser::CArchiveTag packageIdTag("PackageId", "ID of package");
 	static iser::CArchiveTag componentIdTag("ComponentId", "ID of factory");
+
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
 
 	bool retVal = true;
 

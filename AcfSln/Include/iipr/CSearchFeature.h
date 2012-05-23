@@ -48,13 +48,11 @@ public:
 				const i2d::CVector2d& position,
 				double angle,
 				const i2d::CVector2d& scale,
-				int index = -1,
-				const QString& id = "");
+				int index = -1);
 
 	double GetAngle() const;
 	const i2d::CVector2d& GetScale() const;
 	int GetIndex() const;
-	const QString& GetId() const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
@@ -63,7 +61,6 @@ private:
 	double m_angle;
 	i2d::CVector2d m_scale;
 	int m_index;
-	QString m_id;
 };
 
 

@@ -124,6 +124,9 @@ void TMessageContainerWrap<Base>::AddChildContainer(IMessageContainer* childCont
 template <class Base>
 bool TMessageContainerWrap<Base>::Serialize(iser::IArchive& archive)
 {
+	static iser::CArchiveTag messagesTag("Messages", "List of messages");
+	static iser::CArchiveTag messageTag("Message", "Message");
+
 	if (!archive.IsStoring()){
 		return false;
 	}
@@ -131,9 +134,6 @@ bool TMessageContainerWrap<Base>::Serialize(iser::IArchive& archive)
 	bool retVal = true;
 
 	int messageCount = int(m_messages.size());
-
-	static iser::CArchiveTag messagesTag("Messages", "List of messages");
-	static iser::CArchiveTag messageTag("Message", "Message");
 
 	retVal = retVal && archive.BeginMultiTag(messagesTag, messageTag, messageCount);
 

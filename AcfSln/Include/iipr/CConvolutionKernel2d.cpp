@@ -24,6 +24,8 @@
 
 
 // ACF includes
+#include "istd/TChangeNotifier.h"
+
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
@@ -107,6 +109,8 @@ bool CConvolutionKernel2d::Serialize(iser::IArchive& archive)
 		retVal = retVal && archive.EndTag(valuesTag);
 	}
 	else{
+		istd::CChangeNotifier notifier(this);
+
 		istd::CIndex2d size(0, 0);
 
 		retVal = retVal && archive.BeginTag(sizeTag);

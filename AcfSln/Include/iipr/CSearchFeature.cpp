@@ -24,6 +24,8 @@
 
 
 // ACF includes
+#include "istd/TChangeNotifier.h"
+
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
@@ -39,13 +41,11 @@ CSearchFeature::CSearchFeature(
 			const i2d::CVector2d& position,
 			double angle,
 			const i2d::CVector2d& scale,
-			int index,
-			const QString& id)
+			int index)
 :	BaseClass(weight),
 	m_scale(scale),
 	m_angle(angle),
-	m_index(index),
-	m_id(id)
+	m_index(index)
 {
 	BaseClass::SetPosition(position);
 }
@@ -69,39 +69,31 @@ int CSearchFeature::GetIndex() const
 }
 
 
-const QString& CSearchFeature::GetId() const
-{
-	return m_id;
-}
-
-
 // reimplemented (iser::ISerializable)
 
 bool CSearchFeature::Serialize(iser::IArchive& archive)
 {
+	static iser::CArchiveTag angleTag("Angle", "Angle of found model");
+	static iser::CArchiveTag scaleTag("Scale", "Scale of found model");
+	static iser::CArchiveTag indexTag("Index", "Index of found model");
+
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
+
 	bool retVal = true;
 
 	retVal = retVal && BaseClass::Serialize(archive);
 
-	static iser::CArchiveTag angleTag("Angle", "Angle of found model");
 	retVal = retVal && archive.BeginTag(angleTag);
 	retVal = retVal && archive.Process(m_angle);
 	retVal = retVal && archive.EndTag(angleTag);
 
-	static iser::CArchiveTag scaleTag("Scale", "Scale of found model");
 	retVal = retVal && archive.BeginTag(scaleTag);
 	retVal = retVal && m_scale.Serialize(archive);
 	retVal = retVal && archive.EndTag(scaleTag);
 
-	static iser::CArchiveTag indexTag("Index", "Index of found model");
 	retVal = retVal && archive.BeginTag(indexTag);
 	retVal = retVal && archive.Process(m_index);
 	retVal = retVal && archive.EndTag(indexTag);
-
-	static iser::CArchiveTag idTag("Id", "Id of found model");
-	retVal = retVal && archive.BeginTag(idTag);
-	retVal = retVal && archive.Process(m_id);
-	retVal = retVal && archive.EndTag(idTag);
 
 	return retVal;
 }

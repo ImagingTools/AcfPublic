@@ -24,6 +24,10 @@
 #define iipr_TFeatureWrap_included
 
 
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+// IACF includes
 #include "iipr/CFeatureBase.h"
 
 
@@ -64,6 +68,8 @@ TFeatureWrap<BaseObject>::TFeatureWrap(double weight)
 template <class BaseObject>
 bool TFeatureWrap<BaseObject>::Serialize(iser::IArchive& archive)
 {
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
+
 	bool retVal = true;
 
 	retVal = retVal && BaseClass::Serialize(archive);

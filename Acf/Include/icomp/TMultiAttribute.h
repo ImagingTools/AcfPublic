@@ -28,6 +28,7 @@
 #include <QtCore/QVector>
 
 // ACF includes
+#include "istd/TChangeNotifier.h"
 #include "istd/CClassInfo.h"
 
 #include "iser/IArchive.h"
@@ -177,12 +178,14 @@ QByteArray TMultiAttribute<Value>::GetFactoryId() const
 template <typename Value>
 bool TMultiAttribute<Value>::Serialize(iser::IArchive& archive)
 {
-	bool retVal = true;
+	static iser::CArchiveTag valuesTag("Values", "List of attribute values");
+	static iser::CArchiveTag valueTag("Value", "Single Value");
 
 	bool isStoring = archive.IsStoring();
 
-	static iser::CArchiveTag valuesTag("Values", "List of attribute values");
-	static iser::CArchiveTag valueTag("Value", "Single Value");
+	istd::CChangeNotifier notifier(isStoring? NULL: this);
+
+	bool retVal = true;
 
 	int valuesCount = 0;
 

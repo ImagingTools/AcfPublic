@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2338
+          2301
         </Number>
         <Description>
           ACF
@@ -395,18 +395,10 @@
     </Interface>
     <Interface>
       <InterfaceId>
-        ibase::IMessageContainer
-      </InterfaceId>
-      <ComponentId>
-        LogModel
-      </ComponentId>
-    </Interface>
-    <Interface>
-      <InterfaceId>
         imod::IModel
       </InterfaceId>
       <ComponentId>
-        LogModel
+        LogGui
       </ComponentId>
     </Interface>
     <Interface>
@@ -435,10 +427,18 @@
     </Interface>
     <Interface>
       <InterfaceId>
+        iqtgui::IVisualStatusProvider
+      </InterfaceId>
+      <ComponentId>
+        LogGui
+      </ComponentId>
+    </Interface>
+    <Interface>
+      <InterfaceId>
         istd::IChangeable
       </InterfaceId>
       <ComponentId>
-        LogModel
+        LogGui
       </ComponentId>
     </Interface>
   </ExportedInterfaces>

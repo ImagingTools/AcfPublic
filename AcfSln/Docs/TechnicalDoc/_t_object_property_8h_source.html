@@ -162,40 +162,41 @@
 <a name="l00139"></a>00139 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00140"></a><a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">00140</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">TObjectProperty&lt;Value&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
 <a name="l00141"></a>00141 {
-<a name="l00142"></a>00142        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
+<a name="l00142"></a>00142        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> valueTag(<span class="stringliteral">&quot;Value&quot;</span>, <span class="stringliteral">&quot;Property value&quot;</span>);
 <a name="l00143"></a>00143 
-<a name="l00144"></a>00144        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> valueTag(<span class="stringliteral">&quot;Value&quot;</span>, <span class="stringliteral">&quot;Property value&quot;</span>);
-<a name="l00145"></a>00145        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147        retVal = retVal &amp;&amp; m_value.Serialize(archive);
-<a name="l00148"></a>00148 
-<a name="l00149"></a>00149        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
-<a name="l00150"></a>00150 
-<a name="l00151"></a>00151        <span class="keywordflow">return</span> retVal;
-<a name="l00152"></a>00152 }
-<a name="l00153"></a>00153 
+<a name="l00144"></a>00144        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> notifier(archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">IsStoring</a>()? <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
+<a name="l00149"></a>00149        retVal = retVal &amp;&amp; m_value.Serialize(archive);
+<a name="l00150"></a>00150        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152        <span class="keywordflow">return</span> retVal;
+<a name="l00153"></a>00153 }
 <a name="l00154"></a>00154 
-<a name="l00155"></a>00155 <span class="comment">// static methods</span>
-<a name="l00156"></a>00156 
-<a name="l00157"></a>00157 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00158"></a><a class="code" href="classiprop_1_1_t_object_property.html#a44d2daef0c68b35461bd28bb577248a4">00158</a> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprop_1_1_t_object_property.html#a44d2daef0c68b35461bd28bb577248a4">TObjectProperty&lt;Value&gt;::GetTypeName</a>()
-<a name="l00159"></a>00159 {
-<a name="l00160"></a>00160        <span class="keywordflow">return</span> s_typeName;
-<a name="l00161"></a>00161 }
-<a name="l00162"></a>00162 
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156 <span class="comment">// static methods</span>
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00159"></a><a class="code" href="classiprop_1_1_t_object_property.html#a44d2daef0c68b35461bd28bb577248a4">00159</a> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprop_1_1_t_object_property.html#a44d2daef0c68b35461bd28bb577248a4">TObjectProperty&lt;Value&gt;::GetTypeName</a>()
+<a name="l00160"></a>00160 {
+<a name="l00161"></a>00161        <span class="keywordflow">return</span> s_typeName;
+<a name="l00162"></a>00162 }
 <a name="l00163"></a>00163 
-<a name="l00164"></a>00164 <span class="comment">// private static properties</span>
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00167"></a>00167 <span class="keyword">const</span> QByteArray <a class="code" href="classiprop_1_1_t_object_property.html" title="Template implementation of an atomic property.">TObjectProperty&lt;Value&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_object_property.html" title="Template implementation of an atomic property.">TObjectProperty&lt;Value&gt;</a> &gt;());
-<a name="l00168"></a>00168 
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165 <span class="comment">// private static properties</span>
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00168"></a>00168 <span class="keyword">const</span> QByteArray <a class="code" href="classiprop_1_1_t_object_property.html" title="Template implementation of an atomic property.">TObjectProperty&lt;Value&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_object_property.html" title="Template implementation of an atomic property.">TObjectProperty&lt;Value&gt;</a> &gt;());
 <a name="l00169"></a>00169 
-<a name="l00170"></a>00170 } <span class="comment">// namespace iprop</span>
-<a name="l00171"></a>00171 
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171 } <span class="comment">// namespace iprop</span>
 <a name="l00172"></a>00172 
-<a name="l00173"></a>00173 <span class="preprocessor">#endif // !iprop_TObjectProperty_included</span>
-<a name="l00174"></a>00174 <span class="preprocessor"></span>
-<a name="l00175"></a>00175 
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174 <span class="preprocessor">#endif // !iprop_TObjectProperty_included</span>
+<a name="l00175"></a>00175 <span class="preprocessor"></span>
+<a name="l00176"></a>00176 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

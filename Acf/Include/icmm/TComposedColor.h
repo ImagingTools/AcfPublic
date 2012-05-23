@@ -25,6 +25,8 @@
 
 
 // ACF includes
+#include "istd/TChangeNotifier.h"
+
 #include "iser/ISerializable.h"
 #include "iser/CArchiveTag.h"
 
@@ -384,10 +386,12 @@ void TComposedColor<Size>::GetNormalized(TComposedColor<Size>& result) const
 template <int Size>
 bool TComposedColor<Size>::Serialize(iser::IArchive& archive)
 {
-	bool retVal = true;
-
 	static iser::CArchiveTag colorComponentsTag("ColorComponents", "List of color components");
 	static iser::CArchiveTag componentTag("Component", "Single component");
+
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
+
+	bool retVal = true;
 
 	int elementsCount = BaseClass::GetElementsCount();
 

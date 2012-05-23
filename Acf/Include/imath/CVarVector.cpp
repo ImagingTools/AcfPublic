@@ -134,12 +134,14 @@ bool CVarVector::GetNormalized(CVarVector& result, double length) const
 
 bool CVarVector::Serialize(iser::IArchive& archive)
 {
+	static iser::CArchiveTag elementsTag("Elements", "List of vector element");
+	static iser::CArchiveTag elementTag("Element", "Single vector element");
+
+	bool isStoring = archive.IsStoring();
+
 	bool retVal = true;
 
 	int elementsCount = GetElementsCount();
-
-	static iser::CArchiveTag elementsTag("Elements", "List of vector element");
-	static iser::CArchiveTag elementTag("Element", "Single vector element");
 
 	retVal = retVal && archive.BeginMultiTag(elementsTag, elementTag, elementsCount);
 
@@ -147,7 +149,7 @@ bool CVarVector::Serialize(iser::IArchive& archive)
 		return false;
 	}
 
-	if (!archive.IsStoring()){
+	if (!isStoring){
 		m_elements.resize(elementsCount);
 	}
 

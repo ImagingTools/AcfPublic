@@ -163,49 +163,50 @@
 <a name="l00140"></a>00140 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00141"></a><a class="code" href="classiprop_1_1_t_property.html#a035a722c8060bd11d04883aebf697be4">00141</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_property.html#a035a722c8060bd11d04883aebf697be4">TProperty&lt;Value&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
 <a name="l00142"></a>00142 {
-<a name="l00143"></a>00143        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
+<a name="l00143"></a>00143        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> valueTag(<span class="stringliteral">&quot;Value&quot;</span>, <span class="stringliteral">&quot;Property value&quot;</span>);
 <a name="l00144"></a>00144 
-<a name="l00145"></a>00145        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> valueTag(<span class="stringliteral">&quot;Value&quot;</span>, <span class="stringliteral">&quot;Property value&quot;</span>);
-<a name="l00146"></a>00146        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
-<a name="l00147"></a>00147 
-<a name="l00148"></a>00148        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(m_value);
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
-<a name="l00151"></a>00151 
-<a name="l00152"></a>00152        <span class="keywordflow">return</span> retVal;
-<a name="l00153"></a>00153 }
-<a name="l00154"></a>00154 
+<a name="l00145"></a>00145        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> notifier(archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">IsStoring</a>()? <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
+<a name="l00150"></a>00150        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(m_value);
+<a name="l00151"></a>00151        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153        <span class="keywordflow">return</span> retVal;
+<a name="l00154"></a>00154 }
 <a name="l00155"></a>00155 
-<a name="l00156"></a>00156 <span class="comment">// static methods</span>
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00159"></a><a class="code" href="classiprop_1_1_t_property.html#ac379a7694c670b782ee473975496a562">00159</a> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprop_1_1_t_property.html#ac379a7694c670b782ee473975496a562">TProperty&lt;Value&gt;::GetTypeName</a>()
-<a name="l00160"></a>00160 {
-<a name="l00161"></a>00161        <span class="keywordflow">return</span> s_typeName;
-<a name="l00162"></a>00162 }
-<a name="l00163"></a>00163 
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157 <span class="comment">// static methods</span>
+<a name="l00158"></a>00158 
+<a name="l00159"></a>00159 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00160"></a><a class="code" href="classiprop_1_1_t_property.html#ac379a7694c670b782ee473975496a562">00160</a> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprop_1_1_t_property.html#ac379a7694c670b782ee473975496a562">TProperty&lt;Value&gt;::GetTypeName</a>()
+<a name="l00161"></a>00161 {
+<a name="l00162"></a>00162        <span class="keywordflow">return</span> s_typeName;
+<a name="l00163"></a>00163 }
 <a name="l00164"></a>00164 
-<a name="l00165"></a>00165 <span class="comment">// private static properties</span>
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00168"></a>00168 <span class="keyword">const</span> QByteArray <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;Value&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;Value&gt;</a> &gt;());
-<a name="l00169"></a>00169 
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166 <span class="comment">// private static properties</span>
+<a name="l00167"></a>00167 
+<a name="l00168"></a>00168 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00169"></a>00169 <span class="keyword">const</span> QByteArray <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;Value&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;Value&gt;</a> &gt;());
 <a name="l00170"></a>00170 
-<a name="l00171"></a>00171 <span class="comment">// typedefs</span>
-<a name="l00172"></a>00172 
-<a name="l00173"></a><a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">00173</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">CDoubleProperty</a>;
-<a name="l00174"></a><a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">00174</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">CBoolProperty</a>;
-<a name="l00175"></a><a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">00175</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">CIntProperty</a>;
-<a name="l00176"></a><a class="code" href="namespaceiprop.html#a5b6aa25962ebcf89eb3b3e41c20de2e1">00176</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;QString&gt;</a> <a class="code" href="namespaceiprop.html#a5b6aa25962ebcf89eb3b3e41c20de2e1">CStringProperty</a>;
-<a name="l00177"></a><a class="code" href="namespaceiprop.html#ae3d8ffc89d60cdbbf33e654d0ce03140">00177</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;QByteArray&gt;</a> <a class="code" href="namespaceiprop.html#ae3d8ffc89d60cdbbf33e654d0ce03140">CStdStringProperty</a>;
-<a name="l00178"></a>00178 
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172 <span class="comment">// typedefs</span>
+<a name="l00173"></a>00173 
+<a name="l00174"></a><a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">00174</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">CDoubleProperty</a>;
+<a name="l00175"></a><a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">00175</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">CBoolProperty</a>;
+<a name="l00176"></a><a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">00176</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">CIntProperty</a>;
+<a name="l00177"></a><a class="code" href="namespaceiprop.html#a5b6aa25962ebcf89eb3b3e41c20de2e1">00177</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;QString&gt;</a> <a class="code" href="namespaceiprop.html#a5b6aa25962ebcf89eb3b3e41c20de2e1">CStringProperty</a>;
+<a name="l00178"></a><a class="code" href="namespaceiprop.html#ae3d8ffc89d60cdbbf33e654d0ce03140">00178</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;QByteArray&gt;</a> <a class="code" href="namespaceiprop.html#ae3d8ffc89d60cdbbf33e654d0ce03140">CStdStringProperty</a>;
 <a name="l00179"></a>00179 
-<a name="l00180"></a>00180 } <span class="comment">// namespace iprop</span>
-<a name="l00181"></a>00181 
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 } <span class="comment">// namespace iprop</span>
 <a name="l00182"></a>00182 
-<a name="l00183"></a>00183 <span class="preprocessor">#endif // !iprop_TProperty_included</span>
-<a name="l00184"></a>00184 <span class="preprocessor"></span>
-<a name="l00185"></a>00185 
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184 <span class="preprocessor">#endif // !iprop_TProperty_included</span>
+<a name="l00185"></a>00185 <span class="preprocessor"></span>
+<a name="l00186"></a>00186 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

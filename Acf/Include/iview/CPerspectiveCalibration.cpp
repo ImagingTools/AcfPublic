@@ -24,6 +24,8 @@
 
 
 // ACF includes
+#include "istd/TChangeNotifier.h"
+
 #include "imath/CVarMatrix.h"
 
 #include "ibase/CSize.h"
@@ -353,6 +355,8 @@ i2d::CVector2d CPerspectiveCalibration::GetValueAt(const i2d::CVector2d& argumen
 
 bool CPerspectiveCalibration::Serialize(iser::IArchive& archive)
 {
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
+
 	bool result = m_logAxisX.Serialize(archive);
 	result = result && m_logAxisY.Serialize(archive);
 	result = result && m_logCenter.Serialize(archive);
