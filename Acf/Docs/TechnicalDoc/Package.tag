@@ -34410,6 +34410,36 @@
       <anchor>abb815f430a25cc753ce2119345c97e99</anchor>
       <arglist>(IViewProvider *providerPtr)</arglist>
     </member>
+    <member kind="enumeration">
+      <name>ExtenderMode</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>aaf6d6a099bfcc800c2f8b66baa3724bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_COMBINE</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>aaf6d6a099bfcc800c2f8b66baa3724bbad409221fe43adab183cd5bfea781c664</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_SLAVE_DIRECT_ONLY</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>aaf6d6a099bfcc800c2f8b66baa3724bba4a62bacf6a267b8581b5f65b2c59a704</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_OWN_SHAPES_INDIRECT</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>aaf6d6a099bfcc800c2f8b66baa3724bba414d3aa9f7d9b4e360055e8535d4a31c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_SLAVE_DIRECT_ONLY_OWN_SHAPES_INDIRECT</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>aaf6d6a099bfcc800c2f8b66baa3724bba9f2a48a348ff8a8c77ab0fd106494083</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef" protection="protected">
       <type>istd::TPointerVector&lt; iview::IShape &gt;</type>
       <name>Shapes</name>

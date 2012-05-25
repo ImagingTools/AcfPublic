@@ -118,7 +118,7 @@ void CTabContainerGuiComp::OnGuiCreated()
 						(guiIndex < m_slaveWidgetsModelCompPtr.GetCount())){
 				imod::IModel* modelPtr = m_slaveWidgetsModelCompPtr[guiIndex];
 				if ((m_slaveWidgetsVisualCompPtr[guiIndex] != NULL) && (modelPtr != NULL)){
-					RegisterModel(modelPtr);
+					RegisterModel(modelPtr, guiIndex);
 				}
 			}
 		}
@@ -159,7 +159,9 @@ void CTabContainerGuiComp::OnGuiDestroyed()
 
 void CTabContainerGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	UpdateVisualElements();
+	if (IsGuiCreated()){
+		UpdateVisualElements();
+	}
 }
 
 

@@ -82,7 +82,7 @@ void CComposedGuiComp::OnGuiCreated()
 	QWidget* widgetPtr = GetWidget();
 	I_ASSERT(widgetPtr != NULL);	// GUI was created, main widget must be present
 
-	QLayout* layoutPtr = NULL;
+	QBoxLayout* layoutPtr = NULL;
 	if (*m_useHorizontalLayoutAttrPtr){
 		layoutPtr = new QHBoxLayout(widgetPtr);
 	}
@@ -102,7 +102,7 @@ void CComposedGuiComp::OnGuiCreated()
 
 			if (guiPtr != NULL){
 				QWidget* panelPtr = new QWidget(widgetPtr);
-				QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
+				QBoxLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
 				panelLayoutPtr->setContentsMargins(6, 0, 6, 0);
 				QString name;
 				if (i < m_namesAttrPtr.GetCount()){
@@ -117,6 +117,10 @@ void CComposedGuiComp::OnGuiCreated()
 				QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
 				panelLayoutPtr->addItem(spacerPtr);
+
+				if (*m_insertSpacerAttrPtr){
+					panelLayoutPtr->insertStretch(-1);
+				}
 			}
 		}
 
@@ -132,7 +136,7 @@ void CComposedGuiComp::OnGuiCreated()
 
 			if (guiPtr != NULL){
 				QWidget* panelPtr = new QWidget(tabWidgetPtr);
-				QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
+				QBoxLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
 				QString name;
 				if (i < m_namesAttrPtr.GetCount()){
 					name = m_namesAttrPtr[i];
@@ -146,6 +150,10 @@ void CComposedGuiComp::OnGuiCreated()
 				QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
 				panelLayoutPtr->addItem(spacerPtr);
+
+				if (*m_insertSpacerAttrPtr){
+					panelLayoutPtr->insertStretch(-1);
+				}
 			}
 		}
 
@@ -194,6 +202,10 @@ void CComposedGuiComp::OnGuiCreated()
 			if (guiPtr != NULL){
 				guiPtr->CreateGui(elementParentPtr);
 			}
+		}
+
+		if (*m_insertSpacerAttrPtr){
+			layoutPtr->insertStretch(-1);
 		}
 	}
 

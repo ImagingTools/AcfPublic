@@ -12228,8 +12228,15 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>abf1aac9d43bdb0ae48cfc62cba7a249b</anchor>
-      <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetObserverCompPtr, false)</arglist>
+      <anchor>a5e276cdf38b14ab332ff4ca2f85da2c9</anchor>
+      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a732f6395c68bbc94e97905d1daa91108</anchor>
+      <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
