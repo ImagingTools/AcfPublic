@@ -345,10 +345,10 @@ void CPolygonCalibrationShape::DrawCurve(QPainter& drawContext) const
 
 				point1 = point2;
 			}
+
+			drawContext.restore();
 		}
 	}
-
-	drawContext.restore();
 }
 
 
@@ -378,6 +378,8 @@ void CPolygonCalibrationShape::DrawArea(QPainter& drawContext) const
 				calib.GetInvPositionAt(polygon.GetNode(i), viewPos);
 				m_screenPoints[i] = iqt::GetQPoint(transform.GetScreenPosition(viewPos));
 			}
+
+			drawContext.save();
 
 			if (IsSelected()){
 				drawContext.setBrush(colorShema.GetBrush(IColorShema::SB_HALF_TRANSPARENT));
