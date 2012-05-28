@@ -197,8 +197,6 @@ private:
 
 	bool m_isBkActive;
 
-	bool m_isBlocked;
-
 	friend class CViewport;
 };
 

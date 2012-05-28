@@ -227,16 +227,10 @@ void CConsoleBase::SetMmButtonVisible(bool state)
 
 void CConsoleBase::UpdateView()
 {
-	if (m_isBlocked){
-		m_isBlocked = false;
-		return;
-	}
-
 	CViewport& view = GetViewRef();
 	if (m_isZoomToFit){
 		m_storedTransform = view.GetTransform();
 		UpdateComponentsPosition();
-		m_isBlocked = true;
 		view.UpdateFitTransform();
 	}
 
@@ -263,7 +257,6 @@ void CConsoleBase::Init()
 	m_isBkActive = false;
 	m_isZoomToFit = false;
 	m_fitMode = FM_BOTH;
-	m_isBlocked = false;
 }
 
 
