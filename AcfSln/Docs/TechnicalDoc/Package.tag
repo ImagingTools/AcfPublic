@@ -4736,6 +4736,7 @@
     <filename>classiinsp_1_1_c_inspection_task_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::IInspectionTask</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -4760,6 +4761,13 @@
       <name>BaseClass</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a2ef04c15176b03787f0f6c3bc66f7825</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelBridgeBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a12198bff1d69b95db90f8783b59da116</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -4815,8 +4823,22 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a805a1029cebadc8671793742043e042c</anchor>
+      <arglist>(m_subtaskInfoProviderCompPtr, m_subtasksCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a8476d1be5baf4b4809bc396e3c2cf695</anchor>
       <arglist>(m_generalParamsModelCompPtr, m_generalParamsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CInspectionTaskComp</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a3ee26523129b1c7e4814a3b3d39f4e11</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -4867,6 +4889,55 @@
       <anchor>ae17f09b830020cb2017119e8a57b262a</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QDateTime</type>
+      <name>GetInformationTimeStamp</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a82415e97a0cd28925bbf702fe04520ea</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual InformationCategory</type>
+      <name>GetInformationCategory</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a4383fb2fbc88dec48b08f219ebb6f193</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationId</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a28f1e7c7941512e8253b258da4e708eb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationDescription</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ad54b4d8cecb3b4a39132dfac9a1abec8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationSource</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>adb4c454612b5de808cfc720901a84169</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationFlags</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a136a36971cb1ece1303a522dfffefe7c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureStatusKnown</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a0e2c095f7d9adbfd5483b54cd550d84c</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -4880,6 +4951,13 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a278e42c65aded923511687058ca5de3c</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>af7ff85eeaf73e1b17c3054716c241df0</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5720,10 +5798,10 @@
     <filename>classiipr_1_1_c_image_crop_processor_comp.html</filename>
     <base>iipr::CImageRegionProcessorCompBase</base>
     <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
+      <type>CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
-      <anchor>a584cdfe173a47336e27482953b2f9489</anchor>
+      <anchor>a8bd0f4bb480440da7bd9dd13f61ccf9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
