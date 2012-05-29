@@ -29,7 +29,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_acquisition_8h.html">icam/IBitmapAcquisition.h</a>&quot;</span>
@@ -40,11 +40,11 @@
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
 <a name="l00020"></a><a class="code" href="classicam_1_1_c_camera_delegator_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_c_camera_delegator_base.html" title="Implementation of bitmap acquisition delegating all calls to some slave object.">CCameraDelegatorBase</a>:
-<a name="l00021"></a>00021                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00021"></a>00021                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
 <a name="l00022"></a>00022                      <span class="keyword">public</span> <a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00025"></a><a class="code" href="classicam_1_1_c_camera_delegator_base.html#a07c04406f339c50d184593895968adba">00025</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classicam_1_1_c_camera_delegator_base.html#a07c04406f339c50d184593895968adba">BaseClass</a>;
+<a name="l00025"></a><a class="code" href="classicam_1_1_c_camera_delegator_base.html#a039daebcd10e8851774315cdb8ae410d">00025</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classicam_1_1_c_camera_delegator_base.html#a039daebcd10e8851774315cdb8ae410d">BaseClass</a>;
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classicam_1_1_c_camera_delegator_base.html" title="Implementation of bitmap acquisition delegating all calls to some slave object.">CCameraDelegatorBase</a>);
 <a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>);

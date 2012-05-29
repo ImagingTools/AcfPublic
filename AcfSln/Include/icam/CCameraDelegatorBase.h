@@ -44,7 +44,7 @@ class CCameraDelegatorBase:
 			public IBitmapAcquisition
 {
 public:
-	typedef icomp::CComponentBase BaseClass;
+	typedef ibase::CLoggerComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CCameraDelegatorBase);
 		I_REGISTER_INTERFACE(IBitmapAcquisition);

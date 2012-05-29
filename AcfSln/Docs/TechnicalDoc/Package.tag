@@ -2488,13 +2488,13 @@
   <compound kind="class">
     <name>icam::CCameraDelegatorBase</name>
     <filename>classicam_1_1_c_camera_delegator_base.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base>icam::IBitmapAcquisition</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>a07c04406f339c50d184593895968adba</anchor>
+      <anchor>a039daebcd10e8851774315cdb8ae410d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
