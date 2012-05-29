@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include "ibase/TLoggerCompWrap.h"
 
 // ACF-Solutions includes
 #include "icam/IBitmapAcquisition.h"
@@ -40,7 +40,7 @@ namespace icam
 	It is used to provide cascades of camera implementations.
 */
 class CCameraDelegatorBase:
-			public icomp::CComponentBase,
+			public ibase::CLoggerComponentBase,
 			public IBitmapAcquisition
 {
 public:
