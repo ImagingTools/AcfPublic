@@ -480,7 +480,7 @@ bool CGenicamCameraComp::SynchronizeCameraParams(const iprm::IParamsSet* paramsP
 				if (		!deviceInfo.devicePtr->SetIntegerNodeValue("Width", int(roiParamsPtr->GetWidth())) ||
 							!deviceInfo.devicePtr->SetIntegerNodeValue("Height", int(roiParamsPtr->GetHeight())) ||
 							!deviceInfo.devicePtr->SetIntegerNodeValue("OffsetX", int(roiParamsPtr->GetLeft())) ||
-							!deviceInfo.devicePtr->SetIntegerNodeValue("OffsetY", int(roiParamsPtr->GetHeight()))){
+							!deviceInfo.devicePtr->SetIntegerNodeValue("OffsetY", int(roiParamsPtr->GetTop()))){
 					SendWarningMessage(MI_CANNOT_SET, tr("Camera %1: cannot set ROI").arg(deviceInfo.cameraId));
 				}
 
