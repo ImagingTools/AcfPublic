@@ -32,13 +32,12 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::CToolBarWidgetGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CToolBarWidgetGuiComp" --><!-- doxytag: inherits="TGuiComponentBase&lt; QToolBar &gt;,iqtgui::IMainWindowComponent" -->
+<!-- doxytag: class="iqtgui::CToolBarWidgetGuiComp" --><!-- doxytag: inherits="iqtgui::CToolBarGuiCompBase" -->
 <p>Component for construction of a tool bar with an inserted widget.  
  <a href="classiqtgui_1_1_c_tool_bar_widget_gui_comp.html#details">More...</a></p>
 
@@ -49,6 +48,7 @@ Inheritance diagram for iqtgui::CToolBarWidgetGuiComp:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_tool_bar_widget_gui_comp.png" usemap="#iqtgui::CToolBarWidgetGuiComp_map" alt=""/>
   <map id="iqtgui::CToolBarWidgetGuiComp_map" name="iqtgui::CToolBarWidgetGuiComp_map">
+<area href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html" title="Basic implementation of a tool bar component." alt="iqtgui::CToolBarGuiCompBase" shape="rect" coords="378,280,620,304"/>
 <area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; QToolBar &gt;" shape="rect" coords="252,224,494,248"/>
 <area href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on..." alt="iqtgui::IMainWindowComponent" shape="rect" coords="504,224,746,248"/>
 <area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="252,168,494,192"/>
@@ -66,15 +66,7 @@ Inheritance diagram for iqtgui::CToolBarWidgetGuiComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a><br class="typebreak"/>
-&lt; QToolBar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_widget_gui_comp.html#ac3f7e9491da6634496091afe86e69552">BaseClass</a></td></tr>
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_widget_gui_comp.html#af5b54d265417cf7f5fd81d2746969cb6">AddToMainWindow</a> (QMainWindow &amp;mainWindow)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add this component to main window.  <a href="#af5b54d265417cf7f5fd81d2746969cb6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_widget_gui_comp.html#afe82b19d45cd5a131755c71cc69940b2">RemoveFromMainWindow</a> (QMainWindow &amp;mainWindow)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove this component from main window.  <a href="#afe82b19d45cd5a131755c71cc69940b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html">CToolBarGuiCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_widget_gui_comp.html#ac113ff87da63b4d68e806dbca18249a2">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_widget_gui_comp.html#aca8cae38800d73ed6c368ad23e130581">OnGuiCreated</a> ()</td></tr>
@@ -85,47 +77,26 @@ Protected Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component for construction of a tool bar with an inserted widget. </p>
 
-<p>Definition at line <a class="el" href="_c_tool_bar_widget_gui_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_tool_bar_widget_gui_comp_8h_source.html">CToolBarWidgetGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_tool_bar_widget_gui_comp_8h_source.html#l00016">16</a> of file <a class="el" href="_c_tool_bar_widget_gui_comp_8h_source.html">CToolBarWidgetGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="ac3f7e9491da6634496091afe86e69552"></a><!-- doxytag: member="iqtgui::CToolBarWidgetGuiComp::BaseClass" ref="ac3f7e9491da6634496091afe86e69552" args="" -->
+<a class="anchor" id="ac113ff87da63b4d68e806dbca18249a2"></a><!-- doxytag: member="iqtgui::CToolBarWidgetGuiComp::BaseClass" ref="ac113ff87da63b4d68e806dbca18249a2" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a>&lt;QToolBar&gt; <a class="el" href="classiqtgui_1_1_c_tool_bar_widget_gui_comp.html#ac3f7e9491da6634496091afe86e69552">iqtgui::CToolBarWidgetGuiComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html">CToolBarGuiCompBase</a> <a class="el" href="classiqtgui_1_1_c_tool_bar_widget_gui_comp.html#ac113ff87da63b4d68e806dbca18249a2">iqtgui::CToolBarWidgetGuiComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_component_base.html#a71d48e5e9425438c80e0d95aa88fa782">iqtgui::TGuiComponentBase&lt; QToolBar &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a6dee28458fe443fac94b83f8a265265e">iqtgui::CToolBarGuiCompBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_tool_bar_widget_gui_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_tool_bar_widget_gui_comp_8h_source.html">CToolBarWidgetGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_tool_bar_widget_gui_comp_8h_source.html#l00019">19</a> of file <a class="el" href="_c_tool_bar_widget_gui_comp_8h_source.html">CToolBarWidgetGuiComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af5b54d265417cf7f5fd81d2746969cb6"></a><!-- doxytag: member="iqtgui::CToolBarWidgetGuiComp::AddToMainWindow" ref="af5b54d265417cf7f5fd81d2746969cb6" args="(QMainWindow &amp;mainWindow)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iqtgui::CToolBarWidgetGuiComp::AddToMainWindow </td>
-          <td>(</td>
-          <td class="paramtype">QMainWindow &amp;&#160;</td>
-          <td class="paramname"><em>mainWindow</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Add this component to main window. </p>
-
-<p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#a3834e70dd62781859c5d5ffa5db0c8f3">iqtgui::IMainWindowComponent</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aca8cae38800d73ed6c368ad23e130581"></a><!-- doxytag: member="iqtgui::CToolBarWidgetGuiComp::OnGuiCreated" ref="aca8cae38800d73ed6c368ad23e130581" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +113,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called just after GUI is initialized. </p>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ab66ecf3d13faa48018f89d871bd32ae3">iqtgui::CGuiComponentBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a742e2309d8ca71c36cb368fca9e0922c">iqtgui::CToolBarGuiCompBase</a>.</p>
 
 </div>
 </div>
@@ -163,27 +134,6 @@ Protected Member Functions</h2></td></tr>
 <p>Called just before GUI is released. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a71e5a19907ff118fe8b99280b86c16ff">iqtgui::CGuiComponentBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afe82b19d45cd5a131755c71cc69940b2"></a><!-- doxytag: member="iqtgui::CToolBarWidgetGuiComp::RemoveFromMainWindow" ref="afe82b19d45cd5a131755c71cc69940b2" args="(QMainWindow &amp;mainWindow)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iqtgui::CToolBarWidgetGuiComp::RemoveFromMainWindow </td>
-          <td>(</td>
-          <td class="paramtype">QMainWindow &amp;&#160;</td>
-          <td class="paramname"><em>mainWindow</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Remove this component from main window. </p>
-
-<p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#a4abeb613d32398f5b5908b1cde3c2544">iqtgui::IMainWindowComponent</a>.</p>
 
 </div>
 </div>

@@ -92,6 +92,8 @@ void CSnapImageGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 		istd::TDelPtr<iview::CImageShape> shapePtr(new iview::CImageShape(lookupTablePtr));
 		if (shapePtr != NULL){
 			if (m_bitmapModelCompPtr->AttachObserver(shapePtr.GetPtr())){
+				shapePtr->AssignToLayer(iview::IViewLayer::LT_BACKGROUND);
+			
 				result.PushBack(shapePtr.PopPtr());
 			}
 		}

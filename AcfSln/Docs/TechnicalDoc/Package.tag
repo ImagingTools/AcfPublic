@@ -13173,6 +13173,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CNumericParamsGuiComp</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>adbc80b0da300f07523bd4283c360b22e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>

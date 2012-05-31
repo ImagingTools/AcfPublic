@@ -69,32 +69,34 @@
 <a name="l00043"></a>00043               I_ASSIGN(m_isSliderVisibleAttrPtr, <span class="stringliteral">&quot;SliderVisible&quot;</span>, <span class="stringliteral">&quot;Enables slider control&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
 <a name="l00044"></a>00044        I_END_COMPONENT;
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#a940f409ec2d5182ebc44d18d676ad8f7">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">protected</span>:
-<a name="l00050"></a>00050        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#a4f438f3020d29784b1221a7fc09357e1">OnGuiDestroyed</a>();
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#a63dc4b15868a9b8127ed99b95c71d04d">UpdateGui</a>(<span class="keywordtype">int</span> changeFlags);
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">public</span> Q_SLOTS:
-<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#acef378fdfa0f680884dc098cb4110519">OnValueChanged</a>();
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keyword">private</span>:
-<a name="l00060"></a>00060        I_ATTR(<span class="keywordtype">bool</span>, m_isSliderVisibleAttrPtr);
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;CNumericValueWidget&gt;</a> m_valueWidgets;
-<a name="l00063"></a>00063 };
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 } <span class="comment">// namespace iqtmeas</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#adbc80b0da300f07523bd4283c360b22e">~CNumericParamsGuiComp</a>();
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048        <span class="comment">// reimplemented (imod::IModelEditor)</span>
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#a940f409ec2d5182ebc44d18d676ad8f7">UpdateModel</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="keyword">protected</span>:
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#a4f438f3020d29784b1221a7fc09357e1">OnGuiDestroyed</a>();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#a63dc4b15868a9b8127ed99b95c71d04d">UpdateGui</a>(<span class="keywordtype">int</span> changeFlags);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 <span class="keyword">public</span> Q_SLOTS:
+<a name="l00059"></a>00059        <span class="keywordtype">void</span> <a class="code" href="classiqtmeas_1_1_c_numeric_params_gui_comp.html#acef378fdfa0f680884dc098cb4110519">OnValueChanged</a>();
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="keyword">private</span>:
+<a name="l00062"></a>00062        I_ATTR(<span class="keywordtype">bool</span>, m_isSliderVisibleAttrPtr);
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;CNumericValueWidget&gt;</a> m_valueWidgets;
+<a name="l00065"></a>00065 };
+<a name="l00066"></a>00066 
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="preprocessor">#endif // !iqtmeas_CNumericParamsGuiComp_included</span>
-<a name="l00070"></a>00070 <span class="preprocessor"></span>
-<a name="l00071"></a>00071 
+<a name="l00068"></a>00068 } <span class="comment">// namespace iqtmeas</span>
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#endif // !iqtmeas_CNumericParamsGuiComp_included</span>
+<a name="l00072"></a>00072 <span class="preprocessor"></span>
+<a name="l00073"></a>00073 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

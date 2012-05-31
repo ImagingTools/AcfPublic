@@ -580,6 +580,7 @@ void CGenicamCameraComp::OnComponentCreated()
 	gige::DevicesList devicesList = s_cameraSigleton.gigeApi->GetAllDevices();
 
 	int devicesCount = int(devicesList.size());
+	m_deviceInfos.SetCount(devicesCount);
 
 	QMap<QString, int> sortedDeviceList;
 	for (int i = 0; i < devicesCount; ++i){
@@ -614,7 +615,7 @@ void CGenicamCameraComp::OnComponentCreated()
 			deviceInfoPtr->EnsureConnected();
 		}
 
-		m_deviceInfos.PushBack(deviceInfoPtr.PopPtr());
+		m_deviceInfos.SetElementAt(deviceIndex, deviceInfoPtr.PopPtr());
 	}
 }
 

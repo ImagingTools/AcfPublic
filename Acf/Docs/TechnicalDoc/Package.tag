@@ -3738,6 +3738,15 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CExtendedConsoleGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_extended_console_gui_comp_8h</filename>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <class kind="class">iqt2d::CExtendedConsoleGuiComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CImageViewComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_image_view_comp_8h</filename>
@@ -4052,6 +4061,25 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CCommandsToolBarGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_commands_tool_bar_gui_comp_8h</filename>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_c_tool_bar_gui_comp_base_8h" name="CToolBarGuiCompBase.h" local="yes" imported="no">iqtgui/CToolBarGuiCompBase.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">iqtgui::CCommandsToolBarGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCommandTools.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_command_tools_8h</filename>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">iqtgui::CCommandTools</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComposedGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_composed_gui_comp_8h</filename>
@@ -4274,7 +4302,7 @@
     <includes id="_i_dialog_8h" name="IDialog.h" local="yes" imported="no">iqtgui/IDialog.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <includes id="_c_command_tools_8h" name="CCommandTools.h" local="yes" imported="no">iqtgui/CCommandTools.h</includes>
     <includes id="_c_gui_component_dialog_8h" name="CGuiComponentDialog.h" local="yes" imported="no">iqtgui/CGuiComponentDialog.h</includes>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
     <namespace>iqtgui</namespace>
@@ -4327,11 +4355,19 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CToolBarGuiCompBase.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_tool_bar_gui_comp_base_8h</filename>
+    <includes id="_i_main_window_component_8h" name="IMainWindowComponent.h" local="yes" imported="no">iqtgui/IMainWindowComponent.h</includes>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <class kind="class">iqtgui::CToolBarGuiCompBase</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CToolBarWidgetGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_tool_bar_widget_gui_comp_8h</filename>
-    <includes id="_i_main_window_component_8h" name="IMainWindowComponent.h" local="yes" imported="no">iqtgui/IMainWindowComponent.h</includes>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_c_tool_bar_gui_comp_base_8h" name="CToolBarGuiCompBase.h" local="yes" imported="no">iqtgui/CToolBarGuiCompBase.h</includes>
     <class kind="class">iqtgui::CToolBarWidgetGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -29845,12 +29881,12 @@
     <name>iprm::TParamsPtr</name>
     <filename>classiprm_1_1_t_params_ptr.html</filename>
     <templarg></templarg>
-    <base>TPointerBase&lt; ParameterInterace &gt;</base>
+    <base>TPointerBase&lt; const ParameterInterace &gt;</base>
     <member kind="typedef">
-      <type>istd::TPointerBase&lt; ParameterInterace &gt;</type>
+      <type>istd::TPointerBase&lt; const ParameterInterace &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
-      <anchor>a9725dd4552f42705afb87b4d4fa841f8</anchor>
+      <anchor>a855054d12e5abf4b6f3afa2d5ad67ea0</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -33619,6 +33655,7 @@
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
+    <class kind="class">iqt2d::CExtendedConsoleGuiComp</class>
     <class kind="class">iqt2d::CImageViewComp</class>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
     <class kind="class">iqt2d::CPolygonParamsGuiComp</class>
@@ -33780,6 +33817,32 @@
       <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
       <anchor>a4d31720672516f003690bf36e7de4c48</anchor>
       <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CExtendedConsoleGuiComp</name>
+    <filename>classiqt2d_1_1_c_extended_console_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CExtendedConsoleGuiComp &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CExtendedConsoleGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a1cff0b636f04192322fdb46e0604f497</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_c_extended_console_gui_comp.html</anchorfile>
+      <anchor>ada4db05ed1af3652184c837a8dcc4540</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a160cab8c1311151a7e89e84f21e9c042</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34418,6 +34481,13 @@
       <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
       <anchor>aaec9099f0c927c299bb16ba255594773</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TViewExtenderCompBase</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>a9e174b0aad68f3db191a1c6b88c8cd04</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -35472,6 +35542,8 @@
     <class kind="class">iqtgui::CApplicationCompBase</class>
     <class kind="class">iqtgui::CCheckableComboBox</class>
     <class kind="class">iqtgui::CCommandsBinderComp</class>
+    <class kind="class">iqtgui::CCommandsToolBarGuiComp</class>
+    <class kind="class">iqtgui::CCommandTools</class>
     <class kind="class">iqtgui::CComposedGuiComp</class>
     <class kind="class">iqtgui::CDialogApplicationComp</class>
     <class kind="class">iqtgui::CDialogGuiComp</class>
@@ -35499,6 +35571,7 @@
     <class kind="class">iqtgui::CTabbedMultiViewGuiComp</class>
     <class kind="class">iqtgui::CTabContainerGuiComp</class>
     <class kind="class">iqtgui::CTextElider</class>
+    <class kind="class">iqtgui::CToolBarGuiCompBase</class>
     <class kind="class">iqtgui::CToolBarWidgetGuiComp</class>
     <class kind="class">iqtgui::CTreeWidgetFilter</class>
     <class kind="class">iqtgui::CWidgetUpdateBlocker</class>
@@ -35679,6 +35752,43 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::CCommandsToolBarGuiComp</name>
+    <filename>classiqtgui_1_1_c_commands_tool_bar_gui_comp.html</filename>
+    <base>iqtgui::CToolBarGuiCompBase</base>
+    <member kind="typedef">
+      <type>CToolBarGuiCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_commands_tool_bar_gui_comp.html</anchorfile>
+      <anchor>a970ba7e3660232c53f6c8cded661181d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_commands_tool_bar_gui_comp.html</anchorfile>
+      <anchor>ad26e4a30aa4e54eeaa9a2c9ff8a10136</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CCommandTools</name>
+    <filename>classiqtgui_1_1_c_command_tools.html</filename>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>CreateMenu</name>
+      <anchorfile>classiqtgui_1_1_c_command_tools.html</anchorfile>
+      <anchor>a1e5372ad1f66ebb6602611bd3eb94c06</anchor>
+      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, MenuType &amp;result)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>SetupToolbar</name>
+      <anchorfile>classiqtgui_1_1_c_command_tools.html</anchorfile>
+      <anchor>adbfd019679674dc1467c6710b75d2471</anchor>
+      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, QToolBar &amp;result, int prevGroupId=ibase::ICommand::GI_NONE)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtgui::CComposedGuiComp</name>
     <filename>classiqtgui_1_1_c_composed_gui_comp.html</filename>
     <base>TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt;</base>
@@ -35715,6 +35825,13 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
       <anchor>a39e95e68c62e662ff39a9ce3311dd9cf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>ad3b26182b2a5455a25685082cbdf614b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -37223,13 +37340,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SetupToolbar</name>
-      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>a12cc477bd40fcb3a9fe211a121a023b5</anchor>
-      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, QToolBar &amp;result, int prevGroupId=ibase::ICommand::GI_NONE) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetToolBarsVisible</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
@@ -37312,13 +37422,6 @@
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>af945677d33a6a50d1b32f3b759c10198</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreateMenu</name>
-      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>a7186625bd332df240115c513e6964dbf</anchor>
-      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, MenuType &amp;result) const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>CommandsObserver</type>
@@ -37532,30 +37635,49 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqtgui::CToolBarWidgetGuiComp</name>
-    <filename>classiqtgui_1_1_c_tool_bar_widget_gui_comp.html</filename>
+    <name>iqtgui::CToolBarGuiCompBase</name>
+    <filename>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</filename>
     <base>TGuiComponentBase&lt; QToolBar &gt;</base>
     <base virtualness="virtual">iqtgui::IMainWindowComponent</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QToolBar &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_tool_bar_widget_gui_comp.html</anchorfile>
-      <anchor>ac3f7e9491da6634496091afe86e69552</anchor>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>a6dee28458fe443fac94b83f8a265265e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>AddToMainWindow</name>
-      <anchorfile>classiqtgui_1_1_c_tool_bar_widget_gui_comp.html</anchorfile>
-      <anchor>af5b54d265417cf7f5fd81d2746969cb6</anchor>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>ad3d805d2e31b847df10e8fb85805a1a2</anchor>
       <arglist>(QMainWindow &amp;mainWindow)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveFromMainWindow</name>
-      <anchorfile>classiqtgui_1_1_c_tool_bar_widget_gui_comp.html</anchorfile>
-      <anchor>afe82b19d45cd5a131755c71cc69940b2</anchor>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>aec45539053c128210f767a529604f18d</anchor>
       <arglist>(QMainWindow &amp;mainWindow)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>a742e2309d8ca71c36cb368fca9e0922c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CToolBarWidgetGuiComp</name>
+    <filename>classiqtgui_1_1_c_tool_bar_widget_gui_comp.html</filename>
+    <base>iqtgui::CToolBarGuiCompBase</base>
+    <member kind="typedef">
+      <type>CToolBarGuiCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_widget_gui_comp.html</anchorfile>
+      <anchor>ac113ff87da63b4d68e806dbca18249a2</anchor>
+      <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
