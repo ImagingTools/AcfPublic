@@ -82,7 +82,7 @@
 <a name="l00079"></a>00079               I_ASSIGN(m_infoLabelAttrPtr, <span class="stringliteral">&quot;InfoLabel&quot;</span>, <span class="stringliteral">&quot;Information label for the options selector&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Info&quot;</span>);
 <a name="l00080"></a>00080               I_ASSIGN(m_infoIconProviderCompPtr, <span class="stringliteral">&quot;InfoIconProvider&quot;</span>, <span class="stringliteral">&quot;Provider of the info icon&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;InfoIconProvider&quot;</span>);
 <a name="l00081"></a>00081               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size of the used icons&quot;</span>, <span class="keyword">false</span>, 32);
-<a name="l00082"></a>00082               I_ASSIGN(m_uiModeAttrPtr, <span class="stringliteral">&quot;UiMode&quot;</span>, <span class="stringliteral">&quot;Selection representation mode. 0 - Combo box,\n1 - Horizonal layouted radio button group\n2 - Vertical layouted radio button group&quot;</span>, <span class="keyword">false</span>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#accdd24a68fc1969b44c11c6fa07e5d4ea10d38c316c669a719850fbf4dabc085c" title="Combo box selection.">UM_COMBOBOX</a>);
+<a name="l00082"></a>00082               I_ASSIGN(m_uiModeAttrPtr, <span class="stringliteral">&quot;UiMode&quot;</span>, <span class="stringliteral">&quot;Selection representation mode. 0 - Combo box,\n1 - Horizonal layouted radio button group\n2 - Vertical layouted radio button group&quot;</span>, <span class="keyword">true</span>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#accdd24a68fc1969b44c11c6fa07e5d4ea10d38c316c669a719850fbf4dabc085c" title="Combo box selection.">UM_COMBOBOX</a>);
 <a name="l00083"></a>00083               I_ASSIGN(m_labelPositionAttrPtr, <span class="stringliteral">&quot;LabelPosition&quot;</span>, <span class="stringliteral">&quot;Selection label position. 0 - Left from the selector,\n1 - On top of the selector&quot;</span>, <span class="keyword">false</span>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a4f27ff84540f06531d264dd9939e89fda19322d40f99dd4f149f8e4c8a37177a3" title="Left from the selector.">LP_LEFT</a>);
 <a name="l00084"></a>00084        I_END_COMPONENT;
 <a name="l00085"></a>00085 
@@ -109,7 +109,7 @@
 <a name="l00106"></a>00106 
 <a name="l00107"></a>00107 <span class="keyword">private</span>:
 <a name="l00108"></a>00108        <span class="keywordtype">void</span> UpdateComboBoxesView();
-<a name="l00109"></a>00109        <span class="keywordtype">void</span> UpdateRadioButtonView(<span class="keywordtype">bool</span> useVerticalLayout = <span class="keyword">false</span>);
+<a name="l00109"></a>00109        <span class="keywordtype">void</span> UpdateRadioButtonView();
 <a name="l00110"></a>00110        <span class="keywordtype">void</span> UpdateDescriptionFrame();
 <a name="l00111"></a>00111 
 <a name="l00112"></a>00112 <span class="keyword">private</span>:

@@ -84,6 +84,7 @@ public:
 
 	// reimplemented (iproc::ISupplier)
 	virtual void InvalidateSupplier();
+	virtual void EnsureWorkInitialized();
 	virtual void EnsureWorkFinished();
 	virtual void ClearWorkResults();
 	virtual int GetWorkStatus() const;
@@ -154,6 +155,8 @@ private:
 	QDateTime m_resultTypeStamp;
 	InformationCategory m_resultCategory;
 	QString m_resultDescription;
+
+	istd::CChangeNotifier m_productChangeNotifier;
 };
 
 

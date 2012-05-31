@@ -35,7 +35,8 @@ namespace iinsp
 
 CInspectionTaskComp::CInspectionTaskComp()
 :	m_isStatusKnown(false),
-	m_resultCategory(IC_NONE)
+	m_resultCategory(IC_NONE),
+	m_productChangeNotifier(NULL, CF_SUPPLIER_RESULTS | CF_MODEL)
 {
 }
 
@@ -58,7 +59,7 @@ iproc::ISupplier* CInspectionTaskComp::GetSubtask(int subtaskIndex) const
 
 void CInspectionTaskComp::InvalidateSupplier()
 {
-	istd::CChangeNotifier notifier(this);
+	m_productChangeNotifier.SetPtr(this);
 
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
@@ -70,10 +71,22 @@ void CInspectionTaskComp::InvalidateSupplier()
 }
 
 
+void CInspectionTaskComp::EnsureWorkInitialized()
+{
+	m_productChangeNotifier.SetPtr(this);
+
+	int inspectionsCount = m_subtasksCompPtr.GetCount();
+	for (int i = 0; i < inspectionsCount; ++i){
+		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
+		if (supplierPtr != NULL){
+			supplierPtr->EnsureWorkInitialized();
+		}
+	}
+}
+
+
 void CInspectionTaskComp::EnsureWorkFinished()
 {
-	istd::CChangeNotifier notifier(this);
-
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
@@ -81,12 +94,14 @@ void CInspectionTaskComp::EnsureWorkFinished()
 			supplierPtr->EnsureWorkFinished();
 		}
 	}
+
+	m_productChangeNotifier.SetPtr(NULL);
 }
 
 
 void CInspectionTaskComp::ClearWorkResults()
 {
-	istd::CChangeNotifier notifier(this);
+	m_productChangeNotifier.SetPtr(this);
 
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
@@ -100,7 +115,7 @@ void CInspectionTaskComp::ClearWorkResults()
 
 int CInspectionTaskComp::GetWorkStatus() const
 {
-	int retVal = WS_NONE;
+	int retVal = WS_INVALID;
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		const iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];

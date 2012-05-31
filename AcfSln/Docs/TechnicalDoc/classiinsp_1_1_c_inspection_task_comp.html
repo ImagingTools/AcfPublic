@@ -61,13 +61,12 @@ Inheritance diagram for iinsp::CInspectionTaskComp:</div>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,209,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_loggable.html" alt="ibase::ILoggable" shape="rect" coords="219,56,428,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html" alt="istd::ILogger" shape="rect" coords="438,56,647,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="657,56,866,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="657,56,866,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="876,56,1085,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1095,56,1304,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1314,56,1523,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="219,0,428,24"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="438,0,647,24"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="657,0,866,24"/>
 </map>
  </div></div>
 
@@ -97,6 +96,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html">iproc::ISupplier</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a6939fea0173b71740845be7683c9eb40">GetSubtask</a> (int subtaskIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get single inspection steps (subtasks).  <a href="#a6939fea0173b71740845be7683c9eb40"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a2fde7c7a52fb8ec9f30ac1c9cf7f3570">InvalidateSupplier</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a11f9adccf21efc75d4af08e84fced7ab">EnsureWorkInitialized</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#ab83d6a7be784858e191434b33fb4e648">EnsureWorkFinished</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a883d18ce626088c874c58b4eee7e47de">ClearWorkResults</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a159ce5ef379a6b99ab53177179023468">GetWorkStatus</a> () const </td></tr>
@@ -277,6 +277,24 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a8407cf9f0d773e91bfa10d6616a36e4d">iproc::ISupplier</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11f9adccf21efc75d4af08e84fced7ab"></a><!-- doxytag: member="iinsp::CInspectionTaskComp::EnsureWorkInitialized" ref="a11f9adccf21efc75d4af08e84fced7ab" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iinsp::CInspectionTaskComp::EnsureWorkInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a1d5a8103b4fc07f82c8d5f44794bb78e">iproc::ISupplier</a>.</p>
 
 </div>
 </div>

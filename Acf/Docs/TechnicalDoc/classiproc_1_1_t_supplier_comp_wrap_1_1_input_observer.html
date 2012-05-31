@@ -59,14 +59,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html#aef95decb5518150f7c51a5c8b9d421c8">InputObserver</a> (<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">TSupplierCompWrap</a>&lt; Product &gt; *parentPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html#a12f8316cddc6667f774114f05d0fd755">OnUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html#a3ae4ef72220cf7de4a1165e9fda588eb">BeforeUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#a3ae4ef72220cf7de4a1165e9fda588eb"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Product&gt;<br/>
 class iproc::TSupplierCompWrap&lt; Product &gt;::InputObserver</h3>
 
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00091">91</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00100">100</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aef95decb5518150f7c51a5c8b9d421c8"></a><!-- doxytag: member="iproc::TSupplierCompWrap::InputObserver::InputObserver" ref="aef95decb5518150f7c51a5c8b9d421c8" args="(TSupplierCompWrap&lt; Product &gt; *parentPtr)" -->
 <div class="memitem">
@@ -85,21 +86,21 @@ template&lt;class Product &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00260">260</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00303">303</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a12f8316cddc6667f774114f05d0fd755"></a><!-- doxytag: member="iproc::TSupplierCompWrap::InputObserver::OnUpdate" ref="a12f8316cddc6667f774114f05d0fd755" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<a class="anchor" id="a3ae4ef72220cf7de4a1165e9fda588eb"></a><!-- doxytag: member="iproc::TSupplierCompWrap::InputObserver::BeforeUpdate" ref="a3ae4ef72220cf7de4a1165e9fda588eb" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Product &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap</a>&lt; Product &gt;::InputObserver::OnUpdate </td>
+          <td class="memname">void <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap</a>&lt; Product &gt;::InputObserver::BeforeUpdate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
           <td class="paramname"><em>modelPtr</em>, </td>
@@ -125,11 +126,14 @@ template&lt;class Product &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a4fedb2ca9c97485f0688e99d072610df">imod::CMultiModelObserverBase</a>.</p>
+<p>This function will be called before update of the observer contents occures. </p>
+<p>Please note, that in some cases no following AfterUpdate can be called. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00272">272</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a22234401b6906764d85a3a9b86f21686">imod::CMultiModelObserverBase</a>.</p>
 
-<p>References <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00139">iproc::TSupplierCompWrap&lt; Product &gt;::InvalidateSupplier()</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00315">315</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+
+<p>References <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00151">iproc::TSupplierCompWrap&lt; Product &gt;::InvalidateSupplier()</a>.</p>
 
 </div>
 </div>

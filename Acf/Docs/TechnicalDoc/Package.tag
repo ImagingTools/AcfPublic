@@ -3158,7 +3158,7 @@
     <name>ISupplier.h</name>
     <path>C:/Temp/Acf/Include/iproc/</path>
     <filename>_i_supplier_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <class kind="class">iproc::ISupplier</class>
@@ -3213,6 +3213,7 @@
     <name>TSupplierCompWrap.h</name>
     <path>C:/Temp/Acf/Include/iproc/</path>
     <filename>_t_supplier_comp_wrap_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
@@ -30459,7 +30460,7 @@
   <compound kind="class">
     <name>iproc::ISupplier</name>
     <filename>classiproc_1_1_i_supplier.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <name>WorkStatus</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
@@ -30467,9 +30468,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>WS_NONE</name>
+      <name>WS_INVALID</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ea67f3e6492065f90039b36834b4d5031e</anchor>
+      <anchor>ad3b7143c610c4f271745217854b1251eab14d115e664be0ece856109431395207</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -30525,6 +30526,13 @@
       <name>InvalidateSupplier</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
       <anchor>a0496343d4f5ae9a3f71caf5163b35d13</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a1d5a8103b4fc07f82c8d5f44794bb78e</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -30829,6 +30837,7 @@
     <templarg>Product</templarg>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iproc::ISupplier</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <class kind="class">iproc::TSupplierCompWrap::InputObserver</class>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -30879,6 +30888,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a448aa1751441a329a76510cbeb2894c6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>EnsureWorkFinished</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
@@ -30904,6 +30920,13 @@
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ab6f30ac3f2d05e657c1263026630fd6d</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a864d166238f938df650c6d0b9a254406</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const Product *</type>
@@ -30961,9 +30984,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnUpdate</name>
+      <name>BeforeUpdate</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html</anchorfile>
-      <anchor>a12f8316cddc6667f774114f05d0fd755</anchor>
+      <anchor>a3ae4ef72220cf7de4a1165e9fda588eb</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>

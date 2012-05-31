@@ -2823,6 +2823,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
+      <anchor>aa38cc48770f8ea39cba9ee46d57fac65</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
@@ -4859,6 +4866,13 @@
       <name>InvalidateSupplier</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a2fde7c7a52fb8ec9f30ac1c9cf7f3570</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a11f9adccf21efc75d4af08e84fced7ab</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
