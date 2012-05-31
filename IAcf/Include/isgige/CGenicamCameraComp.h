@@ -180,6 +180,8 @@ protected:
 		CGenicamCameraComp& m_parent;
 	};
 
+	gige::INode GetWriteableNode(DeviceInfo& deviceInfo, const std::string& nodeName);
+
 	DeviceInfo* GetDeviceByUrl(const QString& urlString) const;
 	DeviceInfo* GetDeviceByParams(const iprm::IParamsSet* paramsPtr) const;
 

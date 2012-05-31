@@ -103,9 +103,6 @@ int CGenicamCameraComp::DoProcessing(
 	I_ASSERT(deviceInfoPtr->devicePtr.IsValid());
 
 	if (deviceInfoPtr->triggerMode == isig::ITriggerParams::TM_SOFTWARE){
-		deviceInfoPtr->devicePtr->SetStringNodeValue("LineSelector", "Line1");
-		deviceInfoPtr->devicePtr->SetStringNodeValue("LineSource", "ExposureActive");
-
 		if (!deviceInfoPtr->devicePtr->CommandNodeExecute("TriggerSoftware")){
 			SendErrorMessage(MI_CANNOT_SET, tr("Camera %1: Cannot send software trigger").arg(deviceInfoPtr->cameraId));
 
@@ -114,6 +111,11 @@ int CGenicamCameraComp::DoProcessing(
 	}
 
 	iwin::CPerformanceTimeStamp elapsedTime;
+
+	int bufferSize = 1;
+	if (m_imageBufferSizeAttrPtr.IsValid()){
+		bufferSize = qMax(1, *m_imageBufferSizeAttrPtr);
+	}
 
 	do{
 		if (deviceInfoPtr->devicePtr->IsBufferEmpty()){
@@ -176,7 +178,9 @@ int CGenicamCameraComp::DoProcessing(
 		}
 
 		// remove one image from camera buffer
-		deviceInfoPtr->devicePtr->PopImage(imageInfoPtr);	
+		deviceInfoPtr->devicePtr->PopImage(imageInfoPtr);
+
+		deviceInfoPtr->EnsureStopped();
 
 		return TS_OK;
 	} while (elapsedTime.GetElapsed() < *m_timeoutAttrPtr);
@@ -263,6 +267,19 @@ QByteArray CGenicamCameraComp::GetOptionId(int /*index*/) const
 
 
 // protected methods
+
+gige::INode CGenicamCameraComp::GetWriteableNode(DeviceInfo& deviceInfo, const std::string& nodeName)
+{
+	if ((deviceInfo.devicePtr != NULL) && deviceInfo.devicePtr->IsAvailable(nodeName)){
+		gige::INode nodePtr = deviceInfo.devicePtr->GetNode(nodeName);
+		if ((nodePtr != NULL) && nodePtr->IsWritable()){
+			return nodePtr;
+		}
+	}
+
+	return NULL;
+}
+
 
 CGenicamCameraComp::DeviceInfo* CGenicamCameraComp::GetDeviceByUrl(const QString& urlString) const
 {
@@ -403,6 +420,8 @@ CGenicamCameraComp::DeviceInfo* CGenicamCameraComp::EnsureDeviceSynchronized(con
 		I_ASSERT(deviceInfoPtr->devicePtr.IsValid());
 
 		if (!SynchronizeCameraParams(paramsPtr, *deviceInfoPtr)){
+			SendErrorMessage(MI_CANNOT_SET, tr("Camera %1: Cannot set camera parameters!").arg(deviceInfoPtr->cameraId));
+
 			return NULL;
 		}
 
@@ -465,15 +484,29 @@ bool CGenicamCameraComp::SynchronizeCameraParams(const iprm::IParamsSet* paramsP
 		if (!deviceInfo.EnsureStopped()){
 			return false;
 		}
+
 		retVal = deviceInfo.devicePtr->SetIntegerNodeValue("TLParamsLocked", 0) && retVal;
 
 		if (!deviceInfo.devicePtr->SetStringNodeValue("AcquisitionMode", "Continuous")){
 			SendErrorMessage(MI_CANNOT_SET, tr("Camera %1: Cannot set initial values").arg(deviceInfo.cameraId));
 		}
 
-		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineSelector", "Line1") && retVal;
-		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineMode", "Output") && retVal;
-		retVal = deviceInfo.devicePtr->SetStringNodeValue("LineSource", "ExposureActive") && retVal;
+		gige::INode lineSelectorNodePtr = GetWriteableNode(deviceInfo, "LineSelector");
+		if (lineSelectorNodePtr != NULL){
+			if (lineSelectorNodePtr->SetStringNodeValue("Line1")){
+				gige::INode lineModeNodePtr = GetWriteableNode(deviceInfo, "LineMode");
+				if (lineModeNodePtr != NULL){
+					retVal = lineModeNodePtr->SetStringNodeValue("Output") && retVal;
+				}
+				gige::INode lineSourceNodePtr = GetWriteableNode(deviceInfo, "LineSource");
+				if (lineSourceNodePtr != NULL){
+					retVal = lineSourceNodePtr->SetStringNodeValue("ExposureActive") && retVal;
+				}
+			}
+			else{
+				retVal = false;
+			}
+		}
 
 		if (roiParamsPtr != NULL){
 			if (!deviceInfo.isStarted || (*roiParamsPtr != deviceInfo.roi)){
