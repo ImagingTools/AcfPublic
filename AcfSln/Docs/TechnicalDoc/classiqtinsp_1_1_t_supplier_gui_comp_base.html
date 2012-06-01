@@ -86,7 +86,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a10421a5f009909833e71dbc9bca46dc5">OnGuiModelAttached</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c94b477ef9e003078f52435ca5eebd7">OnGuiModelDetached</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">CreateShapes</a> (int sceneId, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html#a86ad20c3318bd0ae11f071c5404c8774">Shapes</a> &amp;result)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ab4c020eace12715b61e207418079b09e">UpdateGui</a> (int updateFlags=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">AfterUpdate</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c61d390a1ca63f329d97352bea72536">GetParamsWidget</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameters widget object.  <a href="#a8c61d390a1ca63f329d97352bea72536"></a><br/></td></tr>
 </table>
@@ -172,6 +172,47 @@ template&lt;class UI , class WidgetType &gt; </div>
 <p>Reimplemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5a952165d7d8cc75974405429534c088">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00120">120</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab1c890054066dea7a34f819ef086882"></a><!-- doxytag: member="iqtinsp::TSupplierGuiCompBase::AfterUpdate" ref="aab1c890054066dea7a34f819ef086882" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class UI , class WidgetType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase</a>&lt; UI, WidgetType &gt;::AfterUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a09679cc02dbb54b0470d77ac459f0fae">iqtcam::CBitmapSupplierGuiComp</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00316">316</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+
+<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">istd::IInformationProvider::GetInformationCategory()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">iproc::ISupplier::GetWorkStatus()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a0ffe506c6f69a959d14eb3b2260a24df">istd::IInformationProvider::IC_ERROR</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152afdf1bdfc124526192bd59bbdbad614cb">istd::IInformationProvider::IC_WARNING</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c">iproc::ISupplier::WS_CANCELED</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032">iproc::ISupplier::WS_CRITICAL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf">iproc::ISupplier::WS_ERROR</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6">iproc::ISupplier::WS_LOCKED</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed">iproc::ISupplier::WS_OK</a>.</p>
 
 </div>
 </div>
@@ -515,31 +556,6 @@ template&lt;class UI , class WidgetType &gt; </div>
 <p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00216">216</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">iproc::ISupplier::GetModelParametersSet()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51aa09dcbc2185bb8c631d1537abd3c04a8">iser::IFileLoader::StateFailed</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab4c020eace12715b61e207418079b09e"></a><!-- doxytag: member="iqtinsp::TSupplierGuiCompBase::UpdateGui" ref="ab4c020eace12715b61e207418079b09e" args="(int updateFlags=0)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class UI , class WidgetType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase</a>&lt; UI, WidgetType &gt;::UpdateGui </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>updateFlags</em> = <code>0</code></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5b0ba931a51005936119096efb7011d3">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#afbfa844c008eb0d274bd8dd48d0a5b40">iqtipr::CValueSupplierGuiComp</a>, <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ace6a629516d2430b02e4ef4dad4268b3">iqtcam::CBitmapSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#a4bfc1b681d2ac1f8a401e332c72c7b17">iqtipr::CLineProjectionSupplierGuiComp</a>, and <a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#aa635fb30331f46d5efc33b4adb2f192f">iqtinsp::CGeneralSupplierGuiComp</a>.</p>
-
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00317">317</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
-
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">istd::IInformationProvider::GetInformationCategory()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">iproc::ISupplier::GetWorkStatus()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a0ffe506c6f69a959d14eb3b2260a24df">istd::IInformationProvider::IC_ERROR</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152afdf1bdfc124526192bd59bbdbad614cb">istd::IInformationProvider::IC_WARNING</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c">iproc::ISupplier::WS_CANCELED</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032">iproc::ISupplier::WS_CRITICAL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf">iproc::ISupplier::WS_ERROR</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6">iproc::ISupplier::WS_LOCKED</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed">iproc::ISupplier::WS_OK</a>.</p>
 
 </div>
 </div>

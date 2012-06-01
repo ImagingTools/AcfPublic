@@ -37534,8 +37534,8 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>ac83741bbaafed0f48c929497eb42d100</anchor>
-      <arglist>(m_slaveWidgetsModelCompPtr, m_slaveWidgetsCompPtr, false)</arglist>
+      <anchor>a9436580fea58a22ec5c3108ead964382</anchor>
+      <arglist>(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

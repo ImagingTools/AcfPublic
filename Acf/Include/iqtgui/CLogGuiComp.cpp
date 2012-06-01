@@ -274,7 +274,16 @@ void CLogGuiComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPo
 }
 
 
-// reimplemented (imod::CMultiModelDispatcherBase)
+// private methods
+
+void CLogGuiComp::UpdateVisualStatus()
+{
+	istd::CChangeNotifier visualStatusNotifier(&m_visualStatus);
+
+	SetStatusIcon(GetCategoryIcon(m_statusCategory));
+	SetStatusText(GetCategoryText(m_statusCategory));
+}
+
 
 // protected slots
 
@@ -292,9 +301,7 @@ void CLogGuiComp::OnAddMessage(QTreeWidgetItem* itemPtr)
 	if (itemCategory > m_statusCategory){
 		m_statusCategory = itemCategory;
 
-		istd::CChangeNotifier visualStatusNotifier(&m_visualStatus);
-		SetStatusIcon(GetCategoryIcon(m_statusCategory));
-		SetStatusText(GetCategoryText(m_statusCategory));
+		UpdateVisualStatus();
 	}
 }
 
@@ -345,9 +352,7 @@ void CLogGuiComp::OnMessageModeChanged()
 
 	m_statusCategory = worstCategory;
 
-	istd::CChangeNotifier visualStatusNotifier(&m_visualStatus);
-	SetStatusIcon(GetCategoryIcon(m_statusCategory));
-	SetStatusText(GetCategoryText(m_statusCategory));
+	UpdateVisualStatus();
 }
 
 
@@ -361,9 +366,7 @@ void CLogGuiComp::OnClearAction()
 	if (m_statusCategory != istd::IInformationProvider::IC_NONE){
 		m_statusCategory = istd::IInformationProvider::IC_NONE;
 
-		istd::CChangeNotifier visualStatusNotifier(&m_visualStatus);
-		SetStatusIcon(GetCategoryIcon(m_statusCategory));
-		SetStatusText(GetCategoryText(m_statusCategory));
+		UpdateVisualStatus();
 	}
 }
 

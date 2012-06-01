@@ -103,8 +103,10 @@ void CLineProjectionSupplierGuiComp::OnGuiModelAttached()
 }
 
 
-void CLineProjectionSupplierGuiComp::UpdateGui(int /*updateFlags*/)
+void CLineProjectionSupplierGuiComp::UpdateGui(int updateFlags)
 {
+	BaseClass::UpdateGui(updateFlags);
+
 	I_ASSERT(IsGuiCreated());
 
 	const imeas::IDataSequence* projectionPtr = NULL;

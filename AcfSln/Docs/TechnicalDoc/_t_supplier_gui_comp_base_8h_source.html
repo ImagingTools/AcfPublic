@@ -90,8 +90,8 @@
 <a name="l00082"></a>00082        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
 <a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
 <a name="l00084"></a>00084 
-<a name="l00085"></a>00085        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ab4c020eace12715b61e207418079b09e">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00085"></a>00085        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088        <span class="comment">// abstract methods</span>
 <a name="l00094"></a>00094 <span class="comment"></span>       <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c61d390a1ca63f329d97352bea72536" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span> = 0;
@@ -314,83 +314,90 @@
 <a name="l00311"></a>00311 }
 <a name="l00312"></a>00312 
 <a name="l00313"></a>00313 
-<a name="l00314"></a>00314 <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00315"></a>00315 
-<a name="l00316"></a>00316 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00317"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ab4c020eace12715b61e207418079b09e">00317</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ab4c020eace12715b61e207418079b09e">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::UpdateGui</a>(<span class="keywordtype">int</span> updateFlags)
-<a name="l00318"></a>00318 {
-<a name="l00319"></a>00319        BaseClass::UpdateGui(updateFlags);
+<a name="l00314"></a>00314 <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00315"></a>00315 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
+<a name="l00316"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">00316</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr)
+<a name="l00317"></a>00317 {
+<a name="l00318"></a>00318        <span class="keywordflow">if</span> (!IsGuiCreated()){
+<a name="l00319"></a>00319               BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
 <a name="l00320"></a>00320 
-<a name="l00321"></a>00321        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(IsGuiCreated());
-<a name="l00322"></a>00322 
-<a name="l00323"></a>00323        QString statusText = <span class="stringliteral">&quot;&quot;</span>;
-<a name="l00324"></a>00324        QIcon statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateUnknown.svg&quot;</span>);
-<a name="l00325"></a>00325 
-<a name="l00326"></a>00326        QString description;
-<a name="l00327"></a>00327 
-<a name="l00328"></a>00328        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html">iproc::ISupplier</a>* supplierPtr = GetObjectPtr();
-<a name="l00329"></a>00329        <span class="keywordflow">if</span> (supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00330"></a>00330               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>* infoProviderPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>*<span class="keyword">&gt;</span>(supplierPtr);
-<a name="l00331"></a>00331 
-<a name="l00332"></a>00332               <span class="keywordtype">int</span> workStatus = supplierPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">GetWorkStatus</a>();
-<a name="l00333"></a>00333 
-<a name="l00334"></a>00334               <span class="keywordflow">switch</span> (workStatus){
-<a name="l00335"></a>00335               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6">iproc::ISupplier::WS_LOCKED</a>:
-<a name="l00336"></a>00336                      statusText = tr(<span class="stringliteral">&quot;Locked&quot;</span>);
-<a name="l00337"></a>00337                      <span class="keywordflow">break</span>;
-<a name="l00338"></a>00338 
-<a name="l00339"></a>00339               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed">iproc::ISupplier::WS_OK</a>:
-<a name="l00340"></a>00340                      <span class="keywordflow">if</span> (infoProviderPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00341"></a>00341                             <span class="keywordflow">switch</span> (infoProviderPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">GetInformationCategory</a>()){
-<a name="l00342"></a>00342                             <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152afdf1bdfc124526192bd59bbdbad614cb">istd::IInformationProvider::IC_WARNING</a>:
-<a name="l00343"></a>00343                                    statusText = tr(<span class="stringliteral">&quot;Processing completed with warnings&quot;</span>);
-<a name="l00344"></a>00344                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateWarning.svg&quot;</span>);
-<a name="l00345"></a>00345                                    <span class="keywordflow">break</span>;
-<a name="l00346"></a>00346 
-<a name="l00347"></a>00347                             <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a0ffe506c6f69a959d14eb3b2260a24df">istd::IInformationProvider::IC_ERROR</a>:
-<a name="l00348"></a>00348                                    statusText = tr(<span class="stringliteral">&quot;Processing completed with errors&quot;</span>);
-<a name="l00349"></a>00349                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateInvalid.svg&quot;</span>);
-<a name="l00350"></a>00350                                    <span class="keywordflow">break</span>;
-<a name="l00351"></a>00351 
-<a name="l00352"></a>00352                             <span class="keywordflow">default</span>:
-<a name="l00353"></a>00353                                    statusText = tr(<span class="stringliteral">&quot;Processing completed without errors&quot;</span>);
-<a name="l00354"></a>00354                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateOk.svg&quot;</span>);
-<a name="l00355"></a>00355                                    <span class="keywordflow">break</span>;
-<a name="l00356"></a>00356                             }
-<a name="l00357"></a>00357                      }
-<a name="l00358"></a>00358                      <span class="keywordflow">break</span>;
-<a name="l00359"></a>00359 
-<a name="l00360"></a>00360               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c">iproc::ISupplier::WS_CANCELED</a>:
-<a name="l00361"></a>00361                      statusText = tr(<span class="stringliteral">&quot;Processing canceled by user&quot;</span>);
-<a name="l00362"></a>00362                      <span class="keywordflow">break</span>;
-<a name="l00363"></a>00363 
-<a name="l00364"></a>00364               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf">iproc::ISupplier::WS_ERROR</a>:
-<a name="l00365"></a>00365                      statusText = tr(<span class="stringliteral">&quot;Processing not possible&quot;</span>);
-<a name="l00366"></a>00366                      statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateInvalid.svg&quot;</span>);
+<a name="l00321"></a>00321               <span class="keywordflow">return</span>;
+<a name="l00322"></a>00322        }
+<a name="l00323"></a>00323 
+<a name="l00324"></a>00324        QString statusText = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00325"></a>00325        QIcon statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateUnknown.svg&quot;</span>);
+<a name="l00326"></a>00326 
+<a name="l00327"></a>00327        QString description;
+<a name="l00328"></a>00328 
+<a name="l00329"></a>00329        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html">iproc::ISupplier</a>* supplierPtr = GetObjectPtr();
+<a name="l00330"></a>00330        <span class="keywordflow">if</span> (supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00331"></a>00331               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>* infoProviderPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>*<span class="keyword">&gt;</span>(supplierPtr);
+<a name="l00332"></a>00332 
+<a name="l00333"></a>00333               <span class="keywordtype">int</span> workStatus = supplierPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">GetWorkStatus</a>();
+<a name="l00334"></a>00334 
+<a name="l00335"></a>00335               <span class="keywordflow">switch</span> (workStatus){
+<a name="l00336"></a>00336               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6">iproc::ISupplier::WS_LOCKED</a>:
+<a name="l00337"></a>00337                      statusText = tr(<span class="stringliteral">&quot;Locked&quot;</span>);
+<a name="l00338"></a>00338                      <span class="keywordflow">break</span>;
+<a name="l00339"></a>00339 
+<a name="l00340"></a>00340               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed">iproc::ISupplier::WS_OK</a>:
+<a name="l00341"></a>00341                      <span class="keywordflow">if</span> (infoProviderPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00342"></a>00342                             <span class="keywordflow">switch</span> (infoProviderPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">GetInformationCategory</a>()){
+<a name="l00343"></a>00343                             <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152afdf1bdfc124526192bd59bbdbad614cb">istd::IInformationProvider::IC_WARNING</a>:
+<a name="l00344"></a>00344                                    statusText = tr(<span class="stringliteral">&quot;Processing completed with warnings&quot;</span>);
+<a name="l00345"></a>00345                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateWarning.svg&quot;</span>);
+<a name="l00346"></a>00346                                    <span class="keywordflow">break</span>;
+<a name="l00347"></a>00347 
+<a name="l00348"></a>00348                             <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a0ffe506c6f69a959d14eb3b2260a24df">istd::IInformationProvider::IC_ERROR</a>:
+<a name="l00349"></a>00349                                    statusText = tr(<span class="stringliteral">&quot;Processing completed with errors&quot;</span>);
+<a name="l00350"></a>00350                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateInvalid.svg&quot;</span>);
+<a name="l00351"></a>00351                                    <span class="keywordflow">break</span>;
+<a name="l00352"></a>00352 
+<a name="l00353"></a>00353                             <span class="keywordflow">default</span>:
+<a name="l00354"></a>00354                                    statusText = tr(<span class="stringliteral">&quot;Processing completed without errors&quot;</span>);
+<a name="l00355"></a>00355                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateOk.svg&quot;</span>);
+<a name="l00356"></a>00356                                    <span class="keywordflow">break</span>;
+<a name="l00357"></a>00357                             }
+<a name="l00358"></a>00358                      }
+<a name="l00359"></a>00359                      <span class="keywordflow">else</span>{
+<a name="l00360"></a>00360                             statusText = tr(<span class="stringliteral">&quot;Processing completed without errors&quot;</span>);
+<a name="l00361"></a>00361                             statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateOk.svg&quot;</span>);
+<a name="l00362"></a>00362                      }
+<a name="l00363"></a>00363                      <span class="keywordflow">break</span>;
+<a name="l00364"></a>00364 
+<a name="l00365"></a>00365               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c">iproc::ISupplier::WS_CANCELED</a>:
+<a name="l00366"></a>00366                      statusText = tr(<span class="stringliteral">&quot;Processing canceled by user&quot;</span>);
 <a name="l00367"></a>00367                      <span class="keywordflow">break</span>;
 <a name="l00368"></a>00368 
-<a name="l00369"></a>00369               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032">iproc::ISupplier::WS_CRITICAL</a>:
-<a name="l00370"></a>00370                      statusText = tr(<span class="stringliteral">&quot;Critical error occurred, application problem&quot;</span>);
-<a name="l00371"></a>00371                      statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/Error.svg&quot;</span>);
+<a name="l00369"></a>00369               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf">iproc::ISupplier::WS_ERROR</a>:
+<a name="l00370"></a>00370                      statusText = tr(<span class="stringliteral">&quot;Processing not possible&quot;</span>);
+<a name="l00371"></a>00371                      statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateInvalid.svg&quot;</span>);
 <a name="l00372"></a>00372                      <span class="keywordflow">break</span>;
 <a name="l00373"></a>00373 
-<a name="l00374"></a>00374               <span class="keywordflow">default</span>:
-<a name="l00375"></a>00375                      <span class="keywordflow">break</span>;
-<a name="l00376"></a>00376               }
-<a name="l00377"></a>00377        }
+<a name="l00374"></a>00374               <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032">iproc::ISupplier::WS_CRITICAL</a>:
+<a name="l00375"></a>00375                      statusText = tr(<span class="stringliteral">&quot;Critical error occurred, application problem&quot;</span>);
+<a name="l00376"></a>00376                      statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/Error.svg&quot;</span>);
+<a name="l00377"></a>00377                      <span class="keywordflow">break</span>;
 <a name="l00378"></a>00378 
-<a name="l00379"></a>00379        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> visualStatusNotifier(&amp;m_visualStatus);
-<a name="l00380"></a>00380        SetStatusIcon(statusIcon);
-<a name="l00381"></a>00381        SetStatusText(statusText);
-<a name="l00382"></a>00382 }
+<a name="l00379"></a>00379               <span class="keywordflow">default</span>:
+<a name="l00380"></a>00380                      <span class="keywordflow">break</span>;
+<a name="l00381"></a>00381               }
+<a name="l00382"></a>00382        }
 <a name="l00383"></a>00383 
-<a name="l00384"></a>00384 
-<a name="l00385"></a>00385 } <span class="comment">// namespace iqtinsp</span>
-<a name="l00386"></a>00386 
+<a name="l00384"></a>00384        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> visualStatusNotifier(&amp;m_visualStatus);
+<a name="l00385"></a>00385        SetStatusIcon(statusIcon);
+<a name="l00386"></a>00386        SetStatusText(statusText);
 <a name="l00387"></a>00387 
-<a name="l00388"></a>00388 <span class="preprocessor">#endif // !iqtinsp_TSupplierGuiCompBase_included</span>
-<a name="l00389"></a>00389 <span class="preprocessor"></span>
+<a name="l00388"></a>00388        BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+<a name="l00389"></a>00389 }
 <a name="l00390"></a>00390 
+<a name="l00391"></a>00391 
+<a name="l00392"></a>00392 } <span class="comment">// namespace iqtinsp</span>
+<a name="l00393"></a>00393 
+<a name="l00394"></a>00394 
+<a name="l00395"></a>00395 <span class="preprocessor">#endif // !iqtinsp_TSupplierGuiCompBase_included</span>
+<a name="l00396"></a>00396 <span class="preprocessor"></span>
+<a name="l00397"></a>00397 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

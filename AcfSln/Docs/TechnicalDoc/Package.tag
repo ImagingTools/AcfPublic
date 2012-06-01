@@ -12159,8 +12159,8 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a828cf210937586a87b4378141918015f</anchor>
-      <arglist>(m_editorVisualModelsCompPtr, m_editorsCompPtr, false)</arglist>
+      <anchor>a19ab3d56db2d3aa0bab6a8a008639420</anchor>
+      <arglist>(m_editorVisualModelsCompPtr, m_editorVisualInfosCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -12416,10 +12416,10 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateGui</name>
+      <name>AfterUpdate</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>ab4c020eace12715b61e207418079b09e</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>aab1c890054066dea7a34f819ef086882</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>

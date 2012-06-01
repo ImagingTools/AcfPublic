@@ -110,8 +110,10 @@ void CValueSupplierGuiComp::OnGuiModelAttached()
 }
 
 
-void CValueSupplierGuiComp::UpdateGui(int /*updateFlags*/)
+void CValueSupplierGuiComp::UpdateGui(int updateFlags)
 {
+	BaseClass::UpdateGui(updateFlags);
+
 	I_ASSERT(IsGuiCreated());
 
 	imath::CVarVector position;
