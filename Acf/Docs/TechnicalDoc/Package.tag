@@ -51710,6 +51710,13 @@
       <anchor>af48bf4890526fc28daaac1425c47cb9f</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CShapeStatusInfoComp</name>
+      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
+      <anchor>ac23ad5e7f69a4fff83bf85d663a4ec5d</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
       <name>GetLogicalPosition</name>

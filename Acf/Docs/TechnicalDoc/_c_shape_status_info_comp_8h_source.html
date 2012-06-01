@@ -47,26 +47,29 @@
 <a name="l00023"></a>00023               I_REGISTER_INTERFACE(<a class="code" href="classiview_1_1_i_shape_status_info.html" title="Interface for access local bitmap information.">IShapeStatusInfo</a>);
 <a name="l00024"></a>00024        I_END_COMPONENT;
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a2034bb5b056cea0f01a5012fe84727bb" title="Get logical position on the bitmap.">GetLogicalPosition</a>() <span class="keyword">const</span>;
-<a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a64c0354a340b92edbe808a39a78c5a1e" title="Set logical position on the bitmap.">SetLogicalPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; logicalPosition);
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a0975034216406e44a75a1c81d09e6901" title="Get position in pixel on the bitmap.">GetPixelPosition</a>() <span class="keyword">const</span>;
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#afa147f09799aea2ee110b9b60b6b1ad1" title="Set position in pixel on the bitmap.">SetPixelPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; pixelPosition);
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> QString <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a5a7fa5a502975bfa8c45dd5c77ecfbc0" title="Get information text for the current position.">GetInfoText</a>() <span class="keyword">const</span>;
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a8f0c8105c0d264adf3605724a024201b" title="Set information text for the current position.">SetInfoText</a>(<span class="keyword">const</span> QString&amp; infoText);
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">private</span>:
-<a name="l00034"></a>00034        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_logicalPosition;
-<a name="l00035"></a>00035        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_pixelPosition;
-<a name="l00036"></a>00036        QString m_infoText;
-<a name="l00037"></a>00037 };
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 } <span class="comment">// namespace iview</span>
+<a name="l00026"></a>00026        <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#ac23ad5e7f69a4fff83bf85d663a4ec5d">CShapeStatusInfoComp</a>();
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028        <span class="comment">// reimplemented (IShapeStatusInfo)</span>
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a2034bb5b056cea0f01a5012fe84727bb" title="Get logical position on the bitmap.">GetLogicalPosition</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a64c0354a340b92edbe808a39a78c5a1e" title="Set logical position on the bitmap.">SetLogicalPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; logicalPosition);
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a0975034216406e44a75a1c81d09e6901" title="Get position in pixel on the bitmap.">GetPixelPosition</a>() <span class="keyword">const</span>;
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#afa147f09799aea2ee110b9b60b6b1ad1" title="Set position in pixel on the bitmap.">SetPixelPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; pixelPosition);
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> QString <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a5a7fa5a502975bfa8c45dd5c77ecfbc0" title="Get information text for the current position.">GetInfoText</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_status_info_comp.html#a8f0c8105c0d264adf3605724a024201b" title="Set information text for the current position.">SetInfoText</a>(<span class="keyword">const</span> QString&amp; infoText);
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="keyword">private</span>:
+<a name="l00037"></a>00037        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_logicalPosition;
+<a name="l00038"></a>00038        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_pixelPosition;
+<a name="l00039"></a>00039        QString m_infoText;
+<a name="l00040"></a>00040 };
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="preprocessor">#endif // !iview_CShapeStatusInfoComp_included</span>
-<a name="l00044"></a>00044 <span class="preprocessor"></span>
+<a name="l00043"></a>00043 } <span class="comment">// namespace iview</span>
+<a name="l00044"></a>00044 
 <a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="preprocessor">#endif // !iview_CShapeStatusInfoComp_included</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>
+<a name="l00048"></a>00048 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
