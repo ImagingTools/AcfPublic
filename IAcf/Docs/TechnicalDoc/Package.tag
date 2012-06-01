@@ -2065,6 +2065,13 @@
       <arglist>(int type, QString message)</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>gige::INode</type>
+      <name>GetWriteableNode</name>
+      <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>
+      <anchor>ad24b2934d57af12ac9820897e90613ff</anchor>
+      <arglist>(DeviceInfo &amp;deviceInfo, const std::string &amp;nodeName)</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>DeviceInfo *</type>
       <name>GetDeviceByUrl</name>
       <anchorfile>classisgige_1_1_c_genicam_camera_comp.html</anchorfile>

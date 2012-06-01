@@ -112,7 +112,7 @@
 <a name="l00089"></a>00089               I_ASSIGN(m_triggerDifferenceAttrPtr, <span class="stringliteral">&quot;TriggerDifference&quot;</span>, <span class="stringliteral">&quot;Time difference between trigger signal and image time stamp used for synchronized trigger (in seconds)&quot;</span>, <span class="keyword">true</span>, 0.01);
 <a name="l00090"></a>00090               I_ASSIGN(m_triggerToleranceAttrPtr, <span class="stringliteral">&quot;TriggerTolerance&quot;</span>, <span class="stringliteral">&quot;Tolerance of trigger time difference used for synchronized trigger (in seconds)&quot;</span>, <span class="keyword">true</span>, 0.02);
 <a name="l00091"></a>00091               I_ASSIGN(m_connectOnStartAttrPtr, <span class="stringliteral">&quot;ConnectOnStart&quot;</span>, <span class="stringliteral">&quot;If true connection on start will be done, if false only connection on demand is done&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00092"></a>00092               I_ASSIGN(m_imageBufferSizeAttrPtr, <span class="stringliteral">&quot;BufferSize&quot;</span>, <span class="stringliteral">&quot;Size of the image buffer&quot;</span>, <span class="keyword">false</span>, 1);
+<a name="l00092"></a>00092               I_ASSIGN(m_imageBufferSizeAttrPtr, <span class="stringliteral">&quot;BufferSize&quot;</span>, <span class="stringliteral">&quot;Size of the image buffer, if not set, no buffered mode will be used&quot;</span>, <span class="keyword">false</span>, 1);
 <a name="l00093"></a>00093        I_END_COMPONENT;
 <a name="l00094"></a>00094 
 <a name="l00095"></a><a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#af964bba310c519da790022d88e4bc861">00095</a>        <span class="keyword">enum</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#af964bba310c519da790022d88e4bc861">MessageId</a>
@@ -181,54 +181,56 @@
 <a name="l00158"></a>00158               <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html" title="Camera accessed over interface Genicam.">CGenicamCameraComp</a>&amp; m_parent;
 <a name="l00159"></a>00159        };
 <a name="l00160"></a>00160 
-<a name="l00161"></a>00161        <a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#ae39467db34439888b270f3ffa6954629">GetDeviceByUrl</a>(<span class="keyword">const</span> QString&amp; urlString) <span class="keyword">const</span>;
-<a name="l00162"></a>00162        <a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a0f8c8b4f90a0b866306f2b9d6bd35635">GetDeviceByParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164        <span class="keywordtype">int</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#ae64d89482caf21ca9ce2d8e92ca957d4">GetTriggerModeByParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
-<a name="l00165"></a>00165        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimeas_1_1_i_linear_adjust_params.html">imeas::ILinearAdjustParams</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a6c589249d5e8a250a07b98e3696a5537">GetAdjustFromParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
-<a name="l00166"></a>00166        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a7e661bfbd2a02f3fff4d024bf6e75417">GetRoiFromParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
-<a name="l00167"></a>00167        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_exposure_params.html">icam::IExposureParams</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a9633d06c9013faef34b81fdfa1feff19">GetEposureTimeFromParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
-<a name="l00168"></a>00168 
-<a name="l00169"></a>00169        <a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a4116a821146ebcc687047e978f00075f">EnsureDeviceSynchronized</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr);
-<a name="l00170"></a>00170        <span class="keywordtype">bool</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#aaca4a7f4a2098fea27266294d651fe51">SynchronizeCameraParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr, <a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>&amp; deviceInfo);
-<a name="l00171"></a>00171 
-<a name="l00172"></a>00172        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00173"></a>00173        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a562cfb945ccb1164ed19546647c98377">OnComponentCreated</a>();
-<a name="l00174"></a>00174        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a246262fd2523d4d37ae5c47ddc0c4921">OnComponentDestroyed</a>();
-<a name="l00175"></a>00175 
-<a name="l00176"></a>00176 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00177"></a>00177        <span class="keywordtype">void</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a4ea3ed595409af72643acc5258d8e09e">OnCameraEventLog</a>(<span class="keywordtype">int</span> type, QString message);
-<a name="l00178"></a>00178 
-<a name="l00179"></a>00179 <span class="keyword">private</span>:
-<a name="l00180"></a>00180        I_ATTR(QByteArray, m_urlParamsIdAttrPtr);
-<a name="l00181"></a>00181        I_ATTR(QByteArray, m_selectionParamIdPtr);
-<a name="l00182"></a>00182        I_ATTR(QByteArray, m_exposureParamsIdAttrPtr);
-<a name="l00183"></a>00183        I_ATTR(QByteArray, m_triggerParamsIdAttrPtr);
-<a name="l00184"></a>00184        I_ATTR(QByteArray, m_adjustParamsIdAttrPtr);
-<a name="l00185"></a>00185        I_ATTR(QByteArray, m_roiParamIdPtr);
-<a name="l00186"></a>00186        I_ATTR(<span class="keywordtype">double</span>, m_timeoutAttrPtr);
-<a name="l00187"></a>00187        I_ATTR(<span class="keywordtype">double</span>, m_findDevicesTimeAttrPtr);
-<a name="l00188"></a>00188        I_ATTR(<span class="keywordtype">double</span>, m_triggerToleranceAttrPtr);
-<a name="l00189"></a>00189        I_ATTR(<span class="keywordtype">double</span>, m_triggerDifferenceAttrPtr);
-<a name="l00190"></a>00190        I_ATTR(<span class="keywordtype">bool</span>, m_connectOnStartAttrPtr);
-<a name="l00191"></a>00191        I_ATTR(<span class="keywordtype">int</span>, m_imageBufferSizeAttrPtr);
-<a name="l00192"></a>00192 
-<a name="l00193"></a>00193        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;DeviceInfo&gt;</a> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">DeviceInfos</a>;
-<a name="l00194"></a>00194        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">DeviceInfos</a> m_deviceInfos;
-<a name="l00195"></a>00195        <span class="keyword">typedef</span> QMap&lt;quint32, int&gt; IpAddressToIndexMap;
-<a name="l00196"></a>00196        IpAddressToIndexMap m_ipAddressToIndexMap;
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198        <span class="comment">// static attributes</span>
-<a name="l00199"></a>00199        <a class="code" href="classisgige_1_1_c_genicam_camera_singleton.html">CGenicamCameraSingleton</a> s_cameraSigleton;
-<a name="l00200"></a>00200 };
-<a name="l00201"></a>00201 
-<a name="l00202"></a>00202 
-<a name="l00203"></a>00203 } <span class="comment">// namespace isgige</span>
+<a name="l00161"></a>00161        gige::INode <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#ad24b2934d57af12ac9820897e90613ff">GetWriteableNode</a>(<a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>&amp; deviceInfo, <span class="keyword">const</span> std::string&amp; nodeName);
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163        <a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#ae39467db34439888b270f3ffa6954629">GetDeviceByUrl</a>(<span class="keyword">const</span> QString&amp; urlString) <span class="keyword">const</span>;
+<a name="l00164"></a>00164        <a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a0f8c8b4f90a0b866306f2b9d6bd35635">GetDeviceByParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166        <span class="keywordtype">int</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#ae64d89482caf21ca9ce2d8e92ca957d4">GetTriggerModeByParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
+<a name="l00167"></a>00167        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimeas_1_1_i_linear_adjust_params.html">imeas::ILinearAdjustParams</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a6c589249d5e8a250a07b98e3696a5537">GetAdjustFromParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
+<a name="l00168"></a>00168        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a7e661bfbd2a02f3fff4d024bf6e75417">GetRoiFromParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
+<a name="l00169"></a>00169        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_exposure_params.html">icam::IExposureParams</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a9633d06c9013faef34b81fdfa1feff19">GetEposureTimeFromParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171        <a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>* <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a4116a821146ebcc687047e978f00075f">EnsureDeviceSynchronized</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr);
+<a name="l00172"></a>00172        <span class="keywordtype">bool</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#aaca4a7f4a2098fea27266294d651fe51">SynchronizeCameraParams</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr, <a class="code" href="structisgige_1_1_c_genicam_camera_comp_1_1_device_info.html">DeviceInfo</a>&amp; deviceInfo);
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00175"></a>00175        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a562cfb945ccb1164ed19546647c98377">OnComponentCreated</a>();
+<a name="l00176"></a>00176        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a246262fd2523d4d37ae5c47ddc0c4921">OnComponentDestroyed</a>();
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00179"></a>00179        <span class="keywordtype">void</span> <a class="code" href="classisgige_1_1_c_genicam_camera_comp.html#a4ea3ed595409af72643acc5258d8e09e">OnCameraEventLog</a>(<span class="keywordtype">int</span> type, QString message);
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 <span class="keyword">private</span>:
+<a name="l00182"></a>00182        I_ATTR(QByteArray, m_urlParamsIdAttrPtr);
+<a name="l00183"></a>00183        I_ATTR(QByteArray, m_selectionParamIdPtr);
+<a name="l00184"></a>00184        I_ATTR(QByteArray, m_exposureParamsIdAttrPtr);
+<a name="l00185"></a>00185        I_ATTR(QByteArray, m_triggerParamsIdAttrPtr);
+<a name="l00186"></a>00186        I_ATTR(QByteArray, m_adjustParamsIdAttrPtr);
+<a name="l00187"></a>00187        I_ATTR(QByteArray, m_roiParamIdPtr);
+<a name="l00188"></a>00188        I_ATTR(<span class="keywordtype">double</span>, m_timeoutAttrPtr);
+<a name="l00189"></a>00189        I_ATTR(<span class="keywordtype">double</span>, m_findDevicesTimeAttrPtr);
+<a name="l00190"></a>00190        I_ATTR(<span class="keywordtype">double</span>, m_triggerToleranceAttrPtr);
+<a name="l00191"></a>00191        I_ATTR(<span class="keywordtype">double</span>, m_triggerDifferenceAttrPtr);
+<a name="l00192"></a>00192        I_ATTR(<span class="keywordtype">bool</span>, m_connectOnStartAttrPtr);
+<a name="l00193"></a>00193        I_ATTR(<span class="keywordtype">int</span>, m_imageBufferSizeAttrPtr);
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;DeviceInfo&gt;</a> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">DeviceInfos</a>;
+<a name="l00196"></a>00196        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">DeviceInfos</a> m_deviceInfos;
+<a name="l00197"></a>00197        <span class="keyword">typedef</span> QMap&lt;quint32, int&gt; IpAddressToIndexMap;
+<a name="l00198"></a>00198        IpAddressToIndexMap m_ipAddressToIndexMap;
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200        <span class="comment">// static attributes</span>
+<a name="l00201"></a>00201        <a class="code" href="classisgige_1_1_c_genicam_camera_singleton.html">CGenicamCameraSingleton</a> s_cameraSigleton;
+<a name="l00202"></a>00202 };
+<a name="l00203"></a>00203 
 <a name="l00204"></a>00204 
-<a name="l00205"></a>00205 
-<a name="l00206"></a>00206 <span class="preprocessor">#endif // !isgige_CGenicamCameraComp_included</span>
-<a name="l00207"></a>00207 <span class="preprocessor"></span>
-<a name="l00208"></a>00208 
+<a name="l00205"></a>00205 } <span class="comment">// namespace isgige</span>
+<a name="l00206"></a>00206 
+<a name="l00207"></a>00207 
+<a name="l00208"></a>00208 <span class="preprocessor">#endif // !isgige_CGenicamCameraComp_included</span>
+<a name="l00209"></a>00209 <span class="preprocessor"></span>
+<a name="l00210"></a>00210 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
