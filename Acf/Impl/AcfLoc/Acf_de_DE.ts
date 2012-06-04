@@ -757,25 +757,25 @@ See &apos;License.txt&apos; for license information</source>
         <location filename="../../Include/iqtgui/CLogGuiComp.ui" line="112"/>
         <location filename="../../Include/iqtgui/Generated/ui_CLogGuiComp.h" line="98"/>
         <source>State</source>
-        <translation type="unfinished">Status</translation>
+        <translation>Status</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.ui" line="117"/>
         <location filename="../../Include/iqtgui/Generated/ui_CLogGuiComp.h" line="97"/>
         <source>Time</source>
-        <translation type="unfinished">Zeit</translation>
+        <translation>Zeit</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.ui" line="122"/>
         <location filename="../../Include/iqtgui/Generated/ui_CLogGuiComp.h" line="96"/>
         <source>Source</source>
-        <translation type="unfinished">Quelle</translation>
+        <translation>Quelle</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.ui" line="127"/>
         <location filename="../../Include/iqtgui/Generated/ui_CLogGuiComp.h" line="95"/>
         <source>Message</source>
-        <translation type="unfinished">Meldung</translation>
+        <translation>Meldung</translation>
     </message>
 </context>
 <context>
@@ -783,22 +783,22 @@ See &apos;License.txt&apos; for license information</source>
     <message>
         <location filename="../../Include/iqtgui/Generated/ui_CLoginGuiComp.h" line="118"/>
         <source>User</source>
-        <translation type="unfinished">Benutzer</translation>
+        <translation>Benutzer</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/Generated/ui_CLoginGuiComp.h" line="119"/>
         <source>Password</source>
-        <translation type="unfinished">Passwort</translation>
+        <translation>Passwort</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/Generated/ui_CLoginGuiComp.h" line="120"/>
         <source>Login</source>
-        <translation type="unfinished">Login</translation>
+        <translation>Login</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/Generated/ui_CLoginGuiComp.h" line="121"/>
         <source>Logout</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -807,7 +807,7 @@ See &apos;License.txt&apos; for license information</source>
         <location filename="../../Include/icmpstr/CMultiAttributeEditor.ui" line="17"/>
         <location filename="../../Include/icmpstr/generated/ui_CMultiAttributeEditor.h" line="123"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../Include/icmpstr/CMultiAttributeEditor.ui" line="41"/>
@@ -815,7 +815,7 @@ See &apos;License.txt&apos; for license information</source>
         <location filename="../../Include/icmpstr/generated/ui_CMultiAttributeEditor.h" line="124"/>
         <location filename="../../Include/icmpstr/generated/ui_CMultiAttributeEditor.h" line="125"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../Include/icmpstr/CMultiAttributeEditor.ui" line="79"/>
@@ -823,7 +823,7 @@ See &apos;License.txt&apos; for license information</source>
         <location filename="../../Include/icmpstr/generated/ui_CMultiAttributeEditor.h" line="126"/>
         <location filename="../../Include/icmpstr/generated/ui_CMultiAttributeEditor.h" line="127"/>
         <source>PushButton</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -832,7 +832,7 @@ See &apos;License.txt&apos; for license information</source>
         <location filename="../../Include/iqtprm/CNameParamGuiComp.ui" line="14"/>
         <location filename="../../Include/iqtprm/generated/ui_CNameParamGuiComp.h" line="58"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -841,13 +841,13 @@ See &apos;License.txt&apos; for license information</source>
         <location filename="../../Include/iqtgui/CObjectPreviewGuiComp.ui" line="14"/>
         <location filename="../../Include/iqtgui/Generated/ui_CObjectPreviewGuiComp.h" line="59"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CObjectPreviewGuiComp.ui" line="17"/>
         <location filename="../../Include/iqtgui/Generated/ui_CObjectPreviewGuiComp.h" line="61"/>
         <source>Display navigation bar</source>
-        <translation type="unfinished">Navigationsleiste anzeigen</translation>
+        <translation>Navigationsleiste anzeigen</translation>
     </message>
 </context>
 <context>
@@ -855,7 +855,7 @@ See &apos;License.txt&apos; for license information</source>
     <message>
         <location filename="../../Include/iqtprm/generated/ui_COptionsListGuiComp.h" line="70"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2750,43 +2750,43 @@ in %1 generiert werden</translation>
     <message>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="31"/>
         <source>Object is not Qt image</source>
-        <translation type="unfinished">Das Objekt is nicht ein Qt-Bild</translation>
+        <translation>Das Objekt is nicht ein Qt-Bild</translation>
     </message>
     <message>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="46"/>
         <source>Bad image file extension %1</source>
-        <translation type="unfinished">Bilddatei hat eine invalide Dateierweiterung %1</translation>
+        <translation>Bilddatei hat eine invalide Dateierweiterung %1</translation>
     </message>
     <message>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="56"/>
         <source>Image file %1 not exist</source>
-        <translation type="unfinished">Bilddatei %1 existiert nicht</translation>
+        <translation>Bilddatei %1 existiert nicht</translation>
     </message>
     <message>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="66"/>
         <source>Bad image format</source>
-        <translation type="unfinished">Invaides Bildformat</translation>
+        <translation>Invaides Bildformat</translation>
     </message>
     <message>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="103"/>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="124"/>
         <source>Object is not supported image</source>
-        <translation type="unfinished">Das Objekt ist kein unterstütztes Bild</translation>
+        <translation>Das Objekt ist kein unterstütztes Bild</translation>
     </message>
     <message>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="107"/>
         <source>Cannot load file %1</source>
-        <translation type="unfinished">Die Datei %1 konnte nicht geladen werden</translation>
+        <translation>Die Datei %1 konnte nicht geladen werden</translation>
     </message>
     <message>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="137"/>
         <source>Cannot save file %1</source>
-        <translation type="unfinished">Die Datei %1 konnte nicht gespeichert werden</translation>
+        <translation>Die Datei %1 konnte nicht gespeichert werden</translation>
     </message>
     <message>
         <location filename="../../Include/iqt/CBitmapLoaderComp.cpp" line="173"/>
         <source>Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3327,47 +3327,47 @@ in %1 generiert werden</translation>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="68"/>
         <source>New informations available</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Informationen vorhanden</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="71"/>
         <source>There are warnings</source>
-        <translation type="unfinished"></translation>
+        <translation>Warnungen vorhanden</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="74"/>
         <source>There are errors</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler vorhanden</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="77"/>
         <source>There are critical errors!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kritische Fehler aufgetreten!</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="195"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Information</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="205"/>
         <source>Warning</source>
-        <translation type="unfinished">Warnung</translation>
+        <translation>Warnung</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="215"/>
         <source>Error</source>
-        <translation type="unfinished">Fehler</translation>
+        <translation>Fehler</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="225"/>
         <source>Clear</source>
-        <translation type="unfinished">Löschen</translation>
+        <translation>Löschen</translation>
     </message>
     <message>
         <location filename="../../Include/iqtgui/CLogGuiComp.cpp" line="238"/>
         <source>Export...</source>
-        <translation type="unfinished">Exportieren...</translation>
+        <translation>Exportieren...</translation>
     </message>
 </context>
 <context>
