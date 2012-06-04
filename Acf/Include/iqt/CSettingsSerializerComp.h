@@ -24,6 +24,7 @@
 #define iqt_CSettingsSerializerComp_included
 
 
+// ACF includes
 #include "iser/IFileLoader.h"
 
 #include "icomp/CComponentBase.h"
@@ -69,12 +70,13 @@ public:
 
 private:
 	I_REF(ibase::IApplicationInfo, m_applicationInfoCompPtr);
-	I_ATTR(QString, m_rootKeyAttrPtr);
+	I_ATTR(QByteArray, m_rootKeyAttrPtr);
 };
-	  
+
 
 } // namespace iqt
 
 
 #endif // !iqt_CSettingsSerializerComp_included
+
 
