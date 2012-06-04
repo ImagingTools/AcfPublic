@@ -22227,8 +22227,8 @@
       <type>virtual bool</type>
       <name>FileOpen</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a62296534d07168f3bbbb199da7f328d4</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)</arglist>
+      <anchor>a9322de8deae115bb5fda51913d59c6cd</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -22321,11 +22321,11 @@
       <anchor>a230ee9606b4757ad5210b9707ddc41be</anchor>
       <arglist>(const QString &amp;filePath) const </arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>SingleDocumentData *</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual SingleDocumentData *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>ab9f46603ec9fb42b17b32ddbc13a8a8e</anchor>
+      <anchor>a3725273b825005a5547f415d0a0c1d51</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -22690,8 +22690,8 @@
       <type>virtual bool</type>
       <name>FileOpen</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>ada6b87bc29c9681aec7581629524206d</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)</arglist>
+      <anchor>a36179f899927d8fbfb74ed3ea963a43a</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -23212,8 +23212,8 @@
       <type>virtual bool</type>
       <name>FileOpen</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a954ae1ff95dcdd12f06cc041ca58fbb5</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, FileToTypeMap *loadedMapPtr=NULL)=0</arglist>
+      <anchor>acf8d20ab44ed7c4d090f25df0b5898b4</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -54737,8 +54737,8 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
-      <anchor>a926b0156ac06d97197f270449b276e91</anchor>
-      <arglist>(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, true)</arglist>
+      <anchor>ae01b05d894373f89e0e7fdb53e0717ff</anchor>
+      <arglist>(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>

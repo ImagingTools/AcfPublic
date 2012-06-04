@@ -187,6 +187,7 @@ bool CSingleDocumentManagerBase::FileOpen(
 			const QString* fileNamePtr,
 			bool createView,
 			const QByteArray& viewTypeId,
+			istd::IChangeable** documentPtr,
 			FileToTypeMap* loadedMapPtr)
 {
 	bool retVal = true;
@@ -205,6 +206,10 @@ bool CSingleDocumentManagerBase::FileOpen(
 		if (OpenDocument(fileName, createView, viewTypeId, documentTypeId)){
 			if (loadedMapPtr != NULL){
 				loadedMapPtr->operator[](fileName) = documentTypeId;
+			}
+
+			if (documentPtr != NULL){
+				*documentPtr = m_documentPtr.GetPtr();
 			}
 		}
 		else{

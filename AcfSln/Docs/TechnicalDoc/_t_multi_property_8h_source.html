@@ -265,66 +265,90 @@
 <a name="l00276"></a>00276 
 <a name="l00277"></a>00277        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
 <a name="l00278"></a>00278 
-<a name="l00279"></a>00279        <span class="keywordtype">int</span> valuesCount = 0;
-<a name="l00280"></a>00280 
-<a name="l00281"></a>00281        <span class="keywordflow">if</span> (isStoring){
-<a name="l00282"></a>00282               valuesCount = int(m_values.size());
-<a name="l00283"></a>00283        }
-<a name="l00284"></a>00284 
-<a name="l00285"></a>00285        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">BeginMultiTag</a>(valuesTag, valueTag, valuesCount);
-<a name="l00286"></a>00286 
-<a name="l00287"></a>00287        <span class="keywordflow">if</span> (!isStoring){
-<a name="l00288"></a>00288               <span class="keywordflow">if</span> (!retVal){
-<a name="l00289"></a>00289                      <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00290"></a>00290               }
-<a name="l00291"></a>00291 
-<a name="l00292"></a>00292               m_values.reserve(valuesCount);
-<a name="l00293"></a>00293        }
-<a name="l00294"></a>00294 
-<a name="l00295"></a>00295        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; valuesCount; ++i){
-<a name="l00296"></a>00296               retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
-<a name="l00297"></a>00297               Value value = m_values[i];
-<a name="l00298"></a>00298               retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(value);
-<a name="l00299"></a>00299               m_values[i] = value;
-<a name="l00300"></a>00300               retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
-<a name="l00301"></a>00301        }
-<a name="l00302"></a>00302 
-<a name="l00303"></a>00303        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valuesTag);
+<a name="l00279"></a>00279        <span class="keywordflow">if</span> (isStoring){
+<a name="l00280"></a>00280               <span class="keywordtype">int</span> valuesCount = int(m_values.size());
+<a name="l00281"></a>00281 
+<a name="l00282"></a>00282               retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">BeginMultiTag</a>(valuesTag, valueTag, valuesCount);
+<a name="l00283"></a>00283               <span class="keywordflow">for</span> (ValueList::iterator iter = m_values.begin(); iter != m_values.end(); ++iter){
+<a name="l00284"></a>00284                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
+<a name="l00285"></a>00285                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(*iter);
+<a name="l00286"></a>00286                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
+<a name="l00287"></a>00287               }
+<a name="l00288"></a>00288               retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valuesTag);
+<a name="l00289"></a>00289        }
+<a name="l00290"></a>00290        <span class="keywordflow">else</span>{
+<a name="l00291"></a>00291               <span class="keywordtype">int</span> valuesCount = 0;
+<a name="l00292"></a>00292 
+<a name="l00293"></a>00293               retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">BeginMultiTag</a>(valuesTag, valueTag, valuesCount);
+<a name="l00294"></a>00294               <span class="keywordflow">if</span> (!retVal){
+<a name="l00295"></a>00295                      <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00296"></a>00296               }
+<a name="l00297"></a>00297 
+<a name="l00298"></a>00298               <span class="comment">// load properties &#39;in place&#39;, without allocation of new elements</span>
+<a name="l00299"></a>00299               <span class="keywordtype">int</span> itemIndex = 0;
+<a name="l00300"></a>00300               <span class="keywordflow">for</span> (ValueList::iterator iter = m_values.begin(); iter != m_values.end(); ++iter){
+<a name="l00301"></a>00301                      <span class="comment">// remove rest of elements, if current number of elements is bigger than the stored</span>
+<a name="l00302"></a>00302                      <span class="keywordflow">if</span> (itemIndex &gt;= valuesCount){
+<a name="l00303"></a>00303                             m_values.erase(iter, m_values.end());
 <a name="l00304"></a>00304 
-<a name="l00305"></a>00305        <span class="keywordflow">return</span> retVal;
-<a name="l00306"></a>00306 }
+<a name="l00305"></a>00305                             <span class="keywordflow">break</span>;
+<a name="l00306"></a>00306                      }
 <a name="l00307"></a>00307 
-<a name="l00308"></a>00308 
-<a name="l00309"></a>00309 <span class="comment">// static methods</span>
-<a name="l00310"></a>00310 
-<a name="l00311"></a>00311 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value, <span class="keyword">class</span> Container&gt;
-<a name="l00312"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a53c009560a3a0ece77dbd6684cd6f6f0">00312</a> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprop_1_1_t_multi_property.html#a53c009560a3a0ece77dbd6684cd6f6f0">TMultiProperty&lt;Value, Container&gt;::GetTypeName</a>()
-<a name="l00313"></a>00313 {
-<a name="l00314"></a>00314        <span class="keywordflow">return</span> s_typeName;
-<a name="l00315"></a>00315 }
-<a name="l00316"></a>00316 
-<a name="l00317"></a>00317 
-<a name="l00318"></a>00318 <span class="comment">// private static properties</span>
-<a name="l00319"></a>00319 
-<a name="l00320"></a>00320 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value, <span class="keyword">class</span> Container&gt;
-<a name="l00321"></a>00321 <span class="keyword">const</span> QByteArray <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;Value, Container&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;Value&gt;</a> &gt;());
+<a name="l00308"></a>00308                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
+<a name="l00309"></a>00309                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(*iter);
+<a name="l00310"></a>00310                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
+<a name="l00311"></a>00311 
+<a name="l00312"></a>00312                      ++itemIndex;
+<a name="l00313"></a>00313               }
+<a name="l00314"></a>00314 
+<a name="l00315"></a>00315               <span class="comment">// load rest of properties if current number of elements is smaller than the stored</span>
+<a name="l00316"></a>00316               <span class="keywordflow">while</span> (itemIndex &lt; valuesCount){
+<a name="l00317"></a>00317                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
+<a name="l00318"></a>00318                      Value value;
+<a name="l00319"></a>00319                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(value);
+<a name="l00320"></a>00320                      m_values.push_back(value);
+<a name="l00321"></a>00321                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
 <a name="l00322"></a>00322 
-<a name="l00323"></a>00323 
-<a name="l00324"></a>00324 <span class="comment">// typedefs</span>
+<a name="l00323"></a>00323                      ++itemIndex;
+<a name="l00324"></a>00324               }
 <a name="l00325"></a>00325 
-<a name="l00326"></a><a class="code" href="namespaceiprop.html#a18873d3b40062f0883b8ee66e2859640">00326</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a18873d3b40062f0883b8ee66e2859640">CMultiDoubleProperty</a>;
-<a name="l00327"></a><a class="code" href="namespaceiprop.html#a42a40f12de60cd4e05115fc792cb62ee">00327</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a42a40f12de60cd4e05115fc792cb62ee">CMultiBoolProperty</a>;
-<a name="l00328"></a><a class="code" href="namespaceiprop.html#a72c4d8a7d76de3f5cd8f7b486449fade">00328</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a72c4d8a7d76de3f5cd8f7b486449fade">CMultiIntProperty</a>;
-<a name="l00329"></a><a class="code" href="namespaceiprop.html#aef09d125d1f832e723feae69e2f3db3e">00329</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;QString, QStringList&gt;</a> <a class="code" href="namespaceiprop.html#aef09d125d1f832e723feae69e2f3db3e">CMultiStringProperty</a>;
-<a name="l00330"></a><a class="code" href="namespaceiprop.html#a98edf16a10baca64c26c9873cf45e385">00330</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;QByteArray&gt;</a> <a class="code" href="namespaceiprop.html#a98edf16a10baca64c26c9873cf45e385">CMultiStdStringProperty</a>;
+<a name="l00326"></a>00326               retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valuesTag);
+<a name="l00327"></a>00327        }
+<a name="l00328"></a>00328 
+<a name="l00329"></a>00329        <span class="keywordflow">return</span> retVal;
+<a name="l00330"></a>00330 }
 <a name="l00331"></a>00331 
 <a name="l00332"></a>00332 
-<a name="l00333"></a>00333 } <span class="comment">// namespace iprop</span>
+<a name="l00333"></a>00333 <span class="comment">// static methods</span>
 <a name="l00334"></a>00334 
-<a name="l00335"></a>00335 
-<a name="l00336"></a>00336 <span class="preprocessor">#endif // !iprop_TMultiProperty_included</span>
-<a name="l00337"></a>00337 <span class="preprocessor"></span>
-<a name="l00338"></a>00338 
+<a name="l00335"></a>00335 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value, <span class="keyword">class</span> Container&gt;
+<a name="l00336"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a53c009560a3a0ece77dbd6684cd6f6f0">00336</a> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprop_1_1_t_multi_property.html#a53c009560a3a0ece77dbd6684cd6f6f0">TMultiProperty&lt;Value, Container&gt;::GetTypeName</a>()
+<a name="l00337"></a>00337 {
+<a name="l00338"></a>00338        <span class="keywordflow">return</span> s_typeName;
+<a name="l00339"></a>00339 }
+<a name="l00340"></a>00340 
+<a name="l00341"></a>00341 
+<a name="l00342"></a>00342 <span class="comment">// private static properties</span>
+<a name="l00343"></a>00343 
+<a name="l00344"></a>00344 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value, <span class="keyword">class</span> Container&gt;
+<a name="l00345"></a>00345 <span class="keyword">const</span> QByteArray <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;Value, Container&gt;::s_typeName</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;Value&gt;</a> &gt;());
+<a name="l00346"></a>00346 
+<a name="l00347"></a>00347 
+<a name="l00348"></a>00348 <span class="comment">// typedefs</span>
+<a name="l00349"></a>00349 
+<a name="l00350"></a><a class="code" href="namespaceiprop.html#a18873d3b40062f0883b8ee66e2859640">00350</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a18873d3b40062f0883b8ee66e2859640">CMultiDoubleProperty</a>;
+<a name="l00351"></a><a class="code" href="namespaceiprop.html#a42a40f12de60cd4e05115fc792cb62ee">00351</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a42a40f12de60cd4e05115fc792cb62ee">CMultiBoolProperty</a>;
+<a name="l00352"></a><a class="code" href="namespaceiprop.html#a72c4d8a7d76de3f5cd8f7b486449fade">00352</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a72c4d8a7d76de3f5cd8f7b486449fade">CMultiIntProperty</a>;
+<a name="l00353"></a><a class="code" href="namespaceiprop.html#aef09d125d1f832e723feae69e2f3db3e">00353</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;QString, QStringList&gt;</a> <a class="code" href="namespaceiprop.html#aef09d125d1f832e723feae69e2f3db3e">CMultiStringProperty</a>;
+<a name="l00354"></a><a class="code" href="namespaceiprop.html#a98edf16a10baca64c26c9873cf45e385">00354</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_multi_property.html" title="Template implementation of multiple property.">TMultiProperty&lt;QByteArray&gt;</a> <a class="code" href="namespaceiprop.html#a98edf16a10baca64c26c9873cf45e385">CMultiStdStringProperty</a>;
+<a name="l00355"></a>00355 
+<a name="l00356"></a>00356 
+<a name="l00357"></a>00357 } <span class="comment">// namespace iprop</span>
+<a name="l00358"></a>00358 
+<a name="l00359"></a>00359 
+<a name="l00360"></a>00360 <span class="preprocessor">#endif // !iprop_TMultiProperty_included</span>
+<a name="l00361"></a>00361 <span class="preprocessor"></span>
+<a name="l00362"></a>00362 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

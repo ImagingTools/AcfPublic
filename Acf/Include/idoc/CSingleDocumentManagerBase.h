@@ -67,6 +67,7 @@ public:
 				const QString* fileNamePtr = NULL,
 				bool createView = true,
 				const QByteArray& viewTypeId = "",
+				istd::IChangeable** documentPtr = NULL,
 				FileToTypeMap* loadedMapPtr = NULL);
 	virtual bool FileSave(
 				int documentIndex = -1,

@@ -216,6 +216,7 @@ bool CMultiDocumentManagerBase::FileOpen(
 			const QString* fileNamePtr,
 			bool createView,
 			const QByteArray& viewTypeId,
+			istd::IChangeable** documentPtr,
 			FileToTypeMap* loadedMapPtr)
 {
 	bool retVal = true;
@@ -235,13 +236,18 @@ bool CMultiDocumentManagerBase::FileOpen(
 		const QString& fileName = *iter;
 
 		QByteArray documentTypeId;
-		if (OpenDocument(fileName, createView, viewTypeId, documentTypeId)){
+		istd::IChangeable* openDocumentPtr = OpenDocument(fileName, createView, viewTypeId, documentTypeId);
+		if (openDocumentPtr != NULL){
 			if (loadedMapPtr != NULL){
 				loadedMapPtr->operator[](fileName) = documentTypeId;
 			}
 		}
 		else{
 			retVal = false;
+		}
+
+		if (documentPtr != NULL){
+			*documentPtr = openDocumentPtr;
 		}
 	}
 
@@ -328,25 +334,28 @@ void CMultiDocumentManagerBase::FileClose(int documentIndex, bool* ignoredPtr)
 		SingleDocumentData* infoPtr = m_documentInfos.GetAt(documentIndex);
 		I_ASSERT(infoPtr != NULL);
 
-		for (Views::iterator iter = infoPtr->views.begin(); iter != infoPtr->views.end(); ++iter){
-			if (infoPtr->isDirty){
-				QueryDocumentClose(*infoPtr, ignoredPtr);
-				if ((ignoredPtr != NULL) && *ignoredPtr){
-					break;
+		while (!infoPtr->views.empty()){
+			for (Views::iterator iter = infoPtr->views.begin(); iter != infoPtr->views.end(); ++iter){
+				if (infoPtr->isDirty){
+					QueryDocumentClose(*infoPtr, ignoredPtr);
+					if ((ignoredPtr != NULL) && *ignoredPtr){
+						break;
+					}
 				}
-			}
 
-			I_ASSERT(iter->IsValid());
+				I_ASSERT(iter->IsValid());
 
-			istd::IPolymorphic* viewPtr = iter->GetPtr();
-			I_ASSERT(viewPtr != NULL);
+				istd::IPolymorphic* viewPtr = iter->GetPtr();
+				I_ASSERT(viewPtr != NULL);
 
-			OnViewRemoved(viewPtr);
+				OnViewRemoved(viewPtr);
 
-			infoPtr->views.erase(iter);
+				infoPtr->views.erase(iter);
 
-			if (viewPtr == m_activeViewPtr){
-				m_activeViewPtr = NULL;
+				if (viewPtr == m_activeViewPtr){
+					m_activeViewPtr = NULL;
+				}
+				break;
 			}
 		}
 

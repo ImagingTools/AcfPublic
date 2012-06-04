@@ -67,11 +67,13 @@ bool CComposedStateControllerComp::IsEnterAllowed(bool isActionAllowed, const IS
 		}
 	}
 
-	int slavesCount = m_slaveControllersCompPtr.GetCount();
-	for (int i = 0; i < slavesCount; ++i){
-		const iproc::IStateController* slaveConstrollerPtr = m_slaveControllersCompPtr[i];
-		if ((slaveConstrollerPtr != NULL) && !slaveConstrollerPtr->IsEnterAllowed(isActionAllowed)){
-			return false;	// if any subcontroller block entering this state, it will be blocked
+	if (m_slaveControllersCompPtr.IsValid()){
+		int slavesCount = m_slaveControllersCompPtr.GetCount();
+		for (int i = 0; i < slavesCount; ++i){
+			const iproc::IStateController* slaveConstrollerPtr = m_slaveControllersCompPtr[i];
+			if ((slaveConstrollerPtr != NULL) && !slaveConstrollerPtr->IsEnterAllowed(isActionAllowed)){
+				return false;	// if any subcontroller block entering this state, it will be blocked
+			}
 		}
 	}
 
@@ -88,11 +90,13 @@ bool CComposedStateControllerComp::IsLeaveAllowed(bool isActionAllowed, const IS
 		}
 	}
 
-	int slavesCount = m_slaveControllersCompPtr.GetCount();
-	for (int i = 0; i < slavesCount; ++i){
-		const iproc::IStateController* slaveConstrollerPtr = m_slaveControllersCompPtr[i];
-		if ((slaveConstrollerPtr != NULL) && !slaveConstrollerPtr->IsLeaveAllowed(isActionAllowed)){
-			return false;	// if any subcontroller block leaving this state, it will be blocked
+	if (m_slaveControllersCompPtr.IsValid()){
+		int slavesCount = m_slaveControllersCompPtr.GetCount();
+		for (int i = 0; i < slavesCount; ++i){
+			const iproc::IStateController* slaveConstrollerPtr = m_slaveControllersCompPtr[i];
+			if ((slaveConstrollerPtr != NULL) && !slaveConstrollerPtr->IsLeaveAllowed(isActionAllowed)){
+				return false;	// if any subcontroller block leaving this state, it will be blocked
+			}
 		}
 	}
 
@@ -150,11 +154,13 @@ void CComposedStateControllerComp::UpdateAllMembers()
 {
 	bool isEnabled = true;
 
-	int slavesCount = m_slaveControllersCompPtr.GetCount();
-	for (int i = 0; i < slavesCount; ++i){
-		const iproc::IStateController* slaveConstrollerPtr = m_slaveControllersCompPtr[i];
-		if (slaveConstrollerPtr != NULL){
-			isEnabled = isEnabled && slaveConstrollerPtr->IsStateEnabled();
+	if (m_slaveControllersCompPtr.IsValid()){
+		int slavesCount = m_slaveControllersCompPtr.GetCount();
+		for (int i = 0; i < slavesCount; ++i){
+			const iproc::IStateController* slaveConstrollerPtr = m_slaveControllersCompPtr[i];
+			if (slaveConstrollerPtr != NULL){
+				isEnabled = isEnabled && slaveConstrollerPtr->IsStateEnabled();
+			}
 		}
 	}
 
