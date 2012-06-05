@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2354
+          2246
         </Number>
         <Description>
           ACF
@@ -39,7 +39,7 @@
               LanguageIds
             </Id>
             <Type>
-              String[]
+              Id[]
             </Type>
             <ExportId>
               LanguageIds
@@ -157,13 +157,13 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="5">
+        <AttributeInfoMap count="4">
           <AttributeInfo>
             <Id>
               LanguageIds
             </Id>
             <Type>
-              String[]
+              Id[]
             </Type>
             <ExportId>
               LanguageIds
@@ -186,22 +186,6 @@
                   pl_PL
                 </Value>
               </Values>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              Log
-            </Id>
-            <Type>
-              Reference
-            </Type>
-            <ExportId>
-              Log
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
             </Data>
           </AttributeInfo>
           <AttributeInfo>
