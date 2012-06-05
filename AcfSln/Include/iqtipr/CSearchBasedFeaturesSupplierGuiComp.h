@@ -55,7 +55,6 @@ public:
 
 	enum ColumnType
 	{
-		CT_ID,
 		CT_SCORE,
 		CT_X,
 		CT_Y,
@@ -65,7 +64,7 @@ public:
 	};
 
 	I_BEGIN_COMPONENT(CSearchBasedFeaturesSupplierGuiComp);
-		I_ASSIGN(m_intermediateResultsGuiCompPtr, "IntermediateResultsGui", "GUI integrated into group 'Intermediate Results'", false, "IntermediateResultsGui");
+		I_ASSIGN(m_intermediateResultsGuiCompPtr, "IntermediateResultsGui", "GUI integreted in group 'Intermediate Results'", false, "IntermediateResultsGui");
 	I_END_COMPONENT;
 
 	CSearchBasedFeaturesSupplierGuiComp();
