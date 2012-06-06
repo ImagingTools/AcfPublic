@@ -117,74 +117,77 @@
 <a name="l00112"></a>00112 
 <a name="l00113"></a>00113                      <span class="keywordflow">return</span> parentPtr-&gt;<a class="code" href="classicomp_1_1_i_composite_component.html#a5f1d5c145632068d67dc0b1772c6b590" title="Create instance of subcomponent using its ID.">CreateSubcomponent</a>(baseId);
 <a name="l00114"></a>00114               }
-<a name="l00115"></a>00115        }
-<a name="l00116"></a>00116 
-<a name="l00117"></a>00117        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00118"></a>00118 }
+<a name="l00115"></a>00115               <span class="keywordflow">else</span>{
+<a name="l00116"></a>00116                      qCritical(<span class="stringliteral">&quot;Component %s is defined, but definition component has no parent&quot;</span>, BaseClass::operator*().constData());
+<a name="l00117"></a>00117               }
+<a name="l00118"></a>00118        }
 <a name="l00119"></a>00119 
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
-<a name="l00122"></a><a class="code" href="classicomp_1_1_t_factory_member.html#ad53dda6ed5f363ca9f7e0d23c0e22f48">00122</a> Interface* <a class="code" href="classicomp_1_1_t_factory_member.html#ad53dda6ed5f363ca9f7e0d23c0e22f48" title="Create an instance of the object, mapped to the keyId keyId.">TFactoryMember&lt;Interface&gt;::CreateInstance</a>(<span class="keyword">const</span> QByteArray&amp; <span class="comment">/*keyId*/</span>)<span class="keyword"> const</span>
-<a name="l00123"></a>00123 <span class="keyword"></span>{
-<a name="l00124"></a>00124        <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;IComponent&gt;</a> newComponentPtr(CreateComponent());
-<a name="l00125"></a>00125        <span class="keywordflow">if</span> (newComponentPtr.<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf" title="Check if internal pointer not NULL.">IsValid</a>()){
-<a name="l00126"></a>00126               Interface* retVal = BaseClass2::ExtractInterface&lt;Interface&gt;(newComponentPtr.<a class="code" href="classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951" title="Return access to internal stored pointer.">GetPtr</a>());
-<a name="l00127"></a>00127               <span class="keywordflow">if</span> (retVal != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00128"></a>00128                      newComponentPtr.<a class="code" href="classistd_1_1_t_del_ptr.html#a699e9ff86495a4b8e5f22cbdc285c2cf" title="Reset internal pointer value without deleting instance and return previos value.">PopPtr</a>();
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130                      <span class="keywordflow">return</span> retVal;
-<a name="l00131"></a>00131               }
-<a name="l00132"></a>00132        }
-<a name="l00133"></a>00133 
-<a name="l00134"></a>00134        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00135"></a>00135 }
+<a name="l00120"></a>00120        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00121"></a>00121 }
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
+<a name="l00125"></a><a class="code" href="classicomp_1_1_t_factory_member.html#ad53dda6ed5f363ca9f7e0d23c0e22f48">00125</a> Interface* <a class="code" href="classicomp_1_1_t_factory_member.html#ad53dda6ed5f363ca9f7e0d23c0e22f48" title="Create an instance of the object, mapped to the keyId keyId.">TFactoryMember&lt;Interface&gt;::CreateInstance</a>(<span class="keyword">const</span> QByteArray&amp; <span class="comment">/*keyId*/</span>)<span class="keyword"> const</span>
+<a name="l00126"></a>00126 <span class="keyword"></span>{
+<a name="l00127"></a>00127        <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;IComponent&gt;</a> newComponentPtr(CreateComponent());
+<a name="l00128"></a>00128        <span class="keywordflow">if</span> (newComponentPtr.<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf" title="Check if internal pointer not NULL.">IsValid</a>()){
+<a name="l00129"></a>00129               Interface* retVal = BaseClass2::ExtractInterface&lt;Interface&gt;(newComponentPtr.<a class="code" href="classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951" title="Return access to internal stored pointer.">GetPtr</a>());
+<a name="l00130"></a>00130               <span class="keywordflow">if</span> (retVal != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00131"></a>00131                      newComponentPtr.<a class="code" href="classistd_1_1_t_del_ptr.html#a699e9ff86495a4b8e5f22cbdc285c2cf" title="Reset internal pointer value without deleting instance and return previos value.">PopPtr</a>();
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133                      <span class="keywordflow">return</span> retVal;
+<a name="l00134"></a>00134               }
+<a name="l00135"></a>00135        }
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137 
-<a name="l00138"></a>00138 <span class="comment">// reimplemented (istd::IFactoryInfo)</span>
+<a name="l00137"></a>00137        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00138"></a>00138 }
 <a name="l00139"></a>00139 
-<a name="l00140"></a>00140 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
-<a name="l00141"></a><a class="code" href="classicomp_1_1_t_factory_member.html#a789587d514aaa8e329bb3c53129f7cea">00141</a> <a class="code" href="classistd_1_1_i_factory_info.html#ac357ea42763cc3625d85f4cce9fb2312">istd::IFactoryInfo::KeyList</a> <a class="code" href="classicomp_1_1_t_factory_member.html#a789587d514aaa8e329bb3c53129f7cea" title="Returns all posible keys for this factory.">TFactoryMember&lt;Interface&gt;::GetFactoryKeys</a>()<span class="keyword"> const</span>
-<a name="l00142"></a>00142 <span class="keyword"></span>{
-<a name="l00143"></a>00143        <span class="keyword">static</span> <a class="code" href="classicomp_1_1_t_factory_member.html#a744384330c55a7c2cd16a0783206479a">KeyList</a> defaultList(1, <span class="stringliteral">&quot;Component&quot;</span>);
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145        <span class="keywordflow">return</span> defaultList;
-<a name="l00146"></a>00146 }
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 <span class="comment">// reimplemented (istd::IFactoryInfo)</span>
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
+<a name="l00144"></a><a class="code" href="classicomp_1_1_t_factory_member.html#a789587d514aaa8e329bb3c53129f7cea">00144</a> <a class="code" href="classistd_1_1_i_factory_info.html#ac357ea42763cc3625d85f4cce9fb2312">istd::IFactoryInfo::KeyList</a> <a class="code" href="classicomp_1_1_t_factory_member.html#a789587d514aaa8e329bb3c53129f7cea" title="Returns all posible keys for this factory.">TFactoryMember&lt;Interface&gt;::GetFactoryKeys</a>()<span class="keyword"> const</span>
+<a name="l00145"></a>00145 <span class="keyword"></span>{
+<a name="l00146"></a>00146        <span class="keyword">static</span> <a class="code" href="classicomp_1_1_t_factory_member.html#a744384330c55a7c2cd16a0783206479a">KeyList</a> defaultList(1, <span class="stringliteral">&quot;Component&quot;</span>);
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148 
-<a name="l00149"></a>00149 <span class="comment">// static methods</span>
+<a name="l00148"></a>00148        <span class="keywordflow">return</span> defaultList;
+<a name="l00149"></a>00149 }
 <a name="l00150"></a>00150 
-<a name="l00151"></a>00151 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
-<a name="l00152"></a><a class="code" href="classicomp_1_1_t_factory_member.html#a9371b39dd866ac17fc4f263523199603">00152</a> Interface* <a class="code" href="classicomp_1_1_t_factory_member.html#a9371b39dd866ac17fc4f263523199603" title="Extract interface from some component.">TFactoryMember&lt;Interface&gt;::ExtractInterface</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* instancePtr, <span class="keyword">const</span> QByteArray&amp; subId)
-<a name="l00153"></a>00153 {
-<a name="l00154"></a>00154        <span class="keywordflow">if</span> (instancePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00155"></a>00155               <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>* componentPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>*<span class="keyword">&gt;</span>(instancePtr);
-<a name="l00156"></a>00156               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);    <span class="comment">// Only objects returned by \b CreateComponent should be used as input</span>
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158               <span class="keywordflow">if</span> (componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00159"></a>00159                      <span class="keywordflow">return</span> BaseClass2::ExtractInterface&lt;Interface&gt;(componentPtr, subId);
-<a name="l00160"></a>00160               }
-<a name="l00161"></a>00161        }
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00164"></a>00164 }
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152 <span class="comment">// static methods</span>
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
+<a name="l00155"></a><a class="code" href="classicomp_1_1_t_factory_member.html#a9371b39dd866ac17fc4f263523199603">00155</a> Interface* <a class="code" href="classicomp_1_1_t_factory_member.html#a9371b39dd866ac17fc4f263523199603" title="Extract interface from some component.">TFactoryMember&lt;Interface&gt;::ExtractInterface</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* instancePtr, <span class="keyword">const</span> QByteArray&amp; subId)
+<a name="l00156"></a>00156 {
+<a name="l00157"></a>00157        <span class="keywordflow">if</span> (instancePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00158"></a>00158               <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>* componentPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>*<span class="keyword">&gt;</span>(instancePtr);
+<a name="l00159"></a>00159               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);    <span class="comment">// Only objects returned by \b CreateComponent should be used as input</span>
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161               <span class="keywordflow">if</span> (componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00162"></a>00162                      <span class="keywordflow">return</span> BaseClass2::ExtractInterface&lt;Interface&gt;(componentPtr, subId);
+<a name="l00163"></a>00163               }
+<a name="l00164"></a>00164        }
 <a name="l00165"></a>00165 
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167 <span class="comment">// protected methods</span>
+<a name="l00166"></a>00166        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00167"></a>00167 }
 <a name="l00168"></a>00168 
-<a name="l00169"></a>00169 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
-<a name="l00170"></a><a class="code" href="classicomp_1_1_t_factory_member.html#aa47b9875f79f341e4802dfb1af2b6611">00170</a> <a class="code" href="classicomp_1_1_t_factory_member.html#ad8d3fe1f76788458c4efe9bb6e095823">TFactoryMember&lt;Interface&gt;::TFactoryMember</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_t_factory_member.html" title="Factory of components used as component member.">TFactoryMember</a>&amp; ptr)
-<a name="l00171"></a>00171 :      <a class="code" href="classicomp_1_1_t_attribute_member.html">BaseClass</a>(ptr),
-<a name="l00172"></a>00172        m_definitionComponentPtr(ptr.m_definitionComponentPtr)
-<a name="l00173"></a>00173 {
-<a name="l00174"></a>00174 }
-<a name="l00175"></a>00175 
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177 } <span class="comment">// namespace icomp</span>
+<a name="l00169"></a>00169 
+<a name="l00170"></a>00170 <span class="comment">// protected methods</span>
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
+<a name="l00173"></a><a class="code" href="classicomp_1_1_t_factory_member.html#aa47b9875f79f341e4802dfb1af2b6611">00173</a> <a class="code" href="classicomp_1_1_t_factory_member.html#ad8d3fe1f76788458c4efe9bb6e095823">TFactoryMember&lt;Interface&gt;::TFactoryMember</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_t_factory_member.html" title="Factory of components used as component member.">TFactoryMember</a>&amp; ptr)
+<a name="l00174"></a>00174 :      <a class="code" href="classicomp_1_1_t_attribute_member.html">BaseClass</a>(ptr),
+<a name="l00175"></a>00175        m_definitionComponentPtr(ptr.m_definitionComponentPtr)
+<a name="l00176"></a>00176 {
+<a name="l00177"></a>00177 }
 <a name="l00178"></a>00178 
 <a name="l00179"></a>00179 
-<a name="l00180"></a>00180 <span class="preprocessor">#endif // !icomp_TFactoryMember_included</span>
-<a name="l00181"></a>00181 <span class="preprocessor"></span>
+<a name="l00180"></a>00180 } <span class="comment">// namespace icomp</span>
+<a name="l00181"></a>00181 
 <a name="l00182"></a>00182 
+<a name="l00183"></a>00183 <span class="preprocessor">#endif // !icomp_TFactoryMember_included</span>
+<a name="l00184"></a>00184 <span class="preprocessor"></span>
+<a name="l00185"></a>00185 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

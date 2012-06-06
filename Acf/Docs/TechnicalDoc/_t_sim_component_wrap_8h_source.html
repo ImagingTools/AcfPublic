@@ -53,97 +53,111 @@
 <a name="l00032"></a>00032 
 <a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8c9c875e4e186c3b5076f72710d9d5f4" title="Initialilze component after setting all its attributes and references.">InitComponent</a>();
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038        <span class="comment">// reimplemented (icomp::ICompositeComponent)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a2b64d31fbbb64e874a9605ab598904ca" title="Get access to subcomponent using its ID.">GetSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId) <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">IComponentContext</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a3069c1960279b7af10b10ca2c2cc72a8" title="Get access to context of subcomponent using its ID.">GetSubcomponentContext</a>(<span class="keyword">const</span> QByteArray&amp; componentId) <span class="keyword">const</span>;
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6efa28a4353503b1ffad2b9e059daa23" title="Create instance of subcomponent using its ID.">CreateSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId) <span class="keyword">const</span>;
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e" title="Called if subcomponent is removed from memory.">OnSubcomponentDeleted</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* subcomponentPtr);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (icomp::IComponent)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">ICompositeComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8decdf8cc986e669aa9c384060c8f80c" title="Get parent of this component.">GetParentComponent</a>(<span class="keywordtype">bool</span> ownerOnly = <span class="keyword">false</span>) <span class="keyword">const</span>;
-<a name="l00046"></a>00046 };
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="comment">// public methods</span>
+<a name="l00038"></a>00038        <span class="comment">// reimplemented (icomp::IComponentContext)</span>
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#abf50b74906c5c8e9b9b22639bb36c338" title="Get ID of this component in the context tree.">GetContextId</a>() <span class="keyword">const</span>;
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (icomp::ICompositeComponent)</span>
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a2b64d31fbbb64e874a9605ab598904ca" title="Get access to subcomponent using its ID.">GetSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId) <span class="keyword">const</span>;
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">IComponentContext</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a3069c1960279b7af10b10ca2c2cc72a8" title="Get access to context of subcomponent using its ID.">GetSubcomponentContext</a>(<span class="keyword">const</span> QByteArray&amp; componentId) <span class="keyword">const</span>;
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6efa28a4353503b1ffad2b9e059daa23" title="Create instance of subcomponent using its ID.">CreateSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId) <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e" title="Called if subcomponent is removed from memory.">OnSubcomponentDeleted</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* subcomponentPtr);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (icomp::IComponent)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">ICompositeComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8decdf8cc986e669aa9c384060c8f80c" title="Get parent of this component.">GetParentComponent</a>(<span class="keywordtype">bool</span> ownerOnly = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00049"></a>00049 };
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00052"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#ad3f600f68d1d422180991935f17ced7d">00052</a> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#ad3f600f68d1d422180991935f17ced7d">TSimComponentWrap&lt;Base&gt;::TSimComponentWrap</a>()
-<a name="l00053"></a>00053 :      <a class="code" href="classicomp_1_1_t_component_wrap.html">BaseClass</a>(),
-<a name="l00054"></a>00054        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html">BaseClass2</a>(&amp;<a class="code" href="classicomp_1_1_t_component_wrap.html">BaseClass</a>::GetComponentStaticInfo())
-<a name="l00055"></a>00055 {
-<a name="l00056"></a>00056 }
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00060"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8c9c875e4e186c3b5076f72710d9d5f4">00060</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8c9c875e4e186c3b5076f72710d9d5f4" title="Initialilze component after setting all its attributes and references.">TSimComponentWrap&lt;Base&gt;::InitComponent</a>()
-<a name="l00061"></a>00061 {
-<a name="l00062"></a>00062        SetComponentContext(<span class="keyword">this</span>, <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keyword">false</span>);
-<a name="l00063"></a>00063 }
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="comment">// reimplemented (icomp::ICompositeComponent)</span>
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="comment">// public methods</span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00055"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#ad3f600f68d1d422180991935f17ced7d">00055</a> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#ad3f600f68d1d422180991935f17ced7d">TSimComponentWrap&lt;Base&gt;::TSimComponentWrap</a>()
+<a name="l00056"></a>00056 :      <a class="code" href="classicomp_1_1_t_component_wrap.html">BaseClass</a>(),
+<a name="l00057"></a>00057        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html">BaseClass2</a>(&amp;<a class="code" href="classicomp_1_1_t_component_wrap.html">BaseClass</a>::GetComponentStaticInfo())
+<a name="l00058"></a>00058 {
+<a name="l00059"></a>00059 }
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00063"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8c9c875e4e186c3b5076f72710d9d5f4">00063</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8c9c875e4e186c3b5076f72710d9d5f4" title="Initialilze component after setting all its attributes and references.">TSimComponentWrap&lt;Base&gt;::InitComponent</a>()
+<a name="l00064"></a>00064 {
+<a name="l00065"></a>00065        SetComponentContext(<span class="keyword">this</span>, <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keyword">false</span>);
+<a name="l00066"></a>00066 }
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00069"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a2b64d31fbbb64e874a9605ab598904ca">00069</a> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a2b64d31fbbb64e874a9605ab598904ca" title="Get access to subcomponent using its ID.">TSimComponentWrap&lt;Base&gt;::GetSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId)<span class="keyword"> const</span>
-<a name="l00070"></a>00070 <span class="keyword"></span>{
-<a name="l00071"></a>00071        BaseClass2::ComponentsMap::const_iterator iter = BaseClass2::m_componentsMap.find(componentId);
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073        <span class="keywordflow">if</span> (iter != BaseClass2::m_componentsMap.end()){
-<a name="l00074"></a>00074               <span class="keywordflow">return</span> iter.value();
-<a name="l00075"></a>00075        }
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00078"></a>00078 }
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="comment">// reimplemented (icomp::IComponentContext)</span>
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00072"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#abf50b74906c5c8e9b9b22639bb36c338">00072</a> <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#abf50b74906c5c8e9b9b22639bb36c338" title="Get ID of this component in the context tree.">TSimComponentWrap&lt;Base&gt;::GetContextId</a>()<span class="keyword"> const</span>
+<a name="l00073"></a>00073 <span class="keyword"></span>{
+<a name="l00074"></a>00074        <span class="keyword">static</span> QByteArray <span class="keywordtype">id</span> = istd::CClassInfo::GetName&lt;Base&gt;();
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076        <span class="keywordflow">return</span> id;
+<a name="l00077"></a>00077 }
+<a name="l00078"></a>00078 
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00082"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a3069c1960279b7af10b10ca2c2cc72a8">00082</a> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">IComponentContext</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a3069c1960279b7af10b10ca2c2cc72a8" title="Get access to context of subcomponent using its ID.">TSimComponentWrap&lt;Base&gt;::GetSubcomponentContext</a>(<span class="keyword">const</span> QByteArray&amp; <span class="comment">/*componentId*/</span>)<span class="keyword"> const</span>
-<a name="l00083"></a>00083 <span class="keyword"></span>{
-<a name="l00084"></a>00084        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00085"></a>00085 }
+<a name="l00080"></a>00080 <span class="comment">// reimplemented (icomp::ICompositeComponent)</span>
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00083"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a2b64d31fbbb64e874a9605ab598904ca">00083</a> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a2b64d31fbbb64e874a9605ab598904ca" title="Get access to subcomponent using its ID.">TSimComponentWrap&lt;Base&gt;::GetSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId)<span class="keyword"> const</span>
+<a name="l00084"></a>00084 <span class="keyword"></span>{
+<a name="l00085"></a>00085        BaseClass2::ComponentsMap::const_iterator iter = BaseClass2::m_componentsMap.find(componentId);
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00089"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6efa28a4353503b1ffad2b9e059daa23">00089</a> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6efa28a4353503b1ffad2b9e059daa23" title="Create instance of subcomponent using its ID.">TSimComponentWrap&lt;Base&gt;::CreateSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId)<span class="keyword"> const</span>
-<a name="l00090"></a>00090 <span class="keyword"></span>{
-<a name="l00091"></a>00091        FactoriesMap::const_iterator iter = m_factoriesMap.find(componentId);
-<a name="l00092"></a>00092        <span class="keywordflow">if</span> (iter != m_factoriesMap.end()){
-<a name="l00093"></a>00093               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(iter.value() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00087"></a>00087        <span class="keywordflow">if</span> (iter != BaseClass2::m_componentsMap.end()){
+<a name="l00088"></a>00088               <span class="keywordflow">return</span> iter.value();
+<a name="l00089"></a>00089        }
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00092"></a>00092 }
+<a name="l00093"></a>00093 
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095               <span class="keywordflow">return</span> iter.value()-&gt;CreateInstance();
-<a name="l00096"></a>00096        }
-<a name="l00097"></a>00097 
+<a name="l00095"></a>00095 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00096"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a3069c1960279b7af10b10ca2c2cc72a8">00096</a> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">IComponentContext</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a3069c1960279b7af10b10ca2c2cc72a8" title="Get access to context of subcomponent using its ID.">TSimComponentWrap&lt;Base&gt;::GetSubcomponentContext</a>(<span class="keyword">const</span> QByteArray&amp; <span class="comment">/*componentId*/</span>)<span class="keyword"> const</span>
+<a name="l00097"></a>00097 <span class="keyword"></span>{
 <a name="l00098"></a>00098        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00099"></a>00099 }
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00103"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e">00103</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e" title="Called if subcomponent is removed from memory.">TSimComponentWrap&lt;Base&gt;::OnSubcomponentDeleted</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <span class="comment">/*subcomponentPtr*/</span>)
-<a name="l00104"></a>00104 {
-<a name="l00105"></a>00105        <a class="code" href="istd_8h.html#a5952e0d7281d1ab784531120ea40c9c4">I_CRITICAL</a>();
-<a name="l00106"></a>00106 }
-<a name="l00107"></a>00107 
+<a name="l00103"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6efa28a4353503b1ffad2b9e059daa23">00103</a> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6efa28a4353503b1ffad2b9e059daa23" title="Create instance of subcomponent using its ID.">TSimComponentWrap&lt;Base&gt;::CreateSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId)<span class="keyword"> const</span>
+<a name="l00104"></a>00104 <span class="keyword"></span>{
+<a name="l00105"></a>00105        FactoriesMap::const_iterator iter = m_factoriesMap.find(componentId);
+<a name="l00106"></a>00106        <span class="keywordflow">if</span> (iter != m_factoriesMap.end()){
+<a name="l00107"></a>00107               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(iter.value() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="comment">// reimplemented (icomp::IComponent)</span>
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00112"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8decdf8cc986e669aa9c384060c8f80c">00112</a> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">ICompositeComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8decdf8cc986e669aa9c384060c8f80c" title="Get parent of this component.">TSimComponentWrap&lt;Base&gt;::GetParentComponent</a>(<span class="keywordtype">bool</span> ownerOnly)<span class="keyword"> const</span>
-<a name="l00113"></a>00113 <span class="keyword"></span>{
-<a name="l00114"></a>00114        <span class="keywordflow">if</span> (ownerOnly){
-<a name="l00115"></a>00115               <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00116"></a>00116        }
-<a name="l00117"></a>00117        <span class="keywordflow">else</span>{
-<a name="l00118"></a>00118               <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span><a class="code" href="classicomp_1_1_t_sim_component_wrap.html" title="Simulation wrapper of component.">TSimComponentWrap&lt;Base&gt;</a>* <span class="keyword">&gt;</span>(<span class="keyword">this</span>);
-<a name="l00119"></a>00119        }
+<a name="l00109"></a>00109               <span class="keywordflow">return</span> iter.value()-&gt;CreateInstance();
+<a name="l00110"></a>00110        }
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00113"></a>00113 }
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00117"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e">00117</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e" title="Called if subcomponent is removed from memory.">TSimComponentWrap&lt;Base&gt;::OnSubcomponentDeleted</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <span class="comment">/*subcomponentPtr*/</span>)
+<a name="l00118"></a>00118 {
+<a name="l00119"></a>00119        <a class="code" href="istd_8h.html#a5952e0d7281d1ab784531120ea40c9c4">I_CRITICAL</a>();
 <a name="l00120"></a>00120 }
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122 
-<a name="l00123"></a>00123 } <span class="comment">// namespace icomp</span>
+<a name="l00123"></a>00123 <span class="comment">// reimplemented (icomp::IComponent)</span>
 <a name="l00124"></a>00124 
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 <span class="preprocessor">#endif // !icomp_TSimComponentWrap_included</span>
-<a name="l00127"></a>00127 <span class="preprocessor"></span>
-<a name="l00128"></a>00128 
+<a name="l00125"></a>00125 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
+<a name="l00126"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8decdf8cc986e669aa9c384060c8f80c">00126</a> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">ICompositeComponent</a>* <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a8decdf8cc986e669aa9c384060c8f80c" title="Get parent of this component.">TSimComponentWrap&lt;Base&gt;::GetParentComponent</a>(<span class="keywordtype">bool</span> ownerOnly)<span class="keyword"> const</span>
+<a name="l00127"></a>00127 <span class="keyword"></span>{
+<a name="l00128"></a>00128        <span class="keywordflow">if</span> (ownerOnly){
+<a name="l00129"></a>00129               <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00130"></a>00130        }
+<a name="l00131"></a>00131        <span class="keywordflow">else</span>{
+<a name="l00132"></a>00132               <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span><a class="code" href="classicomp_1_1_t_sim_component_wrap.html" title="Simulation wrapper of component.">TSimComponentWrap&lt;Base&gt;</a>* <span class="keyword">&gt;</span>(<span class="keyword">this</span>);
+<a name="l00133"></a>00133        }
+<a name="l00134"></a>00134 }
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137 } <span class="comment">// namespace icomp</span>
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 <span class="preprocessor">#endif // !icomp_TSimComponentWrap_included</span>
+<a name="l00141"></a>00141 <span class="preprocessor"></span>
+<a name="l00142"></a>00142 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

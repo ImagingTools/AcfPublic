@@ -147,18 +147,21 @@
 <a name="l00131"></a>00131 
 <a name="l00132"></a>00132                      m_isInitialized = retVal;
 <a name="l00133"></a>00133               }
-<a name="l00134"></a>00134        }
-<a name="l00135"></a>00135 
-<a name="l00136"></a>00136        <span class="keywordflow">return</span> m_isInitialized;
-<a name="l00137"></a>00137 }
+<a name="l00134"></a>00134               <span class="keywordflow">else</span>{
+<a name="l00135"></a>00135                      qCritical(<span class="stringliteral">&quot;Components are is defined, but definition component has no parent&quot;</span>);
+<a name="l00136"></a>00136               }
+<a name="l00137"></a>00137        }
 <a name="l00138"></a>00138 
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140 } <span class="comment">// namespace icomp</span>
+<a name="l00139"></a>00139        <span class="keywordflow">return</span> m_isInitialized;
+<a name="l00140"></a>00140 }
 <a name="l00141"></a>00141 
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143 <span class="preprocessor">#endif // !icomp_TMultiReferenceMember_included</span>
-<a name="l00144"></a>00144 <span class="preprocessor"></span>
+<a name="l00143"></a>00143 } <span class="comment">// namespace icomp</span>
+<a name="l00144"></a>00144 
 <a name="l00145"></a>00145 
+<a name="l00146"></a>00146 <span class="preprocessor">#endif // !icomp_TMultiReferenceMember_included</span>
+<a name="l00147"></a>00147 <span class="preprocessor"></span>
+<a name="l00148"></a>00148 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

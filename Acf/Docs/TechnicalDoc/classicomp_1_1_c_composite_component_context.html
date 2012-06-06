@@ -58,8 +58,8 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_context.html">CComponentContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component_context.html#ac8b8752ab9b88e2e3f819eb7519dcec8">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component_context.html#a8761ec4df20d9a7fad6f1d5d9484250b">CCompositeComponentContext</a> (const <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> *elementPtr, const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *staticInfoPtr, const <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *registryPtr, const <a class="el" href="classicomp_1_1_i_component_environment_manager.html">IComponentEnvironmentManager</a> *environmentManagerPtr, const <a class="el" href="classicomp_1_1_c_composite_component_context.html">CCompositeComponentContext</a> *parentPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a8761ec4df20d9a7fad6f1d5d9484250b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component_context.html#a551b574f1de28807de66ebd3696251e0">CCompositeComponentContext</a> (const <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> *elementPtr, const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *staticInfoPtr, const <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> *registryPtr, const <a class="el" href="classicomp_1_1_i_component_environment_manager.html">IComponentEnvironmentManager</a> *environmentManagerPtr, const <a class="el" href="classicomp_1_1_c_composite_component_context.html">CCompositeComponentContext</a> *parentPtr, const QByteArray &amp;contextId)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a551b574f1de28807de66ebd3696251e0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component_context.html#aa0948f4cc2e5cee9e92a197064b210aa">GetRegistry</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_i_component_environment_manager.html">IComponentEnvironmentManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component_context.html#af001bd0f41ca5d4a3d8c01f6312c7912">GetEnvironmentManager</a> () const </td></tr>
@@ -84,7 +84,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8761ec4df20d9a7fad6f1d5d9484250b"></a><!-- doxytag: member="icomp::CCompositeComponentContext::CCompositeComponentContext" ref="a8761ec4df20d9a7fad6f1d5d9484250b" args="(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IRegistry *registryPtr, const IComponentEnvironmentManager *environmentManagerPtr, const CCompositeComponentContext *parentPtr)" -->
+<a class="anchor" id="a551b574f1de28807de66ebd3696251e0"></a><!-- doxytag: member="icomp::CCompositeComponentContext::CCompositeComponentContext" ref="a551b574f1de28807de66ebd3696251e0" args="(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IRegistry *registryPtr, const IComponentEnvironmentManager *environmentManagerPtr, const CCompositeComponentContext *parentPtr, const QByteArray &amp;contextId)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -116,7 +116,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classicomp_1_1_c_composite_component_context.html">CCompositeComponentContext</a> *&#160;</td>
-          <td class="paramname"><em>parentPtr</em>&#160;</td>
+          <td class="paramname"><em>parentPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>contextId</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,7 +161,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_composite_component_context_8h_source.html#l00055">55</a> of file <a class="el" href="_c_composite_component_context_8h_source.html">CCompositeComponentContext.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_composite_component_context_8h_source.html#l00056">56</a> of file <a class="el" href="_c_composite_component_context_8h_source.html">CCompositeComponentContext.h</a>.</p>
 
 </div>
 </div>
@@ -173,7 +179,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_composite_component_context_8h_source.html#l00049">49</a> of file <a class="el" href="_c_composite_component_context_8h_source.html">CCompositeComponentContext.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_composite_component_context_8h_source.html#l00050">50</a> of file <a class="el" href="_c_composite_component_context_8h_source.html">CCompositeComponentContext.h</a>.</p>
 
 </div>
 </div>

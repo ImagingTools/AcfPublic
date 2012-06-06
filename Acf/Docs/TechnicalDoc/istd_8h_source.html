@@ -57,7 +57,7 @@
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 <span class="preprocessor">#define I_IF_DEBUG(instructions) instructions</span>
 <a name="l00047"></a>00047 <span class="preprocessor"></span><span class="preprocessor">#define I_ASSERT(condition) Q_ASSERT(condition)</span>
-<a name="l00048"></a>00048 <span class="preprocessor"></span><span class="preprocessor">#define I_CRITICAL() qFatal(&quot;fatal error %s: (%s)&quot;, __FILE__, __LINE__)</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span><span class="preprocessor">#define I_CRITICAL() Q_ASSERT(false)</span>
 <a name="l00049"></a>00049 <span class="preprocessor"></span>
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 <span class="preprocessor">#else // _DEBUG || DEBUG</span>

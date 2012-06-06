@@ -153,6 +153,9 @@ bool TMultiReferenceMember<Interface>::EnsureInitialized() const
 
 			m_isInitialized = retVal;
 		}
+		else{
+			qCritical("Components are is defined, but definition component has no parent");
+		}
 	}
 
 	return m_isInitialized;

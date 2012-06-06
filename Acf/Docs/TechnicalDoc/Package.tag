@@ -1549,6 +1549,7 @@
     <filename>_c_component_context_8h</filename>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <class kind="class">icomp::CComponentContext</class>
+    <class kind="struct">icomp::CComponentContext::AttributeInfo</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -1936,6 +1937,7 @@
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_i_real_attribute_static_info_8h" name="IRealAttributeStaticInfo.h" local="yes" imported="no">icomp/IRealAttributeStaticInfo.h</includes>
     <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_c_component_context_8h" name="CComponentContext.h" local="yes" imported="no">icomp/CComponentContext.h</includes>
     <class kind="class">icomp::TAttributeMemberBase</class>
     <class kind="class">icomp::TAttributeMember</class>
     <class kind="class">icomp::TAttributeMember&lt; TAttribute&lt; QString &gt; &gt;</class>
@@ -18576,18 +18578,19 @@
     <name>icomp::CComponentContext</name>
     <filename>classicomp_1_1_c_component_context.html</filename>
     <base virtualness="virtual">icomp::IComponentContext</base>
+    <class kind="struct">icomp::CComponentContext::AttributeInfo</class>
     <member kind="function">
       <type></type>
       <name>CComponentContext</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>af12383ba7933a87e063d920a822c7104</anchor>
-      <arglist>(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IComponentContext *parentPtr=NULL, const QByteArray &amp;contextId=&quot;&quot;)</arglist>
+      <anchor>ae82dfd88b4350ffefaf7629ea7feb91b</anchor>
+      <arglist>(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IComponentContext *parentPtr, const QByteArray &amp;contextId)</arglist>
     </member>
-    <member kind="function">
-      <type>const QByteArray &amp;</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QByteArray &amp;</type>
       <name>GetContextId</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>a09b48548eb60613ea9a4a91bdf552a85</anchor>
+      <anchor>ab75ce7235bf5030745569b3944b8309f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18617,6 +18620,38 @@
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
       <anchor>af4bfeff376a73676c94bb238810800d7</anchor>
       <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CalcAttributeInfo</name>
+      <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
+      <anchor>a88f5475fc6ec59d4729f8f256b363b14</anchor>
+      <arglist>(const QByteArray &amp;attributeId, AttributeInfo &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QByteArray</type>
+      <name>GetCompleteContextId</name>
+      <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
+      <anchor>ad370213d58104fca3076df8893861ce5</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>icomp::CComponentContext::AttributeInfo</name>
+    <filename>structicomp_1_1_c_component_context_1_1_attribute_info.html</filename>
+    <member kind="variable">
+      <type>const iser::IObject *</type>
+      <name>attributePtr</name>
+      <anchorfile>structicomp_1_1_c_component_context_1_1_attribute_info.html</anchorfile>
+      <anchor>a08742f4c8dce14b7a47923ea2cc89e12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>definitionLevel</name>
+      <anchorfile>structicomp_1_1_c_component_context_1_1_attribute_info.html</anchorfile>
+      <anchor>a5569c30059340fb624074ce9a618fbda</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18845,8 +18880,8 @@
       <type></type>
       <name>CCompositeComponentContext</name>
       <anchorfile>classicomp_1_1_c_composite_component_context.html</anchorfile>
-      <anchor>a8761ec4df20d9a7fad6f1d5d9484250b</anchor>
-      <arglist>(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IRegistry *registryPtr, const IComponentEnvironmentManager *environmentManagerPtr, const CCompositeComponentContext *parentPtr)</arglist>
+      <anchor>a551b574f1de28807de66ebd3696251e0</anchor>
+      <arglist>(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IRegistry *registryPtr, const IComponentEnvironmentManager *environmentManagerPtr, const CCompositeComponentContext *parentPtr, const QByteArray &amp;contextId)</arglist>
     </member>
     <member kind="function">
       <type>const IRegistry &amp;</type>
@@ -19958,6 +19993,13 @@
     <name>icomp::IComponentContext</name>
     <filename>classicomp_1_1_i_component_context.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QByteArray &amp;</type>
+      <name>GetContextId</name>
+      <anchorfile>classicomp_1_1_i_component_context.html</anchorfile>
+      <anchor>ac5ba6c38c0398be762b0c7b2e1b04e33</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const IRegistryElement &amp;</type>
       <name>GetRegistryElement</name>
@@ -21854,6 +21896,13 @@
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
       <anchor>a8c9c875e4e186c3b5076f72710d9d5f4</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QByteArray &amp;</type>
+      <name>GetContextId</name>
+      <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
+      <anchor>abf50b74906c5c8e9b9b22639bb36c338</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
@@ -37259,8 +37308,8 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>ae923392fe3ed75380ad3aeb82f52c695</anchor>
-      <arglist>(m_mainWindowComponentsCompPtr, m_mainWindowCommandsCompPtr, false)</arglist>
+      <anchor>acb3b847be66deb18bad5331998322a04</anchor>
+      <arglist>(m_mainWindowCommandsCompPtr, m_mainWindowComponentsCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>

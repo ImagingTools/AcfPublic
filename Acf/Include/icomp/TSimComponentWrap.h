@@ -57,6 +57,9 @@ public:
 	*/
 	void InitComponent();
 
+	// reimplemented (icomp::IComponentContext)
+	virtual const QByteArray& GetContextId() const;
+
 	// reimplemented (icomp::ICompositeComponent)
 	virtual IComponent* GetSubcomponent(const QByteArray& componentId) const;
 	virtual const IComponentContext* GetSubcomponentContext(const QByteArray& componentId) const;
@@ -82,6 +85,17 @@ template <class Base>
 void TSimComponentWrap<Base>::InitComponent()
 {
 	SetComponentContext(this, NULL, false);
+}
+
+
+// reimplemented (icomp::IComponentContext)
+
+template <class Base>
+const QByteArray& TSimComponentWrap<Base>::GetContextId() const
+{
+	static QByteArray id = istd::CClassInfo::GetName<Base>();
+
+	return id;
 }
 
 

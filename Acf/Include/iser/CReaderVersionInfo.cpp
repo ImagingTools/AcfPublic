@@ -70,7 +70,7 @@ CReaderVersionInfo::VersionIds CReaderVersionInfo::GetVersionIds() const
 bool CReaderVersionInfo::GetVersionNumber(int versionId, quint32& result) const
 {
 	VersionElements::ConstIterator findIter = m_versionIdList.constFind(versionId);
-	if (findIter != m_versionIdList.end()){
+	if (findIter != m_versionIdList.constEnd()){
 		result = findIter.value().versionNumber;
 
 		return true;
@@ -85,7 +85,7 @@ bool CReaderVersionInfo::GetVersionNumber(int versionId, quint32& result) const
 QString CReaderVersionInfo::GetVersionIdDescription(int versionId) const
 {
 	VersionElements::ConstIterator findIter = m_versionIdList.constFind(versionId);
-	if (findIter != m_versionIdList.end()){
+	if (findIter != m_versionIdList.constEnd()){
 		return findIter.value().description;
 	}
 
