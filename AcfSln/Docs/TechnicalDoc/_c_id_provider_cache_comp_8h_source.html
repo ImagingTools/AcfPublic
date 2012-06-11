@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iinsp/CIdCacheComp.h Source File</title>
+<title>Include/iinsp/CIdProviderCacheComp.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,11 +21,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iinsp/CIdCacheComp.h</div>  </div>
+<div class="title">Include/iinsp/CIdProviderCacheComp.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_id_cache_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iinsp_CIdCacheComp_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iinsp_CIdCacheComp_included</span>
+<a href="_c_id_provider_cache_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iinsp_CIdProviderCacheComp_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iinsp_CIdProviderCacheComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
@@ -39,24 +39,24 @@
 <a name="l00013"></a>00013 {
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
-<a name="l00021"></a><a class="code" href="classiinsp_1_1_c_id_cache_comp.html">00021</a> <span class="keyword">class </span><a class="code" href="classiinsp_1_1_c_id_cache_comp.html" title="General ID provider returning always stored ID.">CIdCacheComp</a>:
+<a name="l00021"></a><a class="code" href="classiinsp_1_1_c_id_provider_cache_comp.html">00021</a> <span class="keyword">class </span><a class="code" href="classiinsp_1_1_c_id_provider_cache_comp.html" title="General ID provider returning always stored ID.">CIdProviderCacheComp</a>:
 <a name="l00022"></a>00022                      <span class="keyword">public</span> icomp::CComponentBase,
 <a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiinsp_1_1_i_id_provider.html" title="Allow access to some ID.">IIdProvider</a>
 <a name="l00024"></a>00024 {
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00026"></a><a class="code" href="classiinsp_1_1_c_id_cache_comp.html#ab04df91a474ab4afe3c7bdd71a961343">00026</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiinsp_1_1_c_id_cache_comp.html#ab04df91a474ab4afe3c7bdd71a961343">BaseClass</a>;
+<a name="l00026"></a><a class="code" href="classiinsp_1_1_c_id_provider_cache_comp.html#afbeec5ef19e5c6e15e38101f72d5e6fb">00026</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiinsp_1_1_c_id_provider_cache_comp.html#afbeec5ef19e5c6e15e38101f72d5e6fb">BaseClass</a>;
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028        I_BEGIN_COMPONENT(<a class="code" href="classiinsp_1_1_c_id_cache_comp.html" title="General ID provider returning always stored ID.">CIdCacheComp</a>);
+<a name="l00028"></a>00028        I_BEGIN_COMPONENT(<a class="code" href="classiinsp_1_1_c_id_provider_cache_comp.html" title="General ID provider returning always stored ID.">CIdProviderCacheComp</a>);
 <a name="l00029"></a>00029               I_REGISTER_INTERFACE(<a class="code" href="classiinsp_1_1_i_id_provider.html" title="Allow access to some ID.">IIdProvider</a>);
 <a name="l00030"></a>00030        I_END_COMPONENT;
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032        <a class="code" href="classiinsp_1_1_c_id_cache_comp.html#a9c2085f385ddb3ff76abf5fb36e7a470">CIdCacheComp</a>();
+<a name="l00032"></a>00032        <a class="code" href="classiinsp_1_1_c_id_provider_cache_comp.html#a5ddb1080ada229964b1ae11fef617d11">CIdProviderCacheComp</a>();
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (iinsp::IIdProvider)</span>
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> quint32 <a class="code" href="classiinsp_1_1_c_id_cache_comp.html#a8a7f3b95fcd2d2eda0778a53bbbd08c6" title="Get current ID value.">GetCurrentId</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> quint32 <a class="code" href="classiinsp_1_1_c_id_provider_cache_comp.html#a712665b02514541474375365732cd004" title="Get current ID value.">GetCurrentId</a>() <span class="keyword">const</span>;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiinsp_1_1_c_id_cache_comp.html#a88b71e8c1ff73bb34d1ba3c1de6df8d3">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiinsp_1_1_c_id_provider_cache_comp.html#afd786803a5b0a0373185d7988f622c8f">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">private</span>:
 <a name="l00041"></a>00041        <span class="keywordtype">int</span> m_currentId;
@@ -66,7 +66,7 @@
 <a name="l00045"></a>00045 } <span class="comment">// namespace iinsp</span>
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="preprocessor">#endif // !iinsp_CIdCacheComp_included</span>
+<a name="l00048"></a>00048 <span class="preprocessor">#endif // !iinsp_CIdProviderCacheComp_included</span>
 <a name="l00049"></a>00049 <span class="preprocessor"></span>
 <a name="l00050"></a>00050 
 </pre></div></div>

@@ -20,42 +20,53 @@
 ********************************************************************************/
 
 
-#include "iinsp/CIdCacheComp.h"
+#ifndef iinsp_CIdProviderCacheComp_included
+#define iinsp_CIdProviderCacheComp_included
+
+
+// ACF includes
+#include "icomp/CComponentBase.h"
+
+// ACF-Solutions includes
+#include "iinsp/IIdProvider.h"
 
 
 namespace iinsp
 {
 
 
-CIdCacheComp::CIdCacheComp()
-:	m_currentId(0)
+/**
+	General ID provider returning always stored ID.
+	Stored ID can be changed only copying their from another ID provider using CopyFrom method.
+	This object will be used to manage threading barrier for object supplier chain.
+*/
+class CIdProviderCacheComp:
+			public icomp::CComponentBase,
+			virtual public IIdProvider
 {
-}
+public:
+	typedef icomp::CComponentBase BaseClass;
 
+	I_BEGIN_COMPONENT(CIdProviderCacheComp);
+		I_REGISTER_INTERFACE(IIdProvider);
+	I_END_COMPONENT;
 
-// reimplemented (iinsp::IIdProvider)
+	CIdProviderCacheComp();
 
-quint32 CIdCacheComp::GetCurrentId() const
-{
-	return m_currentId;
-}
+	// reimplemented (iinsp::IIdProvider)
+	virtual quint32 GetCurrentId() const;
 
+	// reimplemented (istd::IChangeable)
+	virtual bool CopyFrom(const IChangeable& object);
 
-// reimplemented (istd::IChangeable)
-
-bool CIdCacheComp::CopyFrom(const IChangeable& object)
-{
-	const IIdProvider* providerPtr = dynamic_cast<const IIdProvider*>(&object);
-	if (providerPtr != NULL){
-		m_currentId = providerPtr->GetCurrentId();
-
-		return true;
-	}
-
-	return false;
-}
+private:
+	int m_currentId;
+};
 
 
 } // namespace iinsp
+
+
+#endif // !iinsp_CIdProviderCacheComp_included
 
 

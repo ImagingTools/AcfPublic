@@ -409,11 +409,11 @@
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
-    <name>CIdCacheComp.h</name>
+    <name>CIdProviderCacheComp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
-    <filename>_c_id_cache_comp_8h</filename>
+    <filename>_c_id_provider_cache_comp_8h</filename>
     <includes id="_i_id_provider_8h" name="IIdProvider.h" local="yes" imported="no">iinsp/IIdProvider.h</includes>
-    <class kind="class">iinsp::CIdCacheComp</class>
+    <class kind="class">iinsp::CIdProviderCacheComp</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -459,11 +459,11 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
-    <name>CBitmapCacheComp.h</name>
+    <name>CBitmapProviderCacheComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_c_bitmap_cache_comp_8h</filename>
+    <filename>_c_bitmap_provider_cache_comp_8h</filename>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
-    <class kind="class">iipr::CBitmapCacheComp</class>
+    <class kind="class">iipr::CBitmapProviderCacheComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -4628,7 +4628,7 @@
   <compound kind="namespace">
     <name>iinsp</name>
     <filename>namespaceiinsp.html</filename>
-    <class kind="class">iinsp::CIdCacheComp</class>
+    <class kind="class">iinsp::CIdProviderCacheComp</class>
     <class kind="class">iinsp::CInformationProviderCacheComp</class>
     <class kind="class">iinsp::CInspectionTaskComp</class>
     <class kind="class">iinsp::IIdProvider</class>
@@ -4636,36 +4636,36 @@
     <class kind="class">iinsp::ITimeStampProvider</class>
   </compound>
   <compound kind="class">
-    <name>iinsp::CIdCacheComp</name>
-    <filename>classiinsp_1_1_c_id_cache_comp.html</filename>
+    <name>iinsp::CIdProviderCacheComp</name>
+    <filename>classiinsp_1_1_c_id_provider_cache_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iinsp::IIdProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
-      <anchor>ab04df91a474ab4afe3c7bdd71a961343</anchor>
+      <anchorfile>classiinsp_1_1_c_id_provider_cache_comp.html</anchorfile>
+      <anchor>afbeec5ef19e5c6e15e38101f72d5e6fb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>CIdCacheComp</name>
-      <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
-      <anchor>a9c2085f385ddb3ff76abf5fb36e7a470</anchor>
+      <name>CIdProviderCacheComp</name>
+      <anchorfile>classiinsp_1_1_c_id_provider_cache_comp.html</anchorfile>
+      <anchor>a5ddb1080ada229964b1ae11fef617d11</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual quint32</type>
       <name>GetCurrentId</name>
-      <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
-      <anchor>a8a7f3b95fcd2d2eda0778a53bbbd08c6</anchor>
+      <anchorfile>classiinsp_1_1_c_id_provider_cache_comp.html</anchorfile>
+      <anchor>a712665b02514541474375365732cd004</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
-      <anchorfile>classiinsp_1_1_c_id_cache_comp.html</anchorfile>
-      <anchor>a88b71e8c1ff73bb34d1ba3c1de6df8d3</anchor>
+      <anchorfile>classiinsp_1_1_c_id_provider_cache_comp.html</anchorfile>
+      <anchor>afd786803a5b0a0373185d7988f622c8f</anchor>
       <arglist>(const IChangeable &amp;object)</arglist>
     </member>
   </compound>
@@ -5020,7 +5020,7 @@
   <compound kind="namespace">
     <name>iipr</name>
     <filename>namespaceiipr.html</filename>
-    <class kind="class">iipr::CBitmapCacheComp</class>
+    <class kind="class">iipr::CBitmapProviderCacheComp</class>
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
     <class kind="class">iipr::CCaliperParamsComp</class>
@@ -5105,37 +5105,37 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::CBitmapCacheComp</name>
-    <filename>classiipr_1_1_c_bitmap_cache_comp.html</filename>
+    <name>iipr::CBitmapProviderCacheComp</name>
+    <filename>classiipr_1_1_c_bitmap_provider_cache_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
-      <anchor>afbabd1198a48658b5ec39f495e5f89e8</anchor>
+      <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
+      <anchor>aa02977435d6f87aa3bbe43a5f8d49138</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
-      <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
-      <anchor>a4da8959c644ebe297ea8b60dded19fc0</anchor>
+      <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
+      <anchor>ab4497e98f0bca9e7ec515487fc33c8c8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ITransformation2d *</type>
       <name>GetCalibration</name>
-      <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
-      <anchor>ac901e850a72f1cf9cf18033a67496b2a</anchor>
+      <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
+      <anchor>aa6253dd2d5ccca94a78037989b5c3918</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
-      <anchorfile>classiipr_1_1_c_bitmap_cache_comp.html</anchorfile>
-      <anchor>aa490db973848794068662e42f35e9397</anchor>
+      <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
+      <anchor>ae08fa5fe7907083af20162a90ec343f0</anchor>
       <arglist>(const IChangeable &amp;object)</arglist>
     </member>
   </compound>

@@ -20,34 +20,42 @@
 ********************************************************************************/
 
 
-#ifndef InspectionPck_included
-#define InspectionPck_included
-
-
-// ACF includes
-#include "icomp/TModelCompWrap.h"
-#include "icomp/TMakeComponentWrap.h"
-
-#include "iinsp/CInspectionTaskComp.h"
-#include "iinsp/CInformationProviderCacheComp.h"
 #include "iinsp/CIdProviderCacheComp.h"
 
 
-/**
-	Base system-undependent general package.
-*/
-namespace InspectionPck
+namespace iinsp
 {
 
 
-typedef icomp::TModelCompWrap<iinsp::CInspectionTaskComp> InspectionTask;
-typedef icomp::TModelCompWrap<iinsp::CInformationProviderCacheComp> InformationProviderCache;
-typedef icomp::TModelCompWrap<iinsp::CIdProviderCacheComp> IdProviderCache;
+CIdProviderCacheComp::CIdProviderCacheComp()
+:	m_currentId(0)
+{
+}
 
 
-} // namespace InspectionPck
+// reimplemented (iinsp::IIdProvider)
+
+quint32 CIdProviderCacheComp::GetCurrentId() const
+{
+	return m_currentId;
+}
 
 
-#endif // !InspectionPck_included
+// reimplemented (istd::IChangeable)
+
+bool CIdProviderCacheComp::CopyFrom(const IChangeable& object)
+{
+	const IIdProvider* providerPtr = dynamic_cast<const IIdProvider*>(&object);
+	if (providerPtr != NULL){
+		m_currentId = providerPtr->GetCurrentId();
+
+		return true;
+	}
+
+	return false;
+}
+
+
+} // namespace iinsp
 
 

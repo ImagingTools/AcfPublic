@@ -20,53 +20,59 @@
 ********************************************************************************/
 
 
-#ifndef iinsp_CIdCacheComp_included
-#define iinsp_CIdCacheComp_included
+#ifndef iipr_CBitmapProviderCacheComp_included
+#define iipr_CBitmapProviderCacheComp_included
 
 
 // ACF includes
+#include "istd/TDelPtr.h"
 #include "icomp/CComponentBase.h"
+#include "i2d/ICalibrationProvider.h"
 
 // ACF-Solutions includes
-#include "iinsp/IIdProvider.h"
+#include "iipr/IBitmapProvider.h"
 
 
-namespace iinsp
+namespace iipr
 {
 
 
 /**
-	General ID provider returning always stored ID.
-	Stored ID can be changed only copying their from another ID provider using CopyFrom method.
+	Bitmap provider returning always stored bitmap.
+	Stored bitmap can be changed only copying the bitmap from another bitmap provider using CopyFrom method.
 	This object will be used to manage threading barrier for object supplier chain.
 */
-class CIdCacheComp:
+class CBitmapProviderCacheComp:
 			public icomp::CComponentBase,
-			virtual public IIdProvider
+			virtual public IBitmapProvider,
+			virtual public i2d::ICalibrationProvider
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
 
-	I_BEGIN_COMPONENT(CIdCacheComp);
-		I_REGISTER_INTERFACE(IIdProvider);
+	I_BEGIN_COMPONENT(CBitmapProviderCacheComp);
+		I_REGISTER_INTERFACE(IBitmapProvider);
+		I_REGISTER_INTERFACE(ICalibrationProvider);
 	I_END_COMPONENT;
 
-	CIdCacheComp();
+	// reimplemented (iipr::IBitmapProvider)
+	virtual const iimg::IBitmap* GetBitmap() const;
 
-	// reimplemented (iinsp::IIdProvider)
-	virtual quint32 GetCurrentId() const;
+	// reimplemented (i2d::ICalibrationProvider)
+	virtual const i2d::ITransformation2d* GetCalibration() const;
 
 	// reimplemented (istd::IChangeable)
 	virtual bool CopyFrom(const IChangeable& object);
 
 private:
-	int m_currentId;
+	istd::TDelPtr<iimg::IBitmap> m_bitmapPtr;
+	istd::TDelPtr<i2d::ITransformation2d> m_transformPtr;
 };
 
 
-} // namespace iinsp
+} // namespace iipr
 
 
-#endif // !iinsp_CIdCacheComp_included
+#endif // !iipr_CBitmapProviderCacheComp_included
 
 
