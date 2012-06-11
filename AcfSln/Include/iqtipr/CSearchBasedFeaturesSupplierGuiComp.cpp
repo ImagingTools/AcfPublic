@@ -78,8 +78,8 @@ bool CSearchBasedFeaturesSupplierGuiComp::DoTest()
 
 	bool retVal = BaseClass::DoTest();
 
-	quint64 time = timer.elapsed();
-	TimeLabel->setText(QString::number(time));
+	quint64 time = timer.nsecsElapsed() / 1000000.0;
+	TimeLabel->setText(QString("%1 ms").arg(time));
 
 	return retVal;
 }
