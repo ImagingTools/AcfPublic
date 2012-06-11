@@ -12736,6 +12736,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>CT_ID</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a987696d6998db2f2a611815f942cc9bea515f77ffe0e55ae4723df93e725660d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>CT_SCORE</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a987696d6998db2f2a611815f942cc9bea82d5f2e058036ad010b8e53e2fe0702b</anchor>

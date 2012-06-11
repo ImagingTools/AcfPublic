@@ -3546,6 +3546,7 @@
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">iqt::CTranslationManagerComp</class>
     <namespace>iqt</namespace>
   </compound>
@@ -33155,14 +33156,14 @@
   <compound kind="class">
     <name>iqt::CTranslationManagerComp</name>
     <filename>classiqt_1_1_c_translation_manager_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iqt::ITranslationManager</base>
     <base virtualness="virtual">iprm::ISelectionConstraints</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>a0a86a84402f838d1e70e147e4e4148ba</anchor>
+      <anchor>a71ee02912b8d55441a24347a01aafd2b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

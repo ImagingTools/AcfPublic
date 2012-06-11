@@ -18,13 +18,13 @@
   <PositionMap count="2">
     <Element>
       <ComponentName>
-        QtLocalization
+        AcfLocalization
       </ComponentName>
       <X>
-        575
+        518
       </X>
       <X>
-        225
+        269
       </X>
       <Note>
         
@@ -32,13 +32,13 @@
     </Element>
     <Element>
       <ComponentName>
-        AcfLocalization
+        AcfSolutionsLocalization
       </ComponentName>
       <X>
-        575
+        525
       </X>
       <X>
-        375
+        400
       </X>
       <Note>
         

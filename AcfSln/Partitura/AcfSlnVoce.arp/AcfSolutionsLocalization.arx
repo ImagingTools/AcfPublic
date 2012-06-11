@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2349
+          2364
         </Number>
         <Description>
           ACF
@@ -15,56 +15,16 @@
       </Version>
     </VersionInfos>
   </AcfHeader>
-  <ElementsList count="5">
+  <ElementsList count="2">
     <Element>
       <Id>
-        CommandsToolBar
+        AcfLocalization
       </Id>
       <PackageId>
-        QtGuiPck
+        AcfVoce
       </PackageId>
       <ComponentId>
-        CommandsToolBar
-      </ComponentId>
-      <Data>
-        <IsEnabled>
-          true
-        </IsEnabled>
-        <Flags>
-          0
-        </Flags>
-        <AttributeInfoMap count="1">
-          <AttributeInfo>
-            <Id>
-              CommandsProvider
-            </Id>
-            <Type>
-              Reference
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Value>
-                ViewProvider
-              </Value>
-            </Data>
-          </AttributeInfo>
-        </AttributeInfoMap>
-      </Data>
-    </Element>
-    <Element>
-      <Id>
-        ExtendedConsoleGui
-      </Id>
-      <PackageId>
-        QtViewPck
-      </PackageId>
-      <ComponentId>
-        ExtendedConsoleGui
+        AcfLocalization
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -76,59 +36,50 @@
         <AttributeInfoMap count="3">
           <AttributeInfo>
             <Id>
-              StatusInfoGui
+              LanguageIds
             </Id>
             <Type>
-              Reference
+              Id[]
             </Type>
             <ExportId>
-              
+              LanguageIds
             </ExportId>
             <Data>
               <IsEnabled>
-                true
+                false
               </IsEnabled>
-              <Value>
-                ShapeInfoGui
-              </Value>
             </Data>
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              ToolBar
+              Log
             </Id>
             <Type>
               Reference
             </Type>
             <ExportId>
-              
+              Log
             </ExportId>
             <Data>
               <IsEnabled>
-                true
+                false
               </IsEnabled>
-              <Value>
-                CommandsToolBar
-              </Value>
             </Data>
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              ViewProvider
+              SlaveTranslationManager
             </Id>
             <Type>
               Reference
             </Type>
             <ExportId>
-              
+              SlaveTranslationManager
             </ExportId>
             <Data>
               <IsEnabled>
-                true
+                false
               </IsEnabled>
-              <Value>
-                ViewProvider
-              </Value>
             </Data>
           </AttributeInfo>
         </AttributeInfoMap>
@@ -136,13 +87,13 @@
     </Element>
     <Element>
       <Id>
-        ShapeInfoGui
+        AcfSolutionsLocalization
       </Id>
       <PackageId>
-        QtViewPck
+        QtPck
       </PackageId>
       <ComponentId>
-        ShapeInfoGui
+        TranslationManager
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -151,10 +102,72 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="1">
+        <AttributeInfoMap count="6">
           <AttributeInfo>
             <Id>
-              DefaultModel
+              LanguageIds
+            </Id>
+            <Type>
+              Id[]
+            </Type>
+            <ExportId>
+              LanguageIds
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Values count="4">
+                <Value>
+                  en_US
+                </Value>
+                <Value>
+                  de_DE
+                </Value>
+                <Value>
+                  ru_RU
+                </Value>
+                <Value>
+                  pl_PL
+                </Value>
+              </Values>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              LanguageSelection
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              LanguageSelection
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              Log
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              Log
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              SlaveTranslationManager
             </Id>
             <Type>
               Reference
@@ -167,58 +180,16 @@
                 true
               </IsEnabled>
               <Value>
-                ShapeStatusInfo
+                AcfLocalization
               </Value>
             </Data>
           </AttributeInfo>
-        </AttributeInfoMap>
-      </Data>
-    </Element>
-    <Element>
-      <Id>
-        ShapeStatusInfo
-      </Id>
-      <PackageId>
-        QtViewPck
-      </PackageId>
-      <ComponentId>
-        ShapeStatusInfo
-      </ComponentId>
-      <Data>
-        <IsEnabled>
-          true
-        </IsEnabled>
-        <Flags>
-          0
-        </Flags>
-        <AttributeInfoMap count="0">
-        </AttributeInfoMap>
-      </Data>
-    </Element>
-    <Element>
-      <Id>
-        ViewProvider
-      </Id>
-      <PackageId>
-        QtViewPck
-      </PackageId>
-      <ComponentId>
-        ViewProvider
-      </ComponentId>
-      <Data>
-        <IsEnabled>
-          true
-        </IsEnabled>
-        <Flags>
-          0
-        </Flags>
-        <AttributeInfoMap count="1">
           <AttributeInfo>
             <Id>
-              ShapeStatusInfo
+              TranslationFilePath
             </Id>
             <Type>
-              Reference
+              String
             </Type>
             <ExportId>
               
@@ -228,7 +199,26 @@
                 true
               </IsEnabled>
               <Value>
-                ShapeStatusInfo
+                :/Translations
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              TranslationFilePrefix
+            </Id>
+            <Type>
+              Id
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                AcfSln
               </Value>
             </Data>
           </AttributeInfo>
@@ -238,38 +228,46 @@
   </ElementsList>
   <EmbeddedRegistriesList count="0">
   </EmbeddedRegistriesList>
-  <ExportedInterfaces count="3">
+  <ExportedInterfaces count="4">
     <Interface>
       <InterfaceId>
-        ibase::ICommandsProvider
+        imod::IModel
       </InterfaceId>
       <ComponentId>
-        ViewProvider
+        AcfSolutionsLocalization
       </ComponentId>
     </Interface>
     <Interface>
       <InterfaceId>
-        iqt2d::IViewProvider
+        iprm::ISelectionConstraints
       </InterfaceId>
       <ComponentId>
-        ViewProvider
+        AcfSolutionsLocalization
       </ComponentId>
     </Interface>
     <Interface>
       <InterfaceId>
-        iqtgui::IGuiObject
+        iqt::ITranslationManager
       </InterfaceId>
       <ComponentId>
-        ExtendedConsoleGui
+        AcfSolutionsLocalization
+      </ComponentId>
+    </Interface>
+    <Interface>
+      <InterfaceId>
+        istd::IChangeable
+      </InterfaceId>
+      <ComponentId>
+        AcfSolutionsLocalization
       </ComponentId>
     </Interface>
   </ExportedInterfaces>
   <ExportedComponents count="0">
   </ExportedComponents>
   <Description>
-    2D-Console with tool bar and status info
+    ACF-Solutions strings localization
   </Description>
   <Keywords>
-    
+    Translation Tag='Localization'
   </Keywords>
 </Acf>
