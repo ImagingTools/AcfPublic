@@ -32825,8 +32825,8 @@
       <type></type>
       <name>CSettingsArchiveBase</name>
       <anchorfile>classiqt_1_1_c_settings_archive_base.html</anchorfile>
-      <anchor>abb4ba80282c44fd015e732b460fcb247</anchor>
-      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)</arglist>
+      <anchor>a98b0203cbdbdd111ba5a92c4289d938d</anchor>
+      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, QSettings::Scope settingsScope=QSettings::UserScope)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QList&lt; TagInfo &gt;</type>
@@ -32940,8 +32940,8 @@
       <type></type>
       <name>CSettingsReadArchive</name>
       <anchorfile>classiqt_1_1_c_settings_read_archive.html</anchorfile>
-      <anchor>a83e5f1117fa5e21e3b96eeb21b16a6b9</anchor>
-      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey)</arglist>
+      <anchor>a5a37f59f0d9db2fadd78295fbcda2bee</anchor>
+      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, QSettings::Scope settingsScope=QSettings::UserScope)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -33050,8 +33050,8 @@
       <type></type>
       <name>CSettingsWriteArchive</name>
       <anchorfile>classiqt_1_1_c_settings_write_archive.html</anchorfile>
-      <anchor>ad9008f082f4ccec02e9811641768ff6e</anchor>
-      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, const iser::IVersionInfo *versionInfoPtr=NULL)</arglist>
+      <anchor>ac68aa2e89eec010c998228b010cfc067</anchor>
+      <arglist>(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, QSettings::Scope settingsScope=QSettings::UserScope, const iser::IVersionInfo *versionInfoPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

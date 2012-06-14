@@ -46,6 +46,7 @@ public:
 				const QString& organizationName,
 				const QString& applicationName,
 				const QString& rootKey,
+				QSettings::Scope settingsScope = QSettings::UserScope,
 				const iser::IVersionInfo* versionInfoPtr = NULL);
 
 	// reimplemented (iser::IArchive)

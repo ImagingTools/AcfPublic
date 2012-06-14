@@ -67,7 +67,7 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqt_1_1_c_settings_archive_base.html">iqt::CSettingsArchiveBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_write_archive.html#a6d1daa00c0128a2a1ee7dcd880769cd0">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_write_archive.html#ad9008f082f4ccec02e9811641768ff6e">CSettingsWriteArchive</a> (const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, const <a class="el" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a> *versionInfoPtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_write_archive.html#ac68aa2e89eec010c998228b010cfc067">CSettingsWriteArchive</a> (const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, QSettings::Scope settingsScope=QSettings::UserScope, const <a class="el" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a> *versionInfoPtr=NULL)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_write_archive.html#abc5a62b39684185e1e5d3ce928abddaf">BeginTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;tag)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of archive tag.  <a href="#abc5a62b39684185e1e5d3ce928abddaf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_write_archive.html#a94d2ba208f6c175b7325b5c8b824b9b4">BeginMultiTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;tag, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;subTag, int &amp;count)</td></tr>
@@ -117,7 +117,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad9008f082f4ccec02e9811641768ff6e"></a><!-- doxytag: member="iqt::CSettingsWriteArchive::CSettingsWriteArchive" ref="ad9008f082f4ccec02e9811641768ff6e" args="(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, const iser::IVersionInfo *versionInfoPtr=NULL)" -->
+<a class="anchor" id="ac68aa2e89eec010c998228b010cfc067"></a><!-- doxytag: member="iqt::CSettingsWriteArchive::CSettingsWriteArchive" ref="ac68aa2e89eec010c998228b010cfc067" args="(const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, QSettings::Scope settingsScope=QSettings::UserScope, const iser::IVersionInfo *versionInfoPtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -138,6 +138,12 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>rootKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QSettings::Scope&#160;</td>
+          <td class="paramname"><em>settingsScope</em> = <code>QSettings::UserScope</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
