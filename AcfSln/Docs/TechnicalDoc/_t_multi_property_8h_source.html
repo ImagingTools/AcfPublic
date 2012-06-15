@@ -207,7 +207,7 @@
 <a name="l00218"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a1a261ecefda44aebddb05cd1a123cbff">00218</a> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_t_multi_property.html#a1a261ecefda44aebddb05cd1a123cbff" title="Remove all values from the container.">TMultiProperty&lt;Value, Container&gt;::ResetValues</a>()
 <a name="l00219"></a>00219 {
 <a name="l00220"></a>00220        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> changePtr(m_propertyOwnerPtr, m_changeFlags);
-<a name="l00221"></a>00221        
+<a name="l00221"></a>00221 
 <a name="l00222"></a>00222        m_values.clear();
 <a name="l00223"></a>00223 }
 <a name="l00224"></a>00224 
@@ -233,7 +233,7 @@
 <a name="l00244"></a>00244 {
 <a name="l00245"></a>00245        <span class="keywordflow">return</span> m_values.end();
 <a name="l00246"></a>00246 }
-<a name="l00247"></a>00247        
+<a name="l00247"></a>00247 
 <a name="l00248"></a>00248 
 <a name="l00249"></a>00249 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value, <span class="keyword">class</span> Container&gt;
 <a name="l00250"></a><a class="code" href="classiprop_1_1_t_multi_property.html#aa757b5000e93318d53a112bb2a160ad3">00250</a> <span class="keyword">typename</span> <a class="code" href="classiprop_1_1_t_multi_property.html#abff86fb4918ca52470e3b9629465f2c6">TMultiProperty&lt;Value, Container&gt;::const_iterator</a> <a class="code" href="classiprop_1_1_t_multi_property.html#add90e2feb40a8642694f530fa9230560">TMultiProperty&lt;Value, Container&gt;::end</a>()<span class="keyword"> const</span>
@@ -269,7 +269,7 @@
 <a name="l00280"></a>00280               <span class="keywordtype">int</span> valuesCount = int(m_values.size());
 <a name="l00281"></a>00281 
 <a name="l00282"></a>00282               retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">BeginMultiTag</a>(valuesTag, valueTag, valuesCount);
-<a name="l00283"></a>00283               <span class="keywordflow">for</span> (ValueList::iterator iter = m_values.begin(); iter != m_values.end(); ++iter){
+<a name="l00283"></a>00283               <span class="keywordflow">for</span> (<span class="keyword">typename</span> ValueList::iterator iter = m_values.begin(); iter != m_values.end(); ++iter){
 <a name="l00284"></a>00284                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
 <a name="l00285"></a>00285                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(*iter);
 <a name="l00286"></a>00286                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
@@ -286,7 +286,7 @@
 <a name="l00297"></a>00297 
 <a name="l00298"></a>00298               <span class="comment">// load properties &#39;in place&#39;, without allocation of new elements</span>
 <a name="l00299"></a>00299               <span class="keywordtype">int</span> itemIndex = 0;
-<a name="l00300"></a>00300               <span class="keywordflow">for</span> (ValueList::iterator iter = m_values.begin(); iter != m_values.end(); ++iter){
+<a name="l00300"></a>00300               <span class="keywordflow">for</span> (<span class="keyword">typename</span> ValueList::iterator iter = m_values.begin(); iter != m_values.end(); ++iter){
 <a name="l00301"></a>00301                      <span class="comment">// remove rest of elements, if current number of elements is bigger than the stored</span>
 <a name="l00302"></a>00302                      <span class="keywordflow">if</span> (itemIndex &gt;= valuesCount){
 <a name="l00303"></a>00303                             m_values.erase(iter, m_values.end());

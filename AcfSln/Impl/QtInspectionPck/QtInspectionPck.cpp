@@ -23,19 +23,16 @@
 #include "QtInspectionPck.h"
 
 
-// Qt includes
-#include <QtCore/QDir>
-
-
 // ACF includes
 #include "icomp/export.h"
+
+
+I_REGISTER_QT_RESOURCE(iqtgui);
 
 
 namespace QtInspectionPck
 {
 
-
-I_REGISTER_QT_RESOURCE(iqtgui);
 
 I_EXPORT_PACKAGE(
 			"AcfSln/Inspection/Gui",

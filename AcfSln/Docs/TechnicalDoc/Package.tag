@@ -12351,6 +12351,13 @@
       <anchor>a93745769f36d860dc445b1c8319851b4</anchor>
       <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>BaseClass::Shapes</type>
+      <name>Shapes</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>afced065323dcfedc4e755d24b667c05d</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AreParamsEditable</name>

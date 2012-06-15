@@ -26,11 +26,12 @@
 #include "icomp/export.h"
 
 
+I_REGISTER_QT_RESOURCE(iqtgui);
+
+
 namespace AbcPck
 {
 
-
-I_REGISTER_QT_RESOURCE(iqtgui);
 
 I_EXPORT_PACKAGE(
 			"Iacf/Abc",

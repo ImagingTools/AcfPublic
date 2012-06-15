@@ -26,11 +26,12 @@
 #include "icomp/export.h"
 
 
+I_REGISTER_QT_RESOURCE(iqtgui);
+
+
 namespace QtExPck
 {
 
-
-I_REGISTER_QT_RESOURCE(iqtgui);
 
 I_EXPORT_PACKAGE(
 			"AcfSln/QtExtension",
