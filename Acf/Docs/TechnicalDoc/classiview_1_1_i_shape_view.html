@@ -68,6 +68,8 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_i_shape_observer.html">IShapeObserver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#aff6357f12d41ab7a7dfbf7562aee4e38">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#a7f60f67032bbbab980ddfc432ab17ac3">SetFitArea</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;area)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set area used for fitting of the view contents.  <a href="#a7f60f67032bbbab980ddfc432ab17ac3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#a302a1b9f3a53b96d5b7501760e9cdfcf">SetTransform</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transform)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a screen transformation.  <a href="#a302a1b9f3a53b96d5b7501760e9cdfcf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#ae8c68ecae45c174e4cd1714763e75585">Update</a> ()=0</td></tr>
@@ -416,7 +418,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_selectable.html#a90f50d7ffe3e00b33b4229ff961b3560">iview::ISelectable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_shape_view_8h_source.html#l00124">124</a> of file <a class="el" href="_i_shape_view_8h_source.html">IShapeView.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_shape_view_8h_source.html#l00128">128</a> of file <a class="el" href="_i_shape_view_8h_source.html">IShapeView.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +472,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_selectable.html#a4962be35f4315cb8016a71e76778a972">iview::ISelectable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_shape_view_8h_source.html#l00123">123</a> of file <a class="el" href="_i_shape_view_8h_source.html">IShapeView.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_shape_view_8h_source.html#l00127">127</a> of file <a class="el" href="_i_shape_view_8h_source.html">IShapeView.h</a>.</p>
 
 </div>
 </div>
@@ -513,6 +515,27 @@ Public Member Functions</h2></td></tr>
 <p>Changes the edit mode. </p>
 
 <p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a0122b7e64def0d86cfa30352689417fa">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_viewport.html#a13c2641ae9dca5a42c05254c0265f298">iview::CViewport</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f60f67032bbbab980ddfc432ab17ac3"></a><!-- doxytag: member="iview::IShapeView::SetFitArea" ref="a7f60f67032bbbab980ddfc432ab17ac3" args="(const i2d::CRectangle &amp;area)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iview::IShapeView::SetFitArea </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>area</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set area used for fitting of the view contents. </p>
+
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#ac88ab699a0179348b2ad3d98ac3245b9">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_viewport.html#a336da414fa0e7d4ff92fb815777ee921">iview::CViewport</a>.</p>
 
 </div>
 </div>

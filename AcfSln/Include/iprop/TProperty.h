@@ -73,15 +73,12 @@ public:
 	virtual bool Serialize(iser::IArchive& archive);
 
 	// static methods
-	static const QByteArray& GetTypeName();
+	static QByteArray GetTypeName();
 
 protected:
 	Value m_value;
 
 	mutable istd::TDelPtr<PropertyType> m_defaultPropertyValuePtr;
-
-private:
-	static const QByteArray s_typeName;
 };
 
 
@@ -154,7 +151,7 @@ const iser::IObject* TProperty<Value>::GetDefaultPropertyPtr() const
 template <typename Value>
 QByteArray TProperty<Value>::GetFactoryId() const
 {
-	return s_typeName;
+	return GetTypeName();
 }
 
 
@@ -180,16 +177,10 @@ bool TProperty<Value>::Serialize(iser::IArchive& archive)
 // static methods
 
 template <typename Value>
-const QByteArray& TProperty<Value>::GetTypeName()
+QByteArray TProperty<Value>::GetTypeName()
 {
-	return s_typeName;
+	return istd::CClassInfo::GetName<TProperty<Value> >();
 }
-
-
-// private static properties
-
-template <typename Value>
-const QByteArray TProperty<Value>::s_typeName(istd::CClassInfo::GetName<TProperty<Value> >());
 
 
 // typedefs

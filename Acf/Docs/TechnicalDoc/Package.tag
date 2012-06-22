@@ -53149,13 +53149,6 @@
       <anchor>a13c2641ae9dca5a42c05254c0265f298</anchor>
       <arglist>(int mode)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetFitArea</name>
-      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
-      <anchor>a336da414fa0e7d4ff92fb815777ee921</anchor>
-      <arglist>(const i2d::CRectangle &amp;area)</arglist>
-    </member>
     <member kind="function">
       <type>int</type>
       <name>GetPixelPositionExact</name>
@@ -53169,6 +53162,13 @@
       <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
       <anchor>ae31c5608f634a689e9d528f13df3da22</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetFitArea</name>
+      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
+      <anchor>a336da414fa0e7d4ff92fb815777ee921</anchor>
+      <arglist>(const i2d::CRectangle &amp;area)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CRect</type>
@@ -54334,6 +54334,13 @@
       <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
       <anchor>aff6357f12d41ab7a7dfbf7562aee4e38</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetFitArea</name>
+      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
+      <anchor>a7f60f67032bbbab980ddfc432ab17ac3</anchor>
+      <arglist>(const i2d::CRectangle &amp;area)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>

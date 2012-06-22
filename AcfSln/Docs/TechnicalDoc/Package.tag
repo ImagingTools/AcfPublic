@@ -10038,10 +10038,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const QByteArray &amp;</type>
+      <type>static QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
-      <anchor>a53c009560a3a0ece77dbd6684cd6f6f0</anchor>
+      <anchor>a2402e764e53a6268974750960dd579ad</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -10135,10 +10135,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const QByteArray &amp;</type>
+      <type>static QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
-      <anchor>a44d2daef0c68b35461bd28bb577248a4</anchor>
+      <anchor>af34c8c7ee76d920d694a350121b2ada9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -10239,10 +10239,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const QByteArray &amp;</type>
+      <type>static QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
-      <anchor>ac379a7694c670b782ee473975496a562</anchor>
+      <anchor>a240fcd498aa91a1520973c055808daca</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
