@@ -92,71 +92,77 @@
 <a name="l00066"></a><a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#af982690722c84baed74f922aa1efd37f">00066</a> <span class="keyword">typename</span> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#a092e365c0b415ddef7c5c5ad2babac30">TImagePixelInterpolator&lt;PixelComponentType&gt;::PixelComponent</a> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#af982690722c84baed74f922aa1efd37f">TImagePixelInterpolator&lt;PixelComponentType&gt;::GetInterpolatedValue</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">int</span> componentIndex)<span class="keyword"> const</span>
 <a name="l00067"></a>00067 <span class="keyword"></span>{
 <a name="l00068"></a>00068        <span class="keywordflow">switch</span> (m_interpolationMode){
-<a name="l00069"></a>00069               <span class="keywordflow">case</span> <a class="code" href="classiipr_1_1_i_image_interpolation_params.html#a3f5eaf6d182d9706c9751576996898b9a3c12d59a96fcaf8dbff8a0b7cf54e43d">iipr::IImageInterpolationParams::IM_BILINEAR</a>:
-<a name="l00070"></a>00070                      <span class="keywordflow">return</span> GetBilinearInterpolated(x, y, componentIndex);
-<a name="l00071"></a>00071        }
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073        <span class="keywordflow">return</span> GetBitmapPixelValue(<span class="keywordtype">int</span>(x), <span class="keywordtype">int</span>(y), componentIndex);
-<a name="l00074"></a>00074 }
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="comment">// private methods</span>
-<a name="l00078"></a>00078        
-<a name="l00079"></a>00079 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PixelComponentType&gt;
-<a name="l00080"></a>00080 <span class="keyword">typename</span> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#a092e365c0b415ddef7c5c5ad2babac30">TImagePixelInterpolator&lt;PixelComponentType&gt;::PixelComponent</a> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html">TImagePixelInterpolator&lt;PixelComponentType&gt;::GetBilinearInterpolated</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">int</span> componentIndex)<span class="keyword"> const</span>
-<a name="l00081"></a>00081 <span class="keyword"></span>{
-<a name="l00082"></a>00082        <span class="keywordtype">int</span> cx = int(qCeil(x));
-<a name="l00083"></a>00083        <span class="keywordtype">int</span> cy = int(qCeil(y));
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085        <span class="keywordtype">int</span> fx = int(qFloor(x));
-<a name="l00086"></a>00086        <span class="keywordtype">int</span> fy = int(qFloor(y));
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088        <span class="keywordtype">double</span> dx = cx - x;
-<a name="l00089"></a>00089        <span class="keywordtype">double</span> dy = cy - y;
+<a name="l00069"></a>00069               <span class="keywordflow">case</span> <a class="code" href="classiipr_1_1_i_image_interpolation_params.html#a3f5eaf6d182d9706c9751576996898b9a7c6a2bf96b3cfef55d066705272cc756">iipr::IImageInterpolationParams::IM_NO_INTERPOLATION</a>:
+<a name="l00070"></a>00070                      <span class="keywordflow">return</span> GetBitmapPixelValue(<span class="keywordtype">int</span>(x), <span class="keywordtype">int</span>(y), componentIndex);
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072               <span class="keywordflow">case</span> <a class="code" href="classiipr_1_1_i_image_interpolation_params.html#a3f5eaf6d182d9706c9751576996898b9a3c12d59a96fcaf8dbff8a0b7cf54e43d">iipr::IImageInterpolationParams::IM_BILINEAR</a>:
+<a name="l00073"></a>00073                      <span class="keywordflow">return</span> GetBilinearInterpolated(x, y, componentIndex);
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075               <span class="keywordflow">default</span>:
+<a name="l00076"></a>00076                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a5952e0d7281d1ab784531120ea40c9c4">I_CRITICAL</a>();
+<a name="l00077"></a>00077        }
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079        <span class="keywordflow">return</span> GetBitmapPixelValue(<span class="keywordtype">int</span>(x), <span class="keywordtype">int</span>(y), componentIndex);
+<a name="l00080"></a>00080 }
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="comment">// private methods</span>
+<a name="l00084"></a>00084        
+<a name="l00085"></a>00085 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PixelComponentType&gt;
+<a name="l00086"></a>00086 <span class="keyword">typename</span> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#a092e365c0b415ddef7c5c5ad2babac30">TImagePixelInterpolator&lt;PixelComponentType&gt;::PixelComponent</a> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html">TImagePixelInterpolator&lt;PixelComponentType&gt;::GetBilinearInterpolated</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">int</span> componentIndex)<span class="keyword"> const</span>
+<a name="l00087"></a>00087 <span class="keyword"></span>{
+<a name="l00088"></a>00088        <span class="keywordtype">int</span> cx = int(qCeil(x));
+<a name="l00089"></a>00089        <span class="keywordtype">int</span> cy = int(qCeil(y));
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091        <span class="keywordtype">double</span> v1 = (1.0 - dx) * (1.0 - dy) * GetBitmapPixelValue(fx, fy, componentIndex);
-<a name="l00092"></a>00092        <span class="keywordtype">double</span> v2 = (dx) * (1.0 - dy) * GetBitmapPixelValue(cx, fy, componentIndex);
-<a name="l00093"></a>00093        <span class="keywordtype">double</span> v3 = (dy) * (1.0 - dx) * GetBitmapPixelValue(fx, cy, componentIndex);
-<a name="l00094"></a>00094        <span class="keywordtype">double</span> v4 = (dy) * (dx) * GetBitmapPixelValue(cx, cy, componentIndex);
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096        <span class="keywordtype">double</span> retVal = v1 + v2 + v3 + v4;
-<a name="l00097"></a>00097        <span class="keywordflow">if</span> (retVal &gt; m_maxValue){
-<a name="l00098"></a>00098               retVal = m_maxValue;
-<a name="l00099"></a>00099        }
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101        <span class="keywordflow">return</span> PixelComponentType(retVal);
-<a name="l00102"></a>00102 }
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PixelComponentType&gt;
-<a name="l00106"></a>00106 <span class="keyword">typename</span> TImagePixelInterpolator&lt;PixelComponentType&gt;::PixelComponent TImagePixelInterpolator&lt;PixelComponentType&gt;::GetBitmapPixelValue(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> componentIndex)<span class="keyword"> const</span>
-<a name="l00107"></a>00107 <span class="keyword"></span>{
-<a name="l00108"></a>00108        <span class="keywordflow">if</span> (x &lt; 0){
-<a name="l00109"></a>00109               x = 0;
-<a name="l00110"></a>00110        }
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112        <span class="keywordflow">if</span> (x &gt;= m_imageWidth){
-<a name="l00113"></a>00113               x = m_imageWidth - 1;
-<a name="l00114"></a>00114        }
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116        <span class="keywordflow">if</span> (y &lt; 0){
-<a name="l00117"></a>00117               y = 0;
-<a name="l00118"></a>00118        }
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120        <span class="keywordflow">if</span> (y &gt;= m_imageHeight){
-<a name="l00121"></a>00121               y = m_imageHeight - 1;
-<a name="l00122"></a>00122        }
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124        <span class="keywordflow">return</span> *(m_imageBufferPtr + x * m_pixelBytesCount + componentIndex + m_imageLineDifference * y);
-<a name="l00125"></a>00125 }
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128 } <span class="comment">// namespace iipr</span>
+<a name="l00091"></a>00091        <span class="keywordtype">int</span> fx = int(qFloor(x));
+<a name="l00092"></a>00092        <span class="keywordtype">int</span> fy = int(qFloor(y));
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094        <span class="keywordtype">double</span> dx = cx - x;
+<a name="l00095"></a>00095        <span class="keywordtype">double</span> dy = cy - y;
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097        <span class="keywordtype">double</span> v1 = (1.0 - dx) * (1.0 - dy) * GetBitmapPixelValue(fx, fy, componentIndex);
+<a name="l00098"></a>00098        <span class="keywordtype">double</span> v2 = (dx) * (1.0 - dy) * GetBitmapPixelValue(cx, fy, componentIndex);
+<a name="l00099"></a>00099        <span class="keywordtype">double</span> v3 = (dy) * (1.0 - dx) * GetBitmapPixelValue(fx, cy, componentIndex);
+<a name="l00100"></a>00100        <span class="keywordtype">double</span> v4 = (dy) * (dx) * GetBitmapPixelValue(cx, cy, componentIndex);
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102        <span class="keywordtype">double</span> retVal = v1 + v2 + v3 + v4;
+<a name="l00103"></a>00103        <span class="keywordflow">if</span> (retVal &gt; m_maxValue){
+<a name="l00104"></a>00104               retVal = m_maxValue;
+<a name="l00105"></a>00105        }
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107        <span class="keywordflow">return</span> PixelComponentType(retVal);
+<a name="l00108"></a>00108 }
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PixelComponentType&gt;
+<a name="l00112"></a>00112 <span class="keyword">typename</span> TImagePixelInterpolator&lt;PixelComponentType&gt;::PixelComponent TImagePixelInterpolator&lt;PixelComponentType&gt;::GetBitmapPixelValue(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> componentIndex)<span class="keyword"> const</span>
+<a name="l00113"></a>00113 <span class="keyword"></span>{
+<a name="l00114"></a>00114        <span class="keywordflow">if</span> (x &lt; 0){
+<a name="l00115"></a>00115               x = 0;
+<a name="l00116"></a>00116        }
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118        <span class="keywordflow">if</span> (x &gt;= m_imageWidth){
+<a name="l00119"></a>00119               x = m_imageWidth - 1;
+<a name="l00120"></a>00120        }
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122        <span class="keywordflow">if</span> (y &lt; 0){
+<a name="l00123"></a>00123               y = 0;
+<a name="l00124"></a>00124        }
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126        <span class="keywordflow">if</span> (y &gt;= m_imageHeight){
+<a name="l00127"></a>00127               y = m_imageHeight - 1;
+<a name="l00128"></a>00128        }
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130 
-<a name="l00131"></a>00131 <span class="preprocessor">#endif // !iipr_TImagePixelInterpolator_included</span>
-<a name="l00132"></a>00132 <span class="preprocessor"></span>
+<a name="l00130"></a>00130        <span class="keywordflow">return</span> *(m_imageBufferPtr + x * m_pixelBytesCount + componentIndex + m_imageLineDifference * y);
+<a name="l00131"></a>00131 }
+<a name="l00132"></a>00132 
 <a name="l00133"></a>00133 
+<a name="l00134"></a>00134 } <span class="comment">// namespace iipr</span>
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137 <span class="preprocessor">#endif // !iipr_TImagePixelInterpolator_included</span>
+<a name="l00138"></a>00138 <span class="preprocessor"></span>
+<a name="l00139"></a>00139 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
