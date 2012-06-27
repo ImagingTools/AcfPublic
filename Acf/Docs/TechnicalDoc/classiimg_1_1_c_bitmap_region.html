@@ -31,9 +31,10 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iimg::CBitmapRegion Class Reference</div>  </div>
 </div>
@@ -55,54 +56,66 @@ Inheritance diagram for iimg::CBitmapRegion:</div>
 
 <p><a href="classiimg_1_1_c_bitmap_region-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef QVector&lt; <a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">PixelRanges</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QList&lt; <a class="el" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a42d2ffebae7eca34d038088abcdb48d7">CBitmapRegion</a> (const <a class="el" href="classiimg_1_1_i_bitmap.html">IBitmap</a> *bitmapPtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ab321459a10fef69da3a538a293ffc9ac">CreateFromGeometry</a> (const <a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;geometry)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from the geometrical object.  <a href="#ab321459a10fef69da3a538a293ffc9ac"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">PixelRanges</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ae632bef52c5e3d6c7e61916fb89cda23">GetPixelRanges</a> (int lineIndex) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of pixel ranges per given line.  <a href="#ae632bef52c5e3d6c7e61916fb89cda23"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a0b7534151852fbe28d0230b7f3c9ebc8">GetBoundingBox</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#af5339e3fb1b62a062b69d0a6cf878449">ResetBitmapRegion</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#aef2aedb71525f7a2cffcae2094bffdcd">CBitmapRegion</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#afe9b6912ee6dfda4f00457a53ec33cfc">IsBitmapRegionEmpty</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiimg_1_1_i_bitmap.html">IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a1ff9bc9726da47253d1bfaf355531442">GetBitmapPtr</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if region is empty.  <a href="#afe9b6912ee6dfda4f00457a53ec33cfc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a8b68561a19469b0d3ac2a25cb5a25da7">GetBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of this region.  <a href="#a8b68561a19469b0d3ac2a25cb5a25da7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ae632bef52c5e3d6c7e61916fb89cda23">GetPixelRanges</a> (int lineIndex) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of pixel ranges per given line.  <a href="#ae632bef52c5e3d6c7e61916fb89cda23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#af5339e3fb1b62a062b69d0a6cf878449">ResetBitmapRegion</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ace1f5942dba36cf92f0ad93352c39e5a">CreateFromGeometry</a> (const <a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;geometry, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from some geometrical object.  <a href="#ace1f5942dba36cf92f0ad93352c39e5a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ac6dc280c1ccc86275dfa6c459090aec7">CreateFromCircle</a> (const <a class="el" href="classi2d_1_1_c_circle.html">i2d::CCircle</a> &amp;circle, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from circle.  <a href="#ac6dc280c1ccc86275dfa6c459090aec7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ad4d44d489b5a08ee2ab32cf225ce53ee">CreateFromRectangle</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;rect, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from rectangle.  <a href="#ad4d44d489b5a08ee2ab32cf225ce53ee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ae274a10504ec7e1fde73d78ba2644080">CreateFromAnnulus</a> (const <a class="el" href="classi2d_1_1_c_annulus.html">i2d::CAnnulus</a> &amp;annulus, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from annulus.  <a href="#ae274a10504ec7e1fde73d78ba2644080"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ad9492b434469cd42b0d559291fe9e5a1">CreateFromPolygon</a> (const <a class="el" href="classi2d_1_1_c_polygon.html">i2d::CPolygon</a> &amp;polygon, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from polygon.  <a href="#ad9492b434469cd42b0d559291fe9e5a1"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a56b51791a38553f91c8939302eaf5c9e">UnionLine</a> (const <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> &amp;line, <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> &amp;result)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a8a351411e23acc37a677177743ca3b90">IntersectLine</a> (const <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> &amp;line, <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> &amp;result)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_region.html#a2b7eff8cc3383b4d4fa2cde0cd595da9">SetBoundingBox</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;objectBoundingBox, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Representation of a 2D-region as container of bitmap line scans. </p>
 
 <p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00024">24</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="abfdce528ac4e3a07818036e3e7e387c0"></a><!-- doxytag: member="iimg::CBitmapRegion::PixelRanges" ref="abfdce528ac4e3a07818036e3e7e387c0" args="" -->
+<a class="anchor" id="ac70edeb7b23a9fa29354f2ffdb69e686"></a><!-- doxytag: member="iimg::CBitmapRegion::PixelRanges" ref="ac70edeb7b23a9fa29354f2ffdb69e686" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef QVector&lt;<a class="el" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a>&gt; <a class="el" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">iimg::CBitmapRegion::PixelRanges</a></td>
+          <td class="memname">typedef QList&lt;<a class="el" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>&gt; <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">iimg::CBitmapRegion::PixelRanges</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00038">38</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00027">27</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a42d2ffebae7eca34d038088abcdb48d7"></a><!-- doxytag: member="iimg::CBitmapRegion::CBitmapRegion" ref="a42d2ffebae7eca34d038088abcdb48d7" args="(const IBitmap *bitmapPtr=NULL)" -->
+<a class="anchor" id="aef2aedb71525f7a2cffcae2094bffdcd"></a><!-- doxytag: member="iimg::CBitmapRegion::CBitmapRegion" ref="aef2aedb71525f7a2cffcae2094bffdcd" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">iimg::CBitmapRegion::CBitmapRegion </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiimg_1_1_i_bitmap.html">IBitmap</a> *&#160;</td>
-          <td class="paramname"><em>bitmapPtr</em> = <code>NULL</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -112,7 +125,79 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ab321459a10fef69da3a538a293ffc9ac"></a><!-- doxytag: member="iimg::CBitmapRegion::CreateFromGeometry" ref="ab321459a10fef69da3a538a293ffc9ac" args="(const i2d::IObject2d &amp;geometry)" -->
+<a class="anchor" id="ae274a10504ec7e1fde73d78ba2644080"></a><!-- doxytag: member="iimg::CBitmapRegion::CreateFromAnnulus" ref="ae274a10504ec7e1fde73d78ba2644080" args="(const i2d::CAnnulus &amp;annulus, const i2d::CRect *clipAreaPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CBitmapRegion::CreateFromAnnulus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_annulus.html">i2d::CAnnulus</a> &amp;&#160;</td>
+          <td class="paramname"><em>annulus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *&#160;</td>
+          <td class="paramname"><em>clipAreaPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Create 2D-region from annulus. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>annulus object. </td></tr>
+    <tr><td class="paramname">clipAreaPtr</td><td>optional clipping area. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac6dc280c1ccc86275dfa6c459090aec7"></a><!-- doxytag: member="iimg::CBitmapRegion::CreateFromCircle" ref="ac6dc280c1ccc86275dfa6c459090aec7" args="(const i2d::CCircle &amp;circle, const i2d::CRect *clipAreaPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CBitmapRegion::CreateFromCircle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_circle.html">i2d::CCircle</a> &amp;&#160;</td>
+          <td class="paramname"><em>circle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *&#160;</td>
+          <td class="paramname"><em>clipAreaPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Create 2D-region from circle. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circle</td><td>circle object. </td></tr>
+    <tr><td class="paramname">clipAreaPtr</td><td>optional clipping area. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ace1f5942dba36cf92f0ad93352c39e5a"></a><!-- doxytag: member="iimg::CBitmapRegion::CreateFromGeometry" ref="ace1f5942dba36cf92f0ad93352c39e5a" args="(const i2d::IObject2d &amp;geometry, const i2d::CRect *clipAreaPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -120,41 +205,112 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool iimg::CBitmapRegion::CreateFromGeometry </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>geometry</em></td><td>)</td>
+          <td class="paramname"><em>geometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *&#160;</td>
+          <td class="paramname"><em>clipAreaPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Create 2D-region from the geometrical object. </p>
+<p>Create 2D-region from some geometrical object. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">geometry</td><td>some geometrical object. </td></tr>
+    <tr><td class="paramname">clipAreaPtr</td><td>optional clipping area. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="a1ff9bc9726da47253d1bfaf355531442"></a><!-- doxytag: member="iimg::CBitmapRegion::GetBitmapPtr" ref="a1ff9bc9726da47253d1bfaf355531442" args="() const " -->
+<a class="anchor" id="ad9492b434469cd42b0d559291fe9e5a1"></a><!-- doxytag: member="iimg::CBitmapRegion::CreateFromPolygon" ref="ad9492b434469cd42b0d559291fe9e5a1" args="(const i2d::CPolygon &amp;polygon, const i2d::CRect *clipAreaPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiimg_1_1_i_bitmap.html">IBitmap</a> * iimg::CBitmapRegion::GetBitmapPtr </td>
+          <td class="memname">void iimg::CBitmapRegion::CreateFromPolygon </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline]</code></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_polygon.html">i2d::CPolygon</a> &amp;&#160;</td>
+          <td class="paramname"><em>polygon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *&#160;</td>
+          <td class="paramname"><em>clipAreaPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_region_8h_source.html#l00078">78</a> of file <a class="el" href="_c_bitmap_region_8h_source.html">CBitmapRegion.h</a>.</p>
+<p>Create 2D-region from polygon. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>polygon object. </td></tr>
+    <tr><td class="paramname">clipAreaPtr</td><td>optional clipping area. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="a0b7534151852fbe28d0230b7f3c9ebc8"></a><!-- doxytag: member="iimg::CBitmapRegion::GetBoundingBox" ref="a0b7534151852fbe28d0230b7f3c9ebc8" args="() const " -->
+<a class="anchor" id="ad4d44d489b5a08ee2ab32cf225ce53ee"></a><!-- doxytag: member="iimg::CBitmapRegion::CreateFromRectangle" ref="ad4d44d489b5a08ee2ab32cf225ce53ee" args="(const i2d::CRectangle &amp;rect, const i2d::CRect *clipAreaPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>&amp; iimg::CBitmapRegion::GetBoundingBox </td>
+          <td class="memname">void iimg::CBitmapRegion::CreateFromRectangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *&#160;</td>
+          <td class="paramname"><em>clipAreaPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Create 2D-region from rectangle. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>rectangle object. </td></tr>
+    <tr><td class="paramname">clipAreaPtr</td><td>optional clipping area. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8b68561a19469b0d3ac2a25cb5a25da7"></a><!-- doxytag: member="iimg::CBitmapRegion::GetBoundingBox" ref="a8b68561a19469b0d3ac2a25cb5a25da7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> iimg::CBitmapRegion::GetBoundingBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -163,6 +319,8 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Get bounding box of this region. </p>
+
 </div>
 </div>
 <a class="anchor" id="ae632bef52c5e3d6c7e61916fb89cda23"></a><!-- doxytag: member="iimg::CBitmapRegion::GetPixelRanges" ref="ae632bef52c5e3d6c7e61916fb89cda23" args="(int lineIndex) const " -->
@@ -170,7 +328,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">PixelRanges</a>* iimg::CBitmapRegion::GetPixelRanges </td>
+          <td class="memname">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a>* iimg::CBitmapRegion::GetPixelRanges </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>lineIndex</em></td><td>)</td>
@@ -181,6 +339,33 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get the list of pixel ranges per given line. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8a351411e23acc37a677177743ca3b90"></a><!-- doxytag: member="iimg::CBitmapRegion::IntersectLine" ref="a8a351411e23acc37a677177743ca3b90" args="(const PixelRanges &amp;line, PixelRanges &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void iimg::CBitmapRegion::IntersectLine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -198,6 +383,8 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Check if region is empty. </p>
+
 </div>
 </div>
 <a class="anchor" id="af5339e3fb1b62a062b69d0a6cf878449"></a><!-- doxytag: member="iimg::CBitmapRegion::ResetBitmapRegion" ref="af5339e3fb1b62a062b69d0a6cf878449" args="()" -->
@@ -209,6 +396,60 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2b7eff8cc3383b4d4fa2cde0cd595da9"></a><!-- doxytag: member="iimg::CBitmapRegion::SetBoundingBox" ref="a2b7eff8cc3383b4d4fa2cde0cd595da9" args="(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CBitmapRegion::SetBoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>objectBoundingBox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *&#160;</td>
+          <td class="paramname"><em>clipAreaPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56b51791a38553f91c8939302eaf5c9e"></a><!-- doxytag: member="iimg::CBitmapRegion::UnionLine" ref="a56b51791a38553f91c8939302eaf5c9e" args="(const PixelRanges &amp;line, PixelRanges &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void iimg::CBitmapRegion::UnionLine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
         </tr>
       </table>
 </div>

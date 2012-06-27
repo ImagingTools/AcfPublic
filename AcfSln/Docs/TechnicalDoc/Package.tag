@@ -5822,8 +5822,8 @@
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
-      <anchor>aec96edd847957f0781822a39655881c3</anchor>
-      <arglist>(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+      <anchor>aa84b7260ee22e1a4208a288536c8678f</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5841,8 +5841,8 @@
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
-      <anchor>aafaade3ecef5abe420c9b8f86a2a7b58</anchor>
-      <arglist>(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+      <anchor>a6464fa31137bd56a0bc6352140211547</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5912,8 +5912,8 @@
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_polar_transform_processor_comp.html</anchorfile>
-      <anchor>af068977fae375955291eb1957408b801</anchor>
-      <arglist>(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+      <anchor>a06767a1691981c6c71bb1a66de123ca0</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5971,8 +5971,8 @@
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
-      <anchor>ac23913215c0753e4ffab60715157ffe1</anchor>
-      <arglist>(const iimg::IBitmap &amp;input, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const =0</arglist>
+      <anchor>a84b0342f3751089c754cb291831577d8</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

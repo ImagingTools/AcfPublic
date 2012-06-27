@@ -30,10 +30,10 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QVector&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QList&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_rectangle_8h.html">i2d/CRectangle.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_rect_8h.html">i2d/CRect.h</a>&quot;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_circle_8h.html">i2d/CCircle.h</a>&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_annulus_8h.html">i2d/CAnnulus.h</a>&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_polygon_8h.html">i2d/CPolygon.h</a>&quot;</span>
@@ -48,64 +48,47 @@
 <a name="l00024"></a><a class="code" href="classiimg_1_1_c_bitmap_region.html">00024</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_c_bitmap_region.html" title="Representation of a 2D-region as container of bitmap line scans.">CBitmapRegion</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
 <a name="l00025"></a>00025 {
 <a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a><a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">00027</a>        <span class="keyword">struct </span><a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html">PixelRange</a>
-<a name="l00028"></a>00028        {
-<a name="l00029"></a><a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html#a68ac51d222f908dae16b478c2ce91d4e">00029</a>               <a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html#a68ac51d222f908dae16b478c2ce91d4e">PixelRange</a>()
-<a name="l00030"></a>00030               :      <a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html#afc7afaad2f7812ba782eefe90b5c5b60">pixelBufferPtr</a>(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)
-<a name="l00031"></a>00031               {
-<a name="l00032"></a>00032               }
-<a name="l00033"></a>00033 
-<a name="l00034"></a><a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html#a1e3cd8ae22c21afeee87b334f11a807c">00034</a>               <a class="code" href="classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html#a1e3cd8ae22c21afeee87b334f11a807c">range</a>;
-<a name="l00035"></a><a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html#afc7afaad2f7812ba782eefe90b5c5b60">00035</a>               <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="structiimg_1_1_c_bitmap_region_1_1_pixel_range.html#afc7afaad2f7812ba782eefe90b5c5b60">pixelBufferPtr</a>;
-<a name="l00036"></a>00036        };
-<a name="l00037"></a>00037 
-<a name="l00038"></a><a class="code" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">00038</a>        <span class="keyword">typedef</span> QVector&lt;PixelRange&gt; <a class="code" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">PixelRanges</a>;
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040        <a class="code" href="classiimg_1_1_c_bitmap_region.html#a42d2ffebae7eca34d038088abcdb48d7">CBitmapRegion</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">IBitmap</a>* bitmapPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00041"></a>00041 
-<a name="l00045"></a>00045        <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ab321459a10fef69da3a538a293ffc9ac" title="Create 2D-region from the geometrical object.">CreateFromGeometry</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">i2d::IObject2d</a>&amp; geometry);
-<a name="l00046"></a>00046 
-<a name="l00050"></a>00050        <span class="keyword">const</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#abfdce528ac4e3a07818036e3e7e387c0">PixelRanges</a>* <a class="code" href="classiimg_1_1_c_bitmap_region.html#ae632bef52c5e3d6c7e61916fb89cda23" title="Get the list of pixel ranges per given line.">GetPixelRanges</a>(<span class="keywordtype">int</span> lineIndex) <span class="keyword">const</span>;
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; <a class="code" href="classiimg_1_1_c_bitmap_region.html#a0b7534151852fbe28d0230b7f3c9ebc8">GetBoundingBox</a>() <span class="keyword">const</span>;
-<a name="l00053"></a>00053        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#af5339e3fb1b62a062b69d0a6cf878449">ResetBitmapRegion</a>();
-<a name="l00054"></a>00054        <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#afe9b6912ee6dfda4f00457a53ec33cfc">IsBitmapRegionEmpty</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">IBitmap</a>* <a class="code" href="classiimg_1_1_c_bitmap_region.html#a1ff9bc9726da47253d1bfaf355531442">GetBitmapPtr</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059        <span class="keywordtype">void</span> CalculateRegionBoundingBox(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; objectBoundingBox);
-<a name="l00060"></a>00060        <span class="keywordtype">void</span> CreateFromCircle(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_circle.html" title="Definition of graphical circle object.">i2d::CCircle</a>&amp; circle);
-<a name="l00061"></a>00061        <span class="keywordtype">void</span> CreateFromRectangle(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; rect);
-<a name="l00062"></a>00062        <span class="keywordtype">void</span> CreateFromAnnulus(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_annulus.html" title="Definition of graphical annulus object.">i2d::CAnnulus</a>&amp; annulus);
-<a name="l00063"></a>00063        <span class="keywordtype">void</span> CreateFromPolygon(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">i2d::CPolygon</a>&amp; polygon);
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="keywordtype">void</span> InsertVectorPoint(QList&lt;int&gt;&amp; list, <span class="keywordtype">int</span> value);
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="keyword">private</span>:
-<a name="l00068"></a>00068        <span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">IBitmap</a>* m_bitmapPtr;
-<a name="l00069"></a>00069        QVector&lt;PixelRanges&gt; m_rangesContainer;
-<a name="l00070"></a>00070        QVector&lt;const PixelRanges*&gt; m_lineRangePtr;
-<a name="l00071"></a>00071        <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a> m_boundingBox;
-<a name="l00072"></a>00072        <span class="keywordtype">bool</span> m_isEmpty;
-<a name="l00073"></a>00073 };
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="comment">// public inline methods</span>
-<a name="l00077"></a>00077 
-<a name="l00078"></a><a class="code" href="classiimg_1_1_c_bitmap_region.html#a1ff9bc9726da47253d1bfaf355531442">00078</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">IBitmap</a>* <a class="code" href="classiimg_1_1_c_bitmap_region.html#a1ff9bc9726da47253d1bfaf355531442">CBitmapRegion::GetBitmapPtr</a>()<span class="keyword"> const</span>
-<a name="l00079"></a>00079 <span class="keyword"></span>{
-<a name="l00080"></a>00080        <span class="keywordflow">return</span> m_bitmapPtr;
-<a name="l00081"></a>00081 }
-<a name="l00082"></a>00082 
+<a name="l00027"></a><a class="code" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">00027</a>        <span class="keyword">typedef</span> QList&lt;istd::CIntRange&gt; <a class="code" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029        <a class="code" href="classiimg_1_1_c_bitmap_region.html#aef2aedb71525f7a2cffcae2094bffdcd">CBitmapRegion</a>();
+<a name="l00030"></a>00030 
+<a name="l00034"></a>00034        <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#afe9b6912ee6dfda4f00457a53ec33cfc" title="Check if region is empty.">IsBitmapRegionEmpty</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035 
+<a name="l00039"></a>00039        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiimg_1_1_c_bitmap_region.html#a8b68561a19469b0d3ac2a25cb5a25da7" title="Get bounding box of this region.">GetBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00040"></a>00040 
+<a name="l00044"></a>00044        <span class="keyword">const</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a>* <a class="code" href="classiimg_1_1_c_bitmap_region.html#ae632bef52c5e3d6c7e61916fb89cda23" title="Get the list of pixel ranges per given line.">GetPixelRanges</a>(<span class="keywordtype">int</span> lineIndex) <span class="keyword">const</span>;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#af5339e3fb1b62a062b69d0a6cf878449">ResetBitmapRegion</a>();
+<a name="l00047"></a>00047 
+<a name="l00053"></a>00053        <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ace1f5942dba36cf92f0ad93352c39e5a" title="Create 2D-region from some geometrical object.">CreateFromGeometry</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">i2d::IObject2d</a>&amp; geometry, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>* clipAreaPtr);
+<a name="l00054"></a>00054 
+<a name="l00060"></a>00060        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ac6dc280c1ccc86275dfa6c459090aec7" title="Create 2D-region from circle.">CreateFromCircle</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_circle.html" title="Definition of graphical circle object.">i2d::CCircle</a>&amp; circle, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>* clipAreaPtr);
+<a name="l00066"></a>00066        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ad4d44d489b5a08ee2ab32cf225ce53ee" title="Create 2D-region from rectangle.">CreateFromRectangle</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; rect, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>* clipAreaPtr);
+<a name="l00072"></a>00072        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ae274a10504ec7e1fde73d78ba2644080" title="Create 2D-region from annulus.">CreateFromAnnulus</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_annulus.html" title="Definition of graphical annulus object.">i2d::CAnnulus</a>&amp; annulus, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>* clipAreaPtr);
+<a name="l00078"></a>00078        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ad9492b434469cd42b0d559291fe9e5a1" title="Create 2D-region from polygon.">CreateFromPolygon</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_polygon.html">i2d::CPolygon</a>&amp; polygon, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>* clipAreaPtr);
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080        <span class="comment">// static methods</span>
+<a name="l00081"></a>00081        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#a56b51791a38553f91c8939302eaf5c9e">UnionLine</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a>&amp; line, <a class="code" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a>&amp; result);
+<a name="l00082"></a>00082        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#a8a351411e23acc37a677177743ca3b90">IntersectLine</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a>&amp; line, <a class="code" href="classiimg_1_1_c_bitmap_region.html#ac70edeb7b23a9fa29354f2ffdb69e686">PixelRanges</a>&amp; result);
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 } <span class="comment">// namespace iimg</span>
-<a name="l00085"></a>00085 
+<a name="l00084"></a>00084 <span class="keyword">protected</span>:
+<a name="l00085"></a>00085        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_region.html#a2b7eff8cc3383b4d4fa2cde0cd595da9">SetBoundingBox</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; objectBoundingBox, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>* clipAreaPtr);
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 <span class="preprocessor">#endif // !iimg_CBitmapRegion_included</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span>
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 
+<a name="l00087"></a>00087 <span class="keyword">private</span>:
+<a name="l00088"></a>00088        QVector&lt;PixelRanges&gt; m_rangesContainer;
+<a name="l00089"></a>00089        QVector&lt;const PixelRanges*&gt; m_lineRangePtr;
+<a name="l00090"></a>00090        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_boundingBox;
+<a name="l00091"></a>00091        <span class="keywordtype">bool</span> m_isEmpty;
+<a name="l00092"></a>00092 };
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 } <span class="comment">// namespace iimg</span>
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="preprocessor">#endif // !iimg_CBitmapRegion_included</span>
+<a name="l00099"></a>00099 <span class="preprocessor"></span>
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

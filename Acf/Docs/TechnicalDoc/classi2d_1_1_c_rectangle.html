@@ -64,11 +64,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a7e46666d40508de1104aead029bfcffe">CRectangle</a> (double left, double top, double width, double height)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ae68e4d704a4d274081f47f0e9ace4cec">CRectangle</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;topLeft, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;bottomRight)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a6aad17c6ca38d30017addbce7b032780">CRectangle</a> (const <a class="el" href="namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;horizontalRange, const <a class="el" href="namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;verticalRange)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ad8e3f4d2cd3ecb1a8a5471c6af93f859">CRectangle</a> (const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;rect)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#abf9b72b9600df0b18be659e7bde075d5">CRectangle</a> (const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ac5b5ec56c124d3779bf61a48e0161080">IsValid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the rectangle is valid.  <a href="#ac5b5ec56c124d3779bf61a48e0161080"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a6a749106e6047144132d50142df8bf50">IsEmpty</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the rectangle is empty.  <a href="#a6a749106e6047144132d50142df8bf50"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ab677227a1ef0e1d69e5a4f76fe12fb7d">IsValidNonEmpty</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the rectangle is valid and it is not empty.  <a href="#ab677227a1ef0e1d69e5a4f76fe12fb7d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a1c8fa000480d4e79fc50bffb3cba7f3f">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make rectangle empty.  <a href="#a1c8fa000480d4e79fc50bffb3cba7f3f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a9db7eb11cf23e3a95d450f773be932be">GetLeft</a> () const </td></tr>
@@ -85,13 +88,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#afbba6073e1c5a8c4c12b1ab2e0aeb89f">GetVerticalRange</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a8b33b8efce83e4e5c381b92613711ebc">GetVerticalRangeRef</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a925d18385119a6aec6c32dddcae8f99c">SetVerticalRange</a> (const <a class="el" href="namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;range)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ad538120de8a2de748b95b30d9b1f1784">GetTopLeft</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a9c437816b4371b1b204f1aa70a37360b">GetLeftTop</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a66bf1d549b1c09489a25e09263a7a1d6">SetTopLeft</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;topLeft)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a0f834a4ae6730b4a5cf3757e5c440185">GetTopRight</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a91bdbd6a557cc1360e9bcaa1bec1cd43">GetRightTop</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#aecfa4f6dbaec786a79af669fba55058a">SetTopRight</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;topRight)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ac0c224d1ccd98d3e193e2703929a90ad">GetBottomLeft</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a06c87815dd16497576309be22a47512f">GetLeftBottom</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a127756d54d45ccb9a46f564b66fe02e7">SetBottomLeft</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;bottomLeft)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#aaf96d1d71558c974954356d8ae3f3a32">GetBottomRight</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a7d1836d54c82e3c3eb4f898d3ee454bf">GetRightBottom</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a3fd8d7979e25aae962ef65c9258c0318">SetBottomRight</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;bottomRight)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a21b302bf07df4fc9903036743430ac55">Contains</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;point) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ae515025080b43f15390ce1d77d708709">Contains</a> (const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;point) const </td></tr>
@@ -142,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Definition of rectangle area orthogonal to axis of coordination system. </p>
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00021">21</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00024">24</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae0f7a07a0fc7ec9d07400cf4b1f632f0"></a><!-- doxytag: member="i2d::CRectangle::CRectangle" ref="ae0f7a07a0fc7ec9d07400cf4b1f632f0" args="()" -->
 <div class="memitem">
@@ -270,6 +273,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad8e3f4d2cd3ecb1a8a5471c6af93f859"></a><!-- doxytag: member="i2d::CRectangle::CRectangle" ref="ad8e3f4d2cd3ecb1a8a5471c6af93f859" args="(const i2d::CRect &amp;rect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">i2d::CRectangle::CRectangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td><code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="abf9b72b9600df0b18be659e7bde075d5"></a><!-- doxytag: member="i2d::CRectangle::CRectangle" ref="abf9b72b9600df0b18be659e7bde075d5" args="(const istd::CIndex2d &amp;size)" -->
 <div class="memitem">
 <div class="memproto">
@@ -370,43 +390,11 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00182">182</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00191">191</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00323">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00335">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00203">i2d::CRect::CRect()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac0c224d1ccd98d3e193e2703929a90ad"></a><!-- doxytag: member="i2d::CRectangle::GetBottomLeft" ref="ac0c224d1ccd98d3e193e2703929a90ad" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> i2d::CRectangle::GetBottomLeft </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aaf96d1d71558c974954356d8ae3f3a32"></a><!-- doxytag: member="i2d::CRectangle::GetBottomRight" ref="aaf96d1d71558c974954356d8ae3f3a32" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> i2d::CRectangle::GetBottomRight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00226">i2d::CRect::CRect()</a>.</p>
 
 </div>
 </div>
@@ -493,7 +481,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00188">188</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00197">197</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -511,7 +499,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00194">194</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00203">203</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -619,11 +607,43 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00164">164</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00173">173</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00302">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00314">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00203">i2d::CRect::CRect()</a>.</p>
+<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00226">i2d::CRect::CRect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06c87815dd16497576309be22a47512f"></a><!-- doxytag: member="i2d::CRectangle::GetLeftBottom" ref="a06c87815dd16497576309be22a47512f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> i2d::CRectangle::GetLeftBottom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9c437816b4371b1b204f1aa70a37360b"></a><!-- doxytag: member="i2d::CRectangle::GetLeftTop" ref="a9c437816b4371b1b204f1aa70a37360b" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> i2d::CRectangle::GetLeftTop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -662,11 +682,43 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00176">176</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00185">185</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00323">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00335">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00203">i2d::CRect::CRect()</a>.</p>
+<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00226">i2d::CRect::CRect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d1836d54c82e3c3eb4f898d3ee454bf"></a><!-- doxytag: member="i2d::CRectangle::GetRightBottom" ref="a7d1836d54c82e3c3eb4f898d3ee454bf" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> i2d::CRectangle::GetRightBottom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91bdbd6a557cc1360e9bcaa1bec1cd43"></a><!-- doxytag: member="i2d::CRectangle::GetRightTop" ref="a91bdbd6a557cc1360e9bcaa1bec1cd43" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> i2d::CRectangle::GetRightTop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -702,43 +754,11 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00170">170</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00179">179</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00302">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00314">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00203">i2d::CRect::CRect()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad538120de8a2de748b95b30d9b1f1784"></a><!-- doxytag: member="i2d::CRectangle::GetTopLeft" ref="ad538120de8a2de748b95b30d9b1f1784" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> i2d::CRectangle::GetTopLeft </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0f834a4ae6730b4a5cf3757e5c440185"></a><!-- doxytag: member="i2d::CRectangle::GetTopRight" ref="a0f834a4ae6730b4a5cf3757e5c440185" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> i2d::CRectangle::GetTopRight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00226">i2d::CRect::CRect()</a>.</p>
 
 </div>
 </div>
@@ -859,7 +879,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00200">200</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00209">209</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -877,7 +897,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00206">206</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00215">215</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -1032,6 +1052,24 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Return <code>true</code> if the rectangle is valid. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab677227a1ef0e1d69e5a4f76fe12fb7d"></a><!-- doxytag: member="i2d::CRectangle::IsValidNonEmpty" ref="ab677227a1ef0e1d69e5a4f76fe12fb7d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool i2d::CRectangle::IsValidNonEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>true</code> if the rectangle is valid and it is not empty. </p>
 
 </div>
 </div>

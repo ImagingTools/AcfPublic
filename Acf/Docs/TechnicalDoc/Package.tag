@@ -2357,13 +2357,12 @@
     <name>CBitmapRegion.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_bitmap_region_8h</filename>
-    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
     <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <class kind="class">iimg::CBitmapRegion</class>
-    <class kind="struct">iimg::CBitmapRegion::PixelRange</class>
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
@@ -8905,6 +8904,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>IsValidNonEmpty</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a6b35cae3946914dbe62033a12f5e1f06</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>IsNull</name>
       <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
       <anchor>a3996781b71b3ed53e9a1772c650bb751</anchor>
@@ -9094,6 +9100,13 @@
       <type></type>
       <name>CRectangle</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>ad8e3f4d2cd3ecb1a8a5471c6af93f859</anchor>
+      <arglist>(const i2d::CRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRectangle</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>abf9b72b9600df0b18be659e7bde075d5</anchor>
       <arglist>(const istd::CIndex2d &amp;size)</arglist>
     </member>
@@ -9109,6 +9122,13 @@
       <name>IsEmpty</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>a6a749106e6047144132d50142df8bf50</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsValidNonEmpty</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>ab677227a1ef0e1d69e5a4f76fe12fb7d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -9218,9 +9238,9 @@
     </member>
     <member kind="function">
       <type>CVector2d</type>
-      <name>GetTopLeft</name>
+      <name>GetLeftTop</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>ad538120de8a2de748b95b30d9b1f1784</anchor>
+      <anchor>a9c437816b4371b1b204f1aa70a37360b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -9232,9 +9252,9 @@
     </member>
     <member kind="function">
       <type>CVector2d</type>
-      <name>GetTopRight</name>
+      <name>GetRightTop</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a0f834a4ae6730b4a5cf3757e5c440185</anchor>
+      <anchor>a91bdbd6a557cc1360e9bcaa1bec1cd43</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -9246,9 +9266,9 @@
     </member>
     <member kind="function">
       <type>CVector2d</type>
-      <name>GetBottomLeft</name>
+      <name>GetLeftBottom</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>ac0c224d1ccd98d3e193e2703929a90ad</anchor>
+      <anchor>a06c87815dd16497576309be22a47512f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -9260,9 +9280,9 @@
     </member>
     <member kind="function">
       <type>CVector2d</type>
-      <name>GetBottomRight</name>
+      <name>GetRightBottom</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>aaf96d1d71558c974954356d8ae3f3a32</anchor>
+      <anchor>a7d1836d54c82e3c3eb4f898d3ee454bf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -23659,47 +23679,18 @@
     <name>iimg::CBitmapRegion</name>
     <filename>classiimg_1_1_c_bitmap_region.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
-    <class kind="struct">iimg::CBitmapRegion::PixelRange</class>
     <member kind="typedef">
-      <type>QVector&lt; PixelRange &gt;</type>
+      <type>QList&lt; istd::CIntRange &gt;</type>
       <name>PixelRanges</name>
       <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>abfdce528ac4e3a07818036e3e7e387c0</anchor>
+      <anchor>ac70edeb7b23a9fa29354f2ffdb69e686</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CBitmapRegion</name>
       <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>a42d2ffebae7eca34d038088abcdb48d7</anchor>
-      <arglist>(const IBitmap *bitmapPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>CreateFromGeometry</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ab321459a10fef69da3a538a293ffc9ac</anchor>
-      <arglist>(const i2d::IObject2d &amp;geometry)</arglist>
-    </member>
-    <member kind="function">
-      <type>const PixelRanges *</type>
-      <name>GetPixelRanges</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ae632bef52c5e3d6c7e61916fb89cda23</anchor>
-      <arglist>(int lineIndex) const </arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::CRectangle &amp;</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>a0b7534151852fbe28d0230b7f3c9ebc8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>ResetBitmapRegion</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>af5339e3fb1b62a062b69d0a6cf878449</anchor>
+      <anchor>aef2aedb71525f7a2cffcae2094bffdcd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -23710,36 +23701,81 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const IBitmap *</type>
-      <name>GetBitmapPtr</name>
+      <type>i2d::CRect</type>
+      <name>GetBoundingBox</name>
       <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>a1ff9bc9726da47253d1bfaf355531442</anchor>
+      <anchor>a8b68561a19469b0d3ac2a25cb5a25da7</anchor>
       <arglist>() const </arglist>
     </member>
-  </compound>
-  <compound kind="struct">
-    <name>iimg::CBitmapRegion::PixelRange</name>
-    <filename>structiimg_1_1_c_bitmap_region_1_1_pixel_range.html</filename>
     <member kind="function">
-      <type></type>
-      <name>PixelRange</name>
-      <anchorfile>structiimg_1_1_c_bitmap_region_1_1_pixel_range.html</anchorfile>
-      <anchor>a68ac51d222f908dae16b478c2ce91d4e</anchor>
+      <type>const PixelRanges *</type>
+      <name>GetPixelRanges</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>ae632bef52c5e3d6c7e61916fb89cda23</anchor>
+      <arglist>(int lineIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetBitmapRegion</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>af5339e3fb1b62a062b69d0a6cf878449</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="variable">
-      <type>istd::CRange</type>
-      <name>range</name>
-      <anchorfile>structiimg_1_1_c_bitmap_region_1_1_pixel_range.html</anchorfile>
-      <anchor>a1e3cd8ae22c21afeee87b334f11a807c</anchor>
-      <arglist></arglist>
+    <member kind="function">
+      <type>bool</type>
+      <name>CreateFromGeometry</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>ace1f5942dba36cf92f0ad93352c39e5a</anchor>
+      <arglist>(const i2d::IObject2d &amp;geometry, const i2d::CRect *clipAreaPtr)</arglist>
     </member>
-    <member kind="variable">
-      <type>const void *</type>
-      <name>pixelBufferPtr</name>
-      <anchorfile>structiimg_1_1_c_bitmap_region_1_1_pixel_range.html</anchorfile>
-      <anchor>afc7afaad2f7812ba782eefe90b5c5b60</anchor>
-      <arglist></arglist>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateFromCircle</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>ac6dc280c1ccc86275dfa6c459090aec7</anchor>
+      <arglist>(const i2d::CCircle &amp;circle, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateFromRectangle</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>ad4d44d489b5a08ee2ab32cf225ce53ee</anchor>
+      <arglist>(const i2d::CRectangle &amp;rect, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateFromAnnulus</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>ae274a10504ec7e1fde73d78ba2644080</anchor>
+      <arglist>(const i2d::CAnnulus &amp;annulus, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateFromPolygon</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>ad9492b434469cd42b0d559291fe9e5a1</anchor>
+      <arglist>(const i2d::CPolygon &amp;polygon, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>UnionLine</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>a56b51791a38553f91c8939302eaf5c9e</anchor>
+      <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>IntersectLine</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>a8a351411e23acc37a677177743ca3b90</anchor>
+      <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetBoundingBox</name>
+      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
+      <anchor>a2b7eff8cc3383b4d4fa2cde0cd595da9</anchor>
+      <arglist>(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45280,6 +45316,13 @@
       <name>IsEmpty</name>
       <anchorfile>classistd_1_1_t_range.html</anchorfile>
       <anchor>a42721dba39f159b7872df292308b059f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsValidNonEmpty</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a6491bf8cd460a1334d03ed6222df617f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
