@@ -26,8 +26,6 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iqt/CSignalBlocker.h"
-
 
 namespace iqt2d
 {
@@ -100,16 +98,9 @@ void CRectangleParamsGuiComp::UpdateGui(int /*updateFlags*/)
 
 	i2d::CRectangle* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		iqt::CSignalBlocker block(LeftSpin);
 		LeftSpin->setValue(objectPtr->GetLeft());
-
-		iqt::CSignalBlocker block2(RightSpin);
 		RightSpin->setValue(objectPtr->GetRight());
-
-		iqt::CSignalBlocker block3(BottomSpin);
 		BottomSpin->setValue(objectPtr->GetBottom());
-
-		iqt::CSignalBlocker block4(TopSpin);
 		TopSpin->setValue(objectPtr->GetTop());
 
 		UpdateAllViews();

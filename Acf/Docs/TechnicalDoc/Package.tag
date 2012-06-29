@@ -3860,7 +3860,7 @@
     <name>IViewExtender.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_i_view_extender_8h</filename>
-    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">iqt2d::IViewExtender</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3869,9 +3869,9 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_i_view_provider_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_i_shape_view_8h" name="IShapeView.h" local="yes" imported="no">iview/IShapeView.h</includes>
     <includes id="iqt2d_8h" name="iqt2d.h" local="yes" imported="no">iqt2d/iqt2d.h</includes>
     <class kind="class">iqt2d::IViewProvider</class>
+    <namespace>iview</namespace>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -3889,7 +3889,11 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_view_extender_comp_base_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
+    <includes id="_i_shape_view_8h" name="IShapeView.h" local="yes" imported="no">iview/IShapeView.h</includes>
+    <includes id="_i_logical_view_8h" name="ILogicalView.h" local="yes" imported="no">iview/ILogicalView.h</includes>
     <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
+    <includes id="_c_calibrated_view_base_8h" name="CCalibratedViewBase.h" local="yes" imported="no">iview/CCalibratedViewBase.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqt2d::TViewExtenderCompBase</class>
@@ -3899,7 +3903,6 @@
     <name>TViewExtenderDelegatorCompWrap.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_view_extender_delegator_comp_wrap_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqt2d::TViewExtenderDelegatorCompWrap</class>
     <namespace>iqt2d</namespace>
@@ -6730,6 +6733,20 @@
     <filename>classi2d_1_1_c_affine_transformation2d.html</filename>
     <base virtualness="virtual">i2d::ITransformation2d</base>
     <member kind="function">
+      <type></type>
+      <name>CAffineTransformation2d</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>adcc41bc3b4002d119455c8ce3ad37fbc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffineTransformation2d</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>ac0c758fdfb6f8715a8fb7b6e8cafb3d8</anchor>
+      <arglist>(const i2d::CAffine2d &amp;transformation)</arglist>
+    </member>
+    <member kind="function">
       <type>const i2d::CAffine2d &amp;</type>
       <name>GetTransformation</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
@@ -6854,6 +6871,20 @@
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
       <anchor>a75b334351ed65d769049fb2451e3d06d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a22554b26ec0600fd6cb045993e6cbbde</anchor>
+      <arglist>(const istd::IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a12507865e9d64df47e6974b9c8650658</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>CAffine2d</type>
@@ -8868,18 +8899,46 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>istd::CIntRange</type>
+      <type>const istd::CIntRange &amp;</type>
       <name>GetHorizontalRange</name>
       <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
-      <anchor>a10a89a6c1d2489c1854dc832d81948be</anchor>
+      <anchor>a8177c9b3c3a4a280b34180a83db01944</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>istd::CIntRange</type>
+      <type>istd::CIntRange &amp;</type>
+      <name>GetHorizontalRangeRef</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a8e81dc94ed5dee4fe58f8658e2e3b01e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetHorizontalRange</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a33d0e6cddd2ce6fe75359e68419615d7</anchor>
+      <arglist>(const istd::CIntRange &amp;range)</arglist>
+    </member>
+    <member kind="function">
+      <type>const istd::CIntRange &amp;</type>
       <name>GetVerticalRange</name>
       <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
-      <anchor>a4bce788e9de4660d09c3059ad2d466aa</anchor>
+      <anchor>a31e883853ba90408408de8eda5643cdd</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CIntRange &amp;</type>
+      <name>GetVerticalRangeRef</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>ae414c89373e992e2b086c0e188b54598</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetVerticalRange</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>aae7af232baff6c1e42f76482122c021c</anchor>
+      <arglist>(const istd::CIntRange &amp;range)</arglist>
     </member>
     <member kind="function">
       <type>istd::CIndex2d</type>
@@ -23880,6 +23939,69 @@
       <anchor>a8525f9585560133a3f5f27433158c4ab</anchor>
       <arglist>(const i2d::CPolygon &amp;polygon, const i2d::CRect *clipAreaPtr)</arglist>
     </member>
+    <member kind="function">
+      <type>CScanlineMask</type>
+      <name>GetUnion</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ae125990dc6fac3be2a9fea644ea89c9f</anchor>
+      <arglist>(const CScanlineMask &amp;mask) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetUnion</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>af5ea4e239ebc18cc84cda74da94a618d</anchor>
+      <arglist>(const CScanlineMask &amp;mask, CScanlineMask &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Union</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a9d192c413efb0dda649e021b0a134ef5</anchor>
+      <arglist>(const CScanlineMask &amp;mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>CScanlineMask</type>
+      <name>GetIntersection</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a17e0ae3b700439b8efe323ffd6523f7b</anchor>
+      <arglist>(const CScanlineMask &amp;mask) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetIntersection</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a879188eb5973e18800cb44a50a0cc569</anchor>
+      <arglist>(const CScanlineMask &amp;mask, CScanlineMask &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Intersection</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ac94b33f9fbc2c8c5bcd0b359094297ec</anchor>
+      <arglist>(const CScanlineMask &amp;mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>CScanlineMask</type>
+      <name>GetTranslated</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a9e49d4cd90c6c2592b8e1df76057f400</anchor>
+      <arglist>(int dx, int dy) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetTranslated</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a1c67b3e45b19066fc4d761a2b42dc83b</anchor>
+      <arglist>(int dx, int dy, CScanlineMask &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Translate</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ae562e226db109611d02b22d924ecac0a</anchor>
+      <arglist>(int dx, int dy)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEmpty</name>
@@ -23931,16 +24053,30 @@
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
-      <name>UnionLine</name>
+      <name>GetLineUnion</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>adc597c219071c61effcc1884abe7ac18</anchor>
+      <anchor>a3e7b8096289150d5c690e773e6978e5d</anchor>
+      <arglist>(const PixelRanges &amp;line1, const PixelRanges &amp;line2, PixelRanges &amp;result)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>LineUnion</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a64bec86d3c036dd79c24604346c71a82</anchor>
       <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
-      <name>IntersectLine</name>
+      <name>GetLineIntersection</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a3df340f6ee53b2c7dbbd998698c28bcd</anchor>
+      <anchor>ab4a48eeae4a2ba96065afd45342acb4a</anchor>
+      <arglist>(const PixelRanges &amp;line1, const PixelRanges &amp;line2, PixelRanges &amp;result)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>LineIntersection</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a9bc868022aa4ba6de67ac4aad34f4c79</anchor>
       <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -34677,10 +34813,10 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>IsSceneIdSupported</name>
+      <name>IsViewIdSupported</name>
       <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
-      <anchor>a3975b8a2b3d4350dd9367339b6a1083b</anchor>
-      <arglist>(int id) const </arglist>
+      <anchor>a2681ac9266271486c1e25213c60c1266</anchor>
+      <arglist>(int viewId) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const ShapesMap &amp;</type>
@@ -34696,12 +34832,19 @@
       <anchor>a800b8a361c62f39966dd5bbb024618fd</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateViewCalibration</name>
+      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
+      <anchor>ad0478b93314add9de3954248b1fccc49</anchor>
+      <arglist>(iview::IShapeView *viewPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
-      <anchor>a204c880d497070980e349dea6475e45c</anchor>
-      <arglist>(int sceneId, Shapes &amp;result)=0</arglist>
+      <anchor>a8d75f5c0847cdcbe2b838a05fe45c548</anchor>
+      <arglist>(int viewId, Shapes &amp;result)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34711,10 +34854,10 @@
     <base>Base</base>
     <base virtualness="virtual">iqt2d::IViewExtender</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>Base</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_t_view_extender_delegator_comp_wrap.html</anchorfile>
-      <anchor>a7a4d59713cbb05445e193e2b7b5bdeb8</anchor>
+      <anchor>acf09354d259767e4cc7907276822c170</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -46408,6 +46551,7 @@
     <name>iview::CCalibratedViewBase</name>
     <filename>classiview_1_1_c_calibrated_view_base.html</filename>
     <base>iview::CViewBase</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base virtualness="virtual">iview::IVisualCalibrationInfo</base>
     <member kind="typedef">
       <type>CViewBase</type>

@@ -51,177 +51,161 @@
 <a name="l00024"></a>00024 
 <a name="l00030"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html">00030</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_calibrated_view_base.html" title="Abstract base class for all calibrated view.">CCalibratedViewBase</a>:
 <a name="l00031"></a>00031                      <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_view_base.html">CViewBase</a>,
-<a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiview_1_1_i_visual_calibration_info.html" title="Common interface for all objects which allow access to calibration info.">IVisualCalibrationInfo</a>
-<a name="l00033"></a>00033 {
-<a name="l00034"></a>00034 <span class="keyword">public</span>:
-<a name="l00035"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2a17719564d04962a887cbd811807a4d">00035</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_view_base.html">CViewBase</a> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2a17719564d04962a887cbd811807a4d">BaseClass</a>;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a9658bfe22b3445c1bcafbb502a70d8cf">CCalibratedViewBase</a>();
-<a name="l00038"></a>00038 
-<a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab5f3aadf635e42f5f85fb6ceb146d5d5" title="Set calibration object for this view.">SetCalibrationPtr</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* calibrationPtr);
-<a name="l00043"></a>00043 
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a77581d34d0f800e095f70172cb2cf651" title="Set grid visibility state.">SetGridVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00048"></a>00048 
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a5578ebbb9acb7f193715a0122a44ec78" title="Connect visualisation shape for calibration object.">ConnectCalibrationShape</a>(<a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr);
-<a name="l00053"></a>00053 
-<a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ad9b9989392c8b2230d4635d5272d7d7b" title="Set minimal grid size.">SetMinGridDistance</a>(<span class="keywordtype">double</span> gridDistance);
-<a name="l00059"></a>00059 
-<a name="l00063"></a>00063        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab2a827d462f2452ec20299ae9592b6e6" title="Set if grid should be shown in milimeter.">SetGridInMm</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view.">iview::IViewLayer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a3957c2b9787df64fbaa07e2892c10737">GetCalibrationLayer</a>() <span class="keyword">const</span>;
-<a name="l00066"></a>00066 
-<a name="l00072"></a>00072        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#abaa7c4bada0ea318e1505db317c923c3" title="Set default color shema object.">SetDefaultColorShema</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorShema</a>* colorShemaPtr, <span class="keywordtype">bool</span> releaseFlag = <span class="keyword">false</span>);
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a1d7274deb0450cdf230d5ca1d2f2595a">IsBackgroundBufferActive</a>() <span class="keyword">const</span>;
-<a name="l00075"></a>00075        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a048cc11d6231adee980a2fed8cd42e1d">SetBackgroundBufferActive</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00076"></a>00076        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a1b2a442b848a3a5493e364dc10226ac5">IsDoubleBufferActive</a>() <span class="keyword">const</span>;
-<a name="l00077"></a>00077        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a724d2130e1871f07a3c2767ceb42367b">SetDoubleBufferActive</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a959baf5d040bf764e13c5d5f26f33b2f">GetBackgroundBuffer</a>() <span class="keyword">const</span>;
-<a name="l00080"></a>00080        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a959baf5d040bf764e13c5d5f26f33b2f">GetBackgroundBuffer</a>();
-<a name="l00081"></a>00081        <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a12c71e0614bb7ac5eb6c7dcfd7f154ec">GetDoubleBuffer</a>() <span class="keyword">const</span>;
-<a name="l00082"></a>00082        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a12c71e0614bb7ac5eb6c7dcfd7f154ec">GetDoubleBuffer</a>();
-<a name="l00083"></a>00083 
-<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a907d7f2b8d57d6126d039c7563272d67" title="Called if found that display area was resized.">OnResize</a>();
-<a name="l00088"></a>00088        
-<a name="l00092"></a>00092        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a76c31f33af210cfc14f0ebd2e71b1556" title="Check if size size was changed and invalidation and OnResize() should be done.">CheckResize</a>();
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094        <span class="comment">// reimplemented (iview::CViewBase)</span>
-<a name="l00095"></a>00095        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">iview::IColorShema</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a808e54b859e44d92320c4380131dcc90">GetDefaultColorShema</a>() <span class="keyword">const</span>;
-<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a5034161e88f77b5397e954fdae0603e0" title="Inform all shapes about changes.">UpdateAllShapes</a>(<span class="keywordtype">int</span> changeFlag);
-<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a78329039f72a0cd2a790d7cd00bc17c9" title="Insert default layers, when there is no one user layer.">InsertDefaultLayers</a>();
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099        <span class="comment">// reimplemented (iview::IShapeView)</span>
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ae86edc47907d327f860deb57f4d74ffc" title="Insert layer to view.">InsertLayer</a>(<a class="code" href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view.">iview::IViewLayer</a>* layerPtr, <span class="keywordtype">int</span> index = -1, <span class="keywordtype">int</span> layerType = <a class="code" href="classiview_1_1_i_view_layer.html#ab844c082e493b088ae3b3afc42b98240a343ede38a092561041bbe9d20dca6088" title="Layer type is not set.">IViewLayer::LT_NONE</a>);
-<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#af26588318b4e7e10b988f7b837b27e50" title="Remove layer from view.">RemoveLayer</a>(<span class="keywordtype">int</span> index);
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103        <span class="comment">// reimplemented (iview::IVisualCalibrationInfo)</span>
-<a name="l00104"></a>00104        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a7e8ecf4b089d2327f1b9fe91dd6913b5" title="Check if grid is visible.">IsGridVisible</a>() <span class="keyword">const</span>;
-<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2820758cda8cae66ab61f1dfaee3f256" title="Get minimal distance between grid lines.">GetMinGridDistance</a>() <span class="keyword">const</span>;
-<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#accb843682981aae29e3a57de5ee6ba71" title="Check if grid should be shown in milimeter.">IsGridInMm</a>() <span class="keyword">const</span>;
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
-<a name="l00109"></a>00109        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab99e55de7f2adb278eb7e9e306c9593f" title="Get access to transformation object, which transforms a coordinate system to a logical one...">GetCalibration</a>() <span class="keyword">const</span>;
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111        <span class="keyword">using</span> <a class="code" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408" title="Invalidate whole backgroud buffer.">BaseClass::InvalidateBackground</a>;
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113 <span class="keyword">protected</span>:
-<a name="l00114"></a>00114        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a5006a54b7d2a31aefecb53fd399d5ed9">DrawBuffers</a>(QPaintDevice&amp; nativeContext, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; clipRect);
-<a name="l00115"></a>00115        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a26261d7a8f8a6f7b7ab23f8b318d8dd2">DrawToContext</a>(QPaintDevice&amp; nativeContext, QPainter&amp; context, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; invalidatedBox);
-<a name="l00116"></a>00116 
-<a name="l00117"></a>00117 <span class="keyword">private</span>:
-<a name="l00118"></a>00118        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;const IColorShema&gt;</a> m_defaultColorShemaPtr;
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a> m_backgroundBuffer;
-<a name="l00121"></a>00121        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a> m_doubleBuffer;
-<a name="l00122"></a>00122 
-<a name="l00123"></a>00123        <span class="keywordtype">bool</span> m_isBackgroundBufferActive;
-<a name="l00124"></a>00124        <span class="keywordtype">bool</span> m_isDoubleBufferActive;
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_lastClientArea;
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* m_calibrationPtr;
-<a name="l00129"></a>00129        <span class="keywordtype">bool</span> m_isGridVisible;
-<a name="l00130"></a>00130        <span class="keywordtype">bool</span> m_isGridInMm;
-<a name="l00131"></a>00131        <span class="keywordtype">double</span> m_minGridDistance;
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133        <span class="keywordtype">int</span> m_calibrationLayerIndex;
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135        <span class="comment">// default layers</span>
-<a name="l00136"></a>00136        <a class="code" href="classiview_1_1_c_view_layer.html" title="Standard implementation of view layer.">iview::CViewLayer</a> m_calibrationLayer;
-<a name="l00137"></a>00137 };
-<a name="l00138"></a>00138 
+<a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider,
+<a name="l00033"></a>00033                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiview_1_1_i_visual_calibration_info.html" title="Common interface for all objects which allow access to calibration info.">IVisualCalibrationInfo</a>
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035 <span class="keyword">public</span>:
+<a name="l00036"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2a17719564d04962a887cbd811807a4d">00036</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_view_base.html">CViewBase</a> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2a17719564d04962a887cbd811807a4d">BaseClass</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038        <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a9658bfe22b3445c1bcafbb502a70d8cf">CCalibratedViewBase</a>();
+<a name="l00039"></a>00039 
+<a name="l00043"></a>00043        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab5f3aadf635e42f5f85fb6ceb146d5d5" title="Set calibration object for this view.">SetCalibrationPtr</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* calibrationPtr);
+<a name="l00044"></a>00044 
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a77581d34d0f800e095f70172cb2cf651" title="Set grid visibility state.">SetGridVisible</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00049"></a>00049 
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a5578ebbb9acb7f193715a0122a44ec78" title="Connect visualisation shape for calibration object.">ConnectCalibrationShape</a>(<a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">iview::IShape</a>* shapePtr);
+<a name="l00054"></a>00054 
+<a name="l00059"></a>00059        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ad9b9989392c8b2230d4635d5272d7d7b" title="Set minimal grid size.">SetMinGridDistance</a>(<span class="keywordtype">double</span> gridDistance);
+<a name="l00060"></a>00060 
+<a name="l00064"></a>00064        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab2a827d462f2452ec20299ae9592b6e6" title="Set if grid should be shown in milimeter.">SetGridInMm</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view.">iview::IViewLayer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a3957c2b9787df64fbaa07e2892c10737">GetCalibrationLayer</a>() <span class="keyword">const</span>;
+<a name="l00067"></a>00067 
+<a name="l00073"></a>00073        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#abaa7c4bada0ea318e1505db317c923c3" title="Set default color shema object.">SetDefaultColorShema</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorShema</a>* colorShemaPtr, <span class="keywordtype">bool</span> releaseFlag = <span class="keyword">false</span>);
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a1d7274deb0450cdf230d5ca1d2f2595a">IsBackgroundBufferActive</a>() <span class="keyword">const</span>;
+<a name="l00076"></a>00076        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a048cc11d6231adee980a2fed8cd42e1d">SetBackgroundBufferActive</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00077"></a>00077        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a1b2a442b848a3a5493e364dc10226ac5">IsDoubleBufferActive</a>() <span class="keyword">const</span>;
+<a name="l00078"></a>00078        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a724d2130e1871f07a3c2767ceb42367b">SetDoubleBufferActive</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080        <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a959baf5d040bf764e13c5d5f26f33b2f">GetBackgroundBuffer</a>() <span class="keyword">const</span>;
+<a name="l00081"></a>00081        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a959baf5d040bf764e13c5d5f26f33b2f">GetBackgroundBuffer</a>();
+<a name="l00082"></a>00082        <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a12c71e0614bb7ac5eb6c7dcfd7f154ec">GetDoubleBuffer</a>() <span class="keyword">const</span>;
+<a name="l00083"></a>00083        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a12c71e0614bb7ac5eb6c7dcfd7f154ec">GetDoubleBuffer</a>();
+<a name="l00084"></a>00084 
+<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a907d7f2b8d57d6126d039c7563272d67" title="Called if found that display area was resized.">OnResize</a>();
+<a name="l00089"></a>00089        
+<a name="l00093"></a>00093        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a76c31f33af210cfc14f0ebd2e71b1556" title="Check if size size was changed and invalidation and OnResize() should be done.">CheckResize</a>();
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095        <span class="comment">// reimplemented (iview::CViewBase)</span>
+<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">iview::IColorShema</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a808e54b859e44d92320c4380131dcc90">GetDefaultColorShema</a>() <span class="keyword">const</span>;
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a5034161e88f77b5397e954fdae0603e0" title="Inform all shapes about changes.">UpdateAllShapes</a>(<span class="keywordtype">int</span> changeFlag);
+<a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a78329039f72a0cd2a790d7cd00bc17c9" title="Insert default layers, when there is no one user layer.">InsertDefaultLayers</a>();
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100        <span class="comment">// reimplemented (iview::IShapeView)</span>
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ae86edc47907d327f860deb57f4d74ffc" title="Insert layer to view.">InsertLayer</a>(<a class="code" href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view.">iview::IViewLayer</a>* layerPtr, <span class="keywordtype">int</span> index = -1, <span class="keywordtype">int</span> layerType = <a class="code" href="classiview_1_1_i_view_layer.html#ab844c082e493b088ae3b3afc42b98240a343ede38a092561041bbe9d20dca6088" title="Layer type is not set.">IViewLayer::LT_NONE</a>);
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#af26588318b4e7e10b988f7b837b27e50" title="Remove layer from view.">RemoveLayer</a>(<span class="keywordtype">int</span> index);
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104        <span class="comment">// reimplemented (iview::IVisualCalibrationInfo)</span>
+<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a7e8ecf4b089d2327f1b9fe91dd6913b5" title="Check if grid is visible.">IsGridVisible</a>() <span class="keyword">const</span>;
+<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2820758cda8cae66ab61f1dfaee3f256" title="Get minimal distance between grid lines.">GetMinGridDistance</a>() <span class="keyword">const</span>;
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#accb843682981aae29e3a57de5ee6ba71" title="Check if grid should be shown in milimeter.">IsGridInMm</a>() <span class="keyword">const</span>;
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
+<a name="l00110"></a>00110        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab99e55de7f2adb278eb7e9e306c9593f" title="Get access to transformation object, which transforms a coordinate system to a logical one...">GetCalibration</a>() <span class="keyword">const</span>;
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112        <span class="keyword">using</span> <a class="code" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408" title="Invalidate whole backgroud buffer.">BaseClass::InvalidateBackground</a>;
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 <span class="keyword">protected</span>:
+<a name="l00115"></a>00115        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a5006a54b7d2a31aefecb53fd399d5ed9">DrawBuffers</a>(QPaintDevice&amp; nativeContext, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; clipRect);
+<a name="l00116"></a>00116        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a26261d7a8f8a6f7b7ab23f8b318d8dd2">DrawToContext</a>(QPaintDevice&amp; nativeContext, QPainter&amp; context, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; invalidatedBox);
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 <span class="keyword">private</span>:
+<a name="l00119"></a>00119        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;const IColorShema&gt;</a> m_defaultColorShemaPtr;
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a> m_backgroundBuffer;
+<a name="l00122"></a>00122        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a> m_doubleBuffer;
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124        <span class="keywordtype">bool</span> m_isBackgroundBufferActive;
+<a name="l00125"></a>00125        <span class="keywordtype">bool</span> m_isDoubleBufferActive;
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_lastClientArea;
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* m_calibrationPtr;
+<a name="l00130"></a>00130        <span class="keywordtype">bool</span> m_isGridVisible;
+<a name="l00131"></a>00131        <span class="keywordtype">bool</span> m_isGridInMm;
+<a name="l00132"></a>00132        <span class="keywordtype">double</span> m_minGridDistance;
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134        <span class="keywordtype">int</span> m_calibrationLayerIndex;
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136        <span class="comment">// default layers</span>
+<a name="l00137"></a>00137        <a class="code" href="classiview_1_1_c_view_layer.html" title="Standard implementation of view layer.">iview::CViewLayer</a> m_calibrationLayer;
+<a name="l00138"></a>00138 };
 <a name="l00139"></a>00139 
-<a name="l00140"></a>00140 <span class="comment">// inline methods</span>
-<a name="l00141"></a>00141 
-<a name="l00142"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab5f3aadf635e42f5f85fb6ceb146d5d5">00142</a> <span class="keyword">inline</span>        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab5f3aadf635e42f5f85fb6ceb146d5d5" title="Set calibration object for this view.">CCalibratedViewBase::SetCalibrationPtr</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* calibrationPtr)
-<a name="l00143"></a>00143 {
-<a name="l00144"></a>00144        <span class="keywordflow">if</span> (calibrationPtr != m_calibrationPtr){
-<a name="l00145"></a>00145               <span class="keywordflow">if</span> (calibrationPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00146"></a>00146                      m_calibrationPtr = calibrationPtr;
-<a name="l00147"></a>00147               }
-<a name="l00148"></a>00148               <span class="keywordflow">else</span>{
-<a name="l00149"></a>00149                      m_calibrationPtr = &amp;<a class="code" href="classiview_1_1_c_none_calibration.html#a09b33d461102c9e4e646ccf5811e1cba">CNoneCalibration::GetInstance</a>();
-<a name="l00150"></a>00150               }
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 <span class="comment">// inline methods</span>
+<a name="l00142"></a>00142 
+<a name="l00143"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a77581d34d0f800e095f70172cb2cf651">00143</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a77581d34d0f800e095f70172cb2cf651" title="Set grid visibility state.">CCalibratedViewBase::SetGridVisible</a>(<span class="keywordtype">bool</span> state)
+<a name="l00144"></a>00144 {
+<a name="l00145"></a>00145        <span class="keywordflow">if</span> (m_isGridVisible != state){
+<a name="l00146"></a>00146               m_isGridVisible = state;
+<a name="l00147"></a>00147               <a class="code" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408" title="Invalidate whole backgroud buffer.">InvalidateBackground</a>();
+<a name="l00148"></a>00148        }
+<a name="l00149"></a>00149 }
+<a name="l00150"></a>00150 
 <a name="l00151"></a>00151 
-<a name="l00152"></a>00152               <a class="code" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408" title="Invalidate whole backgroud buffer.">InvalidateBackground</a>();
-<a name="l00153"></a>00153        }
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155        <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a5034161e88f77b5397e954fdae0603e0" title="Inform all shapes about changes.">UpdateAllShapes</a>(<a class="code" href="classiview_1_1_i_shape.html#a39a26cc5524c0e914dc5df5a089219c0aa2f6a5cee56651848349f0660e83bca7">iview::IShape::CF_CALIB</a>);
-<a name="l00156"></a>00156 }
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158 
-<a name="l00159"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a77581d34d0f800e095f70172cb2cf651">00159</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a77581d34d0f800e095f70172cb2cf651" title="Set grid visibility state.">CCalibratedViewBase::SetGridVisible</a>(<span class="keywordtype">bool</span> state)
-<a name="l00160"></a>00160 {
-<a name="l00161"></a>00161        <span class="keywordflow">if</span> (m_isGridVisible != state){
-<a name="l00162"></a>00162               m_isGridVisible = state;
-<a name="l00163"></a>00163               <a class="code" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408" title="Invalidate whole backgroud buffer.">InvalidateBackground</a>();
-<a name="l00164"></a>00164        }
-<a name="l00165"></a>00165 }
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167 
-<a name="l00168"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#ad9b9989392c8b2230d4635d5272d7d7b">00168</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ad9b9989392c8b2230d4635d5272d7d7b" title="Set minimal grid size.">CCalibratedViewBase::SetMinGridDistance</a>(<span class="keywordtype">double</span> gridDistance)
-<a name="l00169"></a>00169 {
-<a name="l00170"></a>00170        <span class="keywordflow">if</span> (m_minGridDistance != gridDistance){
-<a name="l00171"></a>00171               m_minGridDistance = gridDistance;
-<a name="l00172"></a>00172               <span class="keywordflow">if</span> (m_isGridVisible){
-<a name="l00173"></a>00173                      <a class="code" href="classiview_1_1_c_view_base.html#a4e28019ad9e1b57647a8a35e855ef797" title="Set validate flag of background buffer.">SetBackgroundBufferValid</a>(<span class="keyword">false</span>);
-<a name="l00174"></a>00174               }
-<a name="l00175"></a>00175        }
-<a name="l00176"></a>00176 }
+<a name="l00152"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#ad9b9989392c8b2230d4635d5272d7d7b">00152</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ad9b9989392c8b2230d4635d5272d7d7b" title="Set minimal grid size.">CCalibratedViewBase::SetMinGridDistance</a>(<span class="keywordtype">double</span> gridDistance)
+<a name="l00153"></a>00153 {
+<a name="l00154"></a>00154        <span class="keywordflow">if</span> (m_minGridDistance != gridDistance){
+<a name="l00155"></a>00155               m_minGridDistance = gridDistance;
+<a name="l00156"></a>00156               <span class="keywordflow">if</span> (m_isGridVisible){
+<a name="l00157"></a>00157                      <a class="code" href="classiview_1_1_c_view_base.html#a4e28019ad9e1b57647a8a35e855ef797" title="Set validate flag of background buffer.">SetBackgroundBufferValid</a>(<span class="keyword">false</span>);
+<a name="l00158"></a>00158               }
+<a name="l00159"></a>00159        }
+<a name="l00160"></a>00160 }
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162 
+<a name="l00163"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab2a827d462f2452ec20299ae9592b6e6">00163</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab2a827d462f2452ec20299ae9592b6e6" title="Set if grid should be shown in milimeter.">CCalibratedViewBase::SetGridInMm</a>(<span class="keywordtype">bool</span> state)
+<a name="l00164"></a>00164 {
+<a name="l00165"></a>00165        <span class="keywordflow">if</span> (m_isGridInMm != state){
+<a name="l00166"></a>00166               m_isGridInMm = state;
+<a name="l00167"></a>00167               <a class="code" href="classiview_1_1_c_view_base.html#a4e28019ad9e1b57647a8a35e855ef797" title="Set validate flag of background buffer.">SetBackgroundBufferValid</a>(<span class="keyword">false</span>);
+<a name="l00168"></a>00168        }
+<a name="l00169"></a>00169 }
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171 
+<a name="l00172"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a3957c2b9787df64fbaa07e2892c10737">00172</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view.">iview::IViewLayer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a3957c2b9787df64fbaa07e2892c10737">CCalibratedViewBase::GetCalibrationLayer</a>()<span class="keyword"> const</span>
+<a name="l00173"></a>00173 <span class="keyword"></span>{
+<a name="l00174"></a>00174        <span class="keywordflow">return</span> m_calibrationLayer;
+<a name="l00175"></a>00175 }
+<a name="l00176"></a>00176 
 <a name="l00177"></a>00177 
-<a name="l00178"></a>00178 
-<a name="l00179"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab2a827d462f2452ec20299ae9592b6e6">00179</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab2a827d462f2452ec20299ae9592b6e6" title="Set if grid should be shown in milimeter.">CCalibratedViewBase::SetGridInMm</a>(<span class="keywordtype">bool</span> state)
-<a name="l00180"></a>00180 {
-<a name="l00181"></a>00181        <span class="keywordflow">if</span> (m_isGridInMm != state){
-<a name="l00182"></a>00182               m_isGridInMm = state;
-<a name="l00183"></a>00183               <a class="code" href="classiview_1_1_c_view_base.html#a4e28019ad9e1b57647a8a35e855ef797" title="Set validate flag of background buffer.">SetBackgroundBufferValid</a>(<span class="keyword">false</span>);
-<a name="l00184"></a>00184        }
-<a name="l00185"></a>00185 }
-<a name="l00186"></a>00186 
-<a name="l00187"></a>00187 
-<a name="l00188"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a3957c2b9787df64fbaa07e2892c10737">00188</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view.">iview::IViewLayer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a3957c2b9787df64fbaa07e2892c10737">CCalibratedViewBase::GetCalibrationLayer</a>()<span class="keyword"> const</span>
-<a name="l00189"></a>00189 <span class="keyword"></span>{
-<a name="l00190"></a>00190        <span class="keywordflow">return</span> m_calibrationLayer;
-<a name="l00191"></a>00191 }
-<a name="l00192"></a>00192 
-<a name="l00193"></a>00193 
-<a name="l00194"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a7e8ecf4b089d2327f1b9fe91dd6913b5">00194</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a7e8ecf4b089d2327f1b9fe91dd6913b5" title="Check if grid is visible.">CCalibratedViewBase::IsGridVisible</a>()<span class="keyword"> const</span>
-<a name="l00195"></a>00195 <span class="keyword"></span>{
-<a name="l00196"></a>00196        <span class="keywordflow">return</span> m_isGridVisible;
-<a name="l00197"></a>00197 }
-<a name="l00198"></a>00198 
-<a name="l00199"></a>00199 
-<a name="l00200"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2820758cda8cae66ab61f1dfaee3f256">00200</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2820758cda8cae66ab61f1dfaee3f256" title="Get minimal distance between grid lines.">CCalibratedViewBase::GetMinGridDistance</a>()<span class="keyword"> const</span>
-<a name="l00201"></a>00201 <span class="keyword"></span>{
-<a name="l00202"></a>00202        <span class="keywordflow">return</span> m_minGridDistance;
-<a name="l00203"></a>00203 }
+<a name="l00178"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a7e8ecf4b089d2327f1b9fe91dd6913b5">00178</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a7e8ecf4b089d2327f1b9fe91dd6913b5" title="Check if grid is visible.">CCalibratedViewBase::IsGridVisible</a>()<span class="keyword"> const</span>
+<a name="l00179"></a>00179 <span class="keyword"></span>{
+<a name="l00180"></a>00180        <span class="keywordflow">return</span> m_isGridVisible;
+<a name="l00181"></a>00181 }
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183 
+<a name="l00184"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2820758cda8cae66ab61f1dfaee3f256">00184</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a2820758cda8cae66ab61f1dfaee3f256" title="Get minimal distance between grid lines.">CCalibratedViewBase::GetMinGridDistance</a>()<span class="keyword"> const</span>
+<a name="l00185"></a>00185 <span class="keyword"></span>{
+<a name="l00186"></a>00186        <span class="keywordflow">return</span> m_minGridDistance;
+<a name="l00187"></a>00187 }
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189 
+<a name="l00190"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#accb843682981aae29e3a57de5ee6ba71">00190</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#accb843682981aae29e3a57de5ee6ba71" title="Check if grid should be shown in milimeter.">CCalibratedViewBase::IsGridInMm</a>()<span class="keyword"> const</span>
+<a name="l00191"></a>00191 <span class="keyword"></span>{
+<a name="l00192"></a>00192        <span class="keywordflow">return</span> m_isGridInMm;
+<a name="l00193"></a>00193 }
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195 
+<a name="l00196"></a>00196 <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
+<a name="l00197"></a>00197 
+<a name="l00198"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab99e55de7f2adb278eb7e9e306c9593f">00198</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab99e55de7f2adb278eb7e9e306c9593f" title="Get access to transformation object, which transforms a coordinate system to a logical one...">CCalibratedViewBase::GetCalibration</a>()<span class="keyword"> const</span>
+<a name="l00199"></a>00199 <span class="keyword"></span>{
+<a name="l00200"></a>00200        <span class="keywordflow">return</span> m_calibrationPtr;
+<a name="l00201"></a>00201 }
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203 
 <a name="l00204"></a>00204 
-<a name="l00205"></a>00205 
-<a name="l00206"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#accb843682981aae29e3a57de5ee6ba71">00206</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#accb843682981aae29e3a57de5ee6ba71" title="Check if grid should be shown in milimeter.">CCalibratedViewBase::IsGridInMm</a>()<span class="keyword"> const</span>
-<a name="l00207"></a>00207 <span class="keyword"></span>{
-<a name="l00208"></a>00208        <span class="keywordflow">return</span> m_isGridInMm;
-<a name="l00209"></a>00209 }
-<a name="l00210"></a>00210 
+<a name="l00205"></a>00205 } <span class="comment">// namespace iview</span>
+<a name="l00206"></a>00206 
+<a name="l00207"></a>00207 
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209 <span class="preprocessor">#endif // !iview_CCalibratedViewBase_included</span>
+<a name="l00210"></a>00210 <span class="preprocessor"></span>
 <a name="l00211"></a>00211 
-<a name="l00212"></a>00212 <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
+<a name="l00212"></a>00212 
 <a name="l00213"></a>00213 
-<a name="l00214"></a><a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab99e55de7f2adb278eb7e9e306c9593f">00214</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classiview_1_1_c_calibrated_view_base.html#ab99e55de7f2adb278eb7e9e306c9593f" title="Get access to transformation object, which transforms a coordinate system to a logical one...">CCalibratedViewBase::GetCalibration</a>()<span class="keyword"> const</span>
-<a name="l00215"></a>00215 <span class="keyword"></span>{
-<a name="l00216"></a>00216        <span class="keywordflow">return</span> m_calibrationPtr;
-<a name="l00217"></a>00217 }
-<a name="l00218"></a>00218 
-<a name="l00219"></a>00219 
-<a name="l00220"></a>00220 
-<a name="l00221"></a>00221 } <span class="comment">// namespace iview</span>
-<a name="l00222"></a>00222 
-<a name="l00223"></a>00223 
-<a name="l00224"></a>00224 
-<a name="l00225"></a>00225 <span class="preprocessor">#endif // !iview_CCalibratedViewBase_included</span>
-<a name="l00226"></a>00226 <span class="preprocessor"></span>
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228 
-<a name="l00229"></a>00229 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

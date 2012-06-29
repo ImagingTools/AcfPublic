@@ -26,8 +26,6 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iqt/CSignalBlocker.h"
-
 
 namespace iqt2d
 {

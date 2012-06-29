@@ -81,6 +81,24 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from annulus.  <a href="#ae85f7318c7e21d846f2f16dc26a961df"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a8525f9585560133a3f5f27433158c4ab">CreateFromPolygon</a> (const <a class="el" href="classi2d_1_1_c_polygon.html">i2d::CPolygon</a> &amp;polygon, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2D-region from polygon.  <a href="#a8525f9585560133a3f5f27433158c4ab"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ae125990dc6fac3be2a9fea644ea89c9f">GetUnion</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;mask) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get union of two masks.  <a href="#ae125990dc6fac3be2a9fea644ea89c9f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#af5ea4e239ebc18cc84cda74da94a618d">GetUnion</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;mask, <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;result) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get union of two masks.  <a href="#af5ea4e239ebc18cc84cda74da94a618d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a9d192c413efb0dda649e021b0a134ef5">Union</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;mask)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate union of this mask and the other one.  <a href="#a9d192c413efb0dda649e021b0a134ef5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a17e0ae3b700439b8efe323ffd6523f7b">GetIntersection</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;mask) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get intersection of two masks.  <a href="#a17e0ae3b700439b8efe323ffd6523f7b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a879188eb5973e18800cb44a50a0cc569">GetIntersection</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;mask, <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;result) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get intersection of two masks.  <a href="#a879188eb5973e18800cb44a50a0cc569"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ac94b33f9fbc2c8c5bcd0b359094297ec">Intersection</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;mask)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate intersection of this mask and the other one.  <a href="#ac94b33f9fbc2c8c5bcd0b359094297ec"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a9e49d4cd90c6c2592b8e1df76057f400">GetTranslated</a> (int dx, int dy) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate translated (moved) mask.  <a href="#a9e49d4cd90c6c2592b8e1df76057f400"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a1c67b3e45b19066fc4d761a2b42dc83b">GetTranslated</a> (int dx, int dy, <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;result) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate translated (moved) mask.  <a href="#a1c67b3e45b19066fc4d761a2b42dc83b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ae562e226db109611d02b22d924ecac0a">Translate</a> (int dx, int dy)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Translated (move) this mask.  <a href="#ae562e226db109611d02b22d924ecac0a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a9a672a0b9a5688afe28b400312227f6a">IsEmpty</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this image is empty.  <a href="#a9a672a0b9a5688afe28b400312227f6a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a48c4e82952b6956f59d5999a47c308bb">ResetImage</a> ()</td></tr>
@@ -97,8 +115,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a2f3947c71c49739c5ec3bc2bc57dde0b"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#adc597c219071c61effcc1884abe7ac18">UnionLine</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;line, <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;result)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a3df340f6ee53b2c7dbbd998698c28bcd">IntersectLine</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;line, <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;result)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a3e7b8096289150d5c690e773e6978e5d">GetLineUnion</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;line1, const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;line2, <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;result)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a64bec86d3c036dd79c24604346c71a82">LineUnion</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;line, <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;result)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ab4a48eeae4a2ba96065afd45342acb4a">GetLineIntersection</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;line1, const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;line2, <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;result)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a9bc868022aa4ba6de67ac4aad34f4c79">LineIntersection</a> (const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;line, <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;result)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a812739c067134a447f2927a356b98cca">SetBoundingBox</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;objectBoundingBox, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
@@ -406,6 +426,121 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a17e0ae3b700439b8efe323ffd6523f7b"></a><!-- doxytag: member="iimg::CScanlineMask::GetIntersection" ref="a17e0ae3b700439b8efe323ffd6523f7b" args="(const CScanlineMask &amp;mask) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> iimg::CScanlineMask::GetIntersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get intersection of two masks. </p>
+
+</div>
+</div>
+<a class="anchor" id="a879188eb5973e18800cb44a50a0cc569"></a><!-- doxytag: member="iimg::CScanlineMask::GetIntersection" ref="a879188eb5973e18800cb44a50a0cc569" args="(const CScanlineMask &amp;mask, CScanlineMask &amp;result) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CScanlineMask::GetIntersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get intersection of two masks. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab4a48eeae4a2ba96065afd45342acb4a"></a><!-- doxytag: member="iimg::CScanlineMask::GetLineIntersection" ref="ab4a48eeae4a2ba96065afd45342acb4a" args="(const PixelRanges &amp;line1, const PixelRanges &amp;line2, PixelRanges &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void iimg::CScanlineMask::GetLineIntersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>line1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>line2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3e7b8096289150d5c690e773e6978e5d"></a><!-- doxytag: member="iimg::CScanlineMask::GetLineUnion" ref="a3e7b8096289150d5c690e773e6978e5d" args="(const PixelRanges &amp;line1, const PixelRanges &amp;line2, PixelRanges &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void iimg::CScanlineMask::GetLineUnion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>line1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>line2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a76f8cf0c701d34b06ca3342833fe0fbe"></a><!-- doxytag: member="iimg::CScanlineMask::GetPixelRanges" ref="a76f8cf0c701d34b06ca3342833fe0fbe" args="(int lineIndex) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -425,30 +560,137 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3df340f6ee53b2c7dbbd998698c28bcd"></a><!-- doxytag: member="iimg::CScanlineMask::IntersectLine" ref="a3df340f6ee53b2c7dbbd998698c28bcd" args="(const PixelRanges &amp;line, PixelRanges &amp;result)" -->
+<a class="anchor" id="a9e49d4cd90c6c2592b8e1df76057f400"></a><!-- doxytag: member="iimg::CScanlineMask::GetTranslated" ref="a9e49d4cd90c6c2592b8e1df76057f400" args="(int dx, int dy) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static void iimg::CScanlineMask::IntersectLine </td>
+          <td class="memname"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> iimg::CScanlineMask::GetTranslated </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calculate translated (moved) mask. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1c67b3e45b19066fc4d761a2b42dc83b"></a><!-- doxytag: member="iimg::CScanlineMask::GetTranslated" ref="a1c67b3e45b19066fc4d761a2b42dc83b" args="(int dx, int dy, CScanlineMask &amp;result) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CScanlineMask::GetTranslated </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Calculate translated (moved) mask. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae125990dc6fac3be2a9fea644ea89c9f"></a><!-- doxytag: member="iimg::CScanlineMask::GetUnion" ref="ae125990dc6fac3be2a9fea644ea89c9f" args="(const CScanlineMask &amp;mask) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> iimg::CScanlineMask::GetUnion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get union of two masks. </p>
+
+</div>
+</div>
+<a class="anchor" id="af5ea4e239ebc18cc84cda74da94a618d"></a><!-- doxytag: member="iimg::CScanlineMask::GetUnion" ref="af5ea4e239ebc18cc84cda74da94a618d" args="(const CScanlineMask &amp;mask, CScanlineMask &amp;result) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CScanlineMask::GetUnion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get union of two masks. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac94b33f9fbc2c8c5bcd0b359094297ec"></a><!-- doxytag: member="iimg::CScanlineMask::Intersection" ref="ac94b33f9fbc2c8c5bcd0b359094297ec" args="(const CScanlineMask &amp;mask)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CScanlineMask::Intersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calculate intersection of this mask and the other one. </p>
+<p>Result is stored in this object. </p>
 
 </div>
 </div>
@@ -487,6 +729,60 @@ Protected Member Functions</h2></td></tr>
 <p>Return true if this image is empty. </p>
 
 <p>Implements <a class="el" href="classiimg_1_1_i_raster_image.html#ac57c404390f62fa0182cefbc7c395467">iimg::IRasterImage</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9bc868022aa4ba6de67ac4aad34f4c79"></a><!-- doxytag: member="iimg::CScanlineMask::LineIntersection" ref="a9bc868022aa4ba6de67ac4aad34f4c79" args="(const PixelRanges &amp;line, PixelRanges &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void iimg::CScanlineMask::LineIntersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64bec86d3c036dd79c24604346c71a82"></a><!-- doxytag: member="iimg::CScanlineMask::LineUnion" ref="a64bec86d3c036dd79c24604346c71a82" args="(const PixelRanges &amp;line, PixelRanges &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void iimg::CScanlineMask::LineUnion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -600,30 +896,52 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adc597c219071c61effcc1884abe7ac18"></a><!-- doxytag: member="iimg::CScanlineMask::UnionLine" ref="adc597c219071c61effcc1884abe7ac18" args="(const PixelRanges &amp;line, PixelRanges &amp;result)" -->
+<a class="anchor" id="ae562e226db109611d02b22d924ecac0a"></a><!-- doxytag: member="iimg::CScanlineMask::Translate" ref="ae562e226db109611d02b22d924ecac0a" args="(int dx, int dy)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static void iimg::CScanlineMask::UnionLine </td>
+          <td class="memname">void iimg::CScanlineMask::Translate </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiimg_1_1_c_scanline_mask.html#aa890b4b88ddc3c3b5d980a0f551c145a">PixelRanges</a> &amp;&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [static]</code></td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Translated (move) this mask. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9d192c413efb0dda649e021b0a134ef5"></a><!-- doxytag: member="iimg::CScanlineMask::Union" ref="a9d192c413efb0dda649e021b0a134ef5" args="(const CScanlineMask &amp;mask)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CScanlineMask::Union </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiimg_1_1_c_scanline_mask.html">CScanlineMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calculate union of this mask and the other one. </p>
+<p>Result is stored in this object. </p>
 
 </div>
 </div>

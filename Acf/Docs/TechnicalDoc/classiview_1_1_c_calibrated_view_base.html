@@ -38,7 +38,7 @@
 <div class="title">iview::CCalibratedViewBase Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::CCalibratedViewBase" --><!-- doxytag: inherits="iview::CViewBase,iview::IVisualCalibrationInfo" -->
+<!-- doxytag: class="iview::CCalibratedViewBase" --><!-- doxytag: inherits="iview::CViewBase,i2d::ICalibrationProvider,iview::IVisualCalibrationInfo" -->
 <p>Abstract base class for all calibrated view.  
  <a href="classiview_1_1_c_calibrated_view_base.html#details">More...</a></p>
 
@@ -50,25 +50,28 @@ Inheritance diagram for iview::CCalibratedViewBase:</div>
   <img src="classiview_1_1_c_calibrated_view_base.png" usemap="#iview::CCalibratedViewBase_map" alt=""/>
   <map id="iview::CCalibratedViewBase_map" name="iview::CCalibratedViewBase_map">
 <area href="classiview_1_1_c_view_base.html" alt="iview::CViewBase" shape="rect" coords="564,280,742,304"/>
-<area href="classiview_1_1_i_visual_calibration_info.html" title="Common interface for all objects which allow access to calibration info." alt="iview::IVisualCalibrationInfo" shape="rect" coords="940,280,1118,304"/>
-<area href="classiview_1_1_i_logical_view.html" title="Comon interface for all views with logical transform support." alt="iview::ILogicalView" shape="rect" coords="235,224,413,248"/>
+<area href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration." alt="i2d::ICalibrationProvider" shape="rect" coords="940,280,1118,304"/>
+<area href="classiview_1_1_i_visual_calibration_info.html" title="Common interface for all objects which allow access to calibration info." alt="iview::IVisualCalibrationInfo" shape="rect" coords="1128,280,1306,304"/>
+<area href="classiview_1_1_i_logical_view.html" title="Interface for all views with logical transform support." alt="iview::ILogicalView" shape="rect" coords="235,224,413,248"/>
 <area href="classiview_1_1_i_draggable.html" title="Common interface for all, you can drag." alt="iview::IDraggable" shape="rect" coords="564,224,742,248"/>
 <area href="classiview_1_1_i_mouse_action_observer.html" title="Common interface for all shapes which are mouse events receiver." alt="iview::IMouseActionObserver" shape="rect" coords="752,224,930,248"/>
-<area href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration." alt="i2d::ICalibrationProvider" shape="rect" coords="940,224,1118,248"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="940,224,1118,248"/>
+<area href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration." alt="i2d::ICalibrationProvider" shape="rect" coords="1128,224,1306,248"/>
 <area href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations." alt="iview::IShapeView" shape="rect" coords="94,168,272,192"/>
 <area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="376,168,554,192"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="564,168,742,192"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="752,168,930,192"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="940,168,1118,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="940,168,1118,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1128,168,1306,192"/>
 <area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="0,112,178,136"/>
 <area href="classiview_1_1_i_selectable.html" alt="iview::ISelectable" shape="rect" coords="188,112,366,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="376,112,554,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="940,112,1118,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1128,112,1306,136"/>
 <area href="classiview_1_1_i_shape_observer.html" title="Common interface for all objects informed about shapes state changes." alt="iview::IShapeObserver" shape="rect" coords="0,56,178,80"/>
 <area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="188,56,366,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,178,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="188,0,366,24"/>
-<area href="classiview_1_1_c_viewport.html" alt="iview::CViewport" shape="rect" coords="752,392,930,416"/>
+<area href="classiview_1_1_c_viewport.html" alt="iview::CViewport" shape="rect" coords="940,392,1118,416"/>
 </map>
  </div></div>
 
@@ -149,7 +152,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_viewport.html#aa894e9822e1ecde84212a4be707965d1">iview::CViewport</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00035">35</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00036">36</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +324,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00214">214</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00198">198</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +342,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00188">188</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00172">172</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -411,7 +414,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_visual_calibration_info.html#a42f1182e79458c5c891ba4048c42f976">iview::IVisualCalibrationInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00200">200</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00184">184</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -532,7 +535,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_visual_calibration_info.html#a73faf58d0f619d9008366ff2f1cb1e2c">iview::IVisualCalibrationInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00206">206</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00190">190</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -554,7 +557,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_visual_calibration_info.html#ab129065d54a5fcf87669df4b49ade657">iview::IVisualCalibrationInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00194">194</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00178">178</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -625,7 +628,7 @@ Protected Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td>
           <td class="paramname"><em>calibrationPtr</em></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -633,9 +636,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set calibration object for this view. </p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00142">142</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
-
-<p>References <a class="el" href="_i_shape_8h_source.html#l00034">iview::IShape::CF_CALIB</a>, <a class="el" href="classiview_1_1_c_none_calibration.html#a09b33d461102c9e4e646ccf5811e1cba">iview::CNoneCalibration::GetInstance()</a>, <a class="el" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408">iview::CViewBase::InvalidateBackground()</a>, <a class="el" href="istd_8h_source.html#l00063">NULL</a>, and <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a5034161e88f77b5397e954fdae0603e0">UpdateAllShapes()</a>.</p>
+<p>Referenced by <a class="el" href="_t_view_extender_comp_base_8h_source.html#l00166">iqt2d::TViewExtenderCompBase&lt; Base &gt;::RemoveItemsFromScene()</a>, and <a class="el" href="_t_view_extender_comp_base_8h_source.html#l00260">iqt2d::TViewExtenderCompBase&lt; Base &gt;::UpdateViewCalibration()</a>.</p>
 
 </div>
 </div>
@@ -709,7 +710,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set if grid should be shown in milimeter. </p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00179">179</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00163">163</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 <p>References <a class="el" href="_c_view_base_8h_source.html#l00535">iview::CViewBase::SetBackgroundBufferValid()</a>.</p>
 
@@ -732,7 +733,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set grid visibility state. </p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00159">159</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00143">143</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_c_view_base.html#a91e22abac9079c8afe0ccbce5843a408">iview::CViewBase::InvalidateBackground()</a>.</p>
 
@@ -756,7 +757,7 @@ Protected Member Functions</h2></td></tr>
 <p>Set minimal grid size. </p>
 <p>It determines minimal distance between grid lines. </p>
 
-<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00168">168</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibrated_view_base_8h_source.html#l00152">152</a> of file <a class="el" href="_c_calibrated_view_base_8h_source.html">CCalibratedViewBase.h</a>.</p>
 
 <p>References <a class="el" href="_c_view_base_8h_source.html#l00535">iview::CViewBase::SetBackgroundBufferValid()</a>.</p>
 
@@ -780,8 +781,6 @@ Protected Member Functions</h2></td></tr>
 <p>Inform all shapes about changes. </p>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_view_base.html#a3e50d7b720c7c76840a5247ed82e2d38">iview::CViewBase</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_calibrated_view_base_8h_source.html#l00142">SetCalibrationPtr()</a>.</p>
 
 </div>
 </div>

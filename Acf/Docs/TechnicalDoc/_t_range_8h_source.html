@@ -272,7 +272,7 @@
 <a name="l00396"></a>00396 <span class="keyword"></span>{
 <a name="l00397"></a>00397        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(IsValid());
 <a name="l00398"></a>00398 
-<a name="l00399"></a>00399        <span class="keywordflow">return</span> (m_minValue &lt;= value) &amp;&amp; (m_maxValue &gt;= value);
+<a name="l00399"></a>00399        <span class="keywordflow">return</span> (value  &gt;= m_minValue) &amp;&amp; (value &lt; m_maxValue);
 <a name="l00400"></a>00400 }
 <a name="l00401"></a>00401 
 <a name="l00402"></a>00402 
@@ -282,21 +282,21 @@
 <a name="l00406"></a>00406        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(IsValid());
 <a name="l00407"></a>00407        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(range.<a class="code" href="classistd_1_1_t_range.html#a26a383dad01a17298fa1ab3d4db2cbb0" title="Return true if the bottom value is smaller or equal then the top value.">IsValid</a>());
 <a name="l00408"></a>00408 
-<a name="l00409"></a>00409        <span class="keywordflow">return</span> (m_minValue &lt;= range.m_minValue) &amp;&amp; (m_maxValue &gt;= range.m_maxValue);
+<a name="l00409"></a>00409        <span class="keywordflow">return</span> (range.m_minValue &gt;= m_minValue) &amp;&amp; (range.m_maxValue &lt;= m_maxValue);
 <a name="l00410"></a>00410 }
 <a name="l00411"></a>00411 
 <a name="l00412"></a>00412 
 <a name="l00413"></a>00413 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00414"></a><a class="code" href="classistd_1_1_t_range.html#a782b910b7b5370dd13c025f3ae207bfc">00414</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_range.html#a782b910b7b5370dd13c025f3ae207bfc" title="Check if this range is intersected by other range.">TRange&lt;ValueType&gt;::IsIntersectedBy</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>&amp; range)<span class="keyword"> const</span>
 <a name="l00415"></a>00415 <span class="keyword"></span>{
-<a name="l00416"></a>00416        <span class="keywordflow">return</span> (m_minValue &lt; range.m_maxValue) || (m_maxValue &gt; range.m_minValue);
+<a name="l00416"></a>00416        <span class="keywordflow">return</span> (range.m_maxValue &gt; m_minValue) &amp;&amp; (range.m_minValue &lt; m_maxValue);
 <a name="l00417"></a>00417 }
 <a name="l00418"></a>00418 
 <a name="l00419"></a>00419 
 <a name="l00420"></a>00420 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00421"></a><a class="code" href="classistd_1_1_t_range.html#af317ee7291dd0a07e1e5863f628d5bdb">00421</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_range.html#af317ee7291dd0a07e1e5863f628d5bdb" title="Check if this range is outside of the given range.">TRange&lt;ValueType&gt;::IsOutsideOf</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange</a>&amp; range)<span class="keyword"> const</span>
 <a name="l00422"></a>00422 <span class="keyword"></span>{
-<a name="l00423"></a>00423        <span class="keywordflow">return</span> (range.m_maxValue &lt; m_minValue) || (range.m_minValue &gt; m_maxValue);
+<a name="l00423"></a>00423        <span class="keywordflow">return</span> (range.m_maxValue &lt;= m_minValue) || (range.m_minValue &gt;= m_maxValue);
 <a name="l00424"></a>00424 }
 <a name="l00425"></a>00425 
 <a name="l00426"></a>00426 

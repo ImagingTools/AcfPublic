@@ -63,6 +63,8 @@ Inheritance diagram for i2d::CAffineTransformation2d:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#adcc41bc3b4002d119455c8ce3ad37fbc">CAffineTransformation2d</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#ac0c758fdfb6f8715a8fb7b6e8cafb3d8">CAffineTransformation2d</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transformation)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a20a3767b358f0de59a1cf5128b9f03e3">GetTransformation</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get used transformation object.  <a href="#a20a3767b358f0de59a1cf5128b9f03e3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a4c5cbc922fa7b51fcdd3008c56d54356">SetTransformation</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transformation)</td></tr>
@@ -95,6 +97,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a9ec8f0febcd856716fcb16492204c094">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;argument) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a75b334351ed65d769049fb2451e3d06d">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a75b334351ed65d769049fb2451e3d06d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a22554b26ec0600fd6cb045993e6cbbde">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#a22554b26ec0600fd6cb045993e6cbbde"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a12507865e9d64df47e6974b9c8650658">CloneMe</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a12507865e9d64df47e6974b9c8650658"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a4f4aa4d0c69401e30ac3691e9d72cc35">m_transformation</a></td></tr>
@@ -103,7 +109,84 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Affine transformation for 2D spaces. </p>
 
 <p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00017">17</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="adcc41bc3b4002d119455c8ce3ad37fbc"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CAffineTransformation2d" ref="adcc41bc3b4002d119455c8ce3ad37fbc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">i2d::CAffineTransformation2d::CAffineTransformation2d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac0c758fdfb6f8715a8fb7b6e8cafb3d8"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CAffineTransformation2d" ref="ac0c758fdfb6f8715a8fb7b6e8cafb3d8" args="(const i2d::CAffine2d &amp;transformation)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">i2d::CAffineTransformation2d::CAffineTransformation2d </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>transformation</em></td><td>)</td>
+          <td><code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a12507865e9d64df47e6974b9c8650658"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CloneMe" ref="a12507865e9d64df47e6974b9c8650658" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CAffineTransformation2d::CloneMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a22554b26ec0600fd6cb045993e6cbbde"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CopyFrom" ref="a22554b26ec0600fd6cb045993e6cbbde" args="(const istd::IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CAffineTransformation2d::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Copy this object from another one. </p>
+<p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a> do nothing. </p>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7a898b2fa281d504ab723cbcee61fdcd"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CreateCombinedTransformation" ref="a7a898b2fa281d504ab723cbcee61fdcd" args="(const ITransformation2d &amp;transform) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -651,7 +734,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00087">87</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00095">95</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
 
 </div>
 </div>

@@ -23,6 +23,10 @@
 #include "iqt2d/CSceneConnectorGuiComp.h"
 
 
+// ACF includes
+#include "iview/IShapeView.h"
+
+
 namespace iqt2d
 {
 

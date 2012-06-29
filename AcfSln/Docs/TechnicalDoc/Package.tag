@@ -12317,6 +12317,7 @@
     <templarg>UI</templarg>
     <templarg>WidgetType</templarg>
     <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</type>
       <name>BaseClass</name>
@@ -12358,6 +12359,13 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a93745769f36d860dc445b1c8319851b4</anchor>
       <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a0c9c1b128b2cc72f0435ef355da4bae9</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>BaseClass::Shapes</type>
