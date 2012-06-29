@@ -27,7 +27,6 @@
 // ACF includes
 #include "icomp/TModelCompWrap.h"
 #include "icomp/TMakeComponentWrap.h"
-#include "iimg/CGeneralBitmap.h"
 
 // ACF-Solutions includes
 #include "iqtmeas/CDataSequenceViewComp.h"

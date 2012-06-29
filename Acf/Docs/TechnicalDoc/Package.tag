@@ -2354,24 +2354,24 @@
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
-    <name>CBitmapRegion.h</name>
-    <path>C:/Temp/Acf/Include/iimg/</path>
-    <filename>_c_bitmap_region_8h</filename>
-    <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
-    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
-    <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
-    <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
-    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
-    <class kind="class">iimg::CBitmapRegion</class>
-    <namespace>iimg</namespace>
-  </compound>
-  <compound kind="file">
     <name>CGeneralBitmap.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_general_bitmap_8h</filename>
     <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
     <includes id="_c_bitmap_base_8h" name="CBitmapBase.h" local="yes" imported="no">iimg/CBitmapBase.h</includes>
     <class kind="class">iimg::CGeneralBitmap</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CScanlineMask.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_c_scanline_mask_8h</filename>
+    <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
+    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
+    <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
+    <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
+    <includes id="_i_raster_image_8h" name="IRasterImage.h" local="yes" imported="no">iimg/IRasterImage.h</includes>
+    <class kind="class">iimg::CScanlineMask</class>
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
@@ -3753,12 +3753,10 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_image_view_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="yes" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <includes id="_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
-    <includes id="_c_affinite_calibration_shape_8h" name="CAffiniteCalibrationShape.h" local="yes" imported="no">iview/CAffiniteCalibrationShape.h</includes>
     <includes id="_c_view_provider_gui_comp_8h" name="CViewProviderGuiComp.h" local="yes" imported="no">iqt2d/CViewProviderGuiComp.h</includes>
     <class kind="class">iqt2d::CImageViewComp</class>
     <namespace>iqt2d</namespace>
@@ -3843,8 +3841,10 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_view_provider_gui_comp_8h</filename>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_c_console_gui_8h" name="CConsoleGui.h" local="yes" imported="no">iview/CConsoleGui.h</includes>
+    <includes id="_c_affinite_calibration_shape_8h" name="CAffiniteCalibrationShape.h" local="yes" imported="no">iview/CAffiniteCalibrationShape.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
     <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <namespace>iqt2d</namespace>
@@ -23587,8 +23587,8 @@
     <name>iimg</name>
     <filename>namespaceiimg.html</filename>
     <class kind="class">iimg::CBitmapBase</class>
-    <class kind="class">iimg::CBitmapRegion</class>
     <class kind="class">iimg::CGeneralBitmap</class>
+    <class kind="class">iimg::CScanlineMask</class>
     <class kind="class">iimg::IBitmap</class>
     <class kind="class">iimg::IRasterImage</class>
     <class kind="class">iimg::TPixelConversion</class>
@@ -23673,109 +23673,6 @@
       <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
       <anchor>a136e4c19f5859a78d3866ac80095d022</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iimg::CBitmapRegion</name>
-    <filename>classiimg_1_1_c_bitmap_region.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="typedef">
-      <type>QList&lt; istd::CIntRange &gt;</type>
-      <name>PixelRanges</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ac70edeb7b23a9fa29354f2ffdb69e686</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CBitmapRegion</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>aef2aedb71525f7a2cffcae2094bffdcd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsBitmapRegionEmpty</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>afe9b6912ee6dfda4f00457a53ec33cfc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CRect</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>a8b68561a19469b0d3ac2a25cb5a25da7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const PixelRanges *</type>
-      <name>GetPixelRanges</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ae632bef52c5e3d6c7e61916fb89cda23</anchor>
-      <arglist>(int lineIndex) const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>ResetBitmapRegion</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>af5339e3fb1b62a062b69d0a6cf878449</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>CreateFromGeometry</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ace1f5942dba36cf92f0ad93352c39e5a</anchor>
-      <arglist>(const i2d::IObject2d &amp;geometry, const i2d::CRect *clipAreaPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>CreateFromCircle</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ac6dc280c1ccc86275dfa6c459090aec7</anchor>
-      <arglist>(const i2d::CCircle &amp;circle, const i2d::CRect *clipAreaPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>CreateFromRectangle</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ad4d44d489b5a08ee2ab32cf225ce53ee</anchor>
-      <arglist>(const i2d::CRectangle &amp;rect, const i2d::CRect *clipAreaPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>CreateFromAnnulus</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ae274a10504ec7e1fde73d78ba2644080</anchor>
-      <arglist>(const i2d::CAnnulus &amp;annulus, const i2d::CRect *clipAreaPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>CreateFromPolygon</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>ad9492b434469cd42b0d559291fe9e5a1</anchor>
-      <arglist>(const i2d::CPolygon &amp;polygon, const i2d::CRect *clipAreaPtr)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>UnionLine</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>a56b51791a38553f91c8939302eaf5c9e</anchor>
-      <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>IntersectLine</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>a8a351411e23acc37a677177743ca3b90</anchor>
-      <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetBoundingBox</name>
-      <anchorfile>classiimg_1_1_c_bitmap_region.html</anchorfile>
-      <anchor>a2b7eff8cc3383b4d4fa2cde0cd595da9</anchor>
-      <arglist>(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23907,6 +23804,151 @@
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
       <anchor>a85347d43554f8183d46a55efab9ea677</anchor>
       <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference, int pixelBitsCount, int componentsCount, int pixelFormat)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::CScanlineMask</name>
+    <filename>classiimg_1_1_c_scanline_mask.html</filename>
+    <base virtualness="virtual">iimg::IRasterImage</base>
+    <member kind="typedef">
+      <type>QList&lt; istd::CIntRange &gt;</type>
+      <name>PixelRanges</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>aa890b4b88ddc3c3b5d980a0f551c145a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CScanlineMask</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>af99af06d374a0b2f8df907bb12e4694a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsBitmapRegionEmpty</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>af40fc8ca1a2b22774651f2965cea1e65</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CRect</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a53251b81d28ef339b4fada68ccf971be</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const PixelRanges *</type>
+      <name>GetPixelRanges</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a76f8cf0c701d34b06ca3342833fe0fbe</anchor>
+      <arglist>(int lineIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CreateFromGeometry</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a3faf5d9177545877e2c211923bb4c1d8</anchor>
+      <arglist>(const i2d::IObject2d &amp;geometry, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateFromCircle</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a7be1736b0f9943de67225bd49c2b274d</anchor>
+      <arglist>(const i2d::CCircle &amp;circle, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateFromRectangle</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a98ab5f83d275987c8932fa8f92564f44</anchor>
+      <arglist>(const i2d::CRectangle &amp;rect, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateFromAnnulus</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ae85f7318c7e21d846f2f16dc26a961df</anchor>
+      <arglist>(const i2d::CAnnulus &amp;annulus, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateFromPolygon</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a8525f9585560133a3f5f27433158c4ab</anchor>
+      <arglist>(const i2d::CPolygon &amp;polygon, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEmpty</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a9a672a0b9a5688afe28b400312227f6a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetImage</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a48c4e82952b6956f59d5999a47c308bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetImageSize</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a561e130a809b8a5b11328354242cbb31</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetComponentsCount</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>aaef909121f6ec3420598d1b8d3a44e76</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual icmm::CVarColor</type>
+      <name>GetColorAt</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a17d94da941d7667e824749529dd490fb</anchor>
+      <arglist>(const istd::CIndex2d &amp;position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetColorAt</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>addc4a8c1313767cddd3d70dc049bd9ca</anchor>
+      <arglist>(const istd::CIndex2d &amp;position, const icmm::CVarColor &amp;color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a2f3947c71c49739c5ec3bc2bc57dde0b</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>UnionLine</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>adc597c219071c61effcc1884abe7ac18</anchor>
+      <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>IntersectLine</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a3df340f6ee53b2c7dbbd998698c28bcd</anchor>
+      <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetBoundingBox</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a812739c067134a447f2927a356b98cca</anchor>
+      <arglist>(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33935,34 +33977,12 @@
     <name>iqt2d::CImageViewComp</name>
     <filename>classiqt2d_1_1_c_image_view_comp.html</filename>
     <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
       <anchor>a0ee8c911b99bc3e9f416fc926b7d3199</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CMultiModelDispatcherBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a6b331d2fadddd9968ad7268cda029532</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a1f69ee289956a60f2de4b4c68b64818e</anchor>
-      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a3955147284cf794a76ee3069896183af</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -33976,20 +33996,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
       <anchor>a86eab23c6253d004a56d7b0aa1bc8377</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a0e762c3d47ba2c5f9ed62c413c129310</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a8437ce3a46b92878bcee2aa2068c5ff4</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -34413,12 +34419,27 @@
     <base>TGuiComponentBase&lt; iview::CConsoleGui &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base virtualness="virtual">iqt2d::IViewProvider</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>a8b23d37e2179b3996b6ad136f47f81ed</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a4627941fbe791699d2c1e0f940b3986f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a5a446304bcd751300a98850b720eb25e</anchor>
+      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
@@ -34446,6 +34467,27 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>a00c5aee16212fa2937f7a6d7670a5796</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a41d3d22dabd8c4602501afb96ab1d592</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a41aeab8b58624ef7e48693d0efdb52e3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a5b024ab4b2bdcc1ac76c5148a94b8a5d</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

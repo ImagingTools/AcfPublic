@@ -6147,6 +6147,7 @@
     <filename>classiipr_1_1_c_position_from_image_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; imath::CVarVector &gt;</base>
     <base virtualness="virtual">iproc::IValueProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</type>
       <name>BaseClass</name>
@@ -6167,6 +6168,13 @@
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
       <anchor>a0ae2af2855c42ea137cd4a9a37f21ed5</anchor>
       <arglist>(int index=-1, int valueTypeId=VTI_AUTO) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
+      <anchor>afb8637e8540b088973c12b84235119d6</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>

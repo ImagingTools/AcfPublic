@@ -26,6 +26,7 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 #include "iprm/IParamsSet.h"
+#include "iimg/IBitmap.h"
 
 
 namespace iavt

@@ -38,7 +38,7 @@
 <div class="title">iqt2d::CViewProviderGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::CViewProviderGuiComp" --><!-- doxytag: inherits="TGuiComponentBase&lt; iview::CConsoleGui &gt;,ibase::ICommandsProvider,iqt2d::IViewProvider" -->
+<!-- doxytag: class="iqt2d::CViewProviderGuiComp" --><!-- doxytag: inherits="TGuiComponentBase&lt; iview::CConsoleGui &gt;,ibase::ICommandsProvider,iqt2d::IViewProvider,imod::CMultiModelDispatcherBase" -->
 <p><code>#include &lt;<a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CViewProviderGuiComp:</div>
@@ -49,9 +49,11 @@ Inheritance diagram for iqt2d::CViewProviderGuiComp:</div>
 <area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;" shape="rect" coords="307,224,604,248"/>
 <area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="921,224,1218,248"/>
 <area href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view." alt="iqt2d::IViewProvider" shape="rect" coords="1228,224,1525,248"/>
+<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="1535,224,1832,248"/>
 <area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="307,168,604,192"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="921,168,1218,192"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1228,168,1525,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1535,168,1832,192"/>
 <area href="class_q_object.html" alt="QObject" shape="rect" coords="0,112,297,136"/>
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="307,112,604,136"/>
 <area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="614,112,911,136"/>
@@ -69,8 +71,11 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a><br class="typebreak"/>
 &lt; <a class="el" href="classiview_1_1_c_console_gui.html">iview::CConsoleGui</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a8b23d37e2179b3996b6ad136f47f81ed">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html">imod::CMultiModelDispatcherBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a4627941fbe791699d2c1e0f940b3986f">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a5a446304bcd751300a98850b720eb25e">I_ASSIGN_TO</a> (m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a55a137fea748d3b7e61dc8d1c18b9cb1">GetCommands</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#a55a137fea748d3b7e61dc8d1c18b9cb1"></a><br/></td></tr>
@@ -82,10 +87,13 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a00c5aee16212fa2937f7a6d7670a5796">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a00c5aee16212fa2937f7a6d7670a5796"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a41d3d22dabd8c4602501afb96ab1d592">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a41aeab8b58624ef7e48693d0efdb52e3">OnComponentCreated</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a5b024ab4b2bdcc1ac76c5148a94b8a5d">OnComponentDestroyed</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00019">19</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a8b23d37e2179b3996b6ad136f47f81ed"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::BaseClass" ref="a8b23d37e2179b3996b6ad136f47f81ed" args="" -->
 <div class="memitem">
@@ -100,7 +108,22 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_component_base.html#a71d48e5e9425438c80e0d95aa88fa782">iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00025">25</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4627941fbe791699d2c1e0f940b3986f"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::BaseClass2" ref="a4627941fbe791699d2c1e0f940b3986f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html">imod::CMultiModelDispatcherBase</a> <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a4627941fbe791699d2c1e0f940b3986f">iqt2d::CViewProviderGuiComp::BaseClass2</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -167,6 +190,75 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5a446304bcd751300a98850b720eb25e"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::I_ASSIGN_TO" ref="a5a446304bcd751300a98850b720eb25e" args="(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqt2d::CViewProviderGuiComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_calibrationProviderModelCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_calibrationProviderCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a41aeab8b58624ef7e48693d0efdb52e3"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::OnComponentCreated" ref="a41aeab8b58624ef7e48693d0efdb52e3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CViewProviderGuiComp::OnComponentCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#acbe64d5e28b4059b0c34111dd7e3cc8d">iqtgui::CGuiComponentBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b024ab4b2bdcc1ac76c5148a94b8a5d"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::OnComponentDestroyed" ref="a5b024ab4b2bdcc1ac76c5148a94b8a5d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CViewProviderGuiComp::OnComponentDestroyed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a007550438603368acd5133e97547d73f">icomp::CComponentBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a00c5aee16212fa2937f7a6d7670a5796"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::OnGuiCreated" ref="a00c5aee16212fa2937f7a6d7670a5796" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -184,6 +276,41 @@ Protected Member Functions</h2></td></tr>
 <p>Called just after GUI is initialized. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ab66ecf3d13faa48018f89d871bd32ae3">iqtgui::CGuiComponentBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41d3d22dabd8c4602501afb96ab1d592"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::OnModelChanged" ref="a41d3d22dabd8c4602501afb96ab1d592" args="(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqt2d::CViewProviderGuiComp::OnModelChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modelId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>changeFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#aa28b9338ca45e28b03cadaf4454f14e8">imod::CMultiModelDispatcherBase</a>.</p>
 
 </div>
 </div>
