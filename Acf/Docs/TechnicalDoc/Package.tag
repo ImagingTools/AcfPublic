@@ -8081,6 +8081,20 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a85f6f7462c442efdb6b94e61ea5e4170</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNodesCount</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a0e9474de5b18f742068ac948bc517d07</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const i2d::CVector2d &amp;</type>
       <name>GetNode</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
@@ -8109,25 +8123,11 @@
       <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Clear</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a85f6f7462c442efdb6b94e61ea5e4170</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveNode</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
       <anchor>a9ae30d587ee316efdc1bd8ed5ab73ad1</anchor>
       <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNodesCount</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a0e9474de5b18f742068ac948bc517d07</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -10433,6 +10433,13 @@
       <arglist>(int nodeIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
+      <anchor>ad9892f1de2670452f05707b31de634c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
       <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
@@ -10445,13 +10452,6 @@
       <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
       <anchor>a6962c49e4acbed86899e113be2c30d0d</anchor>
       <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Clear</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>ad9892f1de2670452f05707b31de634c4</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

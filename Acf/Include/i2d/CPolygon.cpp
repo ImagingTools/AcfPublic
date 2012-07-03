@@ -35,6 +35,12 @@ namespace i2d
 
 // public methods
 
+void CPolygon::Clear()
+{
+	m_nodes.clear();
+}
+
+
 bool CPolygon::InsertNode(const i2d::CVector2d& node)
 {
 	m_nodes.push_back(node);
@@ -50,12 +56,6 @@ bool CPolygon::InsertNode(int index, const i2d::CVector2d& node)
 	m_nodes.insert(iter, node);
 
 	return true;
-}
-
-
-void CPolygon::Clear()
-{
-	m_nodes.clear();
 }
 
 

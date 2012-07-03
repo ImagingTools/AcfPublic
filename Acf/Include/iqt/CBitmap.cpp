@@ -23,6 +23,9 @@
 #include "iqt/CBitmap.h"
 
 
+// include STL
+#include <cstring>
+
 // Qt includes
 #include <QtCore/QVector>
 #include <QtGui/QColor>

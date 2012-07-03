@@ -51,9 +51,9 @@
 <a name="l00032"></a>00032     <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a9e2c30b63d0eaac9834f9961ee952244">GetNodeDataRef</a>(<span class="keywordtype">int</span> nodeIndex);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034     <span class="comment">// reimplement (i2d::CPolygon)</span>
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#ad9892f1de2670452f05707b31de634c4" title="Removes all nodes.">Clear</a>();
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#ad9892f1de2670452f05707b31de634c4" title="Removes all nodes.">Clear</a>();
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
 <a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a0730b0122a64540ae09f102d9a09441d" title="Remove a node at specified index.">RemoveNode</a>(<span class="keywordtype">int</span> index);
 <a name="l00039"></a>00039        
 <a name="l00040"></a>00040 <span class="keyword">protected</span>:
@@ -111,30 +111,30 @@
 <a name="l00092"></a>00092 <span class="comment">// reimplement (i2d::CPolygon)</span>
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094 <span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeData&gt;
-<a name="l00095"></a><a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02">00095</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02" title="Insert a node at the end of node table.">TPolylineExNode&lt;NodeData&gt;::InsertNode</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node)
+<a name="l00095"></a><a class="code" href="classi2d_1_1_t_polyline_ex_node.html#ad9892f1de2670452f05707b31de634c4">00095</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#ad9892f1de2670452f05707b31de634c4" title="Removes all nodes.">TPolylineExNode&lt;NodeData&gt;::Clear</a>()
 <a name="l00096"></a>00096 {
-<a name="l00097"></a>00097        m_nodesData.insert(m_nodesData.end(), NodeData());
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099        <span class="keywordflow">return</span> BaseClass::InsertNode(node);
-<a name="l00100"></a>00100 }
+<a name="l00097"></a>00097        m_nodesData.clear();
+<a name="l00098"></a>00098        BaseClass::Clear();
+<a name="l00099"></a>00099 }
+<a name="l00100"></a>00100 
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103 <span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeData&gt;
-<a name="l00104"></a><a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a6962c49e4acbed86899e113be2c30d0d">00104</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02" title="Insert a node at the end of node table.">TPolylineExNode&lt;NodeData&gt;::InsertNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node)
-<a name="l00105"></a>00105 {
-<a name="l00106"></a>00106        NodesData::iterator iter = m_nodesData.begin();
-<a name="l00107"></a>00107        iter += index;
-<a name="l00108"></a>00108        m_nodesData.insert(iter, NodeData());
+<a name="l00102"></a>00102 <span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeData&gt;
+<a name="l00103"></a><a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02">00103</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02" title="Insert a node at the end of node table.">TPolylineExNode&lt;NodeData&gt;::InsertNode</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node)
+<a name="l00104"></a>00104 {
+<a name="l00105"></a>00105        m_nodesData.insert(m_nodesData.end(), NodeData());
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107        <span class="keywordflow">return</span> BaseClass::InsertNode(node);
+<a name="l00108"></a>00108 }
 <a name="l00109"></a>00109 
-<a name="l00110"></a>00110        <span class="keywordflow">return</span> BaseClass::InsertNode(index, node);
-<a name="l00111"></a>00111 }
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114 <span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeData&gt;
-<a name="l00115"></a><a class="code" href="classi2d_1_1_t_polyline_ex_node.html#ad9892f1de2670452f05707b31de634c4">00115</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#ad9892f1de2670452f05707b31de634c4" title="Removes all nodes.">TPolylineExNode&lt;NodeData&gt;::Clear</a>()
-<a name="l00116"></a>00116 {
-<a name="l00117"></a>00117        m_nodesData.clear();
-<a name="l00118"></a>00118        BaseClass::Clear();
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 <span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeData&gt;
+<a name="l00112"></a><a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a6962c49e4acbed86899e113be2c30d0d">00112</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_polyline_ex_node.html#a7d1815057e7b551b4def29114205bc02" title="Insert a node at the end of node table.">TPolylineExNode&lt;NodeData&gt;::InsertNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node)
+<a name="l00113"></a>00113 {
+<a name="l00114"></a>00114        NodesData::iterator iter = m_nodesData.begin();
+<a name="l00115"></a>00115        iter += index;
+<a name="l00116"></a>00116        m_nodesData.insert(iter, NodeData());
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118        <span class="keywordflow">return</span> BaseClass::InsertNode(index, node);
 <a name="l00119"></a>00119 }
 <a name="l00120"></a>00120 
 <a name="l00121"></a>00121 

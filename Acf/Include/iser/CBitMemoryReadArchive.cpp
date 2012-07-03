@@ -23,6 +23,10 @@
 #include "iser/CBitMemoryReadArchive.h"
 
 
+// STL includes
+#include <cstring>
+
+
 namespace iser
 {
 

@@ -23,6 +23,9 @@
 #include "iqt/CXmlFileReadArchive.h"
 
 
+// include STL
+#include <cstring>
+
 // Qt includes
 #include <QtCore/QFile>
 #include <QtXml/QDomNodeList>
