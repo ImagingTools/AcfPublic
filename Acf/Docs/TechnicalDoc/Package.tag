@@ -33366,6 +33366,13 @@
       <anchor>ac568999a6d59287edc20e8134472c0b4</anchor>
       <arglist>(double seconds)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>RemoveDirectory</name>
+      <anchorfile>classiqt_1_1_c_system.html</anchorfile>
+      <anchor>aa87ebe27e9a3a889daf22374f6129046</anchor>
+      <arglist>(const QString &amp;directoryPath)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqt::CTranslationManagerComp</name>
