@@ -43863,6 +43863,13 @@
       <arglist>(const IndexType &amp;index, const Element &amp;value)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>SetAllElements</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>a0bd33830615391a11c68626e0d40d739</anchor>
+      <arglist>(const Element &amp;value)</arglist>
+    </member>
+    <member kind="function">
       <type>Iterator</type>
       <name>Begin</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
@@ -46252,6 +46259,13 @@
       <anchorfile>classistd_1_1_t_var_array.html</anchorfile>
       <anchor>a9be05877321636976f82b206995dead3</anchor>
       <arglist>(const IndexType &amp;index, const Element &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAllElements</name>
+      <anchorfile>classistd_1_1_t_var_array.html</anchorfile>
+      <anchor>a78fa788f9b274e7c6927e9191c08fbca</anchor>
+      <arglist>(const Element &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>Iterator</type>
