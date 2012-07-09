@@ -2774,6 +2774,13 @@
       <arglist>(const iprm::IParamsSet *origParamsPtr, const iprm::IParamsSet *selectedParamsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetParamIds</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
+      <anchor>a7b0cd6363b97271d8549a78e09ce5703</anchor>
+      <arglist>(bool editableOnly=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>
       <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>

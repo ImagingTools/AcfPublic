@@ -97,11 +97,7 @@ void CGeneralSearchParamsGuiComp::UpdateGui(int /*updateFlags*/)
 		MaxScaleSB->setValue(objectPtr->GetScaleRange().GetMaxValue());
 
 		const iipr::ISearchConstraints* constraintsPtr = objectPtr->GetSearchConstraints();
-		if (constraintsPtr == NULL){
-			RotationCB->setChecked(!objectPtr->GetRotationRange().IsEmpty());
-			ScalingCB->setChecked(!objectPtr->GetScaleRange().IsEmpty());
-		} 
-		else{
+		if (constraintsPtr != NULL){
 			if (!constraintsPtr->IsRotationRangeSupported()){
 				RotationCB->setEnabled(false);
 				MinRotationSB->setEnabled(false);

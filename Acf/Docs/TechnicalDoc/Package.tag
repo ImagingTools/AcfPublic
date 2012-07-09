@@ -28700,18 +28700,18 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetParamIds</name>
+      <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
+      <anchor>a2c056e960ea1d2fe1fd4285cbb35a648</anchor>
+      <arglist>(bool editableOnly=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>
       <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
       <anchor>a9a0b9c21d014982646d887135e159ecb</anchor>
       <arglist>(const QByteArray &amp;id) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iser::ISerializable *</type>
-      <name>GetEditableParameter</name>
-      <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
-      <anchor>aa96d056de18654f96303eb916fa632a8</anchor>
-      <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -29296,6 +29296,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetParamIds</name>
+      <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
+      <anchor>a3831f303536bbf2d8b51102ffe169fba</anchor>
+      <arglist>(bool editableOnly=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>
       <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
@@ -29384,6 +29391,13 @@
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>a87cac9890335a0a4d45b7c553f95dbec</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetParamIds</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>a9580c1230580d0bbd520a568062d883f</anchor>
+      <arglist>(bool editableOnly=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::ISerializable *</type>
@@ -29959,6 +29973,20 @@
     <name>iprm::IParamsSet</name>
     <filename>classiprm_1_1_i_params_set.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="typedef">
+      <type>QSet&lt; QByteArray &gt;</type>
+      <name>Ids</name>
+      <anchorfile>classiprm_1_1_i_params_set.html</anchorfile>
+      <anchor>a8f978a01eb2136dc47de2de14bd76aac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Ids</type>
+      <name>GetParamIds</name>
+      <anchorfile>classiprm_1_1_i_params_set.html</anchorfile>
+      <anchor>a8a95d85e9409edb3b87ae09d12059a05</anchor>
+      <arglist>(bool editableOnly=false) const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iser::ISerializable *</type>
       <name>GetParameter</name>

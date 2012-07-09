@@ -83,7 +83,7 @@
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a94292879cc623a44e70067a7ef78c05e" title="Ensure that all objects are produced.">EnsureWorkFinished</a>();
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a0a5893f9c6a884949e2ccb5286c37921" title="Remove all stored work results.">ClearWorkResults</a>();
 <a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#aae3ac83c656d4b0de834372fdca85ee2" title="Get status of last work.">GetWorkStatus</a>() <span class="keyword">const</span>;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d" title="Get parameter set using by this supplier.">GetModelParametersSet</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d" title="Get parameter set using by this supplier.">GetModelParametersSet</a>() <span class="keyword">const</span>;
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065 <span class="keyword">protected</span>:
 <a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a864d166238f938df650c6d0b9a254406" title="Called if the new work should be initiliazed.">InitializeWork</a>();
@@ -117,7 +117,7 @@
 <a name="l00114"></a>00114 
 <a name="l00115"></a>00115 <span class="keyword">private</span>:
 <a name="l00116"></a>00116        I_ATTR(QString, m_diagnosticNameAttrPtr);
-<a name="l00117"></a>00117        I_REF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>, m_paramsSetCompPtr);
+<a name="l00117"></a>00117        I_REF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>, m_paramsSetCompPtr);
 <a name="l00118"></a>00118        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_paramsSetModelCompPtr);
 <a name="l00119"></a>00119        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_additionalTriggerInputsCompPtr);
 <a name="l00120"></a>00120 
@@ -142,7 +142,7 @@
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00142"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d">00142</a> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of processing parameter.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d" title="Get parameter set using by this supplier.">TSupplierCompWrap&lt;Product&gt;::GetModelParametersSet</a>()<span class="keyword"> const</span>
+<a name="l00142"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d">00142</a> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d" title="Get parameter set using by this supplier.">TSupplierCompWrap&lt;Product&gt;::GetModelParametersSet</a>()<span class="keyword"> const</span>
 <a name="l00143"></a>00143 <span class="keyword"></span>{
 <a name="l00144"></a>00144        <span class="keywordflow">return</span> m_paramsSetCompPtr.GetPtr();
 <a name="l00145"></a>00145 }

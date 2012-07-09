@@ -51,7 +51,7 @@ Inheritance diagram for iprm::CSelectableParamsSetComp:</div>
   <map id="iprm::CSelectableParamsSetComp_map" name="iprm::CSelectableParamsSetComp_map">
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,168,202,192"/>
 <area href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan..." alt="imod::CMultiModelBridgeBase" shape="rect" coords="318,168,520,192"/>
-<area href="classiprm_1_1_i_params_set.html" title="Set of processing parameter." alt="iprm::IParamsSet" shape="rect" coords="636,168,838,192"/>
+<area href="classiprm_1_1_i_params_set.html" title="Set of general parameters." alt="iprm::IParamsSet" shape="rect" coords="636,168,838,192"/>
 <area href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options." alt="iprm::ISelectionParam" shape="rect" coords="848,168,1050,192"/>
 <area href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities." alt="iprm::ISelectionConstraints" shape="rect" coords="1060,168,1262,192"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,112,202,136"/>
@@ -79,6 +79,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a87cac9890335a0a4d45b7c553f95dbec">CSelectableParamsSetComp</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_params_set.html#a8f978a01eb2136dc47de2de14bd76aac">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a9580c1230580d0bbd520a568062d883f">GetParamIds</a> (bool editableOnly=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of used parameter IDs in the parameter set.  <a href="#a9580c1230580d0bbd520a568062d883f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ab90d2803adb8ab9463229c2988b1a326">GetParameter</a> (const QByteArray &amp;id) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get any parameter.  <a href="#ab90d2803adb8ab9463229c2988b1a326"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ab52d4e76358cc7d5c1716b81bc519587">GetEditableParameter</a> (const QByteArray &amp;id)</td></tr>
@@ -329,6 +331,28 @@ Protected Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to parameter instance or NULL if there is no parameter with this ID. </dd></dl>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_params_set.html#a526c5d6481768d3b6c2e73a2abbd58b3">iprm::IParamsSet</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9580c1230580d0bbd520a568062d883f"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::GetParamIds" ref="a9580c1230580d0bbd520a568062d883f" args="(bool editableOnly=false) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_params_set.html#a8f978a01eb2136dc47de2de14bd76aac">Ids</a> iprm::CSelectableParamsSetComp::GetParamIds </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>editableOnly</em> = <code>false</code></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get list of used parameter IDs in the parameter set. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Set of the parameter IDs. </dd></dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_params_set.html#a8a95d85e9409edb3b87ae09d12059a05">iprm::IParamsSet</a>.</p>
 
 </div>
 </div>
