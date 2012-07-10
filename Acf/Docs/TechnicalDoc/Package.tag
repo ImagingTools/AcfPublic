@@ -792,7 +792,6 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_container_8h</filename>
     <includes id="_i_container_info_8h" name="IContainerInfo.h" local="yes" imported="no">istd/IContainerInfo.h</includes>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <class kind="class">ibase::TContainer</class>
     <namespace>ibase</namespace>
@@ -12588,7 +12587,6 @@
     <name>ibase::TContainer</name>
     <filename>classibase_1_1_t_container.html</filename>
     <templarg>ItemClass</templarg>
-    <templarg>ContainerClass</templarg>
     <base virtualness="virtual">istd::IContainerInfo</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
@@ -12599,117 +12597,117 @@
     <member kind="enumvalue">
       <name>CF_ELEMENT_ADDED</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2e9013618def6a035172448c054db9eaa28655de7b3e62356b8678862822ab5ef</anchor>
+      <anchor>a2e9013618def6a035172448c054db9eaa39cd440515a39ecacfb95abd90ec8ae3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_ELEMENT_REMOVED</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2e9013618def6a035172448c054db9eaa60aeca484c2efd0661002aab3eed8553</anchor>
+      <anchor>a2e9013618def6a035172448c054db9eaa861191854ed2ad9d176c34ed83ffb080</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_RESET</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2e9013618def6a035172448c054db9eaa215ec0bb14e4912a23f95037cfa2f298</anchor>
+      <anchor>a2e9013618def6a035172448c054db9eaab9cad8af653d9a35ba913c1044dfbac3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>const ItemClass &amp;</type>
       <name>GetAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>aab88db5a7ef8ed6e32e3a6c5cf050cf4</anchor>
+      <anchor>a7790c9cbb969e063f68301eec854baae</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
       <type>ItemClass &amp;</type>
       <name>GetAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2bd6a68664d832192544e001b04fd050</anchor>
+      <anchor>ac95925eda2764ef0a0bc5ef523871642</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ItemClass &amp;</type>
       <name>PushBack</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a0535f0d639cf96aaeaf88be547139ede</anchor>
+      <anchor>a403ba514ed797a203804d88f62d9adb0</anchor>
       <arglist>(const ItemClass &amp;item)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ItemClass &amp;</type>
       <name>PushFront</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a1249d6af5ed5723e8c510707a341d437</anchor>
+      <anchor>a7332abf2a1625e0755dc40fa42866abd</anchor>
       <arglist>(const ItemClass &amp;item)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ItemClass &amp;</type>
       <name>InsertAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a7eeb08910a558ecf73ac43703073db75</anchor>
+      <anchor>aa4b1142236969d36b28d71773b9869e4</anchor>
       <arglist>(const ItemClass &amp;item, int index)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>PopBack</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>abec6a1fbdc86dd8274989b59e13d2d7b</anchor>
+      <anchor>a09ac63c55d7524b9bf6e683f6ada16cd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>PopFront</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a44fe897d131362f0f40e2a538a5ac04b</anchor>
+      <anchor>a9e8fc08d4962c192fdd98cde9068c4c2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>RemoveAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>aa4d8ea81adebd3cedb5ca92515ede7d8</anchor>
+      <anchor>aca11536415c0702446e81344ee54c797</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Reset</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ac48fcc294ff5227ce68f4b92d47e3bcc</anchor>
+      <anchor>a0c41d14c6ccd399b328e11b79fb1aec3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetItemsCount</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a3cb263062b677c95e350318c86f629c6</anchor>
+      <anchor>a91764cb2cbbdf3513c7ffb3940e4c71c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEmpty</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ac7c5e0f3f5401cecb3f6ba52baac04ed</anchor>
+      <anchor>ab2fb65b570efb9bcefc394c5854dfe5c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsIndexValid</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a41d4c618cc9f94b1674ea10406d2c428</anchor>
+      <anchor>a7557997a798717cbe52b7f4e51dc21b6</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>ContainerClass</type>
+      <type>QList&lt; ItemClass &gt;</type>
       <name>Items</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ad7de4179981c9e2547af1537aa65ece1</anchor>
+      <anchor>ac7750c3f39765264f9ce3a0bfd546ddd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>Items</type>
       <name>m_items</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2d9c0bbfa2c7155e13a410586a2d1c66</anchor>
+      <anchor>a5f84d758c861c6bc6af8435cca6655a3</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -13309,28 +13307,27 @@
     <name>ibase::TSerializableContainer</name>
     <filename>classibase_1_1_t_serializable_container.html</filename>
     <templarg>ItemClass</templarg>
-    <templarg>ContainerClass</templarg>
     <base>ibase::TContainer</base>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
-      <type>TContainer&lt; ItemClass, ContainerClass &gt;</type>
+      <type>TContainer&lt; ItemClass &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
-      <anchor>a8074a26596532676bfee163baf59067a</anchor>
+      <anchor>afb9cc42d2d54b61a04026019f6969e9b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
-      <anchor>a27fde418de8e6e4ad2a45a18f7d4348f</anchor>
+      <anchor>a5bb8aa62a58dc387e177f9302ac8c771</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>SerializeItem</name>
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
-      <anchor>a6045b0b9f7de8d45e7a1cca722a7d483</anchor>
+      <anchor>a26b6da882324306b54c95b86a0c7d842</anchor>
       <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive)=0</arglist>
     </member>
   </compound>

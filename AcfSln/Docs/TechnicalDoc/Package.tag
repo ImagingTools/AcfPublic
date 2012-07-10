@@ -171,6 +171,65 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>CEdgeLine.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_c_edge_line_8h</filename>
+    <includes id="_c_edge_node_8h" name="CEdgeNode.h" local="yes" imported="no">iedge/CEdgeNode.h</includes>
+    <class kind="class">iedge::CEdgeLine</class>
+    <class kind="class">iedge::CEdgeLine::Container</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CEdgeNode.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_c_edge_node_8h</filename>
+    <class kind="class">iedge::CEdgeNode</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CEdgesReductorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_c_edges_reductor_comp_8h</filename>
+    <includes id="_i_numeric_params_8h" name="INumericParams.h" local="yes" imported="no">imeas/INumericParams.h</includes>
+    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
+    <includes id="_i_edge_lines_processor_8h" name="IEdgeLinesProcessor.h" local="yes" imported="no">iedge/IEdgeLinesProcessor.h</includes>
+    <class kind="class">iedge::CEdgesReductorComp</class>
+    <class kind="struct">iedge::CEdgesReductorComp::NodeInfo</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFastEdgesExtractorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_c_fast_edges_extractor_comp_8h</filename>
+    <includes id="_i_numeric_params_8h" name="INumericParams.h" local="yes" imported="no">imeas/INumericParams.h</includes>
+    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
+    <includes id="_i_edges_extractor_8h" name="IEdgesExtractor.h" local="yes" imported="no">iedge/IEdgesExtractor.h</includes>
+    <class kind="class">iedge::CFastEdgesExtractorComp</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iedge.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>iedge_8h</filename>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IEdgeLinesProcessor.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_i_edge_lines_processor_8h</filename>
+    <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
+    <class kind="class">iedge::IEdgeLinesProcessor</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IEdgesExtractor.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_i_edges_extractor_8h</filename>
+    <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
+    <class kind="class">iedge::IEdgesExtractor</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDirectoryMonitorParams.h</name>
     <path>C:/Temp/AcfSln/Include/ifpf/</path>
     <filename>_c_directory_monitor_params_8h</filename>
@@ -2934,6 +2993,408 @@
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
       <anchor>a5b4f1e2f64bb83c43e5db5f4fbc5766a</anchor>
       <arglist>(double time)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iedge</name>
+    <filename>namespaceiedge.html</filename>
+    <class kind="class">iedge::CEdgeLine</class>
+    <class kind="class">iedge::CEdgeNode</class>
+    <class kind="class">iedge::CEdgesReductorComp</class>
+    <class kind="class">iedge::CFastEdgesExtractorComp</class>
+    <class kind="class">iedge::IEdgeLinesProcessor</class>
+    <class kind="class">iedge::IEdgesExtractor</class>
+  </compound>
+  <compound kind="class">
+    <name>iedge::CEdgeLine</name>
+    <filename>classiedge_1_1_c_edge_line.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <class kind="class">iedge::CEdgeLine::Container</class>
+    <member kind="function">
+      <type></type>
+      <name>CEdgeLine</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>ad8e793d1b9b5ff879b90073a5ad6a1c6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CEdgeLine</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>ace47351abb0e8d56dfc3beb12d2f9598</anchor>
+      <arglist>(const CEdgeLine &amp;iedge)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Clear</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a03d8edaf017e25319090df28907fd878</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const CEdgeNode &amp;</type>
+      <name>GetNode</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>afd693c176220964b52b46579c41334c9</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CEdgeNode &amp;</type>
+      <name>GetNodeRef</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a56637a1d3f9e0fb9533b5e4d1d6c89d8</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNode</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a9b62ce86de5c9a10a21fd26481b1ef51</anchor>
+      <arglist>(int index, const CEdgeNode &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsClosed</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>aeef1185f8a01ab6d176f4b7b8c384879</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetClosed</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a7f1496a40e4208699a16075a60fb511a</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetNodesCount</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>abf1846d234c56469a1b86ea94344533c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetSegmentsCount</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>aba95040d83e39430102c174ad2b86995</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMinWeight</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>ad512fbfff6f874f9b72021ff522e39fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMaxWeight</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a023dd5148a084871138894f49d84a27a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>acde2e468afa74d7c098a98955e696c28</anchor>
+      <arglist>(const CEdgeNode &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CopyFromPolyline</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a60b6b336a75b184d99b7fbb3d9f19676</anchor>
+      <arglist>(const i2d::CPolyline &amp;polyline, const i2d::CAffine2d &amp;transform, double weight=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CopyToPolyline</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a7648af3890ee25462bf8668fc1f41ab1</anchor>
+      <arglist>(i2d::CPolyline &amp;polyline, const i2d::CAffine2d &amp;transform) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>ab107da72006c2be0ca88a9e440c2e7b7</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CalcVolatile</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a139b13e1fd9b569cd73c25c011ce9e6c</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedge::CEdgeLine::Container</name>
+    <filename>classiedge_1_1_c_edge_line_1_1_container.html</filename>
+    <base>TSerializableContainer&lt; CEdgeLine &gt;</base>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializeItem</name>
+      <anchorfile>classiedge_1_1_c_edge_line_1_1_container.html</anchorfile>
+      <anchor>a92585a6abdaab36745a9569ea95be423</anchor>
+      <arglist>(CEdgeLine &amp;item, iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedge::CEdgeNode</name>
+    <filename>classiedge_1_1_c_edge_node.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function">
+      <type></type>
+      <name>CEdgeNode</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>a62c2ae31a2c1382c18ff6afbefa84edf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CEdgeNode</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>ade5ee54cc08c93378bc24f5ced3c3386</anchor>
+      <arglist>(const i2d::CVector2d &amp;position, const i2d::CVector2d &amp;derivative, double weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>GetPosition</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>ab189e89d4b98cf2cfeb7abc4428cc124</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPosition</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>a8d9d6f6b7f7dbb0d19a808baccbf36af</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>GetDerivative</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>ac33353aa963c45276cabe9c461c9d224</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDerivative</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>aa177ab89b8984b61d85217b2e4a951bd</anchor>
+      <arglist>(const i2d::CVector2d &amp;derivative)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWeight</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>a835e957733fe7783d38affe3865bfc97</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWeight</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>a7e1b8bafde14a881e06a28ee693a9cfd</anchor>
+      <arglist>(double weight)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiedge_1_1_c_edge_node.html</anchorfile>
+      <anchor>ac9b31dc65dc1e2c77724952d931d07e5</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedge::CEdgesReductorComp</name>
+    <filename>classiedge_1_1_c_edges_reductor_comp.html</filename>
+    <base>TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</base>
+    <class kind="struct">iedge::CEdgesReductorComp::NodeInfo</class>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>aa2637eca8885f690f8d8b28d51c16886</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetReducedLine</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a90bd9850025ff6076defa45b202be65a</anchor>
+      <arglist>(const CEdgeLine &amp;edgeLine, double positionTolerance, double weightTolerance, CEdgeLine &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetReducedLines</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>afa6ce1a7cb8e4b639edf26774f0b386d</anchor>
+      <arglist>(const CEdgeLine::Container &amp;edgeLines, double positionTolerance, double weightTolerance, CEdgeLine::Container &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DoLinesProcessing</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a3ae33ebda48591e3c9b0a59578a96b43</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const CEdgeLine::Container &amp;edgeLines, CEdgeLine::Container &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>ab9aab9d8d234c0295a7489d714d475a2</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a2bf913706ffc0e2ef2cc24b96630aa36</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a4debc7d7e0760a5b19e6f4a1d7d18ce0</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>ac6f96ee3ad4e429b29fe46e77f0c52b8</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>ad95d7bb8d0abbdbe0cc427eaddad6a89</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QVector&lt; NodeInfo &gt;</type>
+      <name>NodeInfos</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a49a02298322722dafdda49eb6ac25d6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ReduceNodes</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>ae129b8f42b2cbac4a41c867d95d7d4f5</anchor>
+      <arglist>(const CEdgeLine &amp;edgeLine, double positionTolerance, double weightTolerance, NodeInfos::Iterator firstIter, NodeInfos::Iterator endIter, NodeInfos &amp;nodeInfos) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iedge::CEdgesReductorComp::NodeInfo</name>
+    <filename>structiedge_1_1_c_edges_reductor_comp_1_1_node_info.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>index</name>
+      <anchorfile>structiedge_1_1_c_edges_reductor_comp_1_1_node_info.html</anchorfile>
+      <anchor>afa4f44f9a25224677abac86abf3d653c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>removedDistance</name>
+      <anchorfile>structiedge_1_1_c_edges_reductor_comp_1_1_node_info.html</anchorfile>
+      <anchor>aa51eb8b2960cd691ff6901002785f754</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>removedWeightDiff</name>
+      <anchorfile>structiedge_1_1_c_edges_reductor_comp_1_1_node_info.html</anchorfile>
+      <anchor>ac6d58c3d27c3a7a425dc3ab5a85af33a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedge::CFastEdgesExtractorComp</name>
+    <filename>classiedge_1_1_c_fast_edges_extractor_comp.html</filename>
+    <base>TSyncProcessorCompBase&lt; IEdgesExtractor &gt;</base>
+    <base>imeas::INumericConstraints</base>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; IEdgesExtractor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>ada3b21847c4d709f1784be2b8eb4b95c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DoContourExtraction</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>aaa7f0066fe1284365eaa05ea846f5280</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;bitmap, CEdgeLine::Container &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>a23015b4ac203547a64204024de4dbcd0</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>a67e9b4d72546275ba3fa3b9d558e487d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>a2d1e8ca5abbfea3645389d8f2f24408f</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>ae775ef2dad9d63f173121341e7378851</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>aa2cf55f07d2d2a9ee25518281ff2eca9</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedge::IEdgeLinesProcessor</name>
+    <filename>classiedge_1_1_i_edge_lines_processor.html</filename>
+    <base virtualness="virtual">iproc::IProcessor</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>DoLinesProcessing</name>
+      <anchorfile>classiedge_1_1_i_edge_lines_processor.html</anchorfile>
+      <anchor>aa1baf6e5cf7b9af9037ddc127eadff27</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const CEdgeLine::Container &amp;edgeLines, CEdgeLine::Container &amp;result) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedge::IEdgesExtractor</name>
+    <filename>classiedge_1_1_i_edges_extractor.html</filename>
+    <base virtualness="virtual">iproc::IProcessor</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>DoContourExtraction</name>
+      <anchorfile>classiedge_1_1_i_edges_extractor.html</anchorfile>
+      <anchor>aa91985aa78580c14809a30825e044a63</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;bitmap, CEdgeLine::Container &amp;result) const =0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -8757,19 +9218,19 @@
     <member kind="enumvalue">
       <name>BYTES_PER_SAMPLE</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a816eb353fe827c575391fa8c91136eadacc0e163beb3e170717fd1cdd318203d5</anchor>
+      <anchor>a42ea7a74ecf605b936b52534d7be7739acc0e163beb3e170717fd1cdd318203d5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BITS_PER_SAMPLE</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a816eb353fe827c575391fa8c91136eadad9ee197dc89c4cc7adbee13008ed1548</anchor>
+      <anchor>a42ea7a74ecf605b936b52534d7be7739ad9ee197dc89c4cc7adbee13008ed1548</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>WAVE_FORMAT_PCM</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a816eb353fe827c575391fa8c91136eadab4c12e1396ba8e8f2d4acdcd0050e24c</anchor>
+      <anchor>a42ea7a74ecf605b936b52534d7be7739ab4c12e1396ba8e8f2d4acdcd0050e24c</anchor>
       <arglist></arglist>
     </member>
   </compound>
