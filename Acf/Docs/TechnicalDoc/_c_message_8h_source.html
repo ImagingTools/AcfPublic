@@ -69,63 +69,66 @@
 <a name="l00045"></a>00045        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_message.html#a2cfd9251b94e5f9a6fd5b4bfd281bb19" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="keyword">protected</span>:
-<a name="l00049"></a><a class="code" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">00049</a>        <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> <a class="code" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">m_category</a>;
-<a name="l00050"></a><a class="code" href="classibase_1_1_c_message.html#a552ee2f7fed1f70c6040715d545ecdea">00050</a>        <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message.html#a552ee2f7fed1f70c6040715d545ecdea">m_id</a>;
-<a name="l00051"></a><a class="code" href="classibase_1_1_c_message.html#a75fe3a47012fc321a0b7e772373dc858">00051</a>        QString <a class="code" href="classibase_1_1_c_message.html#a75fe3a47012fc321a0b7e772373dc858">m_text</a>;
-<a name="l00052"></a><a class="code" href="classibase_1_1_c_message.html#a62a05af22aed3111bbd39f731947f034">00052</a>        QString <a class="code" href="classibase_1_1_c_message.html#a62a05af22aed3111bbd39f731947f034">m_source</a>;
-<a name="l00053"></a><a class="code" href="classibase_1_1_c_message.html#a8a6a2283a1465b61fd49d0c8eab28d6f">00053</a>        <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message.html#a8a6a2283a1465b61fd49d0c8eab28d6f">m_flags</a>;
-<a name="l00054"></a>00054 
-<a name="l00055"></a><a class="code" href="classibase_1_1_c_message.html#a296bd9e63e88fa79f2f691319de5f84e">00055</a>        QDateTime <a class="code" href="classibase_1_1_c_message.html#a296bd9e63e88fa79f2f691319de5f84e">m_timeStamp</a>;
-<a name="l00056"></a>00056 };
+<a name="l00048"></a>00048        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_message.html#ae2caf86fbb1f6c94ac737c5aeb38ea6a" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="keyword">protected</span>:
+<a name="l00052"></a><a class="code" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">00052</a>        <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> <a class="code" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">m_category</a>;
+<a name="l00053"></a><a class="code" href="classibase_1_1_c_message.html#a552ee2f7fed1f70c6040715d545ecdea">00053</a>        <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message.html#a552ee2f7fed1f70c6040715d545ecdea">m_id</a>;
+<a name="l00054"></a><a class="code" href="classibase_1_1_c_message.html#a75fe3a47012fc321a0b7e772373dc858">00054</a>        QString <a class="code" href="classibase_1_1_c_message.html#a75fe3a47012fc321a0b7e772373dc858">m_text</a>;
+<a name="l00055"></a><a class="code" href="classibase_1_1_c_message.html#a62a05af22aed3111bbd39f731947f034">00055</a>        QString <a class="code" href="classibase_1_1_c_message.html#a62a05af22aed3111bbd39f731947f034">m_source</a>;
+<a name="l00056"></a><a class="code" href="classibase_1_1_c_message.html#a8a6a2283a1465b61fd49d0c8eab28d6f">00056</a>        <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message.html#a8a6a2283a1465b61fd49d0c8eab28d6f">m_flags</a>;
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="comment">// inline methods</span>
+<a name="l00058"></a><a class="code" href="classibase_1_1_c_message.html#a296bd9e63e88fa79f2f691319de5f84e">00058</a>        QDateTime <a class="code" href="classibase_1_1_c_message.html#a296bd9e63e88fa79f2f691319de5f84e">m_timeStamp</a>;
+<a name="l00059"></a>00059 };
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="comment">// reimplemented (istd::IInformationProvider)</span>
-<a name="l00062"></a>00062 
-<a name="l00063"></a><a class="code" href="classibase_1_1_c_message.html#abac5eddd946d801440f959aeb0e5bfa9">00063</a> <span class="keyword">inline</span> QDateTime <a class="code" href="classibase_1_1_c_message.html#abac5eddd946d801440f959aeb0e5bfa9" title="Get optional time stamp of the information.">CMessage::GetInformationTimeStamp</a>()<span class="keyword"> const</span>
-<a name="l00064"></a>00064 <span class="keyword"></span>{
-<a name="l00065"></a>00065        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a296bd9e63e88fa79f2f691319de5f84e">m_timeStamp</a>;
-<a name="l00066"></a>00066 }
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 
-<a name="l00069"></a><a class="code" href="classibase_1_1_c_message.html#a93daa6d9b157408aa8fdfb640dee5aae">00069</a> <span class="keyword">inline</span> <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> <a class="code" href="classibase_1_1_c_message.html#a93daa6d9b157408aa8fdfb640dee5aae" title="Get category of the information.">CMessage::GetInformationCategory</a>()<span class="keyword"> const</span>
-<a name="l00070"></a>00070 <span class="keyword"></span>{
-<a name="l00071"></a>00071        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">m_category</a>;
-<a name="l00072"></a>00072 }
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 
-<a name="l00075"></a><a class="code" href="classibase_1_1_c_message.html#a51558dcbf12955d02fb22c4ff7d9591c">00075</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message.html#a51558dcbf12955d02fb22c4ff7d9591c" title="Get binary ID of the information using to automatical identification of this information type...">CMessage::GetInformationId</a>()<span class="keyword"> const</span>
-<a name="l00076"></a>00076 <span class="keyword"></span>{
-<a name="l00077"></a>00077        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a552ee2f7fed1f70c6040715d545ecdea">m_id</a>;
-<a name="l00078"></a>00078 }
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 
-<a name="l00081"></a><a class="code" href="classibase_1_1_c_message.html#a98d8823175baad2e2eee6202a4829bf7">00081</a> <span class="keyword">inline</span> QString <a class="code" href="classibase_1_1_c_message.html#a98d8823175baad2e2eee6202a4829bf7" title="Get the text description of the information.">CMessage::GetInformationDescription</a>()<span class="keyword"> const</span>
-<a name="l00082"></a>00082 <span class="keyword"></span>{
-<a name="l00083"></a>00083        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a75fe3a47012fc321a0b7e772373dc858">m_text</a>;
-<a name="l00084"></a>00084 }
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 
-<a name="l00087"></a><a class="code" href="classibase_1_1_c_message.html#abf52593cb762a131246066078619f1d3">00087</a> <span class="keyword">inline</span> QString <a class="code" href="classibase_1_1_c_message.html#abf52593cb762a131246066078619f1d3" title="Get the source of the information.">CMessage::GetInformationSource</a>()<span class="keyword"> const</span>
-<a name="l00088"></a>00088 <span class="keyword"></span>{
-<a name="l00089"></a>00089        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a62a05af22aed3111bbd39f731947f034">m_source</a>;
-<a name="l00090"></a>00090 }
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092 
-<a name="l00093"></a><a class="code" href="classibase_1_1_c_message.html#a5d5e0d8843a8ca9fbc8ded421df1c164">00093</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message.html#a5d5e0d8843a8ca9fbc8ded421df1c164" title="Get flags of the information.">CMessage::GetInformationFlags</a>()<span class="keyword"> const</span>
-<a name="l00094"></a>00094 <span class="keyword"></span>{
-<a name="l00095"></a>00095        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a8a6a2283a1465b61fd49d0c8eab28d6f">m_flags</a>;
-<a name="l00096"></a>00096 }
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 } <span class="comment">// namespace ibase</span>
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="comment">// inline methods</span>
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="comment">// reimplemented (istd::IInformationProvider)</span>
+<a name="l00065"></a>00065 
+<a name="l00066"></a><a class="code" href="classibase_1_1_c_message.html#abac5eddd946d801440f959aeb0e5bfa9">00066</a> <span class="keyword">inline</span> QDateTime <a class="code" href="classibase_1_1_c_message.html#abac5eddd946d801440f959aeb0e5bfa9" title="Get optional time stamp of the information.">CMessage::GetInformationTimeStamp</a>()<span class="keyword"> const</span>
+<a name="l00067"></a>00067 <span class="keyword"></span>{
+<a name="l00068"></a>00068        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a296bd9e63e88fa79f2f691319de5f84e">m_timeStamp</a>;
+<a name="l00069"></a>00069 }
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 
+<a name="l00072"></a><a class="code" href="classibase_1_1_c_message.html#a93daa6d9b157408aa8fdfb640dee5aae">00072</a> <span class="keyword">inline</span> <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> <a class="code" href="classibase_1_1_c_message.html#a93daa6d9b157408aa8fdfb640dee5aae" title="Get category of the information.">CMessage::GetInformationCategory</a>()<span class="keyword"> const</span>
+<a name="l00073"></a>00073 <span class="keyword"></span>{
+<a name="l00074"></a>00074        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">m_category</a>;
+<a name="l00075"></a>00075 }
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 
+<a name="l00078"></a><a class="code" href="classibase_1_1_c_message.html#a51558dcbf12955d02fb22c4ff7d9591c">00078</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message.html#a51558dcbf12955d02fb22c4ff7d9591c" title="Get binary ID of the information using to automatical identification of this information type...">CMessage::GetInformationId</a>()<span class="keyword"> const</span>
+<a name="l00079"></a>00079 <span class="keyword"></span>{
+<a name="l00080"></a>00080        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a552ee2f7fed1f70c6040715d545ecdea">m_id</a>;
+<a name="l00081"></a>00081 }
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 
+<a name="l00084"></a><a class="code" href="classibase_1_1_c_message.html#a98d8823175baad2e2eee6202a4829bf7">00084</a> <span class="keyword">inline</span> QString <a class="code" href="classibase_1_1_c_message.html#a98d8823175baad2e2eee6202a4829bf7" title="Get the text description of the information.">CMessage::GetInformationDescription</a>()<span class="keyword"> const</span>
+<a name="l00085"></a>00085 <span class="keyword"></span>{
+<a name="l00086"></a>00086        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a75fe3a47012fc321a0b7e772373dc858">m_text</a>;
+<a name="l00087"></a>00087 }
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 
+<a name="l00090"></a><a class="code" href="classibase_1_1_c_message.html#abf52593cb762a131246066078619f1d3">00090</a> <span class="keyword">inline</span> QString <a class="code" href="classibase_1_1_c_message.html#abf52593cb762a131246066078619f1d3" title="Get the source of the information.">CMessage::GetInformationSource</a>()<span class="keyword"> const</span>
+<a name="l00091"></a>00091 <span class="keyword"></span>{
+<a name="l00092"></a>00092        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a62a05af22aed3111bbd39f731947f034">m_source</a>;
+<a name="l00093"></a>00093 }
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 
+<a name="l00096"></a><a class="code" href="classibase_1_1_c_message.html#a5d5e0d8843a8ca9fbc8ded421df1c164">00096</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message.html#a5d5e0d8843a8ca9fbc8ded421df1c164" title="Get flags of the information.">CMessage::GetInformationFlags</a>()<span class="keyword"> const</span>
+<a name="l00097"></a>00097 <span class="keyword"></span>{
+<a name="l00098"></a>00098        <span class="keywordflow">return</span> <a class="code" href="classibase_1_1_c_message.html#a8a6a2283a1465b61fd49d0c8eab28d6f">m_flags</a>;
+<a name="l00099"></a>00099 }
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="preprocessor">#endif // !ibase_CMessage_included</span>
-<a name="l00103"></a>00103 <span class="preprocessor"></span>
+<a name="l00102"></a>00102 } <span class="comment">// namespace ibase</span>
+<a name="l00103"></a>00103 
 <a name="l00104"></a>00104 
+<a name="l00105"></a>00105 <span class="preprocessor">#endif // !ibase_CMessage_included</span>
+<a name="l00106"></a>00106 <span class="preprocessor"></span>
+<a name="l00107"></a>00107 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

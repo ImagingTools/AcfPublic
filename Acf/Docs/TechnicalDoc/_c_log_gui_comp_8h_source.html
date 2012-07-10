@@ -107,7 +107,7 @@
 <a name="l00092"></a>00092        <span class="keywordtype">void</span> UpdateVisualStatus();
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00095"></a>00095        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#aad28c392f20131213ad382c9b1ab96fc">OnAddMessage</a>(QTreeWidgetItem* itemPtr);
+<a name="l00095"></a>00095        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#afce61325a081282c83132397a8704040">OnAddMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>* messagePtr, <span class="keywordtype">bool</span> releaseFlag);
 <a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#abfab01555ef6be6e1a3d119300302a26">OnRemoveMessage</a>(QVariant messageId);
 <a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#a691f3484a4b4a29013125cb082fb905b">OnReset</a>();
 <a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#a47403ce2904f27d0a6ef3a1f193a7acf">OnMessageModeChanged</a>();
@@ -116,7 +116,7 @@
 <a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#acc4ebe610e35d3894f18c2f238f2d0c8">OnExportAction</a>();
 <a name="l00102"></a>00102 
 <a name="l00103"></a>00103 Q_SIGNALS:
-<a name="l00104"></a>00104        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#aed04af5fa2dca1c75cda2b930e49956a">EmitAddMessage</a>(QTreeWidgetItem* itemPtr);
+<a name="l00104"></a>00104        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#a0000773a9b4c264f42ef828251ff3e85">EmitAddMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>* messagePtr, <span class="keywordtype">bool</span> releaseFlag);
 <a name="l00105"></a>00105        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#abaed084450faf40113f8897a6346bfde">EmitRemoveMessage</a>(QVariant);
 <a name="l00106"></a>00106        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_log_gui_comp.html#a554f01e728935319a90639c77e6e9537">EmitReset</a>();
 <a name="l00107"></a>00107 

@@ -84,7 +84,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classibase_1_1_i_message_container.html">ibase::IMessageContainer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a170a3bad5f9f8d70e49f082e854430f0">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signals</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#aed04af5fa2dca1c75cda2b930e49956a">EmitAddMessage</a> (QTreeWidgetItem *itemPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0000773a9b4c264f42ef828251ff3e85">EmitAddMessage</a> (const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *messagePtr, bool releaseFlag)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abaed084450faf40113f8897a6346bfde">EmitRemoveMessage</a> (QVariant)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a554f01e728935319a90639c77e6e9537">EmitReset</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -107,7 +107,7 @@ Protected Types</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#aad28c392f20131213ad382c9b1ab96fc">OnAddMessage</a> (QTreeWidgetItem *itemPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#afce61325a081282c83132397a8704040">OnAddMessage</a> (const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *messagePtr, bool releaseFlag)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abfab01555ef6be6e1a3d119300302a26">OnRemoveMessage</a> (QVariant messageId)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a691f3484a4b4a29013125cb082fb905b">OnReset</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a47403ce2904f27d0a6ef3a1f193a7acf">OnMessageModeChanged</a> ()</td></tr>
@@ -349,16 +349,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aed04af5fa2dca1c75cda2b930e49956a"></a><!-- doxytag: member="iqtgui::CLogGuiComp::EmitAddMessage" ref="aed04af5fa2dca1c75cda2b930e49956a" args="(QTreeWidgetItem *itemPtr)" -->
+<a class="anchor" id="a0000773a9b4c264f42ef828251ff3e85"></a><!-- doxytag: member="iqtgui::CLogGuiComp::EmitAddMessage" ref="a0000773a9b4c264f42ef828251ff3e85" args="(const istd::IInformationProvider *messagePtr, bool releaseFlag)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iqtgui::CLogGuiComp::EmitAddMessage </td>
           <td>(</td>
-          <td class="paramtype">QTreeWidgetItem *&#160;</td>
-          <td class="paramname"><em>itemPtr</em></td><td>)</td>
-          <td><code> [signal]</code></td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *&#160;</td>
+          <td class="paramname"><em>messagePtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>releaseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [signal]</code></td>
         </tr>
       </table>
 </div>
@@ -437,16 +447,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aad28c392f20131213ad382c9b1ab96fc"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnAddMessage" ref="aad28c392f20131213ad382c9b1ab96fc" args="(QTreeWidgetItem *itemPtr)" -->
+<a class="anchor" id="afce61325a081282c83132397a8704040"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnAddMessage" ref="afce61325a081282c83132397a8704040" args="(const istd::IInformationProvider *messagePtr, bool releaseFlag)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqtgui::CLogGuiComp::OnAddMessage </td>
           <td>(</td>
-          <td class="paramtype">QTreeWidgetItem *&#160;</td>
-          <td class="paramname"><em>itemPtr</em></td><td>)</td>
-          <td><code> [protected, virtual, slot]</code></td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *&#160;</td>
+          <td class="paramname"><em>messagePtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>releaseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>

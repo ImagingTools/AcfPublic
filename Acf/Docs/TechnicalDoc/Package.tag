@@ -11251,6 +11251,13 @@
       <anchor>a2cfd9251b94e5f9a6fd5b4bfd281bb19</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classibase_1_1_c_message.html</anchorfile>
+      <anchor>ae2caf86fbb1f6c94ac737c5aeb38ea6a</anchor>
+      <arglist>(const istd::IChangeable &amp;object)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>istd::IInformationProvider::InformationCategory</type>
       <name>m_category</name>
@@ -37095,8 +37102,8 @@
       <type>void</type>
       <name>EmitAddMessage</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>aed04af5fa2dca1c75cda2b930e49956a</anchor>
-      <arglist>(QTreeWidgetItem *itemPtr)</arglist>
+      <anchor>a0000773a9b4c264f42ef828251ff3e85</anchor>
+      <arglist>(const istd::IInformationProvider *messagePtr, bool releaseFlag)</arglist>
     </member>
     <member kind="signal">
       <type>void</type>
@@ -37201,8 +37208,8 @@
       <type>virtual void</type>
       <name>OnAddMessage</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>aad28c392f20131213ad382c9b1ab96fc</anchor>
-      <arglist>(QTreeWidgetItem *itemPtr)</arglist>
+      <anchor>afce61325a081282c83132397a8704040</anchor>
+      <arglist>(const istd::IInformationProvider *messagePtr, bool releaseFlag)</arglist>
     </member>
     <member kind="slot" protection="protected" virtualness="virtual">
       <type>virtual void</type>

@@ -1,5 +1,5 @@
-Installation creation time: Di 10. Jul 00:53:15 2012
+Installation creation time: Di 10. Jul 17:57:05 2012
 IACF Version: 0.3.2.167 (515)
 Compiler code: VC9
 
-This distribution based on ACF 1.6.0.107 (2388) and ACF-Solutions 0.5.0.232 (588)
+This distribution based on ACF 1.6.0.108 (2389) and ACF-Solutions 0.5.0.232 (588)
