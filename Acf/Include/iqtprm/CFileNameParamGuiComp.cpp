@@ -98,14 +98,7 @@ void CFileNameParamGuiComp::UpdateGui(int /*updateFlags*/)
 			PathLabel->setVisible(pathType == iprm::IFileNameParam::PT_FILE);
 			UrlLabel->setVisible(pathType == iprm::IFileNameParam::PT_URL);
 		}
-
 		BrowseButton->setVisible((pathType == iprm::IFileNameParam::PT_DIRECTORY) || (pathType == iprm::IFileNameParam::PT_FILE));
-
-		if (m_readOnlyAttrPtr.IsValid()){
-			if (*m_readOnlyAttrPtr){
-				BrowseButton->hide();
-			}
-		}
 	}
 	else{
 		DirectoryLabel->setVisible(false);
@@ -125,20 +118,17 @@ void CFileNameParamGuiComp::OnGuiCreated()
 	UrlLabel->setVisible(false);
 	BrowseButton->setVisible(false);
 
+	if (m_pathLabelAttrPtr.IsValid()){
+		DirectoryLabel->setText(*m_pathLabelAttrPtr);
+		PathLabel->setText(*m_pathLabelAttrPtr);
+		UrlLabel->setText(*m_pathLabelAttrPtr);
+	}
+
 	QString startHint = tr("<Enter path>");
 	if (m_startHintAttrPtr.IsValid()){
 		startHint = *m_startHintAttrPtr;
 	}
-
-	if (m_labelWidthAttrPtr.IsValid()){
-		int width = *m_labelWidthAttrPtr;
-		if (width > 0){
-			DirectoryLabel->setFixedWidth(width);
-			PathLabel->setFixedWidth(width);
-			UrlLabel->setFixedWidth(width);
-		}
-	}
-
+	
 	iqtgui::CExtLineEdit* lineEdit = new iqtgui::CExtLineEdit(startHint, 2, DirEdit);
 
 	// add "cd up" button:
@@ -149,26 +139,10 @@ void CFileNameParamGuiComp::OnGuiCreated()
 
 	lineEdit->AddWidget(cdUpButton, Qt::AlignRight);
 
-	if (m_readOnlyAttrPtr.IsValid()){
-		lineEdit->setReadOnly(*m_readOnlyAttrPtr);
-		BrowseButton->setHidden(*m_readOnlyAttrPtr);
-		cdUpButton->setDisabled(*m_readOnlyAttrPtr);
-	}
-
 	DirEdit->setLineEdit(lineEdit);
 	DirEdit->setCompleter(NULL);
 
 	BaseClass::OnGuiCreated();
-}
-
-
-void CFileNameParamGuiComp::OnGuiRetranslate()
-{
-	if (m_pathLabelAttrPtr.IsValid()){
-		DirectoryLabel->setText(*m_pathLabelAttrPtr);
-		PathLabel->setText(*m_pathLabelAttrPtr);
-		UrlLabel->setText(*m_pathLabelAttrPtr);
-	}
 }
 
 

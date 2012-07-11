@@ -20,48 +20,34 @@
 ********************************************************************************/
 
 
-#ifndef iqtgui_CCommandsToolBarGuiComp_included
-#define iqtgui_CCommandsToolBarGuiComp_included
+#ifndef iproc_IElapsedTimeProvider_included
+#define iproc_IElapsedTimeProvider_included
 
 
-// ACF includes
-#include "ibase/ICommandsProvider.h"
-
-#include "iqtgui/CToolBarGuiCompBase.h"
-#include "iqtgui/CHierarchicalCommand.h"
+#include "istd/IChangeable.h"
 
 
-namespace iqtgui
+namespace iproc
 {
 
 
 /**
-	Component for construction of a tool bar for a given commands provider.
+	Provider of the elapsed time
+	E.g. used for processing time measuring.
 */
-class CCommandsToolBarGuiComp: public CToolBarGuiCompBase
+class IElapsedTimeProvider: virtual public istd::IChangeable
 {
 public:
-	typedef CToolBarGuiCompBase BaseClass; 
-	
-	I_BEGIN_COMPONENT(CCommandsToolBarGuiComp);
-		I_REGISTER_INTERFACE(iqtgui::IMainWindowComponent);
-		I_ASSIGN(m_commandsProviderCompPtr, "CommandsProvider", "Commands for the tool bar", true, "CommandsProvider");
-	I_END_COMPONENT;
-
-protected:
-	// reimplemented (CGuiComponentBase)
-	virtual void OnGuiCreated();
-
-private:
-	I_REF(ibase::ICommandsProvider, m_commandsProviderCompPtr);
-
-	iqtgui::CHierarchicalCommand m_toolBarCommands;
+	/**
+		Get the elapsed time.
+	*/
+	virtual double GetElapsedTime() const = 0;
 };
 
 
-} // namespace iqtgui
+} // namespace iproc
 
 
-#endif // !iqtgui_CCommandsToolBarGuiComp_included
+#endif // !iproc_IElapsedTimeProvider_included
 
 

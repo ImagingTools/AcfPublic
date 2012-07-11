@@ -3123,6 +3123,14 @@
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
+    <name>IElapsedTimeProvider.h</name>
+    <path>C:/Temp/Acf/Include/iproc/</path>
+    <filename>_i_elapsed_time_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">iproc::IElapsedTimeProvider</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
     <name>iproc.h</name>
     <path>C:/Temp/Acf/Include/iproc/</path>
     <filename>iproc_8h</filename>
@@ -3220,6 +3228,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_i_elapsed_time_provider_8h" name="IElapsedTimeProvider.h" local="yes" imported="no">iproc/IElapsedTimeProvider.h</includes>
     <class kind="class">iproc::TSupplierCompWrap</class>
     <class kind="class">iproc::TSupplierCompWrap::InputObserver</class>
     <namespace>iproc</namespace>
@@ -30214,6 +30223,7 @@
     <class kind="class">iproc::CDelegatedProgressManager</class>
     <class kind="class">iproc::CIterativeProcessorComp</class>
     <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
+    <class kind="class">iproc::IElapsedTimeProvider</class>
     <class kind="class">iproc::IProcessor</class>
     <class kind="class">iproc::IProgressManager</class>
     <class kind="class">iproc::IStateController</class>
@@ -30525,6 +30535,18 @@
       <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
       <anchor>af09dd325ea51accbb9ff63c452f247f4</anchor>
       <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::IElapsedTimeProvider</name>
+    <filename>classiproc_1_1_i_elapsed_time_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetElapsedTime</name>
+      <anchorfile>classiproc_1_1_i_elapsed_time_provider.html</anchorfile>
+      <anchor>a96344ffb77cdaf0127a43f629b0f4768</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31169,6 +31191,7 @@
     <templarg>Product</templarg>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iproc::ISupplier</base>
+    <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
     <base virtualness="virtual">istd::IChangeable</base>
     <class kind="class">iproc::TSupplierCompWrap::InputObserver</class>
     <member kind="enumeration">
@@ -31251,6 +31274,13 @@
       <name>GetModelParametersSet</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ab6f30ac3f2d05e657c1263026630fd6d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetElapsedTime</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad98023b29eb5e8f1091094b4df2bf33f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -34595,6 +34625,36 @@
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base virtualness="virtual">iqt2d::IViewProvider</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="enumeration">
+      <name>BackgroundMode</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>ac7121dfbb7f404a509abd1544e6d00a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_NORMAL</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>ac7121dfbb7f404a509abd1544e6d00a8a69b501d98510e7545a604fdc68442692</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_SOLID</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>ac7121dfbb7f404a509abd1544e6d00a8aabad66b5b688b1f39482ebcdcf191fa5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_CHECKERBOARD</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>ac7121dfbb7f404a509abd1544e6d00a8a76204479eb7829b9e93bf6c37954566b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BM_DOT_GRID</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>ac7121dfbb7f404a509abd1544e6d00a8a49b58379e771807749e79f6867000bbd</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;</type>
       <name>BaseClass</name>

@@ -26,6 +26,7 @@
 
 // Qt includes
 #include <QtCore/QSet>
+#include <QtCore/QElapsedTimer>
 
 // ACF includes
 #include "istd/IChangeable.h"
@@ -41,6 +42,7 @@
 
 // ACF includes
 #include "iproc/ISupplier.h"
+#include "iproc/IElapsedTimeProvider.h"
 
 
 namespace iproc
@@ -55,6 +57,7 @@ template <class Product>
 class TSupplierCompWrap:
 			public ibase::CLoggerComponentBase,
 			virtual public ISupplier,
+			virtual public IElapsedTimeProvider,
 			virtual public istd::IChangeable
 {
 public:
@@ -68,6 +71,7 @@ public:
 
 	I_BEGIN_BASE_COMPONENT(TSupplierCompWrap);
 		I_REGISTER_INTERFACE(ISupplier);
+		I_REGISTER_INTERFACE(IElapsedTimeProvider);
 		I_ASSIGN(m_diagnosticNameAttrPtr, "DiagnosticName", "Name of this supplier for diagnostic, if it is not set, no diagnostic log message will be send", false, "");
 		I_ASSIGN(m_paramsSetCompPtr, "ParamsSet", "Parameters set describing model parameter used to produce results", false, "ParamsSet");
 		I_ASSIGN_TO(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false);
@@ -83,6 +87,9 @@ public:
 	virtual void ClearWorkResults();
 	virtual int GetWorkStatus() const;
 	virtual iprm::IParamsSet* GetModelParametersSet() const;
+
+	// reimplemented (iproc::IElapsedTimeProvider)
+	virtual double GetElapsedTime() const;
 
 protected:
 	/**
@@ -146,6 +153,8 @@ private:
 	InputObserver m_inputObserver;
 
 	istd::CChangeNotifier m_productChangeNotifier;
+
+	double m_elapsedTime;
 };
 
 
@@ -160,13 +169,6 @@ TSupplierCompWrap<Product>::TSupplierCompWrap()
 }
 
 
-template <class Product>
-iprm::IParamsSet* TSupplierCompWrap<Product>::GetModelParametersSet() const
-{
-	return m_paramsSetCompPtr.GetPtr();
-}
-
-
 // pseudo-reimplemented (iproc::ISupplier)
 
 template <class Product>
@@ -175,6 +177,8 @@ void TSupplierCompWrap<Product>::InvalidateSupplier()
 	if (m_workStatus == ISupplier::WS_LOCKED){
 		return;
 	}
+
+	m_elapsedTime = 0.0;
 
 	if (m_workStatus != ISupplier::WS_INVALID){
 		m_productChangeNotifier.SetPtr(this);
@@ -214,8 +218,13 @@ void TSupplierCompWrap<Product>::EnsureWorkFinished()
 			m_productPtr.SetPtr(new Product());
 		}
 
+		QElapsedTimer timer;
+		timer.start();
+
 		m_workStatus = ProduceObject(*m_productPtr);
 		I_ASSERT(m_workStatus >= WS_OK);	// No initial states are possible
+
+		m_elapsedTime = timer.nsecsElapsed() / 1000000000.0;
 
 		m_productChangeNotifier.SetPtr(NULL);
 	}
@@ -228,6 +237,8 @@ void TSupplierCompWrap<Product>::ClearWorkResults()
 	if (m_workStatus == ISupplier::WS_LOCKED){
 		return;
 	}
+
+	m_elapsedTime = 0.0;
 
 	if (m_workStatus != ISupplier::WS_INVALID){
 		m_productChangeNotifier.SetPtr(this);
@@ -243,6 +254,22 @@ template <class Product>
 int TSupplierCompWrap<Product>::GetWorkStatus() const
 {
 	return m_workStatus;
+}
+
+
+template <class Product>
+iprm::IParamsSet* TSupplierCompWrap<Product>::GetModelParametersSet() const
+{
+	return m_paramsSetCompPtr.GetPtr();
+}
+
+
+// reimplemented (iproc::IElapsedTimeProvider)
+
+template <class Product>
+double TSupplierCompWrap<Product>::GetElapsedTime() const
+{
+	return m_elapsedTime;
 }
 
 

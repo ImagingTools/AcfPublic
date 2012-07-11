@@ -274,7 +274,7 @@
 								true
 							</IsEnabled>
 							<Value>
-								2390
+								2393
 							</Value>
 						</Data>
 					</AttributeInfo>
@@ -450,6 +450,6 @@
 		Version information for modules based directly on ACF
 	</Description>
 	<Keywords>
-		Application Tag=Version Info Author="'Witold Gantzke'"
+		Application Tag=Version Info Author='"Witold Gantzke"'
 	</Keywords>
 </Acf>

@@ -5212,6 +5212,7 @@
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::IInspectionTask</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
+    <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -5411,6 +5412,13 @@
       <name>GetInformationFlags</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a136a36971cb1ece1303a522dfffefe7c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetElapsedTime</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a283a83ff2dd87da7df0142bc38a16237</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -13301,13 +13309,6 @@
       <name>on_SaveParamsButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a7bf25c1f1f62003be3ff7ec952b1221a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>DoTest</name>
-      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a583321ecb2e59de097ca7ffdc80fdff4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
