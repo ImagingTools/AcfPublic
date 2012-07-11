@@ -152,6 +152,7 @@ void CFileNameParamGuiComp::OnGuiCreated()
 	if (m_readOnlyAttrPtr.IsValid()){
 		lineEdit->setReadOnly(*m_readOnlyAttrPtr);
 		BrowseButton->setHidden(*m_readOnlyAttrPtr);
+		cdUpButton->setDisabled(*m_readOnlyAttrPtr);
 	}
 
 	DirEdit->setLineEdit(lineEdit);
