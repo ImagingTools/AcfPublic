@@ -38794,6 +38794,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>af09680d91a7f51c17cb81b084a43de9f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
       <anchor>a6db58d566316b88b81125871c1806707</anchor>
@@ -39290,6 +39297,66 @@
       <name>LP_TOP</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>a4f27ff84540f06531d264dd9939e89fda7f2a712b544e9e67eda7316be139e50c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>LabelAlignment</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_LEFT_TOP</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22eaf3b8c2a6a4ddc4b9fb1f6e80af10d08c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_CENTER_TOP</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22ea18dae9ace096b028c18a17c301c6e2af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_RIGHT_TOP</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22ea27d237854041e89e05fa1bb48d580e37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_LEFT_CENTER</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22ea7c04d371d5c0c9e1e395fde44dba7699</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_CENTER</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22eaf9ca0f7c3e24e07ee851df2782be638a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_RIGHT_CENTER</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22eae8edd8905e518caff06cd8aeee35a26c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_LEFT_BOTTOM</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22ead38e5fd53390783b12611e9a4bca26ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_CENTER_BOTTOM</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22ea65937b847ea23d7afb9dffb3216790e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LA_RIGHT_BOTTOM</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a56a5220d36935a9e9012e60082aac22eabb8a9cae002710c5e021d83f7dcba934</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">

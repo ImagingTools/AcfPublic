@@ -99,11 +99,11 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
-    <name>CCameraDelegatorBase.h</name>
+    <name>CCameraDelegatorComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
-    <filename>_c_camera_delegator_base_8h</filename>
+    <filename>_c_camera_delegator_comp_8h</filename>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
-    <class kind="class">icam::CCameraDelegatorBase</class>
+    <class kind="class">icam::CCameraDelegatorComp</class>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
@@ -127,7 +127,7 @@
     <name>CSelectionParamCameraComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selection_param_camera_comp_8h</filename>
-    <includes id="_c_camera_delegator_base_8h" name="CCameraDelegatorBase.h" local="yes" imported="no">icam/CCameraDelegatorBase.h</includes>
+    <includes id="_c_camera_delegator_comp_8h" name="CCameraDelegatorComp.h" local="yes" imported="no">icam/CCameraDelegatorComp.h</includes>
     <class kind="class">icam::CSelectionParamCameraComp</class>
     <class kind="class">icam::CSelectionParamCameraComp::JoinParamsSet</class>
     <namespace>icam</namespace>
@@ -2493,7 +2493,7 @@
     <name>icam</name>
     <filename>namespaceicam.html</filename>
     <class kind="class">icam::CAcquisitionConstraintsComp</class>
-    <class kind="class">icam::CCameraDelegatorBase</class>
+    <class kind="class">icam::CCameraDelegatorComp</class>
     <class kind="class">icam::CExposureParamsComp</class>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
     <class kind="class">icam::CSelectionParamCameraComp</class>
@@ -2545,85 +2545,85 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icam::CCameraDelegatorBase</name>
-    <filename>classicam_1_1_c_camera_delegator_base.html</filename>
+    <name>icam::CCameraDelegatorComp</name>
+    <filename>classicam_1_1_c_camera_delegator_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base>icam::IBitmapAcquisition</base>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>a039daebcd10e8851774315cdb8ae410d</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>aa819b8094e765fc45d9785fbc23cc3cb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>a40be94de067d960206c5fc30969b9693</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>abbd047b5c2bb36f7c2d63d094a856cb6</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetProcessorState</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>af58f534d0e2bcb0130ba433605948dc8</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>afb5ca6efea1d45f31d1411b8d2f28c65</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>AreParamsAccepted</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>a48697c4a03edd5d77938052087221b26</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>a3b43b16f507b61c04a47d352469f93cf</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>ab940415ecb269660a2da1d13765928e9</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>ab475ba8d35eef79f4a4385c1f0574126</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>BeginTask</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>acbd50fd2f56a90b3439419b377ce2ca2</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>afeb5b0dea680cd7bbe118fcddff2e80a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>WaitTaskFinished</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>a757b388e45fbe5c68ee417e50a28f1b4</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>a3c19ac41f0b0100ccf6629442c385a01</anchor>
       <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>CancelTask</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>a137fe0bd6b415fa48ad64a88cff309ba</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>af51b6e837b674811462e4c71b453ec90</anchor>
       <arglist>(int taskId=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetReadyTask</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>ac5cb0d133a3a717145c206d055beb1ea</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>ac18540d187abcf8f65fb061df43ad319</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetTaskState</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>ac70af0f4cdb11376b29e6a0dcaa984f2</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>a4690d97330ada5d80fe619b6d414b2ba</anchor>
       <arglist>(int taskId=-1) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InitProcessor</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_base.html</anchorfile>
-      <anchor>adb0055ad220a9145cbb003b1099ef0fc</anchor>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>a1c7d0d5aacae6a6476dfaafd1e4f36b9</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
   </compound>
@@ -2748,13 +2748,13 @@
   <compound kind="class">
     <name>icam::CSelectionParamCameraComp</name>
     <filename>classicam_1_1_c_selection_param_camera_comp.html</filename>
-    <base>icam::CCameraDelegatorBase</base>
+    <base>icam::CCameraDelegatorComp</base>
     <class kind="class">icam::CSelectionParamCameraComp::JoinParamsSet</class>
     <member kind="typedef">
-      <type>CCameraDelegatorBase</type>
+      <type>CCameraDelegatorComp</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
-      <anchor>aa160ff1248a9548e5a5f8f47c8263cbe</anchor>
+      <anchor>ac2fdfa26f26ed50c09d77a6d7bd9202a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">

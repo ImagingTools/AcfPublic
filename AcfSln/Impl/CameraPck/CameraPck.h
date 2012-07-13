@@ -33,10 +33,11 @@
 #include "icam/CMemoryAcquisitionComp.h"
 #include "icam/CAcquisitionConstraintsComp.h"
 #include "icam/CSelectionParamCameraComp.h"
+#include "icam/CCameraDelegatorComp.h"
 
 
 /**
-	Base system-undependent general package.
+	Base system-independent general package.
 */
 namespace CameraPck
 {
@@ -47,7 +48,7 @@ typedef icomp::TModelCompWrap<icam::CSnapBitmapSupplierComp> SnapBitmapSupplier;
 typedef icam::CMemoryAcquisitionComp MemoryAcquisition;
 typedef icam::CAcquisitionConstraintsComp AcquisitionConstraints;
 typedef icam::CSelectionParamCameraComp SelectionParamCamera;
-
+typedef icam::CCameraDelegatorComp CameraDelegator;
 
 } // namespace CameraPck
 

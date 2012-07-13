@@ -77,61 +77,72 @@
 <a name="l00074"></a><a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a4f27ff84540f06531d264dd9939e89fda7f2a712b544e9e67eda7316be139e50c">00074</a>               <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a4f27ff84540f06531d264dd9939e89fda7f2a712b544e9e67eda7316be139e50c" title="On top of the selector.">LP_TOP</a>
 <a name="l00075"></a>00075        };
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html" title="Simple editor for an exclusive option selection.">CSelectionParamGuiComp</a>);
-<a name="l00078"></a>00078               I_ASSIGN(m_optionsLabelAttrPtr, <span class="stringliteral">&quot;OptionsLabel&quot;</span>, <span class="stringliteral">&quot;Command label for the options selector&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Select&quot;</span>);
-<a name="l00079"></a>00079               I_ASSIGN(m_infoLabelAttrPtr, <span class="stringliteral">&quot;InfoLabel&quot;</span>, <span class="stringliteral">&quot;Information label for the options selector&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Info&quot;</span>);
-<a name="l00080"></a>00080               I_ASSIGN(m_infoIconProviderCompPtr, <span class="stringliteral">&quot;InfoIconProvider&quot;</span>, <span class="stringliteral">&quot;Provider of the info icon&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;InfoIconProvider&quot;</span>);
-<a name="l00081"></a>00081               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size of the used icons&quot;</span>, <span class="keyword">false</span>, 32);
-<a name="l00082"></a>00082               I_ASSIGN(m_uiModeAttrPtr, <span class="stringliteral">&quot;UiMode&quot;</span>, <span class="stringliteral">&quot;Selection representation mode. 0 - Combo box,\n1 - Horizonal layouted radio button group\n2 - Vertical layouted radio button group&quot;</span>, <span class="keyword">true</span>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#accdd24a68fc1969b44c11c6fa07e5d4ea10d38c316c669a719850fbf4dabc085c" title="Combo box selection.">UM_COMBOBOX</a>);
-<a name="l00083"></a>00083               I_ASSIGN(m_labelPositionAttrPtr, <span class="stringliteral">&quot;LabelPosition&quot;</span>, <span class="stringliteral">&quot;Selection label position. 0 - Left from the selector,\n1 - On top of the selector&quot;</span>, <span class="keyword">false</span>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a4f27ff84540f06531d264dd9939e89fda19322d40f99dd4f149f8e4c8a37177a3" title="Left from the selector.">LP_LEFT</a>);
-<a name="l00084"></a>00084        I_END_COMPONENT;
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a3328f8e6cd33cdb75e7528e3718f2391" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="keyword">protected</span>:
-<a name="l00090"></a>00090        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56c87065e5e7a82af60141046247fc94" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#ac03514f920663d14d38f2d8999327cd7" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a2f56abc8c29885436625c37772435a1d" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00077"></a><a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22e">00077</a>        <span class="keyword">enum</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22e">LabelAlignment</a>
+<a name="l00078"></a>00078        {
+<a name="l00079"></a><a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22ea27d237854041e89e05fa1bb48d580e37">00079</a>               <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22eaf3b8c2a6a4ddc4b9fb1f6e80af10d08c">LA_LEFT_TOP</a>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22ea18dae9ace096b028c18a17c301c6e2af">LA_CENTER_TOP</a>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22ea27d237854041e89e05fa1bb48d580e37">LA_RIGHT_TOP</a>,
+<a name="l00080"></a><a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22eae8edd8905e518caff06cd8aeee35a26c">00080</a>               <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22ea7c04d371d5c0c9e1e395fde44dba7699">LA_LEFT_CENTER</a>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22eaf9ca0f7c3e24e07ee851df2782be638a">LA_CENTER</a>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22eae8edd8905e518caff06cd8aeee35a26c">LA_RIGHT_CENTER</a>,
+<a name="l00081"></a><a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22eabb8a9cae002710c5e021d83f7dcba934">00081</a>               <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22ead38e5fd53390783b12611e9a4bca26ed">LA_LEFT_BOTTOM</a>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22ea65937b847ea23d7afb9dffb3216790e9">LA_CENTER_BOTTOM</a>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22eabb8a9cae002710c5e021d83f7dcba934">LA_RIGHT_BOTTOM</a>
+<a name="l00082"></a>00082        };
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html" title="Simple editor for an exclusive option selection.">CSelectionParamGuiComp</a>);
+<a name="l00085"></a>00085               I_ASSIGN(m_optionsLabelAttrPtr, <span class="stringliteral">&quot;OptionsLabel&quot;</span>, <span class="stringliteral">&quot;Command label for the options selector&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Select&quot;</span>);
+<a name="l00086"></a>00086               I_ASSIGN(m_infoLabelAttrPtr, <span class="stringliteral">&quot;InfoLabel&quot;</span>, <span class="stringliteral">&quot;Information label for the options selector&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Info&quot;</span>);
+<a name="l00087"></a>00087               I_ASSIGN(m_infoIconProviderCompPtr, <span class="stringliteral">&quot;InfoIconProvider&quot;</span>, <span class="stringliteral">&quot;Provider of the info icon&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;InfoIconProvider&quot;</span>);
+<a name="l00088"></a>00088               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size of the used icons&quot;</span>, <span class="keyword">false</span>, 32);
+<a name="l00089"></a>00089               I_ASSIGN(m_uiModeAttrPtr, <span class="stringliteral">&quot;UiMode&quot;</span>, <span class="stringliteral">&quot;Selection representation mode.\n0 - Combo box,\n1 - Horizonal layouted radio button group\n2 - Vertical layouted radio button group&quot;</span>, <span class="keyword">true</span>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#accdd24a68fc1969b44c11c6fa07e5d4ea10d38c316c669a719850fbf4dabc085c" title="Combo box selection.">UM_COMBOBOX</a>);
+<a name="l00090"></a>00090               I_ASSIGN(m_labelPositionAttrPtr, <span class="stringliteral">&quot;LabelPosition&quot;</span>, <span class="stringliteral">&quot;Selection label position.\n0 - Left from the selector,\n1 - On top of the selector&quot;</span>, <span class="keyword">false</span>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a4f27ff84540f06531d264dd9939e89fda19322d40f99dd4f149f8e4c8a37177a3" title="Left from the selector.">LP_LEFT</a>);
+<a name="l00091"></a>00091               I_ASSIGN(m_labelAlignAttrPtr, <span class="stringliteral">&quot;LabelAlignment&quot;</span>, <span class="stringliteral">&quot;Selection label alignment.\n0 - Left-Top,\n1 - Center-Top,\n2 - Right-Top,\n3 - Left-Center,\n4 - Center,\n5 - Right-Center,\n6 - Left-Bottom,\n7 - Center-Bottom,\n8 - Right-Bottom&quot;</span>, <span class="keyword">false</span>, <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56a5220d36935a9e9012e60082aac22ea7c04d371d5c0c9e1e395fde44dba7699">LA_LEFT_CENTER</a>);
+<a name="l00092"></a>00092               I_ASSIGN(m_labelWidthAttrPtr, <span class="stringliteral">&quot;LabelWidth&quot;</span>, <span class="stringliteral">&quot;Fixed label width (in pixels)&quot;</span>, <span class="keyword">false</span>, 100);
+<a name="l00093"></a>00093        I_END_COMPONENT;
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a9fe4691ae12e6aecfe32a25bc415a2bd" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a7bc1c19b4ddad3b775c6681e0f0bc808" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a13bf79e337e866b45b4774337c994320" title="Called from widget event filter when slave widget is shown.">OnGuiShown</a>();
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#af5368c8e47a06f7343439f4484d820b8">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00104"></a>00104        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a1b98819d273224667c32201f45e37fb2">OnSelectionChanged</a>(<span class="keywordtype">int</span> index);
-<a name="l00105"></a>00105        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#af0bc6b8f70e8c927ee23b41976b8a5f6">OnRadioButtonSelectionChanged</a>(<span class="keywordtype">bool</span> isSelected);
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 <span class="keyword">private</span>:
-<a name="l00108"></a>00108        <span class="keywordtype">void</span> UpdateComboBoxesView();
-<a name="l00109"></a>00109        <span class="keywordtype">void</span> UpdateRadioButtonView();
-<a name="l00110"></a>00110        <span class="keywordtype">void</span> UpdateDescriptionFrame();
+<a name="l00095"></a>00095        <span class="comment">// reimplemented (imod::IModelEditor)</span>
+<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a3328f8e6cd33cdb75e7528e3718f2391" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="keyword">protected</span>:
+<a name="l00099"></a>00099        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a56c87065e5e7a82af60141046247fc94" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#ac03514f920663d14d38f2d8999327cd7" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a2f56abc8c29885436625c37772435a1d" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a9fe4691ae12e6aecfe32a25bc415a2bd" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a7bc1c19b4ddad3b775c6681e0f0bc808" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a13bf79e337e866b45b4774337c994320" title="Called from widget event filter when slave widget is shown.">OnGuiShown</a>();
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00110"></a>00110        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#af5368c8e47a06f7343439f4484d820b8">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00111"></a>00111 
-<a name="l00112"></a>00112 <span class="keyword">private</span>:
-<a name="l00113"></a>00113        I_ATTR(QString, m_optionsLabelAttrPtr);
-<a name="l00114"></a>00114        I_ATTR(QString, m_infoLabelAttrPtr);
-<a name="l00115"></a>00115        I_ATTR(<span class="keywordtype">int</span>, m_uiModeAttrPtr);
-<a name="l00116"></a>00116        I_ATTR(<span class="keywordtype">int</span>, m_labelPositionAttrPtr);
-<a name="l00117"></a>00117        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_infoIconProviderCompPtr);
-<a name="l00118"></a>00118        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QComboBox&gt;</a> m_comboBoxes;
-<a name="l00121"></a>00121        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QRadioButton&gt;</a> m_radioButtons;
-<a name="l00122"></a>00122        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QFrame&gt;</a> m_radioButtonFramePtr;
-<a name="l00123"></a>00123 };
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 } <span class="comment">// namespace iqtprm</span>
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129 <span class="preprocessor">#endif // !iqtprm_CSelectionParamGuiComp_included</span>
-<a name="l00130"></a>00130 <span class="preprocessor"></span>
-<a name="l00131"></a>00131 
+<a name="l00112"></a>00112 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00113"></a>00113        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a1b98819d273224667c32201f45e37fb2">OnSelectionChanged</a>(<span class="keywordtype">int</span> index);
+<a name="l00114"></a>00114        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_selection_param_gui_comp.html#af0bc6b8f70e8c927ee23b41976b8a5f6">OnRadioButtonSelectionChanged</a>(<span class="keywordtype">bool</span> isSelected);
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="keyword">private</span>:
+<a name="l00117"></a>00117        <span class="keywordtype">void</span> UpdateComboBoxesView();
+<a name="l00118"></a>00118        <span class="keywordtype">void</span> UpdateRadioButtonView();
+<a name="l00119"></a>00119        <span class="keywordtype">void</span> UpdateDescriptionFrame();
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 <span class="keyword">private</span>:
+<a name="l00122"></a>00122        I_ATTR(QString, m_optionsLabelAttrPtr);
+<a name="l00123"></a>00123        I_ATTR(QString, m_infoLabelAttrPtr);
+<a name="l00124"></a>00124        I_ATTR(<span class="keywordtype">int</span>, m_uiModeAttrPtr);
+<a name="l00125"></a>00125        I_ATTR(<span class="keywordtype">int</span>, m_labelPositionAttrPtr);
+<a name="l00126"></a>00126        I_ATTR(<span class="keywordtype">int</span>, m_labelAlignAttrPtr);
+<a name="l00127"></a>00127        I_ATTR(<span class="keywordtype">int</span>, m_labelWidthAttrPtr);
+<a name="l00128"></a>00128        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_infoIconProviderCompPtr);
+<a name="l00129"></a>00129        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QComboBox&gt;</a> m_comboBoxes;
+<a name="l00132"></a>00132        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QRadioButton&gt;</a> m_radioButtons;
+<a name="l00133"></a>00133        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QFrame&gt;</a> m_radioButtonFramePtr;
+<a name="l00134"></a>00134 };
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137 } <span class="comment">// namespace iqtprm</span>
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 <span class="preprocessor">#endif // !iqtprm_CSelectionParamGuiComp_included</span>
+<a name="l00141"></a>00141 <span class="preprocessor"></span>
+<a name="l00142"></a>00142 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

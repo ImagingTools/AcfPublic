@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icam/CCameraDelegatorBase.h"
+#include "icam/CCameraDelegatorComp.h"
 
 
 // ACF includes
@@ -33,7 +33,7 @@ namespace icam
 
 // reimplemented (iipr::IBitmapAcquisition)
 
-istd::CIndex2d CCameraDelegatorBase::GetBitmapSize(const iprm::IParamsSet* paramsPtr) const
+istd::CIndex2d CCameraDelegatorComp::GetBitmapSize(const iprm::IParamsSet* paramsPtr) const
 {
 	if (m_slaveCameraCompPtr.IsValid()){
 		return m_slaveCameraCompPtr->GetBitmapSize(paramsPtr);
@@ -45,7 +45,7 @@ istd::CIndex2d CCameraDelegatorBase::GetBitmapSize(const iprm::IParamsSet* param
 
 // reimplemented (iproc::IProcessor)
 
-int CCameraDelegatorBase::GetProcessorState(const iprm::IParamsSet* paramsPtr) const
+int CCameraDelegatorComp::GetProcessorState(const iprm::IParamsSet* paramsPtr) const
 {
 	if (m_slaveCameraCompPtr.IsValid()){
 		return m_slaveCameraCompPtr->GetProcessorState(paramsPtr);
@@ -55,7 +55,7 @@ int CCameraDelegatorBase::GetProcessorState(const iprm::IParamsSet* paramsPtr) c
 }
 
 
-bool CCameraDelegatorBase::AreParamsAccepted(
+bool CCameraDelegatorComp::AreParamsAccepted(
 			const iprm::IParamsSet* paramsPtr,
 			const istd::IPolymorphic* inputPtr,
 			const istd::IChangeable* outputPtr) const
@@ -68,7 +68,7 @@ bool CCameraDelegatorBase::AreParamsAccepted(
 }
 
 
-int CCameraDelegatorBase::DoProcessing(
+int CCameraDelegatorComp::DoProcessing(
 			const iprm::IParamsSet* paramsPtr,
 			const istd::IPolymorphic* inputPtr,
 			istd::IChangeable* outputPtr,
@@ -82,7 +82,7 @@ int CCameraDelegatorBase::DoProcessing(
 }
 
 
-int CCameraDelegatorBase::BeginTask(
+int CCameraDelegatorComp::BeginTask(
 			const iprm::IParamsSet* paramsPtr,
 			const istd::IPolymorphic* inputPtr,
 			istd::IChangeable* outputPtr,
@@ -96,7 +96,7 @@ int CCameraDelegatorBase::BeginTask(
 }
 
 
-int CCameraDelegatorBase::WaitTaskFinished(
+int CCameraDelegatorComp::WaitTaskFinished(
 				int taskId,
 				double timeoutTime,
 				bool killOnTimeout)
@@ -109,7 +109,7 @@ int CCameraDelegatorBase::WaitTaskFinished(
 }
 
 
-void CCameraDelegatorBase::CancelTask(int taskId)
+void CCameraDelegatorComp::CancelTask(int taskId)
 {
 	if (m_slaveCameraCompPtr.IsValid()){
 		m_slaveCameraCompPtr->CancelTask(taskId);
@@ -117,7 +117,7 @@ void CCameraDelegatorBase::CancelTask(int taskId)
 }
 
 
-int CCameraDelegatorBase::GetReadyTask()
+int CCameraDelegatorComp::GetReadyTask()
 {
 	if (m_slaveCameraCompPtr.IsValid()){
 		return m_slaveCameraCompPtr->GetReadyTask();
@@ -127,7 +127,7 @@ int CCameraDelegatorBase::GetReadyTask()
 }
 
 
-int CCameraDelegatorBase::GetTaskState(int taskId) const
+int CCameraDelegatorComp::GetTaskState(int taskId) const
 {
 	if (m_slaveCameraCompPtr.IsValid()){
 		return m_slaveCameraCompPtr->GetTaskState(taskId);
@@ -137,7 +137,7 @@ int CCameraDelegatorBase::GetTaskState(int taskId) const
 }
 
 
-void CCameraDelegatorBase::InitProcessor(const iprm::IParamsSet* paramsPtr)
+void CCameraDelegatorComp::InitProcessor(const iprm::IParamsSet* paramsPtr)
 {
 	if (m_slaveCameraCompPtr.IsValid()){
 		m_slaveCameraCompPtr->InitProcessor(paramsPtr);

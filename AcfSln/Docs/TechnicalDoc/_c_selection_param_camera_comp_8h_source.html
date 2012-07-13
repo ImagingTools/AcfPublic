@@ -37,17 +37,17 @@
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_manager_8h.html">iprm/IParamsManager.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="comment">// ACF-Solutions include</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_c_camera_delegator_base_8h.html">icam/CCameraDelegatorBase.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_c_camera_delegator_comp_8h.html">icam/CCameraDelegatorComp.h</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 <span class="keyword">namespace </span>icam
 <a name="l00018"></a>00018 {
 <a name="l00019"></a>00019 
 <a name="l00020"></a>00020 
-<a name="l00021"></a><a class="code" href="classicam_1_1_c_selection_param_camera_comp.html">00021</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_c_selection_param_camera_comp.html">CSelectionParamCameraComp</a>: <span class="keyword">public</span> <a class="code" href="classicam_1_1_c_camera_delegator_base.html" title="Implementation of bitmap acquisition delegating all calls to some slave object.">CCameraDelegatorBase</a>
+<a name="l00021"></a><a class="code" href="classicam_1_1_c_selection_param_camera_comp.html">00021</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_c_selection_param_camera_comp.html">CSelectionParamCameraComp</a>: <span class="keyword">public</span> <a class="code" href="classicam_1_1_c_camera_delegator_comp.html" title="Implementation of bitmap acquisition delegating all calls to some slave object.">CCameraDelegatorComp</a>
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
-<a name="l00024"></a><a class="code" href="classicam_1_1_c_selection_param_camera_comp.html#aa160ff1248a9548e5a5f8f47c8263cbe">00024</a>        <span class="keyword">typedef</span> <a class="code" href="classicam_1_1_c_camera_delegator_base.html" title="Implementation of bitmap acquisition delegating all calls to some slave object.">CCameraDelegatorBase</a> <a class="code" href="classicam_1_1_c_selection_param_camera_comp.html#aa160ff1248a9548e5a5f8f47c8263cbe">BaseClass</a>;
+<a name="l00024"></a><a class="code" href="classicam_1_1_c_selection_param_camera_comp.html#ac2fdfa26f26ed50c09d77a6d7bd9202a">00024</a>        <span class="keyword">typedef</span> <a class="code" href="classicam_1_1_c_camera_delegator_comp.html" title="Implementation of bitmap acquisition delegating all calls to some slave object.">CCameraDelegatorComp</a> <a class="code" href="classicam_1_1_c_selection_param_camera_comp.html#ac2fdfa26f26ed50c09d77a6d7bd9202a">BaseClass</a>;
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026        I_BEGIN_COMPONENT(<a class="code" href="classicam_1_1_c_selection_param_camera_comp.html">CSelectionParamCameraComp</a>);
 <a name="l00027"></a>00027               I_ASSIGN(m_selectionIdAttrPtr, <span class="stringliteral">&quot;SelectionId&quot;</span>, <span class="stringliteral">&quot;ID of selection in parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Input&quot;</span>);
