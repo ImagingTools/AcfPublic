@@ -24,7 +24,7 @@
 #define i2d_CRectangle_included
 
 
-#include "istd/CRange.h"
+#include "istd/TRange.h"
 #include "istd/CIndex2d.h"
 
 #include "iser/ISerializable.h"

@@ -25,7 +25,7 @@
 
 
 #include "istd/IPolymorphic.h"
-#include "istd/CRange.h"
+#include "istd/TRange.h"
 
 #include "icam/icam.h"
 

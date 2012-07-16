@@ -255,7 +255,7 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_rect_8h</filename>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
-    <includes id="_c_int_range_8h" name="CIntRange.h" local="yes" imported="no">istd/CIntRange.h</includes>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <includes id="_c_size_8h" name="CSize.h" local="yes" imported="no">ibase/CSize.h</includes>
     <class kind="class">i2d::CRect</class>
@@ -265,7 +265,7 @@
     <name>CRectangle.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_rectangle_8h</filename>
-    <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
@@ -2365,6 +2365,7 @@
     <name>CScanlineMask.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_scanline_mask_8h</filename>
+    <includes id="_t_ranges_8h" name="TRanges.h" local="yes" imported="no">istd/TRanges.h</includes>
     <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
@@ -2439,7 +2440,7 @@
     <name>CComplexDoubleManip.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_c_complex_double_manip_8h</filename>
-    <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
     <includes id="_c_fixed_point_manip_8h" name="CFixedPointManip.h" local="yes" imported="no">imath/CFixedPointManip.h</includes>
     <class kind="class">imath::CComplexDoubleManip</class>
     <namespace>imath</namespace>
@@ -2592,7 +2593,7 @@
     <filename>_t_i_sampled_function_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_t_index_8h" name="TIndex.h" local="yes" imported="no">istd/TIndex.h</includes>
-    <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
     <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="yes" imported="no">imath/TIMathFunction.h</includes>
     <includes id="_t_vector_8h" name="TVector.h" local="yes" imported="no">imath/TVector.h</includes>
     <class kind="class">imath::TISampledFunction</class>
@@ -4832,7 +4833,8 @@
     <name>CPrimitiveTypesSerializer.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_c_primitive_types_serializer_8h</filename>
-    <includes id="_c_range_8h" name="CRange.h" local="yes" imported="no">istd/CRange.h</includes>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
+    <includes id="_t_ranges_8h" name="TRanges.h" local="yes" imported="no">istd/TRanges.h</includes>
     <includes id="_t_index_8h" name="TIndex.h" local="yes" imported="no">istd/TIndex.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <class kind="class">iser::CPrimitiveTypesSerializer</class>
@@ -5131,39 +5133,11 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
-    <name>CIntRange.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>_c_int_range_8h</filename>
-    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
-    <namespace>istd</namespace>
-    <member kind="typedef">
-      <type>istd::TRange&lt; int &gt;</type>
-      <name>CIntRange</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a00297e6d21a1ecbb94c7c66bf61cc4f6</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>CRandomNumber.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_c_random_number_8h</filename>
     <class kind="class">istd::CRandomNumber</class>
     <namespace>istd</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRange.h</name>
-    <path>C:/Temp/Acf/Include/istd/</path>
-    <filename>_c_range_8h</filename>
-    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
-    <namespace>istd</namespace>
-    <member kind="typedef">
-      <type>istd::TRange&lt; double &gt;</type>
-      <name>CRange</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>afdd381b0ad57baa197378147ab9e98e2</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>CVarIndex.h</name>
@@ -5480,6 +5454,42 @@
     <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::TRange</class>
     <namespace>istd</namespace>
+    <member kind="typedef">
+      <type>istd::TRange&lt; double &gt;</type>
+      <name>CRange</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>afdd381b0ad57baa197378147ab9e98e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TRange&lt; int &gt;</type>
+      <name>CIntRange</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>a00297e6d21a1ecbb94c7c66bf61cc4f6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>TRanges.h</name>
+    <path>C:/Temp/Acf/Include/istd/</path>
+    <filename>_t_ranges_8h</filename>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
+    <class kind="class">istd::TRanges</class>
+    <namespace>istd</namespace>
+    <member kind="typedef">
+      <type>TRanges&lt; double &gt;</type>
+      <name>CRanges</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>a24f0a77ba892b5c6e5db2bdbb9d381c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TRanges&lt; int &gt;</type>
+      <name>CIntRanges</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>aa43dd797b70403051ebf80fd7d2fc25d</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>TSingleFactory.h</name>
@@ -23882,13 +23892,6 @@
     <name>iimg::CScanlineMask</name>
     <filename>classiimg_1_1_c_scanline_mask.html</filename>
     <base virtualness="virtual">iimg::IRasterImage</base>
-    <member kind="typedef">
-      <type>QList&lt; istd::CIntRange &gt;</type>
-      <name>PixelRanges</name>
-      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>aa890b4b88ddc3c3b5d980a0f551c145a</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CScanlineMask</name>
@@ -23911,10 +23914,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const PixelRanges *</type>
+      <type>const istd::CIntRanges *</type>
       <name>GetPixelRanges</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a76f8cf0c701d34b06ca3342833fe0fbe</anchor>
+      <anchor>ac028bcb59cb2bea3abff3ba7ea0f0101</anchor>
       <arglist>(int lineIndex) const </arglist>
     </member>
     <member kind="function">
@@ -24063,34 +24066,6 @@
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
       <anchor>a2f3947c71c49739c5ec3bc2bc57dde0b</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>GetLineUnion</name>
-      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a3e7b8096289150d5c690e773e6978e5d</anchor>
-      <arglist>(const PixelRanges &amp;line1, const PixelRanges &amp;line2, PixelRanges &amp;result)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>LineUnion</name>
-      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a64bec86d3c036dd79c24604346c71a82</anchor>
-      <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>GetLineIntersection</name>
-      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>ab4a48eeae4a2ba96065afd45342acb4a</anchor>
-      <arglist>(const PixelRanges &amp;line1, const PixelRanges &amp;line2, PixelRanges &amp;result)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>LineIntersection</name>
-      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a9bc868022aa4ba6de67ac4aad34f4c79</anchor>
-      <arglist>(const PixelRanges &amp;line, PixelRanges &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -40895,6 +40870,27 @@
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
+      <name>SerializeIntRange</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>aa420b81cb679f80cb4e470bceda77ab5</anchor>
+      <arglist>(iser::IArchive &amp;archive, istd::CIntRange &amp;range)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeRanges</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a6ba4d83dad653ba77e94af959374e12d</anchor>
+      <arglist>(iser::IArchive &amp;archive, istd::CRanges &amp;ranges)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeIntRanges</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a70115bd3d363f5c0fdc627df8a2dff64</anchor>
+      <arglist>(iser::IArchive &amp;archive, istd::CIntRanges &amp;ranges)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
       <name>SerializeDateTime</name>
       <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
       <anchor>a479cbded59d35c92ce27a04a8380592c</anchor>
@@ -42395,25 +42391,12 @@
     <class kind="class">istd::TDeleteAdapter</class>
     <class kind="class">istd::TPointerVector</class>
     <class kind="class">istd::TRange</class>
+    <class kind="class">istd::TRanges</class>
     <class kind="class">istd::TSingleFactory</class>
     <class kind="class">istd::TSmartPtr</class>
     <class kind="class">istd::TTransPtr</class>
     <class kind="class">istd::TUpdateManagerWrap</class>
     <class kind="class">istd::TVarArray</class>
-    <member kind="typedef">
-      <type>istd::TRange&lt; int &gt;</type>
-      <name>CIntRange</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a00297e6d21a1ecbb94c7c66bf61cc4f6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>istd::TRange&lt; double &gt;</type>
-      <name>CRange</name>
-      <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>afdd381b0ad57baa197378147ab9e98e2</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>TChangeNotifier&lt; IChangeable &gt;</type>
       <name>CChangeNotifier</name>
@@ -42440,6 +42423,34 @@
       <name>IHierarchical</name>
       <anchorfile>namespaceistd.html</anchorfile>
       <anchor>a909f8c64d39758abb122da2a5d1c0f3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TRange&lt; double &gt;</type>
+      <name>CRange</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>afdd381b0ad57baa197378147ab9e98e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TRange&lt; int &gt;</type>
+      <name>CIntRange</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>a00297e6d21a1ecbb94c7c66bf61cc4f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TRanges&lt; double &gt;</type>
+      <name>CRanges</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>a24f0a77ba892b5c6e5db2bdbb9d381c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TRanges&lt; int &gt;</type>
+      <name>CIntRanges</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>aa43dd797b70403051ebf80fd7d2fc25d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -45969,6 +45980,193 @@
       <anchorfile>classistd_1_1_t_range.html</anchorfile>
       <anchor>a8f0da6a2bff843dd5c35950d6ab48e39</anchor>
       <arglist>(ValueType value1, ValueType value2)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::TRanges</name>
+    <filename>classistd_1_1_t_ranges.html</filename>
+    <templarg>ValueType</templarg>
+    <member kind="typedef">
+      <type>QList&lt; TRange&lt; ValueType &gt; &gt;</type>
+      <name>RangeList</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>af09dc919dd4ac811c5de1a48c496e724</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::set&lt; ValueType &gt;</type>
+      <name>SwitchPoints</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a4c7ba1a93bf6fedab354bced4b40e1bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TRanges</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a85047040efc62d8ea05bbf6f2b4b4a0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>aba2260d520a8780ca38255865b2454e0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsEmpty</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>ad605238c752299f57d46866e73f0e9a7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const SwitchPoints &amp;</type>
+      <name>GetSwitchPoints</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a52b195447442bc95d8cb01584e8beb1b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>SwitchPoints &amp;</type>
+      <name>GetSwitchPointsRef</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a26a24ba4aceddbb2d2bfccc64c91cd2e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InsertSwitchPoint</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a35a1127da7204ddc0de789d097a13030</anchor>
+      <arglist>(ValueType point)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetBeginState</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a7d46da67c0e6354ec442032bc494335a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetBeginState</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a28be64e21fa7c6e390bd332fc7caf009</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInside</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a7538136f8147d44dae251d07b0841a73</anchor>
+      <arglist>(ValueType point) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInside</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>ac3e57bf72fc2631dc1c735f1b1049657</anchor>
+      <arglist>(const TRange&lt; ValueType &gt; &amp;range) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInside</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a828da86224b651b28c637b122cf1cff9</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;rangesList) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRanges&lt; ValueType &gt;</type>
+      <name>GetUnion</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a2bc86c9d0011e2c79a4d5db01d105226</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;rangesList) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetUnion</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a4fd1b1dc49bb7a9c165d61e003b3a0be</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;rangesList, TRanges&lt; ValueType &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Union</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>aab8671d6f0a0f914a35dbfc152944c17</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;rangesList)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Union</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>aa399284d995e3d9576fc94211bf94666</anchor>
+      <arglist>(const TRange&lt; ValueType &gt; &amp;range, bool isInverted=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>TRanges&lt; ValueType &gt;</type>
+      <name>GetIntersection</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a5621a6f9ee9b77f1e53c04a5106549ad</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;rangesList) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetIntersection</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>adc438b11f2323510293b419e90ce0f9b</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;rangesList, TRanges&lt; ValueType &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Intersection</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>ab92dfc8871157df594706ed88fe20b1c</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;rangesList)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Intersection</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>ae68683fb6d70063b0a24da1cc86d525b</anchor>
+      <arglist>(const TRange&lt; ValueType &gt; &amp;range, bool isInverted=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Erosion</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a841475b74296a68dea5cc5d4437b7a87</anchor>
+      <arglist>(ValueType value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Dilatation</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a04e888a95679982782656941ec12879e</anchor>
+      <arglist>(ValueType value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>RemoveGaps</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a78649429abf9b035db8e65983d3d3404</anchor>
+      <arglist>(ValueType value, bool gapState=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ShiftRanges</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a75ccd64818b185cb5dbe8231b2907c6f</anchor>
+      <arglist>(ValueType offset)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetAsList</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a10cd04168431ce75a3c174d628ebb27d</anchor>
+      <arglist>(const TRange&lt; ValueType &gt; &amp;range, RangeList &amp;result) const </arglist>
     </member>
   </compound>
   <compound kind="class">

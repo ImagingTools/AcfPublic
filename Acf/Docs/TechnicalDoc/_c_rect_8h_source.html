@@ -31,7 +31,7 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_index2d_8h.html">istd/CIndex2d.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_int_range_8h.html">istd/CIntRange.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_t_range_8h.html">istd/TRange.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_rectangle_8h.html">i2d/CRectangle.h</a>&quot;</span>
 <a name="l00010"></a>00010 
@@ -163,8 +163,8 @@
 <a name="l00203"></a>00203 
 <a name="l00204"></a><a class="code" href="classi2d_1_1_c_rect.html#afcfc23b1895f5e327ff2ebb475c642f0">00204</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html#a06b042589985ea07c6d2a589164b51d0">CRect::CRect</a>(<span class="keywordtype">int</span> left, <span class="keywordtype">int</span> top, <span class="keywordtype">int</span> right, <span class="keywordtype">int</span> bottom)
 <a name="l00205"></a>00205 {
-<a name="l00206"></a>00206        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(left, right);
-<a name="l00207"></a>00207        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(top, bottom);
+<a name="l00206"></a>00206        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(left, right);
+<a name="l00207"></a>00207        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(top, bottom);
 <a name="l00208"></a>00208 
 <a name="l00209"></a>00209        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00210"></a>00210 }
@@ -172,8 +172,8 @@
 <a name="l00212"></a>00212 
 <a name="l00213"></a><a class="code" href="classi2d_1_1_c_rect.html#a8f86557756ba0c9a118783a058a64bab">00213</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html#a06b042589985ea07c6d2a589164b51d0">CRect::CRect</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; leftTop, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; rightBottom)
 <a name="l00214"></a>00214 {
-<a name="l00215"></a>00215        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>(), rightBottom.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
-<a name="l00216"></a>00216        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>(), rightBottom.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
+<a name="l00215"></a>00215        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>(), rightBottom.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
+<a name="l00216"></a>00216        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>(), rightBottom.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00217"></a>00217 
 <a name="l00218"></a>00218        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00219"></a>00219 }
@@ -181,8 +181,8 @@
 <a name="l00221"></a>00221 
 <a name="l00222"></a><a class="code" href="classi2d_1_1_c_rect.html#a320ca41c6b6ed7e43b27c4026a4a9dcb">00222</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html#a06b042589985ea07c6d2a589164b51d0">CRect::CRect</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; leftTop, <span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">ibase::CSize</a>&amp; size)
 <a name="l00223"></a>00223 {
-<a name="l00224"></a>00224        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>(), leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>() + size.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
-<a name="l00225"></a>00225        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>(), leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>() + size.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
+<a name="l00224"></a>00224        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>(), leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>() + size.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
+<a name="l00225"></a>00225        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>(), leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>() + size.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00226"></a>00226 
 <a name="l00227"></a>00227        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00228"></a>00228 }
@@ -190,8 +190,8 @@
 <a name="l00230"></a>00230 
 <a name="l00231"></a><a class="code" href="classi2d_1_1_c_rect.html#a4f11612e0959e3932083d06737be0517">00231</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html#a06b042589985ea07c6d2a589164b51d0">CRect::CRect</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; rect)
 <a name="l00232"></a>00232 {
-<a name="l00233"></a>00233        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(<span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a9db7eb11cf23e3a95d450f773be932be">GetLeft</a>()), <span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a94382d9c1463e7ca717488b6bfd16ef7">GetRight</a>()));
-<a name="l00234"></a>00234        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(<span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#ac99a58e3e256278be0a389e418b2e048">GetTop</a>()), <span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a17dd2e85d83398d932c330033f28c784">GetBottom</a>()));
+<a name="l00233"></a>00233        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(<span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a9db7eb11cf23e3a95d450f773be932be">GetLeft</a>()), <span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a94382d9c1463e7ca717488b6bfd16ef7">GetRight</a>()));
+<a name="l00234"></a>00234        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(<span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#ac99a58e3e256278be0a389e418b2e048">GetTop</a>()), <span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a17dd2e85d83398d932c330033f28c784">GetBottom</a>()));
 <a name="l00235"></a>00235 
 <a name="l00236"></a>00236        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00237"></a>00237 }
@@ -199,8 +199,8 @@
 <a name="l00239"></a>00239 
 <a name="l00240"></a><a class="code" href="classi2d_1_1_c_rect.html#ad6f743d300cfc44b7fb66412aa1a9d78">00240</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html#a06b042589985ea07c6d2a589164b51d0">CRect::CRect</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">ibase::CSize</a>&amp; size)
 <a name="l00241"></a>00241 {
-<a name="l00242"></a>00242        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(0, size.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
-<a name="l00243"></a>00243        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(0, size.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
+<a name="l00242"></a>00242        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(0, size.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
+<a name="l00243"></a>00243        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(0, size.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00244"></a>00244 
 <a name="l00245"></a>00245        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00246"></a>00246 }
@@ -501,8 +501,8 @@
 <a name="l00541"></a>00541        <span class="keywordtype">int</span> right = qMax(<a class="code" href="classi2d_1_1_c_rect.html#ac9d1434fd87675f0faf51733bc6931b2">GetRight</a>(), point.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
 <a name="l00542"></a>00542        <span class="keywordtype">int</span> bottom = qMax(<a class="code" href="classi2d_1_1_c_rect.html#a75da4cf644f64180b02ec8a816cae12e">GetBottom</a>(), point.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00543"></a>00543 
-<a name="l00544"></a>00544        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(left, right);
-<a name="l00545"></a>00545        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6" title="Range of two integer numbers.">istd::CIntRange</a>(top, bottom);
+<a name="l00544"></a>00544        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(left, right);
+<a name="l00545"></a>00545        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(top, bottom);
 <a name="l00546"></a>00546 }
 <a name="l00547"></a>00547 
 <a name="l00548"></a>00548 

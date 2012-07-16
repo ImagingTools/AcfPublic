@@ -25,7 +25,7 @@
 
 
 #include "istd/IChangeable.h"
-#include "istd/CRange.h"
+#include "istd/TRange.h"
 
 #include "imeas/imeas.h"
 
