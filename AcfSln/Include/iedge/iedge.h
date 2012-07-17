@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef icam_included
-#define icam_included
+#ifndef iedge_included
+#define iedge_included
 
 
 #include "iproc/iproc.h"
@@ -46,5 +46,5 @@ namespace iedge
 } // namespace iedge
 
 
-#endif // !icam_included
+#endif // !iedge_included
 
