@@ -772,7 +772,7 @@ void TRanges<ValueType>::GetAsList(const TRange<ValueType>& range, RangeList& re
 		}
 
 		if (position > prevPosition){
-			if (!state){
+			if (state){
 				result.push_back(TRange<ValueType>(prevPosition, position));
 			}
 
