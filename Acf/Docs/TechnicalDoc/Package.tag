@@ -3047,6 +3047,8 @@
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>iprm_8h</filename>
     <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
+    <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
     <includes id="icomp_8h" name="icomp.h" local="yes" imported="no">icomp/icomp.h</includes>
     <namespace>iprm</namespace>
   </compound>
@@ -3284,6 +3286,8 @@
     <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
     <includes id="_c_bitmap_base_8h" name="CBitmapBase.h" local="yes" imported="no">iimg/CBitmapBase.h</includes>
     <includes id="_i_object_snap_8h" name="IObjectSnap.h" local="yes" imported="no">ibase/IObjectSnap.h</includes>
+    <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
+    <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
     <includes id="_i_q_image_provider_8h" name="IQImageProvider.h" local="yes" imported="no">iqt/IQImageProvider.h</includes>
     <class kind="class">iqt::CBitmap</class>
     <namespace>iqt</namespace>
@@ -3982,6 +3986,8 @@
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_c_multi_document_workspace_gui_comp_8h</filename>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_c_multi_document_manager_base_8h" name="CMultiDocumentManagerBase.h" local="yes" imported="no">idoc/CMultiDocumentManagerBase.h</includes>
     <includes id="_i_document_template_8h" name="IDocumentTemplate.h" local="yes" imported="no">idoc/IDocumentTemplate.h</includes>
     <includes id="_i_settings_provider_8h" name="ISettingsProvider.h" local="yes" imported="no">iqt/ISettingsProvider.h</includes>
@@ -4304,6 +4310,19 @@
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSelectableCommandsProviderComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_selectable_commands_provider_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">iqtgui::CSelectableCommandsProviderComp</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -6435,6 +6454,10 @@
     <filename>class_c_view_provider_gui_comp.html</filename>
   </compound>
   <compound kind="class">
+    <name>DocumentSelectionInfo</name>
+    <filename>class_document_selection_info.html</filename>
+  </compound>
+  <compound kind="class">
     <name>QGraphicsRectItem</name>
     <filename>class_q_graphics_rect_item.html</filename>
   </compound>
@@ -7033,6 +7056,34 @@
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
       <anchor>a396c24871c18b3c44379e0634e92e453</anchor>
       <arglist>(const CAnnulus &amp;annulus) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>a97de2392bbcb8359aae87d166f9a9dee</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>a994865c894bec6edfb431b5fc7792566</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>ab592f4f5aca23656ccdd2186efb99d7c</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>a46103c662f886313c1b115af1f5a0c54</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -22473,6 +22524,13 @@
       <anchor>a230ee9606b4757ad5210b9707ddc41be</anchor>
       <arglist>(const QString &amp;filePath) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>GetDocumentIndex</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a33c45da92ae4e15ee00044f01a2fa785</anchor>
+      <arglist>(const SingleDocumentData &amp;document) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual SingleDocumentData *</type>
       <name>CreateDocument</name>
@@ -31597,6 +31655,7 @@
     <base>iimg::CBitmapBase</base>
     <base virtualness="virtual">iqt::IQImageProvider</base>
     <base virtualness="virtual">ibase::IObjectSnap</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iimg::CBitmapBase</type>
       <name>BaseClass</name>
@@ -31652,6 +31711,13 @@
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
       <anchor>acd10f15b8f3e7fd0ba71905053450dac</anchor>
       <arglist>(const istd::IChangeable &amp;data, iimg::IBitmap &amp;objectSnap, const istd::CIndex2d &amp;size) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
+      <anchor>a9b54d8985735b23efaaf7e97be068e4c</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -34674,6 +34740,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>SetConsoleCalibration</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a5e51c05bda47247602d8aeab2f6db192</anchor>
+      <arglist>(const i2d::ITransformation2d *calibrationPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>a00c5aee16212fa2937f7a6d7670a5796</anchor>
@@ -34699,6 +34772,13 @@
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>a5b024ab4b2bdcc1ac76c5148a94b8a5d</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iview::CAffiniteCalibrationShape</type>
+      <name>m_calibrationShape</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a966c48020079e2b494ffc41f218b215e</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35475,6 +35555,41 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a26500833dd562b1e7b52a55a8df342a4</anchor>
+      <arglist>(DocumentSelection)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a2e2dd9cb592cf660cf350efc62f5cdde</anchor>
+      <arglist>(DocumentSelection, iprm::ISelectionParam, ExtractSelectionInterface)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>ae45043f63f881c395ed5af376232c428</anchor>
+      <arglist>(DocumentSelection, imod::IModel, ExtractSelectionInterfaceModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a6a181e71347da640d7986210b9980708</anchor>
+      <arglist>(DocumentSelection, istd::IChangeable, ExtractSelectionInterfaceChangeable)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>aaf6305e6839d78cdc42c6f590b6423e3</anchor>
+      <arglist>(DocumentSelection, iprm::ISelectionConstraints, ExtractSelectionInterfaceConstraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CMultiDocumentWorkspaceGuiComp</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
       <anchor>a6519aec08bc7f2a0fef9ffe0fd47e5e9</anchor>
@@ -35675,6 +35790,13 @@
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
       <anchor>a4f0ad658f66df2426edac723df87e9ab</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>imod::TModelWrap&lt; DocumentSelectionInfo &gt;</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>ad6a8794d4a6406ea0990438807f0ee0b</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35910,6 +36032,7 @@
     <class kind="class">iqtgui::CModelDialogGuiComp</class>
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
     <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
+    <class kind="class">iqtgui::CSelectableCommandsProviderComp</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <class kind="class">iqtgui::CStatusBarWidgetComp</class>
@@ -37053,6 +37176,13 @@
       <anchor>a27eb391c449d7019a43d049a308f5ea9</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtgui_1_1_c_image_properties_frame_comp.html</anchorfile>
+      <anchor>afb588a2f730c5aa25e4312ade38f1e0c</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CImagePropertyGuiComp</name>
@@ -37568,6 +37698,91 @@
       <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
       <anchor>afa94c2ea414bb8b8cccb5cab85b9394b</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CSelectableCommandsProviderComp</name>
+    <filename>classiqtgui_1_1_c_selectable_commands_provider_comp.html</filename>
+    <base>QObject</base>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a8dbd84550107730cda2bca5a5c607519</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a464ce9581b0eb69d3be2a198345180d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a00726c80266e8b2058416898c7cf3581</anchor>
+      <arglist>(m_commandSelectionModelCompPtr, m_commandSelectionCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSelectableCommandsProviderComp</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a648c7704d22aef743c6c63579dbd09d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a323289101bfd79ac81e51002d22fde27</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a5014c0ae887ad3dfa9efed9b1274a613</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a65132d1b9893599d5c2e7345ead2a837</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>abbb5767df179bf0c7439c08f00240f88</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_rootMenuCommand</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a69976d703cd2ae067ff62d985a02825d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_mainMenuCommand</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a53c5ed75658d73809f832fd97d027c88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_commandsList</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a3621b3e3b547deb14a6ec7d64a140ca6</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45959,6 +46174,20 @@
       <anchorfile>classistd_1_1_t_range.html</anchorfile>
       <anchor>aea1097d943904ddd5d89be7e7d0d0a3b</anchor>
       <arglist>(double value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>TRange &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a0483ccefc9bd881160812577229d8034</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>TRange &amp;</type>
+      <name>operator/=</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a2617f7ecebcb6e80dfadaffeb2cb46e3</anchor>
+      <arglist>(double value)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const TRange &amp;</type>

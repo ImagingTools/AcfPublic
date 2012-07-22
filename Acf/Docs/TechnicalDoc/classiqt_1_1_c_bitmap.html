@@ -38,7 +38,7 @@
 <div class="title">iqt::CBitmap Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt::CBitmap" --><!-- doxytag: inherits="iimg::CBitmapBase,iqt::IQImageProvider,ibase::IObjectSnap" -->
+<!-- doxytag: class="iqt::CBitmap" --><!-- doxytag: inherits="iimg::CBitmapBase,iqt::IQImageProvider,ibase::IObjectSnap,i2d::ICalibrationProvider" -->
 <p>Bitmap implementation based on Qt QImage.  
  <a href="classiqt_1_1_c_bitmap.html#details">More...</a></p>
 
@@ -49,17 +49,20 @@ Inheritance diagram for iqt::CBitmap:</div>
  <div class="center">
   <img src="classiqt_1_1_c_bitmap.png" usemap="#iqt::CBitmap_map" alt=""/>
   <map id="iqt::CBitmap_map" name="iqt::CBitmap_map">
-<area href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods." alt="iimg::CBitmapBase" shape="rect" coords="0,280,125,304"/>
-<area href="classiqt_1_1_i_q_image_provider.html" alt="iqt::IQImageProvider" shape="rect" coords="135,280,260,304"/>
-<area href="classibase_1_1_i_object_snap.html" title="Interface for getting a bitmap snap of any object." alt="ibase::IObjectSnap" shape="rect" coords="270,280,395,304"/>
-<area href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap." alt="iimg::IBitmap" shape="rect" coords="0,224,125,248"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="135,224,260,248"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="270,224,395,248"/>
-<area href="classiimg_1_1_i_raster_image.html" title="General definition of image contains pixels in regular grid." alt="iimg::IRasterImage" shape="rect" coords="0,168,125,192"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="0,112,125,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,125,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,125,24"/>
-<area href="classiqt_1_1_c_bitmap_surface.html" title="Bitmap implementation based on Qt QImage." alt="iqt::CBitmapSurface" shape="rect" coords="135,392,260,416"/>
+<area href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods." alt="iimg::CBitmapBase" shape="rect" coords="0,280,148,304"/>
+<area href="classiqt_1_1_i_q_image_provider.html" alt="iqt::IQImageProvider" shape="rect" coords="158,280,306,304"/>
+<area href="classibase_1_1_i_object_snap.html" title="Interface for getting a bitmap snap of any object." alt="ibase::IObjectSnap" shape="rect" coords="316,280,464,304"/>
+<area href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration." alt="i2d::ICalibrationProvider" shape="rect" coords="474,280,622,304"/>
+<area href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap." alt="iimg::IBitmap" shape="rect" coords="0,224,148,248"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="158,224,306,248"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="316,224,464,248"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="474,224,622,248"/>
+<area href="classiimg_1_1_i_raster_image.html" title="General definition of image contains pixels in regular grid." alt="iimg::IRasterImage" shape="rect" coords="0,168,148,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="474,168,622,192"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="0,112,148,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,148,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,148,24"/>
+<area href="classiqt_1_1_c_bitmap_surface.html" title="Bitmap implementation based on Qt QImage." alt="iqt::CBitmapSurface" shape="rect" coords="237,392,385,416"/>
 </map>
  </div></div>
 
@@ -78,6 +81,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a6e72080f6696e10f4472574690b0f94b">CopyImageFrom</a> (const QImage &amp;image)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#acd10f15b8f3e7fd0ba71905053450dac">GetSnap</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, <a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;objectSnap, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bitmap snap for the data object <code>data</code>.  <a href="#acd10f15b8f3e7fd0ba71905053450dac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a9b54d8985735b23efaaf7e97be068e4c">GetCalibration</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a coordinate system to a logical one.  <a href="#a9b54d8985735b23efaaf7e97be068e4c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a865905d7dc02a2fdc5a65f2c6ff182e9">IsFormatSupported</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the pixel format is supported by the bitmap implementation.  <a href="#a865905d7dc02a2fdc5a65f2c6ff182e9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#af6a2dac6dd9c0f25388fe81875a6efbd">GetPixelFormat</a> () const </td></tr>
@@ -119,7 +125,7 @@ Protected Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Bitmap implementation based on Qt QImage. </p>
 
-<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00021">21</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00024">24</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a87ff2bfecab538a3fb3c3af2b69af4b7"></a><!-- doxytag: member="iqt::CBitmap::BaseClass" ref="a87ff2bfecab538a3fb3c3af2b69af4b7" args="" -->
 <div class="memitem">
@@ -134,7 +140,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiqt_1_1_c_bitmap_surface.html#a1abd95a08e160164c99cf283f11703fe">iqt::CBitmapSurface</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00024">24</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00031">31</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
 
 </div>
 </div>
@@ -395,6 +401,27 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9b54d8985735b23efaaf7e97be068e4c"></a><!-- doxytag: member="iqt::CBitmap::GetCalibration" ref="a9b54d8985735b23efaaf7e97be068e4c" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iqt::CBitmap::GetCalibration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get access to transformation object, which transforms a coordinate system to a logical one. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to transformation if it is accessible, or NULL. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab2be60c31d86ac53521e1fee2c27b3a4"></a><!-- doxytag: member="iqt::CBitmap::GetColorAt" ref="ab2be60c31d86ac53521e1fee2c27b3a4" args="(const istd::CIndex2d &amp;position) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -629,7 +656,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00077">77</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00092">92</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
 
 </div>
 </div>

@@ -91,40 +91,42 @@
 <a name="l00082"></a>00082        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#adc78fdfd1b381f0da35436a3257afa52" title="Called when items should be removed from specified view.">GetView</a>() <span class="keyword">const</span>;
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084 <span class="keyword">protected</span>:
-<a name="l00085"></a>00085        <span class="comment">// reimplemented (CGuiComponentBase)</span>
-<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a00c5aee16212fa2937f7a6d7670a5796" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00089"></a>00089        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a41d3d22dabd8c4602501afb96ab1d592">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a41aeab8b58624ef7e48693d0efdb52e3">OnComponentCreated</a>();
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a5b024ab4b2bdcc1ac76c5148a94b8a5d">OnComponentDestroyed</a>();
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095 <span class="keyword">private</span>:
-<a name="l00096"></a>00096        I_REF(<a class="code" href="classiview_1_1_i_shape_status_info.html" title="Interface for access local bitmap information.">iview::IShapeStatusInfo</a>, m_shapeStatusInfoCompPtr);
-<a name="l00097"></a>00097        I_REF(<a class="code" href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration.">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
-<a name="l00098"></a>00098        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_calibrationProviderModelCompPtr);
-<a name="l00099"></a>00099        I_ATTR(<span class="keywordtype">int</span>, m_viewIdAttrPtr);
-<a name="l00100"></a>00100        I_ATTR(<span class="keywordtype">bool</span>, m_useAntialiasingAttrPtr);
-<a name="l00101"></a>00101        I_ATTR(<span class="keywordtype">bool</span>, m_useShapeEditCommandsAttrPtr);
-<a name="l00102"></a>00102        I_ATTR(<span class="keywordtype">bool</span>, m_useGridCommandsAttrPtr);
-<a name="l00103"></a>00103        I_ATTR(<span class="keywordtype">bool</span>, m_useScollBarCommandsAttrPtr);
-<a name="l00104"></a>00104        I_ATTR(<span class="keywordtype">bool</span>, m_useStatusBarCommandsAttrPtr);
-<a name="l00105"></a>00105        I_ATTR(<span class="keywordtype">bool</span>, m_zoomToFitEnabledAttrPtr);
-<a name="l00106"></a>00106        I_ATTR(<span class="keywordtype">int</span>, m_fitModeAttrPtr);
-<a name="l00107"></a>00107        I_ATTR(<span class="keywordtype">int</span>, m_backgroundModeAttrPtr);
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109        <a class="code" href="classiview_1_1_c_affinite_calibration_shape.html" title="Shape object for affinite calibration.">iview::CAffiniteCalibrationShape</a> m_calibrationShape;
-<a name="l00110"></a>00110 };
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113 } <span class="comment">// namespace iqt2d</span>
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116 <span class="preprocessor">#endif // !iqt2d_CViewProviderGuiComp_included</span>
-<a name="l00117"></a>00117 <span class="preprocessor"></span>
-<a name="l00118"></a>00118 
+<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a5e51c05bda47247602d8aeab2f6db192" title="Do console calibration.">SetConsoleCalibration</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* calibrationPtr);
+<a name="l00089"></a>00089        
+<a name="l00090"></a>00090        <span class="comment">// reimplemented (CGuiComponentBase)</span>
+<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a00c5aee16212fa2937f7a6d7670a5796" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00094"></a>00094        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a41d3d22dabd8c4602501afb96ab1d592">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a41aeab8b58624ef7e48693d0efdb52e3">OnComponentCreated</a>();
+<a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a5b024ab4b2bdcc1ac76c5148a94b8a5d">OnComponentDestroyed</a>();
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 <span class="keyword">protected</span>:
+<a name="l00101"></a>00101        I_REF(<a class="code" href="classiview_1_1_i_shape_status_info.html" title="Interface for access local bitmap information.">iview::IShapeStatusInfo</a>, m_shapeStatusInfoCompPtr);
+<a name="l00102"></a>00102        I_REF(<a class="code" href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration.">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
+<a name="l00103"></a>00103        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_calibrationProviderModelCompPtr);
+<a name="l00104"></a>00104        I_ATTR(<span class="keywordtype">int</span>, m_viewIdAttrPtr);
+<a name="l00105"></a>00105        I_ATTR(<span class="keywordtype">bool</span>, m_useAntialiasingAttrPtr);
+<a name="l00106"></a>00106        I_ATTR(<span class="keywordtype">bool</span>, m_useShapeEditCommandsAttrPtr);
+<a name="l00107"></a>00107        I_ATTR(<span class="keywordtype">bool</span>, m_useGridCommandsAttrPtr);
+<a name="l00108"></a>00108        I_ATTR(<span class="keywordtype">bool</span>, m_useScollBarCommandsAttrPtr);
+<a name="l00109"></a>00109        I_ATTR(<span class="keywordtype">bool</span>, m_useStatusBarCommandsAttrPtr);
+<a name="l00110"></a>00110        I_ATTR(<span class="keywordtype">bool</span>, m_zoomToFitEnabledAttrPtr);
+<a name="l00111"></a>00111        I_ATTR(<span class="keywordtype">int</span>, m_fitModeAttrPtr);
+<a name="l00112"></a>00112        I_ATTR(<span class="keywordtype">int</span>, m_backgroundModeAttrPtr);
+<a name="l00113"></a>00113 
+<a name="l00114"></a><a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a966c48020079e2b494ffc41f218b215e">00114</a>        <a class="code" href="classiview_1_1_c_affinite_calibration_shape.html" title="Shape object for affinite calibration.">iview::CAffiniteCalibrationShape</a> <a class="code" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a966c48020079e2b494ffc41f218b215e">m_calibrationShape</a>;
+<a name="l00115"></a>00115 };
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 } <span class="comment">// namespace iqt2d</span>
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 <span class="preprocessor">#endif // !iqt2d_CViewProviderGuiComp_included</span>
+<a name="l00122"></a>00122 <span class="preprocessor"></span>
+<a name="l00123"></a>00123 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

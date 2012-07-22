@@ -198,8 +198,8 @@ bool CQuadrangle::InvTransform(
 		return retVal;
 	}
 	else{
-		return		m_firstDiagonal.InvTransform(transformation, mode) &&
-					m_secondDiagonal.InvTransform(transformation, mode);
+		return	m_firstDiagonal.InvTransform(transformation, mode) &&
+				m_secondDiagonal.InvTransform(transformation, mode);
 	}
 }
 
@@ -229,8 +229,8 @@ bool CQuadrangle::GetTransformed(
 		return retVal;
 	}
 	else{
-		return		m_firstDiagonal.GetTransformed(transformation, resultQuadranglePtr->m_firstDiagonal, mode) &&
-					m_secondDiagonal.GetTransformed(transformation, resultQuadranglePtr->m_secondDiagonal, mode);
+		return	m_firstDiagonal.GetTransformed(transformation, resultQuadranglePtr->m_firstDiagonal, mode) &&
+				m_secondDiagonal.GetTransformed(transformation, resultQuadranglePtr->m_secondDiagonal, mode);
 	}
 }
 

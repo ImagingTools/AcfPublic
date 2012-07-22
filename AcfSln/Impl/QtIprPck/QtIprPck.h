@@ -35,6 +35,7 @@
 #include "iqtipr/CCircleFinderParamsGuiComp.h"
 #include "iqtipr/CSearchBasedFeaturesSupplierGuiComp.h"
 #include "iqtipr/CGeneralSearchParamsGuiComp.h"
+#include "iqtipr/CConvolution2dParamsGuiComp.h"
 
 
 /**
@@ -50,6 +51,7 @@ typedef iqtipr::CLineProjectionSupplierGuiComp LineProjectionSupplierGui;
 typedef iqtipr::CCircleFinderParamsGuiComp CircleFinderParamsGui;
 typedef iqtipr::CSearchBasedFeaturesSupplierGuiComp SearchBasedFeaturesSupplierGui;
 typedef iqtipr::CGeneralSearchParamsGuiComp GeneralSearchParamsGui;
+typedef iqtipr::CConvolution2dParamsGuiComp Convolution2dParamsGui;
 
 
 } // namespace QtIprPck

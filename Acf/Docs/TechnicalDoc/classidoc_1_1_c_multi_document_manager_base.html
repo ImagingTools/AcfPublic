@@ -115,6 +115,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document info assigned to specified view.  <a href="#a93c3a43310da7510a1676504f79fe414"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a230ee9606b4757ad5210b9707ddc41be">GetDocumentInfoFromPath</a> (const QString &amp;filePath) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document info assigned to specified file.  <a href="#a230ee9606b4757ad5210b9707ddc41be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a33c45da92ae4e15ee00044f01a2fa785">GetDocumentIndex</a> (const <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> &amp;document) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get position index of the given document in the document list.  <a href="#a33c45da92ae4e15ee00044f01a2fa785"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a3725273b825005a5547f415d0a0c1d51">CreateDocument</a> (const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of specified document without attaching to this manager.  <a href="#a3725273b825005a5547f415d0a0c1d51"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a5f5a652857571ffa2537ad9a7d3b52fe">RegisterDocument</a> (<a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> *documentPtr)</td></tr>
@@ -617,6 +619,25 @@ Protected Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>pointer to assigned document, or <code>NULL</code> if no document for this view exists. </dd></dl>
 
 <p>Implements <a class="el" href="classidoc_1_1_i_document_manager.html#a53febd1a6f0bc272173af3afd93cbca5">idoc::IDocumentManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33c45da92ae4e15ee00044f01a2fa785"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::GetDocumentIndex" ref="a33c45da92ae4e15ee00044f01a2fa785" args="(const SingleDocumentData &amp;document) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int idoc::CMultiDocumentManagerBase::GetDocumentIndex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> &amp;&#160;</td>
+          <td class="paramname"><em>document</em></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get position index of the given document in the document list. </p>
 
 </div>
 </div>

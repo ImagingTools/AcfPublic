@@ -34,7 +34,8 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">iqtdoc::CMultiDocumentWorkspaceGuiComp Class Reference</div>  </div>
 </div>
@@ -89,6 +90,11 @@ Public Types</h2></td></tr>
 &lt; QMdiArea &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a9af57cbcaedadde67a849e96b49d3a96">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a26500833dd562b1e7b52a55a8df342a4">I_REGISTER_SUBELEMENT</a> (DocumentSelection)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a2e2dd9cb592cf660cf350efc62f5cdde">I_REGISTER_SUBELEMENT_INTERFACE</a> (DocumentSelection, <a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>, ExtractSelectionInterface)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#ae45043f63f881c395ed5af376232c428">I_REGISTER_SUBELEMENT_INTERFACE</a> (DocumentSelection, <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>, ExtractSelectionInterfaceModel)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a6a181e71347da640d7986210b9980708">I_REGISTER_SUBELEMENT_INTERFACE</a> (DocumentSelection, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractSelectionInterfaceChangeable)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aaf6305e6839d78cdc42c6f590b6423e3">I_REGISTER_SUBELEMENT_INTERFACE</a> (DocumentSelection, <a class="el" href="classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>, ExtractSelectionInterfaceConstraints)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a6519aec08bc7f2a0fef9ffe0fd47e5e9">CMultiDocumentWorkspaceGuiComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a871fd0b855d57687831d1323102d6e11">GetCommands</a> () const </td></tr>
@@ -140,11 +146,14 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a8ef6732602a37df26dfbd5b7d68f9686">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4f0ad658f66df2426edac723df87e9ab">OnEndChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for end change event.  <a href="#a4f0ad658f66df2426edac723df87e9ab"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#ad6a8794d4a6406ea0990438807f0ee0b">imod::TModelWrap&lt; DocumentSelectionInfo &gt;</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This class is a Qt-based workspace implementation of a document manager. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a9af57cbcaedadde67a849e96b49d3a96"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::BaseClass" ref="a9af57cbcaedadde67a849e96b49d3a96" args="" -->
 <div class="memitem">
@@ -159,7 +168,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ae85de65726cc00d124d1cdaa63c17a95">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00044">44</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00047">47</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -185,7 +194,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00055">55</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00063">63</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -337,6 +346,155 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>associated view or NULL if nothing is found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a26500833dd562b1e7b52a55a8df342a4"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT" ref="a26500833dd562b1e7b52a55a8df342a4" args="(DocumentSelection)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT </td>
+          <td>(</td>
+          <td class="paramtype">DocumentSelection&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e2dd9cb592cf660cf350efc62f5cdde"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="a2e2dd9cb592cf660cf350efc62f5cdde" args="(DocumentSelection, iprm::ISelectionParam, ExtractSelectionInterface)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT_INTERFACE </td>
+          <td>(</td>
+          <td class="paramtype">DocumentSelection&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ExtractSelectionInterface&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae45043f63f881c395ed5af376232c428"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="ae45043f63f881c395ed5af376232c428" args="(DocumentSelection, imod::IModel, ExtractSelectionInterfaceModel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT_INTERFACE </td>
+          <td>(</td>
+          <td class="paramtype">DocumentSelection&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ExtractSelectionInterfaceModel&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6a181e71347da640d7986210b9980708"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="a6a181e71347da640d7986210b9980708" args="(DocumentSelection, istd::IChangeable, ExtractSelectionInterfaceChangeable)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT_INTERFACE </td>
+          <td>(</td>
+          <td class="paramtype">DocumentSelection&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ExtractSelectionInterfaceChangeable&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf6305e6839d78cdc42c6f590b6423e3"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="aaf6305e6839d78cdc42c6f590b6423e3" args="(DocumentSelection, iprm::ISelectionConstraints, ExtractSelectionInterfaceConstraints)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtdoc::CMultiDocumentWorkspaceGuiComp::I_REGISTER_SUBELEMENT_INTERFACE </td>
+          <td>(</td>
+          <td class="paramtype">DocumentSelection&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ExtractSelectionInterfaceConstraints&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -824,6 +982,22 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<hr/><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" id="ad6a8794d4a6406ea0990438807f0ee0b"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::imod::TModelWrap&lt; DocumentSelectionInfo &gt;" ref="ad6a8794d4a6406ea0990438807f0ee0b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap</a>&lt; DocumentSelectionInfo &gt;<code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00174">174</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
 
 </div>
 </div>

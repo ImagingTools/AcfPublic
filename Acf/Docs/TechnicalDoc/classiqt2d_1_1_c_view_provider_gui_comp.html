@@ -33,7 +33,8 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iqt2d::CViewProviderGuiComp Class Reference</div>  </div>
 </div>
@@ -94,11 +95,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified view.  <a href="#adc78fdfd1b381f0da35436a3257afa52"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a5e51c05bda47247602d8aeab2f6db192">SetConsoleCalibration</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *calibrationPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do console calibration.  <a href="#a5e51c05bda47247602d8aeab2f6db192"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a00c5aee16212fa2937f7a6d7670a5796">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a00c5aee16212fa2937f7a6d7670a5796"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a41d3d22dabd8c4602501afb96ab1d592">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a41aeab8b58624ef7e48693d0efdb52e3">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a5b024ab4b2bdcc1ac76c5148a94b8a5d">OnComponentDestroyed</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_c_affinite_calibration_shape.html">iview::CAffiniteCalibrationShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a966c48020079e2b494ffc41f218b215e">m_calibrationShape</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Standard 2D-View provider. </p>
@@ -355,6 +361,41 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#aa28b9338ca45e28b03cadaf4454f14e8">imod::CMultiModelDispatcherBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e51c05bda47247602d8aeab2f6db192"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::SetConsoleCalibration" ref="a5e51c05bda47247602d8aeab2f6db192" args="(const i2d::ITransformation2d *calibrationPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CViewProviderGuiComp::SetConsoleCalibration </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td>
+          <td class="paramname"><em>calibrationPtr</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Do console calibration. </p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a966c48020079e2b494ffc41f218b215e"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::m_calibrationShape" ref="a966c48020079e2b494ffc41f218b215e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiview_1_1_c_affinite_calibration_shape.html">iview::CAffiniteCalibrationShape</a> <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a966c48020079e2b494ffc41f218b215e">iqt2d::CViewProviderGuiComp::m_calibrationShape</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00114">114</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 
 </div>
 </div>

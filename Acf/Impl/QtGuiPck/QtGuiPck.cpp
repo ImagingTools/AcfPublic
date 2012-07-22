@@ -234,6 +234,11 @@ I_EXPORT_COMPONENT(
 			"Toolbar Command");
 
 I_EXPORT_COMPONENT(
+			SelectableCommandsProvider,
+			"Selectable command list provider",
+			"Selection Command List Actions");
+
+I_EXPORT_COMPONENT(
 			DocumentProcessingCommand,
 			"Document processing command",
 			"Processing Document Command" IM_TAG("Processing"));

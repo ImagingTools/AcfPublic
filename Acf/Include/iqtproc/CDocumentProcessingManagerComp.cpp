@@ -78,6 +78,7 @@ void CDocumentProcessingManagerComp::DoProcessingToOutput(const istd::IChangeabl
 	istd::CChangeNotifier changePtr(outputDocumentPtr);
 
 	QElapsedTimer timer;
+	timer.start();
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
@@ -85,7 +86,9 @@ void CDocumentProcessingManagerComp::DoProcessingToOutput(const istd::IChangeabl
 				outputDocumentPtr,
 				m_progressManagerCompPtr.GetPtr());
 
-	SendInfoMessage(0, QObject::tr("Processing time: %1 ms").arg(timer.elapsed()), "Document processing manager");
+	double processingTime = timer.nsecsElapsed() / 1000000.0;
+
+	SendInfoMessage(0, QObject::tr("Processing time: %1 ms").arg(processingTime, 2, 'f', 2), "Document processing manager");
 	
 	if (retVal != iproc::IProcessor::TS_OK){
 		SendErrorMessage(0, "Processing was failed", "Document processing manager");
@@ -125,6 +128,7 @@ void CDocumentProcessingManagerComp::DoInPlaceProcessing(istd::IChangeable* inpu
 	}
 
 	QElapsedTimer timer;
+	timer.start();
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
@@ -132,7 +136,9 @@ void CDocumentProcessingManagerComp::DoInPlaceProcessing(istd::IChangeable* inpu
 				outputDocumentPtr.GetPtr(),
 				m_progressManagerCompPtr.GetPtr());
 
-	SendInfoMessage(0, QObject::tr("Processing time: %1 ms").arg(timer.elapsed()), "Document processing manager");
+	double processingTime = timer.nsecsElapsed() / 1000000.0;
+
+	SendInfoMessage(0, QObject::tr("Processing time: %1 ms").arg(processingTime, 2, 'f', 2), "Document processing manager");
 	
 	if (retVal != iproc::IProcessor::TS_OK){
 		SendErrorMessage(0, "Processing was failed", "Document processing manager");

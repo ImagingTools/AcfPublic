@@ -605,6 +605,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CDifferenceBitmapSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_difference_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CExtremumCaliperProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_extremum_caliper_processor_comp_8h</filename>
@@ -1713,6 +1721,14 @@
     <filename>_c_circle_finder_params_gui_comp_8h</filename>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="yes" imported="no">iipr/ICircleFinderParams.h</includes>
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CConvolution2dParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_convolution2d_params_gui_comp_8h</filename>
+    <includes id="_i_convolution_kernel2d_8h" name="IConvolutionKernel2d.h" local="yes" imported="no">iipr/IConvolutionKernel2d.h</includes>
+    <class kind="class">iqtipr::CConvolution2dParamsGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
@@ -5506,6 +5522,7 @@
     <class kind="class">iipr::CConvolutionKernel2d</class>
     <class kind="class">iipr::CConvolutionProcessorComp</class>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
+    <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
     <class kind="class">iipr::CExtremumCaliperProcessorComp</class>
     <class kind="class">iipr::CFeatureBase</class>
     <class kind="class">iipr::CFeaturesContainer</class>
@@ -6011,6 +6028,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetKernelSize</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>a916126a50cd490578b0b50eccbec7e15</anchor>
+      <arglist>(const istd::CIndex2d &amp;kernelSize)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetKernelElement</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
@@ -6024,12 +6048,12 @@
       <anchor>a0ed1b69fc128ad4b7026e6982337e7ac</anchor>
       <arglist>(const istd::CIndex2d &amp;index, double value)</arglist>
     </member>
-    <member kind="function" virtualness="pure">
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a9eb3aee8d75a9edd9fc693d062cd1b49</anchor>
-      <arglist>(iser::IArchive &amp;archive)=0</arglist>
+      <anchor>a536fc3f92be26ac4e99acf7b19aaf37c</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual quint32</type>
@@ -6125,6 +6149,69 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a02c62def2d9d7e2964b87c6d35370a29</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CDifferenceBitmapSupplierComp</name>
+    <filename>classiipr_1_1_c_difference_bitmap_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a86a6c257e8e9c3dae02e3b7e94ffcb61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a3dddd0889fc6a5fab2d881f81ea8b016</anchor>
+      <arglist>(m_firstBitmapProviderModelCompPtr, m_firstBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a1d987c43044f33658cef033d4c6ad103</anchor>
+      <arglist>(m_secondBitmapProviderModelCompPtr, m_secondBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsureBitmapCreated</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a6ed2c0bcd494f93f78c13b7d8eacc234</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a57bb9d04a73f1ec22ba88cf2d65e58e1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a4ccbcf6a0bbb12f3c0f992f140107817</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ada69b4869743de4abeb893ee57f94657</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>af7a48968a480ea74b04691e80632c748</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -7665,6 +7752,13 @@
       <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
       <anchor>a9d7bd53714fc36c93b9aef1e3abf4f40</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetKernelSize</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>a5e5b29ef2d7576df1b9061a2bc192e8f</anchor>
+      <arglist>(const istd::CIndex2d &amp;kernelSize)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
@@ -12933,6 +13027,7 @@
     <filename>namespaceiqtipr.html</filename>
     <class kind="class">iqtipr::CCaliperParamsGuiComp</class>
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
+    <class kind="class">iqtipr::CConvolution2dParamsGuiComp</class>
     <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CProjectionShape</class>
@@ -13038,6 +13133,60 @@
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
       <anchor>ac7946e515605ac530c82aff1f6e0475d</anchor>
       <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CConvolution2dParamsGuiComp</name>
+    <filename>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CConvolution2dParamsGuiComp, iipr::IConvolutionKernel2d &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CConvolution2dParamsGuiComp, iipr::IConvolutionKernel2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a4bd534d8c62466d81c0a682226c4af21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>af17dc6936bad4f472e6041bdca4935fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_KernelWidthSpin_valueChanged</name>
+      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>ad3d907ef090262c55db7663aa262e5c5</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_KernelHeightSpin_valueChanged</name>
+      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a01ba5ffac7a0fe82e16ac7e12e177071</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_KernelTable_itemChanged</name>
+      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a96ad30402a8b760d41707d790b5184d2</anchor>
+      <arglist>(QTableWidgetItem *item)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>ad18bdff28d9e9946b9f036ae366d9113</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a7ebfdcf3588a83c6c3693cd9a0121dac</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

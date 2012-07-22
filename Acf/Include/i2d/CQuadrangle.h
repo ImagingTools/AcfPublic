@@ -32,6 +32,7 @@
 namespace i2d
 {
 
+
 /**
 	Definition of convexes quadrangle object.
 */

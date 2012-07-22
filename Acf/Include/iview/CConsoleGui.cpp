@@ -510,7 +510,7 @@ void CConsoleGui::UpdateCommands()
 
 	// components visibility commands
 	if (IsGridButtonVisible()){
-		m_gridVisibleCommand.setIcon(QIcon(":/Icons/ShowGrid"));
+		m_gridVisibleCommand.setIcon(QIcon(":/Icons/Grid"));
 		m_gridVisibleCommand.setToolTip(tr("Show/Hide Grid"));
 		m_gridVisibleCommand.setChecked(IsGridVisible());
 		m_commands.InsertChild(&m_gridVisibleCommand);
@@ -524,7 +524,7 @@ void CConsoleGui::UpdateCommands()
 	}
 
 	if (IsMmButtonVisible()){
-		m_gridInMmVisibleCommand.setIcon(QIcon(":/Icons/ShowMm"));
+		m_gridInMmVisibleCommand.setIcon(QIcon(":/Icons/LogicalUnit"));
 		m_gridInMmVisibleCommand.setToolTip(tr("Show/Hide Millimeters"));
 		m_gridInMmVisibleCommand.setChecked(IsGridInMm());
 		m_commands.InsertChild(&m_gridInMmVisibleCommand);
