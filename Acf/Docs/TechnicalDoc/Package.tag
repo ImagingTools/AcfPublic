@@ -39556,13 +39556,6 @@
       <anchor>af5ad10b570faa651f7ee4f4c7dd6b595</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
-      <anchor>a3328f8e6cd33cdb75e7528e3718f2391</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnSelectionChanged</name>
