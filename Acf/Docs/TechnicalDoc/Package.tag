@@ -4123,8 +4123,10 @@
     <name>CDialogGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_dialog_gui_comp_8h</filename>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_dialog_8h" name="IDialog.h" local="yes" imported="no">iqtgui/IDialog.h</includes>
     <includes id="_c_gui_component_dialog_8h" name="CGuiComponentDialog.h" local="yes" imported="no">iqtgui/CGuiComponentDialog.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <class kind="class">iqtgui::CDialogGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -36332,8 +36334,10 @@
   <compound kind="class">
     <name>iqtgui::CDialogGuiComp</name>
     <filename>classiqtgui_1_1_c_dialog_gui_comp.html</filename>
+    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iqtgui::IDialog</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -36348,12 +36352,33 @@
       <anchor>a862eb095cd18cd5b1eed60b340e6046f</anchor>
       <arglist>(IGuiObject *parentPtr)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
+      <anchor>ac88fcbfbd98d25b26082a1b5387442a5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCommandActivated</name>
+      <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
+      <anchor>a67853331c040e704bf0f8f7c8492568d</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iqtgui::CGuiComponentDialog *</type>
       <name>CreateComponentDialog</name>
       <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
       <anchor>afb30a131b9ab242f3f01d1aac318343b</anchor>
       <arglist>(int buttons, IGuiObject *parentPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
+      <anchor>a1820a9c95faef6e614adf20e247b28a2</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

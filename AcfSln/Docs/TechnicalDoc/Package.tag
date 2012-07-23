@@ -14333,16 +14333,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnComponentCreated</name>
+      <name>OnGuiDestroyed</name>
       <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
-      <anchor>a62424b4f93762edeb84af94fea612565</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
-      <anchor>a3bdd16025eaee674daa5f25fc5d35a71</anchor>
+      <anchor>a666d542c27fe7a550affc6cc8d3aca6d</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
