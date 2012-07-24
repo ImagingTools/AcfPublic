@@ -165,7 +165,15 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CExtractedEdgeLinesSupplierComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CFastEdgesExtractorComp.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CProcessedEdgeLinesSupplierComp.cpp"
 				>
 			</File>
 		</Filter>
@@ -186,11 +194,27 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CExtractedEdgeLinesSupplierComp.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CFastEdgesExtractorComp.h"
 				>
 			</File>
 			<File
+				RelativePath="..\CProcessedEdgeLinesSupplierComp.h"
+				>
+			</File>
+			<File
 				RelativePath="..\iedge.h"
+				>
+			</File>
+			<File
+				RelativePath="..\IEdgeLinesProcessor.h"
+				>
+			</File>
+			<File
+				RelativePath="..\IEdgeLinesProvider.h"
 				>
 			</File>
 			<File

@@ -56,8 +56,8 @@
 <a name="l00036"></a>00036               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_value_provider.html">iproc::IValueProvider</a>);
 <a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>);
 <a name="l00038"></a>00038               I_ASSIGN(m_bitmapProviderCompPtr, <span class="stringliteral">&quot;BitmapSupplier&quot;</span>, <span class="stringliteral">&quot;Provide image to analyse&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapSupplier&quot;</span>);
-<a name="l00039"></a>00039               I_ASSIGN(m_calibrationProviderCompPtr, <span class="stringliteral">&quot;CalibrationSupplier&quot;</span>, <span class="stringliteral">&quot;Provide 2D-calibration object&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;CalibrationSupplier&quot;</span>);
-<a name="l00040"></a>00040               <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#af0e2eab9108af52e18ec896365e39493">I_ASSIGN_TO</a>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, <span class="keyword">false</span>);
+<a name="l00039"></a>00039               <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#af0e2eab9108af52e18ec896365e39493">I_ASSIGN_TO</a>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, <span class="keyword">false</span>);
+<a name="l00040"></a>00040               I_ASSIGN(m_calibrationProviderCompPtr, <span class="stringliteral">&quot;CalibrationSupplier&quot;</span>, <span class="stringliteral">&quot;Provide 2D-calibration object&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;CalibrationSupplier&quot;</span>);
 <a name="l00041"></a>00041               I_ASSIGN(m_processorCompPtr, <span class="stringliteral">&quot;Processor&quot;</span>, <span class="stringliteral">&quot;Processor calculating set of positions from image&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Processor&quot;</span>);
 <a name="l00042"></a>00042        I_END_COMPONENT;
 <a name="l00043"></a>00043 
@@ -76,8 +76,8 @@
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 <span class="keyword">private</span>:
 <a name="l00058"></a>00058        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
-<a name="l00059"></a>00059        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
-<a name="l00060"></a>00060        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
+<a name="l00059"></a>00059        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
+<a name="l00060"></a>00060        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
 <a name="l00061"></a>00061        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>, m_processorCompPtr);
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;const i2d::ITransformation2d&gt;</a> m_outputCalibrationPtr;

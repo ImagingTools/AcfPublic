@@ -41,7 +41,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="iipr::CCircleFindProcessorComp" --><!-- doxytag: inherits="icomp::CComponentBase,TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;" -->
-<p>Processor finding circle on the image.  
+<p>Cliper based circle finder.  
  <a href="classiipr_1_1_c_circle_find_processor_comp.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>&gt;</code></p>
@@ -88,10 +88,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a33a3f28f99f8d5979f6bf69987c87108">AddProjectionResultsToRays</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> &amp;params, const <a class="el" href="classiipr_1_1_i_features_provider.html">IFeaturesProvider</a> &amp;container, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;inRays, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;outRays)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Processor finding circle on the image. </p>
-<p>It takes area of interests (AOI) from parameter set. As AOI can be used annulus, segment of annulus, rectangle and set of segments of annulus. </p>
+<div class="textblock"><p>Cliper based circle finder. </p>
+<p>This is realized as processor, as input the image, as output consumer of features must be given. It uses set of 1D caliper lines to find the position and radius of circle. It takes area of interests (AOI) from parameter set. As AOI can be used annulus, segment of annulus, rectangle and set of segments of annulus. </p>
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a81f24524e9840fc5478e13aa82f56515"></a><!-- doxytag: member="iipr::CCircleFindProcessorComp::AnnulusFeature" ref="a81f24524e9840fc5478e13aa82f56515" args="" -->
 <div class="memitem">
@@ -104,7 +104,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00061">61</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00063">63</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -121,7 +121,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_wrap.html#a3b21fc424b686e6bcf4537b75d89adf3">iproc::TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -136,7 +136,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00060">60</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00062">62</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -151,7 +151,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00069">69</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00071">71</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -166,7 +166,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00078">78</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00080">80</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>

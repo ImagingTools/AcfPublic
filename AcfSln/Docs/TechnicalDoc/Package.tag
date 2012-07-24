@@ -198,6 +198,17 @@
     <namespace>iedge</namespace>
   </compound>
   <compound kind="file">
+    <name>CExtractedEdgeLinesSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_c_extracted_edge_lines_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
+    <includes id="_i_edges_extractor_8h" name="IEdgesExtractor.h" local="yes" imported="no">iedge/IEdgesExtractor.h</includes>
+    <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
+    <class kind="class">iedge::CExtractedEdgeLinesSupplierComp</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFastEdgesExtractorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_fast_edges_extractor_comp_8h</filename>
@@ -205,6 +216,16 @@
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_i_edges_extractor_8h" name="IEdgesExtractor.h" local="yes" imported="no">iedge/IEdgesExtractor.h</includes>
     <class kind="class">iedge::CFastEdgesExtractorComp</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessedEdgeLinesSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_c_processed_edge_lines_supplier_comp_8h</filename>
+    <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
+    <includes id="_i_edge_lines_processor_8h" name="IEdgeLinesProcessor.h" local="yes" imported="no">iedge/IEdgeLinesProcessor.h</includes>
+    <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
+    <class kind="class">iedge::CProcessedEdgeLinesSupplierComp</class>
     <namespace>iedge</namespace>
   </compound>
   <compound kind="file">
@@ -219,6 +240,14 @@
     <filename>_i_edge_lines_processor_8h</filename>
     <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
     <class kind="class">iedge::IEdgeLinesProcessor</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IEdgeLinesProvider.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_i_edge_lines_provider_8h</filename>
+    <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
+    <class kind="class">iedge::IEdgeLinesProvider</class>
     <namespace>iedge</namespace>
   </compound>
   <compound kind="file">
@@ -3017,14 +3046,17 @@
     <class kind="class">iedge::CEdgeLine</class>
     <class kind="class">iedge::CEdgeNode</class>
     <class kind="class">iedge::CEdgesReductorComp</class>
+    <class kind="class">iedge::CExtractedEdgeLinesSupplierComp</class>
     <class kind="class">iedge::CFastEdgesExtractorComp</class>
+    <class kind="class">iedge::CProcessedEdgeLinesSupplierComp</class>
     <class kind="class">iedge::IEdgeLinesProcessor</class>
+    <class kind="class">iedge::IEdgeLinesProvider</class>
     <class kind="class">iedge::IEdgesExtractor</class>
   </compound>
   <compound kind="class">
     <name>iedge::CEdgeLine</name>
     <filename>classiedge_1_1_c_edge_line.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">i2d::IObject2d</base>
     <class kind="class">iedge::CEdgeLine::Container</class>
     <member kind="function">
       <type></type>
@@ -3130,6 +3162,48 @@
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
       <anchor>a7648af3890ee25462bf8668fc1f41ab1</anchor>
       <arglist>(i2d::CPolyline &amp;polyline, const i2d::CAffine2d &amp;transform) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetCenter</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>ad04631301646dde4857738acd89bb8bf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>MoveCenterTo</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a86725343db2e08c12c528ca88d0799b7</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a5abb8d4eef9681e63c25e8d8f62bc190</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a7aaed40624ff2c63dd7c83a1167234fe</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a189853afff2db9204e132d5081bf3f41</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a88a5f051df9adf3cd6fb0d2eba1e2d2b</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -3335,6 +3409,54 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iedge::CExtractedEdgeLinesSupplierComp</name>
+    <filename>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; CEdgeLine::Container &gt;</base>
+    <base virtualness="virtual">iedge::IEdgeLinesProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; CEdgeLine::Container &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>aa0ba150b5f0c46ac8efbe997398fdab5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>a73bd9af1cf628aa0dee77ddc9f009887</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>af8ba725716f4db770caa1b6ad665a22e</anchor>
+      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CEdgeLine::Container *</type>
+      <name>GetEdgesContainer</name>
+      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>ad3d65bec3cd73ca69c73d6ab18c34230</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>a2386841cb975aac8396dbaef34145e28</anchor>
+      <arglist>(CEdgeLine::Container &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>a12acbdda8cdb713a7d7b7ff6675720f0</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iedge::CFastEdgesExtractorComp</name>
     <filename>classiedge_1_1_c_fast_edges_extractor_comp.html</filename>
     <base>TSyncProcessorCompBase&lt; IEdgesExtractor &gt;</base>
@@ -3390,6 +3512,47 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iedge::CProcessedEdgeLinesSupplierComp</name>
+    <filename>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; CEdgeLine::Container &gt;</base>
+    <base virtualness="virtual">iedge::IEdgeLinesProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; CEdgeLine::Container &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>aef022821ac87debda03eb9c11cd66ff7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>ae4d475b752898e8dbae8d2941cdd1499</anchor>
+      <arglist>(m_edgeLinesProviderModelCompPtr, m_edgeLinesProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CEdgeLine::Container *</type>
+      <name>GetEdgesContainer</name>
+      <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>aadb4a2305929d9b83cee29b3f64fa6d2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>ae77466273e39a966fe797e8075fd4579</anchor>
+      <arglist>(CEdgeLine::Container &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>ae2d25a11298ed0aaf041933f63bc8270</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iedge::IEdgeLinesProcessor</name>
     <filename>classiedge_1_1_i_edge_lines_processor.html</filename>
     <base virtualness="virtual">iproc::IProcessor</base>
@@ -3399,6 +3562,18 @@
       <anchorfile>classiedge_1_1_i_edge_lines_processor.html</anchorfile>
       <anchor>aa1baf6e5cf7b9af9037ddc127eadff27</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const CEdgeLine::Container &amp;edgeLines, CEdgeLine::Container &amp;result) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedge::IEdgeLinesProvider</name>
+    <filename>classiedge_1_1_i_edge_lines_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const CEdgeLine::Container *</type>
+      <name>GetEdgesContainer</name>
+      <anchorfile>classiedge_1_1_i_edge_lines_provider.html</anchorfile>
+      <anchor>a62fa012fd751cba91dd7c4b2bc9e8b55</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7279,6 +7454,13 @@
       <name>GetId</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>a900d79d8c73354c11e90644bf312848c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::ITransformation2d &amp;</type>
+      <name>GetTransformation</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>a9b75f993741fe8ff834b767cb98b754e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
