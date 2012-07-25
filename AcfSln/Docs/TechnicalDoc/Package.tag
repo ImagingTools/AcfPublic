@@ -3159,15 +3159,15 @@
       <type>void</type>
       <name>CopyFromPolyline</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>a60b6b336a75b184d99b7fbb3d9f19676</anchor>
-      <arglist>(const i2d::CPolyline &amp;polyline, const i2d::CAffine2d &amp;transform, double weight=1.0)</arglist>
+      <anchor>a242c83bbd84723911a101091ccbe861e</anchor>
+      <arglist>(const i2d::CPolyline &amp;polyline, double weight=1.0, const i2d::CAffine2d *transformPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>CopyToPolyline</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>a7648af3890ee25462bf8668fc1f41ab1</anchor>
-      <arglist>(i2d::CPolyline &amp;polyline, const i2d::CAffine2d &amp;transform) const </arglist>
+      <anchor>a9aed1a073d7b4525f79d7c2aed8f0d46</anchor>
+      <arglist>(i2d::CPolyline &amp;polyline, const i2d::CAffine2d *transformPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
