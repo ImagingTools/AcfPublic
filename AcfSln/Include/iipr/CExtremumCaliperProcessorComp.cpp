@@ -186,7 +186,7 @@ int CExtremumCaliperProcessorComp::DoProcessing(
 // reimplemented (iipr::IFeatureToProjectionMapper)
 
 bool CExtremumCaliperProcessorComp::GetProjectionPosition(
-			const IFeature& feature,
+			const imeas::INumericValue& feature,
 			const iprm::IParamsSet* /*paramsPtr*/,
 			double& result) const
 {

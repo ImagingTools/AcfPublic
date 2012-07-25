@@ -26,7 +26,7 @@
 
 // ACF-Solutions includes
 #include "imeas/IUnitInfo.h"
-#include "imeas/INumericParams.h"
+#include "imeas/INumericValue.h"
 #include "imeas/INumericConstraints.h"
 
 #include "iipr/TImageParamProcessorCompBase.h"
@@ -41,12 +41,12 @@ namespace iipr
 	This implementation uses moving average alghorithm.
 */
 class CRectImageSmoothProcessorComp:
-			public TImageParamProcessorCompBase<imeas::INumericParams>,
+			public TImageParamProcessorCompBase<imeas::INumericValue>,
 			virtual public imeas::INumericConstraints,
 			virtual protected imeas::IUnitInfo
 {
 public:
-	typedef iipr::TImageParamProcessorCompBase<imeas::INumericParams> BaseClass;
+	typedef iipr::TImageParamProcessorCompBase<imeas::INumericValue> BaseClass;
 
 	enum UnitMode
 	{
@@ -74,9 +74,9 @@ public:
 	virtual const imeas::IUnitInfo& GetNumericValueUnitInfo(int index) const;
 
 protected:
-	// reimplemented (iipr::TImageParamProcessorCompBase<imeas::INumericParams>)
+	// reimplemented (iipr::TImageParamProcessorCompBase<imeas::INumericValue>)
 	virtual bool ParamProcessImage(
-				const imeas::INumericParams* paramsPtr,
+				const imeas::INumericValue* paramsPtr,
 				const iimg::IBitmap& inputImage,
 				iimg::IBitmap& outputImage);
 

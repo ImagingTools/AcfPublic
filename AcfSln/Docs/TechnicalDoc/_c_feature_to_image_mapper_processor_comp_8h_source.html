@@ -35,7 +35,7 @@
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_feature_to_feature_processor_8h.html">iipr/IFeatureToFeatureProcessor.h</a>&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_feature_to_image_mapper_8h.html">iipr/IFeatureToImageMapper.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_feature_wrap_8h.html">iipr/TFeatureWrap.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_weighted_feature_wrap_8h.html">iipr/TWeightedFeatureWrap.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="keyword">namespace </span>iipr
@@ -57,9 +57,9 @@
 <a name="l00035"></a>00035        I_END_COMPONENT;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <span class="comment">// reimplemented (iipr::IFeatureToFeatureProcessor)</span>
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_feature_to_image_mapper_processor_comp.html#a9740b304b91847e996ec61b10f88433d">DoConvertFeatures</a>(
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_feature_to_image_mapper_processor_comp.html#a7afe20834a452b61c710532462b617e1">DoConvertFeatures</a>(
 <a name="l00039"></a>00039                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00040"></a>00040                             <span class="keyword">const</span> <a class="code" href="classiipr_1_1_i_features_provider.html" title="Common interface for someone who can provide access to list of features.">IFeaturesProvider</a>&amp; container,
+<a name="l00040"></a>00040                             <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values.">imeas::INumericValueProvider</a>&amp; container,
 <a name="l00041"></a>00041                             <a class="code" href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects.">IFeaturesConsumer</a>&amp; results);
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (iproc::IProcessor)</span>
@@ -70,7 +70,7 @@
 <a name="l00048"></a>00048                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 <span class="keyword">protected</span>:
-<a name="l00051"></a><a class="code" href="classiipr_1_1_c_feature_to_image_mapper_processor_comp.html#ab391e3374f5f8242b199d7351103e89d">00051</a>        <span class="keyword">typedef</span> <a class="code" href="classiipr_1_1_t_feature_wrap.html">TFeatureWrap&lt;i2d::CPosition2d&gt;</a> <a class="code" href="classiipr_1_1_c_feature_to_image_mapper_processor_comp.html#ab391e3374f5f8242b199d7351103e89d">PositionFeature</a>;
+<a name="l00051"></a><a class="code" href="classiipr_1_1_c_feature_to_image_mapper_processor_comp.html#a4c008f6b71e0917ca53da1ed4ba387fa">00051</a>        <span class="keyword">typedef</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html">TWeightedFeatureWrap&lt;i2d::CPosition2d&gt;</a> <a class="code" href="classiipr_1_1_c_feature_to_image_mapper_processor_comp.html#a4c008f6b71e0917ca53da1ed4ba387fa">PositionFeature</a>;
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 <span class="keyword">private</span>:
 <a name="l00054"></a>00054        I_REF(<a class="code" href="classiipr_1_1_i_feature_to_image_mapper.html" title="Interface allowing mapping of extracted features to native coordinate systems.">iipr::IFeatureToImageMapper</a>, m_featuresMapperCompPtr);

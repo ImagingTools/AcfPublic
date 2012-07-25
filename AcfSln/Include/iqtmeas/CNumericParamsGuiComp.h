@@ -38,7 +38,7 @@
 
 
 // ACF-Solutions includes
-#include "imeas/INumericParams.h"
+#include "imeas/INumericValue.h"
 
 #include "iqtmeas/CNumericValueWidget.h"
 
@@ -51,14 +51,14 @@ class CNumericParamsGuiComp:
 			public ibase::TModelObserverCompWrap<
 						iqtgui::TGuiObserverWrap<
 									iqtgui::TGuiComponentBase<QWidget>,
-									imod::TSingleModelObserverBase<imeas::INumericParams> > >
+									imod::TSingleModelObserverBase<imeas::INumericValue> > >
 {
 	Q_OBJECT
 public:
 	typedef ibase::TModelObserverCompWrap<
 				iqtgui::TGuiObserverWrap<
 							iqtgui::TGuiComponentBase<QWidget>,
-							imod::TSingleModelObserverBase<imeas::INumericParams> > > BaseClass;
+							imod::TSingleModelObserverBase<imeas::INumericValue> > > BaseClass;
 
 	I_BEGIN_COMPONENT(CNumericParamsGuiComp);
 		I_REGISTER_INTERFACE(imod::IModelEditor);

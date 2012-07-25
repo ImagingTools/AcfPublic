@@ -28,17 +28,17 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iipr_CCaliperFeature_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_feature_base_8h.html">iipr/CFeatureBase.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_simple_numeric_value_8h.html">imeas/CSimpleNumericValue.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="keyword">namespace </span>iipr
 <a name="l00009"></a>00009 {
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00015"></a><a class="code" href="classiipr_1_1_c_caliper_feature.html">00015</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_caliper_feature.html" title="Implementation of IFeature interface for caliper-extracted features.">CCaliperFeature</a>: <span class="keyword">public</span> <a class="code" href="classiipr_1_1_c_feature_base.html" title="Base implementation of IFeature interface to reduce overhead by interface changes.">CFeatureBase</a>
+<a name="l00015"></a><a class="code" href="classiipr_1_1_c_caliper_feature.html">00015</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_caliper_feature.html" title="Implementation of INumericValue interface for caliper-extracted features.">CCaliperFeature</a>: <span class="keyword">public</span> imeas::CSimpleNumericValue
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a><a class="code" href="classiipr_1_1_c_caliper_feature.html#a44258656fe3123f5b93b84c8fe1e8219">00018</a>        <span class="keyword">typedef</span> <a class="code" href="classiipr_1_1_c_feature_base.html" title="Base implementation of IFeature interface to reduce overhead by interface changes.">CFeatureBase</a> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a44258656fe3123f5b93b84c8fe1e8219">BaseClass</a>;
+<a name="l00018"></a><a class="code" href="classiipr_1_1_c_caliper_feature.html#a61c78a639d046ca8c1d01b1a75dbf953">00018</a>        <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface.">imeas::CSimpleNumericValue</a> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a61c78a639d046ca8c1d01b1a75dbf953">BaseClass</a>;
 <a name="l00019"></a>00019 
 <a name="l00020"></a><a class="code" href="classiipr_1_1_c_caliper_feature.html#a1ef6f7b6f8f7def20efeb84820baf696">00020</a>        <span class="keyword">enum</span> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a1ef6f7b6f8f7def20efeb84820baf696">EdgeMode</a>
 <a name="l00021"></a>00021        {
@@ -52,23 +52,29 @@
 <a name="l00029"></a>00029                             <span class="keywordtype">int</span> edgeMode);
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a914b0dd0230119e56cf4b47452a23f6b">GetPosition</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a0c7222c02542325465c1be54084a1f9b">GetEdgeMode</a>() <span class="keyword">const</span>;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a7034ea0be5223bcb799fe8e6b3a2dd26">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keyword">private</span>:
-<a name="l00038"></a>00038        <span class="keywordtype">double</span> m_position;
-<a name="l00039"></a>00039        <span class="keywordtype">int</span> m_edgeMode;
-<a name="l00040"></a>00040 };
+<a name="l00032"></a>00032        <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_c_caliper_feature.html#ae0cfd321920b515d8113645cde5c67ef">GetWeight</a>() <span class="keyword">const</span>;
+<a name="l00033"></a>00033        <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a0c7222c02542325465c1be54084a1f9b">GetEdgeMode</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035        <span class="comment">// reimplemented (imeas::INumericValue)</span>
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a751d71e2ff6614a480c88ac34d575372" title="Check if the given value type (or value component) is supported.">IsValueTypeSupported</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a506f91adb89e0a98558e053624d73db4" title="Get access to component value of the given type.">GetComponentValue</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span>;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_caliper_feature.html#a7034ea0be5223bcb799fe8e6b3a2dd26">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 } <span class="comment">// namespace iipr</span>
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="preprocessor">#endif // !iipr_CCaliperFeature_included</span>
-<a name="l00047"></a>00047 <span class="preprocessor"></span>
+<a name="l00042"></a>00042 <span class="keyword">private</span>:
+<a name="l00043"></a>00043        <span class="keywordtype">double</span> m_position;
+<a name="l00044"></a>00044        <span class="keywordtype">double</span> m_weight;
+<a name="l00045"></a>00045        <span class="keywordtype">int</span> m_edgeMode;
+<a name="l00046"></a>00046 };
+<a name="l00047"></a>00047 
 <a name="l00048"></a>00048 
+<a name="l00049"></a>00049 } <span class="comment">// namespace iipr</span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iipr_CCaliperFeature_included</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00054"></a>00054 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

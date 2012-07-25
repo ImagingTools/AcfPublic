@@ -189,7 +189,7 @@ bool CCircleFindProcessorComp::AddAoiToRays(
 		double maxRadius = annulusAoiPtr->GetOuterRadius();
 		center = annulusAoiPtr->GetPosition();
 
-		istd::TDelPtr<IFeaturesProvider> caliperFeaturesProviderPtr;
+		istd::TDelPtr<imeas::INumericValueProvider> caliperFeaturesProviderPtr;
 		IFeaturesConsumer* caliperFeaturesConsumerPtr;
 
 		if (circleFinderParams.GetCaliperMode() == ICircleFinderParams::CCM_BEST){
@@ -391,7 +391,7 @@ bool CCircleFindProcessorComp::CalculateAnnulus(const i2d::CVector2d& center, Ra
 
 void CCircleFindProcessorComp::AddProjectionResultsToRays(
 			const iprm::IParamsSet& params,
-			const iipr::IFeaturesProvider& container,
+			const imeas::INumericValueProvider& container,
 			Rays& inRays,
 			Rays& outRays)
 {
@@ -403,11 +403,9 @@ void CCircleFindProcessorComp::AddProjectionResultsToRays(
 	double bestInWeight = -1;
 	double bestOutWeight = -1;
 
-	iipr::IFeaturesProvider::Features features = container.GetFeatures();
-	for (		iipr::IFeaturesProvider::Features::const_iterator iter = features.begin();
-				iter != features.end();
-				++iter){
-		const CCaliperFeature* featurePtr = dynamic_cast<const CCaliperFeature*>(*iter);
+	int featuresCount = container.GetValuesCount();
+	for (int featureIndex = 0; featureIndex < featuresCount; featureIndex++){
+		const CCaliperFeature* featurePtr = dynamic_cast<const CCaliperFeature*>(&container.GetNumericValue(featureIndex));
 		if (featurePtr != NULL){
 			Point point;
 			point.weight = featurePtr->GetWeight();

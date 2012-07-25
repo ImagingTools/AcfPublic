@@ -37,7 +37,7 @@
 <div class="title">iipr::CSingleFeatureConsumer Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CSingleFeatureConsumer" --><!-- doxytag: inherits="iipr::IFeaturesConsumer,iipr::IFeaturesProvider" -->
+<!-- doxytag: class="iipr::CSingleFeatureConsumer" --><!-- doxytag: inherits="iipr::IFeaturesConsumer,imeas::INumericValueProvider" -->
 <p>Feature consumer implmentation storing one feature only.  
  <a href="classiipr_1_1_c_single_feature_consumer.html#details">More...</a></p>
 
@@ -48,12 +48,12 @@ Inheritance diagram for iipr::CSingleFeatureConsumer:</div>
  <div class="center">
   <img src="classiipr_1_1_c_single_feature_consumer.png" usemap="#iipr::CSingleFeatureConsumer_map" alt=""/>
   <map id="iipr::CSingleFeatureConsumer_map" name="iipr::CSingleFeatureConsumer_map">
-<area href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects." alt="iipr::IFeaturesConsumer" shape="rect" coords="0,112,181,136"/>
-<area href="classiipr_1_1_i_features_provider.html" title="Common interface for someone who can provide access to list of features." alt="iipr::IFeaturesProvider" shape="rect" coords="191,112,372,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,181,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="191,56,372,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,181,24"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="191,0,372,24"/>
+<area href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects." alt="iipr::IFeaturesConsumer" shape="rect" coords="0,112,182,136"/>
+<area href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values." alt="imeas::INumericValueProvider" shape="rect" coords="192,112,374,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,182,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="192,56,374,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,182,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="192,0,374,24"/>
 </map>
  </div></div>
 
@@ -73,13 +73,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get feature adding policy.  <a href="#a826f14a9c6fe6b5039124c88c63d4a90"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a8f351f75c216f997d9d0ace481ef8bf4">SetFeaturePolicy</a> (int featurePolicy)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set feature adding policy.  <a href="#a8f351f75c216f997d9d0ace481ef8bf4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiipr_1_1_i_feature.html">IFeature</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#ab0d04df176cc01887d122ba41ac07b98">GetFeature</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#acdb775a6dfd92ef69a17f03a24a27c04">ResetFeatures</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all features from this container.  <a href="#acdb775a6dfd92ef69a17f03a24a27c04"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a3bec6ac1367b659ba6980108e6278005">AddFeature</a> (const <a class="el" href="classiipr_1_1_i_feature.html">IFeature</a> *featurePtr, bool *isFullPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new feature to the set of features.  <a href="#a3bec6ac1367b659ba6980108e6278005"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiipr_1_1_i_features_provider.html#a75ba10a77a4c648b5a2b1d4a554168d3">Features</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a1c6931be6a8162f5a1b0440325792192">GetFeatures</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get container features.  <a href="#a1c6931be6a8162f5a1b0440325792192"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#abf414f4b6bd9d3696d4610f14c75dba3">AddFeature</a> (const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> *featurePtr, bool *isFullPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new feature to the set of features.  <a href="#abf414f4b6bd9d3696d4610f14c75dba3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a047ea263b8fc0c1ae31bd13b848c4ff2">GetValuesCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of numeric values in the list.  <a href="#a047ea263b8fc0c1ae31bd13b848c4ff2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#aad2f3d538f710964aadb8707a6457962">GetNumericValue</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a single numeric value from the list.  <a href="#aad2f3d538f710964aadb8707a6457962"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Feature consumer implmentation storing one feature only. </p>
@@ -135,14 +137,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a3bec6ac1367b659ba6980108e6278005"></a><!-- doxytag: member="iipr::CSingleFeatureConsumer::AddFeature" ref="a3bec6ac1367b659ba6980108e6278005" args="(const IFeature *featurePtr, bool *isFullPtr=NULL)" -->
+<a class="anchor" id="abf414f4b6bd9d3696d4610f14c75dba3"></a><!-- doxytag: member="iipr::CSingleFeatureConsumer::AddFeature" ref="abf414f4b6bd9d3696d4610f14c75dba3" args="(const imeas::INumericValue *featurePtr, bool *isFullPtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iipr::CSingleFeatureConsumer::AddFeature </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiipr_1_1_i_feature.html">IFeature</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> *&#160;</td>
           <td class="paramname"><em>featurePtr</em>, </td>
         </tr>
         <tr>
@@ -170,23 +172,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if the pushed feature is valid for this container and was inserted correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classiipr_1_1_i_features_consumer.html#a5712576387f97a9f5682865be9d28a79">iipr::IFeaturesConsumer</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab0d04df176cc01887d122ba41ac07b98"></a><!-- doxytag: member="iipr::CSingleFeatureConsumer::GetFeature" ref="ab0d04df176cc01887d122ba41ac07b98" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classiipr_1_1_i_feature.html">IFeature</a>* iipr::CSingleFeatureConsumer::GetFeature </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Implements <a class="el" href="classiipr_1_1_i_features_consumer.html#a22078a8e51b993e90480371222662365">iipr::IFeaturesConsumer</a>.</p>
 
 </div>
 </div>
@@ -209,12 +195,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1c6931be6a8162f5a1b0440325792192"></a><!-- doxytag: member="iipr::CSingleFeatureConsumer::GetFeatures" ref="a1c6931be6a8162f5a1b0440325792192" args="() const " -->
+<a class="anchor" id="aad2f3d538f710964aadb8707a6457962"></a><!-- doxytag: member="iipr::CSingleFeatureConsumer::GetNumericValue" ref="aad2f3d538f710964aadb8707a6457962" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiipr_1_1_i_features_provider.html#a75ba10a77a4c648b5a2b1d4a554168d3">Features</a> iipr::CSingleFeatureConsumer::GetFeatures </td>
+          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a>&amp; iipr::CSingleFeatureConsumer::GetNumericValue </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns a single numeric value from the list. </p>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value_provider.html#a2af116b919bcb8294cfe495a666940f7">imeas::INumericValueProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a047ea263b8fc0c1ae31bd13b848c4ff2"></a><!-- doxytag: member="iipr::CSingleFeatureConsumer::GetValuesCount" ref="a047ea263b8fc0c1ae31bd13b848c4ff2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iipr::CSingleFeatureConsumer::GetValuesCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -223,9 +230,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get container features. </p>
+<p>Get number of numeric values in the list. </p>
 
-<p>Implements <a class="el" href="classiipr_1_1_i_features_provider.html#a818ac59d15c003b4db45407440d968e8">iipr::IFeaturesProvider</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value_provider.html#a552bff1848be3c7927a19727bc919d5a">imeas::INumericValueProvider</a>.</p>
 
 </div>
 </div>

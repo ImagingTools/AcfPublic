@@ -32,10 +32,10 @@
 #include "iproc/TSyncProcessorWrap.h"
 
 #include "iipr/IImageToFeatureProcessor.h"
-#include "iipr/IFeaturesProvider.h"
+#include "imeas/INumericValueProvider.h"
 #include "iipr/IFeatureToImageMapper.h"
 #include "iipr/ICircleFinderParams.h"
-#include "iipr/TFeatureWrap.h"
+#include "iipr/TWeightedFeatureWrap.h"
 
 
 namespace iipr
@@ -81,8 +81,8 @@ public:
 				iproc::IProgressManager* progressManagerPtr = NULL);
 
 protected:
-	typedef TFeatureWrap<i2d::CCircle> CircleFeature;
-	typedef TFeatureWrap<i2d::CAnnulus> AnnulusFeature;
+	typedef TWeightedFeatureWrap<i2d::CCircle> CircleFeature;
+	typedef TWeightedFeatureWrap<i2d::CAnnulus> AnnulusFeature;
 
 	struct Point
 	{
@@ -115,7 +115,7 @@ protected:
 
 	void AddProjectionResultsToRays(
 				const iprm::IParamsSet& params,
-				const IFeaturesProvider& container,
+				const imeas::INumericValueProvider& container,
 				Rays& inRays,
 				Rays& outRays);
 

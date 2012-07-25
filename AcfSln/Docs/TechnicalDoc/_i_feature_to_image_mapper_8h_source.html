@@ -32,19 +32,19 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_vector2d_8h.html">i2d/CVector2d.h</a>&quot;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">namespace </span>iipr
-<a name="l00011"></a>00011 {
+<a name="l00009"></a>00009 <span class="comment">// ACF-Solutions includes</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_8h.html">imeas/INumericValue.h</a>&quot;</span>
+<a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="keyword">class </span>IFeature;
+<a name="l00013"></a>00013 <span class="keyword">namespace </span>iipr
+<a name="l00014"></a>00014 {
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
 <a name="l00020"></a><a class="code" href="classiipr_1_1_i_feature_to_image_mapper.html">00020</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_i_feature_to_image_mapper.html" title="Interface allowing mapping of extracted features to native coordinate systems.">IFeatureToImageMapper</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_i_feature_to_image_mapper.html#a57adb4c0373ffcf2c4baf4f1410e6546" title="Get position in image coordination system using position extracted from projection.">GetImagePosition</a>(
-<a name="l00027"></a>00027                             <span class="keyword">const</span> <a class="code" href="classiipr_1_1_i_feature.html" title="Base interface for all features can be consumed by feature consumer.">IFeature</a>&amp; feature,
+<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_i_feature_to_image_mapper.html#a31463f0753cde675765536cb297be997" title="Get position in image coordination system using position extracted from projection.">GetImagePosition</a>(
+<a name="l00027"></a>00027                             <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>&amp; feature,
 <a name="l00028"></a>00028                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
 <a name="l00029"></a>00029                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&amp; result) <span class="keyword">const</span> = 0;
 <a name="l00030"></a>00030 };

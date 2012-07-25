@@ -38,7 +38,7 @@
 <div class="title">iipr::CPositionFromImageSupplierComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CPositionFromImageSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; imath::CVarVector &gt;,iproc::IValueProvider,i2d::ICalibrationProvider" -->
+<!-- doxytag: class="iipr::CPositionFromImageSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; imath::CVarVector &gt;,imeas::INumericValueProvider,i2d::ICalibrationProvider" -->
 <p>Implementation of value supplier returning position on the image.  
  <a href="classiipr_1_1_c_position_from_image_supplier_comp.html#details">More...</a></p>
 
@@ -50,7 +50,7 @@ Inheritance diagram for iipr::CPositionFromImageSupplierComp:</div>
   <img src="classiipr_1_1_c_position_from_image_supplier_comp.png" usemap="#iipr::CPositionFromImageSupplierComp_map" alt=""/>
   <map id="iipr::CPositionFromImageSupplierComp_map" name="iipr::CPositionFromImageSupplierComp_map">
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html" alt="iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;" shape="rect" coords="750,224,1040,248"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_value_provider.html" alt="iproc::IValueProvider" shape="rect" coords="1500,224,1790,248"/>
+<area href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values." alt="imeas::INumericValueProvider" shape="rect" coords="1500,224,1790,248"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html" alt="i2d::ICalibrationProvider" shape="rect" coords="1800,224,2090,248"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="300,168,590,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html" alt="iproc::ISupplier" shape="rect" coords="600,168,890,192"/>
@@ -83,7 +83,11 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#af0e2eab9108af52e18ec896365e39493">I_ASSIGN_TO</a> (m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a0ae2af2855c42ea137cd4a9a37f21ed5">GetValue</a> (int index=-1, int valueTypeId=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_value_provider.html#a41b0645115a2166c8b41cf3d0191e5c0aeafc034f96c357f4b494215d2c6a360c">VTI_AUTO</a>) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#abc0a01fb04bf7d484a19b74436494797">GetValuesCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of numeric values in the list.  <a href="#abc0a01fb04bf7d484a19b74436494797"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a1ed9118ef6cde2f62a737ec2b6192227">GetNumericValue</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a single numeric value from the list.  <a href="#a1ed9118ef6cde2f62a737ec2b6192227"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#afb8637e8540b088973c12b84235119d6">GetCalibration</a> () const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -95,7 +99,7 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Implementation of value supplier returning position on the image. </p>
 <p>To calculate this position is some processor used. This processor must accept image object as input and produce some set of features containing position into feature consumer. This supplier takes the feature with the higher weight value and output it as found position value. </p>
 
-<p>Definition at line <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html">CPositionFromImageSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html">CPositionFromImageSupplierComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ab187d64547bef3091dba6aa44b96dc37"></a><!-- doxytag: member="iipr::CPositionFromImageSupplierComp::BaseClass" ref="ab187d64547bef3091dba6aa44b96dc37" args="" -->
 <div class="memitem">
@@ -110,7 +114,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html#l00033">33</a> of file <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html">CPositionFromImageSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html">CPositionFromImageSupplierComp.h</a>.</p>
 
 </div>
 </div>
@@ -133,32 +137,44 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0ae2af2855c42ea137cd4a9a37f21ed5"></a><!-- doxytag: member="iipr::CPositionFromImageSupplierComp::GetValue" ref="a0ae2af2855c42ea137cd4a9a37f21ed5" args="(int index=&#45;1, int valueTypeId=VTI_AUTO) const " -->
+<a class="anchor" id="a1ed9118ef6cde2f62a737ec2b6192227"></a><!-- doxytag: member="iipr::CPositionFromImageSupplierComp::GetNumericValue" ref="a1ed9118ef6cde2f62a737ec2b6192227" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> iipr::CPositionFromImageSupplierComp::GetValue </td>
+          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a>&amp; iipr::CPositionFromImageSupplierComp::GetNumericValue </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>-1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>valueTypeId</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_value_provider.html#a41b0645115a2166c8b41cf3d0191e5c0aeafc034f96c357f4b494215d2c6a360c">VTI_AUTO</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const<code> [virtual]</code></td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_value_provider.html#ae9166958dfafd199fde41d7795761e04">iproc::IValueProvider</a>.</p>
+<p>Returns a single numeric value from the list. </p>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value_provider.html#a2af116b919bcb8294cfe495a666940f7">imeas::INumericValueProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc0a01fb04bf7d484a19b74436494797"></a><!-- doxytag: member="iipr::CPositionFromImageSupplierComp::GetValuesCount" ref="abc0a01fb04bf7d484a19b74436494797" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iipr::CPositionFromImageSupplierComp::GetValuesCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get number of numeric values in the list. </p>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value_provider.html#a552bff1848be3c7927a19727bc919d5a">imeas::INumericValueProvider</a>.</p>
 
 </div>
 </div>

@@ -24,7 +24,7 @@
 #define iipr_CCaliperFeature_included
 
 
-#include "iipr/CFeatureBase.h"
+#include "imeas/CSimpleNumericValue.h"
 
 
 namespace iipr
@@ -32,12 +32,12 @@ namespace iipr
 
 
 /**
-	Implementation of IFeature interface for caliper-extracted features.
+	Implementation of INumericValue interface for caliper-extracted features.
 */
-class CCaliperFeature: public CFeatureBase
+class CCaliperFeature: public imeas::CSimpleNumericValue
 {
 public:
-	typedef CFeatureBase BaseClass;
+	typedef imeas::CSimpleNumericValue BaseClass;
 
 	enum EdgeMode
 	{
@@ -51,13 +51,19 @@ public:
 				int edgeMode);
 
 	double GetPosition() const;
+	double GetWeight() const;
 	int GetEdgeMode() const;
+
+	// reimplemented (imeas::INumericValue)
+	virtual bool IsValueTypeSupported(ValueTypeId valueTypeId) const;
+	virtual imath::CVarVector GetComponentValue(ValueTypeId valueTypeId) const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
 private:
 	double m_position;
+	double m_weight;
 	int m_edgeMode;
 };
 

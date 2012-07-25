@@ -60,22 +60,22 @@ Inheritance diagram for iipr::IFeaturesConsumer:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_features_consumer.html#a62b1a91c8f7b255688b11d19232a62e4">ResetFeatures</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all features from this container.  <a href="#a62b1a91c8f7b255688b11d19232a62e4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_features_consumer.html#a5712576387f97a9f5682865be9d28a79">AddFeature</a> (const <a class="el" href="classiipr_1_1_i_feature.html">IFeature</a> *featurePtr, bool *isFullPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new feature to the set of features.  <a href="#a5712576387f97a9f5682865be9d28a79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_features_consumer.html#a22078a8e51b993e90480371222662365">AddFeature</a> (const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> *featurePtr, bool *isFullPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new feature to the set of features.  <a href="#a22078a8e51b993e90480371222662365"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for a features container consuming feature objects. </p>
 
 <p>Definition at line <a class="el" href="_i_features_consumer_8h_source.html#l00017">17</a> of file <a class="el" href="_i_features_consumer_8h_source.html">IFeaturesConsumer.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5712576387f97a9f5682865be9d28a79"></a><!-- doxytag: member="iipr::IFeaturesConsumer::AddFeature" ref="a5712576387f97a9f5682865be9d28a79" args="(const IFeature *featurePtr, bool *isFullPtr=NULL)=0" -->
+<a class="anchor" id="a22078a8e51b993e90480371222662365"></a><!-- doxytag: member="iipr::IFeaturesConsumer::AddFeature" ref="a22078a8e51b993e90480371222662365" args="(const imeas::INumericValue *featurePtr, bool *isFullPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iipr::IFeaturesConsumer::AddFeature </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiipr_1_1_i_feature.html">IFeature</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> *&#160;</td>
           <td class="paramname"><em>featurePtr</em>, </td>
         </tr>
         <tr>
@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if the pushed feature is valid for this container and was inserted correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a3bec6ac1367b659ba6980108e6278005">iipr::CSingleFeatureConsumer</a>, and <a class="el" href="classiipr_1_1_c_features_container.html#abdfb15989e141429c2d57610d468cbe3">iipr::CFeaturesContainer</a>.</p>
+<p>Implemented in <a class="el" href="classiipr_1_1_c_single_feature_consumer.html#abf414f4b6bd9d3696d4610f14c75dba3">iipr::CSingleFeatureConsumer</a>, and <a class="el" href="classiipr_1_1_c_features_container.html#a877af492aa8f31794ea3037eb1cdc5fa">iipr::CFeaturesContainer</a>.</p>
 
 </div>
 </div>

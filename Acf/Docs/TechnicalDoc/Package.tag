@@ -3176,15 +3176,6 @@
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
-    <name>IValueProvider.h</name>
-    <path>C:/Temp/Acf/Include/iproc/</path>
-    <filename>_i_value_provider_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_c_var_vector_8h" name="CVarVector.h" local="yes" imported="no">imath/CVarVector.h</includes>
-    <class kind="class">iproc::IValueProvider</class>
-    <namespace>iproc</namespace>
-  </compound>
-  <compound kind="file">
     <name>TFileCachedProducerCompBase.h</name>
     <path>C:/Temp/Acf/Include/iproc/</path>
     <filename>_t_file_cached_producer_comp_base_8h</filename>
@@ -30263,7 +30254,6 @@
     <class kind="class">iproc::IProgressManager</class>
     <class kind="class">iproc::IStateController</class>
     <class kind="class">iproc::ISupplier</class>
-    <class kind="class">iproc::IValueProvider</class>
     <class kind="class">iproc::TFileCachedProducerCompBase</class>
     <class kind="class">iproc::TILockedProducer</class>
     <class kind="class">iproc::TMemCachedProducerComp</class>
@@ -30951,60 +30941,6 @@
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
       <anchor>a676cd5ff0426c1f72076c1847cb84a52</anchor>
       <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iproc::IValueProvider</name>
-    <filename>classiproc_1_1_i_value_provider.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ValueTypeId</name>
-      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
-      <anchor>a41b0645115a2166c8b41cf3d0191e5c0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_AUTO</name>
-      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
-      <anchor>a41b0645115a2166c8b41cf3d0191e5c0aeafc034f96c357f4b494215d2c6a360c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_POSITION</name>
-      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
-      <anchor>a41b0645115a2166c8b41cf3d0191e5c0aacb2b7b5d7bd14a36bc2251d732eb3a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_RADIUS</name>
-      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
-      <anchor>a41b0645115a2166c8b41cf3d0191e5c0a77a15678c2e57a871f4a6b0cfeab7d02</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_QUALITY</name>
-      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
-      <anchor>a41b0645115a2166c8b41cf3d0191e5c0a23a762dbc632ff5b5f57b699aaa45318</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_ANGLE</name>
-      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
-      <anchor>a41b0645115a2166c8b41cf3d0191e5c0ad4cf3532d6138bd64f798cd894820869</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_LENGTH</name>
-      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
-      <anchor>a41b0645115a2166c8b41cf3d0191e5c0a6ef40f3281d45868105cd4d1c19537d2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual imath::CVarVector</type>
-      <name>GetValue</name>
-      <anchorfile>classiproc_1_1_i_value_provider.html</anchorfile>
-      <anchor>ae9166958dfafd199fde41d7795761e04</anchor>
-      <arglist>(int index=-1, int valueTypeId=VTI_AUTO) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

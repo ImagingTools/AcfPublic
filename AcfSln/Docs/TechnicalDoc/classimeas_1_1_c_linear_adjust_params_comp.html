@@ -38,7 +38,7 @@
 <div class="title">imeas::CLinearAdjustParamsComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="imeas::CLinearAdjustParamsComp" --><!-- doxytag: inherits="icomp::CComponentBase,imeas::ILinearAdjustParams,imeas::INumericParams,imeas::INumericConstraints" -->
+<!-- doxytag: class="imeas::CLinearAdjustParamsComp" --><!-- doxytag: inherits="icomp::CComponentBase,imeas::ILinearAdjustParams,imeas::INumericValue,imeas::INumericConstraints" -->
 <p>Basic implementation of component of linear adjust parameters.  
  <a href="classimeas_1_1_c_linear_adjust_params_comp.html#details">More...</a></p>
 
@@ -51,7 +51,7 @@ Inheritance diagram for imeas::CLinearAdjustParamsComp:</div>
   <map id="imeas::CLinearAdjustParamsComp_map" name="imeas::CLinearAdjustParamsComp_map">
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,168,204,192"/>
 <area href="classimeas_1_1_i_linear_adjust_params.html" title="Get parameter of linear adjust." alt="imeas::ILinearAdjustParams" shape="rect" coords="214,168,418,192"/>
-<area href="classimeas_1_1_i_numeric_params.html" title="General parameter set containing list of numeric values." alt="imeas::INumericParams" shape="rect" coords="428,168,632,192"/>
+<area href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values." alt="imeas::INumericValue" shape="rect" coords="428,168,632,192"/>
 <area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="642,168,846,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,112,204,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="214,112,418,136"/>
@@ -85,8 +85,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value of offset factor.  <a href="#ad3879e24d7b063a8e1cf27d4565f82e3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#ae14ee3b5d4a585e3846956c09ef84831">SetOffsetFactor</a> (double offset)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of offset factor.  <a href="#ae14ee3b5d4a585e3846956c09ef84831"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#aa4c0709600ab79e56c46d7859c793c74">IsValueTypeSupported</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the given value type (or value component) is supported.  <a href="#aa4c0709600ab79e56c46d7859c793c74"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#ad0a3a8228216de79bea9cc5cf28bd451">GetNumericConstraints</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter constraints describing possible parameter values.  <a href="#ad0a3a8228216de79bea9cc5cf28bd451"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#a04b909f463d85c6549f3dd8fa0c1e110">GetComponentValue</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component value of the given type.  <a href="#a04b909f463d85c6549f3dd8fa0c1e110"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#aadb1fe9949f274e21a4085433ab62ebc">GetValues</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of numeric values.  <a href="#aadb1fe9949f274e21a4085433ab62ebc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#a398e789a27935aef97383f4758b7bf99">SetValues</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;values)</td></tr>
@@ -162,6 +166,29 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a04b909f463d85c6549f3dd8fa0c1e110"></a><!-- doxytag: member="imeas::CLinearAdjustParamsComp::GetComponentValue" ref="a04b909f463d85c6549f3dd8fa0c1e110" args="(ValueTypeId valueTypeId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> imeas::CLinearAdjustParamsComp::GetComponentValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a>&#160;</td>
+          <td class="paramname"><em>valueTypeId</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get access to component value of the given type. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>if data vector cannot be calculated it returns empty vector. </dd></dl>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value.html#a95dfecda838338e0327fb7fa0d07ff72">imeas::INumericValue</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad0a3a8228216de79bea9cc5cf28bd451"></a><!-- doxytag: member="imeas::CLinearAdjustParamsComp::GetNumericConstraints" ref="ad0a3a8228216de79bea9cc5cf28bd451" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +205,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get parameter constraints describing possible parameter values. </p>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_params.html#afa55b2b65c2f6a8ec416946e0bd66098">imeas::INumericParams</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value.html#a0bb594ecbaeca794fd86b583c79a5f0a">imeas::INumericValue</a>.</p>
 
 </div>
 </div>
@@ -339,7 +366,30 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get list of numeric values. </p>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_params.html#afd7f4c73268082073507c567b99c942e">imeas::INumericParams</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value.html#a34bc23dcc6747c86589a722d50bb1f71">imeas::INumericValue</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4c0709600ab79e56c46d7859c793c74"></a><!-- doxytag: member="imeas::CLinearAdjustParamsComp::IsValueTypeSupported" ref="aa4c0709600ab79e56c46d7859c793c74" args="(ValueTypeId valueTypeId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool imeas::CLinearAdjustParamsComp::IsValueTypeSupported </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a>&#160;</td>
+          <td class="paramname"><em>valueTypeId</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if the given value type (or value component) is supported. </p>
+<p>If the value component is supported you can access this via GetComponentValue method. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimeas_1_1_c_linear_adjust_params_comp.html#a04b909f463d85c6549f3dd8fa0c1e110" title="Get access to component value of the given type.">GetComponentValue</a> </dd></dl>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value.html#ae80249c5b28cb227c78ab46408dfef69">imeas::INumericValue</a>.</p>
 
 </div>
 </div>
@@ -421,7 +471,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set list of numeric values. </p>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_params.html#a96566d3dc2c14dd3d4b9ccfe3b28edcd">imeas::INumericParams</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_value.html#a320278040f8a7dfbe897c724bdc70a7f">imeas::INumericValue</a>.</p>
 
 </div>
 </div>
