@@ -74,7 +74,6 @@ private:
 	QPixmap m_pixmap;
 
 	const icmm::IColorTransformation* m_colorTransformationPtr;
-
 };
 
 

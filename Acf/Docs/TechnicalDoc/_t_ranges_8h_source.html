@@ -653,60 +653,61 @@
 <a name="l00724"></a>00724 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00725"></a><a class="code" href="classistd_1_1_t_ranges.html#a75ccd64818b185cb5dbe8231b2907c6f">00725</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#a75ccd64818b185cb5dbe8231b2907c6f" title="ShiftRanges all points in this set using specified offset.">TRanges&lt;ValueType&gt;::ShiftRanges</a>(ValueType offset)
 <a name="l00726"></a>00726 {
-<a name="l00727"></a>00727        <span class="keywordflow">for</span> (         SwitchPoints::iterator iter = m_switchPoints.begin();
-<a name="l00728"></a>00728                             iter != m_switchPoints.end();
-<a name="l00729"></a>00729                             ++iter){
-<a name="l00730"></a>00730               ValueType&amp; position = *iter;
-<a name="l00731"></a>00731 
-<a name="l00732"></a>00732               position += offset;
-<a name="l00733"></a>00733        }
-<a name="l00734"></a>00734 }
-<a name="l00735"></a>00735 
+<a name="l00727"></a>00727        <a class="code" href="classistd_1_1_t_ranges.html#a4c7ba1a93bf6fedab354bced4b40e1bb">SwitchPoints</a> newSwitchPoints;
+<a name="l00728"></a>00728        <span class="keywordflow">for</span> (         SwitchPoints::iterator iter = m_switchPoints.begin();
+<a name="l00729"></a>00729                             iter != m_switchPoints.end();
+<a name="l00730"></a>00730                             ++iter){
+<a name="l00731"></a>00731               newSwitchPoints.insert(*iter + offset);
+<a name="l00732"></a>00732        }
+<a name="l00733"></a>00733 
+<a name="l00734"></a>00734        m_switchPoints.swap(newSwitchPoints);
+<a name="l00735"></a>00735 }
 <a name="l00736"></a>00736 
-<a name="l00737"></a>00737 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
-<a name="l00738"></a><a class="code" href="classistd_1_1_t_ranges.html#a10cd04168431ce75a3c174d628ebb27d">00738</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#a10cd04168431ce75a3c174d628ebb27d" title="Get this set as list of istd::TRange objects.">TRanges&lt;ValueType&gt;::GetAsList</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a>&amp; range, <a class="code" href="classistd_1_1_t_ranges.html#af09dc919dd4ac811c5de1a48c496e724">RangeList</a>&amp; result)<span class="keyword"> const</span>
-<a name="l00739"></a>00739 <span class="keyword"></span>{
-<a name="l00740"></a>00740        <span class="keywordtype">int</span> prevPosition = range.<a class="code" href="classistd_1_1_t_range.html#af0d94456ae2efd66fc7c7848e0be8024" title="Get the bottom value.">GetMinValue</a>();
-<a name="l00741"></a>00741 
-<a name="l00742"></a>00742        <span class="keywordtype">bool</span> state = m_beginState;
-<a name="l00743"></a>00743 
-<a name="l00744"></a>00744        <span class="keywordflow">for</span> (         SwitchPoints::const_iterator iter = m_switchPoints.begin();
-<a name="l00745"></a>00745                             iter != m_switchPoints.end();
-<a name="l00746"></a>00746                             ++iter){
-<a name="l00747"></a>00747               ValueType position = *iter;
-<a name="l00748"></a>00748               <span class="keywordflow">if</span> (position &gt;= range.<a class="code" href="classistd_1_1_t_range.html#a138f4e110681ed9aa90ed1971271bc67" title="Get the top value.">GetMaxValue</a>()){
-<a name="l00749"></a>00749                      <span class="keywordflow">break</span>;
-<a name="l00750"></a>00750               }
-<a name="l00751"></a>00751 
-<a name="l00752"></a>00752               <span class="keywordflow">if</span> (position &gt; prevPosition){
-<a name="l00753"></a>00753                      <span class="keywordflow">if</span> (state){
-<a name="l00754"></a>00754                             result.push_back(<a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a>(prevPosition, position));
-<a name="l00755"></a>00755                      }
-<a name="l00756"></a>00756 
-<a name="l00757"></a>00757                      prevPosition = position;
-<a name="l00758"></a>00758               }
-<a name="l00759"></a>00759 
-<a name="l00760"></a>00760               state = !state;
-<a name="l00761"></a>00761        }
-<a name="l00762"></a>00762 
-<a name="l00763"></a>00763        <span class="keywordflow">if</span> (state){
-<a name="l00764"></a>00764               result.push_back(<a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a>(prevPosition, range.<a class="code" href="classistd_1_1_t_range.html#a138f4e110681ed9aa90ed1971271bc67" title="Get the top value.">GetMaxValue</a>()));
-<a name="l00765"></a>00765        }
-<a name="l00766"></a>00766 }
-<a name="l00767"></a>00767 
+<a name="l00737"></a>00737 
+<a name="l00738"></a>00738 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
+<a name="l00739"></a><a class="code" href="classistd_1_1_t_ranges.html#a10cd04168431ce75a3c174d628ebb27d">00739</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#a10cd04168431ce75a3c174d628ebb27d" title="Get this set as list of istd::TRange objects.">TRanges&lt;ValueType&gt;::GetAsList</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a>&amp; range, <a class="code" href="classistd_1_1_t_ranges.html#af09dc919dd4ac811c5de1a48c496e724">RangeList</a>&amp; result)<span class="keyword"> const</span>
+<a name="l00740"></a>00740 <span class="keyword"></span>{
+<a name="l00741"></a>00741        <span class="keywordtype">int</span> prevPosition = range.<a class="code" href="classistd_1_1_t_range.html#af0d94456ae2efd66fc7c7848e0be8024" title="Get the bottom value.">GetMinValue</a>();
+<a name="l00742"></a>00742 
+<a name="l00743"></a>00743        <span class="keywordtype">bool</span> state = m_beginState;
+<a name="l00744"></a>00744 
+<a name="l00745"></a>00745        <span class="keywordflow">for</span> (         SwitchPoints::const_iterator iter = m_switchPoints.begin();
+<a name="l00746"></a>00746                             iter != m_switchPoints.end();
+<a name="l00747"></a>00747                             ++iter){
+<a name="l00748"></a>00748               ValueType position = *iter;
+<a name="l00749"></a>00749               <span class="keywordflow">if</span> (position &gt;= range.<a class="code" href="classistd_1_1_t_range.html#a138f4e110681ed9aa90ed1971271bc67" title="Get the top value.">GetMaxValue</a>()){
+<a name="l00750"></a>00750                      <span class="keywordflow">break</span>;
+<a name="l00751"></a>00751               }
+<a name="l00752"></a>00752 
+<a name="l00753"></a>00753               <span class="keywordflow">if</span> (position &gt; prevPosition){
+<a name="l00754"></a>00754                      <span class="keywordflow">if</span> (state){
+<a name="l00755"></a>00755                             result.push_back(<a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a>(prevPosition, position));
+<a name="l00756"></a>00756                      }
+<a name="l00757"></a>00757 
+<a name="l00758"></a>00758                      prevPosition = position;
+<a name="l00759"></a>00759               }
+<a name="l00760"></a>00760 
+<a name="l00761"></a>00761               state = !state;
+<a name="l00762"></a>00762        }
+<a name="l00763"></a>00763 
+<a name="l00764"></a>00764        <span class="keywordflow">if</span> (state){
+<a name="l00765"></a>00765               result.push_back(<a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a>(prevPosition, range.<a class="code" href="classistd_1_1_t_range.html#a138f4e110681ed9aa90ed1971271bc67" title="Get the top value.">GetMaxValue</a>()));
+<a name="l00766"></a>00766        }
+<a name="l00767"></a>00767 }
 <a name="l00768"></a>00768 
-<a name="l00769"></a>00769 <span class="comment">// typedefs</span>
-<a name="l00770"></a>00770 
-<a name="l00771"></a><a class="code" href="namespaceistd.html#a24f0a77ba892b5c6e5db2bdbb9d381c2">00771</a> <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;double&gt;</a> <a class="code" href="namespaceistd.html#a24f0a77ba892b5c6e5db2bdbb9d381c2">CRanges</a>;
-<a name="l00772"></a><a class="code" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">00772</a> <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;int&gt;</a> <a class="code" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">CIntRanges</a>;
-<a name="l00773"></a>00773 
+<a name="l00769"></a>00769 
+<a name="l00770"></a>00770 <span class="comment">// typedefs</span>
+<a name="l00771"></a>00771 
+<a name="l00772"></a><a class="code" href="namespaceistd.html#a24f0a77ba892b5c6e5db2bdbb9d381c2">00772</a> <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;double&gt;</a> <a class="code" href="namespaceistd.html#a24f0a77ba892b5c6e5db2bdbb9d381c2">CRanges</a>;
+<a name="l00773"></a><a class="code" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">00773</a> <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;int&gt;</a> <a class="code" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">CIntRanges</a>;
 <a name="l00774"></a>00774 
-<a name="l00775"></a>00775 } <span class="comment">// namespace istd</span>
-<a name="l00776"></a>00776 
+<a name="l00775"></a>00775 
+<a name="l00776"></a>00776 } <span class="comment">// namespace istd</span>
 <a name="l00777"></a>00777 
-<a name="l00778"></a>00778 <span class="preprocessor">#endif istd_TRanges_included</span>
-<a name="l00779"></a>00779 <span class="preprocessor"></span>
-<a name="l00780"></a>00780 
+<a name="l00778"></a>00778 
+<a name="l00779"></a>00779 <span class="preprocessor">#endif istd_TRanges_included</span>
+<a name="l00780"></a>00780 <span class="preprocessor"></span>
+<a name="l00781"></a>00781 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

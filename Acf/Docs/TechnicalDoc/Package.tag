@@ -18862,14 +18862,14 @@
       <type>virtual const QString &amp;</type>
       <name>GetDescription</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>aacd90732354b2dca277991e8c2819e06</anchor>
+      <anchor>a1051397699beafc5cdb562a0763b4f46</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetKeywords</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>abc528ae2a18afe7b4a5fe91398f0f2bf</anchor>
+      <anchor>a38c319b737e3841dac674f275a642821</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34165,7 +34165,7 @@
       <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>a0ee8c911b99bc3e9f416fc926b7d3199</anchor>
+      <anchor>ae889bd9ccb05821fe4267f5f75711dce</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
