@@ -59,11 +59,11 @@ Inheritance diagram for icam::IBitmapAcquisition:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_i_bitmap_acquisition.html#ad1fd013eaa11fd644b41f2959b29fd7a">GetBitmapSize</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of acquired bitmap fo specified parameters.  <a href="#ad1fd013eaa11fd644b41f2959b29fd7a"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of acquired bitmap for specified parameters.  <a href="#ad1fd013eaa11fd644b41f2959b29fd7a"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Bitmap acquisition processor. </p>
-<p>This processor use as <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a></code> template parameter Input optional <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_time_stamp.html">istd::ITimeStamp</a> object to indicate trigger time of acquision. </p>
+<p>This processor uses optional input parameter of type <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_time_stamp.html">istd::ITimeStamp</a></code> to identify the image by its trigger time. </p>
 
 <p>Definition at line <a class="el" href="_i_bitmap_acquisition_8h_source.html#l00018">18</a> of file <a class="el" href="_i_bitmap_acquisition_8h_source.html">IBitmapAcquisition.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
@@ -82,7 +82,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get size of acquired bitmap fo specified parameters. </p>
+<p>Get size of acquired bitmap for specified parameters. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>if size of bitmap is known it returns this value. Elsewhere invalid size will be returned. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_index.html#adc9ffec0e27b28010cc88af1ebd33852">istd::TIndex::IsValid()</a></code>. </dd></dl>
 
