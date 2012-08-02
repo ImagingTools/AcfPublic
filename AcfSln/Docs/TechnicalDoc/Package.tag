@@ -11547,14 +11547,14 @@
   <compound kind="class">
     <name>iqtcam::CFileAcquisitionComp</name>
     <filename>classiqtcam_1_1_c_file_acquisition_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <class kind="struct">iqtcam::CFileAcquisitionComp::ParamsInfo</class>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
-      <anchor>a7594ee3b412cd8e21401d545160de53f</anchor>
+      <anchor>af39d2abe9c404adedd4c2504b874f00a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

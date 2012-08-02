@@ -60,6 +60,8 @@ int CFileAcquisitionComp::DoProcessing(
 	I_ASSERT(m_maxCachedDirectoriesAttrPtr.IsValid());	// obligatory attribute
 
 	if (!m_bitmapLoaderCompPtr.IsValid()){
+		SendVerboseMessage("Bitmap loader was not set");
+
 		return TS_INVALID;
 	}
 
@@ -69,6 +71,9 @@ int CFileAcquisitionComp::DoProcessing(
 		loaderParamsPtr = dynamic_cast<const iprm::IFileNameParam*>(paramsPtr->GetParameter(*m_parameterIdAttrPtr));
 		if (loaderParamsPtr != NULL){
 			filesPath = loaderParamsPtr->GetPath();
+		}
+		else{
+			SendVerboseMessage("Bitmap directory parameter not found in the parameter set");
 		}
 	}
 	QDir directory(filesPath);

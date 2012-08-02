@@ -60,7 +60,7 @@ private:
 };
 
 
-} // namespace ibase
+} // namespace iprm
 
 
 #endif // !iprm_CNameParamComp_included

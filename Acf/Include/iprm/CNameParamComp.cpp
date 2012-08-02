@@ -41,6 +41,6 @@ void CNameParamComp::OnComponentCreated()
 }
 
 
-} // namespace ibase
+} // namespace iprm
 
 
