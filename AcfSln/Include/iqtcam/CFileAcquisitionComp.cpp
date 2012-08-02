@@ -34,6 +34,7 @@
 #include "iprm/IParamsSet.h"
 #include "iimg/IRasterImage.h"
 #include "iqt/IQImageProvider.h"
+#include "iprm/TParamsPtr.h"
 
 
 namespace iqtcam
@@ -66,10 +67,10 @@ int CFileAcquisitionComp::DoProcessing(
 	}
 
 	QString filesPath = *m_defaultDirAttrPtr;
-	const iprm::IFileNameParam* loaderParamsPtr = NULL;
+	iprm::TParamsPtr<iprm::IFileNameParam> loaderParamsPtr;
 	if (paramsPtr != NULL){
-		loaderParamsPtr = dynamic_cast<const iprm::IFileNameParam*>(paramsPtr->GetParameter(*m_parameterIdAttrPtr));
-		if (loaderParamsPtr != NULL){
+		loaderParamsPtr.Init(paramsPtr, *m_parameterIdAttrPtr);
+		if (loaderParamsPtr.IsValid()){
 			filesPath = loaderParamsPtr->GetPath();
 		}
 		else{

@@ -25,6 +25,9 @@
 
 
 // ACF includes
+#include "iprm/TParamsPtr.h"
+
+// ACF-Solutions includes
 #include "iipr/CImageProcessorCompBase.h"
 
 
@@ -79,13 +82,13 @@ bool TImageParamProcessorCompBase<ParameterType>::ProcessImage(
 			const iimg::IBitmap& inputImage,
 			iimg::IBitmap& outputImage)
 {
-	const ParameterType* processorParamsPtr = NULL;	
+	iprm::TParamsPtr<ParameterType> processorParamsPtr;	
 	if ((paramsPtr != NULL) && m_paramsIdAttrPtr.IsValid()){
-		processorParamsPtr = dynamic_cast<const ParameterType*>(paramsPtr->GetParameter(*m_paramsIdAttrPtr));
+		processorParamsPtr.Init(paramsPtr, *m_paramsIdAttrPtr);
 	}
 	
 	// do image processing:
-	return ParamProcessImage(processorParamsPtr, inputImage, outputImage);
+	return ParamProcessImage(processorParamsPtr.GetPtr(), inputImage, outputImage);
 }
 
 

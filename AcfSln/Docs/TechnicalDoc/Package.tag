@@ -6963,14 +6963,14 @@
   <compound kind="class">
     <name>iipr::CProcessedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; const i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; const i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a4e87e9bfe3c3368aa73d9f8beea9d813</anchor>
+      <anchor>af2209ade5fbce97f977f90eda8391f93</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

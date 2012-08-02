@@ -3082,6 +3082,7 @@
     <name>TParamsPtr.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_t_params_ptr_8h</filename>
+    <includes id="_t_pointer_base_8h" name="TPointerBase.h" local="yes" imported="no">istd/TPointerBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <class kind="class">iprm::TParamsPtr</class>
     <namespace>iprm</namespace>
@@ -30224,8 +30225,8 @@
       <type></type>
       <name>TParamsPtr</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
-      <anchor>a69c5a48c381617251c08e2e32263fadb</anchor>
-      <arglist>()</arglist>
+      <anchor>ab2cec6753e848321309b77aceef95993</anchor>
+      <arglist>(const ParameterInterace *ptr=NULL)</arglist>
     </member>
     <member kind="function">
       <type></type>

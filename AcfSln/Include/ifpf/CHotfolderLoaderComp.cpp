@@ -29,6 +29,7 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
+#include "iprm/TParamsPtr.h"
 
 
 // AcfSln includes
@@ -54,11 +55,11 @@ int CHotfolderLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& f
 	}
 
 	if (m_monitorSessionsParamIdAttrPtr.IsValid()){
-		const iser::ISerializable* monitoringSessionsPtr = hotfolderParamsSet->GetParameter(*m_monitorSessionsParamIdAttrPtr);
-		if (monitoringSessionsPtr != NULL){
+		iprm::TParamsPtr<iser::ISerializable> monitoringSessionsPtr(hotfolderParamsSet, *m_monitorSessionsParamIdAttrPtr);
+		if (monitoringSessionsPtr.IsValid()){
 			ReadArchiveEx staticParamsArchive(GetStaticParamsPath(filePath), this);
 
-			(const_cast<iser::ISerializable*>(monitoringSessionsPtr))->Serialize(staticParamsArchive);
+			(const_cast<iser::ISerializable*>(monitoringSessionsPtr.GetPtr()))->Serialize(staticParamsArchive);
 		}
 	}
 	
