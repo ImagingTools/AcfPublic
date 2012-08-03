@@ -38611,6 +38611,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>ab3580750fd2f0dc661cc082648044594</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>ad9c99838dff86b005fc5cf32198c332d</anchor>
