@@ -325,7 +325,7 @@
 <a name="l00363"></a>00363 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00364"></a><a class="code" href="classistd_1_1_t_array.html#a0bd33830615391a11c68626e0d40d739">00364</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#a0bd33830615391a11c68626e0d40d739" title="Set some value to all elements.">TArray&lt;Element, Dimensions&gt;::SetAllElements</a>(<span class="keyword">const</span> Element&amp; value)
 <a name="l00365"></a>00365 {
-<a name="l00366"></a>00366        <span class="keywordflow">for</span> (         Elements::Iterator iter = m_elements.begin();
+<a name="l00366"></a>00366     <span class="keywordflow">for</span> (            <span class="keyword">typename</span> Elements::Iterator iter = m_elements.begin();
 <a name="l00367"></a>00367                             iter != m_elements.end();
 <a name="l00368"></a>00368                             ++iter){
 <a name="l00369"></a>00369               *iter = value;

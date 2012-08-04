@@ -141,7 +141,7 @@
 <a name="l00212"></a>00212 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00213"></a><a class="code" href="classistd_1_1_t_ranges.html#a35a1127da7204ddc0de789d097a13030">00213</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#a35a1127da7204ddc0de789d097a13030" title="Insert new switch point.">TRanges&lt;ValueType&gt;::InsertSwitchPoint</a>(ValueType point)
 <a name="l00214"></a>00214 {
-<a name="l00215"></a>00215        std::pair&lt;SwitchPoints::iterator, bool&gt; insertionStatus = m_switchPoints.insert(point);
+<a name="l00215"></a>00215     std::pair&lt;typename SwitchPoints::iterator, bool&gt; insertionStatus = m_switchPoints.insert(point);
 <a name="l00216"></a>00216        <span class="keywordflow">if</span> (!insertionStatus.second){
 <a name="l00217"></a>00217               m_switchPoints.erase(insertionStatus.first);
 <a name="l00218"></a>00218        }
@@ -166,7 +166,7 @@
 <a name="l00237"></a><a class="code" href="classistd_1_1_t_ranges.html#a7538136f8147d44dae251d07b0841a73">00237</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_ranges.html#a7538136f8147d44dae251d07b0841a73" title="Check if some point belongs to set.">TRanges&lt;ValueType&gt;::IsInside</a>(ValueType point)<span class="keyword"> const</span>
 <a name="l00238"></a>00238 <span class="keyword"></span>{
 <a name="l00239"></a>00239        <span class="keywordtype">bool</span> state = m_beginState;
-<a name="l00240"></a>00240        <span class="keywordflow">for</span> (         SwitchPoints::const_iterator iter = m_switchPoints.begin();
+<a name="l00240"></a>00240     <span class="keywordflow">for</span> (            <span class="keyword">typename</span> SwitchPoints::const_iterator iter = m_switchPoints.begin();
 <a name="l00241"></a>00241                             iter != m_switchPoints.end();
 <a name="l00242"></a>00242                             ++iter){
 <a name="l00243"></a>00243               <span class="keywordflow">if</span> (*iter &gt; point){
@@ -184,7 +184,7 @@
 <a name="l00255"></a><a class="code" href="classistd_1_1_t_ranges.html#ac3e57bf72fc2631dc1c735f1b1049657">00255</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_ranges.html#a7538136f8147d44dae251d07b0841a73" title="Check if some point belongs to set.">TRanges&lt;ValueType&gt;::IsInside</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_range.html" title="Implementation of a abstract range defined by two values - minimum and maximum.">TRange&lt;ValueType&gt;</a>&amp; range)<span class="keyword"> const</span>
 <a name="l00256"></a>00256 <span class="keyword"></span>{
 <a name="l00257"></a>00257        <span class="keywordtype">bool</span> state = m_beginState;
-<a name="l00258"></a>00258        <span class="keywordflow">for</span> (         SwitchPoints::const_iterator iter = m_switchPoints.begin();
+<a name="l00258"></a>00258     <span class="keywordflow">for</span> (            <span class="keyword">typename</span> SwitchPoints::const_iterator iter = m_switchPoints.begin();
 <a name="l00259"></a>00259                             iter != m_switchPoints.end();
 <a name="l00260"></a>00260                             ++iter){
 <a name="l00261"></a>00261               <span class="keywordflow">if</span> (*iter &gt; range.<a class="code" href="classistd_1_1_t_range.html#af0d94456ae2efd66fc7c7848e0be8024" title="Get the bottom value.">GetMinValue</a>()){
@@ -209,8 +209,8 @@
 <a name="l00280"></a>00280 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00281"></a><a class="code" href="classistd_1_1_t_ranges.html#a828da86224b651b28c637b122cf1cff9">00281</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_ranges.html#a7538136f8147d44dae251d07b0841a73" title="Check if some point belongs to set.">TRanges&lt;ValueType&gt;::IsInside</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;ValueType&gt;</a>&amp; rangesList)<span class="keyword"> const</span>
 <a name="l00282"></a>00282 <span class="keyword"></span>{
-<a name="l00283"></a>00283        SwitchPoints::const_iterator iter = m_switchPoints.begin();
-<a name="l00284"></a>00284        SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+<a name="l00283"></a>00283     <span class="keyword">typename</span> SwitchPoints::const_iterator iter = m_switchPoints.begin();
+<a name="l00284"></a>00284     <span class="keyword">typename</span> SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 <a name="l00285"></a>00285 
 <a name="l00286"></a>00286        <span class="keywordtype">bool</span> state = m_beginState;
 <a name="l00287"></a>00287        <span class="keywordtype">bool</span> listState = rangesList.m_beginState;
@@ -263,8 +263,8 @@
 <a name="l00334"></a>00334 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00335"></a><a class="code" href="classistd_1_1_t_ranges.html#a4fd1b1dc49bb7a9c165d61e003b3a0be">00335</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#a2bc86c9d0011e2c79a4d5db01d105226" title="Get union of two range list.">TRanges&lt;ValueType&gt;::GetUnion</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;ValueType&gt;</a>&amp; rangesList, <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;ValueType&gt;</a>&amp; result)<span class="keyword"> const</span>
 <a name="l00336"></a>00336 <span class="keyword"></span>{
-<a name="l00337"></a>00337        SwitchPoints::const_iterator iter = m_switchPoints.begin();
-<a name="l00338"></a>00338        SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+<a name="l00337"></a>00337     <span class="keyword">typename</span> SwitchPoints::const_iterator iter = m_switchPoints.begin();
+<a name="l00338"></a>00338     <span class="keyword">typename</span> SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 <a name="l00339"></a>00339 
 <a name="l00340"></a>00340        <span class="keywordtype">bool</span> state = m_beginState;
 <a name="l00341"></a>00341        <span class="keywordtype">bool</span> listState = rangesList.m_beginState;
@@ -320,13 +320,13 @@
 <a name="l00391"></a>00391 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00392"></a><a class="code" href="classistd_1_1_t_ranges.html#aab8671d6f0a0f914a35dbfc152944c17">00392</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#aab8671d6f0a0f914a35dbfc152944c17" title="Calculate union of this range list and the other one.">TRanges&lt;ValueType&gt;::Union</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;ValueType&gt;</a>&amp; rangesList)
 <a name="l00393"></a>00393 {
-<a name="l00394"></a>00394        SwitchPoints::iterator iter = m_switchPoints.begin();
-<a name="l00395"></a>00395        SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+<a name="l00394"></a>00394     <span class="keyword">typename</span> SwitchPoints::iterator iter = m_switchPoints.begin();
+<a name="l00395"></a>00395     <span class="keyword">typename</span> SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 <a name="l00396"></a>00396 
 <a name="l00397"></a>00397        <span class="keywordtype">bool</span> state = m_beginState;
 <a name="l00398"></a>00398        <span class="keywordtype">bool</span> listState = rangesList.m_beginState;
 <a name="l00399"></a>00399 
-<a name="l00400"></a>00400        result.m_beginState = state || listState;
+<a name="l00400"></a>00400     m_beginState = state || listState;
 <a name="l00401"></a>00401 
 <a name="l00402"></a>00402        <span class="keywordflow">for</span> (;;){
 <a name="l00403"></a>00403               <span class="keywordflow">if</span> (iter != m_switchPoints.end()){
@@ -385,7 +385,7 @@
 <a name="l00456"></a>00456        }
 <a name="l00457"></a>00457 
 <a name="l00458"></a>00458        <span class="keywordtype">bool</span> firstPointState = m_beginState;
-<a name="l00459"></a>00459        SwitchPoints::const_iterator firstIter = m_switchPoints.begin();
+<a name="l00459"></a>00459     <span class="keyword">typename</span> SwitchPoints::const_iterator firstIter = m_switchPoints.begin();
 <a name="l00460"></a>00460        <span class="keywordflow">for</span> (;firstIter != m_switchPoints.end(); ++firstIter){
 <a name="l00461"></a>00461               <span class="keywordflow">if</span> (*firstIter &gt; range.<a class="code" href="classistd_1_1_t_range.html#af0d94456ae2efd66fc7c7848e0be8024" title="Get the bottom value.">GetMinValue</a>()){
 <a name="l00462"></a>00462                      <span class="keywordflow">break</span>;
@@ -395,7 +395,7 @@
 <a name="l00466"></a>00466        }
 <a name="l00467"></a>00467 
 <a name="l00468"></a>00468        <span class="keywordtype">bool</span> secondPointState = firstPointState;
-<a name="l00469"></a>00469        SwitchPoints::const_iterator secondIter = firstIter;
+<a name="l00469"></a>00469     <span class="keyword">typename</span> SwitchPoints::const_iterator secondIter = firstIter;
 <a name="l00470"></a>00470        <span class="keywordflow">for</span> (;secondIter != m_switchPoints.end(); ++secondIter){
 <a name="l00471"></a>00471               <span class="keywordflow">if</span> (*secondIter &gt; range.<a class="code" href="classistd_1_1_t_range.html#a138f4e110681ed9aa90ed1971271bc67" title="Get the top value.">GetMaxValue</a>()){
 <a name="l00472"></a>00472                      <span class="keywordflow">break</span>;
@@ -446,8 +446,8 @@
 <a name="l00517"></a>00517 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00518"></a><a class="code" href="classistd_1_1_t_ranges.html#adc438b11f2323510293b419e90ce0f9b">00518</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#a5621a6f9ee9b77f1e53c04a5106549ad" title="Get intersection of two range list.">TRanges&lt;ValueType&gt;::GetIntersection</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;ValueType&gt;</a>&amp; rangesList, <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;ValueType&gt;</a>&amp; result)<span class="keyword"> const</span>
 <a name="l00519"></a>00519 <span class="keyword"></span>{
-<a name="l00520"></a>00520        SwitchPoints::const_iterator iter = m_switchPoints.begin();
-<a name="l00521"></a>00521        SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+<a name="l00520"></a>00520     <span class="keyword">typename</span> SwitchPoints::const_iterator iter = m_switchPoints.begin();
+<a name="l00521"></a>00521     <span class="keyword">typename</span> SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 <a name="l00522"></a>00522 
 <a name="l00523"></a>00523        <span class="keywordtype">bool</span> state = m_beginState;
 <a name="l00524"></a>00524        <span class="keywordtype">bool</span> listState = rangesList.m_beginState;
@@ -503,8 +503,8 @@
 <a name="l00574"></a>00574 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00575"></a><a class="code" href="classistd_1_1_t_ranges.html#ab92dfc8871157df594706ed88fe20b1c">00575</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#ab92dfc8871157df594706ed88fe20b1c" title="Calculate intersection of this range list and the other one.">TRanges&lt;ValueType&gt;::Intersection</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_ranges.html" title="Set of ranges.">TRanges&lt;ValueType&gt;</a>&amp; rangesList)
 <a name="l00576"></a>00576 {
-<a name="l00577"></a>00577        SwitchPoints::iterator iter = m_switchPoints.begin();
-<a name="l00578"></a>00578        SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+<a name="l00577"></a>00577     <span class="keyword">typename</span> SwitchPoints::iterator iter = m_switchPoints.begin();
+<a name="l00578"></a>00578     <span class="keyword">typename</span> SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 <a name="l00579"></a>00579 
 <a name="l00580"></a>00580        <span class="keywordtype">bool</span> state = m_beginState;
 <a name="l00581"></a>00581        <span class="keywordtype">bool</span> listState = rangesList.m_beginState;
@@ -579,7 +579,7 @@
 <a name="l00650"></a>00650 
 <a name="l00651"></a>00651        <span class="keywordtype">bool</span> state = m_beginState;
 <a name="l00652"></a>00652 
-<a name="l00653"></a>00653        SwitchPoints::iterator iter = m_switchPoints.begin();
+<a name="l00653"></a>00653     <span class="keyword">typename</span> SwitchPoints::iterator iter = m_switchPoints.begin();
 <a name="l00654"></a>00654        <span class="keywordflow">while</span> (iter != m_switchPoints.end()){
 <a name="l00655"></a>00655               ValueType point = *iter;
 <a name="l00656"></a>00656 
@@ -588,7 +588,7 @@
 <a name="l00659"></a>00659               <span class="keywordflow">if</span> (!state == isErosion){
 <a name="l00660"></a>00660                      <span class="comment">// move point back</span>
 <a name="l00661"></a>00661                      <span class="keywordflow">if</span> (iter != m_switchPoints.begin()){
-<a name="l00662"></a>00662                             SwitchPoints::iterator prevIter = iter;
+<a name="l00662"></a>00662                 <span class="keyword">typename</span> SwitchPoints::iterator prevIter = iter;
 <a name="l00663"></a>00663                             --prevIter;
 <a name="l00664"></a>00664 
 <a name="l00665"></a>00665                             <span class="keywordflow">if</span> (*prevIter &gt; point - correctionValue * 2){
@@ -606,7 +606,7 @@
 <a name="l00677"></a>00677               }
 <a name="l00678"></a>00678               <span class="keywordflow">else</span>{
 <a name="l00679"></a>00679                      <span class="comment">// move point forward</span>
-<a name="l00680"></a>00680                      SwitchPoints::iterator nextIter = iter;
+<a name="l00680"></a>00680             <span class="keyword">typename</span> SwitchPoints::iterator nextIter = iter;
 <a name="l00681"></a>00681                      ++nextIter;
 <a name="l00682"></a>00682 
 <a name="l00683"></a>00683                      <span class="keywordflow">if</span> (nextIter != m_switchPoints.begin()){
@@ -653,8 +653,8 @@
 <a name="l00724"></a>00724 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;
 <a name="l00725"></a><a class="code" href="classistd_1_1_t_ranges.html#a75ccd64818b185cb5dbe8231b2907c6f">00725</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_ranges.html#a75ccd64818b185cb5dbe8231b2907c6f" title="ShiftRanges all points in this set using specified offset.">TRanges&lt;ValueType&gt;::ShiftRanges</a>(ValueType offset)
 <a name="l00726"></a>00726 {
-<a name="l00727"></a>00727        <a class="code" href="classistd_1_1_t_ranges.html#a4c7ba1a93bf6fedab354bced4b40e1bb">SwitchPoints</a> newSwitchPoints;
-<a name="l00728"></a>00728        <span class="keywordflow">for</span> (         SwitchPoints::iterator iter = m_switchPoints.begin();
+<a name="l00727"></a>00727     <a class="code" href="classistd_1_1_t_ranges.html#a4c7ba1a93bf6fedab354bced4b40e1bb">SwitchPoints</a> newSwitchPoints;
+<a name="l00728"></a>00728     <span class="keywordflow">for</span> (            <span class="keyword">typename</span> SwitchPoints::iterator iter = m_switchPoints.begin();
 <a name="l00729"></a>00729                             iter != m_switchPoints.end();
 <a name="l00730"></a>00730                             ++iter){
 <a name="l00731"></a>00731               newSwitchPoints.insert(*iter + offset);
@@ -671,7 +671,7 @@
 <a name="l00742"></a>00742 
 <a name="l00743"></a>00743        <span class="keywordtype">bool</span> state = m_beginState;
 <a name="l00744"></a>00744 
-<a name="l00745"></a>00745        <span class="keywordflow">for</span> (         SwitchPoints::const_iterator iter = m_switchPoints.begin();
+<a name="l00745"></a>00745     <span class="keywordflow">for</span> (            <span class="keyword">typename</span> SwitchPoints::const_iterator iter = m_switchPoints.begin();
 <a name="l00746"></a>00746                             iter != m_switchPoints.end();
 <a name="l00747"></a>00747                             ++iter){
 <a name="l00748"></a>00748               ValueType position = *iter;

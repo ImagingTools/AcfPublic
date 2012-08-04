@@ -84,6 +84,8 @@ public:
 		I_ASSIGN(m_labelPositionAttrPtr, "LabelPosition", "Selection label position. 0 - Left from the selector,\n1 - On top of the selector", false, LP_LEFT);
 	I_END_COMPONENT;
 
+	COptionsManagerGuiComp();
+			
 	// reimplemented (imod::IModelEditor)
 	virtual void UpdateModel() const;
 
@@ -103,6 +105,7 @@ protected:
 protected Q_SLOTS:
 	void OnSelectionChanged(int index);
 	void OnEditingFinished();
+	void OnTextChanged(const QString& text);
 
 private:
 	void UpdateComboBox();
@@ -114,6 +117,11 @@ private:
 	I_ATTR(int, m_labelPositionAttrPtr);
 	I_ATTR(int, m_iconSizeAttrPtr);
 	I_REF(iqtgui::IIconProvider, m_infoIconProviderCompPtr);
+
+	/**
+		Flag to indicate that the option text is currently editing.
+	*/
+	bool m_isEditingFlag;
 };
 
 

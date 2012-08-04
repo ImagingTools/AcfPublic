@@ -234,7 +234,7 @@ typename TRanges<ValueType>::SwitchPoints& TRanges<ValueType>::GetSwitchPointsRe
 template <typename ValueType>
 void TRanges<ValueType>::InsertSwitchPoint(ValueType point)
 {
-	std::pair<SwitchPoints::iterator, bool> insertionStatus = m_switchPoints.insert(point);
+    std::pair<typename SwitchPoints::iterator, bool> insertionStatus = m_switchPoints.insert(point);
 	if (!insertionStatus.second){
 		m_switchPoints.erase(insertionStatus.first);
 	}
@@ -259,7 +259,7 @@ template <typename ValueType>
 bool TRanges<ValueType>::IsInside(ValueType point) const
 {
 	bool state = m_beginState;
-	for (		SwitchPoints::const_iterator iter = m_switchPoints.begin();
+    for (		typename SwitchPoints::const_iterator iter = m_switchPoints.begin();
 				iter != m_switchPoints.end();
 				++iter){
 		if (*iter > point){
@@ -277,7 +277,7 @@ template <typename ValueType>
 bool TRanges<ValueType>::IsInside(const TRange<ValueType>& range) const
 {
 	bool state = m_beginState;
-	for (		SwitchPoints::const_iterator iter = m_switchPoints.begin();
+    for (		typename SwitchPoints::const_iterator iter = m_switchPoints.begin();
 				iter != m_switchPoints.end();
 				++iter){
 		if (*iter > range.GetMinValue()){
@@ -302,8 +302,8 @@ bool TRanges<ValueType>::IsInside(const TRange<ValueType>& range) const
 template <typename ValueType>
 bool TRanges<ValueType>::IsInside(const TRanges<ValueType>& rangesList) const
 {
-	SwitchPoints::const_iterator iter = m_switchPoints.begin();
-	SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+    typename SwitchPoints::const_iterator iter = m_switchPoints.begin();
+    typename SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 
 	bool state = m_beginState;
 	bool listState = rangesList.m_beginState;
@@ -356,8 +356,8 @@ TRanges<ValueType> TRanges<ValueType>::GetUnion(const TRanges<ValueType>& ranges
 template <typename ValueType>
 void TRanges<ValueType>::GetUnion(const TRanges<ValueType>& rangesList, TRanges<ValueType>& result) const
 {
-	SwitchPoints::const_iterator iter = m_switchPoints.begin();
-	SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+    typename SwitchPoints::const_iterator iter = m_switchPoints.begin();
+    typename SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 
 	bool state = m_beginState;
 	bool listState = rangesList.m_beginState;
@@ -413,13 +413,13 @@ void TRanges<ValueType>::GetUnion(const TRanges<ValueType>& rangesList, TRanges<
 template <typename ValueType>
 void TRanges<ValueType>::Union(const TRanges<ValueType>& rangesList)
 {
-	SwitchPoints::iterator iter = m_switchPoints.begin();
-	SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+    typename SwitchPoints::iterator iter = m_switchPoints.begin();
+    typename SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 
 	bool state = m_beginState;
 	bool listState = rangesList.m_beginState;
 
-	result.m_beginState = state || listState;
+    m_beginState = state || listState;
 
 	for (;;){
 		if (iter != m_switchPoints.end()){
@@ -478,7 +478,7 @@ void TRanges<ValueType>::Union(const TRange<ValueType>& range, bool isInverted)
 	}
 
 	bool firstPointState = m_beginState;
-	SwitchPoints::const_iterator firstIter = m_switchPoints.begin();
+    typename SwitchPoints::const_iterator firstIter = m_switchPoints.begin();
 	for (;firstIter != m_switchPoints.end(); ++firstIter){
 		if (*firstIter > range.GetMinValue()){
 			break;
@@ -488,7 +488,7 @@ void TRanges<ValueType>::Union(const TRange<ValueType>& range, bool isInverted)
 	}
 
 	bool secondPointState = firstPointState;
-	SwitchPoints::const_iterator secondIter = firstIter;
+    typename SwitchPoints::const_iterator secondIter = firstIter;
 	for (;secondIter != m_switchPoints.end(); ++secondIter){
 		if (*secondIter > range.GetMaxValue()){
 			break;
@@ -539,8 +539,8 @@ TRanges<ValueType> TRanges<ValueType>::GetIntersection(const TRanges<ValueType>&
 template <typename ValueType>
 void TRanges<ValueType>::GetIntersection(const TRanges<ValueType>& rangesList, TRanges<ValueType>& result) const
 {
-	SwitchPoints::const_iterator iter = m_switchPoints.begin();
-	SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+    typename SwitchPoints::const_iterator iter = m_switchPoints.begin();
+    typename SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 
 	bool state = m_beginState;
 	bool listState = rangesList.m_beginState;
@@ -596,8 +596,8 @@ void TRanges<ValueType>::GetIntersection(const TRanges<ValueType>& rangesList, T
 template <typename ValueType>
 void TRanges<ValueType>::Intersection(const TRanges<ValueType>& rangesList)
 {
-	SwitchPoints::iterator iter = m_switchPoints.begin();
-	SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
+    typename SwitchPoints::iterator iter = m_switchPoints.begin();
+    typename SwitchPoints::const_iterator listIter = rangesList.m_switchPoints.begin();
 
 	bool state = m_beginState;
 	bool listState = rangesList.m_beginState;
@@ -672,7 +672,7 @@ void TRanges<ValueType>::Erosion(ValueType value)
 
 	bool state = m_beginState;
 
-	SwitchPoints::iterator iter = m_switchPoints.begin();
+    typename SwitchPoints::iterator iter = m_switchPoints.begin();
 	while (iter != m_switchPoints.end()){
 		ValueType point = *iter;
 
@@ -681,7 +681,7 @@ void TRanges<ValueType>::Erosion(ValueType value)
 		if (!state == isErosion){
 			// move point back
 			if (iter != m_switchPoints.begin()){
-				SwitchPoints::iterator prevIter = iter;
+                typename SwitchPoints::iterator prevIter = iter;
 				--prevIter;
 
 				if (*prevIter > point - correctionValue * 2){
@@ -699,7 +699,7 @@ void TRanges<ValueType>::Erosion(ValueType value)
 		}
 		else{
 			// move point forward
-			SwitchPoints::iterator nextIter = iter;
+            typename SwitchPoints::iterator nextIter = iter;
 			++nextIter;
 
 			if (nextIter != m_switchPoints.begin()){
@@ -746,8 +746,8 @@ void TRanges<ValueType>::RemoveGaps(ValueType value, bool gapState)
 template <typename ValueType>
 void TRanges<ValueType>::ShiftRanges(ValueType offset)
 {
-	SwitchPoints newSwitchPoints;
-	for (		SwitchPoints::iterator iter = m_switchPoints.begin();
+    SwitchPoints newSwitchPoints;
+    for (		typename SwitchPoints::iterator iter = m_switchPoints.begin();
 				iter != m_switchPoints.end();
 				++iter){
 		newSwitchPoints.insert(*iter + offset);
@@ -764,7 +764,7 @@ void TRanges<ValueType>::GetAsList(const TRange<ValueType>& range, RangeList& re
 
 	bool state = m_beginState;
 
-	for (		SwitchPoints::const_iterator iter = m_switchPoints.begin();
+    for (		typename SwitchPoints::const_iterator iter = m_switchPoints.begin();
 				iter != m_switchPoints.end();
 				++iter){
 		ValueType position = *iter;

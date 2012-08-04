@@ -37,11 +37,22 @@ namespace iqtprm
 {
 
 
+// public methods
+
+COptionsManagerGuiComp::COptionsManagerGuiComp()
+	:m_isEditingFlag(false)
+{
+}
+
 // reimplemented (imod::IModelEditor)
 
 void COptionsManagerGuiComp::UpdateModel() const
 {
 	I_ASSERT(IsGuiCreated());
+
+	if (m_isEditingFlag){
+		return;
+	}
 
 	iprm::ISelectionParam* selectionPtr = GetObjectPtr();
 	I_ASSERT(selectionPtr != NULL);
@@ -74,6 +85,7 @@ void COptionsManagerGuiComp::OnGuiModelAttached()
 		Selector->setEditable(true);
 
 		connect(Selector->lineEdit(), SIGNAL(editingFinished()), this, SLOT(OnEditingFinished()));
+		connect(Selector->lineEdit(), SIGNAL(textChanged(const QString&)), this, SLOT(OnTextChanged(const QString&)));
 	}
 
 }
@@ -187,6 +199,8 @@ void COptionsManagerGuiComp::OnSelectionChanged(int /*index*/)
 	if (DoUpdateModel()){
 		UpdateDescriptionFrame();
 	}
+
+	m_isEditingFlag = false;
 }
 
 
@@ -220,6 +234,14 @@ void COptionsManagerGuiComp::OnEditingFinished()
 			optionManagerPtr->InsertOption(newOptionName, newOptionName.toLocal8Bit());
 		}
 	}
+
+	m_isEditingFlag = false;
+}
+
+
+void COptionsManagerGuiComp::OnTextChanged(const QString& /*text*/)
+{
+	m_isEditingFlag = true;
 }
 
 

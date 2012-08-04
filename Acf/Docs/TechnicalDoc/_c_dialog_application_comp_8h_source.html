@@ -38,30 +38,30 @@
 <a name="l00011"></a>00011 {
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00019"></a><a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html">00019</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html" title="Standard component for a Qt based GUI application.">CDialogApplicationComp</a>: <span class="keyword">public</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html" title="Standard component for a Qt based GUI application.">CApplicationCompBase</a>
-<a name="l00020"></a>00020 {
-<a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a><a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html#aca95f063e19ab9946cf32740351818ce">00022</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html" title="Standard component for a Qt based GUI application.">CApplicationCompBase</a> <a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html#aca95f063e19ab9946cf32740351818ce">BaseClass</a>;
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html" title="Standard component for a Qt based GUI application.">CDialogApplicationComp</a>);
-<a name="l00025"></a>00025               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a>);
-<a name="l00026"></a>00026               I_ASSIGN(m_mainDialogCompPtr, <span class="stringliteral">&quot;MainDialogWindow&quot;</span>, <span class="stringliteral">&quot;Dialog window shown as main window&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MainDialogWindow&quot;</span>);
-<a name="l00027"></a>00027        I_END_COMPONENT;
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029        <span class="comment">// reimplemented (ibase::IApplication)</span>
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html#af020846485ce5b0cb6cb114d70e87c93" title="Starts execution loop of the application.">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html#a0930cdb686d7394e40fd547924ef3ae1" title="Gets the command line arguments of this application.">GetHelpText</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">private</span>:
-<a name="l00034"></a>00034        I_REF(<a class="code" href="classiqtgui_1_1_i_dialog.html" title="Interface for a dialog widget.">IDialog</a>, m_mainDialogCompPtr);
-<a name="l00035"></a>00035 };
-<a name="l00036"></a>00036 
+<a name="l00017"></a><a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html">00017</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html" title="Standard component for a dialog based GUI application.">CDialogApplicationComp</a>: <span class="keyword">public</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html" title="Standard component for a Qt based GUI application.">CApplicationCompBase</a>
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019 <span class="keyword">public</span>:
+<a name="l00020"></a><a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html#aca95f063e19ab9946cf32740351818ce">00020</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html" title="Standard component for a Qt based GUI application.">CApplicationCompBase</a> <a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html#aca95f063e19ab9946cf32740351818ce">BaseClass</a>;
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html" title="Standard component for a dialog based GUI application.">CDialogApplicationComp</a>);
+<a name="l00023"></a>00023               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a>);
+<a name="l00024"></a>00024               I_ASSIGN(m_mainDialogCompPtr, <span class="stringliteral">&quot;MainDialogWindow&quot;</span>, <span class="stringliteral">&quot;Dialog window shown as main window&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MainDialogWindow&quot;</span>);
+<a name="l00025"></a>00025        I_END_COMPONENT;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027        <span class="comment">// reimplemented (ibase::IApplication)</span>
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html#af020846485ce5b0cb6cb114d70e87c93" title="Starts execution loop of the application.">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_dialog_application_comp.html#a0930cdb686d7394e40fd547924ef3ae1" title="Gets the command line arguments of this application.">GetHelpText</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">private</span>:
+<a name="l00032"></a>00032        I_REF(<a class="code" href="classiqtgui_1_1_i_dialog.html" title="Interface for a dialog widget.">IDialog</a>, m_mainDialogCompPtr);
+<a name="l00033"></a>00033 };
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 } <span class="comment">// namespace iqtgui</span>
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 } <span class="comment">// namespace iqtgui</span>
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="preprocessor">#endif // iqtgui_CDialogApplicationComp_included</span>
-<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="preprocessor">#endif // iqtgui_CDialogApplicationComp_included</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

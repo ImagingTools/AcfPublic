@@ -573,6 +573,16 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>CSingletonApplicationComp.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_c_singleton_application_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_application_8h" name="IApplication.h" local="yes" imported="no">ibase/IApplication.h</includes>
+    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
+    <class kind="class">ibase::CSingletonApplicationComp</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSize.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_size_8h</filename>
@@ -10730,6 +10740,7 @@
     <class kind="class">ibase::CMultiObserverBinderComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
     <class kind="class">ibase::CSelectableFileConverterComp</class>
+    <class kind="class">ibase::CSingletonApplicationComp</class>
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::CStreamLogCompBase</class>
     <class kind="class">ibase::CTextDocumentComp</class>
@@ -11752,6 +11763,54 @@
       <anchorfile>classibase_1_1_c_selectable_file_converter_comp.html</anchorfile>
       <anchor>a02ab5a71e6291259398587fd2cbc9a3a</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::CSingletonApplicationComp</name>
+    <filename>classibase_1_1_c_singleton_application_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ibase::IApplication</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>a79107560ef617410bb3eb5b596e5f92b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSingletonApplicationComp</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>a61cc3b8bbc1d49f29fc0cc223f6ccd7c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeApplication</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>af6df5796895aaded10a84e0ae4b7bc9a</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>Execute</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>a3eff6c2c1b1a6b4c6bfe7a319e7e9f07</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetHelpText</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>ab993f28d3b2c0b6fc6ba2c1a4471a410</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>a3ed96cb6c8fc2272e3f2768dec162165</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39082,6 +39141,13 @@
       <anchor>ab56765c1e3207cdcc6cabefc014c5ef4</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>COptionsManagerGuiComp</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>ad21f50ed3aed0fa9d54c7b547466d4da</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
@@ -39102,6 +39168,13 @@
       <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
       <anchor>af917255cd67bbd0e9953abee2b598c5c</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnTextChanged</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a0367e9609f2d142c854498901fddb0b4</anchor>
+      <arglist>(const QString &amp;text)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
