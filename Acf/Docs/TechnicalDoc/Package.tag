@@ -2975,6 +2975,16 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CSelectionDelegatorComp.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_selection_delegator_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <class kind="class">iprm::CSelectionDelegatorComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectionParam.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_selection_param_8h</filename>
@@ -28764,6 +28774,7 @@
     <class kind="class">iprm::CParamsSet</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
     <class kind="class">iprm::CSelectionConstraintsComp</class>
+    <class kind="class">iprm::CSelectionDelegatorComp</class>
     <class kind="class">iprm::CSelectionParam</class>
     <class kind="class">iprm::CSelectionParamComp</class>
     <class kind="class">iprm::CVariableParamComp</class>
@@ -29650,6 +29661,47 @@
       <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
       <anchor>ad9c9a0d04561c8a23a4b32e986c8869c</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CSelectionDelegatorComp</name>
+    <filename>classiprm_1_1_c_selection_delegator_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
+      <anchor>a74f0813a6d08690fdc5f6f795b70f676</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
+      <anchor>ab128113bb8461af53b3b9c63a1272807</anchor>
+      <arglist>(m_sourceSelectionModelCompPtr, m_sourceSelectionCompPtr, true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
+      <anchor>ac0ae199ff591803a502a913696701b96</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
+      <anchor>a6c88bdcda9db32372307eb37109774c3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
+      <anchor>a6cf7669866aa7eb0300f5c82aecaaa4c</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
