@@ -19,6 +19,9 @@ msbuild TutorialAcf.sln /p:Configuration=Release
 cd %ACFSLNDIR%\Build\VC9
 msbuild AcfSlnAll.sln /p:Configuration=Release
 
+cd %ACFSLNDIR%\Docs\Tutorial\Build\VC9
+msbuild TutorialAcfSln.sln /p:Configuration=Release
+
 cd %IACFDIR%\Build\VC9
 msbuild IacfAll.sln /p:Configuration=Release
 
