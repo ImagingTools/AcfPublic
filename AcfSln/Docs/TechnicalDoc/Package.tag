@@ -259,6 +259,13 @@
     <namespace>iedge</namespace>
   </compound>
   <compound kind="file">
+    <name>CEdgeLineContainerShape.h</name>
+    <path>C:/Temp/AcfSln/Include/iedgegui/</path>
+    <filename>_c_edge_line_container_shape_8h</filename>
+    <class kind="class">iedgegui::CEdgeLineContainerShape</class>
+    <namespace>iedgegui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDirectoryMonitorParams.h</name>
     <path>C:/Temp/AcfSln/Include/ifpf/</path>
     <filename>_c_directory_monitor_params_8h</filename>
@@ -3592,6 +3599,44 @@
       <anchorfile>classiedge_1_1_i_edges_extractor.html</anchorfile>
       <anchor>aa91985aa78580c14809a30825e044a63</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;bitmap, CEdgeLine::Container &amp;result) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iedgegui</name>
+    <filename>namespaceiedgegui.html</filename>
+    <class kind="class">iedgegui::CEdgeLineContainerShape</class>
+  </compound>
+  <compound kind="class">
+    <name>iedgegui::CEdgeLineContainerShape</name>
+    <filename>classiedgegui_1_1_c_edge_line_container_shape.html</filename>
+    <base>iview::CShapeBase</base>
+    <member kind="typedef">
+      <type>iview::CShapeBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiedgegui_1_1_c_edge_line_container_shape.html</anchorfile>
+      <anchor>aa4cf336ba5b742ba16bd256203abc098</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiedgegui_1_1_c_edge_line_container_shape.html</anchorfile>
+      <anchor>a1bf36d29879bd585766a941c1614e0b7</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiedgegui_1_1_c_edge_line_container_shape.html</anchorfile>
+      <anchor>ab3c7f66d069d03df5ef85678c3f9f13d</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiedgegui_1_1_c_edge_line_container_shape.html</anchorfile>
+      <anchor>a488d34a5d75a25fb60429bc1ed7463b8</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
