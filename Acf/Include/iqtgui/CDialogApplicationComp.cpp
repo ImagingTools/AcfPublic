@@ -47,7 +47,7 @@ int CDialogApplicationComp::Execute(int argc, char** argv)
 				}
 			}
 		}
-		QApplication::setStyle(appStyle);
+		QApplication::setStyle(QString::fromLocal8Bit(appStyle));
 
 		TryShowSplashScreen();
 
