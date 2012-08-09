@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2414
+          2433
         </Number>
         <Description>
           ACF
@@ -81,13 +81,13 @@
     </Element>
     <Element>
       <Id>
-        LinesEdgeSupplierGui
+        EdgeLinesSupplierGui
       </Id>
       <PackageId>
-        helloworldpck
+        EdgePck
       </PackageId>
       <ComponentId>
-        LinesEdgeSupplierGui
+        EdgeLinesSupplierGui
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -229,7 +229,7 @@
         i2d::ICalibrationProvider
       </InterfaceId>
       <ComponentId>
-        LinesEdgeSupplierGui
+        EdgeLinesSupplierGui
       </ComponentId>
     </Interface>
     <Interface>
@@ -237,7 +237,7 @@
         imod::IModelEditor
       </InterfaceId>
       <ComponentId>
-        LinesEdgeSupplierGui
+        EdgeLinesSupplierGui
       </ComponentId>
     </Interface>
     <Interface>
@@ -245,7 +245,7 @@
         imod::IObserver
       </InterfaceId>
       <ComponentId>
-        LinesEdgeSupplierGui
+        EdgeLinesSupplierGui
       </ComponentId>
     </Interface>
     <Interface>
@@ -253,7 +253,7 @@
         iqt2d::IViewExtender
       </InterfaceId>
       <ComponentId>
-        LinesEdgeSupplierGui
+        EdgeLinesSupplierGui
       </ComponentId>
     </Interface>
     <Interface>
@@ -261,7 +261,7 @@
         iqtgui::IGuiObject
       </InterfaceId>
       <ComponentId>
-        LinesEdgeSupplierGui
+        EdgeLinesSupplierGui
       </ComponentId>
     </Interface>
   </ExportedInterfaces>
@@ -271,7 +271,7 @@
         VisualStatus
       </ExportedId>
       <ComponentId>
-        LinesEdgeSupplierGui/VisualStatus
+        EdgeLinesSupplierGui/VisualStatus
       </ComponentId>
     </Component>
   </ExportedComponents>
