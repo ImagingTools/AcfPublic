@@ -27,6 +27,7 @@
 // Qt includes
 #include <QtCore/QDir>
 #include <QtCore/QStringList>
+#include <QtCore/QMutex.h>
 
 // ACF includes
 #include "iser/IFileLoader.h"
@@ -99,6 +100,8 @@ private:
 	I_ATTR(QByteArray, m_parameterIdAttrPtr);
 	I_ATTR(int, m_maxCachedDirectoriesAttrPtr);
 	I_REF(iprm::IFileNameParam, m_lastFileNameAttrPtr);
+
+	QMutex m_lock;
 };
 
 

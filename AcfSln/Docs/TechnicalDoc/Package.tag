@@ -266,6 +266,18 @@
     <namespace>iedgegui</namespace>
   </compound>
   <compound kind="file">
+    <name>CEdgeLinesSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iedgegui/</path>
+    <filename>_c_edge_lines_supplier_gui_comp_8h</filename>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
+    <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
+    <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp</class>
+    <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp::ParamsObserver</class>
+    <namespace>iedgegui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDirectoryMonitorParams.h</name>
     <path>C:/Temp/AcfSln/Include/ifpf/</path>
     <filename>_c_directory_monitor_params_8h</filename>
@@ -3605,6 +3617,7 @@
     <name>iedgegui</name>
     <filename>namespaceiedgegui.html</filename>
     <class kind="class">iedgegui::CEdgeLineContainerShape</class>
+    <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp</class>
   </compound>
   <compound kind="class">
     <name>iedgegui::CEdgeLineContainerShape</name>
@@ -3637,6 +3650,115 @@
       <anchorfile>classiedgegui_1_1_c_edge_line_container_shape.html</anchorfile>
       <anchor>a488d34a5d75a25fb60429bc1ed7463b8</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedgegui::CEdgeLinesSupplierGuiComp</name>
+    <filename>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</filename>
+    <base>TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierGuiComp &gt;</base>
+    <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp::ParamsObserver</class>
+    <member kind="typedef">
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>afb5e2a56499f91b992ab609b24207004</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CEdgeLinesSupplierGuiComp</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a5c15f077830bd7c70cf24eb2ccad9e00</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_TestButton_clicked</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a0875219ecc3d656b484f402d4f1f63de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LoadParamsButton_clicked</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a3b03d47f9c59bf8b86f5778301d84e14</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveParamsButton_clicked</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>ae9cc9fee2bec5fcb709e771628ad7b5f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetParamsWidget</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a7ca8ff8dadc20a3d1823b5c41fc55492</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateShapes</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>abdb629d6974c35e2fa4e326f7ba340f9</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a4990a6661fa7dd20bbc1b5c8d830fe61</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>ad9b46b22a6c328fc653c29e2e3e5fa89</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>ac068b930cd22438a00577e27587b209f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>ae39027385cb4dd7b787db097bc9c7766</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a022a5dda300ac214ef2efa5695c75b00</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iedgegui::CEdgeLinesSupplierGuiComp::ParamsObserver</name>
+    <filename>classiedgegui_1_1_c_edge_lines_supplier_gui_comp_1_1_params_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>ParamsObserver</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp_1_1_params_observer.html</anchorfile>
+      <anchor>a07446371b740c7a1ca7b1d4bf5d40fde</anchor>
+      <arglist>(CEdgeLinesSupplierGuiComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp_1_1_params_observer.html</anchorfile>
+      <anchor>ac99d5687325232a78e28206aff6f6c0d</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">

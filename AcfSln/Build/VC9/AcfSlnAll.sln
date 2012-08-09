@@ -1,5 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C++ Express 2008
+# Visual Studio 2008
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Component", "Component", "{8E0B8DFD-41AF-4200-AC4A-83FA5B9C1898}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Static", "Static", "{9D9563E7-6D8C-4B82-8CE3-009EB344A8A7}"
