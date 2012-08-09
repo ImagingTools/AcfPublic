@@ -138,7 +138,7 @@ IComponent* TSimComponentWrap<Base>::CreateSubcomponent(const QByteArray& compon
 template <class Base>
 void TSimComponentWrap<Base>::OnSubcomponentDeleted(const IComponent* /*subcomponentPtr*/)
 {
-	I_CRITICAL();
+	qFatal("Simulated component cannot have sub-components");
 }
 
 

@@ -37,7 +37,7 @@
 <div class="title">ibase::CLogComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::CLogComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::TMessageContainerWrap" -->
+<!-- doxytag: class="ibase::CLogComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::CMessageContainer" -->
 <p>Data model of logging component.  
  <a href="classibase_1_1_c_log_comp.html#details">More...</a></p>
 
@@ -48,18 +48,20 @@ Inheritance diagram for ibase::CLogComp:</div>
  <div class="center">
   <img src="classibase_1_1_c_log_comp.png" usemap="#ibase::CLogComp_map" alt=""/>
   <map id="ibase::CLogComp_map" name="ibase::CLogComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,392,394,416"/>
-<area href="classibase_1_1_t_message_container_wrap.html" title="Basic implementation of a message container." alt="ibase::TMessageContainerWrap&lt; Base &gt;" shape="rect" coords="404,392,798,416"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,336,394,360"/>
-<area href="classibase_1_1_t_hierarchical_base.html" alt="ibase::THierarchicalBase&lt; Base &gt;" shape="rect" coords="404,336,798,360"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,280,394,304"/>
-<area href="classistd_1_1_t_change_delegator.html" title="Binder of some istd::IChangeable implementation and changing delegator." alt="istd::TChangeDelegator&lt; Base &gt;" shape="rect" coords="404,280,798,304"/>
-<area href="classistd_1_1_t_change_binder.html" alt="istd::TChangeBinder&lt; Base, CChangeDelegator &gt;" shape="rect" coords="404,224,798,248"/>
-<area href="class_base.html" alt="Base" shape="rect" coords="202,168,596,192"/>
-<area href="classistd_1_1_c_change_delegator.html" title="Delegates calls of IChangeable methods to the given slave." alt="istd::CChangeDelegator" shape="rect" coords="606,168,1000,192"/>
-<area href="classistd_1_1_i_change_delegator.html" title="Common interface for all classes that supports delegation of their updates to another class..." alt="istd::IChangeDelegator" shape="rect" coords="606,112,1000,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="606,56,1000,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="606,0,1000,24"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,392,445,416"/>
+<area href="classibase_1_1_c_message_container.html" title="Basic implementation of a message container." alt="ibase::CMessageContainer" shape="rect" coords="682,392,1127,416"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,336,445,360"/>
+<area href="classibase_1_1_t_hierarchical_base.html" alt="ibase::THierarchicalBase&lt; IHierarchicalMessageContainer &gt;" shape="rect" coords="455,336,900,360"/>
+<area href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages)." alt="ibase::IMessageConsumer" shape="rect" coords="910,336,1355,360"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,280,445,304"/>
+<area href="classistd_1_1_t_change_delegator.html" alt="istd::TChangeDelegator&lt; IHierarchicalMessageContainer &gt;" shape="rect" coords="455,280,900,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="910,280,1355,304"/>
+<area href="classistd_1_1_t_change_binder.html" alt="istd::TChangeBinder&lt; IHierarchicalMessageContainer, CChangeDelegator &gt;" shape="rect" coords="455,224,900,248"/>
+<area href="class_i_hierarchical_message_container.html" alt="IHierarchicalMessageContainer" shape="rect" coords="227,168,672,192"/>
+<area href="classistd_1_1_c_change_delegator.html" title="Delegates calls of IChangeable methods to the given slave." alt="istd::CChangeDelegator" shape="rect" coords="682,168,1127,192"/>
+<area href="classistd_1_1_i_change_delegator.html" title="Common interface for all classes that supports delegation of their updates to another class..." alt="istd::IChangeDelegator" shape="rect" coords="682,112,1127,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="682,56,1127,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="682,0,1127,24"/>
 </map>
  </div></div>
 
@@ -68,7 +70,7 @@ Inheritance diagram for ibase::CLogComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_log_comp.html#a6a16d07d54fcbd9ad7f10dfbda2550c9">BaseClass</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceibase.html#ad18f70e34fdb313a13c197d43127c463">ibase::CMessageContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_log_comp.html#af3497bda2968a9ba9952b1083a9135fa">BaseClass2</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classibase_1_1_c_message_container.html">ibase::CMessageContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_log_comp.html#af3497bda2968a9ba9952b1083a9135fa">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_log_comp.html#af1aa4862efe7d80e5af4da651437312a">OnComponentCreated</a> ()</td></tr>
@@ -89,7 +91,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_message_container_wrap.html#a22f8898ecec1631d8ee8c995314d8f82">ibase::TMessageContainerWrap&lt; Base &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_hierarchical_base.html#a42e03941ea05bc756eab49d96bf658e4">ibase::THierarchicalBase&lt; IHierarchicalMessageContainer &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_log_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_log_comp_8h_source.html">CLogComp.h</a>.</p>
 
@@ -100,13 +102,13 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="namespaceibase.html#ad18f70e34fdb313a13c197d43127c463">ibase::CMessageContainer</a> <a class="el" href="classibase_1_1_c_log_comp.html#af3497bda2968a9ba9952b1083a9135fa">ibase::CLogComp::BaseClass2</a></td>
+          <td class="memname">typedef <a class="el" href="classibase_1_1_c_message_container.html">ibase::CMessageContainer</a> <a class="el" href="classibase_1_1_c_log_comp.html#af3497bda2968a9ba9952b1083a9135fa">ibase::CLogComp::BaseClass2</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_t_change_binder.html#a13fca783bae6e7251bfb0420f1986860">istd::TChangeBinder&lt; Base, CChangeDelegator &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_t_change_binder.html#a13fca783bae6e7251bfb0420f1986860">istd::TChangeBinder&lt; IHierarchicalMessageContainer, CChangeDelegator &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_log_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_log_comp_8h_source.html">CLogComp.h</a>.</p>
 

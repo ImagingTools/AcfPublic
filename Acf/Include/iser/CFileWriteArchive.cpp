@@ -93,7 +93,7 @@ bool CFileWriteArchive::EndTag(const CArchiveTag& tag)
 	bool retVal = (element.tagBinaryId == tag.GetBinaryId());
 
 	if (!retVal){
-		I_CRITICAL();	// BeginTag and EndTag have to use the same tag
+		qFatal("BeginTag and EndTag have to use the same tag");
 
 		return false;
 	}

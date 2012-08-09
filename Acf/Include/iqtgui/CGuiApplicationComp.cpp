@@ -64,7 +64,7 @@ int CGuiApplicationComp::Execute(int argc, char** argv)
 				}
 			}
 		}
-		QApplication::setStyle(QString::fromLocal8Bit(appStyle));
+		QApplication::setStyle(appStyle);
 
 		TryShowSplashScreen();
 

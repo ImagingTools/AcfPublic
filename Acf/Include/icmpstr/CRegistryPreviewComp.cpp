@@ -71,7 +71,7 @@ bool CRegistryPreviewComp::StartRegistry(const icomp::IRegistry& registry)
 	QString acfExeFile = iqt::CSystem::GetEnrolledPath(m_commandFileNameCompPtr->GetPath());
 
 	QDir applicationDir(QCoreApplication::applicationDirPath());
-	QString acfApplicationPath = applicationDir.absoluteFilePath(acfExeFile);
+	QString acfApplicationPath = QDir::toNativeSeparators(applicationDir.absoluteFilePath(acfExeFile));
 
 	m_process.setWorkingDirectory(applicationDir.path());
 
@@ -82,9 +82,11 @@ bool CRegistryPreviewComp::StartRegistry(const icomp::IRegistry& registry)
 		QString configFilePath = m_envManagerCompPtr->GetConfigFilePath();
 		if (!configFilePath.isEmpty()){
 			parameters << "-config";
-			parameters << configFilePath;
+			parameters << QDir::toNativeSeparators(configFilePath);
 		}
 	}
+
+	SendInfoMessage(0, QString("Start ACF runtime: %1 %2").arg(acfApplicationPath).arg(parameters.join(" ")));
 
 	m_process.start(acfApplicationPath, parameters);
 
@@ -122,7 +124,7 @@ void CRegistryPreviewComp::OnComponentCreated()
 
 	QDir tempDir = QDir::temp();
 	if (tempDir.exists()){
-		m_tempFileName = tempDir.absoluteFilePath("registry_preview.arx");
+		m_tempFileName = QDir::toNativeSeparators(tempDir.absoluteFilePath("registry_preview.arx"));
 	}
 
 	m_isRunning = false;
@@ -132,6 +134,9 @@ void CRegistryPreviewComp::OnComponentCreated()
 				this, 
 				SLOT(OnStateChanged(QProcess::ProcessState)), 
 				Qt::QueuedConnection);
+
+	connect(&m_process, SIGNAL(readyReadStandardError()), this, SLOT(OnReadyReadStandardError()));
+	connect(&m_process, SIGNAL(readyReadStandardOutput()), this, SLOT(OnReadyReadStandardOutput()));
 }
 
 
@@ -156,6 +161,26 @@ void CRegistryPreviewComp::OnStateChanged(QProcess::ProcessState state)
 	istd::CChangeNotifier notifier(this);
 
 	m_isRunning = (state == QProcess::Running);
+}
+
+
+void CRegistryPreviewComp::OnReadyReadStandardError()
+{
+	QString errorOutput = m_process.readAllStandardError();
+	
+	errorOutput = errorOutput.simplified();
+
+	SendErrorMessage(0, errorOutput);
+}
+
+
+void CRegistryPreviewComp::OnReadyReadStandardOutput()
+{
+	QString standardOutput = m_process.readAllStandardOutput();
+
+	standardOutput = standardOutput.simplified();
+
+	SendInfoMessage(0, standardOutput);
 }
 
 

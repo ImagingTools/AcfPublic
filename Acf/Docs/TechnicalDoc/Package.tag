@@ -505,7 +505,7 @@
     <filename>_c_log_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ibase/IMessageContainer.h</includes>
-    <includes id="_t_message_container_wrap_8h" name="TMessageContainerWrap.h" local="yes" imported="no">ibase/TMessageContainerWrap.h</includes>
+    <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ibase/CMessageContainer.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ibase/CMessage.h</includes>
     <class kind="class">ibase::CLogComp</class>
     <namespace>ibase</namespace>
@@ -517,6 +517,17 @@
     <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">ibase::CMessage</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMessageContainer.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_c_message_container_8h</filename>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ibase/IMessageContainer.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
+    <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">ibase/THierarchicalBase.h</includes>
+    <class kind="class">ibase::CMessageContainer</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -865,26 +876,6 @@
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ibase/CMessage.h</includes>
     <class kind="class">ibase::TLoggerWrap</class>
     <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TMessageContainerWrap.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_t_message_container_wrap_8h</filename>
-    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ibase/IMessageContainer.h</includes>
-    <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">ibase/THierarchicalBase.h</includes>
-    <class kind="class">ibase::TMessageContainerWrap</class>
-    <namespace>ibase</namespace>
-    <member kind="typedef">
-      <type>TMessageContainerWrap&lt; IHierarchicalMessageContainer &gt;</type>
-      <name>CMessageContainer</name>
-      <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>ad18f70e34fdb313a13c197d43127c463</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>TModelObserverCompWrap.h</name>
@@ -1239,7 +1230,7 @@
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_registry_preview_comp_8h</filename>
     <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
     <class kind="class">icmpstr::CRegistryPreviewComp</class>
@@ -6472,6 +6463,10 @@
     <filename>class_document_selection_info.html</filename>
   </compound>
   <compound kind="class">
+    <name>IHierarchicalMessageContainer</name>
+    <filename>class_i_hierarchical_message_container.html</filename>
+  </compound>
+  <compound kind="class">
     <name>QGraphicsRectItem</name>
     <filename>class_q_graphics_rect_item.html</filename>
   </compound>
@@ -10745,6 +10740,7 @@
     <class kind="class">ibase::CInstantiatorComp</class>
     <class kind="class">ibase::CLogComp</class>
     <class kind="class">ibase::CMessage</class>
+    <class kind="class">ibase::CMessageContainer</class>
     <class kind="class">ibase::CModelBinderComp</class>
     <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CMultiObserverBinderComp</class>
@@ -10778,7 +10774,6 @@
     <class kind="class">ibase::THierarchicalBase</class>
     <class kind="class">ibase::TLoggerCompWrap</class>
     <class kind="class">ibase::TLoggerWrap</class>
-    <class kind="class">ibase::TMessageContainerWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">ibase::TMsbWord</class>
     <class kind="class">ibase::TSerializableContainer</class>
@@ -10801,13 +10796,6 @@
       <name>CLoggerComponentBase</name>
       <anchorfile>group___main.html</anchorfile>
       <anchor>ga8ef64a77c28b704454f15c826587cc93</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMessageContainerWrap&lt; IHierarchicalMessageContainer &gt;</type>
-      <name>CMessageContainer</name>
-      <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>ad18f70e34fdb313a13c197d43127c463</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -11223,7 +11211,7 @@
     <name>ibase::CLogComp</name>
     <filename>classibase_1_1_c_log_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base>ibase::TMessageContainerWrap</base>
+    <base>ibase::CMessageContainer</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -11383,6 +11371,103 @@
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
       <anchor>a296bd9e63e88fa79f2f691319de5f84e</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::CMessageContainer</name>
+    <filename>classibase_1_1_c_message_container.html</filename>
+    <base>THierarchicalBase&lt; IHierarchicalMessageContainer &gt;</base>
+    <base virtualness="virtual">ibase::IMessageConsumer</base>
+    <member kind="function">
+      <type></type>
+      <name>CMessageContainer</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>a658b006be1bea0c2311ba3975f281542</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CMessageContainer</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>a29041cd7c456c043fd3a83762467817d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddChildContainer</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>aa331e77e82c301148a24880866fca9d7</anchor>
+      <arglist>(IHierarchicalMessageContainer *childContainerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>a12a98d2ca094f56627dbf710ee400f9c</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetMaxMessageCount</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>a1ffa5a4e85dedd0303de97fc19955638</anchor>
+      <arglist>(int maxMessageCount=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetMaxLiveTime</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>a77a78e8d6a7be5edcd77d908db8dcbb7</anchor>
+      <arglist>(int maxLiveTime=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorstCategory</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>ae34fbf54ba367e9f9abecef200e724ae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Messages</type>
+      <name>GetMessages</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>ac065525da072c3f81abf399f0c1e296a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>a4ba0c59b1a99bfd7ca60e7b1ade8388c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>aa472c99668e61bd4ce172e307ad79245</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>aef7e1cdf35dc9f443eafc1ac650ad09f</anchor>
+      <arglist>(const IMessageConsumer::MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetChildsCount</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>abb7d4257a9425546d21f23e39a3741dd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual IHierarchicalMessageContainer *</type>
+      <name>GetChild</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>aacb0d3680b600054a53c7f2ebc469993</anchor>
+      <arglist>(int index) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12485,7 +12570,6 @@
   <compound kind="class">
     <name>ibase::IMessageContainer</name>
     <filename>classibase_1_1_i_message_container.html</filename>
-    <base virtualness="virtual">ibase::IMessageConsumer</base>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
@@ -12512,10 +12596,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; MessagePtr &gt;</type>
+      <type>QVector&lt; ibase::IMessageConsumer::MessagePtr &gt;</type>
       <name>Messages</name>
       <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>a026c15e28b79ce00e90acf6adb7bb8c7</anchor>
+      <anchor>a198cd938222b714f782b3e51cbd02efc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -13229,131 +13313,6 @@
       <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
       <anchor>a42ada63e4c0cc1f6a07e1340ccd208f0</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TMessageContainerWrap</name>
-    <filename>classibase_1_1_t_message_container_wrap.html</filename>
-    <templarg></templarg>
-    <base>THierarchicalBase&lt; Base &gt;</base>
-    <member kind="typedef">
-      <type>THierarchicalBase&lt; Base &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a22f8898ecec1631d8ee8c995314d8f82</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TMessageContainerWrap</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a0229c2ab993e6d0556418627ced6681b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~TMessageContainerWrap</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a5b528df51a72a3e7833e11b0136cea04</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddChildContainer</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a43cbfcd4ed31f51878219674f73767f6</anchor>
-      <arglist>(IMessageContainer *childContainerPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a5c7f6e03817b94c178c4b9fe4ce56136</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetMaxMessageCount</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>af046e8c26bc30938f1f2ce5e9a734a2f</anchor>
-      <arglist>(int maxMessageCount=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetMaxLiveTime</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a29d4aff6325c9eb1d46ba06f7f08b993</anchor>
-      <arglist>(int maxLiveTime=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorstCategory</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>aaa613df1d9dcdbcc621e9badc899fe46</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IMessageContainer::Messages</type>
-      <name>GetMessages</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a783de0b2ef703a6e00d0f860383f3147</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearMessages</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a0e6b48fc72490f4a02a98e3e171ca062</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a4d79a2987d21d42847d1cd14e91be61a</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>aeaa3bd93b11e51c3376f79699a04dc2a</anchor>
-      <arglist>(const IMessageConsumer::MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetChildsCount</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a4bd90c7e0c8244ef0fea34bf7ec08ede</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IMessageContainer *</type>
-      <name>GetChild</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a6ac518f8a9f2415dc794903bb6acb9b2</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QList&lt; IMessageContainer::MessagePtr &gt;</type>
-      <name>MessageList</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a6d8e1d6fd4b5f344d1597894974f6c7d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>MessageList</type>
-      <name>m_messages</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>ad489aa402d1186a09b86033faad396c6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_worstCategory</name>
-      <anchorfile>classibase_1_1_t_message_container_wrap.html</anchorfile>
-      <anchor>a6b94faceeab8305d9c50501421f7eecd</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16663,13 +16622,13 @@
     <name>icmpstr::CRegistryPreviewComp</name>
     <filename>classicmpstr_1_1_c_registry_preview_comp.html</filename>
     <base>QObject</base>
-    <base>icomp::CComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base>icmpstr::IRegistryPreview</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>adb7b16e33b017838e06c04a292082942</anchor>
+      <anchor>a6607b9112a5c433a294590200a4e5c69</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -16706,6 +16665,20 @@
       <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
       <anchor>a7e93fa61d636012840d0bae15da65837</anchor>
       <arglist>(QProcess::ProcessState state)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnReadyReadStandardError</name>
+      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
+      <anchor>aeef525ac26ba1bf21c07128821843ba7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnReadyReadStandardOutput</name>
+      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
+      <anchor>aae86f06211e99690090ac68f6bfdbb47</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -44803,7 +44776,7 @@
   <compound kind="class">
     <name>istd::TChangeNotifier</name>
     <filename>classistd_1_1_t_change_notifier.html</filename>
-    <templarg>Changeable</templarg>
+    <templarg></templarg>
     <base>TPointerBase&lt; Changeable &gt;</base>
     <member kind="typedef">
       <type>istd::TPointerBase&lt; Changeable &gt;</type>

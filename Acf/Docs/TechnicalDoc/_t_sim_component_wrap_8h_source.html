@@ -134,7 +134,7 @@
 <a name="l00116"></a>00116 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
 <a name="l00117"></a><a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e">00117</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_sim_component_wrap.html#a6f3df92db1b808ecaef7fca81fa6559e" title="Called if subcomponent is removed from memory.">TSimComponentWrap&lt;Base&gt;::OnSubcomponentDeleted</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <span class="comment">/*subcomponentPtr*/</span>)
 <a name="l00118"></a>00118 {
-<a name="l00119"></a>00119        <a class="code" href="istd_8h.html#a5952e0d7281d1ab784531120ea40c9c4">I_CRITICAL</a>();
+<a name="l00119"></a>00119        qFatal(<span class="stringliteral">&quot;Simulated component cannot have sub-components&quot;</span>);
 <a name="l00120"></a>00120 }
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122 

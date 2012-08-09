@@ -37,7 +37,7 @@
 <div class="title">ibase::IMessageContainer Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::IMessageContainer" --><!-- doxytag: inherits="ibase::IMessageConsumer,iser::ISerializable" -->
+<!-- doxytag: class="ibase::IMessageContainer" --><!-- doxytag: inherits="iser::ISerializable" -->
 <p>Common interface for an message container.  
  <a href="classibase_1_1_i_message_container.html#details">More...</a></p>
 
@@ -48,11 +48,9 @@ Inheritance diagram for ibase::IMessageContainer:</div>
  <div class="center">
   <img src="classibase_1_1_i_message_container.png" usemap="#ibase::IMessageContainer_map" alt=""/>
   <map id="ibase::IMessageContainer_map" name="ibase::IMessageContainer_map">
-<area href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages)." alt="ibase::IMessageConsumer" shape="rect" coords="0,112,159,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="169,112,328,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,56,159,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="169,56,328,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="169,0,328,24"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="0,112,157,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,157,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,157,24"/>
 </map>
  </div></div>
 
@@ -64,7 +62,8 @@ Public Types</h2></td></tr>
 <a class="el" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9af6c8498da8eec2fafe45d980c7f5a2cf">CF_MESSAGE_REMOVED</a> =  1 &lt;&lt; 7, 
 <a class="el" href="classibase_1_1_i_message_container.html#af2755abeca53284af38ccf73ba57d8a9a631695e22f718627f841bf47167c4627">CF_RESET</a> =  1 &lt;&lt; 8
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef QVector&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a026c15e28b79ce00e90acf6adb7bb8c7">Messages</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QVector<br class="typebreak"/>
+&lt; <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">ibase::IMessageConsumer::MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a198cd938222b714f782b3e51cbd02efc">Messages</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a908b3361d6c15f45eae3802e18ba4e5c">SetMaxMessageCount</a> (int maxMessageCount=-1)=0</td></tr>
@@ -73,7 +72,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum time difference between the oldest and newest message.  <a href="#a00747812d58911bf2bb1accc64630fe8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#adaec1546c8caaeac32971c96ea73e2eb">GetWorstCategory</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get worst message category.  <a href="#adaec1546c8caaeac32971c96ea73e2eb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html#a026c15e28b79ce00e90acf6adb7bb8c7">Messages</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100">GetMessages</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html#a198cd938222b714f782b3e51cbd02efc">Messages</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100">GetMessages</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns messages in the container.  <a href="#a0c3f5911eeb22ad94eaa97fe64fae100"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a0d9d1d0a86950ceb646c3e25bad7502c">ClearMessages</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all message items from container.  <a href="#a0d9d1d0a86950ceb646c3e25bad7502c"></a><br/></td></tr>
@@ -83,12 +82,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_message_container_8h_source.html#l00024">24</a> of file <a class="el" href="_i_message_container_8h_source.html">IMessageContainer.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a026c15e28b79ce00e90acf6adb7bb8c7"></a><!-- doxytag: member="ibase::IMessageContainer::Messages" ref="a026c15e28b79ce00e90acf6adb7bb8c7" args="" -->
+<a class="anchor" id="a198cd938222b714f782b3e51cbd02efc"></a><!-- doxytag: member="ibase::IMessageContainer::Messages" ref="a198cd938222b714f782b3e51cbd02efc" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef QVector&lt;<a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">MessagePtr</a>&gt; <a class="el" href="classibase_1_1_i_message_container.html#a026c15e28b79ce00e90acf6adb7bb8c7">ibase::IMessageContainer::Messages</a></td>
+          <td class="memname">typedef QVector&lt;<a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">ibase::IMessageConsumer::MessagePtr</a>&gt; <a class="el" href="classibase_1_1_i_message_container.html#a198cd938222b714f782b3e51cbd02efc">ibase::IMessageContainer::Messages</a></td>
         </tr>
       </table>
 </div>
@@ -150,7 +149,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classibase_1_1_i_message_container.html#a026c15e28b79ce00e90acf6adb7bb8c7">Messages</a> ibase::IMessageContainer::GetMessages </td>
+          <td class="memname">virtual <a class="el" href="classibase_1_1_i_message_container.html#a198cd938222b714f782b3e51cbd02efc">Messages</a> ibase::IMessageContainer::GetMessages </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -160,8 +159,6 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>This function returns messages in the container. </p>
-
-<p>Referenced by <a class="el" href="_t_message_container_wrap_8h_source.html#l00194">ibase::TMessageContainerWrap&lt; Base &gt;::GetMessages()</a>.</p>
 
 </div>
 </div>
@@ -181,8 +178,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Get worst message category. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>IInformationProvider::InformationCategory </dd></dl>
-
-<p>Referenced by <a class="el" href="_t_message_container_wrap_8h_source.html#l00159">ibase::TMessageContainerWrap&lt; Base &gt;::GetWorstCategory()</a>.</p>
 
 </div>
 </div>
