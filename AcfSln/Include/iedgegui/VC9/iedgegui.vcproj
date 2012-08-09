@@ -167,6 +167,10 @@
 				RelativePath="..\CEdgeLineContainerShape.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\CEdgeLinesSupplierGuiComp.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -175,6 +179,10 @@
 			>
 			<File
 				RelativePath="..\CEdgeLineContainerShape.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CEdgeLinesSupplierGuiComp.h"
 				>
 			</File>
 		</Filter>
@@ -194,6 +202,10 @@
 		<Filter
 			Name="Qt Designer Files"
 			>
+			<File
+				RelativePath="..\CEdgeLinesSupplierGuiComp.ui"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="MOC"
