@@ -55,6 +55,8 @@ bool CFastEdgesExtractorComp::DoContourExtraction(
 			const iimg::IBitmap& bitmap,
 			CEdgeLine::Container& result) const
 {
+	result.Reset();
+
 	ibase::CSize size = bitmap.GetImageSize();
 	if ((size.GetX() < 3) || (size.GetY() < 3)){
 		SendErrorMessage(0, "Image too small to calculate edges");
@@ -201,14 +203,16 @@ const imeas::IUnitInfo& CFastEdgesExtractorComp::GetNumericValueUnitInfo(int /*i
 // private static methods
 
 __forceinline void CFastEdgesExtractorComp::TryConnectElements(
-				ExtNode* neightborNodePtr,
-				ExtNode* nodePtr)
+			PixelDescriptor& neightborPixel,
+			PixelDescriptor& pixel)
 {
-	Q_ASSERT(nodePtr != NULL);
-
+	ExtNode* neightborNodePtr = neightborPixel.listReference;
 	if (neightborNodePtr == NULL){
 		return;
 	}
+
+	ExtNode* nodePtr = pixel.listReference;
+	Q_ASSERT(nodePtr != NULL);
 
 	const i2d::CVector2d& elementPosition = neightborNodePtr->position;
 	i2d::CVector2d displacement = elementPosition - nodePtr->position;
@@ -218,16 +222,22 @@ __forceinline void CFastEdgesExtractorComp::TryConnectElements(
 	if (derivativeDotProduct > 0){
 		double derivativeAngleCos = derivativeDotProduct / (nodePtr->derivative.GetLength() * neightborNodePtr->derivative.GetLength());
 
-		double orientationFactor = (nodePtr->derivative + neightborNodePtr->derivative).GetCrossProductZ(displacement);
+		double orientationFactor = (nodePtr->derivative + neightborNodePtr->derivative).GetCrossProductZ(displacement) / displacement.GetLength2();
 		if (orientationFactor >= 0){
-			double connectionWeight = orientationFactor * derivativeAngleCos * nodePtr->weight * neightborNodePtr->weight;
-			if (			(connectionWeight >= nodePtr->nextWeight) &&
+			double connectionWeight = orientationFactor * derivativeAngleCos;
+			if (			(connectionWeight > nodePtr->nextWeight) &&
 							((neightborNodePtr->prevPtr == NULL) || (neightborNodePtr->prevWeight < connectionWeight))){
 				// disconnect neighbor from previous connection
 				if (neightborNodePtr->prevPtr != NULL){
 					Q_ASSERT(neightborNodePtr->prevPtr->nextPtr == neightborNodePtr);
 
 					neightborNodePtr->prevPtr->nextPtr = NULL;
+				}
+
+				if (nodePtr->nextPtr != NULL){
+					Q_ASSERT(nodePtr->nextPtr->prevPtr == nodePtr);
+
+					nodePtr->nextPtr->prevPtr = NULL;
 				}
 
 				// connect both nodes
@@ -238,14 +248,20 @@ __forceinline void CFastEdgesExtractorComp::TryConnectElements(
 			}
 		}
 		else{
-			double connectionWeight = -orientationFactor * derivativeAngleCos * nodePtr->weight * neightborNodePtr->weight;
-			if (			(connectionWeight >= nodePtr->prevWeight) &&
+			double connectionWeight = -orientationFactor * derivativeAngleCos;
+			if (			(connectionWeight > nodePtr->prevWeight) &&
 							((neightborNodePtr->nextPtr == NULL) || (neightborNodePtr->nextWeight < connectionWeight))){
 				// disconnect neighbor from previous connection
 				if (neightborNodePtr->nextPtr != NULL){
 					Q_ASSERT(neightborNodePtr->nextPtr->prevPtr == neightborNodePtr);
 
 					neightborNodePtr->nextPtr->prevPtr = NULL;
+				}
+
+				if (nodePtr->prevPtr != NULL){
+					Q_ASSERT(nodePtr->prevPtr->nextPtr == nodePtr);
+
+					nodePtr->prevPtr->nextPtr = NULL;
 				}
 
 				// connect both nodes
@@ -272,6 +288,8 @@ __forceinline CFastEdgesExtractorComp::ExtNode* CFastEdgesExtractorComp::AddPoin
 				InternalContainer& container){
 	ExtNode* nodePtr = container.AddElementToList();
 	if (nodePtr != NULL){
+		PixelDescriptor& pixelDescriptor = destLine2[x];
+
 		nodePtr->position = i2d::CVector2d(posX, posY);
 		nodePtr->derivative = i2d::CVector2d(derivativeX, derivativeY);
 		nodePtr->weight = weight;
@@ -280,11 +298,13 @@ __forceinline CFastEdgesExtractorComp::ExtNode* CFastEdgesExtractorComp::AddPoin
 		nodePtr->prevWeight = 0;
 		nodePtr->nextWeight = 0;
 
+		pixelDescriptor.listReference = nodePtr;
+
 		// try connects with all already calculated neighbours
-		TryConnectElements(destLine1[x - 1].listReference, nodePtr);
-		TryConnectElements(destLine1[x].listReference, nodePtr);
-		TryConnectElements(destLine1[x + 1].listReference, nodePtr);
-		TryConnectElements(destLine2[x - 1].listReference, nodePtr);
+		TryConnectElements(destLine1[x - 1], pixelDescriptor);
+		TryConnectElements(destLine1[x], pixelDescriptor);
+		TryConnectElements(destLine1[x + 1], pixelDescriptor);
+		TryConnectElements(destLine2[x - 1], pixelDescriptor);
 	}
 
 	return nodePtr;
@@ -306,9 +326,11 @@ __forceinline void CFastEdgesExtractorComp::CalcFullDerivative(
 
 	PixelDescriptor& pixelDescr = destLine[x];
 
+	pixelDescr.brightness = qint16(pixel11 + pixel21 + pixel12 + pixel22);
 	pixelDescr.dx = qint16(dx);
 	pixelDescr.dy = qint16(dy);
 	pixelDescr.dirLength2 = quint32(dx * dx + dy * dy);
+	pixelDescr.listReference = NULL;
 }
 
 
@@ -366,7 +388,7 @@ __forceinline void CFastEdgesExtractorComp::CalcPoint(
 
 			nodePtr = AddPointToContour(
 						x + shiftX, y + 0.5,
-						pixelDescriptor.dx / THRESHOLD_FACTOR, pixelDescriptor.dy / THRESHOLD_FACTOR,
+						double(pixelDescriptor.dx) / THRESHOLD_FACTOR, double(pixelDescriptor.dy) / THRESHOLD_FACTOR,
 						weight / THRESHOLD_FACTOR,
 						destLine1, destLine2,
 						x, y,
@@ -380,15 +402,13 @@ __forceinline void CFastEdgesExtractorComp::CalcPoint(
 
 			nodePtr = AddPointToContour(
 						x + 0.5, y + shiftY,
-						pixelDescriptor.dx, pixelDescriptor.dy,
+						double(pixelDescriptor.dx) / THRESHOLD_FACTOR, double(pixelDescriptor.dy) / THRESHOLD_FACTOR,
 						weight / THRESHOLD_FACTOR,
 						destLine1, destLine2,
 						x, y,
 						container);
 		}
 	}
-
-	pixelDescriptor.listReference = nodePtr;
 }
 
 

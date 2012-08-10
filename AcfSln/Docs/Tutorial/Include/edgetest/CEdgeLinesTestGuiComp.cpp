@@ -70,7 +70,7 @@ void CEdgeLinesTestGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 {
 	iedgegui::CEdgeLineContainerShape* shapePtr = new iedgegui::CEdgeLineContainerShape;
 	if (shapePtr != NULL){
-		shapePtr->AssignToLayer(iview::IViewLayer::LT_BACKGROUND);
+		shapePtr->AssignToLayer(iview::IViewLayer::LT_INACTIVE);
 
 		result.PushBack(shapePtr);
 
