@@ -231,6 +231,10 @@
 				RelativePath="..\CVisualRegistryScenographerComp.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\CXpcEditorComp.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -311,6 +315,10 @@
 			</File>
 			<File
 				RelativePath="..\CVisualRegistryScenographerComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CXpcEditorComp.h"
 				>
 			</File>
 			<File
@@ -419,6 +427,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\generated\moc_CXpcEditorComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\generated\qrc_icmpstr.cpp"
 				>
 			</File>
@@ -483,6 +495,10 @@
 				RelativePath="..\CSceneProviderGuiComp.ui"
 				>
 			</File>
+			<File
+				RelativePath="..\CXpcEditorComp.ui"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Moc Files"
@@ -534,6 +550,10 @@
 			</File>
 			<File
 				RelativePath="..\CVisualRegistryScenographerComp.moc"
+				>
+			</File>
+			<File
+				RelativePath="..\CXpcEditorComp.moc"
 				>
 			</File>
 		</Filter>
