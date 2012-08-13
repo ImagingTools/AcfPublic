@@ -134,6 +134,7 @@ private:
 	bool m_areParamsEditable;
 
 	using BaseClass::m_visualStatus;
+    using BaseClass::GetObjectPtr;
 };
 
 

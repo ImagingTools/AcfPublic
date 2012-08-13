@@ -35,9 +35,9 @@ namespace ibase
 
 
 CMessageContainer::CMessageContainer()
-:	m_worstCategory(-1),
-	m_maxMessageCount(-1),
-	m_maxLiveTime(-1)
+:	m_maxMessageCount(-1),
+    m_maxLiveTime(-1),
+    m_worstCategory(-1)
 {
 }
 

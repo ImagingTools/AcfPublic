@@ -27,7 +27,7 @@ public:
 
 	virtual Qt::ItemFlags flags(const QModelIndex & index) const
 	{
-		int flags = QStringListModel::flags(index);
+        Qt::ItemFlags flags = QStringListModel::flags(index);
 
 		return index.data().isNull() ? flags : flags ^ Qt::ItemIsDropEnabled;
 	}
