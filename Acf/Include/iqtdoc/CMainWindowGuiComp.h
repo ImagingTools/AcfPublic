@@ -115,7 +115,6 @@ protected:
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
-	virtual void OnGuiDestroyed();
 	virtual void OnRetranslate();
 
 	// reimplemented (imod::TSingleModelObserverBase)

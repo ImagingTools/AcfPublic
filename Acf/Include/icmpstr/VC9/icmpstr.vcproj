@@ -462,6 +462,10 @@
 				RelativePath="..\generated\ui_CSceneProviderGuiComp.h"
 				>
 			</File>
+			<File
+				RelativePath="..\generated\ui_CXpcEditorComp.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Qt Designer Files"

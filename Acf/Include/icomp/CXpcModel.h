@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
 #ifndef icomp_CXpcModel_included
 #define icomp_CXpcModel_included
 
@@ -12,10 +34,13 @@
 namespace icomp
 {
 
-    /** Data model for XPC files */
-    class CXpcModel : public iser::ISerializable
-    {
-    public:
+
+/**
+	Data model for ACF package loader configuration.
+*/
+class CXpcModel: virtual public iser::ISerializable
+{
+public:
 	// gui interface (for editing)
 	const QStringList& GetConfFilesList() const;
 	void SetConfFilesList(const QStringList& list);
@@ -25,24 +50,24 @@ namespace icomp
 	void SetPackagesList(const QStringList& list);
 
 	// program interface (for loading XPC files)
-	int GetNumConfFiles() const;
-	int GetNumPackageDirs() const;
-	int GetNumPackages() const;
-	QString GetConfFile(int) const;
-	QString GetPackageDir(int) const;
-	QString GetPackage(int) const;
-	void AddConfFile(const QString& path);
-	void AddPackageDir(const QString& path);
-	void AddPackage(const QString& path);
+	virtual int GetNumConfFiles() const;
+	virtual int GetNumPackageDirs() const;
+	virtual int GetNumPackages() const;
+	virtual QString GetConfFile(int) const;
+	virtual QString GetPackageDir(int) const;
+	virtual QString GetPackage(int) const;
+	virtual void AddConfFile(const QString& path);
+	virtual void AddPackageDir(const QString& path);
+	virtual void AddPackage(const QString& path);
 
-	// iser::ISerializable interface
-	bool Serialize(iser::IArchive& archive);
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 
-    private:
+private:
 	QStringList m_confFiles;
 	QStringList m_packageDirs;
 	QStringList m_packages;
-    };
+};
 
 
 } // namespace icomp

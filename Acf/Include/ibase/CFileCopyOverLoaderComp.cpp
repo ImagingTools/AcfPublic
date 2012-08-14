@@ -25,6 +25,7 @@
 
 // Qt includes
 #include <QtCore/QStringList>
+#include <QtCore/QFileInfo>
 
 
 namespace ibase
@@ -75,6 +76,11 @@ bool CFileCopyOverLoaderComp::ConvertFile(
 		else{
 			usedOutputPath = inputFilePath + extensions.front();
 		}
+	}
+
+	QFileInfo inputFileInfo(inputFilePath);
+	if (!inputFileInfo.exists()){
+		SendWarningMessage(0, QString("Input file %1 doesn't exist").arg(inputFilePath));
 	}
 
 	int loadState = m_inputLoaderCompPtr->LoadFromFile(*m_objectCompPtr, inputFilePath);

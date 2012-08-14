@@ -1312,6 +1312,16 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
+    <name>CXpcEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_xpc_editor_comp_8h</filename>
+    <includes id="_c_xpc_model_8h" name="CXpcModel.h" local="yes" imported="no">icomp/CXpcModel.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">icmpstr::CXpcEditorComp</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
     <name>IAttributeSelectionObserver.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_i_attribute_selection_observer_8h</filename>
@@ -1709,6 +1719,14 @@
     <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
     <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
     <class kind="class">icomp::CSimComponentContextBase</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXpcModel.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_c_xpc_model_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <class kind="class">icomp::CXpcModel</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -15025,6 +15043,7 @@
     <class kind="class">icmpstr::CVisualRegistryComp</class>
     <class kind="class">icmpstr::CVisualRegistryElement</class>
     <class kind="class">icmpstr::CVisualRegistryScenographerComp</class>
+    <class kind="class">icmpstr::CXpcEditorComp</class>
     <class kind="class">icmpstr::IAttributeSelectionObserver</class>
     <class kind="class">icmpstr::IComponentNoteController</class>
     <class kind="class">icmpstr::IElementSelectionInfo</class>
@@ -17747,6 +17766,46 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>icmpstr::CXpcEditorComp</name>
+    <filename>classicmpstr_1_1_c_xpc_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
+      <anchor>af7895fd9a9ea0464e623dd04e8a4964d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CXpcEditorComp</name>
+      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
+      <anchor>a587ec0e9daf0dd6fcdfa2ca0617d59a1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
+      <anchor>a8d88666443718f48435ecd1a6c41b846</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
+      <anchor>a900d91744aecb668a1b18270ba4eaa9e</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
+      <anchor>acd2f8b86b0f2c67e2754a358f3ecc408</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>icmpstr::IAttributeSelectionObserver</name>
     <filename>classicmpstr_1_1_i_attribute_selection_observer.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -18391,6 +18450,7 @@
     <class kind="class">icomp::CRegistryElement</class>
     <class kind="class">icomp::CRelatedInfoRegistrator</class>
     <class kind="class">icomp::CSimComponentContextBase</class>
+    <class kind="class">icomp::CXpcModel</class>
     <class kind="class">icomp::IAttributeStaticInfo</class>
     <class kind="class">icomp::IComponent</class>
     <class kind="class">icomp::IComponentContext</class>
@@ -20056,6 +20116,123 @@
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
       <anchor>abe193a448206d9ea37ed9816d6015900</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::CXpcModel</name>
+    <filename>classicomp_1_1_c_xpc_model.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function">
+      <type>const QStringList &amp;</type>
+      <name>GetConfFilesList</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a8f54e2345af5b4d728df054129bdb16d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetConfFilesList</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a37cbb6c0ade5f142b5290e475a9fc591</anchor>
+      <arglist>(const QStringList &amp;list)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QStringList &amp;</type>
+      <name>GetPackageDirsList</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a94ab8d03e4740c7cfec100399fcfecde</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPackageDirsList</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>ada6584f7163bf059843b0ae331e97c1d</anchor>
+      <arglist>(const QStringList &amp;list)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QStringList &amp;</type>
+      <name>GetPackagesList</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a77e8bd3a053e309d204fc893b4a220c1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPackagesList</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a622dd150d561e4c9d937444e5406bece</anchor>
+      <arglist>(const QStringList &amp;list)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumConfFiles</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a1f2188cf027da972a71e1215faef83ea</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumPackageDirs</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>ab4af82528959fdc9fc99798db0574dc2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumPackages</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a9bd860749344c4119fe1195c7b860d67</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetConfFile</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>ad0094be832c54a6e32e27c858fb419d7</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPackageDir</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>ae4fc411546a8b08e53784edb481c1180</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPackage</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>aa098fac2885d3c3087add598a2395fd7</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddConfFile</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>aee98a0791f616b9da5cc7af882233338</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddPackageDir</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>ac129566e69023b6e241abfc319d9a9a1</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddPackage</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a79afe83c49a90fbab38b297fbc688632</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
+      <anchor>a4f3d2442331e4cca93a4625544a6c1dd</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35495,13 +35672,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>aedfd809588364a895120243984adf2e4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a845cfdf0201639524f85eef67b7c2226</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

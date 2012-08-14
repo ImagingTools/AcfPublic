@@ -75,7 +75,9 @@ public:
 protected:
 	typedef typename BaseClass::Shapes Shapes;
 
-	/**‹‹
+	using BaseClass::GetObjectPtr;
+
+	/**
 		Check, if parameters are correct connected to GUI and can be editable.
 	*/
 	bool AreParamsEditable() const;
@@ -134,7 +136,6 @@ private:
 	bool m_areParamsEditable;
 
 	using BaseClass::m_visualStatus;
-    using BaseClass::GetObjectPtr;
 };
 
 
