@@ -628,6 +628,15 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CColorBitmapSeparatorSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_color_bitmap_separator_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <class kind="class">iipr::CColorBitmapSeparatorSupplierComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CConvolutionKernel2d.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_convolution_kernel2d_8h</filename>
@@ -5867,6 +5876,7 @@
     <class kind="class">iipr::CCircleFinderParams</class>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
+    <class kind="class">iipr::CColorBitmapSeparatorSupplierComp</class>
     <class kind="class">iipr::CConvolutionKernel2d</class>
     <class kind="class">iipr::CConvolutionProcessorComp</class>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
@@ -6358,6 +6368,68 @@
       <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_ray.html</anchorfile>
       <anchor>a157e595d699602049b7004b02d4313fd</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CColorBitmapSeparatorSupplierComp</name>
+    <filename>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</base>
+    <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>ab5c425288f38a39899ffff27916c6e64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>a8154330a73be7f8d65f0ccd26dd8d48a</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsureBitmapCreated</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>adbeea9ccf7c93c398844005ead7e2ea6</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>abb9fcd1011858fb991e00e8c276bc04b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>a6c9a06dc1983c4716926ded9c6118571</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>a09ae5bfd6c3c54979321ac8855d25293</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>a008b04ae9dba20b8821be8bf8f15610c</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>adcf275024a5a474346cc994f96543b31</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

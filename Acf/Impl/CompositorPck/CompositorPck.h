@@ -40,6 +40,7 @@
 #include "icmpstr/CPackagesLoaderExtComp.h"
 #include "icmpstr/CComponentNoteEditorComp.h"
 #include "icmpstr/CSceneProviderGuiComp.h"
+#include "icmpstr/CXpcEditorComp.h"
 
 
 /**
@@ -57,18 +58,25 @@ typedef icmpstr::CRegistryPreviewComp RegistryPreview;
 typedef icmpstr::CComponentHelpFileProviderComp ComponentHelpFileProvider;
 typedef icomp::TModelCompWrap<icmpstr::CVisualRegistryComp> VisualRegistry;
 typedef icmpstr::CVisualRegistryScenographerComp VisualRegistryScenographer;
-typedef icomp::TMakeComponentWrap<
-			imod::TModelWrap<icomp::CRegistry>,
-			icomp::IRegistry,
-			iser::ISerializable,
-			istd::IChangeable,
-			imod::IModel> Registry;
 typedef icmpstr::CRegistryConsistInfoComp RegistryConsistInfo;
 typedef icmpstr::CRegistryPropEditorComp RegistryPropEditor;
 typedef icmpstr::CQuickHelpGuiComp QuickHelpGui;
 typedef icomp::TModelCompWrap<icmpstr::CPackagesLoaderExtComp> PackagesLoaderExt;
 typedef icmpstr::CComponentNoteEditorComp ComponentNoteEditor;
 typedef icomp::TModelCompWrap<icmpstr::CSceneProviderGuiComp> SceneProvider;
+typedef icomp::TMakeComponentWrap<
+			imod::TModelWrap<icomp::CRegistry>,
+			icomp::IRegistry,
+			iser::ISerializable,
+			istd::IChangeable,
+			imod::IModel> Registry;
+typedef icomp::TMakeComponentWrap<
+			imod::TModelWrap<icomp::CXpcModel>,
+			icomp::CXpcModel,
+			iser::ISerializable,
+			istd::IChangeable,
+			imod::IModel> XpcModel;
+typedef icmpstr::CXpcEditorComp XpcEditorGui;
 
 
 } // namespace CompositorPck

@@ -39,7 +39,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="icmpstr::CXpcEditorComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;" -->
-<p>Editor for ACF package loader configuration.  
+<p>Editor GUI component for the XpcModel.  
  <a href="classicmpstr_1_1_c_xpc_editor_comp.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_xpc_editor_comp_8h_source.html">CXpcEditorComp.h</a>&gt;</code></p>
@@ -77,10 +77,11 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak"/>
 &lt; Ui::XpcEditorComp, <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_c_xpc_model.html">icomp::CXpcModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_xpc_editor_comp.html#af7895fd9a9ea0464e623dd04e8a4964d">BaseClass</a></td></tr>
+<a class="el" href="classicomp_1_1_c_xpc_model.html">icomp::CXpcModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_xpc_editor_comp.html#a0be55362b300184394272aba38dfc7f6">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_xpc_editor_comp.html#a587ec0e9daf0dd6fcdfa2ca0617d59a1">CXpcEditorComp</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor: create gui data models and connect to their signals to support undo management.  <a href="#a587ec0e9daf0dd6fcdfa2ca0617d59a1"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_xpc_editor_comp.html#a8d88666443718f48435ecd1a6c41b846">UpdateModel</a> () const </td></tr>
@@ -91,16 +92,16 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#acd2f8b86b0f2c67e2754a358f3ecc408"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Editor for ACF package loader configuration. </p>
+<div class="textblock"><p>Editor GUI component for the XpcModel. </p>
 
-<p>Definition at line <a class="el" href="_c_xpc_editor_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_xpc_editor_comp_8h_source.html">CXpcEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_xpc_editor_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_xpc_editor_comp_8h_source.html">CXpcEditorComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="af7895fd9a9ea0464e623dd04e8a4964d"></a><!-- doxytag: member="icmpstr::CXpcEditorComp::BaseClass" ref="af7895fd9a9ea0464e623dd04e8a4964d" args="" -->
+<a class="anchor" id="a0be55362b300184394272aba38dfc7f6"></a><!-- doxytag: member="icmpstr::CXpcEditorComp::BaseClass" ref="a0be55362b300184394272aba38dfc7f6" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt; Ui::XpcEditorComp, <a class="el" href="classicomp_1_1_c_xpc_model.html">icomp::CXpcModel</a>&gt; <a class="el" href="classicmpstr_1_1_c_xpc_editor_comp.html#af7895fd9a9ea0464e623dd04e8a4964d">icmpstr::CXpcEditorComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt;Ui::XpcEditorComp, <a class="el" href="classicomp_1_1_c_xpc_model.html">icomp::CXpcModel</a>&gt; <a class="el" href="classicmpstr_1_1_c_xpc_editor_comp.html#a0be55362b300184394272aba38dfc7f6">icmpstr::CXpcEditorComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -108,7 +109,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a5fd4bd071b17d67ebfc151794f14c4ea">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_xpc_editor_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_xpc_editor_comp_8h_source.html">CXpcEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_xpc_editor_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_xpc_editor_comp_8h_source.html">CXpcEditorComp.h</a>.</p>
 
 </div>
 </div>
@@ -126,6 +127,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Ctor: create gui data models and connect to their signals to support undo management. </p>
 
 </div>
 </div>

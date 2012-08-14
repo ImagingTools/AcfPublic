@@ -37,7 +37,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="icomp::CXpcModel" --><!-- doxytag: inherits="iser::ISerializable" -->
-<p>Data model for ACF package loader configuration.  
+<p>Data model for XPC files.  
  <a href="classicomp_1_1_c_xpc_model.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_xpc_model_8h_source.html">CXpcModel.h</a>&gt;</code></p>
@@ -63,33 +63,33 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ada6584f7163bf059843b0ae331e97c1d">SetPackageDirsList</a> (const QStringList &amp;list)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QStringList &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a77e8bd3a053e309d204fc893b4a220c1">GetPackagesList</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a622dd150d561e4c9d937444e5406bece">SetPackagesList</a> (const QStringList &amp;list)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a1f2188cf027da972a71e1215faef83ea">GetNumConfFiles</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ab4af82528959fdc9fc99798db0574dc2">GetNumPackageDirs</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a9bd860749344c4119fe1195c7b860d67">GetNumPackages</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ad0094be832c54a6e32e27c858fb419d7">GetConfFile</a> (int) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ae4fc411546a8b08e53784edb481c1180">GetPackageDir</a> (int) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#aa098fac2885d3c3087add598a2395fd7">GetPackage</a> (int) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#aee98a0791f616b9da5cc7af882233338">AddConfFile</a> (const QString &amp;path)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ac129566e69023b6e241abfc319d9a9a1">AddPackageDir</a> (const QString &amp;path)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a79afe83c49a90fbab38b297fbc688632">AddPackage</a> (const QString &amp;path)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a4f3d2442331e4cca93a4625544a6c1dd">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a4f3d2442331e4cca93a4625544a6c1dd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a091899f1f8b05fcb6c58e6bf8eede426">GetNumConfFiles</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a2bf5ff65545bfd899c3f3c51a8b1a966">GetNumPackageDirs</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ad4b577fd5d598bc72c0f1193625e79f3">GetNumPackages</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a2588691a4869dfa88aef7d8a339f2083">GetConfFile</a> (int) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ab494071062529a1aa778930e50a76f31">GetPackageDir</a> (int) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ae15df15204d2b660c4ec19df31e3879e">GetPackage</a> (int) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ac482eb3d986f2b1f6b770badafbecb26">AddConfFile</a> (const QString &amp;path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a074e2d66c88ff325c2191be5b7917802">AddPackageDir</a> (const QString &amp;path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#a499bee807f34cfe3b91a9271330e735b">AddPackage</a> (const QString &amp;path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_xpc_model.html#ae4585058f9f5ecd0a77aa2df94b42fc4">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#ae4585058f9f5ecd0a77aa2df94b42fc4"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Data model for ACF package loader configuration. </p>
+<div class="textblock"><p>Data model for XPC files. </p>
 
-<p>Definition at line <a class="el" href="_c_xpc_model_8h_source.html#l00019">19</a> of file <a class="el" href="_c_xpc_model_8h_source.html">CXpcModel.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_xpc_model_8h_source.html#l00016">16</a> of file <a class="el" href="_c_xpc_model_8h_source.html">CXpcModel.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aee98a0791f616b9da5cc7af882233338"></a><!-- doxytag: member="icomp::CXpcModel::AddConfFile" ref="aee98a0791f616b9da5cc7af882233338" args="(const QString &amp;path)" -->
+<a class="anchor" id="ac482eb3d986f2b1f6b770badafbecb26"></a><!-- doxytag: member="icomp::CXpcModel::AddConfFile" ref="ac482eb3d986f2b1f6b770badafbecb26" args="(const QString &amp;path)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void icomp::CXpcModel::AddConfFile </td>
+          <td class="memname">void icomp::CXpcModel::AddConfFile </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -97,16 +97,16 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a79afe83c49a90fbab38b297fbc688632"></a><!-- doxytag: member="icomp::CXpcModel::AddPackage" ref="a79afe83c49a90fbab38b297fbc688632" args="(const QString &amp;path)" -->
+<a class="anchor" id="a499bee807f34cfe3b91a9271330e735b"></a><!-- doxytag: member="icomp::CXpcModel::AddPackage" ref="a499bee807f34cfe3b91a9271330e735b" args="(const QString &amp;path)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void icomp::CXpcModel::AddPackage </td>
+          <td class="memname">void icomp::CXpcModel::AddPackage </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -114,16 +114,16 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac129566e69023b6e241abfc319d9a9a1"></a><!-- doxytag: member="icomp::CXpcModel::AddPackageDir" ref="ac129566e69023b6e241abfc319d9a9a1" args="(const QString &amp;path)" -->
+<a class="anchor" id="a074e2d66c88ff325c2191be5b7917802"></a><!-- doxytag: member="icomp::CXpcModel::AddPackageDir" ref="a074e2d66c88ff325c2191be5b7917802" args="(const QString &amp;path)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void icomp::CXpcModel::AddPackageDir </td>
+          <td class="memname">void icomp::CXpcModel::AddPackageDir </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -131,16 +131,16 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad0094be832c54a6e32e27c858fb419d7"></a><!-- doxytag: member="icomp::CXpcModel::GetConfFile" ref="ad0094be832c54a6e32e27c858fb419d7" args="(int) const " -->
+<a class="anchor" id="a2588691a4869dfa88aef7d8a339f2083"></a><!-- doxytag: member="icomp::CXpcModel::GetConfFile" ref="a2588691a4869dfa88aef7d8a339f2083" args="(int) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QString icomp::CXpcModel::GetConfFile </td>
+          <td class="memname">QString icomp::CXpcModel::GetConfFile </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -164,15 +164,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1f2188cf027da972a71e1215faef83ea"></a><!-- doxytag: member="icomp::CXpcModel::GetNumConfFiles" ref="a1f2188cf027da972a71e1215faef83ea" args="() const " -->
+<a class="anchor" id="a091899f1f8b05fcb6c58e6bf8eede426"></a><!-- doxytag: member="icomp::CXpcModel::GetNumConfFiles" ref="a091899f1f8b05fcb6c58e6bf8eede426" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int icomp::CXpcModel::GetNumConfFiles </td>
+          <td class="memname">int icomp::CXpcModel::GetNumConfFiles </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -180,15 +180,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab4af82528959fdc9fc99798db0574dc2"></a><!-- doxytag: member="icomp::CXpcModel::GetNumPackageDirs" ref="ab4af82528959fdc9fc99798db0574dc2" args="() const " -->
+<a class="anchor" id="a2bf5ff65545bfd899c3f3c51a8b1a966"></a><!-- doxytag: member="icomp::CXpcModel::GetNumPackageDirs" ref="a2bf5ff65545bfd899c3f3c51a8b1a966" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int icomp::CXpcModel::GetNumPackageDirs </td>
+          <td class="memname">int icomp::CXpcModel::GetNumPackageDirs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -196,15 +196,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9bd860749344c4119fe1195c7b860d67"></a><!-- doxytag: member="icomp::CXpcModel::GetNumPackages" ref="a9bd860749344c4119fe1195c7b860d67" args="() const " -->
+<a class="anchor" id="ad4b577fd5d598bc72c0f1193625e79f3"></a><!-- doxytag: member="icomp::CXpcModel::GetNumPackages" ref="ad4b577fd5d598bc72c0f1193625e79f3" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int icomp::CXpcModel::GetNumPackages </td>
+          <td class="memname">int icomp::CXpcModel::GetNumPackages </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -212,16 +212,16 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa098fac2885d3c3087add598a2395fd7"></a><!-- doxytag: member="icomp::CXpcModel::GetPackage" ref="aa098fac2885d3c3087add598a2395fd7" args="(int) const " -->
+<a class="anchor" id="ae15df15204d2b660c4ec19df31e3879e"></a><!-- doxytag: member="icomp::CXpcModel::GetPackage" ref="ae15df15204d2b660c4ec19df31e3879e" args="(int) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QString icomp::CXpcModel::GetPackage </td>
+          <td class="memname">QString icomp::CXpcModel::GetPackage </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -229,16 +229,16 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae4fc411546a8b08e53784edb481c1180"></a><!-- doxytag: member="icomp::CXpcModel::GetPackageDir" ref="ae4fc411546a8b08e53784edb481c1180" args="(int) const " -->
+<a class="anchor" id="ab494071062529a1aa778930e50a76f31"></a><!-- doxytag: member="icomp::CXpcModel::GetPackageDir" ref="ab494071062529a1aa778930e50a76f31" args="(int) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QString icomp::CXpcModel::GetPackageDir </td>
+          <td class="memname">QString icomp::CXpcModel::GetPackageDir </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -278,12 +278,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4f3d2442331e4cca93a4625544a6c1dd"></a><!-- doxytag: member="icomp::CXpcModel::Serialize" ref="a4f3d2442331e4cca93a4625544a6c1dd" args="(iser::IArchive &amp;archive)" -->
+<a class="anchor" id="ae4585058f9f5ecd0a77aa2df94b42fc4"></a><!-- doxytag: member="icomp::CXpcModel::Serialize" ref="ae4585058f9f5ecd0a77aa2df94b42fc4" args="(iser::IArchive &amp;archive)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool icomp::CXpcModel::Serialize </td>
+          <td class="memname">bool icomp::CXpcModel::Serialize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>

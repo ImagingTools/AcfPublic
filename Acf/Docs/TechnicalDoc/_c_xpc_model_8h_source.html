@@ -39,45 +39,44 @@
 <a name="l00012"></a>00012 <span class="keyword">namespace </span>icomp
 <a name="l00013"></a>00013 {
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 
-<a name="l00019"></a><a class="code" href="classicomp_1_1_c_xpc_model.html">00019</a> <span class="keyword">class </span><a class="code" href="classicomp_1_1_c_xpc_model.html" title="Data model for ACF package loader configuration.">CXpcModel</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
-<a name="l00020"></a>00020 {
-<a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a>00022        <span class="comment">// gui interface (for editing)</span>
-<a name="l00023"></a>00023        <span class="keyword">const</span> QStringList&amp; <a class="code" href="classicomp_1_1_c_xpc_model.html#a8f54e2345af5b4d728df054129bdb16d">GetConfFilesList</a>() <span class="keyword">const</span>;
-<a name="l00024"></a>00024        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a37cbb6c0ade5f142b5290e475a9fc591">SetConfFilesList</a>(<span class="keyword">const</span> QStringList&amp; list);
-<a name="l00025"></a>00025        <span class="keyword">const</span> QStringList&amp; <a class="code" href="classicomp_1_1_c_xpc_model.html#a94ab8d03e4740c7cfec100399fcfecde">GetPackageDirsList</a>() <span class="keyword">const</span>;
-<a name="l00026"></a>00026        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#ada6584f7163bf059843b0ae331e97c1d">SetPackageDirsList</a>(<span class="keyword">const</span> QStringList&amp; list);
-<a name="l00027"></a>00027        <span class="keyword">const</span> QStringList&amp; <a class="code" href="classicomp_1_1_c_xpc_model.html#a77e8bd3a053e309d204fc893b4a220c1">GetPackagesList</a>() <span class="keyword">const</span>;
-<a name="l00028"></a>00028        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a622dd150d561e4c9d937444e5406bece">SetPackagesList</a>(<span class="keyword">const</span> QStringList&amp; list);
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="comment">// program interface (for loading XPC files)</span>
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a1f2188cf027da972a71e1215faef83ea">GetNumConfFiles</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#ab4af82528959fdc9fc99798db0574dc2">GetNumPackageDirs</a>() <span class="keyword">const</span>;
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a9bd860749344c4119fe1195c7b860d67">GetNumPackages</a>() <span class="keyword">const</span>;
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> QString <a class="code" href="classicomp_1_1_c_xpc_model.html#ad0094be832c54a6e32e27c858fb419d7">GetConfFile</a>(<span class="keywordtype">int</span>) <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> QString <a class="code" href="classicomp_1_1_c_xpc_model.html#ae4fc411546a8b08e53784edb481c1180">GetPackageDir</a>(<span class="keywordtype">int</span>) <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> QString <a class="code" href="classicomp_1_1_c_xpc_model.html#aa098fac2885d3c3087add598a2395fd7">GetPackage</a>(<span class="keywordtype">int</span>) <span class="keyword">const</span>;
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#aee98a0791f616b9da5cc7af882233338">AddConfFile</a>(<span class="keyword">const</span> QString&amp; path);
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#ac129566e69023b6e241abfc319d9a9a1">AddPackageDir</a>(<span class="keyword">const</span> QString&amp; path);
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a79afe83c49a90fbab38b297fbc688632">AddPackage</a>(<span class="keyword">const</span> QString&amp; path);
+<a name="l00016"></a><a class="code" href="classicomp_1_1_c_xpc_model.html">00016</a>     <span class="keyword">class </span><a class="code" href="classicomp_1_1_c_xpc_model.html" title="Data model for XPC files.">CXpcModel</a> : <span class="keyword">public</span> iser::ISerializable
+<a name="l00017"></a>00017     {
+<a name="l00018"></a>00018     <span class="keyword">public</span>:
+<a name="l00019"></a>00019        <span class="comment">// gui interface (for editing)</span>
+<a name="l00020"></a>00020        <span class="keyword">const</span> QStringList&amp; <a class="code" href="classicomp_1_1_c_xpc_model.html#a8f54e2345af5b4d728df054129bdb16d">GetConfFilesList</a>() <span class="keyword">const</span>;
+<a name="l00021"></a>00021        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a37cbb6c0ade5f142b5290e475a9fc591">SetConfFilesList</a>(<span class="keyword">const</span> QStringList&amp; list);
+<a name="l00022"></a>00022        <span class="keyword">const</span> QStringList&amp; <a class="code" href="classicomp_1_1_c_xpc_model.html#a94ab8d03e4740c7cfec100399fcfecde">GetPackageDirsList</a>() <span class="keyword">const</span>;
+<a name="l00023"></a>00023        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#ada6584f7163bf059843b0ae331e97c1d">SetPackageDirsList</a>(<span class="keyword">const</span> QStringList&amp; list);
+<a name="l00024"></a>00024        <span class="keyword">const</span> QStringList&amp; <a class="code" href="classicomp_1_1_c_xpc_model.html#a77e8bd3a053e309d204fc893b4a220c1">GetPackagesList</a>() <span class="keyword">const</span>;
+<a name="l00025"></a>00025        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a622dd150d561e4c9d937444e5406bece">SetPackagesList</a>(<span class="keyword">const</span> QStringList&amp; list);
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027        <span class="comment">// program interface (for loading XPC files)</span>
+<a name="l00028"></a>00028        <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a091899f1f8b05fcb6c58e6bf8eede426">GetNumConfFiles</a>() <span class="keyword">const</span>;
+<a name="l00029"></a>00029        <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a2bf5ff65545bfd899c3f3c51a8b1a966">GetNumPackageDirs</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030        <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#ad4b577fd5d598bc72c0f1193625e79f3">GetNumPackages</a>() <span class="keyword">const</span>;
+<a name="l00031"></a>00031        QString <a class="code" href="classicomp_1_1_c_xpc_model.html#a2588691a4869dfa88aef7d8a339f2083">GetConfFile</a>(<span class="keywordtype">int</span>) <span class="keyword">const</span>;
+<a name="l00032"></a>00032        QString <a class="code" href="classicomp_1_1_c_xpc_model.html#ab494071062529a1aa778930e50a76f31">GetPackageDir</a>(<span class="keywordtype">int</span>) <span class="keyword">const</span>;
+<a name="l00033"></a>00033        QString <a class="code" href="classicomp_1_1_c_xpc_model.html#ae15df15204d2b660c4ec19df31e3879e">GetPackage</a>(<span class="keywordtype">int</span>) <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#ac482eb3d986f2b1f6b770badafbecb26">AddConfFile</a>(<span class="keyword">const</span> QString&amp; path);
+<a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a074e2d66c88ff325c2191be5b7917802">AddPackageDir</a>(<span class="keyword">const</span> QString&amp; path);
+<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a499bee807f34cfe3b91a9271330e735b">AddPackage</a>(<span class="keyword">const</span> QString&amp; path);
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038        <span class="comment">// iser::ISerializable interface</span>
+<a name="l00039"></a>00039        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#ae4585058f9f5ecd0a77aa2df94b42fc4" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_xpc_model.html#a4f3d2442331e4cca93a4625544a6c1dd" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="keyword">private</span>:
-<a name="l00045"></a>00045        QStringList m_confFiles;
-<a name="l00046"></a>00046        QStringList m_packageDirs;
-<a name="l00047"></a>00047        QStringList m_packages;
-<a name="l00048"></a>00048 };
+<a name="l00041"></a>00041     <span class="keyword">private</span>:
+<a name="l00042"></a>00042        QStringList m_confFiles;
+<a name="l00043"></a>00043        QStringList m_packageDirs;
+<a name="l00044"></a>00044        QStringList m_packages;
+<a name="l00045"></a>00045     };
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 } <span class="comment">// namespace icomp</span>
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 } <span class="comment">// namespace icomp</span>
-<a name="l00052"></a>00052 
+<a name="l00051"></a>00051 <span class="preprocessor">#endif // !icomp_CXpcModel_included</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span>
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif // !icomp_CXpcModel_included</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span>
-<a name="l00056"></a>00056 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

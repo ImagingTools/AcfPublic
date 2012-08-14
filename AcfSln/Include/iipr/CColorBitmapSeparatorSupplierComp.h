@@ -43,13 +43,13 @@ namespace iipr
 */
 class CColorBitmapSeparatorSupplierComp:
 			public iproc::TSupplierCompWrap< istd::TPointerVector<iimg::IBitmap> >,
-			virtual public iipr::IMultiBitmapProvider			
+			virtual public iipr::IMultiBitmapProvider
 {
 public:
 	typedef iproc::TSupplierCompWrap< istd::TPointerVector<iimg::IBitmap> > BaseClass;
 
 	I_BEGIN_COMPONENT(CColorBitmapSeparatorSupplierComp);
-		I_REGISTER_INTERFACE(iipr::IMultiBitmapProvider);		
+		I_REGISTER_INTERFACE(iipr::IMultiBitmapProvider);
 		I_ASSIGN(m_bitmapCompFact, "BitmapFactory", "Use to create bitmap object", true, "BitmapFactory");
 		I_ASSIGN(m_bitmapProviderCompPtr, "BitmapSupplier", "Provide input image", true, "BitmapSupplier");
 		I_ASSIGN_TO(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false);
@@ -57,7 +57,7 @@ public:
 	I_END_COMPONENT;
 
 protected:
-	bool EnsureBitmapCreated(ProductType& result) const;	
+	bool EnsureBitmapCreated(ProductType& result) const;
 
 	// reimplemented (iipr::IMultiBitmapProvider)
 	virtual int GetBitmapsCount() const;
@@ -80,7 +80,7 @@ private:
 	I_REF(iipr::IBitmapProvider, m_bitmapProviderCompPtr);
 	I_REF(imod::IModel, m_bitmapProviderModelCompPtr);
 
-	I_ATTR(bool, m_createBitmapForAlpha);	
+	I_ATTR(bool, m_createBitmapForAlpha);
 };
 
 

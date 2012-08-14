@@ -26,6 +26,7 @@
 namespace iipr
 {
 
+
 // reimplemented (iipr::IMultiBitmapProvider)
 
 int CColorBitmapSeparatorSupplierComp::GetBitmapsCount() const
@@ -67,11 +68,14 @@ const iimg::IBitmap* CColorBitmapSeparatorSupplierComp::GetBitmap(int bitmapInde
 	return NULL;
 }
 
+
 // reimplemented (iipr::IMultiBitmapProvider)
+
 const i2d::ITransformation2d* CColorBitmapSeparatorSupplierComp::GetLogTransform(int bitmapIndex) const
 {
 	return NULL;
 }
+
 
 // reimplemented (iproc::TSupplierCompWrap)
 

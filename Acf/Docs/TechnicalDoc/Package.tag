@@ -1315,9 +1315,9 @@
     <name>CXpcEditorComp.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_xpc_editor_comp_8h</filename>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_xpc_model_8h" name="CXpcModel.h" local="yes" imported="no">icomp/CXpcModel.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">icmpstr::CXpcEditorComp</class>
     <namespace>icmpstr</namespace>
   </compound>
@@ -4503,6 +4503,13 @@
     <filename>iqtgui_8h</filename>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <namespace>iqtgui</namespace>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SetStyleSheet</name>
+      <anchorfile>namespaceiqtgui.html</anchorfile>
+      <anchor>af602612c1f34a2ec8ef67e734a13a7e0</anchor>
+      <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>IVisualStatusProvider.h</name>
@@ -17773,7 +17780,7 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
-      <anchor>af7895fd9a9ea0464e623dd04e8a4964d</anchor>
+      <anchor>a0be55362b300184394272aba38dfc7f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -20121,7 +20128,7 @@
   <compound kind="class">
     <name>icomp::CXpcModel</name>
     <filename>classicomp_1_1_c_xpc_model.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base>iser::ISerializable</base>
     <member kind="function">
       <type>const QStringList &amp;</type>
       <name>GetConfFilesList</name>
@@ -20164,74 +20171,74 @@
       <anchor>a622dd150d561e4c9d937444e5406bece</anchor>
       <arglist>(const QStringList &amp;list)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
+    <member kind="function">
+      <type>int</type>
       <name>GetNumConfFiles</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>a1f2188cf027da972a71e1215faef83ea</anchor>
+      <anchor>a091899f1f8b05fcb6c58e6bf8eede426</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
+    <member kind="function">
+      <type>int</type>
       <name>GetNumPackageDirs</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>ab4af82528959fdc9fc99798db0574dc2</anchor>
+      <anchor>a2bf5ff65545bfd899c3f3c51a8b1a966</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
+    <member kind="function">
+      <type>int</type>
       <name>GetNumPackages</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>a9bd860749344c4119fe1195c7b860d67</anchor>
+      <anchor>ad4b577fd5d598bc72c0f1193625e79f3</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
+    <member kind="function">
+      <type>QString</type>
       <name>GetConfFile</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>ad0094be832c54a6e32e27c858fb419d7</anchor>
+      <anchor>a2588691a4869dfa88aef7d8a339f2083</anchor>
       <arglist>(int) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
+    <member kind="function">
+      <type>QString</type>
       <name>GetPackageDir</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>ae4fc411546a8b08e53784edb481c1180</anchor>
+      <anchor>ab494071062529a1aa778930e50a76f31</anchor>
       <arglist>(int) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
+    <member kind="function">
+      <type>QString</type>
       <name>GetPackage</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>aa098fac2885d3c3087add598a2395fd7</anchor>
+      <anchor>ae15df15204d2b660c4ec19df31e3879e</anchor>
       <arglist>(int) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="function">
+      <type>void</type>
       <name>AddConfFile</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>aee98a0791f616b9da5cc7af882233338</anchor>
+      <anchor>ac482eb3d986f2b1f6b770badafbecb26</anchor>
       <arglist>(const QString &amp;path)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="function">
+      <type>void</type>
       <name>AddPackageDir</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>ac129566e69023b6e241abfc319d9a9a1</anchor>
+      <anchor>a074e2d66c88ff325c2191be5b7917802</anchor>
       <arglist>(const QString &amp;path)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+    <member kind="function">
+      <type>void</type>
       <name>AddPackage</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>a79afe83c49a90fbab38b297fbc688632</anchor>
+      <anchor>a499bee807f34cfe3b91a9271330e735b</anchor>
       <arglist>(const QString &amp;path)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+    <member kind="function">
+      <type>bool</type>
       <name>Serialize</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>a4f3d2442331e4cca93a4625544a6c1dd</anchor>
+      <anchor>ae4585058f9f5ecd0a77aa2df94b42fc4</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -36249,6 +36256,13 @@
     <class kind="class">iqtgui::TGuiComponentBase</class>
     <class kind="class">iqtgui::TGuiObserverWrap</class>
     <class kind="class">iqtgui::TRestorableGuiWrap</class>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SetStyleSheet</name>
+      <anchorfile>namespaceiqtgui.html</anchorfile>
+      <anchor>af602612c1f34a2ec8ef67e734a13a7e0</anchor>
+      <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CAboutWidgetGuiComp</name>

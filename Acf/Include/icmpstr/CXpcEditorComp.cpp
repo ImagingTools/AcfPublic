@@ -21,6 +21,9 @@
 
 
 #include "CXpcEditorComp.h"
+
+
+// ACF includes
 #include <QtGui/QStringListModel>
 #include "generated/ui_CXpcEditorComp.h"
 #include <QtGui/QItemDelegate>
@@ -40,13 +43,16 @@ namespace
 class NonOverwritableQStringListModel : public QStringListModel
 {
 public:
+
+
 	NonOverwritableQStringListModel(QObject* object) : QStringListModel(object)
 	{
 	}
 
-	virtual Qt::ItemFlags flags(const QModelIndex& index) const
+
+	virtual Qt::ItemFlags flags(const QModelIndex & index) const
 	{
-        Qt::ItemFlags flags = QStringListModel::flags(index);
+		int flags = QStringListModel::flags(index);
 
 		return index.data().isNull() ? flags : flags ^ Qt::ItemIsDropEnabled;
 	}
@@ -188,10 +194,10 @@ QDir CXpcEditorComp::GetCurrentDocumentDir()
 }
 
 
-void CXpcEditorComp::PickFileNameForSelection(QAbstractItemView* listView,
+void CXpcEditorComp::PickFileNameForLineEdit(QLineEdit* lineEdit,
 		bool SelectDirectories, iser::IFileTypeInfo* typeInfo)
 {
-	if (!listView) {
+	if (!lineEdit) {
 		return;
 	}
 	QFileDialog dialog;
@@ -219,15 +225,10 @@ void CXpcEditorComp::PickFileNameForSelection(QAbstractItemView* listView,
 		dialog.setNameFilter(filter);
 	}
 
-	QModelIndex index = listView->currentIndex();
-	if (!index.isValid()) {
-		return;
-	}
-
 	// try to access IDocumentManager and ask it for the file name
 	QDir baseDir = GetCurrentDocumentDir();
 
-	QString unrolledPath = iqt::CSystem::GetEnrolledPath(index.data().toString());
+	QString unrolledPath = iqt::CSystem::GetEnrolledPath(lineEdit->text());
 	QFileInfo fileInfo(baseDir.absoluteFilePath(unrolledPath));
 	dialog.setDirectory(fileInfo.absoluteDir());
 
@@ -235,7 +236,7 @@ void CXpcEditorComp::PickFileNameForSelection(QAbstractItemView* listView,
 	if (result == QDialog::Accepted) {
 		QStringList filenames = dialog.selectedFiles();
 		if (filenames.size()) {
-			listView->model()->setData(index, baseDir.relativeFilePath(filenames[0]));
+			lineEdit->setText(baseDir.relativeFilePath(filenames[0]));
 		}
 		DoUpdateModel();
 	}
@@ -244,19 +245,19 @@ void CXpcEditorComp::PickFileNameForSelection(QAbstractItemView* listView,
 
 void CXpcEditorComp::on_buttonEdit_cf_clicked()
 {
-	PickFileNameForSelection(listView_cf, false, m_confFileTypeInfo.GetPtr());
+	PickFileNameForLineEdit(lineEdit_cf, false, m_confFileTypeInfo.GetPtr());
 }
 
 
 void CXpcEditorComp::on_buttonEdit_pd_clicked()
 {
-	PickFileNameForSelection(listView_pd, true);
+	PickFileNameForLineEdit(lineEdit_pd, true);
 }
 
 
 void CXpcEditorComp::on_buttonEdit_pk_clicked()
 {
-	PickFileNameForSelection(listView_pk, false, m_packageFileTypeInfo.GetPtr());
+	PickFileNameForLineEdit(lineEdit_pk, false, m_packageFileTypeInfo.GetPtr());
 }
 
 
@@ -272,19 +273,19 @@ void CXpcEditorComp::OnModelDataChanged(const QModelIndex &, const QModelIndex &
 }
 
 
-void CXpcEditorComp::on_listView_cf_clicked(const QModelIndex & index)
+void CXpcEditorComp::on_listView_cf_activated(const QModelIndex & index)
 {
 	lineEdit_cf->setText(index.data().toString());
 }
 
 
-void CXpcEditorComp::on_listView_pd_clicked(const QModelIndex & index)
+void CXpcEditorComp::on_listView_pd_activated(const QModelIndex & index)
 {
 	lineEdit_pd->setText(index.data().toString());
 }
 
 
-void CXpcEditorComp::on_listView_pk_clicked(const QModelIndex & index)
+void CXpcEditorComp::on_listView_pk_activated(const QModelIndex & index)
 {
 	lineEdit_pk->setText(index.data().toString());
 }
@@ -300,7 +301,7 @@ void CXpcEditorComp::on_listView_cf_doubleClicked(const QModelIndex & index)
 }
 
 
-void CXpcEditorComp::on_lineEdit_cf_textEdited(const QString & text)
+void CXpcEditorComp::on_lineEdit_cf_textChanged(const QString & text)
 {
 	QModelIndex index = listView_cf->currentIndex();
 	if (!index.isValid()) {
@@ -311,7 +312,7 @@ void CXpcEditorComp::on_lineEdit_cf_textEdited(const QString & text)
 }
 
 
-void CXpcEditorComp::on_lineEdit_pd_textEdited(const QString & text)
+void CXpcEditorComp::on_lineEdit_pd_textChanged(const QString & text)
 {
 	QModelIndex index = listView_pd->currentIndex();
 	if (!index.isValid()) {
@@ -322,7 +323,7 @@ void CXpcEditorComp::on_lineEdit_pd_textEdited(const QString & text)
 }
 
 
-void CXpcEditorComp::on_lineEdit_pk_textEdited(const QString & text)
+void CXpcEditorComp::on_lineEdit_pk_textChanged(const QString & text)
 {
 	QModelIndex index = listView_pk->currentIndex();
 	if (!index.isValid()) {
