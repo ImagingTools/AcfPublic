@@ -566,6 +566,24 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>CBitmapJoinerSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_bitmap_joiner_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CBitmapOperations.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_bitmap_operations_8h</filename>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <class kind="class">iipr::CBitmapOperations</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CBitmapProviderCacheComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_provider_cache_comp_8h</filename>
@@ -5869,6 +5887,8 @@
   <compound kind="namespace">
     <name>iipr</name>
     <filename>namespaceiipr.html</filename>
+    <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
+    <class kind="class">iipr::CBitmapOperations</class>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
@@ -5950,6 +5970,135 @@
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CBitmapJoinerSupplierComp</name>
+    <filename>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a74711c1f51b6884ec52038cf89ee307a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a4cd75c889fb31c6dab44b34cee91fb76</anchor>
+      <arglist>(m_inputBitmapsProviderModelCompPtr, m_inputBitmapsProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a945e0e6c32382a81264ec512543be165</anchor>
+      <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsureBitmapCreated</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a28f9a3d02cea8e2a75eb68001b0aa009</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a559799b2a9d21e8dacf53cf107ad5fe3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a9f0f37fc5a423476c7eb0dbf652e0658</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a62512692ec619636260c815e364b47d1</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>add36d2addc89c5d2a8f7b3f17e7be2c2</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CBitmapOperations</name>
+    <filename>classiipr_1_1_c_bitmap_operations.html</filename>
+    <member kind="enumeration">
+      <name>JoinMode</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a0e4ef04c58a1d3aebfed0333e3969ff7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>JM_VERTICAL</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a0e4ef04c58a1d3aebfed0333e3969ff7a46695c669d3e4260b85b8cd9c8ba5b0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>JM_HORIZONTAL</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a0e4ef04c58a1d3aebfed0333e3969ff7a2e6cbef8a8bdae6c9eafae50ea9ef3b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>CombineMode</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a453d103ab8a538a89ec62cdbcef38dc6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CM_AVERAGE</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a453d103ab8a538a89ec62cdbcef38dc6a91630f65a16f58050f373faabf7f992f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CM_MAX</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a453d103ab8a538a89ec62cdbcef38dc6aee95590809cfa1e200e2429474e78950</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CM_MIN</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a453d103ab8a538a89ec62cdbcef38dc6a9bbc2287c904ef039521e61468e92113</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; const iimg::IBitmap * &gt;</type>
+      <name>BitmapList</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>aff1a0e5cb99dae9f4eed448fb6ea6279</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>JoinBitmaps</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>acdf7eff5caac20b8838c1a1015064278</anchor>
+      <arglist>(const BitmapList &amp;bitmapList, JoinMode joinMode, iimg::IBitmap &amp;outputBitmap, istd::ILogger *operationLogPtr=NULL)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CombineBitmaps</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a046a2ea6bb4b7f21d59f87b14395792d</anchor>
+      <arglist>(const BitmapList &amp;bitmapList, CombineMode combineMode, iimg::IBitmap &amp;outputBitmap, imath::CVarVector *weghtsPtr=NULL, istd::ILogger *operationLogPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6388,6 +6537,13 @@
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
       <anchor>a8154330a73be7f8d65f0ccd26dd8d48a</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>add811097b033bec2672b93d28265d309</anchor>
+      <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>

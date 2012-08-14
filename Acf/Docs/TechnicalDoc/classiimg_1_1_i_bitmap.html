@@ -83,14 +83,14 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a5c85a5da56ebf5e681416f434ecab2d2">CopyBitmapRegion</a> (const <a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;sourceBitmap, const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;area)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and copy bitmap region to the bitmap.  <a href="#a5c85a5da56ebf5e681416f434ecab2d2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#aa183038c573dd5e980f4bacd727121ed">GetPixelFormat</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bitmap's pixel format.  <a href="#aa183038c573dd5e980f4bacd727121ed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#aa71b5c7fe94cd389e8b831a56935415e">GetPixelFormat</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bitmap's pixel format.  <a href="#aa71b5c7fe94cd389e8b831a56935415e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a9dc2f1235fad74bda57fc62fa9bd878d">IsFormatSupported</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the pixel format is supported by the bitmap implementation.  <a href="#a9dc2f1235fad74bda57fc62fa9bd878d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a2e432a3dbffea1c93c07cc5521b69297">CreateBitmap</a> (int pixelFormat, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create bitmap with specified size and format.  <a href="#a2e432a3dbffea1c93c07cc5521b69297"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#aeb6fb5c1ef469793975b34468307d2ef">CreateBitmap</a> (int pixelFormat, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create bitmap with specified size and format using external image data buffer.  <a href="#aeb6fb5c1ef469793975b34468307d2ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a6591ed392c0fa6e0d4b32f3a7ac7cf9d">CreateBitmap</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create bitmap with specified size and format.  <a href="#a6591ed392c0fa6e0d4b32f3a7ac7cf9d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a25cc9d13fc16c753a6bf5adbd003ba87">CreateBitmap</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create bitmap with specified size and format using external image data buffer.  <a href="#a25cc9d13fc16c753a6bf5adbd003ba87"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a174b8c2c7fdbb47cdcb245fbadb27b97">GetLineBytesCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bytes per single line.  <a href="#a174b8c2c7fdbb47cdcb245fbadb27b97"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_i_bitmap.html#a617e61e4de45b35f513c169b41a0c0fb">GetLinesDifference</a> () const =0</td></tr>
@@ -188,14 +188,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2e432a3dbffea1c93c07cc5521b69297"></a><!-- doxytag: member="iimg::IBitmap::CreateBitmap" ref="a2e432a3dbffea1c93c07cc5521b69297" args="(int pixelFormat, const istd::CIndex2d &amp;size)=0" -->
+<a class="anchor" id="a6591ed392c0fa6e0d4b32f3a7ac7cf9d"></a><!-- doxytag: member="iimg::IBitmap::CreateBitmap" ref="a6591ed392c0fa6e0d4b32f3a7ac7cf9d" args="(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iimg::IBitmap::CreateBitmap </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a>&#160;</td>
           <td class="paramname"><em>pixelFormat</em>, </td>
         </tr>
         <tr>
@@ -228,18 +228,18 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_bitmap.html#a7f3140bda97ee8bd0463c46f816105c6">iqt::CBitmap</a>, and <a class="el" href="classiimg_1_1_c_general_bitmap.html#a9802b8cb43517aa05f5793e70d8a3a0f">iimg::CGeneralBitmap</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_bitmap.html#a6804f98a76c2d78bab8352b707960c8b">iqt::CBitmap</a>, and <a class="el" href="classiimg_1_1_c_general_bitmap.html#acc089ff6c0beb9d4aac7b0b7d814f1f8">iimg::CGeneralBitmap</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aeb6fb5c1ef469793975b34468307d2ef"></a><!-- doxytag: member="iimg::IBitmap::CreateBitmap" ref="aeb6fb5c1ef469793975b34468307d2ef" args="(int pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0" -->
+<a class="anchor" id="a25cc9d13fc16c753a6bf5adbd003ba87"></a><!-- doxytag: member="iimg::IBitmap::CreateBitmap" ref="a25cc9d13fc16c753a6bf5adbd003ba87" args="(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iimg::IBitmap::CreateBitmap </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a>&#160;</td>
           <td class="paramname"><em>pixelFormat</em>, </td>
         </tr>
         <tr>
@@ -293,7 +293,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_bitmap.html#a95de527e58cfecda5801c804fd83379b">iqt::CBitmap</a>, and <a class="el" href="classiimg_1_1_c_general_bitmap.html#a6dcaf4b58ad51ab73eb40b5fffa1c081">iimg::CGeneralBitmap</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_bitmap.html#a321cd69a33bc5f1f700c4c1e727f5f2c">iqt::CBitmap</a>, and <a class="el" href="classiimg_1_1_c_general_bitmap.html#a3a2c6b02d6532bf57d63a9ce209f8cd2">iimg::CGeneralBitmap</a>.</p>
 
 </div>
 </div>
@@ -432,12 +432,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa183038c573dd5e980f4bacd727121ed"></a><!-- doxytag: member="iimg::IBitmap::GetPixelFormat" ref="aa183038c573dd5e980f4bacd727121ed" args="() const =0" -->
+<a class="anchor" id="aa71b5c7fe94cd389e8b831a56935415e"></a><!-- doxytag: member="iimg::IBitmap::GetPixelFormat" ref="aa71b5c7fe94cd389e8b831a56935415e" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int iimg::IBitmap::GetPixelFormat </td>
+          <td class="memname">virtual <a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> iimg::IBitmap::GetPixelFormat </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -449,7 +449,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the bitmap's pixel format. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="classiqt_1_1_c_bitmap.html#af6a2dac6dd9c0f25388fe81875a6efbd">iqt::CBitmap</a>, and <a class="el" href="classiimg_1_1_c_general_bitmap.html#a2f2ca969467aa5d7f4bb9cf6adff520a">iimg::CGeneralBitmap</a>.</p>
+<p>Implemented in <a class="el" href="classiqt_1_1_c_bitmap.html#ab2b8a54ff3a7f546e35a22c259c79ba3">iqt::CBitmap</a>, and <a class="el" href="classiimg_1_1_c_general_bitmap.html#a2bbaf7e2d507700a01a1ca6435fe9506">iimg::CGeneralBitmap</a>.</p>
 
 </div>
 </div>

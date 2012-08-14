@@ -24054,25 +24054,25 @@
       <arglist>(PixelFormat pixelFormat) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
+      <type>virtual PixelFormat</type>
       <name>GetPixelFormat</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a2f2ca969467aa5d7f4bb9cf6adff520a</anchor>
+      <anchor>a2bbaf7e2d507700a01a1ca6435fe9506</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a9802b8cb43517aa05f5793e70d8a3a0f</anchor>
-      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+      <anchor>acc089ff6c0beb9d4aac7b0b7d814f1f8</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a6dcaf4b58ad51ab73eb40b5fffa1c081</anchor>
-      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
+      <anchor>a3a2c6b02d6532bf57d63a9ce209f8cd2</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -24155,15 +24155,15 @@
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>aae02e4922d48dbb44d8e53008c156951</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount, int componentsCount, int pixelFormat)</arglist>
+      <anchor>a5238bfcf4852d271b9b2f0a2686d01e8</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, int pixelBitsCount, int componentsCount, PixelFormat pixelFormat)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a85347d43554f8183d46a55efab9ea677</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference, int pixelBitsCount, int componentsCount, int pixelFormat)</arglist>
+      <anchor>aef14b2a80ebb64fb9bb19efbe42baeb9</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference, int pixelBitsCount, int componentsCount, PixelFormat pixelFormat)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24419,10 +24419,10 @@
       <arglist>(const iimg::IBitmap &amp;sourceBitmap, const i2d::CRectangle &amp;area)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual int</type>
+      <type>virtual PixelFormat</type>
       <name>GetPixelFormat</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>aa183038c573dd5e980f4bacd727121ed</anchor>
+      <anchor>aa71b5c7fe94cd389e8b831a56935415e</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -24436,15 +24436,15 @@
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a2e432a3dbffea1c93c07cc5521b69297</anchor>
-      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size)=0</arglist>
+      <anchor>a6591ed392c0fa6e0d4b32f3a7ac7cf9d</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>aeb6fb5c1ef469793975b34468307d2ef</anchor>
-      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</arglist>
+      <anchor>a25cc9d13fc16c753a6bf5adbd003ba87</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -31934,25 +31934,25 @@
       <arglist>(PixelFormat pixelFormat) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
+      <type>virtual PixelFormat</type>
       <name>GetPixelFormat</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>af6a2dac6dd9c0f25388fe81875a6efbd</anchor>
+      <anchor>ab2b8a54ff3a7f546e35a22c259c79ba3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>a7f3140bda97ee8bd0463c46f816105c6</anchor>
-      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+      <anchor>a6804f98a76c2d78bab8352b707960c8b</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>a95de527e58cfecda5801c804fd83379b</anchor>
-      <arglist>(int pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
+      <anchor>a321cd69a33bc5f1f700c4c1e727f5f2c</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -32042,14 +32042,14 @@
       <type>QImage::Format</type>
       <name>CalcQtFormat</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>ac3cfdae5ebbafd4d943c7481af9fea1a</anchor>
-      <arglist>(int pixelFormat) const </arglist>
+      <anchor>a75ac7dc64c0c10b740e127a78c738ad7</anchor>
+      <arglist>(PixelFormat pixelFormat) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>int</type>
+      <type>PixelFormat</type>
       <name>CalcFromQtFormat</name>
       <anchorfile>classiqt_1_1_c_bitmap.html</anchorfile>
-      <anchor>ad0847e943b6ef08cb11803c5d2a79955</anchor>
+      <anchor>a8749eedb96425fcb2af56cb8daefa1c1</anchor>
       <arglist>(QImage::Format imageFormat) const </arglist>
     </member>
     <member kind="function" protection="protected">
