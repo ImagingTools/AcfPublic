@@ -36444,6 +36444,13 @@
       <anchor>ad26e4a30aa4e54eeaa9a2c9ff8a10136</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_commands_tool_bar_gui_comp.html</anchorfile>
+      <anchor>ac4e0dabd448c4e4c13f8d89f8317575d</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CCommandTools</name>

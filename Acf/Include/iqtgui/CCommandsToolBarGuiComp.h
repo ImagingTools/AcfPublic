@@ -51,6 +51,7 @@ public:
 protected:
 	// reimplemented (CGuiComponentBase)
 	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
 
 private:
 	I_REF(ibase::ICommandsProvider, m_commandsProviderCompPtr);

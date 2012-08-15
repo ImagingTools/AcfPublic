@@ -59,6 +59,14 @@ void CCommandsToolBarGuiComp::OnGuiCreated()
 }
 
 
+void CCommandsToolBarGuiComp::OnGuiDestroyed()
+{
+	m_toolBarCommands.ResetChilds();
+
+	BaseClass::OnGuiDestroyed();
+}
+
+
 } // namespace iqtgui
 
 

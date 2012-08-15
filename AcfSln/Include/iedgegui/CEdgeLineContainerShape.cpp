@@ -52,8 +52,7 @@ void CEdgeLineContainerShape::Draw(QPainter& drawContext) const
 			// prepare draw context
 			QPen pen;
 			pen.setStyle(Qt::NoPen);
-			QBrush brush;
-			brush.setStyle(Qt::SolidPattern);
+			QBrush brush(Qt::green, Qt::SolidPattern);
 			drawContext.setPen(pen);
 			drawContext.setBrush(brush);
 

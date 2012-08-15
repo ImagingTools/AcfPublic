@@ -26,6 +26,7 @@
 // Qt includes
 #include <QtGui/QIcon>
 #include <QtGui/QApplication>
+#include <QtGui/QDesktopWidget>
 
 
 namespace iqtgui
@@ -82,6 +83,10 @@ iqtgui::CGuiComponentDialog* CDialogGuiComp::CreateComponentDialog(int buttons, 
 		else{
 			dialogPtr->setWindowIcon(QApplication::windowIcon());
 		}
+
+		QSize dialogSize = GetInitialDialogSize();
+
+		dialogPtr->resize(dialogSize.width(), dialogSize.height());
 	}
 
 	return dialogPtr.PopPtr();
@@ -109,6 +114,21 @@ void CDialogGuiComp::OnComponentCreated()
 void CDialogGuiComp::OnCommandActivated()
 {
 	ExecuteDialog(NULL);
+}
+
+
+// private methods
+
+QSize CDialogGuiComp::GetInitialDialogSize() const
+{
+	const QDesktopWidget* desktopPtr = QApplication::desktop();
+	I_ASSERT(desktopPtr != NULL);
+
+	QRect screenRect = desktopPtr->screenGeometry();
+
+	double screenFactor = qMin(0.99, *m_initialDialogSizeAttrPtr);
+
+	return QSize(screenRect.width() * screenFactor, screenRect.height() * screenFactor);
 }
 
 
