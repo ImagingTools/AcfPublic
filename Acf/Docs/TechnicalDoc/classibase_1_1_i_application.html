@@ -65,9 +65,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_application.html#ac98bb438050df407bc1fdf48b4caa341">InitializeApplication</a> (int argc, char **argv)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the application object.  <a href="#ac98bb438050df407bc1fdf48b4caa341"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_application.html#ab4c4a82417e7a591d44a2b769fac15f8">Execute</a> (int argc, char **argv)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts execution loop of the application.  <a href="#ab4c4a82417e7a591d44a2b769fac15f8"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start execution loop of the application.  <a href="#ab4c4a82417e7a591d44a2b769fac15f8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_application.html#a59d3f8ea3ce9cb249cdfe8cdaaf83985">GetHelpText</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the command line arguments of this application.  <a href="#a59d3f8ea3ce9cb249cdfe8cdaaf83985"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get information about the possible command line arguments of this application.  <a href="#a59d3f8ea3ce9cb249cdfe8cdaaf83985"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_application.html#aa7e38815ebcd27dd504e2a0131010c74">GetCommandLine</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the command line arguments of this application.  <a href="#aa7e38815ebcd27dd504e2a0131010c74"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Main entry point of component-based application. </p>
@@ -99,9 +101,29 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Starts execution loop of the application. </p>
+<p>Start execution loop of the application. </p>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_singleton_application_comp.html#a3eff6c2c1b1a6b4c6bfe7a319e7e9f07">ibase::CSingletonApplicationComp</a>, <a class="el" href="classibase_1_1_c_copy_app_comp.html#aea2bdc8e397a802c94454c3f8d275152">ibase::CCopyAppComp</a>, <a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ac5da37f7603e57c88e2827b86e98af5a">iqtgui::CGuiApplicationComp</a>, and <a class="el" href="classiqtgui_1_1_c_dialog_application_comp.html#af020846485ce5b0cb6cb114d70e87c93">iqtgui::CDialogApplicationComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_copy_app_comp.html#aea2bdc8e397a802c94454c3f8d275152">ibase::CCopyAppComp</a>, <a class="el" href="classibase_1_1_c_singleton_application_comp.html#a3eff6c2c1b1a6b4c6bfe7a319e7e9f07">ibase::CSingletonApplicationComp</a>, <a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ac5da37f7603e57c88e2827b86e98af5a">iqtgui::CGuiApplicationComp</a>, and <a class="el" href="classiqtgui_1_1_c_dialog_application_comp.html#af020846485ce5b0cb6cb114d70e87c93">iqtgui::CDialogApplicationComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7e38815ebcd27dd504e2a0131010c74"></a><!-- doxytag: member="ibase::IApplication::GetCommandLine" ref="aa7e38815ebcd27dd504e2a0131010c74" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QStringList ibase::IApplication::GetCommandLine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the command line arguments of this application. </p>
+
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_application_comp_base.html#ae507bea66b42e4629d563d8860ab5c89">iqtgui::CApplicationCompBase</a>, <a class="el" href="classibase_1_1_c_copy_app_comp.html#a4fb8847cb8192be05557ea443593e50d">ibase::CCopyAppComp</a>, and <a class="el" href="classibase_1_1_c_singleton_application_comp.html#a5a026938290aa0046a673ed78bbefdbb">ibase::CSingletonApplicationComp</a>.</p>
 
 </div>
 </div>
@@ -119,9 +141,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Gets the command line arguments of this application. </p>
+<p>Get information about the possible command line arguments of this application. </p>
 
-<p>Implemented in <a class="el" href="classibase_1_1_c_singleton_application_comp.html#ab993f28d3b2c0b6fc6ba2c1a4471a410">ibase::CSingletonApplicationComp</a>, <a class="el" href="classibase_1_1_c_copy_app_comp.html#a79550d56b3e64186fdac58934c0bb285">ibase::CCopyAppComp</a>, <a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#afdf3d4b7dc9c280bfc998cbda548cb3d">iqtgui::CGuiApplicationComp</a>, and <a class="el" href="classiqtgui_1_1_c_dialog_application_comp.html#a0930cdb686d7394e40fd547924ef3ae1">iqtgui::CDialogApplicationComp</a>.</p>
+<p>Implemented in <a class="el" href="classibase_1_1_c_copy_app_comp.html#a79550d56b3e64186fdac58934c0bb285">ibase::CCopyAppComp</a>, <a class="el" href="classibase_1_1_c_singleton_application_comp.html#ab993f28d3b2c0b6fc6ba2c1a4471a410">ibase::CSingletonApplicationComp</a>, <a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#afdf3d4b7dc9c280bfc998cbda548cb3d">iqtgui::CGuiApplicationComp</a>, and <a class="el" href="classiqtgui_1_1_c_dialog_application_comp.html#a0930cdb686d7394e40fd547924ef3ae1">iqtgui::CDialogApplicationComp</a>.</p>
 
 </div>
 </div>
@@ -152,7 +174,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Initialize the application object. </p>
 
-<p>Implemented in <a class="el" href="classiqtgui_1_1_c_application_comp_base.html#a84c4c944544a25c77fa4fa16c13599f1">iqtgui::CApplicationCompBase</a>, <a class="el" href="classibase_1_1_c_singleton_application_comp.html#af6df5796895aaded10a84e0ae4b7bc9a">ibase::CSingletonApplicationComp</a>, and <a class="el" href="classibase_1_1_c_copy_app_comp.html#a7b4727c7e23093c68e70f1a8f723f113">ibase::CCopyAppComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_application_comp_base.html#a84c4c944544a25c77fa4fa16c13599f1">iqtgui::CApplicationCompBase</a>, <a class="el" href="classibase_1_1_c_copy_app_comp.html#a7b4727c7e23093c68e70f1a8f723f113">ibase::CCopyAppComp</a>, and <a class="el" href="classibase_1_1_c_singleton_application_comp.html#af6df5796895aaded10a84e0ae4b7bc9a">ibase::CSingletonApplicationComp</a>.</p>
 
 </div>
 </div>

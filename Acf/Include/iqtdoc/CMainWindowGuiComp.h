@@ -32,6 +32,7 @@
 #include "imod/IModel.h"
 #include "imod/TSingleModelObserverBase.h"
 
+#include "ibase/IApplication.h"
 #include "ibase/IApplicationInfo.h"
 #include "ibase/ICommandsProvider.h"
 
@@ -63,6 +64,7 @@ public:
 		I_ASSIGN(m_documentManagerCompPtr, "DocumentManager", "Document manager", true, "DocumentManager");
 		I_ASSIGN_TO(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true);
 		I_ASSIGN_TO(m_documentManagerCommandsCompPtr, m_documentManagerCompPtr, false);
+		I_ASSIGN(m_applicationCompPtr, "Application", "Access to the application's command line", true, "Application");
 		I_ASSIGN(m_isCopyPathVisibleAttrPtr, "IsCopyPathVisible", "If true, operation Tools/CopyDocumentPath will be visible", true, false);
 		I_ASSIGN(m_isOpenContainingFolderVisibleAttrPtr, "IsOpenContainingFolderVisible", "If true, operation Tools/Open Containing Folder will be visible", true, false);
 		I_ASSIGN(m_maxRecentFilesCountAttrPtr, "MaxRecentFiles", "Maximal size of recent file list for one document type", true, 10);
@@ -233,6 +235,7 @@ private:
 	I_REF(idoc::IDocumentManager, m_documentManagerCompPtr);
 	I_REF(imod::IModel, m_documentManagerModelCompPtr);
 	I_REF(ibase::ICommandsProvider, m_documentManagerCommandsCompPtr);
+	I_REF(ibase::IApplication, m_applicationCompPtr);
 	I_ATTR(bool, m_isCopyPathVisibleAttrPtr);
 	I_ATTR(bool, m_isOpenContainingFolderVisibleAttrPtr);
 	I_ATTR(int, m_maxRecentFilesCountAttrPtr);

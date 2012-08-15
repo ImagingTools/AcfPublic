@@ -66,6 +66,7 @@ public:
 
 	// reimplemented (ibase::IApplication)
 	virtual bool InitializeApplication(int argc, char** argv);
+	virtual QStringList GetCommandLine() const;
 
 protected:
 	QApplication* GetQtApplication() const;
@@ -88,6 +89,8 @@ private:
 	istd::CGeneralTimeStamp m_splashScreenTimer;
 
 	istd::TDelPtr<QApplication> m_applicationPtr;
+
+	QStringList m_applicationArguments;
 };
 
 

@@ -72,58 +72,59 @@
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a973951097579aa9f68d44a2c9ad58043">InitializeApplication</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a738880bcae6c629c232bb6447a4c1607">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> QString <a class="code" href="classiabc_1_1_c_service_application_comp.html#aac355bc2223551a3bfcf0dc58b08d0b1">GetHelpText</a>() <span class="keyword">const</span>;
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (QObject)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a97b07f99dc5a13359b3828eb88813b6c">eventFilter</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a5d118a7b88c87d47b2dde416d77b9274">OnTrayIconActivated</a>(QSystemTrayIcon::ActivationReason reason);
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00060"></a><a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html">00060</a>        <span class="keyword">class </span><a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html">CService</a>: <span class="keyword">public</span> QtServiceBase
-<a name="l00061"></a>00061        {
-<a name="l00062"></a>00062        <span class="keyword">public</span>:
-<a name="l00063"></a><a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a17eabad554f96b428dc5dadc96c9f6cd">00063</a>               <span class="keyword">typedef</span> QtServiceBase <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a17eabad554f96b428dc5dadc96c9f6cd">BaseClass</a>;
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065               <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#aeeb73bad539599de6c1a84b7b37faf87">CService</a>(<a class="code" href="classiabc_1_1_c_service_application_comp.html" title="Qt based component for service-based application.">CServiceApplicationComp</a>&amp; parent,
-<a name="l00066"></a>00066                                    <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>&amp; application,
-<a name="l00067"></a>00067                                    <span class="keywordtype">int</span> serviceArgc,
-<a name="l00068"></a>00068                                    <span class="keywordtype">char</span>** serviceArgv,
-<a name="l00069"></a>00069                                    <span class="keyword">const</span> QString &amp;name);
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="keyword">protected</span>:
-<a name="l00072"></a>00072               <span class="comment">// reimplemented (QtServiceBase)</span>
-<a name="l00073"></a>00073               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a90fb654732229bddd2afb9c0e4e467f7">start</a>();
-<a name="l00074"></a>00074               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#aacebb9f0ab09618aa407cc83cbae89c6">stop</a>();
-<a name="l00075"></a>00075               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a5db36bfb82755a1e28bce7a7b4587514">pause</a>();
-<a name="l00076"></a>00076               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#ade6a6ab3898db148ce96ce01b0734a3d">resume</a>();
-<a name="l00077"></a>00077               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a4ded0cc6081d44a2fd7f2575cfbacea9">createApplication</a>(<span class="keywordtype">int</span> &amp;argc, <span class="keywordtype">char</span> **argv);
-<a name="l00078"></a>00078               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a8fa6866557e7c238c9d74593592e2660">executeApplication</a>();
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080        <span class="keyword">private</span>:
-<a name="l00081"></a>00081               QVector&lt;char*&gt; GetApplicationArguments() <span class="keyword">const</span>;
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083        <span class="keyword">private</span>:
-<a name="l00084"></a>00084               <a class="code" href="classiabc_1_1_c_service_application_comp.html" title="Qt based component for service-based application.">CServiceApplicationComp</a>&amp; m_parent;
-<a name="l00085"></a>00085               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>&amp; m_application;
-<a name="l00086"></a>00086               QStringList m_applicationArguments;
-<a name="l00087"></a>00087        };
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="keyword">private</span>:
-<a name="l00090"></a>00090        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>, m_applicationCompPtr);
-<a name="l00091"></a>00091        I_ATTR(QString, m_serviceDescriptionAttrPtr);
-<a name="l00092"></a>00092        I_ATTR(QString, m_serviceNameAttrPtr);
-<a name="l00093"></a>00093        I_ATTR(<span class="keywordtype">bool</span>, m_manualStartupAttrPtr);
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CService&gt;</a> m_servicePtr;
-<a name="l00096"></a>00096 };
-<a name="l00097"></a>00097 
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> QStringList <a class="code" href="classiabc_1_1_c_service_application_comp.html#a1652855e6325752105fe82543d6a1fdc">GetCommandLine</a>() <span class="keyword">const</span>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054        <span class="comment">// reimplemented (QObject)</span>
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a97b07f99dc5a13359b3828eb88813b6c">eventFilter</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a5d118a7b88c87d47b2dde416d77b9274">OnTrayIconActivated</a>(QSystemTrayIcon::ActivationReason reason);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 <span class="keyword">protected</span>:
+<a name="l00061"></a><a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html">00061</a>        <span class="keyword">class </span><a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html">CService</a>: <span class="keyword">public</span> QtServiceBase
+<a name="l00062"></a>00062        {
+<a name="l00063"></a>00063        <span class="keyword">public</span>:
+<a name="l00064"></a><a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a17eabad554f96b428dc5dadc96c9f6cd">00064</a>               <span class="keyword">typedef</span> QtServiceBase <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a17eabad554f96b428dc5dadc96c9f6cd">BaseClass</a>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066               <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#aeeb73bad539599de6c1a84b7b37faf87">CService</a>(<a class="code" href="classiabc_1_1_c_service_application_comp.html" title="Qt based component for service-based application.">CServiceApplicationComp</a>&amp; parent,
+<a name="l00067"></a>00067                                    <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>&amp; application,
+<a name="l00068"></a>00068                                    <span class="keywordtype">int</span> serviceArgc,
+<a name="l00069"></a>00069                                    <span class="keywordtype">char</span>** serviceArgv,
+<a name="l00070"></a>00070                                    <span class="keyword">const</span> QString &amp;name);
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072        <span class="keyword">protected</span>:
+<a name="l00073"></a>00073               <span class="comment">// reimplemented (QtServiceBase)</span>
+<a name="l00074"></a>00074               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a90fb654732229bddd2afb9c0e4e467f7">start</a>();
+<a name="l00075"></a>00075               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#aacebb9f0ab09618aa407cc83cbae89c6">stop</a>();
+<a name="l00076"></a>00076               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a5db36bfb82755a1e28bce7a7b4587514">pause</a>();
+<a name="l00077"></a>00077               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#ade6a6ab3898db148ce96ce01b0734a3d">resume</a>();
+<a name="l00078"></a>00078               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a4ded0cc6081d44a2fd7f2575cfbacea9">createApplication</a>(<span class="keywordtype">int</span> &amp;argc, <span class="keywordtype">char</span> **argv);
+<a name="l00079"></a>00079               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a8fa6866557e7c238c9d74593592e2660">executeApplication</a>();
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081        <span class="keyword">private</span>:
+<a name="l00082"></a>00082               QVector&lt;char*&gt; GetApplicationArguments() <span class="keyword">const</span>;
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084        <span class="keyword">private</span>:
+<a name="l00085"></a>00085               <a class="code" href="classiabc_1_1_c_service_application_comp.html" title="Qt based component for service-based application.">CServiceApplicationComp</a>&amp; m_parent;
+<a name="l00086"></a>00086               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>&amp; m_application;
+<a name="l00087"></a>00087               QStringList m_applicationArguments;
+<a name="l00088"></a>00088        };
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="keyword">private</span>:
+<a name="l00091"></a>00091        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>, m_applicationCompPtr);
+<a name="l00092"></a>00092        I_ATTR(QString, m_serviceDescriptionAttrPtr);
+<a name="l00093"></a>00093        I_ATTR(QString, m_serviceNameAttrPtr);
+<a name="l00094"></a>00094        I_ATTR(<span class="keywordtype">bool</span>, m_manualStartupAttrPtr);
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CService&gt;</a> m_servicePtr;
+<a name="l00097"></a>00097 };
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099 } <span class="comment">// namespace iabc</span>
-<a name="l00100"></a>00100 
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 } <span class="comment">// namespace iabc</span>
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="preprocessor">#endif // iabc_CServiceApplicationComp_included</span>
-<a name="l00103"></a>00103 <span class="preprocessor"></span>
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="preprocessor">#endif // iabc_CServiceApplicationComp_included</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

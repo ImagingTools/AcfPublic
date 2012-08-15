@@ -3994,6 +3994,7 @@
     <filename>_c_main_window_gui_comp_8h</filename>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_application_8h" name="IApplication.h" local="yes" imported="no">ibase/IApplication.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">idoc/IUndoManager.h</includes>
@@ -11034,6 +11035,13 @@
       <anchor>a79550d56b3e64186fdac58934c0bb285</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetCommandLine</name>
+      <anchorfile>classibase_1_1_c_copy_app_comp.html</anchorfile>
+      <anchor>a4fb8847cb8192be05557ea443593e50d</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ibase::CExternalFileConverterComp</name>
@@ -11925,6 +11933,13 @@
       <anchor>ab993f28d3b2c0b6fc6ba2c1a4471a410</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetCommandLine</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>a5a026938290aa0046a673ed78bbefdbb</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -12304,6 +12319,13 @@
       <name>GetHelpText</name>
       <anchorfile>classibase_1_1_i_application.html</anchorfile>
       <anchor>a59d3f8ea3ce9cb249cdfe8cdaaf83985</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QStringList</type>
+      <name>GetCommandLine</name>
+      <anchorfile>classibase_1_1_i_application.html</anchorfile>
+      <anchor>aa7e38815ebcd27dd504e2a0131010c74</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -36308,6 +36330,13 @@
       <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
       <anchor>a84c4c944544a25c77fa4fa16c13599f1</anchor>
       <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetCommandLine</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>ae507bea66b42e4629d563d8860ab5c89</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QApplication *</type>

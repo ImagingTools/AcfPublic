@@ -42,18 +42,20 @@
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
 <a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_i_application.html#ac98bb438050df407bc1fdf48b4caa341" title="Initialize the application object.">InitializeApplication</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) = 0;
 <a name="l00026"></a>00026 
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_application.html#ab4c4a82417e7a591d44a2b769fac15f8" title="Starts execution loop of the application.">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) = 0;
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_i_application.html#ab4c4a82417e7a591d44a2b769fac15f8" title="Start execution loop of the application.">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) = 0;
 <a name="l00031"></a>00031 
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> QString <a class="code" href="classibase_1_1_i_application.html#a59d3f8ea3ce9cb249cdfe8cdaaf83985" title="Gets the command line arguments of this application.">GetHelpText</a>() <span class="keyword">const</span> = 0;
-<a name="l00036"></a>00036 };
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 } <span class="comment">// namespace ibase</span>
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="preprocessor">#endif // !ibase_IApplication_included</span>
-<a name="l00043"></a>00043 <span class="preprocessor"></span>
-<a name="l00044"></a>00044 
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> QString <a class="code" href="classibase_1_1_i_application.html#a59d3f8ea3ce9cb249cdfe8cdaaf83985" title="Get information about the possible command line arguments of this application.">GetHelpText</a>() <span class="keyword">const</span> = 0;
+<a name="l00036"></a>00036 
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> QStringList <a class="code" href="classibase_1_1_i_application.html#aa7e38815ebcd27dd504e2a0131010c74" title="Get the command line arguments of this application.">GetCommandLine</a>() <span class="keyword">const</span> = 0;
+<a name="l00041"></a>00041 };
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 } <span class="comment">// namespace ibase</span>
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="preprocessor">#endif // !ibase_IApplication_included</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span>
+<a name="l00049"></a>00049 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
