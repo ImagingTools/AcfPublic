@@ -55,5 +55,10 @@ I_EXPORT_COMPONENT(
 			"Gui getting image from camera and connecting it to display console", 
 			"Image Bitmap Camera Snap Acquisition Supplier Parameters GUI Qt");
 
+I_EXPORT_COMPONENT(
+			MultiBitmapViewGui,
+			"Gui groups several consoles with status info into the grid",
+			"GUI Qt Grid Multi Image Bitmap View");
+
 
 } // namespace QtCameraPck
