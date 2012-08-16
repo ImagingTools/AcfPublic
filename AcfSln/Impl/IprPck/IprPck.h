@@ -62,6 +62,7 @@
 #include "iipr/CConvolutionKernel2d.h"
 #include "iipr/CColorBitmapSeparatorSupplierComp.h"
 #include "iipr/CBitmapJoinerSupplierComp.h"
+#include "iipr/CMultiBitmapCacheComp.h"
 
 
 /**
@@ -110,6 +111,7 @@ typedef icomp::TModelCompWrap<iipr::CRingPatternGeneratorParamsComp> RingPattern
 typedef iipr::CRgbToGrayProcessorComp RgbToGrayProcessor;
 typedef iipr::CImageBinarizeProcessorComp ImageBinarizeProcessor;
 typedef icomp::TModelCompWrap<iipr::CBitmapProviderCacheComp> BitmapProviderCache;
+typedef icomp::TModelCompWrap<iipr::CMultiBitmapCacheComp> MultiBitmapProviderCacheComp;
 typedef icomp::TMakeComponentWrap<
 			imod::TModelWrap<iipr::CSearchParams>,
 			iipr::ISearchParams,

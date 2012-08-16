@@ -130,6 +130,8 @@ void CComposedGuiComp::OnGuiCreated()
 		widgetPtr->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 
 		QTabWidget* tabWidgetPtr = new QTabWidget(widgetPtr);
+		tabWidgetPtr->setTabPosition(QTabWidget::TabPosition(*m_tabOrientationAttrPtr));
+
 		int elementsCount = m_guisCompPtr.GetCount();
 		for (int i = 0; i < elementsCount; ++i){
 			iqtgui::IGuiObject* guiPtr = m_guisCompPtr[i];

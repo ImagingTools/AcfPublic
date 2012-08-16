@@ -60,7 +60,7 @@
 <a name="l00037"></a>00037               I_ASSIGN(m_menuNameAttrPtr, <span class="stringliteral">&quot;MenuName&quot;</span>, <span class="stringliteral">&quot;Name of the menu for the action group&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MenuName&quot;</span>);
 <a name="l00038"></a>00038               I_ASSIGN(m_menuDescriptionAttrPtr, <span class="stringliteral">&quot;MenuDescription&quot;</span>, <span class="stringliteral">&quot;Description for the action group&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MenuDescription&quot;</span>);
 <a name="l00039"></a>00039               I_ASSIGN(m_rootMenuNameAttrPtr, <span class="stringliteral">&quot;RootMenu&quot;</span>, <span class="stringliteral">&quot;Name of the root command&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;RootMenu&quot;</span>);
-<a name="l00040"></a>00040               I_ASSIGN(m_initialDialogSizeAttrPtr, <span class="stringliteral">&quot;DialogSize&quot;</span>, <span class="stringliteral">&quot;Initial size of the dialog. The value is factor of the monitor resolution&quot;</span>, <span class="keyword">true</span>, 0.5);
+<a name="l00040"></a>00040               I_ASSIGN(m_initialDialogSizeAttrPtr, <span class="stringliteral">&quot;DialogSize&quot;</span>, <span class="stringliteral">&quot;Initial size of the dialog. The value is proportion of dialog size to desktop size&quot;</span>, <span class="keyword">false</span>, 0.5);
 <a name="l00041"></a>00041        I_END_COMPONENT;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (iqtgui::IDialog)</span>
@@ -79,7 +79,7 @@
 <a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dialog_gui_comp.html#a67853331c040e704bf0f8f7c8492568d">OnCommandActivated</a>();
 <a name="l00057"></a>00057 
 <a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059        QSize GetInitialDialogSize() <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keywordtype">void</span> SetInitialDialogSize(QDialog&amp; dialog) <span class="keyword">const</span>;
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 <span class="keyword">private</span>:
 <a name="l00062"></a>00062        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_guiCompPtr);

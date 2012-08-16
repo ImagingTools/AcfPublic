@@ -31,6 +31,7 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iprop::IPropertiesManager Class Reference</div>  </div>
@@ -56,8 +57,16 @@ Inheritance diagram for iprop::IPropertiesManager:</div>
 
 <p><a href="classiprop_1_1_i_properties_manager-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2">ChangeFlags</a> { <a class="el" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2a81ba63b7ec777b1ba5bc3e2ce539cfc1">CF_RESET</a> =  1 &lt;&lt; 15, 
+<a class="el" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2a01f8a92e043e3d76dc7b75571d02e9a5">CF_ADD_PROPERTY</a> =  1 &lt;&lt; 16
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Data model change notification flags.  <a href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#aca6f310c1740a1eb833551f9c8355774">RemoveAllProperties</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all properties from the manager.  <a href="#aca6f310c1740a1eb833551f9c8355774"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#ac8f07c4483169a61ca474f4a04222097">GetPropertiesCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of properties.  <a href="#ac8f07c4483169a61ca474f4a04222097"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#ab4acd8685206a2c66929d9cc5637f62a">GetProperty</a> (int propertyIndex) const =0</td></tr>
@@ -73,7 +82,37 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Common interface for a container of properties. </p>
 
 <p>Definition at line <a class="el" href="_i_properties_manager_8h_source.html#l00020">20</a> of file <a class="el" href="_i_properties_manager_8h_source.html">IPropertiesManager.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a0fbea1b08f6348eafea994bbc13b64b2"></a><!-- doxytag: member="iprop::IPropertiesManager::ChangeFlags" ref="a0fbea1b08f6348eafea994bbc13b64b2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2">iprop::IPropertiesManager::ChangeFlags</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Data model change notification flags. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a0fbea1b08f6348eafea994bbc13b64b2a81ba63b7ec777b1ba5bc3e2ce539cfc1"></a><!-- doxytag: member="CF_RESET" ref="a0fbea1b08f6348eafea994bbc13b64b2a81ba63b7ec777b1ba5bc3e2ce539cfc1" args="" -->CF_RESET</em>&nbsp;</td><td>
+<p>The property manager was initialized. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a0fbea1b08f6348eafea994bbc13b64b2a01f8a92e043e3d76dc7b75571d02e9a5"></a><!-- doxytag: member="CF_ADD_PROPERTY" ref="a0fbea1b08f6348eafea994bbc13b64b2a01f8a92e043e3d76dc7b75571d02e9a5" args="" -->CF_ADD_PROPERTY</em>&nbsp;</td><td>
+<p>A new property was added to the manager. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
+
+<p>Definition at line <a class="el" href="_i_properties_manager_8h_source.html#l00026">26</a> of file <a class="el" href="_i_properties_manager_8h_source.html">IPropertiesManager.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ac8f07c4483169a61ca474f4a04222097"></a><!-- doxytag: member="iprop::IPropertiesManager::GetPropertiesCount" ref="ac8f07c4483169a61ca474f4a04222097" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -220,6 +259,26 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classiprop_1_1_c_properties_manager.html#a45a286ac7bcff84fd183c4bcb9efd297">iprop::CPropertiesManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca6f310c1740a1eb833551f9c8355774"></a><!-- doxytag: member="iprop::IPropertiesManager::RemoveAllProperties" ref="aca6f310c1740a1eb833551f9c8355774" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iprop::IPropertiesManager::RemoveAllProperties </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Remove all properties from the manager. </p>
+
+<p>Implemented in <a class="el" href="classiprop_1_1_c_properties_manager.html#aebe25efc9cd0569b4e3372f90922dd9a">iprop::CPropertiesManager</a>.</p>
 
 </div>
 </div>

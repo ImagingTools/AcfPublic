@@ -42,7 +42,7 @@ typedef iqtcam::CFileAcquisitionComp FileAcquisition;
 typedef iqtcam::CSnapImageGuiComp SnapImageGui;
 typedef iqtcam::CExposureParamsGuiComp ExposureParamsGui;
 typedef iqtcam::CBitmapSupplierGuiComp SnapBitmapSupplierGui;
-typedef iqtcam::CMultiBitmapViewComp MultiBitmapViewGui;
+typedef iqtcam::CMultiBitmapViewComp MultiBitmapView;
 
 
 } // namespace QtCameraPck

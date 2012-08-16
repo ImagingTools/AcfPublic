@@ -124,6 +124,24 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiCameraBitmapSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_multi_camera_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <class kind="class">icam::CMultiCameraBitmapSupplierComp</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSelectableBitmapSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_selectable_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <class kind="class">icam::CSelectableBitmapSupplierComp</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectionParamCameraComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selection_param_camera_comp_8h</filename>
@@ -1615,6 +1633,15 @@
     <namespace>iqtcam</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiBitmapViewComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
+    <filename>_c_multi_bitmap_view_comp_8h</filename>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="no" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <class kind="class">iqtcam::CMultiBitmapViewComp</class>
+    <class kind="class">iqtcam::CMultiBitmapViewComp::CSingleView</class>
+    <namespace>iqtcam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSnapImageGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_snap_image_gui_comp_8h</filename>
@@ -2591,6 +2618,8 @@
     <class kind="class">icam::CCameraDelegatorComp</class>
     <class kind="class">icam::CExposureParamsComp</class>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
+    <class kind="class">icam::CMultiCameraBitmapSupplierComp</class>
+    <class kind="class">icam::CSelectableBitmapSupplierComp</class>
     <class kind="class">icam::CSelectionParamCameraComp</class>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
     <class kind="class">icam::IBitmapAcquisition</class>
@@ -2838,6 +2867,124 @@
       <anchorfile>classicam_1_1_c_memory_acquisition_comp.html</anchorfile>
       <anchor>a394e0c7c42c4be073bb754043d0ade71</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CMultiCameraBitmapSupplierComp</name>
+    <filename>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</base>
+    <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a6ae28fb24e53c51727c9009cd4d74d00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a8b83e96dbd26bd3a38d52587bf5f35a1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a2f82412f136e1ec83e95734f2bb88be1</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a0f89271a58e8be57f4a3c20c7daaaf55</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a3091d7239019c8f26f6e7fc8d3c53911</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a50a5b1bf93909570927231e657bfa842</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ac0f8481ef76f20d83f61197970ac0857</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CSelectableBitmapSupplierComp</name>
+    <filename>classicam_1_1_c_selectable_bitmap_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ad2d999768aaa66b482edd2e25fe8062b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>aafadd59b4fecb5b906276373157bc250</anchor>
+      <arglist>(m_multiBitmapSupplierCompPtr, m_multiBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>aa78afc7870822ec7a0ab5320628090fe</anchor>
+      <arglist>(m_bitmapSelectionModelCompPtr, m_bitmapSelectionCompPtr, true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a25b8ec9d2cf25eacbb5686a6982463b1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ab0a3e5cf37944d482b7067c1be5d774b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ac3b86edadad0da72e59389dda91be8a8</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a7772420cfc23ea9f18cebf381452fd11</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>afdcf1d6f121248edc60232a2ece8349f</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10960,6 +11107,13 @@
       <arglist>(const QByteArray &amp;propertyId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveAllProperties</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>aebe25efc9cd0569b4e3372f90922dd9a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPropertiesCount</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
@@ -11099,6 +11253,31 @@
     <name>iprop::IPropertiesManager</name>
     <filename>classiprop_1_1_i_properties_manager.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a0fbea1b08f6348eafea994bbc13b64b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_RESET</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a0fbea1b08f6348eafea994bbc13b64b2a81ba63b7ec777b1ba5bc3e2ce539cfc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_ADD_PROPERTY</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a0fbea1b08f6348eafea994bbc13b64b2a01f8a92e043e3d76dc7b75571d02e9a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveAllProperties</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>aca6f310c1740a1eb833551f9c8355774</anchor>
+      <arglist>()=0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetPropertiesCount</name>
@@ -11758,6 +11937,7 @@
     <class kind="class">iqtcam::CBitmapSupplierGuiComp</class>
     <class kind="class">iqtcam::CExposureParamsGuiComp</class>
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
+    <class kind="class">iqtcam::CMultiBitmapViewComp</class>
     <class kind="class">iqtcam::CSnapImageGuiComp</class>
   </compound>
   <compound kind="class">
@@ -11974,6 +12154,172 @@
       <name>idStamp</name>
       <anchorfile>structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html</anchorfile>
       <anchor>a922346277292f8827b9817759720ebb7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtcam::CMultiBitmapViewComp</name>
+    <filename>classiqtcam_1_1_c_multi_bitmap_view_comp.html</filename>
+    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iipr::IMultiBitmapProvider &gt; &gt; &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <class kind="class">iqtcam::CMultiBitmapViewComp::CSingleView</class>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iipr::IMultiBitmapProvider &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a9f8e1e414b786aef6b2eabe0d4f21c5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a502b960d62373391ad90c20edf82fe1a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>aa83b6a31cbdb6741b07214c1013fe26e</anchor>
+      <arglist>(m_informationModelsCompPtr, m_informationProvidersCompPtr, true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a431f628e50845b242958a5f58479ff00</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a3c7b1f8e4089b3fd891b6dae17879542</anchor>
+      <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>aef6d3e304d39d3c349d2c148eac89e15</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>ae4020c58764bb40b076f3cc26887ce4c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a047e4437a9a8076032b95b34f2348ef7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual CSingleView *</type>
+      <name>CreateView</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>aa1aa2dda0d13beb838b97a722a2d8b2e</anchor>
+      <arglist>(QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtcam::CMultiBitmapViewComp::CSingleView</name>
+    <filename>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</filename>
+    <base>iqt2d::IViewProvider</base>
+    <member kind="typedef">
+      <type>QGroupBox</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>ae0c26957e8b402c87fe45f2d5feb4d8a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSingleView</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>af69523765eda8fb69ef76c09d140d7f2</anchor>
+      <arglist>(QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UpdateImage</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>aa6aa2ce7527648fed4dae11c5428ce5b</anchor>
+      <arglist>(const iimg::IBitmap *bitmapPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Init</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a40dd81dd3ba8da577477f878558e4f1b</anchor>
+      <arglist>(bool hasStatusInfo)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetInspectionResult</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a8d5bb4eb773cc5dd816dc38fa2f05ecd</anchor>
+      <arglist>(int result)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetViewId</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a2cef1a91cf1979caac91e6280b75066a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iview::IShapeView *</type>
+      <name>GetView</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>ab851849b056c6070e32edd42f703f7fb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddStatusItems</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a7eef1348d57f3298841a6c55ee75bb5d</anchor>
+      <arglist>(QBoxLayout *layoutPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iview::CImageShape</type>
+      <name>m_backgroundShape</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>ae220075cf42c34402e5aa0aa4a62d202</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imod::TModelWrap&lt; iqt::CBitmap &gt;</type>
+      <name>m_backgroundModel</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a33aa7be6b1b545aa6f25a1cf763cc009</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iview::CConsoleGui</type>
+      <name>m_console</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a3f6b272b07d69aef0dc5139cd3c98c18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QLabel *</type>
+      <name>m_statusLabel</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a2d190cee3256ca32888b1ddc295fb451</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_id</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a1730dff2f3690ff472b349476a984125</anchor>
       <arglist></arglist>
     </member>
   </compound>

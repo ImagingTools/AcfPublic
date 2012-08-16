@@ -43,29 +43,38 @@
 <a name="l00020"></a><a class="code" href="classiprop_1_1_i_properties_manager.html">00020</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprop_1_1_i_properties_manager.html#ac8f07c4483169a61ca474f4a04222097" title="Get number of properties.">GetPropertiesCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00027"></a>00027 
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_i_properties_manager.html#ab4acd8685206a2c66929d9cc5637f62a" title="Get property with the given index.">GetProperty</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span> = 0;
+<a name="l00026"></a><a class="code" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2">00026</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">ChangeFlags</a>
+<a name="l00027"></a>00027        {
+<a name="l00031"></a><a class="code" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2a81ba63b7ec777b1ba5bc3e2ce539cfc1">00031</a>               <a class="code" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2a81ba63b7ec777b1ba5bc3e2ce539cfc1" title="The property manager was initialized.">CF_RESET</a> = 1 &lt;&lt; 15,
 <a name="l00032"></a>00032 
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprop_1_1_i_properties_manager.html#aff67b7b0a40bedf98acda47ca5720d27" title="Get the ID of the property with the given index propertyIndex.">GetPropertyId</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span> = 0;
+<a name="l00036"></a><a class="code" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2a01f8a92e043e3d76dc7b75571d02e9a5">00036</a>               <a class="code" href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2a01f8a92e043e3d76dc7b75571d02e9a5" title="A new property was added to the manager.">CF_ADD_PROPERTY</a> = 1 &lt;&lt; 16
+<a name="l00037"></a>00037        };
 <a name="l00038"></a>00038 
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> QString <a class="code" href="classiprop_1_1_i_properties_manager.html#a16b6064121146b8efab81b4cd84a7e0d" title="Get the description of the property with the given index propertyIndex.">GetPropertyDescription</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span> = 0;
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_i_properties_manager.html#aca6f310c1740a1eb833551f9c8355774" title="Remove all properties from the manager.">RemoveAllProperties</a>() = 0;
 <a name="l00043"></a>00043 
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_i_properties_manager.html#a365365ce2c71f76182d5e60b7be9a4dc" title="Insert an property into the object.">InsertProperty</a>(
-<a name="l00054"></a>00054                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* objectPtr,
-<a name="l00055"></a>00055                             <span class="keyword">const</span> QByteArray&amp; propertyId,
-<a name="l00056"></a>00056                             <span class="keyword">const</span> QByteArray&amp; propertyDescription,
-<a name="l00057"></a>00057                             <span class="keywordtype">int</span> propertyFlags,
-<a name="l00058"></a>00058                             <span class="keywordtype">bool</span> releaseFlag) = 0;
-<a name="l00059"></a>00059 };
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 } <span class="comment">// namespace iprop</span>
-<a name="l00063"></a>00063 
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprop_1_1_i_properties_manager.html#ac8f07c4483169a61ca474f4a04222097" title="Get number of properties.">GetPropertiesCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00048"></a>00048 
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_i_properties_manager.html#ab4acd8685206a2c66929d9cc5637f62a" title="Get property with the given index.">GetProperty</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span> = 0;
+<a name="l00053"></a>00053 
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprop_1_1_i_properties_manager.html#aff67b7b0a40bedf98acda47ca5720d27" title="Get the ID of the property with the given index propertyIndex.">GetPropertyId</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span> = 0;
+<a name="l00059"></a>00059 
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> QString <a class="code" href="classiprop_1_1_i_properties_manager.html#a16b6064121146b8efab81b4cd84a7e0d" title="Get the description of the property with the given index propertyIndex.">GetPropertyDescription</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span> = 0;
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="preprocessor">#endif // !iprop_IPropertiesManager_included</span>
-<a name="l00066"></a>00066 <span class="preprocessor"></span>
-<a name="l00067"></a>00067 
+<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_i_properties_manager.html#a365365ce2c71f76182d5e60b7be9a4dc" title="Insert an property into the object.">InsertProperty</a>(
+<a name="l00075"></a>00075                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* objectPtr,
+<a name="l00076"></a>00076                             <span class="keyword">const</span> QByteArray&amp; propertyId,
+<a name="l00077"></a>00077                             <span class="keyword">const</span> QByteArray&amp; propertyDescription,
+<a name="l00078"></a>00078                             <span class="keywordtype">int</span> propertyFlags,
+<a name="l00079"></a>00079                             <span class="keywordtype">bool</span> releaseFlag) = 0;
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 } <span class="comment">// namespace iprop</span>
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="preprocessor">#endif // !iprop_IPropertiesManager_included</span>
+<a name="l00087"></a>00087 <span class="preprocessor"></span>
+<a name="l00088"></a>00088 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

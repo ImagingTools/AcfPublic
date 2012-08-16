@@ -17805,6 +17805,13 @@
       <anchor>a0be55362b300184394272aba38dfc7f6</anchor>
       <arglist></arglist>
     </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>DoLateUpdateModel</name>
+      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
+      <anchor>ac9e8f03a7367464f13451cf39a997544</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CXpcEditorComp</name>

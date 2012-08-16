@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
 #include "iqtcam/CMultiBitmapViewComp.h"
 
 
@@ -32,11 +54,26 @@ void CMultiBitmapViewComp::OnModelChanged(int modelId, int /*changeFlags*/, istd
 
 void CMultiBitmapViewComp::UpdateGui(int updateFlags)
 {
+	iipr::IMultiBitmapProvider* objectPtr = GetObjectPtr();
+
+	int bitmapsCount = objectPtr->GetBitmapsCount();
+	int viewsCount = m_views.count();
+
+	for (int bitmapIndex = 0; bitmapIndex < bitmapsCount; bitmapIndex++){
+		if (bitmapIndex < viewsCount){
+			CSingleView* viewPtr = m_views.at(bitmapIndex);
+			
+			viewPtr->UpdateImage(objectPtr->GetBitmap(bitmapIndex));
+		}
+	}
+
 	for (int index = 0; index < m_views.count() && index < m_viewExtendersCompPtr.GetCount(); index++){
 		iqt2d::IViewExtender* viewExtenderPtr = m_viewExtendersCompPtr[index];
 		I_ASSERT(viewExtenderPtr != NULL);
 
 		CSingleView* viewPtr = m_views.at(index);
+		I_ASSERT(viewPtr != NULL);
+
 		viewExtenderPtr->RemoveItemsFromScene(viewPtr);
 		viewExtenderPtr->AddItemsToScene(viewPtr, updateFlags);
 	}
@@ -52,8 +89,6 @@ void CMultiBitmapViewComp::OnGuiCreated()
 	m_columnCount = m_horizontalViewsAttrPtr.IsValid() ? qMax(1, *m_horizontalViewsAttrPtr) : 1;
 	m_rowCount = m_verticalViewsAttrPtr.IsValid() ? qMax(1, *m_verticalViewsAttrPtr) : 1;
 
-	int viewsCount = qMin(m_informationProvidersCompPtr.GetCount(), m_rowCount * m_columnCount);
-
 	QWidget* widgetPtr = GetQtWidget();
 	QGridLayout* layoutPtr = new QGridLayout(widgetPtr);
 	layoutPtr->setContentsMargins(0, 0, 0, 0);
@@ -62,21 +97,31 @@ void CMultiBitmapViewComp::OnGuiCreated()
 	int viewIndex = 0;
 	for (int row = 0; row < m_rowCount; row++){
 		for (int col = 0; col < m_columnCount; col++){
-			if (viewIndex >= viewsCount){
-				break;
+			QString titlePrefix = *m_viewLabelPrefixAttrPtr;
+			
+			QString title;
+			if (viewIndex < m_informationProvidersCompPtr.GetCount()){
+				title = m_informationProvidersCompPtr[viewIndex]->GetInformationSource();
 			}
-
-			QString title = m_informationProvidersCompPtr[viewIndex]->GetInformationSource();
+			else{
+				title = QString("%1 %2").arg(titlePrefix).arg(viewIndex + 1);
+			}
+			
 			CSingleView* viewPtr = CreateView(widgetPtr, viewIndex, title);
 			layoutPtr->addWidget(viewPtr, row, col);
 			m_views.append(viewPtr);
 
-			imod::IModel* modelPtr = m_informationModelsCompPtr[viewIndex];
-			I_ASSERT(modelPtr != NULL);
-			bool isModelConnected = RegisterModel(modelPtr, viewIndex);
-			I_ASSERT(isModelConnected);
+			bool hasStatusInfo = false;
+			if (viewIndex < m_informationModelsCompPtr.GetCount()){
+				imod::IModel* modelPtr = m_informationModelsCompPtr[viewIndex];
+				I_ASSERT(modelPtr != NULL);
+				
+				if (RegisterModel(modelPtr, viewIndex)){
+					hasStatusInfo = true;
+				}
+			}
 
-			viewPtr->Init();
+			viewPtr->Init(hasStatusInfo);
 
 			viewIndex++;
 		}
@@ -116,10 +161,33 @@ CMultiBitmapViewComp::CSingleView::CSingleView(QWidget* parentPtr, int id, const
 	m_id(id)
 {
 	setTitle(title);
+
+	m_backgroundShape.AssignToLayer(iview::IViewLayer::LT_BACKGROUND);
+	m_backgroundModel.AttachObserver(&m_backgroundShape);
+
+	m_console.GetViewRef().ConnectShape(&m_backgroundShape);
+
+	m_console.SetFitMode(iview::CConsoleBase::FM_BOTH);
+	m_console.SetZoomToFit(true);
 }
 
 
-void CMultiBitmapViewComp::CSingleView::Init()
+void CMultiBitmapViewComp::CSingleView::UpdateImage(const iimg::IBitmap* bitmapPtr)
+{
+	if (bitmapPtr == NULL){
+		m_backgroundModel.ResetImage();
+	}
+	else{
+		m_backgroundModel.CopyFrom(*bitmapPtr);
+
+		istd::CIndex2d imageSize = bitmapPtr->GetImageSize();
+
+		m_console.GetViewRef().SetFitArea(i2d::CRectangle(0, 0, imageSize.GetX(), imageSize.GetY()));
+	}
+}
+
+
+void CMultiBitmapViewComp::CSingleView::Init(bool hasStatusInfo)
 {
 	// create default layout
 	QVBoxLayout* viewLayoutPtr = new QVBoxLayout;
@@ -129,7 +197,9 @@ void CMultiBitmapViewComp::CSingleView::Init()
 	viewLayoutPtr->addWidget(&m_console);
 
 	// add status label(s)
-	AddStatusItems(viewLayoutPtr);
+	if (hasStatusInfo){
+		AddStatusItems(viewLayoutPtr);
+	}
 }
 
 

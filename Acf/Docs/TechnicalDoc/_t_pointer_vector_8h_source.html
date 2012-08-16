@@ -209,80 +209,84 @@
 <a name="l00239"></a>00239 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
 <a name="l00240"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a90c0258ff7b2fc2b771a2d8d77176cf0">00240</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a90c0258ff7b2fc2b771a2d8d77176cf0" title="Set element at specified index.">TPointerVector&lt;Pointer, AccessAdapter&gt;::SetElementAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a4817377ae68dced25202f277ff1cf32a">ElementType</a>&amp; element)
 <a name="l00241"></a>00241 {
-<a name="l00242"></a>00242        m_elements[index] = element;
-<a name="l00243"></a>00243 }
-<a name="l00244"></a>00244 
+<a name="l00242"></a>00242        <span class="keyword">typename</span> Elements::iterator delIter = (m_elements.begin() + index);
+<a name="l00243"></a>00243 
+<a name="l00244"></a>00244        AccessAdapter::Delete(*delIter);
 <a name="l00245"></a>00245 
-<a name="l00246"></a>00246 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
-<a name="l00247"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a8c38f8f14c5af1666ac72aaa09b4dc13">00247</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a8c38f8f14c5af1666ac72aaa09b4dc13" title="Remove element at specified index.">TPointerVector&lt;Pointer, AccessAdapter&gt;::RemoveAt</a>(<span class="keywordtype">int</span> index)
-<a name="l00248"></a>00248 {
-<a name="l00249"></a>00249        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00250"></a>00250        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
-<a name="l00251"></a>00251 
-<a name="l00252"></a>00252        <span class="keyword">typename</span> Elements::iterator delIter = (m_elements.begin() + index);
-<a name="l00253"></a>00253 
-<a name="l00254"></a>00254        AccessAdapter::Delete(*delIter);
+<a name="l00246"></a>00246        m_elements[index] = element;
+<a name="l00247"></a>00247 }
+<a name="l00248"></a>00248 
+<a name="l00249"></a>00249 
+<a name="l00250"></a>00250 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
+<a name="l00251"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a8c38f8f14c5af1666ac72aaa09b4dc13">00251</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a8c38f8f14c5af1666ac72aaa09b4dc13" title="Remove element at specified index.">TPointerVector&lt;Pointer, AccessAdapter&gt;::RemoveAt</a>(<span class="keywordtype">int</span> index)
+<a name="l00252"></a>00252 {
+<a name="l00253"></a>00253        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
+<a name="l00254"></a>00254        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
 <a name="l00255"></a>00255 
-<a name="l00256"></a>00256        m_elements.erase(delIter);
-<a name="l00257"></a>00257 }
-<a name="l00258"></a>00258 
-<a name="l00259"></a>00259        
-<a name="l00260"></a>00260 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
-<a name="l00261"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a032240cc3e10268dc2426d328c450bb2">00261</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a032240cc3e10268dc2426d328c450bb2" title="Remove element elementPtr.">TPointerVector&lt;Pointer, AccessAdapter&gt;::Remove</a>(Pointer* elementPtr)
-<a name="l00262"></a>00262 {
-<a name="l00263"></a>00263        <span class="keywordtype">int</span> elementsCount = GetCount();
-<a name="l00264"></a>00264 
-<a name="l00265"></a>00265        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> elementIndex = 0; elementIndex &lt; elementsCount; elementIndex++){
-<a name="l00266"></a>00266               <span class="keyword">typename</span> Elements::iterator delIter = (m_elements.begin() + elementIndex);
-<a name="l00267"></a>00267               <span class="keywordflow">if</span> (AccessAdapter::GetPtr(*delIter) == elementPtr){
-<a name="l00268"></a>00268                      RemoveAt(elementIndex);
-<a name="l00269"></a>00269 
-<a name="l00270"></a>00270                      <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00271"></a>00271               }
-<a name="l00272"></a>00272        }
+<a name="l00256"></a>00256        <span class="keyword">typename</span> Elements::iterator delIter = (m_elements.begin() + index);
+<a name="l00257"></a>00257 
+<a name="l00258"></a>00258        AccessAdapter::Delete(*delIter);
+<a name="l00259"></a>00259 
+<a name="l00260"></a>00260        m_elements.erase(delIter);
+<a name="l00261"></a>00261 }
+<a name="l00262"></a>00262 
+<a name="l00263"></a>00263        
+<a name="l00264"></a>00264 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
+<a name="l00265"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a032240cc3e10268dc2426d328c450bb2">00265</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a032240cc3e10268dc2426d328c450bb2" title="Remove element elementPtr.">TPointerVector&lt;Pointer, AccessAdapter&gt;::Remove</a>(Pointer* elementPtr)
+<a name="l00266"></a>00266 {
+<a name="l00267"></a>00267        <span class="keywordtype">int</span> elementsCount = GetCount();
+<a name="l00268"></a>00268 
+<a name="l00269"></a>00269        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> elementIndex = 0; elementIndex &lt; elementsCount; elementIndex++){
+<a name="l00270"></a>00270               <span class="keyword">typename</span> Elements::iterator delIter = (m_elements.begin() + elementIndex);
+<a name="l00271"></a>00271               <span class="keywordflow">if</span> (AccessAdapter::GetPtr(*delIter) == elementPtr){
+<a name="l00272"></a>00272                      RemoveAt(elementIndex);
 <a name="l00273"></a>00273 
-<a name="l00274"></a>00274        <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00275"></a>00275 }
-<a name="l00276"></a>00276 
+<a name="l00274"></a>00274                      <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00275"></a>00275               }
+<a name="l00276"></a>00276        }
 <a name="l00277"></a>00277 
-<a name="l00278"></a>00278 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
-<a name="l00279"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a0dfe3dd48761edeee06ddf18a1d7cac0">00279</a> Pointer* <a class="code" href="classistd_1_1_t_pointer_vector.html#a0dfe3dd48761edeee06ddf18a1d7cac0" title="Pop element at specified index.">TPointerVector&lt;Pointer, AccessAdapter&gt;::PopAt</a>(<span class="keywordtype">int</span> index)
-<a name="l00280"></a>00280 {
-<a name="l00281"></a>00281        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00282"></a>00282        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
-<a name="l00283"></a>00283 
-<a name="l00284"></a>00284        Pointer* popPtr = AccessAdapter::PopPtr(m_elements[index]);
-<a name="l00285"></a>00285 
-<a name="l00286"></a>00286        m_elements.erase(m_elements.begin() + index);
+<a name="l00278"></a>00278        <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00279"></a>00279 }
+<a name="l00280"></a>00280 
+<a name="l00281"></a>00281 
+<a name="l00282"></a>00282 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
+<a name="l00283"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a0dfe3dd48761edeee06ddf18a1d7cac0">00283</a> Pointer* <a class="code" href="classistd_1_1_t_pointer_vector.html#a0dfe3dd48761edeee06ddf18a1d7cac0" title="Pop element at specified index.">TPointerVector&lt;Pointer, AccessAdapter&gt;::PopAt</a>(<span class="keywordtype">int</span> index)
+<a name="l00284"></a>00284 {
+<a name="l00285"></a>00285        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
+<a name="l00286"></a>00286        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
 <a name="l00287"></a>00287 
-<a name="l00288"></a>00288        <span class="keywordflow">return</span> popPtr;
-<a name="l00289"></a>00289 }
-<a name="l00290"></a>00290 
+<a name="l00288"></a>00288        Pointer* popPtr = AccessAdapter::PopPtr(m_elements[index]);
+<a name="l00289"></a>00289 
+<a name="l00290"></a>00290        m_elements.erase(m_elements.begin() + index);
 <a name="l00291"></a>00291 
-<a name="l00292"></a>00292 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
-<a name="l00293"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a9169179b4e85c856a09c2d6202784784">00293</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a9169179b4e85c856a09c2d6202784784" title="Add new element at the end of collection.">TPointerVector&lt;Pointer, AccessAdapter&gt;::PushBack</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a4817377ae68dced25202f277ff1cf32a">ElementType</a>&amp; element)
-<a name="l00294"></a>00294 {
-<a name="l00295"></a>00295        m_elements.push_back(element);
-<a name="l00296"></a>00296 }
-<a name="l00297"></a>00297 
-<a name="l00298"></a>00298 
-<a name="l00299"></a>00299 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
-<a name="l00300"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#ad2f6719f910021a8c9df158ec3a6a526">00300</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#ad2f6719f910021a8c9df158ec3a6a526" title="Insert element at specified position.">TPointerVector&lt;Pointer, AccessAdapter&gt;::InsertElementAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a4817377ae68dced25202f277ff1cf32a">ElementType</a>&amp; element)
-<a name="l00301"></a>00301 {
-<a name="l00302"></a>00302        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00303"></a>00303        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt;= GetCount());
-<a name="l00304"></a>00304        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(HasElement(AccessAdapter::GetPtr(element)) == InvalidIndex);
-<a name="l00305"></a>00305 
-<a name="l00306"></a>00306        m_elements.insert(m_elements.begin() + index, element);
-<a name="l00307"></a>00307 }
-<a name="l00308"></a>00308 
+<a name="l00292"></a>00292        <span class="keywordflow">return</span> popPtr;
+<a name="l00293"></a>00293 }
+<a name="l00294"></a>00294 
+<a name="l00295"></a>00295 
+<a name="l00296"></a>00296 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
+<a name="l00297"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#a9169179b4e85c856a09c2d6202784784">00297</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a9169179b4e85c856a09c2d6202784784" title="Add new element at the end of collection.">TPointerVector&lt;Pointer, AccessAdapter&gt;::PushBack</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a4817377ae68dced25202f277ff1cf32a">ElementType</a>&amp; element)
+<a name="l00298"></a>00298 {
+<a name="l00299"></a>00299        m_elements.push_back(element);
+<a name="l00300"></a>00300 }
+<a name="l00301"></a>00301 
+<a name="l00302"></a>00302 
+<a name="l00303"></a>00303 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>er, <span class="keyword">class</span> AccessAdapter&gt;
+<a name="l00304"></a><a class="code" href="classistd_1_1_t_pointer_vector.html#ad2f6719f910021a8c9df158ec3a6a526">00304</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#ad2f6719f910021a8c9df158ec3a6a526" title="Insert element at specified position.">TPointerVector&lt;Pointer, AccessAdapter&gt;::InsertElementAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_pointer_vector.html#a4817377ae68dced25202f277ff1cf32a">ElementType</a>&amp; element)
+<a name="l00305"></a>00305 {
+<a name="l00306"></a>00306        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
+<a name="l00307"></a>00307        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt;= GetCount());
+<a name="l00308"></a>00308        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(HasElement(AccessAdapter::GetPtr(element)) == InvalidIndex);
 <a name="l00309"></a>00309 
-<a name="l00310"></a>00310 } <span class="comment">// namespace istd</span>
-<a name="l00311"></a>00311 
+<a name="l00310"></a>00310        m_elements.insert(m_elements.begin() + index, element);
+<a name="l00311"></a>00311 }
 <a name="l00312"></a>00312 
-<a name="l00313"></a>00313 <span class="preprocessor">#endif // !istd_TPointerVector_included</span>
-<a name="l00314"></a>00314 <span class="preprocessor"></span>
+<a name="l00313"></a>00313 
+<a name="l00314"></a>00314 } <span class="comment">// namespace istd</span>
 <a name="l00315"></a>00315 
+<a name="l00316"></a>00316 
+<a name="l00317"></a>00317 <span class="preprocessor">#endif // !istd_TPointerVector_included</span>
+<a name="l00318"></a>00318 <span class="preprocessor"></span>
+<a name="l00319"></a>00319 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
