@@ -31,10 +31,12 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iqtinsp::TSupplierGuiCompBase&lt; UI, WidgetType &gt; Class Template Reference</div>  </div>
 </div>
@@ -60,6 +62,9 @@ Inheritance diagram for iqtinsp::TSupplierGuiCompBase&lt; UI, WidgetType &gt;:</
 
 <p><a href="classiqtinsp_1_1_t_supplier_gui_comp_base-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html">ParamsObserver</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
@@ -92,12 +97,17 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save parameters for example to file.  <a href="#a12252b5f658c5140ce9a50e0efa5d4d5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#acf07d958d1c85d95214a89437e58aff5">DoTest</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do inspection test.  <a href="#acf07d958d1c85d95214a89437e58aff5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a9840a8c4375ef9691a24cc73489930d9">OnSupplierParamsChanged</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Method will be called every time if the parameter set of the supplier has been changed.  <a href="#a9840a8c4375ef9691a24cc73489930d9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a10421a5f009909833e71dbc9bca46dc5">OnGuiModelAttached</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c94b477ef9e003078f52435ca5eebd7">OnGuiModelDetached</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">CreateShapes</a> (int sceneId, <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">Shapes</a> &amp;result)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">AfterUpdate</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c61d390a1ca63f329d97352bea72536">GetParamsWidget</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameters widget object.  <a href="#a8c61d390a1ca63f329d97352bea72536"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html">ParamsObserver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a6de84d5d7a40d17563f8918342445f07">m_paramsObserver</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class UI, class WidgetType = QWidget&gt;<br/>
@@ -163,7 +173,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00123">123</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00147">147</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -199,7 +209,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5a952165d7d8cc75974405429534c088">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00132">132</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00157">157</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41a214cdb39d9c2faefaba55c8e01e02828">iqt2d::IViewExtender::SF_DIRECT</a>.</p>
 
@@ -240,7 +250,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a09679cc02dbb54b0470d77ac459f0fae">iqtcam::CBitmapSupplierGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00343">343</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00386">386</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">istd::IInformationProvider::GetInformationCategory()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">iproc::ISupplier::GetWorkStatus()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a0ffe506c6f69a959d14eb3b2260a24df">istd::IInformationProvider::IC_ERROR</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152afdf1bdfc124526192bd59bbdbad614cb">istd::IInformationProvider::IC_WARNING</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c">iproc::ISupplier::WS_CANCELED</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032">iproc::ISupplier::WS_CRITICAL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf">iproc::ISupplier::WS_ERROR</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6">iproc::ISupplier::WS_LOCKED</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed">iproc::ISupplier::WS_OK</a>.</p>
 
@@ -264,7 +274,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Check, if parameters are correct connected to GUI and can be editable. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00172">172</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00197">197</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -297,9 +307,9 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html#a8d75f5c0847cdcbe2b838a05fe45c548">iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#abdb629d6974c35e2fa4e326f7ba340f9">iedgegui::CEdgeLinesSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#aa99cdb959efcf75bd1978d71e475f94d">iqtipr::CValueSupplierGuiComp</a>, <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ac18cf1f6b895addf037fcc93daacc910">iqtcam::CBitmapSupplierGuiComp</a>, and <a class="el" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#ac9ebe456434e30fcd33b2623aea976e3">iqtipr::CLineProjectionSupplierGuiComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ac18cf1f6b895addf037fcc93daacc910">iqtcam::CBitmapSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#ac9ebe456434e30fcd33b2623aea976e3">iqtipr::CLineProjectionSupplierGuiComp</a>, <a class="el" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#abdb629d6974c35e2fa4e326f7ba340f9">iedgegui::CEdgeLinesSupplierGuiComp</a>, and <a class="el" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#aa99cdb959efcf75bd1978d71e475f94d">iqtipr::CValueSupplierGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00335">335</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00378">378</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +331,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Do inspection test. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00265">265</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00290">290</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a8407cf9f0d773e91bfa10d6616a36e4d">iproc::ISupplier::EnsureWorkFinished()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">iproc::ISupplier::GetWorkStatus()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a0496343d4f5ae9a3f71caf5163b35d13">iproc::ISupplier::InvalidateSupplier()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf">iproc::ISupplier::WS_ERROR</a>.</p>
 
@@ -345,7 +355,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00158">158</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00183">183</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider::GetCalibration()</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
@@ -370,7 +380,7 @@ template&lt;class UI, class WidgetType = QWidget&gt; </div>
 <p>Get parameters widget object. </p>
 <p>Extern paremeters GUI will attach to this widget. This widget should have some layout. </p>
 
-<p>Implemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ad7b8b0d008c667d2800cc4eca638c348">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>, <a class="el" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a7ca8ff8dadc20a3d1823b5c41fc55492">iedgegui::CEdgeLinesSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#a8a9dfb272378b56fc59c478ff601aa78">iqtipr::CValueSupplierGuiComp</a>, <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#aefb298cf05d5ed0e8db01486f27249b7">iqtcam::CBitmapSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#ac4d745df35322e7c765ec39dab0c4da7">iqtipr::CLineProjectionSupplierGuiComp</a>, and <a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ab8ca1190d3a8ced0d9b69bac1ed5c497">iqtinsp::CGeneralSupplierGuiComp</a>.</p>
+<p>Implemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ad7b8b0d008c667d2800cc4eca638c348">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>, <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#aefb298cf05d5ed0e8db01486f27249b7">iqtcam::CBitmapSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#ac4d745df35322e7c765ec39dab0c4da7">iqtipr::CLineProjectionSupplierGuiComp</a>, <a class="el" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a7ca8ff8dadc20a3d1823b5c41fc55492">iedgegui::CEdgeLinesSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#a8a9dfb272378b56fc59c478ff601aa78">iqtipr::CValueSupplierGuiComp</a>, and <a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ab8ca1190d3a8ced0d9b69bac1ed5c497">iqtinsp::CGeneralSupplierGuiComp</a>.</p>
 
 </div>
 </div>
@@ -462,7 +472,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Check if parameter loading is supported. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00179">179</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00204">204</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">iproc::ISupplier::GetModelParametersSet()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9">iser::IFileTypeInfo::QF_ANONYMOUS</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df">iser::IFileTypeInfo::QF_LOAD</a>.</p>
 
@@ -486,7 +496,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Check if parameter storing is supported. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00199">199</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00224">224</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">iproc::ISupplier::GetModelParametersSet()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9">iser::IFileTypeInfo::QF_ANONYMOUS</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81">iser::IFileTypeInfo::QF_SAVE</a>.</p>
 
@@ -510,7 +520,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Load parameters from external source (file). </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00219">219</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00244">244</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">iproc::ISupplier::GetModelParametersSet()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51aa09dcbc2185bb8c631d1537abd3c04a8">iser::IFileLoader::StateFailed</a>.</p>
 
@@ -532,9 +542,9 @@ template&lt;class UI , class WidgetType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#af3ffb4548b31f53e48a94d936375ca43">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>, <a class="el" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a4990a6661fa7dd20bbc1b5c8d830fe61">iedgegui::CEdgeLinesSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#ab36269efd80ebc95485d9b7cfccfbc75">iqtipr::CValueSupplierGuiComp</a>, <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a7187188354d8bf4cfdd4dd0681b901c9">iqtcam::CBitmapSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#a8be5a2e26a406acec2365dff698169b5">iqtipr::CLineProjectionSupplierGuiComp</a>, and <a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a292de76a8651f5a98731df87c0d6c82a">iqtinsp::CGeneralSupplierGuiComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#af3ffb4548b31f53e48a94d936375ca43">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>, <a class="el" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a7187188354d8bf4cfdd4dd0681b901c9">iqtcam::CBitmapSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#a8be5a2e26a406acec2365dff698169b5">iqtipr::CLineProjectionSupplierGuiComp</a>, <a class="el" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a4990a6661fa7dd20bbc1b5c8d830fe61">iedgegui::CEdgeLinesSupplierGuiComp</a>, <a class="el" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#ab36269efd80ebc95485d9b7cfccfbc75">iqtipr::CValueSupplierGuiComp</a>, and <a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a292de76a8651f5a98731df87c0d6c82a">iqtinsp::CGeneralSupplierGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00282">282</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00313">313</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">imod::IModel::AttachObserver()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">iproc::ISupplier::GetModelParametersSet()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
@@ -556,9 +566,36 @@ template&lt;class UI , class WidgetType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00308">308</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00349">349</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66">imod::IModel::DetachObserver()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">iproc::ISupplier::GetModelParametersSet()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#aedf078abe8a4b578ac22f154594e6679">imod::IModel::IsAttached()</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9840a8c4375ef9691a24cc73489930d9"></a><!-- doxytag: member="iqtinsp::TSupplierGuiCompBase::OnSupplierParamsChanged" ref="a9840a8c4375ef9691a24cc73489930d9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class UI , class WidgetType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase</a>&lt; UI, WidgetType &gt;::OnSupplierParamsChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Method will be called every time if the parameter set of the supplier has been changed. </p>
+<p>Default implementation does nothing. </p>
+
+<p>Reimplemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a6ba0171a9013a0b5ffbd4ef6490c09e1">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>, <a class="el" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a9830edf0fc0c450453224784fc5ecc2d">iedgegui::CEdgeLinesSupplierGuiComp</a>, and <a class="el" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#a04b2fb36837070a2a173eb08f7a19a89">iqtipr::CValueSupplierGuiComp</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00305">305</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00476">iqtinsp::TSupplierGuiCompBase&lt; UI, WidgetType &gt;::ParamsObserver::OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -583,7 +620,7 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a4fecb0821802b3f9c708868034195019">iqtipr::CSearchBasedFeaturesSupplierGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00145">145</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00170">170</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -605,9 +642,27 @@ template&lt;class UI , class WidgetType &gt; </div>
 
 <p>Save parameters for example to file. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00242">242</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00267">267</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">iproc::ISupplier::GetModelParametersSet()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51aa09dcbc2185bb8c631d1537abd3c04a8">iser::IFileLoader::StateFailed</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a6de84d5d7a40d17563f8918342445f07"></a><!-- doxytag: member="iqtinsp::TSupplierGuiCompBase::m_paramsObserver" ref="a6de84d5d7a40d17563f8918342445f07" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class UI, class WidgetType = QWidget&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html">ParamsObserver</a> <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase</a>&lt; UI, WidgetType &gt;::<a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a6de84d5d7a40d17563f8918342445f07">m_paramsObserver</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_supplier_gui_comp_base_8h_source.html#l00128">128</a> of file <a class="el" href="_t_supplier_gui_comp_base_8h_source.html">TSupplierGuiCompBase.h</a>.</p>
 
 </div>
 </div>

@@ -38,7 +38,6 @@
 // ACF-Solutions includes
 #include "imeas/CGeneralUnitInfo.h"
 
-// QSF includes
 #include "iedge/CEdgeNode.h"
 #include "iedge/CEdgeLine.h"
 #include "iedge/CEdgeLine.h"

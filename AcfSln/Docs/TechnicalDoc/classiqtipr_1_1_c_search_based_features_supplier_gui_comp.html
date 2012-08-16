@@ -31,7 +31,6 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
@@ -62,9 +61,6 @@ Inheritance diagram for iqtipr::CSearchBasedFeaturesSupplierGuiComp:</div>
 
 <p><a href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp_1_1_params_observer.html">ParamsObserver</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a987696d6998db2f2a611815f942cc9be">ColumnType</a> { <br/>
@@ -93,12 +89,13 @@ Protected Slots</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ad7b8b0d008c667d2800cc4eca638c348">GetParamsWidget</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameters widget object.  <a href="#ad7b8b0d008c667d2800cc4eca638c348"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a6ba0171a9013a0b5ffbd4ef6490c09e1">OnSupplierParamsChanged</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Method will be called every time if the parameter set of the supplier has been changed.  <a href="#a6ba0171a9013a0b5ffbd4ef6490c09e1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5a952165d7d8cc75974405429534c088">AddItemsToScene</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr, int flags)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a4fecb0821802b3f9c708868034195019">RemoveItemsFromScene</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a> *providerPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#af3ffb4548b31f53e48a94d936375ca43">OnGuiModelAttached</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5b0ba931a51005936119096efb7011d3">UpdateGui</a> (int updateFlags=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ab089ac6d27dc53727f46ea0596f58e8e">OnGuiCreated</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a47349aff291d427801847a6f3943737d">OnGuiDestroyed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#af9d2735f53f3df11fa336ad78dcc827b">OnComponentDestroyed</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -304,22 +301,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a47349aff291d427801847a6f3943737d"></a><!-- doxytag: member="iqtipr::CSearchBasedFeaturesSupplierGuiComp::OnGuiDestroyed" ref="a47349aff291d427801847a6f3943737d" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtipr::CSearchBasedFeaturesSupplierGuiComp::OnGuiDestroyed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="af3ffb4548b31f53e48a94d936375ca43"></a><!-- doxytag: member="iqtipr::CSearchBasedFeaturesSupplierGuiComp::OnGuiModelAttached" ref="af3ffb4548b31f53e48a94d936375ca43" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -335,6 +316,27 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a10421a5f009909833e71dbc9bca46dc5">iqtinsp::TSupplierGuiCompBase&lt; Ui::CSearchBasedFeaturesSupplierGuiComp &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ba0171a9013a0b5ffbd4ef6490c09e1"></a><!-- doxytag: member="iqtipr::CSearchBasedFeaturesSupplierGuiComp::OnSupplierParamsChanged" ref="a6ba0171a9013a0b5ffbd4ef6490c09e1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtipr::CSearchBasedFeaturesSupplierGuiComp::OnSupplierParamsChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Method will be called every time if the parameter set of the supplier has been changed. </p>
+<p>Default implementation does nothing. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a9840a8c4375ef9691a24cc73489930d9">iqtinsp::TSupplierGuiCompBase&lt; Ui::CSearchBasedFeaturesSupplierGuiComp &gt;</a>.</p>
 
 </div>
 </div>

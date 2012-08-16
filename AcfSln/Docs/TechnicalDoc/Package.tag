@@ -274,7 +274,6 @@
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
     <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp</class>
-    <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp::ParamsObserver</class>
     <namespace>iedgegui</namespace>
   </compound>
   <compound kind="file">
@@ -1784,6 +1783,7 @@
     <filename>_t_supplier_gui_comp_base_8h</filename>
     <includes id="iqtinsp_8h" name="iqtinsp.h" local="yes" imported="no">iqtinsp/iqtinsp.h</includes>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
+    <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
@@ -1846,7 +1846,6 @@
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
-    <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp::ParamsObserver</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
@@ -1857,7 +1856,6 @@
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CValueSupplierGuiComp</class>
-    <class kind="class">iqtipr::CValueSupplierGuiComp::ParamsObserver</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
@@ -3683,20 +3681,12 @@
     <name>iedgegui::CEdgeLinesSupplierGuiComp</name>
     <filename>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</filename>
     <base>TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierGuiComp &gt;</base>
-    <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp::ParamsObserver</class>
     <member kind="typedef">
       <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierGuiComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
       <anchor>afb5e2a56499f91b992ab609b24207004</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CEdgeLinesSupplierGuiComp</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a5c15f077830bd7c70cf24eb2ccad9e00</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -3725,6 +3715,13 @@
       <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
       <anchor>a7ca8ff8dadc20a3d1823b5c41fc55492</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a9830edf0fc0c450453224784fc5ecc2d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -3760,32 +3757,6 @@
       <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
       <anchor>ae39027385cb4dd7b787db097bc9c7766</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a022a5dda300ac214ef2efa5695c75b00</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iedgegui::CEdgeLinesSupplierGuiComp::ParamsObserver</name>
-    <filename>classiedgegui_1_1_c_edge_lines_supplier_gui_comp_1_1_params_observer.html</filename>
-    <base>imod::CSingleModelObserverBase</base>
-    <member kind="function">
-      <type></type>
-      <name>ParamsObserver</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>a07446371b740c7a1ca7b1d4bf5d40fde</anchor>
-      <arglist>(CEdgeLinesSupplierGuiComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>ac99d5687325232a78e28206aff6f6c0d</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -13614,6 +13585,7 @@
     <templarg>WidgetType</templarg>
     <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
     <member kind="typedef">
       <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</type>
       <name>BaseClass</name>
@@ -13714,6 +13686,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a9840a8c4375ef9691a24cc73489930d9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a10421a5f009909833e71dbc9bca46dc5</anchor>
@@ -13746,6 +13725,32 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a8c61d390a1ca63f329d97352bea72536</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ParamsObserver</type>
+      <name>m_paramsObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a6de84d5d7a40d17563f8918342445f07</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtinsp::TSupplierGuiCompBase::ParamsObserver</name>
+    <filename>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>ParamsObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</anchorfile>
+      <anchor>a25bda61b821becc1a50fe24e2d6a880f</anchor>
+      <arglist>(TSupplierGuiCompBase *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</anchorfile>
+      <anchor>a7f0d77ec6f93ed6c5e44067e4e0601f0</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -14102,7 +14107,6 @@
     <name>iqtipr::CSearchBasedFeaturesSupplierGuiComp</name>
     <filename>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</filename>
     <base>TSupplierGuiCompBase&lt; Ui::CSearchBasedFeaturesSupplierGuiComp &gt;</base>
-    <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp::ParamsObserver</class>
     <member kind="enumeration">
       <name>ColumnType</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
@@ -14195,6 +14199,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a6ba0171a9013a0b5ffbd4ef6490c09e1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a5a952165d7d8cc75974405429534c088</anchor>
@@ -14230,13 +14241,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a47349aff291d427801847a6f3943737d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>af9d2735f53f3df11fa336ad78dcc827b</anchor>
@@ -14244,42 +14248,15 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqtipr::CSearchBasedFeaturesSupplierGuiComp::ParamsObserver</name>
-    <filename>classiqtipr_1_1_c_search_based_features_supplier_gui_comp_1_1_params_observer.html</filename>
-    <base>imod::CSingleModelObserverBase</base>
-    <member kind="function">
-      <type></type>
-      <name>ParamsObserver</name>
-      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>aff1f365e7b2201fd545f7aef61b056ca</anchor>
-      <arglist>(CSearchBasedFeaturesSupplierGuiComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>a91044fb3dc297e39a3c4680afda65ffd</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqtipr::CValueSupplierGuiComp</name>
     <filename>classiqtipr_1_1_c_value_supplier_gui_comp.html</filename>
     <base>TSupplierGuiCompBase&lt; Ui::CValueSupplierGuiComp &gt;</base>
-    <class kind="class">iqtipr::CValueSupplierGuiComp::ParamsObserver</class>
     <member kind="typedef">
       <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CValueSupplierGuiComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
       <anchor>a57344afe1ef47fe90364bbba2fc1c8ef</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CValueSupplierGuiComp</name>
-      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>a7d8efb5edf206b772927592e9e447f89</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -14308,6 +14285,13 @@
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
       <anchor>a8a9dfb272378b56fc59c478ff601aa78</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a04b2fb36837070a2a173eb08f7a19a89</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -14350,25 +14334,6 @@
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
       <anchor>a4c562b8bc6c096b14fe17472875d15d9</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtipr::CValueSupplierGuiComp::ParamsObserver</name>
-    <filename>classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html</filename>
-    <base>imod::CSingleModelObserverBase</base>
-    <member kind="function">
-      <type></type>
-      <name>ParamsObserver</name>
-      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>a5145b7e8b579f7ee70c48e081abec0e5</anchor>
-      <arglist>(CValueSupplierGuiComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>a810879a03b633f6a863612453e50020c</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">

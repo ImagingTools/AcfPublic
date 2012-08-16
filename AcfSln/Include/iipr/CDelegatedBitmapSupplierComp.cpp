@@ -69,10 +69,10 @@ int CDelegatedBitmapSupplierComp::ProduceObject(ProductType& result) const
 		}
 
 		if (result.second != NULL){
-			return ISupplier::WS_OK;
+			return WS_OK;
 		}
 		else{
-			return ISupplier::WS_ERROR;
+			return WS_ERROR;
 		}
 	}
 
@@ -80,10 +80,12 @@ int CDelegatedBitmapSupplierComp::ProduceObject(ProductType& result) const
 		result.first = m_calibrationCompPtr.GetPtr();
 		result.second = m_bitmapCompPtr.GetPtr();
 
-		return ISupplier::WS_OK;
+		return WS_OK;
 	}
 
-	return ISupplier::WS_CRITICAL;
+	SendVerboseMessage("Either input bitmap supplier or bitmap object must be set!");
+
+	return WS_CRITICAL;
 }
 
 

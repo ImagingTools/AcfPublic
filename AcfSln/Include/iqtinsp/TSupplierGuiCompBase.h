@@ -107,6 +107,12 @@ protected:
 	*/
 	bool DoTest();
 
+	/**
+		Method will be called every time if the parameter set of the supplier has been changed.
+		Default implementation does nothing.
+	*/
+	virtual void OnSupplierParamsChanged();
+
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
 	virtual void OnGuiModelDetached();
@@ -124,6 +130,24 @@ protected:
 		This widget should have some layout.
 	*/
 	virtual QWidget* GetParamsWidget() const = 0;
+
+protected:
+	class ParamsObserver: public imod::CSingleModelObserverBase
+	{
+	public:
+		ParamsObserver(TSupplierGuiCompBase* parentPtr);
+
+		using imod::CSingleModelObserverBase::EnsureModelDetached;
+
+	protected:
+		// reimplemented (imod::CSingleModelObserverBase)
+		virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
+
+	private:
+		TSupplierGuiCompBase& m_parent;
+	};
+
+	ParamsObserver m_paramsObserver;
 
 private:
 	I_REF(iser::IFileLoader, m_bitmapLoaderCompPtr);
@@ -143,7 +167,8 @@ private:
 
 template <class UI, class WidgetType>
 TSupplierGuiCompBase<UI, WidgetType>::TSupplierGuiCompBase()
-:	m_areParamsEditable(false)
+	:m_paramsObserver(this),
+	m_areParamsEditable(false)
 {
 }
 
@@ -298,6 +323,12 @@ bool TSupplierGuiCompBase<UI, WidgetType>::DoTest()
 }
 
 
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::OnSupplierParamsChanged()
+{
+}
+
+
 // reimplemented (iqtgui::TGuiObserverWrap)
 
 template <class UI, class WidgetType>
@@ -312,16 +343,26 @@ void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelAttached()
 	imod::IModel* paramsModelPtr = dynamic_cast<imod::IModel*>(paramsPtr);
 
 	m_areParamsEditable = false;
+	bool areParamsAttachedToEditor = false;
 	QWidget* paramsWidget = GetParamsWidget();
 	if (paramsWidget != NULL){
 		if ((paramsModelPtr != NULL) && m_paramsSetGuiCompPtr.IsValid() && m_paramsSetObserverCompPtr.IsValid()){
-			paramsModelPtr->AttachObserver(m_paramsSetObserverCompPtr.GetPtr());
+			areParamsAttachedToEditor = paramsModelPtr->AttachObserver(m_paramsSetObserverCompPtr.GetPtr());
+			if (!areParamsAttachedToEditor){
+				qWarning("Supplier parameters could not be connected to the editor");
+			}
+
 			m_paramsSetGuiCompPtr->CreateGui(paramsWidget);
 
 			m_areParamsEditable = true;
+
+
+			// Attach internal parameter observer:
+			paramsModelPtr->AttachObserver(&m_paramsObserver);
 		}
 
 		paramsWidget->setVisible(m_areParamsEditable);
+		paramsWidget->setEnabled(areParamsAttachedToEditor);
 	}
 }
 
@@ -346,6 +387,8 @@ void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelDetached()
 	}
 
 	m_areParamsEditable = false;
+
+	m_paramsObserver.EnsureModelDetached();
 
 	BaseClass::OnGuiModelDetached();
 }
@@ -437,6 +480,27 @@ void TSupplierGuiCompBase<UI, WidgetType>::AfterUpdate(imod::IModel* modelPtr, i
 	BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
 }
 
+
+
+
+// public methods of embedded class ParamsObserver
+
+template <class UI, class WidgetType>
+TSupplierGuiCompBase<UI, WidgetType>::ParamsObserver::ParamsObserver(TSupplierGuiCompBase* parentPtr)
+	:m_parent(*parentPtr)
+{
+	I_ASSERT(parentPtr != NULL);
+}
+
+
+// reimplemented (imod::CSingleModelObserverBase)
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::ParamsObserver::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
+{
+	if ((updateFlags & istd::IChangeable::CF_MODEL) != 0){
+		m_parent.OnSupplierParamsChanged();
+	}
+}
 
 } // namespace iqtinsp
 

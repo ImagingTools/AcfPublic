@@ -38,12 +38,6 @@ namespace iqtipr
 {
 
 
-CValueSupplierGuiComp::CValueSupplierGuiComp()
-:	m_paramsObserver(this)
-{
-}
-
-
 // protected slots
 
 void CValueSupplierGuiComp::on_TestButton_clicked()
@@ -73,6 +67,14 @@ QWidget* CValueSupplierGuiComp::GetParamsWidget() const
 	I_ASSERT(IsGuiCreated());
 
 	return ParamsFrame;
+}
+
+
+void CValueSupplierGuiComp::OnSupplierParamsChanged()
+{
+	if (IsGuiCreated() && AutoUpdateButton->isChecked()){
+		DoTest();
+	}
 }
 
 
@@ -229,27 +231,6 @@ void CValueSupplierGuiComp::OnComponentDestroyed()
 	m_paramsObserver.EnsureModelDetached();
 
 	BaseClass::OnComponentDestroyed();
-}
-
-
-// public methods of embedded class ParamsObserver
-
-CValueSupplierGuiComp::ParamsObserver::ParamsObserver(CValueSupplierGuiComp* parentPtr)
-:	m_parent(*parentPtr)
-{
-	I_ASSERT(parentPtr != NULL);
-}
-
-
-// reimplemented (imod::CSingleModelObserverBase)
-
-void CValueSupplierGuiComp::ParamsObserver::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
-{
-	if (		((updateFlags & istd::IChangeable::CF_MODEL) != 0) &&
-				m_parent.IsGuiCreated() &&
-				m_parent.AutoUpdateButton->isChecked()){
-		m_parent.DoTest();
-	}
 }
 
 

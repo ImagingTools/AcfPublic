@@ -32,7 +32,6 @@
 #include "imeas/INumericValue.h"
 #include "imeas/INumericConstraints.h"
 
-// QSF includes
 #include "iedge/IEdgeLinesProcessor.h"
 
 

@@ -138,7 +138,7 @@ void CNumericParamsGuiComp::UpdateGui(int /*changeFlags*/)
 
 void CNumericParamsGuiComp::OnValueChanged()
 {
-	UpdateModel();
+	DoUpdateModel();
 }
 
 
