@@ -66,13 +66,13 @@
 <a name="l00043"></a>00043               I_ASSIGN(m_manualStartupAttrPtr, <span class="stringliteral">&quot;ManualStartup&quot;</span>, <span class="stringliteral">&quot;If enabled, the service is registered with manual start up&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
 <a name="l00044"></a>00044        I_END_COMPONENT;
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046        QStringList <a class="code" href="classiabc_1_1_c_service_application_comp.html#af0ad88325091c94bff1f4414bbe197e4">GetApplicationArguments</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) <span class="keyword">const</span>;
+<a name="l00046"></a>00046        QStringList <a class="code" href="classiabc_1_1_c_service_application_comp.html#a490abd014bca7b6a40e38af648de6bb9">GetApplicationArguments</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) <span class="keyword">const</span>;
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (ibase::IApplication)</span>
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a973951097579aa9f68d44a2c9ad58043">InitializeApplication</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a738880bcae6c629c232bb6447a4c1607">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> QString <a class="code" href="classiabc_1_1_c_service_application_comp.html#aac355bc2223551a3bfcf0dc58b08d0b1">GetHelpText</a>() <span class="keyword">const</span>;
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> QStringList <a class="code" href="classiabc_1_1_c_service_application_comp.html#a1652855e6325752105fe82543d6a1fdc">GetCommandLine</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> QStringList <a class="code" href="classiabc_1_1_c_service_application_comp.html#a490abd014bca7b6a40e38af648de6bb9">GetApplicationArguments</a>() <span class="keyword">const</span>;
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054        <span class="comment">// reimplemented (QObject)</span>
 <a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a97b07f99dc5a13359b3828eb88813b6c">eventFilter</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);

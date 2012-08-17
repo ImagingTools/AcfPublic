@@ -1315,9 +1315,9 @@
     <name>CXpcEditorComp.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_xpc_editor_comp_8h</filename>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_xpc_model_8h" name="CXpcModel.h" local="yes" imported="no">icomp/CXpcModel.h</includes>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
     <class kind="class">icmpstr::CXpcEditorComp</class>
     <namespace>icmpstr</namespace>
   </compound>
@@ -11037,9 +11037,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
-      <name>GetCommandLine</name>
+      <name>GetApplicationArguments</name>
       <anchorfile>classibase_1_1_c_copy_app_comp.html</anchorfile>
-      <anchor>a4fb8847cb8192be05557ea443593e50d</anchor>
+      <anchor>a126ea51dbb6f6211c00617d3d7e7d5ed</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -11935,9 +11935,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
-      <name>GetCommandLine</name>
+      <name>GetApplicationArguments</name>
       <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>a5a026938290aa0046a673ed78bbefdbb</anchor>
+      <anchor>abdcc6e579e43ff6bf5bdc8237e74cd9a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -12323,9 +12323,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QStringList</type>
-      <name>GetCommandLine</name>
+      <name>GetApplicationArguments</name>
       <anchorfile>classibase_1_1_i_application.html</anchorfile>
-      <anchor>aa7e38815ebcd27dd504e2a0131010c74</anchor>
+      <anchor>ac51049bf56a85a369ec9107b73658051</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -36340,9 +36340,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
-      <name>GetCommandLine</name>
+      <name>GetApplicationArguments</name>
       <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
-      <anchor>ae507bea66b42e4629d563d8860ab5c89</anchor>
+      <anchor>ab31d3ca22aec3065ea2f663343fac4fa</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">

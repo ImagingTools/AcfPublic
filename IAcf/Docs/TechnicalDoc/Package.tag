@@ -271,9 +271,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
-      <name>GetCommandLine</name>
+      <name>GetApplicationArguments</name>
       <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>a1652855e6325752105fe82543d6a1fdc</anchor>
+      <anchor>a490abd014bca7b6a40e38af648de6bb9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
