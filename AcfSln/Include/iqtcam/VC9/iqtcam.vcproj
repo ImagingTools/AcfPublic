@@ -182,7 +182,11 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CMultiBitmapViewComp.cpp"
+				RelativePath="..\CMultiBitmapSupplierGuiComp.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CMultiBitmapSupplierGuiComp.moc"
 				>
 			</File>
 			<File
@@ -212,7 +216,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CMultiBitmapViewComp.h"
+				RelativePath="..\CMultiBitmapSupplierGuiComp.h"
 				>
 			</File>
 			<File
@@ -245,6 +249,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\generated\moc_CMultiBitmapSupplierGuiComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\generated\moc_CSnapImageGuiComp.cpp"
 				>
 			</File>
@@ -254,6 +262,10 @@
 			</File>
 			<File
 				RelativePath="..\generated\ui_CExposureParamsGuiComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\generated\ui_CMultiBitmapSupplierGuiComp.h"
 				>
 			</File>
 			<File
@@ -270,6 +282,10 @@
 			</File>
 			<File
 				RelativePath="..\CExposureParamsGuiComp.ui"
+				>
+			</File>
+			<File
+				RelativePath="..\CMultiBitmapSupplierGuiComp.ui"
 				>
 			</File>
 			<File

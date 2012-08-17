@@ -1,0 +1,258 @@
+// Qt includes
+#include <QDateTime>
+
+// ACF includes
+#include "iqtcam/CMultiBitmapSupplierGuiComp.h"
+
+#include "iview/CImageShape.h"
+
+namespace iqtcam
+{
+
+
+// protected slots
+
+
+CMultiBitmapSupplierGuiComp::CMultiBitmapSupplierGuiComp()
+{
+	m_timer.setInterval(40);
+	QObject::connect(&m_timer, SIGNAL(timeout()), this, SLOT(OnTimerReady()));
+}
+
+
+void CMultiBitmapSupplierGuiComp::on_SnapImageButton_clicked()
+{
+	iproc::ISupplier* supplierPtr = GetObjectPtr();
+	if (supplierPtr != NULL){
+		supplierPtr->InvalidateSupplier();
+		supplierPtr->EnsureWorkFinished();
+
+		if (supplierPtr->GetWorkStatus() >= iproc::ISupplier::WS_ERROR){
+			SizeLabel->setText("Snap Error");
+		}
+	}
+}
+
+
+void CMultiBitmapSupplierGuiComp::on_LiveImageButton_toggled(bool checked)
+{
+	if (checked){
+		m_timer.start();
+	} else{
+		m_timer.stop();
+	}
+}
+
+
+void CMultiBitmapSupplierGuiComp::on_SaveImageButton_clicked()
+{
+	if (m_bitmapLoaderCompPtr.IsValid()){
+
+		// prepare a new filename
+		QString timestamp = QDateTime::currentDateTime().toString("yyyymmddhhmm");
+		QString pictureNumber;
+		pictureNumber.sprintf("%d", IconsView->currentRow());
+		QString newFilePath = *m_saveFilePrefix + "_" + timestamp + "_" + pictureNumber + "." + *m_saveFileExtension;
+
+		if (m_bitmapLoaderCompPtr->SaveToFile(m_bitmap, newFilePath) == iser::IFileLoader::StateFailed){
+			QMessageBox::information(
+					NULL,
+					QObject::tr("Error"),
+					QObject::tr("Cannot save image"));
+		} else{
+			SaveImageButton->setDisabled(true);
+		}
+	}
+}
+
+
+void CMultiBitmapSupplierGuiComp::on_LoadParamsButton_clicked()
+{
+	LoadParams();
+}
+
+
+void CMultiBitmapSupplierGuiComp::on_SaveParamsButton_clicked()
+{
+	SaveParams();
+}
+
+
+void CMultiBitmapSupplierGuiComp::on_IconsView_currentItemChanged(QListWidgetItem * current, QListWidgetItem * previous)
+{
+	QVariant bitmapIndex = current->data(Qt::UserRole);
+	if (!bitmapIndex.isNull()){
+		SelectBitmap(bitmapIndex.toInt());
+		SaveImageButton->setDisabled(false);
+	}
+}
+
+
+void CMultiBitmapSupplierGuiComp::OnTimerReady()
+{
+	on_SnapImageButton_clicked();
+}
+
+
+// protected methods
+
+// reimplemented (iqtgui::CGuiComponentBase)
+
+
+void CMultiBitmapSupplierGuiComp::OnGuiCreated()
+{
+	BaseClass::OnGuiCreated();
+
+	SaveImageButton->setVisible(m_bitmapLoaderCompPtr.IsValid());
+}
+
+
+// reimplemented (iqtinsp::TSupplierGuiCompBase)
+
+
+QWidget* CMultiBitmapSupplierGuiComp::GetParamsWidget() const
+{
+	I_ASSERT(IsGuiCreated());
+
+	return ParamsFrame;
+}
+
+
+// reimplemented (iqt2d::TViewExtenderCompBase)
+
+
+void CMultiBitmapSupplierGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
+{
+	iview::CImageShape* shapePtr = new iview::CImageShape;
+	if (shapePtr != NULL){
+		shapePtr->AssignToLayer(iview::IViewLayer::LT_BACKGROUND);
+
+		result.PushBack(shapePtr);
+
+		m_bitmap.AttachObserver(shapePtr);
+	}
+}
+
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+
+void CMultiBitmapSupplierGuiComp::OnGuiModelAttached()
+{
+	BaseClass::OnGuiModelAttached();
+
+	ParamsGB->setVisible(AreParamsEditable() || IsLoadParamsSupported());
+
+	LoadParamsButton->setVisible(IsLoadParamsSupported());
+	SaveParamsButton->setVisible(IsSaveParamsSupported());
+}
+
+
+void CMultiBitmapSupplierGuiComp::UpdateGui(int updateFlags)
+{
+	BaseClass::UpdateGui(updateFlags);
+
+	I_ASSERT(IsGuiCreated());
+
+	IconsView->reset();
+	IconsView->clear();
+	m_icons.clear();
+
+	iproc::ISupplier* supplierPtr = GetObjectPtr();
+	if (supplierPtr == NULL){
+		return;
+	}
+
+	int workStatus = supplierPtr->GetWorkStatus();
+	if (workStatus != iproc::ISupplier::WS_OK){
+		return;
+	}
+
+	iipr::IMultiBitmapProvider* providerPtr = dynamic_cast<iipr::IMultiBitmapProvider*> (supplierPtr);
+	if (providerPtr == NULL){
+		return;
+	}
+
+	// create bitmap thumbnails
+	for (int bitmapIndex = 0; bitmapIndex < providerPtr->GetBitmapsCount(); bitmapIndex++){
+		const iqt::CBitmap* cBitmapPtr = dynamic_cast<const iqt::CBitmap*> (providerPtr->GetBitmap(bitmapIndex));
+		if (cBitmapPtr != NULL){
+			const QImage& image = cBitmapPtr->GetQImage();
+			QPixmap iconPixmap;
+			iconPixmap.convertFromImage(image);
+			int iconSize = *m_iconSize;
+			m_icons.push_back(QIcon(iconPixmap.scaled(iconSize, iconSize, Qt::KeepAspectRatio)));
+			QString iconLabel;
+			iconLabel.sprintf("%d", bitmapIndex);
+			QListWidgetItem* newItem = new QListWidgetItem(m_icons.back(), iconLabel, IconsView, 0);
+			newItem->setData(Qt::UserRole, bitmapIndex); // store a number to be used for bitmap selection
+			IconsView->addItem(newItem);
+		}
+	}
+
+	istd::CIndex2d bitmapSize = m_bitmap.GetImageSize();
+
+	SizeLabel->setText(tr("(%1 x %2)").arg(bitmapSize.GetX()).arg(bitmapSize.GetY()));
+	SaveImageButton->setEnabled(!bitmapSize.IsSizeEmpty());
+
+	UpdateAllViews();
+}
+
+
+void CMultiBitmapSupplierGuiComp::SelectBitmap(int bitmapIndex)
+{
+	iproc::ISupplier* supplierPtr = GetObjectPtr();
+	if (supplierPtr != NULL){
+		const iimg::IBitmap* bitmapPtr = NULL;
+
+		int workStatus = supplierPtr->GetWorkStatus();
+		if (workStatus == iproc::ISupplier::WS_OK){
+			iipr::IMultiBitmapProvider* providerPtr = dynamic_cast<iipr::IMultiBitmapProvider*> (supplierPtr);
+			if (providerPtr != NULL){
+				bitmapPtr = providerPtr->GetBitmap(bitmapIndex);
+			}
+		}
+
+		if ((bitmapPtr == NULL) || !m_bitmap.CopyFrom(*bitmapPtr)){
+			m_bitmap.ResetImage();
+		}
+	} else{
+		m_bitmap.ResetImage();
+	}
+
+	istd::CIndex2d imageSize = m_bitmap.GetImageSize();
+	i2d::CRectangle imageBox(0, 0, imageSize.GetX(), imageSize.GetY());
+
+	const ShapesMap& shapesMap = GetShapesMap();
+	QSet<iqt2d::IViewProvider*> views = shapesMap.keys().toSet();
+	for (QSet<iqt2d::IViewProvider*>::ConstIterator viewIter = views.begin();
+			viewIter != views.end();
+			++viewIter){
+		iqt2d::IViewProvider* viewProviderPtr = *viewIter;
+		I_ASSERT(viewProviderPtr != NULL);
+
+		iview::CViewBase* viewPtr = dynamic_cast<iview::CViewBase*> (viewProviderPtr->GetView());
+		if (viewPtr != NULL){
+			viewPtr->SetFitArea(imageBox);
+		}
+	}
+}
+
+
+// reimplemented (imod::IObserver)
+
+
+void CMultiBitmapSupplierGuiComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+{
+	iproc::ISupplier* supplierPtr = GetObjectPtr();
+	if (supplierPtr == NULL){
+		m_bitmap.ResetImage();
+	}
+
+	BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+}
+
+
+} // namespace iqtcam
+
+
