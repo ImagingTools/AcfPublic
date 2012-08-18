@@ -39,7 +39,7 @@ namespace istd
 
 
 /**
-	An general timeStamp implementation.
+	An general time stamp implementation.
 */
 class CGeneralTimeStamp: virtual public ITimeStamp
 {

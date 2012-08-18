@@ -32,7 +32,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::CGuiComponentDialog Class Reference</div>  </div>
 </div>
@@ -57,6 +58,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal button box.  <a href="#a47c528935023117f04c3619a96ea6675"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#adb017d269ccf731e903985e334e2c43e">GetGuiPtr</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to the connected GUI object.  <a href="#adb017d269ccf731e903985e334e2c43e"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#a13d56ef292ce716dc37d149b09b6f1cb">closeEvent</a> (QCloseEvent *eventPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class to display an ACF GUI component in a dialog. </p>
@@ -152,6 +156,23 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a13d56ef292ce716dc37d149b09b6f1cb"></a><!-- doxytag: member="iqtgui::CGuiComponentDialog::closeEvent" ref="a13d56ef292ce716dc37d149b09b6f1cb" args="(QCloseEvent *eventPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CGuiComponentDialog::closeEvent </td>
+          <td>(</td>
+          <td class="paramtype">QCloseEvent *&#160;</td>
+          <td class="paramname"><em>eventPtr</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a47c528935023117f04c3619a96ea6675"></a><!-- doxytag: member="iqtgui::CGuiComponentDialog::GetButtonBoxPtr" ref="a47c528935023117f04c3619a96ea6675" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +190,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the internal button box. </p>
 <p>You can use this function to create your own connections to the signals of the button group. </p>
 
-<p>Definition at line <a class="el" href="_c_gui_component_dialog_8h_source.html#l00063">63</a> of file <a class="el" href="_c_gui_component_dialog_8h_source.html">CGuiComponentDialog.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gui_component_dialog_8h_source.html#l00067">67</a> of file <a class="el" href="_c_gui_component_dialog_8h_source.html">CGuiComponentDialog.h</a>.</p>
 
 </div>
 </div>
@@ -189,7 +210,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns pointer to the connected GUI object. </p>
 
-<p>Definition at line <a class="el" href="_c_gui_component_dialog_8h_source.html#l00069">69</a> of file <a class="el" href="_c_gui_component_dialog_8h_source.html">CGuiComponentDialog.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gui_component_dialog_8h_source.html#l00073">73</a> of file <a class="el" href="_c_gui_component_dialog_8h_source.html">CGuiComponentDialog.h</a>.</p>
 
 </div>
 </div>

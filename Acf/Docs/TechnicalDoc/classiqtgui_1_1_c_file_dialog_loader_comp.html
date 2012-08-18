@@ -90,8 +90,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last opened file name.  <a href="#adbd2a0314e6936a69205d07c792bae22"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a8fcc858151f100578b7c5304b3bc613f">AppendLoaderFilterList</a> (const <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> &amp;fileTypeInfo, int flags, QString &amp;allExt, QString &amp;result)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Append filters extracted from file loader to Qt filter list accepted by <code>QFileDialog</code>.  <a href="#a8fcc858151f100578b7c5304b3bc613f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a0d294bee6aff390daabd58ac83187d0f">AppendLoaderFilterList</a> (const <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> &amp;fileTypeInfo, int flags, QString &amp;allExt, QStringList &amp;result)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Append filters extracted from file loader to Qt filter list accepted by <code>QFileDialog</code>.  <a href="#a0d294bee6aff390daabd58ac83187d0f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a27dcd79ba499697d09ebdc36c4e6d3b5">GetPathForType</a> (const QFileInfo &amp;fileInfo, <a class="el" href="classiser_1_1_i_file_loader_info.html#ab6db5c7833e043db2c7c27ad6c24b87d">PathType</a> pathType) const </td></tr>
@@ -149,12 +149,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8fcc858151f100578b7c5304b3bc613f"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList" ref="a8fcc858151f100578b7c5304b3bc613f" args="(const iser::IFileTypeInfo &amp;fileTypeInfo, int flags, QString &amp;allExt, QString &amp;result)" -->
+<a class="anchor" id="a0d294bee6aff390daabd58ac83187d0f"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList" ref="a0d294bee6aff390daabd58ac83187d0f" args="(const iser::IFileTypeInfo &amp;fileTypeInfo, int flags, QString &amp;allExt, QStringList &amp;result)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static int iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList </td>
+          <td class="memname">static void iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> &amp;&#160;</td>
           <td class="paramname"><em>fileTypeInfo</em>, </td>
@@ -174,7 +174,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramtype">QStringList &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -197,7 +197,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>number of filters. </dd></dl>
 
-<p>Referenced by <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00094">iqtdoc::TQtDocumentManagerWrap&lt; Base, Gui &gt;::CreateFileDialogFilter()</a>.</p>
+<p>Referenced by <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00094">iqtdoc::TQtDocumentManagerWrap&lt; Base, Gui &gt;::CreateFileDialogFilters()</a>.</p>
 
 </div>
 </div>

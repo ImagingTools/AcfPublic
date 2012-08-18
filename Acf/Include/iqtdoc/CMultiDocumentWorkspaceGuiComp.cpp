@@ -27,7 +27,6 @@
 #include <QtCore/QMap>
 #include <QtCore/QFileInfo>
 #include <QtCore/QEvent>
-#include <QtGui/QFileDialog>
 #include <QtGui/QMessageBox>
 
 // ACF includes

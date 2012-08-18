@@ -4360,7 +4360,6 @@
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
     <includes id="_c_command_tools_8h" name="CCommandTools.h" local="yes" imported="no">iqtgui/CCommandTools.h</includes>
-    <includes id="_c_gui_component_dialog_8h" name="CGuiComponentDialog.h" local="yes" imported="no">iqtgui/CGuiComponentDialog.h</includes>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -36210,10 +36209,10 @@
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>CreateFileDialogFilter</name>
+      <type>QStringList</type>
+      <name>CreateFileDialogFilters</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>aeabce0560cb6f0587d6785942c270868</anchor>
+      <anchor>aa8a660ca9060d2f9b99d71238e2d0fa1</anchor>
       <arglist>(const QByteArray *documentTypeIdPtr=NULL, int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -36813,11 +36812,11 @@
       <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const </arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static int</type>
+      <type>static void</type>
       <name>AppendLoaderFilterList</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a8fcc858151f100578b7c5304b3bc613f</anchor>
-      <arglist>(const iser::IFileTypeInfo &amp;fileTypeInfo, int flags, QString &amp;allExt, QString &amp;result)</arglist>
+      <anchor>a0d294bee6aff390daabd58ac83187d0f</anchor>
+      <arglist>(const iser::IFileTypeInfo &amp;fileTypeInfo, int flags, QString &amp;allExt, QStringList &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
@@ -37227,6 +37226,13 @@
       <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
       <anchor>adb017d269ccf731e903985e334e2c43e</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>closeEvent</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
+      <anchor>a13d56ef292ce716dc37d149b09b6f1cb</anchor>
+      <arglist>(QCloseEvent *eventPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
