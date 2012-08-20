@@ -28,6 +28,7 @@
 #include "iqtcam/CSnapImageGuiComp.h"
 #include "iqtcam/CExposureParamsGuiComp.h"
 #include "iqtcam/CBitmapSupplierGuiComp.h"
+#include "iqtcam/CMultiBitmapSupplierGuiComp.h"
 #include "iqtcam/CMultiBitmapViewComp.h"
 
 
@@ -42,6 +43,7 @@ typedef iqtcam::CFileAcquisitionComp FileAcquisition;
 typedef iqtcam::CSnapImageGuiComp SnapImageGui;
 typedef iqtcam::CExposureParamsGuiComp ExposureParamsGui;
 typedef iqtcam::CBitmapSupplierGuiComp SnapBitmapSupplierGui;
+typedef iqtcam::CMultiBitmapSupplierGuiComp SnapMultiBitmapSupplierGui;
 typedef iqtcam::CMultiBitmapViewComp MultiBitmapView;
 
 
