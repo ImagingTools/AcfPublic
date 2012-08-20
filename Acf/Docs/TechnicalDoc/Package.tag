@@ -29416,11 +29416,18 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual TypeIds</type>
+      <name>GetSupportedTypeIds</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a1d0d32401737b6b47409dce153d00d87</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>InsertParamsSet</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a78c5340c8c01e19a5a3ffee53b55b881</anchor>
-      <arglist>(int index=-1)</arglist>
+      <anchor>a6981a205a8013f599c9aa6c08550dd18</anchor>
+      <arglist>(const QByteArray &amp;typeId=&quot;&quot;, int index=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -29441,6 +29448,13 @@
       <name>GetParamsSet</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>ae19b3efcc16c19eb07df3a3bef7f8f36</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetParamsSetTypeId</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a3eff4c4c4d934443d4f7ef6a73536f19</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -30248,6 +30262,13 @@
       <anchor>a46124baa6dd501af2dd542770efe4b0bac101d999e270c31d7fb7bf4dee03ddb7</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>QSet&lt; QByteArray &gt;</type>
+      <name>TypeIds</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>a6db60f072b7d018848a44746727eaf8f</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetIndexOperationFlags</name>
@@ -30263,11 +30284,18 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual TypeIds</type>
+      <name>GetSupportedTypeIds</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>a0f3caf76422df683d3c979fa02374fce</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>InsertParamsSet</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a17e34751966ff799f1d1b0202bad65ad</anchor>
-      <arglist>(int index=-1)=0</arglist>
+      <anchor>abed25fb4246287def5dc1b0030341355</anchor>
+      <arglist>(const QByteArray &amp;typeId=&quot;&quot;, int index=-1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -30288,6 +30316,13 @@
       <name>GetParamsSet</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
       <anchor>a6adca790d307f482019f49ad5d36e594</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetParamsSetTypeId</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>a94c350b0be67dbb2d78bd79bdf362dd9</anchor>
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
