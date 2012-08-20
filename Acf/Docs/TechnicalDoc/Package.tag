@@ -3066,7 +3066,7 @@
     <name>IParamsSet.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_i_params_set_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
     <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
     <class kind="class">iprm::IParamsSet</class>
     <namespace>iprm</namespace>
@@ -29604,6 +29604,27 @@
       <anchor>a3e94e1fc04223329ea939d7e6027bb90</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>const QByteArray &amp;</type>
+      <name>GetParametersTypeId</name>
+      <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
+      <anchor>a676b8c91bcc617b6cff80c639fe315b2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetParametersTypeId</name>
+      <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
+      <anchor>a78944a47cc0f1312fd23528275b98872</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
+      <anchor>a3547c2bf4d748af72178b189e8f385d7</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetParamIds</name>
@@ -29700,6 +29721,13 @@
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>a87cac9890335a0a4d45b7c553f95dbec</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>a9826630bd40e9c054c95a1c648cd8749</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -30319,13 +30347,6 @@
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual QByteArray</type>
-      <name>GetParamsSetTypeId</name>
-      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a94c350b0be67dbb2d78bd79bdf362dd9</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetParamsSetName</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
@@ -30343,7 +30364,7 @@
   <compound kind="class">
     <name>iprm::IParamsSet</name>
     <filename>classiprm_1_1_i_params_set.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">iser::IObject</base>
     <member kind="typedef">
       <type>QSet&lt; QByteArray &gt;</type>
       <name>Ids</name>

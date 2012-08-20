@@ -25,7 +25,7 @@
 
 // Qt includes
 #include <QtGui/QMessageBox>
-#include <QElapsedTimer>
+#include <QtCore/QElapsedTimer>
 
 // ACF includes
 #include "imath/CVarVector.h"

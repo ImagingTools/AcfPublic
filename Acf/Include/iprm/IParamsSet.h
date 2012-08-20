@@ -29,7 +29,7 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "iser/ISerializable.h"
+#include "iser/IObject.h"
 
 #include "iprm/iprm.h"
 
@@ -42,7 +42,7 @@ namespace iprm
 	Set of general parameters.
 	These parameters can be editable or not (e.g. automatic calculated parameters).
 */
-class IParamsSet: virtual public iser::ISerializable
+class IParamsSet: virtual public iser::IObject
 {
 public:
 	typedef QSet<QByteArray> Ids;

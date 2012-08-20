@@ -73,46 +73,54 @@
 <a name="l00063"></a>00063 
 <a name="l00067"></a>00067        <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_pointer_vector.html">ParameterInfos</a>&amp; <a class="code" href="classiprm_1_1_c_params_set.html#a3e94e1fc04223329ea939d7e6027bb90" title="Get access to all parameters.">GetParameterInfos</a>() <span class="keyword">const</span>;
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (iprm::IParamsSet)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html#a8f978a01eb2136dc47de2de14bd76aac">Ids</a> <a class="code" href="classiprm_1_1_c_params_set.html#a3831f303536bbf2d8b51102ffe169fba" title="Get list of used parameter IDs in the parameter set.">GetParamIds</a>(<span class="keywordtype">bool</span> editableOnly = <span class="keyword">false</span>) <span class="keyword">const</span>;
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* <a class="code" href="classiprm_1_1_c_params_set.html#aa2998713fe5e13a493ce02ecb0ac86cf" title="Get any parameter.">GetParameter</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* <a class="code" href="classiprm_1_1_c_params_set.html#adf00c286d910c1e9bbc29c81254c8396" title="Get access to editable parameter.">GetEditableParameter</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_set.html#a00131a1b6da0e7f0a6d5b8f2d46f7c5a" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> quint32 <a class="code" href="classiprm_1_1_c_params_set.html#afae644efa9a789dc5c6f6c5a9c9de3de" title="Get minimal needed version to correct storing of this data.">GetMinimalVersion</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span>;
+<a name="l00072"></a>00072        <span class="keyword">const</span> QByteArray&amp; <a class="code" href="classiprm_1_1_c_params_set.html#a676b8c91bcc617b6cff80c639fe315b2" title="Get ID of this parameters type.">GetParametersTypeId</a>() <span class="keyword">const</span>;
+<a name="l00076"></a>00076        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_params_set.html#a78944a47cc0f1312fd23528275b98872" title="Set ID of this parameters type.">SetParametersTypeId</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_set.html#a42e2ab00999fe061d3e718d07ed165d1">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
+<a name="l00078"></a>00078        <span class="comment">// reimplemented (iser::IObject)</span>
+<a name="l00079"></a>00079        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprm_1_1_c_params_set.html#a3547c2bf4d748af72178b189e8f385d7">GetFactoryId</a>() <span class="keyword">const</span>;
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="keyword">protected</span>:
-<a name="l00082"></a>00082        <span class="keyword">const</span> <a class="code" href="structiprm_1_1_c_params_set_1_1_parameter_info.html">ParameterInfo</a>* <a class="code" href="classiprm_1_1_c_params_set.html#a99e9277eb229d179f1f133654538d399">FindParameterInfo</a>(<span class="keyword">const</span> QByteArray&amp; parameterId) <span class="keyword">const</span>;
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="keyword">private</span>:
-<a name="l00085"></a>00085        <a class="code" href="classistd_1_1_t_pointer_vector.html">ParameterInfos</a> m_params;
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* m_slaveSetPtr;
-<a name="l00088"></a>00088 };
+<a name="l00081"></a>00081        <span class="comment">// reimplemented (iprm::IParamsSet)</span>
+<a name="l00082"></a>00082        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html#a8f978a01eb2136dc47de2de14bd76aac">Ids</a> <a class="code" href="classiprm_1_1_c_params_set.html#a3831f303536bbf2d8b51102ffe169fba" title="Get list of used parameter IDs in the parameter set.">GetParamIds</a>(<span class="keywordtype">bool</span> editableOnly = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* <a class="code" href="classiprm_1_1_c_params_set.html#aa2998713fe5e13a493ce02ecb0ac86cf" title="Get any parameter.">GetParameter</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00084"></a>00084        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* <a class="code" href="classiprm_1_1_c_params_set.html#adf00c286d910c1e9bbc29c81254c8396" title="Get access to editable parameter.">GetEditableParameter</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_set.html#a00131a1b6da0e7f0a6d5b8f2d46f7c5a" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00088"></a>00088        <span class="keyword">virtual</span> quint32 <a class="code" href="classiprm_1_1_c_params_set.html#afae644efa9a789dc5c6f6c5a9c9de3de" title="Get minimal needed version to correct storing of this data.">GetMinimalVersion</a>(<span class="keywordtype">int</span> versionId) <span class="keyword">const</span>;
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091 <span class="comment">// inline methods</span>
+<a name="l00090"></a>00090        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_set.html#a42e2ab00999fe061d3e718d07ed165d1">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
 <a name="l00092"></a>00092 
-<a name="l00093"></a><a class="code" href="classiprm_1_1_c_params_set.html#acb62cb1ee5a11151c828771d04d98677">00093</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* <a class="code" href="classiprm_1_1_c_params_set.html#acb62cb1ee5a11151c828771d04d98677" title="Get slave parameter set.">CParamsSet::GetSlaveSet</a>()<span class="keyword"> const</span>
-<a name="l00094"></a>00094 <span class="keyword"></span>{
-<a name="l00095"></a>00095        <span class="keywordflow">return</span> m_slaveSetPtr;
-<a name="l00096"></a>00096 }
-<a name="l00097"></a>00097 
+<a name="l00093"></a>00093 <span class="keyword">protected</span>:
+<a name="l00094"></a>00094        <span class="keyword">const</span> <a class="code" href="structiprm_1_1_c_params_set_1_1_parameter_info.html">ParameterInfo</a>* <a class="code" href="classiprm_1_1_c_params_set.html#a99e9277eb229d179f1f133654538d399">FindParameterInfo</a>(<span class="keyword">const</span> QByteArray&amp; parameterId) <span class="keyword">const</span>;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 <span class="keyword">private</span>:
+<a name="l00097"></a>00097        <a class="code" href="classistd_1_1_t_pointer_vector.html">ParameterInfos</a> m_params;
 <a name="l00098"></a>00098 
-<a name="l00099"></a><a class="code" href="classiprm_1_1_c_params_set.html#ad450e477f7b690739c863d1670dc9725">00099</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_params_set.html#ad450e477f7b690739c863d1670dc9725" title="Set slave parameter set.">CParamsSet::SetSlaveSet</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* slaveSetPtr)
-<a name="l00100"></a>00100 {
-<a name="l00101"></a>00101        m_slaveSetPtr = slaveSetPtr;
-<a name="l00102"></a>00102 }
+<a name="l00099"></a>00099        QByteArray m_paramsTypeId;
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* m_slaveSetPtr;
+<a name="l00102"></a>00102 };
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105 } <span class="comment">// namespace iprm</span>
+<a name="l00105"></a>00105 <span class="comment">// inline methods</span>
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="preprocessor">#endif // !iprm_CParamsSet_included</span>
+<a name="l00107"></a><a class="code" href="classiprm_1_1_c_params_set.html#acb62cb1ee5a11151c828771d04d98677">00107</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* <a class="code" href="classiprm_1_1_c_params_set.html#acb62cb1ee5a11151c828771d04d98677" title="Get slave parameter set.">CParamsSet::GetSlaveSet</a>()<span class="keyword"> const</span>
+<a name="l00108"></a>00108 <span class="keyword"></span>{
+<a name="l00109"></a>00109        <span class="keywordflow">return</span> m_slaveSetPtr;
+<a name="l00110"></a>00110 }
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 
+<a name="l00113"></a><a class="code" href="classiprm_1_1_c_params_set.html#ad450e477f7b690739c863d1670dc9725">00113</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_params_set.html#ad450e477f7b690739c863d1670dc9725" title="Set slave parameter set.">CParamsSet::SetSlaveSet</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* slaveSetPtr)
+<a name="l00114"></a>00114 {
+<a name="l00115"></a>00115        m_slaveSetPtr = slaveSetPtr;
+<a name="l00116"></a>00116 }
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119 } <span class="comment">// namespace iprm</span>
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="preprocessor">#endif // !iprm_CParamsSet_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

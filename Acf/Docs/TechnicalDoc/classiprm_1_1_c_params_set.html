@@ -50,17 +50,18 @@ Inheritance diagram for iprm::CParamsSet:</div>
  <div class="center">
   <img src="classiprm_1_1_c_params_set.png" usemap="#iprm::CParamsSet_map" alt=""/>
   <map id="iprm::CParamsSet_map" name="iprm::CParamsSet_map">
-<area href="classiprm_1_1_i_params_set.html" title="Set of general parameters." alt="iprm::IParamsSet" shape="rect" coords="0,168,223,192"/>
-<area href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan..." alt="imod::CMultiModelBridgeBase" shape="rect" coords="349,168,572,192"/>
+<area href="classiprm_1_1_i_params_set.html" title="Set of general parameters." alt="iprm::IParamsSet" shape="rect" coords="0,224,223,248"/>
+<area href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan..." alt="imod::CMultiModelBridgeBase" shape="rect" coords="349,224,572,248"/>
+<area href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects." alt="iser::IObject" shape="rect" coords="0,168,223,192"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="233,168,456,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="466,168,689,192"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="0,112,223,136"/>
-<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="233,112,456,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="466,112,689,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="233,112,456,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="466,112,689,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,223,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="233,56,456,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="466,56,689,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,223,24"/>
-<area href="classiprm_1_1_c_composed_params_set_comp.html" title="Implementation of interface IParamsSet as component." alt="iprm::CComposedParamsSetComp" shape="rect" coords="174,280,397,304"/>
-<area href="classiwiz_1_1_c_composed_state_controller_comp.html" title="Component implementation of a wizard page." alt="iwiz::CComposedStateControllerComp" shape="rect" coords="174,336,397,360"/>
+<area href="classiprm_1_1_c_composed_params_set_comp.html" title="Implementation of interface IParamsSet as component." alt="iprm::CComposedParamsSetComp" shape="rect" coords="174,336,397,360"/>
+<area href="classiwiz_1_1_c_composed_state_controller_comp.html" title="Component implementation of a wizard page." alt="iwiz::CComposedStateControllerComp" shape="rect" coords="174,392,397,416"/>
 </map>
  </div></div>
 
@@ -84,6 +85,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set editable parameter in this set.  <a href="#ae51ba53a63535f47a82ec1d50c44bff7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiprm_1_1_c_params_set.html#aae2226793d3efbbbe0284183ca44584b">ParameterInfos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_set.html#a3e94e1fc04223329ea939d7e6027bb90">GetParameterInfos</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to all parameters.  <a href="#a3e94e1fc04223329ea939d7e6027bb90"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const QByteArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_set.html#a676b8c91bcc617b6cff80c639fe315b2">GetParametersTypeId</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of this parameters type.  <a href="#a676b8c91bcc617b6cff80c639fe315b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_set.html#a78944a47cc0f1312fd23528275b98872">SetParametersTypeId</a> (const QByteArray &amp;id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ID of this parameters type.  <a href="#a78944a47cc0f1312fd23528275b98872"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_set.html#a3547c2bf4d748af72178b189e8f385d7">GetFactoryId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_params_set.html#a8f978a01eb2136dc47de2de14bd76aac">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_set.html#a3831f303536bbf2d8b51102ffe169fba">GetParamIds</a> (bool editableOnly=false) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of used parameter IDs in the parameter set.  <a href="#a3831f303536bbf2d8b51102ffe169fba"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_set.html#aa2998713fe5e13a493ce02ecb0ac86cf">GetParameter</a> (const QByteArray &amp;id) const </td></tr>
@@ -202,6 +208,24 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3547c2bf4d748af72178b189e8f385d7"></a><!-- doxytag: member="iprm::CParamsSet::GetFactoryId" ref="a3547c2bf4d748af72178b189e8f385d7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QByteArray iprm::CParamsSet::GetFactoryId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiser_1_1_i_object.html#abae3ddcb3be9fcd24ec21b87445e5d7e">iser::IObject</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="afae644efa9a789dc5c6f6c5a9c9de3de"></a><!-- doxytag: member="iprm::CParamsSet::GetMinimalVersion" ref="afae644efa9a789dc5c6f6c5a9c9de3de" args="(int versionId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -272,6 +296,24 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a676b8c91bcc617b6cff80c639fe315b2"></a><!-- doxytag: member="iprm::CParamsSet::GetParametersTypeId" ref="a676b8c91bcc617b6cff80c639fe315b2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QByteArray&amp; iprm::CParamsSet::GetParametersTypeId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get ID of this parameters type. </p>
+
+</div>
+</div>
 <a class="anchor" id="a3831f303536bbf2d8b51102ffe169fba"></a><!-- doxytag: member="iprm::CParamsSet::GetParamIds" ref="a3831f303536bbf2d8b51102ffe169fba" args="(bool editableOnly=false) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +355,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get slave parameter set. </p>
 <p>Slave parameter set will be used for non editable parameter query. If no slave parameter set is defined, it returns NULL. </p>
 
-<p>Definition at line <a class="el" href="_c_params_set_8h_source.html#l00093">93</a> of file <a class="el" href="_c_params_set_8h_source.html">CParamsSet.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_params_set_8h_source.html#l00107">107</a> of file <a class="el" href="_c_params_set_8h_source.html">CParamsSet.h</a>.</p>
 
 </div>
 </div>
@@ -376,6 +418,25 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a78944a47cc0f1312fd23528275b98872"></a><!-- doxytag: member="iprm::CParamsSet::SetParametersTypeId" ref="a78944a47cc0f1312fd23528275b98872" args="(const QByteArray &amp;id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iprm::CParamsSet::SetParametersTypeId </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set ID of this parameters type. </p>
+
+</div>
+</div>
 <a class="anchor" id="ad450e477f7b690739c863d1670dc9725"></a><!-- doxytag: member="iprm::CParamsSet::SetSlaveSet" ref="ad450e477f7b690739c863d1670dc9725" args="(const IParamsSet *slaveSetPtr)" -->
 <div class="memitem">
 <div class="memproto">
@@ -400,7 +461,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_params_set_8h_source.html#l00099">99</a> of file <a class="el" href="_c_params_set_8h_source.html">CParamsSet.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_params_set_8h_source.html#l00113">113</a> of file <a class="el" href="_c_params_set_8h_source.html">CParamsSet.h</a>.</p>
 
 </div>
 </div>

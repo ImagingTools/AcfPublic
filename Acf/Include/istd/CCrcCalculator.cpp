@@ -23,9 +23,7 @@
 #include "istd/CCrcCalculator.h"
 
 // Qt includes
-#include <QFile>
-
-// ACF includes
+#include <QtCore/QFile>
 #include <QtCore/QString>
 
 

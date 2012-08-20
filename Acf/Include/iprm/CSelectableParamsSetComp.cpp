@@ -40,6 +40,14 @@ CSelectableParamsSetComp::CSelectableParamsSetComp()
 }
 
 
+// reimplemented (iser::IObject)
+
+QByteArray CSelectableParamsSetComp::GetFactoryId() const
+{
+	return *m_typeIdAttrPtr;
+}
+
+
 // reimplemented (iprm::IParamsSet)
 
 IParamsSet::Ids CSelectableParamsSetComp::GetParamIds(bool editableOnly) const

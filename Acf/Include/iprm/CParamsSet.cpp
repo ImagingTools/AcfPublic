@@ -38,7 +38,8 @@ namespace iprm
 
 
 CParamsSet::CParamsSet(const IParamsSet* slaveSetPtr)
-:	m_slaveSetPtr(slaveSetPtr)
+:	m_paramsTypeId("Default"),
+	m_slaveSetPtr(slaveSetPtr)
 {
 }
 
@@ -66,6 +67,26 @@ bool CParamsSet::SetEditableParameter(const QByteArray& id, iser::ISerializable*
 const CParamsSet::ParameterInfos& CParamsSet::GetParameterInfos() const
 {
 	return m_params;
+}
+
+
+const QByteArray& CParamsSet::GetParametersTypeId() const
+{
+	return m_paramsTypeId;
+}
+
+
+void CParamsSet::SetParametersTypeId(const QByteArray& id)
+{
+	m_paramsTypeId = id;
+}
+
+
+// reimplemented (iser::IObject)
+
+QByteArray CParamsSet::GetFactoryId() const
+{
+	return m_paramsTypeId;
 }
 
 

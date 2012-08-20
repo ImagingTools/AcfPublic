@@ -31,7 +31,6 @@
 // Qt includes
 #include <QtCore/QString>
 
-
 // ACF includes
 #include "istd/IChangeable.h"
 
