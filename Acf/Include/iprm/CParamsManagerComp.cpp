@@ -421,6 +421,7 @@ QString CParamsManagerComp::GetOptionName(int index) const
 	return GetParamsSetName(index);
 }
 
+
 QString CParamsManagerComp::GetOptionDescription(int /*index*/) const
 {
 	return QString();

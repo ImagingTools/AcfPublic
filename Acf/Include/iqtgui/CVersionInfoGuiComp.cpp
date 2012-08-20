@@ -20,25 +20,34 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include "iqtgui/CVersionInfoGuiComp.h"
 
 
-namespace istd
+namespace iqtgui
 {
 
 
-enum RepositoryState
+// reimplemented (iqtgui::CGuiComponentBase)
+
+void CVersionInfoGuiComp::OnGuiCreated()
 {
-	RS_ORIGINAL_VERSION =  2464,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	BaseClass::OnGuiCreated();
+
+	Tree->header()->setResizeMode(QHeaderView::ResizeToContents);
+
+	for (int i = 0; i < m_versionInfosCompPtr.GetCount(); i++){
+		iser::IVersionInfo* infoPtr = m_versionInfosCompPtr[i];
+		I_ASSERT(infoPtr != NULL);
+
+		iser::IVersionInfo::VersionIds ids = infoPtr->GetVersionIds();
+		for (iser::IVersionInfo::VersionIds::const_iterator it = ids.begin(); it != ids.end(); it++){	
+			QTreeWidgetItem* itemPtr = new QTreeWidgetItem(Tree);
+			
+			itemPtr->setText(0, infoPtr->GetVersionIdDescription(*it));
+			itemPtr->setText(1, infoPtr->GetEncodedVersionName(*it, 0));
+		}
+	}
+}
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
-
-
+} // namespace iqtgui

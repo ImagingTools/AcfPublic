@@ -20,25 +20,46 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef qstdgui_CVersionInfoGuiComp_included
+#define qstdgui_CVersionInfoGuiComp_included
 
 
-namespace istd
+// ACF includes
+#include "iqtgui/TDesignerGuiCompBase.h"
+#include "iser/IVersionInfo.h"
+
+// QSF includes
+#include "Generated/ui_CVersionInfoGuiComp.h"
+
+
+namespace iqtgui
 {
 
 
-enum RepositoryState
+/**
+	GUI component for showing the list of module versions.
+*/
+class CVersionInfoGuiComp: public iqtgui::TDesignerGuiCompBase<Ui::CVersionInfoGuiComp>
 {
-	RS_ORIGINAL_VERSION =  2464,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	typedef iqtgui::TDesignerGuiCompBase<Ui::CVersionInfoGuiComp> BaseClass;
+
+	I_BEGIN_COMPONENT(CVersionInfoGuiComp);
+		I_ASSIGN_MULTI_0(m_versionInfosCompPtr, "VersionInfos", "List of version infos", true);
+	I_END_COMPONENT;
+
+protected:
+	// reimplemented (iqtgui::CGuiComponentBase)
+	virtual void OnGuiCreated();
+
+private:
+	I_MULTIREF(iser::IVersionInfo, m_versionInfosCompPtr);
 };
 
 
-} // namespace istd
+} // namespace iqtgui
 
 
-#endif // !istd_AcfVersion_included
+#endif // !qstdgui_CVersionInfoGuiComp_included
 
 

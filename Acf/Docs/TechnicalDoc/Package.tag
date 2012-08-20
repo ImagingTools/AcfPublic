@@ -573,6 +573,15 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>CQtVersionInfoComp.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_c_qt_version_info_comp_8h</filename>
+    <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <class kind="class">ibase::CQtVersionInfoComp</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableFileConverterComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_selectable_file_converter_comp_8h</filename>
@@ -4433,6 +4442,15 @@
     <filename>_c_tree_widget_filter_8h</filename>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::CTreeWidgetFilter</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CVersionInfoGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_version_info_gui_comp_8h</filename>
+    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
+    <class kind="class">iqtgui::CVersionInfoGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -10770,6 +10788,7 @@
     <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CMultiObserverBinderComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
+    <class kind="class">ibase::CQtVersionInfoComp</class>
     <class kind="class">ibase::CSelectableFileConverterComp</class>
     <class kind="class">ibase::CSingletonApplicationComp</class>
     <class kind="class">ibase::CSize</class>
@@ -11783,6 +11802,72 @@
       <name>OnComponentDestroyed</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
       <anchor>a9a514d1597d09a363c7856b2e870e2a9</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::CQtVersionInfoComp</name>
+    <filename>classibase_1_1_c_qt_version_info_comp.html</filename>
+    <base>iser::IVersionInfo</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <member kind="enumeration">
+      <name>QtVersionIds</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>a2515283ec7bb96a639830927e8bcd9ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QVI_COMPILED</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>a2515283ec7bb96a639830927e8bcd9eca13a35de9fa557878a30d2f88ed62ad74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QVI_RUNTIME</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>a2515283ec7bb96a639830927e8bcd9ecad4ae5dc4c2687a32643069c93d476824</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>a19ce5ce513e73b2c8d3525e31ba696df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual VersionIds</type>
+      <name>GetVersionIds</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>a5f148e744f770d78cb8bb317531a3e73</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetVersionNumber</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>a1fd43aea0f345128752e906f0cdcf90b</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetVersionIdDescription</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>ab97d0f67b3c2cf941e2939feae46463d</anchor>
+      <arglist>(int versionId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetEncodedVersionName</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>ad422a7091206701ba43202dbc34fe4b1</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>a6b6c826f801c2b8e1a60dd1132f6e1d3</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -36326,6 +36411,7 @@
     <class kind="class">iqtgui::CToolBarGuiCompBase</class>
     <class kind="class">iqtgui::CToolBarWidgetGuiComp</class>
     <class kind="class">iqtgui::CTreeWidgetFilter</class>
+    <class kind="class">iqtgui::CVersionInfoGuiComp</class>
     <class kind="class">iqtgui::CWidgetUpdateBlocker</class>
     <class kind="class">iqtgui::IDialog</class>
     <class kind="class">iqtgui::IDropConsumer</class>
@@ -38613,6 +38699,25 @@
       <anchorfile>classiqtgui_1_1_c_tree_widget_filter.html</anchorfile>
       <anchor>a856e1ef1c2db44fbcfbc1e94a6796250</anchor>
       <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CVersionInfoGuiComp</name>
+    <filename>classiqtgui_1_1_c_version_info_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CVersionInfoGuiComp &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CVersionInfoGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_version_info_gui_comp.html</anchorfile>
+      <anchor>a1204a17cef57427e7ea4ddbc3965af2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_version_info_gui_comp.html</anchorfile>
+      <anchor>a2314219830166d3b2cfaf238a174648a</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
