@@ -23,9 +23,6 @@
 #include "ibase/CVersionInfoComp.h"
 
 
-#include "istd/AcfVersion.h"
-
-
 namespace ibase
 {
 
@@ -41,18 +38,8 @@ bool CVersionInfoComp::GetVersionNumber(int versionId, quint32& result) const
 
 		return true;
 	}
-	else if (m_slaveVersionInfoCompPtr.IsValid()){
-		return m_slaveVersionInfoCompPtr->GetVersionNumber(versionId, result);
-	}
-	else if (versionId == iser::IVersionInfo::AcfVersionId){
-		result = istd::RS_USE_VERSION;
 
-		return true;
-	}
-
-	result = 0xffffffff;
-
-	return false;
+	return BaseClass::GetVersionNumber(versionId, result);
 }
 
 
@@ -61,21 +48,14 @@ QString CVersionInfoComp::GetVersionIdDescription(int versionId) const
 	if (m_versionIdAttrPtr.IsValid() && (versionId == *m_versionIdAttrPtr)){
 		return *m_versionIdDescriptionAttrPtr;
 	}
-	else if (m_slaveVersionInfoCompPtr.IsValid()){
-		return m_slaveVersionInfoCompPtr->GetVersionIdDescription(versionId);
-	}
-	else{
-		return "";
-	}
+	
+	return BaseClass::GetVersionIdDescription(versionId);
 }
 
 
 iser::IVersionInfo::VersionIds CVersionInfoComp::GetVersionIds() const
 {
-	VersionIds retVal;
-	if (m_slaveVersionInfoCompPtr.IsValid()){
-		retVal = m_slaveVersionInfoCompPtr->GetVersionIds();
-	}
+	VersionIds retVal = BaseClass::GetVersionIds();
 
 	if (m_versionIdAttrPtr.IsValid()){
 		retVal.insert(*m_versionIdAttrPtr);
@@ -104,15 +84,11 @@ QString CVersionInfoComp::GetEncodedVersionName(int versionId, quint32 versionNu
 		if (m_isExtensionUsedAttrPtr.IsValid() && *m_isExtensionUsedAttrPtr){
 			retVal += QString(".") + QString("%1").arg(int(versionNumber - lastBellowNumber));
 		}
-	}
-	else if (m_slaveVersionInfoCompPtr.IsValid()){
-		retVal = m_slaveVersionInfoCompPtr->GetEncodedVersionName(versionId, versionNumber);
-	}
-	else{
-		retVal = QString("<") + QString("%1").arg(versionNumber) + ">";
+
+		return retVal;
 	}
 
-	return retVal;
+	return BaseClass::GetEncodedVersionName(versionId, versionNumber);
 }
 
 

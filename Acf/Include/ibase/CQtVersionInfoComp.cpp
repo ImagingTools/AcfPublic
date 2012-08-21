@@ -31,10 +31,9 @@ namespace ibase
 
 iser::IVersionInfo::VersionIds CQtVersionInfoComp::GetVersionIds() const
 {
-	static IVersionInfo::VersionIds ids;
-	if (ids.isEmpty()){
-		ids << QVI_COMPILED << QVI_RUNTIME;
-	}
+	IVersionInfo::VersionIds ids = BaseClass::GetVersionIds();
+
+	ids << QVI_COMPILED << QVI_RUNTIME;
 
 	return ids;
 }
@@ -58,7 +57,7 @@ bool CQtVersionInfoComp::GetVersionNumber(int versionId, quint32& result) const
 			return true;
 	}
 
-	return false;
+	return BaseClass::GetVersionNumber(versionId, result);
 }
 
 
@@ -66,17 +65,17 @@ QString CQtVersionInfoComp::GetVersionIdDescription(int versionId) const
 {
 	switch (versionId){
 		case QVI_COMPILED:
-			return "Created with Qt version";
+			return "Qt Compiled Version";
 
 		case QVI_RUNTIME:
 			return "Qt Runtime Version";
 	}
 
-	return QString("Wrong Version ID %1").arg(versionId);
+	return BaseClass::GetVersionIdDescription(versionId);
 }
 
 
-QString CQtVersionInfoComp::GetEncodedVersionName(int versionId, quint32 /*versionNumber*/) const
+QString CQtVersionInfoComp::GetEncodedVersionName(int versionId, quint32 versionNumber) const
 {
 	switch (versionId){
 		case QVI_COMPILED:
@@ -86,20 +85,7 @@ QString CQtVersionInfoComp::GetEncodedVersionName(int versionId, quint32 /*versi
 			return qVersion();
 	}
 
-	return "Unknown";
-}
-
-
-// reimplemented (ibase::CComponentBase)
-
-void CQtVersionInfoComp::OnComponentCreated()
-{
-	BaseClass::OnComponentCreated();
-
-	if (IsVerboseEnabled()){
-		SendInfoMessage(QVI_COMPILED, GetVersionIdDescription(QVI_COMPILED) + ": " + GetEncodedVersionName(QVI_COMPILED, 0), "");
-		SendInfoMessage(QVI_RUNTIME, GetVersionIdDescription(QVI_RUNTIME) + ": " + GetEncodedVersionName(QVI_RUNTIME, 0), "");
-	}
+	return BaseClass::GetEncodedVersionName(versionId, versionNumber);
 }
 
 

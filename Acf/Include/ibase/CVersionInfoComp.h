@@ -24,9 +24,7 @@
 #define ibase_CVersionInfoComp_included
 
 
-#include "iser/IVersionInfo.h"
-
-#include "icomp/CComponentBase.h"
+#include "ibase/TVersionInfoBase.h"
 
 
 namespace ibase
@@ -36,21 +34,18 @@ namespace ibase
 /**
 	Component for providing of version information.
 */
-class CVersionInfoComp: public icomp::CComponentBase, virtual public iser::IVersionInfo
+class CVersionInfoComp: public ibase::CVersionInfoCompBase
 {
 public:
-	typedef icomp::CComponentBase BaseClass;
+	typedef ibase::CVersionInfoCompBase BaseClass;
 
 	I_BEGIN_COMPONENT(CVersionInfoComp);
-		I_REGISTER_INTERFACE(iser::IVersionInfo);
 		I_ASSIGN(m_versionIdAttrPtr, "VersionId", "Version ID", false, 1024);
 		I_ASSIGN(m_versionNumberAttrPtr, "VersionNumber", "Current version number for VersionId", true, 0);
 		I_ASSIGN(m_versionIdDescriptionAttrPtr, "VersionIdDesc", "Descriptions of version ID's", true, "User Version");
 		I_ASSIGN_MULTI_0(m_knownVersionsAttrPtr, "KnownVersions", "Version numbers for known versions", false);
 		I_ASSIGN_MULTI_0(m_knownVersionNamesAttrPtr, "KnownVersionNames", "Names of known versions", false);
 		I_ASSIGN(m_isExtensionUsedAttrPtr, "IsExtensionUsed", "Enable using of automatic calculated minor version information at the end of encoded version string", true, true);
-
-		I_ASSIGN(m_slaveVersionInfoCompPtr, "SlaveVersionInfo", "Slave version info, unknown version information requests will be delegated here", false, "SlaveVersionInfo");
 	I_END_COMPONENT;
 
 	// reimplemented (iser::IVersionInfo)
@@ -66,8 +61,6 @@ private:
 	I_MULTIATTR(int, m_knownVersionsAttrPtr);
 	I_MULTIATTR(QString, m_knownVersionNamesAttrPtr);
 	I_ATTR(bool, m_isExtensionUsedAttrPtr);
-
-	I_REF(iser::IVersionInfo, m_slaveVersionInfoCompPtr);
 };
 
 
