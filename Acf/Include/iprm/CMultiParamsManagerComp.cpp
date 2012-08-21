@@ -24,13 +24,9 @@
 
 
 // ACF includes
-#include "istd/TDelPtr.h"
 #include "istd/TChangeNotifier.h"
-#include "istd/TChangeDelegator.h"
 
 #include "imod/IModel.h"
-
-#include "iprm/IParamsSet.h"
 
 
 namespace iprm
@@ -41,6 +37,7 @@ CMultiParamsManagerComp::CMultiParamsManagerComp()
 :	m_selectedIndex(-1)
 {
 }
+
 
 // reimplemented (iprm::IParamsManager)
 
@@ -78,12 +75,12 @@ int CMultiParamsManagerComp::GetParamsSetsCount() const
 IParamsManager::TypeIds CMultiParamsManagerComp::GetSupportedTypeIds() const
 {
 	IParamsManager::TypeIds retVal;
-
-	QMap<QByteArray,int>::const_iterator iter = m_factoryIdFactoryIndexMap.constBegin();
-	while (iter != m_factoryIdFactoryIndexMap.constEnd()) {
+	
+	for (		QMap<QByteArray,int>::const_iterator iter = m_factoryIdFactoryIndexMap.constBegin();
+				iter != m_factoryIdFactoryIndexMap.constEnd();
+				++iter) {
 		retVal.insert(iter.key());
-		++iter;
-	}	
+	}
 
 	return retVal;
 }
@@ -133,8 +130,8 @@ int CMultiParamsManagerComp::InsertParamsSet(const QByteArray& typeId, int index
 
 bool CMultiParamsManagerComp::RemoveParamsSet(int index)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < CMultiParamsManagerComp::GetParamsSetsCount());
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < CMultiParamsManagerComp::GetParamsSetsCount());
 
 	int fixedParamsCount = m_fixedParamSetsCompPtr.GetCount();
 
@@ -161,10 +158,10 @@ bool CMultiParamsManagerComp::RemoveParamsSet(int index)
 
 bool CMultiParamsManagerComp::SwapParamsSet(int index1, int index2)
 {
-	I_ASSERT(index1 >= 0);
-	I_ASSERT(index1 < CMultiParamsManagerComp::GetParamsSetsCount());
-	I_ASSERT(index2 >= 0);
-	I_ASSERT(index2 < CMultiParamsManagerComp::GetParamsSetsCount());
+	Q_ASSERT(index1 >= 0);
+	Q_ASSERT(index1 < CMultiParamsManagerComp::GetParamsSetsCount());
+	Q_ASSERT(index2 >= 0);
+	Q_ASSERT(index2 < CMultiParamsManagerComp::GetParamsSetsCount());
 
 	int fixedParamsCount = m_fixedParamSetsCompPtr.GetCount();
 
@@ -188,7 +185,7 @@ bool CMultiParamsManagerComp::SwapParamsSet(int index1, int index2)
 
 IParamsSet* CMultiParamsManagerComp::GetParamsSet(int index) const
 {
-	I_ASSERT((index >= 0) && (index < CMultiParamsManagerComp::GetParamsSetsCount()));
+	Q_ASSERT((index >= 0) && (index < CMultiParamsManagerComp::GetParamsSetsCount()));
 
 	int fixedCount = m_fixedParamSetsCompPtr.GetCount();
 	if (index < fixedCount){
@@ -198,9 +195,10 @@ IParamsSet* CMultiParamsManagerComp::GetParamsSet(int index) const
 	return const_cast<IParamsSet*>(m_paramSets[index - fixedCount].paramSetPtr.GetPtr());
 }
 
+
 QByteArray CMultiParamsManagerComp::GetParamsSetTypeId(int index) const
 {
-	I_ASSERT((index >= 0) && (index < CMultiParamsManagerComp::GetParamsSetsCount()));
+	Q_ASSERT((index >= 0) && (index < CMultiParamsManagerComp::GetParamsSetsCount()));
 
 	int fixedCount = m_fixedParamSetsCompPtr.GetCount();
 	if (index < fixedCount){
@@ -215,9 +213,10 @@ QByteArray CMultiParamsManagerComp::GetParamsSetTypeId(int index) const
 	return m_paramSets[index - fixedCount].typeId;
 }
 
+
 QString CMultiParamsManagerComp::GetParamsSetName(int index) const
 {
-	I_ASSERT((index >= 0) && (index < GetParamsSetsCount()));
+	Q_ASSERT((index >= 0) && (index < GetParamsSetsCount()));
 
 	int fixedCount = m_fixedParamSetsCompPtr.GetCount();
 	if (index < fixedCount){
@@ -237,7 +236,7 @@ QString CMultiParamsManagerComp::GetParamsSetName(int index) const
 
 bool CMultiParamsManagerComp::SetParamsSetName(int index, const QString& name)
 {
-	I_ASSERT((index >= 0) && (index < GetParamsSetsCount()));
+	Q_ASSERT((index >= 0) && (index < GetParamsSetsCount()));
 
 	int fixedCount = m_fixedSetNamesCompPtr.GetCount();
 	if (index < fixedCount){
@@ -314,7 +313,6 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 	}
 
 	for (int i = 0; i < paramsCount; ++i){
-		
 		retVal = retVal && archive.BeginTag(paramsSetTag);
 
 		retVal = retVal && archive.BeginTag(typeIdTag);
@@ -327,12 +325,12 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 			retVal = retVal && archive.Process(typeId);
 		}
 		else{
-			
 			retVal = retVal && archive.Process(typeId);
 			if (!retVal){
 				return false;
 			}			
 		}
+
 		retVal = retVal && archive.EndTag(typeIdTag);
 
 		retVal = retVal && archive.BeginTag(nameTag);
@@ -340,26 +338,22 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 		QString name;
 
 		if (isStoring){
-			
 			name = GetParamsSetName(i);
 
 			retVal = retVal && archive.Process(name);
 		}
 		else{
-			
 			retVal = retVal && archive.Process(name);
-			
 			if (!retVal){
 				return false;
 			}			
 		}
 		retVal = retVal && archive.EndTag(nameTag);	
 
-		if(!isStoring)
-		{
-			if(!DeserializeParamsSet(typeId, i, name)){
+		if (!isStoring){
+			if (!DeserializeParamsSet(typeId, i, name)){
 				return false;
-			}			
+			}
 		}
 
 		IParamsSet* paramsSetPtr = GetParamsSet(i);
@@ -434,13 +428,13 @@ void CMultiParamsManagerComp::OnComponentCreated()
 
 	//Obtaining factory ids
 	istd::TDelPtr<IParamsSet> paramsSetPtr;
-	for(int factoryIndex = 0; factoryIndex < m_paramSetsFactoriesPtr.GetCount(); factoryIndex++){		
+	for (int factoryIndex = 0; factoryIndex < m_paramSetsFactoriesPtr.GetCount(); factoryIndex++){		
 		paramsSetPtr.SetPtr(m_paramSetsFactoriesPtr.CreateInstance(factoryIndex));
 		
 		if (paramsSetPtr.IsValid()){
 			QByteArray factoryId = paramsSetPtr->GetFactoryId();
 				
-			if(!factoryId.isEmpty()){
+			if (!factoryId.isEmpty()){
 				m_factoryIdFactoryIndexMap.insert(factoryId, factoryIndex);
 			}
 
@@ -466,6 +460,7 @@ void CMultiParamsManagerComp::OnComponentDestroyed()
 	BaseClass::OnComponentDestroyed();
 }
 
+
 bool CMultiParamsManagerComp::DeserializeParamsSet(const QByteArray& typeId, int index, const QString& name)
 {
 	if (!typeId.isEmpty()){
@@ -476,7 +471,7 @@ bool CMultiParamsManagerComp::DeserializeParamsSet(const QByteArray& typeId, int
 
 	if ((index >= 0) && (index < fixedParamsCount)){
 		return true;
-	}	
+	}
 
 	IParamsSet* newParamsSetPtr = m_paramSetsFactoriesPtr.CreateInstance(m_factoryIdFactoryIndexMap.value(typeId));
 	if (newParamsSetPtr == NULL){
@@ -494,16 +489,16 @@ bool CMultiParamsManagerComp::DeserializeParamsSet(const QByteArray& typeId, int
 	if (index >= 0){
 		int insertIndex = index - fixedParamsCount;
 
-		m_paramSets.insert(m_paramSets.begin() + insertIndex, paramSet);		
+		m_paramSets.insert(m_paramSets.begin() + insertIndex, paramSet);
 	}
 	else{
-		m_paramSets.push_back(paramSet);		
+		m_paramSets.push_back(paramSet);
 	}	
 
 	imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(newParamsSetPtr);
 	if (modelPtr != NULL){
 		modelPtr->AttachObserver(this);
-	}
+	}	
 
 	return true;
 }

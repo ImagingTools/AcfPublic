@@ -553,6 +553,7 @@
     <filename>_c_inspection_task_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <class kind="class">iinsp::CInspectionTaskComp</class>
+    <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -5723,6 +5724,7 @@
     <base virtualness="virtual">istd::IInformationProvider</base>
     <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
@@ -5957,6 +5959,54 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>af7ff85eeaf73e1b17c3054716c241df0</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CInspectionTaskComp::Parameters</name>
+    <filename>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</filename>
+    <base>imod::CMultiModelBridgeBase</base>
+    <base virtualness="virtual">iprm::IParamsSet</base>
+    <member kind="function">
+      <type></type>
+      <name>Parameters</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a18eab05a477eaa118e0e4d1914f11344</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetParent</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>aec5b532e2cc11122abc37e0602238069</anchor>
+      <arglist>(CInspectionTaskComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetParamIds</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a050452b093a50c4998d16a06c270641b</anchor>
+      <arglist>(bool editableOnly=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable *</type>
+      <name>GetParameter</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a003c433c1ceb1c32cde7c7a828257a2d</anchor>
+      <arglist>(const QByteArray &amp;id) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::ISerializable *</type>
+      <name>GetEditableParameter</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a18ac508eea9cfa753c859fa7cdd94c08</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>afa621d1a2e2d77f2fcdb9c7e54fbe275</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">

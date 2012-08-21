@@ -2915,6 +2915,20 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiParamsManagerComp.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_multi_params_manager_comp_8h</filename>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <class kind="class">iprm::CMultiParamsManagerComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CNameParam.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_name_param_8h</filename>
@@ -29037,6 +29051,7 @@
     <class kind="class">iprm::CEnableableParamComp</class>
     <class kind="class">iprm::CFileNameParamComp</class>
     <class kind="class">iprm::CManagerParamsSetShadowerComp</class>
+    <class kind="class">iprm::CMultiParamsManagerComp</class>
     <class kind="class">iprm::CNameParam</class>
     <class kind="class">iprm::CNameParamComp</class>
     <class kind="class">iprm::COptionsManagerComp</class>
@@ -29318,6 +29333,189 @@
       <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
       <anchor>a7ac151b126133ac1ed91d287924ebc0b</anchor>
       <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CMultiParamsManagerComp</name>
+    <filename>classiprm_1_1_c_multi_params_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprm::IParamsManager</base>
+    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a8a18f0d390704106a439e7c102507c3c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiParamsManagerComp</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>af41c57ab5db1f39e25d657cb6602287d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetIndexOperationFlags</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>aae371ff5b70aa68a99b95bf72fb1918a</anchor>
+      <arglist>(int index=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetParamsSetsCount</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a82efc76bc70b8b04eae7074421189be3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TypeIds</type>
+      <name>GetSupportedTypeIds</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>ab77cb6c187e2220a214619c1b512c4c8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>InsertParamsSet</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>ad0784ad16a866899645c3f58cba28533</anchor>
+      <arglist>(const QByteArray &amp;typeId=&quot;&quot;, int index=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveParamsSet</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a4f803aaa5f0091069c78795cbea8b5b7</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SwapParamsSet</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>af4f7843a1bd001a03128f5f44838232b</anchor>
+      <arglist>(int index1, int index2)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual IParamsSet *</type>
+      <name>GetParamsSet</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>acaf53902997bacf70cda2173246b2a33</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetParamsSetTypeId</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a4572ef11740ea627ed565ca516737662</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetParamsSetName</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a4bc57103fed2eaf01cf163df4baab67e</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetParamsSetName</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a4e18ae62bbccc48fe49d5b3d6b1fd007</anchor>
+      <arglist>(int index, const QString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ISelectionConstraints *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>af78a2a3d3d37f830cd8b75a06a1dac3d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a891580615820544eca2d8b0fa7dc02e7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a95ff343301d7fdb64d6a0107a309b10e</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>aa642cc2504bf5bbe95af78381c29eafa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a123d9a9901bbeeec336027d6ec0d5cbe</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a8f2375db85a3144503e4f03d25301e78</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a4278fa18405a7caf92af87848e907c79</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a6f29e4475da3694a0fc09c5ccdcb3b89</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a84c9efb3b0cde90880876afc250faf14</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a28a207370d92c50e9b5ea9f5a9ace120</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a23952cc12c590db6db7579fb511eebac</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>af61615da54317ad382cf08c5da5aa11f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>DeserializeParamsSet</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a19e36000e6cb6a4bf701f9a8a15d5cc3</anchor>
+      <arglist>(const QByteArray &amp;typeId, int index, const QString &amp;name)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39697,6 +39895,13 @@
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
       <anchor>ac3beed82af5260391f35e33f56e9a19f</anchor>
       <arglist>(QTreeWidgetItem *item, int column)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAddMenuOptionClicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
+      <anchor>a9fe7b6c98305850e66dca518f428fc8b</anchor>
+      <arglist>(QAction *action)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

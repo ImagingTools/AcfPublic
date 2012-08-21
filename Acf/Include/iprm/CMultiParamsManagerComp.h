@@ -107,7 +107,7 @@ protected:
 		Deserialize parameter set 
 		\param	index	position in list of parameters.
 		\param	typeid	ID of parameter type.
-		\return			True - deserialization was successfull or False - no deserialization was possible.
+		\return			\c true - deserialization was successfull or \c false - no deserialization was possible.
 	*/
 	bool DeserializeParamsSet(const QByteArray& typeId, int index, const QString& name);
 

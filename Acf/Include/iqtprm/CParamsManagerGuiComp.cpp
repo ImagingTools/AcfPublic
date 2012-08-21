@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #include "iqtprm/CParamsManagerGuiComp.h"
@@ -42,15 +42,13 @@ namespace iqtprm
 
 // public methods
 
-
 CParamsManagerGuiComp::CParamsManagerGuiComp()
-: m_lastConnectedModelPtr(NULL)
+:	m_lastConnectedModelPtr(NULL)
 {
 }
 
 
 // protected slots
-
 
 void CParamsManagerGuiComp::on_AddButton_clicked()
 {
@@ -135,9 +133,9 @@ void CParamsManagerGuiComp::on_ParamsTree_itemSelectionChanged()
 
 	const iprm::ISelectionConstraints* constraintsPtr = selectionPtr->GetSelectionConstraints();
 
-	if ((constraintsPtr != NULL) &&
-			(selectedIndex < constraintsPtr->GetOptionsCount()) &&
-			(selectedIndex != selectionPtr->GetSelectedOptionIndex())){
+	if (		(constraintsPtr != NULL) &&
+				(selectedIndex < constraintsPtr->GetOptionsCount()) &&
+				(selectedIndex != selectionPtr->GetSelectedOptionIndex())){
 		if (selectionPtr->SetSelectedOptionIndex(selectedIndex)){
 			UpdateParamsView(selectedIndex);
 		}
@@ -174,7 +172,6 @@ void CParamsManagerGuiComp::on_ParamsTree_itemChanged(QTreeWidgetItem* item, int
 
 // protected methods
 
-
 void CParamsManagerGuiComp::UpdateActions()
 {
 	I_ASSERT(IsGuiCreated());
@@ -203,11 +200,11 @@ void CParamsManagerGuiComp::UpdateActions()
 	AddButton->setEnabled((flags & iprm::IParamsManager::MF_SUPPORT_INSERT) != 0);
 	RemoveButton->setEnabled((flags & iprm::IParamsManager::MF_SUPPORT_DELETE) != 0);
 	UpButton->setEnabled(
-			((prevFlags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0) &&
-			((flags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0));
+				((prevFlags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0) &&
+				((flags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0));
 	DownButton->setEnabled(
-			((flags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0) &&
-			((nextFlags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0));
+				((flags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0) &&
+				((nextFlags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0));
 }
 
 
@@ -243,7 +240,7 @@ void CParamsManagerGuiComp::UpdateTree()
 			paramsSetItemPtr->setFlags(itemFlags);
 			ParamsTree->addTopLevelItem(paramsSetItemPtr);
 
-			paramsSetItemPtr->setSelected(paramSetIndex == selectedIndex);
+			paramsSetItemPtr->setSelected(paramSetIndex == selectedIndex);	
 		}
 	}
 
@@ -260,7 +257,7 @@ void CParamsManagerGuiComp::UpdateParamsView(int selectedIndex)
 		I_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
 		if (m_paramsObserverCompPtr.IsValid()){
-			modelPtr = dynamic_cast<imod::IModel*> (objectPtr->GetParamsSet(selectedIndex));
+			modelPtr = dynamic_cast<imod::IModel*>(objectPtr->GetParamsSet(selectedIndex));
 		}
 	}
 
@@ -271,7 +268,7 @@ void CParamsManagerGuiComp::UpdateParamsView(int selectedIndex)
 
 		if (modelPtr != NULL){
 			I_ASSERT(!modelPtr->IsAttached(m_paramsObserverCompPtr.GetPtr()));
-
+				
 			if (modelPtr->AttachObserver(m_paramsObserverCompPtr.GetPtr())){
 				m_lastConnectedModelPtr = modelPtr;
 
@@ -322,7 +319,6 @@ void CParamsManagerGuiComp::EnsureParamsGuiDetached()
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-
 void CParamsManagerGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
@@ -343,6 +339,7 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 		}
 
 		iprm::IParamsManager::TypeIds typeIds = objectPtr->GetSupportedTypeIds();
+
 		if (typeIds.size() > 1){
 			iprm::IParamsManager::TypeIds::iterator i;
 			// fill the menu
@@ -350,7 +347,7 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 			m_startVariableMenus.clear();
 			
 			for (i = typeIds.begin(); i != typeIds.end(); ++i){
-				//translate			
+				//translate
 				QString typeName(*i);
 				QString translatedTypeName = tr(*i);
 
@@ -362,7 +359,6 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 
 			AddButton->setMenu(&m_startVariableMenus);
 			QObject::connect(&m_startVariableMenus, SIGNAL(triggered(QAction*)), this, SLOT(OnAddMenuOptionClicked(QAction*)));
-
 		}
 	}
 
@@ -371,7 +367,6 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 
 	ButtonsFrame->setVisible(areAddRemoveButtonsNeeded && areUpDownButtonsNeeded);
 	ParamsTree->setItemDelegate(new iqtgui::CItemDelegate());
-
 }
 
 
@@ -392,7 +387,6 @@ void CParamsManagerGuiComp::UpdateGui(int /*updateFlags*/)
 
 
 // reimplemented (iqtgui::CComponentBase)
-
 
 void CParamsManagerGuiComp::OnGuiCreated()
 {
@@ -422,9 +416,6 @@ void CParamsManagerGuiComp::OnAddMenuOptionClicked(QAction* action)
 {
 	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		int selectedIndex = GetSelectedIndex();
-		I_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
-
 		QByteArray typeName = action->data().toByteArray();
 
 		objectPtr->InsertParamsSet(typeName, -1);
