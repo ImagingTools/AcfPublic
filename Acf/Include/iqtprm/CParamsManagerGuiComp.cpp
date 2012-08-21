@@ -322,6 +322,7 @@ void CParamsManagerGuiComp::EnsureParamsGuiDetached()
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
+
 void CParamsManagerGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
@@ -340,6 +341,29 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 		if (*m_allowUpDownAttrPtr){
 			areUpDownButtonsNeeded = ((flags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0);
 		}
+
+		iprm::IParamsManager::TypeIds typeIds = objectPtr->GetSupportedTypeIds();
+		if (typeIds.size() > 1){
+			iprm::IParamsManager::TypeIds::iterator i;
+			// fill the menu
+			
+			m_startVariableMenus.clear();
+			
+			for (i = typeIds.begin(); i != typeIds.end(); ++i){
+				//translate			
+				QString typeName(*i);
+				QString translatedTypeName = tr(*i);
+
+				QAction* action = m_startVariableMenus.addAction(translatedTypeName);
+
+				//store original type name
+				action->setData(typeName);
+			}
+
+			AddButton->setMenu(&m_startVariableMenus);
+			QObject::connect(&m_startVariableMenus, SIGNAL(triggered(QAction*)), this, SLOT(OnAddMenuOptionClicked(QAction*)));
+
+		}
 	}
 
 	AddRemoveButtonsFrame->setVisible(areAddRemoveButtonsNeeded);
@@ -347,6 +371,7 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 
 	ButtonsFrame->setVisible(areAddRemoveButtonsNeeded && areUpDownButtonsNeeded);
 	ParamsTree->setItemDelegate(new iqtgui::CItemDelegate());
+
 }
 
 
@@ -372,32 +397,6 @@ void CParamsManagerGuiComp::UpdateGui(int /*updateFlags*/)
 void CParamsManagerGuiComp::OnGuiCreated()
 {
 	ParamsFrame->setVisible(false);
-
-	iprm::IParamsManager* taskPtr = GetObjectPtr();
-	if (taskPtr == NULL){
-		return;
-	}
-
-	iprm::IParamsManager::TypeIds typeIds = taskPtr->GetSupportedTypeIds();
-
-	if (typeIds.size() > 1){
-		iprm::IParamsManager::TypeIds::iterator i;
-		// fill the menu
-		for (i = typeIds.begin(); i != typeIds.end(); ++i){
-			//translate			
-			QString typeName(*i);
-			QString translatedTypeName = tr(*i);
-
-			QAction* action = m_startVariableMenus.addAction(translatedTypeName);
-
-			//store original type name
-			action->setData(typeName);
-		}
-
-		AddButton->setMenu(&m_startVariableMenus);
-		QObject::connect(&m_startVariableMenus, SIGNAL(triggered(QAction*)), this, SLOT(OnAddMenuOptionClicked(QAction*)));
-
-	}
 
 	BaseClass::OnGuiCreated();
 
