@@ -107,9 +107,9 @@ protected:
 		Deserialize parameter set 
 		\param	index	position in list of parameters.
 		\param	typeid	ID of parameter type.
-		\return			position of deserialized object or negative value if no deserialization was possible.
+		\return			True - deserialization was successfull or False - no deserialization was possible.
 	*/
-	int DeserializeParamsSet(const QByteArray& typeId, int index, const QString& name);
+	bool DeserializeParamsSet(const QByteArray& typeId, int index, const QString& name);
 
 private:
 	I_MULTIREF(IParamsSet, m_fixedParamSetsCompPtr);
@@ -130,6 +130,8 @@ private:
 	ParamSets m_paramSets;
 
 	int m_selectedIndex;
+
+	QMap<QByteArray, int> m_factoryIdFactoryIndexMap;
 };
 
 

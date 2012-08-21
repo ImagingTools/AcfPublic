@@ -24,6 +24,7 @@
 
 
 // ACF includes
+#include "istd/TDelPtr.h"
 #include "istd/TChangeNotifier.h"
 #include "istd/TChangeDelegator.h"
 
@@ -77,10 +78,12 @@ int CMultiParamsManagerComp::GetParamsSetsCount() const
 IParamsManager::TypeIds CMultiParamsManagerComp::GetSupportedTypeIds() const
 {
 	IParamsManager::TypeIds retVal;
-	
-	for(int index = 0; index < m_paramSetsFactoriesPtr.GetCount(); index++){
-		retVal.insert(m_paramSetsFactoriesPtr[index]);
-	}
+
+	QMap<QByteArray,int>::const_iterator iter = m_factoryIdFactoryIndexMap.constBegin();
+	while (iter != m_factoryIdFactoryIndexMap.constEnd()) {
+		retVal.insert(iter.key());
+		++iter;
+	}	
 
 	return retVal;
 }
@@ -88,7 +91,7 @@ IParamsManager::TypeIds CMultiParamsManagerComp::GetSupportedTypeIds() const
 
 int CMultiParamsManagerComp::InsertParamsSet(const QByteArray& typeId, int index)
 {
-	if (!typeId.isEmpty()){
+	if (!typeId.isEmpty() && !m_factoryIdFactoryIndexMap.contains(typeId)){
 		return -1;
 	}
 
@@ -98,21 +101,7 @@ int CMultiParamsManagerComp::InsertParamsSet(const QByteArray& typeId, int index
 		return -1;
 	}
 
-	int factoryIndex = -1;
-
-	for(int i = 0; i < m_paramSetsFactoriesPtr.GetCount(); i++){
-		
-		if(m_paramSetsFactoriesPtr[i] == typeId){
-			factoryIndex = i;
-			break;
-		}
-	}
-
-	if(factoryIndex < 0){
-		return -1;
-	}
-
-	IParamsSet* newParamsSetPtr = m_paramSetsFactoriesPtr.CreateInstance(factoryIndex);
+	IParamsSet* newParamsSetPtr = m_paramSetsFactoriesPtr.CreateInstance(m_factoryIdFactoryIndexMap.value(typeId));
 	if (newParamsSetPtr == NULL){
 		return -1;
 	}
@@ -351,12 +340,15 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 		QString name;
 
 		if (isStoring){
+			
 			name = GetParamsSetName(i);
 
 			retVal = retVal && archive.Process(name);
 		}
 		else{
+			
 			retVal = retVal && archive.Process(name);
+			
 			if (!retVal){
 				return false;
 			}			
@@ -365,9 +357,9 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 
 		if(!isStoring)
 		{
-			if(DeserializeParamsSet(typeId, i, name) < 0){
+			if(!DeserializeParamsSet(typeId, i, name)){
 				return false;
-			}
+			}			
 		}
 
 		IParamsSet* paramsSetPtr = GetParamsSet(i);
@@ -440,6 +432,22 @@ void CMultiParamsManagerComp::OnComponentCreated()
 		}
 	}
 
+	//Obtaining factory ids
+	istd::TDelPtr<IParamsSet> paramsSetPtr;
+	for(int factoryIndex = 0; factoryIndex < m_paramSetsFactoriesPtr.GetCount(); factoryIndex++){		
+		paramsSetPtr.SetPtr(m_paramSetsFactoriesPtr.CreateInstance(factoryIndex));
+		
+		if (paramsSetPtr.IsValid()){
+			QByteArray factoryId = paramsSetPtr->GetFactoryId();
+				
+			if(!factoryId.isEmpty()){
+				m_factoryIdFactoryIndexMap.insert(factoryId, factoryIndex);
+			}
+
+			paramsSetPtr.Reset();
+		}
+	}
+
 	BaseClass::OnComponentCreated();
 }
 
@@ -458,35 +466,21 @@ void CMultiParamsManagerComp::OnComponentDestroyed()
 	BaseClass::OnComponentDestroyed();
 }
 
-int CMultiParamsManagerComp::DeserializeParamsSet(const QByteArray& typeId, int index, const QString& name)
+bool CMultiParamsManagerComp::DeserializeParamsSet(const QByteArray& typeId, int index, const QString& name)
 {
 	if (!typeId.isEmpty()){
-		return -1;
+		return false;
 	}
 
 	int fixedParamsCount = m_fixedParamSetsCompPtr.GetCount();
 
 	if ((index >= 0) && (index < fixedParamsCount)){
-		return -1;
-	}
+		return true;
+	}	
 
-	int factoryIndex = -1;
-
-	for(int i = 0; i < m_paramSetsFactoriesPtr.GetCount(); i++){
-		
-		if(m_paramSetsFactoriesPtr[i] == typeId){
-			factoryIndex = i;
-			break;
-		}
-	}
-
-	if(factoryIndex < 0){
-		return -1;
-	}
-
-	IParamsSet* newParamsSetPtr = m_paramSetsFactoriesPtr.CreateInstance(factoryIndex);
+	IParamsSet* newParamsSetPtr = m_paramSetsFactoriesPtr.CreateInstance(m_factoryIdFactoryIndexMap.value(typeId));
 	if (newParamsSetPtr == NULL){
-		return -1;
+		return false;
 	}
 
 	istd::CChangeNotifier notifier(this, CF_MODEL | CF_OPTIONS_CHANGED);	
@@ -500,15 +494,18 @@ int CMultiParamsManagerComp::DeserializeParamsSet(const QByteArray& typeId, int 
 	if (index >= 0){
 		int insertIndex = index - fixedParamsCount;
 
-		m_paramSets.insert(m_paramSets.begin() + insertIndex, paramSet);
-
-		return index;
+		m_paramSets.insert(m_paramSets.begin() + insertIndex, paramSet);		
 	}
 	else{
-		m_paramSets.push_back(paramSet);
-
-		return int(m_paramSets.size()) - 1;
+		m_paramSets.push_back(paramSet);		
 	}	
+
+	imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(newParamsSetPtr);
+	if (modelPtr != NULL){
+		modelPtr->AttachObserver(this);
+	}
+
+	return true;
 }
 
 
