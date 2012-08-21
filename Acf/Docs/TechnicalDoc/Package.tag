@@ -576,8 +576,7 @@
     <name>CQtVersionInfoComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_qt_version_info_comp_8h</filename>
-    <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_version_info_base_8h" name="TVersionInfoBase.h" local="yes" imported="no">ibase/TVersionInfoBase.h</includes>
     <class kind="class">ibase::CQtVersionInfoComp</class>
     <namespace>ibase</namespace>
   </compound>
@@ -928,6 +927,30 @@
     <includes id="_t_container_8h" name="TContainer.h" local="yes" imported="no">ibase/TContainer.h</includes>
     <class kind="class">ibase::TSerializableContainer</class>
     <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TVersionInfoBase.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_t_version_info_base_8h</filename>
+    <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_acf_version_8h" name="AcfVersion.h" local="yes" imported="no">istd/AcfVersion.h</includes>
+    <class kind="class">ibase::TVersionInfoBase</class>
+    <namespace>ibase</namespace>
+    <member kind="typedef">
+      <type>ibase::TVersionInfoBase&lt; icomp::CComponentBase &gt;</type>
+      <name>CVersionInfoCompBase</name>
+      <anchorfile>namespaceibase.html</anchorfile>
+      <anchor>aa8558752d45c149b381aed5f2230c386</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::TVersionInfoBase&lt; ibase::CLoggerComponentBase &gt;</type>
+      <name>CVersionInfoLoggerCompBase</name>
+      <anchorfile>namespaceibase.html</anchorfile>
+      <anchor>a68adaed445318f023331a730e6e16131</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CCmy.h</name>
@@ -10835,6 +10858,7 @@
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">ibase::TMsbWord</class>
     <class kind="class">ibase::TSerializableContainer</class>
+    <class kind="class">ibase::TVersionInfoBase</class>
     <member kind="typedef">
       <type>istd::TIHierarchical&lt; ICommand &gt;</type>
       <name>IHierarchicalCommand</name>
@@ -10868,6 +10892,20 @@
       <name>CMsbWord</name>
       <anchorfile>namespaceibase.html</anchorfile>
       <anchor>a143a6a34f2268b1244c26c5a8dfef11f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::TVersionInfoBase&lt; icomp::CComponentBase &gt;</type>
+      <name>CVersionInfoCompBase</name>
+      <anchorfile>namespaceibase.html</anchorfile>
+      <anchor>aa8558752d45c149b381aed5f2230c386</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::TVersionInfoBase&lt; ibase::CLoggerComponentBase &gt;</type>
+      <name>CVersionInfoLoggerCompBase</name>
+      <anchorfile>namespaceibase.html</anchorfile>
+      <anchor>a68adaed445318f023331a730e6e16131</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -11822,8 +11860,7 @@
   <compound kind="class">
     <name>ibase::CQtVersionInfoComp</name>
     <filename>classibase_1_1_c_qt_version_info_comp.html</filename>
-    <base>iser::IVersionInfo</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ibase::TVersionInfoBase</base>
     <member kind="enumeration">
       <name>QtVersionIds</name>
       <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
@@ -11843,10 +11880,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ibase::CVersionInfoCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
-      <anchor>a19ce5ce513e73b2c8d3525e31ba696df</anchor>
+      <anchor>a64768831a0555e7aa52c327a9df62fe2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11876,13 +11913,6 @@
       <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
       <anchor>ad422a7091206701ba43202dbc34fe4b1</anchor>
       <arglist>(int versionId, quint32 versionNumber) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
-      <anchor>a6b6c826f801c2b8e1a60dd1132f6e1d3</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13566,6 +13596,47 @@
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
       <anchor>a26b6da882324306b54c95b86a0c7d842</anchor>
       <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::TVersionInfoBase</name>
+    <filename>classibase_1_1_t_version_info_base.html</filename>
+    <templarg></templarg>
+    <base virtualness="virtual">iser::IVersionInfo</base>
+    <member kind="typedef">
+      <type>BaseComponent</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_version_info_base.html</anchorfile>
+      <anchor>a219a0942873d8b3c40bc6f327e624d95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetVersionNumber</name>
+      <anchorfile>classibase_1_1_t_version_info_base.html</anchorfile>
+      <anchor>ac7b7e9aba842813dba1ed921aa428827</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetVersionIdDescription</name>
+      <anchorfile>classibase_1_1_t_version_info_base.html</anchorfile>
+      <anchor>a831d45939a50797947d53bc540021a23</anchor>
+      <arglist>(int versionId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual VersionIds</type>
+      <name>GetVersionIds</name>
+      <anchorfile>classibase_1_1_t_version_info_base.html</anchorfile>
+      <anchor>a9bc7f878caa8c42d296eb91d06cca9d9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetEncodedVersionName</name>
+      <anchorfile>classibase_1_1_t_version_info_base.html</anchorfile>
+      <anchor>a7942b303540c7cd717ff2b68c88b94d1</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
