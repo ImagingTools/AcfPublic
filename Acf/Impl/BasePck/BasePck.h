@@ -76,6 +76,7 @@
 #include "iprm/CSelectionConstraintsComp.h"
 #include "iprm/CNameParamComp.h"
 #include "iprm/CSelectionDelegatorComp.h"
+#include "iprm/CMultiParamsManagerComp.h"
 
 #include "i2d/CPosition2dComp.h"
 #include "i2d/CRectangleComp.h"
@@ -172,6 +173,7 @@ typedef icomp::TMakeComponentWrap<
 typedef iproc::CCascadedProcessorComp CascadedProcessor;
 typedef iproc::CIterativeProcessorComp IterativeProcessor;
 typedef iproc::CModelBasedProcessingTriggerComp ModelBasedProcessingTrigger;
+typedef icomp::TModelCompWrap<iprm::CMultiParamsManagerComp> MultiParamsManager;
 
 
 } // namespace BasePck
