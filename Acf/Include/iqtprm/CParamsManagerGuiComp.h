@@ -1,27 +1,28 @@
 /********************************************************************************
-**
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
-**
-********************************************************************************/
+ **
+ **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+ **
+ **	This file is part of the ACF Toolkit.
+ **
+ **	This file may be used under the terms of the GNU Lesser
+ **	General Public License version 2.1 as published by the Free Software
+ **	Foundation and appearing in the file LicenseLGPL.txt included in the
+ **	packaging of this file.  Please review the following information to
+ **	ensure the GNU Lesser General Public License version 2.1 requirements
+ **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ **
+ **	If you are unsure which license is appropriate for your use, please
+ **	contact us at info@imagingtools.de.
+ **
+ ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+ **	by Skype to ACF_infoline for further information about the ACF.
+ **
+ ********************************************************************************/
 
 
 #ifndef iqtprm_CParamsManagerGuiComp_included
 #define iqtprm_CParamsManagerGuiComp_included
+
 
 
 #include "iprm/IParamsManager.h"
@@ -31,38 +32,44 @@
 
 #include "iqtprm/Generated/ui_CParamsManagerGuiComp.h"
 
+//QT
+#include <QtGui/QMenu>
+
 
 namespace iqtprm
 {
 
 
-class CParamsManagerGuiComp: public iqtgui::TDesignerGuiObserverCompBase<
-			Ui::CParamsManagerGuiComp,
-			iprm::IParamsManager>
+class CParamsManagerGuiComp 
+: public iqtgui::TDesignerGuiObserverCompBase<
+Ui::CParamsManagerGuiComp,
+iprm::IParamsManager>
 {
 	Q_OBJECT
 
 public:
 	typedef iqtgui::TDesignerGuiObserverCompBase<
-				Ui::CParamsManagerGuiComp,
-				iprm::IParamsManager> BaseClass;
+	Ui::CParamsManagerGuiComp,
+	iprm::IParamsManager> BaseClass;
 
 	I_BEGIN_COMPONENT(CParamsManagerGuiComp);
-		I_ASSIGN(m_paramsGuiCompPtr, "ParamsGui", "GUI object used to display parameters", false, "ParamsGui");
-		I_ASSIGN(m_paramsObserverCompPtr, "ParamsGui", "GUI object used to display parameters", false, "ParamsGui");
-		I_ASSIGN(m_allowAddRemoveAttrPtr, "AllowAddRemove", "If it is false, 'Add' and 'Remove' buttons will be always hidden", true, true);
-		I_ASSIGN(m_allowUpDownAttrPtr, "AllowUpDown", "If it is false, 'Up' and 'Down' buttons will be always hidden", true, true);
+	I_ASSIGN(m_paramsGuiCompPtr, "ParamsGui", "GUI object used to display parameters", false, "ParamsGui");
+	I_ASSIGN(m_paramsObserverCompPtr, "ParamsGui", "GUI object used to display parameters", false, "ParamsGui");
+	I_ASSIGN(m_allowAddRemoveAttrPtr, "AllowAddRemove", "If it is false, 'Add' and 'Remove' buttons will be always hidden", true, true);
+	I_ASSIGN(m_allowUpDownAttrPtr, "AllowUpDown", "If it is false, 'Up' and 'Down' buttons will be always hidden", true, true);
 	I_END_COMPONENT;
 
 	CParamsManagerGuiComp();
 
-protected Q_SLOTS:
+	protected 
+Q_SLOTS:
 	void on_AddButton_clicked();
 	void on_RemoveButton_clicked();
 	void on_UpButton_clicked();
 	void on_DownButton_clicked();
 	void on_ParamsTree_itemSelectionChanged();
 	void on_ParamsTree_itemChanged(QTreeWidgetItem* item, int column);
+	void OnAddMenuOptionClicked(QAction* action);
 
 protected:
 	void UpdateActions();
@@ -87,6 +94,7 @@ private:
 	I_ATTR(bool, m_allowUpDownAttrPtr);
 
 	imod::IModel* m_lastConnectedModelPtr;
+	QMenu m_startVariableMenus;
 };
 
 
