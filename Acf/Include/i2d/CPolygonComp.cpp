@@ -40,7 +40,7 @@ void CPolygonComp::OnComponentCreated()
 
 	int count = qMin(m_xAttrPtr.GetCount(), m_yAttrPtr.GetCount());
 	for (int i = 0; i < count; i++){
-		InsertNode(i2d::CVector2d(m_xAttrPtr[i], m_yAttrPtr[i]));
+		BaseClass2::InsertNode(i2d::CVector2d(m_xAttrPtr[i], m_yAttrPtr[i]));
 	}
 }
 

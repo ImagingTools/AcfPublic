@@ -20,25 +20,31 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include "i2d/CPolylineComp.h"
 
 
-namespace istd
+namespace i2d
 {
 
 
-enum RepositoryState
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CPolylineComp::OnComponentCreated()
 {
-	RS_ORIGINAL_VERSION =  2475,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	BaseClass::OnComponentCreated();
+
+	I_ASSERT(m_xAttrPtr.IsValid());
+	I_ASSERT(m_yAttrPtr.IsValid());
+
+	int count = qMin(m_xAttrPtr.GetCount(), m_yAttrPtr.GetCount());
+	for (int i = 0; i < count; i++){
+		BaseClass2::InsertNode(i2d::CVector2d(m_xAttrPtr[i], m_yAttrPtr[i]));
+	}
+
+	BaseClass2::SetClosed(*m_isClosedAttrPtr);
+}
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
-
-
+} // namespace i2d

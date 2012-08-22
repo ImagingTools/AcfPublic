@@ -86,6 +86,7 @@
 #include "i2d/CLine2dComp.h"
 #include "i2d/CQuadrangleComp.h"
 #include "i2d/CPolygonComp.h"
+#include "i2d/CPolylineComp.h"
 #include "i2d/CAffineTransformation2dComp.h"
 #include "i2d/CStaticCalibrationProviderComp.h"
 
@@ -158,6 +159,7 @@ typedef icomp::TModelCompWrap<i2d::CAnnulusSegmentComp> AnnulusSegment;
 typedef icomp::TModelCompWrap<i2d::CLine2dComp> Line;
 typedef icomp::TModelCompWrap<i2d::CQuadrangleComp> Quadrangle;
 typedef icomp::TModelCompWrap<i2d::CPolygonComp> Polygon;
+typedef icomp::TModelCompWrap<i2d::CPolylineComp> Polyline;
 typedef icomp::TModelCompWrap<i2d::CAffineTransformation2dComp> AffineTransformation2d;
 typedef icomp::TModelCompWrap<i2d::CStaticCalibrationProviderComp> StaticCalibrationProvider;
 

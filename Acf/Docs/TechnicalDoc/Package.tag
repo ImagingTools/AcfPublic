@@ -186,6 +186,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CPolylineComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_polyline_comp_8h</filename>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">i2d::CPolylineComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPolylineExNodeBase.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polyline_ex_node_base_8h</filename>
@@ -6596,6 +6605,7 @@
     <class kind="class">i2d::CPolygonComp</class>
     <class kind="class">i2d::CPolygonExtractor</class>
     <class kind="class">i2d::CPolyline</class>
+    <class kind="class">i2d::CPolylineComp</class>
     <class kind="class">i2d::CPolylineExNodeBase</class>
     <class kind="class">i2d::CPolylineExtractor</class>
     <class kind="class">i2d::CPolypoint</class>
@@ -8377,6 +8387,13 @@
       <anchor>ac93130bb483718ec8392df33995b5b03</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CPolygon</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_c_polygon_comp.html</anchorfile>
+      <anchor>a66a3244c735e06cb480c5b7f62112819</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -8455,6 +8472,33 @@
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
       <anchor>a466e90b8ab72643c744604a75eb5c696</anchor>
       <arglist>(int nodeIndex) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPolylineComp</name>
+    <filename>classi2d_1_1_c_polyline_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CPolyline</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_polyline_comp.html</anchorfile>
+      <anchor>a8bc8507d70a5c641d5e7a7075859c403</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CPolyline</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_c_polyline_comp.html</anchorfile>
+      <anchor>a8fa55dbe6e000d039522b18d4154ec2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_polyline_comp.html</anchorfile>
+      <anchor>ae400b0ed7629bc96b9837a8598e7d238</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
