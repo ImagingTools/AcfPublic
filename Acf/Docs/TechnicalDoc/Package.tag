@@ -938,17 +938,17 @@
     <class kind="class">ibase::TVersionInfoBase</class>
     <namespace>ibase</namespace>
     <member kind="typedef">
-      <type>ibase::TVersionInfoBase&lt; icomp::CComponentBase &gt;</type>
+      <type>TVersionInfoBase&lt; icomp::CComponentBase &gt;</type>
       <name>CVersionInfoCompBase</name>
       <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>aa8558752d45c149b381aed5f2230c386</anchor>
+      <anchor>a81749f71da4de9bfa57389f0a8136ea4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TVersionInfoBase&lt; ibase::CLoggerComponentBase &gt;</type>
+      <type>TVersionInfoBase&lt; CLoggerComponentBase &gt;</type>
       <name>CVersionInfoLoggerCompBase</name>
       <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>a68adaed445318f023331a730e6e16131</anchor>
+      <anchor>a862b03f2a1b9a706b8f8a61aa4d6d1db</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10895,17 +10895,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TVersionInfoBase&lt; icomp::CComponentBase &gt;</type>
+      <type>TVersionInfoBase&lt; icomp::CComponentBase &gt;</type>
       <name>CVersionInfoCompBase</name>
       <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>aa8558752d45c149b381aed5f2230c386</anchor>
+      <anchor>a81749f71da4de9bfa57389f0a8136ea4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TVersionInfoBase&lt; ibase::CLoggerComponentBase &gt;</type>
+      <type>TVersionInfoBase&lt; CLoggerComponentBase &gt;</type>
       <name>CVersionInfoLoggerCompBase</name>
       <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>a68adaed445318f023331a730e6e16131</anchor>
+      <anchor>a862b03f2a1b9a706b8f8a61aa4d6d1db</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -11862,28 +11862,22 @@
     <filename>classibase_1_1_c_qt_version_info_comp.html</filename>
     <base>ibase::TVersionInfoBase</base>
     <member kind="enumeration">
-      <name>QtVersionIds</name>
+      <name>VersionId</name>
       <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
-      <anchor>a2515283ec7bb96a639830927e8bcd9ec</anchor>
+      <anchor>ab0b6ac8d2c288bb01de02ad15c195988</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>QVI_COMPILED</name>
+      <name>VI_QT_VERSION</name>
       <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
-      <anchor>a2515283ec7bb96a639830927e8bcd9eca13a35de9fa557878a30d2f88ed62ad74</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QVI_RUNTIME</name>
-      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
-      <anchor>a2515283ec7bb96a639830927e8bcd9ecad4ae5dc4c2687a32643069c93d476824</anchor>
+      <anchor>ab0b6ac8d2c288bb01de02ad15c195988a373eeda3aa48801dc5c82b4ada608972</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CVersionInfoCompBase</type>
+      <type>ibase::CVersionInfoLoggerCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
-      <anchor>a64768831a0555e7aa52c327a9df62fe2</anchor>
+      <anchor>abf4ab451ae0e1f4f9651456fa27d4051</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11913,6 +11907,13 @@
       <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
       <anchor>ad422a7091206701ba43202dbc34fe4b1</anchor>
       <arglist>(int versionId, quint32 versionNumber) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
+      <anchor>a6b6c826f801c2b8e1a60dd1132f6e1d3</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43162,6 +43163,12 @@
       <name>AcfVersionId</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
       <anchor>a71f9c819b642773712cca9fed1407b80ae4ddfc606911640d4595295870f41dc3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QtVersionId</name>
+      <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
+      <anchor>a71f9c819b642773712cca9fed1407b80a6b90113ab95d5c395cebeafee3711e3c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">

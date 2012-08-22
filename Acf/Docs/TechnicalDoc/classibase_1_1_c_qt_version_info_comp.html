@@ -32,7 +32,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ibase::CQtVersionInfoComp Class Reference</div>  </div>
 </div>
@@ -48,10 +49,10 @@ Inheritance diagram for ibase::CQtVersionInfoComp:</div>
  <div class="center">
   <img src="classibase_1_1_c_qt_version_info_comp.png" usemap="#ibase::CQtVersionInfoComp_map" alt=""/>
   <map id="ibase::CQtVersionInfoComp_map" name="ibase::CQtVersionInfoComp_map">
-<area href="classibase_1_1_t_version_info_base.html" alt="ibase::TVersionInfoBase&lt; BaseComponent &gt;" shape="rect" coords="0,168,263,192"/>
-<area href="classiser_1_1_i_version_info.html" title="Provides access to version information." alt="iser::IVersionInfo" shape="rect" coords="0,112,263,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,263,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,263,24"/>
+<area href="classibase_1_1_t_version_info_base.html" alt="ibase::TVersionInfoBase&lt; BaseComponent &gt;" shape="rect" coords="0,168,312,192"/>
+<area href="classiser_1_1_i_version_info.html" title="Provides access to version information." alt="iser::IVersionInfo" shape="rect" coords="0,112,312,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,312,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,312,24"/>
 </map>
  </div></div>
 
@@ -59,10 +60,11 @@ Inheritance diagram for ibase::CQtVersionInfoComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a2515283ec7bb96a639830927e8bcd9ec">QtVersionIds</a> { <a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a2515283ec7bb96a639830927e8bcd9eca13a35de9fa557878a30d2f88ed62ad74">QVI_COMPILED</a> =  IVersionInfo::UserVersionId + 1, 
-<a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a2515283ec7bb96a639830927e8bcd9ecad4ae5dc4c2687a32643069c93d476824">QVI_RUNTIME</a>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#ab0b6ac8d2c288bb01de02ad15c195988">VersionId</a> { <a class="el" href="classibase_1_1_c_qt_version_info_comp.html#ab0b6ac8d2c288bb01de02ad15c195988a373eeda3aa48801dc5c82b4ada608972">VI_QT_VERSION</a> =  QtVersionId
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceibase.html#aa8558752d45c149b381aed5f2230c386">ibase::CVersionInfoCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a64768831a0555e7aa52c327a9df62fe2">BaseClass</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of version.  <a href="classibase_1_1_c_qt_version_info_comp.html#ab0b6ac8d2c288bb01de02ad15c195988">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="namespaceibase.html#a862b03f2a1b9a706b8f8a61aa4d6d1db">ibase::CVersionInfoLoggerCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#abf4ab451ae0e1f4f9651456fa27d4051">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_version_info.html#a4be1aceeb8f7b19bba451c8471ed716b">VersionIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a5f148e744f770d78cb8bb317531a3e73">GetVersionIds</a> () const </td></tr>
@@ -73,18 +75,21 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of version ID.  <a href="#ab97d0f67b3c2cf941e2939feae46463d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#ad422a7091206701ba43202dbc34fe4b1">GetEncodedVersionName</a> (int versionId, quint32 versionNumber) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode version number to human readable form.  <a href="#ad422a7091206701ba43202dbc34fe4b1"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a6b6c826f801c2b8e1a60dd1132f6e1d3">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component representation of the Qt module version. </p>
 
 <p>Definition at line <a class="el" href="_c_qt_version_info_comp_8h_source.html#l00016">16</a> of file <a class="el" href="_c_qt_version_info_comp_8h_source.html">CQtVersionInfoComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a64768831a0555e7aa52c327a9df62fe2"></a><!-- doxytag: member="ibase::CQtVersionInfoComp::BaseClass" ref="a64768831a0555e7aa52c327a9df62fe2" args="" -->
+<a class="anchor" id="abf4ab451ae0e1f4f9651456fa27d4051"></a><!-- doxytag: member="ibase::CQtVersionInfoComp::BaseClass" ref="abf4ab451ae0e1f4f9651456fa27d4051" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="namespaceibase.html#aa8558752d45c149b381aed5f2230c386">ibase::CVersionInfoCompBase</a> <a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a64768831a0555e7aa52c327a9df62fe2">ibase::CQtVersionInfoComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="namespaceibase.html#a862b03f2a1b9a706b8f8a61aa4d6d1db">ibase::CVersionInfoLoggerCompBase</a> <a class="el" href="classibase_1_1_c_qt_version_info_comp.html#abf4ab451ae0e1f4f9651456fa27d4051">ibase::CQtVersionInfoComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -97,26 +102,28 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Enumeration Documentation</h2>
-<a class="anchor" id="a2515283ec7bb96a639830927e8bcd9ec"></a><!-- doxytag: member="ibase::CQtVersionInfoComp::QtVersionIds" ref="a2515283ec7bb96a639830927e8bcd9ec" args="" -->
+<a class="anchor" id="ab0b6ac8d2c288bb01de02ad15c195988"></a><!-- doxytag: member="ibase::CQtVersionInfoComp::VersionId" ref="ab0b6ac8d2c288bb01de02ad15c195988" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a2515283ec7bb96a639830927e8bcd9ec">ibase::CQtVersionInfoComp::QtVersionIds</a></td>
+          <td class="memname">enum <a class="el" href="classibase_1_1_c_qt_version_info_comp.html#ab0b6ac8d2c288bb01de02ad15c195988">ibase::CQtVersionInfoComp::VersionId</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Type of version. </p>
+<p>This is needed for the sake of supporting mutliply separated versions for separated modules. Whole ACF framework lay under single versioning mechanism and has one version number identified by AcfVersionId type ID. User version type ID should be greater or equal UserVersionId value. </p>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a2515283ec7bb96a639830927e8bcd9eca13a35de9fa557878a30d2f88ed62ad74"></a><!-- doxytag: member="QVI_COMPILED" ref="a2515283ec7bb96a639830927e8bcd9eca13a35de9fa557878a30d2f88ed62ad74" args="" -->QVI_COMPILED</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="ab0b6ac8d2c288bb01de02ad15c195988a373eeda3aa48801dc5c82b4ada608972"></a><!-- doxytag: member="VI_QT_VERSION" ref="ab0b6ac8d2c288bb01de02ad15c195988a373eeda3aa48801dc5c82b4ada608972" args="" -->VI_QT_VERSION</em>&nbsp;</td><td>
 <p>Version of Qt framework against the actual module was compiled. </p>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a2515283ec7bb96a639830927e8bcd9ecad4ae5dc4c2687a32643069c93d476824"></a><!-- doxytag: member="QVI_RUNTIME" ref="a2515283ec7bb96a639830927e8bcd9ecad4ae5dc4c2687a32643069c93d476824" args="" -->QVI_RUNTIME</em>&nbsp;</td><td>
-<p>Version of Qt framework registered in the current runtime system. </p>
 </td></tr>
 </table>
 </dd>
 </dl>
+
+<p>Reimplemented from <a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80">iser::IVersionInfo</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_qt_version_info_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_qt_version_info_comp_8h_source.html">CQtVersionInfoComp.h</a>.</p>
 
@@ -176,7 +183,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>, <a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a1fd43aea0f345128752e906f0cdcf90b" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#ab0b6ac8d2c288bb01de02ad15c195988" title="Type of version.">VersionId</a>, <a class="el" href="classibase_1_1_c_qt_version_info_comp.html#a1fd43aea0f345128752e906f0cdcf90b" title="Get version of archived stream for specific versioning type.">GetVersionNumber</a>. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_version_info_base.html#a831d45939a50797947d53bc540021a23">ibase::TVersionInfoBase&lt; BaseComponent &gt;</a>.</p>
 
@@ -234,7 +241,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_version_info.html#a71f9c819b642773712cca9fed1407b80" title="Type of version.">VersionId</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classibase_1_1_c_qt_version_info_comp.html#ab0b6ac8d2c288bb01de02ad15c195988" title="Type of version.">VersionId</a>. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">result</td><td>output version number. For unknown version it will be set to bigg number to indicate of using the newest version. </td></tr>
@@ -244,6 +251,22 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if version is known. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_version_info_base.html#ac7b7e9aba842813dba1ed921aa428827">ibase::TVersionInfoBase&lt; BaseComponent &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b6c826f801c2b8e1a60dd1132f6e1d3"></a><!-- doxytag: member="ibase::CQtVersionInfoComp::OnComponentCreated" ref="a6b6c826f801c2b8e1a60dd1132f6e1d3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ibase::CQtVersionInfoComp::OnComponentCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
