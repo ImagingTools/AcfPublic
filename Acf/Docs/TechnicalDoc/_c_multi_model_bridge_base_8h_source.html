@@ -43,36 +43,36 @@
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00024"></a><a class="code" href="classimod_1_1_c_multi_model_bridge_base.html">00024</a> <span class="keyword">class </span><a class="code" href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan...">CMultiModelBridgeBase</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">IObserver</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 <span class="keyword">public</span>:
-<a name="l00027"></a>00027        <span class="keyword">virtual</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a5cb433ec26669cecf3299af50ccd8cc7">~CMultiModelBridgeBase</a>();
-<a name="l00028"></a>00028 
-<a name="l00032"></a>00032        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a7cabcb3d27b3596194e4d62529e3d51d" title="Get access to connected model with the index index.">GetModelPtr</a>(<span class="keywordtype">int</span> modelIndex) <span class="keyword">const</span>;
-<a name="l00033"></a>00033 
-<a name="l00037"></a>00037        <span class="keywordtype">int</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a67784894e922842a303965bf500a15d6" title="Gets the number of connected models.">GetModelCount</a>() <span class="keyword">const</span>;
-<a name="l00038"></a>00038 
-<a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#aab36864c19a5855839ebc1d5a3f749cf" title="Remove all observed models from this bridge.">EnsureModelsDetached</a>();
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#ac67ff92f141874ee0afa9574ef3a55ad" title="Check if specified model is attached.">IsModelAttached</a>(<span class="keyword">const</span> <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr) <span class="keyword">const</span>;
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#afd3ea384afd89957e618d44dd23d7d67" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a850b47b1cf4470bf62f3b5919795f492" title="This call back function will be called, if an observable object is about to be detached.">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a9b7e27e61bd22e7777c719fb5300291e" title="This function will be called before update of the observer contents occures.">BeforeUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#ad466317234597651d04fdd782d4c073c" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="keyword">private</span>:
-<a name="l00052"></a>00052        <span class="keyword">typedef</span> QVector&lt;imod::IModel*&gt; Models;
+<a name="l00027"></a><a class="code" href="classimod_1_1_c_multi_model_bridge_base.html">00027</a> <span class="keyword">class </span><a class="code" href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan...">CMultiModelBridgeBase</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">IObserver</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable
+<a name="l00028"></a>00028 {
+<a name="l00029"></a>00029 <span class="keyword">public</span>:
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a5cb433ec26669cecf3299af50ccd8cc7">~CMultiModelBridgeBase</a>();
+<a name="l00031"></a>00031 
+<a name="l00035"></a>00035        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a7cabcb3d27b3596194e4d62529e3d51d" title="Get access to connected model with the index index.">GetModelPtr</a>(<span class="keywordtype">int</span> modelIndex) <span class="keyword">const</span>;
+<a name="l00036"></a>00036 
+<a name="l00040"></a>00040        <span class="keywordtype">int</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a67784894e922842a303965bf500a15d6" title="Gets the number of connected models.">GetModelCount</a>() <span class="keyword">const</span>;
+<a name="l00041"></a>00041 
+<a name="l00045"></a>00045        <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#aab36864c19a5855839ebc1d5a3f749cf" title="Remove all observed models from this bridge.">EnsureModelsDetached</a>();
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#ac67ff92f141874ee0afa9574ef3a55ad" title="Check if specified model is attached.">IsModelAttached</a>(<span class="keyword">const</span> <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr) <span class="keyword">const</span>;
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#afd3ea384afd89957e618d44dd23d7d67" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a850b47b1cf4470bf62f3b5919795f492" title="This call back function will be called, if an observable object is about to be detached.">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#a9b7e27e61bd22e7777c719fb5300291e" title="This function will be called before update of the observer contents occures.">BeforeUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_bridge_base.html#ad466317234597651d04fdd782d4c073c" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054        Models m_models;
-<a name="l00055"></a>00055 };
+<a name="l00054"></a>00054 <span class="keyword">private</span>:
+<a name="l00055"></a>00055        <span class="keyword">typedef</span> QVector&lt;imod::IModel*&gt; Models;
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 } <span class="comment">// namespace imod</span>
+<a name="l00057"></a>00057        Models m_models;
+<a name="l00058"></a>00058 };
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="preprocessor">#endif // !imod_CMultiModelBridgeBase_included</span>
-<a name="l00062"></a>00062 <span class="preprocessor"></span>
+<a name="l00061"></a>00061 } <span class="comment">// namespace imod</span>
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif // !imod_CMultiModelBridgeBase_included</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -3855,7 +3855,7 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_line2d_params_gui_comp_8h</filename>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
-    <includes id="_c_interactive_arrow_shape_8h" name="CInteractiveArrowShape.h" local="yes" imported="no">iview/CInteractiveArrowShape.h</includes>
+    <includes id="_c_interactive_line_shape_8h" name="CInteractiveLineShape.h" local="yes" imported="no">iview/CInteractiveLineShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
     <namespace>iqt2d</namespace>
@@ -3864,11 +3864,19 @@
     <name>CPolygonParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_polygon_params_gui_comp_8h</filename>
-    <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
     <includes id="_c_interactive_polygon_shape_8h" name="CInteractivePolygonShape.h" local="yes" imported="no">iview/CInteractivePolygonShape.h</includes>
-    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="_t_polygon_based_params_gui_comp_8h" name="TPolygonBasedParamsGuiComp.h" local="yes" imported="no">iqt2d/TPolygonBasedParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CPolygonParamsGuiComp</class>
-    <class kind="class">iqt2d::CPolygonParamsGuiComp::CPolygonParamsGuiItemDelegate</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPolylineParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_polyline_params_gui_comp_8h</filename>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <includes id="_c_interactive_polyline_shape_8h" name="CInteractivePolylineShape.h" local="yes" imported="no">iview/CInteractivePolylineShape.h</includes>
+    <includes id="_t_polygon_based_params_gui_comp_8h" name="TPolygonBasedParamsGuiComp.h" local="yes" imported="no">iqt2d/TPolygonBasedParamsGuiComp.h</includes>
+    <class kind="class">iqt2d::CPolylineParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -3961,6 +3969,18 @@
     <includes id="iqt2d_8h" name="iqt2d.h" local="yes" imported="no">iqt2d/iqt2d.h</includes>
     <class kind="class">iqt2d::IViewProvider</class>
     <namespace>iview</namespace>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TPolygonBasedParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_t_polygon_based_params_gui_comp_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
+    <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
+    <includes id="_c_signal_blocker_8h" name="CSignalBlocker.h" local="yes" imported="no">iqt/CSignalBlocker.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <class kind="class">iqt2d::TPolygonBasedParamsGuiComp</class>
+    <class kind="class">iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -5798,6 +5818,16 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CInteractiveLineShape.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_interactive_line_shape_8h</filename>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
+    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">iview/CInteractiveShapeBase.h</includes>
+    <class kind="class">iview::CInteractiveLineShape</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CInteractiveParallelogramShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_interactive_parallelogram_shape_8h</filename>
@@ -6404,12 +6434,21 @@
     <name>ModelObserver</name>
     <title>Model/Observer concept</title>
     <filename>group___model_observer.html</filename>
+    <class kind="class">imod::CModelBase</class>
+    <class kind="class">imod::CModelProxy</class>
+    <class kind="class">imod::CMultiModelBridgeBase</class>
+    <class kind="class">imod::CMultiModelDispatcherBase</class>
+    <class kind="class">imod::CMultiModelObserverBase</class>
+    <class kind="class">imod::CSingleModelObserverBase</class>
     <class kind="class">imod::IModel</class>
     <class kind="class">imod::IModelEditor</class>
+    <class kind="class">imod::IModelSelection</class>
     <class kind="class">imod::IObserver</class>
     <class kind="class">imod::TModelWrap</class>
     <class kind="class">imod::TMultiModelObserverBase</class>
     <class kind="class">imod::TSingleModelObserverBase</class>
+    <class kind="class">iqtgui::TDesignerGuiObserverCompBase</class>
+    <class kind="class">iqtgui::TGuiObserverWrap</class>
     <class kind="class">istd::TChangeNotifier</class>
     <namespace>imod</namespace>
   </compound>
@@ -34723,6 +34762,7 @@
     <class kind="class">iqt2d::CImageViewComp</class>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
     <class kind="class">iqt2d::CPolygonParamsGuiComp</class>
+    <class kind="class">iqt2d::CPolylineParamsGuiComp</class>
     <class kind="class">iqt2d::CQuadrangleParamsGuiComp</class>
     <class kind="class">iqt2d::CRectangleParamsGuiComp</class>
     <class kind="class">iqt2d::CSceneBinderComp</class>
@@ -34731,6 +34771,7 @@
     <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <class kind="class">iqt2d::IViewExtender</class>
     <class kind="class">iqt2d::IViewProvider</class>
+    <class kind="class">iqt2d::TPolygonBasedParamsGuiComp</class>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <class kind="class">iqt2d::TViewExtenderCompBase</class>
     <class kind="class">iqt2d::TViewExtenderDelegatorCompWrap</class>
@@ -34938,12 +34979,12 @@
   <compound kind="class">
     <name>iqt2d::CLine2dParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_line2d_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveArrowShape, i2d::CLine2d &gt;</base>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveLineShape, i2d::CLine2d &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveArrowShape, i2d::CLine2d &gt;</type>
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CInteractiveLineShape, i2d::CLine2d &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>a73d52c1e98e6956e87dc19a61a23fa70</anchor>
+      <anchor>aa4ca40f4fcc223d32ff39d942414169d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34985,34 +35026,19 @@
   <compound kind="class">
     <name>iqt2d::CPolygonParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_polygon_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, iview::CInteractivePolygonShape, i2d::CPolygon &gt;</base>
-    <class kind="class">iqt2d::CPolygonParamsGuiComp::CPolygonParamsGuiItemDelegate</class>
+    <base>TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolygonShape, i2d::CPolygon &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, iview::CInteractivePolygonShape, i2d::CPolygon &gt;</type>
+      <type>TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolygonShape, i2d::CPolygon &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>afecf5d814c9a0ae8d424b00e6f7ac516</anchor>
+      <anchor>a66318fc1b8ca029e66e9203dacd61898</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>acd6a4cec8e21bdfea49f2ed83ea3f83f</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnParamsChanged</name>
       <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
       <anchor>aaebf2b248a8892df45e085fd9cc9cf1e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AppendButton_clicked</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>a44f3be4659339da2abde4a67620bf7a3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -35029,44 +35055,38 @@
       <anchor>a35626fa890256d20063edea1edf0179a</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>ac0ee1431b732fdcc42d44a5f0b5a0d83</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>a2bef7af27d2fc9ef440e865c4ddaf29c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>aa50af43cd277bae58fc2bc005821ff5b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>aead52e404fcbfe76de3f4794e84b0da7</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::CPolygonParamsGuiComp::CPolygonParamsGuiItemDelegate</name>
-    <filename>classiqt2d_1_1_c_polygon_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QWidget *</type>
-      <name>createEditor</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</anchorfile>
-      <anchor>a24585d1419a3eee0c38a0cd3a82c9008</anchor>
-      <arglist>(QWidget *parent, const QStyleOptionViewItem &amp;, const QModelIndex &amp;) const </arglist>
+    <name>iqt2d::CPolylineParamsGuiComp</name>
+    <filename>classiqt2d_1_1_c_polyline_params_gui_comp.html</filename>
+    <base>TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</base>
+    <member kind="typedef">
+      <type>TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>abc024ef6eedbbf24307907750f00ba1a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>aa0f60d1baaf1b45244776aa04b94a00f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_InsertButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a9a435fdeea1d464d8154ce44f1866bcb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a610371022bb193ef4377b1e30b2cfa3c</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35525,6 +35545,81 @@
       <anchorfile>classiqt2d_1_1_i_view_provider.html</anchorfile>
       <anchor>aed42332764dc5898f6efc543aded8d54</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::TPolygonBasedParamsGuiComp</name>
+    <filename>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</filename>
+    <templarg>PolygonBasedShape</templarg>
+    <templarg>PolygonBasedModel</templarg>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, PolygonBasedShape, PolygonBasedModel &gt;</base>
+    <class kind="class">iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</class>
+    <member kind="typedef">
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, PolygonBasedShape, PolygonBasedModel &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a51d350a1c29667e93f4e175024635864</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4ad33e128116c9c72a6f4a4a129f5000</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnInsertNode</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a3413ba3b4208a87dc7c46411c4cff84b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnRemoveNode</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aeef86fa57c8ee4832922dce9071f2a8b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a30547f2127be843f4033f1392af6f5a9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aacfff00b7914dc828ed70db3c8406731</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ac8f25845a2a5a53cfada7fe79e7e8965</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a639829115b16468f337578e9eb36855b</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</name>
+    <filename>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>createEditor</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</anchorfile>
+      <anchor>ab407525b1c480ce9fa245d8ffedaa0c4</anchor>
+      <arglist>(QWidget *parent, const QStyleOptionViewItem &amp;, const QModelIndex &amp;) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -47805,6 +47900,7 @@
     <class kind="class">iview::CInteractiveCenterPinShape</class>
     <class kind="class">iview::CInteractiveCircleShape</class>
     <class kind="class">iview::CInteractiveLabelShape</class>
+    <class kind="class">iview::CInteractiveLineShape</class>
     <class kind="class">iview::CInteractiveParallelogramShape</class>
     <class kind="class">iview::CInteractivePerspectiveCalibrationShape</class>
     <class kind="class">iview::CInteractivePinShape</class>
@@ -50076,6 +50172,151 @@
       <anchorfile>classiview_1_1_c_interactive_label_shape.html</anchorfile>
       <anchor>ad80aca2f5432b1907b39f0188219501a</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CInteractiveLineShape</name>
+    <filename>classiview_1_1_c_interactive_line_shape.html</filename>
+    <base>iview::CInteractiveShapeBase</base>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>af8dc4ad1a84b693982ee03cbe48cc3b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CInteractiveLineShape</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>af15165f74f4ce6f4bf71dc11636b6300</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InvalidateBoundingBox</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>af160924eb01abbf7f33bb5662779f306</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a7fc112545dda8ef7a44df08f74314dd7</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a896b1a8633d38e7a2d63c05806083a73</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a2413b53e4149b484819d814483ff4beb</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>aa2596d52aee82e1b4d568a0f63ec2908</anchor>
+      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseMove</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>af3fb85b5a8925543e334ea8fdff3b981</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsurePointsAreValid</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>af931fdebac517dbe0989fe5e243a5b91</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsurePointsAreValid</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a98df2f9aba6c1a1035a63de1f90fc6ac</anchor>
+      <arglist>(const i2d::CLine2d &amp;line) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CalcPoints</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a9865c0aa771df43224ca37dfebdd94b9</anchor>
+      <arglist>(const i2d::CLine2d &amp;line) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ResetPoints</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a5790479dab43d565f1df9544996088b0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>ae5b1830f8a98475a386fc4e9c5775501</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeginLogDrag</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>aa32af64884e7eb0e38fec2c140282e2f</anchor>
+      <arglist>(const i2d::CVector2d &amp;reference)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLogDragPosition</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a8ad0947db996971bdcbc645912aa08b8</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static bool</type>
+      <name>CheckLine</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a1aa8ccd0b649216f82d59b165db6c3e5</anchor>
+      <arglist>(const istd::CIndex2d &amp;firstPoint, const istd::CIndex2d &amp;secondPoint, const istd::CIndex2d &amp;point, double maxDistance)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>m_referencePosition</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>ab07df4c36f3dfd597098bc8b78237853</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_referenceIndex</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>afddd7ff9a9302de4d8dca79eef950fcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::CIndex2d</type>
+      <name>m_points</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>a0069f509d78bce8543b397e9e25fb862</anchor>
+      <arglist>[2]</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_arePointsValid</name>
+      <anchorfile>classiview_1_1_c_interactive_line_shape.html</anchorfile>
+      <anchor>ad76e6fee662f57c83c149e81e8cbe20d</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

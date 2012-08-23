@@ -35,6 +35,8 @@ namespace imod
 
 /**
 	Interface for model selection.	
+
+	\ingroup ModelObserver
 */
 class IModelSelection: virtual public istd::IChangeable
 {

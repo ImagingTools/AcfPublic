@@ -41,39 +41,39 @@
 <a name="l00014"></a>00014 {
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00020"></a><a class="code" href="classimod_1_1_c_multi_model_observer_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classimod_1_1_c_multi_model_observer_base.html" title="Basic implementation of a multiple model observer.">CMultiModelObserverBase</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">IObserver</a>
-<a name="l00021"></a>00021 {
-<a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a>00023        <span class="keyword">virtual</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#abeb03f6db4c68b652dce9307e3d307a3">~CMultiModelObserverBase</a>();
-<a name="l00024"></a>00024 
-<a name="l00028"></a>00028        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a44e4ecc264d102606dd19b954b4b861e" title="Get access to connected model with the index index.">GetModelPtr</a>(<span class="keywordtype">int</span> modelIndex) <span class="keyword">const</span>;
-<a name="l00029"></a>00029 
-<a name="l00033"></a>00033        <span class="keywordtype">int</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a9b9d05f1e8eed6f32dd8458746860cce" title="Gets the number of connected models.">GetModelCount</a>() <span class="keyword">const</span>;
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a92391a2b6e1dcccfc3987e89ace6da32" title="Check if specified model is attached.">IsModelAttached</a>(<span class="keyword">const</span> <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr) <span class="keyword">const</span>;
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#af6718a19003715d45e9467aba8ea7e7b" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr);
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a217228f7a135b0f1813c2fa4f7629475" title="This call back function will be called, if an observable object is about to be detached.">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr);
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a22234401b6906764d85a3a9b86f21686" title="This function will be called before update of the observer contents occures.">BeforeUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a52d553e4c021cd3022ca5beac156df1f" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="keyword">protected</span>:
-<a name="l00043"></a>00043        <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a6bfa8b39bc6680c04dbfc20966257289">EnsureModelsDetached</a>();
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a4fedb2ca9c97485f0688e99d072610df">OnUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00022"></a><a class="code" href="classimod_1_1_c_multi_model_observer_base.html">00022</a> <span class="keyword">class </span><a class="code" href="classimod_1_1_c_multi_model_observer_base.html" title="Basic implementation of a multiple model observer.">CMultiModelObserverBase</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">IObserver</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024 <span class="keyword">public</span>:
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#abeb03f6db4c68b652dce9307e3d307a3">~CMultiModelObserverBase</a>();
+<a name="l00026"></a>00026 
+<a name="l00030"></a>00030        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a44e4ecc264d102606dd19b954b4b861e" title="Get access to connected model with the index index.">GetModelPtr</a>(<span class="keywordtype">int</span> modelIndex) <span class="keyword">const</span>;
+<a name="l00031"></a>00031 
+<a name="l00035"></a>00035        <span class="keywordtype">int</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a9b9d05f1e8eed6f32dd8458746860cce" title="Gets the number of connected models.">GetModelCount</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a92391a2b6e1dcccfc3987e89ace6da32" title="Check if specified model is attached.">IsModelAttached</a>(<span class="keyword">const</span> <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr) <span class="keyword">const</span>;
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#af6718a19003715d45e9467aba8ea7e7b" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr);
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a217228f7a135b0f1813c2fa4f7629475" title="This call back function will be called, if an observable object is about to be detached.">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr);
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a22234401b6906764d85a3a9b86f21686" title="This function will be called before update of the observer contents occures.">BeforeUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a52d553e4c021cd3022ca5beac156df1f" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="keyword">protected</span>:
+<a name="l00045"></a>00045        <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a6bfa8b39bc6680c04dbfc20966257289">EnsureModelsDetached</a>();
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">private</span>:
-<a name="l00048"></a>00048        <span class="keyword">typedef</span> QVector&lt;IModel*&gt; Models;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        Models m_models;
-<a name="l00051"></a>00051 };
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 } <span class="comment">// namespace imod</span>
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimod_1_1_c_multi_model_observer_base.html#a4fedb2ca9c97485f0688e99d072610df">OnUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="keyword">private</span>:
+<a name="l00050"></a>00050        <span class="keyword">typedef</span> QVector&lt;IModel*&gt; Models;
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        Models m_models;
+<a name="l00053"></a>00053 };
+<a name="l00054"></a>00054 
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="preprocessor">#endif // !imod_CMultiModelObserverBase_included</span>
-<a name="l00058"></a>00058 <span class="preprocessor"></span>
+<a name="l00056"></a>00056 } <span class="comment">// namespace imod</span>
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="preprocessor">#endif // !imod_CMultiModelObserverBase_included</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
