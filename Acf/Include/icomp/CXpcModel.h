@@ -45,17 +45,22 @@ namespace icomp
 	void SetPackageDirsList(const QStringList& list);
 	const QStringList& GetPackagesList() const;
 	void SetPackagesList(const QStringList& list);
+	const QStringList& GetRegistryFilesList() const;
+	void SetRegistryFilesList(const QStringList& list);
 
 	// program interface (for loading XPC files)
 	int GetNumConfFiles() const;
 	int GetNumPackageDirs() const;
 	int GetNumPackages() const;
+	int GetNumRegistryFiles() const;
 	QString GetConfFile(int) const;
 	QString GetPackageDir(int) const;
 	QString GetPackage(int) const;
+	QString GetRegistryFile(int) const;
 	void AddConfFile(const QString& path);
 	void AddPackageDir(const QString& path);
 	void AddPackage(const QString& path);
+	void AddRegistryFile(const QString& path);
 
 	// iser::ISerializable interface
 	bool Serialize(iser::IArchive& archive);
@@ -64,6 +69,7 @@ namespace icomp
 	QStringList m_confFiles;
 	QStringList m_packageDirs;
 	QStringList m_packages;
+	QStringList m_registryFiles;
     };
 
 

@@ -55,7 +55,8 @@ public:
 	I_BEGIN_COMPONENT(CXpcEditorComp);
 		I_ASSIGN(m_docMgrPtr, "DocumentManager", "An object to provide current document file name, to handle relative paths", true, "DocumentManager");
 		I_ASSIGN(m_configFileTypeInfo, "ConfigFileType", "File type description for filtering configuration files, ie. XPC", false, "ConfigFileType");
-		I_ASSIGN(m_packageFileTypeInfo, "PackageFileType", "File type description for filtering package files, ie. ARP", false, "PackageFileType");
+		I_ASSIGN(m_packageFileTypeInfo, "PackageFileType", "File type description for filtering package files, ie. ARP", false, "PackageFileType");	
+		I_ASSIGN(m_registryFileTypeInfo, "RegistryFileType", "File type description for filtering registry files, ie. ARX", false, "RegistryFileType");	
 	I_END_COMPONENT;
 
 	CXpcEditorComp();
@@ -74,12 +75,15 @@ private Q_SLOTS:
 	void on_ConfigPathAddButton_clicked();
 	void on_PackageDirAddButton_clicked();
 	void on_PackagePathAddButton_clicked();
+	void on_RegistryPathAddButton_clicked();
 	void on_ConfigPathRemoveButton_clicked();
 	void on_PackageDirRemoveButton_clicked();
 	void on_PackagePathRemoveButton_clicked();
+	void on_RegistryPathRemoveButton_clicked();
 	void on_ConfigPathBrowseButton_clicked();
 	void on_PackageDirBrowseButton_clicked();
 	void on_PackagePathBrowseButton_clicked();
+	void on_RegistryPathBrowseButton_clicked();
 
 	// undo manager support
 	void OnDoUpdateModel();
@@ -88,6 +92,7 @@ private Q_SLOTS:
 	void OnConfigPathViewSelected(const QItemSelection& selected, const QItemSelection& deselected);
 	void OnPackageDirViewSelected(const QItemSelection& selected, const QItemSelection& deselected);
 	void OnPackagePathViewSelected(const QItemSelection& selected, const QItemSelection& deselected);
+	void OnRegistryPathViewSelected(const QItemSelection& selected, const QItemSelection& deselected);
 
 	// navigation
 	void on_ConfigPathView_doubleClicked(const QModelIndex& index);
@@ -96,15 +101,19 @@ private Q_SLOTS:
 	void on_ConfigPathEdit_editingFinished();
 	void on_PackageDirEdit_editingFinished();
 	void on_PackagePathEdit_editingFinished();
+	void on_RegistryPathEdit_editingFinished();
+
 
 	// maintain selection on lost focus
 	void on_ConfigPathEdit_selectionChanged();
 	void on_PackageDirEdit_selectionChanged();
 	void on_PackagePathEdit_selectionChanged();
+	void on_RegistryPathEdit_selectionChanged();
 
 	void on_ConfigPathEdit_cursorPositionChanged(int oldPosition, int newPosition);
 	void on_PackageDirEdit_cursorPositionChanged(int oldPosition, int newPosition);
 	void on_PackagePathEdit_cursorPositionChanged(int oldPosition, int newPosition);
+	void on_RegistryPathEdit_cursorPositionChanged(int oldPosition, int newPosition);
 
 	void OnInsertVariable(QAction* action);
 
@@ -117,8 +126,9 @@ private:
 		S_CONFIG_PATH = 0,
 		S_PACKAGE_DIR,
 		S_PACKAGE_PATH,
+		S_REGISTRY_PATH,
 		S_FIRST = S_CONFIG_PATH,
-		S_LAST = S_PACKAGE_PATH
+		S_LAST = S_REGISTRY_PATH
 	};
 
 	/**
@@ -153,7 +163,7 @@ private:
 	static void MaintainLineEditSelection(QLineEdit* lineEdit);
 
 	/** MVC models to handle data lists for tables */
-	QStringListModel* m_guiModel[3];
+	QStringListModel* m_guiModel[4];
 
 	QMenu m_startVariableMenus[S_LAST + 1];
 	QMenu m_variableMenus[S_LAST + 1];
@@ -170,7 +180,8 @@ private:
 
 	I_REF(idoc::IDocumentManager, m_docMgrPtr);
 	I_REF(iser::IFileTypeInfo, m_configFileTypeInfo);
-	I_REF(iser::IFileTypeInfo, m_packageFileTypeInfo);
+	I_REF(iser::IFileTypeInfo, m_packageFileTypeInfo);	
+	I_REF(iser::IFileTypeInfo, m_registryFileTypeInfo);
 };
 
 

@@ -30,6 +30,7 @@
 // ACF includes
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
+#include "iser/IVersionInfo.h"
 
 
 namespace icomp
@@ -42,6 +43,7 @@ bool CXpcModel::Serialize(iser::IArchive& archive)
     iser::CArchiveTag packageDirsTag("PackageDirs", "List of package directories", true);
     iser::CArchiveTag dirPathTag("Dir", "List of package directories", true);
     iser::CArchiveTag packageFilesTag("PackageFiles", "List of package files", true);
+	iser::CArchiveTag registryFilesTag("RegistryFiles", "List of registry files", true);
     iser::CArchiveTag filePathTag("FilePath", "Path of single file", true);
 
     bool retVal = true;
@@ -52,6 +54,7 @@ bool CXpcModel::Serialize(iser::IArchive& archive)
 	m_confFiles.clear();
 	m_packageDirs.clear();
 	m_packages.clear();
+	m_registryFiles.clear();
 	}
 	else{
 		configFilesCount = m_confFiles.size();
@@ -134,6 +137,42 @@ bool CXpcModel::Serialize(iser::IArchive& archive)
 
     retVal = retVal && archive.EndTag(packageFilesTag);
 
+	//Checking version of configuration file for registry files support
+	quint32 versionNumber = 0;
+	const iser::IVersionInfo& versionInfo = archive.GetVersionInfo();
+	versionInfo.GetVersionNumber(0, versionNumber);
+
+	if (versionNumber > 2473){
+		//Registry files available
+
+		int registryFilesCount = 0;
+		if (archive.IsStoring()) {
+			registryFilesCount = m_registryFiles.size();
+		}
+
+		retVal = retVal && archive.BeginMultiTag(registryFilesTag, filePathTag, registryFilesCount);
+
+		if (!retVal) {
+			return false;
+		}
+
+		for (int i = 0; i < registryFilesCount; ++i) {
+			retVal = retVal && archive.BeginTag(filePathTag);
+			QString filePath;
+			if (archive.IsStoring()) {
+				filePath = m_registryFiles[i];
+			}
+			retVal = retVal && archive.Process(filePath);
+			if (retVal && !archive.IsStoring()) {
+				m_registryFiles.push_back(filePath);
+			}
+
+			retVal = retVal && archive.EndTag(filePathTag);
+		}
+
+		retVal = retVal && archive.EndTag(registryFilesTag);
+	}	
+
     return retVal;
 }
 
@@ -173,6 +212,17 @@ void CXpcModel::SetPackagesList(const QStringList& list)
     m_packages = list;
 }
 
+const QStringList& CXpcModel::GetRegistryFilesList() const
+{
+	return m_registryFiles;
+}
+
+
+void CXpcModel::SetRegistryFilesList(const QStringList& list)
+{
+    m_registryFiles = list;
+}
+
 
 int CXpcModel::GetNumConfFiles() const
 {
@@ -189,6 +239,11 @@ int CXpcModel::GetNumPackageDirs() const
 int CXpcModel::GetNumPackages() const
 {
     return m_packages.size();
+}
+
+int CXpcModel::GetNumRegistryFiles() const
+{
+	return m_registryFiles.size();
 }
 
 
@@ -219,6 +274,15 @@ QString CXpcModel::GetPackage(int index) const
     }
 }
 
+QString CXpcModel::GetRegistryFile(int index) const
+{
+    if (index < 0 || index >= GetNumRegistryFiles()) {
+	return "";
+    } else {
+	return m_registryFiles[index];
+    }
+}
+
 
 void CXpcModel::AddConfFile(const QString& path)
 {
@@ -235,6 +299,11 @@ void CXpcModel::AddPackageDir(const QString& path)
 void CXpcModel::AddPackage(const QString& path)
 {
     m_packages.push_back(path);
+}
+
+void CXpcModel::AddRegistryFile(const QString& path)
+{
+	m_registryFiles.push_back(path);
 }
 
 
