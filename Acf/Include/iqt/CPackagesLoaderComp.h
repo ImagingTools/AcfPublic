@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #ifndef iqt_CPackagesLoaderComp_included
@@ -52,17 +52,16 @@ namespace iqt
 
 /**
 	Loads component packages from dynamic link libraries.
- */
-class CPackagesLoaderComp :
-public QObject,
-public ibase::CLoggerComponentBase,
-public icomp::CEnvironmentManagerBase,
-virtual public icomp::IRegistryLoader
+*/
+class CPackagesLoaderComp:
+			public QObject,
+			public ibase::CLoggerComponentBase,
+			public icomp::CEnvironmentManagerBase,
+			virtual public icomp::IRegistryLoader
 {
 public:
 	typedef ibase::CLoggerComponentBase BaseClass;
 	typedef icomp::CEnvironmentManagerBase BaseClass2;
-
 
 	enum MessageId
 	{
@@ -71,22 +70,18 @@ public:
 	};
 
 	I_BEGIN_COMPONENT(CPackagesLoaderComp);
-	I_REGISTER_INTERFACE(icomp::IRegistryLoader);
-	I_REGISTER_INTERFACE(icomp::IComponentEnvironmentManager);
-	I_REGISTER_INTERFACE(icomp::IComponentStaticInfo);
-	I_REGISTER_INTERFACE(icomp::IPackagesManager);
-	I_REGISTER_INTERFACE(icomp::IRegistriesManager);
-	I_REGISTER_INTERFACE(icomp::IMetaInfoManager);
-	I_ASSIGN(m_registryLoaderCompPtr, "RegistryLoader", "Loader used to read registry", true, "RegistryLoader");
-	I_ASSIGN(m_configFilePathCompPtr, "ConfigFilePath", "Path of packages configuration file will be loaded, if enabled", false, "ConfigFilePath");
+		I_REGISTER_INTERFACE(icomp::IRegistryLoader);
+		I_REGISTER_INTERFACE(icomp::IComponentEnvironmentManager);
+		I_REGISTER_INTERFACE(icomp::IComponentStaticInfo);
+		I_REGISTER_INTERFACE(icomp::IPackagesManager);
+		I_REGISTER_INTERFACE(icomp::IRegistriesManager);
+		I_REGISTER_INTERFACE(icomp::IMetaInfoManager);
+		I_ASSIGN(m_registryLoaderCompPtr, "RegistryLoader", "Loader used to read registry", true, "RegistryLoader");
+		I_ASSIGN(m_configFilePathCompPtr, "ConfigFilePath", "Path of packages configuration file will be loaded, if enabled", false, "ConfigFilePath");
 	I_END_COMPONENT;
 
 	// reimplemented (icomp::IRegistryLoader)
 	virtual const icomp::IRegistry* GetRegistryFromFile(const QString& path) const;
-	/** Returns a pointer to a registry loaded from active arx file, or null.
-	 Can be used by acf.exe to load default file.
-	 */
-	const icomp::IRegistry* GetActiveRegistry() const;
 
 	// reimplemented (icomp::IComponentEnvironmentManager)
 	virtual QString GetConfigFilePath() const;
@@ -106,15 +101,7 @@ public:
 	virtual void OnComponentCreated();
 
 protected:
-
-	/** 
-	 Internal method used by GetActiveRegistry()
-	 
-	 \todo implement 
-	 */
-	QString GetActiveRegistryFile() const;
-
-	class LogingRegistry : public icomp::CRegistry
+	class LogingRegistry: public icomp::CRegistry
 	{
 	public:
 		typedef icomp::CRegistry BaseClass;
@@ -123,20 +110,14 @@ protected:
 
 		// reimplemented (icomp::IRegistry)
 		virtual ElementInfo* InsertElementInfo(
-				const QByteArray& elementId,
-				const icomp::CComponentAddress& address,
-				bool ensureElementCreated = true);
+					const QByteArray& elementId,
+					const icomp::CComponentAddress& address,
+					bool ensureElementCreated = true);
 
 	private:
 		CPackagesLoaderComp& m_parent;
 	};
 
-	/** 
-	 Store a registry (arx) file name 
-	 
-	 \todo implement 
-	 */
-	virtual bool RegisterRegistryFile(const QString& file);
 	virtual bool RegisterPackageFile(const QString& file);
 	virtual bool RegisterPackagesDir(const QString& subDir);
 	virtual bool LoadConfigFile(const QString& configFile);
@@ -151,7 +132,6 @@ private:
 
 	DllCacheMap m_dllCacheMap;
 
-
 	struct CompositePackageInfo
 	{
 		istd::TDelPtr<icomp::CCompositePackageStaticInfo> staticInfoPtr;
@@ -159,13 +139,13 @@ private:
 	};
 	/**
 		Map package ID to package file path.
-	 */
+	*/
 	typedef QMap<QByteArray, QString> RealPackagesMap;
 	RealPackagesMap m_realPackagesMap;
 
 	/**
 		Map package ID to structure CompositePackageInfo.
-	 */
+	*/
 	typedef QMap<QByteArray, CompositePackageInfo> CompositePackagesMap;
 	CompositePackagesMap m_compositePackagesMap;
 
@@ -178,8 +158,7 @@ private:
 
 	/**
 		List of pathes.
-	 */
-	QList<QString>m_registryFileNames;
+	*/
 	typedef QSet<QString> PathList;
 	mutable PathList m_usedFilesList;
 

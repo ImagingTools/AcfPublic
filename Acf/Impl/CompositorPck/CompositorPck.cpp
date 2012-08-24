@@ -114,6 +114,10 @@ I_EXPORT_COMPONENT(
 			"Display a GUI for editing XPC configurations",
 			IM_TAG("XPC GUI"));
 
+I_EXPORT_COMPONENT(
+			SceneProvider,
+			"Obsolete scene provider used in compositor only",
+			"Scene Provider Extender Display Console" IM_TAG("Deprecated"));
 
 
 } // namespace CompositorPck
