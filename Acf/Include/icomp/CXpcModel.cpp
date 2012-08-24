@@ -141,8 +141,8 @@ bool CXpcModel::Serialize(iser::IArchive& archive)
 	quint32 versionNumber = 0;
 	const iser::IVersionInfo& versionInfo = archive.GetVersionInfo();
 	versionInfo.GetVersionNumber(0, versionNumber);
-
-	if (versionNumber > 2473){
+	
+	if ((signed int)versionNumber > 2473){  // cast to signed because of error value (-1)
 		//Registry files available
 
 		int registryFilesCount = 0;
