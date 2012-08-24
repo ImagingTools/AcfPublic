@@ -1,23 +1,23 @@
 /********************************************************************************
-**
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
-**
-********************************************************************************/
+ **
+ **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+ **
+ **	This file is part of the ACF Toolkit.
+ **
+ **	This file may be used under the terms of the GNU Lesser
+ **	General Public License version 2.1 as published by the Free Software
+ **	Foundation and appearing in the file LicenseLGPL.txt included in the
+ **	packaging of this file.  Please review the following information to
+ **	ensure the GNU Lesser General Public License version 2.1 requirements
+ **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ **
+ **	If you are unsure which license is appropriate for your use, please
+ **	contact us at info@imagingtools.de.
+ **
+ ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+ **	by Skype to ACF_infoline for further information about the ACF.
+ **
+ ********************************************************************************/
 
 
 #include "icomp/CXpcModel.h"
@@ -39,131 +39,130 @@ namespace icomp
 
 bool CXpcModel::Serialize(iser::IArchive& archive)
 {
-    iser::CArchiveTag configFilesTag("ConfigFiles", "List of included config files", true);
-    iser::CArchiveTag packageDirsTag("PackageDirs", "List of package directories", true);
-    iser::CArchiveTag dirPathTag("Dir", "List of package directories", true);
-    iser::CArchiveTag packageFilesTag("PackageFiles", "List of package files", true);
+	iser::CArchiveTag configFilesTag("ConfigFiles", "List of included config files", true);
+	iser::CArchiveTag packageDirsTag("PackageDirs", "List of package directories", true);
+	iser::CArchiveTag dirPathTag("Dir", "List of package directories", true);
+	iser::CArchiveTag packageFilesTag("PackageFiles", "List of package files", true);
 	iser::CArchiveTag registryFilesTag("RegistryFiles", "List of registry files", true);
-    iser::CArchiveTag filePathTag("FilePath", "Path of single file", true);
+	iser::CArchiveTag filePathTag("FilePath", "Path of single file", true);
 
-    bool retVal = true;
+	bool retVal = true;
 
-    int configFilesCount = 0;
+	int configFilesCount = 0;
 
-    if (!archive.IsStoring()) {
-	m_confFiles.clear();
-	m_packageDirs.clear();
-	m_packages.clear();
-	m_registryFiles.clear();
-	}
-	else{
+	if (!archive.IsStoring()){
+		m_confFiles.clear();
+		m_packageDirs.clear();
+		m_packages.clear();
+		m_registryFiles.clear();
+	} else{
 		configFilesCount = m_confFiles.size();
 	}
 	retVal = retVal && archive.BeginMultiTag(configFilesTag, filePathTag, configFilesCount);
 
-	if (!retVal) {
+	if (!retVal){
 		return false;
 	}
 
 	for (int i = 0; i < configFilesCount; ++i){
 		retVal = retVal && archive.BeginTag(filePathTag);
 		QString filePath;
-		if (archive.IsStoring()) {
-		    filePath = m_confFiles[i];
+		if (archive.IsStoring()){
+			filePath = m_confFiles[i];
 		}
 		retVal = retVal && archive.Process(filePath);
-		if (retVal && !archive.IsStoring()) {
-		    m_confFiles.push_back(filePath);
+		if (retVal && !archive.IsStoring()){
+			m_confFiles.push_back(filePath);
 		}
-	
+
 		retVal = retVal && archive.EndTag(filePathTag);
 	}
 
 	retVal = retVal && archive.EndTag(configFilesTag);
 
-    int dirsCount = 0;
-    if (archive.IsStoring()) {
-	dirsCount = m_packageDirs.size();
-    }
-
-    retVal = retVal && archive.BeginMultiTag(packageDirsTag, dirPathTag, dirsCount);
-
-    if (!retVal) {
-	return false;
-    }
-
-    for (int i = 0; i < dirsCount; ++i) {
-	retVal = retVal && archive.BeginTag(dirPathTag);
-	QString dirPath;
-	if (archive.IsStoring()) {
-	    dirPath = m_packageDirs[i];
-	}
-	retVal = retVal && archive.Process(dirPath);
-	if (retVal && !archive.IsStoring()) {
-	    m_packageDirs.push_back(dirPath);
+	int dirsCount = 0;
+	if (archive.IsStoring()){
+		dirsCount = m_packageDirs.size();
 	}
 
-	retVal = retVal && archive.EndTag(dirPathTag);
-    }
+	retVal = retVal && archive.BeginMultiTag(packageDirsTag, dirPathTag, dirsCount);
 
-    retVal = retVal && archive.EndTag(packageDirsTag);
-
-    int filesCount = 0;
-    if (!archive.IsStoring()) {
-	filesCount = m_packages.size();
-    }
-
-    retVal = retVal && archive.BeginMultiTag(packageFilesTag, filePathTag, filesCount);
-
-    if (!retVal) {
-	return false;
-    }
-
-    for (int i = 0; i < filesCount; ++i) {
-	retVal = retVal && archive.BeginTag(filePathTag);
-	QString filePath;
-	if (archive.IsStoring()) {
-	    filePath = m_packages[i];
-	}
-	retVal = retVal && archive.Process(filePath);
-	if (retVal) {
-	    if (!archive.IsStoring()) {
-		m_packages.push_back(filePath);
-	    }
+	if (!retVal){
+		return false;
 	}
 
-	retVal = retVal && archive.EndTag(filePathTag);
-    }
+	for (int i = 0; i < dirsCount; ++i){
+		retVal = retVal && archive.BeginTag(dirPathTag);
+		QString dirPath;
+		if (archive.IsStoring()){
+			dirPath = m_packageDirs[i];
+		}
+		retVal = retVal && archive.Process(dirPath);
+		if (retVal && !archive.IsStoring()){
+			m_packageDirs.push_back(dirPath);
+		}
 
-    retVal = retVal && archive.EndTag(packageFilesTag);
+		retVal = retVal && archive.EndTag(dirPathTag);
+	}
+
+	retVal = retVal && archive.EndTag(packageDirsTag);
+
+	int filesCount = 0;
+	if (archive.IsStoring()){
+		filesCount = m_packages.size();
+	}
+
+	retVal = retVal && archive.BeginMultiTag(packageFilesTag, filePathTag, filesCount);
+
+	if (!retVal){
+		return false;
+	}
+
+	for (int i = 0; i < filesCount; ++i){
+		retVal = retVal && archive.BeginTag(filePathTag);
+		QString filePath;
+		if (archive.IsStoring()){
+			filePath = m_packages[i];
+		}
+		retVal = retVal && archive.Process(filePath);
+		if (retVal){
+			if (!archive.IsStoring()){
+				m_packages.push_back(filePath);
+			}
+		}
+
+		retVal = retVal && archive.EndTag(filePathTag);
+	}
+
+	retVal = retVal && archive.EndTag(packageFilesTag);
 
 	//Checking version of configuration file for registry files support
 	quint32 versionNumber = 0;
 	const iser::IVersionInfo& versionInfo = archive.GetVersionInfo();
 	versionInfo.GetVersionNumber(0, versionNumber);
-	
-	if ((signed int)versionNumber > 2473){  // cast to signed because of error value (-1)
+
+	if ((signed int) versionNumber > 2473){ // cast to signed because of error value (-1)
 		//Registry files available
 
 		int registryFilesCount = 0;
-		if (archive.IsStoring()) {
+		if (archive.IsStoring()){
 			registryFilesCount = m_registryFiles.size();
 		}
 
 		retVal = retVal && archive.BeginMultiTag(registryFilesTag, filePathTag, registryFilesCount);
 
-		if (!retVal) {
+		if (!retVal){
 			return false;
 		}
 
-		for (int i = 0; i < registryFilesCount; ++i) {
+		for (int i = 0; i < registryFilesCount; ++i){
 			retVal = retVal && archive.BeginTag(filePathTag);
 			QString filePath;
-			if (archive.IsStoring()) {
+			if (archive.IsStoring()){
 				filePath = m_registryFiles[i];
 			}
 			retVal = retVal && archive.Process(filePath);
-			if (retVal && !archive.IsStoring()) {
+			if (retVal && !archive.IsStoring()){
 				m_registryFiles.push_back(filePath);
 			}
 
@@ -171,46 +170,48 @@ bool CXpcModel::Serialize(iser::IArchive& archive)
 		}
 
 		retVal = retVal && archive.EndTag(registryFilesTag);
-	}	
+	}
 
-    return retVal;
+	return retVal;
 }
 
 
 const QStringList& CXpcModel::GetConfFilesList() const
 {
-    return m_confFiles;
+	return m_confFiles;
 }
 
 
 void CXpcModel::SetConfFilesList(const QStringList& list)
 {
-    m_confFiles = list;
+	m_confFiles = list;
 }
 
 
 const QStringList& CXpcModel::GetPackageDirsList() const
 {
-    return m_packageDirs;
+	return m_packageDirs;
 }
 
 
 void CXpcModel::SetPackageDirsList(const QStringList& list)
 {
-    m_packageDirs = list;
+	m_packageDirs = list;
 }
 
 
 const QStringList& CXpcModel::GetPackagesList() const
 {
-    return m_packages;
+	return m_packages;
 }
 
 
 void CXpcModel::SetPackagesList(const QStringList& list)
 {
-    m_packages = list;
+	m_packages = list;
+	printf("m_packages.size(): %d\n", m_packages.size());
 }
+
 
 const QStringList& CXpcModel::GetRegistryFilesList() const
 {
@@ -220,26 +221,27 @@ const QStringList& CXpcModel::GetRegistryFilesList() const
 
 void CXpcModel::SetRegistryFilesList(const QStringList& list)
 {
-    m_registryFiles = list;
+	m_registryFiles = list;
 }
 
 
 int CXpcModel::GetNumConfFiles() const
 {
-    return m_confFiles.size();
+	return m_confFiles.size();
 }
 
 
 int CXpcModel::GetNumPackageDirs() const
 {
-    return m_packageDirs.size();
+	return m_packageDirs.size();
 }
 
 
 int CXpcModel::GetNumPackages() const
 {
-    return m_packages.size();
+	return m_packages.size();
 }
+
 
 int CXpcModel::GetNumRegistryFiles() const
 {
@@ -249,57 +251,59 @@ int CXpcModel::GetNumRegistryFiles() const
 
 QString CXpcModel::GetConfFile(int index) const
 {
-    if (index < 0 || index >= GetNumConfFiles())
-	return "";
-    else
-	return m_confFiles[index];
+	if (index < 0 || index >= GetNumConfFiles())
+		return "";
+	else
+		return m_confFiles[index];
 }
 
 
 QString CXpcModel::GetPackageDir(int index) const
 {
-    if (index < 0 || index >= GetNumPackageDirs())
-	return "";
-    else
-	return m_packageDirs[index];
+	if (index < 0 || index >= GetNumPackageDirs())
+		return "";
+	else
+		return m_packageDirs[index];
 }
 
 
 QString CXpcModel::GetPackage(int index) const
 {
-    if (index < 0 || index >= GetNumPackages()) {
-	return "";
-    } else {
-	return m_packages[index];
-    }
+	if (index < 0 || index >= GetNumPackages()){
+		return "";
+	} else{
+		return m_packages[index];
+	}
 }
+
 
 QString CXpcModel::GetRegistryFile(int index) const
 {
-    if (index < 0 || index >= GetNumRegistryFiles()) {
-	return "";
-    } else {
-	return m_registryFiles[index];
-    }
+	if (index < 0 || index >= GetNumRegistryFiles()){
+		return "";
+	} else{
+		return m_registryFiles[index];
+	}
 }
 
 
 void CXpcModel::AddConfFile(const QString& path)
 {
-    m_confFiles.push_back(path);
+	m_confFiles.push_back(path);
 }
 
 
 void CXpcModel::AddPackageDir(const QString& path)
 {
-    m_packageDirs.push_back(path);
+	m_packageDirs.push_back(path);
 }
 
 
 void CXpcModel::AddPackage(const QString& path)
 {
-    m_packages.push_back(path);
+	m_packages.push_back(path);
 }
+
 
 void CXpcModel::AddRegistryFile(const QString& path)
 {

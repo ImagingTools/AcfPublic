@@ -251,8 +251,8 @@ void CXpcEditorComp::PickFileNameForLineEdit(
 	// try to access IDocumentManager and ask it for the file name
 	QDir baseDir = GetCurrentDocumentDir();
 
-	QString unrolledPath = iqt::CSystem::GetEnrolledPath(lineEdit.text());
-	QFileInfo fileInfo(baseDir.absoluteFilePath(unrolledPath));
+	QString unrolledPath = iqt::CSystem::GetAbsolutePath(lineEdit.text(), baseDir);
+	QFileInfo fileInfo(unrolledPath);
 	dialog.setDirectory(fileInfo.absoluteDir());
 
 	if (dialog.exec() == QDialog::Accepted){
@@ -283,7 +283,7 @@ void CXpcEditorComp::on_PackageDirBrowseButton_clicked()
 
 void CXpcEditorComp::on_PackagePathBrowseButton_clicked()
 {
-	PickFileNameForLineEdit(*PackagePathEdit, false, m_packageFileTypeInfo.GetPtr());
+	PickFileNameForLineEdit(*PackagePathEdit, true, m_packageFileTypeInfo.GetPtr());
 
 	on_PackagePathEdit_editingFinished();
 }
