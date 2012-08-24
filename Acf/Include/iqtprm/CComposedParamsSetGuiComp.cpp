@@ -1,23 +1,23 @@
 /********************************************************************************
-**
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
-**
-********************************************************************************/
+ **
+ **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+ **
+ **	This file is part of the ACF Toolkit.
+ **
+ **	This file may be used under the terms of the GNU Lesser
+ **	General Public License version 2.1 as published by the Free Software
+ **	Foundation and appearing in the file LicenseLGPL.txt included in the
+ **	packaging of this file.  Please review the following information to
+ **	ensure the GNU Lesser General Public License version 2.1 requirements
+ **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ **
+ **	If you are unsure which license is appropriate for your use, please
+ **	contact us at info@imagingtools.de.
+ **
+ ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+ **	by Skype to ACF_infoline for further information about the ACF.
+ **
+ ********************************************************************************/
 
 
 #include "iqtprm/CComposedParamsSetGuiComp.h"
@@ -46,13 +46,15 @@
 namespace iqtprm
 {
 
+
 CComposedParamsSetGuiComp::CComposedParamsSetGuiComp()
-:	m_currentGuiIndex(-1)
+: m_currentGuiIndex(-1), m_guiContainer(NULL)
 {
 }
 
 
 // reimplemented (imod::IModelEditor)
+
 
 void CComposedParamsSetGuiComp::UpdateModel() const
 {
@@ -69,7 +71,7 @@ void CComposedParamsSetGuiComp::UpdateModel() const
 		if (m_connectedEditors.find(editorPtr) == m_connectedEditors.end()){
 			continue;
 		}
-		I_ASSERT(editorPtr != NULL);	// only not NULL editors are stored in m_connectedEditors
+		I_ASSERT(editorPtr != NULL); // only not NULL editors are stored in m_connectedEditors
 
 		editorPtr->UpdateModel();
 	}
@@ -101,6 +103,7 @@ void CComposedParamsSetGuiComp::UpdateEditor(int updateFlags)
 
 // reimplemented (imod::IObserver)
 
+
 bool CComposedParamsSetGuiComp::OnAttached(imod::IModel* modelPtr)
 {
 	if (!BaseClass::OnAttached(modelPtr)){
@@ -110,13 +113,18 @@ bool CComposedParamsSetGuiComp::OnAttached(imod::IModel* modelPtr)
 	iprm::IParamsSet* paramsSetPtr = GetObjectPtr();
 	I_ASSERT(paramsSetPtr != NULL);
 
+	int guiMode = *m_designTypeAttrPtr;
+
+	// disable container signalling
+	m_guiContainer->blockSignals(true);
+
 	int elementsCount = qMin(m_observersCompPtr.GetCount(), m_idsAttrPtr.GetCount());
 	for (int i = 0; i < elementsCount; ++i){
 		const QByteArray& paramId = m_idsAttrPtr[i];
 
 		imod::IModel* parameterModelPtr = GetModelPtr();
 		if (!paramId.isEmpty() && (paramId != "*")){
-			parameterModelPtr = dynamic_cast<imod::IModel*>(paramsSetPtr->GetEditableParameter(paramId));
+			parameterModelPtr = dynamic_cast<imod::IModel*> (paramsSetPtr->GetEditableParameter(paramId));
 		}
 
 		imod::IObserver* observerPtr = m_observersCompPtr[i];
@@ -127,7 +135,95 @@ bool CComposedParamsSetGuiComp::OnAttached(imod::IModel* modelPtr)
 				m_connectedEditors.insert(editorPtr);
 			}
 		}
+
+		iqtgui::IGuiObject* guiObject = dynamic_cast<iqtgui::IGuiObject*> (m_observersCompPtr[i]);
+		if (guiObject){
+			bool keepVisible = false;
+
+			iprm::IParamsSet::Ids parameterIds = paramsSetPtr->GetParamIds(true);
+			iprm::IParamsSet::Ids::const_iterator iter;
+			// show elements whose paramId matches a parameter id
+			for (iter = parameterIds.begin(); iter != parameterIds.end(); iter++){
+				if (*iter == paramId){
+					keepVisible = true;
+					break;
+				}
+			}
+
+			// add or remove gui items to the container
+			if (keepVisible){
+				QString name = m_guiNames[guiObject];
+				QWidget* panelPtr;
+				if (guiMode == 2){
+					panelPtr = new QWidget(m_guiContainer);
+					QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
+					QTabWidget* tabWidgetPtr = static_cast<QTabWidget*> (m_guiContainer);
+					tabWidgetPtr->addTab(panelPtr, name);
+					QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
+					panelLayoutPtr->addItem(spacerPtr);
+				} else if (guiMode == 1){
+					panelPtr = new QWidget(m_guiContainer);
+					QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
+					panelLayoutPtr->setContentsMargins(6, 0, 6, 0);
+					QToolBox* toolBoxPtr = static_cast<QToolBox*> (m_guiContainer);
+					toolBoxPtr->addItem(panelPtr, name);
+					QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
+					panelLayoutPtr->addItem(spacerPtr);
+				} else{
+					panelPtr = new QGroupBox(name, m_guiContainer);
+					QLayout* parentLayoutPtr = m_guiContainer->layout();
+					new QVBoxLayout(panelPtr);
+					if (parentLayoutPtr != NULL){
+						parentLayoutPtr->addWidget(panelPtr);
+					}
+				}
+
+				if (guiObject->GetWidget()){
+					QLayout* layout = panelPtr->layout();
+					if (layout){
+						layout->addWidget(guiObject->GetWidget());
+					} else{
+						guiObject->GetWidget()->setParent(panelPtr);
+					}
+				} else{
+					guiObject->CreateGui(panelPtr);
+				}
+			} else if (guiObject->GetWidget()){
+				QWidget* guiWidgetPtr = guiObject->GetWidget();
+				QWidget* framePtr = guiWidgetPtr->parentWidget();
+				if (framePtr){
+					if (guiMode == 2){
+						QTabWidget* tabWidgetPtr = static_cast<QTabWidget*> (m_guiContainer);
+						int index = tabWidgetPtr->indexOf(framePtr);
+						if (index >= 0){
+							tabWidgetPtr->removeTab(index);
+						}
+					} else if (guiMode == 1){
+						QToolBox* toolBoxPtr = static_cast<QToolBox*> (m_guiContainer);
+						int index = toolBoxPtr->indexOf(framePtr);
+						if (index >= 0){
+							toolBoxPtr->removeItem(index);
+						}
+					} else{
+						m_guiContainer->layout()->removeWidget(framePtr);
+						framePtr->setParent(NULL);
+					}
+				}
+			}
+		}
 	}
+
+	// make use of the lastSelectedIndex property
+	if (guiMode == 2){
+		QTabWidget* tabWidgetPtr = static_cast<QTabWidget*> (m_guiContainer);
+		tabWidgetPtr->setCurrentIndex(m_currentGuiIndex);
+	} else if (guiMode == 1){
+		QToolBox* toolBoxPtr = static_cast<QToolBox*> (m_guiContainer);
+		toolBoxPtr->setCurrentIndex(m_currentGuiIndex);
+	}
+
+	// enable container signalling
+	m_guiContainer->blockSignals(false);
 
 	return true;
 }
@@ -138,13 +234,38 @@ bool CComposedParamsSetGuiComp::OnDetached(imod::IModel* modelPtr)
 	iprm::IParamsSet* paramsSetPtr = GetObjectPtr();
 	I_ASSERT(paramsSetPtr != NULL);
 
+	// disable container signalling
+	m_guiContainer->blockSignals(true);
+
+	// clear the gui container
+	int guiMode = *m_designTypeAttrPtr;
+	if (guiMode == 2){
+		QTabWidget* tabWidget = static_cast<QTabWidget*> (m_guiContainer);
+		for (int i = tabWidget->count() - 1; i >= 0; i--){
+			tabWidget->removeTab(i);
+		}
+	} else if (guiMode == 1){
+		QToolBox* toolBox = static_cast<QToolBox*> (m_guiContainer);
+		for (int i = toolBox->count() - 1; i >= 0; i--){
+			toolBox->removeItem(i);
+		}
+	} else{
+		QLayout* layout = m_guiContainer->layout();
+		for (int i = layout->count() - 1; i >= 0; i--){
+			layout->removeItem(layout->itemAt(i));
+		}
+	}
+
+	// enable container signalling
+	m_guiContainer->blockSignals(false);
+
 	m_connectedEditors.clear();
 
 	int elementsCount = qMin(m_observersCompPtr.GetCount(), m_idsAttrPtr.GetCount());
 	for (int i = 0; i < elementsCount; ++i){
 		const QString& paramId = m_idsAttrPtr[i];
 
-		imod::IModel* parameterModelPtr = dynamic_cast<imod::IModel*>(paramsSetPtr->GetEditableParameter(paramId.toLocal8Bit()));
+		imod::IModel* parameterModelPtr = dynamic_cast<imod::IModel*> (paramsSetPtr->GetEditableParameter(paramId.toLocal8Bit()));
 		imod::IObserver* observerPtr = m_observersCompPtr[i];
 
 		if ((parameterModelPtr != NULL) && (observerPtr != NULL) && parameterModelPtr->IsAttached(observerPtr)){
@@ -158,116 +279,69 @@ bool CComposedParamsSetGuiComp::OnDetached(imod::IModel* modelPtr)
 
 // reimplemented (iqtgui::CGuiComponentBase)
 
+
 void CComposedParamsSetGuiComp::OnGuiCreated()
 {
-	QLayout* layoutPtr = ParamsFrame->layout();
-	if (layoutPtr == NULL){
-		if (*m_useHorizontalLayoutAttrPtr){
-			layoutPtr = new QHBoxLayout(ParamsFrame);
-		}
-		else{
-			layoutPtr = new QVBoxLayout(ParamsFrame);
-		}
-	}
+	int guiMode = *m_designTypeAttrPtr;
 
 	if (!m_paramsLoaderCompPtr.IsValid()){
 		LoaderFrame->hide();
 	}
 
+	// initialize the gui container
+	QLayout* layoutPtr = ParamsFrame->layout();
+	if (layoutPtr == NULL){
+		if (*m_useHorizontalLayoutAttrPtr){
+			layoutPtr = new QHBoxLayout(ParamsFrame);
+		} else{
+			layoutPtr = new QVBoxLayout(ParamsFrame);
+		}
+	}
 	layoutPtr->setMargin(0);
 
-	if (*m_designTypeAttrPtr == 1){
-		ParamsFrame->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
-
-		QToolBox* toolBoxPtr = new QToolBox(ParamsFrame);
-		int elementsCount = m_guisCompPtr.GetCount();
-		for (int i = 0; i < elementsCount; ++i){
-			iqtgui::IGuiObject* guiPtr = m_guisCompPtr[i];
-
-			if (guiPtr != NULL){
-				QWidget* panelPtr = new QWidget(ParamsFrame);
-				QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
-				panelLayoutPtr->setContentsMargins(6, 0, 6, 0);
-				QString name;
-				if (i < m_namesAttrPtr.GetCount()){
-					name = m_namesAttrPtr[i];
-				}
-
-				guiPtr->CreateGui(panelPtr);
-
-				toolBoxPtr->addItem(panelPtr, name);
-
-				QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-				panelLayoutPtr->addItem(spacerPtr);
-			}
-		}
-
-		QObject::connect(toolBoxPtr, SIGNAL(currentChanged(int)), this, SLOT(OnEditorChanged(int)));
-
-		layoutPtr->addWidget(toolBoxPtr);
-
-		m_currentGuiIndex = 0;
-	}
-	else if (*m_designTypeAttrPtr == 2){
-		ParamsFrame->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
-
-		QTabWidget* tabWidgetPtr = new QTabWidget(ParamsFrame);
-		int elementsCount = m_guisCompPtr.GetCount();
-		for (int i = 0; i < elementsCount; ++i){
-			iqtgui::IGuiObject* guiPtr = m_guisCompPtr[i];
-
-			if (guiPtr != NULL){
-				QWidget* panelPtr = new QWidget(tabWidgetPtr);
-				QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
-				QString name;
-				if (i < m_namesAttrPtr.GetCount()){
-					name = m_namesAttrPtr[i];
-				}
-
-				guiPtr->CreateGui(panelPtr);
-
-				tabWidgetPtr->addTab(panelPtr, name);
-
-				QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-				panelLayoutPtr->addItem(spacerPtr);
-			}
-		}
-
-		QObject::connect(tabWidgetPtr, SIGNAL(currentChanged(int)), this, SLOT(OnEditorChanged(int)));
-
-		layoutPtr->addWidget(tabWidgetPtr);
-
-		m_currentGuiIndex = 0;
-	}
-	else{
-		int elementsCount = m_guisCompPtr.GetCount();
-		for (int i = 0; i < elementsCount; ++i){
-			iqtgui::IGuiObject* guiPtr = m_guisCompPtr[i];
-
-			QWidget* elementParentPtr = ParamsFrame;
-
-			if (i < m_namesAttrPtr.GetCount()){
-				QLayout* parentLayoutPtr = elementParentPtr->layout();
-
-				elementParentPtr = new QGroupBox(m_namesAttrPtr[i], elementParentPtr);
-				new QVBoxLayout(elementParentPtr);
-
-				if (parentLayoutPtr != NULL){
-					parentLayoutPtr->addWidget(elementParentPtr);
-				}
-			}
-
-			if (guiPtr != NULL){
-				guiPtr->CreateGui(elementParentPtr);
-			}
-		}
-
-		m_currentGuiIndex = -1;
+	QToolBox* toolBoxPtr;
+	QTabWidget* tabWidgetPtr;
+	switch (guiMode){
+		case 2:
+			ParamsFrame->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
+			m_guiContainer = tabWidgetPtr = new QTabWidget(ParamsFrame);
+			QObject::connect(tabWidgetPtr, SIGNAL(currentChanged(int)), this, SLOT(OnEditorChanged(int)));
+			layoutPtr->addWidget(tabWidgetPtr);
+			m_currentGuiIndex = 0;
+			break;
+		case 1:
+			ParamsFrame->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
+			m_guiContainer = toolBoxPtr = new QToolBox(ParamsFrame);
+			QObject::connect(toolBoxPtr, SIGNAL(currentChanged(int)), this, SLOT(OnEditorChanged(int)));
+			layoutPtr->addWidget(toolBoxPtr);
+			m_currentGuiIndex = 0;
+			break;
+		default:
+			m_guiContainer = ParamsFrame;
+			m_currentGuiIndex = -1;
 	}
 
-	if(*m_useVerticalSpacerAttrPtr){
+
+	// map gui objects with their names (the container will be filled by OnAttached())
+	int elementsCount = m_guisCompPtr.GetCount();
+	for (int i = 0; i < elementsCount; ++i){
+
+		iqtgui::IGuiObject* guiPtr = m_guisCompPtr[i];
+		if (guiPtr == NULL){
+			continue;
+		}
+
+		QString name;
+		if (i < m_namesAttrPtr.GetCount()){
+			name = m_namesAttrPtr[i];
+		} else{
+			continue;
+		}
+
+		m_guiNames[guiPtr] = name;
+	}
+
+	if (*m_useVerticalSpacerAttrPtr){
 		QSpacerItem* VerticalSpacer = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
 		layoutPtr->layout()->addItem(VerticalSpacer);
@@ -294,6 +368,7 @@ void CComposedParamsSetGuiComp::OnGuiDestroyed()
 
 // reimplemented (iqt2d::IViewExtender)
 
+
 void CComposedParamsSetGuiComp::AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags)
 {
 	I_ASSERT(providerPtr != NULL);
@@ -316,6 +391,7 @@ void CComposedParamsSetGuiComp::RemoveItemsFromScene(iqt2d::IViewProvider* provi
 
 // protected methods
 
+
 void CComposedParamsSetGuiComp::AttachToScene(iqt2d::IViewProvider* providerPtr, int flags)
 {
 	I_ASSERT(m_showAllShapesAttrPtr.IsValid());
@@ -333,8 +409,7 @@ void CComposedParamsSetGuiComp::AttachToScene(iqt2d::IViewProvider* providerPtr,
 				viewPtr = providerPtr->GetView();
 			}
 		}
-	}
-	else{
+	} else{
 		for (int i = 0; i < elementsCount; ++i){
 			iqt2d::IViewExtender* extenderPtr = m_extendersCompPtr[i];
 			if (extenderPtr != NULL){
@@ -368,8 +443,7 @@ void CComposedParamsSetGuiComp::DetachFromScene(iqt2d::IViewProvider* providerPt
 				viewPtr = providerPtr->GetView();
 			}
 		}
-	}
-	else{
+	} else{
 		for (int i = 0; i < elementsCount; ++i){
 			iqt2d::IViewExtender* extenderPtr = m_extendersCompPtr[i];
 			if (extenderPtr != NULL){
@@ -388,12 +462,13 @@ void CComposedParamsSetGuiComp::DetachFromScene(iqt2d::IViewProvider* providerPt
 
 // protected slots
 
+
 void CComposedParamsSetGuiComp::OnEditorChanged(int index)
 {
 	if (index != m_currentGuiIndex){
-		for (		ConnectedSceneFlags::const_iterator iter = m_connectedSceneFlags.begin();
-					iter != m_connectedSceneFlags.end();
-					++iter){
+		for (ConnectedSceneFlags::const_iterator iter = m_connectedSceneFlags.begin();
+				iter != m_connectedSceneFlags.end();
+				++iter){
 			iqt2d::IViewProvider* providerPtr = iter.key();
 
 			DetachFromScene(providerPtr);
@@ -401,9 +476,9 @@ void CComposedParamsSetGuiComp::OnEditorChanged(int index)
 
 		m_currentGuiIndex = index;
 
-		for (		ConnectedSceneFlags::const_iterator iter = m_connectedSceneFlags.begin();
-					iter != m_connectedSceneFlags.end();
-					++iter){
+		for (ConnectedSceneFlags::const_iterator iter = m_connectedSceneFlags.begin();
+				iter != m_connectedSceneFlags.end();
+				++iter){
 			iqt2d::IViewProvider* providerPtr = iter.key();
 			int flags = iter.value();
 
