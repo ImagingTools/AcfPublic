@@ -1,46 +1,21 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="2">
+    <VersionInfos count="1">
       <Version>
         <Id>
           0
         </Id>
         <Number>
-          2483
+          2437
         </Number>
         <Description>
           ACF
         </Description>
       </Version>
-      <Version>
-        <Id>
-          1023
-        </Id>
-        <Number>
-          264194
-        </Number>
-        <Description>
-          Qt Framework
-        </Description>
-      </Version>
     </VersionInfos>
   </AcfHeader>
-  <PositionMap count="7">
-    <Element>
-      <ComponentName>
-        RegistryFileTypeInfo
-      </ComponentName>
-      <X>
-        1025
-      </X>
-      <X>
-        650
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
+  <PositionMap count="6">
     <Element>
       <ComponentName>
         PackageFileTypeInfo

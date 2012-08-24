@@ -59,6 +59,9 @@ Inheritance diagram for iipr::IMultiBitmapProvider:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_multi_bitmap_provider.html#af3113ea2b82fa05c0a8b13739b78d0c5">GetBitmapSelectionContraints</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional information about bitmaps in form of section contraints.  <a href="#af3113ea2b82fa05c0a8b13739b78d0c5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_multi_bitmap_provider.html#adbbc199bbbd46260346727eb875fe400">GetBitmapsCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of produced bitmaps.  <a href="#adbbc199bbbd46260346727eb875fe400"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_multi_bitmap_provider.html#a4ae922bcc1d3c6b663f00c5ac85dae88">GetBitmap</a> (int bitmapIndex) const =0</td></tr>
@@ -70,7 +73,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Supplier allowing to access of multiple produced bitmaps. </p>
 
-<p>Definition at line <a class="el" href="_i_multi_bitmap_provider_8h_source.html#l00018">18</a> of file <a class="el" href="_i_multi_bitmap_provider_8h_source.html">IMultiBitmapProvider.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_multi_bitmap_provider_8h_source.html#l00019">19</a> of file <a class="el" href="_i_multi_bitmap_provider_8h_source.html">IMultiBitmapProvider.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a4ae922bcc1d3c6b663f00c5ac85dae88"></a><!-- doxytag: member="iipr::IMultiBitmapProvider::GetBitmap" ref="a4ae922bcc1d3c6b663f00c5ac85dae88" args="(int bitmapIndex) const =0" -->
 <div class="memitem">
@@ -111,6 +114,27 @@ Public Member Functions</h2></td></tr>
 <p>Get number of produced bitmaps. </p>
 
 <p>Implemented in <a class="el" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a8b83e96dbd26bd3a38d52587bf5f35a1">icam::CMultiCameraBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#abb9fcd1011858fb991e00e8c276bc04b">iipr::CColorBitmapSeparatorSupplierComp</a>, and <a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a03025bb4473f7b1f9073102b37ba9e70">iipr::CMultiBitmapCacheComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af3113ea2b82fa05c0a8b13739b78d0c5"></a><!-- doxytag: member="iipr::IMultiBitmapProvider::GetBitmapSelectionContraints" ref="af3113ea2b82fa05c0a8b13739b78d0c5" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* iipr::IMultiBitmapProvider::GetBitmapSelectionContraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get optional information about bitmaps in form of section contraints. </p>
+<p>It allows to get name and description of each bitmap channel. </p>
+
+<p>Implemented in <a class="el" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a1a12e90681c61ddd992c678dac43e141">icam::CMultiCameraBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ac3bb508790b32cd3d4bc216f81b6dfe6">iipr::CColorBitmapSeparatorSupplierComp</a>, and <a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a5e21492e96811ce1d101fb5222321c66">iipr::CMultiBitmapCacheComp</a>.</p>
 
 </div>
 </div>

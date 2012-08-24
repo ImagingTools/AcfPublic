@@ -1634,6 +1634,15 @@
     <namespace>iqtcam</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiBitmapSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
+    <filename>_c_multi_bitmap_supplier_gui_comp_8h</filename>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <class kind="class">iqtcam::CMultiBitmapSupplierGuiComp</class>
+    <namespace>iqtcam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CMultiBitmapViewComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_multi_bitmap_view_comp_8h</filename>
@@ -2881,6 +2890,13 @@
       <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
       <anchor>a6ae28fb24e53c51727c9009cd4d74d00</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetBitmapSelectionContraints</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a1a12e90681c61ddd992c678dac43e141</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -6692,6 +6708,7 @@
     <filename>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</base>
     <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
+    <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
@@ -6713,6 +6730,34 @@
       <anchor>add811097b033bec2672b93d28265d309</anchor>
       <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetBitmapSelectionContraints</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>ac3bb508790b32cd3d4bc216f81b6dfe6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>abb9fcd1011858fb991e00e8c276bc04b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>a6c9a06dc1983c4716926ded9c6118571</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetLogTransform</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>a09ae5bfd6c3c54979321ac8855d25293</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
@@ -6722,24 +6767,38 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetBitmapsCount</name>
+      <name>GetConstraintsFlags</name>
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>abb9fcd1011858fb991e00e8c276bc04b</anchor>
+      <anchor>ad80af70bad9caf68eab0d65de3feaf0a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const iimg::IBitmap *</type>
-      <name>GetBitmap</name>
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a6c9a06dc1983c4716926ded9c6118571</anchor>
-      <arglist>(int bitmapIndex) const </arglist>
+      <anchor>a0db7889559855c54fe44674b2785d305</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a09ae5bfd6c3c54979321ac8855d25293</anchor>
-      <arglist>(int bitmapIndex) const </arglist>
+      <anchor>a3f6649862bc81b5bea6b9e2b100f6ff9</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>ad02605c7913eff9f86132ff779dc1366</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>accfe764f0b9dcce4f12bdd8fc75dc681</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -7411,6 +7470,13 @@
       <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
       <anchor>a25f81226b1873d3e06cc5de300ac7f92</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetBitmapSelectionContraints</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a5e21492e96811ce1d101fb5222321c66</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -8670,6 +8736,13 @@
     <name>iipr::IMultiBitmapProvider</name>
     <filename>classiipr_1_1_i_multi_bitmap_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetBitmapSelectionContraints</name>
+      <anchorfile>classiipr_1_1_i_multi_bitmap_provider.html</anchorfile>
+      <anchor>af3113ea2b82fa05c0a8b13739b78d0c5</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetBitmapsCount</name>
@@ -11987,6 +12060,7 @@
     <class kind="class">iqtcam::CBitmapSupplierGuiComp</class>
     <class kind="class">iqtcam::CExposureParamsGuiComp</class>
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
+    <class kind="class">iqtcam::CMultiBitmapSupplierGuiComp</class>
     <class kind="class">iqtcam::CMultiBitmapViewComp</class>
     <class kind="class">iqtcam::CSnapImageGuiComp</class>
   </compound>
@@ -12205,6 +12279,109 @@
       <anchorfile>structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html</anchorfile>
       <anchor>a922346277292f8827b9817759720ebb7</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtcam::CMultiBitmapSupplierGuiComp</name>
+    <filename>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</filename>
+    <base>TSupplierGuiCompBase&lt; Ui::CMultiBitmapSupplierGuiComp &gt;</base>
+    <member kind="typedef">
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CMultiBitmapSupplierGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a0655a2a8cabac38018c3f75aefc66403</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiBitmapSupplierGuiComp</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ade617c6f27bbb7f767e9eeaccd3b2e45</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SnapImageButton_clicked</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a2070beea49f7a6ef37f4ff3c4e8ad768</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LiveImageButton_toggled</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>acda428af8b09609fd1e81bd32efeb622</anchor>
+      <arglist>(bool checked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveImageButton_clicked</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a8ef006872bacc874d1afbbf4001548d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LoadParamsButton_clicked</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ab7a29cc8eab3c81c8f31f3898df57625</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveParamsButton_clicked</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a56000137f220a61a58adef05083f8bc2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_IconsView_currentItemChanged</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a7ef8f07730b8dfddef44f0e7d19dbf25</anchor>
+      <arglist>(QListWidgetItem *current, QListWidgetItem *previous)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnTimerReady</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ab155ddc84178c5b3712c28397b2f6671</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a7cafbe84e7a1ae512fd3e9c279c91a0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetParamsWidget</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a8952ff1b698b0942b9bcbf17f8d96e6e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateShapes</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>aec2477acc6bce878554f2d38e2bf6141</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a2db8ed867cff659c156d9ef02264e46b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a51534ba19224e0b52ac8930f83cbb83d</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">

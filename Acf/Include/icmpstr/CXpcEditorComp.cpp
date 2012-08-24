@@ -98,7 +98,6 @@ void CXpcEditorComp::UpdateModel() const
 	changePtr->SetConfFilesList(GetStringList(S_CONFIG_PATH));
 	changePtr->SetPackageDirsList(GetStringList(S_PACKAGE_DIR));
 	changePtr->SetPackagesList(GetStringList(S_PACKAGE_PATH));
-	changePtr->SetRegistryFilesList(GetStringList(S_REGISTRY_PATH));
 }
 
 
@@ -117,7 +116,6 @@ void CXpcEditorComp::UpdateGui(int /*updateFlags*/)
 		SetStringList(S_CONFIG_PATH, objectPtr->GetConfFilesList());
 		SetStringList(S_PACKAGE_DIR, objectPtr->GetPackageDirsList());
 		SetStringList(S_PACKAGE_PATH, objectPtr->GetPackagesList());
-		SetStringList(S_REGISTRY_PATH, objectPtr->GetRegistryFilesList());
 	}
 }
 
@@ -127,12 +125,10 @@ void CXpcEditorComp::OnGuiCreated()
 	ConfigPathView->setModel(m_guiModel[S_CONFIG_PATH]);
 	PackageDirView->setModel(m_guiModel[S_PACKAGE_DIR]);
 	PackagePathView->setModel(m_guiModel[S_PACKAGE_PATH]);
-	RegistryPathView->setModel(m_guiModel[S_REGISTRY_PATH]);
 
 	QObject::connect(ConfigPathView->selectionModel(), SIGNAL(selectionChanged(const QItemSelection&, const QItemSelection&)), this, SLOT(OnConfigPathViewSelected(const QItemSelection&, const QItemSelection&)));
 	QObject::connect(PackageDirView->selectionModel(), SIGNAL(selectionChanged(const QItemSelection&, const QItemSelection&)), this, SLOT(OnPackageDirViewSelected(const QItemSelection&, const QItemSelection&)));
 	QObject::connect(PackagePathView->selectionModel(), SIGNAL(selectionChanged(const QItemSelection&, const QItemSelection&)), this, SLOT(OnPackagePathViewSelected(const QItemSelection&, const QItemSelection&)));
-	QObject::connect(RegistryPathView->selectionModel(), SIGNAL(selectionChanged(const QItemSelection&, const QItemSelection&)), this, SLOT(OnRegistryPathViewSelected(const QItemSelection&, const QItemSelection&)));
 
 	// Call basic functionality:
 	BaseClass::OnGuiCreated();
@@ -154,11 +150,6 @@ void CXpcEditorComp::on_PackageDirAddButton_clicked()
 void CXpcEditorComp::on_PackagePathAddButton_clicked()
 {
 	m_guiModel[S_PACKAGE_PATH]->insertRow(m_guiModel[S_PACKAGE_PATH]->rowCount());
-}
-
-void CXpcEditorComp::on_RegistryPathAddButton_clicked()
-{
-	m_guiModel[S_REGISTRY_PATH]->insertRow(m_guiModel[S_REGISTRY_PATH]->rowCount());
 }
 
 
@@ -187,15 +178,6 @@ void CXpcEditorComp::on_PackagePathRemoveButton_clicked()
 	QModelIndex index = PackagePathView->currentIndex();
 	if (index.isValid()){
 		m_guiModel[S_PACKAGE_PATH]->removeRow(index.row());
-		DoUpdateModel();
-	}
-}
-
-void CXpcEditorComp::on_RegistryPathRemoveButton_clicked()
-{
-	QModelIndex index = RegistryPathView->currentIndex();
-	if (index.isValid()){
-		m_guiModel[S_REGISTRY_PATH]->removeRow(index.row());
 		DoUpdateModel();
 	}
 }
@@ -251,8 +233,8 @@ void CXpcEditorComp::PickFileNameForLineEdit(
 	// try to access IDocumentManager and ask it for the file name
 	QDir baseDir = GetCurrentDocumentDir();
 
-	QString unrolledPath = iqt::CSystem::GetAbsolutePath(lineEdit.text(), baseDir);
-	QFileInfo fileInfo(unrolledPath);
+	QString unrolledPath = iqt::CSystem::GetEnrolledPath(lineEdit.text());
+	QFileInfo fileInfo(baseDir.absoluteFilePath(unrolledPath));
 	dialog.setDirectory(fileInfo.absoluteDir());
 
 	if (dialog.exec() == QDialog::Accepted){
@@ -283,16 +265,9 @@ void CXpcEditorComp::on_PackageDirBrowseButton_clicked()
 
 void CXpcEditorComp::on_PackagePathBrowseButton_clicked()
 {
-	PickFileNameForLineEdit(*PackagePathEdit, true, m_packageFileTypeInfo.GetPtr());
+	PickFileNameForLineEdit(*PackagePathEdit, false, m_packageFileTypeInfo.GetPtr());
 
 	on_PackagePathEdit_editingFinished();
-}
-
-void CXpcEditorComp::on_RegistryPathBrowseButton_clicked()
-{
-	PickFileNameForLineEdit(*RegistryPathEdit, false, m_registryFileTypeInfo.GetPtr());
-
-	on_RegistryPathEdit_editingFinished();
 }
 
 
@@ -355,21 +330,6 @@ void CXpcEditorComp::OnPackagePathViewSelected(const QItemSelection& selected, c
 	}
 }
 
-void CXpcEditorComp::OnRegistryPathViewSelected(const QItemSelection& selected, const QItemSelection& /*deselected*/)
-{
-	QModelIndexList selectedIndices = selected.indexes();
-	if (!selectedIndices.isEmpty()){
-		RegistryPathEdit->setText(selectedIndices.front().data().toString());
-		RegistryPathEdit->setProperty("selectionLength", 0);
-		RegistryPathEdit->deselect();
-
-		RegistryPathEditFrame->setEnabled(true);
-	}
-	else{
-		RegistryPathEditFrame->setEnabled(false);
-	}
-}
-
 
 void CXpcEditorComp::on_ConfigPathView_doubleClicked(const QModelIndex& index)
 {
@@ -411,16 +371,6 @@ void CXpcEditorComp::on_PackagePathEdit_editingFinished()
 	}
 
 	PackagePathView->model()->setData(index, PackagePathEdit->text());
-}
-
-void CXpcEditorComp::on_RegistryPathEdit_editingFinished()
-{
-	QModelIndex index = RegistryPathView->currentIndex();
-	if (!index.isValid()){
-		return;
-	}
-
-	RegistryPathView->model()->setData(index, RegistryPathEdit->text());
 }
 
 
@@ -495,18 +445,6 @@ void CXpcEditorComp::on_PackagePathEdit_selectionChanged()
 	}
 }
 
-void CXpcEditorComp::on_RegistryPathEdit_selectionChanged()
-{
-	MaintainLineEditSelection(RegistryPathEdit);
-
-	if (RegistryPathEdit->selectionStart() > 0){
-		RegistryPathInsertVariableButton->setMenu(&m_variableMenus[S_REGISTRY_PATH]);
-	}
-	else{
-		RegistryPathInsertVariableButton->setMenu(&m_startVariableMenus[S_REGISTRY_PATH]);
-	}
-}
-
 
 void CXpcEditorComp::on_ConfigPathEdit_cursorPositionChanged(int /*oldPosition*/, int newPosition)
 {
@@ -546,18 +484,6 @@ void CXpcEditorComp::on_PackagePathEdit_cursorPositionChanged(int /*oldPosition*
 	}
 }
 
-void CXpcEditorComp::on_RegistryPathEdit_cursorPositionChanged(int /*oldPosition*/, int newPosition)
-{
-	MaintainLineEditSelection(RegistryPathEdit);
-
-	if (newPosition > 0){
-		RegistryPathInsertVariableButton->setMenu(&m_variableMenus[S_REGISTRY_PATH]);
-	}
-	else{
-		RegistryPathInsertVariableButton->setMenu(&m_startVariableMenus[S_REGISTRY_PATH]);
-	}
-}
-
 
 void CXpcEditorComp::OnInsertVariable(QAction* action)
 {
@@ -575,10 +501,6 @@ void CXpcEditorComp::OnInsertVariable(QAction* action)
 
 	case S_PACKAGE_PATH:
 		lineEditPtr = PackagePathEdit;
-		break;
-
-	case S_REGISTRY_PATH:
-		lineEditPtr = RegistryPathEdit;
 		break;
 
 	default:
@@ -610,10 +532,6 @@ void CXpcEditorComp::OnInsertVariable(QAction* action)
 
 	case S_PACKAGE_PATH:
 		on_PackagePathEdit_editingFinished();
-		break;
-
-	case S_REGISTRY_PATH:
-		on_RegistryPathEdit_editingFinished();
 		break;
 
 	default:

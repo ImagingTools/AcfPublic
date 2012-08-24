@@ -298,7 +298,7 @@ inline bool CComponentBase::IsComponentActive() const
 	icomp::TFactoryMember<interfaceType> member;
 
 /**
-	Declare multiple factories of components.
+	Declare multiple factory of components.
 
 	\ingroup ComponentConcept
 */

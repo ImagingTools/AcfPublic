@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #include "iqt/CSystem.h"
@@ -39,8 +39,8 @@ namespace iqt
 /*
 	Helper implementation makeing sleep functionality public.
 	\intern
- */
-class CQtThread : private QThread
+*/
+class CQtThread: private QThread
 {
 public:
 	using QThread::usleep;
@@ -48,7 +48,6 @@ public:
 
 
 // static members
-
 
 QString CSystem::GetNormalizedPath(const QString& path)
 {
@@ -63,9 +62,9 @@ QString CSystem::GetEnrolledPath(const QString& path)
 	QString retVal = path;
 
 	int endIndex = 0;
-	for (int beginIndex;
-			((beginIndex = retVal.indexOf("$(", endIndex)) >= 0);){
-		endIndex = retVal.indexOf(")", beginIndex + 2);
+	for (		int beginIndex;
+				((beginIndex = retVal.indexOf("$(", endIndex)) >= 0);){
+				endIndex = retVal.indexOf(")", beginIndex + 2);
 		if (endIndex < 0){
 			break;
 		}
@@ -83,62 +82,56 @@ QString CSystem::GetEnrolledPath(const QString& path)
 }
 
 
-QString CSystem::GetAbsolutePath(const QString& filePath, QDir baseDir)
-{
-	QString unrolledPath = GetEnrolledPath(filePath);
-	return baseDir.absoluteFilePath(unrolledPath);
-}
-
-
 QString CSystem::FindVariableValue(const QString& varName)
 {
 	if (varName == "ConfigurationName"){
 #if defined(_DEBUG) || defined(DEBUG) || defined(QT_DEBUG)
-#ifdef _MSC_VER
-#if _MSC_VER >= 1600
-		return "DebugVC10";
-#elif _MSC_VER >= 1500
-		return "DebugVC9";
-#elif _MSC_VER >= 1400
-		return "DebugVC8";
-#elif _MSC_VER >= 1300
-		return "DebugVC7";
-#else
-		return "DebugVC";
-#endif
-#else // _MSC_VER
+	#ifdef _MSC_VER
+		#if _MSC_VER >= 1600
+			return "DebugVC10";
+		#elif _MSC_VER >= 1500
+			return "DebugVC9";
+		#elif _MSC_VER >= 1400
+			return "DebugVC8";
+		#elif _MSC_VER >= 1300
+			return "DebugVC7";
+		#else
+			return "DebugVC";
+		#endif
+	#else // _MSC_VER
 		return "DebugQMake";
-#endif // _MSC_VER
+	#endif // _MSC_VER
 #else // _DEBUG || DEBUG
-#ifdef _MSC_VER
-#if _MSC_VER >= 1600
-		return "ReleaseVC10";
-#elif _MSC_VER >= 1500
-		return "ReleaseVC9";
-#elif _MSC_VER >= 1400
-		return "ReleaseVC8";
-#elif _MSC_VER >= 1300
-		return "ReleaseVC7";
-#else
-		return "ReleaseVC";
-#endif
-#else // _MSC_VER
+	#ifdef _MSC_VER
+		#if _MSC_VER >= 1600
+			return "ReleaseVC10";
+		#elif _MSC_VER >= 1500
+			return "ReleaseVC9";
+		#elif _MSC_VER >= 1400
+			return "ReleaseVC8";
+		#elif _MSC_VER >= 1300
+			return "ReleaseVC7";
+		#else
+			return "ReleaseVC";
+		#endif
+	#else // _MSC_VER
 		return "ReleaseQMake";
-#endif // _MSC_VER
+	#endif // _MSC_VER
 #endif // _DEBUG || DEBUG
-	} else if (varName == "CompilerName"){
+	}
+	else if (varName == "CompilerName"){
 #ifdef _MSC_VER
-#if _MSC_VER >= 1600
+	#if _MSC_VER >= 1600
 		return "VC10";
-#elif _MSC_VER >= 1500
+	#elif _MSC_VER >= 1500
 		return "VC9";
-#elif _MSC_VER >= 1400
+	#elif _MSC_VER >= 1400
 		return "VC8";
-#elif _MSC_VER >= 1300
+	#elif _MSC_VER >= 1300
 		return "VC7";
-#else
+	#else
 		return "VC";
-#endif
+	#endif
 #else // _MSC_VER
 		return "QMake";
 #endif // _MSC_VER
@@ -178,7 +171,7 @@ CSystem::EnvironmentVariables CSystem::GetEnvironmentVariables()
 
 void CSystem::Sleep(double seconds)
 {
-	CQtThread::usleep((unsigned long) seconds * 1000000);
+	CQtThread::usleep((unsigned long)seconds * 1000000);
 }
 
 
@@ -186,16 +179,17 @@ bool CSystem::RemoveDirectory(const QString& directoryPath)
 {
 	bool retVal = true;
 	QDir dir(directoryPath);
-
+ 
 	if (dir.exists(directoryPath)){
-		QFileInfoList fileInfoList = dir.entryInfoList(QDir::NoDotAndDotDot | QDir::System | QDir::Hidden | QDir::AllDirs | QDir::Files, QDir::DirsFirst);
+		QFileInfoList fileInfoList = dir.entryInfoList(QDir::NoDotAndDotDot | QDir::System | QDir::Hidden  | QDir::AllDirs | QDir::Files, QDir::DirsFirst);
 		for (QFileInfoList::ConstIterator fileItemIter = fileInfoList.constBegin(); fileItemIter != fileInfoList.constEnd(); fileItemIter++){
 			if ((*fileItemIter).isDir()){
 				retVal = RemoveDirectory((*fileItemIter).absoluteFilePath());
-			} else{
+			}
+			else {
 				retVal = QFile::remove((*fileItemIter).absoluteFilePath());
 			}
-
+ 
 			if (!retVal){
 				return retVal;
 			}
@@ -203,7 +197,7 @@ bool CSystem::RemoveDirectory(const QString& directoryPath)
 
 		retVal = dir.rmdir(directoryPath);
 	}
-
+ 
 	return retVal;
 }
 
