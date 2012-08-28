@@ -100,6 +100,8 @@ public:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 
+	const QString GetActiveRegistryFile() const;
+
 protected:
 	class LogingRegistry: public icomp::CRegistry
 	{
@@ -117,7 +119,8 @@ protected:
 	private:
 		CPackagesLoaderComp& m_parent;
 	};
-
+	
+	virtual bool RegisterRegistryFile(const QString& file);
 	virtual bool RegisterPackageFile(const QString& file);
 	virtual bool RegisterPackagesDir(const QString& subDir);
 	virtual bool LoadConfigFile(const QString& configFile);
@@ -159,6 +162,7 @@ private:
 	/**
 		List of pathes.
 	*/
+	QList<QString> m_registryFileNames;
 	typedef QSet<QString> PathList;
 	mutable PathList m_usedFilesList;
 

@@ -35,6 +35,9 @@
 
 #include "ibase/IApplication.h"
 
+#include "iqt/CPackagesLoaderComp.h"
+
+
 
 int main(int argc, char *argv[])
 {
@@ -77,6 +80,8 @@ int main(int argc, char *argv[])
 				}
 				else if (option == "config"){
 					configFilePath = QString::fromLocal8Bit(argv[++index]);
+					
+					
 				}
 			}
 		}
@@ -87,6 +92,14 @@ int main(int argc, char *argv[])
 
 	int retVal = 0;
 
+	// Registry file(arx) in config file(xpc)	
+	iqt::CPackagesLoaderComp cpackagesLoaderComp;
+	if (cpackagesLoaderComp.LoadPackages(configFilePath)){		
+		if(cpackagesLoaderComp.GetActiveRegistryFile() != NULL){
+			registryFilePath = cpackagesLoaderComp.GetActiveRegistryFile();		
+		}
+	} 	
+		
 	iqt::CComponentAccessor componentAccessor(registryFilePath, configFilePath);
 
 	ibase::IApplication* applicationPtr = componentAccessor.GetComponentInterface<ibase::IApplication>(componentId);
