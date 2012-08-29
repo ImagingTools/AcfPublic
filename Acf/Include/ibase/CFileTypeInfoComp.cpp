@@ -1,0 +1,79 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "ibase/CFileTypeInfoComp.h"
+
+
+// Qt includes
+#include <QtCore/QStringList>
+
+
+namespace ibase
+{
+
+
+// reimplemented (iser::IFileTypeInfo)
+
+bool CFileTypeInfoComp::GetFileExtensions(QStringList& result, int /*flags*/, bool doAppend) const
+{
+	if (m_fileExtensionsAttrPtr.IsValid()){
+		if (!doAppend){
+			result.clear();
+		}
+
+		int extensionsCount = m_fileExtensionsAttrPtr.GetCount();
+		for (int i = 0; i < extensionsCount; ++i){
+			const QString& extension = m_fileExtensionsAttrPtr[i];
+
+			result.push_back(extension);
+		}
+
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+
+QString CFileTypeInfoComp::GetTypeDescription(const QString* extensionPtr) const
+{
+	if (extensionPtr != NULL){
+		int extensionsCount = qMin(m_fileExtensionsAttrPtr.GetCount(), m_typeDescriptionsAttrPtr.GetCount());
+		for (int extIndex = 0; extIndex < extensionsCount; extIndex++){
+			if (m_fileExtensionsAttrPtr[extIndex] == *extensionPtr){
+				return m_typeDescriptionsAttrPtr[extIndex];
+			}
+		}
+	}
+
+	if (m_typeDescriptionsAttrPtr.GetCount() > 0){
+		return m_typeDescriptionsAttrPtr[0];
+	}
+
+	return "";
+}
+
+
+} // namespace ibase
+
+

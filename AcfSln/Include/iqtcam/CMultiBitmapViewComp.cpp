@@ -1,0 +1,277 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#include "iqtcam/CMultiBitmapViewComp.h"
+
+
+// ACF includes
+#include <iview/CViewport.h>
+
+// Qt includes
+#include <QtGui/QGridLayout>
+
+
+namespace iqtcam
+{
+
+
+// reimplemented (imod::CMultiModelDispatcherBase)
+
+void CMultiBitmapViewComp::OnModelChanged(int modelId, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+{
+	// view index is equal to the modelId
+	int index = modelId;
+
+	if (!IsGuiCreated() || index < 0 || index >= m_views.count()){
+		return;
+	}
+
+	CSingleView* viewPtr = m_views.at(index);
+	viewPtr->SetInspectionResult(m_informationProvidersCompPtr[index]->GetInformationCategory());
+}
+
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CMultiBitmapViewComp::UpdateGui(int updateFlags)
+{
+	iipr::IMultiBitmapProvider* objectPtr = GetObjectPtr();
+
+	int bitmapsCount = objectPtr->GetBitmapsCount();
+	int viewsCount = m_views.count();
+
+	for (int bitmapIndex = 0; bitmapIndex < bitmapsCount; bitmapIndex++){
+		if (bitmapIndex < viewsCount){
+			CSingleView* viewPtr = m_views.at(bitmapIndex);
+			
+			viewPtr->UpdateImage(objectPtr->GetBitmap(bitmapIndex));
+		}
+	}
+
+	for (int index = 0; index < m_views.count() && index < m_viewExtendersCompPtr.GetCount(); index++){
+		iqt2d::IViewExtender* viewExtenderPtr = m_viewExtendersCompPtr[index];
+		I_ASSERT(viewExtenderPtr != NULL);
+
+		CSingleView* viewPtr = m_views.at(index);
+		I_ASSERT(viewPtr != NULL);
+
+		viewExtenderPtr->RemoveItemsFromScene(viewPtr);
+		viewExtenderPtr->AddItemsToScene(viewPtr, updateFlags);
+	}
+}
+
+
+// reimplemented (iqtgui::CGuiComponentBase)
+
+void CMultiBitmapViewComp::OnGuiCreated()
+{
+	BaseClass::OnGuiCreated();
+
+	m_columnCount = m_horizontalViewsAttrPtr.IsValid() ? qMax(1, *m_horizontalViewsAttrPtr) : 1;
+	m_rowCount = m_verticalViewsAttrPtr.IsValid() ? qMax(1, *m_verticalViewsAttrPtr) : 1;
+
+	QWidget* widgetPtr = GetQtWidget();
+	QGridLayout* layoutPtr = new QGridLayout(widgetPtr);
+	layoutPtr->setContentsMargins(0, 0, 0, 0);
+	widgetPtr->setLayout(layoutPtr);
+
+	int viewIndex = 0;
+	for (int row = 0; row < m_rowCount; row++){
+		for (int col = 0; col < m_columnCount; col++){
+			QString titlePrefix = *m_viewLabelPrefixAttrPtr;
+			
+			QString title;
+			if (viewIndex < m_informationProvidersCompPtr.GetCount()){
+				title = m_informationProvidersCompPtr[viewIndex]->GetInformationSource();
+			}
+			else{
+				title = QString("%1 %2").arg(titlePrefix).arg(viewIndex + 1);
+			}
+			
+			CSingleView* viewPtr = CreateView(widgetPtr, viewIndex, title);
+			layoutPtr->addWidget(viewPtr, row, col);
+			m_views.append(viewPtr);
+
+			bool hasStatusInfo = false;
+			if (viewIndex < m_informationModelsCompPtr.GetCount()){
+				imod::IModel* modelPtr = m_informationModelsCompPtr[viewIndex];
+				I_ASSERT(modelPtr != NULL);
+				
+				if (RegisterModel(modelPtr, viewIndex)){
+					hasStatusInfo = true;
+				}
+			}
+
+			viewPtr->Init(hasStatusInfo);
+
+			viewIndex++;
+		}
+	}
+}
+
+
+// reimplemented (icomp::CComponentBase)
+
+void CMultiBitmapViewComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+}
+
+
+void CMultiBitmapViewComp::OnComponentDestroyed()
+{
+	UnregisterAllModels();
+
+	BaseClass::OnComponentDestroyed();
+}
+
+
+// protected methods
+
+CMultiBitmapViewComp::CSingleView* CMultiBitmapViewComp::CreateView(QWidget* parentPtr, int id, const QString& title)
+{
+	return new CSingleView(parentPtr, id, title);
+}
+
+
+// embedded class CView
+
+CMultiBitmapViewComp::CSingleView::CSingleView(QWidget* parentPtr, int id, const QString& title)
+:	BaseClass(parentPtr),
+	m_console(this),
+	m_id(id)
+{
+	setTitle(title);
+
+	m_backgroundShape.AssignToLayer(iview::IViewLayer::LT_BACKGROUND);
+	m_backgroundModel.AttachObserver(&m_backgroundShape);
+
+	m_console.GetViewRef().ConnectShape(&m_backgroundShape);
+
+	m_console.SetFitMode(iview::CConsoleBase::FM_BOTH);
+	m_console.SetZoomToFit(true);
+}
+
+
+void CMultiBitmapViewComp::CSingleView::UpdateImage(const iimg::IBitmap* bitmapPtr)
+{
+	if (bitmapPtr == NULL){
+		m_backgroundModel.ResetImage();
+	}
+	else{
+		m_backgroundModel.CopyFrom(*bitmapPtr);
+
+		istd::CIndex2d imageSize = bitmapPtr->GetImageSize();
+
+		m_console.GetViewRef().SetFitArea(i2d::CRectangle(0, 0, imageSize.GetX(), imageSize.GetY()));
+	}
+}
+
+
+void CMultiBitmapViewComp::CSingleView::Init(bool hasStatusInfo)
+{
+	// create default layout
+	QVBoxLayout* viewLayoutPtr = new QVBoxLayout;
+	setLayout(viewLayoutPtr);
+
+	// add console
+	viewLayoutPtr->addWidget(&m_console);
+
+	// add status label(s)
+	if (hasStatusInfo){
+		AddStatusItems(viewLayoutPtr);
+	}
+}
+
+
+void CMultiBitmapViewComp::CSingleView::SetInspectionResult(int result)
+{
+	static QString s_defaultStyleSheet = "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, "
+		"stop: 0 #ffffff, stop: 0.5 #e0f0ff, stop: 0.51 #d0e0ee, stop: 1 #d0e0ee); "
+		"border: 1px solid #aaaaaa; "
+		"border-radius: 2px; "
+		"color: #999999; font-size: 10pt; font-weight: bold;";
+
+	static QString s_okStyleSheet = "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, "
+		"stop: 0.0 rgba(120,250,145), stop: 0.49 rgba(70,212,145), stop: 0.52 rgba(70,200,105), stop: 1.0 rgba(70,250,105)); "
+		"border: 1px solid #339933; "
+		"border-radius: 2px; "
+		"color: #000000; font-size: 10pt; font-weight: bold;";
+
+	static QString s_errorStyleSheet = "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, "
+		"stop: 0.0 rgba(250,120,145), stop: 0.49 rgba(212,120,145), stop: 0.52 rgba(200,70,105), stop: 1.0 rgba(250,120,145)); "
+		"border: 1px solid #993333; "
+		"border-radius: 2px; "
+		"color: #ffffff; font-size: 10pt; font-weight: bold;";
+
+	static QString s_warningStyleSheet = "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, "
+		"stop: 0.0 rgba(250,250,145), stop: 0.49 rgba(212,212,145), stop: 0.52 rgba(200,200,105), stop: 1.0 rgba(250,250,105)); "
+		"border: 1px solid #996633; "
+		"border-radius: 2px; "
+		"color: #000000; font-size: 10pt; font-weight: bold;";
+
+	switch (result){
+		case istd::IInformationProvider::IC_INFO:
+			m_statusLabel->setStyleSheet(s_okStyleSheet);
+			return;
+
+		case istd::IInformationProvider::IC_ERROR:
+		case istd::IInformationProvider::IC_CRITICAL:
+			m_statusLabel->setStyleSheet(s_errorStyleSheet);
+			return;
+
+		case istd::IInformationProvider::IC_WARNING:
+			m_statusLabel->setStyleSheet(s_warningStyleSheet);
+			return;
+	}
+
+	m_statusLabel->setStyleSheet(s_defaultStyleSheet);
+}
+
+
+// reimplemented (iqt2d::IViewProvider)
+
+int CMultiBitmapViewComp::CSingleView::GetViewId() const
+{
+	return m_id;
+}
+
+
+iview::IShapeView* CMultiBitmapViewComp::CSingleView::GetView() const
+{
+	return &(m_console.GetViewRef());
+}
+
+
+// protected members
+
+void CMultiBitmapViewComp::CSingleView::AddStatusItems(QBoxLayout* layoutPtr)
+{
+	// create default status label
+	m_statusLabel = new QLabel(this);
+	layoutPtr->addWidget(m_statusLabel);
+
+	SetInspectionResult(istd::IInformationProvider::IC_NONE);
+}
+
+
+} // namespace iqtcam

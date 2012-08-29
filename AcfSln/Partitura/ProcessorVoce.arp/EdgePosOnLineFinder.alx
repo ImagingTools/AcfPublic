@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Acf>
+  <AcfHeader>
+    <VersionInfos count="1">
+      <Version>
+        <Id>
+          0
+        </Id>
+        <Number>
+          2246
+        </Number>
+        <Description>
+          ACF
+        </Description>
+      </Version>
+    </VersionInfos>
+  </AcfHeader>
+  <PositionMap count="4">
+    <Element>
+      <ComponentName>
+        CascadedProcessor
+      </ComponentName>
+      <X>
+        625
+      </X>
+      <X>
+        125
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        EdgeOnLineFinder
+      </ComponentName>
+      <X>
+        300
+      </X>
+      <X>
+        375
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        FeatureToImageMapperProcessor
+      </ComponentName>
+      <X>
+        1000
+      </X>
+      <X>
+        375
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        FeaturesContainer
+      </ComponentName>
+      <X>
+        625
+      </X>
+      <X>
+        275
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+  </PositionMap>
+</Acf>

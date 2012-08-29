@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<Acf>
+  <AcfHeader>
+    <VersionInfos count="1">
+      <Version>
+        <Id>
+          0
+        </Id>
+        <Number>
+          2329
+        </Number>
+        <Description>
+          ACF
+        </Description>
+      </Version>
+    </VersionInfos>
+  </AcfHeader>
+  <PositionMap count="9">
+    <Element>
+      <ComponentName>
+        CopyIncludeResources
+      </ComponentName>
+      <X>
+        650
+      </X>
+      <X>
+        625
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyBuild
+      </ComponentName>
+      <X>
+        1000
+      </X>
+      <X>
+        350
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyImplOther
+      </ComponentName>
+      <X>
+        825
+      </X>
+      <X>
+        125
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyImplSources
+      </ComponentName>
+      <X>
+        475
+      </X>
+      <X>
+        125
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        InitSequence
+      </ComponentName>
+      <X>
+        125
+      </X>
+      <X>
+        350
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyImplResources
+      </ComponentName>
+      <X>
+        650
+      </X>
+      <X>
+        225
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyIncludeSources
+      </ComponentName>
+      <X>
+        475
+      </X>
+      <X>
+        475
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyCommon
+      </ComponentName>
+      <X>
+        125
+      </X>
+      <X>
+        525
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyIncludeOther
+      </ComponentName>
+      <X>
+        825
+      </X>
+      <X>
+        475
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+  </PositionMap>
+</Acf>

@@ -1,0 +1,271 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#include "iqtmm/CFrameSeqVideoControllerComp.h"
+
+
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+
+namespace iqtmm
+{
+
+
+// public methods
+
+CFrameSeqVideoControllerComp::CFrameSeqVideoControllerComp()
+:	m_currentFrameIndex(-1),
+	m_isFrameLoaded(false)
+{
+}
+
+
+// reimplemented (icam::IBitmapAcquisition)
+
+istd::CIndex2d CFrameSeqVideoControllerComp::GetBitmapSize(const iprm::IParamsSet* /*paramsPtr*/) const
+{
+	return GetFrameSize();
+}
+
+
+// reimplemented (iproc::IProcessor)
+
+int CFrameSeqVideoControllerComp::DoProcessing(
+			const iprm::IParamsSet* /*paramsPtr*/,
+			const istd::IPolymorphic* /*inputPtr*/,
+			istd::IChangeable* outputPtr,
+			iproc::IProgressManager* /*progressManagerPtr*/)
+{
+	if (outputPtr == NULL){
+		return TS_OK;
+	}
+
+	iimg::IBitmap* bitmapPtr = dynamic_cast<iimg::IBitmap*>(outputPtr);
+	if (bitmapPtr != NULL){
+		if (m_isFrameLoaded){
+			const istd::IChangeable* imagePtr = m_frameDataCompPtr.GetPtr();
+			if ((imagePtr != NULL) && bitmapPtr->CopyFrom(*imagePtr)){
+				return TS_OK;
+			}
+		}
+
+		if (m_frameLoaderCompPtr.IsValid() && (m_currentFrameIndex < m_fileList.count())){
+			QString fileName = m_fileList[m_currentFrameIndex];
+
+			istd::CChangeNotifier notifier(bitmapPtr);
+
+			if (m_frameLoaderCompPtr->LoadFromFile(*bitmapPtr, fileName) == iser::IFileLoader::StateOk){
+				return TS_OK;
+			}
+		}
+	}
+
+	return TS_INVALID;
+}
+
+
+// reimplemented (imm::IMediaController)
+
+QString CFrameSeqVideoControllerComp::GetOpenedMediumUrl() const
+{
+	return m_mediumUrl;
+}
+
+
+bool CFrameSeqVideoControllerComp::OpenMediumUrl(const QString& url, bool autoPlay)
+{
+	istd::CChangeNotifier notifier(this, CF_STATUS | CF_MEDIA_POSITION);
+
+	m_mediumUrl = url;
+
+	QStringList fileExtensions;
+	
+	m_frameLoaderCompPtr->GetFileExtensions(fileExtensions);
+
+	QStringList fileFilter;
+	for (int fileExtensionIndex = 0; fileExtensionIndex < int(fileExtensions.size()); fileExtensionIndex++){
+		fileFilter.push_back(QString("*.") + fileExtensions[fileExtensionIndex]);
+	}
+	
+	m_fileList.Create(m_mediumUrl, 0, 0, fileFilter);
+
+	SetCurrentFrame(-1);
+
+	SetPlaying(autoPlay);
+
+	return true;
+}
+
+
+void CFrameSeqVideoControllerComp::CloseMedium()
+{
+	istd::CChangeNotifier notifier(this, CF_STATUS);
+
+	SetPlaying(false);
+}
+
+
+bool CFrameSeqVideoControllerComp::IsPlaying() const
+{
+	return m_isPlaying;
+}
+
+
+bool CFrameSeqVideoControllerComp::SetPlaying(bool state)
+{
+	istd::CChangeNotifier notifier(this, CF_STATUS);
+
+	if (m_isPlaying != state){
+		m_isPlaying = state;
+	}
+
+	return true;
+}
+
+
+double CFrameSeqVideoControllerComp::GetMediumLength() const
+{
+	return 0;
+}
+
+
+double CFrameSeqVideoControllerComp::GetCurrentPosition() const
+{
+	return GetCurrentFrame() / *m_framesPerSecondAttrPtr;
+}
+
+
+bool CFrameSeqVideoControllerComp::SetCurrentPosition(double position)
+{
+	return SetCurrentFrame(position * *m_framesPerSecondAttrPtr + 0.5);
+}
+
+
+int CFrameSeqVideoControllerComp::GetSupportedFeatures() const
+{
+	return SF_OPEN_MEDIA | SF_PLAY | SF_SEEK;
+}
+
+
+// reimplemented (imm::IVideoInfo)
+
+int CFrameSeqVideoControllerComp::GetFramesCount() const
+{
+	return m_fileList.count();
+}
+
+
+double CFrameSeqVideoControllerComp::GetFrameIntervall() const
+{
+	return 1.0 / *m_framesPerSecondAttrPtr;
+}
+
+
+istd::CIndex2d CFrameSeqVideoControllerComp::GetFrameSize() const
+{
+	return istd::CIndex2d::GetInvalid();
+}
+
+
+double CFrameSeqVideoControllerComp::GetPixelAspectRatio() const
+{
+	return 1;
+}
+
+
+// reimplemented (imm::IVideoController)
+
+int CFrameSeqVideoControllerComp::GetCurrentFrame() const
+{
+	return m_currentFrameIndex;
+}
+
+
+bool CFrameSeqVideoControllerComp::SetCurrentFrame(int frameIndex)
+{
+	if (frameIndex != m_currentFrameIndex){
+		istd::CChangeNotifier notifier(this, CF_MEDIA_POSITION);
+
+		m_currentFrameIndex = frameIndex;
+
+		m_isFrameLoaded = LoadCurrentFrame();
+	}
+
+	return m_isFrameLoaded;
+}
+
+
+// reimplemented (iser::IFileTypeInfo)
+
+bool CFrameSeqVideoControllerComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
+{
+	if (!doAppend){
+		result.clear();
+	}
+
+	if ((flags & QF_LOAD) != 0){
+		result.push_back("");
+	}
+
+	return true;
+}
+
+
+QString CFrameSeqVideoControllerComp::GetTypeDescription(const QString* /*extensionPtr*/) const
+{
+	return "Video files";
+}
+
+
+// protected methods
+
+bool CFrameSeqVideoControllerComp::LoadCurrentFrame()
+{
+	// reset start frame:
+	if (m_currentFrameIndex < 0){
+		iimg::IRasterImage* imagePtr = dynamic_cast<iimg::IRasterImage*>(m_frameDataCompPtr.GetPtr());
+		if (imagePtr != NULL){
+			istd::CChangeNotifier changePtr(imagePtr);
+
+			imagePtr->ResetImage();
+		}
+
+		return true;
+	}
+
+	if (m_frameLoaderCompPtr.IsValid() && m_frameDataCompPtr.IsValid() && (m_currentFrameIndex < m_fileList.count())){
+		QString currentFile = m_fileList[m_currentFrameIndex];
+
+		int loadState = m_frameLoaderCompPtr->LoadFromFile(*m_frameDataCompPtr, currentFile);
+
+		return (loadState == iser::IFileLoader::StateOk);
+	}
+	else{
+		return false;
+	}
+}
+
+
+} // namespace iqtmm
+
+

@@ -1,0 +1,185 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#include "iqtinsp/CGeneralSupplierGuiComp.h"
+
+
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+#include "iproc/IElapsedTimeProvider.h"
+
+
+namespace iqtinsp
+{
+
+
+// protected slots
+
+void CGeneralSupplierGuiComp::on_TestButton_clicked()
+{
+	iproc::ISupplier* supplierPtr = GetObjectPtr();
+	if (supplierPtr != NULL){
+		supplierPtr->InvalidateSupplier();
+		supplierPtr->EnsureWorkFinished();
+
+		if (supplierPtr->GetWorkStatus() >= iproc::ISupplier::WS_ERROR){
+			QMessageBox::information(
+						NULL,
+						QObject::tr("Error"),
+						QObject::tr("Processing Error"));
+		}
+	}
+}
+
+
+void CGeneralSupplierGuiComp::on_LoadParamsButton_clicked()
+{
+	LoadParams();
+}
+
+
+void CGeneralSupplierGuiComp::on_SaveParamsButton_clicked()
+{
+	SaveParams();
+}
+
+
+// protected methods
+
+// reimplemented (iqtinsp::TSupplierGuiCompBase)
+
+QWidget* CGeneralSupplierGuiComp::GetParamsWidget() const
+{
+	I_ASSERT(IsGuiCreated());
+
+	return ParamsFrame;
+}
+
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CGeneralSupplierGuiComp::OnGuiModelAttached()
+{
+	BaseClass::OnGuiModelAttached();
+
+	ParamsGB->setVisible(AreParamsEditable() || IsLoadParamsSupported());
+
+	LoadParamsButton->setVisible(IsLoadParamsSupported());
+	SaveParamsButton->setVisible(IsSaveParamsSupported());
+}
+
+
+void CGeneralSupplierGuiComp::UpdateGui(int updateFlags)
+{
+	BaseClass::UpdateGui(updateFlags);
+
+	I_ASSERT(IsGuiCreated());
+
+	QString statusLabelText = tr("Unknown");
+
+	QString description;
+
+	ProcessingTimeLabel->setText("-");
+
+	const iproc::ISupplier* supplierPtr = GetObjectPtr();
+	if (supplierPtr != NULL){
+		const istd::IInformationProvider* infoProviderPtr = dynamic_cast<const istd::IInformationProvider*>(supplierPtr);
+
+		int workStatus = supplierPtr->GetWorkStatus();
+
+		switch (workStatus){
+		case iproc::ISupplier::WS_INVALID:
+			statusLabelText = tr("None");
+			break;
+
+		case iproc::ISupplier::WS_INIT:
+			statusLabelText = tr("Init");
+			break;
+
+		case iproc::ISupplier::WS_LOCKED:
+			statusLabelText = tr("Locked");
+			break;
+
+		case iproc::ISupplier::WS_OK:
+			if (infoProviderPtr != NULL){
+				switch (infoProviderPtr->GetInformationCategory()){
+				case istd::IInformationProvider::IC_WARNING:
+					statusLabelText = tr("Warning");
+					break;
+
+				case istd::IInformationProvider::IC_ERROR:
+					statusLabelText = tr("Error");
+					break;
+
+				default:
+					statusLabelText = tr("OK");
+					break;
+				}
+			}
+			else{
+				statusLabelText = tr("OK");
+			}
+
+			{
+				const iproc::IElapsedTimeProvider* processingTimeProviderPtr = dynamic_cast<const iproc::IElapsedTimeProvider*>(supplierPtr);
+				if (processingTimeProviderPtr != NULL){
+					ProcessingTimeLabel->setText(QString(tr("%1 ms").arg(processingTimeProviderPtr->GetElapsedTime() * 1000, 1, 'f', 1)));
+
+					ProcessingTimeLabel->setVisible(true);
+				}
+			}
+
+			break;
+
+		case iproc::ISupplier::WS_CANCELED:
+			statusLabelText = tr("Canceled");
+			break;
+
+		case iproc::ISupplier::WS_ERROR:
+			statusLabelText = tr("Not processed");
+			break;
+
+		case iproc::ISupplier::WS_CRITICAL:
+			statusLabelText = tr("Critical");
+			break;
+		}
+
+		if (infoProviderPtr != NULL){
+			description = infoProviderPtr->GetInformationDescription();
+		}
+	}
+
+	StatusLabel->setText(statusLabelText);
+	if (!description.isEmpty()){
+		DescriptionLabel->setText(description);
+		DescriptionLabel->setVisible(true);
+	}
+	else{
+		DescriptionLabel->setVisible(false);
+	}
+}
+
+
+} // namespace iqtinsp
+
+

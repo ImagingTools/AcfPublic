@@ -1,0 +1,166 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iimg_IBitmap_included
+#define iimg_IBitmap_included
+
+
+#include "iimg/IRasterImage.h"
+
+#include "i2d/CRectangle.h"
+
+
+namespace iimg
+{
+
+
+/**
+	Definition of single plane bitmap.
+*/
+class IBitmap: virtual public IRasterImage
+{
+public:
+	/**
+		Bitmap pixel format description.
+	*/
+	enum PixelFormat
+	{
+		/**
+			Unknown image format
+		*/
+		PF_UNKNOWN = 0,
+
+		/**
+			Monochrome bitmap
+		*/
+		PF_MONO,
+
+		/**
+			8-bit grayscale bitmap.
+		*/
+		PF_GRAY,
+
+		/**
+			32-bit RGB-bitmap, alpha channel can be ignored.
+		*/
+		PF_RGB,
+
+		/**
+			32-bit RGB bitmap with alpha channel.
+		*/
+		PF_RGBA,
+
+		/**
+			16-bit grayscale bitmap.
+		*/
+		PF_GRAY16,
+
+		/**
+			32-bit grayscale bitmap.
+		*/
+		PF_GRAY32,
+
+		/**
+			First user defined pixel format.
+		*/
+		PF_USER = 256
+	};
+
+	/**
+		Create and copy bitmap region to the bitmap
+	*/
+	virtual bool CopyBitmapRegion(const iimg::IBitmap& sourceBitmap, const i2d::CRectangle& area) = 0;
+
+	/**
+		Get the bitmap's pixel format.
+		\sa PixelFormat
+	*/
+	virtual PixelFormat GetPixelFormat() const = 0;
+
+	/**
+		Get \c true if the pixel format is supported by the bitmap implementation.
+		\param	pixelFormat		bitmap format. \sa PixelFormat
+	*/
+	virtual bool IsFormatSupported(PixelFormat pixelFormat) const = 0;
+
+	/**
+		Create bitmap with specified size and format.
+		\param	pixelFormat		bitmap format. \sa PixelFormat
+		\param	size			bitmap size.
+	*/
+	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size) = 0;
+
+	/**
+		Create bitmap with specified size and format using external image data buffer.
+		\param	pixelFormat		bitmap format. \sa PixelFormat
+		\param	size			bitmap size.
+		\param	dataPtr			pointer to external image buffer.
+		\param	releaseFlag		if its true, external buffer will be managed (removed) by this object.
+		\param	linesDifference	address difference between next and previos line. If it equals 0, the value will be taken from size and number of bits per pixel.
+	*/
+	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0) = 0;
+
+	/**
+		Number of bytes per single line.
+	*/
+	virtual int GetLineBytesCount() const = 0;
+
+	/**
+		Get address difference between next and previous line.
+	*/
+	virtual int GetLinesDifference() const = 0;
+
+	/**
+		Get address difference between next and previous pixel.
+	*/
+	virtual int GetPixelsDifference() const = 0;
+
+	/**
+		Get number of bits per single pixel component.
+	*/
+	virtual int GetComponentBitsCount(int componentIndex = 0) const = 0;
+
+	/**
+		Get total number of bits per single pixel.
+	*/
+	virtual int GetPixelBitsCount() const = 0;
+
+	/**
+		Get pointer to buffer for single line.
+		\param	positionY	position Y. It must be smaller than bitmap size Y component.
+	*/
+	virtual const void* GetLinePtr(int positionY) const = 0;
+
+	/**
+		Get pointer to buffer for single line.
+		\param	positionY	position Y. It must be smaller than bitmap size Y component.
+	*/
+	virtual void* GetLinePtr(int positionY) = 0;
+};
+
+
+} // namespace iimg
+
+
+#endif // !iimg_IBitmap_included
+
+

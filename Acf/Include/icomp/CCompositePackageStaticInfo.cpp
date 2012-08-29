@@ -1,0 +1,95 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "icomp/CCompositePackageStaticInfo.h"
+
+
+#include "icomp/IComponentEnvironmentManager.h"
+#include "icomp/CComponentAddress.h"
+
+
+namespace icomp
+{
+
+
+CCompositePackageStaticInfo::CCompositePackageStaticInfo(
+			const QByteArray& packageId,
+			const icomp::IComponentEnvironmentManager* managerPtr)
+
+:	m_packageId(packageId),
+	m_envManager(*managerPtr)
+{
+	I_ASSERT(managerPtr != NULL);
+}
+
+
+void CCompositePackageStaticInfo::RegisterEmbeddedComponent(const QByteArray& componentId)
+{
+	m_embeddedComponentInfos[componentId];
+}
+
+
+//	reimplemented (icomp::IComponentStaticInfo)
+
+const IComponentStaticInfo* CCompositePackageStaticInfo::GetEmbeddedComponentInfo(const QByteArray& embeddedId) const
+{
+	EmbeddedComponentInfos::iterator infoIter = m_embeddedComponentInfos.find(embeddedId);
+	if (infoIter != m_embeddedComponentInfos.end()){
+		ComponentInfo& info = infoIter.value();
+
+		if (!info.isInitialized){
+			info.isInitialized = true;
+
+			icomp::CComponentAddress address(m_packageId, embeddedId);
+
+			const icomp::IRegistry* registryPtr = m_envManager.GetRegistry(address);
+			if (registryPtr != NULL){
+				info.componentInfoPtr.SetPtr(new icomp::CCompositeComponentStaticInfo(*registryPtr, m_envManager, this));
+			}
+		}
+
+		return info.componentInfoPtr.GetPtr();
+	}
+
+	return NULL;
+}
+
+
+IElementStaticInfo::Ids CCompositePackageStaticInfo::GetMetaIds(int metaGroupId) const
+{
+	Ids retVal;
+
+	if (metaGroupId == MGI_EMBEDDED_COMPONENTS){
+		for (		EmbeddedComponentInfos::const_iterator iter = m_embeddedComponentInfos.begin();
+					iter != m_embeddedComponentInfos.end();
+					++iter){
+			retVal.insert(iter.key());
+		}
+	}
+
+	return retVal;
+}
+
+
+} // namespace icomp
+
+

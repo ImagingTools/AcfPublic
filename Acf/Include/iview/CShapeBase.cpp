@@ -1,0 +1,306 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "iview/CShapeBase.h"
+
+
+// ACF includes
+#include "iview/IViewLayer.h"
+
+
+namespace iview
+{
+
+
+CShapeBase::CShapeBase()
+{
+	m_isVisible = true;
+	m_userColorShemaPtr = NULL;
+	m_displayPtr = NULL;
+	m_isBoundingBoxValid = false;
+	m_layerType = iview::IViewLayer::LT_INACTIVE;
+}
+
+
+CShapeBase::CShapeBase(const CShapeBase& shape)
+:	BaseClass2(shape)
+{
+	I_ASSERT(shape.m_displayPtr == NULL);	// Copy contructor not allowed for shapes connected to view
+
+	m_displayPtr = NULL;
+
+	m_userColorShemaPtr = shape.m_userColorShemaPtr;
+	m_isVisible = shape.m_isVisible;
+	m_isBoundingBoxValid = false;
+	m_layerType = shape.m_layerType;
+}
+
+
+CShapeBase::~CShapeBase()
+{
+	DisconnectDisplay();
+
+	SetVisible(false);
+}
+
+
+void CShapeBase::SetVisible(bool state)
+{
+	if (m_isVisible != state){
+		m_isVisible = state;
+
+		Invalidate(CS_CONSOLE);
+	}
+}
+
+
+bool CShapeBase::AssignToLayer(int layerType)
+{
+	if (m_displayPtr != NULL){
+		return false;
+	}
+
+	m_layerType = layerType;
+
+	return true;
+}
+
+
+// reimplemented (iview::CShapeControl)
+
+void CShapeBase::Invalidate(int /*changeFlags*/)
+{
+	InvalidateBoundingBox();
+
+	if (m_displayPtr != NULL){
+		m_displayPtr->OnChangeShape(this);
+	}
+}
+
+
+IDisplay* CShapeBase::GetDisplayPtr() const
+{
+	return m_displayPtr;
+}
+
+
+// reimplemented (iview::IShape)
+
+int CShapeBase::GetLayerType() const
+{
+	return m_layerType;
+}
+
+
+i2d::CRect CShapeBase::GetBoundingBox() const
+{
+	if (!m_isBoundingBoxValid){
+		if (IsVisible()){
+			m_boundingBox = CalcBoundingBox();
+		}
+		else{
+			m_boundingBox.Reset();
+		}
+
+		m_isBoundingBoxValid = true;
+	}
+
+	return m_boundingBox;
+}
+
+
+const IColorShema* CShapeBase::GetUserColorShema() const
+{
+	return m_userColorShemaPtr;
+}
+
+
+void CShapeBase::SetUserColorShema(const IColorShema* shemaPtr)
+{
+	m_userColorShemaPtr = shemaPtr;
+	if (m_displayPtr != NULL){
+		m_displayPtr->OnChangeShape(this);
+	}
+}
+
+
+// reimplemented (iview::IVisualizable)
+
+bool CShapeBase::IsVisible() const
+{
+	return m_isVisible;
+}
+
+
+bool CShapeBase::IsDisplayAccepted(const IDisplay& /*display*/) const
+{
+	return true;
+}
+
+
+void CShapeBase::OnConnectDisplay(IDisplay* displayPtr)
+{
+	I_ASSERT(displayPtr != NULL);
+	I_ASSERT(m_displayPtr == NULL);
+	I_ASSERT(IsDisplayAccepted(*displayPtr));
+
+	m_displayPtr = displayPtr;
+}
+
+
+void CShapeBase::OnDisconnectDisplay(IDisplay* I_IF_DEBUG(displayPtr))
+{
+	I_ASSERT(displayPtr != NULL);
+	I_ASSERT(displayPtr == m_displayPtr);
+	m_displayPtr = NULL;
+}
+
+
+bool CShapeBase::OnDisplayChange(int flags)
+{
+	if (flags & GetDisplayChangesMask()){
+		InvalidateBoundingBox();
+		if ((flags & CF_TRANSFORM) != 0){
+			InvalidateTransforms();
+		}
+		return true;
+	}
+	return false;
+}
+
+
+// reimplemented (iview::ITouchable)
+
+ITouchable::TouchState CShapeBase::IsTouched(istd::CIndex2d /*position*/) const
+{
+	return TS_NONE;
+}
+
+
+QString CShapeBase::GetShapeDescriptionAt(istd::CIndex2d /*position*/) const
+{
+	return "";
+}
+
+
+// reimplemented (imod::IObserver)
+
+bool CShapeBase::OnAttached(imod::IModel* modelPtr)
+{
+	bool retVal = BaseClass3::OnAttached(modelPtr);
+
+	Invalidate(CS_CONSOLE);
+
+	return retVal;
+}
+
+
+bool CShapeBase::OnDetached(imod::IModel* modelPtr)
+{
+	bool retVal = BaseClass3::OnDetached(modelPtr);
+
+	Invalidate(CS_CONSOLE);
+
+	return retVal;
+}
+
+
+void CShapeBase::OnUpdate(int changeFlags, istd::IPolymorphic* /*updateParamsPtr*/)
+{
+	Invalidate(changeFlags);
+}
+
+
+// protected methods
+
+int CShapeBase::GetDisplayChangesMask()
+{
+	return CF_TRANSFORM | CF_COLORS;
+}
+
+
+void CShapeBase::InvalidateBoundingBox()
+{
+	InvalidateTransforms();
+	m_isBoundingBoxValid = false;
+}
+
+
+bool CShapeBase::IsDisplayConnected() const
+{
+	I_ASSERT((m_displayPtr == NULL) || IsDisplayAccepted(*m_displayPtr));
+
+	return (m_displayPtr != NULL);
+}
+
+
+const IColorShema& CShapeBase::GetColorShema() const
+{
+	if (m_userColorShemaPtr != NULL){
+		return *m_userColorShemaPtr;
+	}
+	else{
+		I_ASSERT(IsDisplayConnected());
+	
+		return m_displayPtr->GetColorShema();
+	}
+}
+
+
+i2d::CRect CShapeBase::GetClientRect() const
+{
+	I_ASSERT(IsDisplayConnected());
+
+	return m_displayPtr->GetClientRect();
+}
+
+
+bool CShapeBase::IsBoundingBoxValid() const
+{
+	return m_isBoundingBoxValid;
+}
+
+
+// protected methods
+
+void CShapeBase::DisconnectDisplay()
+{
+	if (m_displayPtr != NULL){
+		m_displayPtr->DisconnectShape(this);
+		m_displayPtr = NULL;
+	}
+}
+
+
+// reimplemented (iview::CShapeControl)
+
+const iview::CScreenTransform& CShapeBase::GetViewToScreenTransform() const
+{
+	I_ASSERT(IsDisplayConnected());
+
+	return m_displayPtr->GetTransform();
+}
+
+
+} // namespace iview
+
+

@@ -1,0 +1,105 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef QtPck_included
+#define QtPck_included
+
+
+#include "icomp/TModelCompWrap.h"
+#include "icomp/TMakeComponentWrap.h"
+
+#include "iqt/CPackagesLoaderComp.h"
+#include "iqt/CRegistriesManagerComp.h"
+#include "iqt/CBitmap.h"
+#include "iqt/CBitmapSurface.h"
+#include "iqt/CBitmapLoaderComp.h"
+#include "iqt/CSettingsSerializerComp.h"
+#include "iqt/CApplicationSettingsProviderComp.h"
+#include "iqt/CIniSettingsProviderComp.h"
+#include "iqt/CFileInfoCopyComp.h"
+#include "iqt/CCopyProcessorComp.h"
+#include "iqt/CFileListProviderComp.h"
+#include "iqt/CClipboardSerializerComp.h"
+#include "iqt/CRenderedObjectFileLoaderComp.h"
+#include "iqt/CTranslationManagerComp.h"
+#include "iqt/CXmlFileReadArchive.h"
+#include "iqt/CXmlFileWriteArchive.h"
+#include "iqt/CRegistryCodeSaverComp.h"
+
+#include "iqtdoc/CExtendedDocumentTemplateComp.h"
+#include "iqtdoc/CStaticHelpFileProviderComp.h"
+#include "iqtdoc/CDoxygenHelpFileProviderComp.h"
+
+#include "iqtprm/CRelativeFileNameParamComp.h"
+
+#include "ibase/TFileSerializerComp.h"
+
+
+/**
+	Standard Qt package.
+*/
+namespace QtPck
+{
+
+
+typedef iqt::CPackagesLoaderComp PackagesLoader;
+typedef iqt::CRegistriesManagerComp RegistriesManager;
+typedef icomp::TModelCompWrap<
+			icomp::TMakeComponentWrap<
+						iqt::CBitmap,
+						iimg::IBitmap,
+						iimg::IRasterImage,
+						ibase::IObjectSnap,
+						iser::ISerializable> > Bitmap;
+typedef icomp::TModelCompWrap<
+			icomp::TMakeComponentWrap<
+						iqt::CBitmapSurface,
+						iimg::IBitmap,
+						iimg::IRasterImage,
+						iser::ISerializable,
+						imath::ISampledFunction2d> > BitmapSurface;
+typedef iqt::CBitmapLoaderComp BitmapLoader;
+typedef iqt::CSettingsSerializerComp SettingsSerializer;
+typedef iqt::CApplicationSettingsProviderComp ApplicationSettingsProvider;
+typedef iqt::CIniSettingsProviderComp IniSettingsProvider;
+typedef iqt::CFileInfoCopyComp FileInfoCopy;
+typedef iqt::CCopyProcessorComp CopyProcessor;
+typedef icomp::TModelCompWrap<iqt::CFileListProviderComp> FileListProvider;
+typedef iqt::CClipboardSerializerComp ClipboardSerializer;
+typedef iqt::CRenderedObjectFileLoaderComp RenderedObjectFileLoader;
+typedef icomp::TModelCompWrap<iqt::CTranslationManagerComp> TranslationManager;
+typedef ibase::TFileSerializerComp<iqt::CXmlFileReadArchive, iqt::CXmlFileWriteArchive> QtXmlFileSerializer;
+typedef iqt::CRegistryCodeSaverComp RegistryCodeSaver;
+
+typedef iqtdoc::CExtendedDocumentTemplateComp ExtendedDocumentTemplate;
+typedef iqtdoc::CStaticHelpFileProviderComp StaticHelpFileProvider;
+typedef iqtdoc::CDoxygenHelpFileProviderComp DoxygenHelpFileProvider;
+
+typedef icomp::TModelCompWrap<iqtprm::CRelativeFileNameParamComp> RelativeFileNameParam;
+
+
+} // namespace QtPck
+
+
+#endif // !QtPck_included
+
+

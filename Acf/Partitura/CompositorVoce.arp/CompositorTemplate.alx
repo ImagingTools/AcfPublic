@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<Acf>
+  <AcfHeader>
+    <VersionInfos count="1">
+      <Version>
+        <Id>
+          0
+        </Id>
+        <Number>
+          2437
+        </Number>
+        <Description>
+          ACF
+        </Description>
+      </Version>
+    </VersionInfos>
+  </AcfHeader>
+  <PositionMap count="9">
+    <Element>
+      <ComponentName>
+        RegistryLoader
+      </ComponentName>
+      <X>
+        550
+      </X>
+      <X>
+        100
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        RegistryConsistInfo
+      </ComponentName>
+      <X>
+        925
+      </X>
+      <X>
+        750
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        VisualRegistryView
+      </ComponentName>
+      <X>
+        925
+      </X>
+      <X>
+        625
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        PackagesLoaderExt
+      </ComponentName>
+      <X>
+        200
+      </X>
+      <X>
+        100
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        VisualRegistry
+      </ComponentName>
+      <X>
+        550
+      </X>
+      <X>
+        300
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        DocumentTemplate
+      </ComponentName>
+      <X>
+        925
+      </X>
+      <X>
+        200
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        UndoManager
+      </ComponentName>
+      <X>
+        925
+      </X>
+      <X>
+        100
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        RegistryCodeSaver
+      </ComponentName>
+      <X>
+        525
+      </X>
+      <X>
+        500
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        Preview
+      </ComponentName>
+      <X>
+        750
+      </X>
+      <X>
+        400
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+  </PositionMap>
+</Acf>

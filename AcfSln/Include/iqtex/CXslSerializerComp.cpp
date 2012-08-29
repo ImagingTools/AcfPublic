@@ -1,0 +1,102 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#include "iqtex/CXslSerializerComp.h"
+
+
+// Qt includes
+#include <QtCore/QObject>
+
+// ACF includes
+#include "istd/TChangeNotifier.h"
+
+// ACF-Solutions includes
+#include "iqtex/CXslTransformationReadArchive.h"
+#include "iqtex/CXslTransformationWriteArchive.h"
+
+
+namespace iqtex
+{
+
+
+int CXslSerializerComp::LoadFromFile(istd::IChangeable& data, const QString& filePath) const
+{
+	if (IsOperationSupported(&data, &filePath, QF_LOAD | QF_FILE, false)){
+		CXslTransformationReadArchive archive(filePath, m_xslReadFilePath->GetPath());
+
+		I_ASSERT(!archive.IsStoring());
+
+		iser::ISerializable* serializablePtr = dynamic_cast<iser::ISerializable*>(&data);
+		I_ASSERT(serializablePtr != NULL);
+
+		istd::CChangeNotifier changePtr(NULL, istd::IChangeable::CF_MODEL);
+
+		if (serializablePtr->Serialize(archive)){
+			changePtr.SetPtr(&data);
+
+			return StateOk;
+		}
+		else{
+			OnReadError(archive, data, filePath);
+		}
+	}
+	return StateFailed;
+}
+
+
+int CXslSerializerComp::SaveToFile(const istd::IChangeable& data, const QString& filePath) const
+{
+	if (IsOperationSupported(&data, &filePath, QF_SAVE | QF_FILE, false)){
+		CXslTransformationWriteArchive archive(filePath, m_xslWriteFilePath->GetPath(), GetVersionInfo(), this);
+		I_ASSERT(archive.IsStoring());
+
+		const iser::ISerializable* serializablePtr = dynamic_cast<const iser::ISerializable*>(&data);
+		I_ASSERT(serializablePtr != NULL);
+
+		if (!CheckMinimalVersion(*serializablePtr, archive.GetVersionInfo())){
+			SendWarningMessage(MI_UNSUPPORTED_VERSION, QObject::tr("Archive version is not supported, possible lost of data"));
+		}
+
+		if ((const_cast<iser::ISerializable*>(serializablePtr))->Serialize(archive)){
+			return StateOk;
+		}
+		else{
+			SendInfoMessage(MI_CANNOT_SAVE, QObject::tr("Cannot serialize object to file"));
+		}
+	}
+
+	return StateFailed;
+}
+
+
+// protected methods
+
+
+void CXslSerializerComp::OnReadError(const iser::IArchive& /*archive*/, const istd::IChangeable& /*data*/, const QString& filePath) const
+{
+	SendWarningMessage(MI_CANNOT_LOAD, QObject::tr("Cannot load object from file ") + filePath);
+}
+
+
+} // namespace iqtex
+
+

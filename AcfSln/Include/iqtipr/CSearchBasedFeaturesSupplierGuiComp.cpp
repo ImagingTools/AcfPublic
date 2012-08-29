@@ -1,0 +1,266 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#include "iqtipr/CSearchBasedFeaturesSupplierGuiComp.h"
+
+
+// Qt includes
+#include <QtGui/QMessageBox>
+#include <QtCore/QElapsedTimer>
+
+// ACF includes
+#include "imath/CVarVector.h"
+#include "iproc/IElapsedTimeProvider.h"
+
+// ACF-Solutions includes
+#include "imeas/INumericValueProvider.h"
+
+#include "iipr/CSearchFeature.h"
+
+
+namespace iqtipr
+{
+
+
+CSearchBasedFeaturesSupplierGuiComp::CSearchBasedFeaturesSupplierGuiComp()
+	:m_lastViewPtr(NULL)
+{
+}
+
+
+// protected slots
+
+void CSearchBasedFeaturesSupplierGuiComp::on_TestButton_clicked()
+{
+	DoTest();
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::on_LoadParamsButton_clicked()
+{
+	LoadParams();
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::on_SaveParamsButton_clicked()
+{
+	SaveParams();
+}
+
+
+// protected methods
+
+// reimplemented (iqtinsp::TSupplierGuiCompBase)
+
+QWidget* CSearchBasedFeaturesSupplierGuiComp::GetParamsWidget() const
+{
+	I_ASSERT(IsGuiCreated());
+
+	return ParamsFrame;
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::OnSupplierParamsChanged()
+{
+	if (IsGuiCreated() && AutoUpdateButton->isChecked()){
+		DoTest();
+	}
+}
+
+
+// reimplemented (iqt2d::IViewExtender)
+
+void CSearchBasedFeaturesSupplierGuiComp::AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags)
+{
+	I_ASSERT(providerPtr != NULL);
+
+	iview::IShapeView* viewPtr = providerPtr->GetView();
+	if (viewPtr != NULL){
+		m_lastViewPtr = viewPtr;
+
+		ConnectShapes(*viewPtr);
+	}
+	
+	BaseClass::AddItemsToScene(providerPtr, flags);
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::RemoveItemsFromScene(iqt2d::IViewProvider* providerPtr)
+{
+	I_ASSERT(providerPtr != NULL);
+
+	iview::IShapeView* viewPtr = providerPtr->GetView();
+	if (viewPtr != NULL){
+		DisconnectShapes(*viewPtr);
+	}
+
+	m_lastViewPtr = NULL;
+
+	BaseClass::RemoveItemsFromScene(providerPtr);
+}
+
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CSearchBasedFeaturesSupplierGuiComp::OnGuiModelAttached()
+{
+	BaseClass::OnGuiModelAttached();
+
+	ParamsGB->setVisible(AreParamsEditable() || IsLoadParamsSupported());
+	LoadParamsButton->setVisible(IsLoadParamsSupported());
+	SaveParamsButton->setVisible(IsSaveParamsSupported());
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::UpdateGui(int updateFlags)
+{
+	BaseClass::UpdateGui(updateFlags);
+
+	I_ASSERT(IsGuiCreated());
+
+	if ((updateFlags & iproc::ISupplier::CF_SUPPLIER_RESULTS) == 0){
+		return;
+	}
+
+	ResultsList->clear();
+
+	if (m_lastViewPtr != NULL){
+		DisconnectShapes(*m_lastViewPtr);
+	}
+
+	m_visualPositions.Reset();
+
+	double maxScoreRadius = 50;
+
+	TimeLabel->clear();
+
+	iproc::ISupplier* supplierPtr = GetObjectPtr();
+	if (supplierPtr != NULL){
+		int workStatus = supplierPtr->GetWorkStatus();
+		if (workStatus == iproc::ISupplier::WS_OK){
+			imeas::INumericValueProvider* providerPtr = dynamic_cast<imeas::INumericValueProvider*>(supplierPtr);
+			if (providerPtr != NULL){
+				int featuresCount = providerPtr->GetValuesCount();
+
+				for (int featureIndex = 0; featureIndex < featuresCount; featureIndex++){
+					const iipr::CSearchFeature* searchFeaturePtr = dynamic_cast<const iipr::CSearchFeature*>(&providerPtr->GetNumericValue(featureIndex));
+					if (searchFeaturePtr != NULL){
+						QTreeWidgetItem* modelItemPtr = new QTreeWidgetItem;
+						modelItemPtr->setText(CT_ID, searchFeaturePtr->GetId());
+						modelItemPtr->setText(CT_SCORE, QString::number(searchFeaturePtr->GetWeight() * 100, 'f', 2));
+						modelItemPtr->setText(CT_X, QString::number(searchFeaturePtr->GetPosition().GetX(), 'f', 2));
+						modelItemPtr->setText(CT_Y, QString::number(searchFeaturePtr->GetPosition().GetY(), 'f', 2));
+						modelItemPtr->setText(CT_ANGLE, QString::number(imath::GetDegreeFromRadian(searchFeaturePtr->GetAngle()), 'f', 2));
+						modelItemPtr->setText(CT_X_SCALE, QString::number(searchFeaturePtr->GetScale().GetX(), 'f', 2));
+						modelItemPtr->setText(CT_Y_SCALE, QString::number(searchFeaturePtr->GetScale().GetY(), 'f', 2));
+
+						ResultsList->addTopLevelItem(modelItemPtr);
+
+						VisualObject* visualObject = new VisualObject;
+
+						visualObject->model.SetPtr(new PositionModel);
+						visualObject->model->SetPosition(searchFeaturePtr->GetPosition());
+						visualObject->model->SetRadius(qMax(5.0, maxScoreRadius * searchFeaturePtr->GetWeight()));
+
+						visualObject->shape.SetPtr(new iview::CInteractiveCircleShape());
+						visualObject->shape->SetEditablePosition(false);
+						visualObject->shape->SetEditableRadius(false);
+
+						visualObject->model->AttachObserver(visualObject->shape.GetPtr());
+
+						m_visualPositions.PushBack(visualObject);
+					}
+				}
+			}
+			
+			const iproc::IElapsedTimeProvider* processingTimeProviderPtr = dynamic_cast<const iproc::IElapsedTimeProvider*>(supplierPtr);
+			if (processingTimeProviderPtr != NULL){
+				TimeLabel->setText(QString(tr("%1 ms").arg(processingTimeProviderPtr->GetElapsedTime() * 1000, 1, 'f', 1)));
+			}
+		}
+
+		imod::IModel* paramsModelPtr = dynamic_cast<imod::IModel*>(supplierPtr->GetModelParametersSet());
+		if (paramsModelPtr != NULL){
+			if (!paramsModelPtr->IsAttached(&m_paramsObserver)){
+				m_paramsObserver.EnsureModelDetached();
+
+				paramsModelPtr->AttachObserver(&m_paramsObserver);
+			}
+		}
+	}
+
+	if (m_lastViewPtr != NULL){
+		ConnectShapes(*m_lastViewPtr);
+	}
+}
+
+
+// reimplemented (iqtgui::IGuiObject)
+
+void CSearchBasedFeaturesSupplierGuiComp::OnGuiCreated()
+{
+	BaseClass::OnGuiCreated();
+
+	ResultsList->header()->setResizeMode(QHeaderView::ResizeToContents);
+}
+
+
+
+// reimplemented (icomp::IComponentBase)
+
+void CSearchBasedFeaturesSupplierGuiComp::OnComponentDestroyed()
+{
+	m_paramsObserver.EnsureModelDetached();
+
+	BaseClass::OnComponentDestroyed();
+}
+
+
+// private methods
+
+void CSearchBasedFeaturesSupplierGuiComp::ConnectShapes(iview::IShapeView& view)
+{
+	int shapesCount = m_visualPositions.GetCount();
+	for (int shapeIndex = 0; shapeIndex < shapesCount; shapeIndex++){
+		VisualObject* objectPtr = m_visualPositions.GetAt(shapeIndex);
+		I_ASSERT(objectPtr != NULL);
+
+		view.ConnectShape(objectPtr->shape.GetPtr());
+	}
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::DisconnectShapes(iview::IShapeView& view)
+{
+	int shapesCount = m_visualPositions.GetCount();
+	for (int shapeIndex = 0; shapeIndex < shapesCount; shapeIndex++){
+		VisualObject* objectPtr = m_visualPositions.GetAt(shapeIndex);
+		I_ASSERT(objectPtr != NULL);
+
+		view.DisconnectShape(objectPtr->shape.GetPtr());
+	}
+}
+
+
+} // namespace iqtipr
+
+

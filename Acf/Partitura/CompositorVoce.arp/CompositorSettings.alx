@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<Acf>
+  <AcfHeader>
+    <VersionInfos count="1">
+      <Version>
+        <Id>
+          0
+        </Id>
+        <Number>
+          2246
+        </Number>
+        <Description>
+          ACF
+        </Description>
+      </Version>
+    </VersionInfos>
+  </AcfHeader>
+  <PositionMap count="9">
+    <Element>
+      <ComponentName>
+        ConfigDataShadow
+      </ComponentName>
+      <X>
+        200
+      </X>
+      <X>
+        75
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        ConfigFileShadower
+      </ComponentName>
+      <X>
+        200
+      </X>
+      <X>
+        225
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        ConfigsManager
+      </ComponentName>
+      <X>
+        475
+      </X>
+      <X>
+        300
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        HtmlBrowserFile
+      </ComponentName>
+      <X>
+        500
+      </X>
+      <X>
+        500
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        HtmlEditorFile
+      </ComponentName>
+      <X>
+        725
+      </X>
+      <X>
+        500
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        LanguageSelection
+      </ComponentName>
+      <X>
+        975
+      </X>
+      <X>
+        300
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        PreviewCommandFile
+      </ComponentName>
+      <X>
+        725
+      </X>
+      <X>
+        300
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        SelectableConfigData
+      </ComponentName>
+      <X>
+        475
+      </X>
+      <X>
+        125
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        Settings
+      </ComponentName>
+      <X>
+        200
+      </X>
+      <X>
+        400
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+  </PositionMap>
+</Acf>

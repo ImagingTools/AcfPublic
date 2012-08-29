@@ -1,0 +1,154 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iprm_IParamsManager_included
+#define iprm_IParamsManager_included
+
+
+// Qt includes
+#include <QtCore/QString>
+#include <QtCore/QSet>
+#include <QtCore/QByteArray>
+
+// ACF includes
+#include "iprm/ISelectionParam.h"
+
+
+namespace iprm
+{
+
+
+class IParamsSet;
+
+
+/**
+	Manager of parameters set.
+*/
+class IParamsManager: virtual public iprm::ISelectionParam
+{
+public:
+	typedef QSet<QByteArray> TypeIds;
+	/**
+		Bitwise coded flags used to find out supported features.
+	*/
+	enum ParamsOperationFlags
+	{
+		/**
+			Active if number of parameters is fixed.
+		*/
+		MF_COUNT_FIXED = 1,
+		/**
+			Active if rename of parameters is supported.
+		*/
+		MF_SUPPORT_RENAME = 2,
+		/**
+			Active if insert of parameters is possible.
+		*/
+		MF_SUPPORT_INSERT = 4,
+		/**
+			Active if delete of parameters is possible.
+		*/
+		MF_SUPPORT_DELETE = 8,
+		/**
+			Active if swap of parameters with the other one is possible.
+		*/
+		MF_SUPPORT_SWAP = 16
+	};
+
+	/**
+		Possible changes of the manager's data model.
+	*/
+	enum ChangeFlags
+	{
+		CF_SET_INSERTED = 1 << 14,
+		CF_SET_REMOVED = 1 << 15,
+		CF_SET_NAME_CHANGED = 1 << 16
+	};
+
+	/**
+		Get operation control flags of some paramter set or whole manager.
+		\sa ManagerFlags.
+		\param	index	index addressing position in parameter set list.
+						For negative value general flags are returned.
+						For example if you want to check if there is any renameable element
+						you should call it with negative index value.
+						To check if first element can be renamed call it with index value 0.
+						To check if you can insert at the last position please use index value equal to current number of parameter set.
+	*/
+	virtual int GetIndexOperationFlags(int index = -1) const = 0;
+
+	/**
+		Get number of managed set.
+	*/
+	virtual int GetParamsSetsCount() const = 0;
+
+	/**
+		Get list of IDs of supported parameters types for insert.
+		The IDs are context specified.
+		Please note, that some existing parameters can use IDs outside this list.
+	*/
+	virtual TypeIds GetSupportedTypeIds() const = 0;
+
+	/**
+		Insert new parameters set at selected position.
+		\param	index	position in list of parameters or negative value to use default position.
+		\param	typeid	ID of parameter type.
+						This ID is context specified and is used to indicate type of parameters should be added.
+						If no ID is specified, type will be automatically selected.
+		\return			position of inserted new entry or negative value if no insert was possible.
+						For specified index positions (positive \c index value) it will return the same index or negative value.
+	*/
+	virtual int InsertParamsSet(const QByteArray& typeId = "", int index = -1) = 0;
+
+	/**
+		Remove parameters set at selected position.
+	*/
+	virtual bool RemoveParamsSet(int index) = 0;
+
+	/**
+		Swap two parameter sets.
+	*/
+	virtual bool SwapParamsSet(int index1, int index2) = 0;
+
+	/**
+		Get selected parameter set.
+	*/
+	virtual IParamsSet* GetParamsSet(int index) const = 0;
+
+	/**
+		Get name of specified parameter set.
+	*/
+	virtual QString GetParamsSetName(int index) const = 0;
+
+	/**
+		Set name of specified parameter set.
+	*/
+	virtual bool SetParamsSetName(int index, const QString& name) = 0;
+};
+
+
+} // namespace iprm
+
+
+#endif // !iprm_IParamsManager_included
+
+
