@@ -28,9 +28,6 @@
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
-// ACF-Solutions includes
-#include "imeas/CGeneralUnitInfo.h"
-
 
 namespace imeas
 {
@@ -38,7 +35,9 @@ namespace imeas
 
 CLinearAdjustParamsComp::CLinearAdjustParamsComp()
 :	m_scale(1.0),
-	m_offset(0)
+	m_offset(0),
+	m_offsetUnitInfo(IUnitInfo::UT_RELATIVE, "%", 100, istd::CRange(0, 1)),
+	m_scaleUnitInfo(IUnitInfo::UT_RELATIVE, "%", 100, istd::CRange(0, 1))
 {
 }
 
@@ -201,15 +200,25 @@ QString CLinearAdjustParamsComp::GetNumericValueDescription(int index) const
 
 const imeas::IUnitInfo& CLinearAdjustParamsComp::GetNumericValueUnitInfo(int index) const
 {
-	static imeas::CGeneralUnitInfo offsetUnitInfo(IUnitInfo::UT_RELATIVE, "%", 100, istd::CRange(-1, 1));
-	static imeas::CGeneralUnitInfo scaleUnitInfo(IUnitInfo::UT_RELATIVE, "%", 100, istd::CRange(0, 2));
-
 	switch (index){
 	case 0:
-		return offsetUnitInfo;
+		return m_offsetUnitInfo;
 
 	default:
-		return scaleUnitInfo;
+		return m_scaleUnitInfo;
+	}
+}
+
+
+// reimplemented (icomp::CComponentBase)
+
+void CLinearAdjustParamsComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	if (m_constraintsCompPtr.IsValid()){
+		m_offsetUnitInfo.SetValueRange(m_constraintsCompPtr->GetOffsetFactorRange());
+		m_scaleUnitInfo.SetValueRange(m_constraintsCompPtr->GetScaleFactorRange());
 	}
 }
 
