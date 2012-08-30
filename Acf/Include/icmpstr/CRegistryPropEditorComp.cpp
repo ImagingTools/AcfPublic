@@ -69,7 +69,7 @@ void CRegistryPropEditorComp::CreateOverview()
 			exportedInterfacesItemPtr->setExpanded(true);
 		}
 
-		const icomp::IRegistry::ExportedComponentsMap& exportedComponents = registryPtr->GetExportedComponentsMap();
+		const icomp::IRegistry::ExportedElementsMap& exportedComponents = registryPtr->GetExportedElementsMap();
 		if (!exportedComponents.isEmpty()){
 			QTreeWidgetItem* exportedComponentsItemPtr = new QTreeWidgetItem();
 			exportedComponentsItemPtr->setText(0, tr("Exported Components"));
@@ -77,7 +77,7 @@ void CRegistryPropEditorComp::CreateOverview()
 
 			OverviewTree->addTopLevelItem(exportedComponentsItemPtr);
 
-			for (		icomp::IRegistry::ExportedComponentsMap::const_iterator iter = exportedComponents.begin();
+			for (		icomp::IRegistry::ExportedElementsMap::const_iterator iter = exportedComponents.begin();
 						iter != exportedComponents.end();
 						iter++){
 				QTreeWidgetItem* exportedComponentItemPtr = new QTreeWidgetItem();

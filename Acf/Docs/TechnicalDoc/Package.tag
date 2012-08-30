@@ -3309,7 +3309,8 @@
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_i_elapsed_time_provider_8h" name="IElapsedTimeProvider.h" local="yes" imported="no">iproc/IElapsedTimeProvider.h</includes>
     <class kind="class">iproc::TSupplierCompWrap</class>
-    <class kind="class">iproc::TSupplierCompWrap::InputObserver</class>
+    <class kind="class">iproc::TSupplierCompWrap::InputsObserver</class>
+    <class kind="class">iproc::TSupplierCompWrap::ParamsObserver</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -20063,10 +20064,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ExportedComponentsMap &amp;</type>
-      <name>GetExportedComponentsMap</name>
+      <type>virtual const ExportedElementsMap &amp;</type>
+      <name>GetExportedElementsMap</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>aba3dc2e2369de79b3abfc37e6dda10b9</anchor>
+      <anchor>af44df9cf919a52dbc94b2c0e09be65a4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21129,27 +21130,27 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CF_COMPONENT_ADDED</name>
+      <name>CF_ELEMENT_ADDED</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a8322a59df1735f4c7ff97cc66bc6e22aa1077dac8fbb670348f00ada6b9c7862e</anchor>
+      <anchor>a8322a59df1735f4c7ff97cc66bc6e22aaba9dae4e10d53883e760c807983bbb32</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CF_COMPONENT_REMOVED</name>
+      <name>CF_ELEMENT_REMOVED</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a8322a59df1735f4c7ff97cc66bc6e22aabba34e352b4f37a2b3859ba792db527c</anchor>
+      <anchor>a8322a59df1735f4c7ff97cc66bc6e22aad74b528f6ebec6a6a513a46574d0e352</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CF_COMPONENT_EXPORTED</name>
+      <name>CF_ELEMENT_EXPORTED</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a8322a59df1735f4c7ff97cc66bc6e22aa38f88f95079b3eccce30b401dc5f88a7</anchor>
+      <anchor>a8322a59df1735f4c7ff97cc66bc6e22aa81dab7a8c98bc75cbf1e38a452de211b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CF_COMPONENT_RENAMED</name>
+      <name>CF_ELEMENT_RENAMED</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>a8322a59df1735f4c7ff97cc66bc6e22aa5c0b3b00d5f5108a84ad39f243eea230</anchor>
+      <anchor>a8322a59df1735f4c7ff97cc66bc6e22aab34ab59d163b0783f8ea6516090ae3be</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -21181,9 +21182,9 @@
     </member>
     <member kind="typedef">
       <type>QMap&lt; QByteArray, QByteArray &gt;</type>
-      <name>ExportedComponentsMap</name>
+      <name>ExportedElementsMap</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>ad6772897f1dfa66ced1d0b8b819cd186</anchor>
+      <anchor>a82429c25523b270d22c51cd17b0e498a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -21264,10 +21265,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const ExportedComponentsMap &amp;</type>
-      <name>GetExportedComponentsMap</name>
+      <type>virtual const ExportedElementsMap &amp;</type>
+      <name>GetExportedElementsMap</name>
       <anchorfile>classicomp_1_1_i_registry.html</anchorfile>
-      <anchor>aebcebe3775a74fba1d616527e8219a0b</anchor>
+      <anchor>a1ca1d805e5562c2720ba2bf66395559a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -31990,7 +31991,8 @@
     <base virtualness="virtual">iproc::ISupplier</base>
     <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
     <base virtualness="virtual">istd::IChangeable</base>
-    <class kind="class">iproc::TSupplierCompWrap::InputObserver</class>
+    <class kind="class">iproc::TSupplierCompWrap::InputsObserver</class>
+    <class kind="class">iproc::TSupplierCompWrap::ParamsObserver</class>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
@@ -32087,6 +32089,13 @@
       <anchor>a864d166238f938df650c6d0b9a254406</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnParametersChanged</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a2ed24e750ada2b287d96e3f4f8329c73</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>const Product *</type>
       <name>GetWorkProduct</name>
@@ -32131,22 +32140,55 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iproc::TSupplierCompWrap::InputObserver</name>
-    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html</filename>
+    <name>iproc::TSupplierCompWrap::InputsObserver</name>
+    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</filename>
     <base>imod::CMultiModelObserverBase</base>
     <member kind="function">
       <type></type>
-      <name>InputObserver</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html</anchorfile>
-      <anchor>aef95decb5518150f7c51a5c8b9d421c8</anchor>
+      <name>InputsObserver</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
+      <anchor>a4417edee8623247aab327f4e1dd6ead6</anchor>
       <arglist>(TSupplierCompWrap&lt; Product &gt; *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_input_observer.html</anchorfile>
-      <anchor>a3ae4ef72220cf7de4a1165e9fda588eb</anchor>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
+      <anchor>ad5c662418645b1e2e32b039ca5db024d</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>TSupplierCompWrap&lt; Product &gt; &amp;</type>
+      <name>m_parent</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
+      <anchor>a6013b20e728a1af76021962651331484</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TSupplierCompWrap::ParamsObserver</name>
+    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</filename>
+    <base>imod::CMultiModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>ParamsObserver</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
+      <anchor>ada0299c62b020d51a0b302c4aaac654a</anchor>
+      <arglist>(TSupplierCompWrap&lt; Product &gt; *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
+      <anchor>a204c6243398041b027d3ecf5fec1e19b</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>TSupplierCompWrap&lt; Product &gt; &amp;</type>
+      <name>m_parent</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
+      <anchor>a4140ae4ace7eaf7410c41ff092c126e6</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

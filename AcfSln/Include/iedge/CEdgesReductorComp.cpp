@@ -68,7 +68,7 @@ void CEdgesReductorComp::GetReducedLine(
 				positionTolerance,
 				weightTolerance,
 				0,
-				isClosed? nodesCount + 1: nodesCount - 1,
+				isClosed? nodesCount: nodesCount - 1,
 				nodesToRemove,
 				firstInsideIndex,
 				lastInsideIndex);
@@ -209,7 +209,7 @@ QString CEdgesReductorComp::GetNumericValueDescription(int index) const
 const imeas::IUnitInfo& CEdgesReductorComp::GetNumericValueUnitInfo(int index) const
 {
 	static imeas::CGeneralUnitInfo positionUnitInfo(imeas::IUnitInfo::UT_RELATIVE, "px", 1, istd::CRange(0, 10));
-	static imeas::CGeneralUnitInfo weightUnitInfo(imeas::IUnitInfo::UT_RELATIVE, "%", 100, istd::CRange(0.00, 0.1));
+	static imeas::CGeneralUnitInfo weightUnitInfo(imeas::IUnitInfo::UT_RELATIVE, "%", 100, istd::CRange(0.00, 1));
 
 	switch (index){
 	case 1:
@@ -249,6 +249,7 @@ int CEdgesReductorComp::ReduceNodes(
 		int nodesCount = edgeLine.GetNodesCount();
 
 		int nodeIndex = firstIndex + nodesInsideCount / 2 + 1;
+		int centerNodeIndex = nodeIndex % nodesCount;
 		int leftNodeIndex = (nodeIndex - 1) % nodesCount;
 		int rightNodeIndex = (nodeIndex + 1) % nodesCount;
 
@@ -282,15 +283,15 @@ int CEdgesReductorComp::ReduceNodes(
 			lastInsideIndex = lastIndex - 1;
 		}
 
-		const CEdgeNode& node = edgeLine.GetNode(nodeIndex % nodesCount);
-		const CEdgeNode& prevNode = edgeLine.GetNode(leftNodeIndex % nodesCount);
-		const CEdgeNode& nextNode = edgeLine.GetNode(rightNodeIndex % nodesCount);
+		const CEdgeNode& node = edgeLine.GetNode(centerNodeIndex);
+		const CEdgeNode& prevNode = edgeLine.GetNode(leftNodeIndex);
+		const CEdgeNode& nextNode = edgeLine.GetNode(rightNodeIndex);
 
 		i2d::CVector2d nextPrevDelta = nextNode.GetPosition() - prevNode.GetPosition();
 		i2d::CVector2d prevDelta = node.GetPosition() - prevNode.GetPosition();
 
 		double removedDistance = 0;
-		double removedWeightDiff = 0;
+		double removedWeightProp = 0;
 
 		double nextPrevDistance = nextPrevDelta.GetLength();
 		if (nextPrevDistance >= I_BIG_EPSILON){
@@ -299,18 +300,18 @@ int CEdgesReductorComp::ReduceNodes(
 			double segmentAlpha = prevDelta.GetDotProduct(nextPrevDelta) / nextPrevDelta.GetLength2();
 			double interpolatedWeight = (1 - segmentAlpha) * prevNode.GetWeight() + segmentAlpha * nextNode.GetWeight();
 
-			removedWeightDiff = qFabs(node.GetWeight() - interpolatedWeight);
+			removedWeightProp = node.GetWeight() / interpolatedWeight;
 		}
 		else{
 			removedDistance = prevDelta.GetLength();
 
 			double averageWeight = (prevNode.GetWeight() + nextNode.GetWeight()) * 0.5;
 
-			removedWeightDiff = qFabs(node.GetWeight() - averageWeight);
+			removedWeightProp = node.GetWeight() / averageWeight;
 		}
 
-		if ((removedDistance < positionTolerance) && (removedWeightDiff < weightTolerance)){
-			nodesToRemove[nodeIndex % nodesCount] = true;
+		if ((removedDistance < positionTolerance) && (qFabs(removedWeightProp - 1) < weightTolerance)){
+			nodesToRemove[centerNodeIndex] = true;
 
 			if (firstInsideIndex == nodeIndex){
 				firstInsideIndex = rightNodeIndex;

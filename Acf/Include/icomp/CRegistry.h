@@ -57,7 +57,7 @@ public:
 	virtual bool RemoveEmbeddedRegistry(const QByteArray& registryId);
 	virtual bool RenameEmbeddedRegistry(const QByteArray& oldRegistryId, const QByteArray& newRegistryId);
 	virtual const ExportedInterfacesMap& GetExportedInterfacesMap() const;
-	virtual const ExportedComponentsMap& GetExportedComponentsMap() const;
+	virtual const ExportedElementsMap& GetExportedElementsMap() const;
 	virtual void SetElementInterfaceExported(
 				const QByteArray& elementId,
 				const QByteArray& interfaceName,
@@ -96,7 +96,7 @@ private:
 	ComponentsMap m_componentsMap;
 	EmbeddedRegistriesMap m_embeddedRegistriesMap;
 	ExportedInterfacesMap m_exportedInterfacesMap;
-	ExportedComponentsMap m_exportedComponentsMap;
+	ExportedElementsMap m_exportedComponentsMap;
 
 	QString m_description;
 	QString m_keywords;

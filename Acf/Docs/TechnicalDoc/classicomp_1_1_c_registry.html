@@ -85,11 +85,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">ExportedInterfacesMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a01f3288271d2a592b74f7db567713f61">GetExportedInterfacesMap</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to information structure of exported interfaces.  <a href="#a01f3288271d2a592b74f7db567713f61"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_registry.html#ad6772897f1dfa66ced1d0b8b819cd186">ExportedComponentsMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#aba3dc2e2369de79b3abfc37e6dda10b9">GetExportedComponentsMap</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to map used to convert exported sub-components to internal sub-component ID's.  <a href="#aba3dc2e2369de79b3abfc37e6dda10b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry.html#a82429c25523b270d22c51cd17b0e498a">ExportedElementsMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#af44df9cf919a52dbc94b2c0e09be65a4">GetExportedElementsMap</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to map used to convert exported sub-elements to internal sub-element ID's.  <a href="#af44df9cf919a52dbc94b2c0e09be65a4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a999f44d683d151934a3bfbeb75a2bf23">SetElementInterfaceExported</a> (const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool state=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable exporting single or all interfaces of component.  <a href="#a999f44d683d151934a3bfbeb75a2bf23"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable exporting single or all interfaces of element.  <a href="#a999f44d683d151934a3bfbeb75a2bf23"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a1e4ac43d8dc579ac0c577137a1780913">SetElementExported</a> (const QByteArray &amp;exportId, const QByteArray &amp;elementId)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set element to be exported.  <a href="#a1e4ac43d8dc579ac0c577137a1780913"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a29bfc65ec31589bd311c39dde401cb35">GetDescription</a> () const </td></tr>
@@ -277,12 +276,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aba3dc2e2369de79b3abfc37e6dda10b9"></a><!-- doxytag: member="icomp::CRegistry::GetExportedComponentsMap" ref="aba3dc2e2369de79b3abfc37e6dda10b9" args="() const " -->
+<a class="anchor" id="af44df9cf919a52dbc94b2c0e09be65a4"></a><!-- doxytag: member="icomp::CRegistry::GetExportedElementsMap" ref="af44df9cf919a52dbc94b2c0e09be65a4" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#ad6772897f1dfa66ced1d0b8b819cd186">ExportedComponentsMap</a>&amp; icomp::CRegistry::GetExportedComponentsMap </td>
+          <td class="memname">virtual const <a class="el" href="classicomp_1_1_i_registry.html#a82429c25523b270d22c51cd17b0e498a">ExportedElementsMap</a>&amp; icomp::CRegistry::GetExportedElementsMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -291,9 +290,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get access to map used to convert exported sub-components to internal sub-component ID's. </p>
+<p>Get access to map used to convert exported sub-elements to internal sub-element ID's. </p>
 
-<p>Implements <a class="el" href="classicomp_1_1_i_registry.html#aebcebe3775a74fba1d616527e8219a0b">icomp::IRegistry</a>.</p>
+<p>Implements <a class="el" href="classicomp_1_1_i_registry.html#a1ca1d805e5562c2720ba2bf66395559a">icomp::IRegistry</a>.</p>
 
 </div>
 </div>
@@ -692,7 +691,7 @@ Protected Member Functions</h2></td></tr>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">exportId</td><td>ID of exported name, or NULL if this export should be removed. </td></tr>
-    <tr><td class="paramname">elementId</td><td>ID of element or its subelement (with dot separated) or empty string, if this export should be removed. </td></tr>
+    <tr><td class="paramname">elementId</td><td>ID of element or its subelement (separated with slash) or empty string, if this export should be removed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -732,7 +731,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Enable or disable exporting single or all interfaces of component. </p>
+<p>Enable or disable exporting single or all interfaces of element. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">elementId</td><td>ID of element in registry. </td></tr>

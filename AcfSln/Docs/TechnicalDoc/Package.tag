@@ -3517,6 +3517,7 @@
     <name>iedge::CEdgesReductorComp</name>
     <filename>classiedge_1_1_c_edges_reductor_comp.html</filename>
     <base>TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</base>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</type>
       <name>BaseClass</name>
