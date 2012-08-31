@@ -163,7 +163,7 @@ void CLogGuiComp::OnGuiCreated()
 	LogView->setItemDelegate(itemDelegate);
 	LogView->header()->hide();
 
-	if(m_showLogDescriptionAttrPtr.IsValid() && *m_showLogDescriptionAttrPtr){
+	if (m_showLogDescriptionAttrPtr.IsValid() && *m_showLogDescriptionAttrPtr){
 		LogView->header()->show();
 	}
 

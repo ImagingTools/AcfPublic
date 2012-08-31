@@ -61,7 +61,6 @@ public:
 	I_BEGIN_COMPONENT(CSingleDocumentWorkspaceGuiComp);
 		I_REGISTER_INTERFACE(idoc::IDocumentManager);
 		I_ASSIGN(m_documentTemplateCompPtr, "DocumentTemplate", "Document template", true, "DocumentTemplate");
-		I_ASSIGN(m_rememberOpenDocumentOnExitAttPtr, "RememberOpenDocumentOnExit", "Restores open document from previous session", false, true);
 	I_END_COMPONENT;
 
 	enum GroupId
@@ -99,19 +98,11 @@ protected:
 	// reimplemented (istd:IChangeable)
 	virtual void OnEndChanges(int changeFlags, istd::IPolymorphic* changeParamsPtr);
 
-	// reimplemented (TRestorableGuiWrap)
-	virtual void OnRestoreSettings(const QSettings& settings);
-	virtual void OnSaveSettings(QSettings& settings);
-
 private:
 
 	I_REF(idoc::IDocumentTemplate, m_documentTemplateCompPtr);
-	I_ATTR(bool, m_rememberOpenDocumentOnExitAttPtr);
 
 	iqtgui::IGuiObject* m_lastViewPtr;
-
-	QString m_organizationName;
-	QString m_applicationName;
 };
 
 

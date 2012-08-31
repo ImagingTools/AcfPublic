@@ -112,13 +112,10 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::UpdateMod
 	objectPtr->Clear();
 
 	for (int i = 0; i < count; i++){
-		QTableWidgetItem* item0 = CoordsTable->item(i, 0);
-		QTableWidgetItem* item1 = CoordsTable->item(i, 1);
-		if (item0 && item1){
-			double x = item0->text().toDouble();
-			double y = item1->text().toDouble();
-			objectPtr->InsertNode(i2d::CVector2d(x, y));
-		}
+		double x = CoordsTable->item(i, 0)->text().toDouble();
+		double y = CoordsTable->item(i, 1)->text().toDouble();
+	
+		objectPtr->InsertNode(i2d::CVector2d(x, y));
 	}
 }
 

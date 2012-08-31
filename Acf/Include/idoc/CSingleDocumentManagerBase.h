@@ -127,11 +127,6 @@ protected:
 	*/
 	virtual void QueryDocumentClose(bool* ignoredPtr) = 0;
 
-	/**
-		Serializes open documents information
-	*/
-	bool SerializeOpenDocument(iser::IArchive& archive);
-
 private:
 	QString m_filePath;
 	QByteArray m_documentTypeId;

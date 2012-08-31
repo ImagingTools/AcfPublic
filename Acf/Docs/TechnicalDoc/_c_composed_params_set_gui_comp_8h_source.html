@@ -116,8 +116,8 @@
 <a name="l00089"></a>00089        I_ATTR(<span class="keywordtype">bool</span>, m_showAllShapesAttrPtr);
 <a name="l00090"></a>00090        I_ATTR(<span class="keywordtype">int</span>, m_designTypeAttrPtr);
 <a name="l00091"></a>00091 
-<a name="l00092"></a>00092        <span class="keyword">typedef</span> QSet&lt;imod::IModelEditor*&gt; ConnectedEditors;
-<a name="l00093"></a>00093        ConnectedEditors m_connectedEditors;
+<a name="l00092"></a>00092        <span class="keyword">typedef</span> QMap&lt;imod::IModelEditor*, bool&gt; ConnectedEditorsMap;
+<a name="l00093"></a>00093        ConnectedEditorsMap m_connectedEditorsMap;
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095        <span class="keywordtype">int</span> m_currentGuiIndex;
 <a name="l00096"></a>00096 

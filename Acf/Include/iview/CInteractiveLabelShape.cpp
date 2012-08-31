@@ -201,9 +201,9 @@ void CInteractiveLabelShape::Draw(QPainter& drawContext) const
         drawContext.restore();
 
         //draw ticker
-		if(IsPositionVisible()){
+		if (IsPositionVisible()){
             BaseClass::Draw(drawContext);
-			if(IsSelected() && IsEditableOffset()){
+			if (IsSelected() && IsEditableOffset()){
                 colorShema.DrawTicker(drawContext, offsetSp, IColorShema::TT_MOVE);
 			}
         }
@@ -242,7 +242,7 @@ ITouchable::TouchState CInteractiveLabelShape::IsTouched(istd::CIndex2d position
 				istd::CIndex2d offsetSp = sp + m_drawOffset;
 
 				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_MOVE);
-				if(tickerBox.GetTranslated(offsetSp).IsInside(position))
+				if (tickerBox.GetTranslated(offsetSp).IsInside(position))
 					return TS_TICKER;
 			}
 		}
@@ -250,7 +250,7 @@ ITouchable::TouchState CInteractiveLabelShape::IsTouched(istd::CIndex2d position
 		i2d::CRect textBox;
 		CalculateTextOriginSize(textBox);
 
-		if(textBox.IsInside(position)){
+		if (textBox.IsInside(position)){
 			return IsEditablePosition()? TS_DRAGGABLE: TS_INACTIVE;
 		}
 	}
@@ -388,7 +388,7 @@ i2d::CRect CInteractiveLabelShape::CalcBoundingBox() const
 		if (IsPositionVisible()){
 			const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_MOVE: IColorShema::TT_INACTIVE);
 			boundingBox.Union(tickerBox.GetTranslated(sp));
-			if(IsEditableOffset())
+			if (IsEditableOffset())
 				boundingBox.Union(tickerBox.GetTranslated(offsetSp));
 		}
 

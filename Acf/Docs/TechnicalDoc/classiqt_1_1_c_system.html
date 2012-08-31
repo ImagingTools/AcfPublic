@@ -57,6 +57,9 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system.html#a1803dec41c66e3984b07589954b7277b">GetEnrolledPath</a> (const QString &amp;path)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path with enrolled system variables.  <a href="#a1803dec41c66e3984b07589954b7277b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classiqt_1_1_c_system.html#a24fd7f9658f88455a9ce12672bcfcb43">EnvironmentVariables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system.html#afe9c6a75002da02c8f8a6c42a3c8cf7e">GetEnvironmentVariables</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of environment valiables related to the current process.  <a href="#afe9c6a75002da02c8f8a6c42a3c8cf7e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system.html#abbebd83c1fdf25b698267cfa4af8761d">SetTempDirectoryPath</a> (const QString &amp;tempPath)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set path for for temporary data to the current process.  <a href="#abbebd83c1fdf25b698267cfa4af8761d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system.html#ac568999a6d59287edc20e8134472c0b4">Sleep</a> (double seconds)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep current thread.  <a href="#ac568999a6d59287edc20e8134472c0b4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_system.html#aa87ebe27e9a3a889daf22374f6129046">RemoveDirectory</a> (const QString &amp;directoryPath)</td></tr>
@@ -135,6 +138,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Get list of environment valiables related to the current process. </p>
+
 </div>
 </div>
 <a class="anchor" id="a45576d6fbd34142a2c92fef497fdf960"></a><!-- doxytag: member="iqt::CSystem::GetNormalizedPath" ref="a45576d6fbd34142a2c92fef497fdf960" args="(const QString &amp;path)" -->
@@ -172,6 +177,25 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Remove a given directory with all contents. </p>
+
+</div>
+</div>
+<a class="anchor" id="abbebd83c1fdf25b698267cfa4af8761d"></a><!-- doxytag: member="iqt::CSystem::SetTempDirectoryPath" ref="abbebd83c1fdf25b698267cfa4af8761d" args="(const QString &amp;tempPath)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void iqt::CSystem::SetTempDirectoryPath </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>tempPath</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set path for for temporary data to the current process. </p>
 
 </div>
 </div>

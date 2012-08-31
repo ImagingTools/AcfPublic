@@ -36,8 +36,6 @@
 #include "idoc/IUndoManager.h"
 #include "idoc/CTmplBasedDocumentManagerBase.h"
 
-#include "iser/IArchive.h"
-
 
 namespace idoc
 {
@@ -81,7 +79,6 @@ protected:
 	typedef istd::TDelPtr<idoc::IUndoManager> UndoManagerPtr;
 	typedef istd::TDelPtr<istd::IPolymorphic> ViewPtr;
 	typedef QList<ViewPtr> Views;
-	typedef QList<QByteArray> ViewTypeIds;
 
 	struct SingleDocumentData: public DocumentInfo, public imod::CSingleModelObserverBase
 	{
@@ -106,7 +103,6 @@ protected:
 		DocumentPtr documentPtr;
 		UndoManagerPtr undoManagerPtr;
 		Views views;
-		ViewTypeIds viewTypeIds;
 
 	protected:
 		// reimplemented (imod::CSingleModelObserverBase)
@@ -194,11 +190,6 @@ protected:
 		\param	ignoredPtr	optional return flag indicating that user ignored this close operation.
 	*/
 	virtual void QueryDocumentClose(const SingleDocumentData& info, bool* ignoredPtr) = 0;
-
-	/**
-		Serializes open documents information
-	*/
-	bool SerializeOpenDocumentList(iser::IArchive& archive);
 
 private:
 	typedef istd::TPointerVector<SingleDocumentData> DocumentInfos;

@@ -1291,6 +1291,25 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
+    <name>CRegistryTreeViewComp.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_registry_tree_view_comp_8h</filename>
+    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
+    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
+    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
+    <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
+    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <class kind="class">icmpstr::CRegistryTreeViewComp</class>
+    <class kind="class">icmpstr::CRegistryTreeViewComp::EnvironmentObserver</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSceneProviderGuiComp.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_scene_provider_gui_comp_8h</filename>
@@ -4678,6 +4697,15 @@
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CEnableableParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_enableable_param_gui_comp_8h</filename>
+    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtprm::CEnableableParamGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
@@ -15322,6 +15350,7 @@
     <class kind="class">icmpstr::CRegistryLoaderComp</class>
     <class kind="class">icmpstr::CRegistryPreviewComp</class>
     <class kind="class">icmpstr::CRegistryPropEditorComp</class>
+    <class kind="class">icmpstr::CRegistryTreeViewComp</class>
     <class kind="class">icmpstr::CSceneProviderGuiComp</class>
     <class kind="class">icmpstr::CVisualRegistryComp</class>
     <class kind="class">icmpstr::CVisualRegistryElement</class>
@@ -17076,6 +17105,238 @@
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html</anchorfile>
       <anchor>aff2fb5b7f38432d593e83ae1ac25730f</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CRegistryTreeViewComp</name>
+    <filename>classicmpstr_1_1_c_registry_tree_view_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CRegistryTreeViewComp, icomp::IRegistry &gt;</base>
+    <class kind="class">icmpstr::CRegistryTreeViewComp::EnvironmentObserver</class>
+    <member kind="enumeration">
+      <name>DataRole</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>af56c18fb33e6389cffc4e4a1581c77bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_MESSAGE_LIST</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>af56c18fb33e6389cffc4e4a1581c77bba7649d00cac82dd7253a55f0b618b111e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_ELEMENT_NAME</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>af56c18fb33e6389cffc4e4a1581c77bbabb6366637b72b83e69ac1e9a3e28f29c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_ELEMENT_ID</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>af56c18fb33e6389cffc4e4a1581c77bba72c3a3163d1de45387797a91b7510632</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_ELEMENT_PACKAGE_ID</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>af56c18fb33e6389cffc4e4a1581c77bba694ecd5d537a428ac06f2d7845b47aa4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_REGISTRY</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>af56c18fb33e6389cffc4e4a1581c77bba1b202c3c89c9e423cd36fe6b79561c34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>ColumnTypes</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a2c6d8ecaf6a25ff33c8559d523768971</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_NAME</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a2c6d8ecaf6a25ff33c8559d523768971a2b35f9b630dfdd3b8e1a4ccf61d33dc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_ID</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a2c6d8ecaf6a25ff33c8559d523768971afe74034586cdca0554e64583f39d9aea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_PACKAGE</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a2c6d8ecaf6a25ff33c8559d523768971aa74f98bb082c7285a53b070fcd4087fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CRegistryTreeViewComp, icomp::IRegistry &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a538501ceab1c16a3c3d3d30d8e34e530</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>aa411c26929e956e859e22c0b969e8609</anchor>
+      <arglist>(SelectionInfo)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a7126ee713526d3fa9d708679a90d00ae</anchor>
+      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>ada3f5b36cb97b4f55b9528d024ecb365</anchor>
+      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a6fab23972905eb5d932805e41047aa3e</anchor>
+      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a760efde492bdaa904643a49069355ebe</anchor>
+      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRegistryTreeViewComp</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a6ef137304678cbef9c2f4ac6dd87897b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddSubcomponents</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a78d9f362b7d7f751a7a8fc65e6b97830</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, QTreeWidgetItem *registryElementItemPtr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CreateRegistryTree</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>ae394c9b5b4fb941536373a437c815092</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, QTreeWidgetItem *registryRootItemPtr) const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RegistryTree_itemSelectionChanged</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>ae919cd4f57bd58a5da90584b226950b3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RegistryTree_itemDoubleClicked</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a5d46540820341fab37b940c4a5111855</anchor>
+      <arglist>(QTreeWidgetItem *itemPtr, int column)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QTreeWidgetItem *</type>
+      <name>AddRegistryElementItem</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>ad063bbad59b26f6e5cb6226f47539067</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const icomp::IRegistry::ElementInfo *elementPtr, const QByteArray &amp;elementId, QTreeWidgetItem *parentItemPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateComponentSelection</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a7d0f8e1acdde9160c70565032ab9d9fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a4d5155c05d5e02929088bc6108f67eef</anchor>
+      <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>aeec208163ba21c2ab78d95c5993d1e1c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a2a7154a1725b761d3ff3a562214514ef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a46868cad39114b2305d075cbfa52797c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static IElementSelectionInfo *</type>
+      <name>ExtractSelectionInterface</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a5234adeefe64dbcc43c4f1dd96b7e8e2</anchor>
+      <arglist>(CRegistryTreeViewComp &amp;component)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static imod::IModel *</type>
+      <name>ExtractSelectionInterfaceModel</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a3735d95675b6483ccc224acd1d807768</anchor>
+      <arglist>(CRegistryTreeViewComp &amp;component)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static istd::IChangeable *</type>
+      <name>ExtractSelectionInterfaceChangeable</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>afbc72362f098310ffe5f9b6ee2cbc204</anchor>
+      <arglist>(CRegistryTreeViewComp &amp;component)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>imod::TModelWrap&lt; SelectionInfoImpl &gt;</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a1ecffae37bd7adb0d052fdefe2de32db</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CRegistryTreeViewComp::EnvironmentObserver</name>
+    <filename>classicmpstr_1_1_c_registry_tree_view_comp_1_1_environment_observer.html</filename>
+    <base>TSingleModelObserverBase&lt; icomp::IComponentEnvironmentManager &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>EnvironmentObserver</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp_1_1_environment_observer.html</anchorfile>
+      <anchor>aaa8e5dd579a3d4f9a029c706aeec40ee</anchor>
+      <arglist>(CRegistryTreeViewComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp_1_1_environment_observer.html</anchorfile>
+      <anchor>aec246857ab34e971d2ef23d29004ad48</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19449,6 +19710,13 @@
       <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
       <anchor>a90bf3ca065cd32bf57cb50db3924b781</anchor>
       <arglist>(const IRegistry &amp;registry, const icomp::IComponentEnvironmentManager &amp;manager, const IComponentStaticInfo *parentPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>const IRegistry &amp;</type>
+      <name>GetRegistry</name>
+      <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
+      <anchor>a6dd2eb036ea330ad7e6539acd5b60eb8</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
@@ -34270,6 +34538,13 @@
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
+      <name>SetTempDirectoryPath</name>
+      <anchorfile>classiqt_1_1_c_system.html</anchorfile>
+      <anchor>abbebd83c1fdf25b698267cfa4af8761d</anchor>
+      <arglist>(const QString &amp;tempPath)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
       <name>Sleep</name>
       <anchorfile>classiqt_1_1_c_system.html</anchorfile>
       <anchor>ac568999a6d59287edc20e8134472c0b4</anchor>
@@ -39679,6 +39954,7 @@
     <filename>namespaceiqtprm.html</filename>
     <class kind="class">iqtprm::CComboParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
+    <class kind="class">iqtprm::CEnableableParamGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
     <class kind="class">iqtprm::CNameParamGuiComp</class>
     <class kind="class">iqtprm::COptionsManagerGuiComp</class>
@@ -39895,6 +40171,60 @@
       <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
       <anchor>a37170cc39c89e8af057878087812e4be</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::CEnableableParamGuiComp</name>
+    <filename>classiqtprm_1_1_c_enableable_param_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CEnableableParamGuiComp, iprm::IEnableableParam &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CEnableableParamGuiComp, iprm::IEnableableParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>a2f268039ce75de758107b555d5ba8caf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>add16698d4cd9dff40abd971a4bce9e55</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtprm_1_1_c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>a1920ad32aeb819ba1eda1a35b53752bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtprm_1_1_c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>a64517c949f355d9a1f7adff6f1db0421</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>a28b437863b24f90591a3fffd90260cc8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>ab4d7fee8456ddbe311abc41b6dfa1ca4</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_EnableableCheck_stateChanged</name>
+      <anchorfile>classiqtprm_1_1_c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>a2bc378b0b5b4c863d302e88659f0b47d</anchor>
+      <arglist>(int state)</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -1199,6 +1199,7 @@
     <includes id="_i_linear_adjust_constraints_8h" name="ILinearAdjustConstraints.h" local="yes" imported="no">imeas/ILinearAdjustConstraints.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
+    <includes id="_c_general_unit_info_8h" name="CGeneralUnitInfo.h" local="yes" imported="no">imeas/CGeneralUnitInfo.h</includes>
     <class kind="class">imeas::CLinearAdjustParamsComp</class>
     <namespace>imeas</namespace>
   </compound>
@@ -9725,6 +9726,13 @@
       <anchorfile>classimeas_1_1_c_linear_adjust_params_comp.html</anchorfile>
       <anchor>a738a677451e03bf8ef0eb98b8b5730c3</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classimeas_1_1_c_linear_adjust_params_comp.html</anchorfile>
+      <anchor>ad5ffe1beb899c12fba3f4b45d2cb6ee1</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

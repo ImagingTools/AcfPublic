@@ -185,6 +185,13 @@
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
+    <name>CSystem.h</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>_c_system_8h</filename>
+    <class kind="class">iwin::CSystem</class>
+    <namespace>iwin</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTimeStampCacheComp.h</name>
     <path>C:/Temp/Iacf/Include/iwin/</path>
     <filename>_c_time_stamp_cache_comp_8h</filename>
@@ -1685,6 +1692,7 @@
     <name>iwin</name>
     <filename>namespaceiwin.html</filename>
     <class kind="class">iwin::CPerformanceTimeStamp</class>
+    <class kind="class">iwin::CSystem</class>
     <class kind="class">iwin::CTimeStampCacheComp</class>
     <class kind="class">iwin::TComPtr</class>
   </compound>
@@ -1782,6 +1790,17 @@
       <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
       <anchor>a31d3a7fc182e65b3f47faae63d663f87</anchor>
       <arglist>(const istd::IChangeable &amp;object)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwin::CSystem</name>
+    <filename>classiwin_1_1_c_system.html</filename>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>GetModulePath</name>
+      <anchorfile>classiwin_1_1_c_system.html</anchorfile>
+      <anchor>a1f7559ee41cb4b574c0093722d4d0b31</anchor>
+      <arglist>(bool useApplicationModule=false, bool onlyDirectory=false)</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -1,16 +1,27 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="1">
+    <VersionInfos count="2">
       <Version>
         <Id>
           0
         </Id>
         <Number>
-          2437
+          2494
         </Number>
         <Description>
           ACF
+        </Description>
+      </Version>
+      <Version>
+        <Id>
+          1023
+        </Id>
+        <Number>
+          264192
+        </Number>
+        <Description>
+          Qt Framework
         </Description>
       </Version>
     </VersionInfos>
@@ -21,10 +32,10 @@
         Application
       </ComponentName>
       <X>
-        600
+        525
       </X>
       <X>
-        400
+        475
       </X>
       <Note>
         
@@ -49,7 +60,7 @@
         MainWindowComponents
       </ComponentName>
       <X>
-        950
+        1000
       </X>
       <X>
         175
@@ -63,10 +74,10 @@
         XpcTemplate
       </ComponentName>
       <X>
-        600
+        750
       </X>
       <X>
-        725
+        325
       </X>
       <Note>
         

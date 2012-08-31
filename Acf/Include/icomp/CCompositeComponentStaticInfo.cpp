@@ -37,6 +37,7 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 			const IRegistry& registry,
 			const icomp::IComponentEnvironmentManager& manager,
 			const IComponentStaticInfo* parentPtr)
+	:m_registry(registry)
 {
 	// register exported interfaces
 	const IRegistry::ExportedInterfacesMap& interfacesMap = registry.GetExportedInterfacesMap();
@@ -155,6 +156,12 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 			}
 		}
 	}
+}
+
+
+const IRegistry& CCompositeComponentStaticInfo::GetRegistry() const
+{
+	return m_registry;
 }
 
 

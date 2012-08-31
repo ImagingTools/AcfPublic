@@ -37,7 +37,7 @@
 #include "imod/IModel.h"
 #include "imod/IObserver.h"
 
-#include "iqt/CSignalBlocker.h"
+#include "iqtgui/CWidgetUpdateBlocker.h"
 
 #include "iview/IShapeView.h"
 
@@ -49,8 +49,8 @@ namespace iqtprm
 
 
 CComposedParamsSetGuiComp::CComposedParamsSetGuiComp()
-: m_currentGuiIndex(-1),
-m_guiContainerPtr(NULL)
+:	m_currentGuiIndex(-1),
+	m_guiContainerPtr(NULL)
 {
 }
 
@@ -69,12 +69,12 @@ void CComposedParamsSetGuiComp::UpdateModel() const
 		}
 
 		imod::IModelEditor* editorPtr = m_editorsCompPtr[i];
-		if (m_connectedEditors.find(editorPtr) == m_connectedEditors.end()){
-			continue;
-		}
-		I_ASSERT(editorPtr != NULL); // only not NULL editors are stored in m_connectedEditors
+		ConnectedEditorsMap::ConstIterator findIter = m_connectedEditorsMap.constFind(editorPtr);
+		if (findIter != m_connectedEditorsMap.constEnd() && (findIter.value() == true)){
+			I_ASSERT(editorPtr != NULL); // only not NULL editors are stored in m_connectedEditorsMap
 
-		editorPtr->UpdateModel();
+			editorPtr->UpdateModel();
+		}
 	}
 }
 
@@ -92,11 +92,13 @@ void CComposedParamsSetGuiComp::UpdateEditor(int updateFlags)
 			}
 
 			imod::IModelEditor* editorPtr = m_editorsCompPtr[i];
-			if (editorPtr == NULL){
-				continue;
-			}
+			if (m_connectedEditorsMap.contains(editorPtr)){
+				I_ASSERT(editorPtr != NULL); // only not NULL editors are stored in m_connectedEditorsMap
 
-			editorPtr->UpdateEditor(updateFlags);
+				m_connectedEditorsMap[editorPtr] = true;
+
+				editorPtr->UpdateEditor(updateFlags);
+			}
 		}
 	}
 }
@@ -293,7 +295,7 @@ void CComposedParamsSetGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	iqt::CSignalBlocker blocker(m_guiContainerPtr);
+	iqtgui::CWidgetUpdateBlocker blocker(m_guiContainerPtr);
 
 	iprm::IParamsSet* paramsSetPtr = GetObjectPtr();
 	I_ASSERT(paramsSetPtr != NULL);
@@ -309,7 +311,7 @@ void CComposedParamsSetGuiComp::OnGuiModelAttached()
 		imod::IModel* parameterModelPtr = GetModelPtr();
 		if (!paramId.isEmpty() && (paramId != "*")){
 			iser::ISerializable* parameterPtr = paramsSetPtr->GetEditableParameter(paramId);
-			parameterModelPtr = dynamic_cast<imod::IModel*> (parameterPtr);
+			parameterModelPtr = dynamic_cast<imod::IModel*>(parameterPtr);
 
 			keepVisible = (parameterPtr != NULL);
 		}
@@ -319,11 +321,11 @@ void CComposedParamsSetGuiComp::OnGuiModelAttached()
 		if ((parameterModelPtr != NULL) && (observerPtr != NULL) && parameterModelPtr->AttachObserver(observerPtr)){
 			imod::IModelEditor* editorPtr = m_editorsCompPtr[i];
 			if (editorPtr != NULL){
-				m_connectedEditors.insert(editorPtr);
+				m_connectedEditorsMap[editorPtr] = false;
 			}
 		}
 
-		iqtgui::IGuiObject* guiObject = dynamic_cast<iqtgui::IGuiObject*> (m_observersCompPtr[i]);
+		iqtgui::IGuiObject* guiObject = dynamic_cast<iqtgui::IGuiObject*>(m_observersCompPtr[i]);
 		if (guiObject){
 			iprm::IParamsSet::Ids::const_iterator iter;
 
@@ -366,14 +368,23 @@ void CComposedParamsSetGuiComp::OnGuiModelAttached()
 					}
 				}
 
-				//				if (addSpacer){
-				//					QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
-				//					QLayout* panelLayoutPtr = panelPtr->layout();
-				//					if (panelLayoutPtr != NULL){
-				//						panelLayoutPtr->addItem(spacerPtr);
-				//					}
-				//				}
-				guiObject->CreateGui(panelPtr);
+				if (guiObject->GetWidget()){
+					QLayout* panelLayoutPtr = panelPtr->layout();
+					if (panelLayoutPtr != NULL){
+						panelLayoutPtr->addWidget(guiObject->GetWidget());
+					}
+					else{
+						guiObject->GetWidget()->setParent(panelPtr);
+					}
+
+					if (addSpacer){
+						QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
+						panelLayoutPtr->addItem(spacerPtr);
+					}
+				}
+				else{
+					guiObject->CreateGui(panelPtr);
+				}
 			}
 			else if (guiObject->GetWidget()){
 				QWidget* guiWidgetPtr = guiObject->GetWidget();
@@ -402,7 +413,7 @@ void CComposedParamsSetGuiComp::OnGuiModelAttached()
 		}
 	}
 
-	// restore selection
+	// make use of the lastSelectedIndex property
 	if (guiMode == 2){
 		QTabWidget* tabWidgetPtr = static_cast<QTabWidget*> (m_guiContainerPtr);
 		tabWidgetPtr->setCurrentIndex(m_currentGuiIndex);
@@ -419,15 +430,7 @@ void CComposedParamsSetGuiComp::OnGuiModelDetached()
 	iprm::IParamsSet* paramsSetPtr = GetObjectPtr();
 	I_ASSERT(paramsSetPtr != NULL);
 
-	iqt::CSignalBlocker blocker(m_guiContainerPtr);
-
-	// destroy all editors explicitly, so that gui objects can recreate them on demand
-	for (int i = 0; i < m_observersCompPtr.GetCount(); i++){
-		iqtgui::IGuiObject* guiObject = dynamic_cast<iqtgui::IGuiObject*> (m_observersCompPtr[i]);
-		if (guiObject){
-			guiObject->DestroyGui();
-		}
-	}
+	iqtgui::CWidgetUpdateBlocker blocker(m_guiContainerPtr);
 
 	// clear the gui container
 	int guiMode = *m_designTypeAttrPtr;
@@ -450,7 +453,7 @@ void CComposedParamsSetGuiComp::OnGuiModelDetached()
 		}
 	}
 
-	m_connectedEditors.clear();
+	m_connectedEditorsMap.clear();
 
 	int elementsCount = qMin(m_observersCompPtr.GetCount(), m_idsAttrPtr.GetCount());
 	for (int i = 0; i < elementsCount; ++i){
@@ -459,7 +462,7 @@ void CComposedParamsSetGuiComp::OnGuiModelDetached()
 		imod::IModel* parameterModelPtr = GetModelPtr();
 		if (!paramId.isEmpty() && (paramId != "*")){
 			iser::ISerializable* parameterPtr = paramsSetPtr->GetEditableParameter(paramId);
-			parameterModelPtr = dynamic_cast<imod::IModel*> (parameterPtr);
+			parameterModelPtr = dynamic_cast<imod::IModel*>(parameterPtr);
 		}
 
 		imod::IObserver* observerPtr = m_observersCompPtr[i];
