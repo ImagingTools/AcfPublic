@@ -155,7 +155,7 @@ void CHistogramViewComp::OnGuiCreated()
 
 	layoutPtr->addWidget(m_plotPtr.GetPtr());
 
-	if( m_dataStatisticsGuiCompPtr.IsValid() && m_dataStatisticsObserverCompPtr.IsValid()){
+	if (m_dataStatisticsGuiCompPtr.IsValid() && m_dataStatisticsObserverCompPtr.IsValid()){
 		m_dataStatisticsGuiCompPtr->CreateGui(StatisticsFrame);
 
 		m_curentChannelStatisticsModel.AttachObserver(m_dataStatisticsObserverCompPtr.GetPtr());
@@ -176,7 +176,7 @@ void CHistogramViewComp::OnGuiDestroyed()
 
 	m_curentChannelStatisticsModel.DetachAllObservers();
 
-	if( m_dataStatisticsGuiCompPtr.IsValid()){
+	if (m_dataStatisticsGuiCompPtr.IsValid()){
 		m_dataStatisticsGuiCompPtr->DestroyGui();
 	}
 

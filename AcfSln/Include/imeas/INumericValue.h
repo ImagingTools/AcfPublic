@@ -79,6 +79,11 @@ public:
 		VTI_ANGLE,
 
 		/**
+			Alpha value (proportion).
+		*/
+		VT_ALPHA,
+
+		/**
 			Length or distance.
 		*/
 		VTI_LENGTH,
