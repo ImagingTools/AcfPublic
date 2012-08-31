@@ -34,6 +34,10 @@
 
 #include "idoc/IDocumentTemplate.h"
 
+#include "iqt/CSettingsWriteArchive.h"
+#include "iqt/CSettingsReadArchive.h"
+
+
 
 namespace iqtdoc
 {
@@ -49,6 +53,23 @@ CSingleDocumentWorkspaceGuiComp::CSingleDocumentWorkspaceGuiComp()
 
 void CSingleDocumentWorkspaceGuiComp::OnTryClose(bool* ignoredPtr)
 {
+	//save open document information before exit
+	if((m_rememberOpenDocumentOnExitAttPtr.IsValid() && *m_rememberOpenDocumentOnExitAttPtr) ||
+		!m_rememberOpenDocumentOnExitAttPtr.IsValid()){
+
+		if(!m_organizationName.isEmpty() && !m_applicationName.isEmpty()){
+
+			iqt::CSettingsWriteArchive archive(
+							m_organizationName,
+							m_applicationName,
+							"OpenDocument",
+							QSettings::UserScope);
+
+			SerializeOpenDocument(archive);
+		}
+	}
+	
+	
 	FileClose(-1, ignoredPtr);
 
 	if (ignoredPtr != NULL){
@@ -234,6 +255,37 @@ void CSingleDocumentWorkspaceGuiComp::OnEndChanges(int changeFlags, istd::IPolym
 	if (IsGuiCreated()){
 		UpdateTitle();
 	}
+}
+
+// reimplemented (TRestorableGuiWrap)
+
+void CSingleDocumentWorkspaceGuiComp::OnRestoreSettings(const QSettings& settings)
+{
+	BaseClass::OnRestoreSettings(settings);
+
+	Q_ASSERT(IsGuiCreated());
+	
+	if((m_rememberOpenDocumentOnExitAttPtr.IsValid() && *m_rememberOpenDocumentOnExitAttPtr) ||
+		!m_rememberOpenDocumentOnExitAttPtr.IsValid()){		
+	
+		m_organizationName = settings.organizationName();
+		m_applicationName = settings.applicationName();
+
+		iqt::CSettingsReadArchive archive(
+							m_organizationName,
+							m_applicationName,
+							"OpenDocument");
+		
+		SerializeOpenDocument(archive);
+	}
+}
+
+
+void CSingleDocumentWorkspaceGuiComp::OnSaveSettings(QSettings& settings) 
+{
+	BaseClass::OnSaveSettings(settings);
+
+	Q_ASSERT(IsGuiCreated());	
 }
 
 
