@@ -43,7 +43,7 @@
 <div class="title">icmpstr::CVisualRegistryScenographerComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="icmpstr::CVisualRegistryScenographerComp" --><!-- doxytag: inherits="QObject,TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;,ibase::ICommandsProvider" -->
+<!-- doxytag: class="icmpstr::CVisualRegistryScenographerComp" --><!-- doxytag: inherits="QObject,TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;,ibase::ICommandsProvider,imod::CMultiModelDispatcherBase" -->
 <p><code>#include &lt;<a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for icmpstr::CVisualRegistryScenographerComp:</div>
@@ -54,10 +54,12 @@ Inheritance diagram for icmpstr::CVisualRegistryScenographerComp:</div>
 <area href="class_q_object.html" alt="QObject" shape="rect" coords="0,224,533,248"/>
 <area href="classicmpstr_1_1_t_scenographer_comp_base.html" alt="icmpstr::TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;" shape="rect" coords="543,224,1076,248"/>
 <area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="1629,224,2162,248"/>
+<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="2172,224,2705,248"/>
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,168,533,192"/>
 <area href="classimod_1_1_t_single_model_observer_base.html" alt="imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt;" shape="rect" coords="543,168,1076,192"/>
 <area href="classiqtgui_1_1_i_drop_consumer.html" title="Interface for objects which can receive dragged objects." alt="iqtgui::IDropConsumer" shape="rect" coords="1086,168,1619,192"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1629,168,2162,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="2172,168,2705,192"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,112,533,136"/>
 <area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="543,112,1076,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1086,112,1619,136"/>
@@ -86,6 +88,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ac40d3fb9bbdd4b657136a086497dbba6">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>, ExtractSelectionInterfaceModel)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a98a25978c4b9a1be06b92e5e409b6772">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractSelectionInterfaceChangeable)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a9152e5cdb243f2e81ca63d4a4d97fdd2">I_ASSIGN_TO</a> (m_envManagerModelCompPtr, m_envManagerCompPtr, false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a9cdbdbc3778fe06c65ce7a1365c73b2f">I_ASSIGN_TO</a> (m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a202a8d84b3d0ea592df196438dfe35cb">I_ASSIGN_TO</a> (m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#abb13c1b4ad2ad687396ec9bc894d6170">CVisualRegistryScenographerComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QFont &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ad7b33491cf2beef75c62e086e1e7ab3a">GetElementNameFont</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QFont &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ab54418d9ba7973614f174f66dbaf4d60">GetElementDetailFont</a> () const </td></tr>
@@ -105,7 +109,8 @@ Protected Types</h2></td></tr>
 <a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0da2aef7ef5bc2ca4315af5303a231d1a50">GI_CODEGEN</a>, 
 <a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0dabaf3c62c9df98c822308107b2327d690">GI_PREVIEW</a>, 
 <br/>
-&#160;&#160;<a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805">GI_EDIT</a>
+&#160;&#160;<a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805">GI_EDIT</a>, 
+<a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0dbdaa790bcf7386eeea82c16e89bd0da3e4eb9cfe65deda0faab49c072419603">GI_TOOLS</a>
 <br/>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
@@ -122,6 +127,7 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#afa9c5c1efe7dbdff0299c33e6c2f2314">OnExecute</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#aa7a2dc68091e85110c6a2b8ef0638283">OnAbort</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#aae05a18743b19a5ec054c68fe180ad22">OnExecutionTimerTick</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a8962593f319567c98b4e721b115dad1c">OnShowRegistryTopology</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QGraphicsItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ab4983960912bb930939ece9112da0416">AddShapeToScene</a> (<a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *elementPtr) const </td></tr>
@@ -136,6 +142,11 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Event handler for the drop action.  <a href="#a3c7fe27cca21ea3e8fc47bdbf355fb3a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ac0a5a38f9d27286677a6943da2505cac">UpdateScene</a> (int updateFlags)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update scene according to made changes.  <a href="#ac0a5a38f9d27286677a6943da2505cac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a7578b7af849bbf27f4a3942dc2b629e4">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a2f601bb5af87821d8e9a92af4194c042">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#a2f601bb5af87821d8e9a92af4194c042"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a0cf78c405ceff125a31f11b2a5e5d55e">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#a0cf78c405ceff125a31f11b2a5e5d55e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a57e0ab91280cea11ae9ab4fd428bc645">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a9ff4d50e6d37ca1c0d341ad34ed4f807">OnComponentDestroyed</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
@@ -149,7 +160,7 @@ Friends</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00046">46</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00047">47</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a98807028813fafb5f343bd8b42c60e41"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::BaseClass" ref="a98807028813fafb5f343bd8b42c60e41" args="" -->
 <div class="memitem">
@@ -164,7 +175,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classicmpstr_1_1_t_scenographer_comp_base.html#a3592a0dacc1ae809b7604dad62b721a5">icmpstr::TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00056">56</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00058">58</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -190,11 +201,13 @@ Friends</h2></td></tr>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805"></a><!-- doxytag: member="GI_EDIT" ref="a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805" args="" -->GI_EDIT</em>&nbsp;</td><td>
 </td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a0dbdaa790bcf7386eeea82c16e89bd0da3e4eb9cfe65deda0faab49c072419603"></a><!-- doxytag: member="GI_TOOLS" ref="a0dbdaa790bcf7386eeea82c16e89bd0da3e4eb9cfe65deda0faab49c072419603" args="" -->GI_TOOLS</em>&nbsp;</td><td>
+</td></tr>
 </table>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00091">91</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00097">97</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -443,7 +456,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00223">223</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00243">243</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +474,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00229">229</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00249">249</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -479,6 +492,72 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">m_envManagerCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9cdbdbc3778fe06c65ce7a1365c73b2f"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::I_ASSIGN_TO" ref="a9cdbdbc3778fe06c65ce7a1365c73b2f" args="(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">icmpstr::CVisualRegistryScenographerComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_registryObserverCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_registryTopologyGuiCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a202a8d84b3d0ea592df196438dfe35cb"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::I_ASSIGN_TO" ref="a202a8d84b3d0ea592df196438dfe35cb" args="(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">icmpstr::CVisualRegistryScenographerComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_registryValidationStatusModelCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_registryValidationStatusCompPtr&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -646,6 +725,28 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2f601bb5af87821d8e9a92af4194c042"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnAttached" ref="a2f601bb5af87821d8e9a92af4194c042" args="(imod::IModel *modelPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool icmpstr::CVisualRegistryScenographerComp::OnAttached </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This call back function will be called, if an observable object is about to be attached. </p>
+<p>This function returns a <code>true</code>, if observable object is accepted by the implementation logic of the observer, otherwise the function returns a <code>false</code>. </p>
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_t_single_model_observer_base.html#a1fa929d4bb7490af4db5e9c4bc4b3282">imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a57e0ab91280cea11ae9ab4fd428bc645"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnComponentCreated" ref="a57e0ab91280cea11ae9ab4fd428bc645" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -711,6 +812,27 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0cf78c405ceff125a31f11b2a5e5d55e"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnDetached" ref="a0cf78c405ceff125a31f11b2a5e5d55e" args="(imod::IModel *modelPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool icmpstr::CVisualRegistryScenographerComp::OnDetached </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This call back function will be called, if an observable object is about to be detached. </p>
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_t_single_model_observer_base.html#a72c8c671df6a05c06e182085bb96f028">imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt;</a>.</p>
 
 </div>
 </div>
@@ -794,6 +916,41 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7578b7af849bbf27f4a3942dc2b629e4"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnModelChanged" ref="a7578b7af849bbf27f4a3942dc2b629e4" args="(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void icmpstr::CVisualRegistryScenographerComp::OnModelChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modelId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>changeFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#aa28b9338ca45e28b03cadaf4454f14e8">imod::CMultiModelDispatcherBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a49e6598a03ba7993b3c4f4aa014a8888"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnPasteCommand" ref="a49e6598a03ba7993b3c4f4aa014a8888" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -848,6 +1005,22 @@ Friends</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void icmpstr::CVisualRegistryScenographerComp::OnSelectionChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8962593f319567c98b4e721b115dad1c"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnShowRegistryTopology" ref="a8962593f319567c98b4e721b115dad1c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CVisualRegistryScenographerComp::OnShowRegistryTopology </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected, slot]</code></td>
@@ -977,7 +1150,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00176">176</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00191">191</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>

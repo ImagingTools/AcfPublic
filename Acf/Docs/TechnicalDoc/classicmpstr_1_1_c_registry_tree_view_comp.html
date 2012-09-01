@@ -103,21 +103,27 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a6fab23972905eb5d932805e41047aa3e">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractSelectionInterfaceChangeable)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a760efde492bdaa904643a49069355ebe">I_ASSIGN_TO</a> (m_envManagerModelCompPtr, m_envManagerCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a6ef137304678cbef9c2f4ac6dd87897b">CRegistryTreeViewComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a78d9f362b7d7f751a7a8fc65e6b97830">AddSubcomponents</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, QTreeWidgetItem *registryElementItemPtr) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#ae394c9b5b4fb941536373a437c815092">CreateRegistryTree</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTreeWidgetItem *registryRootItemPtr) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a864e7bc271c06612822a45be997336e5">AddSubcomponents</a> (const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, QTreeWidgetItem *registryElementItemPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a8df8516a98be023a29c7d78b7948ccc1">CreateRegistryTree</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTreeWidgetItem *registryRootItemPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#ae919cd4f57bd58a5da90584b226950b3">on_RegistryTree_itemSelectionChanged</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a5d46540820341fab37b940c4a5111855">on_RegistryTree_itemDoubleClicked</a> (QTreeWidgetItem *itemPtr, int column)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QTreeWidgetItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#ad063bbad59b26f6e5cb6226f47539067">AddRegistryElementItem</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> *elementPtr, const QByteArray &amp;elementId, QTreeWidgetItem *parentItemPtr) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of shape representing some element.  <a href="#ad063bbad59b26f6e5cb6226f47539067"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a7d0f8e1acdde9160c70565032ab9d9fa">UpdateComponentSelection</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QTreeWidgetItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a79b00960d5fb8d195c59ba97d2f0b5af">AddRegistryElementItem</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> *elementPtr, const QByteArray &amp;elementId, QTreeWidgetItem *parentItemPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of shape representing some element.  <a href="#a79b00960d5fb8d195c59ba97d2f0b5af"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a6391357e7a9a8a173850075c89a887a8">IsRegistryValid</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate visual status of the entire registry tree.  <a href="#a6391357e7a9a8a173850075c89a887a8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a53abc7282cb59131e06e36f290a6d820">UpdateRegistryStatus</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a4d5155c05d5e02929088bc6108f67eef">UpdateGui</a> (int updateFlags)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a4d5155c05d5e02929088bc6108f67eef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#ab77244650dc816d9f2d190de9c5b4d66">OnGuiModelDetached</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#ab77244650dc816d9f2d190de9c5b4d66"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#aeec208163ba21c2ab78d95c5993d1e1c">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#aeec208163ba21c2ab78d95c5993d1e1c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a66f86e419648241c45b4bd15aaa58a9e">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#a66f86e419648241c45b4bd15aaa58a9e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a2a7154a1725b761d3ff3a562214514ef">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a46868cad39114b2305d075cbfa52797c">OnComponentDestroyed</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
@@ -223,7 +229,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad063bbad59b26f6e5cb6226f47539067"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::AddRegistryElementItem" ref="ad063bbad59b26f6e5cb6226f47539067" args="(const icomp::IRegistry &amp;registry, const icomp::IRegistry::ElementInfo *elementPtr, const QByteArray &amp;elementId, QTreeWidgetItem *parentItemPtr) const " -->
+<a class="anchor" id="a79b00960d5fb8d195c59ba97d2f0b5af"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::AddRegistryElementItem" ref="a79b00960d5fb8d195c59ba97d2f0b5af" args="(const icomp::IRegistry &amp;registry, const icomp::IRegistry::ElementInfo *elementPtr, const QByteArray &amp;elementId, QTreeWidgetItem *parentItemPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -254,7 +260,7 @@ Friends</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const<code> [protected]</code></td>
+          <td></td><td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -266,7 +272,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a78d9f362b7d7f751a7a8fc65e6b97830"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::AddSubcomponents" ref="a78d9f362b7d7f751a7a8fc65e6b97830" args="(const icomp::CComponentAddress &amp;address, QTreeWidgetItem *registryElementItemPtr) const " -->
+<a class="anchor" id="a864e7bc271c06612822a45be997336e5"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::AddSubcomponents" ref="a864e7bc271c06612822a45be997336e5" args="(const icomp::CComponentAddress &amp;address, QTreeWidgetItem *registryElementItemPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -285,7 +291,7 @@ Friends</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -293,7 +299,44 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae394c9b5b4fb941536373a437c815092"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::CreateRegistryTree" ref="ae394c9b5b4fb941536373a437c815092" args="(const icomp::IRegistry &amp;registry, QTreeWidgetItem *registryRootItemPtr) const " -->
+<a class="anchor" id="a66f86e419648241c45b4bd15aaa58a9e"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::AfterUpdate" ref="a66f86e419648241c45b4bd15aaa58a9e" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void icmpstr::CRegistryTreeViewComp::AfterUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This function will be called after update of the observer contents occures. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a0414b4fb5a17cea42400a88d0df13d5a">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CRegistryTreeViewComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8df8516a98be023a29c7d78b7948ccc1"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::CreateRegistryTree" ref="a8df8516a98be023a29c7d78b7948ccc1" args="(const icomp::IRegistry &amp;registry, QTreeWidgetItem *registryRootItemPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -312,7 +355,7 @@ Friends</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -520,6 +563,25 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6391357e7a9a8a173850075c89a887a8"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::IsRegistryValid" ref="a6391357e7a9a8a173850075c89a887a8" args="(const icomp::IRegistry &amp;registry) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool icmpstr::CRegistryTreeViewComp::IsRegistryValid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;&#160;</td>
+          <td class="paramname"><em>registry</em></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calculate visual status of the entire registry tree. </p>
+
+</div>
+</div>
 <a class="anchor" id="a5d46540820341fab37b940c4a5111855"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::on_RegistryTree_itemDoubleClicked" ref="a5d46540820341fab37b940c4a5111855" args="(QTreeWidgetItem *itemPtr, int column)" -->
 <div class="memitem">
 <div class="memproto">
@@ -619,19 +681,23 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7d0f8e1acdde9160c70565032ab9d9fa"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::UpdateComponentSelection" ref="a7d0f8e1acdde9160c70565032ab9d9fa" args="()" -->
+<a class="anchor" id="ab77244650dc816d9f2d190de9c5b4d66"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::OnGuiModelDetached" ref="ab77244650dc816d9f2d190de9c5b4d66" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void icmpstr::CRegistryTreeViewComp::UpdateComponentSelection </td>
+          <td class="memname">virtual void icmpstr::CRegistryTreeViewComp::OnGuiModelDetached </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Called when model is detached or GUI is destroyed. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ab80f93ad4b306c693eac5fde8f975112">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CRegistryTreeViewComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -656,6 +722,22 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a53abc7282cb59131e06e36f290a6d820"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::UpdateRegistryStatus" ref="a53abc7282cb59131e06e36f290a6d820" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CRegistryTreeViewComp::UpdateRegistryStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Friends And Related Function Documentation</h2>
 <a class="anchor" id="a1ecffae37bd7adb0d052fdefe2de32db"></a><!-- doxytag: member="icmpstr::CRegistryTreeViewComp::imod::TModelWrap&lt; SelectionInfoImpl &gt;" ref="a1ecffae37bd7adb0d052fdefe2de32db" args="" -->
 <div class="memitem">
@@ -668,7 +750,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_tree_view_comp_8h_source.html#l00138">138</a> of file <a class="el" href="_c_registry_tree_view_comp_8h_source.html">CRegistryTreeViewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_tree_view_comp_8h_source.html#l00147">147</a> of file <a class="el" href="_c_registry_tree_view_comp_8h_source.html">CRegistryTreeViewComp.h</a>.</p>
 
 </div>
 </div>

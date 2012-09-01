@@ -120,8 +120,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a23952cc12c590db6db7579fb511eebac">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#af61615da54317ad382cf08c5da5aa11f">OnComponentDestroyed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a19e36000e6cb6a4bf701f9a8a15d5cc3">DeserializeParamsSet</a> (const QByteArray &amp;typeId, int index, const QString &amp;name)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize parameter set.  <a href="#a19e36000e6cb6a4bf701f9a8a15d5cc3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aeb0f24a23abc405816eb74f9065efcdd">EnsureParamExist</a> (const QByteArray &amp;typeId, int index, const QString &amp;name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure some parameter exist and has correct type.  <a href="#aeb0f24a23abc405816eb74f9065efcdd"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of parameter manager. </p>
@@ -161,12 +161,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a19e36000e6cb6a4bf701f9a8a15d5cc3"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::DeserializeParamsSet" ref="a19e36000e6cb6a4bf701f9a8a15d5cc3" args="(const QByteArray &amp;typeId, int index, const QString &amp;name)" -->
+<a class="anchor" id="aeb0f24a23abc405816eb74f9065efcdd"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::EnsureParamExist" ref="aeb0f24a23abc405816eb74f9065efcdd" args="(const QByteArray &amp;typeId, int index, const QString &amp;name)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool iprm::CMultiParamsManagerComp::DeserializeParamsSet </td>
+          <td class="memname">bool iprm::CMultiParamsManagerComp::EnsureParamExist </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>typeId</em>, </td>
@@ -192,7 +192,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Deserialize parameter set. </p>
+<p>Ensure some parameter exist and has correct type. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>position in list of parameters. </td></tr>

@@ -1355,6 +1355,7 @@
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
     <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
@@ -17225,15 +17226,15 @@
       <type>void</type>
       <name>AddSubcomponents</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a78d9f362b7d7f751a7a8fc65e6b97830</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, QTreeWidgetItem *registryElementItemPtr) const </arglist>
+      <anchor>a864e7bc271c06612822a45be997336e5</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, QTreeWidgetItem *registryElementItemPtr)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>CreateRegistryTree</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>ae394c9b5b4fb941536373a437c815092</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, QTreeWidgetItem *registryRootItemPtr) const </arglist>
+      <anchor>a8df8516a98be023a29c7d78b7948ccc1</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, QTreeWidgetItem *registryRootItemPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -17253,14 +17254,21 @@
       <type>QTreeWidgetItem *</type>
       <name>AddRegistryElementItem</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>ad063bbad59b26f6e5cb6226f47539067</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const icomp::IRegistry::ElementInfo *elementPtr, const QByteArray &amp;elementId, QTreeWidgetItem *parentItemPtr) const </arglist>
+      <anchor>a79b00960d5fb8d195c59ba97d2f0b5af</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const icomp::IRegistry::ElementInfo *elementPtr, const QByteArray &amp;elementId, QTreeWidgetItem *parentItemPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsRegistryValid</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a6391357e7a9a8a173850075c89a887a8</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>UpdateComponentSelection</name>
+      <name>UpdateRegistryStatus</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a7d0f8e1acdde9160c70565032ab9d9fa</anchor>
+      <anchor>a53abc7282cb59131e06e36f290a6d820</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -17272,10 +17280,24 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>ab77244650dc816d9f2d190de9c5b4d66</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>aeec208163ba21c2ab78d95c5993d1e1c</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a66f86e419648241c45b4bd15aaa58a9e</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -17972,6 +17994,7 @@
     <base>QObject</base>
     <base>TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <class kind="class">icmpstr::CVisualRegistryScenographerComp::EnvironmentObserver</class>
     <member kind="typedef">
       <type>icmpstr::TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</type>
@@ -18014,6 +18037,20 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
       <anchor>a9152e5cdb243f2e81ca63d4a4d97fdd2</anchor>
       <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a9cdbdbc3778fe06c65ce7a1365c73b2f</anchor>
+      <arglist>(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a202a8d84b3d0ea592df196438dfe35cb</anchor>
+      <arglist>(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -18100,6 +18137,12 @@
       <anchor>a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>GI_TOOLS</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0da3e4eb9cfe65deda0faab49c072419603</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnSelectionChanged</name>
@@ -18184,6 +18227,13 @@
       <anchor>aae05a18743b19a5ec054c68fe180ad22</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnShowRegistryTopology</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a8962593f319567c98b4e721b115dad1c</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QGraphicsItem *</type>
       <name>AddShapeToScene</name>
@@ -18246,6 +18296,27 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
       <anchor>ac0a5a38f9d27286677a6943da2505cac</anchor>
       <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a7578b7af849bbf27f4a3942dc2b629e4</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a2f601bb5af87821d8e9a92af4194c042</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a0cf78c405ceff125a31f11b2a5e5d55e</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -29971,9 +30042,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>DeserializeParamsSet</name>
+      <name>EnsureParamExist</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a19e36000e6cb6a4bf701f9a8a15d5cc3</anchor>
+      <anchor>aeb0f24a23abc405816eb74f9065efcdd</anchor>
       <arglist>(const QByteArray &amp;typeId, int index, const QString &amp;name)</arglist>
     </member>
   </compound>

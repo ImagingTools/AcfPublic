@@ -105,7 +105,7 @@
 <a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#a23952cc12c590db6db7579fb511eebac">OnComponentCreated</a>();
 <a name="l00082"></a>00082        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#af61615da54317ad382cf08c5da5aa11f">OnComponentDestroyed</a>();
 <a name="l00083"></a>00083 
-<a name="l00090"></a>00090        <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#a19e36000e6cb6a4bf701f9a8a15d5cc3" title="Deserialize parameter set.">DeserializeParamsSet</a>(<span class="keyword">const</span> QByteArray&amp; typeId, <span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name);
+<a name="l00090"></a>00090        <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#aeb0f24a23abc405816eb74f9065efcdd" title="Ensure some parameter exist and has correct type.">EnsureParamExist</a>(<span class="keyword">const</span> QByteArray&amp; typeId, <span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name);
 <a name="l00091"></a>00091 
 <a name="l00092"></a>00092 <span class="keyword">private</span>:
 <a name="l00093"></a>00093        I_MULTIREF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_fixedParamSetsCompPtr);
@@ -121,7 +121,7 @@
 <a name="l00103"></a>00103               QByteArray typeId;
 <a name="l00104"></a>00104        };
 <a name="l00105"></a>00105 
-<a name="l00106"></a>00106        <span class="keyword">typedef</span> QVector&lt;ParamSet&gt; ParamSets;
+<a name="l00106"></a>00106        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
 <a name="l00107"></a>00107 
 <a name="l00108"></a>00108        ParamSets m_paramSets;
 <a name="l00109"></a>00109 
