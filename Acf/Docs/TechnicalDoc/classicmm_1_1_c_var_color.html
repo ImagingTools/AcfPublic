@@ -38,7 +38,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="icmm::CVarColor" --><!-- doxytag: inherits="imath::CVarVector,iser::ISerializable" -->
-<p>Generic color implementation with components number set at construction time.  
+<p>Generic color implementation with variable number of color components.  
  <a href="classicmm_1_1_c_var_color.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>&gt;</code></p>
@@ -100,9 +100,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize this vector to specified archive.  <a href="#a1eb0ad2377f2a54579d2d22684d15c0e"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Generic color implementation with components number set at construction time. </p>
+<div class="textblock"><p>Generic color implementation with variable number of color components. </p>
+<p>The dimension of used colorspace can be set at the construction time of <a class="el" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">CVarColor</a> object, </p>
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00021">21</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00023">23</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a23c96fe260b18424ef8d731b64b59299"></a><!-- doxytag: member="icmm::CVarColor::BaseClass" ref="a23c96fe260b18424ef8d731b64b59299" args="" -->
 <div class="memitem">
@@ -115,7 +116,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00024">24</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00026">26</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 </div>
 </div>
@@ -206,7 +207,7 @@ template&lt;int Size&gt; </div>
 
 <p>Template conversion constructor. </p>
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00046">46</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00048">48</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 </div>
 </div>
@@ -284,7 +285,7 @@ template&lt;int Size&gt; </div>
 <p>Check if this color value is normalized. </p>
 <p>Normalized values have all components in the range [0, 1]. </p>
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00119">119</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00121">121</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 <p>References <a class="el" href="_c_var_vector_8h_source.html#l00260">imath::CVarVector::GetElement()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00238">imath::CVarVector::GetElementsCount()</a>.</p>
 
@@ -353,7 +354,7 @@ template&lt;int Size&gt; </div>
 
 <p>Allows to compare two colors with tolerance. </p>
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00113">113</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00115">115</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 <p>References <a class="el" href="_c_var_vector_8h_source.html#l00388">imath::CVarVector::GetDistance()</a>.</p>
 
@@ -393,7 +394,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00155">155</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00157">157</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 </div>
 </div>
@@ -414,7 +415,7 @@ template&lt;int Size&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_var_vector.html#a1c8847b39d7e3855522262062124d161">imath::CVarVector</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00175">175</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00177">177</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 <p>References <a class="el" href="_c_var_vector_8h_source.html#l00260">imath::CVarVector::GetElement()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00238">imath::CVarVector::GetElementsCount()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00272">imath::CVarVector::SetElement()</a>.</p>
 
@@ -454,7 +455,7 @@ template&lt;int Size&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_var_vector.html#a0c2151eccb83eeb8fc28977b9c4cf1f7">imath::CVarVector</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00203">203</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00205">205</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 <p>References <a class="el" href="_c_var_vector_8h_source.html#l00502">imath::CVarVector::operator*=()</a>.</p>
 
@@ -475,7 +476,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00135">135</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00137">137</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 </div>
 </div>
@@ -511,7 +512,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00145">145</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00147">147</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 </div>
 </div>
@@ -547,7 +548,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00165">165</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00167">167</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 </div>
 </div>
@@ -568,7 +569,7 @@ template&lt;int Size&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_var_vector.html#aba6e1b68747e19d79f21a7649d8f72dd">imath::CVarVector</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00189">189</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00191">191</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 <p>References <a class="el" href="_c_var_vector_8h_source.html#l00260">imath::CVarVector::GetElement()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00238">imath::CVarVector::GetElementsCount()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00272">imath::CVarVector::SetElement()</a>.</p>
 
@@ -608,7 +609,7 @@ template&lt;int Size&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classimath_1_1_c_var_vector.html#a75de4d8d869074402ccd8417408a4338">imath::CVarVector</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00211">211</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_color_8h_source.html#l00213">213</a> of file <a class="el" href="_c_var_color_8h_source.html">CVarColor.h</a>.</p>
 
 <p>References <a class="el" href="_c_var_vector_8h_source.html#l00513">imath::CVarVector::operator/=()</a>.</p>
 

@@ -17250,6 +17250,20 @@
       <anchor>a5d46540820341fab37b940c4a5111855</anchor>
       <arglist>(QTreeWidgetItem *itemPtr, int column)</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FilterEdit_textChanged</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a52e20c218ba9ba5ac50481a431f7d921</anchor>
+      <arglist>(const QString &amp;filterText)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ShowOnlyErrorsCheck_stateChanged</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>aa0992bd84925b9f59cac28e19d7b8925</anchor>
+      <arglist>(int state)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QTreeWidgetItem *</type>
       <name>AddRegistryElementItem</name>
@@ -17269,6 +17283,13 @@
       <name>UpdateRegistryStatus</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>a53abc7282cb59131e06e36f290a6d820</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateTreeItemsVisibility</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a3226e59a17c315884d16c207f5b0f8fe</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
