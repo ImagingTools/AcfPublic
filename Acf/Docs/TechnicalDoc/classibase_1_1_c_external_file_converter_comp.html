@@ -32,12 +32,13 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ibase::CExternalFileConverterComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::CExternalFileConverterComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,ibase::IFileConvertCopy" -->
+<!-- doxytag: class="ibase::CExternalFileConverterComp" --><!-- doxytag: inherits="QObject,ibase::TLoggerCompWrap,ibase::IFileConvertCopy" -->
 <p>File converter, which uses an external programm to perform the convert action.  
  <a href="classibase_1_1_c_external_file_converter_comp.html#details">More...</a></p>
 
@@ -48,6 +49,7 @@ Inheritance diagram for ibase::CExternalFileConverterComp:</div>
  <div class="center">
   <img src="classibase_1_1_c_external_file_converter_comp.png" usemap="#ibase::CExternalFileConverterComp_map" alt=""/>
   <map id="ibase::CExternalFileConverterComp_map" name="ibase::CExternalFileConverterComp_map">
+<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,168,213,192"/>
 <area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="223,168,436,192"/>
 <area href="classibase_1_1_i_file_convert_copy.html" title="Common interface for copy a file." alt="ibase::IFileConvertCopy" shape="rect" coords="446,168,659,192"/>
 <area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="223,112,436,136"/>
@@ -69,11 +71,14 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_external_file_converter_comp.html#abc831890e908322c58f35b6ae9792d40">ConvertFile</a> (const QString &amp;inputFilePath, const QString &amp;outputFilePath, const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a file <code>inputFilePath</code> to destination <code>outputFilePath</code>.  <a href="#abc831890e908322c58f35b6ae9792d40"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_external_file_converter_comp.html#a4c4da7f5638d0c0e9c430664d9f0e96a">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>File converter, which uses an external programm to perform the convert action. </p>
 
-<p>Definition at line <a class="el" href="_c_external_file_converter_comp_8h_source.html#l00018">18</a> of file <a class="el" href="_c_external_file_converter_comp_8h_source.html">CExternalFileConverterComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_external_file_converter_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_external_file_converter_comp_8h_source.html">CExternalFileConverterComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a46a6da7c707d06967f1aa166c8742bc0"></a><!-- doxytag: member="ibase::CExternalFileConverterComp::BaseClass" ref="a46a6da7c707d06967f1aa166c8742bc0" args="" -->
 <div class="memitem">
@@ -88,7 +93,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_external_file_converter_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_external_file_converter_comp_8h_source.html">CExternalFileConverterComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_external_file_converter_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_external_file_converter_comp_8h_source.html">CExternalFileConverterComp.h</a>.</p>
 
 </div>
 </div>
@@ -128,6 +133,24 @@ Public Member Functions</h2></td></tr>
 <p>Optionally, you can use <code>paramsPtr</code> to control the copy process. </p>
 
 <p>Implements <a class="el" href="classibase_1_1_i_file_convert_copy.html#af11c3be97058547136044140d22dce6d">ibase::IFileConvertCopy</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c4da7f5638d0c0e9c430664d9f0e96a"></a><!-- doxytag: member="ibase::CExternalFileConverterComp::OnComponentCreated" ref="a4c4da7f5638d0c0e9c430664d9f0e96a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ibase::CExternalFileConverterComp::OnComponentCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 </div>
 </div>

@@ -24,6 +24,9 @@
 #define icmpstr_CComponentNoteEditorComp_included
 
 
+// Qt includes
+#include <QtCore/QTimer>
+
 // ACF includes
 #include "imod/CMultiModelDispatcherBase.h"
 
@@ -61,6 +64,9 @@ protected:
 	virtual void OnGuiModelAttached();
 	virtual void OnGuiModelDetached();
 
+	// reimplemented (QObject)
+	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);
+
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
 
@@ -69,7 +75,10 @@ protected:
 
 protected Q_SLOTS:
 	void on_NoteEditor_textChanged();
-	void on_CommitButton_clicked();
+
+private:
+	QTextCursor m_lastCursorPosition;
+	bool m_textWasChanged;
 };
 
 

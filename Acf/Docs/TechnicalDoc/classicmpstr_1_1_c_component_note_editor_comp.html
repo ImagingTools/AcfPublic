@@ -84,7 +84,6 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#ab1207a910f90d2a13addc32e6655756d">on_NoteEditor_textChanged</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#ad0874468fa251844ed7202b731e4a18f">on_CommitButton_clicked</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#aa0d788190aa022ff2668ddfdd0480fd2">UpdateGui</a> (int updateFlags=0)</td></tr>
@@ -95,13 +94,14 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#aadaa8d26bce2855be670b1f0b6f77571"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#aafa11db8c8d63013ef440ad6b0751288">OnGuiModelDetached</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#aafa11db8c8d63013ef440ad6b0751288"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#a409780372e55a9d0bda316ffab02a905">eventFilter</a> (<a class="el" href="class_q_object.html">QObject</a> *sourcePtr, QEvent *eventPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#a3bdf27150acb81eae40e01f21d41e74c">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a3bdf27150acb81eae40e01f21d41e74c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_component_note_editor_comp.html#aeb2d73b45d65c9f9666746e44297cf79">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_component_note_editor_comp_8h_source.html#l00019">19</a> of file <a class="el" href="_c_component_note_editor_comp_8h_source.html">CComponentNoteEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_note_editor_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_component_note_editor_comp_8h_source.html">CComponentNoteEditorComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aa4b94c71e4f8f581bc50bd80c9937059"></a><!-- doxytag: member="icmpstr::CComponentNoteEditorComp::BaseClass" ref="aa4b94c71e4f8f581bc50bd80c9937059" args="" -->
 <div class="memitem">
@@ -116,7 +116,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a5fd4bd071b17d67ebfc151794f14c4ea">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CComponentNoteEditorComp, IElementSelectionInfo &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_component_note_editor_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_component_note_editor_comp_8h_source.html">CComponentNoteEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_note_editor_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_component_note_editor_comp_8h_source.html">CComponentNoteEditorComp.h</a>.</p>
 
 </div>
 </div>
@@ -138,19 +138,32 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad0874468fa251844ed7202b731e4a18f"></a><!-- doxytag: member="icmpstr::CComponentNoteEditorComp::on_CommitButton_clicked" ref="ad0874468fa251844ed7202b731e4a18f" args="()" -->
+<a class="anchor" id="a409780372e55a9d0bda316ffab02a905"></a><!-- doxytag: member="icmpstr::CComponentNoteEditorComp::eventFilter" ref="a409780372e55a9d0bda316ffab02a905" args="(QObject *sourcePtr, QEvent *eventPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void icmpstr::CComponentNoteEditorComp::on_CommitButton_clicked </td>
+          <td class="memname">virtual bool icmpstr::CComponentNoteEditorComp::eventFilter </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
+          <td class="paramtype"><a class="el" href="class_q_object.html">QObject</a> *&#160;</td>
+          <td class="paramname"><em>sourcePtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QEvent *&#160;</td>
+          <td class="paramname"><em>eventPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#af7d034ff8f69f4102e8df829f71802f5">iqtgui::CGuiComponentBase</a>.</p>
 
 </div>
 </div>

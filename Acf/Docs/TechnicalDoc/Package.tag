@@ -11229,6 +11229,7 @@
   <compound kind="class">
     <name>ibase::CExternalFileConverterComp</name>
     <filename>classibase_1_1_c_external_file_converter_comp.html</filename>
+    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">ibase::IFileConvertCopy</base>
     <member kind="typedef">
@@ -11244,6 +11245,13 @@
       <anchorfile>classibase_1_1_c_external_file_converter_comp.html</anchorfile>
       <anchor>abc831890e908322c58f35b6ae9792d40</anchor>
       <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_c_external_file_converter_comp.html</anchorfile>
+      <anchor>a4c4da7f5638d0c0e9c430664d9f0e96a</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15827,13 +15835,6 @@
       <anchor>ab1207a910f90d2a13addc32e6655756d</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_CommitButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>ad0874468fa251844ed7202b731e4a18f</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
@@ -15861,6 +15862,13 @@
       <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
       <anchor>aafa11db8c8d63013ef440ad6b0751288</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>a409780372e55a9d0bda316ffab02a905</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
