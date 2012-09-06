@@ -1021,7 +1021,7 @@ void CVisualRegistryScenographerComp::ToEmbeddedComponent()
 
 		newInfoPtr->elementPtr.TakeOver(oldInfoPtr->elementPtr);
 
-		for (		icomp::IRegistry::ExportedInterfacesMap::Iterator interfaceIter = exportedInterfacesMap.constBegin();
+		for (		icomp::IRegistry::ExportedInterfacesMap::ConstIterator interfaceIter = exportedInterfacesMap.constBegin();
 					interfaceIter != exportedInterfacesMap.constEnd();
 					++interfaceIter){
 			QByteArray baseId;
@@ -1034,7 +1034,7 @@ void CVisualRegistryScenographerComp::ToEmbeddedComponent()
 			}
 		}
 
-		for (		icomp::IRegistry::ExportedElementsMap::Iterator subcomponentIter = exportedComponentsMap.constBegin();
+		for (		icomp::IRegistry::ExportedElementsMap::ConstIterator subcomponentIter = exportedComponentsMap.constBegin();
 					subcomponentIter != exportedComponentsMap.constEnd();
 					++subcomponentIter){
 			QByteArray baseId;

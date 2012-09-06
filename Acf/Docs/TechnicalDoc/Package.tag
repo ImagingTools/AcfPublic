@@ -2278,6 +2278,7 @@
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">idoc/IUndoManager.h</includes>
     <includes id="_c_tmpl_based_document_manager_base_8h" name="CTmplBasedDocumentManagerBase.h" local="yes" imported="no">idoc/CTmplBasedDocumentManagerBase.h</includes>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
     <class kind="struct">idoc::CMultiDocumentManagerBase::SingleDocumentData</class>
     <namespace>idoc</namespace>
@@ -23381,6 +23382,13 @@
       <anchor>a323464bacb46ca087abe82d5686f77c0</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>QList&lt; QByteArray &gt;</type>
+      <name>ViewTypeIds</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a93fd2a0b38352b4e4d6fa74532e809de</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetActiveView</name>
@@ -23486,6 +23494,13 @@
       <anchor>aecd55f724297c9b24ae7a0decd94a8d5</anchor>
       <arglist>(const SingleDocumentData &amp;info, bool *ignoredPtr)=0</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SerializeOpenDocumentList</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a4a6a52c74faee2a76a92f4d88783472d</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>idoc::CMultiDocumentManagerBase::SingleDocumentData</name>
@@ -23524,6 +23539,13 @@
       <name>views</name>
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
       <anchor>a27ff5cb2b60c54a4d1463abe26936f7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ViewTypeIds</type>
+      <name>viewTypeIds</name>
+      <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
+      <anchor>a3005b1ae083d7c1c400d4dd94b88d487</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -23885,6 +23907,13 @@
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
       <anchor>a449da5685bf4c85013b6fb6cc78ea47c</anchor>
       <arglist>(bool *ignoredPtr)=0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SerializeOpenDocument</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>a6ac417f6a75f9a2ff6893af0dbed5573</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37140,6 +37169,20 @@
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
       <anchor>a2b4d958077fa93a481d34b7967d123c2</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnRestoreSettings</name>
+      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
+      <anchor>af42445991a29be81209d923ebd727dd1</anchor>
+      <arglist>(const QSettings &amp;settings)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSaveSettings</name>
+      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a7e59af8400b250483868ab4022c2a616</anchor>
+      <arglist>(QSettings &amp;settings) const </arglist>
     </member>
   </compound>
   <compound kind="class">

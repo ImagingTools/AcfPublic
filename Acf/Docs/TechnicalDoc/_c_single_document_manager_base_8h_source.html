@@ -105,24 +105,26 @@
 <a name="l00101"></a>00101 
 <a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a449da5685bf4c85013b6fb6cc78ea47c" title="Query user if this document can be closed.">QueryDocumentClose</a>(<span class="keywordtype">bool</span>* ignoredPtr) = 0;
 <a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="keyword">private</span>:
-<a name="l00109"></a>00109        QString m_filePath;
-<a name="l00110"></a>00110        QByteArray m_documentTypeId;
-<a name="l00111"></a>00111        QByteArray m_viewTypeId;
-<a name="l00112"></a>00112        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::IChangeable&gt;</a> m_documentPtr;
-<a name="l00113"></a>00113        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;idoc::IUndoManager&gt;</a> m_undoManagerPtr;
-<a name="l00114"></a>00114        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::IPolymorphic&gt;</a> m_viewPtr;
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116        <span class="keywordtype">bool</span> m_isDirty;
-<a name="l00117"></a>00117 };
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120 } <span class="comment">// namespace idoc</span>
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 
-<a name="l00123"></a>00123 <span class="preprocessor">#endif // idoc_CSingleDocumentManagerBase_included</span>
-<a name="l00124"></a>00124 <span class="preprocessor"></span>
-<a name="l00125"></a>00125 
+<a name="l00111"></a>00111        <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_single_document_manager_base.html#a6ac417f6a75f9a2ff6893af0dbed5573" title="Serializes open documents information.">SerializeOpenDocument</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 <span class="keyword">private</span>:
+<a name="l00114"></a>00114        QString m_filePath;
+<a name="l00115"></a>00115        QByteArray m_documentTypeId;
+<a name="l00116"></a>00116        QByteArray m_viewTypeId;
+<a name="l00117"></a>00117        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::IChangeable&gt;</a> m_documentPtr;
+<a name="l00118"></a>00118        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;idoc::IUndoManager&gt;</a> m_undoManagerPtr;
+<a name="l00119"></a>00119        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::IPolymorphic&gt;</a> m_viewPtr;
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121        <span class="keywordtype">bool</span> m_isDirty;
+<a name="l00122"></a>00122 };
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125 } <span class="comment">// namespace idoc</span>
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128 <span class="preprocessor">#endif // idoc_CSingleDocumentManagerBase_included</span>
+<a name="l00129"></a>00129 <span class="preprocessor"></span>
+<a name="l00130"></a>00130 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

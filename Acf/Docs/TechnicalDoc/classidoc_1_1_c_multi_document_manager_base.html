@@ -101,6 +101,7 @@ Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
 &lt; <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a667be9bdbd3a0b293225d0da037b3c00">ViewPtr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QList&lt; <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a667be9bdbd3a0b293225d0da037b3c00">ViewPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a323464bacb46ca087abe82d5686f77c0">Views</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QList&lt; QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a93fd2a0b38352b4e4d6fa74532e809de">ViewTypeIds</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a2fb120bb06cfa29955a270bf9825d672">SetActiveView</a> (<a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr)</td></tr>
@@ -131,10 +132,12 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets save file name.  <a href="#aec2496b47f95b9594b3a0b9116f07470"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aecd55f724297c9b24ae7a0decd94a8d5">QueryDocumentClose</a> (const <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> &amp;info, bool *ignoredPtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Query user if this document can be closed.  <a href="#aecd55f724297c9b24ae7a0decd94a8d5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a4a6a52c74faee2a76a92f4d88783472d">SerializeOpenDocumentList</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes open documents information.  <a href="#a4a6a52c74faee2a76a92f4d88783472d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00022">22</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00024">24</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a7dbf28615fc9937b79b9e79434d7d071"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::DocumentPtr" ref="a7dbf28615fc9937b79b9e79434d7d071" args="" -->
 <div class="memitem">
@@ -147,7 +150,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00056">56</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00058">58</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div>
@@ -162,7 +165,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00057">57</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00059">59</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div>
@@ -177,7 +180,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00058">58</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00060">60</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div>
@@ -192,7 +195,22 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00059">59</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00061">61</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93fd2a0b38352b4e4d6fa74532e809de"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::ViewTypeIds" ref="a93fd2a0b38352b4e4d6fa74532e809de" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QList&lt;QByteArray&gt; <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a93fd2a0b38352b4e4d6fa74532e809de">idoc::CMultiDocumentManagerBase::ViewTypeIds</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00062">62</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div>
@@ -1002,6 +1020,25 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Register (attach) created document as new working document. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4a6a52c74faee2a76a92f4d88783472d"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::SerializeOpenDocumentList" ref="a4a6a52c74faee2a76a92f4d88783472d" args="(iser::IArchive &amp;archive)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool idoc::CMultiDocumentManagerBase::SerializeOpenDocumentList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramname"><em>archive</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Serializes open documents information. </p>
 
 </div>
 </div>

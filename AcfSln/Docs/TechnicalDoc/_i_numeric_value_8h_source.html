@@ -61,27 +61,29 @@
 <a name="l00063"></a>00063 
 <a name="l00067"></a><a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a464ba9647d480f0169d3254768f13041">00067</a>               <a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a464ba9647d480f0169d3254768f13041" title="Length or distance.">VTI_LENGTH</a>,
 <a name="l00068"></a>00068 
-<a name="l00072"></a><a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a">00072</a>               <a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a" title="2D-transformation, given in the form (m11, m21, m12, m22, dx, dy)">VTI_2D_TRANSFORM</a>
-<a name="l00073"></a>00073        };
-<a name="l00074"></a>00074 
-<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_i_numeric_value.html#ae80249c5b28cb227c78ab46408dfef69" title="Check if the given value type (or value component) is supported.">IsValueTypeSupported</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span> = 0;
-<a name="l00081"></a>00081 
-<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>* <a class="code" href="classimeas_1_1_i_numeric_value.html#a0bb594ecbaeca794fd86b583c79a5f0a" title="Get parameter constraints describing possible parameter values.">GetNumericConstraints</a>() <span class="keyword">const</span> = 0;
+<a name="l00072"></a><a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a">00072</a>               <a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a" title="2D-transformation, given in the form (m11, m21, m12, m22, dx, dy)">VTI_2D_TRANSFORM</a>,
+<a name="l00073"></a>00073 
+<a name="l00077"></a><a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1ad67213851e48e283a12e1a09fd45d4cb">00077</a>               <a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1ad67213851e48e283a12e1a09fd45d4cb" title="Line in 2D-space given in the form (x1, y1, x2, y2)">VTI_2D_LINE</a>
+<a name="l00078"></a>00078        };
+<a name="l00079"></a>00079 
+<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_i_numeric_value.html#ae80249c5b28cb227c78ab46408dfef69" title="Check if the given value type (or value component) is supported.">IsValueTypeSupported</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span> = 0;
 <a name="l00086"></a>00086 
-<a name="l00092"></a>00092        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> <a class="code" href="classimeas_1_1_i_numeric_value.html#a95dfecda838338e0327fb7fa0d07ff72" title="Get access to component value of the given type.">GetComponentValue</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span> = 0;
-<a name="l00093"></a>00093 
-<a name="l00097"></a>00097        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> <a class="code" href="classimeas_1_1_i_numeric_value.html#a34bc23dcc6747c86589a722d50bb1f71" title="Get list of numeric values.">GetValues</a>() <span class="keyword">const</span> = 0;
+<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>* <a class="code" href="classimeas_1_1_i_numeric_value.html#a0bb594ecbaeca794fd86b583c79a5f0a" title="Get parameter constraints describing possible parameter values.">GetNumericConstraints</a>() <span class="keyword">const</span> = 0;
+<a name="l00091"></a>00091 
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> <a class="code" href="classimeas_1_1_i_numeric_value.html#a95dfecda838338e0327fb7fa0d07ff72" title="Get access to component value of the given type.">GetComponentValue</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span> = 0;
 <a name="l00098"></a>00098 
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_i_numeric_value.html#a320278040f8a7dfbe897c724bdc70a7f" title="Set list of numeric values.">SetValues</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&amp; values) = 0;
-<a name="l00103"></a>00103 };
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106 } <span class="comment">// namespace imeas</span>
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="preprocessor">#endif // !imeas_INumericParams_included</span>
-<a name="l00110"></a>00110 <span class="preprocessor"></span>
-<a name="l00111"></a>00111 
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> <a class="code" href="classimeas_1_1_i_numeric_value.html#a34bc23dcc6747c86589a722d50bb1f71" title="Get list of numeric values.">GetValues</a>() <span class="keyword">const</span> = 0;
+<a name="l00103"></a>00103 
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_i_numeric_value.html#a320278040f8a7dfbe897c724bdc70a7f" title="Set list of numeric values.">SetValues</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&amp; values) = 0;
+<a name="l00108"></a>00108 };
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 } <span class="comment">// namespace imeas</span>
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 <span class="preprocessor">#endif // !imeas_INumericParams_included</span>
+<a name="l00115"></a>00115 <span class="preprocessor"></span>
+<a name="l00116"></a>00116 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

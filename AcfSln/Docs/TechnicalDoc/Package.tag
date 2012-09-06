@@ -10606,6 +10606,12 @@
       <anchor>a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>VTI_2D_LINE</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ad67213851e48e283a12e1a09fd45d4cb</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsValueTypeSupported</name>

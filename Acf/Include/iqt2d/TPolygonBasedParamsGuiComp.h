@@ -77,6 +77,10 @@ protected:
 	virtual void OnGuiCreated();
 
 protected:
+	using BaseClass::GetObjectPtr;
+	using BaseClass::DoUpdateModel;
+	using BaseClass::CoordsTable;
+
 	/** 
 		Internal item delegate class for input validation
 	*/
