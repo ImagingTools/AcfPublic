@@ -54,9 +54,7 @@ CSingleDocumentWorkspaceGuiComp::CSingleDocumentWorkspaceGuiComp()
 void CSingleDocumentWorkspaceGuiComp::OnTryClose(bool* ignoredPtr)
 {
 	//save open document information before exit
-	if((m_rememberOpenDocumentOnExitAttPtr.IsValid() && *m_rememberOpenDocumentOnExitAttPtr) ||
-		!m_rememberOpenDocumentOnExitAttPtr.IsValid()){
-
+	if(m_rememberOpenDocumentParamPtr.IsValid() && m_rememberOpenDocumentParamPtr->IsEnabled()){
 		if(!m_organizationName.isEmpty() && !m_applicationName.isEmpty()){
 
 			iqt::CSettingsWriteArchive archive(
@@ -265,8 +263,7 @@ void CSingleDocumentWorkspaceGuiComp::OnRestoreSettings(const QSettings& setting
 
 	Q_ASSERT(IsGuiCreated());
 	
-	if((m_rememberOpenDocumentOnExitAttPtr.IsValid() && *m_rememberOpenDocumentOnExitAttPtr) ||
-		!m_rememberOpenDocumentOnExitAttPtr.IsValid()){		
+	if(m_rememberOpenDocumentParamPtr.IsValid() && m_rememberOpenDocumentParamPtr->IsEnabled()){
 	
 		m_organizationName = settings.organizationName();
 		m_applicationName = settings.applicationName();

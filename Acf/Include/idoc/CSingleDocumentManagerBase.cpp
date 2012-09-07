@@ -475,8 +475,6 @@ bool CSingleDocumentManagerBase::SerializeOpenDocument(iser::IArchive& archive)
 		QString filePath;
 		QByteArray documentTypeId;
 		QByteArray viewTypeId;
-		
-		bool retVal = archive.BeginTag(openDocumentTag);
 
 		retVal = retVal && archive.BeginTag(filePathTag);
 		retVal = retVal && archive.Process(filePath);
