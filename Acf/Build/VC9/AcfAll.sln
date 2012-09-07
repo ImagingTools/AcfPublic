@@ -1,5 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+# Visual C++ Express 2008
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Component", "Component", "{8E0B8DFD-41AF-4200-AC4A-83FA5B9C1897}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tool", "Tool", "{BD453625-8704-4950-B34F-0DD8FBAA26FD}"
@@ -177,6 +177,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iwiz", "..\..\Include\iwiz\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iview", "..\..\Include\iview\VC9\iview.vcproj", "{CE718FF3-10C8-40B7-BCFF-244511F3E1C4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WrapperAcf", "..\..\Impl\WrapperAcf\VC9\WrapperAcf.vcproj", "{EA1679D8-D02A-49DF-9E16-63846C6DBF6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -331,6 +333,10 @@ Global
 		{CE718FF3-10C8-40B7-BCFF-244511F3E1C4}.Debug|Win32.Build.0 = Debug|Win32
 		{CE718FF3-10C8-40B7-BCFF-244511F3E1C4}.Release|Win32.ActiveCfg = Release|Win32
 		{CE718FF3-10C8-40B7-BCFF-244511F3E1C4}.Release|Win32.Build.0 = Release|Win32
+		{EA1679D8-D02A-49DF-9E16-63846C6DBF6F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EA1679D8-D02A-49DF-9E16-63846C6DBF6F}.Debug|Win32.Build.0 = Debug|Win32
+		{EA1679D8-D02A-49DF-9E16-63846C6DBF6F}.Release|Win32.ActiveCfg = Release|Win32
+		{EA1679D8-D02A-49DF-9E16-63846C6DBF6F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
