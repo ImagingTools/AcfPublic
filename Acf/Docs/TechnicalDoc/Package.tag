@@ -37177,13 +37177,6 @@
       <anchor>af42445991a29be81209d923ebd727dd1</anchor>
       <arglist>(const QSettings &amp;settings)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSaveSettings</name>
-      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a7e59af8400b250483868ab4022c2a616</anchor>
-      <arglist>(QSettings &amp;settings) const </arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iqtdoc::CStaticHelpFileProviderComp</name>

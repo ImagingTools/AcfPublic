@@ -35,7 +35,7 @@
 
 
 namespace idoc
-{		
+{
 
 
 // reimplemented (idoc::IDocumentManager)
@@ -456,8 +456,7 @@ bool CSingleDocumentManagerBase::SerializeOpenDocument(iser::IArchive& archive)
 
 	bool retVal = archive.BeginTag(openDocumentTag);
 
-	if(archive.IsStoring())
-	{
+	if (archive.IsStoring()){
 		retVal = retVal && archive.BeginTag(filePathTag);
 		retVal = retVal && archive.Process(m_filePath);
 		retVal = retVal && archive.EndTag(filePathTag);
@@ -470,8 +469,7 @@ bool CSingleDocumentManagerBase::SerializeOpenDocument(iser::IArchive& archive)
 		retVal = retVal && archive.Process(m_viewTypeId);
 		retVal = retVal && archive.EndTag(viewTypeIdTag);		
 	}
-	else {
-
+	else{
 		QString filePath;
 		QByteArray documentTypeId;
 		QByteArray viewTypeId;
@@ -488,8 +486,7 @@ bool CSingleDocumentManagerBase::SerializeOpenDocument(iser::IArchive& archive)
 		retVal = retVal && archive.Process(m_viewTypeId);
 		retVal = retVal && archive.EndTag(viewTypeIdTag);		
 
-		if(retVal && !filePath.isEmpty())
-		{
+		if (retVal && !filePath.isEmpty()){
 			retVal = retVal & OpenDocument(filePath, true, viewTypeId, documentTypeId);
 		}
 	}

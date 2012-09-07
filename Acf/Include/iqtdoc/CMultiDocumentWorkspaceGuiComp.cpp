@@ -98,7 +98,6 @@ void CMultiDocumentWorkspaceGuiComp::OnTryClose(bool* ignoredPtr)
 {
 	//Save open document settings before exit
 	if(m_rememberOpenDocumentsParamPtr.IsValid() && m_rememberOpenDocumentsParamPtr->IsEnabled()){
-
 		if(!m_organizationName.isEmpty() && !m_applicationName.isEmpty()){
 			iqt::CSettingsWriteArchive archive(
 							m_organizationName,

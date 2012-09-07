@@ -2891,6 +2891,13 @@
       <anchor>a6ae28fb24e53c51727c9009cd4d74d00</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiCameraBitmapSupplierComp</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>af255a28a8e3fc782f4de54432409fa73</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iprm::ISelectionConstraints *</type>
       <name>GetBitmapSelectionContraints</name>
@@ -2939,6 +2946,13 @@
       <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
       <anchor>ac0f8481ef76f20d83f61197970ac0857</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ae2282579177db8f2ebddead5df0ae5e3</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

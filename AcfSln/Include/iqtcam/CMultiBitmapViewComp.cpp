@@ -275,3 +275,5 @@ void CMultiBitmapViewComp::CSingleView::AddStatusItems(QBoxLayout* layoutPtr)
 
 
 } // namespace iqtcam
+
+

@@ -82,7 +82,7 @@
 <a name="l00058"></a>00058               I_ASSIGN(m_documentTemplateCompPtr, <span class="stringliteral">&quot;DocumentTemplate&quot;</span>, <span class="stringliteral">&quot;Document template&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DocumentTemplate&quot;</span>);
 <a name="l00059"></a>00059               I_ASSIGN(m_showMaximizedAttrPtr, <span class="stringliteral">&quot;ShowViewMaximized&quot;</span>, <span class="stringliteral">&quot;At start shows the document view maximized&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
 <a name="l00060"></a>00060               I_ASSIGN(m_allowViewRepeatingAttrPtr, <span class="stringliteral">&quot;AllowViewRepeating&quot;</span>, <span class="stringliteral">&quot;If enabled, multiple views for the same document are allowed&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
-<a name="l00061"></a>00061               I_ASSIGN(m_rememberOpenDocumentsOnExitAttPtr, <span class="stringliteral">&quot;RememberOpenDocumentsOnExit&quot;</span>, <span class="stringliteral">&quot;Restores open documents from previous session&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
+<a name="l00061"></a>00061               I_ASSIGN(m_rememberOpenDocumentsParamPtr, <span class="stringliteral">&quot;RememberOpenDocumentsOnExit&quot;</span>, <span class="stringliteral">&quot;If enabled, restores open documents from previous session&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;RememberOpenDocumentsOnExit&quot;</span>);
 <a name="l00062"></a>00062        I_END_COMPONENT;
 <a name="l00063"></a>00063 
 <a name="l00064"></a><a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99">00064</a>        <span class="keyword">enum</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a45e1117a956e4922d146a01f103add99">GroupId</a>
@@ -204,9 +204,9 @@
 <a name="l00195"></a>00195        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_tabbedCommand;
 <a name="l00196"></a>00196 
 <a name="l00197"></a>00197        I_REF(<a class="code" href="classidoc_1_1_i_document_template.html" title="Document template creating and controling views and models.">idoc::IDocumentTemplate</a>, m_documentTemplateCompPtr);
-<a name="l00198"></a>00198        I_ATTR(<span class="keywordtype">bool</span>, m_showMaximizedAttrPtr);
-<a name="l00199"></a>00199        I_ATTR(<span class="keywordtype">bool</span>, m_allowViewRepeatingAttrPtr);
-<a name="l00200"></a>00200        I_ATTR(<span class="keywordtype">bool</span>, m_rememberOpenDocumentsOnExitAttPtr);
+<a name="l00198"></a>00198        I_REF(<a class="code" href="classiprm_1_1_i_enableable_param.html" title="Interface for objects which can be enabled/disabled.">iprm::IEnableableParam</a>, m_rememberOpenDocumentsParamPtr);
+<a name="l00199"></a>00199        I_ATTR(<span class="keywordtype">bool</span>, m_showMaximizedAttrPtr);
+<a name="l00200"></a>00200        I_ATTR(<span class="keywordtype">bool</span>, m_allowViewRepeatingAttrPtr);       
 <a name="l00201"></a>00201        
 <a name="l00202"></a>00202        <span class="keyword">mutable</span> QString m_lastDirectory;
 <a name="l00203"></a>00203 
