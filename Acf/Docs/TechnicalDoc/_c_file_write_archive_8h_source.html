@@ -56,37 +56,49 @@
 <a name="l00044"></a>00044                                    <span class="keywordtype">bool</span> supportTagSkipping = <span class="keyword">true</span>,
 <a name="l00045"></a>00045                                    <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>);
 <a name="l00046"></a>00046 
-<a name="l00050"></a>00050        <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#a20e397acbc28696f2a49833e1a71a95a" title="Force internal stream object to flush.">Flush</a>();
+<a name="l00050"></a>00050        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#a7b148d2b49c7f5553ca8741d5d1f347f" title="Return true if the archive is valid (e.g.">IsArchiveValid</a>() <span class="keyword">const</span>;
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="comment">// reimplemented (iser::IArchive)</span>
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#abce404dd04ef9b71fe49dd4dcd0c96ec" title="Check if skiping to the end of tag on EndTag is supported.">IsTagSkippingSupported</a>() <span class="keyword">const</span>;
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#a72e2668c4594306a72493c9adf44f6ea" title="Begin of archive tag.">BeginTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; tag);
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#a7db11ea82640b76f2fc4285868407404" title="End of archive tag.">EndTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; tag);
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#ae6c893d9b0b689e6d06d46c25a5390a4" title="Process binary data block.">ProcessData</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> size);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">protected</span>:
-<a name="l00059"></a><a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html">00059</a>        <span class="keyword">struct </span><a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html">TagStackElement</a>
-<a name="l00060"></a>00060        {
-<a name="l00061"></a><a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html#a3ad411d595bdd854889e487ad6013728">00061</a>               quint32 <a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html#a3ad411d595bdd854889e487ad6013728">tagBinaryId</a>;
-<a name="l00062"></a><a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html#a880a2cbd24ea66326495f471980d99de">00062</a>               quint32 <a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html#a880a2cbd24ea66326495f471980d99de">endFieldPosition</a>;
-<a name="l00063"></a>00063        };
-<a name="l00064"></a>00064        
-<a name="l00065"></a>00065 <span class="keyword">private</span>:
-<a name="l00066"></a>00066        QFile m_file;
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068        <span class="keywordtype">bool</span> m_supportTagSkipping;
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <span class="keyword">typedef</span> QVector&lt;TagStackElement&gt; TagStack;
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072        TagStack m_tagStack;
-<a name="l00073"></a>00073 };
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#a20e397acbc28696f2a49833e1a71a95a" title="Force internal stream object to flush.">Flush</a>();
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (iser::IArchive)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#abce404dd04ef9b71fe49dd4dcd0c96ec" title="Check if skiping to the end of tag on EndTag is supported.">IsTagSkippingSupported</a>() <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#a72e2668c4594306a72493c9adf44f6ea" title="Begin of archive tag.">BeginTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; tag);
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#a7db11ea82640b76f2fc4285868407404" title="End of archive tag.">EndTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; tag);
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#ae6c893d9b0b689e6d06d46c25a5390a4" title="Process binary data block.">ProcessData</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> size);
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="keyword">protected</span>:
+<a name="l00064"></a><a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html">00064</a>        <span class="keyword">struct </span><a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html">TagStackElement</a>
+<a name="l00065"></a>00065        {
+<a name="l00066"></a><a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html#a3ad411d595bdd854889e487ad6013728">00066</a>               quint32 <a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html#a3ad411d595bdd854889e487ad6013728">tagBinaryId</a>;
+<a name="l00067"></a><a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html#a880a2cbd24ea66326495f471980d99de">00067</a>               quint32 <a class="code" href="structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html#a880a2cbd24ea66326495f471980d99de">endFieldPosition</a>;
+<a name="l00068"></a>00068        };
+<a name="l00069"></a>00069        
+<a name="l00070"></a>00070 <span class="keyword">private</span>:
+<a name="l00071"></a>00071        QFile m_file;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073        <span class="keywordtype">bool</span> m_supportTagSkipping;
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 } <span class="comment">// namespace iser</span>
-<a name="l00077"></a>00077 
+<a name="l00075"></a>00075        <span class="keyword">typedef</span> QVector&lt;TagStackElement&gt; TagStack;
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077        TagStack m_tagStack;
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="preprocessor">#endif // !iser_CFileWriteArchive_included</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span>
+<a name="l00079"></a>00079        <span class="keywordtype">bool</span> m_isValid;
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="comment">// public inline methods</span>
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="classiser_1_1_c_file_write_archive.html#a7b148d2b49c7f5553ca8741d5d1f347f">00085</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_write_archive.html#a7b148d2b49c7f5553ca8741d5d1f347f" title="Return true if the archive is valid (e.g.">CFileWriteArchive::IsArchiveValid</a>()<span class="keyword"> const</span>
+<a name="l00086"></a>00086 <span class="keyword"></span>{
+<a name="l00087"></a>00087        <span class="keywordflow">return</span> m_isValid;
+<a name="l00088"></a>00088 }
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 } <span class="comment">// namespace iser</span>
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="preprocessor">#endif // !iser_CFileWriteArchive_included</span>
+<a name="l00095"></a>00095 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

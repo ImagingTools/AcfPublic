@@ -42222,6 +42222,13 @@
       <arglist>(const QString &amp;filePath, const IVersionInfo *versionInfoPtr=NULL, bool supportTagSkipping=true, bool serializeHeader=true)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>IsArchiveValid</name>
+      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>a7b148d2b49c7f5553ca8741d5d1f347f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>Flush</name>
       <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
@@ -43637,6 +43644,30 @@
       <name>StateFailed</name>
       <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
       <anchor>a75a7bac07b89aa42b7596185b7bb5c51aa09dcbc2185bb8c631d1537abd3c04a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>ErrorType</name>
+      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
+      <anchor>a773dea7ed871a60448bf26efe9f6a729</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ET_NO_WRITE_PERMISSIONS</name>
+      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
+      <anchor>a773dea7ed871a60448bf26efe9f6a729a9f103a28d572122be8df0608de83adfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ET_NO_READ_PERMISSIONS</name>
+      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
+      <anchor>a773dea7ed871a60448bf26efe9f6a729aeed682d1015be39a3f422e61ff7d18fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ET_FILE_NOT_EXIST</name>
+      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
+      <anchor>a773dea7ed871a60448bf26efe9f6a729a41281ca5a5ed803f69f10cac5f5d62e9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">

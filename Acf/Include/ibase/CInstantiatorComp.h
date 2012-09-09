@@ -49,7 +49,7 @@ protected:
 	virtual void OnComponentCreated();
 
 private:
-	I_MULTIREF(void*, m_instancesAttrPtr);
+	I_MULTIREF(istd::IPolymorphic, m_instancesAttrPtr);
 };
 
 

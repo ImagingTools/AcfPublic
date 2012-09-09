@@ -71,6 +71,11 @@ Public Types</h2></td></tr>
 <a class="el" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51aa09dcbc2185bb8c631d1537abd3c04a8">StateFailed</a>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of operation.  <a href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#a773dea7ed871a60448bf26efe9f6a729">ErrorType</a> { <a class="el" href="classiser_1_1_i_file_loader.html#a773dea7ed871a60448bf26efe9f6a729a9f103a28d572122be8df0608de83adfb">ET_NO_WRITE_PERMISSIONS</a>, 
+<a class="el" href="classiser_1_1_i_file_loader.html#a773dea7ed871a60448bf26efe9f6a729aeed682d1015be39a3f422e61ff7d18fc">ET_NO_READ_PERMISSIONS</a>, 
+<a class="el" href="classiser_1_1_i_file_loader.html#a773dea7ed871a60448bf26efe9f6a729a41281ca5a5ed803f69f10cac5f5d62e9">ET_FILE_NOT_EXIST</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible file I/O errors.  <a href="classiser_1_1_i_file_loader.html#a773dea7ed871a60448bf26efe9f6a729">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4">MessageId</a> { <a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4a601a2e89a63068304e0cb83976cdafff">MI_BAD_OBJECT_TYPE</a> =  0xabf0, 
 <a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4a1803b797c6d80cdd6daef0afd6f00ccf">MI_CANNOT_LOAD</a>, 
 <a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4a23433678f728922ea7537fd394c50bb1">MI_CANNOT_SAVE</a>
@@ -90,6 +95,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_file_loader_8h_source.html#l00024">24</a> of file <a class="el" href="_i_file_loader_8h_source.html">IFileLoader.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a773dea7ed871a60448bf26efe9f6a729"></a><!-- doxytag: member="iser::IFileLoader::ErrorType" ref="a773dea7ed871a60448bf26efe9f6a729" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiser_1_1_i_file_loader.html#a773dea7ed871a60448bf26efe9f6a729">iser::IFileLoader::ErrorType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Possible file I/O errors. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a773dea7ed871a60448bf26efe9f6a729a9f103a28d572122be8df0608de83adfb"></a><!-- doxytag: member="ET_NO_WRITE_PERMISSIONS" ref="a773dea7ed871a60448bf26efe9f6a729a9f103a28d572122be8df0608de83adfb" args="" -->ET_NO_WRITE_PERMISSIONS</em>&nbsp;</td><td>
+<p>File could not be written, no write access granted. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a773dea7ed871a60448bf26efe9f6a729aeed682d1015be39a3f422e61ff7d18fc"></a><!-- doxytag: member="ET_NO_READ_PERMISSIONS" ref="a773dea7ed871a60448bf26efe9f6a729aeed682d1015be39a3f422e61ff7d18fc" args="" -->ET_NO_READ_PERMISSIONS</em>&nbsp;</td><td>
+<p>File could not be read, no read access granted. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a773dea7ed871a60448bf26efe9f6a729a41281ca5a5ed803f69f10cac5f5d62e9"></a><!-- doxytag: member="ET_FILE_NOT_EXIST" ref="a773dea7ed871a60448bf26efe9f6a729a41281ca5a5ed803f69f10cac5f5d62e9" args="" -->ET_FILE_NOT_EXIST</em>&nbsp;</td><td>
+<p>File doesn't exist. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_i_file_loader_8h_source.html#l00049">49</a> of file <a class="el" href="_i_file_loader_8h_source.html">IFileLoader.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a885bc2cad957c89052cf890e68436bf4"></a><!-- doxytag: member="iser::IFileLoader::MessageId" ref="a885bc2cad957c89052cf890e68436bf4" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -115,7 +150,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a1c6505cec393c4178dea87867e891199">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a26da1d11efac1ef7f233f7a924984b16">iqt::CRegistryCodeSaverComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#ac5e4af383e4dcd48d1ef9ed512a03ad9">iqt::CBitmapLoaderComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a83c4d161fe2bb108d55f1051d28143f9">icmpstr::CRegistryLoaderComp</a>, and <a class="el" href="classibase_1_1_c_file_serializer_comp_base.html#acc7406a1d564b4d9ea4205a8f6b1b1dc">ibase::CFileSerializerCompBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_file_loader_8h_source.html#l00049">49</a> of file <a class="el" href="_i_file_loader_8h_source.html">IFileLoader.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_loader_8h_source.html#l00070">70</a> of file <a class="el" href="_i_file_loader_8h_source.html">IFileLoader.h</a>.</p>
 
 </div>
 </div>
@@ -228,8 +263,8 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>This function loads data <code>data</code> from file <code>filePath</code>. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>serialization state. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>File loading state. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51" title="Result of operation.">OperationState</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aba24a5237d6d89acc1fc47500cceb780">iqt::CRegistryCodeSaverComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a7024fa370483bef9232977bf45d23de2">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#aef372092b22a5afd632a7765843c9ea7">iqt::CBitmapLoaderComp</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a3780952969ad6243beef39e890a0d7d7">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a8709bbe01cbc5ae537416819812509f0">iqt::CSettingsSerializerComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a2b73d7a0d3ab2c3162d4698d4972bb44">icmpstr::CRegistryLoaderComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#af480f57ae969292135f2c14e84dc2ec4">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#adda3964a8d73b8e71b09c0471a012cb6">iqt::CClipboardSerializerComp</a>, <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a5c618e6e6cdc88f274d5067458b89c82">ibase::CTextFileLoaderComp</a>, <a class="el" href="classibase_1_1_t_file_serializer_comp.html#ab3b73bb0a58e8f00e9f051b0225eaff2">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;</a>, and <a class="el" href="classibase_1_1_t_file_serializer_comp.html#ab3b73bb0a58e8f00e9f051b0225eaff2">ibase::TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</a>.</p>
 
@@ -261,8 +296,8 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>This function saves data <code>data</code> to file <code>filePath</code>. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>serialization state. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd>SerializationState </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>File saving state. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51" title="Result of operation.">OperationState</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a3e6664581a9f2c7bc051dac01dfc754d">iqt::CRegistryCodeSaverComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#ab33d039aab082524aaf3b55cd72faa76">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiqt_1_1_c_bitmap_loader_comp.html#a946ca446a3b8078d32918fc179767c72">iqt::CBitmapLoaderComp</a>, <a class="el" href="classiqt_1_1_c_rendered_object_file_loader_comp.html#a96509b8fc9bdbb3afe8bb24e9ac59ede">iqt::CRenderedObjectFileLoaderComp</a>, <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#aa41d4dd5f51c193309175f99c6844c27">iqt::CSettingsSerializerComp</a>, <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#ade4dd8df0ad64e2b9a7583071e2a54d0">icmpstr::CRegistryLoaderComp</a>, <a class="el" href="classibase_1_1_c_composed_loader_comp.html#a537008ab39a94d4fa0c07a1e3af22d25">ibase::CComposedLoaderComp</a>, <a class="el" href="classiqt_1_1_c_clipboard_serializer_comp.html#accb52f11ece6837c9f76cd5bf07a393d">iqt::CClipboardSerializerComp</a>, <a class="el" href="classibase_1_1_c_text_file_loader_comp.html#a08f309562d94c95403256180f3330dd7">ibase::CTextFileLoaderComp</a>, <a class="el" href="classibase_1_1_t_file_serializer_comp.html#ab287d68478ebf3e9f4d9173fe4122c1d">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;</a>, and <a class="el" href="classibase_1_1_t_file_serializer_comp.html#ab287d68478ebf3e9f4d9173fe4122c1d">ibase::TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</a>.</p>
 

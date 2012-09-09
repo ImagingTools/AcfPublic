@@ -45,6 +45,9 @@ CXmlFileWriteArchive::CXmlFileWriteArchive(
 			SerializeAcfHeader();
 		}
 	}
+	else{
+		m_stream.setStatus(QTextStream::WriteFailed);
+	}
 }
 
 
