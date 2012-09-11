@@ -45,6 +45,7 @@ namespace iview
 
 CConsoleGui::CConsoleGui(QWidget* parent)
 :	BaseClass(parent),
+	m_isFullScreenMode(false),
 	m_commands("&View", 100),
 	m_gridVisibleCommand("Show Grid", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_ONOFF, CGI_CALIBRATION),
 	m_rulerVisibleCommand("Show Ruler", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_ONOFF, CGI_CALIBRATION),
@@ -97,6 +98,8 @@ CConsoleGui::CConsoleGui(QWidget* parent)
 	UpdateCommands();
 
 	ConnectSignalSlots();
+
+	m_viewPtr->installEventFilter(this);	
 }
 
 
@@ -257,7 +260,6 @@ void CConsoleGui::UpdateView()
 	BaseClass::UpdateView();
 }
 
-
 // protected methods
 
 void CConsoleGui::UpdateZoomInOutState()
@@ -340,6 +342,45 @@ void CConsoleGui::UpdateScrollbarsValues()
 			m_verticalScrollbarPtr->setValue(0);
 			m_verticalScrollbarPtr->setSingleStep(1);
 			m_verticalScrollbarPtr->setPageStep(1);
+		}
+	}
+}
+
+bool CConsoleGui::IsFullScreenMode() const
+{
+	return m_isFullScreenMode;
+}
+
+
+void CConsoleGui::SetFullScreenMode(bool fullScreenMode)
+{
+	if (fullScreenMode != m_isFullScreenMode){
+		m_isFullScreenMode = fullScreenMode;
+
+		if(m_isFullScreenMode != this->isFullScreen())	{
+			if(m_isFullScreenMode){
+				m_savedTransform =  m_viewPtr->GetTransform();
+
+				m_savedParentWidgetPtr = this->parentWidget();
+				this->setParent(NULL);
+				
+				this->showFullScreen();				
+				
+				m_viewPtr->SetZoom(iview::CViewBase::ZM_FIT);
+				m_viewPtr->Update();
+			}
+			else{
+				if (m_savedParentWidgetPtr != NULL){
+					this->setParent(m_savedParentWidgetPtr);					
+				}
+				
+				m_savedParentWidgetPtr = NULL;
+
+				this->showNormal();
+				
+				m_viewPtr->SetTransform(m_savedTransform);
+				m_viewPtr->Update();
+			}
 		}
 	}
 }
@@ -566,6 +607,31 @@ void CConsoleGui::OnBoundingBoxChanged()
 }
 
 
+bool CConsoleGui::OnMouseDoubleClickEvent(QEvent* /*eventPtr*/)
+{
+	SetFullScreenMode(!IsFullScreenMode());
+
+	return true;
+}
+
+
+bool CConsoleGui::OnKeyReleaseEvent(QKeyEvent* eventPtr)
+{
+	switch(eventPtr->key()){
+	
+	case Qt::Key_Escape:
+		if (IsFullScreenMode()){
+			SetFullScreenMode(false);
+
+			return true;
+		}
+		break;
+	}
+
+	return false;
+}
+
+
 // reimplemented (QWidget)
 
 void CConsoleGui::wheelEvent(QWheelEvent* eventPtr)
@@ -600,6 +666,35 @@ void CConsoleGui::wheelEvent(QWheelEvent* eventPtr)
 
 		UpdateZoomInOutState();
 	}
+}
+
+
+// reimplemented (QObject)
+
+bool CConsoleGui::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
+{
+	if (sourcePtr != m_viewPtr){
+		return BaseClass::eventFilter(sourcePtr, eventPtr);
+	}
+	
+	switch(eventPtr->type()){
+	case QEvent::MouseButtonDblClick:		
+		if (OnMouseDoubleClickEvent(eventPtr)){
+			return true;
+		}			
+		break;
+
+	case QEvent::KeyRelease:
+		if (OnKeyReleaseEvent(dynamic_cast<QKeyEvent*>(eventPtr))){
+			return true;
+		}
+		break;		
+
+	default:
+		break;
+	}	
+
+	return BaseClass::eventFilter(sourcePtr, eventPtr);
 }
 
 
