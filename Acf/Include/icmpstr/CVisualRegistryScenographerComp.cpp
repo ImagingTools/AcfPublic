@@ -1,23 +1,23 @@
 /********************************************************************************
-**
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
-**
-********************************************************************************/
+ **
+ **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+ **
+ **	This file is part of the ACF Toolkit.
+ **
+ **	This file may be used under the terms of the GNU Lesser
+ **	General Public License version 2.1 as published by the Free Software
+ **	Foundation and appearing in the file LicenseLGPL.txt included in the
+ **	packaging of this file.  Please review the following information to
+ **	ensure the GNU Lesser General Public License version 2.1 requirements
+ **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ **
+ **	If you are unsure which license is appropriate for your use, please
+ **	contact us at info@imagingtools.de.
+ **
+ ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+ **	by Skype to ACF_infoline for further information about the ACF.
+ **
+ ********************************************************************************/
 
 
 #include "icmpstr/CVisualRegistryScenographerComp.h"
@@ -49,14 +49,15 @@
 #include "icmpstr/CGraphicsConnectorItem.h"
 #include "icmpstr/CVisualRegistryElement.h"
 #include "icmpstr/CVisualRegistryComp.h"
+#include "icmpstr/CSceneProviderGuiComp.h"
 
 
 namespace icmpstr
 {
 
 
-CVisualRegistryScenographerComp::CVisualRegistryScenographerComp()
-:	m_environmentObserver(this)
+CVisualRegistryScenographerComp::CVisualRegistryScenographerComp():
+m_environmentObserver(this), m_currentEmbeddedRegistry(NULL)
 {
 	int lightToolFlags = ibase::IHierarchicalCommand::CF_GLOBAL_MENU | ibase::IHierarchicalCommand::CF_TOOLBAR;
 
@@ -117,10 +118,10 @@ CVisualRegistryScenographerComp::CVisualRegistryScenographerComp()
 	SetAcceptedMimeTypes(QStringList() << "text/plain");
 
 	SetIgnoreChanges(i2d::IObject2d::CF_OBJECT_POSITION |
-				istd::IChangeable::CF_MODEL |
-				istd::IChangeable::CF_ACF_INTERNAL |
-				istd::CChangeDelegator::CF_DELEGATED |
-				icomp::IRegistryElement::CF_FLAGS_CHANGED);
+			istd::IChangeable::CF_MODEL |
+			istd::IChangeable::CF_ACF_INTERNAL |
+			istd::CChangeDelegator::CF_DELEGATED |
+			icomp::IRegistryElement::CF_FLAGS_CHANGED);
 
 	m_selectionInfo.SetParent(this);
 }
@@ -142,17 +143,28 @@ bool CVisualRegistryScenographerComp::TryOpenComponent(const CVisualRegistryElem
 {
 	const icomp::IComponentEnvironmentManager* managerPtr = GetEnvironmentManager();
 	if ((managerPtr != NULL) && m_documentManagerCompPtr.IsValid()){
-		
+
 		const icomp::IComponentStaticInfo* metaInfoPtr = managerPtr->GetComponentMetaInfo(registryElement.GetAddress());
 
-		if (metaInfoPtr != NULL &&(metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
-			QDir packageDir(managerPtr->GetPackagePath(registryElement.GetAddress().GetPackageId()));
-		
-			QString filePath = packageDir.absoluteFilePath(registryElement.GetAddress().GetComponentId() + ".arx");
+		if (metaInfoPtr != NULL){
+			if (metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE){
+				QDir packageDir(managerPtr->GetPackagePath(registryElement.GetAddress().GetPackageId()));
 
-			m_documentManagerCompPtr->FileOpen(NULL, &filePath);
+				QString filePath = packageDir.absoluteFilePath(registryElement.GetAddress().GetComponentId() + ".arx");
 
-			return true;
+				m_documentManagerCompPtr->FileOpen(NULL, &filePath);
+
+				return true;
+			}
+		}
+		else{ // embedded registry
+			icmpstr::CSceneProviderGuiComp* guiComp =
+					dynamic_cast<icmpstr::CSceneProviderGuiComp*>(m_sceneProviderCompPtr.GetPtr());
+
+			if (guiComp){
+				QByteArray id = registryElement.GetName().data();
+				guiComp->SelectEmbeddedInList(id, true); // will propagate signal back to OnEmbeddedRegistryChanged
+			}
 		}
 	}
 
@@ -162,6 +174,7 @@ bool CVisualRegistryScenographerComp::TryOpenComponent(const CVisualRegistryElem
 
 // reimplemented (ibase::ICommandsProvider)
 
+
 const ibase::IHierarchicalCommand* CVisualRegistryScenographerComp::GetCommands() const
 {
 	return &m_registryCommand;
@@ -169,6 +182,7 @@ const ibase::IHierarchicalCommand* CVisualRegistryScenographerComp::GetCommands(
 
 
 // protected methods
+
 
 QGraphicsItem* CVisualRegistryScenographerComp::AddShapeToScene(iser::ISerializable* elementPtr) const
 {
@@ -205,7 +219,10 @@ void CVisualRegistryScenographerComp::AddConnectorsToScene()
 	}
 
 	QList<QGraphicsItem*> items = m_scenePtr->items();
-	foreach (QGraphicsItem* itemPtr, items){
+
+
+	foreach(QGraphicsItem* itemPtr, items)
+	{
 		CRegistryElementShape* sourceShapePtr = dynamic_cast<CRegistryElementShape*>(itemPtr);
 		if (sourceShapePtr == NULL){
 			continue;
@@ -217,37 +234,37 @@ void CVisualRegistryScenographerComp::AddConnectorsToScene()
 
 		icomp::IRegistryElement::Ids attributeIds = elementPtr->GetAttributeIds();
 
-		for (		icomp::IRegistryElement::Ids::const_iterator iter = attributeIds.begin(); 
-					iter != attributeIds.end(); 
-					iter++){
+		for (icomp::IRegistryElement::Ids::const_iterator iter = attributeIds.begin();
+				iter != attributeIds.end();
+				iter++){
 			QByteArray attributeId = *iter;
 
 			const icomp::IRegistryElement::AttributeInfo* attributeInfoPtr = elementPtr->GetAttributeInfo(attributeId);
 			if (attributeInfoPtr != NULL){
 				iser::ISerializable* attributePtr = attributeInfoPtr->attributePtr.GetPtr();
 				const icomp::CReferenceAttribute* referenceAttributePtr = dynamic_cast<icomp::CReferenceAttribute*>(attributePtr);
-				if (referenceAttributePtr != NULL){		
+				if (referenceAttributePtr != NULL){
 					const QByteArray& componentId = referenceAttributePtr->GetValue();
-				
+
 					AddConnector(*sourceShapePtr, componentId, attributeId);
 				}
-	
+
 				const icomp::CMultiReferenceAttribute* multiReferenceAttributePtr = dynamic_cast<icomp::CMultiReferenceAttribute*>(attributePtr);
 				if (multiReferenceAttributePtr != NULL){
 					for (int referenceIndex = 0; referenceIndex < multiReferenceAttributePtr->GetValuesCount(); referenceIndex++){
 						const QByteArray& componentId = multiReferenceAttributePtr->GetValueAt(referenceIndex);
-						
+
 						AddConnector(*sourceShapePtr, componentId, attributeId);
 					}
 				}
 
 				const icomp::CFactoryAttribute* factoryAttributePtr = dynamic_cast<icomp::CFactoryAttribute*>(attributePtr);
-				if (factoryAttributePtr != NULL){		
+				if (factoryAttributePtr != NULL){
 					const QByteArray& componentId = factoryAttributePtr->GetValue();
 
 					AddConnector(*sourceShapePtr, componentId, attributeId, true);
 				}
-	
+
 				const icomp::CMultiFactoryAttribute* multiFactoryAttributePtr = dynamic_cast<icomp::CMultiFactoryAttribute*>(attributePtr);
 				if (multiFactoryAttributePtr != NULL){
 					for (int referenceIndex = 0; referenceIndex < multiFactoryAttributePtr->GetValuesCount(); referenceIndex++){
@@ -263,10 +280,10 @@ void CVisualRegistryScenographerComp::AddConnectorsToScene()
 
 
 void CVisualRegistryScenographerComp::AddConnector(
-			CRegistryElementShape& sourceShape,
-			const QByteArray& referenceComponentId,
-			const QByteArray& attributeId,
-			bool isFactory)
+		CRegistryElementShape& sourceShape,
+		const QByteArray& referenceComponentId,
+		const QByteArray& attributeId,
+		bool isFactory)
 {
 	if (m_scenePtr == NULL){
 		return;
@@ -279,7 +296,10 @@ void CVisualRegistryScenographerComp::AddConnector(
 	bool isEmbedded = istd::CIdManipBase::SplitId(referenceComponentId, baseId, subId);
 
 	QList<QGraphicsItem*> items = m_scenePtr->items();
-	foreach(QGraphicsItem* itemPtr, items){
+
+
+	foreach(QGraphicsItem* itemPtr, items)
+	{
 		CRegistryElementShape* destShapePtr = dynamic_cast<CRegistryElementShape*>(itemPtr);
 		if (destShapePtr == NULL){
 			continue;
@@ -299,9 +319,9 @@ void CVisualRegistryScenographerComp::AddConnector(
 
 		CGraphicsConnectorItem* connectorPtr = new CGraphicsConnectorItem(*m_sceneProviderCompPtr.GetPtr(), connectFlags);
 
-		connectorPtr->setToolTip(isFactory?
-					tr("Factory of '%1'").arg(QString(attributeId)):
-					tr("Reference of '%1'").arg(QString(attributeId)));
+		connectorPtr->setToolTip(isFactory ?
+				tr("Factory of '%1'").arg(QString(attributeId)) :
+				tr("Reference of '%1'").arg(QString(attributeId)));
 
 		connectorPtr->InitEnds(&sourceShape, destShapePtr);
 
@@ -313,42 +333,65 @@ void CVisualRegistryScenographerComp::AddConnector(
 
 
 icomp::IRegistryElement* CVisualRegistryScenographerComp::TryCreateComponent(
-			const QByteArray& elementId,
-			const icomp::CComponentAddress& address,
-			const i2d::CVector2d& position)
+		const QByteArray& elementId,
+		const icomp::CComponentAddress& address,
+		const i2d::CVector2d& position)
 {
-	if (!elementId.isEmpty()){
-		istd::TChangeNotifier<icomp::IRegistry> registryPtr(GetObjectPtr(), icomp::IRegistry::CF_ELEMENT_ADDED);
-		if (registryPtr.IsValid()){
-			QRegExp exp("^(\\w*)_(\\d+)$");
-			QString elementIdString = elementId;
+	if (elementId.isEmpty()){
+		return NULL;
+	}
 
-			int elementValue = 0;
-			QString elementBase = elementIdString;
-			int pos = exp.indexIn(elementIdString);
-			if (pos >= 0){
-				elementBase = exp.cap(1);
-				elementValue = exp.cap(2).toInt();
-			}
+	istd::TChangeNotifier<icomp::IRegistry> registryPtr(GetSelectedRegistry(), icomp::IRegistry::CF_ELEMENT_ADDED);
+	if (!registryPtr.IsValid()){
+		return NULL;
+	}
 
-			QByteArray realElementId = elementId;
-			icomp::IRegistry::Ids elementIds = registryPtr->GetElementIds();
-			while (elementIds.find(realElementId) != elementIds.end()){
-				realElementId = QString("%1_%2").arg(elementBase).arg(++elementValue).toLocal8Bit();
-			}
+	QRegExp regexp("^(\\w*)_(\\d+)$");
+	QString elementIdString = elementId;
 
-			icomp::IRegistry::ElementInfo* elementInfoPtr = registryPtr->InsertElementInfo(realElementId, address);
-			if (elementInfoPtr != NULL){
-				CVisualRegistryElement* visualElementPtr = dynamic_cast<CVisualRegistryElement*>(elementInfoPtr->elementPtr.GetPtr());
-				if (visualElementPtr != NULL){
-					visualElementPtr->MoveCenterTo(position);
-				}
+	int elementValue = 0;
+	QString elementBase = elementIdString;
+	int pos = regexp.indexIn(elementIdString);
+	if (pos >= 0){
+		elementBase = regexp.cap(1);
+		elementValue = regexp.cap(2).toInt();
+	}
 
-				ConnectReferences(realElementId);
+	QByteArray realElementId = elementId;
+	icomp::IRegistry::Ids elementIds = registryPtr->GetElementIds();
 
-				return elementInfoPtr->elementPtr.GetPtr();
+	while (elementIds.contains(realElementId)){
+		realElementId = QString("%1_%2").arg(elementBase).arg(++elementValue).toLocal8Bit();
+	}
+
+	// if the new element has empty package_id, assume it's a local composition
+	if (address.GetPackageId().isEmpty() && registryPtr.GetPtr() == GetObjectPtr()){
+		icomp::IRegistry* newEmbeddedRegistryPtr = registryPtr->InsertEmbeddedRegistry(realElementId);
+		if (newEmbeddedRegistryPtr == NULL){
+			QMessageBox::critical(NULL, tr("Error"), tr("Embedded component could not be created!"));
+			return NULL;
+		}
+	}
+
+	icomp::IRegistry::ElementInfo* elementInfoPtr = registryPtr->InsertElementInfo(realElementId, address);
+	if (elementInfoPtr != NULL){
+		CVisualRegistryElement* visualElementPtr = dynamic_cast<CVisualRegistryElement*>(elementInfoPtr->elementPtr.GetPtr());
+		if (visualElementPtr != NULL){
+			visualElementPtr->MoveCenterTo(position);
+		}
+
+		ConnectReferences(realElementId);
+
+		if (registryPtr->GetEmbeddedRegistry(realElementId) != NULL){
+			// add an element to the scene provider embedded compositions list
+			icmpstr::CSceneProviderGuiComp* guiComp =
+					dynamic_cast<icmpstr::CSceneProviderGuiComp*>(m_sceneProviderCompPtr.GetPtr());
+			if (guiComp){
+				guiComp->InsertEmbeddedIntoList(realElementId);
 			}
 		}
+
+		return elementInfoPtr->elementPtr.GetPtr();
 	}
 
 	return NULL;
@@ -364,9 +407,9 @@ void CVisualRegistryScenographerComp::ConnectReferences(const QByteArray& compon
 
 	icomp::IRegistry::Ids componentIds = registryPtr->GetElementIds();
 
-	for (		icomp::IRegistry::Ids::const_iterator iter = componentIds.begin();
-				iter != componentIds.end();
-				iter++){
+	for (icomp::IRegistry::Ids::const_iterator iter = componentIds.begin();
+			iter != componentIds.end();
+			iter++){
 
 		const icomp::IRegistry::ElementInfo* elementInfoPtr = registryPtr->GetElementInfo(*iter);
 		I_ASSERT(elementInfoPtr != NULL);
@@ -378,9 +421,9 @@ void CVisualRegistryScenographerComp::ConnectReferences(const QByteArray& compon
 		}
 
 		icomp::IElementStaticInfo::Ids attributeIds = compMetaInfoPtr->GetMetaIds(icomp::IComponentStaticInfo::MGI_ATTRIBUTES);
-		for (		icomp::IElementStaticInfo::Ids::const_iterator attrIter = attributeIds.begin();
-					attrIter != attributeIds.end();
-					++attrIter){
+		for (icomp::IElementStaticInfo::Ids::const_iterator attrIter = attributeIds.begin();
+				attrIter != attributeIds.end();
+				++attrIter){
 			const QByteArray& attributeId = *attrIter;
 
 			const icomp::IAttributeStaticInfo* staticAttributeInfoPtr = compMetaInfoPtr->GetAttributeInfo(attributeId);
@@ -448,8 +491,8 @@ void CVisualRegistryScenographerComp::UpdateComponentSelection()
 				if (elementInfoPtr != NULL){
 					const icomp::CComponentAddress& address = elementInfoPtr->address;
 					m_quickHelpViewerCompPtr->ShowHelp(
-								address.ToString(),
-								&address);
+							address.ToString(),
+							&address);
 				}
 			}
 		}
@@ -471,90 +514,88 @@ void CVisualRegistryScenographerComp::DoRetranslate()
 {
 	m_editMenu.SetName(tr("&Edit"));
 	m_cutCommand.SetVisuals(
-				tr("Cut"),
-				tr("Cut"),
-				tr("Move selected elements into clipboard"));
+			tr("Cut"),
+			tr("Cut"),
+			tr("Move selected elements into clipboard"));
 	m_copyCommand.SetVisuals(
-				tr("Copy"),
-				tr("Copy"),
-				tr("Copy selected elements into clipboard"));
+			tr("Copy"),
+			tr("Copy"),
+			tr("Copy selected elements into clipboard"));
 	m_pasteCommand.SetVisuals(
-				tr("Paste"),
-				tr("Paste"),
-				tr("Copy selected elements from clipboard into current document"));
+			tr("Paste"),
+			tr("Paste"),
+			tr("Copy selected elements from clipboard into current document"));
 	m_removeComponentCommand.SetVisuals(
-				tr("&Remove"), 
-				tr("Remove"), 
-				tr("Remove the selected element from the registry"),
-				QIcon(":/Icons/Delete.svg"));
+			tr("&Remove"),
+			tr("Remove"),
+			tr("Remove the selected element from the registry"),
+			QIcon(":/Icons/Delete.svg"));
 	m_renameComponentCommand.SetVisuals(
-				tr("&Rename Component"), 
-				tr("Rename"), 
-				tr("Allow to assign new name to selected component"));
+			tr("&Rename Component"),
+			tr("Rename"),
+			tr("Allow to assign new name to selected component"));
 	m_registryMenu.SetVisuals(
-				tr("&Registry"),
-				tr("Registry"),
-				tr("Set of commands manipulating registry"));
+			tr("&Registry"),
+			tr("Registry"),
+			tr("Set of commands manipulating registry"));
 	m_insertEmbeddedRegistryCommand.SetVisuals(
-				tr("&Insert Embedded Composition"), 
-				tr("Insert Embedded"), 
-				tr("Insert new embedded component composition used to group set of components and manage it as single one"));
+			tr("&Insert Embedded Composition"),
+			tr("Insert Embedded"),
+			tr("Insert new embedded component composition used to group set of components and manage it as single one"));
 	m_toEmbeddedRegistryCommand.SetVisuals(
-				tr("To &Embedded Composition"), 
-				tr("To Embedded"), 
-				tr("Make embedded component composition from selected elements.\nIt allows to group set of components and manage it as single one"),
-				QIcon(":/Icons/ToEmbeddedComponent.svg"));
+			tr("To &Embedded Composition"),
+			tr("To Embedded"),
+			tr("Make embedded component composition from selected elements.\nIt allows to group set of components and manage it as single one"),
+			QIcon(":/Icons/ToEmbeddedComponent.svg"));
 	m_exportToCodeCommand.SetVisuals(
-				tr("&Export To Code..."),
-				tr("Export"),
-				tr("Generates C++ code according to this registry"),
-				QIcon(":/Icons/ExportToCode.svg"));
+			tr("&Export To Code..."),
+			tr("Export"),
+			tr("Generates C++ code according to this registry"),
+			QIcon(":/Icons/ExportToCode.svg"));
 	m_executeRegistryCommand.SetVisuals(
-				tr("&Execute Registry"), 
-				tr("&Execute Registry"), 
-				tr("Start registry execution"),
-				QIcon(":/Icons/Play.svg"));
+			tr("&Execute Registry"),
+			tr("&Execute Registry"),
+			tr("Start registry execution"),
+			QIcon(":/Icons/Play.svg"));
 	m_abortRegistryCommand.SetVisuals(
-				tr("&Abort Registry"), 
-				tr("&Abort Registry"), 
-				tr("Abort registry execution"),
-				QIcon(":/Icons/Stop.svg"));
+			tr("&Abort Registry"),
+			tr("&Abort Registry"),
+			tr("Abort registry execution"),
+			QIcon(":/Icons/Stop.svg"));
 	m_showRegistryTopologyCommand.SetVisuals(
-				tr("&Show Component Toplogy..."), 
-				tr("&Show Component Topology"), 
-				tr("Show entire component topology of the current registry"),
-				m_registryValidationStatusCompPtr.IsValid() ? m_registryValidationStatusCompPtr->GetStatusIcon() : QIcon());
+			tr("&Show Component Topology..."),
+			tr("&Show Component Topology"),
+			tr("Show entire component topology of the current registry"),
+			m_registryValidationStatusCompPtr.IsValid() ? m_registryValidationStatusCompPtr->GetStatusIcon() : QIcon());
 }
 
 
-// reimplemented (iqt2d::TScenographerCompBase)
-
+/* reimplemented (iqt2d::TScenographerCompBase) */
 bool CVisualRegistryScenographerComp::OnDropObject(const QMimeData& mimeData, QGraphicsSceneDragDropEvent* eventPtr)
 {
 	if (!mimeData.hasText()){
 		return false;
 	}
 
-	istd::TChangeNotifier<icomp::IRegistry> registryPtr(GetObjectPtr(), icomp::IRegistry::CF_ELEMENT_ADDED | istd::IChangeable::CF_MODEL);
+	istd::TChangeNotifier<icomp::IRegistry> registryPtr(GetSelectedRegistry(), icomp::IRegistry::CF_ELEMENT_ADDED | istd::IChangeable::CF_MODEL);
 	if (!registryPtr.IsValid()){
 		return false;
 	}
-
-	iser::CXmlStringReadArchive archive(mimeData.text().toLocal8Bit(), false);
-
-	icomp::CComponentAddress address;
 
 	i2d::CVector2d position(0, 0);
 	if (eventPtr != NULL){
 		position = i2d::CVector2d(eventPtr->scenePos());
 	}
 
+	iser::CXmlStringReadArchive archive(mimeData.text().toLocal8Bit(), false);
+	icomp::CComponentAddress address;
+
 	if (address.Serialize(archive)){
 		if (TryCreateComponent(address.GetComponentId(), address, position) != NULL){
 			return true;
 		}
 		else{
-			QMessageBox::critical(NULL, tr("Error"), tr("Component could not be added")); 
+			QMessageBox::critical(NULL, tr("Error"), tr("Component could not be added"));
 		}
 	}
 
@@ -565,28 +606,37 @@ bool CVisualRegistryScenographerComp::OnDropObject(const QMimeData& mimeData, QG
 void CVisualRegistryScenographerComp::UpdateScene(int /*updateFlags*/)
 {
 	QList<QGraphicsItem*> itemsToRemove = m_scenePtr->items();
-	foreach(QGraphicsItem* itemPtr, itemsToRemove){
+
+
+	foreach(QGraphicsItem* itemPtr, itemsToRemove)
+	{
 		m_scenePtr->removeItem(itemPtr);
 	}
 
-	icomp::IRegistry* registryPtr = GetObjectPtr();
+	// add element shapes to scene
+	icomp::IRegistry* registryPtr = GetSelectedRegistry();
 	if (registryPtr != NULL){
 		icomp::IRegistry::Ids elementIds = registryPtr->GetElementIds();
-		for (		icomp::IRegistry::Ids::iterator iter = elementIds.begin();
-					iter != elementIds.end();
-					iter++){
+		icomp::IRegistry::Ids::iterator iter;
+		for (iter = elementIds.begin(); iter != elementIds.end(); iter++){
 			const QByteArray& elementId = *iter;
 			const icomp::IRegistry::ElementInfo* elementInfoPtr = registryPtr->GetElementInfo(elementId);
+
 			if ((elementInfoPtr != NULL) && elementInfoPtr->elementPtr.IsValid()){
 				AddShapeToScene(elementInfoPtr->elementPtr.GetPtr());
 			}
 		}
 	}
 
+	UpdateEmbeddedRegistriesList();
+
 	AddConnectorsToScene();
 
 	QList<QGraphicsItem*> items = m_scenePtr->items();
-	foreach(QGraphicsItem* itemPtr, items){
+
+
+	foreach(QGraphicsItem* itemPtr, items)
+	{
 		CRegistryElementShape* elementShapePtr = dynamic_cast<CRegistryElementShape*>(itemPtr);
 		if (elementShapePtr != NULL){
 			elementShapePtr->CheckConsistency();
@@ -599,6 +649,7 @@ void CVisualRegistryScenographerComp::UpdateScene(int /*updateFlags*/)
 
 // reimplemented (imod::CMultiModelDispatcherBase)
 
+
 void CVisualRegistryScenographerComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
 	m_showRegistryTopologyCommand.setIcon(m_registryValidationStatusCompPtr->GetStatusIcon());
@@ -606,7 +657,8 @@ void CVisualRegistryScenographerComp::OnModelChanged(int /*modelId*/, int /*chan
 
 
 // reimplemented (imod::CSingleModelObserverBase)
-	
+
+
 bool CVisualRegistryScenographerComp::OnAttached(imod::IModel* modelPtr)
 {
 	if (BaseClass::OnAttached(modelPtr)){
@@ -643,8 +695,16 @@ bool CVisualRegistryScenographerComp::OnDetached(imod::IModel* modelPtr)
 
 // reimplemented (icomp::CComponentBase)
 
+
 void CVisualRegistryScenographerComp::OnComponentCreated()
 {
+	// connect to embedded registries list selection signal
+	CSceneProviderGuiComp* guiComp = dynamic_cast<CSceneProviderGuiComp*>(m_sceneProviderCompPtr.GetPtr());
+	if (guiComp){
+		connect(guiComp, SIGNAL(embeddedRegistrySelected(const QByteArray&)),
+				this, SLOT(OnEmbeddedRegistrySelected(const QByteArray&)));
+	}
+
 	BaseClass::OnComponentCreated();
 
 	connect(&m_cutCommand, SIGNAL(triggered()), this, SLOT(OnCutCommand()));
@@ -659,7 +719,7 @@ void CVisualRegistryScenographerComp::OnComponentCreated()
 	connect(&m_executeRegistryCommand, SIGNAL(triggered()), this, SLOT(OnExecute()));
 	connect(&m_abortRegistryCommand, SIGNAL(triggered()), this, SLOT(OnAbort()));
 	connect(&m_showRegistryTopologyCommand, SIGNAL(triggered()), this, SLOT(OnShowRegistryTopology()));
-	
+
 	m_exportToCodeCommand.setVisible(m_registryCodeSaverCompPtr.IsValid());
 	m_executeRegistryCommand.setVisible(m_registryPreviewCompPtr.IsValid());
 	m_abortRegistryCommand.setVisible(m_registryPreviewCompPtr.IsValid());
@@ -707,6 +767,7 @@ void CVisualRegistryScenographerComp::OnComponentDestroyed()
 
 // static methods
 
+
 IElementSelectionInfo* CVisualRegistryScenographerComp::ExtractSelectionInterface(CVisualRegistryScenographerComp& component)
 {
 	return &component.m_selectionInfo;
@@ -727,6 +788,7 @@ istd::IChangeable* CVisualRegistryScenographerComp::ExtractSelectionInterfaceCha
 
 // protected slots
 
+
 void CVisualRegistryScenographerComp::OnSelectionChanged()
 {
 	if (m_scenePtr == NULL){
@@ -739,12 +801,12 @@ void CVisualRegistryScenographerComp::OnSelectionChanged()
 
 	QList<QGraphicsItem*> selectedItems = m_scenePtr->selectedItems();
 	CVisualRegistryElement* elementPtr = NULL;
-	
+
 	ElementIds elementIds;
 
-	for (		QList<QGraphicsItem*>::const_iterator iter = selectedItems.begin();
-				iter != selectedItems.end();
-				++iter){
+	for (QList<QGraphicsItem*>::const_iterator iter = selectedItems.begin();
+			iter != selectedItems.end();
+			++iter){
 		QGraphicsItem* selectedItemPtr = *iter;
 		CRegistryElementShape* selectedShapePtr = dynamic_cast<CRegistryElementShape*>(selectedItemPtr);
 		if (selectedShapePtr == NULL){
@@ -754,7 +816,7 @@ void CVisualRegistryScenographerComp::OnSelectionChanged()
 		elementPtr = selectedShapePtr->GetObjectPtr();
 		if (elementPtr != NULL){
 			elementIds.insert(elementPtr->GetName());
-		}	
+		}
 	}
 
 	if (m_selectedElementIds != elementIds){
@@ -776,7 +838,7 @@ void CVisualRegistryScenographerComp::OnCutCommand()
 
 void CVisualRegistryScenographerComp::OnCopyCommand()
 {
-	icomp::IRegistry* registryPtr = GetObjectPtr();
+	icomp::IRegistry* registryPtr = GetSelectedRegistry();
 	if (registryPtr == NULL){
 		return;
 	}
@@ -788,9 +850,9 @@ void CVisualRegistryScenographerComp::OnCopyCommand()
 		int elementsCount = int(m_selectedElementIds.size());
 
 		bool retVal = archive.BeginMultiTag(s_elementsListTag, s_elementTag, elementsCount);
-		for (		ElementIds::iterator iter = m_selectedElementIds.begin();
-					iter != m_selectedElementIds.end();
-					++iter){
+		for (ElementIds::iterator iter = m_selectedElementIds.begin();
+				iter != m_selectedElementIds.end();
+				++iter){
 			QByteArray elementId = *iter;
 
 			const icomp::IRegistry::ElementInfo* elementInfoPtr = registryPtr->GetElementInfo(elementId);
@@ -888,7 +950,7 @@ void CVisualRegistryScenographerComp::OnPasteCommand()
 	retVal = retVal && archive.EndTag(s_elementsListTag);
 
 	if (hasErrors){
-		QMessageBox::critical(NULL, tr("Error"), tr("Some components could not be added")); 
+		QMessageBox::critical(NULL, tr("Error"), tr("Some components could not be added"));
 	}
 
 }
@@ -896,12 +958,18 @@ void CVisualRegistryScenographerComp::OnPasteCommand()
 
 void CVisualRegistryScenographerComp::OnRemoveComponent()
 {
-	istd::TChangeNotifier<icomp::IRegistry> registryPtr(GetObjectPtr(), icomp::IRegistry::CF_ELEMENT_REMOVED | istd::IChangeable::CF_MODEL);
+	istd::TChangeNotifier<icomp::IRegistry> registryPtr(GetSelectedRegistry(), icomp::IRegistry::CF_ELEMENT_REMOVED | istd::IChangeable::CF_MODEL);
 	if (registryPtr.IsValid()){
-		for (		ElementIds::const_iterator iter = m_selectedElementIds.begin();
-					iter != m_selectedElementIds.end();
-					++iter){
+		for (ElementIds::const_iterator iter = m_selectedElementIds.begin();
+				iter != m_selectedElementIds.end();
+				++iter){
 			const QByteArray& elementName = *iter;
+			if (registryPtr->RemoveEmbeddedRegistry(elementName)){
+				icmpstr::CSceneProviderGuiComp* guiComp = dynamic_cast<icmpstr::CSceneProviderGuiComp*>(m_sceneProviderCompPtr.GetPtr());
+				if (guiComp){
+					guiComp->RemoveEmbeddedFromList(elementName);
+				}
+			}
 
 			registryPtr->RemoveElementInfo(elementName);
 		}
@@ -911,7 +979,7 @@ void CVisualRegistryScenographerComp::OnRemoveComponent()
 
 void CVisualRegistryScenographerComp::OnRenameComponent()
 {
-	icomp::IRegistry* registryPtr = GetObjectPtr();
+	icomp::IRegistry* registryPtr = GetSelectedRegistry();
 	if (registryPtr == NULL){
 		return;
 	}
@@ -925,12 +993,12 @@ void CVisualRegistryScenographerComp::OnRenameComponent()
 
 	bool isOk = false;
 	QByteArray newName = QInputDialog::getText(
-				NULL,
-				tr("ACF Compositor"),
-				tr("New component name"),
-				QLineEdit::Normal,
-				oldName,
-				&isOk).toLocal8Bit();
+			NULL,
+			tr("ACF Compositor"),
+			tr("New component name"),
+			QLineEdit::Normal,
+			oldName,
+			&isOk).toLocal8Bit();
 	if (!isOk || newName.isEmpty() || (oldName == newName)){
 		return;
 	}
@@ -948,24 +1016,24 @@ void CVisualRegistryScenographerComp::InsertEmbeddedComponent()
 
 	bool isOk = false;
 	QByteArray newName = QInputDialog::getText(
-				NULL,
-				tr("ACF Compositor"),
-				tr("New embedded component name"),
-				QLineEdit::Normal,
-				"",
-				&isOk).toLocal8Bit();
+			NULL,
+			tr("ACF Compositor"),
+			tr("New embedded component name"),
+			QLineEdit::Normal,
+			"",
+			&isOk).toLocal8Bit();
 	if (!isOk || newName.isEmpty()){
 		return;
 	}
 
-	icomp::IRegistry* newEbeddedRegistryPtr = registryPtr->InsertEmbeddedRegistry(newName);
-	if (newEbeddedRegistryPtr == NULL){
-		QMessageBox::critical(NULL, tr("Error"), tr("Embedded component could not be created!")); 
+	icomp::IRegistry* newEmbeddedRegistryPtr = registryPtr->InsertEmbeddedRegistry(newName);
+	if (newEmbeddedRegistryPtr == NULL){
+		QMessageBox::critical(NULL, tr("Error"), tr("Embedded component could not be created!"));
 		return;
 	}
 
 	if (registryPtr->InsertElementInfo(newName, icomp::CComponentAddress("", newName)) == NULL){
-		QMessageBox::critical(NULL, tr("Error"), tr("Component could not be added")); 
+		QMessageBox::critical(NULL, tr("Error"), tr("Component could not be added"));
 		return;
 	}
 }
@@ -980,83 +1048,131 @@ void CVisualRegistryScenographerComp::ToEmbeddedComponent()
 
 	bool isOk = false;
 	QByteArray newName = QInputDialog::getText(
-				NULL,
-				tr("ACF Compositor"),
-				tr("New embedded component name"),
-				QLineEdit::Normal,
-				"",
-				&isOk).toLocal8Bit();
+			NULL,
+			tr("ACF Compositor"),
+			tr("New embedded component name"),
+			QLineEdit::Normal,
+			"",
+			&isOk).toLocal8Bit();
 	if (!isOk || newName.isEmpty()){
 		return;
 	}
 
-	icomp::IRegistry* newEbeddedRegistryPtr = registryPtr->InsertEmbeddedRegistry(newName);
-	if (newEbeddedRegistryPtr == NULL){
-		QMessageBox::critical(NULL, tr("Error"), tr("Embedded component could not be created!")); 
+	icomp::IRegistry* newEmbeddedRegistryPtr = registryPtr->InsertEmbeddedRegistry(newName);
+	if (newEmbeddedRegistryPtr == NULL){
+		QMessageBox::critical(NULL, tr("Error"), tr("Embedded component could not be created!"));
 		return;
 	}
 
 	if (registryPtr->InsertElementInfo(newName, icomp::CComponentAddress("", newName)) == NULL){
-		QMessageBox::critical(NULL, tr("Error"), tr("Component could not be added")); 
+		QMessageBox::critical(NULL, tr("Error"), tr("Component could not be added"));
 		return;
 	}
 
-	icomp::IRegistry::ExportedInterfacesMap exportedInterfacesMap = registryPtr->GetExportedInterfacesMap();
-	icomp::IRegistry::ExportedElementsMap exportedComponentsMap = registryPtr->GetExportedElementsMap();
-
-	for (		ElementIds::const_iterator iter = m_selectedElementIds.begin();
-				iter != m_selectedElementIds.end();
-				++iter){
+	// move selected elements to the embedded registry
+	for (ElementIds::const_iterator iter = m_selectedElementIds.begin();
+			iter != m_selectedElementIds.end();
+			++iter){
 		const QByteArray& elementName = *iter;
 
-		icomp::IRegistry::ElementInfo* oldInfoPtr = const_cast<icomp::IRegistry::ElementInfo*>(registryPtr->GetElementInfo(elementName));
+		icomp::IRegistry::ElementInfo* oldInfoPtr =
+				const_cast<icomp::IRegistry::ElementInfo*>(registryPtr->GetElementInfo(elementName));
 		if (oldInfoPtr == NULL){
 			continue;
 		}
 
-		icomp::IRegistry::ElementInfo* newInfoPtr = newEbeddedRegistryPtr->InsertElementInfo(elementName, oldInfoPtr->address, false);
+		icomp::IRegistry::ElementInfo* newInfoPtr =
+				newEmbeddedRegistryPtr->InsertElementInfo(elementName, oldInfoPtr->address, false);
 		if (newInfoPtr == NULL){
 			continue;
 		}
 
 		newInfoPtr->elementPtr.TakeOver(oldInfoPtr->elementPtr);
 
-		for (		icomp::IRegistry::ExportedInterfacesMap::ConstIterator interfaceIter = exportedInterfacesMap.constBegin();
-					interfaceIter != exportedInterfacesMap.constEnd();
-					++interfaceIter){
+		icomp::IRegistry::ExportedInterfacesMap exportedInterfacesMap = registryPtr->GetExportedInterfacesMap();
+		for (icomp::IRegistry::ExportedInterfacesMap::const_iterator interfaceIter = exportedInterfacesMap.constBegin();
+				interfaceIter != exportedInterfacesMap.constEnd();
+				++interfaceIter){
 			QByteArray baseId;
 			QByteArray subId;
 			istd::CIdManipBase::SplitId(interfaceIter.value(), baseId, subId);
 			if (baseId == elementName){
 				QByteArray completeElementId = istd::CIdManipBase::JoinId(elementName, subId);
 
-				newEbeddedRegistryPtr->SetElementInterfaceExported(completeElementId, interfaceIter.key(), true);
+				newEmbeddedRegistryPtr->SetElementInterfaceExported(completeElementId, interfaceIter.key(), true);
 			}
 		}
 
-		for (		icomp::IRegistry::ExportedElementsMap::ConstIterator subcomponentIter = exportedComponentsMap.constBegin();
-					subcomponentIter != exportedComponentsMap.constEnd();
-					++subcomponentIter){
+		icomp::IRegistry::ExportedElementsMap exportedComponentsMap = registryPtr->GetExportedElementsMap();
+		for (icomp::IRegistry::ExportedElementsMap::const_iterator subcomponentIter = exportedComponentsMap.constBegin();
+				subcomponentIter != exportedComponentsMap.constEnd();
+				++subcomponentIter){
 			QByteArray baseId;
 			QByteArray subId;
 			istd::CIdManipBase::SplitId(subcomponentIter.value(), baseId, subId);
 			if (baseId == elementName){
 				QByteArray completeElementId = istd::CIdManipBase::JoinId(elementName, subId);
 
-				newEbeddedRegistryPtr->SetElementExported(subcomponentIter.key(), elementName);
+				newEmbeddedRegistryPtr->SetElementExported(subcomponentIter.key(), elementName);
 			}
 		}
+		/*
+		// this code requires a way to get interface type for referenced elements
+		 
+				// replace referenced interfaces of moved elements with exports
+				icomp::IRegistry::Ids ids = newEmbeddedRegistryPtr->GetElementIds();
+				for (icomp::IRegistry::Ids::const_iterator iter = ids.begin(); iter != ids.end(); iter++){
+					// skip moved elements themselves
+					if (m_selectedElementIds.contains(*iter)){
+						continue;
+					}
 
+					const icomp::IRegistry::ElementInfo* info = registryPtr->GetElementInfo(*iter);
+					if (info == NULL || !info->elementPtr.IsValid()){
+						continue;
+					}
+					// search for attributes referencing moved elements
+					icomp::IRegistry::Ids attrIds = info->elementPtr->GetAttributeIds();
+					for (icomp::IRegistry::Ids::const_iterator iter = attrIds.begin(); iter != attrIds.end(); iter++){
+						icomp::IRegistryElement::AttributeInfo* attrInfo = info->elementPtr->GetAttributeInfo(*iter);
+						if (attrInfo == NULL || !attrInfo->attributeTypeName.startsWith("Reference")){
+							continue;
+						}
+
+						icomp::CReferenceAttribute *attr = attrInfo->attributePtr.Cast<icomp::CReferenceAttribute *>();
+						icomp::CMultiReferenceAttribute *attrMulti = attrInfo->attributePtr.Cast<icomp::CMultiReferenceAttribute *>();
+						QSet<QByteArray>refElemNames;
+
+						if (attr != NULL){
+							QByteArray refElemName = attr->GetValue();
+							if (m_selectedElementIds.contains(refElemName)){
+								refElemNames.insert(refElemName);
+								attr->
+							}
+						}
+						else if (attrMulti != NULL){
+							for (int i = 0; i < attrMulti->GetValuesCount(); i++){
+								QByteArray refElemName = attrMulti->GetValueAt(i);
+								if (m_selectedElementIds.contains(refElemName)){
+									refElemNames.insert(refElemName);
+								}
+		 
+							}
+						}
+				
+					}
+				}
+		 */
 		registryPtr->RemoveElementInfo(elementName);
 	}
+
 }
 
 
 void CVisualRegistryScenographerComp::OnExportToCode()
 {
 	icomp::IRegistry* registryPtr = GetObjectPtr();
-	if (		(registryPtr != NULL) &&
-				m_registryCodeSaverCompPtr.IsValid()){
+	if ((registryPtr != NULL) && m_registryCodeSaverCompPtr.IsValid()){
 		QString filter = tr("C++ code file (*.cpp)");
 		QString file = QFileDialog::getSaveFileName(NULL, tr("Export registry to code"), "", filter);
 		if (!file.isEmpty()){
@@ -1071,8 +1187,7 @@ void CVisualRegistryScenographerComp::OnExportToCode()
 void CVisualRegistryScenographerComp::OnExecute()
 {
 	icomp::IRegistry* registryPtr = GetObjectPtr();
-	if (		(registryPtr != NULL) &&
-				m_registryPreviewCompPtr.IsValid()){
+	if ((registryPtr != NULL) && m_registryPreviewCompPtr.IsValid()){
 		bool retVal = m_registryPreviewCompPtr->StartRegistry(*registryPtr);
 		if (retVal){
 			OnExecutionTimerTick();
@@ -1086,8 +1201,7 @@ void CVisualRegistryScenographerComp::OnExecute()
 void CVisualRegistryScenographerComp::OnAbort()
 {
 	icomp::IRegistry* registryPtr = GetObjectPtr();
-	if (		(registryPtr != NULL) &&
-				m_registryPreviewCompPtr.IsValid()){
+	if ((registryPtr != NULL) && m_registryPreviewCompPtr.IsValid()){
 		m_registryPreviewCompPtr->AbortRegistry();
 
 		OnExecutionTimerTick();
@@ -1108,7 +1222,7 @@ void CVisualRegistryScenographerComp::OnExecutionTimerTick()
 		icomp::IRegistry* registryPtr = GetObjectPtr();
 		if (registryPtr != NULL){
 			const icomp::IRegistry::ExportedInterfacesMap& interfacesMap = registryPtr->GetExportedInterfacesMap();
-			isExecutable = (interfacesMap.find(istd::CClassInfo::GetName<ibase::IApplication>()) != interfacesMap.end());
+			isExecutable = (interfacesMap.find(istd::CClassInfo::GetName<ibase::IApplication > ()) != interfacesMap.end());
 		}
 	}
 
@@ -1136,6 +1250,34 @@ void CVisualRegistryScenographerComp::OnShowRegistryTopology()
 }
 
 
+void CVisualRegistryScenographerComp::OnEmbeddedRegistrySelected(const QByteArray & id)
+{
+	icomp::IRegistry* old = GetSelectedRegistry();
+	icomp::IRegistry* root = GetObjectPtr();
+	icomp::IRegistry* embedded = root->GetEmbeddedRegistry(id);
+	m_currentEmbeddedRegistry = embedded ? embedded : root;
+
+	if (old != m_currentEmbeddedRegistry){
+		UpdateScene(0);
+	}
+}
+
+
+void CVisualRegistryScenographerComp::UpdateEmbeddedRegistriesList()
+{
+	// add embedded registries to the list below the scene
+	icmpstr::CSceneProviderGuiComp* guiComp = dynamic_cast<icmpstr::CSceneProviderGuiComp*>(m_sceneProviderCompPtr.GetPtr());
+	icomp::IRegistry* rootRegistryPtr = GetObjectPtr();
+	if (guiComp != NULL && guiComp->IsGuiCreated() && rootRegistryPtr != NULL){
+		icomp::IRegistry::Ids embeddedIds = rootRegistryPtr->GetEmbeddedRegistryIds();
+		icomp::IRegistry::Ids::iterator iter;
+		for (iter = embeddedIds.begin(); iter != embeddedIds.end(); iter++){
+			const QByteArray& elementId = *iter;
+			guiComp->InsertEmbeddedIntoList(elementId);
+		}
+	}
+}
+
 // static attributes
 iser::CArchiveTag CVisualRegistryScenographerComp::s_elementsListTag("ElementsList", "List of elements");
 iser::CArchiveTag CVisualRegistryScenographerComp::s_elementTag("Element", "Single element", true);
@@ -1146,8 +1288,9 @@ iser::CArchiveTag CVisualRegistryScenographerComp::s_elementCenterTag("Center", 
 
 // public methods of embedded class EnvironmentObserver
 
-CVisualRegistryScenographerComp::EnvironmentObserver::EnvironmentObserver(CVisualRegistryScenographerComp* parentPtr)
-:	m_parent(*parentPtr)
+
+CVisualRegistryScenographerComp::EnvironmentObserver::EnvironmentObserver(CVisualRegistryScenographerComp * parentPtr)
+: m_parent(*parentPtr)
 {
 	I_ASSERT(parentPtr != NULL);
 }
@@ -1157,6 +1300,7 @@ CVisualRegistryScenographerComp::EnvironmentObserver::EnvironmentObserver(CVisua
 
 // reimplemented (imod::TSingleModelObserverBase)
 
+
 void CVisualRegistryScenographerComp::EnvironmentObserver::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
 {
 	m_parent.UpdateScene(updateFlags);
@@ -1165,7 +1309,8 @@ void CVisualRegistryScenographerComp::EnvironmentObserver::OnUpdate(int updateFl
 
 // public methods of embedded class SelectionInfoImpl
 
-void CVisualRegistryScenographerComp::SelectionInfoImpl::SetParent(CVisualRegistryScenographerComp* parentPtr)
+
+void CVisualRegistryScenographerComp::SelectionInfoImpl::SetParent(CVisualRegistryScenographerComp * parentPtr)
 {
 	m_parentPtr = parentPtr;
 }
@@ -1173,25 +1318,26 @@ void CVisualRegistryScenographerComp::SelectionInfoImpl::SetParent(CVisualRegist
 
 // reimplemented (icmpstr::IElementSelectionInfo)
 
-icomp::IRegistry* CVisualRegistryScenographerComp::SelectionInfoImpl::GetSelectedRegistry() const
-{
-	I_ASSERT(m_parentPtr != NULL);	// parent should be set before any subelement can be accessed
 
-	return m_parentPtr->GetObjectPtr();
+icomp::IRegistry * CVisualRegistryScenographerComp::SelectionInfoImpl::GetSelectedRegistry() const
+{
+	I_ASSERT(m_parentPtr != NULL); // parent should be set before any subelement can be accessed
+
+	return m_parentPtr->GetSelectedRegistry();
 }
 
 
 IElementSelectionInfo::Elements CVisualRegistryScenographerComp::SelectionInfoImpl::GetSelectedElements() const
 {
-	I_ASSERT(m_parentPtr != NULL);	// parent should be set before any subelement can be accessed
+	I_ASSERT(m_parentPtr != NULL); // parent should be set before any subelement can be accessed
 
 	IElementSelectionInfo::Elements retVal;
 
-	icomp::IRegistry* registryPtr = m_parentPtr->GetObjectPtr();
+	icomp::IRegistry* registryPtr = GetSelectedRegistry();
 	if (registryPtr != NULL){
-		for (		ElementIds::const_iterator iter = m_parentPtr->m_selectedElementIds.begin();
-					iter != m_parentPtr->m_selectedElementIds.end();
-					++iter){
+		for (ElementIds::const_iterator iter = m_parentPtr->m_selectedElementIds.begin();
+				iter != m_parentPtr->m_selectedElementIds.end();
+				++iter){
 			const QByteArray& elementName = *iter;
 
 			const icomp::IRegistry::ElementInfo* elementInfoPtr = registryPtr->GetElementInfo(elementName);

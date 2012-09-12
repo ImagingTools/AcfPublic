@@ -76,8 +76,7 @@ IRegistry::ElementInfo* CRegistry::InsertElementInfo(
 			const CComponentAddress& address,
 			bool ensureElementCreated)
 {
-	ComponentsMap::const_iterator iter = m_componentsMap.find(elementId);
-	if (iter != m_componentsMap.end()){
+	if(m_componentsMap.contains(elementId)){
 		return NULL;
 	}
 
@@ -674,7 +673,7 @@ bool CRegistry::SerializeEmbeddedRegistries(iser::IArchive& archive)
 	}
 
 	retVal = retVal && archive.EndTag(registriesListTag);
-
+	
 	return retVal;
 }
 
