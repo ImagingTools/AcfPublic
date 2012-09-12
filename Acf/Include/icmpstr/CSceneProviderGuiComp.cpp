@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #include "icmpstr/CSceneProviderGuiComp.h"
@@ -34,7 +34,6 @@
 // ACF includes
 #include "iqtdoc/CMainWindowGuiComp.h"
 
-#include "iqt/CSignalBlocker.h"
 
 namespace icmpstr
 {
@@ -42,13 +41,12 @@ namespace icmpstr
 
 // public methods
 
-
 CSceneProviderGuiComp::CSceneProviderGuiComp()
-: m_fitMode(FM_NONE),
-m_isFullScreenMode(false),
-m_isZoomIgnored(false),
-m_savedParentWidgetPtr(NULL),
-m_isotropyFactor(0)
+:	m_fitMode(FM_NONE),
+	m_isFullScreenMode(false),
+	m_isZoomIgnored(false),
+	m_savedParentWidgetPtr(NULL),
+	m_isotropyFactor(0)
 {
 	m_printCommand.SetGroupId(iqtdoc::CMainWindowGuiComp::GI_DOCUMENT);
 	m_printCommand.setShortcut(tr("Ctrl+P"));
@@ -60,8 +58,8 @@ m_isotropyFactor(0)
 	m_editMenu.InsertChild(&m_selectAllCommand);
 
 	m_autoFitToViewCommand.SetStaticFlags(
-			iqtgui::CHierarchicalCommand::CF_ONOFF |
-			iqtgui::CHierarchicalCommand::CF_GLOBAL_MENU);
+				iqtgui::CHierarchicalCommand::CF_ONOFF | 
+				iqtgui::CHierarchicalCommand::CF_GLOBAL_MENU);
 	connect(&m_autoFitToViewCommand, SIGNAL(toggled(bool)), this, SLOT(OnAutoFit(bool)));
 	m_viewMenu.InsertChild(&m_autoFitToViewCommand);
 
@@ -98,62 +96,7 @@ void CSceneProviderGuiComp::SetIsotropyFactor(double factor)
 }
 
 
-int CSceneProviderGuiComp::GetEmbeddedListSize() const
-{
-	return LocalCompositionSelectorList->count();
-}
-
-
-void CSceneProviderGuiComp::ClearEmbeddedList()
-{
-	LocalCompositionSelectorGroupBox->setVisible(false);
-	iqt::CSignalBlocker blocker(LocalCompositionSelectorList);
-	LocalCompositionSelectorList->clear();
-	LocalCompositionSelectorList->addItem("<< root >>");
-	LocalCompositionSelectorList->setCurrentItem(0);
-}
-
-
-void CSceneProviderGuiComp::InsertEmbeddedIntoList(QByteArray id)
-{
-	if (LocalCompositionSelectorList->count() == 0){
-		ClearEmbeddedList();
-	}
-	QList<QListWidgetItem *> items = LocalCompositionSelectorList->findItems(id, Qt::MatchExactly);
-	if (items.empty()){
-		LocalCompositionSelectorList->addItem(id);
-	}
-	LocalCompositionSelectorGroupBox->setVisible(true);
-}
-
-
-void CSceneProviderGuiComp::RemoveEmbeddedFromList(QByteArray id)
-{
-	QList<QListWidgetItem *> items = LocalCompositionSelectorList->findItems(id, Qt::MatchExactly);
-	if (items.empty()){
-		return;
-	}
-	int row = LocalCompositionSelectorList->row(items[0]);
-	LocalCompositionSelectorList->model()->removeRow(row);
-	if (LocalCompositionSelectorList->count() == 1){ // just root
-		LocalCompositionSelectorGroupBox->setVisible(false);
-	}
-}
-
-
-void CSceneProviderGuiComp::SelectEmbeddedInList(QByteArray id, bool propagateEvent /* = true */)
-{
-	QList<QListWidgetItem *> items = LocalCompositionSelectorList->findItems(id, Qt::MatchExactly);
-
-	if (items.empty()){
-		return;
-	}
-
-	LocalCompositionSelectorList->blockSignals(!propagateEvent);
-	LocalCompositionSelectorList->setCurrentItem(items[0]);
-	LocalCompositionSelectorList->blockSignals(false);
-}
-
+// reimplemented (ibase::ICommandsProvider)
 
 const ibase::IHierarchicalCommand* CSceneProviderGuiComp::GetCommands() const
 {
@@ -162,7 +105,6 @@ const ibase::IHierarchicalCommand* CSceneProviderGuiComp::GetCommands() const
 
 
 // reimplemented (icmpstr::ISceneProvider)
-
 
 int CSceneProviderGuiComp::GetSceneId() const
 {
@@ -190,6 +132,7 @@ bool CSceneProviderGuiComp::GetSceneAlignment(double& distance) const
 }
 
 
+
 int CSceneProviderGuiComp::GetSceneFlags() const
 {
 	int sceneFlags = 0;
@@ -207,7 +150,6 @@ int CSceneProviderGuiComp::GetSceneFlags() const
 
 
 // reimplemented (i2d::ISceneController)
-
 
 int CSceneProviderGuiComp::GetSceneRestrictionFlags() const
 {
@@ -266,14 +208,14 @@ bool CSceneProviderGuiComp::SetFullScreenMode(bool fullScreenMode)
 				BottomFrame->setVisible(false);
 				CompleteFrame->showFullScreen();
 
-				SetFittedScale(m_fitMode != FM_NONE ? m_fitMode : FM_ISOTROPIC);
+				SetFittedScale(m_fitMode != FM_NONE? m_fitMode: FM_ISOTROPIC);
 			}
 			else{
 				if (m_savedParentWidgetPtr != NULL){
 					CompleteFrame->setParent(m_savedParentWidgetPtr);
 					m_savedParentWidgetPtr->layout()->addWidget(CompleteFrame);
 				}
-
+				
 				m_savedParentWidgetPtr = NULL;
 
 				BottomFrame->setVisible(m_sceneControllerGuiCompPtr.IsValid());
@@ -311,7 +253,7 @@ bool CSceneProviderGuiComp::SetScale(int scaleMode, double scaleFactor)
 	double currentScale = GetScale();
 
 	QMatrix newMatrix;
-	newMatrix.scale(scaleFactor / currentScale, scaleFactor / currentScale);
+	newMatrix.scale(scaleFactor / currentScale, scaleFactor/ currentScale);
 
 	QMatrix currentMatrix = SceneView->matrix();
 	currentMatrix *= newMatrix;
@@ -329,7 +271,6 @@ bool CSceneProviderGuiComp::SetScale(int scaleMode, double scaleFactor)
 
 
 // protected methods
-
 
 bool CSceneProviderGuiComp::OnResize(QResizeEvent* /*eventPtr*/)
 {
@@ -375,22 +316,22 @@ bool CSceneProviderGuiComp::OnMouseDoubleClickEvent(QEvent* eventPtr)
 
 bool CSceneProviderGuiComp::OnKeyReleaseEvent(QKeyEvent* eventPtr)
 {
-	switch (eventPtr->key()){
-		case Qt::Key_Plus:
-			OnZoomIncrement();
+	switch(eventPtr->key()){
+	case Qt::Key_Plus:
+		OnZoomIncrement();
+		return true;
+
+	case Qt::Key_Minus:
+		OnZoomDecrement();
+		return true;
+
+	case Qt::Key_Escape:
+		if (IsFullScreenMode()){
+			SetFullScreenMode(false);
+
 			return true;
-
-		case Qt::Key_Minus:
-			OnZoomDecrement();
-			return true;
-
-		case Qt::Key_Escape:
-			if (IsFullScreenMode()){
-				SetFullScreenMode(false);
-
-				return true;
-			}
-			break;
+		}
+		break;
 	}
 
 	return false;
@@ -456,7 +397,7 @@ bool CSceneProviderGuiComp::HasDropConsumerForFormat(const QStringList& formats)
 			}
 		}
 	}
-
+	
 	return false;
 }
 
@@ -476,12 +417,12 @@ void CSceneProviderGuiComp::DelegateDropEvent(const QMimeData& mimeData, QGraphi
 		}
 
 		QStringList supportedIds = dropConsumerPtr->GetAcceptedMimeIds();
-
+		
 		bool triggerEvent = false;
 		for (int idIndex = 0; idIndex < supportedIds.size(); idIndex++){
 			if (formats.contains(supportedIds[idIndex])){
 				triggerEvent = true;
-
+				
 				break;
 			}
 		}
@@ -496,24 +437,18 @@ void CSceneProviderGuiComp::DelegateDropEvent(const QMimeData& mimeData, QGraphi
 void CSceneProviderGuiComp::ResetScene()
 {
 	QList<QGraphicsItem*> sceneItems = m_scenePtr->items();
-
-
-	foreach(QGraphicsItem* itemPtr, sceneItems)
-	{
+	foreach(QGraphicsItem* itemPtr, sceneItems){
 		m_scenePtr->removeItem(itemPtr);
 	}
-
+	
 	m_scenePtr.Reset();
 }
 
 
 // reimplemented (iqtgui::CGuiComponentBase)
 
-
 void CSceneProviderGuiComp::OnGuiCreated()
 {
-	ClearEmbeddedList(); // hide
-
 	BaseClass::OnGuiCreated();
 
 	if (m_dropConsumersCompPtr.IsValid() && m_dropConsumersCompPtr.GetCount() > 0){
@@ -523,7 +458,7 @@ void CSceneProviderGuiComp::OnGuiCreated()
 	SceneView->setScene(m_scenePtr.GetPtr());
 	SceneView->setMouseTracking(true);
 	SceneView->setDragMode(QGraphicsView::ScrollHandDrag);
-
+	
 	switch (*m_backgroundModeAttrPtr){
 		case BM_NORMAL:
 			SceneView->setBackgroundBrush(qApp->palette().button());
@@ -533,15 +468,14 @@ void CSceneProviderGuiComp::OnGuiCreated()
 			SceneView->setBackgroundBrush(qApp->palette().window());
 			break;
 
-		case BM_CHECKERBOARD:
-		{
+		case BM_CHECKERBOARD:{
 			QPixmap backgroundPixmap(16, 16);
 
 			QPainter p(&backgroundPixmap);
-			p.fillRect(0, 0, 8, 8, QBrush(qRgb(200, 200, 200)));
+			p.fillRect(0, 0, 8, 8, QBrush(qRgb(200,200,200)));
 			p.fillRect(0, 8, 8, 8, QBrush(Qt::white));
 			p.fillRect(8, 0, 8, 8, QBrush(Qt::white));
-			p.fillRect(8, 8, 8, 8, QBrush(qRgb(200, 200, 200)));
+			p.fillRect(8, 8, 8, 8, QBrush(qRgb(200,200,200)));
 			SceneView->setBackgroundBrush(QBrush(backgroundPixmap));
 			break;
 		}
@@ -590,7 +524,7 @@ void CSceneProviderGuiComp::OnGuiCreated()
 	else{
 		BottomFrame->setVisible(false);
 	}
-}
+} 
 
 
 void CSceneProviderGuiComp::OnGuiDestroyed()
@@ -621,7 +555,6 @@ void CSceneProviderGuiComp::OnRetranslate()
 
 // reimplemented (icomp::CComponentBase)
 
-
 void CSceneProviderGuiComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
@@ -633,9 +566,9 @@ void CSceneProviderGuiComp::OnComponentCreated()
 		m_scenePtr->setSceneRect(0, 0, *m_sceneWidthAttrPtr, *m_sceneHeightAttrPtr);
 	}
 
-	I_ASSERT(m_allowWidgetResizeAttrPtr.IsValid()); // this attribute is obligatory
+	I_ASSERT(m_allowWidgetResizeAttrPtr.IsValid());	// this attribute is obligatory
 	m_fitToImageCommand.setVisible(*m_allowWidgetResizeAttrPtr);
-	I_ASSERT(m_allowSelectAllAttrPtr.IsValid()); // this attribute is obligatory
+	I_ASSERT(m_allowSelectAllAttrPtr.IsValid());	// this attribute is obligatory
 	m_selectAllCommand.setVisible(*m_allowSelectAllAttrPtr);
 }
 
@@ -650,7 +583,6 @@ void CSceneProviderGuiComp::OnComponentDestroyed()
 
 // reimplemented (QObject)
 
-
 bool CSceneProviderGuiComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 {
 	if ((sourcePtr != SceneView) && (sourcePtr != m_scenePtr.GetPtr())){
@@ -658,32 +590,32 @@ bool CSceneProviderGuiComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 	}
 
 	if (IsGuiCreated()){
-		switch (eventPtr->type()){
-				//		case QEvent::MouseButtonDblClick:
-			case QEvent::GraphicsSceneMouseDoubleClick:
-				if (OnMouseDoubleClickEvent(eventPtr)){
-					return true;
-				}
-				break;
+		switch(eventPtr->type()){
+//		case QEvent::MouseButtonDblClick:
+		case QEvent::GraphicsSceneMouseDoubleClick:
+			if (OnMouseDoubleClickEvent(eventPtr)){
+				return true;
+			}
+			break;
 
-			case QEvent::KeyRelease:
-				if (OnKeyReleaseEvent(dynamic_cast<QKeyEvent*>(eventPtr))){
-					return true;
-				}
-				break;
+		case QEvent::KeyRelease:
+			if (OnKeyReleaseEvent(dynamic_cast<QKeyEvent*>(eventPtr))){
+				return true;
+			}
+			break;
 
-			case QEvent::Resize:
-				OnResize(dynamic_cast<QResizeEvent*>(eventPtr));
-				break;
+		case QEvent::Resize:
+			OnResize(dynamic_cast<QResizeEvent*>(eventPtr));
+			break;
 
-			case QEvent::GraphicsSceneWheel:
-				if (OnWheelEvent(dynamic_cast<QGraphicsSceneWheelEvent*>(eventPtr))){
-					return true;
-				}
-				break;
+		case QEvent::GraphicsSceneWheel:
+			if (OnWheelEvent(dynamic_cast<QGraphicsSceneWheelEvent*>(eventPtr))){
+				return true;
+			}
+			break;
 
-			default:
-				break;
+		default:
+			break;
 		}
 	}
 
@@ -692,7 +624,6 @@ bool CSceneProviderGuiComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 
 
 // protected slots
-
 
 void CSceneProviderGuiComp::OnPrint()
 {
@@ -717,20 +648,20 @@ void CSceneProviderGuiComp::OnPrint()
 
 	QPainter painter(&printer);
 
-	// print, fitting the viewport contents into a full page
+	 // print, fitting the viewport contents into a full page
 	m_scenePtr->render(&painter);
 }
 
 
 void CSceneProviderGuiComp::OnZoomIncrement()
 {
-	ScaleView(qPow((double)2, 0.5));
+	 ScaleView(qPow((double)2, 0.5));  
 }
 
 
 void CSceneProviderGuiComp::OnZoomDecrement()
 {
-	ScaleView(qPow((double)2, -0.5));
+	ScaleView(qPow((double)2, -0.5));  
 }
 
 
@@ -789,18 +720,10 @@ void CSceneProviderGuiComp::OnSelectAllShapes()
 }
 
 
-void CSceneProviderGuiComp::on_LocalCompositionSelectorList_itemSelectionChanged()
-{
-	QByteArray itemLabel = LocalCompositionSelectorList->currentItem()->data(0).toByteArray();
-	embeddedRegistrySelected(itemLabel);
-}
-
-
 // public methods of embedded class CScene
 
-
 CSceneProviderGuiComp::CScene::CScene(CSceneProviderGuiComp* parentPtr)
-: m_parent(*parentPtr)
+:	m_parent(*parentPtr)
 {
 	I_ASSERT(parentPtr != NULL);
 }
@@ -808,8 +731,7 @@ CSceneProviderGuiComp::CScene::CScene(CSceneProviderGuiComp* parentPtr)
 
 // protected methods of embedded class CScene
 
-
-void CSceneProviderGuiComp::CScene::DrawGrid(QPainter& painter, const QRectF& rect, bool useDot)
+void CSceneProviderGuiComp::CScene::DrawGrid(QPainter& painter, const QRectF& rect, bool useDot)  
 {
 	QRectF gridRect = rect;
 	if (!sceneRect().isEmpty()){
@@ -838,7 +760,7 @@ void CSceneProviderGuiComp::CScene::DrawGrid(QPainter& painter, const QRectF& re
 		}
 
 		for (int y = firstTopGridLine; y <= realRect.bottom(); y += gridSize){
-			lines.append(QLine(realRect.left(), y, realRect.right(), y));
+			lines.append(QLine(realRect.left(), y, realRect.right(), y));           
 		}
 
 		gridColor.setAlpha(128);
@@ -873,21 +795,20 @@ void CSceneProviderGuiComp::CScene::DrawGrid(QPainter& painter, const QRectF& re
 
 // reimplemented (QGraphicsScene)
 
-
 void CSceneProviderGuiComp::CScene::drawBackground(QPainter* painter, const QRectF& rect)
 {
 	if (m_parent.IsGuiCreated() && m_parent.m_backgroundModeAttrPtr.IsValid()){
 		switch (*m_parent.m_backgroundModeAttrPtr){
-			case BM_GRID:
-				DrawGrid(*painter, rect, false);
-				break;
+		case BM_GRID:
+			DrawGrid(*painter, rect, false);
+			break;
 
-			case BM_DOT_GRID:
-				DrawGrid(*painter, rect, true);
-				break;
+		case BM_DOT_GRID:
+			DrawGrid(*painter, rect, true);
+			break;
 
-			default:
-				QGraphicsScene::drawBackground(painter, rect);
+		default:
+			QGraphicsScene::drawBackground(painter, rect);
 		}
 	}
 	else{

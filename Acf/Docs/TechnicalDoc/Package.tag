@@ -40182,6 +40182,30 @@
     <filename>classiqtprm_1_1_c_composed_params_set_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CComposedParamsSetGuiComp, iprm::IParamsSet &gt;</base>
     <base>iqt2d::IViewExtender</base>
+    <member kind="enumeration">
+      <name>DesignType</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a4ca42eb68775c64397e0aa78b9fae133</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DT_SIMPLE</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a4ca42eb68775c64397e0aa78b9fae133af38830d23e9d998b02dc78430de1a3a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DT_TOOL_BOX</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a4ca42eb68775c64397e0aa78b9fae133a9c3f93cd9525d81e0592f0753c950210</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DT_TAB_WIDGET</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a4ca42eb68775c64397e0aa78b9fae133afa314659eaf0c29306860eee9f457707</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CComposedParamsSetGuiComp, iprm::IParamsSet &gt;</type>
       <name>BaseClass</name>

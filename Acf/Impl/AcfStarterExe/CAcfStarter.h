@@ -20,25 +20,40 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef CAcfStarter_included
+#define CAcfStarter_included
+ 
+
+#include "Generated/ui_CAcfStarter.h"
 
 
-namespace istd
+class CAcfStarter: public QWidget, public Ui::CAcfStarter
 {
+    Q_OBJECT
+ 
+public:
+	CAcfStarter(char **argv);
+	CAcfStarter();
 
-
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  2513,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public slots:
+    void GetPath();	
+    void RunACF();   
+	void RunACF(int msec);
+	void GetRegistryPath(QListWidgetItem*);
+	
+private:
+	QString acfDir;
+	QString configFilePath;
+	QString activeRegistryFilePath;
+	QStringList applicationRegistriesList;
+	bool InitApplicationRegistriesList();
+	void SetProperty();
+	QTimer *timer;
+	
+	
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+#endif // !CAcfStarter_included
 
 

@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #ifndef icmpstr_CVisualRegistryScenographerComp_included
@@ -56,6 +56,7 @@
 #include "icmpstr/IRegistryConsistInfo.h"
 #include "icmpstr/IElementSelectionInfo.h"
 
+
 namespace icmpstr
 {
 
@@ -66,58 +67,55 @@ class CVisualRegistryComp;
 
 
 class CVisualRegistryScenographerComp:
-public QObject,
-public icmpstr::TScenographerCompBase<imod::TSingleModelObserverBase<icomp::IRegistry> >,
-virtual public ibase::ICommandsProvider,
-protected imod::CMultiModelDispatcherBase
+			public QObject,
+			public icmpstr::TScenographerCompBase<
+						imod::TSingleModelObserverBase<icomp::IRegistry> >,
+			virtual public ibase::ICommandsProvider,
+			protected imod::CMultiModelDispatcherBase
 {
 	Q_OBJECT
 
 public:
 	typedef icmpstr::TScenographerCompBase<
-	imod::TSingleModelObserverBase<icomp::IRegistry> > BaseClass;
+				imod::TSingleModelObserverBase<icomp::IRegistry> > BaseClass;
 
 	I_BEGIN_COMPONENT(CVisualRegistryScenographerComp);
-	I_REGISTER_INTERFACE(ibase::ICommandsProvider);
-	I_REGISTER_SUBELEMENT(SelectionInfo);
-	I_REGISTER_SUBELEMENT_INTERFACE(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface);
-	I_REGISTER_SUBELEMENT_INTERFACE(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel);
-	I_REGISTER_SUBELEMENT_INTERFACE(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable);
-	I_ASSIGN(m_registryCodeSaverCompPtr, "RegistryCodeSaver", "Export registry to C++ code file", false, "RegistryCodeSaver");
-	I_ASSIGN(m_registryPreviewCompPtr, "RegistryPreview", "Executes preview of the registry", false, "RegistryPreview");
-	I_ASSIGN(m_envManagerCompPtr, "MetaInfoManager", "Allows access to component meta information", true, "MetaInfoManager");
-	I_ASSIGN_TO(m_envManagerModelCompPtr, m_envManagerCompPtr, false);
-	I_ASSIGN(m_quickHelpViewerCompPtr, "QuickHelpGui", "Show help of selected component using its address", false, "QuickHelpGui");
-	I_ASSIGN(m_documentManagerCompPtr, "DocumentManager", "Document manager allowing to load files on double click", false, "DocumentManager");
-	I_ASSIGN(m_consistencyInfoCompPtr, "ConsistencyInfo", "Allows to check consistency of registries and attributes", false, "ConsistencyInfo");
-	I_ASSIGN(m_registryTopologyGuiCompPtr, "RegistryTopologyGui", "GUI for showing the registry component topology", false, "RegistryTopologyGui");
-	I_ASSIGN_TO(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false);
-	I_ASSIGN(m_registryValidationStatusCompPtr, "RegistryValidationStatus", "Visual status of registry validation", false, "RegistryValidationStatus");
-	I_ASSIGN_TO(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false);
+		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
+		I_REGISTER_SUBELEMENT(SelectionInfo);
+		I_REGISTER_SUBELEMENT_INTERFACE(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface);
+		I_REGISTER_SUBELEMENT_INTERFACE(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel);
+		I_REGISTER_SUBELEMENT_INTERFACE(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable);
+		I_ASSIGN(m_registryCodeSaverCompPtr, "RegistryCodeSaver", "Export registry to C++ code file", false, "RegistryCodeSaver");
+		I_ASSIGN(m_registryPreviewCompPtr, "RegistryPreview", "Executes preview of the registry", false, "RegistryPreview");
+		I_ASSIGN(m_envManagerCompPtr, "MetaInfoManager", "Allows access to component meta information", true, "MetaInfoManager");
+		I_ASSIGN_TO(m_envManagerModelCompPtr, m_envManagerCompPtr, false);
+		I_ASSIGN(m_quickHelpViewerCompPtr, "QuickHelpGui", "Show help of selected component using its address", false, "QuickHelpGui");
+		I_ASSIGN(m_documentManagerCompPtr, "DocumentManager", "Document manager allowing to load files on double click", false, "DocumentManager");
+		I_ASSIGN(m_consistInfoCompPtr, "ConsistencyInfo", "Allows to check consistency of registries and attributes", false, "ConsistencyInfo");
+		I_ASSIGN(m_registryTopologyGuiCompPtr, "RegistryTopologyGui", "GUI for showing the registry component topology", false, "RegistryTopologyGui");
+		I_ASSIGN_TO(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false);
+		I_ASSIGN(m_registryValidationStatusCompPtr, "RegistryValidationStatus", "Visual status of registry validation", false, "RegistryValidationStatus");
+		I_ASSIGN_TO(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false);
 	I_END_COMPONENT;
 
 	CVisualRegistryScenographerComp();
 
 	const QFont& GetElementNameFont() const;
 	const QFont& GetElementDetailFont() const;
-
+	
 	const icomp::IComponentEnvironmentManager* GetEnvironmentManager() const;
 	const IRegistryConsistInfo* GetRegistryConsistInfo() const;
-/** Get root or embedded registry that is currently selected in the editor */
-	icomp::IRegistry* GetSelectedRegistry() const;
 
 	/**
 		Try to open the composite component's registry in a new window. 
 		If the element is a composite component the function returns \c true, otherwise a \c false.
-	 */
+	*/
 	bool TryOpenComponent(const CVisualRegistryElement& registryElement) const;
 
 	// reimplemented (ibase::ICommandsProvider)
 	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 
 protected:
-
-
 	enum GroupId
 	{
 		GI_COMPONENT = 0x5430,
@@ -127,7 +125,6 @@ protected:
 		GI_EDIT,
 		GI_TOOLS
 	};
-
 
 	class EnvironmentObserver: public imod::TSingleModelObserverBase<icomp::IComponentEnvironmentManager>
 	{
@@ -144,30 +141,21 @@ protected:
 
 	/**
 		Create instance of shape representing some element.
-		The shape will be automatically connected to element using model/observer pattern.
+		The shape will be automatically conncted to element using model/observer pattern.
 		\sa imod.
-	 */
+	*/
 	QGraphicsItem* AddShapeToScene(iser::ISerializable* elementPtr) const;
 	void AddConnectorsToScene();
-
 	void AddConnector(
-			CRegistryElementShape& sourceShape,
-			const QByteArray& referenceComponentId,
-			const QByteArray& attributeId,
-			bool isFactory = false);
-
-	/** 
-	 Used on drop/paste action
-	 */
+				CRegistryElementShape& sourceShape,
+				const QByteArray& referenceComponentId,
+				const QByteArray& attributeId,
+				bool isFactory = false);
 	icomp::IRegistryElement* TryCreateComponent(
-			const QByteArray& elementId,
-			const icomp::CComponentAddress& address,
-			const i2d::CVector2d& position);
-
+				const QByteArray& elementId,
+				const icomp::CComponentAddress& address,
+				const i2d::CVector2d& position);
 	void ConnectReferences(const QByteArray& componentRole);
-	/**
-	 Update component selection and related menu actions.
-	 */
 	void UpdateComponentSelection();
 
 	void DoRetranslate();
@@ -192,8 +180,7 @@ protected:
 	static imod::IModel* ExtractSelectionInterfaceModel(CVisualRegistryScenographerComp& component);
 	static istd::IChangeable* ExtractSelectionInterfaceChangeable(CVisualRegistryScenographerComp& component);
 
-	protected
-Q_SLOTS:
+protected Q_SLOTS:
 	void OnSelectionChanged();
 
 	void OnCutCommand();
@@ -208,16 +195,8 @@ Q_SLOTS:
 	void OnAbort();
 	void OnExecutionTimerTick();
 	void OnShowRegistryTopology();
-	/**
-	 Updates the scene and fills it with currently selected registry.
-	 \param id valid component id of an embedded registry; otherwise will switch to root level
-	 */
-	void OnEmbeddedRegistrySelected(const QByteArray& id);
-	void UpdateEmbeddedRegistriesList();
 
 private:
-
-
 	class SelectionInfoImpl: virtual public IElementSelectionInfo
 	{
 	public:
@@ -239,12 +218,12 @@ private:
 	I_REF(imod::IModel, m_envManagerModelCompPtr);
 	I_REF(idoc::IHelpViewer, m_quickHelpViewerCompPtr);
 	I_REF(idoc::IDocumentManager, m_documentManagerCompPtr);
-	I_REF(IRegistryConsistInfo, m_consistencyInfoCompPtr);
+	I_REF(IRegistryConsistInfo, m_consistInfoCompPtr);
 	I_REF(iqtgui::IGuiObject, m_registryTopologyGuiCompPtr);
 	I_REF(imod::IObserver, m_registryObserverCompPtr);
 	I_REF(iqtgui::IVisualStatusProvider, m_registryValidationStatusCompPtr);
 	I_REF(imod::IModel, m_registryValidationStatusModelCompPtr);
-
+	
 	iqtgui::CHierarchicalCommand m_registryCommand;
 	iqtgui::CHierarchicalCommand m_editMenu;
 	iqtgui::CHierarchicalCommand m_cutCommand;
@@ -272,8 +251,6 @@ private:
 
 	imod::TModelWrap<SelectionInfoImpl> m_selectionInfo;
 
-	icomp::IRegistry* m_currentEmbeddedRegistry;
-
 	// static attributes
 	static iser::CArchiveTag s_elementsListTag;
 	static iser::CArchiveTag s_elementTag;
@@ -285,7 +262,6 @@ private:
 
 // inline methods
 
-
 inline const icomp::IComponentEnvironmentManager* CVisualRegistryScenographerComp::GetEnvironmentManager() const
 {
 	return m_envManagerCompPtr.GetPtr();
@@ -294,14 +270,9 @@ inline const icomp::IComponentEnvironmentManager* CVisualRegistryScenographerCom
 
 inline const IRegistryConsistInfo* CVisualRegistryScenographerComp::GetRegistryConsistInfo() const
 {
-	return m_consistencyInfoCompPtr.GetPtr();
+	return m_consistInfoCompPtr.GetPtr();
 }
 
-
-inline icomp::IRegistry* CVisualRegistryScenographerComp::GetSelectedRegistry() const
-{
-	return m_currentEmbeddedRegistry != NULL ? m_currentEmbeddedRegistry : GetObjectPtr();
-}
 
 } // namespace icmpstr
 
