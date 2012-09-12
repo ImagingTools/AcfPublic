@@ -94,7 +94,7 @@ public:
 	virtual CViewport& GetViewRef();
 
 	// reimplemented (ibase::ICommandsProvider)
-	virtual const ibase::IHierarchicalCommand* GetCommands() const;	
+	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 
 public Q_SLOTS:
 	void OnZoomIn();
@@ -113,7 +113,6 @@ public Q_SLOTS:
 	void OnHScrollbarChanged(int newPos);
 	void OnVScrollbarChanged(int newPos);
 	void UpdateView();
-	
 
 Q_SIGNALS:
 	bool selectionChanged(const iview::IShapeView& view, const istd::CIndex2d& position, const iview::IInteractiveShape& shape, bool state);
@@ -122,8 +121,6 @@ Q_SIGNALS:
 protected:
 	void UpdateZoomInOutState();
 	void UpdateScrollbarsValues();
-	bool IsFullScreenMode() const;
-	void SetFullScreenMode(bool isFullScreen);
 
 	// reimplemented (iview::CConsoleBase)
 	virtual void UpdateCursorInfo(const i2d::CVector2d& pixelPos, const i2d::CVector2d& logicalPos, const QString& infoText);
@@ -136,15 +133,9 @@ protected:
 	virtual bool OnSelectChange(const iview::IShapeView& view, const istd::CIndex2d& position, const iview::IInteractiveShape& shape, bool state);
 	virtual bool OnMouseButton(const iview::IShapeView& view, const istd::CIndex2d& position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape* shapePtr);
 	virtual void OnBoundingBoxChanged();
-	virtual bool OnMouseDoubleClickEvent(QEvent* eventPtr);
-	virtual bool OnKeyReleaseEvent(QKeyEvent* eventPtr);
 
 	// reimplemented Qt (QWidget)
 	virtual void wheelEvent(QWheelEvent* event);
-	virtual void keyReleaseEvent(QKeyEvent* event);
-	
-	// reimplemented (QObject)
-	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);	
 
 	iview::CViewport* m_viewPtr;
 
@@ -177,10 +168,6 @@ private:
 	iqtgui::CHierarchicalCommand m_pointsSubCommand;
 
 	IShapeStatusInfo* m_shapeStatusInfoPtr;
-
-	bool m_isFullScreenMode;
-	QWidget* m_savedParentWidgetPtr;
-	iview::CScreenTransform m_savedTransform;
 };
 
 
