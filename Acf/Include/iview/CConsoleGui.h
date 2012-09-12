@@ -140,7 +140,8 @@ protected:
 	virtual bool OnKeyReleaseEvent(QKeyEvent* eventPtr);
 
 	// reimplemented Qt (QWidget)
-	virtual void wheelEvent(QWheelEvent* event);	
+	virtual void wheelEvent(QWheelEvent* event);
+	virtual void keyReleaseEvent(QKeyEvent* event);
 	
 	// reimplemented (QObject)
 	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);	

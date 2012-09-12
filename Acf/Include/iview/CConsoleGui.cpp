@@ -668,6 +668,13 @@ void CConsoleGui::wheelEvent(QWheelEvent* eventPtr)
 	}
 }
 
+void CConsoleGui::keyReleaseEvent(QKeyEvent* eventPtr)
+{
+	if (!OnKeyReleaseEvent(eventPtr)){
+		BaseClass::keyReleaseEvent(eventPtr);
+	}
+}
+
 
 // reimplemented (QObject)
 
@@ -683,12 +690,6 @@ bool CConsoleGui::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 			return true;
 		}			
 		break;
-
-	case QEvent::KeyRelease:
-		if (OnKeyReleaseEvent(dynamic_cast<QKeyEvent*>(eventPtr))){
-			return true;
-		}
-		break;		
 
 	default:
 		break;
