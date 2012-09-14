@@ -87,27 +87,28 @@
 <a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_registry.html#a1795126d3d10326b96504b6de71d60c8">SerializeExportedInterfaces</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_registry.html#a337d709e9a9bbf84c8fc79adafc1d5d6">SerializeExportedComponents</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">private</span>:
-<a name="l00070"></a>00070        <span class="keyword">typedef</span> QMap&lt;QByteArray, ElementInfo&gt; ComponentsMap;
-<a name="l00071"></a>00071        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;IRegistry&gt;</a> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">RegistryPtr</a>;
-<a name="l00072"></a>00072        <span class="keyword">typedef</span> QMap&lt;QByteArray, RegistryPtr&gt; EmbeddedRegistriesMap;
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074        ComponentsMap m_componentsMap;
-<a name="l00075"></a>00075        EmbeddedRegistriesMap m_embeddedRegistriesMap;
-<a name="l00076"></a>00076        <a class="code" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">ExportedInterfacesMap</a> m_exportedInterfacesMap;
-<a name="l00077"></a>00077        <a class="code" href="classicomp_1_1_i_registry.html#a82429c25523b270d22c51cd17b0e498a" title="Map assigning exported sub-component names to internal subcomponent ID&#39;s.">ExportedElementsMap</a> m_exportedComponentsMap;
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        QString m_description;
-<a name="l00080"></a>00080        QString m_keywords;
-<a name="l00081"></a>00081 };
-<a name="l00082"></a>00082 
+<a name="l00069"></a><a class="code" href="classicomp_1_1_c_registry.html#ae41e73c22cada5ece11176b79b2674d1">00069</a>        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;IRegistry&gt;</a> <a class="code" href="classicomp_1_1_c_registry.html#ae41e73c22cada5ece11176b79b2674d1">RegistryPtr</a>;
+<a name="l00070"></a><a class="code" href="classicomp_1_1_c_registry.html#ace5e784723dd819e4639c79e63174856">00070</a>        <span class="keyword">typedef</span> QMap&lt;QByteArray, RegistryPtr&gt; <a class="code" href="classicomp_1_1_c_registry.html#ace5e784723dd819e4639c79e63174856">EmbeddedRegistriesMap</a>;
+<a name="l00071"></a><a class="code" href="classicomp_1_1_c_registry.html#a0db43d5c09bd10faaf22ba31159dd299">00071</a>        <a class="code" href="classicomp_1_1_c_registry.html#ace5e784723dd819e4639c79e63174856">EmbeddedRegistriesMap</a> <a class="code" href="classicomp_1_1_c_registry.html#a0db43d5c09bd10faaf22ba31159dd299">m_embeddedRegistriesMap</a>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="keyword">private</span>:
+<a name="l00074"></a>00074        <span class="keyword">typedef</span> QMap&lt;QByteArray, ElementInfo&gt; ComponentsMap;
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076        ComponentsMap m_componentsMap;
+<a name="l00077"></a>00077        <a class="code" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">ExportedInterfacesMap</a> m_exportedInterfacesMap;
+<a name="l00078"></a>00078        <a class="code" href="classicomp_1_1_i_registry.html#a82429c25523b270d22c51cd17b0e498a" title="Map assigning exported sub-component names to internal subcomponent ID&#39;s.">ExportedElementsMap</a> m_exportedComponentsMap;
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080        QString m_description;
+<a name="l00081"></a>00081        QString m_keywords;
+<a name="l00082"></a>00082 };
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 } <span class="comment">// namespace icomp</span>
-<a name="l00085"></a>00085 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 } <span class="comment">// namespace icomp</span>
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 <span class="preprocessor">#endif // !icomp_CRegistry_included</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span>
-<a name="l00089"></a>00089 
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif // !icomp_CRegistry_included</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span>
+<a name="l00090"></a>00090 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

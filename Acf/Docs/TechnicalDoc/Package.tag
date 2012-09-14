@@ -94,6 +94,14 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CDataNodePolylineBase.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_data_node_polyline_base_8h</filename>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
+    <class kind="class">i2d::CDataNodePolylineBase</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDirection2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_direction2d_8h</filename>
@@ -192,14 +200,6 @@
     <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CPolylineComp</class>
-    <namespace>i2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CPolylineExNodeBase.h</name>
-    <path>C:/Temp/Acf/Include/i2d/</path>
-    <filename>_c_polyline_ex_node_base_8h</filename>
-    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
-    <class kind="class">i2d::CPolylineExNodeBase</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -319,6 +319,33 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CTubeNode.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_tube_node_8h</filename>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="i2d_8h" name="i2d.h" local="yes" imported="no">i2d/i2d.h</includes>
+    <class kind="class">i2d::CTubeNode</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTubePolylineComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_tube_polyline_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_data_node_polyline_8h" name="TDataNodePolyline.h" local="yes" imported="no">i2d/TDataNodePolyline.h</includes>
+    <includes id="_c_tube_node_8h" name="CTubeNode.h" local="yes" imported="no">i2d/CTubeNode.h</includes>
+    <class kind="class">i2d::CTubePolylineComp</class>
+    <namespace>i2d</namespace>
+    <member kind="typedef">
+      <type>TDataNodePolyline&lt; CTubeNode &gt;</type>
+      <name>CTubePolyline</name>
+      <anchorfile>namespacei2d.html</anchorfile>
+      <anchor>af339c1831861ba94dc1d0996bc51a84b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>CVector2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_vector2d_8h</filename>
@@ -373,11 +400,11 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
-    <name>TPolylineExNode.h</name>
+    <name>TDataNodePolyline.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
-    <filename>_t_polyline_ex_node_8h</filename>
-    <includes id="_c_polyline_ex_node_base_8h" name="CPolylineExNodeBase.h" local="yes" imported="no">i2d/CPolylineExNodeBase.h</includes>
-    <class kind="class">i2d::TPolylineExNode</class>
+    <filename>_t_data_node_polyline_8h</filename>
+    <includes id="_c_data_node_polyline_base_8h" name="CDataNodePolylineBase.h" local="yes" imported="no">i2d/CDataNodePolylineBase.h</includes>
+    <class kind="class">i2d::TDataNodePolyline</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -6665,6 +6692,7 @@
     <class kind="class">i2d::CAnnulusSegmentComp</class>
     <class kind="class">i2d::CCircle</class>
     <class kind="class">i2d::CCircleComp</class>
+    <class kind="class">i2d::CDataNodePolylineBase</class>
     <class kind="class">i2d::CDirection2d</class>
     <class kind="class">i2d::CLabel</class>
     <class kind="class">i2d::CLine2d</class>
@@ -6676,7 +6704,6 @@
     <class kind="class">i2d::CPolygonExtractor</class>
     <class kind="class">i2d::CPolyline</class>
     <class kind="class">i2d::CPolylineComp</class>
-    <class kind="class">i2d::CPolylineExNodeBase</class>
     <class kind="class">i2d::CPolylineExtractor</class>
     <class kind="class">i2d::CPolypoint</class>
     <class kind="class">i2d::CPosition2d</class>
@@ -6689,12 +6716,21 @@
     <class kind="class">i2d::CSpline</class>
     <class kind="class">i2d::CSplineSegment</class>
     <class kind="class">i2d::CStaticCalibrationProviderComp</class>
+    <class kind="class">i2d::CTubeNode</class>
+    <class kind="class">i2d::CTubePolylineComp</class>
     <class kind="class">i2d::CVector2d</class>
     <class kind="class">i2d::ICalibrationProvider</class>
     <class kind="class">i2d::IObject2d</class>
     <class kind="class">i2d::ISceneController</class>
     <class kind="class">i2d::ITransformation2d</class>
-    <class kind="class">i2d::TPolylineExNode</class>
+    <class kind="class">i2d::TDataNodePolyline</class>
+    <member kind="typedef">
+      <type>TDataNodePolyline&lt; CTubeNode &gt;</type>
+      <name>CTubePolyline</name>
+      <anchorfile>namespacei2d.html</anchorfile>
+      <anchor>af339c1831861ba94dc1d0996bc51a84b</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CAffine2d</name>
@@ -7505,6 +7541,39 @@
       <anchorfile>classi2d_1_1_c_circle_comp.html</anchorfile>
       <anchor>a1bbacd11a54daecbfb247fdd890d88aa</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CDataNodePolylineBase</name>
+    <filename>classi2d_1_1_c_data_node_polyline_base.html</filename>
+    <base>i2d::CPolyline</base>
+    <member kind="typedef">
+      <type>CPolyline</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_data_node_polyline_base.html</anchorfile>
+      <anchor>a36fa12768a9a80677267b86dd7f0f9ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::ISerializable &amp;</type>
+      <name>GetNodeData</name>
+      <anchorfile>classi2d_1_1_c_data_node_polyline_base.html</anchorfile>
+      <anchor>aadf4b69a8e312a68c76e30bab30a23fc</anchor>
+      <arglist>(int nodeIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iser::ISerializable &amp;</type>
+      <name>GetNodeDataRef</name>
+      <anchorfile>classi2d_1_1_c_data_node_polyline_base.html</anchorfile>
+      <anchor>a429946319a481f220bf86f4f886152fc</anchor>
+      <arglist>(int nodeIndex)=0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_data_node_polyline_base.html</anchorfile>
+      <anchor>a277802da8b39c5bd00e55be9a227691e</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8569,39 +8638,6 @@
       <anchorfile>classi2d_1_1_c_polyline_comp.html</anchorfile>
       <anchor>ae400b0ed7629bc96b9837a8598e7d238</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>i2d::CPolylineExNodeBase</name>
-    <filename>classi2d_1_1_c_polyline_ex_node_base.html</filename>
-    <base>i2d::CPolyline</base>
-    <member kind="typedef">
-      <type>CPolyline</type>
-      <name>BaseClass</name>
-      <anchorfile>classi2d_1_1_c_polyline_ex_node_base.html</anchorfile>
-      <anchor>a988d3e4f95fd7500d321976af690973d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iser::ISerializable &amp;</type>
-      <name>GetNodeData</name>
-      <anchorfile>classi2d_1_1_c_polyline_ex_node_base.html</anchorfile>
-      <anchor>a8c98cd1b17e25e3d51829a1e62fd0ff3</anchor>
-      <arglist>(int nodeIndex) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual iser::ISerializable &amp;</type>
-      <name>GetNodeDataRef</name>
-      <anchorfile>classi2d_1_1_c_polyline_ex_node_base.html</anchorfile>
-      <anchor>a82501a805517478a20164f49ed9fb123</anchor>
-      <arglist>(int nodeIndex)=0</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classi2d_1_1_c_polyline_ex_node_base.html</anchorfile>
-      <anchor>a2b91352237ed0eb8daa68ba8d6be713f</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10067,6 +10103,94 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CTubeNode</name>
+    <filename>classi2d_1_1_c_tube_node.html</filename>
+    <base>iser::ISerializable</base>
+    <member kind="function">
+      <type></type>
+      <name>CTubeNode</name>
+      <anchorfile>classi2d_1_1_c_tube_node.html</anchorfile>
+      <anchor>a4da89475dcfbfb5d3b2a8d4d3c42d81a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const istd::CRange &amp;</type>
+      <name>GetTubeRange</name>
+      <anchorfile>classi2d_1_1_c_tube_node.html</anchorfile>
+      <anchor>a0d8355804aea4b50e45236a846189ea9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTubeRange</name>
+      <anchorfile>classi2d_1_1_c_tube_node.html</anchorfile>
+      <anchor>a0305c903b5ce52daacbfab45809ed214</anchor>
+      <arglist>(const istd::CRange &amp;tubeRange)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetInterpolated</name>
+      <anchorfile>classi2d_1_1_c_tube_node.html</anchorfile>
+      <anchor>a411cbdf861ec2c49b06da50660d6b88b</anchor>
+      <arglist>(const CTubeNode &amp;first, const CTubeNode &amp;second, double alpha)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_tube_node.html</anchorfile>
+      <anchor>a79e6c45297898426dd783a36452f8ab1</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CTubePolylineComp</name>
+    <filename>classi2d_1_1_c_tube_polyline_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::TDataNodePolyline</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
+      <anchor>abc20670af97a14600f494980ea7f985d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CTubePolyline</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
+      <anchor>a22b29f8431fd27b357fb1f39b7d22dd8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
+      <anchor>a19f982e998ae80ae53035bdf311e14c3</anchor>
+      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
+      <anchor>a1dc55887592940014ec9eb342dd65896</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetNodesCount</name>
+      <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
+      <anchor>a2e0b6535804c5e678b2881dafe592381</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
+      <anchor>ac50329a9b70f6627eebae20a93d2110f</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CVector2d</name>
     <filename>classi2d_1_1_c_vector2d.html</filename>
     <base>TVector&lt; 2 &gt;</base>
@@ -10665,78 +10789,78 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>i2d::TPolylineExNode</name>
-    <filename>classi2d_1_1_t_polyline_ex_node.html</filename>
+    <name>i2d::TDataNodePolyline</name>
+    <filename>classi2d_1_1_t_data_node_polyline.html</filename>
     <templarg></templarg>
-    <base>i2d::CPolylineExNodeBase</base>
+    <base>i2d::CDataNodePolylineBase</base>
     <member kind="typedef">
       <type>CPolyline</type>
       <name>BaseClass</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>adeccb7d4e6c9056aa1711b0dcc7503ce</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a6b6ad9f09506a0de19e6222b4b3216f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>const NodeData &amp;</type>
       <name>GetTNodeData</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>af26668ff37281d8e3cbb5fc6696e63a6</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a0d7d0eb5137140cead3e18ff32ddf1b3</anchor>
       <arglist>(int nodeIndex) const </arglist>
     </member>
     <member kind="function">
       <type>NodeData &amp;</type>
       <name>GetTNodeDataRef</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>ab00efccb8fdb4ddf2af99acb2e0e8aab</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a0d23fff4405c6aacff7eb990142d5f60</anchor>
       <arglist>(int nodeIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::ISerializable &amp;</type>
       <name>GetNodeData</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>af36898677defddcd99e2b1dbebcfde39</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>ac486bd5a6e5e8c649d5edcfae460552c</anchor>
       <arglist>(int nodeIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::ISerializable &amp;</type>
       <name>GetNodeDataRef</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>a9e2c30b63d0eaac9834f9961ee952244</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a4b94f12d4fa71b118285ee195d348f12</anchor>
       <arglist>(int nodeIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Clear</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>ad9892f1de2670452f05707b31de634c4</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a7649960d99c6638f722848dd9f5282fd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>a7d1815057e7b551b4def29114205bc02</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>acf43b8d0bb7299c5eed71d2b415b92a6</anchor>
       <arglist>(const i2d::CVector2d &amp;node)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>a6962c49e4acbed86899e113be2c30d0d</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a11903220d4d63bbdd86169d8e1f39980</anchor>
       <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveNode</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>a0730b0122a64540ae09f102d9a09441d</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a1df706697750c63cad83f66011448d15</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNodesCount</name>
-      <anchorfile>classi2d_1_1_t_polyline_ex_node.html</anchorfile>
-      <anchor>a9cbf9bf7832131b8a612c2bb028b7e98</anchor>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>ab92692dc07e24d0b0abb86235ed808e5</anchor>
       <arglist>(int count)</arglist>
     </member>
   </compound>
@@ -17455,6 +17579,13 @@
       <anchor>a67daccf53d94bd418b6df8e2e2271ee5</anchor>
       <arglist>(double)</arglist>
     </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>embeddedRegistrySelected</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a63280291733b3e99608f2ab03a6cc8fc</anchor>
+      <arglist>(const QByteArray &amp;)</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CSceneProviderGuiComp</name>
@@ -17475,6 +17606,41 @@
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a903626b7abb7c7678d0e3861dfdda07e</anchor>
       <arglist>(double factor)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetEmbeddedListSize</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>aaca98e22e91027e213ab41913274d4a1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ClearEmbeddedList</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a20e9fe749496815eaa5820070fdd2e61</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InsertEmbeddedIntoList</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ae5a0d788719026ad10ca5abe2ad3ef73</anchor>
+      <arglist>(QByteArray id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>RemoveEmbeddedFromList</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a6df41ef5f9d702ff119860e9da334fd3</anchor>
+      <arglist>(QByteArray id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SelectEmbeddedInList</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>ac50eef583875a56f0eb412c0f7388b94</anchor>
+      <arglist>(QByteArray id, bool propagateEvent=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
@@ -17614,6 +17780,13 @@
       <name>OnSelectAllShapes</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a2c734d994a9f91ccb439b6b1d4c2753b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LocalCompositionSelectorList_itemSelectionChanged</name>
+      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>aa237fb782bf19ec9424b4f14e95061f5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -17905,6 +18078,13 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
       <anchor>a40ad86788e501d3944b8cf7b441cd8e7</anchor>
       <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual icomp::IRegistry *</type>
+      <name>InsertEmbeddedRegistry</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
+      <anchor>a789c93e7101c97281de1d4388d06820b</anchor>
+      <arglist>(const QByteArray &amp;registryId)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18263,6 +18443,27 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
       <anchor>a8962593f319567c98b4e721b115dad1c</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnEmbeddedRegistrySelected</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a786213f9623cac3f83a82b1dd0f5809b</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>UpdateEmbeddedRegistriesList</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>ac73585ef7277074e988b278eb9355d81</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>icomp::IRegistry *</type>
+      <name>GetSelectedRegistry</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
+      <anchor>a51e6d0b78f8ab9f5228d1e75d312a26a</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QGraphicsItem *</type>
@@ -20502,6 +20703,20 @@
       <anchor>af8048e9193dde9a7dedf7835185b7ce7</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TDelPtr&lt; IRegistry &gt;</type>
+      <name>RegistryPtr</name>
+      <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
+      <anchor>ae41e73c22cada5ece11176b79b2674d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; QByteArray, RegistryPtr &gt;</type>
+      <name>EmbeddedRegistriesMap</name>
+      <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
+      <anchor>ace5e784723dd819e4639c79e63174856</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual icomp::IRegistryElement *</type>
       <name>CreateRegistryElement</name>
@@ -20536,6 +20751,13 @@
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
       <anchor>a337d709e9a9bbf84c8fc79adafc1d5d6</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>EmbeddedRegistriesMap</type>
+      <name>m_embeddedRegistriesMap</name>
+      <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
+      <anchor>a0db43d5c09bd10faaf22ba31159dd299</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

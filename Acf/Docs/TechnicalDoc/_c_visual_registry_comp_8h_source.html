@@ -102,18 +102,19 @@
 <a name="l00075"></a>00075        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_registry_element.html" title="Represents element of registry describing component parameters.">icomp::IRegistryElement</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_comp.html#a40ad86788e501d3944b8cf7b441cd8e7" title="Called to create instance of registry element.">CreateRegistryElement</a>(
 <a name="l00076"></a>00076                             <span class="keyword">const</span> QByteArray&amp; elementId,
 <a name="l00077"></a>00077                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address) <span class="keyword">const</span>;
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="keyword">private</span>:
-<a name="l00080"></a>00080        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
-<a name="l00081"></a>00081 };
-<a name="l00082"></a>00082 
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_comp.html#a789c93e7101c97281de1d4388d06820b" title="Insert embedded registry with specified ID.">InsertEmbeddedRegistry</a>(<span class="keyword">const</span> QByteArray&amp; registryId);
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="keyword">private</span>:
+<a name="l00081"></a>00081        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
+<a name="l00082"></a>00082 };
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 } <span class="comment">// namespace icmpstr</span>
-<a name="l00085"></a>00085 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 } <span class="comment">// namespace icmpstr</span>
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 <span class="preprocessor">#endif // !icmpstr_CVisualRegistryComp_included</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span>
-<a name="l00089"></a>00089 
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif // !icmpstr_CVisualRegistryComp_included</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span>
+<a name="l00090"></a>00090 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

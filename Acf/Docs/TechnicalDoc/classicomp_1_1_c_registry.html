@@ -33,7 +33,8 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">icomp::CRegistry Class Reference</div>  </div>
 </div>
@@ -108,6 +109,9 @@ Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap</a><br class="typebreak"/>
 &lt; <a class="el" href="classistd_1_1_t_change_delegator.html">istd::TChangeDelegator</a><br class="typebreak"/>
 &lt; <a class="el" href="classicomp_1_1_c_registry_element.html">CRegistryElement</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#af8048e9193dde9a7dedf7835185b7ce7">Element</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt; <a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#ae41e73c22cada5ece11176b79b2674d1">RegistryPtr</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QByteArray, <br class="typebreak"/>
+<a class="el" href="classicomp_1_1_c_registry.html#ae41e73c22cada5ece11176b79b2674d1">RegistryPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#ace5e784723dd819e4639c79e63174856">EmbeddedRegistriesMap</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a9d0b0048b2da27a5cf4a9de781b54aa8">CreateRegistryElement</a> (const QByteArray &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const </td></tr>
@@ -116,6 +120,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#acdbc6a6df7fec91816ea9bfe42e46da4">SerializeEmbeddedRegistries</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a1795126d3d10326b96504b6de71d60c8">SerializeExportedInterfaces</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a337d709e9a9bbf84c8fc79adafc1d5d6">SerializeExportedComponents</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_c_registry.html#ace5e784723dd819e4639c79e63174856">EmbeddedRegistriesMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_registry.html#a0db43d5c09bd10faaf22ba31159dd299">m_embeddedRegistriesMap</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Standard implementation of registry. </p>
@@ -136,6 +143,36 @@ Protected Member Functions</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#ae351ba2a9668492132d7354a79d74695">icmpstr::CVisualRegistryComp</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_registry_8h_source.html#l00056">56</a> of file <a class="el" href="_c_registry_8h_source.html">CRegistry.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace5e784723dd819e4639c79e63174856"></a><!-- doxytag: member="icomp::CRegistry::EmbeddedRegistriesMap" ref="ace5e784723dd819e4639c79e63174856" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QMap&lt;QByteArray, <a class="el" href="classicomp_1_1_c_registry.html#ae41e73c22cada5ece11176b79b2674d1">RegistryPtr</a>&gt; <a class="el" href="classicomp_1_1_c_registry.html#ace5e784723dd819e4639c79e63174856">icomp::CRegistry::EmbeddedRegistriesMap</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_registry_8h_source.html#l00070">70</a> of file <a class="el" href="_c_registry_8h_source.html">CRegistry.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae41e73c22cada5ece11176b79b2674d1"></a><!-- doxytag: member="icomp::CRegistry::RegistryPtr" ref="ae41e73c22cada5ece11176b79b2674d1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt;<a class="el" href="classicomp_1_1_i_registry.html">IRegistry</a>&gt; <a class="el" href="classicomp_1_1_c_registry.html#ae41e73c22cada5ece11176b79b2674d1">icomp::CRegistry::RegistryPtr</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_registry_8h_source.html#l00069">69</a> of file <a class="el" href="_c_registry_8h_source.html">CRegistry.h</a>.</p>
 
 </div>
 </div>
@@ -424,6 +461,8 @@ Protected Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>instance of new created embedded registry. </dd></dl>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_registry.html#a457760368d21fdcc55d10b740e57451f">icomp::IRegistry</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a789c93e7101c97281de1d4388d06820b">icmpstr::CVisualRegistryComp</a>.</p>
 
 </div>
 </div>
@@ -763,6 +802,22 @@ Protected Member Functions</h2></td></tr>
 <p>Set keywords for this registry used for search. </p>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_registry.html#a0aa38468da6b896f5cffcd0cfc665046">icomp::IRegistry</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a0db43d5c09bd10faaf22ba31159dd299"></a><!-- doxytag: member="icomp::CRegistry::m_embeddedRegistriesMap" ref="a0db43d5c09bd10faaf22ba31159dd299" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classicomp_1_1_c_registry.html#ace5e784723dd819e4639c79e63174856">EmbeddedRegistriesMap</a> <a class="el" href="classicomp_1_1_c_registry.html#a0db43d5c09bd10faaf22ba31159dd299">icomp::CRegistry::m_embeddedRegistriesMap</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_registry_8h_source.html#l00071">71</a> of file <a class="el" href="_c_registry_8h_source.html">CRegistry.h</a>.</p>
 
 </div>
 </div>

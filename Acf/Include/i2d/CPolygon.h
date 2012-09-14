@@ -38,6 +38,9 @@ namespace i2d
 {
 
 
+/**
+	Definition of the data model for a polygon.
+*/
 class CPolygon: virtual public IObject2d
 {
 public:

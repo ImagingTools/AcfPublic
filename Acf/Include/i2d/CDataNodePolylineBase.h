@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef i2d_CPolylineExNodeBase_included
-#define i2d_CPolylineExNodeBase_included
+#ifndef i2d_CDataNodePolylineBase_included
+#define i2d_CDataNodePolylineBase_included
 
 
 // ACF includes
@@ -32,14 +32,22 @@ namespace i2d
 {
 
 
-class CPolylineExNodeBase: public CPolyline
+/**
+	Base class for polylines with additional data stored in each node.
+*/
+class CDataNodePolylineBase: public CPolyline
 {
 public:
 	typedef CPolyline BaseClass;
 
-	/** Get segment user data.
+	/**
+		Get user data from the given node.
 	*/
 	virtual const iser::ISerializable& GetNodeData(int nodeIndex) const = 0;
+
+	/**
+		\overload
+	*/
 	virtual iser::ISerializable& GetNodeDataRef(int nodeIndex) = 0;
 
 	// reimplemented (iser::ISerializable)
@@ -50,5 +58,5 @@ public:
 } // namespace i2d
 
 
-#endif // !i2d_CPolylineExNodeBase_included
+#endif // !i2d_CDataNodePolylineBase_included
 

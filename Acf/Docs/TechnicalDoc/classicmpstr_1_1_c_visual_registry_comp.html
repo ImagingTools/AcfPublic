@@ -103,6 +103,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a12448f6dd30f6ac32503d8c6c79742e9">SerializeComponentInfo</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, QByteArray &amp;componentName, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, QString &amp;note)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a40ad86788e501d3944b8cf7b441cd8e7">CreateRegistryElement</a> (const QByteArray &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to create instance of registry element.  <a href="#a40ad86788e501d3944b8cf7b441cd8e7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_comp.html#a789c93e7101c97281de1d4388d06820b">InsertEmbeddedRegistry</a> (const QByteArray &amp;registryId)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert embedded registry with specified ID.  <a href="#a789c93e7101c97281de1d4388d06820b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -304,6 +306,28 @@ Protected Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_registry.html#a8b4f27336913e9fa867eaacbaba629a2">icomp::CRegistry</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a789c93e7101c97281de1d4388d06820b"></a><!-- doxytag: member="icmpstr::CVisualRegistryComp::InsertEmbeddedRegistry" ref="a789c93e7101c97281de1d4388d06820b" args="(const QByteArray &amp;registryId)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a>* icmpstr::CVisualRegistryComp::InsertEmbeddedRegistry </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>registryId</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Insert embedded registry with specified ID. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>instance of new created embedded registry. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_registry.html#ab6d97013c85838ea50f8a2eff5a6c8b4">icomp::CRegistry</a>.</p>
 
 </div>
 </div>

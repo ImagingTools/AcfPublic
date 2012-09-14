@@ -20,47 +20,62 @@
 ********************************************************************************/
 
 
-#include "i2d/CPolylineExNodeBase.h"
+#include "i2d/CTubeNode.h"
 
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iser/IArchive.h"
+#include "iser/CPrimitiveTypesSerializer.h"
 
 
 namespace i2d
 {
 
 
-// reimplemented (iser::ISerializable)
+// public methods
 
-bool CPolylineExNodeBase::Serialize(iser::IArchive& archive)
+CTubeNode::CTubeNode()
+	:m_tubeRange(-10, 10)
 {
-	static iser::CArchiveTag nodesDataTag("NodesExtraData", "Nodes Extra Data");
-	static iser::CArchiveTag nodeDataTag("Node", "Node Data");
+}
 
-	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL);
 
-	bool retVal = BaseClass::Serialize(archive);
+const istd::CRange& CTubeNode::GetTubeRange() const
+{
+	return m_tubeRange;
+}
 
-	// static attributes
-	if (retVal){
-		int nodesCount = GetNodesCount();
-		retVal = retVal && archive.BeginTag(nodesDataTag);
-		for (int nodeIndex = 0; nodeIndex < nodesCount; ++nodeIndex){
-			iser::ISerializable& nodeData = GetNodeDataRef(nodeIndex);
 
-			retVal = retVal && archive.BeginTag(nodeDataTag);
-			retVal = retVal && nodeData.Serialize(archive);
-			retVal = retVal && archive.EndTag(nodeDataTag);
-		}
-		retVal = retVal && archive.EndTag(nodesDataTag);
+void CTubeNode::SetTubeRange(const istd::CRange& tubeRange)
+{
+	if (m_tubeRange != tubeRange){
+		istd::CChangeNotifier changePtr(this);
+
+		m_tubeRange = tubeRange;
 	}
+}
 
-	return retVal;
+
+void CTubeNode::SetInterpolated(
+			const CTubeNode& first,
+			const CTubeNode& second,
+			double alpha)
+{
+	istd::CChangeNotifier changePtr(this);
+
+	m_tubeRange.SetInterpolated(first.m_tubeRange, second.m_tubeRange, alpha);
+}
+
+
+// reimplemented (qcom::ISerializable)
+
+bool CTubeNode::Serialize(iser::IArchive& archive)
+{
+	return iser::CPrimitiveTypesSerializer::SerializeRange(archive, m_tubeRange);
 }
 
 
 } // namespace i2d
+
 

@@ -128,15 +128,22 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#aa7a2dc68091e85110c6a2b8ef0638283">OnAbort</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#aae05a18743b19a5ec054c68fe180ad22">OnExecutionTimerTick</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a8962593f319567c98b4e721b115dad1c">OnShowRegistryTopology</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a786213f9623cac3f83a82b1dd0f5809b">OnEmbeddedRegistrySelected</a> (const QByteArray &amp;id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the scene and fills it with currently selected registry.  <a href="#a786213f9623cac3f83a82b1dd0f5809b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ac73585ef7277074e988b278eb9355d81">UpdateEmbeddedRegistriesList</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a51e6d0b78f8ab9f5228d1e75d312a26a">GetSelectedRegistry</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get root or embedded registry that is currently selected in the editor.  <a href="#a51e6d0b78f8ab9f5228d1e75d312a26a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QGraphicsItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ab4983960912bb930939ece9112da0416">AddShapeToScene</a> (<a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> *elementPtr) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of shape representing some element.  <a href="#ab4983960912bb930939ece9112da0416"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ad856af3c00a1fcf929106fead92704fa">AddConnectorsToScene</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#ada7ffbb9e2cbdc8534a6793dc2dd8eef">AddConnector</a> (<a class="el" href="classicmpstr_1_1_c_registry_element_shape.html">CRegistryElementShape</a> &amp;sourceShape, const QByteArray &amp;referenceComponentId, const QByteArray &amp;attributeId, bool isFactory=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_registry_element.html">icomp::IRegistryElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a38db8b13925b822b0fed67eb4248072c">TryCreateComponent</a> (const QByteArray &amp;elementId, const <a class="el" href="classicomp_1_1_c_component_address.html">icomp::CComponentAddress</a> &amp;address, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Used on drop/paste action.  <a href="#a38db8b13925b822b0fed67eb4248072c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a3ba75a073ed97de195fafd149fd95e30">ConnectReferences</a> (const QByteArray &amp;componentRole)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a5a5fa5717d66268ddff72cb4f07ba067">UpdateComponentSelection</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update component selection and related menu actions.  <a href="#a5a5fa5717d66268ddff72cb4f07ba067"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#afe83e2d92ab9da4d0704940b321bec2f">DoRetranslate</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_scenographer_comp.html#a3c7fe27cca21ea3e8fc47bdbf355fb3a">OnDropObject</a> (const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Event handler for the drop action.  <a href="#a3c7fe27cca21ea3e8fc47bdbf355fb3a"></a><br/></td></tr>
@@ -300,7 +307,7 @@ Friends</h2></td></tr>
 <div class="memdoc">
 
 <p>Create instance of shape representing some element. </p>
-<p>The shape will be automatically conncted to element using model/observer pattern. </p>
+<p>The shape will be automatically connected to element using model/observer pattern. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="namespaceimod.html" title="This namespace containes basic implementation of Model/Observer design pattern This package is system...">imod</a>. </dd></dl>
 
 </div>
@@ -456,7 +463,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00243">243</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00262">262</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>
@@ -474,7 +481,25 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00249">249</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00268">268</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a51e6d0b78f8ab9f5228d1e75d312a26a"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::GetSelectedRegistry" ref="a51e6d0b78f8ab9f5228d1e75d312a26a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a>* icmpstr::CVisualRegistryScenographerComp::GetSelectedRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get root or embedded registry that is currently selected in the editor. </p>
 
 </div>
 </div>
@@ -868,6 +893,31 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a786213f9623cac3f83a82b1dd0f5809b"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnEmbeddedRegistrySelected" ref="a786213f9623cac3f83a82b1dd0f5809b" args="(const QByteArray &amp;id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CVisualRegistryScenographerComp::OnEmbeddedRegistrySelected </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Updates the scene and fills it with currently selected registry. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>valid component id of an embedded registry; otherwise will switch to root level </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="afa9c5c1efe7dbdff0299c33e6c2f2314"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::OnExecute" ref="afa9c5c1efe7dbdff0299c33e6c2f2314" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -1078,6 +1128,8 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Used on drop/paste action. </p>
+
 </div>
 </div>
 <a class="anchor" id="ae9b9fada88111cbd8986638eecdad9ea"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::TryOpenComponent" ref="ae9b9fada88111cbd8986638eecdad9ea" args="(const CVisualRegistryElement &amp;registryElement) const " -->
@@ -1109,6 +1161,24 @@ Friends</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Update component selection and related menu actions. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac73585ef7277074e988b278eb9355d81"></a><!-- doxytag: member="icmpstr::CVisualRegistryScenographerComp::UpdateEmbeddedRegistriesList" ref="ac73585ef7277074e988b278eb9355d81" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CVisualRegistryScenographerComp::UpdateEmbeddedRegistriesList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -1150,7 +1220,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00191">191</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html#l00208">208</a> of file <a class="el" href="_c_visual_registry_scenographer_comp_8h_source.html">CVisualRegistryScenographerComp.h</a>.</p>
 
 </div>
 </div>

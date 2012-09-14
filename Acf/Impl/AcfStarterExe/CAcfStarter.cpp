@@ -179,7 +179,7 @@ bool CAcfStarter::InitApplicationRegistriesList()
 	if (!configurationData.Serialize(archive)){				
 		QMessageBox::warning(
 					this,
-					"ACF Wrapper",								  
+					"ACF Starter",								  
 					"Problem archive config File",
 					QMessageBox::Ok);
 		return false;
@@ -195,7 +195,7 @@ bool CAcfStarter::InitApplicationRegistriesList()
 			packageDir.setPath(iqt::CSystem::GetNormalizedPath(configurationData.GetPackageDir(i)));
 			if (!packageDir.exists()){
 				std::cout << i + 1 << " Package dir doesn't exist:" << std::endl  << packageDir.absolutePath().toStdString() << std::endl;		
-				QMessageBox::warning(0, "ACF Wrapper",
+				QMessageBox::warning(0, "ACF Starter",
 								  "package dir not exist",
 								  QMessageBox::Ok);		
 				return false;
@@ -212,7 +212,7 @@ bool CAcfStarter::InitApplicationRegistriesList()
 			iser::CXmlFileReadArchive archiveRegistry(configurationData.GetRegistryFile(i));
 			icomp::CRegistry registryData;
 			if (!registryData.Serialize(archiveRegistry)){				
-				QMessageBox::warning(this, "ACF Wrapper",								  
+				QMessageBox::warning(this, "ACF Starter",								  
 					"Problem archive registry File",
 					QMessageBox::Ok);
 				return false;
@@ -235,7 +235,7 @@ bool CAcfStarter::InitApplicationRegistriesList()
 		if (applicationRegistriesList.isEmpty()){
 			QMessageBox::warning(
 						this,
-						"ACF Wrapper",								  
+						"ACF Starter",								  
 						"Archive registry does not have a interface Application",
 						QMessageBox::Ok);
 
@@ -247,7 +247,7 @@ bool CAcfStarter::InitApplicationRegistriesList()
 	}
 	else{
 		QMessageBox::warning(
-					this, "ACF Wrapper",								  
+					this, "ACF Starter",								  
 					"Problem with registry file or package dirs",
 					QMessageBox::Ok);
 

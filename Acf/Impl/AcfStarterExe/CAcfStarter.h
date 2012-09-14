@@ -49,8 +49,6 @@ private:
 	bool InitApplicationRegistriesList();
 	void SetProperty();
 	QTimer *timer;
-	
-	
 };
 
 
