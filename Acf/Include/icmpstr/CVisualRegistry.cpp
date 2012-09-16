@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CVisualRegistryComp.h"
+#include "icmpstr/CVisualRegistry.h"
 
 
 // Qt includes
@@ -41,7 +41,13 @@ namespace icmpstr
 {
 
 
-bool CVisualRegistryComp::SerializeComponentsLayout(iser::IArchive& archive)
+CVisualRegistry::CVisualRegistry()
+:	m_serializeUserData(true)
+{
+}
+
+
+bool CVisualRegistry::SerializeComponentsLayout(iser::IArchive& archive)
 {
 	static iser::CArchiveTag positionMapTag("PositionMap", "Map of component name to its positions");
 	static iser::CArchiveTag elementTag("Element", "Map element");
@@ -131,7 +137,7 @@ bool CVisualRegistryComp::SerializeComponentsLayout(iser::IArchive& archive)
 		if (archive.IsStoring()){
 			for (Ids::const_iterator iter = ids.begin(); iter != ids.end(); iter++){
 				QByteArray id = *iter;
-				CVisualRegistryComp* embeddedRegPtr = dynamic_cast<CVisualRegistryComp*> (GetEmbeddedRegistry(id));
+				CVisualRegistry* embeddedRegPtr = dynamic_cast<CVisualRegistry*> (GetEmbeddedRegistry(id));
 				if (embeddedRegPtr != NULL){
 					retVal = retVal && archive.BeginTag(embeddedRegistryTag);
 					retVal = retVal && archive.BeginTag(embeddedRegistryIdTag);
@@ -159,7 +165,7 @@ bool CVisualRegistryComp::SerializeComponentsLayout(iser::IArchive& archive)
 					return false;
 				}
 
-				CVisualRegistryComp* embeddedRegPtr = dynamic_cast<CVisualRegistryComp*> (GetEmbeddedRegistry(id));
+				CVisualRegistry* embeddedRegPtr = dynamic_cast<CVisualRegistry*> (GetEmbeddedRegistry(id));
 				if (embeddedRegPtr != NULL){
 					// serialize embedded PositionMap etc.
 					embeddedRegPtr->SerializeComponentsLayout(archive);
@@ -176,13 +182,13 @@ bool CVisualRegistryComp::SerializeComponentsLayout(iser::IArchive& archive)
 }
 
 
-bool CVisualRegistryComp::SerializeRegistry(iser::IArchive& archive)
+bool CVisualRegistry::SerializeRegistry(iser::IArchive& archive)
 {
-	return BaseClass2::Serialize(archive);
+	return BaseClass::Serialize(archive);
 }
 
 
-bool CVisualRegistryComp::SerializeUserData(iser::IArchive& archive)
+bool CVisualRegistry::SerializeUserData(iser::IArchive& archive)
 {
 	return SerializeComponentsLayout(archive);
 }
@@ -190,7 +196,7 @@ bool CVisualRegistryComp::SerializeUserData(iser::IArchive& archive)
 
 // reimplemented (IComponentNoteController)
 
-QString CVisualRegistryComp::GetComponentNote(const QByteArray& componentName)
+QString CVisualRegistry::GetComponentNote(const QByteArray& componentName)
 {
 	const ElementInfo* elementInfoPtr = GetElementInfo(componentName);
 	if (elementInfoPtr != NULL){
@@ -204,7 +210,7 @@ QString CVisualRegistryComp::GetComponentNote(const QByteArray& componentName)
 }
 
 
-void CVisualRegistryComp::SetComponentNote(const QByteArray& componentName, const QString& componentNote)
+void CVisualRegistry::SetComponentNote(const QByteArray& componentName, const QString& componentNote)
 {
 	const ElementInfo* elementInfoPtr = GetElementInfo(componentName);
 	if (elementInfoPtr == NULL){
@@ -222,12 +228,12 @@ void CVisualRegistryComp::SetComponentNote(const QByteArray& componentName, cons
 
 // reimplemented (icomp::IRegistry)
 
-CVisualRegistryComp::ElementInfo* CVisualRegistryComp::InsertElementInfo(
+CVisualRegistry::ElementInfo* CVisualRegistry::InsertElementInfo(
 			const QByteArray& elementId,
 			const icomp::CComponentAddress& address,
 			bool ensureElementCreated)
 {
-	ElementInfo* infoPtr = BaseClass2::InsertElementInfo(elementId, address, ensureElementCreated);
+	ElementInfo* infoPtr = BaseClass::InsertElementInfo(elementId, address, ensureElementCreated);
 
 	if (infoPtr != NULL){
 		CVisualRegistryElement* elementPtr = dynamic_cast<CVisualRegistryElement*>(infoPtr->elementPtr.GetPtr());
@@ -235,19 +241,12 @@ CVisualRegistryComp::ElementInfo* CVisualRegistryComp::InsertElementInfo(
 			elementPtr->SetName(elementId);
 		}
 	}
-	else{
-		SendErrorMessage(
-					MI_CANNOT_CREATE_ELEMENT,
-					tr("Cannot create %1 (%2)").
-								arg(QString(elementId)).
-								arg(address.ToString()));
-	}
 
 	return infoPtr;
 }
 
 
-bool CVisualRegistryComp::RenameElement(const QByteArray& oldElementId, const QByteArray& newElementId)
+bool CVisualRegistry::RenameElement(const QByteArray& oldElementId, const QByteArray& newElementId)
 {
 	i2d::CVector2d oldPosition;
 	const ElementInfo* oldElementInfoPtr = GetElementInfo(oldElementId);
@@ -260,7 +259,7 @@ bool CVisualRegistryComp::RenameElement(const QByteArray& oldElementId, const QB
 
 	istd::TChangeNotifier<icomp::IRegistry> changePtr(this, CF_MODEL | CF_ELEMENT_RENAMED);
 
-	if (BaseClass2::RenameElement(oldElementId, newElementId)){
+	if (BaseClass::RenameElement(oldElementId, newElementId)){
 		const ElementInfo* newElementInfoPtr = GetElementInfo(newElementId);
 		if (newElementInfoPtr != NULL){
 			CVisualRegistryElement* elementPtr = dynamic_cast<CVisualRegistryElement*>(newElementInfoPtr->elementPtr.GetPtr());
@@ -281,15 +280,21 @@ bool CVisualRegistryComp::RenameElement(const QByteArray& oldElementId, const QB
 
 // reimplemented (iser::ISerializable)
 
-bool CVisualRegistryComp::Serialize(iser::IArchive& archive)
+bool CVisualRegistry::Serialize(iser::IArchive& archive)
 {
-	return BaseClass2::Serialize(archive) && SerializeUserData(archive);
+	bool retVal = SerializeRegistry(archive);
+
+	if (m_serializeUserData){
+		retVal = retVal && SerializeUserData(archive);
+	}
+
+	return retVal;
 }
 
 
 // protected methods
 
-bool CVisualRegistryComp::SerializeComponentInfo(
+bool CVisualRegistry::SerializeComponentInfo(
 			iser::IArchive& archive,
 			QByteArray& componentRole,
 			i2d::CVector2d& position,
@@ -328,7 +333,7 @@ bool CVisualRegistryComp::SerializeComponentInfo(
 
 // reimplemented (icomp::CRegistry)
 
-icomp::IRegistryElement* CVisualRegistryComp::CreateRegistryElement(
+icomp::IRegistryElement* CVisualRegistry::CreateRegistryElement(
 			const QByteArray& elementId,
 			const icomp::CComponentAddress& address) const
 {
@@ -337,7 +342,7 @@ icomp::IRegistryElement* CVisualRegistryComp::CreateRegistryElement(
 		registryElementPtr->Initialize(this, address);
 		registryElementPtr->SetName(elementId);
 		
-		registryElementPtr->SetSlavePtr(const_cast<CVisualRegistryComp*>(this));
+		registryElementPtr->SetSlavePtr(const_cast<CVisualRegistry*>(this));
 
 		return registryElementPtr;
 	}
@@ -346,18 +351,18 @@ icomp::IRegistryElement* CVisualRegistryComp::CreateRegistryElement(
 }
 
 
-icomp::IRegistry* CVisualRegistryComp::InsertEmbeddedRegistry(const QByteArray& registryId)
+icomp::IRegistry* CVisualRegistry::InsertEmbeddedRegistry(const QByteArray& registryId)
 {
 	// A specialization of this method is needed to enable component layout support in embedded compositions.
-
-	RegistryPtr newRegistryPtr(new istd::TChangeDelegator<CVisualRegistryComp>(this));
+	istd::TDelPtr<CVisualRegistry> newRegistryPtr(new istd::TChangeDelegator<CVisualRegistry>(this));
+	newRegistryPtr->m_serializeUserData = false;
 
 	RegistryPtr& registryPtr = m_embeddedRegistriesMap[registryId];
 	if (registryPtr.IsValid()){
 		return NULL; // such ID exists yet!
 	}
 
-	registryPtr.TakeOver(newRegistryPtr);
+	registryPtr.SetPtr(newRegistryPtr.PopPtr());
 
 	return registryPtr.GetPtr();
 }

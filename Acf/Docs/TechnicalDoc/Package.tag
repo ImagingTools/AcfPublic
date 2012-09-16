@@ -329,13 +329,11 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
-    <name>CTubePolylineComp.h</name>
+    <name>CTubePolyline.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
-    <filename>_c_tube_polyline_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <filename>_c_tube_polyline_8h</filename>
     <includes id="_t_data_node_polyline_8h" name="TDataNodePolyline.h" local="yes" imported="no">i2d/TDataNodePolyline.h</includes>
     <includes id="_c_tube_node_8h" name="CTubeNode.h" local="yes" imported="no">i2d/CTubeNode.h</includes>
-    <class kind="class">i2d::CTubePolylineComp</class>
     <namespace>i2d</namespace>
     <member kind="typedef">
       <type>TDataNodePolyline&lt; CTubeNode &gt;</type>
@@ -344,6 +342,23 @@
       <anchor>af339c1831861ba94dc1d0996bc51a84b</anchor>
       <arglist></arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>CTubePolylineComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_tube_polyline_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_tube_polyline_8h" name="CTubePolyline.h" local="yes" imported="no">i2d/CTubePolyline.h</includes>
+    <class kind="class">i2d::CTubePolylineComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTubeProjectionsGenerator.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_tube_projections_generator_8h</filename>
+    <includes id="_c_tube_polyline_8h" name="CTubePolyline.h" local="yes" imported="no">i2d/CTubePolyline.h</includes>
+    <class kind="class">i2d::CTubeProjectionsGenerator</class>
+    <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
     <name>CVector2d.h</name>
@@ -1351,15 +1366,13 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
-    <name>CVisualRegistryComp.h</name>
+    <name>CVisualRegistry.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_visual_registry_comp_8h</filename>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
+    <filename>_c_visual_registry_8h</filename>
     <includes id="_c_registry_8h" name="CRegistry.h" local="yes" imported="no">icomp/CRegistry.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_i_component_note_controller_8h" name="IComponentNoteController.h" local="yes" imported="no">icmpstr/IComponentNoteController.h</includes>
     <includes id="_c_visual_registry_element_8h" name="CVisualRegistryElement.h" local="yes" imported="no">icmpstr/CVisualRegistryElement.h</includes>
-    <class kind="class">icmpstr::CVisualRegistryComp</class>
+    <class kind="class">icmpstr::CVisualRegistry</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -3983,6 +3996,16 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CTubePolylineParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_tube_polyline_params_gui_comp_8h</filename>
+    <includes id="_c_tube_polyline_8h" name="CTubePolyline.h" local="yes" imported="no">i2d/CTubePolyline.h</includes>
+    <includes id="_c_interactive_tube_polyline_shape_8h" name="CInteractiveTubePolylineShape.h" local="yes" imported="no">iview/CInteractiveTubePolylineShape.h</includes>
+    <includes id="_t_polygon_based_params_gui_comp_8h" name="TPolygonBasedParamsGuiComp.h" local="yes" imported="no">iqt2d/TPolygonBasedParamsGuiComp.h</includes>
+    <class kind="class">iqt2d::CTubePolylineParamsGuiComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CViewProviderGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_view_provider_gui_comp_8h</filename>
@@ -5967,6 +5990,14 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CInteractiveTubePolylineShape.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_interactive_tube_polyline_shape_8h</filename>
+    <includes id="_c_interactive_polyline_shape_8h" name="CInteractivePolylineShape.h" local="yes" imported="no">iview/CInteractivePolylineShape.h</includes>
+    <class kind="class">iview::CInteractiveTubePolylineShape</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CInteractiveViewLayer.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_interactive_view_layer_8h</filename>
@@ -6718,6 +6749,7 @@
     <class kind="class">i2d::CStaticCalibrationProviderComp</class>
     <class kind="class">i2d::CTubeNode</class>
     <class kind="class">i2d::CTubePolylineComp</class>
+    <class kind="class">i2d::CTubeProjectionsGenerator</class>
     <class kind="class">i2d::CVector2d</class>
     <class kind="class">i2d::ICalibrationProvider</class>
     <class kind="class">i2d::IObject2d</class>
@@ -10188,6 +10220,24 @@
       <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
       <anchor>ac50329a9b70f6627eebae20a93d2110f</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CTubeProjectionsGenerator</name>
+    <filename>classi2d_1_1_c_tube_projections_generator.html</filename>
+    <member kind="typedef">
+      <type>QVector&lt; CLine2d &gt;</type>
+      <name>ProjectionLines</name>
+      <anchorfile>classi2d_1_1_c_tube_projections_generator.html</anchorfile>
+      <anchor>abfe41f1fa969c1da114859f8919b9b2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>GeneratorProjections</name>
+      <anchorfile>classi2d_1_1_c_tube_projections_generator.html</anchorfile>
+      <anchor>ae44aad091dd46639ab9dc3f67683667c</anchor>
+      <arglist>(const i2d::CTubePolyline &amp;tube, int projectionsCount, ProjectionLines &amp;projections)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15486,7 +15536,7 @@
     <class kind="class">icmpstr::CRegistryPropEditorComp</class>
     <class kind="class">icmpstr::CRegistryTreeViewComp</class>
     <class kind="class">icmpstr::CSceneProviderGuiComp</class>
-    <class kind="class">icmpstr::CVisualRegistryComp</class>
+    <class kind="class">icmpstr::CVisualRegistry</class>
     <class kind="class">icmpstr::CVisualRegistryElement</class>
     <class kind="class">icmpstr::CVisualRegistryScenographerComp</class>
     <class kind="class">icmpstr::CXpcEditorComp</class>
@@ -17956,134 +18006,133 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icmpstr::CVisualRegistryComp</name>
-    <filename>classicmpstr_1_1_c_visual_registry_comp.html</filename>
+    <name>icmpstr::CVisualRegistry</name>
+    <filename>classicmpstr_1_1_c_visual_registry.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
     <base>icomp::CRegistry</base>
     <base virtualness="virtual">icmpstr::IComponentNoteController</base>
     <member kind="enumeration">
       <name>MessageId</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>afe0f6cfc6ddaa3eaf49a75596a65dd99</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>a12990af2da6dc5fcb708ec39d3747f4a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_CREATE_ELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>afe0f6cfc6ddaa3eaf49a75596a65dd99a3272024fba7b4111589216b90834c9ff</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>afdcadbe2008e6e89bdde96d26bfca04d</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>a12990af2da6dc5fcb708ec39d3747f4aac1fab72877a37ca1f0ab6b3936a6e4a3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>icomp::CRegistry</type>
-      <name>BaseClass2</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>abccfbc1c188347419bad864f11836312</anchor>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>abeafd65eeb1a68562890d8eef10d4ef5</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CVisualRegistry</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>af1a2823bf33d52d967fef7c5fdc7aa60</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SerializeComponentsLayout</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a8c37dea315a97051b35d420aca77dafb</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>a8212c4cfee3d5f462c592356b3a43cc9</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SerializeRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a80f526e8ed3def36bf2e1fe918e7c6dd</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>aacc81283198b77d48a70230f8c0306b3</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SerializeUserData</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>acfcfcc44cf58e8e5835ee73e2825af38</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>af8d0e2442da19c68cc77e67732831632</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetComponentNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a138d3108735b0cf7ec6e18879c58b7cf</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>ade15062c098b2f1337ce1b349a4c0013</anchor>
       <arglist>(const QByteArray &amp;componentName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetComponentNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a9c85896362923ae38b839f02bcb24910</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>a0d0e25f014391207b270fc35c945d3c0</anchor>
       <arglist>(const QByteArray &amp;componentName, const QString &amp;componentNote)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ElementInfo *</type>
       <name>InsertElementInfo</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>ad21351e11beed921a256a622daa05800</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>a844b262dddc0fdcfe52ed0ef9308ab16</anchor>
       <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RenameElement</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>ada53ee410f808da8f0b2efc738dc461d</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>a371381857eb111a8f2d53c032b3aadc1</anchor>
       <arglist>(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a88a64ae45ead12a9b565ee086aaa8980</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>aad3503b4a0d519f820306a1d9a5456ee</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>imod::TModelWrap&lt; istd::TChangeDelegator&lt; CVisualRegistryElement &gt; &gt;</type>
       <name>Element</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>ae351ba2a9668492132d7354a79d74695</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>accdcceac4a4aa28bf0e72bb7bdf0c7d4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; QIcon &gt;</type>
       <name>IconPtr</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a9a4b2ce9c07b921f9f36b4effb1e33d7</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>aca3f11d3675d97682091a3171699496d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QMap&lt; icomp::CComponentAddress, IconPtr &gt;</type>
       <name>IconMap</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a716ecd018a52c7ae5e305d062b63e105</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>af335b49f02059c0e6f329fa4df77a18e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SerializeComponentInfo</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a12448f6dd30f6ac32503d8c6c79742e9</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>a3996514753bd3011052829d04d19c19d</anchor>
       <arglist>(iser::IArchive &amp;archive, QByteArray &amp;componentName, i2d::CVector2d &amp;position, QString &amp;note)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual icomp::IRegistryElement *</type>
       <name>CreateRegistryElement</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a40ad86788e501d3944b8cf7b441cd8e7</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>aa3848ac92823cbf68132d4dbf22f07fa</anchor>
       <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual icomp::IRegistry *</type>
       <name>InsertEmbeddedRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_comp.html</anchorfile>
-      <anchor>a789c93e7101c97281de1d4388d06820b</anchor>
+      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
+      <anchor>a1ca96f13f105db7257b8a61f4bf1a99e</anchor>
       <arglist>(const QByteArray &amp;registryId)</arglist>
     </member>
   </compound>
@@ -35471,6 +35520,7 @@
     <class kind="class">iqt2d::CSceneBinderComp</class>
     <class kind="class">iqt2d::CSceneConnectorGuiComp</class>
     <class kind="class">iqt2d::CSelectableSceneExtenderComp</class>
+    <class kind="class">iqt2d::CTubePolylineParamsGuiComp</class>
     <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <class kind="class">iqt2d::IViewExtender</class>
     <class kind="class">iqt2d::IViewProvider</class>
@@ -36073,6 +36123,67 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqt2d::CTubePolylineParamsGuiComp</name>
+    <filename>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</filename>
+    <base>TPolygonBasedParamsGuiComp&lt; iview::CInteractiveTubePolylineShape, i2d::CTubePolyline &gt;</base>
+    <member kind="typedef">
+      <type>TPolygonBasedParamsGuiComp&lt; iview::CInteractiveTubePolylineShape, i2d::CTubePolyline &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a76157cd11602e6785321c112a13417a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a76ea3cdfd1589d5437ef93581a50e29a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a60bed1ad37bb02278e94cbf24aaa9c0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_InsertButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>ac8fa0027ab5fdd821b0967221829e2b6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a7933f55396d7834fea0600be34f79310</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnInsertNode</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a4a82d485aabf616ed4e4ea17d07292db</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a75000a5003176f0ccf89bbfd51359fcf</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a5a749fbcb90d12a93006670d4f7a5e09</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqt2d::CViewProviderGuiComp</name>
     <filename>classiqt2d_1_1_c_view_provider_gui_comp.html</filename>
     <base>TGuiComponentBase&lt; iview::CConsoleGui &gt;</base>
@@ -36257,6 +36368,30 @@
     <templarg>PolygonBasedModel</templarg>
     <base>TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, PolygonBasedShape, PolygonBasedModel &gt;</base>
     <class kind="class">iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</class>
+    <member kind="enumeration">
+      <name>CellIndex</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a17c8f28921324f7cd093dd06f50cba7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CI_X</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a17c8f28921324f7cd093dd06f50cba7faf31ee5244ab5dcf82c13e85cbda57df4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CI_Y</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a17c8f28921324f7cd093dd06f50cba7fa5a8040950fe4cc7381fc86976e3d6834</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CI_LAST</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a17c8f28921324f7cd093dd06f50cba7fa028c40a0d99470fcdc389525604b0737</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, PolygonBasedShape, PolygonBasedModel &gt;</type>
       <name>BaseClass</name>
@@ -36270,6 +36405,13 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a4ad33e128116c9c72a6f4a4a129f5000</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QTableWidget *</type>
+      <name>GetNodeTable</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a404f5b3e48947e6bf207d79d06f8492b</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -48730,6 +48872,7 @@
     <class kind="class">iview::CInteractiveShapeBase</class>
     <class kind="class">iview::CInteractiveSplineShape</class>
     <class kind="class">iview::CInteractiveTransformableRectangleShape</class>
+    <class kind="class">iview::CInteractiveTubePolylineShape</class>
     <class kind="class">iview::CInteractiveViewLayer</class>
     <class kind="class">iview::CNoneCalibration</class>
     <class kind="class">iview::CNoneCalibrationShape</class>
@@ -49161,13 +49304,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CColorShema</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>ae8197a822706a252e4b15c25d33957f1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual const QFont &amp;</type>
       <name>GetFont</name>
       <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
@@ -49208,34 +49344,6 @@
       <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
       <anchor>a89c3d2f6980ec2137b2255fb02fe2ef3</anchor>
       <arglist>(iview::IColorShema::StandardBrush brushType, const QBrush &amp;brush)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const PensPtrSet &amp;</type>
-      <name>GetPensPtrSet</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>aebbef98ecdfb37fc317d32e8501d2559</anchor>
-      <arglist>(IColorShema::StandardPensSet pensSetType) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPensPtrSet</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>adc28be135a28b77db6045a01e04d767f</anchor>
-      <arglist>(StandardPensSet pensSetType, const PensPtrSet &amp;pensSet)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreatePenSet</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>a26a1b1009de399df7bc2d849c97de5a5</anchor>
-      <arglist>(IColorShema::StandardPensSet penSetType, int size)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DeletePenSet</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>ab9b056e178bc7db7e1701fb69b64d0a8</anchor>
-      <arglist>(IColorShema::StandardPensSet penSetType)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -49881,6 +49989,20 @@
       <anchor>af1d787905207f1c2243074aff63d06de</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsFullScreenMode</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a25513c912a9558abdb0ffa4731225ec9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetFullScreenMode</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a500fdff5123071a74315fd1a7976d83c</anchor>
+      <arglist>(bool isFullScreen)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateCursorInfo</name>
@@ -49938,11 +50060,39 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>wheelEvent</name>
+      <type>virtual bool</type>
+      <name>OnWheelEvent</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ab58f49dd051ebbdd993d51cb62f8728e</anchor>
-      <arglist>(QWheelEvent *event)</arglist>
+      <anchor>a0c534dc441835e6d7b1f347d7cb22102</anchor>
+      <arglist>(QWheelEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseDoubleClickEvent</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>ab4e616b3df38134184dfd1688670b445</anchor>
+      <arglist>(QEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnKeyReleaseEvent</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>ad686389fcd038311f1826e83743b21a7</anchor>
+      <arglist>(QKeyEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>keyReleaseEvent</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a44267df68b56bd67b9f9e39074b9f136</anchor>
+      <arglist>(QKeyEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a32282ec797e6ee0d41899770265943bd</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>iview::CViewport *</type>
@@ -52649,6 +52799,81 @@
       <anchorfile>classiview_1_1_c_interactive_transformable_rectangle_shape.html</anchorfile>
       <anchor>a24f84228cfecb38edc18a7b45abcef90</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CInteractiveTubePolylineShape</name>
+    <filename>classiview_1_1_c_interactive_tube_polyline_shape.html</filename>
+    <base>iview::CInteractivePolylineShape</base>
+    <member kind="typedef">
+      <type>iview::CInteractivePolylineShape</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a786bf02b49ee0df617c19758e2590e3c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CInteractiveTubePolylineShape</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a9409ed68a7908053fcb1b096cfc1eec1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOrientationVisible</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a8b64bed490d3cb243343149bc727f18a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOrientationVisible</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a625bb90c16f29f0a62b818e6e4ea50f9</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsAlwaysMovable</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>ab2f7ab21e342222dbff9a075b850d3eb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetAlwaysMovable</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a20117fdb34987e26782b07886c68f17f</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>aea87909b517488f1a9797c8ca60ef288</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DrawCurve</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>ac9fd4b3f3341430d6ecbbf531cb054f5</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DrawSelectionElements</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a00c1dce5a6a2fe8dc962a5c926fc434b</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTickerTouched</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a0d517b23a028efe5871cfdc9b3a327ee</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -56210,24 +56435,6 @@
       <arglist></arglist>
     </member>
     <member kind="enumeration">
-      <name>StandardPensSet</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a127cda44e66438411ebb1bdc9d1cc3cd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SPS_NORMAL</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a127cda44e66438411ebb1bdc9d1cc3cdab2c41c7c35c7072affd2a914849b7492</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SPS_LAST</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a127cda44e66438411ebb1bdc9d1cc3cda96b036ccbd048742ffa41c5104aa4a49</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
       <name>TickerType</name>
       <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
       <anchor>adb917a7a31141b77860d5329e3f693fe</anchor>
@@ -56323,13 +56530,6 @@
       <anchor>adb917a7a31141b77860d5329e3f693fea5c29fa24ea5338a1ceaa3f7da73a7d78</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>QVector&lt; const QPen * &gt;</type>
-      <name>PensPtrSet</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>ad322f2f49b9ca2ee75195d1c9d667040</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>Assign</name>
@@ -56378,20 +56578,6 @@
       <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
       <anchor>a082feaaee850f648252ee155e2d6d7b8</anchor>
       <arglist>(StandardFont fontType, const QFont &amp;font)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const PensPtrSet &amp;</type>
-      <name>GetPensPtrSet</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a1a371d9aa5396e6a39d5739afeda33c8</anchor>
-      <arglist>(StandardPensSet pensSetType) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetPensPtrSet</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>ae5dbc862a951d287a9ff908c2b5dcc06</anchor>
-      <arglist>(StandardPensSet pensSetType, const PensPtrSet &amp;pensSet)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>

@@ -45,6 +45,7 @@
 #include "iqt2d/CViewProviderGuiComp.h"
 #include "iqt2d/CExtendedConsoleGuiComp.h"
 #include "iqt2d/CPolylineParamsGuiComp.h"
+#include "iqt2d/CTubePolylineParamsGuiComp.h"
 
 
 /**
@@ -72,6 +73,7 @@ typedef iqt2d::CSelectableSceneExtenderComp SelectableSceneExtender;
 typedef icomp::TModelCompWrap<iqt2d::CViewProviderGuiComp> ViewProvider;
 typedef iqt2d::CExtendedConsoleGuiComp ExtendedConsoleGui;
 typedef iqt2d::CPolylineParamsGuiComp PolylineParamsGui;
+typedef iqt2d::CTubePolylineParamsGuiComp TubePolylineParamsGui;
 
 
 } // namespace QtViewPck

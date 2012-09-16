@@ -609,6 +609,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CCaliperDistanceFeature.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_caliper_distance_feature_8h</filename>
+    <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="no" imported="no">iipr/TWeightedFeatureWrap.h</includes>
+    <class kind="class">iipr::CCaliperDistanceFeature</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCaliperFeature.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_caliper_feature_8h</filename>
@@ -702,6 +710,33 @@
     <filename>_c_difference_bitmap_supplier_comp_8h</filename>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CEdgeDistanceProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_edge_distance_processor_comp_8h</filename>
+    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
+    <includes id="_i_caliper_params_8h" name="ICaliperParams.h" local="yes" imported="no">iipr/ICaliperParams.h</includes>
+    <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="yes" imported="no">iipr/TWeightedFeatureWrap.h</includes>
+    <class kind="class">iipr::CEdgeDistanceProcessorComp</class>
+    <class kind="struct">iipr::CEdgeDistanceProcessorComp::Point</class>
+    <class kind="struct">iipr::CEdgeDistanceProcessorComp::CaliperLine</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CEdgeDistancesSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_edge_distances_supplier_comp_8h</filename>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
+    <includes id="_c_caliper_distance_feature_8h" name="CCaliperDistanceFeature.h" local="yes" imported="no">iipr/CCaliperDistanceFeature.h</includes>
+    <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
+    <class kind="class">iipr::CEdgeDistancesSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -828,6 +863,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiLineSupplierCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_multi_line_supplier_comp_base_8h</filename>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <class kind="class">iipr::CMultiLineSupplierCompBase</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPositionFromImageSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
@@ -937,6 +980,14 @@
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTubeProjectionLinesProviderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_tube_projection_lines_provider_comp_8h</filename>
+    <includes id="_c_multi_line_supplier_comp_base_8h" name="CMultiLineSupplierCompBase.h" local="yes" imported="no">iipr/CMultiLineSupplierCompBase.h</includes>
+    <class kind="class">iipr::CTubeProjectionLinesProviderComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -6063,6 +6114,7 @@
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
     <class kind="class">iipr::CBitmapOperations</class>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
+    <class kind="class">iipr::CCaliperDistanceFeature</class>
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
     <class kind="class">iipr::CCaliperParamsComp</class>
@@ -6074,6 +6126,8 @@
     <class kind="class">iipr::CConvolutionProcessorComp</class>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
     <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
+    <class kind="class">iipr::CEdgeDistanceProcessorComp</class>
+    <class kind="class">iipr::CEdgeDistancesSupplierComp</class>
     <class kind="class">iipr::CExtremumCaliperProcessorComp</class>
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
@@ -6088,6 +6142,7 @@
     <class kind="class">iipr::CLineProjectionProcessorComp</class>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
     <class kind="class">iipr::CMultiBitmapCacheComp</class>
+    <class kind="class">iipr::CMultiLineSupplierCompBase</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
@@ -6101,6 +6156,7 @@
     <class kind="class">iipr::CSearchFeature</class>
     <class kind="class">iipr::CSearchParams</class>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
+    <class kind="class">iipr::CTubeProjectionLinesProviderComp</class>
     <class kind="class">iipr::IBitmapProvider</class>
     <class kind="class">iipr::ICaliperParams</class>
     <class kind="class">iipr::ICaliperProcessor</class>
@@ -6307,6 +6363,46 @@
       <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
       <anchor>ae08fa5fe7907083af20162a90ec343f0</anchor>
       <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CCaliperDistanceFeature</name>
+    <filename>classiipr_1_1_c_caliper_distance_feature.html</filename>
+    <base>TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</base>
+    <member kind="typedef">
+      <type>iipr::TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_caliper_distance_feature.html</anchorfile>
+      <anchor>a9b7eead80a3eeda0c75a6bf6cdb82e54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCaliperDistanceFeature</name>
+      <anchorfile>classiipr_1_1_c_caliper_distance_feature.html</anchorfile>
+      <anchor>a2e6242a89efa7a9cdf1012808f62970f</anchor>
+      <arglist>(const i2d::CLine2d &amp;caliperLine, double weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetDistance</name>
+      <anchorfile>classiipr_1_1_c_caliper_distance_feature.html</anchorfile>
+      <anchor>a14cb9b1d512680695ab1729c383f202a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classiipr_1_1_c_caliper_distance_feature.html</anchorfile>
+      <anchor>a70f5887206c028cb74b882dd6eb154cf</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classiipr_1_1_c_caliper_distance_feature.html</anchorfile>
+      <anchor>ad282f669af970cf814e10d0aab5c6271</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7026,6 +7122,147 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CEdgeDistanceProcessorComp</name>
+    <filename>classiipr_1_1_c_edge_distance_processor_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
+    <class kind="struct">iipr::CEdgeDistanceProcessorComp::CaliperLine</class>
+    <class kind="struct">iipr::CEdgeDistanceProcessorComp::Point</class>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
+      <anchor>a8c25a6efeced2e5411943c3a4c243196</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoExtractFeatures</name>
+      <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
+      <anchor>ad2bcec7b6b871f5665452690a680a964</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, IFeaturesConsumer &amp;results)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
+      <anchor>a52dfd7061734f7b4a04f7af7b7f45ba7</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QVector&lt; CaliperLine &gt;</type>
+      <name>CaliperLines</name>
+      <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
+      <anchor>a01bd153b7c1a590a9968734867b06e8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CalculateCaliperLines</name>
+      <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
+      <anchor>a96ca3c22632860709461aaedf224c8dc</anchor>
+      <arglist>(const istd::IChangeable &amp;aoiObject, const iprm::IParamsSet &amp;params, const iimg::IBitmap &amp;image, CaliperLines &amp;rays, i2d::CLine2d &amp;projectionLine, i2d::CVector2d &amp;center)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CalculateCaliper</name>
+      <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
+      <anchor>add9234f0743b4ed3c56d9ceb02273437</anchor>
+      <arglist>(const iprm::IParamsSet &amp;params, iipr::ICaliperParams &amp;workingCaliperParams, ICaliperParams::DirectionMode caliperDirectionMode, const iimg::IBitmap &amp;image, CaliperLine &amp;ray) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetCaliperResults</name>
+      <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
+      <anchor>aefdb323e87e4537c29c0cdde930f1196</anchor>
+      <arglist>(const iprm::IParamsSet &amp;params, const imeas::INumericValueProvider &amp;container, ICaliperParams::DirectionMode caliperDirectionMode, CaliperLine &amp;ray) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iipr::CEdgeDistanceProcessorComp::CaliperLine</name>
+    <filename>structiipr_1_1_c_edge_distance_processor_comp_1_1_caliper_line.html</filename>
+    <member kind="variable">
+      <type>Point</type>
+      <name>points</name>
+      <anchorfile>structiipr_1_1_c_edge_distance_processor_comp_1_1_caliper_line.html</anchorfile>
+      <anchor>a71834bca5c66f72de85ebc516f050931</anchor>
+      <arglist>[2]</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iipr::CEdgeDistanceProcessorComp::Point</name>
+    <filename>structiipr_1_1_c_edge_distance_processor_comp_1_1_point.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Point</name>
+      <anchorfile>structiipr_1_1_c_edge_distance_processor_comp_1_1_point.html</anchorfile>
+      <anchor>ac5116f22edc9e590c5b3f041ff500bf9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>weight</name>
+      <anchorfile>structiipr_1_1_c_edge_distance_processor_comp_1_1_point.html</anchorfile>
+      <anchor>a965bb090b6a2dabaa338cced765be5df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>i2d::CVector2d</type>
+      <name>position</name>
+      <anchorfile>structiipr_1_1_c_edge_distance_processor_comp_1_1_point.html</anchorfile>
+      <anchor>acfe8a7b45dd8638b62e6093a9b2bb8da</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CEdgeDistancesSupplierComp</name>
+    <filename>classiipr_1_1_c_edge_distances_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
+    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
+      <anchor>aa6659152de54a0578a90afb12748bfa7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
+      <anchor>a0a4b575c5c2e489a84166fc44de31549</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
+      <anchor>ac14808c8b057602ed6bd73cc4754d348</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::INumericValue &amp;</type>
+      <name>GetNumericValue</name>
+      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
+      <anchor>aba80ac7e00e77a881351ae87eb6fed9d</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
+      <anchor>a38276845a06ceee1c98f2c6fb73378ca</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
+      <anchor>a9caa4f1976582446a196a7e9d07594d1</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CExtremumCaliperProcessorComp</name>
     <filename>classiipr_1_1_c_extremum_caliper_processor_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -7494,6 +7731,33 @@
       <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
       <anchor>a5a9b3e28451dd73d780f51d82958ce7b</anchor>
       <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CMultiLineSupplierCompBase</name>
+    <filename>classiipr_1_1_c_multi_line_supplier_comp_base.html</filename>
+    <base>TSupplierCompWrap&lt; QVector&lt; i2d::CLine2d &gt; &gt;</base>
+    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; QVector&lt; i2d::CLine2d &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_multi_line_supplier_comp_base.html</anchorfile>
+      <anchor>aa5cdb0909d9ea73ee021f71a41007ae3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classiipr_1_1_c_multi_line_supplier_comp_base.html</anchorfile>
+      <anchor>a1fc472ba15cf1b9f9aaf6104b12e02b6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::INumericValue &amp;</type>
+      <name>GetNumericValue</name>
+      <anchorfile>classiipr_1_1_c_multi_line_supplier_comp_base.html</anchorfile>
+      <anchor>abda18c7e53c7039843f73250a06e8840</anchor>
+      <arglist>(int index) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8330,6 +8594,25 @@
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
       <anchor>aad2f3d538f710964aadb8707a6457962</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CTubeProjectionLinesProviderComp</name>
+    <filename>classiipr_1_1_c_tube_projection_lines_provider_comp.html</filename>
+    <base>iipr::CMultiLineSupplierCompBase</base>
+    <member kind="typedef">
+      <type>iipr::CMultiLineSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
+      <anchor>ab5324e2988b8106663ff0b9628111d75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
+      <anchor>a77dabcf210a3b294d5fc0bc53fd0b0dd</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
     </member>
   </compound>
   <compound kind="class">

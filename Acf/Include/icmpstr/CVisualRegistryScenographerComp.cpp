@@ -48,7 +48,7 @@
 #include "icmpstr/CRegistryElementShape.h"
 #include "icmpstr/CGraphicsConnectorItem.h"
 #include "icmpstr/CVisualRegistryElement.h"
-#include "icmpstr/CVisualRegistryComp.h"
+#include "icmpstr/CVisualRegistry.h"
 #include "icmpstr/CSceneProviderGuiComp.h"
 
 

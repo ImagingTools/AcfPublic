@@ -32,7 +32,7 @@
 #include "icmpstr/CRegistryLoaderComp.h"
 #include "icmpstr/CRegistryPreviewComp.h"
 #include "icmpstr/CComponentHelpFileProviderComp.h"
-#include "icmpstr/CVisualRegistryComp.h"
+#include "icmpstr/CVisualRegistry.h"
 #include "icmpstr/CVisualRegistryScenographerComp.h"
 #include "icmpstr/CRegistryConsistInfoComp.h"
 #include "icmpstr/CRegistryPropEditorComp.h"
@@ -56,7 +56,13 @@ typedef icmpstr::CPackageOverviewComp PackageOverview;
 typedef icmpstr::CRegistryLoaderComp RegistryLoader;
 typedef icmpstr::CRegistryPreviewComp RegistryPreview;
 typedef icmpstr::CComponentHelpFileProviderComp ComponentHelpFileProvider;
-typedef icomp::TModelCompWrap<icmpstr::CVisualRegistryComp> VisualRegistry;
+typedef icomp::TMakeComponentWrap<
+			imod::TModelWrap<icmpstr::CVisualRegistry>,
+			icomp::IRegistry,
+			iser::ISerializable,
+			istd::IChangeable,
+			imod::IModel,
+			icmpstr::IComponentNoteController> VisualRegistry;
 typedef icmpstr::CVisualRegistryScenographerComp VisualRegistryScenographer;
 typedef icmpstr::CRegistryConsistInfoComp RegistryConsistInfo;
 typedef icmpstr::CRegistryPropEditorComp RegistryPropEditor;

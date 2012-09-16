@@ -63,7 +63,7 @@ namespace icmpstr
 
 class CRegistryElementShape;
 class CVisualRegistryElement;
-class CVisualRegistryComp;
+class CVisualRegistry;
 
 
 class CVisualRegistryScenographerComp:

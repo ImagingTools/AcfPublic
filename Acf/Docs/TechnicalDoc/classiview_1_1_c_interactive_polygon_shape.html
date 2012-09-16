@@ -68,7 +68,8 @@ Inheritance diagram for iview::CInteractivePolygonShape:</div>
 <area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="298,112,586,136"/>
 <area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="0,112,288,136"/>
 <area href="classiview_1_1_c_interactive_polyline_shape.html" alt="iview::CInteractivePolylineShape" shape="rect" coords="1490,448,1778,472"/>
-<area href="classiview_1_1_c_interactive_spline_shape.html" alt="iview::CInteractiveSplineShape" shape="rect" coords="1490,504,1778,528"/>
+<area href="classiview_1_1_c_interactive_spline_shape.html" alt="iview::CInteractiveSplineShape" shape="rect" coords="1341,504,1629,528"/>
+<area href="classiview_1_1_c_interactive_tube_polyline_shape.html" title="Graphical representation of tube region." alt="iview::CInteractiveTubePolylineShape" shape="rect" coords="1639,504,1927,528"/>
 </map>
  </div></div>
 
@@ -138,7 +139,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html#af238c4be52379c70e94143d15f1991e6">iview::CInteractiveTransformableRectangleShape</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#a509f5ff17e46e097702d2c7ca3962834">iview::CInteractiveSplineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#ac0a39f89a7ff0f43aa672a1334f40835">iview::CInteractivePolylineShape</a>.</p>
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a786bf02b49ee0df617c19758e2590e3c">iview::CInteractiveTubePolylineShape</a>, <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#a509f5ff17e46e097702d2c7ca3962834">iview::CInteractiveSplineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#ac0a39f89a7ff0f43aa672a1334f40835">iview::CInteractivePolylineShape</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_interactive_polygon_shape_8h_source.html#l00023">23</a> of file <a class="el" href="_c_interactive_polygon_shape_8h_source.html">CInteractivePolygonShape.h</a>.</p>
 
@@ -200,7 +201,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html#a2352d5c0b65df5395951ac56e2abb5bb">iview::CInteractiveTransformableRectangleShape</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#ad8d4b609eac30caf5b1ae0072227f161">iview::CInteractiveSplineShape</a>.</p>
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#aea87909b517488f1a9797c8ca60ef288">iview::CInteractiveTubePolylineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#ad8d4b609eac30caf5b1ae0072227f161">iview::CInteractiveSplineShape</a>.</p>
 
 </div>
 </div>
@@ -259,7 +260,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a28275e2fcae5b6fb98b86e4d9892b400">iview::CInteractivePolylineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#a4a009fdd8ffb90cc2f244328f92f5031">iview::CInteractiveSplineShape</a>.</p>
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#ac9fd4b3f3341430d6ecbbf531cb054f5">iview::CInteractiveTubePolylineShape</a>, <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a28275e2fcae5b6fb98b86e4d9892b400">iview::CInteractivePolylineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#a4a009fdd8ffb90cc2f244328f92f5031">iview::CInteractiveSplineShape</a>.</p>
 
 </div>
 </div>
@@ -278,7 +279,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a75b8b7f7dae2b0128efec8cf7382e914">iview::CInteractivePolylineShape</a>.</p>
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a00c1dce5a6a2fe8dc962a5c926fc434b">iview::CInteractiveTubePolylineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a75b8b7f7dae2b0128efec8cf7382e914">iview::CInteractivePolylineShape</a>.</p>
 
 </div>
 </div>
@@ -335,6 +336,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Check if in all edit modes is this shape draggable. </p>
 <p>Normally it is possible to drag this object only in EM_NONE mode. </p>
+
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#ab2f7ab21e342222dbff9a075b850d3eb">iview::CInteractiveTubePolylineShape</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_interactive_polygon_shape_8h_source.html#l00105">105</a> of file <a class="el" href="_c_interactive_polygon_shape_8h_source.html">CInteractivePolygonShape.h</a>.</p>
 
@@ -542,6 +545,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Set flag if in all edit modes is this shape draggable. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#acb003a14fd5a4b5692f25a9eb7804cca" title="Check if in all edit modes is this shape draggable.">IsAlwaysMovable()</a> </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a20117fdb34987e26782b07886c68f17f">iview::CInteractiveTubePolylineShape</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_interactive_polygon_shape_8h_source.html#l00111">111</a> of file <a class="el" href="_c_interactive_polygon_shape_8h_source.html">CInteractivePolygonShape.h</a>.</p>
 

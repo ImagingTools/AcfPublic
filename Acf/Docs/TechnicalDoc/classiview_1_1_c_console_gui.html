@@ -105,6 +105,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a449b6f542830be21da32068ff8c4b6c0">UpdateZoomInOutState</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#af1d787905207f1c2243074aff63d06de">UpdateScrollbarsValues</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a25513c912a9558abdb0ffa4731225ec9">IsFullScreenMode</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a500fdff5123071a74315fd1a7976d83c">SetFullScreenMode</a> (bool isFullScreen)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0b3f091a8637911aba40254d69d7898e">UpdateCursorInfo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;pixelPos, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logicalPos, const QString &amp;infoText)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a75c16cbc934985f8b3d01c70f2828ac9">UpdateEditModeButtons</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update state of edit mode buttons.  <a href="#a75c16cbc934985f8b3d01c70f2828ac9"></a><br/></td></tr>
@@ -117,7 +119,11 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ae5450db91849b321fc53c4a403ff42be">OnSelectChange</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> &amp;shape, bool state)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0839ca484be604ce6ef73fcde794875a">OnMouseButton</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, Qt::MouseButton buttonType, bool state, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *shapePtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a40493b9b08232ae94350dd9eaeed6a59">OnBoundingBoxChanged</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ab58f49dd051ebbdd993d51cb62f8728e">wheelEvent</a> (QWheelEvent *event)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0c534dc441835e6d7b1f347d7cb22102">OnWheelEvent</a> (QWheelEvent *eventPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ab4e616b3df38134184dfd1688670b445">OnMouseDoubleClickEvent</a> (QEvent *eventPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ad686389fcd038311f1826e83743b21a7">OnKeyReleaseEvent</a> (QKeyEvent *eventPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a44267df68b56bd67b9f9e39074b9f136">keyReleaseEvent</a> (QKeyEvent *event)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a32282ec797e6ee0d41899770265943bd">eventFilter</a> (<a class="el" href="class_q_object.html">QObject</a> *sourcePtr, QEvent *eventPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_c_viewport.html">iview::CViewport</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#abf5a4a802825f2baf42d1fb57c83e0f9">m_viewPtr</a></td></tr>
@@ -207,6 +213,33 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a32282ec797e6ee0d41899770265943bd"></a><!-- doxytag: member="iview::CConsoleGui::eventFilter" ref="a32282ec797e6ee0d41899770265943bd" args="(QObject *sourcePtr, QEvent *eventPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CConsoleGui::eventFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_q_object.html">QObject</a> *&#160;</td>
+          <td class="paramname"><em>sourcePtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QEvent *&#160;</td>
+          <td class="paramname"><em>eventPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ae1e1ba50dbac1497c193cc2b48023417"></a><!-- doxytag: member="iview::CConsoleGui::GetCommands" ref="ae1e1ba50dbac1497c193cc2b48023417" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -246,9 +279,9 @@ Properties</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a8e5ff5fef1ef39abe96f7f07dd95d4e6">iview::CConsoleBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00156">156</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00169">169</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, <a class="el" href="_c_console_gui_8h_source.html#l00118">m_viewPtr</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, <a class="el" href="_c_console_gui_8h_source.html#l00126">m_viewPtr</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
 </div>
 </div>
@@ -270,9 +303,42 @@ Properties</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a6b75d35864e307cb98efa1ead7da9655">iview::CConsoleBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00164">164</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00177">177</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, <a class="el" href="_c_console_gui_8h_source.html#l00118">m_viewPtr</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, <a class="el" href="_c_console_gui_8h_source.html#l00126">m_viewPtr</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25513c912a9558abdb0ffa4731225ec9"></a><!-- doxytag: member="iview::CConsoleGui::IsFullScreenMode" ref="a25513c912a9558abdb0ffa4731225ec9" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iview::CConsoleGui::IsFullScreenMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44267df68b56bd67b9f9e39074b9f136"></a><!-- doxytag: member="iview::CConsoleGui::keyReleaseEvent" ref="a44267df68b56bd67b9f9e39074b9f136" args="(QKeyEvent *event)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iview::CConsoleGui::keyReleaseEvent </td>
+          <td>(</td>
+          <td class="paramtype">QKeyEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -372,6 +438,23 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad686389fcd038311f1826e83743b21a7"></a><!-- doxytag: member="iview::CConsoleGui::OnKeyReleaseEvent" ref="ad686389fcd038311f1826e83743b21a7" args="(QKeyEvent *eventPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CConsoleGui::OnKeyReleaseEvent </td>
+          <td>(</td>
+          <td class="paramtype">QKeyEvent *&#160;</td>
+          <td class="paramname"><em>eventPtr</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a0839ca484be604ce6ef73fcde794875a"></a><!-- doxytag: member="iview::CConsoleGui::OnMouseButton" ref="a0839ca484be604ce6ef73fcde794875a" args="(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)" -->
 <div class="memitem">
 <div class="memproto">
@@ -416,6 +499,23 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a20c25121739e123a7eb603b917548b08">iview::CConsoleBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4e616b3df38134184dfd1688670b445"></a><!-- doxytag: member="iview::CConsoleGui::OnMouseDoubleClickEvent" ref="ab4e616b3df38134184dfd1688670b445" args="(QEvent *eventPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CConsoleGui::OnMouseDoubleClickEvent </td>
+          <td>(</td>
+          <td class="paramtype">QEvent *&#160;</td>
+          <td class="paramname"><em>eventPtr</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -609,6 +709,23 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0c534dc441835e6d7b1f347d7cb22102"></a><!-- doxytag: member="iview::CConsoleGui::OnWheelEvent" ref="a0c534dc441835e6d7b1f347d7cb22102" args="(QWheelEvent *eventPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CConsoleGui::OnWheelEvent </td>
+          <td>(</td>
+          <td class="paramtype">QWheelEvent *&#160;</td>
+          <td class="paramname"><em>eventPtr</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af3e76ffb99fdac17ad2e387260ff7eb0"></a><!-- doxytag: member="iview::CConsoleGui::OnZoomIn" ref="af3e76ffb99fdac17ad2e387260ff7eb0" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -706,6 +823,23 @@ Properties</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a500fdff5123071a74315fd1a7976d83c"></a><!-- doxytag: member="iview::CConsoleGui::SetFullScreenMode" ref="a500fdff5123071a74315fd1a7976d83c" args="(bool isFullScreen)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iview::CConsoleGui::SetFullScreenMode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFullScreen</em></td><td>)</td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -899,23 +1033,6 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab58f49dd051ebbdd993d51cb62f8728e"></a><!-- doxytag: member="iview::CConsoleGui::wheelEvent" ref="ab58f49dd051ebbdd993d51cb62f8728e" args="(QWheelEvent *event)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iview::CConsoleGui::wheelEvent </td>
-          <td>(</td>
-          <td class="paramtype">QWheelEvent *&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="abf5a4a802825f2baf42d1fb57c83e0f9"></a><!-- doxytag: member="iview::CConsoleGui::m_viewPtr" ref="abf5a4a802825f2baf42d1fb57c83e0f9" args="" -->
 <div class="memitem">
@@ -928,9 +1045,9 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00118">118</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_gui_8h_source.html#l00126">126</a> of file <a class="el" href="_c_console_gui_8h_source.html">CConsoleGui.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_console_gui_8h_source.html#l00156">GetView()</a>, and <a class="el" href="_c_console_gui_8h_source.html#l00164">GetViewRef()</a>.</p>
+<p>Referenced by <a class="el" href="_c_console_gui_8h_source.html#l00169">GetView()</a>, and <a class="el" href="_c_console_gui_8h_source.html#l00177">GetViewRef()</a>.</p>
 
 </div>
 </div>
