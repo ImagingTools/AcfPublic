@@ -104,8 +104,10 @@ void CViewport::UpdateFitTransform()
 			SetZoom(iview::CViewBase::ZM_FIT_COVER);
 			break;
 		}
-		m_framePtr->m_isZoomToFit = true;
+		m_framePtr->m_isZoomToFit = true;		
 	}
+
+	m_framePtr->UpdateButtonsState();
 
 	CalcBoundingBox();
 
@@ -244,8 +246,7 @@ void CViewport::SetBackgroundBufferValid(bool state)
 					else{
 						SetZoom(iview::CViewBase::ZM_RESET);
 					}
-				}
-				m_framePtr->UpdateButtonsState();
+				}			
 			}
 		}
 	}
