@@ -1299,6 +1299,15 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>CSimpleNumericValueProvider.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_simple_numeric_value_provider_8h</filename>
+    <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <class kind="class">imeas::CSimpleNumericValueProvider</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CWavSamplesLoaderComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_wav_samples_loader_comp_8h</filename>
@@ -1916,6 +1925,15 @@
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMultiLineSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_multi_line_supplier_gui_comp_8h</filename>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="_c_simple_numeric_value_provider_8h" name="CSimpleNumericValueProvider.h" local="yes" imported="no">imeas/CSimpleNumericValueProvider.h</includes>
+    <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
@@ -9425,6 +9443,7 @@
     <class kind="class">imeas::CNumericParamsComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CSimpleNumericValue</class>
+    <class kind="class">imeas::CSimpleNumericValueProvider</class>
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
     <class kind="class">imeas::IDataSequence</class>
     <class kind="class">imeas::IDataSequenceInfo</class>
@@ -10423,6 +10442,39 @@
       <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
       <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CSimpleNumericValueProvider</name>
+    <filename>classimeas_1_1_c_simple_numeric_value_provider.html</filename>
+    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
+      <anchor>a8d5935a2e15a28e8a99680d287fa5f71</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::INumericValue &amp;</type>
+      <name>GetNumericValue</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
+      <anchor>a9dcc3ad33fccd9ea51acbf44dd89bf28</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
+      <anchor>a81e6008977c60d66f74d57ebd64c6333</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
+      <anchor>a4590c17a50beeacb53bc3c2ae5a5361e</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14625,6 +14677,7 @@
     <class kind="class">iqtipr::CConvolution2dParamsGuiComp</class>
     <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
+    <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
     <class kind="class">iqtipr::CProjectionShape</class>
     <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
     <class kind="class">iqtipr::CValueSupplierGuiComp</class>
@@ -14918,6 +14971,96 @@
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
       <anchor>a81b79cf0034b245d650cf65ec0a1342b</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CMultiLineSupplierGuiComp</name>
+    <filename>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</filename>
+    <base>TSupplierGuiCompBase&lt; Ui::CMultiLineSupplierGuiComp, imeas::INumericValueProvider &gt;</base>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <member kind="typedef">
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CMultiLineSupplierGuiComp, imeas::INumericValueProvider &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a41fbfc9dd9d3a98a44e9d34181eb17f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiLineSupplierGuiComp</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a5af1163765070f8455fb3780c7013ae8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_TestButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a7373b2a703aaed3173226cc2d50ec81d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a06ed1c6537419851c4cc4a8653c67d9a</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a2b180b6005668e230dad370b77b98b57</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetParamsWidget</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a5f20730fef699c61054da90201e9b77c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateShapes</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a89dc417d46e6dd4c85c035e8856fb456</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>afa0a259d06db389df4689852296d12f0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>aa9e9f88a7238a27f08bfe02fb67577ee</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>ab5792f9abc2703e1606dfdcabe8f6bc5</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iprm::ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a0f629bc22f32265bb176acec36323631</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a15ff163f60b0818dd747b01cd52e2199</anchor>
+      <arglist>(iser::IArchive &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
