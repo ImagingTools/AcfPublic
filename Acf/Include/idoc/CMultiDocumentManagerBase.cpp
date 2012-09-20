@@ -671,8 +671,7 @@ bool CMultiDocumentManagerBase::SerializeOpenDocumentList(iser::IArchive& archiv
 			int viewCount = info.viewTypeIds.count();	
 			retVal = archive.BeginMultiTag(viewListTag, viewTag, viewCount);
 
-			for(int j = 0; j < viewCount; ++j)
-			{
+			for (int j = 0; j < viewCount; ++j){
 				retVal = retVal && archive.BeginTag(viewTag);
 				
 				retVal = retVal && archive.BeginTag(viewTypeIdTag);
@@ -713,7 +712,7 @@ bool CMultiDocumentManagerBase::SerializeOpenDocumentList(iser::IArchive& archiv
 			int viewCount = 0;	
 			retVal = archive.BeginMultiTag(viewListTag, viewTag, viewCount);
 			
-			for(int j = 0; j < viewCount; ++j)
+			for (int j = 0; j < viewCount; ++j)
 			{
 				QByteArray viewTypeId;
 				retVal = retVal && archive.BeginTag(viewTag);

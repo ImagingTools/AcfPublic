@@ -178,7 +178,7 @@ bool CRectImageSmoothProcessorComp::ParamProcessImage(
 		I_ASSERT(firstPassOutputImagePtr != NULL);
 
 
-		for(int componentIndex = 0; componentIndex < componentsCount; componentIndex++){
+		for (int componentIndex = 0; componentIndex < componentsCount; componentIndex++){
 			for (int y = 0; y < imageHeight; ++y){
 				quint8* outputPtr = (quint8*)firstPassOutputImagePtr->GetLinePtr(y) + componentIndex;
 

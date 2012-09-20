@@ -31712,15 +31712,15 @@
       <type></type>
       <name>TParamsPtr</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
-      <anchor>adb773ae44336c81b8c6a0bcb23543bcb</anchor>
-      <arglist>(const IParamsSet *parameterSetPtr, const QByteArray &amp;parameterId)</arglist>
+      <anchor>a517c3957581b4b439e20924d34b15c21</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const QByteArray &amp;parameterId, bool isObligatory=true)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>Init</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
-      <anchor>a041d2c09d20bde2fc913ab6d5cd7ec0e</anchor>
-      <arglist>(const IParamsSet *parameterSetPtr, const QByteArray &amp;parameterId)</arglist>
+      <anchor>aef4f7e221c56b1f0cde4058c275e580c</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const QByteArray &amp;parameterId, bool isObligatory=true)</arglist>
     </member>
   </compound>
   <compound kind="namespace">

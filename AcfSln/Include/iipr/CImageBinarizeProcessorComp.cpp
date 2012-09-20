@@ -96,7 +96,7 @@ bool CImageBinarizeProcessorComp::ConvertImage(
 
 	double threshold = values[0];
 
-	for(int y = 0; y < imageHeight; ++y){
+	for (int y = 0; y < imageHeight; ++y){
 		quint8* outputImageBufferPtr = (quint8*)outputBitmap.GetLinePtr(y);
 		quint8* inputImageBufferPtr = (quint8*)inputBitmap.GetLinePtr(y);
 
