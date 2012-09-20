@@ -34,7 +34,6 @@ namespace iqtipr
 
 
 CMultiLineSupplierGuiComp::CMultiLineSupplierGuiComp()
-	:m_selectedLineIndex(-1)
 {
 }
 
@@ -91,7 +90,7 @@ QWidget* CMultiLineSupplierGuiComp::GetParamsWidget() const
 
 void CMultiLineSupplierGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 {
-	CShape* shapePtr = new CShape(*this);
+	CShape* shapePtr = new CShape(m_lineSelection);
 
 	m_results.AttachObserver(shapePtr);
 
@@ -99,31 +98,52 @@ void CMultiLineSupplierGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 }
 
 
+// internal class CLineSelection
+
+CMultiLineSupplierGuiComp::CLineSelection::CLineSelection()
+:	m_selectedLineIndex(-1)
+{
+
+}
+
+
 // reimplemented (iprm::ISelectionParam)
 
-const iprm::ISelectionConstraints* CMultiLineSupplierGuiComp::GetSelectionConstraints() const
+const iprm::ISelectionConstraints* CMultiLineSupplierGuiComp::CLineSelection::GetSelectionConstraints() const
 {
 	return NULL;
 }
 
 
-int CMultiLineSupplierGuiComp::GetSelectedOptionIndex() const
+int CMultiLineSupplierGuiComp::CLineSelection::GetSelectedOptionIndex() const
 {
 	return m_selectedLineIndex;
 }
 
 
-bool CMultiLineSupplierGuiComp::SetSelectedOptionIndex(int index)
+bool CMultiLineSupplierGuiComp::CLineSelection::SetSelectedOptionIndex(int index)
 {
-	m_selectedLineIndex = index;
+	if (m_selectedLineIndex != index){
+		istd::CChangeNotifier updatePtr(this);
+
+		m_selectedLineIndex = index;
+	}
 
 	return true;
 }
 
 
-iprm::ISelectionParam* CMultiLineSupplierGuiComp::GetActiveSubselection() const
+iprm::ISelectionParam* CMultiLineSupplierGuiComp::CLineSelection::GetActiveSubselection() const
 {
 	return NULL;
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CMultiLineSupplierGuiComp::CLineSelection::Serialize(iser::IArchive& /*archive*/)
+{
+	return true;
 }
 
 
@@ -132,6 +152,13 @@ iprm::ISelectionParam* CMultiLineSupplierGuiComp::GetActiveSubselection() const
 CMultiLineSupplierGuiComp::CShape::CShape(iprm::ISelectionParam& selection)
 	:m_lineSelection(selection)
 {
+	RegisterModel(dynamic_cast<imod::IModel*>(&m_lineSelection));
+}
+
+
+CMultiLineSupplierGuiComp::CShape::~CShape()
+{
+	UnregisterAllModels();
 }
 
 
@@ -169,6 +196,14 @@ void CMultiLineSupplierGuiComp::CShape::Draw(QPainter& drawContext) const
 			drawContext.setPen(normalPen);
 		}
 	}
+}
+
+
+// reimplemented (imod::CMultiModelDispatcherBase)
+
+void CMultiLineSupplierGuiComp::CShape::OnModelChanged(int /*modelId*/, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+{
+	Invalidate();
 }
 
 
