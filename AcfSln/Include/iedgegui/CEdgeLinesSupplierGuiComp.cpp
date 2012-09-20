@@ -41,6 +41,12 @@ namespace iedgegui
 {
 
 
+CEdgeLinesSupplierGuiComp::CEdgeLinesSupplierGuiComp()
+{
+	m_edgesColorShema.SetPen(iview::IColorShema::SP_NORMAL, QPen(Qt::blue));
+}
+
+
 // protected slots
 
 void CEdgeLinesSupplierGuiComp::on_TestButton_clicked()
@@ -88,6 +94,8 @@ void CEdgeLinesSupplierGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 	iedgegui::CEdgeLineContainerShape* shapePtr = new iedgegui::CEdgeLineContainerShape(); 
 
 	if (shapePtr != NULL){
+		shapePtr->SetUserColorShema(&m_edgesColorShema);
+
 		shapePtr->AssignToLayer(iview::IViewLayer::LT_INACTIVE);
 
 		m_foundModel.AttachObserver(shapePtr);

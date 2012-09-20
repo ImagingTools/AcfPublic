@@ -107,6 +107,8 @@ void CViewport::UpdateFitTransform()
 		m_framePtr->m_isZoomToFit = true;
 	}
 
+	m_framePtr->UpdateButtonsState();
+
 	CalcBoundingBox();
 
 	i2d::CRect boundingBox = GetBoundingBox();
@@ -245,7 +247,6 @@ void CViewport::SetBackgroundBufferValid(bool state)
 						SetZoom(iview::CViewBase::ZM_RESET);
 					}
 				}
-				m_framePtr->UpdateButtonsState();
 			}
 		}
 	}

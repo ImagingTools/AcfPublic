@@ -458,33 +458,31 @@
 <a name="l00459"></a>00459 }
 <a name="l00460"></a>00460 
 <a name="l00461"></a>00461 
-<a name="l00462"></a>00462 
+<a name="l00462"></a>00462 <span class="comment">// public methods of embedded class ParamsObserver</span>
 <a name="l00463"></a>00463 
-<a name="l00464"></a>00464 <span class="comment">// public methods of embedded class ParamsObserver</span>
-<a name="l00465"></a>00465 
-<a name="l00466"></a>00466 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00467"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a25bda61b821becc1a50fe24e2d6a880f">00467</a> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a25bda61b821becc1a50fe24e2d6a880f">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::ParamsObserver::ParamsObserver</a>(<a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase</a>* parentPtr)
-<a name="l00468"></a>00468        :m_parent(*parentPtr)
-<a name="l00469"></a>00469 {
-<a name="l00470"></a>00470        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(parentPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00471"></a>00471 }
-<a name="l00472"></a>00472 
-<a name="l00473"></a>00473 
-<a name="l00474"></a>00474 <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00475"></a>00475 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00476"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a7f0d77ec6f93ed6c5e44067e4e0601f0">00476</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::ParamsObserver::OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
-<a name="l00477"></a>00477 {
-<a name="l00478"></a>00478        <span class="keywordflow">if</span> ((updateFlags &amp; <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9a3c86ebce4c2fe9371a8409708979b789">istd::IChangeable::CF_MODEL</a>) != 0){
-<a name="l00479"></a>00479               m_parent.<a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a9840a8c4375ef9691a24cc73489930d9" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
-<a name="l00480"></a>00480        }
-<a name="l00481"></a>00481 }
+<a name="l00464"></a>00464 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
+<a name="l00465"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a25bda61b821becc1a50fe24e2d6a880f">00465</a> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a25bda61b821becc1a50fe24e2d6a880f">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::ParamsObserver::ParamsObserver</a>(<a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase</a>* parentPtr)
+<a name="l00466"></a>00466        :m_parent(*parentPtr)
+<a name="l00467"></a>00467 {
+<a name="l00468"></a>00468        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(parentPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00469"></a>00469 }
+<a name="l00470"></a>00470 
+<a name="l00471"></a>00471 
+<a name="l00472"></a>00472 <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00473"></a>00473 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
+<a name="l00474"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a7f0d77ec6f93ed6c5e44067e4e0601f0">00474</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::ParamsObserver::OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
+<a name="l00475"></a>00475 {
+<a name="l00476"></a>00476        <span class="keywordflow">if</span> ((updateFlags &amp; <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9a3c86ebce4c2fe9371a8409708979b789">istd::IChangeable::CF_MODEL</a>) != 0){
+<a name="l00477"></a>00477               m_parent.<a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a9840a8c4375ef9691a24cc73489930d9" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
+<a name="l00478"></a>00478        }
+<a name="l00479"></a>00479 }
+<a name="l00480"></a>00480 
+<a name="l00481"></a>00481 } <span class="comment">// namespace iqtinsp</span>
 <a name="l00482"></a>00482 
-<a name="l00483"></a>00483 } <span class="comment">// namespace iqtinsp</span>
-<a name="l00484"></a>00484 
-<a name="l00485"></a>00485 
-<a name="l00486"></a>00486 <span class="preprocessor">#endif // !iqtinsp_TSupplierGuiCompBase_included</span>
-<a name="l00487"></a>00487 <span class="preprocessor"></span>
-<a name="l00488"></a>00488 
+<a name="l00483"></a>00483 
+<a name="l00484"></a>00484 <span class="preprocessor">#endif // !iqtinsp_TSupplierGuiCompBase_included</span>
+<a name="l00485"></a>00485 <span class="preprocessor"></span>
+<a name="l00486"></a>00486 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
