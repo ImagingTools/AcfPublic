@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #include "icmpstr/CRegistryTreeViewComp.h"
@@ -40,20 +40,20 @@ namespace icmpstr
 
 
 CRegistryTreeViewComp::CRegistryTreeViewComp()
-: m_environmentObserver(this)
+	:m_environmentObserver(this)
 {
 	m_selectionInfo.SetParent(this);
 }
 
 
 void CRegistryTreeViewComp::AddSubcomponents(
-		const icomp::CComponentAddress& address,
-		QTreeWidgetItem* registryElementItemPtr)
+			const icomp::CComponentAddress& address,
+			QTreeWidgetItem* registryElementItemPtr)
 {
 	if (m_envManagerCompPtr.IsValid()){
 		const icomp::IComponentStaticInfo* metaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(address);
 
-		if (metaInfoPtr != NULL && (metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
+		if (metaInfoPtr != NULL &&(metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
 			const icomp::CCompositeComponentStaticInfo* compositeMetaInfoPtr = dynamic_cast<const icomp::CCompositeComponentStaticInfo*>(metaInfoPtr);
 			if (compositeMetaInfoPtr != NULL){
 				const icomp::IRegistry& registry = compositeMetaInfoPtr->GetRegistry();
@@ -68,14 +68,14 @@ void CRegistryTreeViewComp::AddSubcomponents(
 void CRegistryTreeViewComp::CreateRegistryTree(const icomp::IRegistry& registry, QTreeWidgetItem* registryRootItemPtr)
 {
 	icomp::IRegistry::Ids elementIds = registry.GetElementIds();
-	for (icomp::IRegistry::Ids::iterator iter = elementIds.begin();
-			iter != elementIds.end();
-			iter++){
+	for (		icomp::IRegistry::Ids::iterator iter = elementIds.begin();
+				iter != elementIds.end();
+				iter++){
 		const QByteArray& elementId = *iter;
 		const icomp::IRegistry::ElementInfo* elementInfoPtr = registry.GetElementInfo(elementId);
 		if ((elementInfoPtr != NULL) && elementInfoPtr->elementPtr.IsValid()){
 			QTreeWidgetItem* elementItem = AddRegistryElementItem(registry, elementInfoPtr, elementId, registryRootItemPtr);
-
+			
 			// fill a subtree for an embedded composition
 			icomp::IRegistry* embeddedRegistry = registry.GetEmbeddedRegistry(elementId);
 			if (embeddedRegistry != NULL && elementItem != NULL){
@@ -85,14 +85,14 @@ void CRegistryTreeViewComp::CreateRegistryTree(const icomp::IRegistry& registry,
 	}
 }
 
+
 // protected methods
 
-
-QTreeWidgetItem * CRegistryTreeViewComp::AddRegistryElementItem(
-		const icomp::IRegistry& registry,
-		const icomp::IRegistry::ElementInfo* elementPtr,
-		const QByteArray& elementId,
-		QTreeWidgetItem* parentItemPtr)
+QTreeWidgetItem* CRegistryTreeViewComp::AddRegistryElementItem(
+			const icomp::IRegistry& registry,
+			const icomp::IRegistry::ElementInfo* elementPtr,
+			const QByteArray& elementId,
+			QTreeWidgetItem* parentItemPtr)
 {
 	icomp::CRegistryElement* registryElementPtr = dynamic_cast<icomp::CRegistryElement*>(elementPtr->elementPtr.GetPtr());
 	if (registryElementPtr != NULL){
@@ -113,17 +113,17 @@ QTreeWidgetItem * CRegistryTreeViewComp::AddRegistryElementItem(
 			parentItemPtr->addChild(elementItemPtr);
 			parentItemPtr->setExpanded(true);
 		}
-
+		
 		bool isConsistent = true;
 		ibase::CMessageContainer messageContainer;
 
 		if (m_consistInfoCompPtr.IsValid()){
 			isConsistent = m_consistInfoCompPtr->IsElementValid(
-					elementId,
-					registry,
-					false,
-					true,
-					&messageContainer);
+						elementId,
+						registry,
+						false,
+						true,
+						&messageContainer);
 		}
 
 		static QIcon errorIcon(":/Icons/Warning.svg");
@@ -163,14 +163,14 @@ QTreeWidgetItem * CRegistryTreeViewComp::AddRegistryElementItem(
 }
 
 
-bool CRegistryTreeViewComp::IsRegistryValid(const icomp::IRegistry & registry) const
+bool CRegistryTreeViewComp::IsRegistryValid(const icomp::IRegistry& registry) const
 {
 	bool retVal = true;
 
 	icomp::IRegistry::Ids elementIds = registry.GetElementIds();
-	for (icomp::IRegistry::Ids::iterator iter = elementIds.begin();
-			iter != elementIds.end();
-			iter++){
+	for (		icomp::IRegistry::Ids::iterator iter = elementIds.begin();
+				iter != elementIds.end();
+				iter++){
 		const QByteArray& elementId = *iter;
 		const icomp::IRegistry::ElementInfo* elementInfoPtr = registry.GetElementInfo(elementId);
 		if ((elementInfoPtr != NULL) && elementInfoPtr->elementPtr.IsValid()){
@@ -180,11 +180,11 @@ bool CRegistryTreeViewComp::IsRegistryValid(const icomp::IRegistry & registry) c
 
 				if (m_consistInfoCompPtr.IsValid()){
 					isConsistent = m_consistInfoCompPtr->IsElementValid(
-							elementId,
-							registry,
-							false,
-							true,
-							NULL);
+								elementId,
+								registry,
+								false,
+								true,
+								NULL);
 				}
 
 				if (!isConsistent){
@@ -194,7 +194,7 @@ bool CRegistryTreeViewComp::IsRegistryValid(const icomp::IRegistry & registry) c
 				if (m_envManagerCompPtr.IsValid()){
 					const icomp::IComponentStaticInfo* metaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(elementInfoPtr->address);
 
-					if (metaInfoPtr != NULL && (metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
+					if (metaInfoPtr != NULL &&(metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
 						const icomp::CCompositeComponentStaticInfo* compositeMetaInfoPtr = dynamic_cast<const icomp::CCompositeComponentStaticInfo*>(metaInfoPtr);
 						if (compositeMetaInfoPtr != NULL){
 							const icomp::IRegistry& registry = compositeMetaInfoPtr->GetRegistry();
@@ -215,9 +215,9 @@ bool CRegistryTreeViewComp::IsRegistryValid(const icomp::IRegistry & registry) c
 void CRegistryTreeViewComp::UpdateRegistryStatus()
 {
 	const icomp::IRegistry* registryPtr = GetObjectPtr();
-	if (registryPtr != NULL){
+	if (registryPtr != NULL){		
 		bool isValid = IsRegistryValid(*registryPtr);
-
+			
 		static QIcon errorIcon(":/Icons/Warning.svg");
 		static QIcon okIcon(":/Icons/Ok");
 
@@ -237,7 +237,7 @@ void CRegistryTreeViewComp::UpdateTreeItemsVisibility()
 		QTreeWidgetItem* itemPtr = *treeIter;
 
 		bool showItem = true;
-
+			
 		QString itemName = itemPtr->text(CT_NAME);
 
 		if (filterText.isEmpty() || itemName.contains(filterText, Qt::CaseInsensitive)){
@@ -257,7 +257,7 @@ void CRegistryTreeViewComp::UpdateTreeItemsVisibility()
 		if (showItem){
 			QTreeWidgetItem* parentItemPtr = itemPtr->parent();
 
-			while (parentItemPtr != NULL){
+			while (parentItemPtr != NULL){ 
 				if (parentItemPtr->isHidden()){
 					parentItemPtr->setHidden(false);
 				}
@@ -272,7 +272,6 @@ void CRegistryTreeViewComp::UpdateTreeItemsVisibility()
 
 
 // reimplemented (iqtgui::TGuiObserverWrap)
-
 
 void CRegistryTreeViewComp::UpdateGui(int /*updateFlags*/)
 {
@@ -308,7 +307,6 @@ void CRegistryTreeViewComp::OnGuiModelDetached()
 
 // reimplemented (iqtgui::CGuiComponentBase)
 
-
 void CRegistryTreeViewComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
@@ -318,7 +316,7 @@ void CRegistryTreeViewComp::OnGuiCreated()
 
 	MainSplitter->setSizes(sizes);
 
-	//	RegistryTree->setItemDelegate(new iqtgui::CItemDelegate);
+//	RegistryTree->setItemDelegate(new iqtgui::CItemDelegate);
 
 	RegistryTree->header()->setResizeMode(QHeaderView::Stretch);
 }
@@ -326,17 +324,15 @@ void CRegistryTreeViewComp::OnGuiCreated()
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-
-void CRegistryTreeViewComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic * updateParamsPtr)
+void CRegistryTreeViewComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
 	UpdateRegistryStatus();
-
+	
 	BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
 }
 
 
 // reimplemented (icomp::CComponentBase)
-
 
 void CRegistryTreeViewComp::OnComponentCreated()
 {
@@ -360,27 +356,25 @@ void CRegistryTreeViewComp::OnComponentDestroyed()
 
 // static methods
 
-
-IElementSelectionInfo * CRegistryTreeViewComp::ExtractSelectionInterface(CRegistryTreeViewComp & component)
+IElementSelectionInfo* CRegistryTreeViewComp::ExtractSelectionInterface(CRegistryTreeViewComp& component)
 {
 	return &component.m_selectionInfo;
 }
 
 
-imod::IModel * CRegistryTreeViewComp::ExtractSelectionInterfaceModel(CRegistryTreeViewComp & component)
+imod::IModel* CRegistryTreeViewComp::ExtractSelectionInterfaceModel(CRegistryTreeViewComp& component)
 {
 	return &component.m_selectionInfo;
 }
 
 
-istd::IChangeable * CRegistryTreeViewComp::ExtractSelectionInterfaceChangeable(CRegistryTreeViewComp & component)
+istd::IChangeable* CRegistryTreeViewComp::ExtractSelectionInterfaceChangeable(CRegistryTreeViewComp& component)
 {
 	return &component.m_selectionInfo;
 }
 
 
 // protected slots
-
 
 void CRegistryTreeViewComp::on_RegistryTree_itemSelectionChanged()
 {
@@ -392,7 +386,7 @@ void CRegistryTreeViewComp::on_RegistryTree_itemSelectionChanged()
 	QList<QTreeWidgetItem*> selectedItems = RegistryTree->selectedItems();
 
 	int itemsCount = selectedItems.size();
-
+	
 	for (int itemIndex = 0; itemIndex < itemsCount; itemIndex++){
 		QTreeWidgetItem* itemPtr = selectedItems.at(itemIndex);
 		I_ASSERT(itemPtr != NULL);
@@ -404,7 +398,7 @@ void CRegistryTreeViewComp::on_RegistryTree_itemSelectionChanged()
 		MessagesList->setPlainText(messageText);
 
 		m_selectedElements.selectedElementIds.insert(itemPtr->data(CT_NAME, DR_ELEMENT_ID).toByteArray());
-		int registryPointerAddress = itemPtr->data(CT_NAME, DR_REGISTRY).toUInt();
+        int registryPointerAddress = itemPtr->data(CT_NAME, DR_REGISTRY).toUInt();
 		m_selectedElements.registryPtr = reinterpret_cast<icomp::IRegistry*>(registryPointerAddress);
 	}
 
@@ -428,13 +422,13 @@ void CRegistryTreeViewComp::on_RegistryTree_itemDoubleClicked(QTreeWidgetItem* i
 
 	componentAddress.SetComponentId(itemPtr->data(CT_NAME, DR_ELEMENT_ID).toByteArray());
 	componentAddress.SetPackageId(itemPtr->data(CT_NAME, DR_ELEMENT_PACKAGE_ID).toByteArray());
-
+	
 	if (m_envManagerCompPtr.IsValid() && m_documentManagerCompPtr.IsValid()){
 		const icomp::IComponentStaticInfo* metaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(componentAddress);
 
-		if (metaInfoPtr != NULL && (metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
+		if (metaInfoPtr != NULL &&(metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
 			QDir packageDir(m_envManagerCompPtr->GetPackagePath(componentAddress.GetPackageId()));
-
+		
 			QString filePath = packageDir.absoluteFilePath(componentAddress.GetComponentId() + ".arx");
 
 			m_documentManagerCompPtr->FileOpen(NULL, &filePath);
@@ -457,9 +451,8 @@ void CRegistryTreeViewComp::on_ShowOnlyErrorsCheck_stateChanged(int /*state*/)
 
 // public methods of embedded class EnvironmentObserver
 
-
-CRegistryTreeViewComp::EnvironmentObserver::EnvironmentObserver(CRegistryTreeViewComp * parentPtr)
-: m_parent(*parentPtr)
+CRegistryTreeViewComp::EnvironmentObserver::EnvironmentObserver(CRegistryTreeViewComp* parentPtr)
+:	m_parent(*parentPtr)
 {
 	I_ASSERT(parentPtr != NULL);
 }
@@ -468,7 +461,6 @@ CRegistryTreeViewComp::EnvironmentObserver::EnvironmentObserver(CRegistryTreeVie
 // protected methods of embedded class EnvironmentObserver
 
 // reimplemented (imod::TSingleModelObserverBase)
-
 
 void CRegistryTreeViewComp::EnvironmentObserver::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
 {
@@ -482,8 +474,7 @@ void CRegistryTreeViewComp::EnvironmentObserver::OnUpdate(int updateFlags, istd:
 
 // public methods of embedded class SelectionInfoImpl
 
-
-void CRegistryTreeViewComp::SelectionInfoImpl::SetParent(CRegistryTreeViewComp * parentPtr)
+void CRegistryTreeViewComp::SelectionInfoImpl::SetParent(CRegistryTreeViewComp* parentPtr)
 {
 	m_parentPtr = parentPtr;
 }
@@ -491,10 +482,9 @@ void CRegistryTreeViewComp::SelectionInfoImpl::SetParent(CRegistryTreeViewComp *
 
 // reimplemented (icmpstr::IElementSelectionInfo)
 
-
-icomp::IRegistry * CRegistryTreeViewComp::SelectionInfoImpl::GetSelectedRegistry() const
+icomp::IRegistry* CRegistryTreeViewComp::SelectionInfoImpl::GetSelectedRegistry() const
 {
-	I_ASSERT(m_parentPtr != NULL); // parent should be set before any subelement can be accessed
+	I_ASSERT(m_parentPtr != NULL);	// parent should be set before any subelement can be accessed
 
 	return m_parentPtr->m_selectedElements.registryPtr;
 }
@@ -502,15 +492,15 @@ icomp::IRegistry * CRegistryTreeViewComp::SelectionInfoImpl::GetSelectedRegistry
 
 IElementSelectionInfo::Elements CRegistryTreeViewComp::SelectionInfoImpl::GetSelectedElements() const
 {
-	I_ASSERT(m_parentPtr != NULL); // parent should be set before any subelement can be accessed
+	I_ASSERT(m_parentPtr != NULL);	// parent should be set before any subelement can be accessed
 
 	IElementSelectionInfo::Elements retVal;
 
 	icomp::IRegistry* registryPtr = m_parentPtr->GetObjectPtr();
 	if (registryPtr != NULL){
-		for (ElementIds::const_iterator iter = m_parentPtr->m_selectedElements.selectedElementIds.begin();
-				iter != m_parentPtr->m_selectedElements.selectedElementIds.end();
-				++iter){
+		for (		ElementIds::const_iterator iter = m_parentPtr->m_selectedElements.selectedElementIds.begin();
+					iter != m_parentPtr->m_selectedElements.selectedElementIds.end();
+					++iter){
 			const QByteArray& elementName = *iter;
 
 			const icomp::IRegistry::ElementInfo* elementInfoPtr = registryPtr->GetElementInfo(elementName);

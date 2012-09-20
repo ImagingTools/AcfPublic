@@ -31,7 +31,7 @@
 #include "iprm/ISelectionParam.h"
 #include "imod/CMultiModelDispatcherBase.h"
 
-// QSF includes
+// ACF-Solutions includes
 #include "Generated/ui_CMultiLineSupplierGuiComp.h"
 
 

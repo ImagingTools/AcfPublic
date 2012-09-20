@@ -33,20 +33,20 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_gui_comp_base_8h.html">iqtinsp/TSupplierGuiCompBase.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_simple_numeric_value_provider_8h.html">imeas/CSimpleNumericValueProvider.h</a>&quot;</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_selection_param_8h.html">iprm/ISelectionParam.h</a>&quot;</span>
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="comment">// QSF includes</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;Generated/ui_CMultiLineSupplierGuiComp.h&quot;</span>
-<a name="l00013"></a>00013 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_multi_model_dispatcher_base_8h.html">imod/CMultiModelDispatcherBase.h</a>&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="comment">// ACF-Solutions includes</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;Generated/ui_CMultiLineSupplierGuiComp.h&quot;</span>
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="keyword">namespace </span>iqtipr
-<a name="l00016"></a>00016 {
-<a name="l00017"></a>00017 
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keyword">namespace </span>iqtipr
+<a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 
-<a name="l00019"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html">00019</a> <span class="keyword">class </span><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html">CMultiLineSupplierGuiComp</a>: 
-<a name="l00020"></a>00020                      <span class="keyword">public</span> iqtinsp::TSupplierGuiCompBase&lt;
-<a name="l00021"></a>00021                                           Ui::CMultiLineSupplierGuiComp,
-<a name="l00022"></a>00022                                           imeas::INumericValueProvider&gt;,
-<a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::ISelectionParam
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html">CMultiLineSupplierGuiComp</a>: 
+<a name="l00021"></a>00021                      <span class="keyword">public</span> iqtinsp::TSupplierGuiCompBase&lt;
+<a name="l00022"></a>00022                                           Ui::CMultiLineSupplierGuiComp,
+<a name="l00023"></a>00023                                           imeas::INumericValueProvider&gt;
 <a name="l00024"></a>00024 {
 <a name="l00025"></a>00025        Q_OBJECT
 <a name="l00026"></a>00026 
@@ -56,68 +56,85 @@
 <a name="l00030"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a41fbfc9dd9d3a98a44e9d34181eb17f0">00030</a>                             <a class="code" href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values.">imeas::INumericValueProvider</a>&gt; <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a41fbfc9dd9d3a98a44e9d34181eb17f0">BaseClass</a>;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html">CMultiLineSupplierGuiComp</a>);
-<a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>);
-<a name="l00034"></a>00034        I_END_COMPONENT;
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036        <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a5af1163765070f8455fb3780c7013ae8">CMultiLineSupplierGuiComp</a>();
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a7373b2a703aaed3173226cc2d50ec81d">on_TestButton_clicked</a>();
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keyword">protected</span>:
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a06ed1c6537419851c4cc4a8653c67d9a">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a2b180b6005668e230dad370b77b98b57" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a5f20730fef699c61054da90201e9b77c" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a89dc417d46e6dd4c85c035e8856fb456">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#afa0a259d06db389df4689852296d12f0">GetSelectionConstraints</a>() <span class="keyword">const</span>;
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#aa9e9f88a7238a27f08bfe02fb67577ee">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#ab5792f9abc2703e1606dfdcabe8f6bc5">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>* <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a0f629bc22f32265bb176acec36323631">GetActiveSubselection</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00059"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a15ff163f60b0818dd747b01cd52e2199">00059</a>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a15ff163f60b0818dd747b01cd52e2199">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; <span class="comment">/*archive*/</span>)
-<a name="l00060"></a>00060        {
-<a name="l00061"></a>00061               <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00062"></a>00062        }
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keyword">private</span>:
-<a name="l00065"></a>00065        <span class="keyword">class </span>CShape: <span class="keyword">public</span> iview::CShapeBase                         
-<a name="l00066"></a>00066        {
-<a name="l00067"></a>00067        <span class="keyword">public</span>:
-<a name="l00068"></a>00068               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_shape_base.html">iview::CShapeBase</a> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a41fbfc9dd9d3a98a44e9d34181eb17f0">BaseClass</a>;
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070               CShape(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>&amp; selection);
+<a name="l00033"></a>00033               <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a07ff848c104eb26b288a0d90d73378ae">I_REGISTER_SUBELEMENT</a>(<a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html">CLineSelection</a>);
+<a name="l00034"></a>00034               <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#ab6c71812baee7c0be4baa5c62bc0b157">I_REGISTER_SUBELEMENT_INTERFACE</a>(<a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html">CLineSelection</a>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>, <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a1bde2cc20a10345284f8a439ce178978">ExtractLineSelection</a>);
+<a name="l00035"></a>00035        I_END_COMPONENT;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037        <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a5af1163765070f8455fb3780c7013ae8">CMultiLineSupplierGuiComp</a>();
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00040"></a>00040        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a7373b2a703aaed3173226cc2d50ec81d">on_TestButton_clicked</a>();
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="keyword">protected</span>:
+<a name="l00043"></a>00043        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a06ed1c6537419851c4cc4a8653c67d9a">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a2b180b6005668e230dad370b77b98b57" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a5f20730fef699c61054da90201e9b77c" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a89dc417d46e6dd4c85c035e8856fb456">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="keyword">protected</span>:
+<a name="l00054"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html">00054</a>        <span class="keyword">class </span><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html">CLineSelection</a>: <span class="keyword">public</span> iprm::ISelectionParam
+<a name="l00055"></a>00055        {
+<a name="l00056"></a>00056        <span class="keyword">public</span>:
+<a name="l00057"></a>00057               <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html#a44516259b50c461958c63e46ac7eeddc">CLineSelection</a>();
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059               <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
+<a name="l00060"></a>00060               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html#a3bb8274bda0b11c7e196a9c51a6f1fe3">GetSelectionConstraints</a>() <span class="keyword">const</span>;
+<a name="l00061"></a>00061               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html#abf750be052b36cad1e025d15cf23e772">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
+<a name="l00062"></a>00062               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html#a9c14423748e856e7042216df96fc8b52">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
+<a name="l00063"></a>00063               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>* <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html#ae8c3f7afb1656d4dd599732cfb522b8d">GetActiveSubselection</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065               <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00066"></a>00066               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html#acd11627f4682d2de12eb683408e347b6">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="keyword">protected</span>:
+<a name="l00069"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html#aeb688b5a52941e2ab0e39570fccdf70e">00069</a>               <span class="keywordtype">int</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html#aeb688b5a52941e2ab0e39570fccdf70e">m_selectedLineIndex</a>;
+<a name="l00070"></a>00070        };
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072               <span class="comment">// reimplemented (iview::IVisualizable)</span>
-<a name="l00073"></a>00073               <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="keyword">protected</span>:
-<a name="l00076"></a>00076               <span class="keywordtype">void</span> UpdateShape();
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078               <span class="comment">// reimplemented (iview::CShapeBase)</span>
-<a name="l00079"></a>00079               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rect.html">i2d::CRect</a> CalcBoundingBox() <span class="keyword">const</span>;
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081        <span class="keyword">private</span>:
-<a name="l00082"></a>00082               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>&amp; m_lineSelection;
-<a name="l00083"></a>00083        };
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085        <span class="keywordtype">int</span> m_selectedLineIndex;
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;imeas::CSimpleNumericValueProvider&gt;</a> m_results;
-<a name="l00088"></a>00088 };
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091 } <span class="comment">// namespace iqtipr</span>
+<a name="l00072"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html">00072</a>        <span class="keyword">class </span><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html">CShape</a>: 
+<a name="l00073"></a>00073                             <span class="keyword">public</span> iview::CShapeBase,
+<a name="l00074"></a>00074                             <span class="keyword">protected</span> imod::CMultiModelDispatcherBase
+<a name="l00075"></a>00075        {
+<a name="l00076"></a>00076        <span class="keyword">public</span>:
+<a name="l00077"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#abb793b5e2c05c9549904d3172a68875b">00077</a>               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_shape_base.html">iview::CShapeBase</a> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#abb793b5e2c05c9549904d3172a68875b">BaseClass</a>;
+<a name="l00078"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#a618cb1474d7653d7a3d21c36149d35e4">00078</a>               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_dispatcher_base.html">imod::CMultiModelDispatcherBase</a> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#a618cb1474d7653d7a3d21c36149d35e4">BaseClass2</a>;
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080               <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#a279829ab7b1a986f660196158590c335">CShape</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>&amp; selection);
+<a name="l00081"></a>00081               <span class="keyword">virtual</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#ab3bbc16929d19f7b9e35207b64800e79">~CShape</a>();
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083               <span class="comment">// reimplemented (iview::IVisualizable)</span>
+<a name="l00084"></a>00084               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#ad1b90b99890d7cb85bb968fcaa0c4d37">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086               <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00087"></a>00087               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#afc3e5c5aff53a42da6f5c89a016d1f3d">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089        <span class="keyword">protected</span>:
+<a name="l00090"></a>00090               <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00091"></a>00091               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rect.html">i2d::CRect</a> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html#af2741f23a9203df7a99e87c8b94f4698">CalcBoundingBox</a>() <span class="keyword">const</span>;
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 <span class="preprocessor">#endif // !iqtipr_CMultiLineSupplierGuiComp_included</span>
+<a name="l00093"></a>00093        <span class="keyword">private</span>:
+<a name="l00094"></a>00094               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>&amp; m_lineSelection;
+<a name="l00095"></a>00095        };
+<a name="l00096"></a>00096 
+<a name="l00097"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a2c7497508b7b0ff204cf57ef6422234f">00097</a>        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;imeas::CSimpleNumericValueProvider&gt;</a> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a2c7497508b7b0ff204cf57ef6422234f">m_results</a>;
+<a name="l00098"></a>00098 
+<a name="l00099"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a21a8608d1f261be35132bb5030c4e273">00099</a>        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;CLineSelection&gt;</a> <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a21a8608d1f261be35132bb5030c4e273">m_lineSelection</a>;
+<a name="l00100"></a>00100 
+<a name="l00101"></a><a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a1bde2cc20a10345284f8a439ce178978">00101</a>        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>* <a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a1bde2cc20a10345284f8a439ce178978">ExtractLineSelection</a>(<a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html">CMultiLineSupplierGuiComp</a>&amp; component)
+<a name="l00102"></a>00102        {
+<a name="l00103"></a>00103               <span class="keywordflow">return</span> &amp;component.<a class="code" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#a21a8608d1f261be35132bb5030c4e273">m_lineSelection</a>;
+<a name="l00104"></a>00104        }
+<a name="l00105"></a>00105 };
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 } <span class="comment">// namespace iqtipr</span>
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 <span class="preprocessor">#endif // !iqtipr_CMultiLineSupplierGuiComp_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

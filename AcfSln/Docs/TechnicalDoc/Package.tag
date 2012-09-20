@@ -1934,6 +1934,8 @@
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="_c_simple_numeric_value_provider_8h" name="CSimpleNumericValueProvider.h" local="yes" imported="no">imeas/CSimpleNumericValueProvider.h</includes>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
+    <class kind="class">iqtipr::CMultiLineSupplierGuiComp::CLineSelection</class>
+    <class kind="class">iqtipr::CMultiLineSupplierGuiComp::CShape</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
@@ -14977,13 +14979,28 @@
     <name>iqtipr::CMultiLineSupplierGuiComp</name>
     <filename>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</filename>
     <base>TSupplierGuiCompBase&lt; Ui::CMultiLineSupplierGuiComp, imeas::INumericValueProvider &gt;</base>
-    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <class kind="class">iqtipr::CMultiLineSupplierGuiComp::CLineSelection</class>
+    <class kind="class">iqtipr::CMultiLineSupplierGuiComp::CShape</class>
     <member kind="typedef">
       <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CMultiLineSupplierGuiComp, imeas::INumericValueProvider &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
       <anchor>a41fbfc9dd9d3a98a44e9d34181eb17f0</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a07ff848c104eb26b288a0d90d73378ae</anchor>
+      <arglist>(CLineSelection)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>ab6c71812baee7c0be4baa5c62bc0b157</anchor>
+      <arglist>(CLineSelection, iprm::ISelectionParam, ExtractLineSelection)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -15027,40 +15044,135 @@
       <anchor>a89dc417d46e6dd4c85c035e8856fb456</anchor>
       <arglist>(int sceneId, Shapes &amp;result)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="protected" static="yes">
+      <type>static iprm::ISelectionParam *</type>
+      <name>ExtractLineSelection</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a1bde2cc20a10345284f8a439ce178978</anchor>
+      <arglist>(CMultiLineSupplierGuiComp &amp;component)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imod::TModelWrap&lt; imeas::CSimpleNumericValueProvider &gt;</type>
+      <name>m_results</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a2c7497508b7b0ff204cf57ef6422234f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imod::TModelWrap&lt; CLineSelection &gt;</type>
+      <name>m_lineSelection</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a21a8608d1f261be35132bb5030c4e273</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CMultiLineSupplierGuiComp::CLineSelection</name>
+    <filename>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html</filename>
+    <base>iprm::ISelectionParam</base>
+    <member kind="function">
+      <type></type>
+      <name>CLineSelection</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html</anchorfile>
+      <anchor>a44516259b50c461958c63e46ac7eeddc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const iprm::ISelectionConstraints *</type>
       <name>GetSelectionConstraints</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>afa0a259d06db389df4689852296d12f0</anchor>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html</anchorfile>
+      <anchor>a3bb8274bda0b11c7e196a9c51a6f1fe3</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>aa9e9f88a7238a27f08bfe02fb67577ee</anchor>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html</anchorfile>
+      <anchor>abf750be052b36cad1e025d15cf23e772</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>ab5792f9abc2703e1606dfdcabe8f6bc5</anchor>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html</anchorfile>
+      <anchor>a9c14423748e856e7042216df96fc8b52</anchor>
       <arglist>(int index)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual iprm::ISelectionParam *</type>
       <name>GetActiveSubselection</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>a0f629bc22f32265bb176acec36323631</anchor>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html</anchorfile>
+      <anchor>ae8c3f7afb1656d4dd599732cfb522b8d</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>a15ff163f60b0818dd747b01cd52e2199</anchor>
-      <arglist>(iser::IArchive &amp;)</arglist>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html</anchorfile>
+      <anchor>acd11627f4682d2de12eb683408e347b6</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_selectedLineIndex</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_line_selection.html</anchorfile>
+      <anchor>aeb688b5a52941e2ab0e39570fccdf70e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CMultiLineSupplierGuiComp::CShape</name>
+    <filename>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</filename>
+    <base>iview::CShapeBase</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>iview::CShapeBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</anchorfile>
+      <anchor>abb793b5e2c05c9549904d3172a68875b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</anchorfile>
+      <anchor>a618cb1474d7653d7a3d21c36149d35e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CShape</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</anchorfile>
+      <anchor>a279829ab7b1a986f660196158590c335</anchor>
+      <arglist>(iprm::ISelectionParam &amp;selection)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CShape</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</anchorfile>
+      <anchor>ab3bbc16929d19f7b9e35207b64800e79</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</anchorfile>
+      <anchor>ad1b90b99890d7cb85bb968fcaa0c4d37</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</anchorfile>
+      <anchor>afc3e5c5aff53a42da6f5c89a016d1f3d</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</anchorfile>
+      <anchor>af2741f23a9203df7a99e87c8b94f4698</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">

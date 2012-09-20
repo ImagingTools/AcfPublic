@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #ifndef icmpstr_CSceneProviderGuiComp_included
@@ -42,77 +42,98 @@
 #include "icmpstr/ISceneProvider.h"
 #include "icmpstr/Generated/ui_CSceneProviderGuiComp.h"
 
+
 namespace icmpstr
 {
 
 
-class CSceneProviderGuiComp:
-public iqtgui::TDesignerGuiCompBase<Ui::CSceneProviderGuiComp>,
-virtual public ibase::ICommandsProvider,
-virtual public ISceneProvider,
-virtual public i2d::ISceneController
+class CSceneProviderGuiComp: 
+			public iqtgui::TDesignerGuiCompBase<Ui::CSceneProviderGuiComp>,
+			virtual public ibase::ICommandsProvider,
+			virtual public ISceneProvider,
+			virtual public i2d::ISceneController
 {
 	Q_OBJECT
 public:
 	typedef iqtgui::TDesignerGuiCompBase<Ui::CSceneProviderGuiComp> BaseClass;
 
-
 	enum BackgroundMode
 	{
 		/**
-			Standard window background.
-		 */
+			Standard window backround.
+		*/
 		BM_NORMAL,
 
 		/**
 			Filled with solid color.
-		 */
+		*/
 		BM_SOLID,
 
 		/**
 			Grid of horizontal and vertical lines.
-		 */
+		*/
 		BM_GRID,
 
 		/**
 			Checkerboard pattern.
-		 */
+		*/
 		BM_CHECKERBOARD,
 
 		/**
 			Dot grid.
-		 */
+		*/
 		BM_DOT_GRID,
 
 		/**
 			Transparent background.
-		 */
+		*/
 		BM_TRANSPARENT
 	};
 
 	I_BEGIN_COMPONENT(CSceneProviderGuiComp);
-	I_REGISTER_INTERFACE(ibase::ICommandsProvider);
-	I_REGISTER_INTERFACE(ISceneProvider);
-	I_REGISTER_INTERFACE(i2d::ISceneController);
-	I_ASSIGN(m_allowWidgetResizeAttrPtr, "AllowWidgetResize", "Allow resize of QWidet object (should be disabled if this GUI size is managed by layout)", true, false);
-	I_ASSIGN(m_sceneIdAttrPtr, "SceneId", "ID allowing identifying this scene", true, 0);
-	I_ASSIGN(m_useAntialiasingAttrPtr, "UseAntialiasing", "Enables using of antialiasing", false, false);
-	I_ASSIGN(m_fitModeAttrPtr, "FitMode", "Set fit automatic mode for the scene\n 0 - no fit (default)\n 1 - isotropic (reduction)\n 2 - isotropic\n 3 - anisotropic", false, 0);
-	I_ASSIGN(m_isotropyFactorAttrPtr, "IsotropyFactor", "Describe type of isotropic transformation: 0 - letterbox, 1 - full", true, 0);
-	I_ASSIGN(m_sceneControllerGuiCompPtr, "SceneController", "Scene controller", false, "SceneController");
-	I_ASSIGN_MULTI_0(m_dropConsumersCompPtr, "DropConsumers", "List of consumers for the drop event", false);
-	I_ASSIGN(m_backgroundModeAttrPtr, "BackgroundMode", "Mode of background drawing:\n 0 - normal window\n 1 - solid color\n 2 - grid\n 3 - checkerboard\n 4 - dot grid\n 5 - transparent", true, 0);
-	I_ASSIGN(m_gridSizeAttrPtr, "GridSize", "Size of grid, it is used also for background", true, 20);
-	I_ASSIGN(m_isAlignmentEnabledAttrPtr, "IsAlignmentEnabled", "If true, grid alignment will be enabled", true, false);
-	I_ASSIGN(m_sceneWidthAttrPtr, "SceneWidth", "Logical with of scene", false, 1000);
-	I_ASSIGN(m_sceneHeightAttrPtr, "SceneHeight", "Logical height of scene", false, 1000);
-	I_ASSIGN(m_allowSelectAllAttrPtr, "AllowSelectAll", "If true, command 'Select All' will be enabled", true, false);
+		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
+		I_REGISTER_INTERFACE(ISceneProvider);
+		I_REGISTER_INTERFACE(i2d::ISceneController);
+		I_ASSIGN(m_allowWidgetResizeAttrPtr, "AllowWidgetResize", "Allow resize of QWidet object (should be disabled if this GUI size is managed by layout)", true, false);
+		I_ASSIGN(m_sceneIdAttrPtr, "SceneId", "ID allowing identifying this scene", true, 0);
+		I_ASSIGN(m_useAntialiasingAttrPtr, "UseAntialiasing", "Enables using of antialiasing", false, false);
+		I_ASSIGN(m_fitModeAttrPtr, "FitMode", "Set fit automatic mode for the scene\n 0 - no fit (default)\n 1 - isotropic (reduction)\n 2 - isotropic\n 3 - anisotropic", false, 0);
+		I_ASSIGN(m_isotropyFactorAttrPtr, "IsotropyFactor", "Describe type of isotropic transformation: 0 - letterbox, 1 - full", true, 0);
+		I_ASSIGN(m_sceneControllerGuiCompPtr, "SceneController", "Scene controller", false, "SceneController");
+		I_ASSIGN_MULTI_0(m_dropConsumersCompPtr, "DropConsumers", "List of consumers for the drop event", false);
+		I_ASSIGN(m_backgroundModeAttrPtr, "BackgroundMode", "Mode of background drawing:\n 0 - normal window\n 1 - solid color\n 2 - grid\n 3 - checkerboard\n 4 - dot grid\n 5 - transparent", true, 0);	
+		I_ASSIGN(m_gridSizeAttrPtr, "GridSize", "Size of grid, it is used also for background", true, 20);	
+		I_ASSIGN(m_isAlignmentEnabledAttrPtr, "IsAlignmentEnabled", "If true, grid alignment will be enabled", true, false);	
+		I_ASSIGN(m_sceneWidthAttrPtr, "SceneWidth", "Logical with of scene", false, 1000);	
+		I_ASSIGN(m_sceneHeightAttrPtr, "SceneHeight", "Logical height of scene", false, 1000);	
+		I_ASSIGN(m_allowSelectAllAttrPtr, "AllowSelectAll", "If true, command 'Select All' will be enabled", true, false);	
 	I_END_COMPONENT;
 
 	CSceneProviderGuiComp();
 
 	double GetIsotropyFactor() const;
 	void SetIsotropyFactor(double factor);
+
+	// embedded compositions list support
+	int GetEmbeddedListSize() const;
+	/**
+		Remove all elements from the embedded compositions list and hide it
+	*/
+	void ClearEmbeddedList();
+	/**
+		Show the embedded composition list and add an item with given id.
+		First added element inserts <<root>> as well and makes the list visible.
+		Each element is added only once.
+	*/
+	void InsertEmbeddedIntoList(QByteArray id);
+	/**
+		Remove an element from the embedded compositions list. If it was the last one, hide the list
+	*/
+	void RemoveEmbeddedFromList(QByteArray id);
+	/**
+		Select embedded composition list element with given id
+	*/
+	void SelectEmbeddedInList(QByteArray id, bool propagateEvent = true);
 
 	// reimplemented (ibase::ICommandsProvider)
 	virtual const ibase::IHierarchicalCommand* GetCommands() const;
@@ -133,11 +154,9 @@ public:
 	virtual bool SetScale(int scaleMode = SM_SET, double value = 1.0);
 
 protected:
-
-
 	/**
 		Implementation of QGraphicsScene with own background drawing to provide rastered backgrounds.
-	 */
+	*/
 	class CScene: public QGraphicsScene
 	{
 	public:
@@ -186,9 +205,9 @@ protected:
 
 Q_SIGNALS:
 	void zoomChanged(double);
+	void embeddedRegistrySelected(const QByteArray&);
 
-	protected
-Q_SLOTS:
+protected Q_SLOTS:
 	void OnPrint();
 	void OnZoomIncrement();
 	void OnZoomDecrement();
@@ -197,10 +216,12 @@ Q_SLOTS:
 	void OnResetScale();
 	void OnAutoFit(bool isAutoScale);
 	void OnSelectAllShapes();
+	// propagate list selection signal to externally accessible signal
+	void on_LocalCompositionSelectorList_itemSelectionChanged();
 
 private:
 	istd::TDelPtr<QGraphicsScene> m_scenePtr;
-
+	
 	FitMode m_fitMode;
 
 	bool m_isFullScreenMode;
@@ -240,7 +261,6 @@ private:
 
 
 // inline protected methods
-
 
 inline iqtgui::CHierarchicalCommand& CSceneProviderGuiComp::GetCommandsRootRef()
 {
