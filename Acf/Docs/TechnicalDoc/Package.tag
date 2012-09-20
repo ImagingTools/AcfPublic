@@ -30265,13 +30265,6 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetParamsSetTypeId</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a4572ef11740ea627ed565ca516737662</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetParamsSetName</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
@@ -30590,13 +30583,6 @@
       <name>GetParamsSet</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>ae19b3efcc16c19eb07df3a3bef7f8f36</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetParamsSetTypeId</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a3eff4c4c4d934443d4f7ef6a73536f19</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">

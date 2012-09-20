@@ -195,24 +195,6 @@ IParamsSet* CMultiParamsManagerComp::GetParamsSet(int index) const
 }
 
 
-QByteArray CMultiParamsManagerComp::GetParamsSetTypeId(int index) const
-{
-	Q_ASSERT((index >= 0) && (index < CMultiParamsManagerComp::GetParamsSetsCount()));
-
-	int fixedSetsCount = m_fixedParamSetsCompPtr.GetCount();
-	if (index < fixedSetsCount){
-		int typeIdsCount = m_fixedSetTypeIdsCompPtr.GetCount();
-		if (typeIdsCount > 0){
-			int realIndex = qMin(index, typeIdsCount);
-
-			return m_fixedSetTypeIdsCompPtr[realIndex];
-		}
-	}
-	
-	return m_paramSets[index - fixedSetsCount].typeId;
-}
-
-
 QString CMultiParamsManagerComp::GetParamsSetName(int index) const
 {
 	Q_ASSERT((index >= 0) && (index < GetParamsSetsCount()));
@@ -319,7 +301,16 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 		QByteArray typeId;
 
 		if (isStoring){
-			typeId = GetParamsSetTypeId(i);
+			int fixedSetsCount = m_fixedParamSetsCompPtr.GetCount();
+			if (i < fixedSetsCount){
+				const iprm::IParamsSet* fixedSetPtr = m_fixedParamSetsCompPtr[i - fixedSetsCount];
+				if (fixedSetPtr != NULL){
+					typeId = fixedSetPtr->GetFactoryId();
+				}
+			}
+			else{
+				typeId = m_paramSets[i - fixedSetsCount].typeId;
+			}
 
 			retVal = retVal && archive.Process(typeId);
 		}
@@ -431,9 +422,8 @@ void CMultiParamsManagerComp::OnComponentCreated()
 	}
 
 	//Obtaining factory ids
-	istd::TDelPtr<IParamsSet> paramsSetPtr;
 	for (int factoryIndex = 0; factoryIndex < m_paramSetsFactoriesPtr.GetCount(); factoryIndex++){		
-		paramsSetPtr.SetPtr(m_paramSetsFactoriesPtr.CreateInstance(factoryIndex));
+		istd::TDelPtr<IParamsSet> paramsSetPtr(m_paramSetsFactoriesPtr.CreateInstance(factoryIndex));
 		
 		if (paramsSetPtr.IsValid()){
 			QByteArray factoryId = paramsSetPtr->GetFactoryId();
@@ -441,8 +431,6 @@ void CMultiParamsManagerComp::OnComponentCreated()
 			if (!factoryId.isEmpty()){
 				m_factoryIdFactoryIndexMap.insert(factoryId, factoryIndex);
 			}
-
-			paramsSetPtr.Reset();
 		}
 	}
 
