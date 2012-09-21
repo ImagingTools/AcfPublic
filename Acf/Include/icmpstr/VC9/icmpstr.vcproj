@@ -520,6 +520,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CVisualRegistryScenographerComp.ui"
+				>
+			</File>
+			<File
 				RelativePath="..\CXpcEditorComp.ui"
 				>
 			</File>
