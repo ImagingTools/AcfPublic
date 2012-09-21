@@ -1953,15 +1953,11 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 							*registryPtr,
 							queryFlags);
 
-
-				QList< QByteArray> compatIdList = compatIds.toList();	
-				qSort(compatIdList);
-				
-				for(        QList< QByteArray>::const_iterator iter = compatIdList.begin();
-							iter != compatIdList.end();
+				for (		icomp::IRegistry::Ids::const_iterator iter = compatIds.begin();
+							iter != compatIds.end();
 							++iter){
-						comboEditor->addItem(*iter);
-				}				
+					comboEditor->addItem(*iter);
+				}
 			}
 
 			const icomp::CReferenceAttribute* referenceAttributePtr = dynamic_cast<const icomp::CReferenceAttribute*>(attributePtr);
