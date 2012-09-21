@@ -1288,14 +1288,11 @@ void CVisualRegistryScenographerComp::OnShowRegistryTopology()
 		dialog.setWindowTitle(tr("Registry Topology"));
 
 		// find button box and disable default button to ignore Enter presses
-		const QObjectList& children = dialog.children();
-		for (int i = 0; i < children.size(); i++){
-			QDialogButtonBox* box = dynamic_cast<QDialogButtonBox*>(children[i]);
-			if (box){
-				QPushButton* button = dynamic_cast<QPushButton*>(box->button(QDialogButtonBox::Close));
-				if (button){
-					button->setAutoDefault(false);
-				}
+		const QDialogButtonBox* box = dialog.GetButtonBoxPtr();
+		if (box){
+			QPushButton* button = dynamic_cast<QPushButton*>(box->button(QDialogButtonBox::Close));
+			if (button){
+				button->setAutoDefault(false);
 			}
 		}
 
