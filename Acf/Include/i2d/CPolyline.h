@@ -33,6 +33,10 @@ namespace i2d
 {
 
 
+/**
+	2D-object representing a polyine.
+	A polyline is a connected series of line segments and is normally used to approximate curved paths.
+*/
 class CPolyline: public CPolygon
 {
 public:
@@ -72,6 +76,8 @@ private:
 };
 
 
+// public inline methods
+
 inline CPolyline::CPolyline()
 {
 	m_isClosed = false;
@@ -88,4 +94,5 @@ inline bool CPolyline::IsClosed() const
 
 
 #endif // !i2d_CPolyline_included
+
 

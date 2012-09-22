@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include "qmetaobject.h"
+#include <QtCore/qmetaobject.h>
 
 
 // ACF includes

@@ -31,6 +31,9 @@ namespace i2d
 {	
 
 
+/**
+	Radial segment of the annulus object.
+*/
 class CAnnulusSegment: public CAnnulus
 {
 public:

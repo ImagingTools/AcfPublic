@@ -33,6 +33,9 @@ namespace i2d
 {
 
 
+/**
+	Definition of tube region based on polyline.
+*/
 typedef TDataNodePolyline<CTubeNode> CTubePolyline;
 
 

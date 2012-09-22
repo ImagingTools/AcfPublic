@@ -113,7 +113,6 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_label_8h</filename>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_c_position2d_8h" name="CPosition2d.h" local="yes" imported="no">i2d/CPosition2d.h</includes>
     <class kind="class">i2d::CLabel</class>
     <namespace>i2d</namespace>
@@ -9973,13 +9972,6 @@
     <name>i2d::CSplineSegment</name>
     <filename>classi2d_1_1_c_spline_segment.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="typedef">
-      <type>istd::IPolymorphic</type>
-      <name>BaseClass</name>
-      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
-      <anchor>a5da3c499ae782a8a1cea13108af36805</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
       <name>GetPointInSegment</name>

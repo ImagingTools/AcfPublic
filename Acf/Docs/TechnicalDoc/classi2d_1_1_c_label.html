@@ -38,6 +38,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="i2d::CLabel" --><!-- doxytag: inherits="i2d::CPosition2d" -->
+<p>Data model for the label shape.  
+ <a href="classi2d_1_1_c_label.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_c_label_8h_source.html">CLabel.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for i2d::CLabel:</div>
@@ -61,14 +64,18 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a8e50e02b99526b2e23d163bd055cc08e">CLabel</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position=<a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>(0, 0), const QString &amp;labelText=&quot;Label&quot;)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the label object with predefined parameters.  <a href="#a8e50e02b99526b2e23d163bd055cc08e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#afba5278ae233b323f7020c1c217579e1">GetText</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get label text.  <a href="#afba5278ae233b323f7020c1c217579e1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a37a3cf9cf3a1dedba74213fd16ebd946">SetText</a> (const QString &amp;labelText)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set label text.  <a href="#a37a3cf9cf3a1dedba74213fd16ebd946"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a9014bf003fa9b9b0b5c3a207d7af0e17">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a9014bf003fa9b9b0b5c3a207d7af0e17"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_c_label_8h_source.html#l00017">17</a> of file <a class="el" href="_c_label_8h_source.html">CLabel.h</a>.</p>
+<div class="textblock"><p>Data model for the label shape. </p>
+
+<p>Definition at line <a class="el" href="_c_label_8h_source.html#l00018">18</a> of file <a class="el" href="_c_label_8h_source.html">CLabel.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aba01ad4cbc064ac8ce3f08ad3512c02e"></a><!-- doxytag: member="i2d::CLabel::BaseClass" ref="aba01ad4cbc064ac8ce3f08ad3512c02e" args="" -->
 <div class="memitem">
@@ -81,7 +88,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_label_8h_source.html#l00020">20</a> of file <a class="el" href="_c_label_8h_source.html">CLabel.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_label_8h_source.html#l00021">21</a> of file <a class="el" href="_c_label_8h_source.html">CLabel.h</a>.</p>
 
 </div>
 </div>
@@ -111,6 +118,15 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Construct the label object with predefined parameters. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Center position of the label. </td></tr>
+    <tr><td class="paramname">labelText</td><td>Label text. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
@@ -128,7 +144,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_label_8h_source.html#l00037">37</a> of file <a class="el" href="_c_label_8h_source.html">CLabel.h</a>.</p>
+<p>Get label text. </p>
+
+<p>Definition at line <a class="el" href="_c_label_8h_source.html#l00050">50</a> of file <a class="el" href="_c_label_8h_source.html">CLabel.h</a>.</p>
 
 </div>
 </div>
@@ -169,6 +187,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Set label text. </p>
 
 </div>
 </div>

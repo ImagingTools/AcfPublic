@@ -38,6 +38,9 @@ namespace i2d
 {
 
 
+/**
+	2D-object given by the simple set of points.
+*/
 class CPolypoint: virtual public IObject2d
 {
 public:
