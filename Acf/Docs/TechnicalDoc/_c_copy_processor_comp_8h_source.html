@@ -67,7 +67,7 @@
 <a name="l00044"></a>00044               I_ASSIGN(m_outputPathAttrPtr, <span class="stringliteral">&quot;OutputDir&quot;</span>, <span class="stringliteral">&quot;Path of input file or directory&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;./Copy&quot;</span>);
 <a name="l00045"></a>00045               I_ASSIGN_MULTI_1(m_filtersAttrPtr, <span class="stringliteral">&quot;Filters&quot;</span>, <span class="stringliteral">&quot;List of file filters will be copied&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;*&quot;</span>);
 <a name="l00046"></a>00046               I_ASSIGN_MULTI_0(m_excludeFiltersAttrPtr, <span class="stringliteral">&quot;ExcludeFilters&quot;</span>, <span class="stringliteral">&quot;List of file filters will be exclude from copy&quot;</span>, <span class="keyword">false</span>);
-<a name="l00047"></a>00047               I_ASSIGN(m_recursionDepthAttrPtr, <span class="stringliteral">&quot;RecursionDepth&quot;</span>, <span class="stringliteral">&quot;Depth of recursion&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00047"></a>00047               I_ASSIGN(m_recursionDepthAttrPtr, <span class="stringliteral">&quot;RecursionDepth&quot;</span>, <span class="stringliteral">&quot;Depth of recursion. Negative value means no depth limitation&quot;</span>, <span class="keyword">true</span>, 0);
 <a name="l00048"></a>00048        I_END_COMPONENT;
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 <span class="keyword">protected</span>:
