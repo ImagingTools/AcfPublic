@@ -55,38 +55,40 @@
 <a name="l00032"></a><a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html#afa13537de800360da28b6a28ed5e8a43">00032</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_comp_base.html">iproc::CSyncProcessorCompBase</a> <a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html#afa13537de800360da28b6a28ed5e8a43">BaseClass</a>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html" title="Basic implementation for a image region processor.">CImageRegionProcessorCompBase</a>);
-<a name="l00035"></a>00035               I_ASSIGN(m_aoiParamIdAttrPtr, <span class="stringliteral">&quot;AoiParamId&quot;</span>, <span class="stringliteral">&quot;ID of the AOI region in the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;AoiParams&quot;</span>);
-<a name="l00036"></a>00036               I_ASSIGN(m_regionCalibrationProviderCompPtr, <span class="stringliteral">&quot;RegionCalibrationProvider&quot;</span>, <span class="stringliteral">&quot;Calibration object used for tranformation of region parameters from logical to pixel coordinates&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;RegionCalibrationProvider&quot;</span>);
-<a name="l00037"></a>00037        I_END_COMPONENT;
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iproc::IProcessor)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html#a4684a9de7aa9e5a6179b5d84793f2f47">DoProcessing</a>(
-<a name="l00041"></a>00041                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00042"></a>00042                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
-<a name="l00043"></a>00043                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
-<a name="l00044"></a>00044                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="keyword">protected</span>:
-<a name="l00047"></a>00047        <span class="comment">// abstract methods</span>
-<a name="l00048"></a>00048 
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html#a84b0342f3751089c754cb291831577d8" title="Process the defined image region.">ProcessImageRegion</a>(
-<a name="l00053"></a>00053                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputBitmap,
-<a name="l00054"></a>00054                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00055"></a>00055                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a>* aoiPtr,
-<a name="l00056"></a>00056                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr) <span class="keyword">const</span> = 0;
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059        I_ATTR(QByteArray, m_aoiParamIdAttrPtr);
-<a name="l00060"></a>00060        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_regionCalibrationProviderCompPtr);
-<a name="l00061"></a>00061 };
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 } <span class="comment">// namespace iipr</span>
+<a name="l00035"></a>00035               I_ASSIGN(m_aoiParamIdAttrPtr, <span class="stringliteral">&quot;AoiParamId&quot;</span>, <span class="stringliteral">&quot;ID of the AOI region in the parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;AoiParams&quot;</span>);
+<a name="l00036"></a>00036               I_ASSIGN(m_allowEmptyRegionAttrPtr, <span class="stringliteral">&quot;AllowEmptyAoi&quot;</span>, <span class="stringliteral">&quot;If enabled the full image area is used of no AOI was set&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_regionCalibrationProviderCompPtr, <span class="stringliteral">&quot;RegionCalibrationProvider&quot;</span>, <span class="stringliteral">&quot;Calibration object used for tranformation of region parameters from logical to pixel coordinates&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;RegionCalibrationProvider&quot;</span>);
+<a name="l00038"></a>00038        I_END_COMPONENT;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (iproc::IProcessor)</span>
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html#a4684a9de7aa9e5a6179b5d84793f2f47">DoProcessing</a>(
+<a name="l00042"></a>00042                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00043"></a>00043                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00044"></a>00044                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00045"></a>00045                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="keyword">protected</span>:
+<a name="l00048"></a>00048        <span class="comment">// abstract methods</span>
+<a name="l00049"></a>00049 
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html#a84b0342f3751089c754cb291831577d8" title="Process the defined image region.">ProcessImageRegion</a>(
+<a name="l00054"></a>00054                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputBitmap,
+<a name="l00055"></a>00055                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00056"></a>00056                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a>* aoiPtr,
+<a name="l00057"></a>00057                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr) <span class="keyword">const</span> = 0;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">private</span>:
+<a name="l00060"></a>00060        I_ATTR(QByteArray, m_aoiParamIdAttrPtr);
+<a name="l00061"></a>00061        I_ATTR(<span class="keywordtype">bool</span>, m_allowEmptyRegionAttrPtr);
+<a name="l00062"></a>00062        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_regionCalibrationProviderCompPtr);
+<a name="l00063"></a>00063 };
+<a name="l00064"></a>00064 
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="preprocessor">#endif // !iipr_CImageRegionProcessorCompBase_included</span>
-<a name="l00068"></a>00068 <span class="preprocessor"></span>
-<a name="l00069"></a>00069 
+<a name="l00066"></a>00066 } <span class="comment">// namespace iipr</span>
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="preprocessor">#endif // !iipr_CImageRegionProcessorCompBase_included</span>
+<a name="l00070"></a>00070 <span class="preprocessor"></span>
+<a name="l00071"></a>00071 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

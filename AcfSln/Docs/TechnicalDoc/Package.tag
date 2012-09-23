@@ -855,6 +855,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CMorphologicalProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_morphological_processor_comp_8h</filename>
+    <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
+    <class kind="class">iipr::CMorphologicalProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CMultiBitmapCacheComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_bitmap_cache_comp_8h</filename>
@@ -6168,6 +6176,7 @@
     <class kind="class">iipr::CImageRegionProcessorCompBase</class>
     <class kind="class">iipr::CLineProjectionProcessorComp</class>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
+    <class kind="class">iipr::CMorphologicalProcessorComp</class>
     <class kind="class">iipr::CMultiBitmapCacheComp</class>
     <class kind="class">iipr::CMultiLineSupplierCompBase</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
@@ -7703,6 +7712,43 @@
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
       <anchor>a949009c368a09afc4275e4257471251f</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CMorphologicalProcessorComp</name>
+    <filename>classiipr_1_1_c_morphological_processor_comp.html</filename>
+    <base>iipr::CImageRegionProcessorCompBase</base>
+    <member kind="enumeration">
+      <name>ProcessingMode</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PM_EROSION</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228a448e664dbee5a2c8ba527d7dc7891fcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PM_DILATATION</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228a1b11f08282c852e60404285ce08a43fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CImageRegionProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a1b0ae65faf74008c2b943ad9d59b3789</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImageRegion</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a7981c6af9bc393094a701a245c2dc623</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">

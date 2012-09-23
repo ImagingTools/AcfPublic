@@ -3903,6 +3903,7 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_image_view_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
     <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="yes" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
@@ -35685,12 +35686,20 @@
     <name>iqt2d::CImageViewComp</name>
     <filename>classiqt2d_1_1_c_image_view_comp.html</filename>
     <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
       <anchor>ae889bd9ccb05821fe4267f5f75711dce</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
+      <anchor>a0f98aea10d5fbe4f1b9d013ff20b0400</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

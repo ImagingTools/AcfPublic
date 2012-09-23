@@ -66,6 +66,8 @@
 #include "iipr/CEdgeDistanceProcessorComp.h"
 #include "iipr/CEdgeDistancesSupplierComp.h"
 #include "iipr/CTubeProjectionLinesProviderComp.h"
+#include "iipr/CMorphologicalProcessorComp.h"
+
 
 /**
 	System-undependent image processing package.
@@ -135,6 +137,7 @@ typedef icomp::TModelCompWrap<iipr::CBitmapJoinerSupplierComp> BitmapJoinerSuppl
 typedef iipr::CEdgeDistanceProcessorComp EdgeDistanceProcessor;
 typedef icomp::TModelCompWrap<iipr::CEdgeDistancesSupplierComp> EdgeDistancesSupplier;
 typedef icomp::TModelCompWrap<iipr::CTubeProjectionLinesProviderComp> TubeProjectionLinesProvider;
+typedef iipr::CMorphologicalProcessorComp MorphologicalProcessor;
 
 
 } // namespace IprPck
