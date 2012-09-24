@@ -1,30 +1,62 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="1">
+    <VersionInfos count="2">
       <Version>
         <Id>
           0
         </Id>
         <Number>
-          2476
+          2535
         </Number>
         <Description>
           ACF
         </Description>
       </Version>
+      <Version>
+        <Id>
+          1023
+        </Id>
+        <Number>
+          264192
+        </Number>
+        <Description>
+          Qt Framework
+        </Description>
+      </Version>
     </VersionInfos>
   </AcfHeader>
-  <ElementsList count="2">
+  <ElementsList count="4">
     <Element>
       <Id>
-        BaseInfo
+        Bitmap
       </Id>
       <PackageId>
-        AcfVoce
+        QtPck
       </PackageId>
       <ComponentId>
-        VersionInfo
+        Bitmap
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="0">
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        Dilatation
+      </Id>
+      <PackageId>
+        IprPck
+      </PackageId>
+      <ComponentId>
+        MorphologicalProcessor
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -36,7 +68,7 @@
         <AttributeInfoMap count="7">
           <AttributeInfo>
             <Id>
-              IsExtensionUsed
+              AllowEmptyAoi
             </Id>
             <Type>
               Boolean
@@ -55,10 +87,10 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              KnownVersionNames
+              AoiParamId
             </Id>
             <Type>
-              String[]
+              Id
             </Type>
             <ExportId>
               
@@ -67,103 +99,20 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="11">
-                <Value>
-                  0.2.0
-                </Value>
-                <Value>
-                  0.3.0
-                </Value>
-                <Value>
-                  0.3.1
-                </Value>
-                <Value>
-                  0.3.2
-                </Value>
-                <Value>
-                  0.4.0
-                </Value>
-                <Value>
-                  0.4.1
-                </Value>
-                <Value>
-                  0.4.2
-                </Value>
-                <Value>
-                  0.4.3
-                </Value>
-                <Value>
-                  0.4.4
-                </Value>
-                <Value>
-                  0.5.0
-                </Value>
-                <Value>
-                  0.5.1
-                </Value>
-              </Values>
+              <Value>
+                AoiParams
+              </Value>
             </Data>
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              KnownVersions
+              EnableVerbose
             </Id>
             <Type>
-              Integer[]
+              Boolean
             </Type>
             <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Values count="11">
-                <Value>
-                  127
-                </Value>
-                <Value>
-                  144
-                </Value>
-                <Value>
-                  148
-                </Value>
-                <Value>
-                  183
-                </Value>
-                <Value>
-                  209
-                </Value>
-                <Value>
-                  292
-                </Value>
-                <Value>
-                  307
-                </Value>
-                <Value>
-                  313
-                </Value>
-                <Value>
-                  341
-                </Value>
-                <Value>
-                  356
-                </Value>
-                <Value>
-                  651
-                </Value>
-              </Values>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              SlaveVersionInfo
-            </Id>
-            <Type>
-              Reference
-            </Type>
-            <ExportId>
-              SlaveVersionInfo
+              EnableVerbose
             </ExportId>
             <Data>
               <IsEnabled>
@@ -173,7 +122,39 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionId
+              FilterSizeParamsId
+            </Id>
+            <Type>
+              Id
+            </Type>
+            <ExportId>
+              FilterSizeParamsId
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              Log
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              Log
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              ProcessingMode
             </Id>
             <Type>
               Integer
@@ -192,40 +173,18 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionIdDesc
+              RegionCalibrationProvider
             </Id>
             <Type>
-              String
+              Reference
             </Type>
             <ExportId>
-              
+              RegionCalibrationProvider
             </ExportId>
             <Data>
               <IsEnabled>
-                true
+                false
               </IsEnabled>
-              <Value>
-                ACF-Solutions
-              </Value>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              VersionNumber
-            </Id>
-            <Type>
-              Integer
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Value>
-                683
-              </Value>
             </Data>
           </AttributeInfo>
         </AttributeInfoMap>
@@ -233,13 +192,13 @@
     </Element>
     <Element>
       <Id>
-        VersionInfo
+        Erosion
       </Id>
       <PackageId>
-        BasePck
+        IprPck
       </PackageId>
       <ComponentId>
-        VersionInfo
+        MorphologicalProcessor
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -251,58 +210,10 @@
         <AttributeInfoMap count="7">
           <AttributeInfo>
             <Id>
-              IsExtensionUsed
+              AllowEmptyAoi
             </Id>
             <Type>
               Boolean
-            </Type>
-            <ExportId>
-              IsExtensionUsed
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              KnownVersionNames
-            </Id>
-            <Type>
-              String[]
-            </Type>
-            <ExportId>
-              KnownVersionNames
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              KnownVersions
-            </Id>
-            <Type>
-              Integer[]
-            </Type>
-            <ExportId>
-              KnownVersions
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              SlaveVersionInfo
-            </Id>
-            <Type>
-              Reference
             </Type>
             <ExportId>
               
@@ -312,19 +223,38 @@
                 true
               </IsEnabled>
               <Value>
-                BaseInfo
+                true
               </Value>
             </Data>
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionId
+              AoiParamId
             </Id>
             <Type>
-              Integer
+              Id
             </Type>
             <ExportId>
-              VersionId
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                AoiParams
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              EnableVerbose
+            </Id>
+            <Type>
+              Boolean
+            </Type>
+            <ExportId>
+              EnableVerbose
             </ExportId>
             <Data>
               <IsEnabled>
@@ -334,13 +264,13 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionIdDesc
+              FilterSizeParamsId
             </Id>
             <Type>
-              String
+              Id
             </Type>
             <ExportId>
-              VersionIdDesc
+              FilterSizeParamsId
             </ExportId>
             <Data>
               <IsEnabled>
@@ -350,18 +280,167 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionNumber
+              Log
             </Id>
             <Type>
-              Integer
+              Reference
             </Type>
             <ExportId>
-              VersionNumber
+              Log
             </ExportId>
             <Data>
               <IsEnabled>
                 false
               </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              ProcessingMode
+            </Id>
+            <Type>
+              Integer
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                0
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              RegionCalibrationProvider
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              RegionCalibrationProvider
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        Opening
+      </Id>
+      <PackageId>
+        BasePck
+      </PackageId>
+      <ComponentId>
+        CascadedProcessor
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="4">
+          <AttributeInfo>
+            <Id>
+              Buffers
+            </Id>
+            <Type>
+              Reference[]
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Values count="1">
+                <Value>
+                  Bitmap
+                </Value>
+              </Values>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              Processors
+            </Id>
+            <Type>
+              Reference[]
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Values count="2">
+                <Value>
+                  Dilatation
+                </Value>
+                <Value>
+                  Erosion
+                </Value>
+              </Values>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              ProgressDescriptions
+            </Id>
+            <Type>
+              String[]
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Values count="2">
+                <Value>
+                  Dilatation
+                </Value>
+                <Value>
+                  Erosion
+                </Value>
+              </Values>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              ProgressIds
+            </Id>
+            <Type>
+              Id[]
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Values count="2">
+                <Value>
+                  Dilatation
+                </Value>
+                <Value>
+                  Erosion
+                </Value>
+              </Values>
             </Data>
           </AttributeInfo>
         </AttributeInfoMap>
@@ -373,19 +452,19 @@
   <ExportedInterfaces count="1">
     <Interface>
       <InterfaceId>
-        iser::IVersionInfo
+        iproc::IProcessor
       </InterfaceId>
       <ComponentId>
-        VersionInfo
+        Opening
       </ComponentId>
     </Interface>
   </ExportedInterfaces>
   <ExportedComponents count="0">
   </ExportedComponents>
   <Description>
-    Version information for modules based directly on ACF-Solutions
+    Processor for morphological opening
   </Description>
   <Keywords>
-    Application Tag=Version Info Author='"Witold Gantzke"'
+    Morphology Opening Closing Processor Bitmap Author='"Kirill Lepskiy"' Tag='"Image Processing"'
   </Keywords>
 </Acf>
