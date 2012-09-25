@@ -11791,6 +11791,13 @@
       <anchor>aa331e77e82c301148a24880866fca9d7</anchor>
       <arglist>(IHierarchicalMessageContainer *childContainerPtr)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSlaveConsumer</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>ac96787fcd2d4df915eab139c29164be7</anchor>
+      <arglist>(ibase::IMessageConsumer *consumerPtr)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>

@@ -31,11 +31,12 @@
 
 
 namespace ibase
-{		
+{
 
 
 CMessageContainer::CMessageContainer()
-    :m_maxMessageCount(-1),
+:	m_slaveConsumerPtr(NULL),
+	m_maxMessagesCount(-1),
 	m_maxLiveTime(-1),
     m_worstCategory(-1)
 {
@@ -53,6 +54,12 @@ void CMessageContainer::AddChildContainer(IHierarchicalMessageContainer* childCo
 	I_ASSERT(childContainerPtr != NULL);
 
 	m_childContainers.push_back(childContainerPtr);
+}
+
+
+void CMessageContainer::SetSlaveConsumer(ibase::IMessageConsumer* consumerPtr)
+{
+	m_slaveConsumerPtr = consumerPtr;
 }
 
 
@@ -99,9 +106,9 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 
 void CMessageContainer::SetMaxMessageCount(int maxMessageCount)
 {
-	I_ASSERT(m_maxMessageCount != 0);
+	I_ASSERT(m_maxMessagesCount != 0);
 
-	m_maxMessageCount = maxMessageCount;
+	m_maxMessagesCount = maxMessageCount;
 }
 
 
@@ -184,7 +191,7 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 {
 	I_ASSERT(messagePtr.IsValid());
 
-	if (m_maxMessageCount == 0){
+	if (m_maxMessagesCount == 0){
 		return;
 	}
 
@@ -202,8 +209,8 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 		}
 	}
 
-	if (m_maxMessageCount >= 0){
-		while (int(m_messages.size()) > m_maxMessageCount){
+	if (m_maxMessagesCount >= 0){
+		while (int(m_messages.size()) > m_maxMessagesCount){
 			I_ASSERT(!m_messages.isEmpty());
 			const IMessageConsumer::MessagePtr& messageToRemovePtr = m_messages.back();
 
@@ -221,6 +228,9 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 		}
 	}
 
+	if (m_slaveConsumerPtr != NULL){
+		m_slaveConsumerPtr->AddMessage(messagePtr);
+	}
 }
 
 

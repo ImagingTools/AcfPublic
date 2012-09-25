@@ -480,7 +480,7 @@ void TRanges<ValueType>::Union(const TRange<ValueType>& range, bool isInverted)
 	bool firstPointState = m_beginState;
     typename SwitchPoints::const_iterator firstIter = m_switchPoints.begin();
 	for (;firstIter != m_switchPoints.end(); ++firstIter){
-		if (*firstIter > range.GetMinValue()){
+		if (*firstIter >= range.GetMinValue()){
 			break;
 		}
 
@@ -490,7 +490,7 @@ void TRanges<ValueType>::Union(const TRange<ValueType>& range, bool isInverted)
 	bool secondPointState = firstPointState;
     typename SwitchPoints::const_iterator secondIter = firstIter;
 	for (;secondIter != m_switchPoints.end(); ++secondIter){
-		if (*secondIter > range.GetMaxValue()){
+		if (*secondIter >= range.GetMaxValue()){
 			break;
 		}
 
@@ -515,11 +515,11 @@ void TRanges<ValueType>::Union(const TRange<ValueType>& range, bool isInverted)
 
 	m_beginState = m_beginState || isInverted;
 
-	if (firstPointState != !isInverted){
+	if (firstPointState == isInverted){
 		m_switchPoints.insert(range.GetMinValue());
 	}
 
-	if (secondPointState != isInverted){
+	if (secondPointState == isInverted){
 		m_switchPoints.insert(range.GetMaxValue());
 	}
 }

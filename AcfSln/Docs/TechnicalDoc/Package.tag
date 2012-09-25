@@ -3058,6 +3058,13 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>acb0ecf0fda33d6c91a9efb71c1135732</anchor>
+      <arglist>(m_multiBitmapProviderModelCompPtr, m_multiBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
       <anchor>aa78afc7870822ec7a0ab5320628090fe</anchor>
       <arglist>(m_bitmapSelectionModelCompPtr, m_bitmapSelectionCompPtr, true)</arglist>
     </member>

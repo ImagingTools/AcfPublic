@@ -387,7 +387,7 @@
 <a name="l00458"></a>00458        <span class="keywordtype">bool</span> firstPointState = m_beginState;
 <a name="l00459"></a>00459     <span class="keyword">typename</span> SwitchPoints::const_iterator firstIter = m_switchPoints.begin();
 <a name="l00460"></a>00460        <span class="keywordflow">for</span> (;firstIter != m_switchPoints.end(); ++firstIter){
-<a name="l00461"></a>00461               <span class="keywordflow">if</span> (*firstIter &gt; range.<a class="code" href="classistd_1_1_t_range.html#af0d94456ae2efd66fc7c7848e0be8024" title="Get the bottom value.">GetMinValue</a>()){
+<a name="l00461"></a>00461               <span class="keywordflow">if</span> (*firstIter &gt;= range.<a class="code" href="classistd_1_1_t_range.html#af0d94456ae2efd66fc7c7848e0be8024" title="Get the bottom value.">GetMinValue</a>()){
 <a name="l00462"></a>00462                      <span class="keywordflow">break</span>;
 <a name="l00463"></a>00463               }
 <a name="l00464"></a>00464 
@@ -397,7 +397,7 @@
 <a name="l00468"></a>00468        <span class="keywordtype">bool</span> secondPointState = firstPointState;
 <a name="l00469"></a>00469     <span class="keyword">typename</span> SwitchPoints::const_iterator secondIter = firstIter;
 <a name="l00470"></a>00470        <span class="keywordflow">for</span> (;secondIter != m_switchPoints.end(); ++secondIter){
-<a name="l00471"></a>00471               <span class="keywordflow">if</span> (*secondIter &gt; range.<a class="code" href="classistd_1_1_t_range.html#a138f4e110681ed9aa90ed1971271bc67" title="Get the top value.">GetMaxValue</a>()){
+<a name="l00471"></a>00471               <span class="keywordflow">if</span> (*secondIter &gt;= range.<a class="code" href="classistd_1_1_t_range.html#a138f4e110681ed9aa90ed1971271bc67" title="Get the top value.">GetMaxValue</a>()){
 <a name="l00472"></a>00472                      <span class="keywordflow">break</span>;
 <a name="l00473"></a>00473               }
 <a name="l00474"></a>00474 
@@ -422,11 +422,11 @@
 <a name="l00493"></a>00493 
 <a name="l00494"></a>00494        m_beginState = m_beginState || isInverted;
 <a name="l00495"></a>00495 
-<a name="l00496"></a>00496        <span class="keywordflow">if</span> (firstPointState != !isInverted){
+<a name="l00496"></a>00496        <span class="keywordflow">if</span> (firstPointState == isInverted){
 <a name="l00497"></a>00497               m_switchPoints.insert(range.<a class="code" href="classistd_1_1_t_range.html#af0d94456ae2efd66fc7c7848e0be8024" title="Get the bottom value.">GetMinValue</a>());
 <a name="l00498"></a>00498        }
 <a name="l00499"></a>00499 
-<a name="l00500"></a>00500        <span class="keywordflow">if</span> (secondPointState != isInverted){
+<a name="l00500"></a>00500        <span class="keywordflow">if</span> (secondPointState == isInverted){
 <a name="l00501"></a>00501               m_switchPoints.insert(range.<a class="code" href="classistd_1_1_t_range.html#a138f4e110681ed9aa90ed1971271bc67" title="Get the top value.">GetMaxValue</a>());
 <a name="l00502"></a>00502        }
 <a name="l00503"></a>00503 }
