@@ -73,6 +73,8 @@ protected:
 	bool TryShowSplashScreen();
 	void HideSplashScreen();
 
+	void InitializeComponentApplication();
+
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 

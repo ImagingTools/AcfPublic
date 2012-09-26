@@ -3444,6 +3444,13 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>GetTotalLength</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a03534da84e5543b7fb85ba7aad1a48f8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>GetMinWeight</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
       <anchor>ad512fbfff6f874f9b72021ff522e39fc</anchor>

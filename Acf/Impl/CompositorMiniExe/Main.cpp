@@ -218,8 +218,6 @@ int main(int argc, char *argv[])
 	// registry model
 	modelObserverPtr = &attributeEditorComp;
 	icomp::TSimComponentsFactory<CompositorPck::VisualRegistry> modelFactoryComp;
-	modelFactoryComp.SetRef("Log", &log);
-	modelFactoryComp.SetRef("MetaInfoManager", &packagesLoaderComp);
 
 	// registry view
 	metaInfoManagerPtr = &packagesLoaderComp;

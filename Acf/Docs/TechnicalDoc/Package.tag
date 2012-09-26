@@ -11798,26 +11798,26 @@
       <anchor>ac96787fcd2d4df915eab139c29164be7</anchor>
       <arglist>(ibase::IMessageConsumer *consumerPtr)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMaxMessageCount</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>afddbd67f0c5a6d30ce8bf1aa62eabc20</anchor>
+      <arglist>(int maxMessageCount=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMaxLiveTime</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>ac5865d36dcc37244079be586a373d5b0</anchor>
+      <arglist>(int maxLiveTime=-1)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
       <anchor>a12a98d2ca094f56627dbf710ee400f9c</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetMaxMessageCount</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>a1ffa5a4e85dedd0303de97fc19955638</anchor>
-      <arglist>(int maxMessageCount=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetMaxLiveTime</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>a77a78e8d6a7be5edcd77d908db8dcbb7</anchor>
-      <arglist>(int maxLiveTime=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -13073,20 +13073,6 @@
       <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
       <anchor>a198cd938222b714f782b3e51cbd02efc</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetMaxMessageCount</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>a908b3361d6c15f45eae3802e18ba4e5c</anchor>
-      <arglist>(int maxMessageCount=-1)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetMaxLiveTime</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>a00747812d58911bf2bb1accc64630fe8</anchor>
-      <arglist>(int maxLiveTime=-1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -37760,6 +37746,13 @@
       <name>HideSplashScreen</name>
       <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
       <anchor>acfcaf67ecd1e90711f3a868bad6de0f9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InitializeComponentApplication</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>a44957c1cf1d3b71e1606b3d3e23539df</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

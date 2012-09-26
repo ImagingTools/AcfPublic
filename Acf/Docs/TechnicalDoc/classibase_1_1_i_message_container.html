@@ -66,10 +66,6 @@ Public Types</h2></td></tr>
 &lt; <a class="el" href="classibase_1_1_i_message_consumer.html#ae311a8dd68f996f8aaaf8ed9fdfa4df7">ibase::IMessageConsumer::MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a198cd938222b714f782b3e51cbd02efc">Messages</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a908b3361d6c15f45eae3802e18ba4e5c">SetMaxMessageCount</a> (int maxMessageCount=-1)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximal number of messages in the container.  <a href="#a908b3361d6c15f45eae3802e18ba4e5c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a00747812d58911bf2bb1accc64630fe8">SetMaxLiveTime</a> (int maxLiveTime=-1)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum time difference between the oldest and newest message.  <a href="#a00747812d58911bf2bb1accc64630fe8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#adaec1546c8caaeac32971c96ea73e2eb">GetWorstCategory</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get worst message category.  <a href="#adaec1546c8caaeac32971c96ea73e2eb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_container.html#a198cd938222b714f782b3e51cbd02efc">Messages</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_message_container.html#a0c3f5911eeb22ad94eaa97fe64fae100">GetMessages</a> () const =0</td></tr>
@@ -178,58 +174,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Get worst message category. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>IInformationProvider::InformationCategory </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a00747812d58911bf2bb1accc64630fe8"></a><!-- doxytag: member="ibase::IMessageContainer::SetMaxLiveTime" ref="a00747812d58911bf2bb1accc64630fe8" args="(int maxLiveTime=&#45;1)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ibase::IMessageContainer::SetMaxLiveTime </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxLiveTime</em> = <code>-1</code></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set maximum time difference between the oldest and newest message. </p>
-<p>If calculated value is grated then this threshold, the oldest message will be removed if a new message will be added. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">maxLiveTime</td><td>maximal time difference in seconds </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a908b3361d6c15f45eae3802e18ba4e5c"></a><!-- doxytag: member="ibase::IMessageContainer::SetMaxMessageCount" ref="a908b3361d6c15f45eae3802e18ba4e5c" args="(int maxMessageCount=&#45;1)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ibase::IMessageContainer::SetMaxMessageCount </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxMessageCount</em> = <code>-1</code></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set maximal number of messages in the container. </p>
-<p>If a new message will be added to the full container, the oldest message will be removed. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">maxMessageCount</td><td>maximal number of messages in the container. If the value equals -1, no limit is set for. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
