@@ -494,6 +494,7 @@
     <filename>_c_external_file_converter_comp_8h</filename>
     <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
     <class kind="class">ibase::CExternalFileConverterComp</class>
     <namespace>ibase</namespace>
@@ -2490,6 +2491,7 @@
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
     <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
+    <includes id="_c_tube_polyline_8h" name="CTubePolyline.h" local="yes" imported="no">i2d/CTubePolyline.h</includes>
     <includes id="_i_raster_image_8h" name="IRasterImage.h" local="yes" imported="no">iimg/IRasterImage.h</includes>
     <class kind="class">iimg::CScanlineMask</class>
     <namespace>iimg</namespace>
@@ -4331,6 +4333,15 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileListProviderGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_file_list_provider_gui_comp_8h</filename>
+    <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ibase/IFileListProvider.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtgui::CFileListProviderGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFilePersistenceGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_file_persistence_gui_comp_8h</filename>
@@ -4897,6 +4908,19 @@
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <class kind="class">iqtproc::CDocumentProcessingManagerCompBase</class>
+    <namespace>iqtproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessorCommandComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtproc/</path>
+    <filename>_c_processor_command_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iqtproc::CProcessorCommandComp</class>
     <namespace>iqtproc</namespace>
   </compound>
   <compound kind="file">
@@ -6142,6 +6166,15 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CSimpleShapeFactoryComp.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_simple_shape_factory_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_shape_factory_8h" name="IShapeFactory.h" local="yes" imported="no">iview/IShapeFactory.h</includes>
+    <class kind="class">iview::CSimpleShapeFactoryComp</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTransformableRectangleCalibrationShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_transformable_rectangle_calibration_shape_8h</filename>
@@ -6297,6 +6330,15 @@
     <includes id="_i_visualizable_8h" name="IVisualizable.h" local="yes" imported="no">iview/IVisualizable.h</includes>
     <includes id="_i_touchable_8h" name="ITouchable.h" local="yes" imported="no">iview/ITouchable.h</includes>
     <class kind="class">iview::IShape</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IShapeFactory.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_i_shape_factory_8h</filename>
+    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_i_shape_8h" name="IShape.h" local="yes" imported="no">iview/IShape.h</includes>
+    <class kind="class">iview::IShapeFactory</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -8427,6 +8469,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetNodesCount</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a855c33b5809933c0c29ffc945b304b60</anchor>
+      <arglist>(int nodesCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetNodesCount</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
@@ -8537,13 +8586,6 @@
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
       <anchor>aee96368e13548faa82bd3c2cf7aad01a</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetNodesCount</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a855c33b5809933c0c29ffc945b304b60</anchor>
-      <arglist>(int nodesCount)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25206,6 +25248,13 @@
       <arglist>(const i2d::CPolygon &amp;polygon, const i2d::CRect *clipAreaPtr)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>CreateFromTube</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ae7ab62660b35eb281b4efda1c7507157</anchor>
+      <arglist>(const i2d::CTubePolyline &amp;tube, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function">
       <type>CScanlineMask</type>
       <name>GetUnion</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
@@ -33710,6 +33759,7 @@
   <compound kind="class">
     <name>iqt::CFileListProviderComp</name>
     <filename>classiqt_1_1_c_file_list_provider_comp.html</filename>
+    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ibase::IFileListProvider</base>
     <base protection="protected">imod::CSingleModelObserverBase</base>
@@ -37627,6 +37677,7 @@
     <class kind="class">iqtgui::CDockWidgetGuiComp</class>
     <class kind="class">iqtgui::CExtLineEdit</class>
     <class kind="class">iqtgui::CFileDialogLoaderComp</class>
+    <class kind="class">iqtgui::CFileListProviderGuiComp</class>
     <class kind="class">iqtgui::CFilePersistenceGuiComp</class>
     <class kind="class">iqtgui::CFileSystemExplorerGuiComp</class>
     <class kind="class">iqtgui::CFreeWidgetGuiComp</class>
@@ -38235,6 +38286,25 @@
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
       <anchor>acdeb4247ab86e7fe2626df198cd0b23e</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CFileListProviderGuiComp</name>
+    <filename>classiqtgui_1_1_c_file_list_provider_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileListProviderGuiComp, ibase::IFileListProvider &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileListProviderGuiComp, ibase::IFileListProvider &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_file_list_provider_gui_comp.html</anchorfile>
+      <anchor>a5bf4fbf8c8ca513d012a13a5b42e639a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtgui_1_1_c_file_list_provider_gui_comp.html</anchorfile>
+      <anchor>ad66b1edb11f61154bf365e4267301aa6</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41558,6 +41628,7 @@
     <class kind="class">iqtproc::CDocumentProcessingCommandComp</class>
     <class kind="class">iqtproc::CDocumentProcessingManagerComp</class>
     <class kind="class">iqtproc::CDocumentProcessingManagerCompBase</class>
+    <class kind="class">iqtproc::CProcessorCommandComp</class>
     <class kind="class">iqtproc::CProcessorControlGuiComp</class>
     <class kind="class">iqtproc::CProgressManagerGuiComp</class>
   </compound>
@@ -41695,6 +41766,62 @@
       <name>m_processingCommand</name>
       <anchorfile>classiqtproc_1_1_c_document_processing_manager_comp_base.html</anchorfile>
       <anchor>a32607952e2d40660d23fafd36dfcb06b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtproc::CProcessorCommandComp</name>
+    <filename>classiqtproc_1_1_c_processor_command_comp.html</filename>
+    <base>QObject</base>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtproc_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>af507e33b8c5a504b173bac63978eb3e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CProcessorCommandComp</name>
+      <anchorfile>classiqtproc_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>ae05045be3b76815f2bb317eecfab81a6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqtproc_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>ab15b2b6fa188896988fad5b892487971</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtproc_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>ad1e3030982522f418b27ff61d899f64d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_rootMenuCommand</name>
+      <anchorfile>classiqtproc_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>ad4310221af17139812a46931a7fc2d83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_mainMenuCommand</name>
+      <anchorfile>classiqtproc_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>ae0feb1e3f59388244231fcd338be1b50</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_processingCommand</name>
+      <anchorfile>classiqtproc_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a608f42d056afcb13912d8aa8280c2517</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -48876,6 +49003,7 @@
     <class kind="class">iview::CShapeControl</class>
     <class kind="class">iview::CShapeInfoGuiComp</class>
     <class kind="class">iview::CShapeStatusInfoComp</class>
+    <class kind="class">iview::CSimpleShapeFactoryComp</class>
     <class kind="class">iview::CTransformableRectangleCalibrationShape</class>
     <class kind="class">iview::CViewBase</class>
     <class kind="class">iview::CViewLayer</class>
@@ -48891,6 +49019,7 @@
     <class kind="class">iview::ISelectable</class>
     <class kind="class">iview::ISelectableLayer</class>
     <class kind="class">iview::IShape</class>
+    <class kind="class">iview::IShapeFactory</class>
     <class kind="class">iview::IShapeObserver</class>
     <class kind="class">iview::IShapeStatusInfo</class>
     <class kind="class">iview::IShapeView</class>
@@ -54701,6 +54830,26 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iview::CSimpleShapeFactoryComp</name>
+    <filename>classiview_1_1_c_simple_shape_factory_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iview::IShapeFactory</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_simple_shape_factory_comp.html</anchorfile>
+      <anchor>a623d2fb76d534fa11ab549a7499b96ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual IShape *</type>
+      <name>CreateShape</name>
+      <anchorfile>classiview_1_1_c_simple_shape_factory_comp.html</anchorfile>
+      <anchor>ab876f759b4fbe669cc73173510bede85</anchor>
+      <arglist>(const i2d::IObject2d &amp;object, bool connectToModel=false) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::CTransformableRectangleCalibrationShape</name>
     <filename>classiview_1_1_c_transformable_rectangle_calibration_shape.html</filename>
     <base>iview::CCalibrationShapeBase</base>
@@ -57106,6 +57255,18 @@
       <anchorfile>classiview_1_1_i_shape.html</anchorfile>
       <anchor>aceaf509648d94de5e893938201667392</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::IShapeFactory</name>
+    <filename>classiview_1_1_i_shape_factory.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual IShape *</type>
+      <name>CreateShape</name>
+      <anchorfile>classiview_1_1_i_shape_factory.html</anchorfile>
+      <anchor>a669dafb68a14de550fc606063ca2439b</anchor>
+      <arglist>(const i2d::IObject2d &amp;object, bool connectToModel=false) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

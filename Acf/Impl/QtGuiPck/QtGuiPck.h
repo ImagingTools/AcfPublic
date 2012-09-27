@@ -54,6 +54,7 @@
 #include "iqtgui/CCommandsToolBarGuiComp.h"
 #include "iqtgui/CSelectableCommandsProviderComp.h"
 #include "iqtgui/CVersionInfoGuiComp.h"
+#include "iqtgui/CFileListProviderGuiComp.h"
 
 #include "iqtprm/CFileNameParamGuiComp.h"
 #include "iqtprm/CComposedParamsSetGuiComp.h"
@@ -78,6 +79,7 @@
 #include "iqtproc/CProcessorControlGuiComp.h"
 #include "iqtproc/CDocumentProcessingManagerComp.h"
 #include "iqtproc/CDocumentProcessingCommandComp.h"
+#include "iqtproc/CProcessorCommandComp.h"
 
 
 /**
@@ -114,6 +116,7 @@ typedef iqtgui::CImagePropertiesFrameComp ImagePropertiesFrame;
 typedef iqtgui::CCommandsToolBarGuiComp CommandsToolBar;
 typedef icomp::TModelCompWrap<iqtgui::CSelectableCommandsProviderComp> SelectableCommandsProvider;
 typedef iqtgui::CVersionInfoGuiComp VersionInfoGui;
+typedef iqtgui::CFileListProviderGuiComp FileListProviderGui;
 
 typedef iqtprm::CComposedParamsSetGuiComp ComposedParamsSetGui;
 typedef iqtprm::CVariableParamGuiComp VariableParamGui;
@@ -138,7 +141,7 @@ typedef iqtproc::CProgressManagerGuiComp ProgressManagerGui;
 typedef iqtproc::CProcessorControlGuiComp ProcessorControlGui;
 typedef iqtproc::CDocumentProcessingManagerComp DocumentProcessingManager;
 typedef iqtproc::CDocumentProcessingCommandComp DocumentProcessingCommand;
-
+typedef iqtproc::CProcessorCommandComp ProcessorCommand;
 
 
 } // namespace QtGuiPck

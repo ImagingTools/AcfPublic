@@ -29,6 +29,7 @@
 #include "imod/IModel.h"
 #include "imod/TModelWrap.h"
 #include "imod/CMultiModelBridgeBase.h"
+#include "ibase/IMessageContainer.h"
 #include "ibase/TLoggerCompWrap.h"
 #include "iproc/IElapsedTimeProvider.h"
 
@@ -46,6 +47,7 @@ namespace iinsp
 class CInspectionTaskComp:
 			public ibase::CLoggerComponentBase,
 			virtual public IInspectionTask,
+			virtual public ibase::IMessageContainer,
 			virtual public istd::IInformationProvider,
 			virtual public iproc::IElapsedTimeProvider,
 			protected imod::CMultiModelBridgeBase
@@ -73,6 +75,7 @@ public:
 		I_ASSIGN_MULTI_0(m_subtasksCompPtr, "Subtasks", "List of subtasks (suppliers)", true);
 		I_ASSIGN_TO(m_subtaskModelsCompPtr, m_subtasksCompPtr, true);
 		I_ASSIGN_TO(m_subtaskInspectionCompPtr, m_subtasksCompPtr, false);
+		I_ASSIGN_TO(m_subtaskMessageContainerCompPtr, m_subtasksCompPtr, false);
 		I_ASSIGN_TO(m_subtaskInfoProviderCompPtr, m_subtasksCompPtr, false);
 		I_ASSIGN(m_serializeSuppliersAttrPtr, "SerializeSuppliers", "If it is true, parameters of suppliers will be serialized", true, true);
 		I_ASSIGN(m_reduceHierarchyAttrPtr, "ReduceHierarchy", "If it is true, sub inspection tasks will be rolled out", true, false);
@@ -93,6 +96,14 @@ public:
 	virtual void ClearWorkResults();
 	virtual int GetWorkStatus() const;
 	virtual iprm::IParamsSet* GetModelParametersSet() const;
+
+	// reimplemented (ibase::IMessageContainer)
+	virtual int GetWorstCategory() const;
+	virtual Messages GetMessages() const;
+	virtual void ClearMessages();
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (istd::IInformationProvider)
 	virtual QDateTime GetInformationTimeStamp() const;
@@ -145,6 +156,7 @@ private:
 	I_MULTIREF(iproc::ISupplier, m_subtasksCompPtr);
 	I_MULTIREF(imod::IModel, m_subtaskModelsCompPtr);
 	I_MULTIREF(IInspectionTask, m_subtaskInspectionCompPtr);
+	I_MULTIREF(ibase::IMessageContainer, m_subtaskMessageContainerCompPtr);
 	I_MULTIREF(istd::IInformationProvider, m_subtaskInfoProviderCompPtr);
 	I_ATTR(bool, m_serializeSuppliersAttrPtr);
 	I_ATTR(bool, m_reduceHierarchyAttrPtr);

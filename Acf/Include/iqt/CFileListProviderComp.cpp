@@ -58,6 +58,9 @@ void CFileListProviderComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*
 	if (m_dirParamCompPtr.IsValid()){
 		QStringList filters;
 
+		m_directoryWatcher.removePaths(m_directoryWatcher.directories());
+		m_directoryWatcher.addPath(m_dirParamCompPtr->GetPath());
+
 		if (m_fileLoaderCompPtr.IsValid()){
 			QStringList extensions;
 			if (m_fileLoaderCompPtr->GetFileExtensions(extensions)){
@@ -95,6 +98,8 @@ void CFileListProviderComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
+	connect(&m_directoryWatcher, SIGNAL(directoryChanged(const QString&)), this, SLOT(OnDirectoryContentChanged(const QString&)));
+
 	if (m_dirParamModelCompPtr.IsValid()){
 		m_dirParamModelCompPtr->AttachObserver(this);
 	}
@@ -109,6 +114,14 @@ void CFileListProviderComp::OnComponentDestroyed()
 	imod::CSingleModelObserverBase::EnsureModelDetached();
 
 	BaseClass::OnComponentDestroyed();
+}
+
+
+// private slots
+
+void CFileListProviderComp::OnDirectoryContentChanged(const QString& /*directoryPath*/)
+{
+	OnUpdate(0, NULL);
 }
 
 

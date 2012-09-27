@@ -28,6 +28,10 @@
 #include <QtCore/QProcess>
 
 
+// ACF includes
+#include "iprm/TParamsPtr.h"
+
+
 namespace ibase
 {
 
@@ -37,7 +41,7 @@ namespace ibase
 bool CExternalFileConverterComp::ConvertFile(
 			const QString& inputFilePath,
 			const QString& outputFilePath,
-			const iprm::IParamsSet* /*paramsSetPtr*/) const
+			const iprm::IParamsSet* paramsSetPtr) const
 {
 	if (!m_executablePathCompPtr.IsValid()){
 		SendErrorMessage(0, "Path for an executable was not set");
@@ -54,18 +58,37 @@ bool CExternalFileConverterComp::ConvertFile(
 	QStringList arguments;
 
 	// setup command line arguments:
-	if (!m_processArgumentsAttrPtr.IsValid()){
-		arguments.push_back(inputFilePath);
-		arguments.push_back(outputFilePath);
+	if (!m_defaultProcessArgumentsAttrPtr.IsValid()){
+		if (paramsSetPtr != NULL){
+			iprm::TParamsPtr<iprm::INameParam> commandLineParamPtr(paramsSetPtr, *m_processArgumentsParamsIdAttrPtr);
+			if (commandLineParamPtr.IsValid()){
+				arguments = commandLineParamPtr->GetName().split(" ");
+			}
+		}
+		else{
+			arguments.push_back(inputFilePath);
+			arguments.push_back(outputFilePath);
+		}
 	}
 	else{
-		QString applicationArguments = *m_processArgumentsAttrPtr;
+		QString applicationArguments = *m_defaultProcessArgumentsAttrPtr;
 
 		arguments = applicationArguments.split(" ");
+	}
 
-		for (int argIndex = 0; argIndex < int(arguments.size()); argIndex++){
-			arguments[argIndex].replace("$(Input)", inputFilePath);
-			arguments[argIndex].replace("$(Output)", outputFilePath);
+	for (int argIndex = 0; argIndex < int(arguments.size()); argIndex++){
+		arguments[argIndex].replace("$(Input)", inputFilePath);
+		arguments[argIndex].replace("$(Output)", outputFilePath);
+	}
+
+	if (m_additionalArgumentsCompPtr.IsValid()){
+		int additionalArgumentsCount = m_additionalArgumentsCompPtr.GetCount();
+
+		for (int addIndex = 0; addIndex < additionalArgumentsCount; addIndex){
+			iprm::INameParam* argumentPtr = m_additionalArgumentsCompPtr[addIndex];
+			if (argumentPtr != NULL){
+				arguments.push_back(argumentPtr->GetName());
+			}
 		}
 	}
 

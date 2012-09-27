@@ -31,8 +31,7 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">i2d::CPolygon Class Reference</div>  </div>
 </div>
@@ -69,6 +68,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#ab4ea42338c6ef2d89deb95fa4881963f">CPolygon</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a85f6f7462c442efdb6b94e61ea5e4170">Clear</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all nodes.  <a href="#a85f6f7462c442efdb6b94e61ea5e4170"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a855c33b5809933c0c29ffc945b304b60">SetNodesCount</a> (int nodesCount)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new nodes count.  <a href="#a855c33b5809933c0c29ffc945b304b60"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07">GetNodesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return size of node table.  <a href="#a0e9474de5b18f742068ac948bc517d07"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d">GetNode</a> (int index) const </td></tr>
@@ -101,10 +102,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#ac4537d82fd57c0ada41467d3ae3f3db2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#aee96368e13548faa82bd3c2cf7aad01a">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#aee96368e13548faa82bd3c2cf7aad01a"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a855c33b5809933c0c29ffc945b304b60">SetNodesCount</a> (int nodesCount)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new nodes count.  <a href="#a855c33b5809933c0c29ffc945b304b60"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Definition of the data model for a polygon. </p>
@@ -125,7 +122,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00138">138</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00137">137</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +262,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00151">151</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00150">150</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -289,7 +286,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return size of node table. </p>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00145">145</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00144">144</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_polygon_based_params_gui_comp_8h_source.html#l00201">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;::UpdateGui()</a>.</p>
 
@@ -502,7 +499,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Assignment operator. </p>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00167">167</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00166">166</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 </div>
 </div>
@@ -586,7 +583,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00159">159</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00158">158</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -601,7 +598,7 @@ Protected Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>nodesCount</em></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>

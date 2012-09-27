@@ -37,6 +37,8 @@
 #include "ifpf/CVisualHotfolderWorkflowComp.h"
 #include "ifpf/CFileSystemChangeStorage.h"
 #include "ifpf/CFileNamingParamsComp.h"
+#include "ifpf/CFileListConverterComp.h"
+
 
 /**
 	System-undependent package for File Processing Framework.
@@ -73,6 +75,8 @@ typedef icomp::TModelCompWrap<ifpf::CFileNamingParamsComp> FileNamingParams;
 typedef icomp::TModelCompWrap<
 			icomp::TMakeComponentWrap<
 						ifpf::CFileSystemChangeStorage, ifpf::IFileSystemChangeStorage> > FileSystemChangeStorage;
+
+typedef ifpf::CFileListConverterComp FileListConverter;
 
 
 } // namespace FpfPck

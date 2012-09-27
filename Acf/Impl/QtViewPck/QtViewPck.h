@@ -29,6 +29,7 @@
 
 #include "iview/CShapeStatusInfoComp.h"
 #include "iview/CShapeInfoGuiComp.h"
+#include "iview/CSimpleShapeFactoryComp.h"
 
 #include "iqt2d/TViewExtenderDelegatorCompWrap.h"
 #include "iqt2d/CSceneConnectorGuiComp.h"
@@ -57,6 +58,7 @@ namespace QtViewPck
 
 typedef icomp::TModelCompWrap<iview::CShapeStatusInfoComp> ShapeStatusInfo;
 typedef iview::CShapeInfoGuiComp ShapeInfoGui;
+typedef iview::CSimpleShapeFactoryComp SimpleShapeFactory;
 
 typedef iqt2d::CViewExtenderDelegatorComp SceneExtenderDelegator;
 typedef iqt2d::CSceneConnectorGuiComp SceneConnector;

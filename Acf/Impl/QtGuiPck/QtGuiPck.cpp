@@ -278,6 +278,16 @@ I_EXPORT_COMPONENT(
 			"Enableable parameter editor",
 			"Enableable Parameter");
 
+I_EXPORT_COMPONENT(
+			ProcessorCommand,
+			"Binding of any processor to menu command",
+			"Menu Processor Command Action");
+
+I_EXPORT_COMPONENT(
+			FileListProviderGui,
+			"UI for showing a list of files",
+			"File List");
+
 
 } // namespace QtGuiPck
 

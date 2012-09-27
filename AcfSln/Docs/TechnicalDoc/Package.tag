@@ -310,6 +310,14 @@
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileListConverterComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <filename>_c_file_list_converter_comp_8h</filename>
+    <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifpf/IFileNaming.h</includes>
+    <class kind="class">ifpf::CFileListConverterComp</class>
+    <namespace>ifpf</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFileNamingParamsComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifpf/</path>
     <filename>_c_file_naming_params_comp_8h</filename>
@@ -4017,6 +4025,7 @@
     <filename>namespaceifpf.html</filename>
     <class kind="class">ifpf::CDirectoryMonitorParams</class>
     <class kind="class">ifpf::CDirectoryMonitorParamsComp</class>
+    <class kind="class">ifpf::CFileListConverterComp</class>
     <class kind="class">ifpf::CFileNamingParamsComp</class>
     <class kind="class">ifpf::CFileSystemChangeStorage</class>
     <class kind="class">ifpf::CHotfolderLoaderComp</class>
@@ -4158,6 +4167,25 @@
       <anchorfile>classifpf_1_1_c_directory_monitor_params_comp.html</anchorfile>
       <anchor>a194988615bd63d6196b3cbdffb510120</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifpf::CFileListConverterComp</name>
+    <filename>classifpf_1_1_c_file_list_converter_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifpf_1_1_c_file_list_converter_comp.html</anchorfile>
+      <anchor>a2becfa027d4b4d3f7e7ff6f08d5f8ce0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classifpf_1_1_c_file_list_converter_comp.html</anchorfile>
+      <anchor>af06af83087171b2fa4dfa7cde02d99d4</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5826,6 +5854,7 @@
     <filename>classiinsp_1_1_c_inspection_task_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::IInspectionTask</base>
+    <base virtualness="virtual">ibase::IMessageContainer</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
@@ -5915,6 +5944,13 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a1c74eb8fdd63cf1e28c1461c7a4c9de3</anchor>
+      <arglist>(m_subtaskMessageContainerCompPtr, m_subtasksCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a805a1029cebadc8671793742043e042c</anchor>
       <arglist>(m_subtaskInfoProviderCompPtr, m_subtasksCompPtr, false)</arglist>
     </member>
@@ -5987,6 +6023,34 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>ae17f09b830020cb2017119e8a57b262a</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorstCategory</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a411f25807ee791f2188b6b9c90e91a97</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Messages</type>
+      <name>GetMessages</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a4a7c7e12d32036fb4a75c832bb70db2d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ad75146ffc4fb28ce4b2dc85e88b0fc89</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ac80722d2ef85459f84449030e20512a8</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QDateTime</type>
