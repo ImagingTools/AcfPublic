@@ -247,19 +247,30 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 	}
 
 	i2d::CRect regionRect = bitmapRegion.GetBoundingBox();
+	if (regionRect.IsEmpty() || !regionRect.IsValid()){
+		SendWarningMessage(0, "Cannot process an empty or invalid region");
+
+		return false;	
+	}
 
 	if (!outputBitmapPtr->CopyFrom(inputBitmap)){
+		SendVerboseMessage("Input bitmap could not be copied");
+
 		return false;
 	}
 
 	iprm::TParamsPtr<imeas::INumericValue> filterSizePtr(paramsPtr, *m_filterSizeParamsIdAttrPtr);
 	if (filterSizePtr == NULL){
+		SendVerboseMessage("Filter size parameter not set");
+
 		return false;
 	}
 
 	imath::CVarVector filterLengths = filterSizePtr->GetValues();
 	int filterDimensionsCount = filterLengths.GetElementsCount();
 	if (filterDimensionsCount < 1){
+		SendVerboseMessage("Filter has wrong dimension");
+
 		return false;
 	}
 
