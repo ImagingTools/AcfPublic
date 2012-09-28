@@ -317,40 +317,48 @@ bool CInteractiveTubePolylineShape::OnMouseMove(istd::CIndex2d position)
 					const iview::CScreenTransform& transform = GetLogToScreenTransform();
 					i2d::CVector2d currentPosition = transform.GetClientPosition(position);
 
-					double newWidth = currentPosition.GetDistance(nodePosition);
+					i2d::CVector2d rightPos = nodePosition - kneeVector * range.GetMaxValue();
+					i2d::CVector2d leftPos = nodePosition - kneeVector * range.GetMinValue();
 
 					int keysState = GetKeysState();
+					bool isSynchronized = ((keysState & Qt::ControlModifier) != 0);
 
 					if (m_draggedTickerType == TT_LEFT){
-						i2d::CVector2d rightPos = nodePosition - kneeVector * range.GetMaxValue();
+						i2d::CVector2d newPoint = i2d::CLine2d(leftPos, nodePosition).GetExtendedNearestPoint(currentPosition);
+						double newWidth = qMax(0.1, newPoint.GetDistance(nodePosition));
 
-						if (rightPos.GetDistance(currentPosition) >= nodePosition.GetDistance(currentPosition)){
-							range.SetMinValue(-newWidth);
+						// check if in the range
+						double widthRightNew = rightPos.GetDistance(newPoint);
+						double widthRightCenter = rightPos.GetDistance(nodePosition);
+						if (widthRightNew + 0.1 < widthRightCenter + newWidth){
+							newWidth = 0.1;
+						}
 
-							if ((keysState & Qt::ControlModifier) != 0){
-								range.SetMaxValue(newWidth);
-							}
-
-							nodeData.SetTubeRange(range);
-
-							UpdateModelChanges();
+						range.SetMinValue(-newWidth);
+						if (isSynchronized){
+							range.SetMaxValue(newWidth);
 						}
 					}
 					else{
-						i2d::CVector2d leftPos = nodePosition - kneeVector * range.GetMinValue();
+						i2d::CVector2d newPoint = i2d::CLine2d(rightPos, nodePosition).GetExtendedNearestPoint(currentPosition);
+						double newWidth = qMax(0.1, newPoint.GetDistance(nodePosition));
 
-						if (leftPos.GetDistance(currentPosition) >= nodePosition.GetDistance(currentPosition)){
-							range.SetMaxValue(newWidth);
+						// check if in the range
+						double widthLeftNew = leftPos.GetDistance(newPoint);
+						double widthLeftCenter = leftPos.GetDistance(nodePosition);
+						if (widthLeftNew + 0.1 < widthLeftCenter + newWidth){
+							newWidth = 0.1;
+						}
 
-							if ((keysState & Qt::ControlModifier) != 0){
-								range.SetMinValue(-newWidth);
-							}
-
-							nodeData.SetTubeRange(range);
-
-							UpdateModelChanges();
+						range.SetMaxValue(newWidth);
+						if (isSynchronized){
+							range.SetMinValue(-newWidth);
 						}
 					}
+
+					nodeData.SetTubeRange(range);
+
+					UpdateModelChanges();
 
 					return true;
 				}
@@ -376,12 +384,8 @@ bool CInteractiveTubePolylineShape::OnMouseMove(istd::CIndex2d position)
 
 ITouchable::TouchState CInteractiveTubePolylineShape::IsTouched(istd::CIndex2d position) const
 {
-	//m_draggedTickerType = TT_NONE;
-
 	ITouchable::TouchState isTouched = BaseClass::IsTouched(position);
 	if (isTouched != TS_NONE){
-		//m_draggedTickerType = TT_BASIC;
-
 		return isTouched;
 	}
 
@@ -425,16 +429,10 @@ ITouchable::TouchState CInteractiveTubePolylineShape::IsTouched(istd::CIndex2d p
 				//}
 
 				if (tickerBoxMove.GetTranslated(rightScreenPoint).IsInside(position)){
-					//m_draggedTickerType = TT_RIGHT;
-					//m_draggedTickerIndex = nodeIndex;
-
 					return TS_TICKER;
 				}
 
 				if (tickerBoxMove.GetTranslated(leftScreenPoint).IsInside(position)){
-					//m_draggedTickerType = TT_LEFT;
-					//m_draggedTickerIndex = nodeIndex;
-
 					return TS_TICKER;
 				}
 			}
