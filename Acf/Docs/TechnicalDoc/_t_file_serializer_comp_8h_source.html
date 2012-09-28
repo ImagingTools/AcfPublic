@@ -150,7 +150,7 @@
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(!archive.IsStoring());
 <a name="l00131"></a>00131 
-<a name="l00132"></a>00132               <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* serializablePtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>*<span class="keyword">&gt;</span>(&amp;data);
+<a name="l00132"></a>00132               <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* serializablePtr = CompCastPtr&lt;iser::ISerializable&gt;(&amp;data);
 <a name="l00133"></a>00133               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(serializablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="code" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9a3c86ebce4c2fe9371a8409708979b789" title="Indicate that data model is changed.">istd::IChangeable::CF_MODEL</a>);
@@ -176,7 +176,7 @@
 <a name="l00155"></a>00155               <a class="code" href="classibase_1_1_t_file_serializer_comp_1_1_write_archive_ex.html">WriteArchiveEx</a> archive(filePath, GetVersionInfo(), <span class="keyword">this</span>);
 <a name="l00156"></a>00156               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(archive.IsStoring());
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158               <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* serializablePtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>*<span class="keyword">&gt;</span>(&amp;data);
+<a name="l00158"></a>00158               <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* serializablePtr = CompCastPtr&lt;iser::ISerializable&gt;(&amp;data);
 <a name="l00159"></a>00159               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(serializablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00160"></a>00160 
 <a name="l00161"></a>00161               <span class="keywordflow">if</span> (!CheckMinimalVersion(*serializablePtr, archive.GetVersionInfo())){
