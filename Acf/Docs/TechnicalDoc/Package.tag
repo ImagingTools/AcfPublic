@@ -52970,6 +52970,27 @@
       <anchor>aea87909b517488f1a9797c8ca60ef288</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a8d0d53331679668dc316aa0d5a244648</anchor>
+      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseMove</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a282b4f882895e677c72b4d8a3c1e3c59</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
+      <anchor>a8baea31373a0618c3d908a1bb5ea8e6a</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawCurve</name>
@@ -52983,13 +53004,6 @@
       <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
       <anchor>a00c1dce5a6a2fe8dc962a5c926fc434b</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTickerTouched</name>
-      <anchorfile>classiview_1_1_c_interactive_tube_polyline_shape.html</anchorfile>
-      <anchor>a0d517b23a028efe5871cfdc9b3a327ee</anchor>
-      <arglist>(istd::CIndex2d position) const </arglist>
     </member>
   </compound>
   <compound kind="class">

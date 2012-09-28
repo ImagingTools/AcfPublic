@@ -232,13 +232,8 @@ i2d::CRect CMultiLineSupplierGuiComp::CShape::CalcBoundingBox() const
 			istd::CIndex2d startPoint = transform.GetScreenPosition(i2d::CVector2d(lineValues.GetElement(0), lineValues.GetElement(1)));
 			istd::CIndex2d endPoint = transform.GetScreenPosition(i2d::CVector2d(lineValues.GetElement(2), lineValues.GetElement(3)));
 
-			if (startPoint.IsValid()){
-				boundingBox.Union(startPoint);
-			}
-
-			if (endPoint.IsValid()){
-				boundingBox.Union(endPoint);
-			}
+			boundingBox.Union(startPoint);
+			boundingBox.Union(endPoint);
 		}
 
 		const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_INACTIVE);

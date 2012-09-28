@@ -14444,6 +14444,18 @@
     <filename>classiqtinsp_1_1_c_inspection_task_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="enumeration">
+      <name>DataRole</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aaf567d81493ff1fd3b1e02461dd7f453</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_TASK_INDEX</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aaf567d81493ff1fd3b1e02461dd7f453af4ee775a7ab84f68029768c86bf4e4ba</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</type>
       <name>BaseClass</name>

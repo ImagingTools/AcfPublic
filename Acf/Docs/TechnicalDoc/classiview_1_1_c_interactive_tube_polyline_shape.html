@@ -93,11 +93,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag if in all edit modes is this shape draggable.  <a href="#a20117fdb34987e26782b07886c68f17f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#aea87909b517488f1a9797c8ca60ef288">CalcBoundingBox</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#aea87909b517488f1a9797c8ca60ef288"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a8d0d53331679668dc316aa0d5a244648">OnMouseButton</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, bool downFlag)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It is called, when mouse button is pushed down or up on this object.  <a href="#a8d0d53331679668dc316aa0d5a244648"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a282b4f882895e677c72b4d8a3c1e3c59">OnMouseMove</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It is called, when mouse is moved.  <a href="#a282b4f882895e677c72b4d8a3c1e3c59"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2">TouchState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a8baea31373a0618c3d908a1bb5ea8e6a">IsTouched</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if any shape is touched.  <a href="#a8baea31373a0618c3d908a1bb5ea8e6a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#ac9fd4b3f3341430d6ecbbf531cb054f5">DrawCurve</a> (QPainter &amp;drawContext) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a00c1dce5a6a2fe8dc962a5c926fc434b">DrawSelectionElements</a> (QPainter &amp;drawContext) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a0d517b23a028efe5871cfdc9b3a327ee">IsTickerTouched</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Graphical representation of tube region. </p>
@@ -217,7 +222,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#acb003a14fd5a4b5692f25a9eb7804cca">iview::CInteractivePolygonShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html#l00084">84</a> of file <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html">CInteractiveTubePolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html#l00094">94</a> of file <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html">CInteractiveTubePolylineShape.h</a>.</p>
 
 </div>
 </div>
@@ -240,26 +245,104 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a7c4d0f285debf624dd6522eae648ec5e">iview::CInteractivePolylineShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html#l00069">69</a> of file <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html">CInteractiveTubePolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html#l00079">79</a> of file <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html">CInteractiveTubePolylineShape.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0d517b23a028efe5871cfdc9b3a327ee"></a><!-- doxytag: member="iview::CInteractiveTubePolylineShape::IsTickerTouched" ref="a0d517b23a028efe5871cfdc9b3a327ee" args="(istd::CIndex2d position) const " -->
+<a class="anchor" id="a8baea31373a0618c3d908a1bb5ea8e6a"></a><!-- doxytag: member="iview::CInteractiveTubePolylineShape::IsTouched" ref="a8baea31373a0618c3d908a1bb5ea8e6a" args="(istd::CIndex2d position) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool iview::CInteractiveTubePolylineShape::IsTickerTouched </td>
+          <td class="memname">virtual <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2">TouchState</a> iview::CInteractiveTubePolylineShape::IsTouched </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td>
           <td class="paramname"><em>position</em></td><td>)</td>
-          <td> const<code> [protected, virtual]</code></td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html#ae3ee68326f21a3e5e11d4b43837f0134">iview::CInteractiveTransformableRectangleShape</a>.</p>
+<p>Check, if any shape is touched. </p>
+<p>When shape is touched, it return also pointer to this shape. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>touch state for the shape, or <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2ad3c721810a0dd0c07bc84248c5f1060b" title="Nothing is touched.">iview::IInteractiveShape::TS_NONE</a>, when nothing found. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a12e74574f335242770424f64ac810d26">iview::CInteractivePolylineShape</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d0d53331679668dc316aa0d5a244648"></a><!-- doxytag: member="iview::CInteractiveTubePolylineShape::OnMouseButton" ref="a8d0d53331679668dc316aa0d5a244648" args="(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CInteractiveTubePolylineShape::OnMouseButton </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Qt::MouseButton&#160;</td>
+          <td class="paramname"><em>buttonType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>downFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>It is called, when mouse button is pushed down or up on this object. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- position of mouse pointer on client area (picture coords). </td></tr>
+    <tr><td class="paramname">downFlag</td><td>- true, if mouse button is pushed down, false if pushed up. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if this shape should get focus to catch all mouse movements. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#afb09b0b46b020a77102b1071709500cf">iview::CInteractivePolylineShape</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a282b4f882895e677c72b4d8a3c1e3c59"></a><!-- doxytag: member="iview::CInteractiveTubePolylineShape::OnMouseMove" ref="a282b4f882895e677c72b4d8a3c1e3c59" args="(istd::CIndex2d position)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CInteractiveTubePolylineShape::OnMouseMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>It is called, when mouse is moved. </p>
+<p>Only objects with focus receive this event. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- position of mouse pointer on client area (picture coords). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if this shape should hold focus to catch longer all mouse movements. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#a6593c1b3be6a4de6e590928a5f8b146a">iview::CInteractivePolygonShape</a>.</p>
 
 </div>
 </div>
@@ -283,7 +366,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#af8b0556ab14ced8f2aa7631e32be9bf3">iview::CInteractivePolygonShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html#l00090">90</a> of file <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html">CInteractiveTubePolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html#l00100">100</a> of file <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html">CInteractiveTubePolylineShape.h</a>.</p>
 
 </div>
 </div>
@@ -312,7 +395,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#afcf28beceeeb39bb243f146b28ea8ab2">iview::CInteractivePolylineShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html#l00075">75</a> of file <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html">CInteractiveTubePolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html#l00085">85</a> of file <a class="el" href="_c_interactive_tube_polyline_shape_8h_source.html">CInteractiveTubePolylineShape.h</a>.</p>
 
 <p>References <a class="el" href="iview_8h_source.html#l00055">iview::CS_CONSOLE</a>, and <a class="el" href="classiview_1_1_c_shape_base.html#a0c22c7bac5b7d9b6db603eb20f9bc02b">iview::CShapeBase::Invalidate()</a>.</p>
 

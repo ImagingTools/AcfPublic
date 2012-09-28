@@ -81,6 +81,9 @@ static void DoFilter(
 	
 	for (int componentIndex = 0; componentIndex < componentsCount; componentIndex++){
 		for( int y = regionTop; y < regionBottom; ++y){
+			I_ASSERT(y >= 0);
+			I_ASSERT(y < inputImageHeight);
+
 			const PixelComponentType* inputLinePtr = (PixelComponentType*)inputImage.GetLinePtr(y);
 			PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
@@ -141,6 +144,9 @@ static void DoFilter(
 		int inputLineDifference = tempBitmap.GetLinesDifference();
 
 		for( int y = regionTop; y < regionTop + kernelHalfHeight; ++y){
+			I_ASSERT(y >= 0);
+			I_ASSERT(y < inputImageHeight);
+
 			const PixelComponentType* inputLinePtr = (PixelComponentType*)tempBitmap.GetLinePtr(y);
 			PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
@@ -164,6 +170,9 @@ static void DoFilter(
 		}
 
 		for( int y = regionTop + kernelHalfHeight; y < regionBottom - kernelHalfHeight; ++y){
+			I_ASSERT(y >= 0);
+			I_ASSERT(y < inputImageHeight);
+
 			const PixelComponentType* inputLinePtr = (PixelComponentType*)tempBitmap.GetLinePtr(y);
 			PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
@@ -183,6 +192,9 @@ static void DoFilter(
 		}
 
 		for( int y = regionBottom - kernelHalfHeight; y < regionBottom; ++y){
+			I_ASSERT(y >= 0);
+			I_ASSERT(y < inputImageHeight);
+
 			const PixelComponentType* inputLinePtr = (PixelComponentType*)tempBitmap.GetLinePtr(y);
 			PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
@@ -254,23 +266,19 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 	}
 
 	if (!outputBitmapPtr->CopyFrom(inputBitmap)){
-		SendVerboseMessage("Input bitmap could not be copied");
-
 		return false;
 	}
 
+	regionRect.Intersection(i2d::CRect(inputBitmap.GetImageSize()));
+
 	iprm::TParamsPtr<imeas::INumericValue> filterSizePtr(paramsPtr, *m_filterSizeParamsIdAttrPtr);
 	if (filterSizePtr == NULL){
-		SendVerboseMessage("Filter size parameter not set");
-
 		return false;
 	}
 
 	imath::CVarVector filterLengths = filterSizePtr->GetValues();
 	int filterDimensionsCount = filterLengths.GetElementsCount();
 	if (filterDimensionsCount < 1){
-		SendVerboseMessage("Filter has wrong dimension");
-
 		return false;
 	}
 
