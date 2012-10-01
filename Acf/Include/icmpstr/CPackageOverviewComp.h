@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #ifndef icmpstr_CPackageOverviewComp_included
@@ -56,24 +56,24 @@ namespace icmpstr
 
 
 class CPackageOverviewComp:
-public iqtgui::TDesignerGuiObserverCompBase<Ui::CPackageOverviewComp, IElementSelectionInfo>,
-virtual public ibase::ICommandsProvider,
-virtual public IAttributeSelectionObserver
+			public iqtgui::TDesignerGuiObserverCompBase<Ui::CPackageOverviewComp, IElementSelectionInfo>,
+			virtual public ibase::ICommandsProvider,
+			virtual public IAttributeSelectionObserver
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
 	typedef iqtgui::TDesignerGuiObserverCompBase<Ui::CPackageOverviewComp, IElementSelectionInfo> BaseClass;
 
 	I_BEGIN_COMPONENT(CPackageOverviewComp);
-	I_REGISTER_INTERFACE(ibase::ICommandsProvider);
-	I_REGISTER_INTERFACE(IAttributeSelectionObserver);
-	I_ASSIGN(m_envManagerCompPtr, "EnvironmentManager", "Packages manager used to provide icon paths", true, "PackagesManager");
-	I_ASSIGN(m_consistInfoCompPtr, "ConsistencyInfo", "Allows to check consistency of registries and access to buffered icons", false, "ConsistencyInfo");
-	I_ASSIGN(m_quickHelpViewerCompPtr, "QuickHelpGui", "Show help of selected component using its address", false, "HelpViewer");
-	I_ASSIGN(m_documentManagerCompPtr, "DocumentManager", "Document manager allowing to load files on double click", false, "DocumentManager");
-	I_ASSIGN(m_configFilePathCompPtr, "ConfigFilePath", "Path of packages configuration file will be loaded, if enabled", false, "ConfigFilePath");
-	I_ASSIGN_TO(m_configFilePathModelCompPtr, m_configFilePathCompPtr, false);
+		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
+		I_REGISTER_INTERFACE(IAttributeSelectionObserver);
+		I_ASSIGN(m_envManagerCompPtr, "EnvironmentManager", "Packages manager used to provide icon paths", true, "PackagesManager");
+		I_ASSIGN(m_consistInfoCompPtr, "ConsistencyInfo", "Allows to check consistency of registries and access to buffred icons", false, "ConsistencyInfo");
+		I_ASSIGN(m_quickHelpViewerCompPtr, "QuickHelpGui", "Show help of selected component using its address", false, "HelpViewer");
+		I_ASSIGN(m_documentManagerCompPtr, "DocumentManager", "Document manager allowing to load files on double click", false, "DocumentManager");
+		I_ASSIGN(m_configFilePathCompPtr, "ConfigFilePath", "Path of packages configuration file will be loaded, if enabled", false, "ConfigFilePath");
+		I_ASSIGN_TO(m_configFilePathModelCompPtr, m_configFilePathCompPtr, false);
 	I_END_COMPONENT;
 
 	CPackageOverviewComp();
@@ -85,15 +85,9 @@ public:
 	virtual void OnAttributeSelected(const icomp::IAttributeStaticInfo* attributeStaticInfoPtr);
 
 protected:
-
-
 	struct RootInfo
 	{
-
-
-		RootInfo(): itemPtr(NULL), hasRealComponents(false), hasCompositeComponents(false)
-		{
-		}
+		RootInfo(): itemPtr(NULL), hasRealComponents(false), hasCompositeComponents(false){}
 
 		QTreeWidgetItem* itemPtr;
 		bool hasRealComponents;
@@ -106,15 +100,15 @@ protected:
 	void UpdateAllLists();
 
 	/**
-		Get a list of components that match the filter criteria.
-	 */
+		Get component list, that match to the filter criteria.
+	*/
 	icomp::IMetaInfoManager::ComponentAddresses GetFilteredComponentAdresses() const;
 
-	//	bool IsInterfaceSupportedByComponent(const istd::CClassInfo& interfaceInfo, const QTreeWidgetItem& item) const;
+	bool IsInterfaceSupportedByComponent(const istd::CClassInfo& interfaceInfo, const QTreeWidgetItem& item) const;
 
 	/**
 		Create the drag preview for the component.
-	 */
+	*/
 	QPixmap CreateComponentDragPixmap(const icomp::CComponentAddress &address) const;
 
 	RootInfo& EnsureRoot(const QByteArray& path, const icomp::CComponentAddress& address, const icomp::IComponentStaticInfo* staticInfoPtr);
@@ -147,15 +141,13 @@ protected Q_SLOTS:
 	void on_InterfaceClearButton_clicked();
 
 private:
-
-
 	class PackageItemBase: public QTreeWidgetItem
 	{
 	public:
 		PackageItemBase(
-				CPackageOverviewComp& parent,
-				const QString& description,
-				const QIcon& icon = QIcon());
+					CPackageOverviewComp& parent,
+					const QString& description,
+					const QIcon& icon = QIcon());
 
 		virtual const QString& GetDescription() const;
 
@@ -164,17 +156,16 @@ private:
 		QString m_description;
 	};
 
-
 	class PackageComponentItem: public PackageItemBase
 	{
 	public:
 		typedef PackageItemBase BaseClass;
 
 		PackageComponentItem(
-				CPackageOverviewComp& parent,
-				const icomp::CComponentAddress& address,
-				const icomp::IComponentStaticInfo* staticInfoPtr,
-				const QIcon& icon);
+					CPackageOverviewComp& parent,
+					const icomp::CComponentAddress& address,
+					const icomp::IComponentStaticInfo* staticInfoPtr,
+					const QIcon& icon);
 
 		bool IsInterfaceSupported(const istd::CClassInfo& interfaceInfo) const;
 		const icomp::CComponentAddress& GetAddress() const;
@@ -183,18 +174,16 @@ private:
 		icomp::CComponentAddress m_address;
 	};
 
-
 	class PackageItem: public PackageItemBase
 	{
 	public:
 		typedef PackageItemBase BaseClass;
 
 		PackageItem(
-				CPackageOverviewComp& parent,
-				const QString& description,
-				const QIcon& icon = QIcon());
+					CPackageOverviewComp& parent,
+					const QString& description,
+					const QIcon& icon = QIcon());
 	};
-
 
 	class RegistryObserver: public imod::CSingleModelObserverBase
 	{
@@ -209,7 +198,6 @@ private:
 		CPackageOverviewComp& m_parent;
 	};
 
-
 	class ConfigObserver: public imod::CSingleModelObserverBase
 	{
 	public:
@@ -222,7 +210,6 @@ private:
 	private:
 		CPackageOverviewComp& m_parent;
 	};
-
 
 	enum GruppingMode
 	{

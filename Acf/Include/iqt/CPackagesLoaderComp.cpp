@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #include "iqt/CPackagesLoaderComp.h"
@@ -38,7 +38,6 @@
 #include "icomp/CXpcModel.h"
 
 #include "iqt/CSystem.h"
-#include "iqt/CDefaultRegistryLoaderProvider.h"
 
 #include "icomp/export.h"
 
@@ -48,7 +47,6 @@ namespace iqt
 
 
 // reimplemented (icomp::IRegistryLoader)
-
 
 const icomp::IRegistry* CPackagesLoaderComp::GetRegistryFromFile(const QString& path) const
 {
@@ -63,43 +61,10 @@ const icomp::IRegistry* CPackagesLoaderComp::GetRegistryFromFile(const QString& 
 
 	RegistryPtr& mapValue = m_registriesMap[correctedPath];
 	if (m_registryLoaderCompPtr.IsValid()){
-		RegistryPtr newRegistryPtr(new LogingRegistry(const_cast<CPackagesLoaderComp*>(this)));
+		istd::TDelPtr<icomp::IRegistry> newRegistryPtr(new LogingRegistry(const_cast<CPackagesLoaderComp*>(this)));
 		if (m_registryLoaderCompPtr->LoadFromFile(*newRegistryPtr, correctedPath) == iser::IFileLoader::StateOk){
 			mapValue.TakeOver(newRegistryPtr);
 			m_invRegistriesMap[mapValue.GetPtr()] = fileInfo;
-
-			// create and register static infos for embedded compositions
-			icomp::CPackageStaticInfo* packageStaticInfo =
-					const_cast<icomp::CPackageStaticInfo*>(
-					dynamic_cast<const icomp::CPackageStaticInfo*>(this));
-			if (packageStaticInfo != NULL){
-				icomp::IRegistry::Ids embeddedRegistryIds = mapValue->GetEmbeddedRegistryIds();
-				for (icomp::IRegistry::Ids::const_iterator iter = embeddedRegistryIds.begin();
-						iter != embeddedRegistryIds.end();
-						iter++){
-					icomp::IRegistry* embeddedRegistry = mapValue->GetEmbeddedRegistry(*iter);
-					Q_ASSERT(embeddedRegistry != NULL);
-					icomp::CCompositeComponentStaticInfo* newInfo;
-					newInfo = new icomp::CCompositeComponentStaticInfo(*embeddedRegistry, *this, packageStaticInfo);
-					packageStaticInfo->RegisterEmbeddedComponentInfo(*iter, newInfo);
-
-
-					// register exported subelements and imported attributes too (unfinished):
-					icomp::IRegistry::ExportedElementsMap exportedElementsMap = embeddedRegistry->GetExportedElementsMap();
-					QList<QByteArray> subElementNames = exportedElementsMap.keys();
-					for (int i = 0; i < subElementNames.size(); i++){
-						const icomp::IComponentStaticInfo* subElementInfo =
-								dynamic_cast<const icomp::IComponentStaticInfo*>(
-								packageStaticInfo->GetSubelementInfo(subElementNames[i]));
-						if (subElementInfo != NULL){
-							newInfo->RegisterSubelementInfo(subElementNames[i], subElementInfo);
-						}
-						//						embeddedRegistry->
-						//						packageStaticInfo->GetAttributeInfo()
-						//					newInfo->RegisterAttributeInfo();
-					}
-				}
-			}
 
 			return mapValue.GetPtr();
 		}
@@ -111,7 +76,6 @@ const icomp::IRegistry* CPackagesLoaderComp::GetRegistryFromFile(const QString& 
 
 // reimplemented (icomp::IComponentEnvironmentManager)
 
-
 QString CPackagesLoaderComp::GetConfigFilePath() const
 {
 	return m_configFilePath;
@@ -120,8 +84,7 @@ QString CPackagesLoaderComp::GetConfigFilePath() const
 
 // reimplemented (icomp::IPackagesManager)
 
-
-bool CPackagesLoaderComp::LoadPackages(const QString & configFilePath)
+bool CPackagesLoaderComp::LoadPackages(const QString& configFilePath)
 {
 	istd::CChangeNotifier notifier(this);
 
@@ -162,7 +125,7 @@ bool CPackagesLoaderComp::LoadPackages(const QString & configFilePath)
 }
 
 
-int CPackagesLoaderComp::GetPackageType(const QByteArray & packageId) const
+int CPackagesLoaderComp::GetPackageType(const QByteArray& packageId) const
 {
 	RealPackagesMap::const_iterator foundNormalIter = m_realPackagesMap.find(packageId);
 	if (foundNormalIter != m_realPackagesMap.end()){
@@ -178,7 +141,7 @@ int CPackagesLoaderComp::GetPackageType(const QByteArray & packageId) const
 }
 
 
-QString CPackagesLoaderComp::GetPackagePath(const QByteArray & packageId) const
+QString CPackagesLoaderComp::GetPackagePath(const QByteArray& packageId) const
 {
 	RealPackagesMap::const_iterator foundNormalIter = m_realPackagesMap.find(packageId);
 	if (foundNormalIter != m_realPackagesMap.end()){
@@ -196,8 +159,7 @@ QString CPackagesLoaderComp::GetPackagePath(const QByteArray & packageId) const
 
 // reimplemented (icomp::IRegistriesManager)
 
-
-const icomp::IRegistry * CPackagesLoaderComp::GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry * contextRegistryPtr) const
+const icomp::IRegistry* CPackagesLoaderComp::GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr) const
 {
 	CompositePackagesMap::const_iterator foundCompositeIter = m_compositePackagesMap.find(address.GetPackageId());
 	if (foundCompositeIter != m_compositePackagesMap.end()){
@@ -212,15 +174,14 @@ const icomp::IRegistry * CPackagesLoaderComp::GetRegistry(const icomp::CComponen
 
 // reimplemented (icomp::IMetaInfoManager)
 
-
 CPackagesLoaderComp::ComponentAddresses CPackagesLoaderComp::GetComponentAddresses(int typeFlag) const
 {
 	ComponentAddresses retVal;
 
 	if ((typeFlag & CTF_REAL) != 0){
-		for (RealPackagesMap::const_iterator packageIter = m_realPackagesMap.begin();
-				packageIter != m_realPackagesMap.end();
-				++packageIter){
+		for (		RealPackagesMap::const_iterator packageIter = m_realPackagesMap.begin();
+					packageIter != m_realPackagesMap.end();
+					++packageIter){
 			const QByteArray packageId = packageIter.key();
 
 			const IComponentStaticInfo* packageInfoPtr = GetEmbeddedComponentInfo(packageId);
@@ -230,9 +191,9 @@ CPackagesLoaderComp::ComponentAddresses CPackagesLoaderComp::GetComponentAddress
 				icomp::CComponentAddress address;
 				address.SetPackageId(packageId);
 
-				for (Ids::const_iterator componentIter = componentIds.begin();
-						componentIter != componentIds.end();
-						++componentIter){
+				for (		Ids::const_iterator componentIter = componentIds.begin();
+							componentIter != componentIds.end();
+							++componentIter){
 					address.SetComponentId(*componentIter);
 
 					retVal.insert(address);
@@ -242,9 +203,9 @@ CPackagesLoaderComp::ComponentAddresses CPackagesLoaderComp::GetComponentAddress
 	}
 
 	if ((typeFlag & CTF_COMPOSITE) != 0){
-		for (CompositePackagesMap::const_iterator packageIter = m_compositePackagesMap.begin();
-				packageIter != m_compositePackagesMap.end();
-				++packageIter){
+		for (		CompositePackagesMap::const_iterator packageIter = m_compositePackagesMap.begin();
+					packageIter != m_compositePackagesMap.end();
+					++packageIter){
 			const QByteArray packageId = packageIter.key();
 
 			const IComponentStaticInfo* packageInfoPtr = GetEmbeddedComponentInfo(packageId);
@@ -254,9 +215,9 @@ CPackagesLoaderComp::ComponentAddresses CPackagesLoaderComp::GetComponentAddress
 				icomp::CComponentAddress address;
 				address.SetPackageId(packageId);
 
-				for (Ids::const_iterator componentIter = componentIds.begin();
-						componentIter != componentIds.end();
-						++componentIter){
+				for (		Ids::const_iterator componentIter = componentIds.begin();
+							componentIter != componentIds.end();
+							++componentIter){
 					address.SetComponentId(*componentIter);
 
 					retVal.insert(address);
@@ -271,7 +232,6 @@ CPackagesLoaderComp::ComponentAddresses CPackagesLoaderComp::GetComponentAddress
 
 // reimplemented (icomp::CComponentBase)
 
-
 void CPackagesLoaderComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
@@ -282,8 +242,7 @@ void CPackagesLoaderComp::OnComponentCreated()
 
 // protected methods
 
-
-bool CPackagesLoaderComp::RegisterPackageFile(const QString & file)
+bool CPackagesLoaderComp::RegisterPackageFile(const QString& file)
 {
 	QFileInfo fileInfo(file);
 
@@ -309,10 +268,10 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString & file)
 		}
 		else if (foundIter.value() != fileInfo.canonicalFilePath()){
 			SendWarningMessage(
-					MI_CANNOT_REGISTER,
-					QObject::tr("Second real package definition was ignored %1 (previous: %2)")
-					.arg(fileInfo.canonicalFilePath())
-					.arg(foundIter.value()));
+						MI_CANNOT_REGISTER,
+						QObject::tr("Second real package definition was ignored %1 (previous: %2)")
+									.arg(fileInfo.canonicalFilePath())
+									.arg(foundIter.value()));
 		}
 	}
 	else if (fileInfo.isDir()){
@@ -321,8 +280,8 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString & file)
 			CompositePackageInfo& packageInfo = m_compositePackagesMap[packageId];
 
 			icomp::CCompositePackageStaticInfo* infoPtr = new icomp::CCompositePackageStaticInfo(
-					packageId,
-					this);
+						packageId,
+						this);
 			if (infoPtr == NULL){
 				return false;
 			}
@@ -331,9 +290,9 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString & file)
 			filters.append("*.arx");
 			QDir packageDir(fileInfo.absoluteFilePath());
 			QStringList componentFiles = packageDir.entryList(filters, QDir::Files | QDir::NoDotAndDotDot);
-			for (QStringList::iterator iter = componentFiles.begin();
-					iter != componentFiles.end();
-					++iter){
+			for (		QStringList::iterator iter = componentFiles.begin();
+						iter != componentFiles.end();
+						++iter){
 				QFileInfo componentFileInfo(*iter);
 				infoPtr->RegisterEmbeddedComponent(componentFileInfo.baseName().toLocal8Bit());
 			}
@@ -345,10 +304,10 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString & file)
 			iser::CXmlFileReadArchive archive(metaInfoFile);
 			if (!infoPtr->SerializeMeta(archive)){
 				SendWarningMessage(
-						iser::IFileLoader::MI_CANNOT_LOAD,
-						QObject::tr("Cannot load meta description for registry %1 (%2)")
-						.arg(QString(packageId))
-						.arg(metaInfoFile));
+							iser::IFileLoader::MI_CANNOT_LOAD,
+							QObject::tr("Cannot load meta description for registry %1 (%2)")
+										.arg(QString(packageId))
+										.arg(metaInfoFile));
 			}
 
 			RegisterEmbeddedComponentInfo(packageId, infoPtr);
@@ -357,10 +316,10 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString & file)
 		}
 		else if (foundIter.value().directory.canonicalPath() != fileInfo.canonicalFilePath()){
 			SendWarningMessage(
-					MI_CANNOT_REGISTER,
-					QObject::tr("Second composed package definition was ignored %1 (previous: %2)")
-					.arg(fileInfo.canonicalFilePath())
-					.arg(foundIter.value().directory.canonicalPath()));
+						MI_CANNOT_REGISTER,
+						QObject::tr("Second composed package definition was ignored %1 (previous: %2)")
+									.arg(fileInfo.canonicalFilePath())
+									.arg(foundIter.value().directory.canonicalPath()));
 		}
 	}
 
@@ -368,7 +327,7 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString & file)
 }
 
 
-bool CPackagesLoaderComp::RegisterPackagesDir(const QString & path)
+bool CPackagesLoaderComp::RegisterPackagesDir(const QString& path)
 {
 	bool retVal = true;
 
@@ -377,9 +336,9 @@ bool CPackagesLoaderComp::RegisterPackagesDir(const QString & path)
 	QStringList filters;
 	filters.append("*.arp");
 	QStringList filesInfo = packagesDir.entryList(filters, QDir::NoSymLinks | QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
-	for (QStringList::iterator iter = filesInfo.begin();
-			iter != filesInfo.end();
-			++iter){
+	for (		QStringList::iterator iter = filesInfo.begin();
+				iter != filesInfo.end();
+				++iter){
 		QString filePath = packagesDir.absoluteFilePath(*iter);
 
 		retVal = RegisterPackageFile(filePath) && retVal;
@@ -389,7 +348,7 @@ bool CPackagesLoaderComp::RegisterPackagesDir(const QString & path)
 }
 
 
-bool CPackagesLoaderComp::LoadConfigFile(const QString & configFile)
+bool CPackagesLoaderComp::LoadConfigFile(const QString& configFile)
 {
 	QString correctedPath;
 	if (!CheckAndMarkPath(QDir(), configFile, correctedPath)){
@@ -441,7 +400,7 @@ bool CPackagesLoaderComp::LoadConfigFile(const QString & configFile)
 }
 
 
-QLibrary & CPackagesLoaderComp::GetLibrary(const QFileInfo & fileInfo)
+QLibrary& CPackagesLoaderComp::GetLibrary(const QFileInfo& fileInfo)
 {
 	QString absolutePath = fileInfo.canonicalFilePath();
 
@@ -456,8 +415,8 @@ QLibrary & CPackagesLoaderComp::GetLibrary(const QFileInfo & fileInfo)
 	libraryPtr.SetPtr(new QLibrary(absolutePath));
 	if (!libraryPtr.IsValid() || !libraryPtr->load()){
 		SendErrorMessage(
-				MI_CANNOT_REGISTER,
-				QObject::tr("Cannot register package %1 (%2)").arg(fileInfo.fileName()).arg(libraryPtr->errorString()));
+					MI_CANNOT_REGISTER,
+					QObject::tr("Cannot register package %1 (%2)").arg(fileInfo.fileName()).arg(libraryPtr->errorString()));
 	}
 
 	return *libraryPtr;
@@ -466,9 +425,8 @@ QLibrary & CPackagesLoaderComp::GetLibrary(const QFileInfo & fileInfo)
 
 // public methods of embedded class LogingRegistry
 
-
-CPackagesLoaderComp::LogingRegistry::LogingRegistry(CPackagesLoaderComp * parentPtr)
-: m_parent(*parentPtr)
+CPackagesLoaderComp::LogingRegistry::LogingRegistry(CPackagesLoaderComp* parentPtr)
+:	m_parent(*parentPtr)
 {
 	I_ASSERT(parentPtr != NULL);
 }
@@ -476,27 +434,26 @@ CPackagesLoaderComp::LogingRegistry::LogingRegistry(CPackagesLoaderComp * parent
 
 // reimplemented (icomp::IRegistry)
 
-
-CPackagesLoaderComp::LogingRegistry::ElementInfo * CPackagesLoaderComp::LogingRegistry::InsertElementInfo(
-		const QByteArray& elementId,
-		const icomp::CComponentAddress& address,
-		bool ensureElementCreated)
+CPackagesLoaderComp::LogingRegistry::ElementInfo* CPackagesLoaderComp::LogingRegistry::InsertElementInfo(
+			const QByteArray& elementId,
+			const icomp::CComponentAddress& address,
+			bool ensureElementCreated)
 {
 	ElementInfo* retVal = BaseClass::InsertElementInfo(elementId, address, ensureElementCreated);
 
 	if (retVal == NULL){
 		m_parent.SendErrorMessage(
-				MI_CANNOT_CREATE_ELEMENT,
-				QObject::tr("Cannot create %1 (%2)").
-				arg(QString(elementId)).
-				arg(address.ToString()));
+					MI_CANNOT_CREATE_ELEMENT,
+					QObject::tr("Cannot create %1 (%2)").
+								arg(QString(elementId)).
+								arg(address.ToString()));
 	}
 
 	return retVal;
 }
 
 
-bool CPackagesLoaderComp::CheckAndMarkPath(const QDir& directory, const QString& path, QString & resultPath) const
+bool CPackagesLoaderComp::CheckAndMarkPath(const QDir& directory, const QString& path, QString& resultPath) const
 {
 	QString fullPath = QFileInfo(directory.filePath(iqt::CSystem::GetEnrolledPath(path))).canonicalFilePath();
 	if (!fullPath.isEmpty() && (m_usedFilesList.find(fullPath) == m_usedFilesList.end())){

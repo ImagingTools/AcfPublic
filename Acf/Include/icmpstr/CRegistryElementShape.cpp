@@ -42,7 +42,7 @@ namespace icmpstr
 
 
 CRegistryElementShape::CRegistryElementShape(
-			CVisualRegistryScenographerComp* registryViewPtr,
+			const CVisualRegistryScenographerComp* registryViewPtr,
 			const icmpstr::ISceneProvider* providerPtr)
 :	BaseClass(true, providerPtr),
 	m_registryView(*registryViewPtr),

@@ -1,23 +1,23 @@
 /********************************************************************************
- **
- **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
- **
- **	This file is part of the ACF Toolkit.
- **
- **	This file may be used under the terms of the GNU Lesser
- **	General Public License version 2.1 as published by the Free Software
- **	Foundation and appearing in the file LicenseLGPL.txt included in the
- **	packaging of this file.  Please review the following information to
- **	ensure the GNU Lesser General Public License version 2.1 requirements
- **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
- **
- **	If you are unsure which license is appropriate for your use, please
- **	contact us at info@imagingtools.de.
- **
- ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
- **	by Skype to ACF_infoline for further information about the ACF.
- **
- ********************************************************************************/
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
 
 
 #include "iqt/CRegistryCodeSaverComp.h"
@@ -29,33 +29,6 @@
 
 // ACF includes
 #include "iqt/iqt.h"
-#define CODE(...) #__VA_ARGS__
-
-namespace
-{
-
-
-/**
-	Make valid C identifiers from arbitrary strings.
- */
-QByteArray MakeValidIdentifier(const QByteArray & identifier)
-{
-	QByteArray result = identifier;
-
-	if (!isalpha(identifier[0])){
-		result[0] = '_';
-	}
-
-	for (int c = 1; c < identifier.size(); c++){
-		if (!isalnum(identifier[c])){
-			result[c] = '_';
-		}
-	}
-
-	return result;
-}
-
-} // unnamed namespace
 
 
 namespace iqt
@@ -63,13 +36,12 @@ namespace iqt
 
 
 CRegistryCodeSaverComp::CRegistryCodeSaverComp()
-: m_indentCount(0)
+:	m_indentCount(0)
 {
 }
 
 
 // reimplemented (iser::IFileLoader)
-
 
 bool CRegistryCodeSaverComp::IsOperationSupported(
 		const istd::IChangeable* dataObjectPtr,
@@ -100,13 +72,10 @@ int CRegistryCodeSaverComp::SaveToFile(const istd::IChangeable& data, const QStr
 
 	Addresses realAddresses;
 	Addresses composedAddresses;
-	if (!AppendAddresses(*registryPtr, realAddresses, composedAddresses)){
-		return StateFailed;
-	}
-
 	QByteArray className;
 	QString baseFilePath;
-	if (!ExtractInfoFromFile(filePath, className, baseFilePath)){
+	if (		!AppendAddresses(*registryPtr, realAddresses, composedAddresses) ||
+				!ExtractInfoFromFile(filePath, className, baseFilePath)){
 		return StateFailed;
 	}
 
@@ -119,20 +88,16 @@ int CRegistryCodeSaverComp::SaveToFile(const istd::IChangeable& data, const QStr
 		QFile headerFile(baseFilePath + ".h");
 		QFile codeFile(filePath);
 
-		if (!codeFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text) ||
-				!headerFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)){
-			headerFile.remove();
-			codeFile.remove();
+		if (		!codeFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text) ||
+					!headerFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)){
 			return StateFailed;
 		}
 
 		QTextStream headerStream(&headerFile);
 		QTextStream codeStream(&codeFile);
-		if (!WriteHeader(className, *registryPtr, composedAddresses, realAddresses, headerStream) ||
-				!WriteIncludes(className, realAddresses, codeStream) ||
-				!WriteClassDefinitions(className, *registryPtr, composedAddresses, realAddresses, codeStream)){
-			headerFile.remove();
-			codeFile.remove();
+		if (		!WriteHeader(className, *registryPtr, composedAddresses, realAddresses, headerStream) ||
+					!WriteIncludes(className, realAddresses, codeStream) ||
+					!WriteClassDefinitions(className, *registryPtr, composedAddresses, realAddresses, codeStream)){
 			return StateFailed;
 		}
 	}
@@ -141,13 +106,11 @@ int CRegistryCodeSaverComp::SaveToFile(const istd::IChangeable& data, const QStr
 		QFile depsFile(baseFilePath + ".pri");
 
 		if (!depsFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)){
-			depsFile.remove();
 			return StateFailed;
 		}
 
 		QTextStream depsStream(&depsFile);
 		if (!WriteDependencies(className, composedAddresses, realAddresses, depsStream)){
-			depsFile.remove();
 			return StateFailed;
 		}
 	}
@@ -157,7 +120,6 @@ int CRegistryCodeSaverComp::SaveToFile(const istd::IChangeable& data, const QStr
 
 
 // reimplemented (iser::IFileTypeInfo)
-
 
 bool CRegistryCodeSaverComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {
@@ -172,14 +134,14 @@ bool CRegistryCodeSaverComp::GetFileExtensions(QStringList& result, int flags, b
 		}
 
 		switch (workingMode){
-			case WM_DEPENDENCIES:
-				result.push_back("pri");
-				break;
+		case WM_DEPENDENCIES:
+			result.push_back("pri");
+			break;
 
-			default:
-				result.push_back("cpp"); // default
-				result.push_back("C"); // capital C for C++, not C
-				break;
+		default:
+			result.push_back("c");
+			result.push_back("cpp");
+			break;
 		}
 	}
 
@@ -196,16 +158,16 @@ QString CRegistryCodeSaverComp::GetTypeDescription(const QString* extensionPtr) 
 		}
 
 		switch (workingMode){
-			case WM_DEPENDENCIES:
-				return QObject::tr("qmake dependency file");
+		case WM_DEPENDENCIES:
+			return QObject::tr("qmake dependency file");
 
-			default:
-				return QObject::tr("C++ source file");
+		default:
+			return QObject::tr("C++ source file");
 		}
 	}
 
-	if ((extensionPtr->compare("c", Qt::CaseInsensitive) == 0) ||
-			(extensionPtr->compare("cpp", Qt::CaseInsensitive) == 0)){
+	if (		(extensionPtr->compare("c", Qt::CaseInsensitive) == 0) ||
+				(extensionPtr->compare("cpp", Qt::CaseInsensitive) == 0)){
 		return QObject::tr("C++ source file");
 	}
 	else if (extensionPtr->compare("pri", Qt::CaseInsensitive) == 0){
@@ -217,7 +179,6 @@ QString CRegistryCodeSaverComp::GetTypeDescription(const QString* extensionPtr) 
 
 
 // reimplemented (iprm::ISelectionConstraints)
-
 
 int CRegistryCodeSaverComp::GetConstraintsFlags() const
 {
@@ -234,14 +195,14 @@ int CRegistryCodeSaverComp::GetOptionsCount() const
 QString CRegistryCodeSaverComp::GetOptionName(int index) const
 {
 	switch (index){
-		case WM_DEPENDENCIES:
-			return QObject::tr("Dependencies");
+	case WM_DEPENDENCIES:
+		return QObject::tr("Dependencies");
 
-		case WM_SOURCES_AND_WM_DEPENDENCIES:
-			return QObject::tr("Sources and dependencies");
+	case WM_SOURCES_AND_WM_DEPENDENCIES:
+		return QObject::tr("Sources and dependencies");
 
-		default:
-			return QObject::tr("Sources");
+	default:
+		return QObject::tr("Sources");
 	}
 }
 
@@ -249,14 +210,14 @@ QString CRegistryCodeSaverComp::GetOptionName(int index) const
 QString CRegistryCodeSaverComp::GetOptionDescription(int index) const
 {
 	switch (index){
-		case WM_DEPENDENCIES:
-			return QObject::tr("List of all component and package files requested by this registry will be saved");
+	case WM_DEPENDENCIES:
+		return QObject::tr("List of all component and package files requested by this registry will be saved");
 
-		case WM_SOURCES_AND_WM_DEPENDENCIES:
-			return QObject::tr("C++ sources and list of all component and package files requested by this registry will be saved");
+	case WM_SOURCES_AND_WM_DEPENDENCIES:
+		return QObject::tr("C++ sources and list of all component and package files requested by this registry will be saved");
 
-		default:
-			return QObject::tr("C++ sources will be saved");
+	default:
+		return QObject::tr("C++ sources will be saved");
 	}
 }
 
@@ -264,56 +225,53 @@ QString CRegistryCodeSaverComp::GetOptionDescription(int index) const
 QByteArray CRegistryCodeSaverComp::GetOptionId(int index) const
 {
 	switch (index){
-		case WM_DEPENDENCIES:
-			return "Dependencies";
+	case WM_DEPENDENCIES:
+		return "Dependencies";
 
-		case WM_SOURCES_AND_WM_DEPENDENCIES:
-			return "Sources and dependencies";
+	case WM_SOURCES_AND_WM_DEPENDENCIES:
+		return "Sources and dependencies";
 
-		default:
-			return "Sources";
+	default:
+		return "Sources";
 	}
 }
 
 
 // protected methods
 
-
 bool CRegistryCodeSaverComp::AppendAddresses(
-		const icomp::IRegistry& registry,
-		Addresses& realAddresses,
-		Addresses& composedAddresses) const
+			const icomp::IRegistry& registry,
+			Addresses& realAddresses,
+			Addresses& composedAddresses) const
 {
 	if (!m_packagesManagerCompPtr.IsValid() || !m_registriesManagerCompPtr.IsValid()){
 		return false;
 	}
 
 	icomp::IRegistry::Ids ids = registry.GetElementIds();
-	for (icomp::IRegistry::Ids::const_iterator elementIter = ids.begin();
-			elementIter != ids.end();
-			++elementIter){
+	for (		icomp::IRegistry::Ids::const_iterator elementIter = ids.begin();
+				elementIter != ids.end();
+				++elementIter){
 		const QByteArray& componentId = *elementIter;
 
 		const icomp::IRegistry::ElementInfo* infoPtr = registry.GetElementInfo(componentId);
-		I_ASSERT(infoPtr != NULL); // used element ID was returned by registry, info must exist.
+		I_ASSERT(infoPtr != NULL);	// used element ID was returned by registry, info must exist.
 
 		const QByteArray& packageId = infoPtr->address.GetPackageId();
-		int packageType = m_packagesManagerCompPtr->GetPackageType(packageId);
-
 		if (packageId.isEmpty()){
-			// treat embedded components as packages
-			packageType = icomp::IPackagesManager::PT_EMBEDDED;
+			continue;	// skip embedded components
 		}
 
+		int packageType = m_packagesManagerCompPtr->GetPackageType(packageId);
 
 		switch (packageType){
-			case icomp::IPackagesManager::PT_REAL:
-				if (realAddresses.find(infoPtr->address) == realAddresses.end()){
-					realAddresses.insert(infoPtr->address);
-				}
-				break;
+		case icomp::IPackagesManager::PT_REAL:
+			if (realAddresses.find(infoPtr->address) == realAddresses.end()){
+				realAddresses.insert(infoPtr->address);
+			}
+			break;
 
-			case icomp::IPackagesManager::PT_COMPOSED:
+		case icomp::IPackagesManager::PT_COMPOSED:
 			{
 				const icomp::IRegistry* registryPtr = m_registriesManagerCompPtr->GetRegistry(infoPtr->address);
 				if (registryPtr != NULL){
@@ -325,37 +283,18 @@ bool CRegistryCodeSaverComp::AppendAddresses(
 				}
 				else{
 					SendErrorMessage(
-							MI_UNDEFINED_COMPONENT,
-							QObject::tr("Composite component '%1' is undefined").arg(infoPtr->address.ToString()));
+								MI_UNDEFINED_COMPONENT,
+								QObject::tr("Composite component '%1' is undefined").arg(infoPtr->address.ToString()));
 					return false;
 				}
 			}
-				break;
+			break;
 
-			case icomp::IPackagesManager::PT_EMBEDDED:
-			{
-				const icomp::IRegistry* registryPtr = registry.GetEmbeddedRegistry(infoPtr->address.GetComponentId());
-				if (registryPtr != NULL){
-					composedAddresses.insert(infoPtr->address);
-
-					if (!AppendAddresses(*registryPtr, realAddresses, composedAddresses)){
-						return false;
-					}
-				}
-				else{
-					SendErrorMessage(
-							MI_UNDEFINED_COMPONENT,
-							QObject::tr("Composite component '%1' is undefined").arg(infoPtr->address.ToString()));
-					return false;
-				}
-			}
-				break;
-
-			default:
-				SendErrorMessage(
+		default:
+			SendErrorMessage(
 						MI_UNDEFINED_PACKAGE,
 						QObject::tr("Package '%1' is undefined").arg(QString(packageId)));
-				return false;
+			return false;
 		}
 	}
 
@@ -367,9 +306,9 @@ CRegistryCodeSaverComp::Ids CRegistryCodeSaverComp::ExtractPackageIds(const Addr
 {
 	Ids retVal;
 
-	for (Addresses::const_iterator addressIter = addresses.begin();
-			addressIter != addresses.end();
-			++addressIter){
+	for (		Addresses::const_iterator addressIter = addresses.begin();
+				addressIter != addresses.end();
+				++addressIter){
 		const icomp::CComponentAddress& address = *addressIter;
 
 		retVal.insert(address.GetPackageId());
@@ -383,9 +322,9 @@ CRegistryCodeSaverComp::Ids CRegistryCodeSaverComp::ExtractComponentIds(const Ad
 {
 	Ids retVal;
 
-	for (Addresses::const_iterator addressIter = addresses.begin();
-			addressIter != addresses.end();
-			++addressIter){
+	for (		Addresses::const_iterator addressIter = addresses.begin();
+				addressIter != addresses.end();
+				++addressIter){
 		const icomp::CComponentAddress& address = *addressIter;
 
 		if (address.GetPackageId() == packageId){
@@ -398,11 +337,11 @@ CRegistryCodeSaverComp::Ids CRegistryCodeSaverComp::ExtractComponentIds(const Ad
 
 
 bool CRegistryCodeSaverComp::WriteHeader(
-		const QByteArray& className,
-		const icomp::IRegistry& registry,
-		const Addresses& composedAddresses,
-		const Addresses& realAddresses,
-		QTextStream& stream) const
+			const QByteArray& className,
+			const icomp::IRegistry& registry,
+			const Addresses& composedAddresses,
+			const Addresses& realAddresses,
+			QTextStream& stream) const
 {
 	QByteArray includeDefine = className + "_included";
 
@@ -483,11 +422,11 @@ bool CRegistryCodeSaverComp::WriteHeader(
 		stream << "\n";
 
 		NextLine(stream);
-		stream << "//\tcomposite packages";
+		stream << "//\tcomposited packages";
 
-		for (Ids::const_iterator packageIter = composedPackageIds.begin();
-				packageIter != composedPackageIds.end();
-				++packageIter){
+		for (		Ids::const_iterator packageIter = composedPackageIds.begin();
+					packageIter != composedPackageIds.end();
+					++packageIter){
 			const QByteArray& packageId = *packageIter;
 			if (packageId.isEmpty()){
 				continue;
@@ -511,9 +450,9 @@ bool CRegistryCodeSaverComp::WriteHeader(
 			stream << "C" << packageName << "(const icomp::IComponentEnvironmentManager* managerPtr);";
 
 			Ids componentIds = ExtractComponentIds(composedAddresses, packageId);
-			for (Ids::const_iterator componentIter = componentIds.begin();
-					componentIter != componentIds.end();
-					++componentIter){
+			for (		Ids::const_iterator componentIter = componentIds.begin();
+						componentIter != componentIds.end();
+						++componentIter){
 				const QByteArray& componentId = *componentIter;
 
 				icomp::CComponentAddress address(packageId, componentId);
@@ -545,9 +484,9 @@ bool CRegistryCodeSaverComp::WriteHeader(
 		NextLine(stream);
 		stream << "//\treal packages";
 
-		for (Ids::const_iterator packageIter = realPackageIds.begin();
-				packageIter != realPackageIds.end();
-				++packageIter){
+		for (		Ids::const_iterator packageIter = realPackageIds.begin();
+					packageIter != realPackageIds.end();
+					++packageIter){
 			const QByteArray& packageId = *packageIter;
 			if (packageId.isEmpty()){
 				continue;
@@ -620,9 +559,9 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	ChangeIndent(1);
 
 	if (!realPackageIds.isEmpty()){
-		for (Ids::const_iterator packageInstanceIter = realPackageIds.begin();
-				packageInstanceIter != realPackageIds.end();
-				++packageInstanceIter){
+		for (		Ids::const_iterator packageInstanceIter = realPackageIds.begin();
+					packageInstanceIter != realPackageIds.end();
+					++packageInstanceIter){
 			const QByteArray& packageId = *packageInstanceIter;
 			if (packageId.isEmpty()){
 				continue;
@@ -638,9 +577,9 @@ bool CRegistryCodeSaverComp::WriteHeader(
 	}
 
 	if (!composedPackageIds.isEmpty()){
-		for (Ids::const_iterator registerPackageIter = composedPackageIds.begin();
-				registerPackageIter != composedPackageIds.end();
-				++registerPackageIter){
+		for (		Ids::const_iterator registerPackageIter = composedPackageIds.begin();
+					registerPackageIter != composedPackageIds.end();
+					++registerPackageIter){
 			const QByteArray& packageId = *registerPackageIter;
 			if (packageId.isEmpty()){
 				continue;
@@ -687,9 +626,9 @@ bool CRegistryCodeSaverComp::WriteHeader(
 
 
 bool CRegistryCodeSaverComp::WriteIncludes(
-		const QByteArray& className,
-		const Addresses& addresses,
-		QTextStream& stream) const
+			const QByteArray& className,
+			const Addresses& addresses,
+			QTextStream& stream) const
 {
 	stream << "#include \"" << className << ".h\"" << "\n";
 	stream << "\n\n";
@@ -704,9 +643,9 @@ bool CRegistryCodeSaverComp::WriteIncludes(
 		stream << "\n";
 		stream << "// ACF component includes" << "\n";
 
-		for (Ids::const_iterator packageIter = packageIds.begin();
-				packageIter != packageIds.end();
-				++packageIter){
+		for (		Ids::const_iterator packageIter = packageIds.begin();
+					packageIter != packageIds.end();
+					++packageIter){
 			const QByteArray& packageId = *packageIter;
 			if (packageId.isEmpty()){
 				continue;
@@ -721,11 +660,11 @@ bool CRegistryCodeSaverComp::WriteIncludes(
 
 
 bool CRegistryCodeSaverComp::WriteClassDefinitions(
-		const QByteArray& className,
-		const icomp::IRegistry& registry,
-		const Addresses& composedAddresses,
-		const Addresses& realAddresses,
-		QTextStream& stream) const
+			const QByteArray& className,
+			const icomp::IRegistry& registry,
+			const Addresses& composedAddresses,
+			const Addresses& realAddresses,
+			QTextStream& stream) const
 {
 	NextLine(stream);
 	stream << className << "::" << className << "()";
@@ -747,27 +686,6 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 	NextLine(stream);
 	stream << "SetComponentContext(m_mainContextPtr.GetPtr(), NULL, false);";
 
-	NextLine(stream);
-	stream << "// register embedded component info for elements taken from mainRegistry";
-	NextLine(stream);
-	stream << CODE(
-			icomp::CPackageStaticInfo* staticInfoPtr = dynamic_cast<icomp::CPackageStaticInfo*>(&localEnvironmentManager);
-
-	if (staticInfoPtr != NULL){
-		icomp::IRegistry::Ids embeddedRegistryIds = mainRegistry.GetEmbeddedRegistryIds();
-		for (icomp::IRegistry::Ids::const_iterator iter = embeddedRegistryIds.begin();
-				iter != embeddedRegistryIds.end();
-				iter++){
-			icomp::IRegistry* embeddedRegistry = mainRegistry.GetEmbeddedRegistry(*iter);
-					Q_ASSERT(embeddedRegistry != NULL);
-					icomp::CCompositeComponentStaticInfo* newInfo;
-					newInfo = new icomp::CCompositeComponentStaticInfo(*embeddedRegistry, localEnvironmentManager, staticInfoPtr);
-					staticInfoPtr->RegisterEmbeddedComponentInfo(*iter, newInfo);
-		}
-	}
-	);
-
-
 	ChangeIndent(-1);
 	NextLine(stream);
 	stream << "}";
@@ -782,9 +700,9 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 	Ids composedPackageIds = ExtractPackageIds(composedAddresses);
 
 	if (m_registriesManagerCompPtr.IsValid()){
-		for (Ids::const_iterator packageIter = composedPackageIds.begin();
-				packageIter != composedPackageIds.end();
-				++packageIter){
+		for (		Ids::const_iterator packageIter = composedPackageIds.begin();
+					packageIter != composedPackageIds.end();
+					++packageIter){
 			const QByteArray& packageId = *packageIter;
 			if (packageId.isEmpty()){
 				continue;
@@ -809,9 +727,9 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 			ChangeIndent(1);
 
 			Ids componentIds = ExtractComponentIds(composedAddresses, packageId);
-			for (Ids::const_iterator instanceRegIter = componentIds.begin();
-					instanceRegIter != componentIds.end();
-					++instanceRegIter){
+			for (		Ids::const_iterator instanceRegIter = componentIds.begin();
+						instanceRegIter != componentIds.end();
+						++instanceRegIter){
 				const QByteArray& componentId = *instanceRegIter;
 
 				NextLine(stream);
@@ -824,9 +742,9 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 
 			stream << "\n\n";
 
-			for (Ids::const_iterator componentIter = componentIds.begin();
-					componentIter != componentIds.end();
-					++componentIter){
+			for (		Ids::const_iterator componentIter = componentIds.begin();
+						componentIter != componentIds.end();
+						++componentIter){
 				const QByteArray& componentId = *componentIter;
 
 				icomp::CComponentAddress address(packageId, componentId);
@@ -845,9 +763,9 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 
 	Ids realPackageIds = ExtractPackageIds(realAddresses);
 
-	for (Ids::const_iterator packageIter = realPackageIds.begin();
-			packageIter != realPackageIds.end();
-			++packageIter){
+	for (		Ids::const_iterator packageIter = realPackageIds.begin();
+				packageIter != realPackageIds.end();
+				++packageIter){
 		const QByteArray& packageId = *packageIter;
 		if (packageId.isEmpty()){
 			continue;
@@ -868,9 +786,9 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 		ChangeIndent(1);
 
 		Ids componentIds = ExtractComponentIds(realAddresses, packageId);
-		for (Ids::const_iterator instanceRegIter = componentIds.begin();
-				instanceRegIter != componentIds.end();
-				++instanceRegIter){
+		for (		Ids::const_iterator instanceRegIter = componentIds.begin();
+					instanceRegIter != componentIds.end();
+					++instanceRegIter){
 			const QByteArray& componentId = *instanceRegIter;
 
 			QByteArray infoName = "info" + componentId;
@@ -905,9 +823,9 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 		NextLine(stream);
 		stream << "// register real components";
 
-		for (Ids::const_iterator registerRealIter = realPackageIds.begin();
-				registerRealIter != realPackageIds.end();
-				++registerRealIter){
+		for (		Ids::const_iterator registerRealIter = realPackageIds.begin();
+					registerRealIter != realPackageIds.end();
+					++registerRealIter){
 			const QByteArray& packageId = *registerRealIter;
 			if (packageId.isEmpty()){
 				continue;
@@ -925,21 +843,13 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 
 		NextLine(stream);
 		stream << "// create map for all known registries";
-		for (Addresses::const_iterator regTestIter = composedAddresses.begin();
-				regTestIter != composedAddresses.end();
-				++regTestIter){
+		for (		Addresses::const_iterator regTestIter = composedAddresses.begin();
+					regTestIter != composedAddresses.end();
+					++regTestIter){
 			const icomp::CComponentAddress& address = *regTestIter;
 
-			if (address.GetPackageId().isEmpty()){
-				continue; // skip embedded compositions (do not create pointers to them)
-			}
-
 			NextLine(stream);
-			stream << "m_registriesMap[icomp::CComponentAddress(\"" <<
-					address.GetPackageId() << "\", \"" <<
-					address.GetComponentId() << "\")].SetPtr(new C" <<
-					MakeValidIdentifier(GetPackageName(address.GetPackageId())) <<
-					"::C" << MakeValidIdentifier(address.GetComponentId()) << "Registry());";
+			stream << "m_registriesMap[icomp::CComponentAddress(\"" << address.GetPackageId() << "\", \"" << address.GetComponentId() << "\")].SetPtr(new C" << GetPackageName(address.GetPackageId()) << "::C" << address.GetComponentId() << "Registry());";
 		}
 	}
 
@@ -949,9 +859,9 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 		NextLine(stream);
 		stream << "// register composed packages";
 
-		for (Ids::const_iterator registerPackageIter = composedPackageIds.begin();
-				registerPackageIter != composedPackageIds.end();
-				++registerPackageIter){
+		for (		Ids::const_iterator registerPackageIter = composedPackageIds.begin();
+					registerPackageIter != composedPackageIds.end();
+					++registerPackageIter){
 			const QByteArray& packageId = *registerPackageIter;
 			if (packageId.isEmpty()){
 				continue;
@@ -1018,10 +928,10 @@ bool CRegistryCodeSaverComp::WriteClassDefinitions(
 
 
 bool CRegistryCodeSaverComp::WriteDependencies(
-		const QByteArray& className,
-		const Addresses& composedAddresses,
-		const Addresses& realAddresses,
-		QTextStream& stream) const
+			const QByteArray& className,
+			const Addresses& composedAddresses,
+			const Addresses& realAddresses,
+			QTextStream& stream) const
 {
 	if (!m_packagesManagerCompPtr.IsValid()){
 		return false;
@@ -1033,40 +943,45 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 	}
 
 	stream << "#dependencies of class " << className << "\n";
-	stream << "ARXC_DEPENDENCIES +=";
 	if (!composedAddresses.isEmpty() && !realAddresses.isEmpty()){
+		stream << "ARXC_DEPENDENCIES +=";
 
-		for (Addresses::const_iterator addressIter = composedAddresses.begin();
-				addressIter != composedAddresses.end();
-				++addressIter){
+		for (		Addresses::const_iterator addressIter = composedAddresses.begin();
+					addressIter != composedAddresses.end();
+					++addressIter){
 			const icomp::CComponentAddress& address = *addressIter;
 			const QByteArray& packageId = address.GetPackageId();
 
 			QString packagePath = m_packagesManagerCompPtr->GetPackagePath(packageId);
-			if (!packagePath.isEmpty()){
-				stream << " \\" << "\n";
-				stream << "\t" << baseDir.relativeFilePath(packagePath).toLocal8Bit() << "/" << address.GetComponentId() << ".arx";
+			if (packagePath.isEmpty()){
+				SendErrorMessage(
+							MI_UNKNOWN_PACKAGE,
+							QObject::tr("Composed package '%1' cannot be found").arg(QString(packageId)));
+				return false;
 			}
+
+			stream << " \\" << "\n";
+			stream << "\t" << baseDir.relativeFilePath(packagePath).toLocal8Bit() << "/" << address.GetComponentId() << ".arx";
 		}
 
 		Ids packageIdsList;
-		for (Addresses::const_iterator addressIter = realAddresses.begin();
-				addressIter != realAddresses.end();
-				++addressIter){
+		for (		Addresses::const_iterator addressIter = realAddresses.begin();
+					addressIter != realAddresses.end();
+					++addressIter){
 			const icomp::CComponentAddress& address = *addressIter;
 			packageIdsList.insert(address.GetPackageId());
 		}
 
-		for (Ids::const_iterator packageIter = packageIdsList.begin();
-				packageIter != packageIdsList.end();
-				++packageIter){
+		for (		Ids::const_iterator packageIter = packageIdsList.begin();
+					packageIter != packageIdsList.end();
+					++packageIter){
 			const QByteArray& packageId = *packageIter;
 
 			QString packagePath = m_packagesManagerCompPtr->GetPackagePath(packageId);
 			if (packagePath.isEmpty()){
 				SendErrorMessage(
-						MI_UNKNOWN_PACKAGE,
-						QObject::tr("Package '%1' cannot be found").arg(QString(packageId)));
+							MI_UNKNOWN_PACKAGE,
+							QObject::tr("Package '%1' cannot be found").arg(QString(packageId)));
 				return false;
 			}
 
@@ -1077,9 +992,9 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 
 	if (m_extPackagesManagerCompPtr.IsValid()){
 		icomp::IExtPackagesManager::PathList configFilesList = m_extPackagesManagerCompPtr->GetConfigurationPathList(icomp::IExtPackagesManager::PT_CONFIG);
-		for (icomp::IExtPackagesManager::PathList::const_iterator pathIter = configFilesList.begin();
-				pathIter != configFilesList.end();
-				++pathIter){
+		for (		icomp::IExtPackagesManager::PathList::const_iterator pathIter = configFilesList.begin();
+					pathIter != configFilesList.end();
+					++pathIter){
 			const QString& configFilePath = *pathIter;
 
 			stream << " \\" << "\n";
@@ -1094,24 +1009,26 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 
 
 bool CRegistryCodeSaverComp::WriteRegistryInfo(
-		const icomp::IRegistry& registry,
-		const QByteArray& registryCallPrefix,
-		QTextStream& stream) const
+			const icomp::IRegistry& registry,
+			const QByteArray& registryCallPrefix,
+			QTextStream& stream) const
 {
 	icomp::IRegistry::Ids ids = registry.GetElementIds();
-	for (icomp::IRegistry::Ids::const_iterator elementIter = ids.begin();
-			elementIter != ids.end();
-			++elementIter){
-		const QByteArray& componentId = *elementIter;
+	if (!ids.isEmpty()){
+		for (		icomp::IRegistry::Ids::const_iterator elementIter = ids.begin();
+					elementIter != ids.end();
+					++elementIter){
+			const QByteArray& componentId = *elementIter;
 
-		const icomp::IRegistry::ElementInfo* infoPtr = registry.GetElementInfo(componentId);
-		I_ASSERT(infoPtr != NULL); // used element ID was returned by registry, info must exist.
+			const icomp::IRegistry::ElementInfo* infoPtr = registry.GetElementInfo(componentId);
+			I_ASSERT(infoPtr != NULL);	// used element ID was returned by registry, info must exist.
 
-		NextLine(stream);
-		stream << "// element '" << componentId << "' of type " << infoPtr->address.GetPackageId() << "::" << infoPtr->address.GetComponentId();
+			NextLine(stream);
+			stream << "// element '" << componentId << "' of type " << infoPtr->address.GetPackageId() << "::" << infoPtr->address.GetComponentId();
 
-		if (!WriteComponentInfo(registry, registryCallPrefix, componentId, *infoPtr, stream)){
-			return false;
+			if (!WriteComponentInfo(registry, registryCallPrefix, componentId, *infoPtr, stream)){
+				return false;
+			}
 		}
 	}
 
@@ -1119,9 +1036,9 @@ bool CRegistryCodeSaverComp::WriteRegistryInfo(
 	if (!interfacesMap.isEmpty()){
 		NextLine(stream);
 		stream << "// interface export";
-		for (icomp::IRegistry::ExportedInterfacesMap::const_iterator interfaceIter = interfacesMap.begin();
-				interfaceIter != interfacesMap.end();
-				++interfaceIter){
+		for (		icomp::IRegistry::ExportedInterfacesMap::const_iterator interfaceIter = interfacesMap.begin();
+					interfaceIter != interfacesMap.end();
+					++interfaceIter){
 			const QByteArray& interfaceName = interfaceIter.key();
 			const QByteArray& componentName = interfaceIter.value();
 
@@ -1135,18 +1052,15 @@ bool CRegistryCodeSaverComp::WriteRegistryInfo(
 			stream << "\t\t\ttrue);";
 		}
 	}
-	else{
-		stream << "/* No interfaces to export */";
-	}
 
 	const icomp::IRegistry::ExportedElementsMap& componentsMap = registry.GetExportedElementsMap();
 	if (!componentsMap.isEmpty()){
 		stream << "\n";
 		NextLine(stream);
 		stream << "// component export";
-		for (icomp::IRegistry::ExportedElementsMap::const_iterator componentIter = componentsMap.begin();
-				componentIter != componentsMap.end();
-				++componentIter){
+		for (		icomp::IRegistry::ExportedElementsMap::const_iterator componentIter = componentsMap.begin();
+					componentIter != componentsMap.end();
+					++componentIter){
 			const QByteArray& exportedName = componentIter.key();
 			const QByteArray& componentName = componentIter.value();
 
@@ -1161,16 +1075,16 @@ bool CRegistryCodeSaverComp::WriteRegistryInfo(
 
 
 	icomp::IRegistry::Ids embeddedIds = registry.GetEmbeddedRegistryIds();
-	for (icomp::IRegistry::Ids::const_iterator embeddedIter = embeddedIds.begin();
-			embeddedIter != embeddedIds.end();
-			++embeddedIter){
+	for (		icomp::IRegistry::Ids::const_iterator embeddedIter = embeddedIds.begin();
+				embeddedIter != embeddedIds.end();
+				++embeddedIter){
 		const QByteArray& id = *embeddedIter;
 
 		const icomp::IRegistry* embeddedRegistryPtr = registry.GetEmbeddedRegistry(id);
 		if (embeddedRegistryPtr != NULL){
 			stream << "\n";
 
-			QByteArray embeddedRegName = "embedded" + MakeValidIdentifier(id) + "Ptr";
+			QByteArray embeddedRegName = "embedded" + id + "Ptr";
 
 			NextLine(stream);
 			stream << "icomp::IRegistry* " << embeddedRegName << " = " << registryCallPrefix << "InsertEmbeddedRegistry(\"" << id << "\");";
@@ -1193,13 +1107,13 @@ bool CRegistryCodeSaverComp::WriteRegistryInfo(
 
 
 bool CRegistryCodeSaverComp::WriteComponentInfo(
-		const icomp::IRegistry& /*registry*/,
-		const QByteArray& registryCallPrefix,
-		const QByteArray& componentId,
-		const icomp::IRegistry::ElementInfo& componentInfo,
-		QTextStream& stream) const
+			const icomp::IRegistry& /*registry*/,
+			const QByteArray& registryCallPrefix,
+			const QByteArray& componentId,
+			const icomp::IRegistry::ElementInfo& componentInfo,
+			QTextStream& stream) const
 {
-	QByteArray elementInfoName = "info" + MakeValidIdentifier(componentId) + "Ptr";
+	QByteArray elementInfoName = "info" + componentId + "Ptr";
 
 	if (componentInfo.elementPtr.IsValid()){
 		icomp::IRegistryElement& component = *componentInfo.elementPtr;
@@ -1236,9 +1150,9 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 					stream << "\n";
 				}
 
-				for (icomp::IRegistryElement::Ids::const_iterator attributeIter = attributeIds.begin();
-						attributeIter != attributeIds.end();
-						++attributeIter){
+				for (		icomp::IRegistryElement::Ids::const_iterator attributeIter = attributeIds.begin();
+							attributeIter != attributeIds.end();
+							++attributeIter){
 					const QByteArray& attributeId = *attributeIter;
 
 					const icomp::IRegistryElement::AttributeInfo* attrInfoPtr = component.GetAttributeInfo(attributeId);
@@ -1291,11 +1205,11 @@ bool CRegistryCodeSaverComp::WriteComponentInfo(
 
 
 bool CRegistryCodeSaverComp::WriteAttribute(
-		const QByteArray& attributeId,
-		const QByteArray& /*componentId*/,
-		const QByteArray& attributeInfoName,
-		const iser::IObject& attribute,
-		QTextStream& stream) const
+			const QByteArray& attributeId,
+			const QByteArray& /*componentId*/,
+			const QByteArray& attributeInfoName,
+			const iser::IObject& attribute,
+			QTextStream& stream) const
 {
 	QByteArray attributeType;
 	QByteArray valueString;
@@ -1335,9 +1249,9 @@ bool CRegistryCodeSaverComp::WriteAttribute(
 			NextLine(stream);
 			stream << "n" << attributeInfoName << "->Reset();";
 
-			for (QList<QByteArray>::const_iterator iter = valueStrings.begin();
-					iter != valueStrings.end();
-					++iter){
+			for (		QList<QByteArray>::const_iterator iter = valueStrings.begin();
+						iter != valueStrings.end();
+						++iter){
 				NextLine(stream);
 				stream << "n" << attributeInfoName << "->InsertValue(" << *iter << ");";
 			}
@@ -1345,8 +1259,8 @@ bool CRegistryCodeSaverComp::WriteAttribute(
 	}
 	else{
 		SendErrorMessage(
-				MI_UNDEFINED_ATTR_TYPE,
-				QObject::tr("Unknown attribute type: %1").arg(QString(attributeType)));
+					MI_UNDEFINED_ATTR_TYPE,
+					QObject::tr("Unknown attribute type: %1").arg(QString(attributeType)));
 		return false;
 	}
 
@@ -1355,10 +1269,10 @@ bool CRegistryCodeSaverComp::WriteAttribute(
 
 
 bool CRegistryCodeSaverComp::WriteRegistryClassDeclaration(
-		const QByteArray& /*baseClassName*/,
-		const QByteArray& registryClassName,
-		const icomp::IRegistry& registry,
-		QTextStream& stream) const
+			const QByteArray& /*baseClassName*/,
+			const QByteArray& registryClassName,
+			const icomp::IRegistry& registry,
+			QTextStream& stream) const
 {
 	QString description = registry.GetDescription();
 
@@ -1394,10 +1308,10 @@ bool CRegistryCodeSaverComp::WriteRegistryClassDeclaration(
 
 
 bool CRegistryCodeSaverComp::WriteRegistryClassBody(
-		const QByteArray& baseClassName,
-		const QByteArray& registryClassName,
-		const icomp::IRegistry& registry,
-		QTextStream& stream) const
+			const QByteArray& baseClassName,
+			const QByteArray& registryClassName,
+			const icomp::IRegistry& registry,
+			QTextStream& stream) const
 {
 	NextLine(stream);
 	stream << "// Embedded class " << registryClassName;
@@ -1424,13 +1338,13 @@ bool CRegistryCodeSaverComp::WriteRegistryClassBody(
 
 
 bool CRegistryCodeSaverComp::GetAttributeValue(
-		const iser::ISerializable& attribute,
-		QByteArray& valueString,
-		QByteArray& typeName) const
+			const iser::ISerializable& attribute,
+			QByteArray& valueString,
+			QByteArray& typeName) const
 {
 	const icomp::CBooleanAttribute* boolAttribute = dynamic_cast<const icomp::CBooleanAttribute*>(&attribute);
 	if (boolAttribute != NULL){
-		valueString = boolAttribute->GetValue() ? "true" : "false";
+		valueString = boolAttribute->GetValue()? "true": "false";
 		typeName = "icomp::CBooleanAttribute";
 
 		return true;
@@ -1488,16 +1402,16 @@ bool CRegistryCodeSaverComp::GetAttributeValue(
 
 
 bool CRegistryCodeSaverComp::GetMultiAttributeValue(
-		const iser::ISerializable& attribute,
-		QList<QByteArray>& valueStrings,
-		QByteArray& typeName) const
+			const iser::ISerializable& attribute,
+			QList<QByteArray>& valueStrings,
+			QByteArray& typeName) const
 {
 	valueStrings.clear();
 
 	const icomp::CBooleanListAttribute* boolAttribute = dynamic_cast<const icomp::CBooleanListAttribute*>(&attribute);
 	if (boolAttribute != NULL){
 		for (int index = 0; index < boolAttribute->GetValuesCount(); index++){
-			valueStrings.push_back(boolAttribute->GetValueAt(index) ? "true" : "false");
+			valueStrings.push_back(boolAttribute->GetValueAt(index)? "true": "false");
 		}
 
 		typeName = "icomp::CBooleanListAttribute";
@@ -1619,9 +1533,9 @@ QByteArray CRegistryCodeSaverComp::GetStringLiteral(const QString& text) const
 
 	QByteArray retVal("\"");
 
-	for (QString::const_iterator iter = text.begin();
-			iter != text.end();
-			++iter){
+	for (		QString::const_iterator iter = text.begin();
+				iter != text.end();
+				++iter){
 		wchar_t c = (*iter).unicode();
 
 		if (c == '\a'){
@@ -1673,9 +1587,9 @@ QByteArray CRegistryCodeSaverComp::GetIdValueLiteral(const QByteArray& text) con
 
 	QByteArray retVal("\"");
 
-	for (QByteArray::const_iterator iter = text.begin();
-			iter != text.end();
-			++iter){
+	for (		QByteArray::const_iterator iter = text.begin();
+				iter != text.end();
+				++iter){
 		QByteArray::value_type c = *iter;
 
 		if (c == '\a'){

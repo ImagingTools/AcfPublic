@@ -51,7 +51,7 @@ public:
 	typedef icmpstr::TObjectShapeBase<QGraphicsRectItem, CVisualRegistryElement> BaseClass;
 
 	CRegistryElementShape(
-				CVisualRegistryScenographerComp* registryViewPtr,
+				const CVisualRegistryScenographerComp* registryViewPtr,
 				const icmpstr::ISceneProvider* providerPtr = NULL);
 
 	QRectF GetViewRect() const;
@@ -90,7 +90,7 @@ protected:
 	virtual void OnSelectionChanged(bool isSelected);
 
 private:
-	CVisualRegistryScenographerComp& m_registryView;
+	const CVisualRegistryScenographerComp& m_registryView;
 
 	QStringList m_exportedInterfacesList;
 

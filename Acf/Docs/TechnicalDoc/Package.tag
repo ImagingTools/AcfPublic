@@ -8063,6 +8063,13 @@
       <arglist>(const i2d::CVector2d &amp;point) const </arglist>
     </member>
     <member kind="function">
+      <type>i2d::CVector2d</type>
+      <name>GetExtendedNearestPoint</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a70388812eb3495bf2fefea76b7593aba</anchor>
+      <arglist>(const i2d::CVector2d &amp;point) const </arglist>
+    </member>
+    <member kind="function">
       <type>CLine2d</type>
       <name>GetShortestEndConnection</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
