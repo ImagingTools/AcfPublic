@@ -101,6 +101,7 @@ public:
 	virtual void OnComponentCreated();
 
 protected:
+	/** Logging? */
 	class LogingRegistry: public icomp::CRegistry
 	{
 	public:
@@ -157,7 +158,7 @@ private:
 	mutable InvRegistriesMap m_invRegistriesMap;
 
 	/**
-		List of pathes.
+		List of paths.
 	*/
 	typedef QSet<QString> PathList;
 	mutable PathList m_usedFilesList;
