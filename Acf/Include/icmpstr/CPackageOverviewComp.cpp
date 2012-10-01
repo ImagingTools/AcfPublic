@@ -1,23 +1,23 @@
 /********************************************************************************
-**
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
-**
-********************************************************************************/
+ **
+ **	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+ **
+ **	This file is part of the ACF Toolkit.
+ **
+ **	This file may be used under the terms of the GNU Lesser
+ **	General Public License version 2.1 as published by the Free Software
+ **	Foundation and appearing in the file LicenseLGPL.txt included in the
+ **	packaging of this file.  Please review the following information to
+ **	ensure the GNU Lesser General Public License version 2.1 requirements
+ **	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ **
+ **	If you are unsure which license is appropriate for your use, please
+ **	contact us at info@imagingtools.de.
+ **
+ ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+ **	by Skype to ACF_infoline for further information about the ACF.
+ **
+ ********************************************************************************/
 
 
 #include "icmpstr/CPackageOverviewComp.h"
@@ -49,15 +49,18 @@
 namespace icmpstr
 {
 
+
 class CItemDelegate: public QItemDelegate
 {
 public:
 	typedef QItemDelegate BaseClass;
 
+
 	enum Margin
 	{
 		SIDE_OFFSET = 4
 	};
+
 
 	CItemDelegate()
 	{
@@ -68,6 +71,7 @@ public:
 
 		m_defaultComponentIcon = QIcon(":/Icons/CompositorIcon.svg").pixmap(QSize(64, 64), QIcon::Disabled);
 	}
+
 
 	void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const
 	{
@@ -121,10 +125,10 @@ public:
 
 			if (!componentIcon.isNull()){
 				QRectF iconRect(
-					mainRect.left() + SIDE_OFFSET,
-					mainRect.top() + SIDE_OFFSET,
-					iconSize,
-					iconSize);
+						mainRect.left() + SIDE_OFFSET,
+						mainRect.top() + SIDE_OFFSET,
+						iconSize,
+						iconSize);
 
 				componentIcon.paint(painter, iconRect.toRect());
 				mainRect.adjust(mainRect.height() + SIDE_OFFSET, 0, 0, 0);
@@ -134,7 +138,7 @@ public:
 		mainRect.adjust(SIDE_OFFSET, 1, 0, -1);
 
 		if (packageItemPtr == NULL && ((option.state & QStyle::State_Selected) == 0)){
-			QColor separatorColor(192,220,255);
+			QColor separatorColor(192, 220, 255);
 
 			painter->setPen(separatorColor);
 
@@ -153,8 +157,8 @@ public:
 		if (!componentDescription.isEmpty()){
 			painter->setFont(m_componentDescriptionFont);
 			painter->drawText(
-				mainRect,
-				Qt::AlignBottom | Qt::AlignLeft | Qt::TextSingleLine, componentDescription);
+					mainRect,
+					Qt::AlignBottom | Qt::AlignLeft | Qt::TextSingleLine, componentDescription);
 		}
 	}
 
@@ -180,6 +184,8 @@ public:
 	}
 
 private:
+
+
 	int CalculateItemHeight() const
 	{
 		QFontMetrics nameFontMetrics(m_componentNameFont);
@@ -191,6 +197,7 @@ private:
 
 		return height;
 	}
+
 
 	void UpdateGradients(const QStyleOptionViewItem& option) const
 	{
@@ -229,7 +236,7 @@ private:
 		selectedComponentGradient.setColorAt(qMin(1.0, 4 * iconFactor), QColor(10, 242, 126));
 		selectedComponentGradient.setColorAt(mainFactor, QColor(10, 242, 126, 128));
 		selectedComponentGradient.setColorAt(1.0, transparentColor);
-		m_selectedItemBrush =  selectedComponentGradient;
+		m_selectedItemBrush = selectedComponentGradient;
 	}
 
 private:
@@ -245,12 +252,12 @@ private:
 
 
 CPackageOverviewComp::CPackageOverviewComp()
-:	m_packagesCommand("", 110, ibase::ICommand::CF_GLOBAL_MENU),
-	m_reloadCommand("", 110, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR),
-	m_registryObserver(this),
-	m_configObserver(this),
-	m_startDrag(false),
-	m_starDragPosition(0, 0)
+: m_packagesCommand("", 110, ibase::ICommand::CF_GLOBAL_MENU),
+m_reloadCommand("", 110, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR),
+m_registryObserver(this),
+m_configObserver(this),
+m_startDrag(false),
+m_starDragPosition(0, 0)
 {
 	connect(&m_reloadCommand, SIGNAL(triggered()), this, SLOT(OnReloadPackages()));
 	m_packagesCommand.InsertChild(&m_reloadCommand);
@@ -260,6 +267,7 @@ CPackageOverviewComp::CPackageOverviewComp()
 
 // reimplemented (ibase::ICommandsProvider)
 
+
 const ibase::IHierarchicalCommand* CPackageOverviewComp::GetCommands() const
 {
 	return &m_commands;
@@ -267,6 +275,7 @@ const ibase::IHierarchicalCommand* CPackageOverviewComp::GetCommands() const
 
 
 // reimplemented (icmpstr::IAttributeSelectionObserver)
+
 
 void CPackageOverviewComp::OnAttributeSelected(const icomp::IAttributeStaticInfo* attributeStaticInfoPtr)
 {
@@ -281,12 +290,12 @@ void CPackageOverviewComp::OnAttributeSelected(const icomp::IAttributeStaticInfo
 
 		if (isReference || isMultiReference || isFactory || isMultiFactory){
 			icomp::IElementStaticInfo::Ids interfaceNames = attributeStaticInfoPtr->GetRelatedMetaIds(
-				icomp::IComponentStaticInfo::MGI_INTERFACES,
-				0,
-				icomp::IAttributeStaticInfo::AF_NULLABLE);	// Names of the interfaces which must be set
+					icomp::IComponentStaticInfo::MGI_INTERFACES,
+					0,
+					icomp::IAttributeStaticInfo::AF_NULLABLE); // Names of the interfaces which must be set
 			if (interfaceNames.isEmpty()){
 				interfaceNames = attributeStaticInfoPtr->GetRelatedMetaIds(
-					icomp::IComponentStaticInfo::MGI_INTERFACES, 0, 0);	// All asked interfaces
+						icomp::IComponentStaticInfo::MGI_INTERFACES, 0, 0); // All asked interfaces
 			}
 
 			if (!interfaceNames.isEmpty()){
@@ -319,6 +328,7 @@ void CPackageOverviewComp::OnAttributeSelected(const icomp::IAttributeStaticInfo
 
 // protected methods
 
+
 void CPackageOverviewComp::GenerateComponentTree(bool forceUpdate)
 {
 	icomp::IMetaInfoManager::ComponentAddresses addresses = GetFilteredComponentAdresses();
@@ -331,9 +341,9 @@ void CPackageOverviewComp::GenerateComponentTree(bool forceUpdate)
 
 	QString currentKey = GroupByCB->currentText();
 
-	for (		icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
-				addressIter != addresses.end();
-				++addressIter){
+	for (icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
+			addressIter != addresses.end();
+			++addressIter){
 		const icomp::CComponentAddress& address = *addressIter;
 
 		const icomp::IComponentStaticInfo* metaInfoPtr = NULL;
@@ -366,7 +376,8 @@ void CPackageOverviewComp::GenerateComponentTree(bool forceUpdate)
 				elementName = address.GetComponentId();
 				break;
 
-			default:{
+			default:
+			{
 				if (metaInfoPtr != NULL){
 					icomp::CComponentMetaDescriptionEncoder encoder(metaInfoPtr->GetKeywords());
 
@@ -391,14 +402,14 @@ void CPackageOverviewComp::GenerateComponentTree(bool forceUpdate)
 			}
 		}
 
-		for (		QStringList::const_iterator iter = groupIds.begin();
-					iter != groupIds.end();
-					++iter){
+		for (QStringList::const_iterator iter = groupIds.begin();
+				iter != groupIds.end();
+				++iter){
 			PackageComponentItem* itemPtr = new PackageComponentItem(
-						*this,
-						address,
-						metaInfoPtr,
-						icon);
+					*this,
+					address,
+					metaInfoPtr,
+					icon);
 			itemPtr->setText(0, elementName);
 
 			RootInfo& rootInfo = EnsureRoot(iter->toLocal8Bit(), address, metaInfoPtr);
@@ -408,9 +419,9 @@ void CPackageOverviewComp::GenerateComponentTree(bool forceUpdate)
 		}
 	}
 
-	for (		RootInfos::const_iterator toolTipIter = m_roots.begin();
-				toolTipIter != m_roots.end();
-				++toolTipIter){
+	for (RootInfos::const_iterator toolTipIter = m_roots.begin();
+			toolTipIter != m_roots.end();
+			++toolTipIter){
 		const RootInfo& info = toolTipIter.value();
 		if (info.itemPtr != NULL){
 			QString typeName;
@@ -455,9 +466,9 @@ void CPackageOverviewComp::UpdateComponentGroups()
 
 	icomp::IMetaInfoManager::ComponentAddresses addresses = m_envManagerCompPtr->GetComponentAddresses();
 
-	for (		icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
-				addressIter != addresses.end();
-				++addressIter){
+	for (icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
+			addressIter != addresses.end();
+			++addressIter){
 		const icomp::CComponentAddress& address = *addressIter;
 		const icomp::IComponentStaticInfo* metaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(address);
 
@@ -482,18 +493,18 @@ void CPackageOverviewComp::UpdateInterfaceList()
 	if (m_envManagerCompPtr.IsValid()){
 		icomp::IMetaInfoManager::ComponentAddresses addresses = m_envManagerCompPtr->GetComponentAddresses();
 
-		for (		icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
-					addressIter != addresses.end();
-					++addressIter){
+		for (icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
+				addressIter != addresses.end();
+				++addressIter){
 			const icomp::CComponentAddress& address = *addressIter;
 
 			const icomp::IComponentStaticInfo* metaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(address);
 			if (metaInfoPtr != NULL){
 				const icomp::IElementStaticInfo::Ids& interfaceNames = metaInfoPtr->GetMetaIds(icomp::IComponentStaticInfo::MGI_INTERFACES);
 
-				for (		icomp::IElementStaticInfo::Ids::const_iterator interfaceIter = interfaceNames.begin();
-							interfaceIter != interfaceNames.end();
-							++interfaceIter){
+				for (icomp::IElementStaticInfo::Ids::const_iterator interfaceIter = interfaceNames.begin();
+						interfaceIter != interfaceNames.end();
+						++interfaceIter){
 					knownInterfaces.insert(*interfaceIter);
 				}
 			}
@@ -507,9 +518,9 @@ void CPackageOverviewComp::UpdateInterfaceList()
 		InterfaceCB->setMaxCount(int(knownInterfacesList.size()));
 
 		InterfaceCB->addItem(tr("Any"));
-		for (		QList<QByteArray>::ConstIterator iterfaceIter = knownInterfacesList.constBegin();
-					iterfaceIter != knownInterfacesList.constEnd();
-					++iterfaceIter){
+		for (QList<QByteArray>::ConstIterator iterfaceIter = knownInterfacesList.constBegin();
+				iterfaceIter != knownInterfacesList.constEnd();
+				++iterfaceIter){
 			const QByteArray& interfaceName = *iterfaceIter;
 
 			InterfaceCB->addItem(interfaceName);
@@ -544,10 +555,9 @@ icomp::IMetaInfoManager::ComponentAddresses CPackageOverviewComp::GetFilteredCom
 	}
 
 	icomp::IMetaInfoManager::ComponentAddresses addresses = m_envManagerCompPtr->GetComponentAddresses();
-
-	for (		icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
-				addressIter != addresses.end();
-				++addressIter){
+	for (icomp::IMetaInfoManager::ComponentAddresses::const_iterator addressIter = addresses.begin();
+			addressIter != addresses.end();
+			++addressIter){
 		const icomp::CComponentAddress& address = *addressIter;
 		const icomp::IComponentStaticInfo* metaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(address);
 
@@ -565,9 +575,9 @@ icomp::IMetaInfoManager::ComponentAddresses CPackageOverviewComp::GetFilteredCom
 
 			if (metaInfoPtr != NULL){
 				const icomp::IElementStaticInfo::Ids& interfaces = metaInfoPtr->GetMetaIds(icomp::IComponentStaticInfo::MGI_INTERFACES);
-				for (		InterfaceFilter::const_iterator iterfaceIter = m_interfaceFilter.begin();
-							iterfaceIter != m_interfaceFilter.end();
-							++iterfaceIter){
+				for (InterfaceFilter::const_iterator iterfaceIter = m_interfaceFilter.begin();
+						iterfaceIter != m_interfaceFilter.end();
+						++iterfaceIter){
 					const QByteArray& filteredInterfaceName = *iterfaceIter;
 					if (interfaces.find(filteredInterfaceName) == interfaces.end()){
 						isFilterMatched = false;
@@ -576,35 +586,35 @@ icomp::IMetaInfoManager::ComponentAddresses CPackageOverviewComp::GetFilteredCom
 				}
 			}
 
-			for (		QStringList::const_iterator filterIter = m_keywordsFilter.begin();
-						filterIter != m_keywordsFilter.end();
-						++filterIter){
+			for (QStringList::const_iterator filterIter = m_keywordsFilter.begin();
+					filterIter != m_keywordsFilter.end();
+					++filterIter){
 				const QString& filter = *filterIter;
 
 				bool filterFound = false;
-				for (		QStringList::const_iterator keywordIter = keywords.begin();
-							keywordIter != keywords.end();
-							++keywordIter){
+				for (QStringList::const_iterator keywordIter = keywords.begin();
+						keywordIter != keywords.end();
+						++keywordIter){
 					const QString& keyword = *keywordIter;
 
 					if (keyword.contains(filter, Qt::CaseInsensitive)){
 						filterFound = true;
 						break;
-						}
-					}
-
-					if (!filterFound){
-						isFilterMatched = false;
-						break;
 					}
 				}
 
-				if (!isFilterMatched){
-					continue;
+				if (!filterFound){
+					isFilterMatched = false;
+					break;
 				}
 			}
 
-			filteredComponentAdresses.insert(address);
+			if (!isFilterMatched){
+				continue;
+			}
+		}
+
+		filteredComponentAdresses.insert(address);
 	}
 
 	const IElementSelectionInfo* objectPtr = GetObjectPtr();
@@ -612,9 +622,9 @@ icomp::IMetaInfoManager::ComponentAddresses CPackageOverviewComp::GetFilteredCom
 		const icomp::IRegistry* registryPtr = objectPtr->GetSelectedRegistry();
 		if (registryPtr != NULL){
 			icomp::IRegistry::Ids embeddedIds = registryPtr->GetEmbeddedRegistryIds();
-			for (		icomp::IRegistry::Ids::const_iterator embeddedIter = embeddedIds.begin();
-						embeddedIter != embeddedIds.end();
-						++embeddedIter){
+			for (icomp::IRegistry::Ids::const_iterator embeddedIter = embeddedIds.begin();
+					embeddedIter != embeddedIds.end();
+					++embeddedIter){
 				const QByteArray& embeddedId = *embeddedIter;
 
 				const icomp::IRegistry* embeddedRegistryPtr = registryPtr->GetEmbeddedRegistry(embeddedId);
@@ -633,9 +643,9 @@ icomp::IMetaInfoManager::ComponentAddresses CPackageOverviewComp::GetFilteredCom
 
 					const icomp::IRegistry::ExportedInterfacesMap& exportedInterfaces = embeddedRegistryPtr->GetExportedInterfacesMap();
 
-					for (		InterfaceFilter::const_iterator iterfaceIter = m_interfaceFilter.begin();
-								iterfaceIter != m_interfaceFilter.end();
-								++iterfaceIter){
+					for (InterfaceFilter::const_iterator iterfaceIter = m_interfaceFilter.begin();
+							iterfaceIter != m_interfaceFilter.end();
+							++iterfaceIter){
 						const QByteArray& filteredInterfaceName = *iterfaceIter;
 						if (exportedInterfaces.find(filteredInterfaceName) == exportedInterfaces.end()){
 							isFilterMatched = false;
@@ -643,44 +653,45 @@ icomp::IMetaInfoManager::ComponentAddresses CPackageOverviewComp::GetFilteredCom
 						}
 					}
 
-					for (		QStringList::const_iterator filterIter = m_keywordsFilter.begin();
-								filterIter != m_keywordsFilter.end();
-								++filterIter){
+					for (QStringList::const_iterator filterIter = m_keywordsFilter.begin();
+							filterIter != m_keywordsFilter.end();
+							++filterIter){
 						const QString& filter = *filterIter;
 
 						bool filterFound = false;
-						for (		QStringList::const_iterator keywordIter = keywords.begin();
-									keywordIter != keywords.end();
-									++keywordIter){
+						for (QStringList::const_iterator keywordIter = keywords.begin();
+								keywordIter != keywords.end();
+								++keywordIter){
 							const QString& keyword = *keywordIter;
 
 							if (keyword.contains(filter, Qt::CaseInsensitive)){
 								filterFound = true;
 								break;
-								}
-							}
-
-							if (!filterFound){
-								isFilterMatched = false;
-								break;
 							}
 						}
 
-						if (!isFilterMatched){
-							continue;
+						if (!filterFound){
+							isFilterMatched = false;
+							break;
 						}
 					}
 
-					filteredComponentAdresses.insert(icomp::CComponentAddress("", embeddedId));
+					if (!isFilterMatched){
+						continue;
+					}
 				}
+
+				filteredComponentAdresses.insert(icomp::CComponentAddress("", embeddedId));
 			}
 		}
+	}
 
 	return filteredComponentAdresses;
 }
 
 
 // protected slots
+
 
 void CPackageOverviewComp::on_FilterEdit_editingFinished()
 {
@@ -690,7 +701,7 @@ void CPackageOverviewComp::on_FilterEdit_editingFinished()
 
 	UpdateBlocker blocker(this);
 
-	QStringList keywordsFilter = FilterEdit->text().split(QChar(' '), QString::SkipEmptyParts,  Qt::CaseInsensitive);
+	QStringList keywordsFilter = FilterEdit->text().split(QChar(' '), QString::SkipEmptyParts, Qt::CaseInsensitive);
 
 	if (keywordsFilter != m_keywordsFilter){
 		m_keywordsFilter = keywordsFilter;
@@ -764,7 +775,7 @@ void CPackageOverviewComp::on_PackagesList_itemDoubleClicked(QTreeWidgetItem* it
 
 		const icomp::IComponentStaticInfo* metaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(address);
 
-		if (metaInfoPtr != NULL &&(metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
+		if (metaInfoPtr != NULL && (metaInfoPtr->GetComponentType() == icomp::IComponentStaticInfo::CT_COMPOSITE)){
 			QDir packageDir(m_envManagerCompPtr->GetPackagePath(address.GetPackageId()));
 			QString filePath = packageDir.absoluteFilePath(QString(address.GetComponentId()) + ".arx");
 
@@ -833,6 +844,7 @@ void CPackageOverviewComp::on_InterfaceClearButton_clicked()
 
 // protected methods
 
+
 QPixmap CPackageOverviewComp::CreateComponentDragPixmap(const icomp::CComponentAddress &address) const
 {
 	QPushButton componentLabel(NULL);
@@ -875,13 +887,13 @@ CPackageOverviewComp::RootInfo& CPackageOverviewComp::EnsureRoot(const QByteArra
 	}
 
 	switch (componentType){
-	case icomp::IComponentStaticInfo::CT_REAL:
-		rootInfo.hasRealComponents = true;
-		break;
+		case icomp::IComponentStaticInfo::CT_REAL:
+			rootInfo.hasRealComponents = true;
+			break;
 
-	case icomp::IComponentStaticInfo::CT_COMPOSITE:
-		rootInfo.hasCompositeComponents = true;
-		break;
+		case icomp::IComponentStaticInfo::CT_COMPOSITE:
+			rootInfo.hasCompositeComponents = true;
+			break;
 	}
 
 	if (rootInfo.itemPtr == NULL){
@@ -921,6 +933,7 @@ CPackageOverviewComp::RootInfo& CPackageOverviewComp::EnsureRoot(const QByteArra
 
 // reimplemented (QObject)
 
+
 bool CPackageOverviewComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 {
 	QWidget* sourceWidgetPtr = dynamic_cast<QWidget*>(sourcePtr);
@@ -938,7 +951,7 @@ bool CPackageOverviewComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 	}
 
 	switch (eventPtr->type()){
-	case QEvent::MouseMove:
+		case QEvent::MouseMove:
 		{
 			bool doDrag = false;
 
@@ -967,30 +980,30 @@ bool CPackageOverviewComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 						QDrag *drag = new QDrag(sourceWidgetPtr);
 						drag->setMimeData(mimeDataPtr);
 						drag->setPixmap(CreateComponentDragPixmap(address));
-						drag->setHotSpot(QPoint(drag->pixmap().width()/2, drag->pixmap().height()));
+						drag->setHotSpot(QPoint(drag->pixmap().width() / 2, drag->pixmap().height()));
 						drag->start(Qt::MoveAction);
 					}
 				}
 			}
 		}
-		break;
+			break;
 
-	case QEvent::MouseButtonPress:
-		if (mouseEventPtr->button() == Qt::LeftButton && sourceWidgetPtr != NULL){
-			if (!m_startDrag){
-				m_startDrag = true;
+		case QEvent::MouseButtonPress:
+			if (mouseEventPtr->button() == Qt::LeftButton && sourceWidgetPtr != NULL){
+				if (!m_startDrag){
+					m_startDrag = true;
 
-				m_starDragPosition = mouseEventPtr->pos();
+					m_starDragPosition = mouseEventPtr->pos();
+				}
 			}
-		}
-		break;
+			break;
 
-	case QEvent::MouseButtonRelease:
-		m_startDrag = false;
-		break;
+		case QEvent::MouseButtonRelease:
+			m_startDrag = false;
+			break;
 
-	default:
-		break;
+		default:
+			break;
 	}
 
 	return BaseClass::eventFilter(sourcePtr, eventPtr);
@@ -998,6 +1011,7 @@ bool CPackageOverviewComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 
 
 // reimplemented (iqtgui::TGuiObserverWrap)
+
 
 void CPackageOverviewComp::UpdateGui(int updateFlags)
 {
@@ -1016,7 +1030,7 @@ void CPackageOverviewComp::UpdateGui(int updateFlags)
 			}
 		}
 
-		if ((updateFlags & IElementSelectionInfo::CF_SELECTION) == 0){	// ignore selection only changes
+		if ((updateFlags & IElementSelectionInfo::CF_SELECTION) == 0){ // ignore selection only changes
 			GenerateComponentTree(false);
 		}
 	}
@@ -1029,6 +1043,7 @@ void CPackageOverviewComp::UpdateGui(int updateFlags)
 
 
 // reimplemented (CGuiComponentBase)
+
 
 void CPackageOverviewComp::OnGuiCreated()
 {
@@ -1086,9 +1101,9 @@ void CPackageOverviewComp::OnGuiRetranslate()
 	GroupByCB->setCurrentIndex(currentGroupIndex);
 
 	if (m_configFilePathModelCompPtr.IsValid()){
-		if (		!m_configFilePathModelCompPtr->IsAttached(&m_configObserver) &&
-			!m_configFilePathModelCompPtr->AttachObserver(&m_configObserver)){
-				UpdateAllLists();
+		if (!m_configFilePathModelCompPtr->IsAttached(&m_configObserver) &&
+				!m_configFilePathModelCompPtr->AttachObserver(&m_configObserver)){
+			UpdateAllLists();
 		}
 	}
 	else{
@@ -1099,12 +1114,13 @@ void CPackageOverviewComp::OnGuiRetranslate()
 
 // public methods of embedded class PackageItemBase
 
+
 CPackageOverviewComp::PackageItemBase::PackageItemBase(
-	CPackageOverviewComp& parent,
-	const QString& description,
-	const QIcon& icon)
-	:	m_parent(parent),
-	m_description(description)
+		CPackageOverviewComp& parent,
+		const QString& description,
+		const QIcon& icon)
+: m_parent(parent),
+m_description(description)
 {
 	setIcon(0, icon);
 }
@@ -1118,13 +1134,14 @@ const QString& CPackageOverviewComp::PackageItemBase::GetDescription() const
 
 // public methods of embedded class PackageComponentItem
 
+
 CPackageOverviewComp::PackageComponentItem::PackageComponentItem(
-	CPackageOverviewComp& parent,
-	const icomp::CComponentAddress& address,
-	const icomp::IComponentStaticInfo* staticInfoPtr,
-	const QIcon& icon)
-	:	BaseClass(parent, (staticInfoPtr != NULL) ? staticInfoPtr->GetDescription() : QString(), icon),
-	m_address(address)
+		CPackageOverviewComp& parent,
+		const icomp::CComponentAddress& address,
+		const icomp::IComponentStaticInfo* staticInfoPtr,
+		const QIcon& icon)
+: BaseClass(parent, (staticInfoPtr != NULL) ? staticInfoPtr->GetDescription() : QString(), icon),
+m_address(address)
 {
 	QString toolTip;
 	if (!address.GetPackageId().isEmpty()){
@@ -1157,11 +1174,12 @@ const icomp::CComponentAddress& CPackageOverviewComp::PackageComponentItem::GetA
 
 // public methods of embedded class PackageItem
 
+
 CPackageOverviewComp::PackageItem::PackageItem(
-	CPackageOverviewComp& parent,
-	const QString& description,
-	const QIcon& icon)
-	:	BaseClass(parent, description, icon)
+		CPackageOverviewComp& parent,
+		const QString& description,
+		const QIcon& icon)
+: BaseClass(parent, description, icon)
 {
 	setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
 }
@@ -1169,8 +1187,9 @@ CPackageOverviewComp::PackageItem::PackageItem(
 
 // public methods of embedded class RegistryObserver
 
+
 CPackageOverviewComp::RegistryObserver::RegistryObserver(CPackageOverviewComp* parentPtr)
-:	m_parent(*parentPtr)
+: m_parent(*parentPtr)
 {
 	I_ASSERT(parentPtr != NULL);
 }
@@ -1179,6 +1198,7 @@ CPackageOverviewComp::RegistryObserver::RegistryObserver(CPackageOverviewComp* p
 // protected methods of embedded class RegistryObserver
 
 // reimplemented (imod::CSingleModelObserverBase)
+
 
 void CPackageOverviewComp::RegistryObserver::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
 {
@@ -1196,8 +1216,9 @@ void CPackageOverviewComp::RegistryObserver::OnUpdate(int updateFlags, istd::IPo
 
 // public methods of embedded class RegistryObserver
 
+
 CPackageOverviewComp::ConfigObserver::ConfigObserver(CPackageOverviewComp* parentPtr)
-:	m_parent(*parentPtr)
+: m_parent(*parentPtr)
 {
 	I_ASSERT(parentPtr != NULL);
 }
@@ -1206,6 +1227,7 @@ CPackageOverviewComp::ConfigObserver::ConfigObserver(CPackageOverviewComp* paren
 // protected methods of embedded class RegistryObserver
 
 // reimplemented (imod::CSingleModelObserverBase)
+
 
 void CPackageOverviewComp::ConfigObserver::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
