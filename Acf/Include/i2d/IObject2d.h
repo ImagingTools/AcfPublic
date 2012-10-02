@@ -24,8 +24,8 @@
 #define i2d_IObject2d_included
 
 
+// ACF includes
 #include "iser/ISerializable.h"
-
 #include "i2d/ITransformation2d.h"
 
 
@@ -46,6 +46,12 @@ public:
 	{
 		CF_OBJECT_POSITION = 1 << 20
 	};
+
+	/**
+		Get calibration of this 2D object.
+		If no calibration is set, it returns \c NULL.
+	*/
+	virtual const ITransformation2d* GetCalibration() const = 0;
 
 	/**
 		Returns center of this 2D-object.

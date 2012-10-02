@@ -37,7 +37,7 @@
 <div class="title">i2d::CPosition2d Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="i2d::CPosition2d" --><!-- doxytag: inherits="i2d::IObject2d" -->
+<!-- doxytag: class="i2d::CPosition2d" --><!-- doxytag: inherits="i2d::CObject2dBase" -->
 <p>Definition of graphical point object.  
  <a href="classi2d_1_1_c_position2d.html#details">More...</a></p>
 
@@ -48,18 +48,19 @@ Inheritance diagram for i2d::CPosition2d:</div>
  <div class="center">
   <img src="classi2d_1_1_c_position2d.png" usemap="#i2d::CPosition2d_map" alt=""/>
   <map id="i2d::CPosition2d_map" name="i2d::CPosition2d_map">
+<area href="classi2d_1_1_c_object2d_base.html" title="Base class for 2D-objects implementing interface i2d::IObject2d." alt="i2d::CObject2dBase" shape="rect" coords="450,224,620,248"/>
 <area href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects." alt="i2d::IObject2d" shape="rect" coords="450,168,620,192"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="450,112,620,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="450,56,620,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="450,0,620,24"/>
-<area href="classi2d_1_1_c_annulus.html" title="Definition of graphical annulus object." alt="i2d::CAnnulus" shape="rect" coords="90,280,260,304"/>
-<area href="classi2d_1_1_c_circle.html" title="Definition of graphical circle object." alt="i2d::CCircle" shape="rect" coords="360,280,530,304"/>
-<area href="classi2d_1_1_c_label.html" title="Data model for the label shape." alt="i2d::CLabel" shape="rect" coords="540,280,710,304"/>
-<area href="classi2d_1_1_c_position2d_comp.html" title="Implementation of a 2D-position as a component." alt="i2d::CPosition2dComp" shape="rect" coords="720,280,890,304"/>
-<area href="classi2d_1_1_c_annulus_comp.html" title="Implementation of a annulus as a component." alt="i2d::CAnnulusComp" shape="rect" coords="0,336,170,360"/>
-<area href="classi2d_1_1_c_annulus_segment.html" title="Radial segment of the annulus object." alt="i2d::CAnnulusSegment" shape="rect" coords="180,336,350,360"/>
-<area href="classi2d_1_1_c_circle_comp.html" title="Implementation of a circle as a component." alt="i2d::CCircleComp" shape="rect" coords="360,336,530,360"/>
-<area href="classi2d_1_1_c_annulus_segment_comp.html" title="Implementation of a annulus as a component." alt="i2d::CAnnulusSegmentComp" shape="rect" coords="180,392,350,416"/>
+<area href="classi2d_1_1_c_annulus.html" title="Definition of graphical annulus object." alt="i2d::CAnnulus" shape="rect" coords="90,336,260,360"/>
+<area href="classi2d_1_1_c_circle.html" title="Definition of graphical circle object." alt="i2d::CCircle" shape="rect" coords="360,336,530,360"/>
+<area href="classi2d_1_1_c_label.html" title="Data model for the label shape." alt="i2d::CLabel" shape="rect" coords="540,336,710,360"/>
+<area href="classi2d_1_1_c_position2d_comp.html" title="Implementation of a 2D-position as a component." alt="i2d::CPosition2dComp" shape="rect" coords="720,336,890,360"/>
+<area href="classi2d_1_1_c_annulus_comp.html" title="Implementation of a annulus as a component." alt="i2d::CAnnulusComp" shape="rect" coords="0,392,170,416"/>
+<area href="classi2d_1_1_c_annulus_segment.html" title="Radial segment of the annulus object." alt="i2d::CAnnulusSegment" shape="rect" coords="180,392,350,416"/>
+<area href="classi2d_1_1_c_circle_comp.html" title="Implementation of a circle as a component." alt="i2d::CCircleComp" shape="rect" coords="360,392,530,416"/>
+<area href="classi2d_1_1_c_annulus_segment_comp.html" title="Implementation of a annulus as a component." alt="i2d::CAnnulusSegmentComp" shape="rect" coords="180,448,350,472"/>
 </map>
  </div></div>
 
@@ -340,7 +341,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#adcb2ccc83d1ab6b7104966b3ecf1a2e2">i2d::IObject2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_object2d_base.html#ae265e9ee5ad0fa90a7a32690ce12936b">i2d::CObject2dBase</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus.html#a994865c894bec6edfb431b5fc7792566">i2d::CAnnulus</a>, and <a class="el" href="classi2d_1_1_c_circle.html#af4ba43370e7e1756fbb925617939af69">i2d::CCircle</a>.</p>
 
@@ -450,7 +451,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#a3c2325cbf5ccb7e1efb14104667822a6">i2d::IObject2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_object2d_base.html#a2fb83ed63f504dc07ecb1b90efa91cb7">i2d::CObject2dBase</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus.html#a97de2392bbcb8359aae87d166f9a9dee">i2d::CAnnulus</a>, and <a class="el" href="classi2d_1_1_c_circle.html#a8015a4528b42eb8a741d0edd56b98b46">i2d::CCircle</a>.</p>
 

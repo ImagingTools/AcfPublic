@@ -121,7 +121,7 @@
     <name>CLine2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_line2d_8h</filename>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CLine2d</class>
     <namespace>i2d</namespace>
@@ -145,11 +145,19 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CObject2dBase.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_object2d_base_8h</filename>
+    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <class kind="class">i2d::CObject2dBase</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CParallelogram.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_parallelogram_8h</filename>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
     <class kind="class">i2d::CParallelogram</class>
     <namespace>i2d</namespace>
@@ -159,6 +167,7 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polygon_8h</filename>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <class kind="class">i2d::CPolygon</class>
@@ -216,7 +225,7 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polypoint_8h</filename>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CPolypoint</class>
     <namespace>i2d</namespace>
@@ -225,7 +234,7 @@
     <name>CPosition2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_position2d_8h</filename>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CPosition2d</class>
     <namespace>i2d</namespace>
@@ -243,7 +252,7 @@
     <name>CQuadrangle.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_quadrangle_8h</filename>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <class kind="class">i2d::CQuadrangle</class>
@@ -276,7 +285,7 @@
     <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
     <class kind="class">i2d::CRectangle</class>
     <namespace>i2d</namespace>
@@ -1379,7 +1388,7 @@
     <name>CVisualRegistryElement.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_visual_registry_element_8h</filename>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
     <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
     <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
@@ -6771,6 +6780,7 @@
     <class kind="class">i2d::CLine2d</class>
     <class kind="class">i2d::CLine2dComp</class>
     <class kind="class">i2d::CMatrix2d</class>
+    <class kind="class">i2d::CObject2dBase</class>
     <class kind="class">i2d::CParallelogram</class>
     <class kind="class">i2d::CPolygon</class>
     <class kind="class">i2d::CPolygonComp</class>
@@ -7788,7 +7798,7 @@
   <compound kind="class">
     <name>i2d::CLine2d</name>
     <filename>classi2d_1_1_c_line2d.html</filename>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="function">
       <type></type>
       <name>CLine2d</name>
@@ -8376,9 +8386,63 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CObject2dBase</name>
+    <filename>classi2d_1_1_c_object2d_base.html</filename>
+    <base virtualness="virtual">i2d::IObject2d</base>
+    <member kind="function">
+      <type></type>
+      <name>CObject2dBase</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>ab00780b19a69d586c8d7e6ea37e7df3d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCalibration</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a0db72061ef94ce499b1aa3fd86789965</anchor>
+      <arglist>(const ITransformation2d *calibrationPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a746af84cc92775cf8ede5c5797197f76</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a2fb83ed63f504dc07ecb1b90efa91cb7</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>ae265e9ee5ad0fa90a7a32690ce12936b</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a112cd54e033e10804932b0079b6d286d</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, CObject2dBase &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>aa3aeb8a92c2ac25a814e42449cf64b7f</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, CObject2dBase &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CParallelogram</name>
     <filename>classi2d_1_1_c_parallelogram.html</filename>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::CAffine2d &amp;</type>
       <name>GetTransform</name>
@@ -8460,7 +8524,7 @@
   <compound kind="class">
     <name>i2d::CPolygon</name>
     <filename>classi2d_1_1_c_polygon.html</filename>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="function">
       <type></type>
       <name>CPolygon</name>
@@ -8735,7 +8799,7 @@
   <compound kind="class">
     <name>i2d::CPolypoint</name>
     <filename>classi2d_1_1_c_polypoint.html</filename>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="function">
       <type></type>
       <name>CPolypoint</name>
@@ -8817,7 +8881,7 @@
   <compound kind="class">
     <name>i2d::CPosition2d</name>
     <filename>classi2d_1_1_c_position2d.html</filename>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="function">
       <type></type>
       <name>CPosition2d</name>
@@ -8940,7 +9004,7 @@
   <compound kind="class">
     <name>i2d::CQuadrangle</name>
     <filename>classi2d_1_1_c_quadrangle.html</filename>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="function">
       <type></type>
       <name>CQuadrangle</name>
@@ -9508,7 +9572,7 @@
   <compound kind="class">
     <name>i2d::CRectangle</name>
     <filename>classi2d_1_1_c_rectangle.html</filename>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="function">
       <type></type>
       <name>CRectangle</name>
@@ -10517,6 +10581,13 @@
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
       <anchor>ad93b4b065f29fa85330055454c837acaa1ec86ce6e63055e3ff6f752e4c954253</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>aeb73b9d031949427c3e44e57efe4eab8</anchor>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual CVector2d</type>
@@ -18175,7 +18246,7 @@
     <name>icmpstr::CVisualRegistryElement</name>
     <filename>classicmpstr_1_1_c_visual_registry_element.html</filename>
     <base>icomp::CRegistryElement</base>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="typedef">
       <type>icomp::CRegistryElement</type>
       <name>BaseClass</name>
@@ -54577,6 +54648,20 @@
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
       <anchor>a06821a59e07db37d05cf2b0a45fcf6cc</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>GetScreenPosition</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>a15b9b85c11c48ba26ce7f978bfe344c8</anchor>
+      <arglist>(const i2d::CVector2d &amp;logPosition, const i2d::ITransformation2d *calibrationPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>GetLogPosition</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>aa9f49134013b4d1147a65c875c26c0dd</anchor>
+      <arglist>(const i2d::CVector2d &amp;screenPosition, const i2d::ITransformation2d *calibrationPtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>

@@ -29,7 +29,7 @@
 
 
 // ACF includes
-#include "i2d/IObject2d.h"
+#include "i2d/CObject2dBase.h"
 
 #include "icomp/IRegistry.h"
 #include "icomp/CComponentAddress.h"
@@ -42,7 +42,7 @@ namespace icmpstr
 {
 
 
-class CVisualRegistryElement: public icomp::CRegistryElement, virtual public i2d::IObject2d
+class CVisualRegistryElement: public icomp::CRegistryElement, public i2d::CObject2dBase
 {
 public:
 	typedef icomp::CRegistryElement BaseClass;

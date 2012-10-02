@@ -3378,7 +3378,7 @@
   <compound kind="class">
     <name>iedge::CEdgeLine</name>
     <filename>classiedge_1_1_c_edge_line.html</filename>
-    <base virtualness="virtual">i2d::IObject2d</base>
+    <base>i2d::CObject2dBase</base>
     <class kind="class">iedge::CEdgeLine::Container</class>
     <member kind="function">
       <type></type>

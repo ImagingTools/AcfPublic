@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "i2d/IObject2d.h"
+#include "i2d/CObject2dBase.h"
 #include "i2d/CVector2d.h"
 
 
@@ -36,7 +36,7 @@ namespace i2d
 /**
 	Definition of graphical point object.
 */
-class CPosition2d: virtual public IObject2d
+class CPosition2d: public CObject2dBase
 {
 public:
 	CPosition2d();

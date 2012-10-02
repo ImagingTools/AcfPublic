@@ -29,8 +29,8 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define i2d_IObject2d_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
-<a name="l00006"></a>00006 
+<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_transformation2d_8h.html">i2d/ITransformation2d.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
@@ -49,39 +49,41 @@
 <a name="l00025"></a><a class="code" href="classi2d_1_1_i_object2d.html#ad93b4b065f29fa85330055454c837acaa1ec86ce6e63055e3ff6f752e4c954253">00025</a>               <a class="code" href="classi2d_1_1_i_object2d.html#ad93b4b065f29fa85330055454c837acaa1ec86ce6e63055e3ff6f752e4c954253">CF_OBJECT_POSITION</a> = 1 &lt;&lt; 20
 <a name="l00026"></a>00026        };
 <a name="l00027"></a>00027 
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">CVector2d</a> <a class="code" href="classi2d_1_1_i_object2d.html#a49e87ff841963eb9041b62581e19eb70" title="Returns center of this 2D-object.">GetCenter</a>() <span class="keyword">const</span> = 0;
-<a name="l00032"></a>00032 
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_i_object2d.html#a220864dd27c1973b54fa4788caee2630" title="Move object to position position.">MoveCenterTo</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">CVector2d</a>&amp; position) = 0;
-<a name="l00037"></a>00037 
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_i_object2d.html#a3c2325cbf5ccb7e1efb14104667822a6" title="Transform this object using some transformation.">Transform</a>(
-<a name="l00046"></a>00046                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>&amp; transformation,
-<a name="l00047"></a>00047                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">ITransformation2d::EM_NONE</a>,
-<a name="l00048"></a>00048                             <span class="keywordtype">double</span>* errorFactorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
-<a name="l00049"></a>00049 
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_i_object2d.html#adcb2ccc83d1ab6b7104966b3ecf1a2e2" title="Do inverse transformation of this object.">InvTransform</a>(
-<a name="l00058"></a>00058                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>&amp; transformation,
-<a name="l00059"></a>00059                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">ITransformation2d::EM_NONE</a>,
-<a name="l00060"></a>00060                             <span class="keywordtype">double</span>* errorFactorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
-<a name="l00061"></a>00061 
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_i_object2d.html#a8013559af5f052dc7eda938f56cf9cf1" title="Calulate transformation of the object into second one.">GetTransformed</a>(
-<a name="l00071"></a>00071                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>&amp; transformation,
-<a name="l00072"></a>00072                             <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">IObject2d</a>&amp; result,
-<a name="l00073"></a>00073                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">ITransformation2d::EM_NONE</a>,
-<a name="l00074"></a>00074                             <span class="keywordtype">double</span>* errorFactorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
-<a name="l00075"></a>00075 
-<a name="l00084"></a>00084        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_i_object2d.html#ab77a3500838d3439a2cc8cfb679fc860" title="Calulate inverse transformation of the object into second one.">GetInvTransformed</a>(
-<a name="l00085"></a>00085                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>&amp; transformation,
-<a name="l00086"></a>00086                             <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">IObject2d</a>&amp; result,
-<a name="l00087"></a>00087                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">ITransformation2d::EM_NONE</a>,
-<a name="l00088"></a>00088                             <span class="keywordtype">double</span>* errorFactorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
-<a name="l00089"></a>00089 };
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092 } <span class="comment">// namespace i2d</span>
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095 <span class="preprocessor">#endif // !i2d_IObject2d_included</span>
-<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>* <a class="code" href="classi2d_1_1_i_object2d.html#aeb73b9d031949427c3e44e57efe4eab8" title="Get calibration of this 2D object.">GetCalibration</a>() <span class="keyword">const</span> = 0;
+<a name="l00033"></a>00033 
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">CVector2d</a> <a class="code" href="classi2d_1_1_i_object2d.html#a49e87ff841963eb9041b62581e19eb70" title="Returns center of this 2D-object.">GetCenter</a>() <span class="keyword">const</span> = 0;
+<a name="l00038"></a>00038 
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_i_object2d.html#a220864dd27c1973b54fa4788caee2630" title="Move object to position position.">MoveCenterTo</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">CVector2d</a>&amp; position) = 0;
+<a name="l00043"></a>00043 
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_i_object2d.html#a3c2325cbf5ccb7e1efb14104667822a6" title="Transform this object using some transformation.">Transform</a>(
+<a name="l00052"></a>00052                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>&amp; transformation,
+<a name="l00053"></a>00053                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">ITransformation2d::EM_NONE</a>,
+<a name="l00054"></a>00054                             <span class="keywordtype">double</span>* errorFactorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00055"></a>00055 
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_i_object2d.html#adcb2ccc83d1ab6b7104966b3ecf1a2e2" title="Do inverse transformation of this object.">InvTransform</a>(
+<a name="l00064"></a>00064                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>&amp; transformation,
+<a name="l00065"></a>00065                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">ITransformation2d::EM_NONE</a>,
+<a name="l00066"></a>00066                             <span class="keywordtype">double</span>* errorFactorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) = 0;
+<a name="l00067"></a>00067 
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_i_object2d.html#a8013559af5f052dc7eda938f56cf9cf1" title="Calulate transformation of the object into second one.">GetTransformed</a>(
+<a name="l00077"></a>00077                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>&amp; transformation,
+<a name="l00078"></a>00078                             <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">IObject2d</a>&amp; result,
+<a name="l00079"></a>00079                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">ITransformation2d::EM_NONE</a>,
+<a name="l00080"></a>00080                             <span class="keywordtype">double</span>* errorFactorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
+<a name="l00081"></a>00081 
+<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_i_object2d.html#ab77a3500838d3439a2cc8cfb679fc860" title="Calulate inverse transformation of the object into second one.">GetInvTransformed</a>(
+<a name="l00091"></a>00091                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">ITransformation2d</a>&amp; transformation,
+<a name="l00092"></a>00092                             <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">IObject2d</a>&amp; result,
+<a name="l00093"></a>00093                             <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode = <a class="code" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" title="There is no preferencies, should be automatically selected.">ITransformation2d::EM_NONE</a>,
+<a name="l00094"></a>00094                             <span class="keywordtype">double</span>* errorFactorPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span> = 0;
+<a name="l00095"></a>00095 };
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 } <span class="comment">// namespace i2d</span>
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="preprocessor">#endif // !i2d_IObject2d_included</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -121,6 +121,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a06821a59e07db37d05cf2b0a45fcf6cc">OnUpdate</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a15b9b85c11c48ba26ce7f978bfe344c8">GetScreenPosition</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logPosition, const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *calibrationPtr) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get screen position based on logical position.  <a href="#a15b9b85c11c48ba26ce7f978bfe344c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#aa9f49134013b4d1147a65c875c26c0dd">GetLogPosition</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;screenPosition, const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *calibrationPtr) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get logical position based on screen position.  <a href="#aa9f49134013b4d1147a65c875c26c0dd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#ab6b72a34649abfbc775ddb6f1b9e37f5">GetDisplayChangesMask</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get display changes mask.  <a href="#ab6b72a34649abfbc775ddb6f1b9e37f5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a5da5a9e5047c26a76c525d1342718fb0">InvalidateBoundingBox</a> ()</td></tr>
@@ -404,6 +408,64 @@ Protected Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_i_view_layer.html#ab844c082e493b088ae3b3afc42b98240">IViewLayer::LayerType</a> </dd></dl>
 
 <p>Implements <a class="el" href="classiview_1_1_i_shape.html#ae87e78fa4921bf3e0a89eba0c48e41f9">iview::IShape</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9f49134013b4d1147a65c875c26c0dd"></a><!-- doxytag: member="iview::CShapeBase::GetLogPosition" ref="aa9f49134013b4d1147a65c875c26c0dd" args="(const i2d::CVector2d &amp;screenPosition, const i2d::ITransformation2d *calibrationPtr) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> iview::CShapeBase::GetLogPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>screenPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td>
+          <td class="paramname"><em>calibrationPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get logical position based on screen position. </p>
+
+</div>
+</div>
+<a class="anchor" id="a15b9b85c11c48ba26ce7f978bfe344c8"></a><!-- doxytag: member="iview::CShapeBase::GetScreenPosition" ref="a15b9b85c11c48ba26ce7f978bfe344c8" args="(const i2d::CVector2d &amp;logPosition, const i2d::ITransformation2d *calibrationPtr) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> iview::CShapeBase::GetScreenPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>logPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td>
+          <td class="paramname"><em>calibrationPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get screen position based on logical position. </p>
 
 </div>
 </div>
