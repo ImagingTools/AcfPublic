@@ -113,7 +113,7 @@ Protected Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a9c6b505aa6a67bf5101cc4c7167c7b0a">AppendAddresses</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;realAddresses, <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;composedAddresses) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of used addresses used by this registry and its subcomponents.  <a href="#a9c6b505aa6a67bf5101cc4c7167c7b0a"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get component addresses used by given registry and its elements (recursively).  <a href="#a9c6b505aa6a67bf5101cc4c7167c7b0a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a07708fb861ee817af147477240e915b7">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#acd3576b40b87c57ee19924ec7c185818">ExtractPackageIds</a> (const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;addresses) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a07708fb861ee817af147477240e915b7">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a29dc4536caadaaec2f9d0181a7c81480">ExtractComponentIds</a> (const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;addresses, const QByteArray &amp;packageId) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a1af3938e9ba36d0e3ada30283497b89c">WriteHeader</a> (const QByteArray &amp;className, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;composedAddresses, const <a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a7bb84acab4ca7dde1c6b55750694c659">Addresses</a> &amp;realAddresses, QTextStream &amp;stream) const </td></tr>
@@ -128,9 +128,12 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#ad737ac81765bdf7d35bc7713ae4c251a">GetAttributeValue</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#af3b83ac8ccb908c4e40b305d89def9bb">GetMultiAttributeValue</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a281e822e66afc348fe7b90de8bfd6ed9">NextLine</a> (QTextStream &amp;stream) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new line and indentation tabs.  <a href="#a281e822e66afc348fe7b90de8bfd6ed9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a54b58cce3dcc8f83ed7b62ab59d79181">ChangeIndent</a> (int difference) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a89ea2bad71e57a26c840055723541edf">ExtractInfoFromFile</a> (const QString &amp;filePath, QByteArray &amp;className, QString &amp;baseFilePath) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract class name and absolute header path from a file name.  <a href="#a89ea2bad71e57a26c840055723541edf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a561ad6b7cdafa2318ee085dabb2840a6">GetPackageName</a> (const QByteArray &amp;packageId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that a package name ends with 'Pck'.  <a href="#a561ad6b7cdafa2318ee085dabb2840a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#a67c5a72d1dd9908a390fae256abc5b3a">GetStringLiteral</a> (const QString &amp;text) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some wide string as C++ string literal.  <a href="#a67c5a72d1dd9908a390fae256abc5b3a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_registry_code_saver_comp.html#aa6a43424ffb38cf493481f9cd6f4a2da">GetIdValueLiteral</a> (const QByteArray &amp;text) const </td></tr>
@@ -294,7 +297,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get set of used addresses used by this registry and its subcomponents. </p>
+<p>Get component addresses used by given registry and its elements (recursively). </p>
 
 </div>
 </div>
@@ -372,6 +375,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Extract class name and absolute header path from a file name. </p>
 
 </div>
 </div>
@@ -649,6 +654,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Ensure that a package name ends with 'Pck'. </p>
+
 </div>
 </div>
 <a class="anchor" id="a67c5a72d1dd9908a390fae256abc5b3a"></a><!-- doxytag: member="iqt::CRegistryCodeSaverComp::GetStringLiteral" ref="a67c5a72d1dd9908a390fae256abc5b3a" args="(const QString &amp;text) const " -->
@@ -823,6 +830,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Insert a new line and indentation tabs. </p>
 
 </div>
 </div>

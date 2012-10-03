@@ -310,6 +310,14 @@
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileContainer.h</name>
+    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <filename>_c_file_container_8h</filename>
+    <includes id="ifpf_8h" name="ifpf.h" local="yes" imported="no">ifpf/ifpf.h</includes>
+    <class kind="class">ifpf::CFileContainer</class>
+    <namespace>ifpf</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFileListConverterComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifpf/</path>
     <filename>_c_file_list_converter_comp_8h</filename>
@@ -4025,6 +4033,7 @@
     <filename>namespaceifpf.html</filename>
     <class kind="class">ifpf::CDirectoryMonitorParams</class>
     <class kind="class">ifpf::CDirectoryMonitorParamsComp</class>
+    <class kind="class">ifpf::CFileContainer</class>
     <class kind="class">ifpf::CFileListConverterComp</class>
     <class kind="class">ifpf::CFileNamingParamsComp</class>
     <class kind="class">ifpf::CFileSystemChangeStorage</class>
@@ -4170,6 +4179,32 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ifpf::CFileContainer</name>
+    <filename>classifpf_1_1_c_file_container.html</filename>
+    <base virtualness="virtual">ibase::IFileListProvider</base>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetFiles</name>
+      <anchorfile>classifpf_1_1_c_file_container.html</anchorfile>
+      <anchor>a6162f54ede622fab3ca938e51e44fd53</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertFile</name>
+      <anchorfile>classifpf_1_1_c_file_container.html</anchorfile>
+      <anchor>ae4bceec38a2e9c2e33ef8896e09c4ece</anchor>
+      <arglist>(const QString &amp;file, int index=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetFileList</name>
+      <anchorfile>classifpf_1_1_c_file_container.html</anchorfile>
+      <anchor>ab747bf9263259bf2f2daa52e9a2ceb40</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ifpf::CFileListConverterComp</name>
     <filename>classifpf_1_1_c_file_list_converter_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
@@ -4208,18 +4243,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetRenamingMode</name>
+      <type>virtual OverwriteStrategy</type>
+      <name>GetOverwriteStrategy</name>
       <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>aa17d41bde00bcc2bef56952cf44ce06b</anchor>
+      <anchor>a2168341012f006347ec49e3bc99c8446</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>SetRenamingMode</name>
+      <name>SetOverwriteStrategy</name>
       <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>aed87a7f85f87d58740b3021c12ede158</anchor>
-      <arglist>(int renamingMode)</arglist>
+      <anchor>ae031f4c1213993fc4dd66b8062cca0ab</anchor>
+      <arglist>(OverwriteStrategy overwriteStrategy)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -4255,6 +4290,13 @@
       <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
       <anchor>a6fe3547208aaf2e30caeb09bc5a24d69</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a5349bf2b45d5c364e0a70b150ad46fef</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5243,36 +5285,36 @@
     <filename>classifpf_1_1_i_file_naming_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
-      <name>RenamingMode</name>
+      <name>OverwriteStrategy</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>ad02901e9cd66b367f8382818148dd30f</anchor>
+      <anchor>a9087548ed69f852963e21dff496ce872</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>RM_OVERWRITE</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>ad02901e9cd66b367f8382818148dd30fa681eec69a0e6b60b742871fb9368f21f</anchor>
+      <anchor>a9087548ed69f852963e21dff496ce872a681eec69a0e6b60b742871fb9368f21f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>RM_NUMBERING</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>ad02901e9cd66b367f8382818148dd30fa447a42800989f2fe1df7c32a48b23722</anchor>
+      <anchor>a9087548ed69f852963e21dff496ce872a447a42800989f2fe1df7c32a48b23722</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetRenamingMode</name>
+      <type>virtual OverwriteStrategy</type>
+      <name>GetOverwriteStrategy</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a3a67608f648e7486c43a6f295afcbdfa</anchor>
+      <anchor>aef70ca1ac99b19cb7bd1b8434a56c489</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>SetRenamingMode</name>
+      <name>SetOverwriteStrategy</name>
       <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>af0cc56abe6f5803459f5abd9ab0cce70</anchor>
-      <arglist>(int renamingMode)=0</arglist>
+      <anchor>a25309cd68c798b92435879d62bcc130f</anchor>
+      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>

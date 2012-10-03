@@ -25,7 +25,7 @@
 
 // Qt includes
 #include <QtGui/QLabel>
-
+#include <QtGui/QRegExpValidator>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
@@ -100,6 +100,13 @@ void CNameParamGuiComp::OnGuiCreated()
 
 
 	connect(NameEdit, SIGNAL(textChanged(const QString&)), this, SLOT(OnNameChanged(const QString&)));
+	if (m_regularExpressionAttrPtr.IsValid()){
+		QRegExp expression(*m_regularExpressionAttrPtr);
+
+		QRegExpValidator* validatorPtr = new QRegExpValidator(expression);
+
+		NameEdit->setValidator(validatorPtr);
+	}
 }
 
 

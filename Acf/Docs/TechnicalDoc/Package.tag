@@ -1385,6 +1385,29 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
+    <name>CVisualRegistryEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_visual_registry_editor_comp_8h</filename>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
+    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
+    <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
+    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
+    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
+    <class kind="class">icmpstr::CVisualRegistryEditorComp</class>
+    <class kind="class">icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CVisualRegistryElement.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_visual_registry_element_8h</filename>
@@ -1394,31 +1417,6 @@
     <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::CVisualRegistryElement</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CVisualRegistryScenographerComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_visual_registry_scenographer_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
-    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_t_scenographer_comp_base_8h" name="TScenographerCompBase.h" local="yes" imported="no">icmpstr/TScenographerCompBase.h</includes>
-    <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
-    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
-    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <class kind="class">icmpstr::CVisualRegistryScenographerComp</class>
-    <class kind="class">icmpstr::CVisualRegistryScenographerComp::EnvironmentObserver</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -1999,14 +1997,6 @@
     <filename>_i_registry_loader_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">icomp::IRegistryLoader</class>
-    <namespace>icomp</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IRegistryLoaderProvider.h</name>
-    <path>C:/Temp/Acf/Include/icomp/</path>
-    <filename>_i_registry_loader_provider_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">icomp::IRegistryLoaderProvider</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -3476,6 +3466,9 @@
     <name>CComponentAccessor.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_component_accessor_8h</filename>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
+    <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_c_composite_component_8h" name="CCompositeComponent.h" local="yes" imported="no">icomp/CCompositeComponent.h</includes>
     <class kind="class">iqt::CComponentAccessor</class>
     <namespace>iqt</namespace>
@@ -3488,19 +3481,6 @@
     <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">iqt::CCopyProcessorComp</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CDefaultRegistryLoaderProvider.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_default_registry_loader_provider_8h</filename>
-    <includes id="iser_2_c_xml_file_read_archive_8h" name="CXmlFileReadArchive.h" local="yes" imported="no">iser/CXmlFileReadArchive.h</includes>
-    <includes id="iser_2_c_xml_file_write_archive_8h" name="CXmlFileWriteArchive.h" local="yes" imported="no">iser/CXmlFileWriteArchive.h</includes>
-    <includes id="_t_file_serializer_comp_8h" name="TFileSerializerComp.h" local="yes" imported="no">ibase/TFileSerializerComp.h</includes>
-    <includes id="_i_registry_loader_provider_8h" name="IRegistryLoaderProvider.h" local="yes" imported="no">icomp/IRegistryLoaderProvider.h</includes>
-    <includes id="_t_sim_component_wrap_8h" name="TSimComponentWrap.h" local="yes" imported="no">icomp/TSimComponentWrap.h</includes>
-    <includes id="_c_packages_loader_comp_8h" name="CPackagesLoaderComp.h" local="yes" imported="no">iqt/CPackagesLoaderComp.h</includes>
-    <class kind="class">iqt::CDefaultRegistryLoaderProvider</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -6749,10 +6729,6 @@
   <compound kind="class">
     <name>VisualStatus</name>
     <filename>class_visual_status.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>XmlFileSerializer</name>
-    <filename>class_xml_file_serializer.html</filename>
   </compound>
   <compound kind="class">
     <name>Size</name>
@@ -15643,8 +15619,8 @@
     <class kind="class">icmpstr::CRegistryTreeViewComp</class>
     <class kind="class">icmpstr::CSceneProviderGuiComp</class>
     <class kind="class">icmpstr::CVisualRegistry</class>
+    <class kind="class">icmpstr::CVisualRegistryEditorComp</class>
     <class kind="class">icmpstr::CVisualRegistryElement</class>
-    <class kind="class">icmpstr::CVisualRegistryScenographerComp</class>
     <class kind="class">icmpstr::CXpcEditorComp</class>
     <class kind="class">icmpstr::IAttributeSelectionObserver</class>
     <class kind="class">icmpstr::IComponentNoteController</class>
@@ -16694,13 +16670,6 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsInterfaceSupportedByComponent</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a56bc42e302a3172f686969c3deac6ffe</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceInfo, const QTreeWidgetItem &amp;item) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>QPixmap</type>
       <name>CreateComponentDragPixmap</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
@@ -17080,8 +17049,8 @@
       <type></type>
       <name>CRegistryElementShape</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a765d8a517349edf6f1461b1d4c6a5ab8</anchor>
-      <arglist>(const CVisualRegistryScenographerComp *registryViewPtr, const icmpstr::ISceneProvider *providerPtr=NULL)</arglist>
+      <anchor>aded32c2fe22eb95c76dbf3730796b0fd</anchor>
+      <arglist>(CVisualRegistryEditorComp *registryViewPtr, const icmpstr::ISceneProvider *providerPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>QRectF</type>
@@ -18243,6 +18212,489 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>icmpstr::CVisualRegistryEditorComp</name>
+    <filename>classicmpstr_1_1_c_visual_registry_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</base>
+    <base virtualness="virtual">iqtgui::IDropConsumer</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <class kind="class">icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</class>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a2be0ca698a596382a666aeca507de9a9</anchor>
+      <arglist>(SelectionInfo)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ad6823f83b1eb612268ed27447f4e810a</anchor>
+      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a8823c212bee5d338d5fdc4001acebee4</anchor>
+      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ad2ef8080be4f247a47ff6063032e6517</anchor>
+      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a0c4a36fcb6f07ee291614101d9c3f2d2</anchor>
+      <arglist>(m_sceneProviderGuiCompPtr, m_sceneProviderCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ab3b9115aaaf6bd8e11e484fcd50f0c49</anchor>
+      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ae7389e7d6c27724af87baf8d5956cf04</anchor>
+      <arglist>(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a5b5ce2f2865f8a6c0e8c6397a0ce25cc</anchor>
+      <arglist>(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CVisualRegistryEditorComp</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>afd688e7ecb8ec53f2444fdf2c9178d7b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const QFont &amp;</type>
+      <name>GetElementNameFont</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ac165739fcecbc4713a4c80eab970dfc0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const QFont &amp;</type>
+      <name>GetElementDetailFont</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>aa2282b19f08849a789b8bf9154785d8e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const icomp::IComponentEnvironmentManager *</type>
+      <name>GetEnvironmentManager</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>aa98b336168a19656fae79d8f6433a6e2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const IRegistryConsistInfo *</type>
+      <name>GetRegistryConsistInfo</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>aa9b166d5fea6b091b999a710e732bd35</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>TryOpenComponent</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>adbdcac0be0af8540390aa21ff4cbbdb7</anchor>
+      <arglist>(const CVisualRegistryElement &amp;registryElement)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetIgnoreChanges</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>aa7725fa94730cb9c04d5e59ba656e123</anchor>
+      <arglist>(int ignoreUpdateFlags)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAcceptedMimeTypes</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>acc889733d4946c3b2bb9453703150bcf</anchor>
+      <arglist>(const QStringList &amp;mimeTypes)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>aabf294b438ec771c45ad197978174048</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetAcceptedMimeIds</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>abd12be132c99494d0ef120818c896c92</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnDropFinished</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a26988087a87aba5b3f993877ea80f412</anchor>
+      <arglist>(const QMimeData &amp;mimeData, QEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a0a6de143ba4be8064a6942bb95394463</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a4c891c183b1f408f0591b672152f8fb2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>GroupId</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a233b273076b25fa833a2a3b2123386d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_COMPONENT</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a233b273076b25fa833a2a3b2123386d7a1db9f4469a5b86bf612026a67d2e0c06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_EMBEDDED_REGISTRY</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a233b273076b25fa833a2a3b2123386d7a19b58792dc1b6b504b35c25a762c6d63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_CODEGEN</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a233b273076b25fa833a2a3b2123386d7a27da63bde2eb1d0247950e53258ce708</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_PREVIEW</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a233b273076b25fa833a2a3b2123386d7a333f46c00846751c89c0429f428a437d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_EDIT</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a233b273076b25fa833a2a3b2123386d7a059bb57882415ccd6c208015f6113fa1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_TOOLS</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a233b273076b25fa833a2a3b2123386d7a1d489f3ab152d5ed5d36be0cbb347422</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ac022b0f5d471e1ae544a91c12329b935</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCutCommand</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>abcba543c6e7e4887d1c83e356ef27d64</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCopyCommand</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a306faa669843bcf718e176182db77bc0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnPasteCommand</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a93d4ebcf3887c28718a3aed8dee69b88</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnRemoveComponent</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a21c58c10627758b78f541d49f87ecda7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnRenameComponent</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a07ed3d6ff9348728203d30fc3b132957</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>NewEmbeddedComponent</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a524211f2df03a3b38fd81c4f1646a736</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>ToEmbeddedComponent</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a6f6d91ab8f40e133107f964fd960455b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>RemoveEmbeddedComponent</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a98c3cfdc9535a73b20cf2915522b10c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnExportToCode</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a5c02f309036f42e0d7893f95908518e9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnExecute</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>aa4ab3adb657b1fadbfa749a59184060d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAbort</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a97e103ece057f3f5eb35c19b9284528c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnExecutionTimerTick</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ad106963a0a84920649a64d259ee30102</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnShowRegistryTopology</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a9a9a84c44284ce68694ea1bc75a8e4b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnEmbeddedComponentButtonClicked</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a18fb3f5b3ae3c3b5ff5cdc29ebe9b107</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>UpdateEmbeddedRegistryButtons</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ac403c35b20500aee8f27259268a45361</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>UpdateEmbeddedRegistryView</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ab5327d7dc79b59d59b989edda4ecd30e</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>aa8b2750cb1c903b73899c16f7f90da56</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a3f08b370e1cbb44da13f8d1535401dce</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>icomp::IRegistry *</type>
+      <name>GetSelectedRegistry</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a8c5bb9b7d115ccb10684f5862cf35c72</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QGraphicsItem *</type>
+      <name>AddShapeToScene</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a837c0b20aff3f9b4745138df7257f12d</anchor>
+      <arglist>(iser::ISerializable *elementPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>AddConnectorsToScene</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a835ff27bd9a00ee741cbb9b879087e9d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>AddConnector</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a16a82854a377fa66427fa0872dd26cad</anchor>
+      <arglist>(CRegistryElementShape &amp;sourceShape, const QByteArray &amp;referenceComponentId, const QByteArray &amp;attributeId, bool isFactory=false)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>icomp::IRegistryElement *</type>
+      <name>TryCreateComponent</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a74e5e7ff66d60bdd61340ed72f16b96a</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ConnectReferences</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ac26961623ce7b332fdcb43e9d0f46db3</anchor>
+      <arglist>(const QByteArray &amp;componentRole)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateComponentSelection</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ad492494cb0e8fd2d5fd3a6a238fddef3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoRetranslate</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a20bd3646af0fa95386167d03aad9eb53</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDropObject</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a52fd71ee948b05248d94a5a043839343</anchor>
+      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateScene</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ac86b77de39ddc462410c4ecb69ee1c58</anchor>
+      <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a31a0816128118d47d543d9d51d80b7af</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a323000d3138c35b7c48bbf8a015d6045</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>af4d64289ff0173a223146e2a0a72445f</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a8205212eeb4d97087b2ac4b2d47686b4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ab5b47a8ef4c9e14d2fb82421a9f8036f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static IElementSelectionInfo *</type>
+      <name>ExtractSelectionInterface</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a552f47a4770b653aa992d2351edfb555</anchor>
+      <arglist>(CVisualRegistryEditorComp &amp;component)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static imod::IModel *</type>
+      <name>ExtractSelectionInterfaceModel</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a027eede96df6977af9b5b40c84cf2543</anchor>
+      <arglist>(CVisualRegistryEditorComp &amp;component)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static istd::IChangeable *</type>
+      <name>ExtractSelectionInterfaceChangeable</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a6e68c1b3cf8ceba830a8f158012223e9</anchor>
+      <arglist>(CVisualRegistryEditorComp &amp;component)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>imod::TModelWrap&lt; SelectionInfoImpl &gt;</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a1ecffae37bd7adb0d052fdefe2de32db</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</name>
+    <filename>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</filename>
+    <base>TSingleModelObserverBase&lt; icomp::IComponentEnvironmentManager &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>EnvironmentObserver</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</anchorfile>
+      <anchor>a47d0280e470f8ef8c6c54c47f99fb8d3</anchor>
+      <arglist>(CVisualRegistryEditorComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</anchorfile>
+      <anchor>a35514abd8c7a95bc6a473a8d699b0301</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>icmpstr::CVisualRegistryElement</name>
     <filename>classicmpstr_1_1_c_visual_registry_element.html</filename>
     <base>icomp::CRegistryElement</base>
@@ -18351,419 +18803,6 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
       <anchor>a8e60a45da2f52b86f58694b1bbd69be0</anchor>
       <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CVisualRegistryScenographerComp</name>
-    <filename>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</filename>
-    <base>QObject</base>
-    <base>TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <class kind="class">icmpstr::CVisualRegistryScenographerComp::EnvironmentObserver</class>
-    <member kind="typedef">
-      <type>icmpstr::TScenographerCompBase&lt; imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a98807028813fafb5f343bd8b42c60e41</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a7fc831e12d87f443b06afc458baf6e33</anchor>
-      <arglist>(SelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a9bb328309c6ab4b7ebf94ee209a42df7</anchor>
-      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ac40d3fb9bbdd4b657136a086497dbba6</anchor>
-      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a98a25978c4b9a1be06b92e5e409b6772</anchor>
-      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a9152e5cdb243f2e81ca63d4a4d97fdd2</anchor>
-      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a9cdbdbc3778fe06c65ce7a1365c73b2f</anchor>
-      <arglist>(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a202a8d84b3d0ea592df196438dfe35cb</anchor>
-      <arglist>(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CVisualRegistryScenographerComp</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>abb13c1b4ad2ad687396ec9bc894d6170</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const QFont &amp;</type>
-      <name>GetElementNameFont</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ad7b33491cf2beef75c62e086e1e7ab3a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const QFont &amp;</type>
-      <name>GetElementDetailFont</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ab54418d9ba7973614f174f66dbaf4d60</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const icomp::IComponentEnvironmentManager *</type>
-      <name>GetEnvironmentManager</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a3da1eb7f05f1be90f226a54c90a73107</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const IRegistryConsistInfo *</type>
-      <name>GetRegistryConsistInfo</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>acfab0e9deefe5a2d9ca6c5c4ce1a574e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>TryOpenComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ae9b9fada88111cbd8986638eecdad9ea</anchor>
-      <arglist>(const CVisualRegistryElement &amp;registryElement) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a9e361089e77284e5efa91e7dae124ec5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="enumeration">
-      <name>GroupId</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_COMPONENT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0dac2c586c6cff797537e9a274943eaca0d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_EMBEDDED_REGISTRY</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0da164b1555a4133735e31d7ca93fc639e0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_CODEGEN</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0da2aef7ef5bc2ca4315af5303a231d1a50</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_PREVIEW</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0dabaf3c62c9df98c822308107b2327d690</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_EDIT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0da4e69b951417366114dbe49cd02093805</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_TOOLS</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0dbdaa790bcf7386eeea82c16e89bd0da3e4eb9cfe65deda0faab49c072419603</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a08767078053ee954a18678aa179b0582</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnCutCommand</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a3a8f3d4a519786731c8d5865ac50f6cc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnCopyCommand</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a454b1220d3f0ceb71b46d541d96eaf41</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnPasteCommand</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a49e6598a03ba7993b3c4f4aa014a8888</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnRemoveComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>abfdcf87e3bd82a40b2cad1cda06cff02</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnRenameComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0bb1ff11bea86b456f324735084643ff</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>InsertEmbeddedComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0115eac451648a356bf256047a1cb65b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>ToEmbeddedComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ae8eb02b4f026c239bdf450f3291050a3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnExportToCode</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>acd41339e8e59fe483c5eaa53db38419c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnExecute</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>afa9c5c1efe7dbdff0299c33e6c2f2314</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAbort</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>aa7a2dc68091e85110c6a2b8ef0638283</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnExecutionTimerTick</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>aae05a18743b19a5ec054c68fe180ad22</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnShowRegistryTopology</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a8962593f319567c98b4e721b115dad1c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnEmbeddedRegistrySelected</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a786213f9623cac3f83a82b1dd0f5809b</anchor>
-      <arglist>(const QByteArray &amp;id)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateEmbeddedRegistriesList</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ac73585ef7277074e988b278eb9355d81</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>icomp::IRegistry *</type>
-      <name>GetSelectedRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a51e6d0b78f8ab9f5228d1e75d312a26a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QGraphicsItem *</type>
-      <name>AddShapeToScene</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ab4983960912bb930939ece9112da0416</anchor>
-      <arglist>(iser::ISerializable *elementPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>AddConnectorsToScene</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ad856af3c00a1fcf929106fead92704fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>AddConnector</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ada7ffbb9e2cbdc8534a6793dc2dd8eef</anchor>
-      <arglist>(CRegistryElementShape &amp;sourceShape, const QByteArray &amp;referenceComponentId, const QByteArray &amp;attributeId, bool isFactory=false)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>icomp::IRegistryElement *</type>
-      <name>TryCreateComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a38db8b13925b822b0fed67eb4248072c</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ConnectReferences</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a3ba75a073ed97de195fafd149fd95e30</anchor>
-      <arglist>(const QByteArray &amp;componentRole)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateComponentSelection</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a5a5fa5717d66268ddff72cb4f07ba067</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DoRetranslate</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>afe83e2d92ab9da4d0704940b321bec2f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDropObject</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a3c7fe27cca21ea3e8fc47bdbf355fb3a</anchor>
-      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateScene</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>ac0a5a38f9d27286677a6943da2505cac</anchor>
-      <arglist>(int updateFlags)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a7578b7af849bbf27f4a3942dc2b629e4</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a2f601bb5af87821d8e9a92af4194c042</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a0cf78c405ceff125a31f11b2a5e5d55e</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a57e0ab91280cea11ae9ab4fd428bc645</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a9ff4d50e6d37ca1c0d341ad34ed4f807</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static IElementSelectionInfo *</type>
-      <name>ExtractSelectionInterface</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a7211cd41b0e418ba711d50dcf67cf36b</anchor>
-      <arglist>(CVisualRegistryScenographerComp &amp;component)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static imod::IModel *</type>
-      <name>ExtractSelectionInterfaceModel</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a1cfe9234b227da52f9c6cfc8020a9042</anchor>
-      <arglist>(CVisualRegistryScenographerComp &amp;component)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static istd::IChangeable *</type>
-      <name>ExtractSelectionInterfaceChangeable</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a8e2013929f2c6a981fdea9dcf5b9228d</anchor>
-      <arglist>(CVisualRegistryScenographerComp &amp;component)</arglist>
-    </member>
-    <member kind="friend">
-      <type>friend class</type>
-      <name>imod::TModelWrap&lt; SelectionInfoImpl &gt;</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp.html</anchorfile>
-      <anchor>a1ecffae37bd7adb0d052fdefe2de32db</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CVisualRegistryScenographerComp::EnvironmentObserver</name>
-    <filename>classicmpstr_1_1_c_visual_registry_scenographer_comp_1_1_environment_observer.html</filename>
-    <base>TSingleModelObserverBase&lt; icomp::IComponentEnvironmentManager &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>EnvironmentObserver</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp_1_1_environment_observer.html</anchorfile>
-      <anchor>a093a801b21047591500dd32594df1903</anchor>
-      <arglist>(CVisualRegistryScenographerComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_scenographer_comp_1_1_environment_observer.html</anchorfile>
-      <anchor>a216bd4b71d9e8e5d48f5bd5991aeb1e4</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19142,7 +19181,7 @@
   <compound kind="class">
     <name>icmpstr::TScenographerCompBase</name>
     <filename>classicmpstr_1_1_t_scenographer_comp_base.html</filename>
-    <templarg>Observer</templarg>
+    <templarg></templarg>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iqtgui::IDropConsumer</base>
     <member kind="typedef">
@@ -19476,7 +19515,6 @@
     <class kind="class">icomp::IRegistry</class>
     <class kind="class">icomp::IRegistryElement</class>
     <class kind="class">icomp::IRegistryLoader</class>
-    <class kind="class">icomp::IRegistryLoaderProvider</class>
     <class kind="class">icomp::TAttribute</class>
     <class kind="class">icomp::TAttributeMemberBase</class>
     <class kind="class">icomp::TAttributeMember</class>
@@ -22215,25 +22253,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icomp::IRegistryLoaderProvider</name>
-    <filename>classicomp_1_1_i_registry_loader_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual IComponentEnvironmentManager *</type>
-      <name>GetEnvironmentManager</name>
-      <anchorfile>classicomp_1_1_i_registry_loader_provider.html</anchorfile>
-      <anchor>a9cf99f0fdb87ba1db40df0e1fd803d68</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual IRegistryLoader *</type>
-      <name>GetRegistryLoader</name>
-      <anchorfile>classicomp_1_1_i_registry_loader_provider.html</anchorfile>
-      <anchor>a7397d89fe5b1103ceaf56f07b2770323</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>icomp::TAttribute</name>
     <filename>classicomp_1_1_t_attribute.html</filename>
     <templarg>Value</templarg>
@@ -23303,7 +23322,7 @@
   <compound kind="class">
     <name>icomp::TSimComponentWrap</name>
     <filename>classicomp_1_1_t_sim_component_wrap.html</filename>
-    <templarg>Base</templarg>
+    <templarg></templarg>
     <base>TComponentWrap&lt; Base &gt;</base>
     <base>icomp::CSimComponentContextBase</base>
     <base virtualness="virtual">icomp::ICompositeComponent</base>
@@ -33077,7 +33096,6 @@
     <class kind="class">iqt::CClipboardSerializerComp</class>
     <class kind="class">iqt::CComponentAccessor</class>
     <class kind="class">iqt::CCopyProcessorComp</class>
-    <class kind="class">iqt::CDefaultRegistryLoaderProvider</class>
     <class kind="class">iqt::CDirList</class>
     <class kind="class">iqt::CFileInfoCopyComp</class>
     <class kind="class">iqt::CFileList</class>
@@ -33676,32 +33694,6 @@
       <anchorfile>classiqt_1_1_c_copy_processor_comp.html</anchorfile>
       <anchor>a3f4e89be171b82c512a22d73e2619120</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CDefaultRegistryLoaderProvider</name>
-    <filename>classiqt_1_1_c_default_registry_loader_provider.html</filename>
-    <base virtualness="virtual">icomp::IRegistryLoaderProvider</base>
-    <member kind="function">
-      <type></type>
-      <name>CDefaultRegistryLoaderProvider</name>
-      <anchorfile>classiqt_1_1_c_default_registry_loader_provider.html</anchorfile>
-      <anchor>a8267ef9fd7e172996b779ee30ce0c43d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual icomp::IComponentEnvironmentManager *</type>
-      <name>GetEnvironmentManager</name>
-      <anchorfile>classiqt_1_1_c_default_registry_loader_provider.html</anchorfile>
-      <anchor>a674fd47a3b9b5e2dbad42912479f902d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual icomp::IRegistryLoader *</type>
-      <name>GetRegistryLoader</name>
-      <anchorfile>classiqt_1_1_c_default_registry_loader_provider.html</anchorfile>
-      <anchor>af1e7e08fdb17814a38988e206da62ff0</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">

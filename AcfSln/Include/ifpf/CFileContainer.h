@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,40 +15,49 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
 
 
-#ifndef icomp_IRegistryLoaderProvider_included
-#define icomp_IRegistryLoaderProvider_included
+#ifndef ifpf_CFileContainer_included
+#define ifpf_CFileContainer_included
 
 
-#include "istd/IPolymorphic.h"
+// Qt includes
+#include <QFileInfoList>
+
+// ACF includes
+#include "ibase/IFileListProvider.h"
+
+#include "ifpf/ifpf.h"
 
 
-namespace icomp
+namespace ifpf
 {
 
 
-class IRegistryLoader;
-class IComponentEnvironmentManager;
-
-
-/**
-	Interface for a ACF registry loader provider.
-*/
-class IRegistryLoaderProvider: virtual public istd::IPolymorphic
+class CFileContainer: virtual public ibase::IFileListProvider
 {
 public:
-	virtual IComponentEnvironmentManager* GetEnvironmentManager() const = 0;
-	virtual IRegistryLoader* GetRegistryLoader() const = 0;
+	void ResetFiles();
+
+	/**
+		Insert a new file into the list.
+	*/
+	virtual bool InsertFile(const QString& file, int index = -1);
+
+	// reimplemented (ibase::IFileListProvider)
+	virtual QStringList GetFileList() const;
+
+private:
+	QFileInfoList m_fileList;
 };
-	
-
-} // namespace icomp
 
 
-#endif // !icomp_IRegistryLoaderProvider_included
+} // namespace ifpf
+
+
+#endif //!ifpf_CFileContainer_included
 
 
