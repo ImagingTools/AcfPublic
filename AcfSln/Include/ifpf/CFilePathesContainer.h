@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef ifpf_CFileContainer_included
-#define ifpf_CFileContainer_included
+#ifndef ifpf_CFilePathesContainer_included
+#define ifpf_CFilePathesContainer_included
 
 
 // Qt includes
@@ -37,7 +37,7 @@ namespace ifpf
 {
 
 
-class CFileContainer: virtual public ibase::IFileListProvider
+class CFilePathesContainer: virtual public ibase::IFileListProvider
 {
 public:
 	void ResetFiles();
@@ -58,6 +58,6 @@ private:
 } // namespace ifpf
 
 
-#endif //!ifpf_CFileContainer_included
+#endif //!ifpf_CFilePathesContainer_included
 
 

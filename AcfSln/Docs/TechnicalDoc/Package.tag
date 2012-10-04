@@ -310,14 +310,6 @@
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
-    <name>CFileContainer.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
-    <filename>_c_file_container_8h</filename>
-    <includes id="ifpf_8h" name="ifpf.h" local="yes" imported="no">ifpf/ifpf.h</includes>
-    <class kind="class">ifpf::CFileContainer</class>
-    <namespace>ifpf</namespace>
-  </compound>
-  <compound kind="file">
     <name>CFileListConverterComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifpf/</path>
     <filename>_c_file_list_converter_comp_8h</filename>
@@ -331,6 +323,14 @@
     <filename>_c_file_naming_params_comp_8h</filename>
     <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifpf/IFileNamingParams.h</includes>
     <class kind="class">ifpf::CFileNamingParamsComp</class>
+    <namespace>ifpf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFilePathesContainer.h</name>
+    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <filename>_c_file_pathes_container_8h</filename>
+    <includes id="ifpf_8h" name="ifpf.h" local="yes" imported="no">ifpf/ifpf.h</includes>
+    <class kind="class">ifpf::CFilePathesContainer</class>
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
@@ -4033,9 +4033,9 @@
     <filename>namespaceifpf.html</filename>
     <class kind="class">ifpf::CDirectoryMonitorParams</class>
     <class kind="class">ifpf::CDirectoryMonitorParamsComp</class>
-    <class kind="class">ifpf::CFileContainer</class>
     <class kind="class">ifpf::CFileListConverterComp</class>
     <class kind="class">ifpf::CFileNamingParamsComp</class>
+    <class kind="class">ifpf::CFilePathesContainer</class>
     <class kind="class">ifpf::CFileSystemChangeStorage</class>
     <class kind="class">ifpf::CHotfolderLoaderComp</class>
     <class kind="class">ifpf::CHotfolderProcessingInfo</class>
@@ -4179,32 +4179,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CFileContainer</name>
-    <filename>classifpf_1_1_c_file_container.html</filename>
-    <base virtualness="virtual">ibase::IFileListProvider</base>
-    <member kind="function">
-      <type>void</type>
-      <name>ResetFiles</name>
-      <anchorfile>classifpf_1_1_c_file_container.html</anchorfile>
-      <anchor>a6162f54ede622fab3ca938e51e44fd53</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InsertFile</name>
-      <anchorfile>classifpf_1_1_c_file_container.html</anchorfile>
-      <anchor>ae4bceec38a2e9c2e33ef8896e09c4ece</anchor>
-      <arglist>(const QString &amp;file, int index=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetFileList</name>
-      <anchorfile>classifpf_1_1_c_file_container.html</anchorfile>
-      <anchor>ab747bf9263259bf2f2daa52e9a2ceb40</anchor>
-      <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ifpf::CFileListConverterComp</name>
     <filename>classifpf_1_1_c_file_list_converter_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
@@ -4297,6 +4271,32 @@
       <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
       <anchor>a5349bf2b45d5c364e0a70b150ad46fef</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifpf::CFilePathesContainer</name>
+    <filename>classifpf_1_1_c_file_pathes_container.html</filename>
+    <base virtualness="virtual">ibase::IFileListProvider</base>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetFiles</name>
+      <anchorfile>classifpf_1_1_c_file_pathes_container.html</anchorfile>
+      <anchor>ac5624fa56a1f3767a317281fb170225b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertFile</name>
+      <anchorfile>classifpf_1_1_c_file_pathes_container.html</anchorfile>
+      <anchor>a24ae75151098bcd9da3421548e2e1e78</anchor>
+      <arglist>(const QString &amp;file, int index=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetFileList</name>
+      <anchorfile>classifpf_1_1_c_file_pathes_container.html</anchorfile>
+      <anchor>a4a16acbe867ef125a80693a44dce6099</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">

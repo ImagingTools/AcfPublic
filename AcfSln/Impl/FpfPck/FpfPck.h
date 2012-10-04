@@ -38,7 +38,7 @@
 #include "ifpf/CFileSystemChangeStorage.h"
 #include "ifpf/CFileNamingParamsComp.h"
 #include "ifpf/CFileListConverterComp.h"
-#include "ifpf/CFileContainer.h"
+#include "ifpf/CFilePathesContainer.h"
 
 
 /**
@@ -80,7 +80,7 @@ typedef icomp::TModelCompWrap<
 typedef ifpf::CFileListConverterComp FileListConverter;
 
 typedef icomp::TMakeComponentWrap<
-			ifpf::CFileContainer, ibase::IFileListProvider, istd::IChangeable> FilesContainer;
+			ifpf::CFilePathesContainer, ibase::IFileListProvider, istd::IChangeable> FilesContainer;
 
 
 } // namespace FpfPck

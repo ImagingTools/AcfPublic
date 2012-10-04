@@ -28,7 +28,7 @@
 #include <QtCore/QDir>
 
 // ACF-Solutions includes
-#include <ifpf/CFileContainer.h>
+#include <ifpf/CFilePathesContainer.h>
 
 
 namespace ifpf
@@ -66,7 +66,7 @@ int CFileListConverterComp::DoProcessing(
 
 	int retVal = TS_OK;
 
-	CFileContainer* convertedFileListPtr = dynamic_cast<CFileContainer*>(outputPtr);
+	CFilePathesContainer* convertedFileListPtr = dynamic_cast<CFilePathesContainer*>(outputPtr);
 
 	QStringList fileList = inputFileListProviderPtr->GetFileList();
 	int filesCount = fileList.count();
