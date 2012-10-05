@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iqtproc_CProgressManagerGuiComp_included
-#define iqtproc_CProgressManagerGuiComp_included
+#ifndef iqtgui_CProgressManagerGuiComp_included
+#define iqtgui_CProgressManagerGuiComp_included
 
 
 // ACF includes
@@ -29,10 +29,10 @@
 
 #include "iproc/CDelegatedProgressManager.h"
 
-#include "iqtproc/Generated/ui_CProgressManagerGuiComp.h"
+#include "iqtgui/Generated/ui_CProgressManagerGuiComp.h"
 
 
-namespace iqtproc
+namespace iqtgui
 {
 
 
@@ -89,9 +89,9 @@ private:
 };
 
 
-} // namespace iqtproc
+} // namespace iqtgui
 
 
-#endif // !iqtproc_CProgressManagerGuiComp_included
+#endif // !iqtgui_CProgressManagerGuiComp_included
 
 

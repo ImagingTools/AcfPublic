@@ -55,8 +55,8 @@ Inheritance diagram for ifpf::CFilePathesContainer:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_pathes_container.html#ac5624fa56a1f3767a317281fb170225b">ResetFiles</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_pathes_container.html#a24ae75151098bcd9da3421548e2e1e78">InsertFile</a> (const QString &amp;file, int index=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new file into the list.  <a href="#a24ae75151098bcd9da3421548e2e1e78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_pathes_container.html#aba849a0b0ee1c9181e912cc7ec8c926c">InsertFile</a> (const QString &amp;file, int index=-1, bool ignoreNonExistingFiles=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new file into the list.  <a href="#aba849a0b0ee1c9181e912cc7ec8c926c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_c_file_pathes_container.html#a4a16acbe867ef125a80693a44dce6099">GetFileList</a> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -81,7 +81,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a24ae75151098bcd9da3421548e2e1e78"></a><!-- doxytag: member="ifpf::CFilePathesContainer::InsertFile" ref="a24ae75151098bcd9da3421548e2e1e78" args="(const QString &amp;file, int index=&#45;1)" -->
+<a class="anchor" id="aba849a0b0ee1c9181e912cc7ec8c926c"></a><!-- doxytag: member="ifpf::CFilePathesContainer::InsertFile" ref="aba849a0b0ee1c9181e912cc7ec8c926c" args="(const QString &amp;file, int index=&#45;1, bool ignoreNonExistingFiles=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -95,7 +95,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ignoreNonExistingFiles</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -107,6 +113,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Insert a new file into the list. </p>
+<p>If  is set, only existing files will be added to the list. </p>
 
 </div>
 </div>

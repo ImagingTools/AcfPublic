@@ -90,6 +90,22 @@ void CFileNamingParamsComp::SetSuffix(const QString& suffix)
 }
 
 
+QStringList CFileNamingParamsComp::GetPatternsToRemove() const
+{
+	return m_patternsToRemove;
+}
+
+
+void CFileNamingParamsComp::SetPatternsToRemove(const QStringList& patternsToRemove)
+{
+	if (m_patternsToRemove != patternsToRemove){
+		istd::CChangeNotifier changePtr(this);
+
+		m_patternsToRemove = patternsToRemove;
+	}
+}
+
+
 // reimplemented (iser::ISerializable)
 
 bool CFileNamingParamsComp::Serialize(iser::IArchive& archive)

@@ -55,6 +55,7 @@
 #include "iqtgui/CSelectableCommandsProviderComp.h"
 #include "iqtgui/CVersionInfoGuiComp.h"
 #include "iqtgui/CFileListProviderGuiComp.h"
+#include "iqtgui/CProgressManagerGuiComp.h"
 
 #include "iqtprm/CFileNameParamGuiComp.h"
 #include "iqtprm/CComposedParamsSetGuiComp.h"
@@ -75,7 +76,6 @@
 #include "iqtdoc/CHtmlHelpGuiComp.h"
 #include "iqtdoc/CHtmlHelpViewerComp.h"
 
-#include "iqtproc/CProgressManagerGuiComp.h"
 #include "iqtproc/CProcessorControlGuiComp.h"
 #include "iqtproc/CDocumentProcessingManagerComp.h"
 #include "iqtproc/CDocumentProcessingCommandComp.h"
@@ -117,6 +117,7 @@ typedef iqtgui::CCommandsToolBarGuiComp CommandsToolBar;
 typedef icomp::TModelCompWrap<iqtgui::CSelectableCommandsProviderComp> SelectableCommandsProvider;
 typedef iqtgui::CVersionInfoGuiComp VersionInfoGui;
 typedef iqtgui::CFileListProviderGuiComp FileListProviderGui;
+typedef iqtgui::CProgressManagerGuiComp ProgressManagerGui;
 
 typedef iqtprm::CComposedParamsSetGuiComp ComposedParamsSetGui;
 typedef iqtprm::CVariableParamGuiComp VariableParamGui;
@@ -137,7 +138,6 @@ typedef icomp::TModelCompWrap<iqtdoc::CMultiDocumentWorkspaceGuiComp> MultiDocWo
 typedef iqtdoc::CHtmlHelpGuiComp HtmlHelpGui;
 typedef iqtdoc::CHtmlHelpViewerComp HtmlHelpViewer;
 
-typedef iqtproc::CProgressManagerGuiComp ProgressManagerGui;
 typedef iqtproc::CProcessorControlGuiComp ProcessorControlGui;
 typedef iqtproc::CDocumentProcessingManagerComp DocumentProcessingManager;
 typedef iqtproc::CDocumentProcessingCommandComp DocumentProcessingCommand;

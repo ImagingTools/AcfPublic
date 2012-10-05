@@ -37,7 +37,7 @@
 <div class="title">i2d::IObject2d Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="i2d::IObject2d" --><!-- doxytag: inherits="iser::ISerializable" -->
+<!-- doxytag: class="i2d::IObject2d" --><!-- doxytag: inherits="iser::ISerializable,i2d::ICalibrationProvider" -->
 <p>Common interface for describing the 2D-objects.  
  <a href="classi2d_1_1_i_object2d.html#details">More...</a></p>
 
@@ -49,17 +49,20 @@ Inheritance diagram for i2d::IObject2d:</div>
   <img src="classi2d_1_1_i_object2d.png" usemap="#i2d::IObject2d_map" alt=""/>
   <map id="i2d::IObject2d_map" name="i2d::IObject2d_map">
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="0,112,192,136"/>
+<area href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration." alt="i2d::ICalibrationProvider" shape="rect" coords="202,112,394,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,192,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="202,56,394,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,192,24"/>
-<area href="classi2d_1_1_c_object2d_base.html" title="Base class for 2D-objects implementing interface i2d::IObject2d." alt="i2d::CObject2dBase" shape="rect" coords="0,224,192,248"/>
-<area href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space." alt="i2d::CLine2d" shape="rect" coords="202,280,394,304"/>
-<area href="classi2d_1_1_c_parallelogram.html" title="This class defines parallelogram." alt="i2d::CParallelogram" shape="rect" coords="202,336,394,360"/>
-<area href="classi2d_1_1_c_polygon.html" title="Definition of the data model for a polygon." alt="i2d::CPolygon" shape="rect" coords="202,392,394,416"/>
-<area href="classi2d_1_1_c_polypoint.html" title="2D-object given by the simple set of points." alt="i2d::CPolypoint" shape="rect" coords="202,448,394,472"/>
-<area href="classi2d_1_1_c_position2d.html" title="Definition of graphical point object." alt="i2d::CPosition2d" shape="rect" coords="202,504,394,528"/>
-<area href="classi2d_1_1_c_quadrangle.html" title="Definition of convexes quadrangle object." alt="i2d::CQuadrangle" shape="rect" coords="202,560,394,584"/>
-<area href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system." alt="i2d::CRectangle" shape="rect" coords="202,616,394,640"/>
-<area href="classicmpstr_1_1_c_visual_registry_element.html" alt="icmpstr::CVisualRegistryElement" shape="rect" coords="202,672,394,696"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="202,0,394,24"/>
+<area href="classi2d_1_1_c_object2d_base.html" title="Base class for 2D-objects implementing interface i2d::IObject2d." alt="i2d::CObject2dBase" shape="rect" coords="101,224,293,248"/>
+<area href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space." alt="i2d::CLine2d" shape="rect" coords="303,280,495,304"/>
+<area href="classi2d_1_1_c_parallelogram.html" title="This class defines parallelogram." alt="i2d::CParallelogram" shape="rect" coords="303,336,495,360"/>
+<area href="classi2d_1_1_c_polygon.html" title="Definition of the data model for a polygon." alt="i2d::CPolygon" shape="rect" coords="303,392,495,416"/>
+<area href="classi2d_1_1_c_polypoint.html" title="2D-object given by the simple set of points." alt="i2d::CPolypoint" shape="rect" coords="303,448,495,472"/>
+<area href="classi2d_1_1_c_position2d.html" title="Definition of graphical point object." alt="i2d::CPosition2d" shape="rect" coords="303,504,495,528"/>
+<area href="classi2d_1_1_c_quadrangle.html" title="Definition of convexes quadrangle object." alt="i2d::CQuadrangle" shape="rect" coords="303,560,495,584"/>
+<area href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system." alt="i2d::CRectangle" shape="rect" coords="303,616,495,640"/>
+<area href="classicmpstr_1_1_c_visual_registry_element.html" alt="icmpstr::CVisualRegistryElement" shape="rect" coords="303,672,495,696"/>
 </map>
  </div></div>
 
@@ -71,8 +74,6 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_object2d.html#aeb73b9d031949427c3e44e57efe4eab8">GetCalibration</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get calibration of this 2D object.  <a href="#aeb73b9d031949427c3e44e57efe4eab8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_object2d.html#a49e87ff841963eb9041b62581e19eb70">GetCenter</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#a49e87ff841963eb9041b62581e19eb70"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_object2d.html#a220864dd27c1973b54fa4788caee2630">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)=0</td></tr>
@@ -89,7 +90,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for describing the 2D-objects. </p>
 
-<p>Definition at line <a class="el" href="_i_object2d_8h_source.html#l00020">20</a> of file <a class="el" href="_i_object2d_8h_source.html">IObject2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_object2d_8h_source.html#l00021">21</a> of file <a class="el" href="_i_object2d_8h_source.html">IObject2d.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="ad93b4b065f29fa85330055454c837aca"></a><!-- doxytag: member="i2d::IObject2d::ChangeFlags" ref="ad93b4b065f29fa85330055454c837aca" args="" -->
 <div class="memitem">
@@ -110,32 +111,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_object2d_8h_source.html#l00023">23</a> of file <a class="el" href="_i_object2d_8h_source.html">IObject2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_object2d_8h_source.html#l00026">26</a> of file <a class="el" href="_i_object2d_8h_source.html">IObject2d.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aeb73b9d031949427c3e44e57efe4eab8"></a><!-- doxytag: member="i2d::IObject2d::GetCalibration" ref="aeb73b9d031949427c3e44e57efe4eab8" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a>* i2d::IObject2d::GetCalibration </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get calibration of this 2D object. </p>
-<p>If no calibration is set, it returns <code>NULL</code>. </p>
-
-<p>Implemented in <a class="el" href="classi2d_1_1_c_object2d_base.html#a746af84cc92775cf8ede5c5797197f76">i2d::CObject2dBase</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a49e87ff841963eb9041b62581e19eb70"></a><!-- doxytag: member="i2d::IObject2d::GetCenter" ref="a49e87ff841963eb9041b62581e19eb70" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +283,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classi2d_1_1_c_line2d.html#aea187f4dcad6dc4bd3e242434b3d90f6">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_rectangle.html#a93a38c4b97932ac545551e25198e4b53">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_polygon.html#a363ad5b2f229beb54391ab1cdd96f6c0">i2d::CPolygon</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#ac444f10fc9d82abe56f5addca2f1f213">icmpstr::CVisualRegistryElement</a>, <a class="el" href="classi2d_1_1_c_annulus.html#a994865c894bec6edfb431b5fc7792566">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#af05ba6db56c5f9c35c52b4623df850c8">i2d::CQuadrangle</a>, <a class="el" href="classi2d_1_1_c_circle.html#af4ba43370e7e1756fbb925617939af69">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_parallelogram.html#ae0c4cdbcd9026fd201edcfe31b47089d">i2d::CParallelogram</a>, <a class="el" href="classi2d_1_1_c_polypoint.html#af0d98aba8231c48b55bd6ad7e2013811">i2d::CPolypoint</a>, <a class="el" href="classi2d_1_1_c_position2d.html#a9ad485da3d0ad4aaa4591c89c8218e6a">i2d::CPosition2d</a>, and <a class="el" href="classi2d_1_1_c_object2d_base.html#ae265e9ee5ad0fa90a7a32690ce12936b">i2d::CObject2dBase</a>.</p>
+<p>Implemented in <a class="el" href="classi2d_1_1_c_line2d.html#aea187f4dcad6dc4bd3e242434b3d90f6">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_rectangle.html#a93a38c4b97932ac545551e25198e4b53">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_polygon.html#a363ad5b2f229beb54391ab1cdd96f6c0">i2d::CPolygon</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#ac444f10fc9d82abe56f5addca2f1f213">icmpstr::CVisualRegistryElement</a>, <a class="el" href="classi2d_1_1_c_annulus.html#a994865c894bec6edfb431b5fc7792566">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#af05ba6db56c5f9c35c52b4623df850c8">i2d::CQuadrangle</a>, <a class="el" href="classi2d_1_1_c_circle.html#af4ba43370e7e1756fbb925617939af69">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_parallelogram.html#ae0c4cdbcd9026fd201edcfe31b47089d">i2d::CParallelogram</a>, <a class="el" href="classi2d_1_1_c_polypoint.html#af0d98aba8231c48b55bd6ad7e2013811">i2d::CPolypoint</a>, <a class="el" href="classi2d_1_1_c_object2d_base.html#ae265e9ee5ad0fa90a7a32690ce12936b">i2d::CObject2dBase</a>, and <a class="el" href="classi2d_1_1_c_position2d.html#a9ad485da3d0ad4aaa4591c89c8218e6a">i2d::CPosition2d</a>.</p>
 
 </div>
 </div>
@@ -371,7 +351,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classi2d_1_1_c_line2d.html#ab210c59ecb8699481c596fa217805c7a">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_rectangle.html#ac7255f6da8137970250ff79063c7809e">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_polygon.html#a53e82055ed15ac596a74cf635af324d9">i2d::CPolygon</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a6786b9a5ebbd0c89474d9b813de8cd14">icmpstr::CVisualRegistryElement</a>, <a class="el" href="classi2d_1_1_c_annulus.html#a97de2392bbcb8359aae87d166f9a9dee">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#af9f161a5f264cdfb65d2f7b143a3e7ed">i2d::CQuadrangle</a>, <a class="el" href="classi2d_1_1_c_circle.html#a8015a4528b42eb8a741d0edd56b98b46">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_parallelogram.html#ae27897353c7f9386e779be26f6702fa8">i2d::CParallelogram</a>, <a class="el" href="classi2d_1_1_c_polypoint.html#a902c1469a1610d8c7c07d944122a5d8a">i2d::CPolypoint</a>, <a class="el" href="classi2d_1_1_c_position2d.html#ac0b5c1d29d941f1b67653f7fffe47553">i2d::CPosition2d</a>, and <a class="el" href="classi2d_1_1_c_object2d_base.html#a2fb83ed63f504dc07ecb1b90efa91cb7">i2d::CObject2dBase</a>.</p>
+<p>Implemented in <a class="el" href="classi2d_1_1_c_line2d.html#ab210c59ecb8699481c596fa217805c7a">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_rectangle.html#ac7255f6da8137970250ff79063c7809e">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_polygon.html#a53e82055ed15ac596a74cf635af324d9">i2d::CPolygon</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a6786b9a5ebbd0c89474d9b813de8cd14">icmpstr::CVisualRegistryElement</a>, <a class="el" href="classi2d_1_1_c_annulus.html#a97de2392bbcb8359aae87d166f9a9dee">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#af9f161a5f264cdfb65d2f7b143a3e7ed">i2d::CQuadrangle</a>, <a class="el" href="classi2d_1_1_c_circle.html#a8015a4528b42eb8a741d0edd56b98b46">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_parallelogram.html#ae27897353c7f9386e779be26f6702fa8">i2d::CParallelogram</a>, <a class="el" href="classi2d_1_1_c_polypoint.html#a902c1469a1610d8c7c07d944122a5d8a">i2d::CPolypoint</a>, <a class="el" href="classi2d_1_1_c_object2d_base.html#a2fb83ed63f504dc07ecb1b90efa91cb7">i2d::CObject2dBase</a>, and <a class="el" href="classi2d_1_1_c_position2d.html#ac0b5c1d29d941f1b67653f7fffe47553">i2d::CPosition2d</a>.</p>
 
 </div>
 </div>

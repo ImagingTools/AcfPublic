@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "iprm/CSelectionDelegatorComp.h"
+#include "ibase/CObjectSynchronizerComp.h"
 
 
 // ACF inlcudes
 #include "imod/IModel.h"
 
 
-namespace iprm
+namespace ibase
 {
 
 
@@ -35,14 +35,14 @@ namespace iprm
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CSelectionDelegatorComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CObjectSynchronizerComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	int slaveCounts = m_slaveSelectionsCompPtr.GetCount();
+	int slaveCounts = m_slaveObjectsCompPtr.GetCount();
 
 	for (int slaveIndex = 0; slaveIndex < slaveCounts; slaveIndex++){
-		iprm::ISelectionParam* selectionPtr = m_slaveSelectionsCompPtr[slaveIndex];
-		if (selectionPtr != NULL){
-			selectionPtr->SetSelectedOptionIndex(m_sourceSelectionCompPtr->GetSelectedOptionIndex());
+		istd::IChangeable* slaveObjectPtr = m_slaveObjectsCompPtr[slaveIndex];
+		if ((slaveObjectPtr != NULL) && m_referenceObjectCompPtr.IsValid()){
+			slaveObjectPtr->CopyFrom(*m_referenceObjectCompPtr.GetPtr());
 		}
 	}
 }
@@ -50,17 +50,17 @@ void CSelectionDelegatorComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* 
 
 // reimplemented (icomp::CComponentBase)
 
-void CSelectionDelegatorComp::OnComponentCreated()
+void CObjectSynchronizerComp::OnComponentCreated()
 {
-	if (m_sourceSelectionModelCompPtr.IsValid()){
-		m_sourceSelectionModelCompPtr->AttachObserver(this);
+	if (m_referenceObjectModelCompPtr.IsValid()){
+		m_referenceObjectModelCompPtr->AttachObserver(this);
 	}
 	
 	BaseClass::OnComponentCreated();
 }
 
 
-void CSelectionDelegatorComp::OnComponentDestroyed()
+void CObjectSynchronizerComp::OnComponentDestroyed()
 {
 	EnsureModelDetached();
 
@@ -68,6 +68,6 @@ void CSelectionDelegatorComp::OnComponentDestroyed()
 }
 
 
-} // namespace iprm
+} // namespace ibase
 
 

@@ -49,8 +49,6 @@
 #include "iqtdoc/CStaticHelpFileProviderComp.h"
 #include "iqtdoc/CDoxygenHelpFileProviderComp.h"
 
-#include "iqtprm/CRelativeFileNameParamComp.h"
-
 #include "ibase/TFileSerializerComp.h"
 
 
@@ -93,8 +91,6 @@ typedef iqt::CRegistryCodeSaverComp RegistryCodeSaver;
 typedef iqtdoc::CExtendedDocumentTemplateComp ExtendedDocumentTemplate;
 typedef iqtdoc::CStaticHelpFileProviderComp StaticHelpFileProvider;
 typedef iqtdoc::CDoxygenHelpFileProviderComp DoxygenHelpFileProvider;
-
-typedef icomp::TModelCompWrap<iqtprm::CRelativeFileNameParamComp> RelativeFileNameParam;
 
 
 } // namespace QtPck

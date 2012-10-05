@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtprm/CRelativeFileNameParamComp.h"
+#include "iprm/CRelativeFileNameParamComp.h"
 
 
 // Qt includes
@@ -32,7 +32,7 @@
 #include "iser/IFileArchiveInfo.h"
 
 
-namespace iqtprm
+namespace iprm
 {
 
 
@@ -129,6 +129,6 @@ bool CRelativeFileNameParamComp::Serialize(iser::IArchive& archive)
 }
 
 
-} // namespace iqtprm
+} // namespace iprm
 
 

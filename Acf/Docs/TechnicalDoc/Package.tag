@@ -399,6 +399,7 @@
     <filename>_i_object2d_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_i_transformation2d_8h" name="ITransformation2d.h" local="yes" imported="no">i2d/ITransformation2d.h</includes>
+    <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
     <class kind="class">i2d::IObject2d</class>
     <namespace>i2d</namespace>
   </compound>
@@ -630,6 +631,16 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_object_queue_8h" name="IObjectQueue.h" local="yes" imported="no">ibase/IObjectQueue.h</includes>
     <class kind="class">ibase::CObjectQueueComp</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CObjectSynchronizerComp.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_c_object_synchronizer_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">ibase::CObjectSynchronizerComp</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -3076,6 +3087,15 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CRelativeFileNameParamComp.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_relative_file_name_param_comp_8h</filename>
+    <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">iprm/CFileNameParamComp.h</includes>
+    <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
+    <class kind="class">iprm::CRelativeFileNameParamComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableParamsSetComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_selectable_params_set_comp_8h</filename>
@@ -3097,16 +3117,6 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <class kind="class">iprm::CSelectionConstraintsComp</class>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSelectionDelegatorComp.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_c_selection_delegator_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <class kind="class">iprm::CSelectionDelegatorComp</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -4484,6 +4494,15 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CProgressManagerGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_progress_manager_gui_comp_8h</filename>
+    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <includes id="_c_delegated_progress_manager_8h" name="CDelegatedProgressManager.h" local="yes" imported="no">iproc/CDelegatedProgressManager.h</includes>
+    <class kind="class">iqtgui::CProgressManagerGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableCommandsProviderComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_selectable_commands_provider_comp_8h</filename>
@@ -4803,15 +4822,6 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
-    <name>CRelativeFileNameParamComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtprm/</path>
-    <filename>_c_relative_file_name_param_comp_8h</filename>
-    <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">iprm/CFileNameParamComp.h</includes>
-    <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
-    <class kind="class">iqtprm::CRelativeFileNameParamComp</class>
-    <namespace>iqtprm</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSelectableGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_selectable_gui_comp_8h</filename>
@@ -4924,15 +4934,6 @@
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iqtproc::CProcessorControlGuiComp</class>
-    <namespace>iqtproc</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CProgressManagerGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtproc/</path>
-    <filename>_c_progress_manager_gui_comp_8h</filename>
-    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
-    <includes id="_c_delegated_progress_manager_8h" name="CDelegatedProgressManager.h" local="yes" imported="no">iproc/CDelegatedProgressManager.h</includes>
-    <class kind="class">iqtproc::CProgressManagerGuiComp</class>
     <namespace>iqtproc</namespace>
   </compound>
   <compound kind="file">
@@ -10553,6 +10554,7 @@
     <name>i2d::IObject2d</name>
     <filename>classi2d_1_1_i_object2d.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
@@ -10564,13 +10566,6 @@
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
       <anchor>ad93b4b065f29fa85330055454c837acaa1ec86ce6e63055e3ff6f752e4c954253</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const ITransformation2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
-      <anchor>aeb73b9d031949427c3e44e57efe4eab8</anchor>
-      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual CVector2d</type>
@@ -11209,6 +11204,7 @@
     <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CMultiObserverBinderComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
+    <class kind="class">ibase::CObjectSynchronizerComp</class>
     <class kind="class">ibase::CQtVersionInfoComp</class>
     <class kind="class">ibase::CSelectableFileConverterComp</class>
     <class kind="class">ibase::CSingletonApplicationComp</class>
@@ -12253,6 +12249,47 @@
       <name>OnComponentDestroyed</name>
       <anchorfile>classibase_1_1_c_object_queue_comp.html</anchorfile>
       <anchor>a9a514d1597d09a363c7856b2e870e2a9</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::CObjectSynchronizerComp</name>
+    <filename>classibase_1_1_c_object_synchronizer_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_c_object_synchronizer_comp.html</anchorfile>
+      <anchor>a9d912ba9c1750a714b77cd11b4392da0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classibase_1_1_c_object_synchronizer_comp.html</anchorfile>
+      <anchor>a09a71138dd1ec80fdafd3233676192bd</anchor>
+      <arglist>(m_referenceObjectModelCompPtr, m_referenceObjectCompPtr, true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classibase_1_1_c_object_synchronizer_comp.html</anchorfile>
+      <anchor>a80daa9745d0974c152467c3a91757264</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_c_object_synchronizer_comp.html</anchorfile>
+      <anchor>ab6e16c034ae3f0b7f6f366c8ebef8566</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classibase_1_1_c_object_synchronizer_comp.html</anchorfile>
+      <anchor>afb1cc7655806484c51c7d1d8be5d662c</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -30062,9 +30099,9 @@
     <class kind="class">iprm::COptionsManagerComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
     <class kind="class">iprm::CParamsSet</class>
+    <class kind="class">iprm::CRelativeFileNameParamComp</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
     <class kind="class">iprm::CSelectionConstraintsComp</class>
-    <class kind="class">iprm::CSelectionDelegatorComp</class>
     <class kind="class">iprm::CSelectionParam</class>
     <class kind="class">iprm::CSelectionParamComp</class>
     <class kind="class">iprm::CVariableParamComp</class>
@@ -30975,6 +31012,39 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprm::CRelativeFileNameParamComp</name>
+    <filename>classiprm_1_1_c_relative_file_name_param_comp.html</filename>
+    <base>iprm::CFileNameParamComp</base>
+    <member kind="typedef">
+      <type>iprm::CFileNameParamComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>aeab0397d34db8fd01d7d0127d3442889</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetPath</name>
+      <anchorfile>classiprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>af152dd57b9acb56b57b1d9b789a44d80</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classiprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a505309dc77dbe736ce4b5b2832090bfb</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>afbc8fc35d10b3eb8a72f23760a199805</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprm::CSelectableParamsSetComp</name>
     <filename>classiprm_1_1_c_selectable_params_set_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -31162,47 +31232,6 @@
       <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
       <anchor>ad9c9a0d04561c8a23a4b32e986c8869c</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprm::CSelectionDelegatorComp</name>
-    <filename>classiprm_1_1_c_selection_delegator_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base protection="protected">imod::CSingleModelObserverBase</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
-      <anchor>a74f0813a6d08690fdc5f6f795b70f676</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
-      <anchor>ab128113bb8461af53b3b9c63a1272807</anchor>
-      <arglist>(m_sourceSelectionModelCompPtr, m_sourceSelectionCompPtr, true)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
-      <anchor>ac0ae199ff591803a502a913696701b96</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
-      <anchor>a6c88bdcda9db32372307eb37109774c3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiprm_1_1_c_selection_delegator_comp.html</anchorfile>
-      <anchor>a6cf7669866aa7eb0300f5c82aecaaa4c</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37777,6 +37806,7 @@
     <class kind="class">iqtgui::CModelDialogGuiComp</class>
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
     <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
+    <class kind="class">iqtgui::CProgressManagerGuiComp</class>
     <class kind="class">iqtgui::CSelectableCommandsProviderComp</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
@@ -39524,6 +39554,89 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::CProgressManagerGuiComp</name>
+    <filename>classiqtgui_1_1_c_progress_manager_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CProgressManagerGuiComp &gt;</base>
+    <base>iproc::CDelegatedProgressManager</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CProgressManagerGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>aeb60dcc9414b1adeae6296f3df6b2719</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::CDelegatedProgressManager</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a324942ab0ed15c578373f5a247bc0e0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CProgressManagerGuiComp</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a1969c763e5f8b7e47bb2d2071ad88179</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CancelButton_clicked</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a58e8da17a880e2bb0b35c4969a76685e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateVisibleComponents</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a1455e82024189a6c1f5d8271bac8c156</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateProgressBar</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a098143af0cd5d3c2789cf76e23bb587e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnCancelable</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>af1662e4ca2173599affc8d94032d1c17</anchor>
+      <arglist>(bool cancelState)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginProgressSession</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>ae654249d7ea94668547dab9663791e70</anchor>
+      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCanceled</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a5b97a607d827263dc428da9aa17d14fa</anchor>
+      <arglist>(int sessionId) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnEndChanges</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>aa418c6e00a574e88439b5ea57ef647aa</anchor>
+      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a2bc4034f224412688d67dc131aa214b6</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtgui::CSelectableCommandsProviderComp</name>
     <filename>classiqtgui_1_1_c_selectable_commands_provider_comp.html</filename>
     <base>QObject</base>
@@ -40600,7 +40713,6 @@
     <class kind="class">iqtprm::CNameParamGuiComp</class>
     <class kind="class">iqtprm::COptionsManagerGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
-    <class kind="class">iqtprm::CRelativeFileNameParamComp</class>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
     <class kind="class">iqtprm::CSelectableParamsSetGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
@@ -41258,39 +41370,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqtprm::CRelativeFileNameParamComp</name>
-    <filename>classiqtprm_1_1_c_relative_file_name_param_comp.html</filename>
-    <base>iprm::CFileNameParamComp</base>
-    <member kind="typedef">
-      <type>iprm::CFileNameParamComp</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a972b443e272786c338d16dabfcca6bb5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QString &amp;</type>
-      <name>GetPath</name>
-      <anchorfile>classiqtprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a301ae19d7258cfd23e79e0ddfdeda000</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPath</name>
-      <anchorfile>classiqtprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a898191a787c5aef074af9f48f7b38b7a</anchor>
-      <arglist>(const QString &amp;path)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiqtprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a09fef93906086c4c34a9e9ad8435d689</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqtprm::CSelectableGuiComp</name>
     <filename>classiqtprm_1_1_c_selectable_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CSelectableGuiComp, iprm::ISelectionParam &gt;</base>
@@ -41714,7 +41793,6 @@
     <class kind="class">iqtproc::CDocumentProcessingManagerCompBase</class>
     <class kind="class">iqtproc::CProcessorCommandComp</class>
     <class kind="class">iqtproc::CProcessorControlGuiComp</class>
-    <class kind="class">iqtproc::CProgressManagerGuiComp</class>
   </compound>
   <compound kind="class">
     <name>iqtproc::CDocumentProcessingCommandComp</name>
@@ -42002,89 +42080,6 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtproc_1_1_c_processor_control_gui_comp.html</anchorfile>
       <anchor>ac84eb402f91e50afc75ec4b208580adb</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtproc::CProgressManagerGuiComp</name>
-    <filename>classiqtproc_1_1_c_progress_manager_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CProgressManagerGuiComp &gt;</base>
-    <base>iproc::CDelegatedProgressManager</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CProgressManagerGuiComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a0cd5b60469a5ab60db07d72102bd651a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iproc::CDelegatedProgressManager</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>ad6815922b5d4715aea528dc65361c3e9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CProgressManagerGuiComp</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a43bb1afb50e87ae9c26cabb8a60dafc3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_CancelButton_clicked</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a2e8b4781b8198567f7f945c5ff03716f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateVisibleComponents</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a76a0e19487b7bddde2226288eea227a7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateProgressBar</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>aec08aedd2e1f6c144434f6afd335d8c5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>OnCancelable</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a1b5b216de1397e5be6557a9919d11fa4</anchor>
-      <arglist>(bool cancelState)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>BeginProgressSession</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>ab0aab4ea08ed73facdae4da93cf1ba44</anchor>
-      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsCanceled</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a36c1f395defe8b209b897c8a8e495e2e</anchor>
-      <arglist>(int sessionId) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnEndChanges</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>a08fd58045b2383be0c3703749cdac3a8</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtproc_1_1_c_progress_manager_gui_comp.html</anchorfile>
-      <anchor>af3cbd1a3bb22e117e0468e1bcf14cf93</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

@@ -77,6 +77,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set suffix of the file.  <a href="#a4c3e3cff5e301dc3e83c329881ed3797"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#aae4f1c33f9ee7aaf645428e52429b570">SetSuffix</a> (const QString &amp;suffix)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get suffix of the file.  <a href="#aae4f1c33f9ee7aaf645428e52429b570"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#a57aa51da12f5cb6274c9eb10c00cf0ca">GetPatternsToRemove</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of text patterns, that must be removed from the output file name.  <a href="#a57aa51da12f5cb6274c9eb10c00cf0ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifpf_1_1_i_file_naming_params.html#aaadfe05a59977f4922ec8530685fc129">SetPatternsToRemove</a> (const QStringList &amp;patternsToRemove)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set list of text patterns, that must be removed from the output file name.  <a href="#aaadfe05a59977f4922ec8530685fc129"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for calculation parameters of the new file name for any file item. </p>
@@ -107,7 +111,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_file_naming_params_8h_source.html#l00024">24</a> of file <a class="el" href="_i_file_naming_params_8h_source.html">IFileNamingParams.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_naming_params_8h_source.html#l00023">23</a> of file <a class="el" href="_i_file_naming_params_8h_source.html">IFileNamingParams.h</a>.</p>
 
 </div>
 </div>
@@ -130,6 +134,27 @@ Public Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifpf_1_1_i_file_naming_params.html#a9087548ed69f852963e21dff496ce872" title="Strategy mode.">OverwriteStrategy</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#a2168341012f006347ec49e3bc99c8446">ifpf::CFileNamingParamsComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57aa51da12f5cb6274c9eb10c00cf0ca"></a><!-- doxytag: member="ifpf::IFileNamingParams::GetPatternsToRemove" ref="a57aa51da12f5cb6274c9eb10c00cf0ca" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QStringList ifpf::IFileNamingParams::GetPatternsToRemove </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get list of text patterns, that must be removed from the output file name. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifpf_1_1_i_file_naming_params.html#aaadfe05a59977f4922ec8530685fc129" title="Set list of text patterns, that must be removed from the output file name.">SetPatternsToRemove</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#a52a469eca75ca2a376e4c8c7b5437fbb">ifpf::CFileNamingParamsComp</a>.</p>
 
 </div>
 </div>
@@ -192,6 +217,29 @@ Public Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifpf_1_1_i_file_naming_params.html#a9087548ed69f852963e21dff496ce872" title="Strategy mode.">OverwriteStrategy</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#ae031f4c1213993fc4dd66b8062cca0ab">ifpf::CFileNamingParamsComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaadfe05a59977f4922ec8530685fc129"></a><!-- doxytag: member="ifpf::IFileNamingParams::SetPatternsToRemove" ref="aaadfe05a59977f4922ec8530685fc129" args="(const QStringList &amp;patternsToRemove)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ifpf::IFileNamingParams::SetPatternsToRemove </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>patternsToRemove</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set list of text patterns, that must be removed from the output file name. </p>
+<p>For example, the file name <code>foo_some.txt</code> will be transformed into <code>foo.txt</code> if <code>_some</code> pattern is set. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifpf_1_1_i_file_naming_params.html#a57aa51da12f5cb6274c9eb10c00cf0ca" title="Get list of text patterns, that must be removed from the output file name.">GetPatternsToRemove</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classifpf_1_1_c_file_naming_params_comp.html#ae029b35a340435ff98e163391579d675">ifpf::CFileNamingParamsComp</a>.</p>
 
 </div>
 </div>

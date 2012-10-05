@@ -20,36 +20,37 @@
 ********************************************************************************/
 
 
-#ifndef iprm_CSelectionDelegatorComp_included
-#define iprm_CSelectionDelegatorComp_included
+#ifndef ibase_CObjectSynchronizerComp_included
+#define ibase_CObjectSynchronizerComp_included
 
 
 #include "icomp/CComponentBase.h"
 
 #include "imod/CSingleModelObserverBase.h"
 
-#include "iprm/ISelectionParam.h"
+#include "istd/IChangeable.h"
 
 
-namespace iprm
+namespace ibase
 {
 
 
 /**
-	Component for synchronization of a list of selections.
-	
+	Component for synchronization between some master data object and its "slaves".
+	On component initialization the slave objects are initialized with data of "master" object.
+	On each change of the "master" data, the slave objects will be automatically synchronized.
 */
-class CSelectionDelegatorComp:
+class CObjectSynchronizerComp:
 			public icomp::CComponentBase,
 			protected imod::CSingleModelObserverBase
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
 
-	I_BEGIN_COMPONENT(CSelectionDelegatorComp);
-		I_ASSIGN(m_sourceSelectionCompPtr, "SourceSelection", "Source selection", true, "SourceSelection");
-		I_ASSIGN_TO(m_sourceSelectionModelCompPtr, m_sourceSelectionCompPtr, true);
-		I_ASSIGN_MULTI_0(m_slaveSelectionsCompPtr, "SlaveSelections", "List of slave selection components", true);		
+	I_BEGIN_COMPONENT(CObjectSynchronizerComp);
+		I_ASSIGN(m_referenceObjectCompPtr, "ReferenceObject", "Reference data object", true, "ReferenceObject");
+		I_ASSIGN_TO(m_referenceObjectModelCompPtr, m_referenceObjectCompPtr, true);
+		I_ASSIGN_MULTI_0(m_slaveObjectsCompPtr, "SlaveObjects", "The list of object which will be hold synchronized with reference object", true);		
 	I_END_COMPONENT;
 	
 protected:
@@ -61,15 +62,15 @@ protected:
 	virtual void OnComponentDestroyed();
 
 private:
-	I_REF(iprm::ISelectionParam, m_sourceSelectionCompPtr);
-	I_REF(imod::IModel, m_sourceSelectionModelCompPtr);
-	I_MULTIREF(iprm::ISelectionParam, m_slaveSelectionsCompPtr);
+	I_REF(istd::IChangeable, m_referenceObjectCompPtr);
+	I_REF(imod::IModel, m_referenceObjectModelCompPtr);
+	I_MULTIREF(istd::IChangeable, m_slaveObjectsCompPtr);
 };
 
 
-} // namespace iprm
+} // namespace ibase
 
 
-#endif // !iprm_CSelectionDelegatorComp_included
+#endif // !ibase_CObjectSynchronizerComp_included
 
 
