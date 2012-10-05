@@ -173,10 +173,6 @@ void TViewExtenderCompBase<Base>::AddItemsToScene(IViewProvider* providerPtr, in
 		}
 	}
 
-	if (flags & SF_DIRECT){
-		UpdateViewCalibration(viewPtr);
-	}
-
 	if (showSlaveShapes && m_slaveExtenderCompPtr.IsValid()){
 		m_slaveExtenderCompPtr->AddItemsToScene(providerPtr, (flags | SF_BACKGROUND) & ~SF_DIRECT);
 
@@ -184,6 +180,10 @@ void TViewExtenderCompBase<Base>::AddItemsToScene(IViewProvider* providerPtr, in
 	}
 	else{
 		m_isSlaveShown = false;
+	}
+
+	if (flags & SF_DIRECT){
+		UpdateViewCalibration(viewPtr);
 	}
 }
 
@@ -303,7 +303,7 @@ void TViewExtenderCompBase<Base>::UpdateViewCalibration(iview::IShapeView* viewP
 		i2d::CAffine2d logToViewTransform;
 
 		if (viewCalibrationPtr != NULL){
-			viewCalibrationPtr->GetLocalInvTransform(i2d::CVector2d(0, 0), logToViewTransform);
+			viewCalibrationPtr->GetLocalTransform(i2d::CVector2d(0, 0), logToViewTransform);
 		}
 		else{
 			logToViewTransform.Reset();

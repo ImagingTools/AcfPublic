@@ -33,6 +33,12 @@ CObject2dBase::CObject2dBase()
 }
 
 
+CObject2dBase::CObject2dBase(const CObject2dBase& object2d)
+:	m_calibrationPtr(object2d.m_calibrationPtr)
+{
+}
+
+
 void CObject2dBase::SetCalibration(const ITransformation2d* calibrationPtr)
 {
 	m_calibrationPtr = calibrationPtr;

@@ -93,7 +93,7 @@ void CComponentBase::OnComponentDestroyed()
 }
 
 
-// static methods
+// static protected methods
 
 const icomp::IRealComponentStaticInfo& CComponentBase::InitStaticInfo(IComponent* componentPtr)
 {

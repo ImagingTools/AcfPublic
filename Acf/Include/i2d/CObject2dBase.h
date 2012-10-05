@@ -40,6 +40,7 @@ class CObject2dBase: virtual public IObject2d
 {
 public:
 	CObject2dBase();
+	CObject2dBase(const CObject2dBase& object2d);
 
 	/**
 		Set calibration of this object.

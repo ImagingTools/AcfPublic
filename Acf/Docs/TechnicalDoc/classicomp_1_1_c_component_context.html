@@ -33,6 +33,7 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">icomp::CComponentContext Class Reference</div>  </div>
@@ -74,6 +75,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to parent component context.  <a href="#af74fee5cbfd4ee48283b18c8102fa1fc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#af4bfeff376a73676c94bb238810800d7">GetAttribute</a> (const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get attribute using its ID.  <a href="#af4bfeff376a73676c94bb238810800d7"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#ae64dfff260e096c6f203d25f6e8dccad">GetHierarchyAddress</a> (const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *contextPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get address of this component identifying it in component topology hierarchy.  <a href="#ae64dfff260e096c6f203d25f6e8dccad"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#a88f5475fc6ec59d4729f8f256b363b14">CalcAttributeInfo</a> (const QByteArray &amp;attributeId, <a class="el" href="structicomp_1_1_c_component_context_1_1_attribute_info.html">AttributeInfo</a> &amp;result) const </td></tr>
@@ -226,6 +231,27 @@ Protected Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="classicomp_1_1_i_component_context.html#ac5ba6c38c0398be762b0c7b2e1b04e33">icomp::IComponentContext</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_component_clone_wrap_8h_source.html#l00027">icomp::TComponentCloneWrap&lt; BaseClass &gt;::CloneMe()</a>, and <a class="el" href="_t_logger_comp_wrap_8h_source.html#l00082">ibase::TLoggerCompWrap&lt; Base &gt;::DecorateMessage()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae64dfff260e096c6f203d25f6e8dccad"></a><!-- doxytag: member="icomp::CComponentContext::GetHierarchyAddress" ref="ae64dfff260e096c6f203d25f6e8dccad" args="(const IComponentContext *contextPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QByteArray icomp::CComponentContext::GetHierarchyAddress </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td>
+          <td class="paramname"><em>contextPtr</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get address of this component identifying it in component topology hierarchy. </p>
+
+<p>Referenced by <a class="el" href="_t_attribute_member_8h_source.html#l00085">icomp::TAttributeMemberBase&lt; Attribute &gt;::Init()</a>.</p>
 
 </div>
 </div>

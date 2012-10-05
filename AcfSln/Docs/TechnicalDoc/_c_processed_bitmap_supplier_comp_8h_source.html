@@ -57,43 +57,40 @@
 <a name="l00034"></a>00034               <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a6ddc62f438e357669453ca2d2a22e68d">I_ASSIGN_TO</a>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, <span class="keyword">false</span>);
 <a name="l00035"></a>00035               <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a6ddc62f438e357669453ca2d2a22e68d">I_ASSIGN_TO</a>(m_calibrationProviderCompPtr, m_bitmapProviderCompPtr, <span class="keyword">false</span>);
 <a name="l00036"></a>00036               I_ASSIGN(m_imageProcessorCompPtr, <span class="stringliteral">&quot;BitmapProcessor&quot;</span>, <span class="stringliteral">&quot;Bitmap conversion processor (takes bitmap as input and output)&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapProcessor&quot;</span>);
-<a name="l00037"></a>00037               I_ASSIGN(m_workingLogTransformCompPtr, <span class="stringliteral">&quot;WorkingLogTransform&quot;</span>, <span class="stringliteral">&quot;Transformation object will be used as processor output&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;WorkingLogTransform&quot;</span>);
-<a name="l00038"></a>00038               I_ASSIGN(m_defaultLogTransformCompPtr, <span class="stringliteral">&quot;DefaultLogTransform&quot;</span>, <span class="stringliteral">&quot;Default transformation used to calculate logical coordinates&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DefaultLogTransform&quot;</span>);
-<a name="l00039"></a>00039        I_END_COMPONENT;
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keyword">protected</span>:
-<a name="l00042"></a>00042        <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#ae30a377d05d1f6711b35fe9fddbdf1d4">EnsureBitmapCreated</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (iipr::IBitmapProvider)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a4688ddf6927eaf785b7297c8acadaf9e" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a54a0ca0953038fc07b9ce2e6d2729f1f">GetCalibration</a>() <span class="keyword">const</span>;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a857ccf41fffe37d31452115c0a0b77fa">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a81741a268acf9a5682ee358f508b4746">OnComponentCreated</a>();
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">private</span>:
-<a name="l00057"></a>00057        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
-<a name="l00060"></a>00060        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
-<a name="l00061"></a>00061        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
-<a name="l00062"></a>00062        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>, m_imageProcessorCompPtr);
-<a name="l00063"></a>00063        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>, m_workingLogTransformCompPtr);
-<a name="l00064"></a>00064        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>, m_defaultLogTransformCompPtr);
-<a name="l00065"></a>00065 };
+<a name="l00037"></a>00037        I_END_COMPONENT;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">protected</span>:
+<a name="l00040"></a>00040        <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#ae30a377d05d1f6711b35fe9fddbdf1d4">EnsureBitmapCreated</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042        <span class="comment">// reimplemented (iipr::IBitmapProvider)</span>
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a4688ddf6927eaf785b7297c8acadaf9e" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a54a0ca0953038fc07b9ce2e6d2729f1f">GetCalibration</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a857ccf41fffe37d31452115c0a0b77fa">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a81741a268acf9a5682ee358f508b4746">OnComponentCreated</a>();
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="keyword">private</span>:
+<a name="l00055"></a>00055        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
+<a name="l00058"></a>00058        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
+<a name="l00059"></a>00059        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
+<a name="l00060"></a>00060        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>, m_imageProcessorCompPtr);
+<a name="l00061"></a>00061        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>, m_defaultCalibrationCompPtr);
+<a name="l00062"></a>00062 };
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 } <span class="comment">// namespace iipr</span>
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068 } <span class="comment">// namespace iipr</span>
-<a name="l00069"></a>00069 
+<a name="l00068"></a>00068 <span class="preprocessor">#endif // !iipr_CProcessedBitmapSupplierComp_included</span>
+<a name="l00069"></a>00069 <span class="preprocessor"></span>
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071 <span class="preprocessor">#endif // !iipr_CProcessedBitmapSupplierComp_included</span>
-<a name="l00072"></a>00072 <span class="preprocessor"></span>
-<a name="l00073"></a>00073 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

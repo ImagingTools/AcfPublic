@@ -8372,6 +8372,13 @@
       <anchor>ab00780b19a69d586c8d7e6ea37e7df3d</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CObject2dBase</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a016af1dc4f10d78f5eab57fe5b040350</anchor>
+      <arglist>(const CObject2dBase &amp;object2d)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetCalibration</name>
@@ -19916,6 +19923,13 @@
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
       <anchor>af4bfeff376a73676c94bb238810800d7</anchor>
       <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetHierarchyAddress</name>
+      <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
+      <anchor>ae64dfff260e096c6f203d25f6e8dccad</anchor>
+      <arglist>(const IComponentContext *contextPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>

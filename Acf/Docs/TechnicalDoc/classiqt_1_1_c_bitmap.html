@@ -83,7 +83,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bitmap snap for the data object <code>data</code>.  <a href="#acd10f15b8f3e7fd0ba71905053450dac"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a9b54d8985735b23efaaf7e97be068e4c">GetCalibration</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a coordinate system to a logical one.  <a href="#a9b54d8985735b23efaaf7e97be068e4c"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a logical coordinate system to physical one.  <a href="#a9b54d8985735b23efaaf7e97be068e4c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#a865905d7dc02a2fdc5a65f2c6ff182e9">IsFormatSupported</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the pixel format is supported by the bitmap implementation.  <a href="#a865905d7dc02a2fdc5a65f2c6ff182e9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_bitmap.html#ab2b8a54ff3a7f546e35a22c259c79ba3">GetPixelFormat</a> () const </td></tr>
@@ -415,7 +415,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get access to transformation object, which transforms a coordinate system to a logical one. </p>
+<p>Get access to transformation object, which transforms a logical coordinate system to physical one. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to transformation if it is accessible, or NULL. </dd></dl>
 
 <p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
