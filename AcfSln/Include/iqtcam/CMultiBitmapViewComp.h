@@ -71,9 +71,12 @@ public:
 		I_ASSIGN_TO(m_informationModelsCompPtr, m_informationProvidersCompPtr, true);
 		I_ASSIGN_MULTI_0(m_viewExtendersCompPtr, "ViewExtenders", "View extenders", false);
 		I_ASSIGN(m_viewLabelPrefixAttrPtr, "ViewLabelPrefix", "Prefix used to title the single bitmap view", true, "Image");
+		I_ASSIGN(m_showStatusLabelAttrPtr, "ShowStatusLabel", "Makes status label visible or not", false, false);
 	I_END_COMPONENT;
 
 protected:
+	static QIcon GetCategoryIcon(istd::IInformationProvider::InformationCategory category);
+
 	// reimplemented (imod::CMultiModelDispatcherBase)
 	virtual void OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr);
 
@@ -127,6 +130,7 @@ private:
 	I_MULTIREF(imod::IModel, m_informationModelsCompPtr);
 	I_MULTIREF(iqt2d::IViewExtender, m_viewExtendersCompPtr);
 	I_ATTR(QString, m_viewLabelPrefixAttrPtr);
+	I_ATTR(bool, m_showStatusLabelAttrPtr);
 	
 	int m_rowCount;
 	int m_columnCount;
