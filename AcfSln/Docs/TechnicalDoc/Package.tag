@@ -4374,6 +4374,13 @@
       <anchor>ae39027385cb4dd7b787db097bc9c7766</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a1dfec64cedacf82fae78846a74076f13</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>ifileproc</name>
@@ -16543,10 +16550,10 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_MessageList_itemClicked</name>
+      <name>on_MessageList_itemSelectionChanged</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ad312e6ba1915406a73d9b75b30a92443</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
+      <anchor>a814177456ea9b0b8f39209544c592ffa</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
