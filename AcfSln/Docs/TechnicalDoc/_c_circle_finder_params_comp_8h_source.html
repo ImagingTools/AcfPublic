@@ -28,7 +28,7 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iipr_CCircleFinderParamsComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_circle_finder_params_8h.html">iipr/CCircleFinderParams.h</a>&quot;</span>
 <a name="l00008"></a>00008 
@@ -40,10 +40,10 @@
 <a name="l00014"></a><a class="code" href="classiipr_1_1_c_circle_finder_params_comp.html">00014</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_circle_finder_params_comp.html">CCircleFinderParamsComp</a>: <span class="keyword">public</span> icomp::CComponentBase, <span class="keyword">public</span> iipr::<a class="code" href="classiipr_1_1_c_circle_finder_params.html">CCircleFinderParams</a>
 <a name="l00015"></a>00015 {
 <a name="l00016"></a>00016 <span class="keyword">public</span>:
-<a name="l00017"></a><a class="code" href="classiipr_1_1_c_circle_finder_params_comp.html#ada88e590e126e771bba1b6274a709afa">00017</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiipr_1_1_c_circle_finder_params_comp.html#ada88e590e126e771bba1b6274a709afa">BaseClass</a>;
+<a name="l00017"></a><a class="code" href="classiipr_1_1_c_circle_finder_params_comp.html#ada88e590e126e771bba1b6274a709afa">00017</a>        <span class="keyword">typedef</span> icomp::CComponentBase <a class="code" href="classiipr_1_1_c_circle_finder_params_comp.html#ada88e590e126e771bba1b6274a709afa">BaseClass</a>;
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_circle_finder_params_comp.html">CCircleFinderParamsComp</a>);
-<a name="l00020"></a>00020               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
+<a name="l00020"></a>00020               I_REGISTER_INTERFACE(iser::ISerializable);
 <a name="l00021"></a>00021               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_circle_finder_params.html" title="Interface for the circle finder parameter.">iipr::ICircleFinderParams</a>);
 <a name="l00022"></a>00022               I_ASSIGN(m_isOutlierEliminationEnabledAttrPtr, <span class="stringliteral">&quot;OutlierEliminationEnabled&quot;</span>, <span class="stringliteral">&quot;Enable outliers elimination&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
 <a name="l00023"></a>00023               I_ASSIGN(m_minOutlierDistanceAttrPtr, <span class="stringliteral">&quot;MinOutlierDistance&quot;</span>, <span class="stringliteral">&quot;Minimal outliers distance in pixel&quot;</span>, <span class="keyword">false</span>, 5.0);

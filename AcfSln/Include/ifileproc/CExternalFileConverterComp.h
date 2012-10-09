@@ -1,0 +1,92 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#ifndef ifileproc_CExternalFileConverterComp_included
+#define ifileproc_CExternalFileConverterComp_included
+
+
+// Qt includes
+#include <QtCore/QProcess>
+
+// ACF includes
+#include "ibase/IFileConvertCopy.h"
+#include "ibase/TLoggerCompWrap.h"
+
+#include "iprm/INameParam.h"
+#include "iprm/IFileNameParam.h"
+
+
+namespace ifileproc
+{
+
+
+/**
+	File converter, which uses an external programm to perform the convert action. 
+*/
+class CExternalFileConverterComp:
+			public QObject,
+			public ibase::CLoggerComponentBase,
+			virtual public ibase::IFileConvertCopy
+{
+	Q_OBJECT
+
+public:
+	typedef ibase::CLoggerComponentBase BaseClass;
+
+	I_BEGIN_COMPONENT(CExternalFileConverterComp);
+		I_REGISTER_INTERFACE(ibase::IFileConvertCopy);
+		I_ASSIGN(m_executablePathCompPtr, "ExecutablePath", "Path to the application's binary", true, "ExecutablePath");
+		I_ASSIGN(m_defaultProcessArgumentsAttrPtr, "DefaultProcessArguments", "Application conversion arguments.\nUse $(Input) to specify the input and $(Output) for output file name", false, "$(Input) $(Output)");
+		I_ASSIGN(m_processArgumentsParamsIdAttrPtr, "ProcessArgumentsParamsId", "ID of the command line parameter (given as a INameParam object) in the parameter set", true, "ProcessArgumentsParamsId");
+		I_ASSIGN_MULTI_0(m_additionalArgumentsCompPtr, "AdditionalArguments", "Additional command line arguments", false);
+	I_END_COMPONENT;
+
+	// reimplemented (ibase::IFileConvertCopy)
+	virtual bool ConvertFile(
+				const QString& inputFilePath,
+				const QString& outputFilePath,
+				const iprm::IParamsSet* paramsPtr = NULL) const;
+
+protected:
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated();
+
+private Q_SLOTS:
+	void OnReadyReadStandardError();
+	void OnReadyReadStandardOutput();
+
+private:
+	I_REF(iprm::IFileNameParam, m_executablePathCompPtr);
+	I_ATTR(QString, m_defaultProcessArgumentsAttrPtr);
+	I_ATTR(QByteArray, m_processArgumentsParamsIdAttrPtr);
+	I_MULTIREF(iprm::INameParam, m_additionalArgumentsCompPtr);
+
+	mutable QProcess m_conversionProcess;
+};
+
+
+} // namespace ifileproc
+
+
+#endif // !ifileproc_CExternalFileConverterComp_included
+
+

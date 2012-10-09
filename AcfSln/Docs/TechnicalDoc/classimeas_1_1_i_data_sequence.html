@@ -36,7 +36,7 @@
 <div class="title">imeas::IDataSequence Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="imeas::IDataSequence" --><!-- doxytag: inherits="iser::ISerializable" -->
+<!-- doxytag: class="imeas::IDataSequence" -->
 <p>General definition of sequence contains samples in regular time grid.  
  <a href="classimeas_1_1_i_data_sequence.html#details">More...</a></p>
 
@@ -47,12 +47,9 @@ Inheritance diagram for imeas::IDataSequence:</div>
  <div class="center">
   <img src="classimeas_1_1_i_data_sequence.png" usemap="#imeas::IDataSequence_map" alt=""/>
   <map id="imeas::IDataSequence_map" name="imeas::IDataSequence_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="132,112,386,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="132,56,386,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="132,0,386,24"/>
-<area href="classimeas_1_1_c_general_data_sequence.html" title="General implementation of sample sequence interface IDataSequence." alt="imeas::CGeneralDataSequence" shape="rect" coords="0,224,254,248"/>
-<area href="classimeas_1_1_i_discrete_data_sequence.html" title="General definition of sequence contains discrete sample values in regular time grid." alt="imeas::IDiscreteDataSequence" shape="rect" coords="264,224,518,248"/>
-<area href="classimeas_1_1_t_discrete_data_sequence.html" alt="imeas::TDiscreteDataSequence&lt; Element &gt;" shape="rect" coords="264,280,518,304"/>
+<area href="classimeas_1_1_c_general_data_sequence.html" title="General implementation of sample sequence interface IDataSequence." alt="imeas::CGeneralDataSequence" shape="rect" coords="0,56,254,80"/>
+<area href="classimeas_1_1_i_discrete_data_sequence.html" title="General definition of sequence contains discrete sample values in regular time grid." alt="imeas::IDiscreteDataSequence" shape="rect" coords="264,56,518,80"/>
+<area href="classimeas_1_1_t_discrete_data_sequence.html" alt="imeas::TDiscreteDataSequence&lt; Element &gt;" shape="rect" coords="264,112,518,136"/>
 </map>
  </div></div>
 
@@ -62,7 +59,7 @@ Inheritance diagram for imeas::IDataSequence:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_data_sequence.html#a488f10d1c0ae0619cca612d177d7dc43">CreateSequence</a> (int samplesCount, int channelsCount=1)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence with specified number of samples, channels and sample depth.  <a href="#a488f10d1c0ae0619cca612d177d7dc43"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_data_sequence.html#a901e49a1803d67c0bce2fdbed259bcf2">CreateSequenceWithInfo</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_data_sequence.html#a901e49a1803d67c0bce2fdbed259bcf2">CreateSequenceWithInfo</a> (const istd::TTransPtr&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create sequence and set the info object.  <a href="#a901e49a1803d67c0bce2fdbed259bcf2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_data_sequence.html#ad7e156a46448191b4d7401ebe6e2b4fd">GetSequenceInfo</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get additional information about this sequence.  <a href="#ad7e156a46448191b4d7401ebe6e2b4fd"></a><br/></td></tr>
@@ -131,7 +128,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool imeas::IDataSequence::CreateSequenceWithInfo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const istd::TTransPtr&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>infoPtr</em>, </td>
         </tr>
         <tr>

@@ -32,7 +32,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QString&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;iser/ISerializable.h&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="keyword">namespace </span>iauth
@@ -60,7 +60,7 @@
 <a name="l00059"></a>00059        <span class="keywordtype">void</span> <a class="code" href="classiauth_1_1_c_user.html#a21be7bf74a1bdad9988f5e8c031c6641" title="Set password to be reseted.">ResetPassword</a>();
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00062"></a>00062        <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_c_user.html#a9ec2abee1d9b4c2bdc0b34fbf1aa9606">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00062"></a>00062        <span class="keywordtype">bool</span> <a class="code" href="classiauth_1_1_c_user.html#a9ec2abee1d9b4c2bdc0b34fbf1aa9606">Serialize</a>(iser::IArchive&amp; archive);
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="keyword">private</span>:
 <a name="l00065"></a>00065        QString m_userName;

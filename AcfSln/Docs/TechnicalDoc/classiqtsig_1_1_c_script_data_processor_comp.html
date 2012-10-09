@@ -38,7 +38,7 @@
 <div class="title">iqtsig::CScriptDataProcessorComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtsig::CScriptDataProcessorComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,iproc::TSyncProcessorWrap" -->
+<!-- doxytag: class="iqtsig::CScriptDataProcessorComp" --><!-- doxytag: inherits="ibase::CLoggerComponentBase,iproc::TSyncProcessorWrap" -->
 <p>Processor creating some data sequence (sample) using user defined script.  
  <a href="classiqtsig_1_1_c_script_data_processor_comp.html#details">More...</a></p>
 
@@ -49,15 +49,8 @@ Inheritance diagram for iqtsig::CScriptDataProcessorComp:</div>
  <div class="center">
   <img src="classiqtsig_1_1_c_script_data_processor_comp.png" usemap="#iqtsig::CScriptDataProcessorComp_map" alt=""/>
   <map id="iqtsig::CScriptDataProcessorComp_map" name="iqtsig::CScriptDataProcessorComp_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="266,168,522,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap&lt; class &gt;" shape="rect" coords="532,168,788,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="266,112,522,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="532,112,788,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,256,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_loggable.html" alt="ibase::ILoggable" shape="rect" coords="266,56,522,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html" alt="istd::ILogger" shape="rect" coords="532,56,788,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="266,0,522,24"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="532,0,788,24"/>
+<area href="classibase_1_1_c_logger_component_base.html" alt="CLoggerComponentBase" shape="rect" coords="0,0,256,24"/>
+<area href="classiproc_1_1_t_sync_processor_wrap.html" title="Wrapper of iproc::IProcessor for simple synchrone processor implementations." alt="iproc::TSyncProcessorWrap&lt; Base &gt;" shape="rect" coords="266,0,522,24"/>
 </map>
  </div></div>
 
@@ -65,15 +58,15 @@ Inheritance diagram for iqtsig::CScriptDataProcessorComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8468ba0584c1a8101e02aa735c550b0e">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef ibase::CLoggerComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8468ba0584c1a8101e02aa735c550b0e">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#abdb15e7bca5de76c4ad23358b0dda149">CScriptDataProcessorComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#aa8eb6c524209cd20317be01fe8a777f6">DoProcessing</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a> *progressManagerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#abc7bd09ca1f2ca6aa543eb944c5bd833">GetIntervalRange</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#ad281b9d9964a03f3998d383751ee0e06">DoProcessing</a> (const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual istd::CRange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#abc7bd09ca1f2ca6aa543eb944c5bd833">GetIntervalRange</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#a5264292f917d63866788b35d19d06da4">IsSamplingModeSupported</a> (int mode) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#acf837e72ccb12d66dcbd31583fbff654">GetValueRange</a> (bool forInput=true, bool forOutput=true, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsSetPtr=0) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8bb49c30779938f1f181e6a0a1640d9b">GetMaximalSamplesCount</a> (bool forInput=true, bool forOutput=true, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsSetPtr=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual istd::CRange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#acf837e72ccb12d66dcbd31583fbff654">GetValueRange</a> (bool forInput=true, bool forOutput=true, const iprm::IParamsSet *paramsSetPtr=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8bb49c30779938f1f181e6a0a1640d9b">GetMaximalSamplesCount</a> (bool forInput=true, bool forOutput=true, const iprm::IParamsSet *paramsSetPtr=0) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#a34bdaad5171c27cca12366a81947adfe">OnComponentCreated</a> ()</td></tr>
@@ -94,13 +87,13 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8468ba0584c1a8101e02aa735c550b0e">iqtsig::CScriptDataProcessorComp::BaseClass</a></td>
+          <td class="memname">typedef ibase::CLoggerComponentBase <a class="el" href="classiqtsig_1_1_c_script_data_processor_comp.html#a8468ba0584c1a8101e02aa735c550b0e">iqtsig::CScriptDataProcessorComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a3b21fc424b686e6bcf4537b75d89adf3">iproc::TSyncProcessorWrap&lt; Base &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_script_data_processor_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_script_data_processor_comp_8h_source.html">CScriptDataProcessorComp.h</a>.</p>
 
@@ -124,33 +117,33 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aa8eb6c524209cd20317be01fe8a777f6"></a><!-- doxytag: member="iqtsig::CScriptDataProcessorComp::DoProcessing" ref="aa8eb6c524209cd20317be01fe8a777f6" args="(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)" -->
+<a class="anchor" id="ad281b9d9964a03f3998d383751ee0e06"></a><!-- doxytag: member="iqtsig::CScriptDataProcessorComp::DoProcessing" ref="ad281b9d9964a03f3998d383751ee0e06" args="(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iqtsig::CScriptDataProcessorComp::DoProcessing </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
+          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
           <td class="paramname"><em>paramsPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramtype">const istd::IPolymorphic *&#160;</td>
           <td class="paramname"><em>inputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
+          <td class="paramtype">istd::IChangeable *&#160;</td>
           <td class="paramname"><em>outputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a> *&#160;</td>
-          <td class="paramname"><em>progressManagerPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+          <td class="paramtype">ibase::IProgressManager *&#160;</td>
+          <td class="paramname"><em>progressManagerPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -168,7 +161,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> iqtsig::CScriptDataProcessorComp::GetIntervalRange </td>
+          <td class="memname">virtual istd::CRange iqtsig::CScriptDataProcessorComp::GetIntervalRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -198,7 +191,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
+          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
           <td class="paramname"><em>paramsSetPtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -217,7 +210,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> iqtsig::CScriptDataProcessorComp::GetValueRange </td>
+          <td class="memname">virtual istd::CRange iqtsig::CScriptDataProcessorComp::GetValueRange </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>forInput</em> = <code>true</code>, </td>
@@ -231,7 +224,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
+          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
           <td class="paramname"><em>paramsSetPtr</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -275,8 +268,6 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 </div>
 </div>

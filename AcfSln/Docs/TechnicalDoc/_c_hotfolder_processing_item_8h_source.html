@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/ifpf/CHotfolderProcessingItem.h Source File</title>
+<title>Include/ihotf/CHotfolderProcessingItem.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,47 +21,47 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/ifpf/CHotfolderProcessingItem.h</div>  </div>
+<div class="title">Include/ihotf/CHotfolderProcessingItem.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_hotfolder_processing_item_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ifpf_CHotfolderProcessingItem_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ifpf_CHotfolderProcessingItem_included</span>
+<a href="_c_hotfolder_processing_item_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ihotf_CHotfolderProcessingItem_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ihotf_CHotfolderProcessingItem_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QDateTime&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;imod/TModelWrap.h&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// AcfSln includes</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_hotfolder_processing_item_8h.html">ifpf/IHotfolderProcessingItem.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_hotfolder_processing_item_8h.html">ihotf/IHotfolderProcessingItem.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="keyword">namespace </span>ifpf
+<a name="l00015"></a>00015 <span class="keyword">namespace </span>ihotf
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00022"></a><a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html">00022</a> <span class="keyword">class </span><a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">CHotfolderProcessingItem</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> ifpf::<a class="code" href="classifpf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">IHotfolderProcessingItem</a>
+<a name="l00022"></a><a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html">00022</a> <span class="keyword">class </span><a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">CHotfolderProcessingItem</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> ihotf::<a class="code" href="classihotf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">IHotfolderProcessingItem</a>
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00025"></a>00025        <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a5f7313e6332ce0be38a4b0b27ed386ef">CHotfolderProcessingItem</a>();
+<a name="l00025"></a>00025        <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#ad19b8dc46f3b25fc56c4e57555ba6632">CHotfolderProcessingItem</a>();
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027        <span class="comment">// reimplemented (ifpf::IHotfolderProcessingItem)</span>
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> QByteArray <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a424b49070110413e1ee7632905f11ab6" title="Return the unique identifier for a processing item.">GetItemUuid</a>() <span class="keyword">const</span>;
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#aef870897ca5480a8fbbc2106757e3f5c" title="Get the processing state for the item.">GetProcessingState</a>() <span class="keyword">const</span>;
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a5e92b99831f8d7a04209a0a812f02460" title="Set the processing state for the item.">SetProcessingState</a>(<span class="keywordtype">int</span> processingState);
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> QString <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a864e38503a96049e8f21bc8c20e8d784" title="Get file path, of the file which must be processed.">GetInputFile</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a153079be88e81d4a3e37422b44a2f39d" title="Set input file path.">SetInputFile</a>(<span class="keyword">const</span> QString&amp; inputFile);
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> QString <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#add78233e2ae3b81fe2062a05af213eb9" title="Get file path of the processing output.">GetOutputFile</a>() <span class="keyword">const</span>;
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#ae7a577197ab6053bfaa1cc89c8afdb52" title="Set file path of the processing output.">SetOutputFile</a>(<span class="keyword">const</span> QString&amp; outputFile);
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#ac39a2433609c2344720e6564af96d7ff" title="Get processing time.">GetProcessingTime</a>() <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a92c2daee7e69c4d3f42e39379ffa7bf0" title="Set processing time.">SetProcessingTime</a>(<span class="keywordtype">double</span> processingTime);
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> QDateTime&amp; <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#a033daa9af7dc7bc673c58e62c6b224bb" title="Get start time of the job.">GetStartTime</a>() <span class="keyword">const</span>;
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#ada35cc61ff5790ff16764b7bbe785897" title="Set start time of the job.">SetStartTime</a>(<span class="keyword">const</span> QDateTime&amp; startTime);
+<a name="l00027"></a>00027        <span class="comment">// reimplemented (ihotf::IHotfolderProcessingItem)</span>
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> QByteArray <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#afe978e79eac7fe10c505fd008c799647" title="Return the unique identifier for a processing item.">GetItemUuid</a>() <span class="keyword">const</span>;
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#a87f5927f0e4efffe3ee49a411b903abd" title="Get the processing state for the item.">GetProcessingState</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#a4930c8e07363a5b3591f499912e5a624" title="Set the processing state for the item.">SetProcessingState</a>(<span class="keywordtype">int</span> processingState);
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> QString <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#a43ed45ee9cffc592bff8b50e4d03ee3d" title="Get file path, of the file which must be processed.">GetInputFile</a>() <span class="keyword">const</span>;
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#a0769ecc3dc2ed5624fb8b96c300eeefb" title="Set input file path.">SetInputFile</a>(<span class="keyword">const</span> QString&amp; inputFile);
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> QString <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#ae1cd08b61d8d5b28432103c8913894ef" title="Get file path of the processing output.">GetOutputFile</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#aee3c4b9e548d2edee47bffafdfdf1da7" title="Set file path of the processing output.">SetOutputFile</a>(<span class="keyword">const</span> QString&amp; outputFile);
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#a91356525dc212b207bc5ace382629a81" title="Get processing time.">GetProcessingTime</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#af79f5e2e022327f05fa97354651ef7db" title="Set processing time.">SetProcessingTime</a>(<span class="keywordtype">double</span> processingTime);
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> QDateTime&amp; <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#ad359cf3da9c8965d5457cf6edb1ab8bf" title="Get start time of the job.">GetStartTime</a>() <span class="keyword">const</span>;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#a358771922c81cf6eaafe067f7fd145be" title="Set start time of the job.">SetStartTime</a>(<span class="keyword">const</span> QDateTime&amp; startTime);
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifpf_1_1_c_hotfolder_processing_item.html#afd559116e64604ee426497a53d89d09b">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html#a4a5b7ceaee00dece3594f289b3912453">Serialize</a>(iser::IArchive&amp; archive);
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 <span class="keyword">private</span>:
 <a name="l00044"></a>00044        QString m_inputFile;
@@ -74,10 +74,10 @@
 <a name="l00051"></a>00051 };
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 } <span class="comment">// namespace ifpf</span>
+<a name="l00054"></a>00054 } <span class="comment">// namespace ihotf</span>
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="preprocessor">#endif // !ifpf_CHotfolderProcessingItem_included</span>
+<a name="l00057"></a>00057 <span class="preprocessor">#endif // !ihotf_CHotfolderProcessingItem_included</span>
 <a name="l00058"></a>00058 <span class="preprocessor"></span>
 <a name="l00059"></a>00059 
 </pre></div></div>

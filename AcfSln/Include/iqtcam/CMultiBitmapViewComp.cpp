@@ -34,32 +34,6 @@ namespace iqtcam
 {
 
 
-// protected methods
-
-QIcon CMultiBitmapViewComp::GetCategoryIcon(istd::IInformationProvider::InformationCategory category)
-{
-	static QIcon defaultIcon(":/Icons/StateUnknown.svg");
-	static QIcon infoIcon(":/Icons/StateOk.svg");
-	static QIcon warningIcon(":/Icons/StateWarning.svg");
-	static QIcon errorIcon(":/Icons/StateInvalid.svg");
-
-	switch (category){
-	case istd::IInformationProvider::IC_INFO:
-		return infoIcon;
-
-	case istd::IInformationProvider::IC_WARNING:
-		return warningIcon;
-
-	case istd::IInformationProvider::IC_ERROR:
-	case istd::IInformationProvider::IC_CRITICAL:
-		return errorIcon;
-
-	default:
-		return defaultIcon;
-	}
-}
-
-
 // reimplemented (imod::CMultiModelDispatcherBase)
 
 void CMultiBitmapViewComp::OnModelChanged(int modelId, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
@@ -71,12 +45,8 @@ void CMultiBitmapViewComp::OnModelChanged(int modelId, int /*changeFlags*/, istd
 		return;
 	}
 
-	istd::IInformationProvider::InformationCategory resultCategory = m_informationProvidersCompPtr[index]->GetInformationCategory();
-
 	CSingleView* viewPtr = m_views.at(index);
-	viewPtr->SetInspectionResult(resultCategory);
-
-	SetStatusIcon(GetCategoryIcon(resultCategory));
+	viewPtr->SetInspectionResult(m_informationProvidersCompPtr[index]->GetInformationCategory());
 }
 
 
@@ -147,9 +117,7 @@ void CMultiBitmapViewComp::OnGuiCreated()
 				I_ASSERT(modelPtr != NULL);
 				
 				if (RegisterModel(modelPtr, viewIndex)){
-					if (m_showStatusLabelAttrPtr.IsValid()){
-						hasStatusInfo = *m_showStatusLabelAttrPtr;
-					}
+					hasStatusInfo = true;
 				}
 			}
 
@@ -190,8 +158,7 @@ CMultiBitmapViewComp::CSingleView* CMultiBitmapViewComp::CreateView(QWidget* par
 CMultiBitmapViewComp::CSingleView::CSingleView(QWidget* parentPtr, int id, const QString& title)
 :	BaseClass(parentPtr),
 	m_console(this),
-	m_id(id),
-	m_statusLabel(NULL)
+	m_id(id)
 {
 	setTitle(title);
 
@@ -238,10 +205,6 @@ void CMultiBitmapViewComp::CSingleView::Init(bool hasStatusInfo)
 
 void CMultiBitmapViewComp::CSingleView::SetInspectionResult(int result)
 {
-	if (m_statusLabel == NULL){
-		return;
-	}
-
 	static QString s_defaultStyleSheet = "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, "
 		"stop: 0 #ffffff, stop: 0.5 #e0f0ff, stop: 0.51 #d0e0ee, stop: 1 #d0e0ee); "
 		"border: 1px solid #aaaaaa; "

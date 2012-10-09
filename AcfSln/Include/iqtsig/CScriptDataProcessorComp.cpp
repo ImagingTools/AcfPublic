@@ -26,7 +26,7 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 #include "ibase/ITextDocument.h"
-#include "iproc/IProgressManager.h"
+#include "ibase/IProgressManager.h"
 #include "iprm/TParamsPtr.h"
 
 // ACF-Solution includes
@@ -49,7 +49,7 @@ int CScriptDataProcessorComp::DoProcessing(
 			const iprm::IParamsSet* paramsPtr,
 			const istd::IPolymorphic* /*inputPtr*/,
 			istd::IChangeable* outputPtr,
-			iproc::IProgressManager* progressManagerPtr)
+			ibase::IProgressManager* progressManagerPtr)
 {
 	if (outputPtr == NULL){
 		return TS_OK;

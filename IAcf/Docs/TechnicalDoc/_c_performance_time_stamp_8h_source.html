@@ -29,7 +29,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_time_stamp_8h.html">istd/ITimeStamp.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;istd/ITimeStamp.h&quot;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a><a class="code" href="namespaceiwin.html">00009</a> <span class="keyword">namespace </span>iwin
@@ -52,13 +52,13 @@
 <a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#ae3331426035df2167dc3e4fce915cac9">Start</a>(<span class="keywordtype">double</span> elapsedTime = 0);
 <a name="l00032"></a>00032        <span class="keyword">virtual</span> QDateTime <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#a7b0a156c16bf7987d367cc397b39e4d4">GetStartTime</a>() <span class="keyword">const</span>;
 <a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#ad4b4573d41106beb68da8a6c077188c5">GetElapsed</a>() <span class="keyword">const</span>;
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#a50890a4ba7decc909ecb80ef24f6e91c">GetTimeTo</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_time_stamp.html">istd::ITimeStamp</a>&amp; timeStamp) <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#a50890a4ba7decc909ecb80ef24f6e91c">GetTimeTo</a>(<span class="keyword">const</span> istd::ITimeStamp&amp; timeStamp) <span class="keyword">const</span>;
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#a29b68b6a6c474a8ae7fc839e3992983b">WaitTo</a>(<span class="keywordtype">double</span> time) <span class="keyword">const</span>;
 <a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#adf6e3dec35bfc09d0433d5f02f33c428">GetTimerResolution</a>() <span class="keyword">const</span>;
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <span class="comment">// reimplemented (istd::IChangeable)</span>
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#a0cff265f686beed4198272cf47faa5ef">GetSupportedOperations</a>() <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#a31d3a7fc182e65b3f47faae63d663f87">CopyFrom</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwin_1_1_c_performance_time_stamp.html#a31d3a7fc182e65b3f47faae63d663f87">CopyFrom</a>(<span class="keyword">const</span> istd::IChangeable&amp; <span class="keywordtype">object</span>);
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 <span class="keyword">private</span>:
 <a name="l00043"></a>00043        qint64 m_startCounter;

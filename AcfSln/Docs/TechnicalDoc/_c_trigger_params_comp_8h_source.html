@@ -32,14 +32,14 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QVector&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_trigger_constraints_8h.html">isig/ITriggerConstraints.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_trigger_params_8h.html">isig/ITriggerParams.h</a>&quot;</span>
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_selection_param_8h.html">iprm/ISelectionParam.h</a>&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_selection_constraints_8h.html">iprm/ISelectionConstraints.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;iprm/ISelectionParam.h&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;iprm/ISelectionConstraints.h&quot;</span>
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="keyword">namespace </span>isig
@@ -53,14 +53,14 @@
 <a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">protected</span> iprm::ISelectionConstraints
 <a name="l00031"></a>00031 {
 <a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a><a class="code" href="classisig_1_1_c_trigger_params_comp.html#ad16135821778b4f3a13bad5309635a42">00033</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#ad16135821778b4f3a13bad5309635a42">BaseClass</a>;
+<a name="l00033"></a><a class="code" href="classisig_1_1_c_trigger_params_comp.html#ad16135821778b4f3a13bad5309635a42">00033</a>        <span class="keyword">typedef</span> icomp::CComponentBase <a class="code" href="classisig_1_1_c_trigger_params_comp.html#ad16135821778b4f3a13bad5309635a42">BaseClass</a>;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a59a3773c1df8b113b1aadeb86c8ea1e5">CTriggerParamsComp</a>();
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        I_BEGIN_COMPONENT(<a class="code" href="classisig_1_1_c_trigger_params_comp.html" title="Implementation of standard trigger parameters set.">CTriggerParamsComp</a>);
 <a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="code" href="classisig_1_1_i_trigger_params.html" title="Interface for hardware trigger parameters.">isig::ITriggerParams</a>);
-<a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>);
-<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
+<a name="l00039"></a>00039               I_REGISTER_INTERFACE(iprm::ISelectionParam);
+<a name="l00040"></a>00040               I_REGISTER_INTERFACE(iser::ISerializable);
 <a name="l00041"></a>00041               I_ASSIGN(m_triggerConstraintsCompPtr, <span class="stringliteral">&quot;Constraints&quot;</span>, <span class="stringliteral">&quot;Describing allowed parameter state, typically implemented in camera component&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Constraints&quot;</span>);
 <a name="l00042"></a>00042               I_ASSIGN(m_triggerModeAttrPtr, <span class="stringliteral">&quot;TriggerMode&quot;</span>, <span class="stringliteral">&quot;Set trigger mode:\n\t0 - None\n\t1 - Continuous\n\t2 - Rising edge\n\t3 - Falling edge\n\t4 - Positive level\n\t5 - Negative level\n\t6 - Software&quot;</span>, <span class="keyword">true</span>, 0);
 <a name="l00043"></a>00043        I_END_COMPONENT;
@@ -71,13 +71,13 @@
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a670d41fc9ce3033bba4475114b27bb30" title="Set trigger mode.">SetTriggerMode</a>(<span class="keywordtype">int</span> triggerMode);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a419b028561f12b0d90a7009c6d111391">GetSelectionConstraints</a>() <span class="keyword">const</span>;
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keyword">const</span> iprm::ISelectionConstraints* <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a419b028561f12b0d90a7009c6d111391">GetSelectionConstraints</a>() <span class="keyword">const</span>;
 <a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a3a756a7e7b63b071836701cd9218ed79">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#af448b8ed00283d61b8b0085ec27f9042">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>* <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a119dd721625d290b7ee6cee31ca24e59">GetActiveSubselection</a>() <span class="keyword">const</span>;
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> iprm::ISelectionParam* <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a119dd721625d290b7ee6cee31ca24e59">GetActiveSubselection</a>() <span class="keyword">const</span>;
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#ac2ac5146f3ccba17864e9a53d4e00852">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#ac2ac5146f3ccba17864e9a53d4e00852">Serialize</a>(iser::IArchive&amp; archive);
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">protected</span>:
 <a name="l00060"></a>00060        <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a8e715bbb6bbdd3a6cc1554bac9e911fa">InitializeSelectionList</a>();

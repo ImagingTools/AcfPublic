@@ -32,9 +32,9 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QVector&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_smart_ptr_8h.html">istd/TSmartPtr.h</a>&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_opt_del_ptr_8h.html">istd/TOptDelPtr.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_i_sampled_function_8h.html">imath/TISampledFunction.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;istd/TSmartPtr.h&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;istd/TOptDelPtr.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;imath/TISampledFunction.h&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_data_sequence_8h.html">imeas/IDataSequence.h</a>&quot;</span>
 <a name="l00014"></a>00014 
@@ -45,7 +45,7 @@
 <a name="l00019"></a>00019 
 <a name="l00023"></a><a class="code" href="classimeas_1_1_c_general_data_sequence.html">00023</a> <span class="keyword">class </span><a class="code" href="classimeas_1_1_c_general_data_sequence.html" title="General implementation of sample sequence interface IDataSequence.">CGeneralDataSequence</a>:
 <a name="l00024"></a>00024                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">IDataSequence</a>,
-<a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> imath::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceimath.html#a541d89115a4ed133e53f12dbe68096c0">ISampledFunction2d</a>
+<a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> imath::ISampledFunction2d
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
 <a name="l00028"></a>00028        <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a79e2b361e9a6d560528facd68026ac85">CGeneralDataSequence</a>();
@@ -57,7 +57,7 @@
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (imeas::IDataSequence)</span>
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a7d81c3228991066bb926d9d0701f23ab" title="Create container for sample sequence with specified number of samples, channels and sample depth...">CreateSequence</a>(<span class="keywordtype">int</span> samplesCount, <span class="keywordtype">int</span> channelsCount = 1);
 <a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a8a021f5747dd23089fa8c1c827eb3af1" title="Create sequence and set the info object.">CreateSequenceWithInfo</a>(
-<a name="l00037"></a>00037                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr&lt;const IDataSequenceInfo&gt;</a>&amp; infoPtr,
+<a name="l00037"></a>00037                             <span class="keyword">const</span> istd::TTransPtr&lt;const IDataSequenceInfo&gt;&amp; infoPtr,
 <a name="l00038"></a>00038                             <span class="keywordtype">int</span> samplesCount = -1,
 <a name="l00039"></a>00039                             <span class="keywordtype">int</span> channelsCount = -1);
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly.">IDataSequenceInfo</a>* <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a2d7aa2e2c3a732a649f6d68a2d3fa496" title="Get additional information about this sequence.">GetSequenceInfo</a>() <span class="keyword">const</span>;
@@ -69,23 +69,23 @@
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a418b1ef75d3a13cbee6a76cfd79c4c46" title="Set sample value at specified index.">SetSample</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> channel, <span class="keywordtype">double</span> value);
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (imath::ISampledFunction2d)</span>
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a6694c61dbd08da4f072df162c131de20">CreateFunction</a>(<span class="keywordtype">double</span>* dataPtr, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a>&amp; sizes);
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a6694c61dbd08da4f072df162c131de20">CreateFunction</a>(<span class="keywordtype">double</span>* dataPtr, <span class="keyword">const</span> ArgumentType&amp; sizes);
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a6a806df933a68b70d86a53c5335feadf">GetTotalSamplesCount</a>() <span class="keyword">const</span>;
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a490318441721d34ab63eb93fc11f5b67">GetGridSize</a>(<span class="keywordtype">int</span> dimensionIndex) <span class="keyword">const</span>;
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a98df6a08c319a5b0387d9725af62d96f">GetLogicalRange</a>(<span class="keywordtype">int</span> dimensionIndex) <span class="keyword">const</span>;
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a9f1945afcdaa61068332a83916f39f4f">GetResultValueRange</a>(<span class="keywordtype">int</span> dimensionIndex, <span class="keywordtype">int</span> resultDimension = -1) <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> istd::CRange <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a98df6a08c319a5b0387d9725af62d96f">GetLogicalRange</a>(<span class="keywordtype">int</span> dimensionIndex) <span class="keyword">const</span>;
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> istd::CRange <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a9f1945afcdaa61068332a83916f39f4f">GetResultValueRange</a>(<span class="keywordtype">int</span> dimensionIndex, <span class="keywordtype">int</span> resultDimension = -1) <span class="keyword">const</span>;
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (imath::TIMathFunction)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a00f38b7438dbbaf7449a5213cb6e78f7">GetValueAt</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a>&amp; argument, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_vector.html">ResultType</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_vector.html">ResultType</a> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a00f38b7438dbbaf7449a5213cb6e78f7">GetValueAt</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a>&amp; argument) <span class="keyword">const</span>;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a00f38b7438dbbaf7449a5213cb6e78f7">GetValueAt</a>(<span class="keyword">const</span> ArgumentType&amp; argument, ResultType&amp; result) <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> ResultType <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a00f38b7438dbbaf7449a5213cb6e78f7">GetValueAt</a>(<span class="keyword">const</span> ArgumentType&amp; argument) <span class="keyword">const</span>;
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a5b9a737242e540a06763ef9a432550ad">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a5b9a737242e540a06763ef9a432550ad">Serialize</a>(iser::IArchive&amp; archive);
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062        <span class="comment">// reimplemented (istd::IChangeable)</span>
 <a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a8c0119514a46b7abea210ad03e8821c4">GetSupportedOperations</a>() <span class="keyword">const</span>;
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a69367b08243df66471eccff9a050693b">CopyFrom</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a0a4a53ba14c9e9b7915f3c3eb6223ee1">CloneMe</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a69367b08243df66471eccff9a050693b">CopyFrom</a>(<span class="keyword">const</span> istd::IChangeable&amp; <span class="keywordtype">object</span>);
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> istd::IChangeable* <a class="code" href="classimeas_1_1_c_general_data_sequence.html#a0a4a53ba14c9e9b7915f3c3eb6223ee1">CloneMe</a>() <span class="keyword">const</span>;
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 <span class="keyword">private</span>:
 <a name="l00068"></a>00068        <span class="keyword">typedef</span> QVector&lt;double&gt; Samples;
@@ -93,7 +93,7 @@
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071        <span class="keywordtype">int</span> m_channelsCount;
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;const IDataSequenceInfo&gt;</a> m_sequenceInfoPtr;
+<a name="l00073"></a>00073        istd::TSmartPtr&lt;const IDataSequenceInfo&gt; m_sequenceInfoPtr;
 <a name="l00074"></a>00074 };
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 

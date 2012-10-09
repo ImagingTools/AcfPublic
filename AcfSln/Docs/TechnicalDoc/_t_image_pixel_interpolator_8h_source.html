@@ -32,7 +32,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/qmath.h&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html">istd/istd.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;istd/istd.h&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// IACF includes</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_image_interpolation_params_8h.html">iipr/IImageInterpolationParams.h</a>&quot;</span>
@@ -54,7 +54,7 @@
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a><a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#a092e365c0b415ddef7c5c5ad2babac30">00029</a>        <span class="keyword">typedef</span> PixelComponentType <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#a092e365c0b415ddef7c5c5ad2babac30">PixelComponent</a>;
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031        <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#aa205c5f67dcc4fe98c9c29a049c0550d">TImagePixelInterpolator</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; image, <span class="keywordtype">int</span> interpolationMode);
+<a name="l00031"></a>00031        <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#aa205c5f67dcc4fe98c9c29a049c0550d">TImagePixelInterpolator</a>(<span class="keyword">const</span> iimg::IBitmap&amp; image, <span class="keywordtype">int</span> interpolationMode);
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        PixelComponentType <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#af982690722c84baed74f922aa1efd37f">GetInterpolatedValue</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">int</span> componentIndex) <span class="keyword">const</span>;
 <a name="l00034"></a>00034 
@@ -76,13 +76,13 @@
 <a name="l00050"></a>00050 <span class="comment">// public methods</span>
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PixelComponentType&gt;
-<a name="l00053"></a><a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#aa205c5f67dcc4fe98c9c29a049c0550d">00053</a> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#aa205c5f67dcc4fe98c9c29a049c0550d">TImagePixelInterpolator&lt;PixelComponentType&gt;::TImagePixelInterpolator</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; bitmap, <span class="keywordtype">int</span> interpolationMode)
+<a name="l00053"></a><a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#aa205c5f67dcc4fe98c9c29a049c0550d">00053</a> <a class="code" href="classiipr_1_1_t_image_pixel_interpolator.html#aa205c5f67dcc4fe98c9c29a049c0550d">TImagePixelInterpolator&lt;PixelComponentType&gt;::TImagePixelInterpolator</a>(<span class="keyword">const</span> iimg::IBitmap&amp; bitmap, <span class="keywordtype">int</span> interpolationMode)
 <a name="l00054"></a>00054 {
-<a name="l00055"></a>00055        m_imageBufferPtr = (PixelComponentType*)bitmap.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f">GetLinePtr</a>(0);
-<a name="l00056"></a>00056        m_imageLineDifference = bitmap.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a617e61e4de45b35f513c169b41a0c0fb">GetLinesDifference</a>();
-<a name="l00057"></a>00057        m_imageHeight = bitmap.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01">GetImageSize</a>().<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>();
-<a name="l00058"></a>00058        m_imageWidth = bitmap.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01">GetImageSize</a>().<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>();
-<a name="l00059"></a>00059        m_pixelBytesCount = bitmap.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a14b90a702aeadc90850669f4ef81d611">GetPixelBitsCount</a>() / 8;
+<a name="l00055"></a>00055        m_imageBufferPtr = (PixelComponentType*)bitmap.GetLinePtr(0);
+<a name="l00056"></a>00056        m_imageLineDifference = bitmap.GetLinesDifference();
+<a name="l00057"></a>00057        m_imageHeight = bitmap.GetImageSize().GetY();
+<a name="l00058"></a>00058        m_imageWidth = bitmap.GetImageSize().GetX();
+<a name="l00059"></a>00059        m_pixelBytesCount = bitmap.GetPixelBitsCount() / 8;
 <a name="l00060"></a>00060        m_interpolationMode = interpolationMode;
 <a name="l00061"></a>00061        m_maxValue = int(qPow(2.0, <span class="keywordtype">double</span>(<span class="keyword">sizeof</span>(PixelComponentType) * 8)) - 1);
 <a name="l00062"></a>00062 }
@@ -99,7 +99,7 @@
 <a name="l00073"></a>00073                      <span class="keywordflow">return</span> GetBilinearInterpolated(x, y, componentIndex);
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075               <span class="keywordflow">default</span>:
-<a name="l00076"></a>00076                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a5952e0d7281d1ab784531120ea40c9c4">I_CRITICAL</a>();
+<a name="l00076"></a>00076                      I_CRITICAL();
 <a name="l00077"></a>00077        }
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079        <span class="keywordflow">return</span> GetBitmapPixelValue(<span class="keywordtype">int</span>(x), <span class="keywordtype">int</span>(y), componentIndex);

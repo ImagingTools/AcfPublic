@@ -29,7 +29,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_change_notifier_8h.html">istd/TChangeNotifier.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;istd/TChangeNotifier.h&quot;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_simple_numeric_value_8h.html">imeas/CSimpleNumericValue.h</a>&quot;</span>
@@ -54,7 +54,7 @@
 <a name="l00031"></a>00031        <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#aef12a2739f789cde29f56b01944cda48">SetWeight</a>(<span class="keywordtype">double</span> weight);
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">Serialize</a>(iser::IArchive&amp; archive);
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">protected</span>:
 <a name="l00037"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a48120fa2978f81cf33d685fddc69bab9">00037</a>        <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a48120fa2978f81cf33d685fddc69bab9">m_weight</a>;
@@ -87,19 +87,19 @@
 <a name="l00064"></a>00064 <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
-<a name="l00067"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">00067</a> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">TWeightedFeatureWrap&lt;BaseObject&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
+<a name="l00067"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">00067</a> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">TWeightedFeatureWrap&lt;BaseObject&gt;::Serialize</a>(iser::IArchive&amp; archive)
 <a name="l00068"></a>00068 {
-<a name="l00069"></a>00069        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> notifier(archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">IsStoring</a>()? <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
+<a name="l00069"></a>00069        istd::CChangeNotifier notifier(archive.IsStoring()? NULL: <span class="keyword">this</span>);
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073        retVal = retVal &amp;&amp; BaseClass::Serialize(archive);
 <a name="l00074"></a>00074        retVal = retVal &amp;&amp; BaseClass2::Serialize(archive);
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> weightTag(<span class="stringliteral">&quot;Weight&quot;</span>, <span class="stringliteral">&quot;Weight&quot;</span>);
-<a name="l00077"></a>00077        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(weightTag);
-<a name="l00078"></a>00078        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(m_weight);
-<a name="l00079"></a>00079        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(weightTag);
+<a name="l00076"></a>00076        iser::CArchiveTag weightTag(<span class="stringliteral">&quot;Weight&quot;</span>, <span class="stringliteral">&quot;Weight&quot;</span>);
+<a name="l00077"></a>00077        retVal = retVal &amp;&amp; archive.BeginTag(weightTag);
+<a name="l00078"></a>00078        retVal = retVal &amp;&amp; archive.Process(m_weight);
+<a name="l00079"></a>00079        retVal = retVal &amp;&amp; archive.EndTag(weightTag);
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081        <span class="keywordflow">return</span> retVal;
 <a name="l00082"></a>00082 }

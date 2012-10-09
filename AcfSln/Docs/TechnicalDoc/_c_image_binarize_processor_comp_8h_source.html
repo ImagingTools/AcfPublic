@@ -29,8 +29,8 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_8h.html">iimg/IBitmap.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_sync_processor_comp_base_8h.html">iproc/TSyncProcessorCompBase.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;iimg/IBitmap.h&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_t_sync_processor_comp_base_8h.html">iproc/TSyncProcessorCompBase.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_8h.html">imeas/INumericValue.h</a>&quot;</span>
@@ -40,27 +40,27 @@
 <a name="l00014"></a>00014 {
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00020"></a><a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html" title="Processor for image binarization using static threshold.">CImageBinarizeProcessorComp</a>: <span class="keyword">public</span> iproc::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceiproc.html#a65c76f6b4ad2de54dfdcfb737b246473">CSyncProcessorCompBase</a>
+<a name="l00020"></a><a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html" title="Processor for image binarization using static threshold.">CImageBinarizeProcessorComp</a>: <span class="keyword">public</span> iproc::<a class="code" href="namespaceiproc.html#a65c76f6b4ad2de54dfdcfb737b246473">CSyncProcessorCompBase</a>
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a><a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html#a9532d5882c242898ac8013849d17b7a6">00023</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_comp_base.html">iproc::CSyncProcessorCompBase</a> <a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html#a9532d5882c242898ac8013849d17b7a6">BaseClass</a>;
+<a name="l00023"></a><a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html#a9532d5882c242898ac8013849d17b7a6">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html" title="Simple definition macro for a synchronous processor.">iproc::CSyncProcessorCompBase</a> <a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html#a9532d5882c242898ac8013849d17b7a6">BaseClass</a>;
 <a name="l00024"></a>00024        
 <a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html" title="Processor for image binarization using static threshold.">CImageBinarizeProcessorComp</a>);
 <a name="l00026"></a>00026               I_ASSIGN(m_binarizationParamsIdAttrPtr, <span class="stringliteral">&quot;BinarizationParameterId&quot;</span>, <span class="stringliteral">&quot;ID of binarization parameters in the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;BinarizationParameterId&quot;</span>);
 <a name="l00027"></a>00027        I_END_COMPONENT;
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        <span class="comment">// reimplemented (iproc::IProcessor)</span>
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html#af52e8023cd49e462eb8efd4d8329fb11">DoProcessing</a>(
-<a name="l00031"></a>00031                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00032"></a>00032                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
-<a name="l00033"></a>00033                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
-<a name="l00034"></a>00034                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a>* progressManagerPtr = NULL);
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_image_binarize_processor_comp.html#a169349d9a8373f26906ae813cf0e8242">DoProcessing</a>(
+<a name="l00031"></a>00031                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr,
+<a name="l00032"></a>00032                             <span class="keyword">const</span> istd::IPolymorphic* inputPtr,
+<a name="l00033"></a>00033                             istd::IChangeable* outputPtr,
+<a name="l00034"></a>00034                             ibase::IProgressManager* progressManagerPtr = NULL);
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">private</span>:
 <a name="l00037"></a>00037        <span class="keywordtype">bool</span> ConvertImage(
-<a name="l00038"></a>00038                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputBitmap,
+<a name="l00038"></a>00038                             <span class="keyword">const</span> iimg::IBitmap&amp; inputBitmap,
 <a name="l00039"></a>00039                             <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>&amp; thresholdParams,
-<a name="l00040"></a>00040                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputBitmap) <span class="keyword">const</span>;
+<a name="l00040"></a>00040                             iimg::IBitmap&amp; outputBitmap) <span class="keyword">const</span>;
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 <span class="keyword">private</span>:
 <a name="l00043"></a>00043        I_ATTR(QByteArray, m_binarizationParamsIdAttrPtr);

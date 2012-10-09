@@ -36,7 +36,7 @@
 <div class="title">imeas::CGeneralDataSequence Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="imeas::CGeneralDataSequence" --><!-- doxytag: inherits="imeas::IDataSequence,imath::TISampledFunction" -->
+<!-- doxytag: class="imeas::CGeneralDataSequence" --><!-- doxytag: inherits="imeas::IDataSequence" -->
 <p>General implementation of sample sequence interface <a class="el" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">IDataSequence</a>.  
  <a href="classimeas_1_1_c_general_data_sequence.html#details">More...</a></p>
 
@@ -47,15 +47,7 @@ Inheritance diagram for imeas::CGeneralDataSequence:</div>
  <div class="center">
   <img src="classimeas_1_1_c_general_data_sequence.png" usemap="#imeas::CGeneralDataSequence_map" alt=""/>
   <map id="imeas::CGeneralDataSequence_map" name="imeas::CGeneralDataSequence_map">
-<area href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid." alt="imeas::IDataSequence" shape="rect" coords="0,168,538,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html" alt="imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;" shape="rect" coords="822,168,1360,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,538,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_math_function.html" alt="imath::TIMathFunction&lt; istd::TIndex&lt; ArgumentDimensions &gt;, TVector&lt; ResultDimensions &gt; &gt;" shape="rect" coords="548,112,1086,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1096,112,1634,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,538,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="548,56,1086,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1096,56,1634,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,538,24"/>
+<area href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid." alt="imeas::IDataSequence" shape="rect" coords="0,0,186,24"/>
 </map>
  </div></div>
 
@@ -69,7 +61,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#aee69c1a58a8ef6cbfa23b1af375076c1">GetSamplesBufferSize</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a7d81c3228991066bb926d9d0701f23ab">CreateSequence</a> (int samplesCount, int channelsCount=1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence with specified number of samples, channels and sample depth.  <a href="#a7d81c3228991066bb926d9d0701f23ab"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a8a021f5747dd23089fa8c1c827eb3af1">CreateSequenceWithInfo</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a8a021f5747dd23089fa8c1c827eb3af1">CreateSequenceWithInfo</a> (const istd::TTransPtr&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create sequence and set the info object.  <a href="#a8a021f5747dd23089fa8c1c827eb3af1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a2d7aa2e2c3a732a649f6d68a2d3fa496">GetSequenceInfo</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get additional information about this sequence.  <a href="#a2d7aa2e2c3a732a649f6d68a2d3fa496"></a><br/></td></tr>
@@ -85,17 +77,17 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get sample value at specified index.  <a href="#aa9283e96016674a47186ae9f48b5fc86"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a418b1ef75d3a13cbee6a76cfd79c4c46">SetSample</a> (int index, int channel, double value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sample value at specified index.  <a href="#a418b1ef75d3a13cbee6a76cfd79c4c46"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a6694c61dbd08da4f072df162c131de20">CreateFunction</a> (double *dataPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a> &amp;sizes)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a6694c61dbd08da4f072df162c131de20">CreateFunction</a> (double *dataPtr, const ArgumentType &amp;sizes)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a6a806df933a68b70d86a53c5335feadf">GetTotalSamplesCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a490318441721d34ab63eb93fc11f5b67">GetGridSize</a> (int dimensionIndex) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a98df6a08c319a5b0387d9725af62d96f">GetLogicalRange</a> (int dimensionIndex) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a9f1945afcdaa61068332a83916f39f4f">GetResultValueRange</a> (int dimensionIndex, int resultDimension=-1) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a00f38b7438dbbaf7449a5213cb6e78f7">GetValueAt</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a> &amp;argument, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_math_function.html#ace1c5a007a5285d3137785c9414e0297">ResultType</a> &amp;result) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_math_function.html#ace1c5a007a5285d3137785c9414e0297">ResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a958a051b82884f051fe494373d835181">GetValueAt</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a> &amp;argument) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a5b9a737242e540a06763ef9a432550ad">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual istd::CRange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a98df6a08c319a5b0387d9725af62d96f">GetLogicalRange</a> (int dimensionIndex) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual istd::CRange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a9f1945afcdaa61068332a83916f39f4f">GetResultValueRange</a> (int dimensionIndex, int resultDimension=-1) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a00f38b7438dbbaf7449a5213cb6e78f7">GetValueAt</a> (const ArgumentType &amp;argument, ResultType &amp;result) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual ResultType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a958a051b82884f051fe494373d835181">GetValueAt</a> (const ArgumentType &amp;argument) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a5b9a737242e540a06763ef9a432550ad">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a8c0119514a46b7abea210ad03e8821c4">GetSupportedOperations</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a69367b08243df66471eccff9a050693b">CopyFrom</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a0a4a53ba14c9e9b7915f3c3eb6223ee1">CloneMe</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a69367b08243df66471eccff9a050693b">CopyFrom</a> (const istd::IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual istd::IChangeable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_general_data_sequence.html#a0a4a53ba14c9e9b7915f3c3eb6223ee1">CloneMe</a> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>General implementation of sample sequence interface <a class="el" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">IDataSequence</a>. </p>
@@ -124,7 +116,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* imeas::CGeneralDataSequence::CloneMe </td>
+          <td class="memname">virtual istd::IChangeable* imeas::CGeneralDataSequence::CloneMe </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -132,8 +124,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
 
 </div>
 </div>
@@ -144,15 +134,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool imeas::CGeneralDataSequence::CopyFrom </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
+          <td class="paramtype">const istd::IChangeable &amp;&#160;</td>
           <td class="paramname"><em>object</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
 
 </div>
 </div>
@@ -169,7 +157,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a> &amp;&#160;</td>
+          <td class="paramtype">const ArgumentType &amp;&#160;</td>
           <td class="paramname"><em>sizes</em>&#160;</td>
         </tr>
         <tr>
@@ -180,8 +168,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a16220ce1ed6224f81cd8767d4f61110c">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>.</p>
 
 </div>
 </div>
@@ -231,7 +217,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool imeas::CGeneralDataSequence::CreateSequenceWithInfo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const istd::TTransPtr&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>infoPtr</em>, </td>
         </tr>
         <tr>
@@ -304,8 +290,6 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a94bb365d6e058085a455695bd5e02981">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a98df6a08c319a5b0387d9725af62d96f"></a><!-- doxytag: member="imeas::CGeneralDataSequence::GetLogicalRange" ref="a98df6a08c319a5b0387d9725af62d96f" args="(int dimensionIndex) const " -->
@@ -313,7 +297,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> imeas::CGeneralDataSequence::GetLogicalRange </td>
+          <td class="memname">virtual istd::CRange imeas::CGeneralDataSequence::GetLogicalRange </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>dimensionIndex</em></td><td>)</td>
@@ -323,8 +307,6 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a328cb0898de744b624ad7478a7c8579d">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a9f1945afcdaa61068332a83916f39f4f"></a><!-- doxytag: member="imeas::CGeneralDataSequence::GetResultValueRange" ref="a9f1945afcdaa61068332a83916f39f4f" args="(int dimensionIndex, int resultDimension=&#45;1) const " -->
@@ -332,7 +314,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> imeas::CGeneralDataSequence::GetResultValueRange </td>
+          <td class="memname">virtual istd::CRange imeas::CGeneralDataSequence::GetResultValueRange </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>dimensionIndex</em>, </td>
@@ -351,8 +333,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a853e098453c578beaed1af3eceaca810">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>.</p>
 
 </div>
 </div>
@@ -495,8 +475,6 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a9577d4917a5131637c35ef6b6e9fc42a">istd::IChangeable</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a6a806df933a68b70d86a53c5335feadf"></a><!-- doxytag: member="imeas::CGeneralDataSequence::GetTotalSamplesCount" ref="a6a806df933a68b70d86a53c5335feadf" args="() const " -->
@@ -513,8 +491,6 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#aec265e34d9b04adc733b1e339f877fa5">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a00f38b7438dbbaf7449a5213cb6e78f7"></a><!-- doxytag: member="imeas::CGeneralDataSequence::GetValueAt" ref="a00f38b7438dbbaf7449a5213cb6e78f7" args="(const ArgumentType &amp;argument, ResultType &amp;result) const " -->
@@ -524,13 +500,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool imeas::CGeneralDataSequence::GetValueAt </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a> &amp;&#160;</td>
+          <td class="paramtype">const ArgumentType &amp;&#160;</td>
           <td class="paramname"><em>argument</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_math_function.html#ace1c5a007a5285d3137785c9414e0297">ResultType</a> &amp;&#160;</td>
+          <td class="paramtype">ResultType &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -549,9 +525,9 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_math_function.html#ace1c5a007a5285d3137785c9414e0297">ResultType</a> imeas::CGeneralDataSequence::GetValueAt </td>
+          <td class="memname">virtual ResultType imeas::CGeneralDataSequence::GetValueAt </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html#a635b1cce21e7750f3fa765fac2dbc59d">ArgumentType</a> &amp;&#160;</td>
+          <td class="paramtype">const ArgumentType &amp;&#160;</td>
           <td class="paramname"><em>argument</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -609,15 +585,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool imeas::CGeneralDataSequence::Serialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramtype">iser::IArchive &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 </div>
 </div>

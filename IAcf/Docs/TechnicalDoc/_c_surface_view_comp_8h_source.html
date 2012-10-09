@@ -29,12 +29,12 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_i_sampled_function_8h.html">imath/TISampledFunction.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;imath/TISampledFunction.h&quot;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_commands_provider_8h.html">ibase/ICommandsProvider.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;ibase/ICommandsProvider.h&quot;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_hierarchical_command_8h.html">iqtgui/CHierarchicalCommand.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;iqtgui/TDesignerGuiObserverCompBase.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;iqtgui/CHierarchicalCommand.h&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;iqwt3d/Generated/ui_CSurfaceViewComp.h&quot;</span>
 <a name="l00014"></a>00014 
@@ -57,16 +57,16 @@
 <a name="l00034"></a>00034        Q_OBJECT
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">public</span>:
-<a name="l00037"></a>00037        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
+<a name="l00037"></a>00037        <span class="keyword">typedef</span> iqtgui::TDesignerGuiObserverCompBase&lt;
 <a name="l00038"></a>00038                             <a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#ae9b8d991771ddf2f4b80c97f135fff1c">Ui::CSurfaceViewComp</a>,
-<a name="l00039"></a><a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#adaeaf233d106a40d69f9011e75ed51b2">00039</a>                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html">imath::ISampledFunction2d</a>&gt; <a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#adaeaf233d106a40d69f9011e75ed51b2">BaseClass</a>;
+<a name="l00039"></a><a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#adaeaf233d106a40d69f9011e75ed51b2">00039</a>                             imath::ISampledFunction2d&gt; <a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#adaeaf233d106a40d69f9011e75ed51b2">BaseClass</a>;
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041        <span class="keyword">enum</span>{
 <a name="l00042"></a><a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#aeaf554c308f948855bb7911c7f31063ea207fb1c05fde188e8364c877e04ca0df">00042</a>               <a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#aeaf554c308f948855bb7911c7f31063ea207fb1c05fde188e8364c877e04ca0df">GI_QWT3D</a> = 177
 <a name="l00043"></a>00043        };
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        I_BEGIN_COMPONENT(<a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html" title="3D-View based on Qwt3D library.">CSurfaceViewComp</a>);
-<a name="l00046"></a>00046               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
+<a name="l00046"></a>00046               I_REGISTER_INTERFACE(ibase::ICommandsProvider);
 <a name="l00047"></a>00047               I_ASSIGN(m_enableLightingAttrPtr, <span class="stringliteral">&quot;EnableLighting&quot;</span>, <span class="stringliteral">&quot;Enable lighting for the scene&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
 <a name="l00048"></a>00048               I_ASSIGN(m_enableOrthoAttrPtr, <span class="stringliteral">&quot;EnableOrtho&quot;</span>, <span class="stringliteral">&quot;EnableOrtho&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
 <a name="l00049"></a>00049               I_ASSIGN(m_enableAutoScaleAttrPtr, <span class="stringliteral">&quot;EnableAutoScale&quot;</span>, <span class="stringliteral">&quot;Enable auto scaling of scene axes&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
@@ -80,7 +80,7 @@
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#aa34808beb19fd88d8dc07960869a3a14">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_i_hierarchical.html">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#a53f1425d210e2f95251edb080fd200aa">GetCommands</a>() <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keyword">const</span> ibase::IHierarchicalCommand* <a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#a53f1425d210e2f95251edb080fd200aa">GetCommands</a>() <span class="keyword">const</span>;
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 <span class="keyword">protected</span>:
 <a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqwt3d_1_1_c_surface_view_comp.html#a62770aa72f83dccfc22f543ccdce5322">SetupLighting</a>();
@@ -105,14 +105,14 @@
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083        Qwt3D::SurfacePlot* m_surfacePlotPtr;
 <a name="l00084"></a>00084 
-<a name="l00085"></a>00085        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_rootCommand;
-<a name="l00086"></a>00086        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_plotCommands;
-<a name="l00087"></a>00087        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_enableLightingCommand;
-<a name="l00088"></a>00088        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_enableOrthoCommand;
-<a name="l00089"></a>00089        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_enableAutoScaleCommand;
-<a name="l00090"></a>00090        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_enableMeshCommand;
-<a name="l00091"></a>00091        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_enableShaderCommand;
-<a name="l00092"></a>00092        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> m_enableLegendCommand;
+<a name="l00085"></a>00085        iqtgui::CHierarchicalCommand m_rootCommand;
+<a name="l00086"></a>00086        iqtgui::CHierarchicalCommand m_plotCommands;
+<a name="l00087"></a>00087        iqtgui::CHierarchicalCommand m_enableLightingCommand;
+<a name="l00088"></a>00088        iqtgui::CHierarchicalCommand m_enableOrthoCommand;
+<a name="l00089"></a>00089        iqtgui::CHierarchicalCommand m_enableAutoScaleCommand;
+<a name="l00090"></a>00090        iqtgui::CHierarchicalCommand m_enableMeshCommand;
+<a name="l00091"></a>00091        iqtgui::CHierarchicalCommand m_enableShaderCommand;
+<a name="l00092"></a>00092        iqtgui::CHierarchicalCommand m_enableLegendCommand;
 <a name="l00093"></a>00093 };
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095 

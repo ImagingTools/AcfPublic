@@ -138,7 +138,7 @@ int CLibAvVideoDecoderComp::DoProcessing(
 			const iprm::IParamsSet* paramsPtr,
 			const istd::IPolymorphic* inputPtr,
 			istd::IChangeable* outputPtr,
-			iproc::IProgressManager* progressManagerPtr)
+			ibase::IProgressManager* progressManagerPtr)
 {
 	if (outputPtr == NULL){
 		return TS_OK;
@@ -157,7 +157,7 @@ int CLibAvVideoDecoderComp::BeginTask(
 			const iprm::IParamsSet* /*paramsPtr*/,
 			const istd::IPolymorphic* /*inputPtr*/,
 			istd::IChangeable* outputPtr,
-			iproc::IProgressManager* /*progressManagerPtr*/)
+			ibase::IProgressManager* /*progressManagerPtr*/)
 {
 	m_nextTaskId = (m_nextTaskId + 1) & 0x7fff;
 

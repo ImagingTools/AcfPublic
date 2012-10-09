@@ -48,12 +48,10 @@ Inheritance diagram for iipr::CSingleFeatureConsumer:</div>
  <div class="center">
   <img src="classiipr_1_1_c_single_feature_consumer.png" usemap="#iipr::CSingleFeatureConsumer_map" alt=""/>
   <map id="iipr::CSingleFeatureConsumer_map" name="iipr::CSingleFeatureConsumer_map">
-<area href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects." alt="iipr::IFeaturesConsumer" shape="rect" coords="0,112,182,136"/>
-<area href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values." alt="imeas::INumericValueProvider" shape="rect" coords="192,112,374,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,182,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="192,56,374,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,182,24"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="192,0,374,24"/>
+<area href="classiipr_1_1_i_features_consumer.html" title="Common interface for a features container consuming feature objects." alt="iipr::IFeaturesConsumer" shape="rect" coords="0,56,182,80"/>
+<area href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values." alt="imeas::INumericValueProvider" shape="rect" coords="192,56,374,80"/>
+<area href="classistd_1_1_i_changeable.html" alt="IChangeable" shape="rect" coords="0,0,182,24"/>
+<area href="classistd_1_1_i_changeable.html" alt="IChangeable" shape="rect" coords="192,0,374,24"/>
 </map>
  </div></div>
 
@@ -75,7 +73,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set feature adding policy.  <a href="#a8f351f75c216f997d9d0ace481ef8bf4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#acdb775a6dfd92ef69a17f03a24a27c04">ResetFeatures</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all features from this container.  <a href="#acdb775a6dfd92ef69a17f03a24a27c04"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#abf414f4b6bd9d3696d4610f14c75dba3">AddFeature</a> (const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> *featurePtr, bool *isFullPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#abf414f4b6bd9d3696d4610f14c75dba3">AddFeature</a> (const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> *featurePtr, bool *isFullPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new feature to the set of features.  <a href="#abf414f4b6bd9d3696d4610f14c75dba3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_single_feature_consumer.html#a047ea263b8fc0c1ae31bd13b848c4ff2">GetValuesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of numeric values in the list.  <a href="#a047ea263b8fc0c1ae31bd13b848c4ff2"></a><br/></td></tr>
@@ -151,7 +149,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>isFullPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+          <td class="paramname"><em>isFullPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

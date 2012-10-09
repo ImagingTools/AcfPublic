@@ -33,8 +33,8 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtCore/QString&gt;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_xml_write_archive_base_8h.html">iser/CXmlWriteArchiveBase.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_file_archive_info_8h.html">iser/CFileArchiveInfo.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;iser/CXmlWriteArchiveBase.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;iser/CFileArchiveInfo.h&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="keyword">namespace </span>izlib
@@ -46,14 +46,14 @@
 <a name="l00028"></a>00028                      <span class="keyword">public</span> iser::CFileArchiveInfo
 <a name="l00029"></a>00029 {
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a><a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#aa4cf73320dfedfaffe0531e98b9371e6">00031</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_xml_write_archive_base.html">iser::CXmlWriteArchiveBase</a> <a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#aa4cf73320dfedfaffe0531e98b9371e6">BaseClass</a>;
-<a name="l00032"></a><a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#a9d60d5465898b13168ae82e8d7b10d0b">00032</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_file_archive_info.html">iser::CFileArchiveInfo</a> <a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#a9d60d5465898b13168ae82e8d7b10d0b">BaseClass2</a>;
+<a name="l00031"></a><a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#aa4cf73320dfedfaffe0531e98b9371e6">00031</a>        <span class="keyword">typedef</span> iser::CXmlWriteArchiveBase <a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#aa4cf73320dfedfaffe0531e98b9371e6">BaseClass</a>;
+<a name="l00032"></a><a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#a9d60d5465898b13168ae82e8d7b10d0b">00032</a>        <span class="keyword">typedef</span> iser::CFileArchiveInfo <a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#a9d60d5465898b13168ae82e8d7b10d0b">BaseClass2</a>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#ac39700995a4901dcc68f44d08f2a6f21">CGzXmlWriteArchive</a>(
 <a name="l00035"></a>00035                             <span class="keyword">const</span> QString&amp; filePath,
-<a name="l00036"></a>00036                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_version_info.html">iser::IVersionInfo</a>* versionInfoPtr = NULL,
+<a name="l00036"></a>00036                             <span class="keyword">const</span> iser::IVersionInfo* versionInfoPtr = NULL,
 <a name="l00037"></a>00037                             <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>,
-<a name="l00038"></a>00038                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; rootTag = <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>);
+<a name="l00038"></a>00038                             <span class="keyword">const</span> iser::CArchiveTag&amp; rootTag = s_acfRootTag);
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <a class="code" href="classizlib_1_1_c_gz_xml_write_archive.html#af380eda41be2e5719dcfd848f213f8f4">~CGzXmlWriteArchive</a>();
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">protected</span>:

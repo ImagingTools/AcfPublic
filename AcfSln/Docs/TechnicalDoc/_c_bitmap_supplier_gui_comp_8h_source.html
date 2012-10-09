@@ -32,12 +32,12 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QTimer&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_observer_8h.html">imod/IObserver.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_bitmap_8h.html">iqt/CBitmap.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_gui_object_8h.html">iqtgui/IGuiObject.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;iser/IFileLoader.h&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;imod/IObserver.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;imod/TModelWrap.h&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iqt/CBitmap.h&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;iqtgui/IGuiObject.h&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;iqtgui/TDesignerGuiObserverCompBase.h&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_provider_8h.html">iipr/IBitmapProvider.h</a>&quot;</span>
 <a name="l00017"></a>00017 
@@ -81,19 +81,19 @@
 <a name="l00055"></a>00055        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#aefb298cf05d5ed0e8db01486f27249b7" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ac18cf1f6b895addf037fcc93daacc910">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ac18cf1f6b895addf037fcc93daacc910">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">Shapes</a>&amp; result);
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a7187188354d8bf4cfdd4dd0681b901c9">OnGuiModelAttached</a>();
 <a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ace6a629516d2430b02e4ef4dad4268b3">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a09679cc02dbb54b0470d77ac459f0fae">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a09679cc02dbb54b0470d77ac459f0fae">AfterUpdate</a>(imod::IModel* modelPtr, <span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr);
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 <span class="keyword">private</span>:
-<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_bitmapLoaderCompPtr);
+<a name="l00068"></a>00068        I_REF(iser::IFileLoader, m_bitmapLoaderCompPtr);
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iqt::CBitmap&gt;</a> m_bitmap;
+<a name="l00070"></a>00070        imod::TModelWrap&lt;iqt::CBitmap&gt; m_bitmap;
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072        QTimer m_timer;
 <a name="l00073"></a>00073 };

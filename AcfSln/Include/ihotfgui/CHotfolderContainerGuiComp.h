@@ -1,0 +1,78 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#ifndef ihotfgui_CHotfolderContainerGuiComp_included
+#define ihotfgui_CHotfolderContainerGuiComp_included
+
+
+// Qt includes
+#include <QtCore/QDir>
+#include <QtCore/QMimeData>
+#include <QtGui/QTreeWidget>
+#include <QtGui/QDrag>
+
+// ACF includes
+#include "istd/TDelPtr.h"
+
+#include "iqtgui/TDesignerGuiCompBase.h"
+
+#include "Generated/ui_CHotfolderContainerGuiComp.h"
+
+
+namespace ihotfgui
+{
+
+
+class CHotfolderContainerGuiComp:
+			public iqtgui::TDesignerGuiCompBase<Ui::CHotfolderContainerGuiComp>
+{
+    Q_OBJECT
+
+public:
+	typedef iqtgui::TDesignerGuiCompBase<Ui::CHotfolderContainerGuiComp> BaseClass;
+	
+	I_BEGIN_COMPONENT(CHotfolderContainerGuiComp);
+		I_ASSIGN_MULTI_0(m_hotoflderFactoryIdsAttrPtr, "HotfolderFactoryIds", "List of factory IDs for hotfolder creation", true);
+	I_END_COMPONENT;
+
+protected:
+	/**
+		Create the drag preview for the component.
+	*/
+	QPixmap CreateComponentDragPixmap(const QString& hotfolderId) const;
+
+	// reimplemented (QObject)
+	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);
+
+	// reimplemented (CGuiComponentBase)
+	virtual void OnGuiCreated();
+
+private:
+	I_MULTIATTR(QString, m_hotoflderFactoryIdsAttrPtr);
+};
+
+
+} // namespace ihotfgui
+
+
+#endif // !ihotfgui_CHotfolderContainerGuiComp_included
+

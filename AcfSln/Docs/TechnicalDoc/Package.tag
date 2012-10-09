@@ -119,6 +119,7 @@
     <name>CMemoryAcquisitionComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_memory_acquisition_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
     <namespace>icam</namespace>
@@ -127,6 +128,7 @@
     <name>CMultiCameraBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_multi_camera_bitmap_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
     <class kind="class">icam::CMultiCameraBitmapSupplierComp</class>
@@ -136,6 +138,7 @@
     <name>CSelectableBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selectable_bitmap_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
     <class kind="class">icam::CSelectableBitmapSupplierComp</class>
@@ -154,6 +157,7 @@
     <name>CSnapBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
@@ -163,6 +167,7 @@
     <name>IBitmapAcquisition.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_i_bitmap_acquisition_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">icam::IBitmapAcquisition</class>
     <namespace>icam</namespace>
   </compound>
@@ -170,6 +175,7 @@
     <name>icam.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>icam_8h</filename>
+    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
@@ -208,6 +214,7 @@
     <name>CEdgesReductorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_edges_reductor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_i_edge_lines_processor_8h" name="IEdgeLinesProcessor.h" local="yes" imported="no">iedge/IEdgeLinesProcessor.h</includes>
@@ -218,6 +225,7 @@
     <name>CExtractedEdgeLinesSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_extracted_edge_lines_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
     <includes id="_i_edges_extractor_8h" name="IEdgesExtractor.h" local="yes" imported="no">iedge/IEdgesExtractor.h</includes>
@@ -229,6 +237,7 @@
     <name>CFastEdgesExtractorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_fast_edges_extractor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_i_edges_extractor_8h" name="IEdgesExtractor.h" local="yes" imported="no">iedge/IEdgesExtractor.h</includes>
@@ -239,6 +248,7 @@
     <name>CProcessedEdgeLinesSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_processed_edge_lines_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
     <includes id="_i_edge_lines_processor_8h" name="IEdgeLinesProcessor.h" local="yes" imported="no">iedge/IEdgeLinesProcessor.h</includes>
     <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
@@ -249,12 +259,14 @@
     <name>iedge.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>iedge_8h</filename>
+    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <namespace>iedge</namespace>
   </compound>
   <compound kind="file">
     <name>IEdgeLinesProcessor.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_i_edge_lines_processor_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
     <class kind="class">iedge::IEdgeLinesProcessor</class>
     <namespace>iedge</namespace>
@@ -271,6 +283,7 @@
     <name>IEdgesExtractor.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_i_edges_extractor_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
     <class kind="class">iedge::IEdgesExtractor</class>
     <namespace>iedge</namespace>
@@ -294,258 +307,380 @@
     <namespace>iedgegui</namespace>
   </compound>
   <compound kind="file">
-    <name>CDirectoryMonitorParams.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
-    <filename>_c_directory_monitor_params_8h</filename>
-    <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ifpf/IDirectoryMonitorParams.h</includes>
-    <class kind="class">ifpf::CDirectoryMonitorParams</class>
-    <namespace>ifpf</namespace>
+    <name>CCopyProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_c_copy_processor_comp_8h</filename>
+    <class kind="class">ifileproc::CCopyProcessorComp</class>
+    <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
-    <name>CDirectoryMonitorParamsComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
-    <filename>_c_directory_monitor_params_comp_8h</filename>
-    <includes id="_c_directory_monitor_params_8h" name="CDirectoryMonitorParams.h" local="yes" imported="no">ifpf/CDirectoryMonitorParams.h</includes>
-    <class kind="class">ifpf::CDirectoryMonitorParamsComp</class>
-    <namespace>ifpf</namespace>
+    <name>CExternalFileConverterComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_c_external_file_converter_comp_8h</filename>
+    <class kind="class">ifileproc::CExternalFileConverterComp</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileConvertOverProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_c_file_convert_over_processor_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">ifileproc::CFileConvertOverProcessorComp</class>
+    <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
     <name>CFileListConverterComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_list_converter_comp_8h</filename>
-    <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifpf/IFileNaming.h</includes>
-    <class kind="class">ifpf::CFileListConverterComp</class>
-    <namespace>ifpf</namespace>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifileproc/IFileNaming.h</includes>
+    <class kind="class">ifileproc::CFileListConverterComp</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileNamingComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_c_file_naming_comp_8h</filename>
+    <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifileproc/IFileNaming.h</includes>
+    <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifileproc/IFileNamingParams.h</includes>
+    <class kind="class">ifileproc::CFileNamingComp</class>
+    <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
     <name>CFileNamingParamsComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_naming_params_comp_8h</filename>
-    <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifpf/IFileNamingParams.h</includes>
-    <class kind="class">ifpf::CFileNamingParamsComp</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifileproc/IFileNamingParams.h</includes>
+    <class kind="class">ifileproc::CFileNamingParamsComp</class>
+    <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
     <name>CFilePathesContainer.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_pathes_container_8h</filename>
-    <includes id="ifpf_8h" name="ifpf.h" local="yes" imported="no">ifpf/ifpf.h</includes>
-    <class kind="class">ifpf::CFilePathesContainer</class>
-    <namespace>ifpf</namespace>
+    <includes id="ifileproc_8h" name="ifileproc.h" local="yes" imported="no">ifileproc/ifileproc.h</includes>
+    <class kind="class">ifileproc::CFilePathesContainer</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSelectableFileConverterComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_c_selectable_file_converter_comp_8h</filename>
+    <class kind="class">ifileproc::CSelectableFileConverterComp</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFileNaming.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_i_file_naming_8h</filename>
+    <class kind="class">ifileproc::IFileNaming</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFileNamingParams.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_i_file_naming_params_8h</filename>
+    <class kind="class">ifileproc::IFileNamingParams</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ifileproc.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>ifileproc_8h</filename>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDirectoryMonitorParams.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
+    <filename>_c_directory_monitor_params_8h</filename>
+    <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ihotf/IDirectoryMonitorParams.h</includes>
+    <class kind="class">ihotf::CDirectoryMonitorParams</class>
+    <namespace>ihotf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDirectoryMonitorParamsComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
+    <filename>_c_directory_monitor_params_comp_8h</filename>
+    <includes id="_c_directory_monitor_params_8h" name="CDirectoryMonitorParams.h" local="yes" imported="no">ihotf/CDirectoryMonitorParams.h</includes>
+    <class kind="class">ihotf::CDirectoryMonitorParamsComp</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CFileSystemChangeStorage.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_file_system_change_storage_8h</filename>
-    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ifpf/IFileSystemChangeStorage.h</includes>
-    <class kind="class">ifpf::CFileSystemChangeStorage</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ihotf/IFileSystemChangeStorage.h</includes>
+    <class kind="class">ihotf::CFileSystemChangeStorage</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CHotfolderLoaderComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_loader_comp_8h</filename>
-    <class kind="class">ifpf::CHotfolderLoaderComp</class>
-    <namespace>ifpf</namespace>
+    <class kind="class">ihotf::CHotfolderLoaderComp</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CHotfolderProcessingInfo.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_processing_info_8h</filename>
-    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ifpf/IHotfolderProcessingInfo.h</includes>
-    <includes id="_c_hotfolder_processing_item_8h" name="CHotfolderProcessingItem.h" local="yes" imported="no">ifpf/CHotfolderProcessingItem.h</includes>
-    <class kind="class">ifpf::CHotfolderProcessingInfo</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
+    <includes id="_c_hotfolder_processing_item_8h" name="CHotfolderProcessingItem.h" local="yes" imported="no">ihotf/CHotfolderProcessingItem.h</includes>
+    <class kind="class">ihotf::CHotfolderProcessingInfo</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CHotfolderProcessingItem.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_processing_item_8h</filename>
-    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ifpf/IHotfolderProcessingItem.h</includes>
-    <class kind="class">ifpf::CHotfolderProcessingItem</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
+    <class kind="class">ihotf::CHotfolderProcessingItem</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CHotfolderStatistics.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_statistics_8h</filename>
-    <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ifpf/IHotfolderStatistics.h</includes>
-    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ifpf/IHotfolderProcessingInfo.h</includes>
-    <class kind="class">ifpf::CHotfolderStatistics</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ihotf/IHotfolderStatistics.h</includes>
+    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
+    <class kind="class">ihotf::CHotfolderStatistics</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CHotfolderWorkflowComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_workflow_comp_8h</filename>
-    <includes id="_i_hotfolder_workflow_8h" name="IHotfolderWorkflow.h" local="yes" imported="no">ifpf/IHotfolderWorkflow.h</includes>
-    <includes id="_i_hotfolder_info_manager_8h" name="IHotfolderInfoManager.h" local="yes" imported="no">ifpf/IHotfolderInfoManager.h</includes>
-    <includes id="_c_hotfolder_workflow_item_8h" name="CHotfolderWorkflowItem.h" local="yes" imported="no">ifpf/CHotfolderWorkflowItem.h</includes>
-    <class kind="class">ifpf::CHotfolderWorkflowComp</class>
-    <class kind="struct">ifpf::CHotfolderWorkflowComp::HotfolderItem</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_workflow_8h" name="IHotfolderWorkflow.h" local="yes" imported="no">ihotf/IHotfolderWorkflow.h</includes>
+    <includes id="_i_hotfolder_info_manager_8h" name="IHotfolderInfoManager.h" local="yes" imported="no">ihotf/IHotfolderInfoManager.h</includes>
+    <includes id="_c_hotfolder_workflow_item_8h" name="CHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/CHotfolderWorkflowItem.h</includes>
+    <class kind="class">ihotf::CHotfolderWorkflowComp</class>
+    <class kind="struct">ihotf::CHotfolderWorkflowComp::HotfolderItem</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CHotfolderWorkflowItem.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_workflow_item_8h</filename>
-    <includes id="_i_hotfolder_workflow_item_8h" name="IHotfolderWorkflowItem.h" local="yes" imported="no">ifpf/IHotfolderWorkflowItem.h</includes>
-    <includes id="_i_hotfolder_info_manager_8h" name="IHotfolderInfoManager.h" local="yes" imported="no">ifpf/IHotfolderInfoManager.h</includes>
-    <class kind="class">ifpf::CHotfolderWorkflowItem</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_workflow_item_8h" name="IHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/IHotfolderWorkflowItem.h</includes>
+    <includes id="_i_hotfolder_info_manager_8h" name="IHotfolderInfoManager.h" local="yes" imported="no">ihotf/IHotfolderInfoManager.h</includes>
+    <class kind="class">ihotf::CHotfolderWorkflowItem</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CMonitoringSession.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_monitoring_session_8h</filename>
-    <includes id="_i_monitoring_session_8h" name="IMonitoringSession.h" local="yes" imported="no">ifpf/IMonitoringSession.h</includes>
-    <class kind="class">ifpf::CMonitoringSession</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_monitoring_session_8h" name="IMonitoringSession.h" local="yes" imported="no">ihotf/IMonitoringSession.h</includes>
+    <class kind="class">ihotf::CMonitoringSession</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CMonitoringSessionsManager.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_monitoring_sessions_manager_8h</filename>
-    <includes id="_i_monitoring_session_manager_8h" name="IMonitoringSessionManager.h" local="yes" imported="no">ifpf/IMonitoringSessionManager.h</includes>
-    <includes id="_c_monitoring_session_8h" name="CMonitoringSession.h" local="yes" imported="no">ifpf/CMonitoringSession.h</includes>
-    <class kind="class">ifpf::CMonitoringSessionsManager</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_monitoring_session_manager_8h" name="IMonitoringSessionManager.h" local="yes" imported="no">ihotf/IMonitoringSessionManager.h</includes>
+    <includes id="_c_monitoring_session_8h" name="CMonitoringSession.h" local="yes" imported="no">ihotf/CMonitoringSession.h</includes>
+    <class kind="class">ihotf::CMonitoringSessionsManager</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CVisualHotfolderWorkflowComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_visual_hotfolder_workflow_comp_8h</filename>
-    <includes id="_c_hotfolder_workflow_comp_8h" name="CHotfolderWorkflowComp.h" local="yes" imported="no">ifpf/CHotfolderWorkflowComp.h</includes>
-    <includes id="_c_visual_hotfolder_workflow_item_8h" name="CVisualHotfolderWorkflowItem.h" local="yes" imported="no">ifpf/CVisualHotfolderWorkflowItem.h</includes>
-    <class kind="class">ifpf::CVisualHotfolderWorkflowComp</class>
-    <namespace>ifpf</namespace>
+    <includes id="_c_hotfolder_workflow_comp_8h" name="CHotfolderWorkflowComp.h" local="yes" imported="no">ihotf/CHotfolderWorkflowComp.h</includes>
+    <includes id="_c_visual_hotfolder_workflow_item_8h" name="CVisualHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/CVisualHotfolderWorkflowItem.h</includes>
+    <class kind="class">ihotf::CVisualHotfolderWorkflowComp</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CVisualHotfolderWorkflowItem.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_visual_hotfolder_workflow_item_8h</filename>
-    <includes id="_c_hotfolder_workflow_item_8h" name="CHotfolderWorkflowItem.h" local="yes" imported="no">ifpf/CHotfolderWorkflowItem.h</includes>
-    <class kind="class">ifpf::CVisualHotfolderWorkflowItem</class>
-    <namespace>ifpf</namespace>
+    <includes id="_c_hotfolder_workflow_item_8h" name="CHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/CHotfolderWorkflowItem.h</includes>
+    <class kind="class">ihotf::CVisualHotfolderWorkflowItem</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>CVisualHotfolderWorkflowLoaderComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_visual_hotfolder_workflow_loader_comp_8h</filename>
-    <includes id="_i_hotfolder_workflow_8h" name="IHotfolderWorkflow.h" local="yes" imported="no">ifpf/IHotfolderWorkflow.h</includes>
-    <includes id="_c_hotfolder_processing_item_8h" name="CHotfolderProcessingItem.h" local="yes" imported="no">ifpf/CHotfolderProcessingItem.h</includes>
-    <includes id="_c_monitoring_session_8h" name="CMonitoringSession.h" local="yes" imported="no">ifpf/CMonitoringSession.h</includes>
     <class kind="class">ifpf::CHotfolderWorkflowComp</class>
     <namespace>ifpf</namespace>
   </compound>
   <compound kind="file">
     <name>IDirectoryMonitor.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_directory_monitor_8h</filename>
-    <class kind="class">ifpf::IDirectoryMonitor</class>
-    <namespace>ifpf</namespace>
+    <class kind="class">ihotf::IDirectoryMonitor</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IDirectoryMonitorParams.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_directory_monitor_params_8h</filename>
-    <class kind="class">ifpf::IDirectoryMonitorParams</class>
-    <namespace>ifpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileNaming.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
-    <filename>_i_file_naming_8h</filename>
-    <class kind="class">ifpf::IFileNaming</class>
-    <namespace>ifpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileNamingParams.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
-    <filename>_i_file_naming_params_8h</filename>
-    <class kind="class">ifpf::IFileNamingParams</class>
-    <namespace>ifpf</namespace>
+    <class kind="class">ihotf::IDirectoryMonitorParams</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IFileSystemChangeStorage.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_file_system_change_storage_8h</filename>
-    <class kind="class">ifpf::IFileSystemChangeStorage</class>
-    <namespace>ifpf</namespace>
+    <class kind="class">ihotf::IFileSystemChangeStorage</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
-    <name>ifpf.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
-    <filename>ifpf_8h</filename>
-    <namespace>ifpf</namespace>
+    <name>ihotf.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
+    <filename>ihotf_8h</filename>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderInfoManager.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_info_manager_8h</filename>
-    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ifpf/IHotfolderProcessingInfo.h</includes>
-    <class kind="class">ifpf::IHotfolderInfoManager</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
+    <class kind="class">ihotf::IHotfolderInfoManager</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderProcessingInfo.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_processing_info_8h</filename>
-    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ifpf/IHotfolderProcessingItem.h</includes>
-    <class kind="class">ifpf::IHotfolderProcessingInfo</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
+    <class kind="class">ihotf::IHotfolderProcessingInfo</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderProcessingItem.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_processing_item_8h</filename>
-    <class kind="class">ifpf::IHotfolderProcessingItem</class>
-    <namespace>ifpf</namespace>
+    <class kind="class">ihotf::IHotfolderProcessingItem</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderStatistics.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_statistics_8h</filename>
-    <class kind="class">ifpf::IHotfolderStatistics</class>
-    <namespace>ifpf</namespace>
+    <class kind="class">ihotf::IHotfolderStatistics</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderTaskManager.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_task_manager_8h</filename>
-    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ifpf/IHotfolderProcessingItem.h</includes>
-    <class kind="class">ifpf::IHotfolderTaskManager</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
+    <class kind="class">ihotf::IHotfolderTaskManager</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderWorkflow.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_workflow_8h</filename>
-    <includes id="_i_hotfolder_workflow_item_8h" name="IHotfolderWorkflowItem.h" local="yes" imported="no">ifpf/IHotfolderWorkflowItem.h</includes>
-    <class kind="class">ifpf::IHotfolderWorkflow</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_hotfolder_workflow_item_8h" name="IHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/IHotfolderWorkflowItem.h</includes>
+    <class kind="class">ihotf::IHotfolderWorkflow</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderWorkflowItem.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_workflow_item_8h</filename>
-    <class kind="class">ifpf::IHotfolderWorkflowItem</class>
-    <namespace>ifpf</namespace>
+    <class kind="class">ihotf::IHotfolderWorkflowItem</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IMonitoringSession.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_monitoring_session_8h</filename>
-    <class kind="class">ifpf::IMonitoringSession</class>
-    <namespace>ifpf</namespace>
+    <class kind="class">ihotf::IMonitoringSession</class>
+    <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IMonitoringSessionManager.h</name>
-    <path>C:/Temp/AcfSln/Include/ifpf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_monitoring_session_manager_8h</filename>
-    <includes id="_i_monitoring_session_8h" name="IMonitoringSession.h" local="yes" imported="no">ifpf/IMonitoringSession.h</includes>
-    <class kind="class">ifpf::IMonitoringSessionManager</class>
-    <namespace>ifpf</namespace>
+    <includes id="_i_monitoring_session_8h" name="IMonitoringSession.h" local="yes" imported="no">ihotf/IMonitoringSession.h</includes>
+    <class kind="class">ihotf::IMonitoringSessionManager</class>
+    <namespace>ihotf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDirectoryItemGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_directory_item_gui_comp_8h</filename>
+    <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ihotf/IHotfolderStatistics.h</includes>
+    <class kind="class">ihotfgui::CDirectoryItemGuiComp</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDirectoryMonitorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_directory_monitor_comp_8h</filename>
+    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ihotf/IFileSystemChangeStorage.h</includes>
+    <includes id="_i_directory_monitor_8h" name="IDirectoryMonitor.h" local="yes" imported="no">ihotf/IDirectoryMonitor.h</includes>
+    <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ihotf/IDirectoryMonitorParams.h</includes>
+    <includes id="_i_monitoring_session_manager_8h" name="IMonitoringSessionManager.h" local="yes" imported="no">ihotf/IMonitoringSessionManager.h</includes>
+    <class kind="class">ihotfgui::CDirectoryMonitorComp</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDirectoryMonitorParamsGui.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_directory_monitor_params_gui_8h</filename>
+    <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ihotf/IDirectoryMonitorParams.h</includes>
+    <class kind="class">ihotfgui::CDirectoryMonitorParamsGui</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHotfolderContainerGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_hotfolder_container_gui_comp_8h</filename>
+    <class kind="class">ihotfgui::CHotfolderContainerGuiComp</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHotfolderGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_hotfolder_gui_comp_8h</filename>
+    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
+    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
+    <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ihotf/IHotfolderStatistics.h</includes>
+    <class kind="class">ihotfgui::CHotfolderGuiComp</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHotfolderProcessingComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_hotfolder_processing_comp_8h</filename>
+    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
+    <includes id="_i_hotfolder_task_manager_8h" name="IHotfolderTaskManager.h" local="yes" imported="no">ihotf/IHotfolderTaskManager.h</includes>
+    <class kind="class">ihotfgui::CHotfolderProcessingComp</class>
+    <class kind="class">ihotfgui::CHotfolderProcessingComp::ItemProcessor</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHotfolderTaskManagerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_hotfolder_task_manager_comp_8h</filename>
+    <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifileproc/IFileNaming.h</includes>
+    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ihotf/IFileSystemChangeStorage.h</includes>
+    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
+    <includes id="_i_directory_monitor_8h" name="IDirectoryMonitor.h" local="yes" imported="no">ihotf/IDirectoryMonitor.h</includes>
+    <includes id="_i_hotfolder_task_manager_8h" name="IHotfolderTaskManager.h" local="yes" imported="no">ihotf/IHotfolderTaskManager.h</includes>
+    <class kind="class">ihotfgui::CHotfolderTaskManagerComp</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessingItemPreviewGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_processing_item_preview_gui_comp_8h</filename>
+    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
+    <class kind="class">ihotfgui::CProcessingItemPreviewGuiComp</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ihotfgui.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>ihotfgui_8h</filename>
+    <namespace>ihotfgui</namespace>
   </compound>
   <compound kind="file">
     <name>CIdProviderCacheComp.h</name>
@@ -566,6 +701,7 @@
     <name>CInspectionTaskComp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_inspection_task_comp_8h</filename>
+    <includes id="_i_elapsed_time_provider_8h" name="IElapsedTimeProvider.h" local="yes" imported="no">iproc/IElapsedTimeProvider.h</includes>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <class kind="class">iinsp::CInspectionTaskComp</class>
     <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
@@ -582,12 +718,14 @@
     <name>iinsp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>iinsp_8h</filename>
+    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>IInspectionTask.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_inspection_task_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <class kind="class">iinsp::IInspectionTask</class>
     <namespace>iinsp</namespace>
   </compound>
@@ -602,6 +740,8 @@
     <name>CBitmapJoinerSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_joiner_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
@@ -676,6 +816,7 @@
     <name>CCircleFindProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_circle_find_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
@@ -690,6 +831,8 @@
     <name>CColorBitmapSeparatorSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_color_bitmap_separator_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
     <class kind="class">iipr::CColorBitmapSeparatorSupplierComp</class>
@@ -716,6 +859,7 @@
     <name>CDelegatedBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_delegated_bitmap_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
@@ -724,6 +868,8 @@
     <name>CDifferenceBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_difference_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
     <namespace>iipr</namespace>
@@ -732,6 +878,7 @@
     <name>CEdgeDistanceProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_edge_distance_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
@@ -746,6 +893,8 @@
     <name>CEdgeDistancesSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_edge_distances_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
@@ -759,6 +908,7 @@
     <name>CExtremumCaliperProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_extremum_caliper_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_caliper_processor_8h" name="ICaliperProcessor.h" local="yes" imported="no">iipr/ICaliperProcessor.h</includes>
     <includes id="_i_feature_to_projection_mapper_8h" name="IFeatureToProjectionMapper.h" local="yes" imported="no">iipr/IFeatureToProjectionMapper.h</includes>
     <class kind="class">iipr::CExtremumCaliperProcessorComp</class>
@@ -777,6 +927,7 @@
     <name>CFeatureToImageMapperProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_feature_to_image_mapper_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_feature_to_feature_processor_8h" name="IFeatureToFeatureProcessor.h" local="yes" imported="no">iipr/IFeatureToFeatureProcessor.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="yes" imported="no">iipr/TWeightedFeatureWrap.h</includes>
@@ -787,6 +938,7 @@
     <name>CImageBinarizeProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_binarize_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <class kind="class">iipr::CImageBinarizeProcessorComp</class>
     <namespace>iipr</namespace>
@@ -838,6 +990,7 @@
     <name>CImageProcessorCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_processor_comp_base_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageProcessorCompBase</class>
     <namespace>iipr</namespace>
   </compound>
@@ -845,13 +998,17 @@
     <name>CImageRegionProcessorCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_region_processor_comp_base_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageRegionProcessorCompBase</class>
+    <namespace>i2d</namespace>
+    <namespace>iimg</namespace>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CLineProjectionProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_line_projection_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <includes id="_i_projection_constraints_8h" name="IProjectionConstraints.h" local="yes" imported="no">iipr/IProjectionConstraints.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
@@ -863,6 +1020,8 @@
     <name>CLineProjectionSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_line_projection_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">iipr/IDataSequenceProvider.h</includes>
@@ -890,6 +1049,7 @@
     <name>CMultiLineSupplierCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_line_supplier_comp_base_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <class kind="class">iipr::CMultiLineSupplierCompBase</class>
     <namespace>iipr</namespace>
@@ -898,6 +1058,8 @@
     <name>CPositionFromImageSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
@@ -908,6 +1070,7 @@
     <name>CProcessedAcquisitionComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_processed_acquisition_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <namespace>iipr</namespace>
@@ -916,6 +1079,8 @@
     <name>CProcessedBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_processed_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
@@ -924,6 +1089,7 @@
     <name>CRectDerivativeProcessor.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rect_derivative_processor_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
@@ -953,6 +1119,7 @@
     <name>CRgbToGrayProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rgb_to_gray_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CRgbToGrayProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -960,6 +1127,7 @@
     <name>CRingPatternGeneratorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_ring_pattern_generator_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CRingPatternGeneratorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -975,6 +1143,8 @@
     <name>CSearchBasedFeaturesSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_search_based_features_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
@@ -1033,6 +1203,7 @@
     <name>ICaliperProcessor.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_caliper_processor_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <class kind="class">iipr::ICaliperProcessor</class>
@@ -1073,6 +1244,7 @@
     <name>IFeatureToFeatureProcessor.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_feature_to_feature_processor_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <class kind="class">iipr::IFeatureToFeatureProcessor</class>
@@ -1105,6 +1277,7 @@
     <name>IImageToFeatureProcessor.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_image_to_feature_processor_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <class kind="class">iipr::IImageToFeatureProcessor</class>
     <namespace>iipr</namespace>
@@ -1113,6 +1286,7 @@
     <name>iipr.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>iipr_8h</filename>
+    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <namespace>iipr</namespace>
     <member kind="enumeration">
@@ -1132,6 +1306,7 @@
     <name>ILineProjectionProcessor.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_line_projection_processor_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <class kind="class">iipr::ILineProjectionProcessor</class>
     <namespace>iipr</namespace>
@@ -1192,6 +1367,7 @@
     <filename>_t_image_pixel_interpolator_8h</filename>
     <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
     <class kind="class">iipr::TImagePixelInterpolator</class>
+    <namespace>iimg</namespace>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -1263,6 +1439,7 @@
     <name>CHistogramStatisticsProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_histogram_statistics_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <namespace>imeas</namespace>
   </compound>
@@ -1425,6 +1602,7 @@
     <name>ISampleAcquisition.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_sample_acquisition_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">imeas::ISampleAcquisition</class>
     <namespace>imeas</namespace>
   </compound>
@@ -1475,6 +1653,7 @@
     <name>imf.h</name>
     <path>C:/Temp/AcfSln/Include/imf/</path>
     <filename>imf_8h</filename>
+    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <namespace>imf</namespace>
   </compound>
@@ -1508,6 +1687,184 @@
     <includes id="imm_8h" name="imm.h" local="yes" imported="no">imm/imm.h</includes>
     <class kind="class">imm::IVideoInfo</class>
     <namespace>imm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCascadedProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_c_cascaded_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
+    <class kind="class">iproc::CCascadedProcessorComp</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CIterativeProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_c_iterative_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
+    <class kind="class">iproc::CIterativeProcessorComp</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CModelBasedProcessingTriggerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_c_model_based_processing_trigger_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IElapsedTimeProvider.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_i_elapsed_time_provider_8h</filename>
+    <class kind="class">iproc::IElapsedTimeProvider</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iproc.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>iproc_8h</filename>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IProcessor.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_i_processor_8h</filename>
+    <class kind="class">iproc::IProcessor</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IStateController.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_i_state_controller_8h</filename>
+    <class kind="class">iproc::IStateController</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ISupplier.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_i_supplier_8h</filename>
+    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
+    <class kind="class">iproc::ISupplier</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TFileCachedProducerCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_t_file_cached_producer_comp_base_8h</filename>
+    <includes id="_t_i_locked_producer_8h" name="TILockedProducer.h" local="yes" imported="no">iproc/TILockedProducer.h</includes>
+    <class kind="class">iproc::TFileCachedProducerCompBase</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TILockedProducer.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_t_i_locked_producer_8h</filename>
+    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
+    <class kind="class">iproc::TILockedProducer</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMemCachedProducerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_t_mem_cached_producer_comp_8h</filename>
+    <includes id="_t_i_locked_producer_8h" name="TILockedProducer.h" local="yes" imported="no">iproc/TILockedProducer.h</includes>
+    <class kind="class">iproc::TMemCachedProducerComp</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMorphLockedProducerBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_t_morph_locked_producer_base_8h</filename>
+    <includes id="_t_i_locked_producer_8h" name="TILockedProducer.h" local="yes" imported="no">iproc/TILockedProducer.h</includes>
+    <class kind="class">iproc::TMorphLockedProducerBase</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TSupplierCompWrap.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_t_supplier_comp_wrap_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_i_elapsed_time_provider_8h" name="IElapsedTimeProvider.h" local="yes" imported="no">iproc/IElapsedTimeProvider.h</includes>
+    <class kind="class">iproc::TSupplierCompWrap</class>
+    <class kind="class">iproc::TSupplierCompWrap::InputsObserver</class>
+    <class kind="class">iproc::TSupplierCompWrap::ParamsObserver</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TSyncProcessorCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_t_sync_processor_comp_base_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
+    <class kind="class">iproc::TSyncProcessorCompBase</class>
+    <namespace>iproc</namespace>
+    <member kind="typedef">
+      <type>TSyncProcessorCompBase&lt; IProcessor &gt;</type>
+      <name>CSyncProcessorCompBase</name>
+      <anchorfile>namespaceiproc.html</anchorfile>
+      <anchor>a65c76f6b4ad2de54dfdcfb737b246473</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>TSyncProcessorWrap.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_t_sync_processor_wrap_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iproc::TSyncProcessorWrap</class>
+    <namespace>iproc</namespace>
+    <member kind="typedef">
+      <type>TSyncProcessorWrap&lt; IProcessor &gt;</type>
+      <name>CSyncProcessorBase</name>
+      <anchorfile>namespaceiproc.html</anchorfile>
+      <anchor>a20696afdd1463d42b09fe2b513b13b44</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CDocumentProcessingCommandComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
+    <filename>_c_document_processing_command_comp_8h</filename>
+    <includes id="_c_document_processing_manager_comp_base_8h" name="CDocumentProcessingManagerCompBase.h" local="yes" imported="no">iprocgui/CDocumentProcessingManagerCompBase.h</includes>
+    <class kind="class">iprocgui::CDocumentProcessingCommandComp</class>
+    <namespace>iprocgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDocumentProcessingManagerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
+    <filename>_c_document_processing_manager_comp_8h</filename>
+    <includes id="_c_document_processing_manager_comp_base_8h" name="CDocumentProcessingManagerCompBase.h" local="yes" imported="no">iprocgui/CDocumentProcessingManagerCompBase.h</includes>
+    <class kind="class">iprocgui::CDocumentProcessingManagerComp</class>
+    <namespace>iprocgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDocumentProcessingManagerCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
+    <filename>_c_document_processing_manager_comp_base_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iprocgui::CDocumentProcessingManagerCompBase</class>
+    <namespace>iprocgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessorCommandComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
+    <filename>_c_processor_command_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iprocgui::CProcessorCommandComp</class>
+    <namespace>iprocgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessorControlGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
+    <filename>_c_processor_control_gui_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iprocgui::CProcessorControlGuiComp</class>
+    <namespace>iprocgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iprocgui.h</name>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
+    <filename>iprocgui_8h</filename>
+    <namespace>iqproc</namespace>
   </compound>
   <compound kind="file">
     <name>CPropertiesEditorComp.h</name>
@@ -1711,6 +2068,7 @@
     <name>CFileAcquisitionComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_file_acquisition_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
@@ -1787,98 +2145,10 @@
     <namespace>iqtex</namespace>
   </compound>
   <compound kind="file">
-    <name>CDirectoryItemGuiComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_directory_item_gui_comp_8h</filename>
-    <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ifpf/IHotfolderStatistics.h</includes>
-    <class kind="class">iqtfpf::CDirectoryItemGuiComp</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CDirectoryMonitorComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_directory_monitor_comp_8h</filename>
-    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ifpf/IFileSystemChangeStorage.h</includes>
-    <includes id="_i_directory_monitor_8h" name="IDirectoryMonitor.h" local="yes" imported="no">ifpf/IDirectoryMonitor.h</includes>
-    <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ifpf/IDirectoryMonitorParams.h</includes>
-    <includes id="_i_monitoring_session_manager_8h" name="IMonitoringSessionManager.h" local="yes" imported="no">ifpf/IMonitoringSessionManager.h</includes>
-    <class kind="class">iqtfpf::CDirectoryMonitorComp</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CDirectoryMonitorParamsGui.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_directory_monitor_params_gui_8h</filename>
-    <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ifpf/IDirectoryMonitorParams.h</includes>
-    <class kind="class">iqtfpf::CDirectoryMonitorParamsGui</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileNamingComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_file_naming_comp_8h</filename>
-    <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifpf/IFileNaming.h</includes>
-    <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifpf/IFileNamingParams.h</includes>
-    <class kind="class">iqtfpf::CFileNamingComp</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CHotfolderContainerGuiComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_hotfolder_container_gui_comp_8h</filename>
-    <class kind="class">iqtfpf::CHotfolderContainerGuiComp</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CHotfolderGuiComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_hotfolder_gui_comp_8h</filename>
-    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ifpf/IHotfolderProcessingInfo.h</includes>
-    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ifpf/IHotfolderProcessingItem.h</includes>
-    <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ifpf/IHotfolderStatistics.h</includes>
-    <class kind="class">iqtfpf::CHotfolderGuiComp</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CHotfolderProcessingComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_hotfolder_processing_comp_8h</filename>
-    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ifpf/IHotfolderProcessingInfo.h</includes>
-    <includes id="_i_hotfolder_task_manager_8h" name="IHotfolderTaskManager.h" local="yes" imported="no">ifpf/IHotfolderTaskManager.h</includes>
-    <class kind="class">iqtfpf::CHotfolderProcessingComp</class>
-    <class kind="class">iqtfpf::CHotfolderProcessingComp::ItemProcessor</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CHotfolderTaskManagerComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_hotfolder_task_manager_comp_8h</filename>
-    <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifpf/IFileNaming.h</includes>
-    <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ifpf/IFileSystemChangeStorage.h</includes>
-    <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ifpf/IHotfolderProcessingInfo.h</includes>
-    <includes id="_i_directory_monitor_8h" name="IDirectoryMonitor.h" local="yes" imported="no">ifpf/IDirectoryMonitor.h</includes>
-    <includes id="_i_hotfolder_task_manager_8h" name="IHotfolderTaskManager.h" local="yes" imported="no">ifpf/IHotfolderTaskManager.h</includes>
-    <class kind="class">iqtfpf::CHotfolderTaskManagerComp</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CProcessingItemPreviewGuiComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>_c_processing_item_preview_gui_comp_8h</filename>
-    <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ifpf/IHotfolderProcessingItem.h</includes>
-    <class kind="class">iqtfpf::CProcessingItemPreviewGuiComp</class>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>iqtfpf.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtfpf/</path>
-    <filename>iqtfpf_8h</filename>
-    <namespace>iqtfpf</namespace>
-  </compound>
-  <compound kind="file">
     <name>CGeneralSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_c_general_supplier_gui_comp_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
     <namespace>iqtinsp</namespace>
@@ -1902,6 +2172,7 @@
     <name>TSupplierGuiCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_t_supplier_gui_comp_base_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="iqtinsp_8h" name="iqtinsp.h" local="yes" imported="no">iqtinsp/iqtinsp.h</includes>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
@@ -2041,6 +2312,7 @@
     <name>CFrameSeqVideoControllerComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>_c_frame_seq_video_controller_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
     <class kind="class">iqtmm::CFrameSeqVideoControllerComp</class>
@@ -2105,6 +2377,7 @@
     <name>CSampleAcquisitionGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_sample_acquisition_gui_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_c_sample_container_view_8h" name="CSampleContainerView.h" local="yes" imported="no">iqtsig/CSampleContainerView.h</includes>
     <class kind="class">iqtsig::CSampleAcquisitionGuiComp</class>
@@ -2131,6 +2404,7 @@
     <name>CScriptDataProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_script_data_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
     <class kind="class">iqtsig::CScriptDataProcessorComp</class>
     <namespace>iqtsig</namespace>
@@ -2235,22 +2509,129 @@
     <class kind="class">isig::ITriggerParams</class>
     <namespace>isig</namespace>
   </compound>
+  <compound kind="file">
+    <name>CComposedStateControllerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
+    <filename>_c_composed_state_controller_comp_8h</filename>
+    <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">iwiz::CComposedStateControllerComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSelectionConsistencyControllerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
+    <filename>_c_selection_consistency_controller_comp_8h</filename>
+    <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
+    <class kind="class">iwiz::CSelectionConsistencyControllerComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CStateControllerCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
+    <filename>_c_state_controller_comp_base_8h</filename>
+    <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
+    <class kind="class">iwiz::CStateControllerCompBase</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CWizardDocumentComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
+    <filename>_c_wizard_document_comp_8h</filename>
+    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
+    <includes id="_i_params_manager_wizard_8h" name="IParamsManagerWizard.h" local="yes" imported="no">iwiz/IParamsManagerWizard.h</includes>
+    <class kind="class">iwiz::CWizardDocumentComp</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IParamsManagerWizard.h</name>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
+    <filename>_i_params_manager_wizard_8h</filename>
+    <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
+    <class kind="class">iwiz::IParamsManagerWizard</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iwiz.h</name>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
+    <filename>iwiz_8h</filename>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IWizardNavigationController.h</name>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
+    <filename>_i_wizard_navigation_controller_8h</filename>
+    <class kind="class">iwiz::IWizardNavigationController</class>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CWizardOptionsListGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iwizgui/</path>
+    <filename>_c_wizard_options_list_gui_comp_8h</filename>
+    <includes id="_i_params_manager_wizard_8h" name="IParamsManagerWizard.h" local="yes" imported="no">iwiz/IParamsManagerWizard.h</includes>
+    <class kind="class">iwizgui::CWizardOptionsListGuiComp</class>
+    <namespace>iwizgui</namespace>
+  </compound>
   <compound kind="group">
     <name>AcfSln</name>
     <title>ACF-Solutions</title>
     <filename>group___acf_sln.html</filename>
   </compound>
   <compound kind="class">
-    <name>TModelObserverCompWrap</name>
-    <filename>class_t_model_observer_comp_wrap.html</filename>
+    <name>i2d::CLine2d</name>
+    <filename>classi2d_1_1_c_line2d.html</filename>
   </compound>
   <compound kind="class">
-    <name>TSingleModelObserverBase</name>
-    <filename>class_t_single_model_observer_base.html</filename>
+    <name>ibase::CLoggerComponentBase</name>
+    <filename>classibase_1_1_c_logger_component_base.html</filename>
   </compound>
   <compound kind="class">
-    <name>TVector</name>
-    <filename>class_t_vector.html</filename>
+    <name>i2d::CPosition2d</name>
+    <filename>classi2d_1_1_c_position2d.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>IBitmapAcquisition</name>
+    <filename>class_i_bitmap_acquisition.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>i2d::ICalibrationProvider</name>
+    <filename>classi2d_1_1_i_calibration_provider.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>ICaliperProcessor</name>
+    <filename>class_i_caliper_processor.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>istd::IChangeable</name>
+    <filename>classistd_1_1_i_changeable.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>IEdgeLinesProcessor</name>
+    <filename>class_i_edge_lines_processor.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>IEdgesExtractor</name>
+    <filename>class_i_edges_extractor.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>IFeatureToFeatureProcessor</name>
+    <filename>class_i_feature_to_feature_processor.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>IImageToFeatureProcessor</name>
+    <filename>class_i_image_to_feature_processor.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>ILineProjectionProcessor</name>
+    <filename>class_i_line_projection_processor.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::TViewExtenderCompBase</name>
+    <filename>classiqt2d_1_1_t_view_extender_comp_base.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>i2d</name>
+    <filename>namespacei2d.html</filename>
   </compound>
   <compound kind="namespace">
     <name>iauth</name>
@@ -2268,10 +2649,8 @@
   <compound kind="class">
     <name>iauth::CSimpleLoginComp</name>
     <filename>classiauth_1_1_c_simple_login_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>iauth::ILogin</base>
     <base>iauth::IRightsProvider</base>
-    <base>iser::ISerializable</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -2360,7 +2739,6 @@
   <compound kind="class">
     <name>iauth::CStaticRightsProviderComp</name>
     <filename>classiauth_1_1_c_static_rights_provider_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>iauth::IRightsProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -2387,7 +2765,6 @@
   <compound kind="class">
     <name>iauth::CUser</name>
     <filename>classiauth_1_1_c_user.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CUser</name>
@@ -2462,7 +2839,6 @@
   <compound kind="class">
     <name>iauth::CUserLoginComp</name>
     <filename>classiauth_1_1_c_user_login_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iauth::ILogin</base>
     <base virtualness="virtual">iauth::IRightsProvider</base>
     <member kind="typedef">
@@ -2504,7 +2880,6 @@
   <compound kind="class">
     <name>iauth::CUsersManagerComp</name>
     <filename>classiauth_1_1_c_users_manager_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iauth::IUsersManager</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -2601,7 +2976,6 @@
   <compound kind="class">
     <name>iauth::ILogin</name>
     <filename>classiauth_1_1_i_login.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual CUser *</type>
       <name>GetLoggedUser</name>
@@ -2627,7 +3001,6 @@
   <compound kind="class">
     <name>iauth::IPasswordChanger</name>
     <filename>classiauth_1_1_i_password_changer.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>TryChangePassword</name>
@@ -2651,7 +3024,6 @@
   <compound kind="class">
     <name>iauth::IUsersManager</name>
     <filename>classiauth_1_1_i_users_manager.html</filename>
-    <base>iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetUsersCount</name>
@@ -2734,7 +3106,6 @@
   <compound kind="class">
     <name>icam::CAcquisitionConstraintsComp</name>
     <filename>classicam_1_1_c_acquisition_constraints_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
     <member kind="typedef">
@@ -2776,7 +3147,7 @@
   <compound kind="class">
     <name>icam::CCameraDelegatorComp</name>
     <filename>classicam_1_1_c_camera_delegator_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ibase::CLoggerComponentBase</base>
     <base>icam::IBitmapAcquisition</base>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
@@ -2810,15 +3181,15 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
-      <anchor>ab475ba8d35eef79f4a4385c1f0574126</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>abbec32b705b72834aff73bea16fd6303</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>BeginTask</name>
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
-      <anchor>afeb5b0dea680cd7bbe118fcddff2e80a</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a0cc6825fb26614d90bbcc1920da440e8</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -2859,7 +3230,6 @@
   <compound kind="class">
     <name>icam::CExposureParamsComp</name>
     <filename>classicam_1_1_c_exposure_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">icam::IExposureParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -2942,8 +3312,6 @@
   <compound kind="class">
     <name>icam::CMemoryAcquisitionComp</name>
     <filename>classicam_1_1_c_memory_acquisition_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>iimg::CGeneralBitmap</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; IBitmapAcquisition &gt;</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -2963,8 +3331,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classicam_1_1_c_memory_acquisition_comp.html</anchorfile>
-      <anchor>a1c3f9d548556feab49625f8942ab2a9a</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>ad025933d407f5efff5f6ec6caa7009c0</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
@@ -3143,15 +3511,15 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
-      <anchor>aac988b742826f1a775525b7e63634772</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a51c95aa277deac02e8512a1366acfe0f</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>BeginTask</name>
       <anchorfile>classicam_1_1_c_selection_param_camera_comp.html</anchorfile>
-      <anchor>aa7d8ed18f8d62e7c88c4e73d680eb515</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a7288702c4e87c134cf81e3563713e5c1</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -3185,7 +3553,6 @@
   <compound kind="class">
     <name>icam::CSelectionParamCameraComp::JoinParamsSet</name>
     <filename>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</filename>
-    <base virtualness="virtual">iprm::IParamsSet</base>
     <member kind="function">
       <type></type>
       <name>JoinParamsSet</name>
@@ -3279,7 +3646,6 @@
   <compound kind="class">
     <name>icam::IExposureConstraints</name>
     <filename>classicam_1_1_i_exposure_constraints.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetShutterTimeRange</name>
@@ -3305,7 +3671,6 @@
   <compound kind="class">
     <name>icam::IExposureParams</name>
     <filename>classicam_1_1_i_exposure_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const IExposureConstraints *</type>
       <name>GetExposureConstraints</name>
@@ -3372,7 +3737,6 @@
   <compound kind="class">
     <name>iedge::CEdgeLine</name>
     <filename>classiedge_1_1_c_edge_line.html</filename>
-    <base>i2d::CObject2dBase</base>
     <class kind="class">iedge::CEdgeLine::Container</class>
     <member kind="function">
       <type></type>
@@ -3546,7 +3910,6 @@
   <compound kind="class">
     <name>iedge::CEdgeLine::Container</name>
     <filename>classiedge_1_1_c_edge_line_1_1_container.html</filename>
-    <base>TSerializableContainer&lt; CEdgeLine &gt;</base>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SerializeItem</name>
@@ -3558,7 +3921,6 @@
   <compound kind="class">
     <name>iedge::CEdgeNode</name>
     <filename>classiedge_1_1_c_edge_node.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CEdgeNode</name>
@@ -3660,8 +4022,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
-      <anchor>ab9aab9d8d234c0295a7489d714d475a2</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a0ca558e1bdc5c75739b430be78186368</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -3777,8 +4139,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
-      <anchor>a23015b4ac203547a64204024de4dbcd0</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a7bb77ac6c8fa671c552b3a75a004e6cd</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -3895,7 +4257,6 @@
   <compound kind="class">
     <name>iedgegui::CEdgeLineContainerShape</name>
     <filename>classiedgegui_1_1_c_edge_line_container_shape.html</filename>
-    <base>iview::CShapeBase</base>
     <member kind="typedef">
       <type>iview::CShapeBase</type>
       <name>BaseClass</name>
@@ -4015,796 +4376,493 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>ifpf</name>
-    <filename>namespaceifpf.html</filename>
-    <class kind="class">ifpf::CDirectoryMonitorParams</class>
-    <class kind="class">ifpf::CDirectoryMonitorParamsComp</class>
-    <class kind="class">ifpf::CFileListConverterComp</class>
-    <class kind="class">ifpf::CFileNamingParamsComp</class>
-    <class kind="class">ifpf::CFilePathesContainer</class>
-    <class kind="class">ifpf::CFileSystemChangeStorage</class>
-    <class kind="class">ifpf::CHotfolderLoaderComp</class>
-    <class kind="class">ifpf::CHotfolderProcessingInfo</class>
-    <class kind="class">ifpf::CHotfolderProcessingItem</class>
-    <class kind="class">ifpf::CHotfolderStatistics</class>
-    <class kind="class">ifpf::CHotfolderWorkflowComp</class>
-    <class kind="class">ifpf::CHotfolderWorkflowItem</class>
-    <class kind="class">ifpf::CMonitoringSession</class>
-    <class kind="class">ifpf::CMonitoringSessionsManager</class>
-    <class kind="class">ifpf::CVisualHotfolderWorkflowComp</class>
-    <class kind="class">ifpf::CVisualHotfolderWorkflowItem</class>
-    <class kind="class">ifpf::IDirectoryMonitor</class>
-    <class kind="class">ifpf::IDirectoryMonitorParams</class>
-    <class kind="class">ifpf::IFileNaming</class>
-    <class kind="class">ifpf::IFileNamingParams</class>
-    <class kind="class">ifpf::IFileSystemChangeStorage</class>
-    <class kind="class">ifpf::IHotfolderInfoManager</class>
-    <class kind="class">ifpf::IHotfolderProcessingInfo</class>
-    <class kind="class">ifpf::IHotfolderProcessingItem</class>
-    <class kind="class">ifpf::IHotfolderStatistics</class>
-    <class kind="class">ifpf::IHotfolderTaskManager</class>
-    <class kind="class">ifpf::IHotfolderWorkflow</class>
-    <class kind="class">ifpf::IHotfolderWorkflowItem</class>
-    <class kind="class">ifpf::IMonitoringSession</class>
-    <class kind="class">ifpf::IMonitoringSessionManager</class>
+    <name>ifileproc</name>
+    <filename>namespaceifileproc.html</filename>
+    <class kind="class">ifileproc::CCopyProcessorComp</class>
+    <class kind="class">ifileproc::CExternalFileConverterComp</class>
+    <class kind="class">ifileproc::CFileConvertOverProcessorComp</class>
+    <class kind="class">ifileproc::CFileListConverterComp</class>
+    <class kind="class">ifileproc::CFileNamingComp</class>
+    <class kind="class">ifileproc::CFileNamingParamsComp</class>
+    <class kind="class">ifileproc::CFilePathesContainer</class>
+    <class kind="class">ifileproc::CSelectableFileConverterComp</class>
+    <class kind="class">ifileproc::IFileNaming</class>
+    <class kind="class">ifileproc::IFileNamingParams</class>
   </compound>
   <compound kind="class">
-    <name>ifpf::CDirectoryMonitorParams</name>
-    <filename>classifpf_1_1_c_directory_monitor_params.html</filename>
-    <base virtualness="virtual">ifpf::IDirectoryMonitorParams</base>
-    <member kind="function">
-      <type></type>
-      <name>CDirectoryMonitorParams</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>acdf05c55ffee1107a8b5dde1b61ba093</anchor>
-      <arglist>()</arglist>
+    <name>ifileproc::CCopyProcessorComp</name>
+    <filename>classifileproc_1_1_c_copy_processor_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>ae9117ca2a5727f97cb7804c1b2563af6</anchor>
+      <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetPoolingIntervall</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a011acf45e925bcce854e3324a19d3afb</anchor>
-      <arglist>() const </arglist>
+    <member kind="enumvalue">
+      <name>MI_END_STATUS</name>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>ae9117ca2a5727f97cb7804c1b2563af6a844d7eb582809504218a94de3ce3f0cd</anchor>
+      <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPoolingIntervall</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>ad429621dc840dfb2ffce7a01a29a61ba</anchor>
-      <arglist>(double poolingIntervall)</arglist>
+    <member kind="enumvalue">
+      <name>MI_NO_INPUT</name>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>ae9117ca2a5727f97cb7804c1b2563af6a9be50e7fdb1bd05becd2721c87cb36b5</anchor>
+      <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetObservedItemTypes</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a998b4cf0fd185eb2f03ad552999e183a</anchor>
-      <arglist>() const </arglist>
+    <member kind="enumvalue">
+      <name>MI_NO_OUTPUT</name>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>ae9117ca2a5727f97cb7804c1b2563af6ae9f08125c486c586c67e9c5b6db12ab3</anchor>
+      <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetObservedItemTypes</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a8d0d59611ad761f6ff0b6f4fa91ea5bb</anchor>
-      <arglist>(int observedItemTypes)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetObservedChanges</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>acb6dfaadce0c460b14ad32b458493d4e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetObservedChanges</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a8ebe01fa59171647cbc2d134b8e0d8aa</anchor>
-      <arglist>(int ovservedChanges)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetAcceptPatterns</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a54d04a6fffbea582e79d934f35e2da99</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetAcceptPatterns</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a087676ca0a33975d1cc7368bbd2d8466</anchor>
-      <arglist>(const QStringList &amp;acceptPatterns)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetIgnorePatterns</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>ab5567e42c7ac2267accf4a2178ccdec4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetIgnorePatterns</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>ae9a1673767947233f1b274e97b6ffefa</anchor>
-      <arglist>(const QStringList &amp;acceptPatterns)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a64c6df2fd17011ff75afe17a9c2fa60f</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ifpf::CDirectoryMonitorParamsComp</name>
-    <filename>classifpf_1_1_c_directory_monitor_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>ifpf::CDirectoryMonitorParams</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params_comp.html</anchorfile>
-      <anchor>a069bdab36940a505e95159a8f0dfecc1</anchor>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>a52c86179a80b6b8b51bbe766fa915ce6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>ifpf::CDirectoryMonitorParams</type>
-      <name>BaseClass2</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params_comp.html</anchorfile>
-      <anchor>a1eacfeb8b73d4c7d24668cb5ea5bf0ba</anchor>
-      <arglist></arglist>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckFileExistTree</name>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>adc5dc87ddb7f5ba1abcde62f0e908da1</anchor>
+      <arglist>(const QDir &amp;inputDir, const QStringList &amp;filters, const QStringList &amp;excludeFilters, int recursionDepth) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CopyFileTree</name>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>a2ca8c805c95ecf7ae7c1c5fa9593aa39</anchor>
+      <arglist>(const QDir &amp;inputDir, const QDir &amp;outputDir, const QStringList &amp;filters, const QStringList &amp;excludeFilters, int recursionDepth, int &amp;counter) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckIfExcluded</name>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>ab2657c598396158624b7befce70f4fc4</anchor>
+      <arglist>(const QString &amp;fileName, const QStringList &amp;excludeFilters) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classifpf_1_1_c_directory_monitor_params_comp.html</anchorfile>
-      <anchor>a194988615bd63d6196b3cbdffb510120</anchor>
+      <anchorfile>classifileproc_1_1_c_copy_processor_comp.html</anchorfile>
+      <anchor>a8161abc782c8e3666e24c21212dc5d6d</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CFileListConverterComp</name>
-    <filename>classifpf_1_1_c_file_list_converter_comp.html</filename>
+    <name>ifileproc::CExternalFileConverterComp</name>
+    <filename>classifileproc_1_1_c_external_file_converter_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifileproc_1_1_c_external_file_converter_comp.html</anchorfile>
+      <anchor>a9a0354a6f2e63896166a06220d47276f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConvertFile</name>
+      <anchorfile>classifileproc_1_1_c_external_file_converter_comp.html</anchorfile>
+      <anchor>a779660152ec1e775f2a9b3067495529a</anchor>
+      <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifileproc_1_1_c_external_file_converter_comp.html</anchorfile>
+      <anchor>a60ff8b6e50103bff9a27d4a79a5532c4</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifileproc::CFileConvertOverProcessorComp</name>
+    <filename>classifileproc_1_1_c_file_convert_over_processor_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifileproc_1_1_c_file_convert_over_processor_comp.html</anchorfile>
+      <anchor>a25e84206e80578e52f1f054f12450704</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFileConvertOverProcessorComp</name>
+      <anchorfile>classifileproc_1_1_c_file_convert_over_processor_comp.html</anchorfile>
+      <anchor>a5e5b7e0cd41d6e60c34d314db3e34c1d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConvertFile</name>
+      <anchorfile>classifileproc_1_1_c_file_convert_over_processor_comp.html</anchorfile>
+      <anchor>a57b8f9fe23771813e19619a4b9cc0930</anchor>
+      <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifileproc::CFileListConverterComp</name>
+    <filename>classifileproc_1_1_c_file_list_converter_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
     <member kind="typedef">
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_file_list_converter_comp.html</anchorfile>
-      <anchor>a2becfa027d4b4d3f7e7ff6f08d5f8ce0</anchor>
+      <anchorfile>classifileproc_1_1_c_file_list_converter_comp.html</anchorfile>
+      <anchor>ae92f67ceb959557a369a51b5540c98ae</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
-      <anchorfile>classifpf_1_1_c_file_list_converter_comp.html</anchorfile>
-      <anchor>af06af83087171b2fa4dfa7cde02d99d4</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchorfile>classifileproc_1_1_c_file_list_converter_comp.html</anchorfile>
+      <anchor>ae6f3bf67ff0fa426a4aae8ad5c3da853</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CFileNamingParamsComp</name>
-    <filename>classifpf_1_1_c_file_naming_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ifpf::IFileNamingParams</base>
+    <name>ifileproc::CFileNamingComp</name>
+    <filename>classifileproc_1_1_c_file_naming_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <base virtualness="virtual">ifileproc::IFileNaming</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_comp.html</anchorfile>
+      <anchor>a4050ac6a1bbd857b6da8ddb3469e3b1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetFilePath</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_comp.html</anchorfile>
+      <anchor>ad070efb94f46b3daffba88283d40a14d</anchor>
+      <arglist>(const QString &amp;inputFileName) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifileproc::CFileNamingParamsComp</name>
+    <filename>classifileproc_1_1_c_file_naming_params_comp.html</filename>
+    <base virtualness="virtual">ifileproc::IFileNamingParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>aba98b1c9b79d710cdb9749da99fa0a81</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a9f93a7d613e1f76e2e5651e6a5f08149</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CFileNamingParamsComp</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a09fb21399cfc0630acc111ddb65fd968</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a24f32b7094354f7e0941f37e615b4ced</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual OverwriteStrategy</type>
       <name>GetOverwriteStrategy</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a2168341012f006347ec49e3bc99c8446</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>ade9242b434379c228f1b5b3f7d0eb3e2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetOverwriteStrategy</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>ae031f4c1213993fc4dd66b8062cca0ab</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>ac6814362da5098e9903340b251f531e1</anchor>
       <arglist>(OverwriteStrategy overwriteStrategy)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetPrefix</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a8291fe6fe613fd904520046150c97741</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a19ad71ae219bbe3d9be5681cea88fea6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPrefix</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>abd3cdb8bc680e6c5c01f4ebf545fe5f6</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a1bc94d44ff19a35617328570390b6c9e</anchor>
       <arglist>(const QString &amp;prefix)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetSuffix</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a66531a7ba03ab38139475cab9b3862cb</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a12d370f195951edddc28f9d48d1a3041</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSuffix</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>ad83ca290f2d2fb06ca6a71e5d18fa73d</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a997320def50775776200feadb293c26f</anchor>
       <arglist>(const QString &amp;suffix)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
       <name>GetPatternsToRemove</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a52a469eca75ca2a376e4c8c7b5437fbb</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>ab4fae40b6f399ed4e77df09e4919406f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPatternsToRemove</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>ae029b35a340435ff98e163391579d675</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a86d9a039cceecf955c86ee481c9d56b2</anchor>
       <arglist>(const QStringList &amp;patternsToRemove)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a6fe3547208aaf2e30caeb09bc5a24d69</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a7bcdbd60b2cd6089b7f3c354a4edef08</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classifpf_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a5349bf2b45d5c364e0a70b150ad46fef</anchor>
+      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
+      <anchor>a44638976c7253ff544987d042fb4e737</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CFilePathesContainer</name>
-    <filename>classifpf_1_1_c_file_pathes_container.html</filename>
-    <base virtualness="virtual">ibase::IFileListProvider</base>
+    <name>ifileproc::CFilePathesContainer</name>
+    <filename>classifileproc_1_1_c_file_pathes_container.html</filename>
     <member kind="function">
       <type>void</type>
       <name>ResetFiles</name>
-      <anchorfile>classifpf_1_1_c_file_pathes_container.html</anchorfile>
-      <anchor>ac5624fa56a1f3767a317281fb170225b</anchor>
+      <anchorfile>classifileproc_1_1_c_file_pathes_container.html</anchorfile>
+      <anchor>a41f33a962fbf6761750ab9a007986425</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertFile</name>
-      <anchorfile>classifpf_1_1_c_file_pathes_container.html</anchorfile>
-      <anchor>aba849a0b0ee1c9181e912cc7ec8c926c</anchor>
+      <anchorfile>classifileproc_1_1_c_file_pathes_container.html</anchorfile>
+      <anchor>a382029470eff5fd81c6353212029fb96</anchor>
       <arglist>(const QString &amp;file, int index=-1, bool ignoreNonExistingFiles=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
       <name>GetFileList</name>
-      <anchorfile>classifpf_1_1_c_file_pathes_container.html</anchorfile>
-      <anchor>a4a16acbe867ef125a80693a44dce6099</anchor>
+      <anchorfile>classifileproc_1_1_c_file_pathes_container.html</anchorfile>
+      <anchor>a5fdf400339a5dd41d3366eaa43188b53</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CFileSystemChangeStorage</name>
-    <filename>classifpf_1_1_c_file_system_change_storage.html</filename>
-    <base virtualness="virtual">ifpf::IFileSystemChangeStorage</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetStorageItemsCount</name>
-      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>acf23937654cae9feebd4357b6cb3bdd9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetItemPath</name>
-      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>a078f80f40d7f4265b4d2e0188fcc63e8</anchor>
-      <arglist>(int fileIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetItemState</name>
-      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>a17b79aeeb30f8cad8e300c4175e3db72</anchor>
-      <arglist>(int fileIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateStorageItem</name>
-      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>a66c8f125912f07bd94cb1552fed22c96</anchor>
-      <arglist>(const QString &amp;path, int itemFlags)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ResetStorage</name>
-      <anchorfile>classifpf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>aca8050eb866a5699ed7f73c33a49d137</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ifpf::CHotfolderLoaderComp</name>
-    <filename>classifpf_1_1_c_hotfolder_loader_comp.html</filename>
-    <base>TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ab302656f69eca51e35b3a36083cd43fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_LOAD_ERROR</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ab302656f69eca51e35b3a36083cd43fdaebb60ccac56373ea41c60e7f4c54b562</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_READ_STATIC_PARAMS</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ab302656f69eca51e35b3a36083cd43fdaaa6062ce8221829af899fe14721bf06b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_READ_DYNAMIC_PARAMS</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ab302656f69eca51e35b3a36083cd43fda628b1e1d3dde10618543d3f7ae0f05c5</anchor>
-      <arglist></arglist>
-    </member>
+    <name>ifileproc::CSelectableFileConverterComp</name>
+    <filename>classifileproc_1_1_c_selectable_file_converter_comp.html</filename>
     <member kind="typedef">
-      <type>ibase::TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</type>
+      <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a0cff9300c66ffa9b473e36e2901a67fd</anchor>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a6d19081c6d37afa0ee8516b8e7572c8a</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a8cff5be1520e49b873b6498802ddc64a</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a10f31fd399d398d863a7a71e4a1e103a</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
+    <member kind="function">
+      <type></type>
+      <name>CSelectableFileConverterComp</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a1d9905cbfe4197675a106e933cd820bf</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a4f0ddeff61bd2f6f85a7931dd5b98371</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <name>ConvertFile</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a2af0c5a60a8d87f382879ceae57170bc</anchor>
+      <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>acce65034361d959a84328cd78f157046</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+      <type>virtual const ISelectionConstraints *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a688d46d29cc3460586e5aed2dd1d1a68</anchor>
+      <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>GetStaticParamsPath</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a56700d4ff4a510345e9c232c4c77b2f9</anchor>
-      <arglist>(const QString &amp;objectPath) const </arglist>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a04578647853ff5878755ef7c0e25ae28</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a4409552270a591d62d0ae16657cffe91</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>ab8956a029e24f516ce185e4a417295d8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>ac0cc7e6cf44ecf70cee726c2a3f39cfc</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>aa2678f7c50c21c4e36f6332604bd693e</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnReadError</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>aa35bc2c8080d420bf55ebfef94bec365</anchor>
-      <arglist>(const iser::CXmlFileReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ifpf::CHotfolderProcessingInfo</name>
-    <filename>classifpf_1_1_c_hotfolder_processing_info.html</filename>
-    <base virtualness="virtual">ifpf::IHotfolderProcessingInfo</base>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderProcessingInfo</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a8ca676171fad14811815d17e4c66ee25</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ItemExists</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a17223641fbd208eaf40afd7875c246fb</anchor>
-      <arglist>(const QString &amp;inputFilePath, ifpf::IHotfolderProcessingItem **foundItemPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ItemExists</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>aa7eff844d84c50c5cdf667e7958705f2</anchor>
-      <arglist>(const ifpf::IHotfolderProcessingItem &amp;processingItem) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ifpf::IHotfolderProcessingItem *</type>
-      <name>AddProcessingItem</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a25db4fb3769754ef466961e010d4f115</anchor>
-      <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath=QString())</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RemoveProcessingItem</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>aeaa1653a516454294e5c6d9fa8b52219</anchor>
-      <arglist>(ifpf::IHotfolderProcessingItem *fileItemPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetProcessingItemsCount</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>af4ae79d0ad4f9b31ec44941074f8f894</anchor>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a71468b1274cc1a04022ca52c7b7fdfed</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderProcessingItem *</type>
-      <name>GetProcessingItem</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a14ac706b52a1807e1f64b34f31641fb2</anchor>
-      <arglist>(int processingItemIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsWorking</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a7a6df11978d57bca450ef53896b0b86e</anchor>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a099244e71c6a8ebdd79f05448a6c2845</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetWorking</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>aa87eaafcba9ce18e721f1dee22f02701</anchor>
-      <arglist>(bool working=true)</arglist>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a2813c800728aec6e9ebf64bb2b0809e4</anchor>
+      <arglist>(int index) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a9e7250c0036ebb12d584e37a6a86ed90</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>a96a7a18fbaf204c76323dd8397dea22c</anchor>
+      <arglist>(int index) const </arglist>
     </member>
-    <member kind="typedef" protection="protected">
-      <type>imod::TModelWrap&lt; istd::TChangeDelegator&lt; ifpf::CHotfolderProcessingItem &gt; &gt;</type>
-      <name>ProcessingItem</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a9cd122f706ced93e9edcbc8c276163e2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>istd::TPointerVector&lt; ifpf::IHotfolderProcessingItem &gt;</type>
-      <name>FileItems</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>ad80099b1d9fb53af75e7a25a9e18760d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>FileItems</type>
-      <name>m_processingItems</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a43c988e5acb8cde9bf3997434ee49a6c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_isWorking</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a876570a8f9e51b107d479ed73fd50f83</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QMutex</type>
-      <name>m_mutex</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_info.html</anchorfile>
-      <anchor>a60529b2cf50c08714ab7d9aec66b4d5d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ifpf::CHotfolderProcessingItem</name>
-    <filename>classifpf_1_1_c_hotfolder_processing_item.html</filename>
-    <base virtualness="virtual">ifpf::IHotfolderProcessingItem</base>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderProcessingItem</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a5f7313e6332ce0be38a4b0b27ed386ef</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QByteArray</type>
-      <name>GetItemUuid</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a424b49070110413e1ee7632905f11ab6</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetProcessingState</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>aef870897ca5480a8fbbc2106757e3f5c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetProcessingState</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a5e92b99831f8d7a04209a0a812f02460</anchor>
-      <arglist>(int processingState)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetInputFile</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a864e38503a96049e8f21bc8c20e8d784</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetInputFile</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a153079be88e81d4a3e37422b44a2f39d</anchor>
-      <arglist>(const QString &amp;inputFile)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOutputFile</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>add78233e2ae3b81fe2062a05af213eb9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOutputFile</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>ae7a577197ab6053bfaa1cc89c8afdb52</anchor>
-      <arglist>(const QString &amp;outputFile)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetProcessingTime</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>ac39a2433609c2344720e6564af96d7ff</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetProcessingTime</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a92c2daee7e69c4d3f42e39379ffa7bf0</anchor>
-      <arglist>(double processingTime)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QDateTime &amp;</type>
-      <name>GetStartTime</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>a033daa9af7dc7bc673c58e62c6b224bb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetStartTime</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>ada35cc61ff5790ff16764b7bbe785897</anchor>
-      <arglist>(const QDateTime &amp;startTime)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_processing_item.html</anchorfile>
-      <anchor>afd559116e64604ee426497a53d89d09b</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <name>GetOptionId</name>
+      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
+      <anchor>af8c83113238e4559a4a7ed0cd0e44487</anchor>
+      <arglist>(int index) const </arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CHotfolderStatistics</name>
-    <filename>classifpf_1_1_c_hotfolder_statistics.html</filename>
-    <base virtualness="virtual">ifpf::IHotfolderStatistics</base>
-    <base>TSingleModelObserverBase&lt; ifpf::IHotfolderProcessingInfo &gt;</base>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; ifpf::IHotfolderProcessingInfo &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a731d0f3967db625007cc17058f5f6b8d</anchor>
+    <name>ifileproc::IFileNaming</name>
+    <filename>classifileproc_1_1_i_file_naming.html</filename>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetFilePath</name>
+      <anchorfile>classifileproc_1_1_i_file_naming.html</anchorfile>
+      <anchor>a4e3e3034bca0d8b9ff57953aa7b6d8dc</anchor>
+      <arglist>(const QString &amp;inputFileName) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifileproc::IFileNamingParams</name>
+    <filename>classifileproc_1_1_i_file_naming_params.html</filename>
+    <member kind="enumeration">
+      <name>OverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderStatistics</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a16a1398116c8b075c96142f14cf026e3</anchor>
-      <arglist>()</arglist>
+    <member kind="enumvalue">
+      <name>RM_OVERWRITE</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2ac2af4cd344ad51fc08436eac8747539a</anchor>
+      <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetItemsCount</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a1bef36f2fabe0675228d5a5f8751687a</anchor>
-      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
+    <member kind="enumvalue">
+      <name>RM_NUMBERING</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2aba08a396fb1f24a745551c9585c3d5bd</anchor>
+      <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSuccessCount</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>aed90eed706e0358fe6d11ef18af1a33f</anchor>
-      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual OverwriteStrategy</type>
+      <name>GetOverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a676375f2aadf7f987715775c9e380aa4</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetErrorsCount</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a314f41dfb9b6c3151f628b4cc8edc224</anchor>
-      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetAbortedCount</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>ad8d5986f990fc29620afeaf6d625cb1c</anchor>
-      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetProcessingTime</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a2e277161d3cc5294df6fbaa8287b41c8</anchor>
-      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>af935836ced7c81bdbc59a2a5b254a3d9</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <name>SetOverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a213e37f01756a3c6b2594137a2df9d20</anchor>
+      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>aecee073e70d199a045c4c9c0efd75499</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetPrefix</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a071d8bcf5db41c4968e509a84e3c51cc</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a0c39998556c8c787349e3c3c7c52f4b5</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetPrefix</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a21c08bf26829bc75aeb2852a72113374</anchor>
+      <arglist>(const QString &amp;prefix)=0</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ResetStatistics</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>afc28f14fa389751ac65634ce228532ee</anchor>
-      <arglist>()</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetSuffix</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a753e523548b1fb97c9ddeac545779f79</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>RebuildStatistics</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>ac67e7420c0d848c443b08e782e6f4bf1</anchor>
-      <arglist>()</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetSuffix</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a2fb3327b0cce1cdd76994d8c52639da4</anchor>
+      <arglist>(const QString &amp;suffix)=0</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateStateMaps</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a12b302387ae35f6326bb67396de5d2df</anchor>
-      <arglist>(int itemState, const QString &amp;directoryPath)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual QStringList</type>
+      <name>GetPatternsToRemove</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a764e80fa36ec30505f0fcdbf2e678d00</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static QString</type>
-      <name>GetDirectoryPath</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a762a8fad33605869239474a27c66978c</anchor>
-      <arglist>(const ifpf::IHotfolderProcessingItem &amp;item)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetPatternsToRemove</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a3573570923b2dc556a10aebb7233ec97</anchor>
+      <arglist>(const QStringList &amp;patternsToRemove)=0</arglist>
     </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ifpf</name>
+    <filename>namespaceifpf.html</filename>
+    <class kind="class">ifpf::CHotfolderWorkflowComp</class>
   </compound>
   <compound kind="class">
     <name>ifpf::CHotfolderWorkflowComp</name>
     <filename>classifpf_1_1_c_hotfolder_workflow_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ifpf::IHotfolderWorkflow</base>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ifpf::IHotfolderWorkflow</base>
-    <base virtualness="virtual">ifpf::IHotfolderInfoManager</base>
-    <class kind="struct">ifpf::CHotfolderWorkflowComp::HotfolderItem</class>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
       <anchor>ae46bc4edd04290ce7249de98540d9dec</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ae46bc4edd04290ce7249de98540d9dec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderWorkflowComp</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a70918bb98ad538f86d28cac051206207</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderProcessingInfo *</type>
-      <name>GetProcessingInfo</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a6718745865e4d36add47a48b5edda4d8</anchor>
-      <arglist>(const QString &amp;hotfolderName) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderWorkflowItem *</type>
-      <name>AddHotfolder</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a087906c8f256fdac1f82ce8ff46b438b</anchor>
-      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RemoveHotfolder</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a08f0acd90d47e1acc11ede45bb5f8a57</anchor>
-      <arglist>(const QString &amp;hotfolderName)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetHotfolderIds</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a3b12bae2b23b7783596df5a1178a8091</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetHotfolderList</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ac6ad475a920fc1346ea4995221bb2245</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderWorkflowItem *</type>
-      <name>GetHotfolder</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ab78f92b9bd1c39abff6abeb5fdeed629</anchor>
-      <arglist>(const QString &amp;hotfolderName) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a91f25e020813632ddf9d8bcb2d50686d</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -4855,27 +4913,6 @@
       <anchor>a91f25e020813632ddf9d8bcb2d50686d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="typedef" protection="protected">
-      <type>istd::TPointerVector&lt; HotfolderItem &gt;</type>
-      <name>Hotfolders</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a58faf3140cc37fd663b1f92f38d19bf8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual HotfolderItem *</type>
-      <name>CreateHotfolder</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ac221694e0600faa90cee949900b9f9af</anchor>
-      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString()) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderWorkflowItem *</type>
-      <name>CreateWorkflowItem</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a03e7d0c80cdb8a7677a7b549ae4ff9ef</anchor>
-      <arglist>(const QString &amp;hotfolderId) const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ifpf::IHotfolderProcessingInfo *</type>
       <name>CreateHotfolder</name>
@@ -4884,913 +4921,2143 @@
       <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString()) const </arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>ifpf::CHotfolderWorkflowComp::HotfolderItem</name>
-    <filename>structifpf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</filename>
-    <member kind="variable">
-      <type>istd::TDelPtr&lt; iprm::IParamsSet &gt;</type>
-      <name>hotfolderParamsPtr</name>
-      <anchorfile>structifpf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</anchorfile>
-      <anchor>a6ac32a26afbd5a5a3e8fa5ae0c16037c</anchor>
+  <compound kind="namespace">
+    <name>ihotf</name>
+    <filename>namespaceihotf.html</filename>
+    <class kind="class">ihotf::CDirectoryMonitorParams</class>
+    <class kind="class">ihotf::CDirectoryMonitorParamsComp</class>
+    <class kind="class">ihotf::CFileSystemChangeStorage</class>
+    <class kind="class">ihotf::CHotfolderLoaderComp</class>
+    <class kind="class">ihotf::CHotfolderProcessingInfo</class>
+    <class kind="class">ihotf::CHotfolderProcessingItem</class>
+    <class kind="class">ihotf::CHotfolderStatistics</class>
+    <class kind="class">ihotf::CHotfolderWorkflowComp</class>
+    <class kind="class">ihotf::CHotfolderWorkflowItem</class>
+    <class kind="class">ihotf::CMonitoringSession</class>
+    <class kind="class">ihotf::CMonitoringSessionsManager</class>
+    <class kind="class">ihotf::CVisualHotfolderWorkflowComp</class>
+    <class kind="class">ihotf::CVisualHotfolderWorkflowItem</class>
+    <class kind="class">ihotf::IDirectoryMonitor</class>
+    <class kind="class">ihotf::IDirectoryMonitorParams</class>
+    <class kind="class">ihotf::IFileSystemChangeStorage</class>
+    <class kind="class">ihotf::IHotfolderInfoManager</class>
+    <class kind="class">ihotf::IHotfolderProcessingInfo</class>
+    <class kind="class">ihotf::IHotfolderProcessingItem</class>
+    <class kind="class">ihotf::IHotfolderStatistics</class>
+    <class kind="class">ihotf::IHotfolderTaskManager</class>
+    <class kind="class">ihotf::IHotfolderWorkflow</class>
+    <class kind="class">ihotf::IHotfolderWorkflowItem</class>
+    <class kind="class">ihotf::IMonitoringSession</class>
+    <class kind="class">ihotf::IMonitoringSessionManager</class>
+  </compound>
+  <compound kind="class">
+    <name>ihotf::CDirectoryMonitorParams</name>
+    <filename>classihotf_1_1_c_directory_monitor_params.html</filename>
+    <base virtualness="virtual">ihotf::IDirectoryMonitorParams</base>
+    <member kind="function">
+      <type></type>
+      <name>CDirectoryMonitorParams</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>aa8786226f865d71858e7e1df19e8e186</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetPoolingIntervall</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a64fe092838e0a615bf93dc812ee2db97</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPoolingIntervall</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>aeaa913eed21c280b7d78cd61e6535be2</anchor>
+      <arglist>(double poolingIntervall)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetObservedItemTypes</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>ae01934c15e8f1fdd86e7ded7d6b84141</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetObservedItemTypes</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a99d7d94720c6dd5aebecb4cb914c74d5</anchor>
+      <arglist>(int observedItemTypes)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetObservedChanges</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a89714d048f3e2c7e4a398cbdef328be4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetObservedChanges</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a7a8e689cec5fe1f0111450ccd0b44b6e</anchor>
+      <arglist>(int ovservedChanges)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetAcceptPatterns</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>aa133a4444ab3cebd912ae801a3b6a371</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetAcceptPatterns</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a65c6037f397a2f536e3992859fc47468</anchor>
+      <arglist>(const QStringList &amp;acceptPatterns)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetIgnorePatterns</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a5f2bd9023d29236f1c2368a58d94aec1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetIgnorePatterns</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>ab25fbb44b01862c5c008ec059b098ae1</anchor>
+      <arglist>(const QStringList &amp;acceptPatterns)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a4b7e6d06c734ab27994d3b3a58b40efe</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotf::CDirectoryMonitorParamsComp</name>
+    <filename>classihotf_1_1_c_directory_monitor_params_comp.html</filename>
+    <base>ihotf::CDirectoryMonitorParams</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params_comp.html</anchorfile>
+      <anchor>ab8a30219d2f02d0034a179be173c332b</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
-      <type>istd::TDelPtr&lt; ifpf::IHotfolderWorkflowItem &gt;</type>
-      <name>elementPtr</name>
-      <anchorfile>structifpf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</anchorfile>
-      <anchor>a7e7fa27888256c462dd453a2f8355cd9</anchor>
+    <member kind="typedef">
+      <type>ihotf::CDirectoryMonitorParams</type>
+      <name>BaseClass2</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params_comp.html</anchorfile>
+      <anchor>acb8794154e1ba81a5737d751b061e58b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params_comp.html</anchorfile>
+      <anchor>adecd3122a30aff93cbc31b44bc1efe1e</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotf::CFileSystemChangeStorage</name>
+    <filename>classihotf_1_1_c_file_system_change_storage.html</filename>
+    <base virtualness="virtual">ihotf::IFileSystemChangeStorage</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetStorageItemsCount</name>
+      <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>a0eb3506329283eb2a0e3e31f05238340</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetItemPath</name>
+      <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>a90fd1652bcbf9fbfd9bb787d769975c2</anchor>
+      <arglist>(int fileIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetItemState</name>
+      <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>a1f959ac5146a4ae649be8aa7b36c78e1</anchor>
+      <arglist>(int fileIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateStorageItem</name>
+      <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>a77c682c9330e9c4120c384bee66f48cf</anchor>
+      <arglist>(const QString &amp;path, int itemFlags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetStorage</name>
+      <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>a08e4420303355c52698f9626dd8857e2</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotf::CHotfolderLoaderComp</name>
+    <filename>classihotf_1_1_c_hotfolder_loader_comp.html</filename>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_LOAD_ERROR</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a540b9547bdc5551e9c5ee0c0149af7ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_READ_STATIC_PARAMS</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a3fadb5a59a47e69b165a130cce118457</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_READ_DYNAMIC_PARAMS</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a499e1ff10c7dcd34442b0473102c9f7b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>a0650077677699cd0a25abb1ba418a346</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>aa60ed182d639095c9d02963135b48714</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>ad3e769f854c79a42db83b5f7665b2329</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>a4d9d2c0a575b9457621fa1c2af1fc581</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>ace302b59822a6f767859e7c704dbff1c</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetStaticParamsPath</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>a563f842fb8310521a0150e7151bcf753</anchor>
+      <arglist>(const QString &amp;objectPath) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnReadError</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
+      <anchor>ad7f66fbcd9366b7bd8c72dc2ed067315</anchor>
+      <arglist>(const iser::CXmlFileReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotf::CHotfolderProcessingInfo</name>
+    <filename>classihotf_1_1_c_hotfolder_processing_info.html</filename>
+    <base virtualness="virtual">ihotf::IHotfolderProcessingInfo</base>
+    <member kind="function">
+      <type></type>
+      <name>CHotfolderProcessingInfo</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>acc9ce62616eb1aa0f4363405ab69d20e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ItemExists</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4becbf0bbb9149683ca81d7ed61bc189</anchor>
+      <arglist>(const QString &amp;inputFilePath, ihotf::IHotfolderProcessingItem **foundItemPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ItemExists</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a1079c68ad965762c6d0e6bc8ec7fb2c4</anchor>
+      <arglist>(const ihotf::IHotfolderProcessingItem &amp;processingItem) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ihotf::IHotfolderProcessingItem *</type>
+      <name>AddProcessingItem</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a1e183d815b04627858e0680bf96079a6</anchor>
+      <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath=QString())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveProcessingItem</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a7915223af1fde483e78ab16907b50484</anchor>
+      <arglist>(ihotf::IHotfolderProcessingItem *fileItemPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessingItemsCount</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>aeaee9665bddaaf2b59b83ffb917a9996</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ihotf::IHotfolderProcessingItem *</type>
+      <name>GetProcessingItem</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a3271a81e8d5529795f0ac520b6e972c2</anchor>
+      <arglist>(int processingItemIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsWorking</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>afbad743a6c2e22873dd61dce337de54c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetWorking</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a79cca07e8678c60c51f2f42d9a6e19f8</anchor>
+      <arglist>(bool working=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a301ad1b9fa7f8d77f3f0a9edd616030d</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>imod::TModelWrap&lt; istd::TChangeDelegator&lt; ihotf::CHotfolderProcessingItem &gt; &gt;</type>
+      <name>ProcessingItem</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>ae451f0d9b96d283be3d67cf4fbf99b4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TPointerVector&lt; ihotf::IHotfolderProcessingItem &gt;</type>
+      <name>FileItems</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a6c5080ccefa5345728b127ad6b5f0b10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>FileItems</type>
+      <name>m_processingItems</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a98f65b2dabae358001f5586f8de402c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isWorking</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a8235fec3b2c27d3e6248cc9eebe6131f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QMutex</type>
+      <name>m_mutex</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_info.html</anchorfile>
+      <anchor>a05f372d4424c24c7ca989687824ba8c9</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CHotfolderWorkflowItem</name>
-    <filename>classifpf_1_1_c_hotfolder_workflow_item.html</filename>
-    <base>iprm::CNameParam</base>
-    <base virtualness="virtual">ifpf::IHotfolderWorkflowItem</base>
+    <name>ihotf::CHotfolderProcessingItem</name>
+    <filename>classihotf_1_1_c_hotfolder_processing_item.html</filename>
+    <base virtualness="virtual">ihotf::IHotfolderProcessingItem</base>
+    <member kind="function">
+      <type></type>
+      <name>CHotfolderProcessingItem</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>ad19b8dc46f3b25fc56c4e57555ba6632</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetItemUuid</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>afe978e79eac7fe10c505fd008c799647</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessingState</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>a87f5927f0e4efffe3ee49a411b903abd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetProcessingState</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>a4930c8e07363a5b3591f499912e5a624</anchor>
+      <arglist>(int processingState)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInputFile</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>a43ed45ee9cffc592bff8b50e4d03ee3d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetInputFile</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>a0769ecc3dc2ed5624fb8b96c300eeefb</anchor>
+      <arglist>(const QString &amp;inputFile)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOutputFile</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>ae1cd08b61d8d5b28432103c8913894ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOutputFile</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>aee3c4b9e548d2edee47bffafdfdf1da7</anchor>
+      <arglist>(const QString &amp;outputFile)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetProcessingTime</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>a91356525dc212b207bc5ace382629a81</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetProcessingTime</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>af79f5e2e022327f05fa97354651ef7db</anchor>
+      <arglist>(double processingTime)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QDateTime &amp;</type>
+      <name>GetStartTime</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>ad359cf3da9c8965d5457cf6edb1ab8bf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetStartTime</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>a358771922c81cf6eaafe067f7fd145be</anchor>
+      <arglist>(const QDateTime &amp;startTime)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
+      <anchor>a4a5b7ceaee00dece3594f289b3912453</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotf::CHotfolderStatistics</name>
+    <filename>classihotf_1_1_c_hotfolder_statistics.html</filename>
+    <base virtualness="virtual">ihotf::IHotfolderStatistics</base>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; ihotf::IHotfolderProcessingInfo &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>a8088ab3e77aa0cae84f3a4ffb3a81b3e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHotfolderStatistics</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>a51d0e9b9b039018e77e40fe758177d81</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetItemsCount</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>a6404b08d45517b5c359540b328eeaafc</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSuccessCount</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>a1e0e7366e027acbbfd7a9eaee32e6f64</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetErrorsCount</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>a1849c5f224c74c50b924e5bd5065e749</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetAbortedCount</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>ae83071a0deb6d260ea82483700a657f8</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetProcessingTime</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>a1bb7b4c8a0e5928951017c95202afcfb</anchor>
+      <arglist>(const QString &amp;directoryPath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>a164fba56570ef3365175ba4172706f71</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>aab663606ccdfa4723432e534e51c7895</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>ad1502965971ab9da2ca3d62ef97d49a0</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ResetStatistics</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>aadcf8d7b3df2d0fa9b8618c69d004e60</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>RebuildStatistics</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>aaf1234de7ec4d8cb1b3a3cb00f08d49b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateStateMaps</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>a89df17ff2dee1aa0571ad8df9ebf1057</anchor>
+      <arglist>(int itemState, const QString &amp;directoryPath)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static QString</type>
+      <name>GetDirectoryPath</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
+      <anchor>ae30352557767af4b3f3fabc2ab7d9a0b</anchor>
+      <arglist>(const ihotf::IHotfolderProcessingItem &amp;item)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotf::CHotfolderWorkflowComp</name>
+    <filename>classihotf_1_1_c_hotfolder_workflow_comp.html</filename>
+    <base virtualness="virtual">ihotf::IHotfolderWorkflow</base>
+    <base virtualness="virtual">ihotf::IHotfolderInfoManager</base>
+    <class kind="struct">ihotf::CHotfolderWorkflowComp::HotfolderItem</class>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a4dc24c9aa9845bf9489148eb74c87068</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHotfolderWorkflowComp</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a9692c015f3b1b386d8ffc20d530270d7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ihotf::IHotfolderProcessingInfo *</type>
+      <name>GetProcessingInfo</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>acf2343827c9984b41e308f64962f2b54</anchor>
+      <arglist>(const QString &amp;hotfolderName) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
+      <name>AddHotfolder</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a79261ef40cd0cb9ff1d6e0564afc7c4f</anchor>
+      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveHotfolder</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>af74d150d059d4ba89f77e0a0b37d2076</anchor>
+      <arglist>(const QString &amp;hotfolderName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetHotfolderIds</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>aed30e3cff2a2076b046d9b5be568d4aa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetHotfolderList</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>ae6a8775bbc7e066beac0a325dfd533f2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
+      <name>GetHotfolder</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>ad38d30e005c7f7c0813df6af4f850760</anchor>
+      <arglist>(const QString &amp;hotfolderName) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a3f7239803a9d00d714f4f1ea6ad64baf</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TPointerVector&lt; HotfolderItem &gt;</type>
+      <name>Hotfolders</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a8c7fc532ac7bdd307b4ada28dbc9c386</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual HotfolderItem *</type>
+      <name>CreateHotfolder</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a4340a67825fe69ec21db4ab9d7ac455f</anchor>
+      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString()) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
+      <name>CreateWorkflowItem</name>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>adbd0216823589c3b55d6a8f91bcd9207</anchor>
+      <arglist>(const QString &amp;hotfolderId) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ihotf::CHotfolderWorkflowComp::HotfolderItem</name>
+    <filename>structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</filename>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; iprm::IParamsSet &gt;</type>
+      <name>hotfolderParamsPtr</name>
+      <anchorfile>structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</anchorfile>
+      <anchor>ad71b3f4afc3ee5f3581a32ca83441b4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; ihotf::IHotfolderWorkflowItem &gt;</type>
+      <name>elementPtr</name>
+      <anchorfile>structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</anchorfile>
+      <anchor>a46f3fe0b691bdb1b702a57c5dec36510</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotf::CHotfolderWorkflowItem</name>
+    <filename>classihotf_1_1_c_hotfolder_workflow_item.html</filename>
+    <base virtualness="virtual">ihotf::IHotfolderWorkflowItem</base>
     <member kind="typedef">
       <type>iprm::CNameParam</type>
       <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a438cd54d80a49d357d4419c5246cf360</anchor>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a8ed20d4a216a0dbdd5a0b25d7e5a3fcb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>Initialize</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a6cf6c3af6a572a3158ac9c2fb18524dd</anchor>
-      <arglist>(const QString &amp;hotfolderId, const ifpf::IHotfolderInfoManager *infoManagerPtr)</arglist>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a6e191db912f16975328ad4e0eb0b30ab</anchor>
+      <arglist>(const QString &amp;hotfolderId, const ihotf::IHotfolderInfoManager *infoManagerPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetHotfolderId</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>addb6b0a64a842937c149d90601c3303a</anchor>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a6d76012a7d34e8bd9a093877161a4ebf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
       <name>GetInputDirectories</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>abf23c814942b4a043506a3851a27c670</anchor>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a3c3450b0c27018ca947a04906f3e7474</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetOutputDirectory</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a08ad2ccdac98a58cbdd0db48607a5d16</anchor>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a98a65b936824b5b50361d7182967f968</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a9f7793c53695aa5e8d85149ae7cb460d</anchor>
+      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a9c2f6d54e3c0c467cf393f62d7c8de5c</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CMonitoringSession</name>
-    <filename>classifpf_1_1_c_monitoring_session.html</filename>
-    <base virtualness="virtual">ifpf::IMonitoringSession</base>
+    <name>ihotf::CMonitoringSession</name>
+    <filename>classihotf_1_1_c_monitoring_session.html</filename>
+    <base virtualness="virtual">ihotf::IMonitoringSession</base>
     <member kind="function" virtualness="virtual">
       <type>virtual const FileItems &amp;</type>
       <name>GetFileInfoList</name>
-      <anchorfile>classifpf_1_1_c_monitoring_session.html</anchorfile>
-      <anchor>a7b06465f196d221fa4673cd25a3541e0</anchor>
+      <anchorfile>classihotf_1_1_c_monitoring_session.html</anchorfile>
+      <anchor>ad73982469309c935e4a3440c480ea2f8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetFileInfoList</name>
-      <anchorfile>classifpf_1_1_c_monitoring_session.html</anchorfile>
-      <anchor>a0e83f145424a37e9c56cd6c4e599eb56</anchor>
+      <anchorfile>classihotf_1_1_c_monitoring_session.html</anchorfile>
+      <anchor>a95630e04a40f1049411e979b04d6644e</anchor>
       <arglist>(const FileItems &amp;fileList)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_monitoring_session.html</anchorfile>
-      <anchor>acac61e17f3d36a8cbb258b3f87dcc9c3</anchor>
+      <anchorfile>classihotf_1_1_c_monitoring_session.html</anchorfile>
+      <anchor>a98206d4f1a0c5385174ad74978003046</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CMonitoringSessionsManager</name>
-    <filename>classifpf_1_1_c_monitoring_sessions_manager.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <base virtualness="virtual">ifpf::IMonitoringSessionManager</base>
+    <name>ihotf::CMonitoringSessionsManager</name>
+    <filename>classihotf_1_1_c_monitoring_sessions_manager.html</filename>
+    <base virtualness="virtual">ihotf::IMonitoringSessionManager</base>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetSessions</name>
-      <anchorfile>classifpf_1_1_c_monitoring_sessions_manager.html</anchorfile>
-      <anchor>a38cb724d2d31f325b9766de4a856fdf7</anchor>
+      <anchorfile>classihotf_1_1_c_monitoring_sessions_manager.html</anchorfile>
+      <anchor>a62293fabfbb06d00dc9a2e726fda08aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual ifpf::IMonitoringSession *</type>
+      <type>virtual ihotf::IMonitoringSession *</type>
       <name>GetSession</name>
-      <anchorfile>classifpf_1_1_c_monitoring_sessions_manager.html</anchorfile>
-      <anchor>a07230f06dd00ec829f105e104ab0dfd3</anchor>
+      <anchorfile>classihotf_1_1_c_monitoring_sessions_manager.html</anchorfile>
+      <anchor>a3f8a294dd761afbdc632f3390ae0535f</anchor>
       <arglist>(const QString &amp;directoryPath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_monitoring_sessions_manager.html</anchorfile>
-      <anchor>a5154ede64a3751ba93a1063a6d2f3858</anchor>
+      <anchorfile>classihotf_1_1_c_monitoring_sessions_manager.html</anchorfile>
+      <anchor>a03da74bfc7b31080aa2fac00463ffba3</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CVisualHotfolderWorkflowComp</name>
-    <filename>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</filename>
-    <base>TLoggerCompWrap&lt; ifpf::CHotfolderWorkflowComp &gt;</base>
+    <name>ihotf::CVisualHotfolderWorkflowComp</name>
+    <filename>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</filename>
     <member kind="enumeration">
       <name>ChangeFlags</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a6863a8a6dda59bb130e031e7efcab6d0</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a0438f1d88c246a7bed7b8aa055abb10f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_SELECTION</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a6863a8a6dda59bb130e031e7efcab6d0a2d8b4b479dfd04a57af269ee54b68792</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a0438f1d88c246a7bed7b8aa055abb10fa69962f55481ec648dab0b77f27a63bc4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>MessageId</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a56d8b47c00a1145ed62496dc82476f53</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>aef3922c988e971d564a955ffb887aa02</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MI_CANNOT_CREATE_ELEMENT</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a56d8b47c00a1145ed62496dc82476f53a53776ffa237a000021b5806800e57524</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>aef3922c988e971d564a955ffb887aa02a4c91f8c3b3a94e6f9b64bfbbd1adc145</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; ifpf::CHotfolderWorkflowComp &gt;</type>
+      <type>ibase::TLoggerCompWrap&lt; ihotf::CHotfolderWorkflowComp &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a520182b2af0a6afa60ff95e2bed01afb</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>abe20ec7ac6b27907ba5fffc99dbba01f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SerializeLayout</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ac0217faee18c0bd1c589cdb9e38c5012</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>ac9569bfa774e798436218b9beeea42c0</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SerializeWorkflow</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>aa0fc76c4d0bfc8a2413a9454bb668043</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>af55713b790e601f749df2cfb58e53294</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a483cf6d97a6c42be13aa1413f44f3efb</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a93df6e2db895d20b2246d12bc4113cc5</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>imod::TModelWrap&lt; istd::TChangeDelegator&lt; CVisualHotfolderWorkflowItem &gt; &gt;</type>
       <name>Element</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a6a12df0e92183b9e482209977c91454d</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a45f349022b206dff0e46140926a4848a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SerializeItemPosition</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ac87e75630e903c27a5c78e792945e0db</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a4ef63a3c5611a87c6c22af6efdf7431c</anchor>
       <arglist>(iser::IArchive &amp;archive, QString &amp;hotfolderName, i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderWorkflowItem *</type>
+      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
       <name>CreateWorkflowItem</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a31846c940aea83e420916704322f259a</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
+      <anchor>a41ce366d60010a3acb90c7bf037c8266</anchor>
       <arglist>(const QString &amp;hotfolderId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::CVisualHotfolderWorkflowItem</name>
-    <filename>classifpf_1_1_c_visual_hotfolder_workflow_item.html</filename>
-    <base>ifpf::CHotfolderWorkflowItem</base>
+    <name>ihotf::CVisualHotfolderWorkflowItem</name>
+    <filename>classihotf_1_1_c_visual_hotfolder_workflow_item.html</filename>
+    <base>ihotf::CHotfolderWorkflowItem</base>
     <base>i2d::CPosition2d</base>
     <member kind="typedef">
-      <type>ifpf::CHotfolderWorkflowItem</type>
+      <type>ihotf::CHotfolderWorkflowItem</type>
       <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a51d5ac08fa30918c33fbf2ae30b11a15</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
+      <anchor>adc4a3fc40f1938ae2bd8d6292740c31a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>i2d::CPosition2d</type>
       <name>BaseClass2</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a968a1a5141adf0f8842c5e417e891b91</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a136784fa2293f34eba97b9d4b5049210</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a1a9205e1651c7cca682cd204283c85c2</anchor>
+      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a2f7222bc640145a7ca90148dbbff2114</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IDirectoryMonitor</name>
-    <filename>classifpf_1_1_i_directory_monitor.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <name>ihotf::IDirectoryMonitor</name>
+    <filename>classihotf_1_1_i_directory_monitor.html</filename>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>StartObserving</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>a5e635e02ae03431b5b7cc3803efeadc8</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor.html</anchorfile>
+      <anchor>a078a128b76defee3d300fb98ea4be56c</anchor>
       <arglist>(const iprm::IParamsSet *paramsSetPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>StopObserving</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor.html</anchorfile>
-      <anchor>aca2d03e7734aa3d4b30548b2d316293c</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor.html</anchorfile>
+      <anchor>a809c362ba49c2f00102b14c4e8575663</anchor>
       <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IDirectoryMonitorParams</name>
-    <filename>classifpf_1_1_i_directory_monitor_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <name>ihotf::IDirectoryMonitorParams</name>
+    <filename>classihotf_1_1_i_directory_monitor_params.html</filename>
     <member kind="enumeration">
       <name>ObserveItems</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a2364deb587220a5ab6e514513b9ceda4</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04da</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OI_DIR</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a2364deb587220a5ab6e514513b9ceda4aeed8bd5771ebb1fbd095b596c2fd5d35</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa7599e9ab1b619df49c4ba4a579ce2b4f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OI_FILES</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a2364deb587220a5ab6e514513b9ceda4a63d863f3dd1befc0f23b8e9a89d4c455</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa984e2752588ae89b46df21ab093cbc92</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OI_DRIVES</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a2364deb587220a5ab6e514513b9ceda4a6d4437f11523f455fba09a67ca767510</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04daad7d8730b118ed354976bbd5b09122f57</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OI_ALL</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a2364deb587220a5ab6e514513b9ceda4a2c965f0e657f2160d941eed488db0008</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa24fb33171c88e54a19eba621060e7399</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>ObserveChanges</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aee893f9be0ee8fc626e38b2dfc292f4e</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OC_ADD</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aee893f9be0ee8fc626e38b2dfc292f4ea4a63e13a9b416f1bb1dd35eaf30f0c28</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebab48e14500184a2cc3c29f400a70a02ab</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OC_REMOVE</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aee893f9be0ee8fc626e38b2dfc292f4ea2bb81ef3a8d68ddc4d828a29e95448cf</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeba506e8db021cea2079d03cb71e9694dab</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OC_MODIFIED</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aee893f9be0ee8fc626e38b2dfc292f4ea8ca7f48953bcce230aa40bf6b3918831</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebaac7357818cd8c40f1b7ebcc34fb2e41c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OC_ATTR_CHANGED</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aee893f9be0ee8fc626e38b2dfc292f4ea942b61a655694e91e5678d314befca4d</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeba084d631c7fd91017d212ad0964e9e369</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>OC_ALL</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aee893f9be0ee8fc626e38b2dfc292f4ea17eef16d6eb4f2a9fe8cdb9a9f57b979</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebaf0a2a07efc2f4f0b5a851383c8a0f9ff</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetPoolingIntervall</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a694211d3d89b5b62bd3ebba21fd31653</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a3d9ef3d25883b96e28a5cdfca13532db</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetPoolingIntervall</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a12fa78524627bbbcc4b7f1d5232071e0</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a9a36c4a7bb84ffe0d6d084adc5377515</anchor>
       <arglist>(double poolingIntervall)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetObservedItemTypes</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a71b7fbccce4226cc1cc1cd9951d4b7cb</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>af69ab86106ee56b1b9009929b997ba3a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetObservedItemTypes</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>ab3902abf0b907294557e4983f26a8d50</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a953e3239a2eb23c4510a2a8df20f7a66</anchor>
       <arglist>(int observedItemTypes)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetObservedChanges</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a9da6096b7cf3527279dbbe0261866dbb</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>af06ba7d305dc86812fcf3e2cf605a6d2</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetObservedChanges</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a0c39b6119762036879dad6a533cfcab7</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a92755ba04060747845adee35cfb05d35</anchor>
       <arglist>(int ovservedChanges)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QStringList</type>
       <name>GetAcceptPatterns</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a14ba146345d926a8a77ea6ef7edda218</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a71ef75c733f89e792bcc87ca5e6245c3</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetAcceptPatterns</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>add96510ed709758e83960787c2d0996f</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>ace02dca6346aa56cab468c820896aab2</anchor>
       <arglist>(const QStringList &amp;acceptPatterns)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QStringList</type>
       <name>GetIgnorePatterns</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aa8213056b7493af62ecde04097a79e24</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a957f15c4cd79228f053f60d614f858bd</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetIgnorePatterns</name>
-      <anchorfile>classifpf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a369083bf6a95c0dfe95f453881e99f64</anchor>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>abb07baae6a4cc0d2c79d13ada0b6d0a3</anchor>
       <arglist>(const QStringList &amp;acceptPatterns)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IFileNaming</name>
-    <filename>classifpf_1_1_i_file_naming.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetFilePath</name>
-      <anchorfile>classifpf_1_1_i_file_naming.html</anchorfile>
-      <anchor>a1265b84f16a99ae721152bee3a3fdff5</anchor>
-      <arglist>(const QString &amp;inputFileName) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ifpf::IFileNamingParams</name>
-    <filename>classifpf_1_1_i_file_naming_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>OverwriteStrategy</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a9087548ed69f852963e21dff496ce872</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RM_OVERWRITE</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a9087548ed69f852963e21dff496ce872a681eec69a0e6b60b742871fb9368f21f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RM_NUMBERING</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a9087548ed69f852963e21dff496ce872a447a42800989f2fe1df7c32a48b23722</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual OverwriteStrategy</type>
-      <name>GetOverwriteStrategy</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>aef70ca1ac99b19cb7bd1b8434a56c489</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetOverwriteStrategy</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a25309cd68c798b92435879d62bcc130f</anchor>
-      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetPrefix</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a292de5d09a6b7082887fd0094dcd988f</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetPrefix</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a42a1b07f395f55f6490f6c176c120da7</anchor>
-      <arglist>(const QString &amp;prefix)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetSuffix</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a4c3e3cff5e301dc3e83c329881ed3797</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetSuffix</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>aae4f1c33f9ee7aaf645428e52429b570</anchor>
-      <arglist>(const QString &amp;suffix)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QStringList</type>
-      <name>GetPatternsToRemove</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a57aa51da12f5cb6274c9eb10c00cf0ca</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetPatternsToRemove</name>
-      <anchorfile>classifpf_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>aaadfe05a59977f4922ec8530685fc129</anchor>
-      <arglist>(const QStringList &amp;patternsToRemove)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ifpf::IFileSystemChangeStorage</name>
-    <filename>classifpf_1_1_i_file_system_change_storage.html</filename>
+    <name>ihotf::IFileSystemChangeStorage</name>
+    <filename>classihotf_1_1_i_file_system_change_storage.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a4ca1a8f6fefd71cdc825a37d770776ff</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aa</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_NEW</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a4ca1a8f6fefd71cdc825a37d770776ffababd7968253c7df987d382526f46a9d1</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaaa7cb08d2291d9bd5aa48ebf4d7179d7d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_REMOVED</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a4ca1a8f6fefd71cdc825a37d770776ffab6b1a886e08ad3cedf7beaa8fd7d3b0b</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa6e9f6c9972ea2c7250091f234b798b9e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_MODIFIED</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a4ca1a8f6fefd71cdc825a37d770776ffac39be054aa6f3b77375a22a61bace65d</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa85e1559051304b6e5460c957f25eeebd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_ATTRIBUTE_CHANGED</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a4ca1a8f6fefd71cdc825a37d770776ffac2a054a3d8ea8fb00301e1a3552c7332</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa56203ba063dd39bc72d4223e95758a57</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_SOME_CHANGES</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a4ca1a8f6fefd71cdc825a37d770776ffa6a833c0d448eb5e506f9dd3aadee75e7</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa40ae541377854ec43214278f63031e29</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetStorageItemsCount</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a0bcc6ee2801fafaa62b98a7d298f38d9</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a9b9e8aa515b9ae05c7eb7a01ade440a2</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetItemPath</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>aec20468d7d5a38465b0642c4e46e46d4</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a144ee894badd6ae3afea2687e1409bdd</anchor>
       <arglist>(int fileIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetItemState</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>aa19fead0c9a02a12063008930fe1f33a</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>ab19759536ee5c334d79f92a25b98564f</anchor>
       <arglist>(int fileIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>UpdateStorageItem</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a8bf3c8b6cce6a0bb86b6c7fb16406561</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>aa54010e1bffdb791eec448fdf67a6475</anchor>
       <arglist>(const QString &amp;path, int itemFlags)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ResetStorage</name>
-      <anchorfile>classifpf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>ad62885c3bc82b1c3f6e2db19184c6f17</anchor>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>aad0c41c5cda6aaf721a5f67e5a61e2ca</anchor>
       <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IHotfolderInfoManager</name>
-    <filename>classifpf_1_1_i_hotfolder_info_manager.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <name>ihotf::IHotfolderInfoManager</name>
+    <filename>classihotf_1_1_i_hotfolder_info_manager.html</filename>
     <member kind="function" virtualness="pure">
-      <type>virtual ifpf::IHotfolderProcessingInfo *</type>
+      <type>virtual ihotf::IHotfolderProcessingInfo *</type>
       <name>GetProcessingInfo</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_info_manager.html</anchorfile>
-      <anchor>aeee81966f198dada887d2342568fa9d0</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_info_manager.html</anchorfile>
+      <anchor>aecb642c7349520e1d06251ea1f7db81a</anchor>
       <arglist>(const QString &amp;hotfolderName) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IHotfolderProcessingInfo</name>
-    <filename>classifpf_1_1_i_hotfolder_processing_info.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <name>ihotf::IHotfolderProcessingInfo</name>
+    <filename>classihotf_1_1_i_hotfolder_processing_info.html</filename>
     <member kind="enumeration">
       <name>ChangeFlags</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>aa095b17443ce153473336a37f59c80f3</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_FILE_ADDED</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>aa095b17443ce153473336a37f59c80f3afd3f06a5c1bd0db466d5fb1490258bfa</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a5f5275d6317c0068e41cd827294b9e7f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_FILE_REMOVED</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>aa095b17443ce153473336a37f59c80f3abb4712ffb4576808af1544823fcda692</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89afb6246c4bf61925bc19cacbfec7c4734</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_WORKING_STATE_CHANGED</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>aa095b17443ce153473336a37f59c80f3a26a05e7c739be926e321ca78e59fa552</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a99c81350ac27623901fbfd7fa70551f3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_CREATE</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>aa095b17443ce153473336a37f59c80f3a319f3d6faa098840bb2239f2599b913b</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a7dcd29a108550be035ae8b1f13b571c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const ifpf::IHotfolderProcessingItem *</type>
+      <type>virtual const ihotf::IHotfolderProcessingItem *</type>
       <name>AddProcessingItem</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a56f2373511826129627a9d49fe8127c1</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a706b72177ccabfe6431af6839a3ad64c</anchor>
       <arglist>(const QString &amp;inputFilePath, const QString &amp;outputFilePath=QString())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>RemoveProcessingItem</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a9a18921dbc941223931f42110ba43417</anchor>
-      <arglist>(ifpf::IHotfolderProcessingItem *fileItemPtr)=0</arglist>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a67c1eed92ba1d7d4f9de28cd59ee34b6</anchor>
+      <arglist>(ihotf::IHotfolderProcessingItem *fileItemPtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetProcessingItemsCount</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a7ebb6894ed3681c06ea42dd392313f0b</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>aef04a14af4030bf1421bf7c1be04e2c3</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ifpf::IHotfolderProcessingItem *</type>
+      <type>virtual ihotf::IHotfolderProcessingItem *</type>
       <name>GetProcessingItem</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a88c5824b30f0bb3335d1f3812cce6664</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a097fbdd2d25ee303218dfa1819d16ca9</anchor>
       <arglist>(int processingItemIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsWorking</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>adb641d7d5c062ded45ac2175a62794d6</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4ae112f8d6c00afcd025edf25c04364f</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetWorking</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a9cd115caedfa70c6b7d1aec1b00fb2ab</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a92884ef1c7c5872127697bf2a4fdd96f</anchor>
       <arglist>(bool working=true)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IHotfolderProcessingItem</name>
-    <filename>classifpf_1_1_i_hotfolder_processing_item.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <name>ihotf::IHotfolderProcessingItem</name>
+    <filename>classihotf_1_1_i_hotfolder_processing_item.html</filename>
     <member kind="enumeration">
       <name>ChangeFlags</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>aec806de9f56ad032156dd598e3cf0997</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>af500e562d7ce2615b264150f3c0f5a16</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_STATE_CHANGED</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>aec806de9f56ad032156dd598e3cf0997aa198fb509db6f571c0442d2e3d596bb8</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>af500e562d7ce2615b264150f3c0f5a16a055f4eb86715c9ece526d77e12c5be82</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QByteArray</type>
       <name>GetItemUuid</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a523ef6cbab3376b29269c6ac71836b74</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>aa10fec7d5033bae98a9e1d7d9c60d2e7</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetProcessingState</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>ab21917d38f672d28e10e3bc513bdb05d</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>af824afef724e9deccb50f8d21d7e0280</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetProcessingState</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a312bd5554a3faa60d2c3b9c06b97f1b8</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>a845205246613c2917964a68258628b9b</anchor>
       <arglist>(int processingState)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetInputFile</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>ad2c142f71f518e9b695dedd265bae95e</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>abd15f95515db1dacd70abed22a9f63c2</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetInputFile</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>aaa3bb41eb5db992c249e368507dc5e58</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>a4ea848c1c6bb4d48dcddbbf4ecd2242a</anchor>
       <arglist>(const QString &amp;inputFile)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetOutputFile</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>afa187d986168f0bcc1597f52d143163f</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>a4c0469e2ac9e74bc40a5ec35c8923074</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetOutputFile</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>af295a3987b459d03afc5c077293d0bde</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>a7f5180b4cc79a77c4312bee49e80e388</anchor>
       <arglist>(const QString &amp;outputFile)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetProcessingTime</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>ad333f06c6f055aa13119e430d5176760</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>a596c0b8bb88420e6ebbf380d6a295840</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetProcessingTime</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>acfff128208f38e25d325ec966896134f</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>ac3ef2293923b69e67a32f230b07e83c8</anchor>
       <arglist>(double processingTime)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const QDateTime &amp;</type>
       <name>GetStartTime</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a9d2bf261a3ca668640149b2fb07af11b</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>a2f106f15010696a83ab79805f7573e4c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetStartTime</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>a86b4809c248e84baa803eaf4ef6eb989</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>a3a9706830b5c80a95893fa975cd0d6ba</anchor>
       <arglist>(const QDateTime &amp;startTime)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IHotfolderStatistics</name>
-    <filename>classifpf_1_1_i_hotfolder_statistics.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <name>ihotf::IHotfolderStatistics</name>
+    <filename>classihotf_1_1_i_hotfolder_statistics.html</filename>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetItemsCount</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>a1106cbc5d9e7fe3518a1169ddd3199cb</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_statistics.html</anchorfile>
+      <anchor>a494717ba493646f98f91b709a146b62f</anchor>
       <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSuccessCount</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>a60e145d3c4ed5a8ab80a2921ae7c705e</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_statistics.html</anchorfile>
+      <anchor>a1bdbe0e56de86ba673ccd85d7740bbd5</anchor>
       <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetErrorsCount</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>aae0cb2226f5039d9e2679e596b142a31</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_statistics.html</anchorfile>
+      <anchor>a76e9d2bed4a8eb506cf982d80f7f9330</anchor>
       <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetAbortedCount</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>ae4ea4f10d85cf74f591b328094fe0185</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_statistics.html</anchorfile>
+      <anchor>a05c0a0460abfb143d58707e383383a33</anchor>
       <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetProcessingTime</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_statistics.html</anchorfile>
-      <anchor>a7a1484ec9db1614801a80cebef97be08</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_statistics.html</anchorfile>
+      <anchor>a1f348aa3d2168d87acbeecb79c3ce9e4</anchor>
       <arglist>(const QString &amp;directoryPath=QString()) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IHotfolderTaskManager</name>
-    <filename>classifpf_1_1_i_hotfolder_task_manager.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <name>ihotf::IHotfolderTaskManager</name>
+    <filename>classihotf_1_1_i_hotfolder_task_manager.html</filename>
     <member kind="function" virtualness="pure">
-      <type>virtual ifpf::IHotfolderProcessingItem *</type>
+      <type>virtual ihotf::IHotfolderProcessingItem *</type>
       <name>GetNextProcessingTask</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_task_manager.html</anchorfile>
-      <anchor>a45e21eda735847b76a683c7c8a783930</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_task_manager.html</anchorfile>
+      <anchor>ac68c6227fa8950a53d2058807c239867</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IHotfolderWorkflow</name>
-    <filename>classifpf_1_1_i_hotfolder_workflow.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <name>ihotf::IHotfolderWorkflow</name>
+    <filename>classihotf_1_1_i_hotfolder_workflow.html</filename>
     <member kind="enumeration">
       <name>ChangeFlags</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a92c2a5a1c93eaa77fb09826627656a3d</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>af3a689fc2dc0f735daad899539473023</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_HOTFOLDER_ADDED</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a92c2a5a1c93eaa77fb09826627656a3daeb0d1e74103d66319cae81edde2b20f4</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>af3a689fc2dc0f735daad899539473023a32f637509feecae4f56b8b3908b94b9d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CF_HOTFOLDER_REMOVED</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a92c2a5a1c93eaa77fb09826627656a3da3a56722acf0c1ec761f8b5e6634b0adc</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>af3a689fc2dc0f735daad899539473023a671b99a9e0012c06ce56e945b42985a2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ifpf::IHotfolderWorkflowItem *</type>
+      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
       <name>AddHotfolder</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>af46c503e8aba808e51ea21af12516bb0</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>a8322dfe27aa50dda45b133defe283af1</anchor>
       <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>RemoveHotfolder</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>ab6273194b71ba8beb1453490b9b1d0f4</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>ad5afb985d01ab83c089bd1c0fce0612d</anchor>
       <arglist>(const QString &amp;hotfolderName)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QStringList</type>
       <name>GetHotfolderIds</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>abd678b68a8b6a5f70f7ea807f4036fe5</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>a20fbcc9eea9c6cf0a114401595f459f2</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QStringList</type>
       <name>GetHotfolderList</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a82ac6cb98ea75418800e9234679c4214</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>a99daf2b9c61a0af34b6d43c51c8556db</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ifpf::IHotfolderWorkflowItem *</type>
+      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
       <name>GetHotfolder</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a4ea6f0404fec34f610acd1aa6df227cb</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>aedf0aa123890a858c3169bff14d3788f</anchor>
       <arglist>(const QString &amp;hotfolderName) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IHotfolderWorkflowItem</name>
-    <filename>classifpf_1_1_i_hotfolder_workflow_item.html</filename>
-    <base virtualness="virtual">iprm::INameParam</base>
+    <name>ihotf::IHotfolderWorkflowItem</name>
+    <filename>classihotf_1_1_i_hotfolder_workflow_item.html</filename>
     <member kind="function" virtualness="pure">
       <type>virtual QStringList</type>
       <name>GetInputDirectories</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a7b335d2b34d6d5f06ae93df24fd5e12c</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a6a5af997d419ff7d7b1dbaf1839e0a81</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetOutputDirectory</name>
-      <anchorfile>classifpf_1_1_i_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a3d811768a0e2793f7399ea32a3a7b049</anchor>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow_item.html</anchorfile>
+      <anchor>a0eadeb63404f5495861804e342678199</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IMonitoringSession</name>
-    <filename>classifpf_1_1_i_monitoring_session.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <name>ihotf::IMonitoringSession</name>
+    <filename>classihotf_1_1_i_monitoring_session.html</filename>
     <member kind="typedef">
       <type>QMap&lt; QString, QDateTime &gt;</type>
       <name>FileItems</name>
-      <anchorfile>classifpf_1_1_i_monitoring_session.html</anchorfile>
-      <anchor>ac47d3a11d4a8515d18ad728217afe462</anchor>
+      <anchorfile>classihotf_1_1_i_monitoring_session.html</anchorfile>
+      <anchor>a856b68b006a506022046e5fedcbc69db</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const FileItems &amp;</type>
       <name>GetFileInfoList</name>
-      <anchorfile>classifpf_1_1_i_monitoring_session.html</anchorfile>
-      <anchor>ac539132606b758ed3a1e02f0278a4712</anchor>
+      <anchorfile>classihotf_1_1_i_monitoring_session.html</anchorfile>
+      <anchor>a9507028f671d5dcdde9220de86611cdf</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetFileInfoList</name>
-      <anchorfile>classifpf_1_1_i_monitoring_session.html</anchorfile>
-      <anchor>a219e4ed4a936ffd6ad509d0d8a34462c</anchor>
+      <anchorfile>classihotf_1_1_i_monitoring_session.html</anchorfile>
+      <anchor>af5a67e59e7db4016ad58e7b792dd862f</anchor>
       <arglist>(const FileItems &amp;fileList)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>ifpf::IMonitoringSessionManager</name>
-    <filename>classifpf_1_1_i_monitoring_session_manager.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <name>ihotf::IMonitoringSessionManager</name>
+    <filename>classihotf_1_1_i_monitoring_session_manager.html</filename>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ResetSessions</name>
-      <anchorfile>classifpf_1_1_i_monitoring_session_manager.html</anchorfile>
-      <anchor>a3d702fca72fb6392ecd37610f6018e79</anchor>
+      <anchorfile>classihotf_1_1_i_monitoring_session_manager.html</anchorfile>
+      <anchor>a40aa4134c3dc4484c9f250673801b1df</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ifpf::IMonitoringSession *</type>
+      <type>virtual ihotf::IMonitoringSession *</type>
       <name>GetSession</name>
-      <anchorfile>classifpf_1_1_i_monitoring_session_manager.html</anchorfile>
-      <anchor>aaabc7bbaf2994244fca59e3bb5c793a7</anchor>
+      <anchorfile>classihotf_1_1_i_monitoring_session_manager.html</anchorfile>
+      <anchor>ac6f39fdad769ed38cce2931ae03c962c</anchor>
       <arglist>(const QString &amp;directoryPath) const =0</arglist>
     </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ihotfgui</name>
+    <filename>namespaceihotfgui.html</filename>
+    <class kind="class">ihotfgui::CDirectoryItemGuiComp</class>
+    <class kind="class">ihotfgui::CDirectoryMonitorComp</class>
+    <class kind="class">ihotfgui::CDirectoryMonitorParamsGui</class>
+    <class kind="class">ihotfgui::CHotfolderContainerGuiComp</class>
+    <class kind="class">ihotfgui::CHotfolderGuiComp</class>
+    <class kind="class">ihotfgui::CHotfolderProcessingComp</class>
+    <class kind="class">ihotfgui::CHotfolderTaskManagerComp</class>
+    <class kind="class">ihotfgui::CProcessingItemPreviewGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CDirectoryItemGuiComp</name>
+    <filename>classihotfgui_1_1_c_directory_item_gui_comp.html</filename>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDirectoryItemGuiComp, ihotf::IHotfolderStatistics &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
+      <anchor>ab08b28d13f2f2c0dce6c7a9a9bee44ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDirectoryItemGuiComp</name>
+      <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
+      <anchor>afdf4d276cec2899694240a278a72600c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
+      <anchor>ae2439ce949dbe3e43a990ee9f7f14a93</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
+      <anchor>ac86ed061b6a8a323de011cc7ee5a3ca1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a299f7cd0a14879b3ebee352cc96dc0a2</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a03ab02b92347b85ff6ad942186c902ca</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
+      <anchor>aff06c7f17c2a2b70dcbd8f0d81fea557</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a3e0723ff2cc4009e5e191b63d6ebe9c4</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CDirectoryMonitorComp</name>
+    <filename>classihotfgui_1_1_c_directory_monitor_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <base virtualness="virtual">ihotf::IDirectoryMonitor</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>aa1730388980c671c3b3235983ed43513</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QThread</type>
+      <name>BaseClass2</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>a37d528cb74450ee6f94f78e5fe918cb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>FolderChanged</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>ab9492b82f6ae39cf864be2422f29d843</anchor>
+      <arglist>(int changeFlags)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>aa6624f804d38a5770638cc9eafc29e07</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDirectoryMonitorComp</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>a2741ecbed1c7043af72a998401c25718</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>StartObserving</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>ad0b82d8806bc11e8529ff7cae77181c0</anchor>
+      <arglist>(const iprm::IParamsSet *paramsSetPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>StopObserving</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>a68668878977709b0d69fb4f059aa778f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>adda310996032e3b484d5d0626018faa1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>a75e7fe17b2a743beb9c1edf198fa152e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>run</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>a68ffe2e515de025cba87ddab56fe7308</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CDirectoryMonitorParamsGui</name>
+    <filename>classihotfgui_1_1_c_directory_monitor_params_gui.html</filename>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDirectoryMonitorParamsGui, ihotf::IDirectoryMonitorParams &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a2413c83747d0b2d44deb803f2e3ad1a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a610352078e028f8879b8f9b4aa41670b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a6a5c281cd1c3e96256b4cd3c3e51c6a5</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a40f3ae2c9638d467875459f218e0eeaf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FilesCheck_toggled</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a1937928819f6af4176afaa72add931ce</anchor>
+      <arglist>(bool isChecked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_DirsCheck_toggled</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ae473a415375ecbb6514b8d477bb955ec</anchor>
+      <arglist>(bool isChecked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_DrivesCheck_toggled</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a30ad974342436ea0305230f4557dc3b4</anchor>
+      <arglist>(bool isChecked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ModifiedCheck_toggled</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a85489d83f49fee1c2aa3f26473256bea</anchor>
+      <arglist>(bool isChecked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AddedCheck_toggled</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a9016c0e837c41aff6299525c6a3b5316</anchor>
+      <arglist>(bool isChecked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemovedCheck_toggled</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ada7a4de69033cbad13d0d8ec3bdc6aad</anchor>
+      <arglist>(bool isChecked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AttributesCheck_toggled</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ae9af9d752e687fb716aa544f8b7309cc</anchor>
+      <arglist>(bool isChecked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PoolingIntervallSpin_valueChanged</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ac1a96248c548a7c53a4a1c725f8c5c57</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AddAcceptPatternButton_clicked</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>aa393ff445400b321ff99b5f4a400f1ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveAcceptPatternButton_clicked</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ab6cc01cd9fc98bbf7d7bc4b335ca68ba</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AcceptPatternsList_itemSelectionChanged</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>aff2e5e0859219f77e9196f27519e04ac</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AcceptPatternsList_itemChanged</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a969bbe8733982660964b3fbb19e6a4ff</anchor>
+      <arglist>(QTreeWidgetItem *item, int column)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AddIgnorePatternButton_clicked</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a0e5bffbb54c69431f8690a523c97844d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveIgnorePatternButton_clicked</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ab7faea7d16a8b74c21d8f32fc68c4ae4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_IgnorePatternsList_itemSelectionChanged</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ae648aff446c87438bed3282598ee840a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_IgnorePatternsList_itemChanged</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a57b4613a91b18dade3fc47d307f196cf</anchor>
+      <arglist>(QTreeWidgetItem *item, int column)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CHotfolderContainerGuiComp</name>
+    <filename>classihotfgui_1_1_c_hotfolder_container_gui_comp.html</filename>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CHotfolderContainerGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
+      <anchor>aae537d3d9972cbd8aa00c613a1f317cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QPixmap</type>
+      <name>CreateComponentDragPixmap</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
+      <anchor>a59d1e480bcd5c33e722f7b04dbabe546</anchor>
+      <arglist>(const QString &amp;hotfolderId) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
+      <anchor>afa109cd3e4330de17c544f6474233d13</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
+      <anchor>a6b62087623c61b7dbcec4545fd024add</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CHotfolderGuiComp</name>
+    <filename>classihotfgui_1_1_c_hotfolder_gui_comp.html</filename>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CHotfolderGuiComp, ihotf::IHotfolderProcessingInfo &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a87acc0afc4053ec194b01cdfaee19f50</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CModelProxy</type>
+      <name>BaseClass2</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a8038d1dfc35f752712d494e7f18b2f05</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>ac93816118e5147894e0c5b2bc936a109</anchor>
+      <arglist>(m_statisticsHotfolderObserverCompPtr, m_statisticsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a85c54f564d58c751ec5c13f37ff32dd0</anchor>
+      <arglist>(m_directoryItemObserverFactCompPtr, m_directoryItemGuiFactCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a864b2510651b21a7e831509f6dc4a7b3</anchor>
+      <arglist>(m_directoryItemSelectionFactCompPtr, m_directoryItemGuiFactCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>ab4fce00ab6b3fca81e0a492ef901805e</anchor>
+      <arglist>(m_processingItemPreviewCompPtr, m_processingItemPreviewGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>ad49f40cd4a3efb26cef39d7b8e7903fb</anchor>
+      <arglist>(m_inputDirectoriesParamsManagerModelCompPtr, m_inputDirectoriesParamsManagerCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHotfolderGuiComp</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>aef88f79a512eb31036203744032e2f53</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>ae835d8859750babd303f09f8e7617f37</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a584fe1bca6d146db5d631d3f31569893</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a86d5a5ce2c5c12a3d80c5c5f5fed35b5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a84c319f4b40d6b0d398ce0208a6e265e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a8babff4bca2353d7bc553a4d14d5749a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>aaae9072ddf1f92c7eb9e1264e70455a7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CHotfolderProcessingComp</name>
+    <filename>classihotfgui_1_1_c_hotfolder_processing_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <class kind="class">ihotfgui::CHotfolderProcessingComp::ItemProcessor</class>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
+      <anchor>ac28973763f64a1f8bec29c520044b2b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
+      <anchor>acb7706f3e61cd3be18a62d6e34e99586</anchor>
+      <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHotfolderProcessingComp</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
+      <anchor>a9a1dd95b0f04530939b0a0552bf25c32</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnProcessingTimer</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
+      <anchor>a851811fe580ea14090626448df587ccf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnProcessingItemFinished</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
+      <anchor>ab680ed474dfaa2bc005e00f93b04e54a</anchor>
+      <arglist>(const ItemProcessor &amp;processor)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
+      <anchor>a8b14ea9b72a52cebc84d5cd8c09adcf6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
+      <anchor>aa3eb227653cdd4c7b520f60e9a6a4aca</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CHotfolderProcessingComp::ItemProcessor</name>
+    <filename>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</filename>
+    <member kind="typedef">
+      <type>QThread</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
+      <anchor>adc16e0f5f7174c90eaf28ac20375b153</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ItemProcessor</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
+      <anchor>a5ff49492b8d4bb5b60cb6b27fabc1117</anchor>
+      <arglist>(CHotfolderProcessingComp &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const QByteArray &amp;itemUuid)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetProcessingState</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
+      <anchor>a11d849a83b8eb558e79b416d57609b3e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetItemUuid</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
+      <anchor>a064232ba9f3b8dcd3b8d867d60ad931f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QDateTime</type>
+      <name>GetStartTime</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
+      <anchor>a6c08be153a3e1e40651e664709abc087</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetProcessingTime</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
+      <anchor>a6c75a6db2e5e7b0495b766e54a8ffe39</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Cancel</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
+      <anchor>a72cfa1f6ee3c9195cc20b35af6a1fd99</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>run</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
+      <anchor>a4b49e513700dac819d387735bf3d424c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CHotfolderTaskManagerComp</name>
+    <filename>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <base virtualness="virtual">ihotf::IHotfolderTaskManager</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>aa5c90eda103f8db9bdf39981aad6472b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>af64dc511550fd21a6d176f83e9aa82be</anchor>
+      <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>ab6dc8c325046c80415fc73f074611f8a</anchor>
+      <arglist>(m_fileSystemChangeStorageModelCompPtr, m_fileSystemChangeStorageCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHotfolderTaskManagerComp</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>a4ebef81b935aa3dd0ca4b6355433a203</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ihotf::IHotfolderProcessingItem *</type>
+      <name>GetNextProcessingTask</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>a55193a6e7830a3dd0202141011dc4fc4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>a583429be51f7fade3137e4a58327c30a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
+      <anchor>a20e4c599d487420e0358aacef2b25e0c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CProcessingItemPreviewGuiComp</name>
+    <filename>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</filename>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CProcessingItemPreviewGuiComp, ihotf::IHotfolderProcessingItem &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a7e578870c4cae295cdd229bd240064f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>ad3197eb8660227a443c1bc744070b265</anchor>
+      <arglist>(m_inputPreviewGuiCompPtr, m_inputPreviewObserverCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>aac009a09afd9671f89ca4f8b4d41ac00</anchor>
+      <arglist>(m_outputPreviewGuiCompPtr, m_outputPreviewObserverCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>acb44ecac60d092ffde578c41c28f5728</anchor>
+      <arglist>(m_inputFileNameParamModelCompPtr, m_inputFileNameParamCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>adc1b68a48f6c8ca00de0b528691e2c7e</anchor>
+      <arglist>(m_outputFileNameParamModelCompPtr, m_outputFileNameParamCompPtr, true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a670bd8b5c61b729bdb534b73363b5424</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a4029efb033d7afbc45242bd8241e043b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a0ee1612f6731614183fe625a2cc97d64</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a1e97e72ab21842ba0b607ae8ef342d05</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a8989a5d62880cfa3c2b0598e52f0c422</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iimg</name>
+    <filename>namespaceiimg.html</filename>
   </compound>
   <compound kind="namespace">
     <name>iinsp</name>
@@ -5805,7 +7072,6 @@
   <compound kind="class">
     <name>iinsp::CIdProviderCacheComp</name>
     <filename>classiinsp_1_1_c_id_provider_cache_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iinsp::IIdProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -5839,8 +7105,6 @@
   <compound kind="class">
     <name>iinsp::CInformationProviderCacheComp</name>
     <filename>classiinsp_1_1_c_information_provider_cache_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -5908,12 +7172,9 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp</name>
     <filename>classiinsp_1_1_c_inspection_task_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ibase::CLoggerComponentBase</base>
     <base virtualness="virtual">iinsp::IInspectionTask</base>
-    <base virtualness="virtual">ibase::IMessageContainer</base>
-    <base virtualness="virtual">istd::IInformationProvider</base>
     <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
-    <base protection="protected">imod::CMultiModelBridgeBase</base>
     <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -6189,8 +7450,6 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp::Parameters</name>
     <filename>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</filename>
-    <base>imod::CMultiModelBridgeBase</base>
-    <base virtualness="virtual">iprm::IParamsSet</base>
     <member kind="function">
       <type></type>
       <name>Parameters</name>
@@ -6503,7 +7762,6 @@
   <compound kind="class">
     <name>iipr::CBitmapProviderCacheComp</name>
     <filename>classiipr_1_1_c_bitmap_provider_cache_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
@@ -6718,7 +7976,6 @@
   <compound kind="class">
     <name>iipr::CCaliperParamsComp</name>
     <filename>classiipr_1_1_c_caliper_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>iipr::CCaliperParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -6813,7 +8070,6 @@
   <compound kind="class">
     <name>iipr::CCircleFinderParamsComp</name>
     <filename>classiipr_1_1_c_circle_finder_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>iipr::CCircleFinderParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -6833,7 +8089,6 @@
   <compound kind="class">
     <name>iipr::CCircleFindProcessorComp</name>
     <filename>classiipr_1_1_c_circle_find_processor_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
     <class kind="struct">iipr::CCircleFindProcessorComp::Point</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Ray</class>
@@ -6855,8 +8110,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>afe54ccf8cf71fd7a064dfbe6a50e466a</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>acc4c657f22e7822a4ff54206a332ca31</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TWeightedFeatureWrap&lt; i2d::CCircle &gt;</type>
@@ -6963,7 +8218,6 @@
     <filename>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</base>
     <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
-    <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
@@ -7073,7 +8327,6 @@
   <compound kind="class">
     <name>iipr::CConvolutionKernel2d</name>
     <filename>classiipr_1_1_c_convolution_kernel2d.html</filename>
-    <base virtualness="virtual">imath::CSampledFunction2d</base>
     <base virtualness="virtual">iipr::IConvolutionKernel2d</base>
     <member kind="typedef">
       <type>imath::CSampledFunction2d</type>
@@ -7294,7 +8547,6 @@
   <compound kind="class">
     <name>iipr::CEdgeDistanceProcessorComp</name>
     <filename>classiipr_1_1_c_edge_distance_processor_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
     <class kind="struct">iipr::CEdgeDistanceProcessorComp::CaliperLine</class>
     <class kind="struct">iipr::CEdgeDistanceProcessorComp::Point</class>
@@ -7316,8 +8568,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
-      <anchor>a52dfd7061734f7b4a04f7af7b7f45ba7</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a3697b62a287e12ea5d9821cd046b1e84</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QVector&lt; CaliperLine &gt;</type>
@@ -7435,7 +8687,6 @@
   <compound kind="class">
     <name>iipr::CExtremumCaliperProcessorComp</name>
     <filename>classiipr_1_1_c_extremum_caliper_processor_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; ICaliperProcessor &gt;</base>
     <base virtualness="virtual">iipr::IFeatureToProjectionMapper</base>
     <member kind="typedef">
@@ -7463,8 +8714,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_processor_comp.html</anchorfile>
-      <anchor>a52c2f661660b377539d4136dc1a88de3</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>aecfc44612745b6b835cfbfc352c14e10</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -7511,7 +8762,6 @@
   <compound kind="class">
     <name>iipr::CFeatureToImageMapperProcessorComp</name>
     <filename>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; IFeatureToFeatureProcessor &gt;</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -7531,8 +8781,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
-      <anchor>af41f85a9d78ea5302cbdffce5f6a4fb6</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a7770ab3b8cab2048912c19352f3ae320</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</type>
@@ -7557,8 +8807,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_binarize_processor_comp.html</anchorfile>
-      <anchor>af52e8023cd49e462eb8efd4d8329fb11</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a169349d9a8373f26906ae813cf0e8242</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7692,8 +8942,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>ac2992792559f45fc305bce7ec70da134</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a5c47a52b01a6dd05800b16d66374657e</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -7718,8 +8968,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
-      <anchor>a4684a9de7aa9e5a6179b5d84793f2f47</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a9c9f584d8942176ebc6f1247f62ac93c</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -7732,7 +8982,6 @@
   <compound kind="class">
     <name>iipr::CLineProjectionProcessorComp</name>
     <filename>classiipr_1_1_c_line_projection_processor_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; ILineProjectionProcessor &gt;</base>
     <base virtualness="virtual">iipr::IFeatureToImageMapper</base>
     <base virtualness="virtual">iipr::IProjectionConstraints</base>
@@ -7775,8 +9024,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>a46a8b9a1fb30af7c1e080f8c9f841fe6</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>aebbf5ca518eaf4927b66c8e0a449d969</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
@@ -7888,7 +9137,6 @@
   <compound kind="class">
     <name>iipr::CMultiBitmapCacheComp</name>
     <filename>classiipr_1_1_c_multi_bitmap_cache_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -8045,8 +9293,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_processed_acquisition_comp.html</anchorfile>
-      <anchor>a8e4f41a6a298a4e03345ece94f3a53f5</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a091c75e055017e50953a49462a557bc1</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8143,8 +9391,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>aab9377a4639fbe9b9d9649beb06392c4</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a3a5377066f46a464a5d55e66a43216e0</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -8213,7 +9461,6 @@
   <compound kind="class">
     <name>iipr::CRectDerivativeProcessorComp</name>
     <filename>classiipr_1_1_c_rect_derivative_processor_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>iipr::CRectDerivativeProcessor</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -8378,8 +9625,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_rgb_to_gray_processor_comp.html</anchorfile>
-      <anchor>aca24af0d4224de36f56ee13e427f5c9c</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>aa01cec16835fea9beed32f2a3000525b</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8397,14 +9644,13 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_comp.html</anchorfile>
-      <anchor>a70f1f5afa949e3ae093a5b1f209fc9cd</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a472c9006a11aa155b55bd2d1db1a1751</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iipr::CRingPatternGeneratorParamsComp</name>
     <filename>classiipr_1_1_c_ring_pattern_generator_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::IRingPatternGeneratorParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -8837,7 +10083,6 @@
   <compound kind="class">
     <name>iipr::ICaliperParams</name>
     <filename>classiipr_1_1_i_caliper_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>PolarityMode</name>
       <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
@@ -8968,7 +10213,6 @@
   <compound kind="class">
     <name>iipr::ICircleFinderParams</name>
     <filename>classiipr_1_1_i_circle_finder_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>CaliperMode</name>
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
@@ -9047,7 +10291,6 @@
   <compound kind="class">
     <name>iipr::IConvolutionKernel2d</name>
     <filename>classiipr_1_1_i_convolution_kernel2d.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CIndex2d</type>
       <name>GetKernelSize</name>
@@ -9123,7 +10366,6 @@
   <compound kind="class">
     <name>iipr::IFeatureToImageMapper</name>
     <filename>classiipr_1_1_i_feature_to_image_mapper.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetImagePosition</name>
@@ -9135,7 +10377,6 @@
   <compound kind="class">
     <name>iipr::IFeatureToProjectionMapper</name>
     <filename>classiipr_1_1_i_feature_to_projection_mapper.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetProjectionPosition</name>
@@ -9147,7 +10388,6 @@
   <compound kind="class">
     <name>iipr::IImageInterpolationParams</name>
     <filename>classiipr_1_1_i_image_interpolation_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>InterpolationMode</name>
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
@@ -9247,7 +10487,6 @@
   <compound kind="class">
     <name>iipr::IProjectionConstraints</name>
     <filename>classiipr_1_1_i_projection_constraints.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetLineWidthRange</name>
@@ -9280,7 +10519,6 @@
   <compound kind="class">
     <name>iipr::IProjectionParams</name>
     <filename>classiipr_1_1_i_projection_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const IProjectionConstraints *</type>
       <name>GetProjectionConstraints</name>
@@ -9320,7 +10558,6 @@
   <compound kind="class">
     <name>iipr::IRingPatternGeneratorParams</name>
     <filename>classiipr_1_1_i_ring_pattern_generator_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>PatternType</name>
       <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
@@ -9404,7 +10641,6 @@
   <compound kind="class">
     <name>iipr::ISearchParams</name>
     <filename>classiipr_1_1_i_search_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const ISearchConstraints *</type>
       <name>GetSearchConstraints</name>
@@ -9842,7 +11078,6 @@
     <name>imeas::CGeneralDataSequence</name>
     <filename>classimeas_1_1_c_general_data_sequence.html</filename>
     <base virtualness="virtual">imeas::IDataSequence</base>
-    <base virtualness="virtual">imath::TISampledFunction</base>
     <member kind="function">
       <type></type>
       <name>CGeneralDataSequence</name>
@@ -10102,14 +11337,13 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classimeas_1_1_c_histogram_statistics_processor_comp.html</anchorfile>
-      <anchor>ab21d63d8bc7cee624761f53c251012eb</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a935266eb047b8f0179e07b1fb8ea4e99</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>imeas::CLinearAdjustParamsComp</name>
     <filename>classimeas_1_1_c_linear_adjust_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">imeas::ILinearAdjustParams</base>
     <base virtualness="virtual">imeas::INumericValue</base>
     <base protection="protected" virtualness="virtual">imeas::INumericConstraints</base>
@@ -10352,7 +11586,6 @@
   <compound kind="class">
     <name>imeas::CNumericConstraintsComp</name>
     <filename>classimeas_1_1_c_numeric_constraints_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
     <member kind="typedef">
@@ -10429,7 +11662,6 @@
   <compound kind="class">
     <name>imeas::CNumericParamsComp</name>
     <filename>classimeas_1_1_c_numeric_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base>imeas::CSimpleNumericValue</base>
     <base protection="protected" virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
@@ -10669,8 +11901,6 @@
   <compound kind="class">
     <name>imeas::CWavSamplesLoaderComp</name>
     <filename>classimeas_1_1_c_wav_samples_loader_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -10735,7 +11965,6 @@
   <compound kind="class">
     <name>imeas::IDataSequence</name>
     <filename>classimeas_1_1_i_data_sequence.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateSequence</name>
@@ -10804,7 +12033,6 @@
     <name>imeas::IDataSequenceInfo</name>
     <filename>classimeas_1_1_i_data_sequence_info.html</filename>
     <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>SequenceInfoFlags</name>
       <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
@@ -10885,7 +12113,6 @@
   <compound kind="class">
     <name>imeas::IDataSequenceStatistics</name>
     <filename>classimeas_1_1_i_data_sequence_statistics.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetChannelStatistics</name>
@@ -10918,7 +12145,6 @@
   <compound kind="class">
     <name>imeas::IDataStatistics</name>
     <filename>classimeas_1_1_i_data_statistics.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>CreateStatistics</name>
@@ -11010,7 +12236,6 @@
   <compound kind="class">
     <name>imeas::ILinearAdjustParams</name>
     <filename>classimeas_1_1_i_linear_adjust_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const ILinearAdjustConstraints *</type>
       <name>GetAdjustConstraints</name>
@@ -11083,7 +12308,6 @@
   <compound kind="class">
     <name>imeas::INumericValue</name>
     <filename>classimeas_1_1_i_numeric_value.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>ValueTypeId</name>
       <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
@@ -11220,7 +12444,6 @@
   <compound kind="class">
     <name>imeas::IUnitInfo</name>
     <filename>classimeas_1_1_i_unit_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <name>UnitType</name>
       <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
@@ -11426,7 +12649,6 @@
     <name>imm::IMediaController</name>
     <filename>classimm_1_1_i_media_controller.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <base virtualness="virtual">iser::IFileTypeInfo</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
@@ -11574,7 +12796,6 @@
   <compound kind="class">
     <name>imm::IVideoInfo</name>
     <filename>classimm_1_1_i_video_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetFramesCount</name>
@@ -11602,6 +12823,1377 @@
       <anchorfile>classimm_1_1_i_video_info.html</anchorfile>
       <anchor>a0b40fbd17d7be62d702032088b63e82f</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iproc</name>
+    <filename>namespaceiproc.html</filename>
+    <class kind="class">iproc::CCascadedProcessorComp</class>
+    <class kind="class">iproc::CIterativeProcessorComp</class>
+    <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
+    <class kind="class">iproc::IElapsedTimeProvider</class>
+    <class kind="class">iproc::IProcessor</class>
+    <class kind="class">iproc::IStateController</class>
+    <class kind="class">iproc::ISupplier</class>
+    <class kind="class">iproc::TFileCachedProducerCompBase</class>
+    <class kind="class">iproc::TILockedProducer</class>
+    <class kind="class">iproc::TMemCachedProducerComp</class>
+    <class kind="class">iproc::TMorphLockedProducerBase</class>
+    <class kind="class">iproc::TSupplierCompWrap</class>
+    <class kind="class">iproc::TSyncProcessorCompBase</class>
+    <class kind="class">iproc::TSyncProcessorWrap</class>
+    <member kind="typedef">
+      <type>TSyncProcessorCompBase&lt; IProcessor &gt;</type>
+      <name>CSyncProcessorCompBase</name>
+      <anchorfile>namespaceiproc.html</anchorfile>
+      <anchor>a65c76f6b4ad2de54dfdcfb737b246473</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TSyncProcessorWrap&lt; IProcessor &gt;</type>
+      <name>CSyncProcessorBase</name>
+      <anchorfile>namespaceiproc.html</anchorfile>
+      <anchor>a20696afdd1463d42b09fe2b513b13b44</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::CCascadedProcessorComp</name>
+    <filename>classiproc_1_1_c_cascaded_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorWrap</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
+      <anchor>a184b8e078c20b9972474afe471cc60d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSyncProcessorBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
+      <anchor>a87d37996d4399406f3375c5e571fe12a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
+      <anchor>a7fba1e11c55b50eefabe9682d8979971</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
+      <anchor>a835018bd3713fe9708d509c7ba8c1ce9</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
+      <anchor>a8970c23987e9178843b9eeb7960db3a5</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
+      <anchor>afca74bcd67ce8a03e9ef1f1d02a07b26</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::CIterativeProcessorComp</name>
+    <filename>classiproc_1_1_c_iterative_processor_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <base>iproc::TSyncProcessorWrap</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a5c38e80996484bd73eaf8524eedba0ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_BUFFER</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a5c38e80996484bd73eaf8524eedba0eca1bc0a262d6eed674d2e8526d7d9dd46a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>acbfe48bc4d178444aa91bd62893e68cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a7c0e084c8f13147f88adb132acab1cbb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>ac47c207560f49b1d1da03fdcbd97a381</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>aeac3d10f3aac8be90d52bdb1a9fc3fef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a49477b1df2ddf39f0fa0ecc6f3f4874b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a483bcb83a62e43e4ff7a1eeb322f009c</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a96784ce3ec10619c0d3bdd4e8e6edc8e</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a3171f4a1f484f2e144f357cdee5d9f61</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>ProcessSlave</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a6fb1d1b9ee52373138103cac8b024714</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
+      <anchor>a38ea594db0ebdfa99da890128d4a22c7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::CModelBasedProcessingTriggerComp</name>
+    <filename>classiproc_1_1_c_model_based_processing_trigger_comp.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>a1e77a85bac7e41c195721e403f6ba204</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>ad4e2f3e85eccbfeaa8aad7b2c29dad3d</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CModelBasedProcessingTriggerComp</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>a9b77cdf39619f9f717c4c0fedf53338b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>a1ddfbca8893ef60ac3b1431a8ffd2130</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>af760a88d6323de5015b9860bbb19f569</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
+      <anchor>af09dd325ea51accbb9ff63c452f247f4</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::IElapsedTimeProvider</name>
+    <filename>classiproc_1_1_i_elapsed_time_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetElapsedTime</name>
+      <anchorfile>classiproc_1_1_i_elapsed_time_provider.html</anchorfile>
+      <anchor>a96344ffb77cdaf0127a43f629b0f4768</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::IProcessor</name>
+    <filename>classiproc_1_1_i_processor.html</filename>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_PARAMS</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a0670e38ef8e7cadcc77fcffde5b01b06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_PROCESSING_ERROR</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a128a151b6f04fa2eda6e912ac1480d4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>ProcessorState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PS_UNKNOWN</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aab1e7cabfb9d1020ee100b6ee1fbe5620</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PS_INITIALIZATION</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aa2d7a7e4db57eeef7e5be24d2dbc6dc63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PS_READY</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabad97a2c4f0c515bd712963edecdbbba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PS_INVALID</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabbd46d78a0723b57d57c31298901e5f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>TaskState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TS_NONE</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a4193a2826a1a3ecb44b5a47247656aaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TS_WAIT</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a66a293521f3e1288297befd306c46b85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TS_OK</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a012c8b8611b7e4dd198a6ce37aa6bf57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TS_CANCELED</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a1fad2f44bdf50b7c30ddda7738995a43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TS_INVALID</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73ae6084d2b3eadd5d5928353a9d5b59594</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a21bebcb085e8e93dc6920ad3dcf6c4ce</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a18d945c422d423fa69be5c2a136e1258</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>ad5afd83168811f2e276fa4d57821b013</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>af214e4076c2fa524b9aa6de572e90170</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>abb082ed0fb7e87d975848e53aad84f89</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa73693c6c682f31cf5bb344c6e816d6f</anchor>
+      <arglist>(int taskId=-1)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a4afcb910ebe56624cb240a09b998581a</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>ab8c6e1b11221b853398eadc0953b2f07</anchor>
+      <arglist>(int taskId=-1) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71cf33bedd0292459b281926cb2df448</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::IStateController</name>
+    <filename>classiproc_1_1_i_state_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_STATE_ENTERED</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2eac4e9320a483212dc73c200dcce456e8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_STATE_LEAVED</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2ea99855149be815e58d177b0986ace78fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_GRAPH_CHANGED</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2eaf1c410d785c523a7bc0f7dcbb40bdec5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_STATE_ENABLED</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a689c37ae7122c3dcf699bd8d0f721a2ea15711255a2b455bd2c63d245d2fd68aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsStateEnabled</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a3c32dabb91bd5647393bacb82c33fb56</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsStateActive</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a0d6e37fa8bdf58d51168db93855707a8</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsEnterAllowed</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a6ed859c9b3171d0e77e3a0d3268b6782</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsLeaveAllowed</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>af60162b22c686240e70e37eb5643bf52</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>TryEnterState</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a206ddfb8927d571047516503ca243b3d</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>TryLeaveState</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>adec23e99e03a45c23beef49b5e56e264</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::ISupplier</name>
+    <filename>classiproc_1_1_i_supplier.html</filename>
+    <member kind="enumeration">
+      <name>WorkStatus</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WS_INVALID</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251eab14d115e664be0ece856109431395207</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WS_INIT</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WS_LOCKED</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WS_OK</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WS_CANCELED</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WS_ERROR</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WS_CRITICAL</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a493b9bac260cff15679441656b15f3ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_SUPPLIER_RESULTS</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a0496343d4f5ae9a3f71caf5163b35d13</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a1d5a8103b4fc07f82c8d5f44794bb78e</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a8407cf9f0d773e91bfa10d6616a36e4d</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a9ca6810fbb13f002e9eaaece19ddf31a</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>afcc7cf98a07ad365e35635eab32d8bcb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a676cd5ff0426c1f72076c1847cb84a52</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TFileCachedProducerCompBase</name>
+    <filename>classiproc_1_1_t_file_cached_producer_comp_base.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base virtualness="virtual">iproc::TILockedProducer</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>af57ca634721f62f6f3ece442f582ebbd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TILockedProducer&lt; Key, CacheObject &gt;</type>
+      <name>LockedProducerType</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>aacdbbb443d1969232634d0ed05437ce6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CacheObject *</type>
+      <name>ProduceLockedObject</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>a4aa3156c239594e3a9eb4f20623ea90c</anchor>
+      <arglist>(const Key &amp;key)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UnlockObject</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>adfff54da7c6cd1d18fa1ff31327fa097</anchor>
+      <arglist>(const CacheObject *objectPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>PushKeyBack</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>a9ca96ad5d4074112bf77a41512ff67a8</anchor>
+      <arglist>(const Key &amp;key)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CleanFileList</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>a0b9bbf383285d893bcd31168a167a3f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnCacheFileSaved</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>a2394884de10642312c21d2180d046b0d</anchor>
+      <arglist>(const Key &amp;key, const QString &amp;cacheFilePath)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnCacheFileRemoved</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>adf4a23ed996fc2545d58176b57e2f084</anchor>
+      <arglist>(const Key &amp;key, const QString &amp;cacheFilePath)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual QString</type>
+      <name>CalcCacheFilePath</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>a130e2ea47c7ced7159c764b98dd63a55</anchor>
+      <arglist>(const Key &amp;key) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetMaxCachedFilesCount</name>
+      <anchorfile>classiproc_1_1_t_file_cached_producer_comp_base.html</anchorfile>
+      <anchor>aa3a79666d440d2204579865d39440f15</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TILockedProducer</name>
+    <filename>classiproc_1_1_t_i_locked_producer.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <member kind="function" virtualness="pure">
+      <type>virtual const CacheObject *</type>
+      <name>ProduceLockedObject</name>
+      <anchorfile>classiproc_1_1_t_i_locked_producer.html</anchorfile>
+      <anchor>add1563729bb56977037a3ea2b8a846f8</anchor>
+      <arglist>(const Key &amp;key)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>UnlockObject</name>
+      <anchorfile>classiproc_1_1_t_i_locked_producer.html</anchorfile>
+      <anchor>ac88e2233c4a024d9a23d26053c870bac</anchor>
+      <arglist>(const CacheObject *objectPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TMemCachedProducerComp</name>
+    <filename>classiproc_1_1_t_mem_cached_producer_comp.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base virtualness="virtual">iproc::TILockedProducer</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_mem_cached_producer_comp.html</anchorfile>
+      <anchor>a6ca12b6480bc45ac3f1741ac94260077</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TILockedProducer&lt; Key, CacheObject &gt;</type>
+      <name>LockedProducerType</name>
+      <anchorfile>classiproc_1_1_t_mem_cached_producer_comp.html</anchorfile>
+      <anchor>a04ea9a99f1898240afdac1597b5c0aa3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CacheObject *</type>
+      <name>ProduceLockedObject</name>
+      <anchorfile>classiproc_1_1_t_mem_cached_producer_comp.html</anchorfile>
+      <anchor>aa440adc320329b3b9706fca004dd1275</anchor>
+      <arglist>(const Key &amp;key)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UnlockObject</name>
+      <anchorfile>classiproc_1_1_t_mem_cached_producer_comp.html</anchorfile>
+      <anchor>a290f970f6953dfa5640e9af7c19321c0</anchor>
+      <arglist>(const CacheObject *objectPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CleanElementList</name>
+      <anchorfile>classiproc_1_1_t_mem_cached_producer_comp.html</anchorfile>
+      <anchor>a154ec56923ea6e7c1574e6bb6ebbc819</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TMorphLockedProducerBase</name>
+    <filename>classiproc_1_1_t_morph_locked_producer_base.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>iproc::TILockedProducer</base>
+    <member kind="function">
+      <type></type>
+      <name>TMorphLockedProducerBase</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>ac0984951cfdc8cf3638bd3cf74eb780c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMaxCumulatedWeight</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>a64cb9563b9718f86fac601cea7f7fc1d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMaxCumulatedWeight</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>a4d951a5cb9b850c2ca8cdfb356751bb6</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CacheObject *</type>
+      <name>ProduceLockedObject</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>a3936791a01b0097b7fec6f9bd57f6039</anchor>
+      <arglist>(const Key &amp;key)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UnlockObject</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>ae38d113d17ae184bdbd9b3870f576f42</anchor>
+      <arglist>(const CacheObject *objectPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CleanElementList</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>a96ad3dc8538adffa2ab9184132776e98</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual double</type>
+      <name>CalcCacheObject</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>a36bdcd6ff6f39fef9577215cde00067f</anchor>
+      <arglist>(const Key &amp;key, const SourceObject &amp;source, CacheObject &amp;cache) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual const SourceObject *</type>
+      <name>LockSourceObject</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>a5df3ff71e891b49ee5352de7f84e21d5</anchor>
+      <arglist>(const Key &amp;key)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>UnlockSourceObject</name>
+      <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
+      <anchor>ae925e0d1801b26435fd4ce86bd92867e</anchor>
+      <arglist>(const Key &amp;key, const SourceObject *sourcePtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TSupplierCompWrap</name>
+    <filename>classiproc_1_1_t_supplier_comp_wrap.html</filename>
+    <templarg>Product</templarg>
+    <base>ibase::CLoggerComponentBase</base>
+    <base virtualness="virtual">iproc::ISupplier</base>
+    <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <class kind="class">iproc::TSupplierCompWrap::InputsObserver</class>
+    <class kind="class">iproc::TSupplierCompWrap::ParamsObserver</class>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae4928500a07bc7997704eb06d7effb9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_DURATION_TIME</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae4928500a07bc7997704eb06d7effb9faab1f299aea6b4bfa72738cc9cdb34670</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>aa798f2691f94a39db1097a56727a68b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Product</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9f63ea1c39f5e17fabf56729c317cd1f</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSupplierCompWrap</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a11d01e8db5c10dc62b7b795c1c38d358</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5e0a872fbc23c641a87a0e722e7a3e2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a448aa1751441a329a76510cbeb2894c6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>aae3ac83c656d4b0de834372fdca85ee2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ab6f30ac3f2d05e657c1263026630fd6d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetElapsedTime</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad98023b29eb5e8f1091094b4df2bf33f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a864d166238f938df650c6d0b9a254406</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnParametersChanged</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a2ed24e750ada2b287d96e3f4f8329c73</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const Product *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RegisterSupplierInput</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6003440e8b69055a64692bcf5da84408</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UnregisterSupplierInput</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>af3699e19481feebf476a3f823ac98bfb</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <arglist>(Product &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a87209e190b38fd6513767b16208ed1ce</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ab6c61739f6153e4f37b82ca110468afe</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TSupplierCompWrap::InputsObserver</name>
+    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>InputsObserver</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
+      <anchor>a4417edee8623247aab327f4e1dd6ead6</anchor>
+      <arglist>(TSupplierCompWrap&lt; Product &gt; *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
+      <anchor>ad5c662418645b1e2e32b039ca5db024d</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>TSupplierCompWrap&lt; Product &gt; &amp;</type>
+      <name>m_parent</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
+      <anchor>a6013b20e728a1af76021962651331484</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TSupplierCompWrap::ParamsObserver</name>
+    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ParamsObserver</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
+      <anchor>ada0299c62b020d51a0b302c4aaac654a</anchor>
+      <arglist>(TSupplierCompWrap&lt; Product &gt; *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
+      <anchor>a204c6243398041b027d3ecf5fec1e19b</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>TSupplierCompWrap&lt; Product &gt; &amp;</type>
+      <name>m_parent</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
+      <anchor>a4140ae4ace7eaf7410c41ff092c126e6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TSyncProcessorCompBase</name>
+    <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <templarg>Base</templarg>
+    <templarg>Interface</templarg>
+    <base>ibase::CLoggerComponentBase</base>
+    <base>iproc::TSyncProcessorWrap</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aba5b8a1659fcb233df925c946248ae58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; Base &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Interface</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::TSyncProcessorWrap</name>
+    <filename>classiproc_1_1_t_sync_processor_wrap.html</filename>
+    <templarg>Base</templarg>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iprocgui</name>
+    <filename>namespaceiprocgui.html</filename>
+    <class kind="class">iprocgui::CDocumentProcessingCommandComp</class>
+    <class kind="class">iprocgui::CDocumentProcessingManagerComp</class>
+    <class kind="class">iprocgui::CDocumentProcessingManagerCompBase</class>
+    <class kind="class">iprocgui::CProcessorCommandComp</class>
+    <class kind="class">iprocgui::CProcessorControlGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iprocgui::CDocumentProcessingCommandComp</name>
+    <filename>classiprocgui_1_1_c_document_processing_command_comp.html</filename>
+    <base>iprocgui::CDocumentProcessingManagerCompBase</base>
+    <member kind="typedef">
+      <type>iprocgui::CDocumentProcessingManagerCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_command_comp.html</anchorfile>
+      <anchor>af63c16e07912eb65d20eca7af83e987b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoDocumentProcessing</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_command_comp.html</anchorfile>
+      <anchor>a0b56a66d2926f88dd6caf65246816564</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprocgui::CDocumentProcessingManagerComp</name>
+    <filename>classiprocgui_1_1_c_document_processing_manager_comp.html</filename>
+    <base>iprocgui::CDocumentProcessingManagerCompBase</base>
+    <member kind="typedef">
+      <type>iprocgui::CDocumentProcessingManagerCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp.html</anchorfile>
+      <anchor>a41404d8cdb42bdfac96c979471b7f207</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoDocumentProcessing</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp.html</anchorfile>
+      <anchor>a7ab898bbc70d5fbef752ca0a19db0b6a</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprocgui::CDocumentProcessingManagerCompBase</name>
+    <filename>classiprocgui_1_1_c_document_processing_manager_comp_base.html</filename>
+    <base>ibase::CLoggerComponentBase</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a663beb23386ecc1a732eb2b55cf86393</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a817892a7761181e19c02326cf686ec66</anchor>
+      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDocumentProcessingManagerCompBase</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a94236a24c35c7ced2fecf65eeba3f3b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInputDocumentRequired</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a2ef6c2a629dbdc00e74bb57e294092c0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetProcessingCommandEnabled</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>aad3ec6b54e6b4b1a2371f1970f951361</anchor>
+      <arglist>(bool isProcessingCommandEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a937d0085e132727b5b55b1a9b949f29c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a85544fd405a619b295b1f1156c70804a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a89a8acd22b4aaf27f7472adaf164b78c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>DoDocumentProcessing</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>ae67ec59dda6ef0c8e0387cb1c3dcf10e</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>abfc0b10a9d2dfc534f26e1899b158cf7</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_processingMenu</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a4ce81aa063682fa5195fbc5a45762acd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_rootCommands</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>ae709005994ea32faa4ee0c2e526b9cec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_processingCommand</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a2f0ac6f5b7663d002eb3b4a9728f2fa2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprocgui::CProcessorCommandComp</name>
+    <filename>classiprocgui_1_1_c_processor_command_comp.html</filename>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a1db201b611271ceb3876ea9335f3aa48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CProcessorCommandComp</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>ad1131e69796475b00bf64e34e893ef59</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a18dee64b849e2441dc998061867cc908</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a8be49e72d3adebf7c9d48396f601f10e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_rootMenuCommand</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a7d471fac4820bd78c9e32ec7ba41c828</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_mainMenuCommand</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a183e4664d45dbc0c9f2ef20767500b7b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_processingCommand</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>ad59790321d6f161127708540327e15fe</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprocgui::CProcessorControlGuiComp</name>
+    <filename>classiprocgui_1_1_c_processor_control_gui_comp.html</filename>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CProcessorControlGuiComp, QWidget &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>ae8482bc875c7c1989ed8cd3ba8e2edb1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a43407ec469164aeddee9c37a80a387a0</anchor>
+      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CProcessorControlGuiComp</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>aa92b0a9aaa2247b43e19b005d726d2a9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_DataAcquisitionButton_clicked</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>ae8add1a64226a6f31938977306b6e2ca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LiveDataAcquisitionButton_toggled</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a047b91ba5caf0dcec94cb646d3ee0496</anchor>
+      <arglist>(bool checked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveDataButton_clicked</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>aa98bb67056c1da4ed6a5472712b25204</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LoadParamsButton_clicked</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>accb2829bab03508deb3237e4ab129f5b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveParamsButton_clicked</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a8a60eee6bb3a5bbe8e728729d685d4a2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnTimerReady</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a5669446185726a08050c61dd658c3c9c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>ab5f0147cc0faf8d2749ee8c8ebbc9171</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>DoDataAcquisition</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>aff0a13aff0fc1b8442d81e294efa6dc2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a4e09fb7ab20fd91140a944e618ec92de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a0ff1ea89db443d313a35233b83624641</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -11689,7 +14281,6 @@
   <compound kind="class">
     <name>iprop::CPropertiesEditorComp</name>
     <filename>classiprop_1_1_c_properties_editor_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CPropertiesEditorComp, IPropertiesManager &gt;</base>
     <member kind="enumeration">
       <name>ColumnType</name>
       <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
@@ -11867,7 +14458,6 @@
   <compound kind="class">
     <name>iprop::CPropertyBase</name>
     <filename>classiprop_1_1_c_property_base.html</filename>
-    <base>TCopySerializedWrap&lt; IProperty &gt;</base>
     <member kind="function">
       <type></type>
       <name>CPropertyBase</name>
@@ -11907,7 +14497,6 @@
   <compound kind="class">
     <name>iprop::IPropertiesManager</name>
     <filename>classiprop_1_1_i_properties_manager.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
@@ -11972,7 +14561,6 @@
   <compound kind="class">
     <name>iprop::IProperty</name>
     <filename>classiprop_1_1_i_property.html</filename>
-    <base virtualness="virtual">iser::IObject</base>
     <member kind="enumeration">
       <name>PropertyFlags</name>
       <anchorfile>classiprop_1_1_i_property.html</anchorfile>
@@ -12370,6 +14958,10 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>iqproc</name>
+    <filename>namespaceiqproc.html</filename>
+  </compound>
+  <compound kind="namespace">
     <name>iqtauth</name>
     <filename>namespaceiqtauth.html</filename>
     <class kind="class">iqtauth::CChangePasswordDialog</class>
@@ -12412,7 +15004,6 @@
   <compound kind="class">
     <name>iqtauth::CLoginBarGuiComp</name>
     <filename>classiqtauth_1_1_c_login_bar_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CLoginBarGuiComp &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CLoginBarGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -12466,8 +15057,6 @@
   <compound kind="class">
     <name>iqtauth::CUserGuiComp</name>
     <filename>classiqtauth_1_1_c_user_gui_comp.html</filename>
-    <base>TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <base virtualness="virtual">iauth::IPasswordChanger</base>
     <member kind="typedef">
       <type>ibase::TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</type>
@@ -12702,7 +15291,6 @@
   <compound kind="class">
     <name>iqtcam::CExposureParamsGuiComp</name>
     <filename>classiqtcam_1_1_c_exposure_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CExposureParamsGuiComp, icam::IExposureParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CExposureParamsGuiComp, icam::IExposureParams &gt;</type>
       <name>BaseClass</name>
@@ -12749,7 +15337,7 @@
   <compound kind="class">
     <name>iqtcam::CFileAcquisitionComp</name>
     <filename>classiqtcam_1_1_c_file_acquisition_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ibase::CLoggerComponentBase</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <class kind="struct">iqtcam::CFileAcquisitionComp::ParamsInfo</class>
     <member kind="typedef">
@@ -12770,8 +15358,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
-      <anchor>ad3bf15fa5ca1cc96706fbe9442841fa2</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a6d147dc90246a9a9bb3054474aa5e129</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
@@ -12919,8 +15507,6 @@
   <compound kind="class">
     <name>iqtcam::CMultiBitmapViewComp</name>
     <filename>classiqtcam_1_1_c_multi_bitmap_view_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iipr::IMultiBitmapProvider &gt; &gt; &gt;</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <class kind="class">iqtcam::CMultiBitmapViewComp::CSingleView</class>
     <member kind="typedef">
       <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iipr::IMultiBitmapProvider &gt; &gt; &gt;</type>
@@ -12989,7 +15575,6 @@
   <compound kind="class">
     <name>iqtcam::CMultiBitmapViewComp::CSingleView</name>
     <filename>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</filename>
-    <base>iqt2d::IViewProvider</base>
     <member kind="typedef">
       <type>QGroupBox</type>
       <name>BaseClass</name>
@@ -13085,7 +15670,7 @@
   <compound kind="class">
     <name>iqtcam::CSnapImageGuiComp</name>
     <filename>classiqtcam_1_1_c_snap_image_gui_comp.html</filename>
-    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</base>
+    <base>iqt2d::TViewExtenderCompBase</base>
     <member kind="typedef">
       <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</type>
       <name>BaseClass</name>
@@ -13231,8 +15816,6 @@
   <compound kind="class">
     <name>iqtex::CTcpTerminalGuiComp</name>
     <filename>classiqtex_1_1_c_tcp_terminal_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CTcpTerminalGuiComp &gt;</base>
-    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CTcpTerminalGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -13335,7 +15918,6 @@
   <compound kind="class">
     <name>iqtex::CXslSerializerComp</name>
     <filename>classiqtex_1_1_c_xsl_serializer_comp.html</filename>
-    <base>ibase::CFileSerializerCompBase</base>
     <member kind="typedef">
       <type>ibase::CFileSerializerCompBase</type>
       <name>BaseClass</name>
@@ -13368,8 +15950,6 @@
   <compound kind="class">
     <name>iqtex::CXslTransformationReadArchive</name>
     <filename>classiqtex_1_1_c_xsl_transformation_read_archive.html</filename>
-    <base>iser::CReadArchiveBase</base>
-    <base>iser::CXmlDocumentInfoBase</base>
     <member kind="function">
       <type></type>
       <name>CXslTransformationReadArchive</name>
@@ -13535,9 +16115,6 @@
   <compound kind="class">
     <name>iqtex::CXslTransformationWriteArchive</name>
     <filename>classiqtex_1_1_c_xsl_transformation_write_archive.html</filename>
-    <base>iser::CWriteArchiveBase</base>
-    <base>iser::CFileArchiveInfo</base>
-    <base>iser::CXmlDocumentInfoBase</base>
     <member kind="typedef">
       <type>iser::CWriteArchiveBase</type>
       <name>BaseClass</name>
@@ -13736,705 +16313,6 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>iqtfpf</name>
-    <filename>namespaceiqtfpf.html</filename>
-    <class kind="class">iqtfpf::CDirectoryItemGuiComp</class>
-    <class kind="class">iqtfpf::CDirectoryMonitorComp</class>
-    <class kind="class">iqtfpf::CDirectoryMonitorParamsGui</class>
-    <class kind="class">iqtfpf::CFileNamingComp</class>
-    <class kind="class">iqtfpf::CHotfolderContainerGuiComp</class>
-    <class kind="class">iqtfpf::CHotfolderGuiComp</class>
-    <class kind="class">iqtfpf::CHotfolderProcessingComp</class>
-    <class kind="class">iqtfpf::CHotfolderTaskManagerComp</class>
-    <class kind="class">iqtfpf::CProcessingItemPreviewGuiComp</class>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CDirectoryItemGuiComp</name>
-    <filename>classiqtfpf_1_1_c_directory_item_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CDirectoryItemGuiComp, ifpf::IHotfolderStatistics &gt;</base>
-    <base virtualness="virtual">iprm::ISelectionParam</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDirectoryItemGuiComp, ifpf::IHotfolderStatistics &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a64fbaaca31969c3a6ceb9ab226f37e46</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDirectoryItemGuiComp</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a8565fef677fc07a9b254ee80b42e8dc1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
-      <name>GetSelectionConstraints</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a7c9958caaaca1538596a753eefd36a9b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a61a8f35a1a09eb8bebaca926ccdd817a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a2f605ecca40b4212b1a3fb7164c9528b</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iprm::ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a010390358036ea376af5aa5cb9ac16b5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a654becf12e3aa3a192d22b9919c6990e</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a3e988133a9bda258395cc2a69f168bce</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CDirectoryMonitorComp</name>
-    <filename>classiqtfpf_1_1_c_directory_monitor_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifpf::IDirectoryMonitor</base>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a38b31eb7e57b5b3e91c9897b7903f04d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QThread</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a82dd05a0a06535c79ae7b4ec10f77c97</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>FolderChanged</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a48c08d1ef0441d20c77d9e1678d33de2</anchor>
-      <arglist>(int changeFlags)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a0fe1f80a8ffd029f80df4039778cc130</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDirectoryMonitorComp</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a5d5ef6244b85075de6a58df03a1df8cf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>StartObserving</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>ae9db6d6c80455280882a2708f1990c69</anchor>
-      <arglist>(const iprm::IParamsSet *paramsSetPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>StopObserving</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>aa1a057eb546259e338ac955b9e150245</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a20cc302d3f7dc0989d8dacec09eafc39</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a0d83793a9023b89e4811c9fba5d95f35</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>run</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>a933ce94b1e6b8dda9123bdd728400f0a</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CDirectoryMonitorParamsGui</name>
-    <filename>classiqtfpf_1_1_c_directory_monitor_params_gui.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CDirectoryMonitorParamsGui, ifpf::IDirectoryMonitorParams &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDirectoryMonitorParamsGui, ifpf::IDirectoryMonitorParams &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a7347344c630fc38a3d1a5221a670a63e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a1296ad87605c817738e96c00b9e24e46</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a3607dc55e2d69e0cb4329355572a6674</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a821a6695b0a971a9522681fc3c33964d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilesCheck_toggled</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a5f848eb96a2307e507614dfa0e802d63</anchor>
-      <arglist>(bool isChecked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_DirsCheck_toggled</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a314ce70105966cdcf07cb3e7593793f5</anchor>
-      <arglist>(bool isChecked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_DrivesCheck_toggled</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a95b577fc12632e056ee7eab34caac334</anchor>
-      <arglist>(bool isChecked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_ModifiedCheck_toggled</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>afb0aa3b353fffd3b00981ce6132495d1</anchor>
-      <arglist>(bool isChecked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AddedCheck_toggled</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a33edf19da57375920d87cdeb9d3481fe</anchor>
-      <arglist>(bool isChecked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_RemovedCheck_toggled</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>ab8464dd91e9b7ad4de7329d4ba304942</anchor>
-      <arglist>(bool isChecked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AttributesCheck_toggled</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a7e14853fa97dec0cca516e151171102b</anchor>
-      <arglist>(bool isChecked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_PoolingIntervallSpin_valueChanged</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>ac86c917bf161a77ba66b5e47a3fa6694</anchor>
-      <arglist>(double value)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AddAcceptPatternButton_clicked</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>aba17c57279edac28af5bffa81e1d2954</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_RemoveAcceptPatternButton_clicked</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a0613bf0ad10be0c01f4311ebec8f1eba</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AcceptPatternsList_itemSelectionChanged</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>ae1ca00240179ceffb029e34dd49b050f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AcceptPatternsList_itemChanged</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a1807fcd5b82c124e8b7a1969960f14b3</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AddIgnorePatternButton_clicked</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>afca844a7010e8d7dc5e7cc66004333bb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_RemoveIgnorePatternButton_clicked</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a3993cfd365241e60f73d925056f3c39b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_IgnorePatternsList_itemSelectionChanged</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a7e27b28d8a3bcc6dd86a7dd8eb50e1a2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_IgnorePatternsList_itemChanged</name>
-      <anchorfile>classiqtfpf_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a2edf27b250c4125a409ee8c4ded54704</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CFileNamingComp</name>
-    <filename>classiqtfpf_1_1_c_file_naming_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifpf::IFileNaming</base>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_file_naming_comp.html</anchorfile>
-      <anchor>a9b792e3c49a71aa365ba82fe77964536</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetFilePath</name>
-      <anchorfile>classiqtfpf_1_1_c_file_naming_comp.html</anchorfile>
-      <anchor>a7a7971b31f63b91fd2f573ec58f954f4</anchor>
-      <arglist>(const QString &amp;inputFileName) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CHotfolderContainerGuiComp</name>
-    <filename>classiqtfpf_1_1_c_hotfolder_container_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CHotfolderContainerGuiComp &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CHotfolderContainerGuiComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
-      <anchor>a144b0388b56d2fd6f2777f1c49f488a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QPixmap</type>
-      <name>CreateComponentDragPixmap</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
-      <anchor>a050346b7326893391e8e7a3798c8e797</anchor>
-      <arglist>(const QString &amp;hotfolderId) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>eventFilter</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
-      <anchor>a08a4343999771a810ee626e5a7392c48</anchor>
-      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_container_gui_comp.html</anchorfile>
-      <anchor>aeea917980c26a322ae798acfccd945b4</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CHotfolderGuiComp</name>
-    <filename>classiqtfpf_1_1_c_hotfolder_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CHotfolderGuiComp, ifpf::IHotfolderProcessingInfo &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CHotfolderGuiComp, ifpf::IHotfolderProcessingInfo &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a986faf5368da23bdd430971d0076932a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CModelProxy</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a6a9345ee06b7a01a00a4fec70dc9b9ad</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a528edd61360e64485cc9dcc0ce824e78</anchor>
-      <arglist>(m_statisticsHotfolderObserverCompPtr, m_statisticsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a9bcf9d1568d7ac00130991f06b3a5fd9</anchor>
-      <arglist>(m_directoryItemObserverFactCompPtr, m_directoryItemGuiFactCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a719b21c3850949f239088ba1d900073a</anchor>
-      <arglist>(m_directoryItemSelectionFactCompPtr, m_directoryItemGuiFactCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>af2f428fb0525d7e1a72a1e5cd4746b0c</anchor>
-      <arglist>(m_processingItemPreviewCompPtr, m_processingItemPreviewGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>afa69ffb1f016a11b46e2a3f7b0a47052</anchor>
-      <arglist>(m_inputDirectoriesParamsManagerModelCompPtr, m_inputDirectoriesParamsManagerCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderGuiComp</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a2733aadc5ee2b71ea880a954024e0980</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>ad9c62a8f41a75b6810723ad1a9292c1e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a02b2f22b3a4c7f56d6900743ca0cef26</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>ac37b7c4ab04fb26d222ec5bd9c80d29d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>aecfbbf3bca4218a5b27690622f6dab96</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a12750af82ff61386f593c9acc8ba50da</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>ae2454e3cd3152866ab75ba1a40ed006b</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CHotfolderProcessingComp</name>
-    <filename>classiqtfpf_1_1_c_hotfolder_processing_comp.html</filename>
-    <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
-    <class kind="class">iqtfpf::CHotfolderProcessingComp::ItemProcessor</class>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>ae8880beecfce17c304a3d9c7ed2ffb52</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>a1bccc6866240155f3c66db44a9dd4cb0</anchor>
-      <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderProcessingComp</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>a381970aa732e85beb2dd165f216cff1e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnProcessingTimer</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>ae68470b0e80298aec6eaa72b93431998</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnProcessingItemFinished</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>a61ea909bf183ba229957d1c05f5fe768</anchor>
-      <arglist>(const ItemProcessor &amp;processor)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>a15cc48e02339f496d2cd7dc15ded0404</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>ac5299a626cecfa0927904936bc7dd05d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CHotfolderProcessingComp::ItemProcessor</name>
-    <filename>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</filename>
-    <member kind="typedef">
-      <type>QThread</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>a364543b749eab712908103acc67bc8a4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ItemProcessor</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>a49f25d4d64f7e675a0a6c7e08ffb23ce</anchor>
-      <arglist>(CHotfolderProcessingComp &amp;parent, const QString &amp;inputFilePath, const QString &amp;outputFilePath, const QByteArray &amp;itemUuid)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetProcessingState</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>ae36f393ac0883594511f83e456fbebe4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetItemUuid</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>a05805c8074c3f589469cdac5fce785f1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>QDateTime</type>
-      <name>GetStartTime</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>ac08ff8a99a673845556185b172ea20a0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetProcessingTime</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>a068dd6cfa6ca864cebd4d29c5e596815</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Cancel</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>a1b61ec6db63a674cd1e57858a26d2de3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>run</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_processing_comp_1_1_item_processor.html</anchorfile>
-      <anchor>ab8fc640b12b6103836800727feddc721</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CHotfolderTaskManagerComp</name>
-    <filename>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifpf::IHotfolderTaskManager</base>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>a055510f6a523db53a6975f2c0c2df6ac</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>a57fd9873ba82c7cdac195f10bf314167</anchor>
-      <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>a6b1d54ec0df46ba499ea355abb20d76d</anchor>
-      <arglist>(m_fileSystemChangeStorageModelCompPtr, m_fileSystemChangeStorageCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderTaskManagerComp</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>a31e8c6896be7f495fcb67a7b9ce2fa7c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderProcessingItem *</type>
-      <name>GetNextProcessingTask</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>a040875fd3913bc5b50f750d9757a689a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>a0e0b0af61d4c5df2fd0bf334c9abc10b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqtfpf_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>a167da5c8a10b7f70fca738bcf79b8f36</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtfpf::CProcessingItemPreviewGuiComp</name>
-    <filename>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CProcessingItemPreviewGuiComp, ifpf::IHotfolderProcessingItem &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CProcessingItemPreviewGuiComp, ifpf::IHotfolderProcessingItem &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>ac0156132be12e1fe25c99ddf68819667</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>a8a76f8ec8b01d2ffb14159ad7ad939f9</anchor>
-      <arglist>(m_inputPreviewGuiCompPtr, m_inputPreviewObserverCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>aa146007e339de21a3d90a448b4d58eec</anchor>
-      <arglist>(m_outputPreviewGuiCompPtr, m_outputPreviewObserverCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>af888d86abb0d7bc4fe3cc9ed951144e0</anchor>
-      <arglist>(m_inputFileNameParamModelCompPtr, m_inputFileNameParamCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>a46ca9188b976b62268badac6fe953d82</anchor>
-      <arglist>(m_outputFileNameParamModelCompPtr, m_outputFileNameParamCompPtr, true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>a761a5380f7386d96526680d086f4320c</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>a6d2308472859c754e9cdc2bce0559fff</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>a8e2649ce75757e0eafc50c73131cce88</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>aaa4c021145972e447c3a9c1450a9e47e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtfpf_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>a71e1620de6631083e707215000e7b665</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
     <name>iqtinsp</name>
     <filename>namespaceiqtinsp.html</filename>
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
@@ -14498,8 +16376,6 @@
   <compound kind="class">
     <name>iqtinsp::CInspectionTaskGuiComp</name>
     <filename>classiqtinsp_1_1_c_inspection_task_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <name>DataRole</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
@@ -14510,6 +16386,12 @@
       <name>DR_TASK_INDEX</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>aaf567d81493ff1fd3b1e02461dd7f453af4ee775a7ab84f68029768c86bf4e4ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_SHAPE_INDEX</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aaf567d81493ff1fd3b1e02461dd7f453a05d6708a666b15d413ee95e52937d050</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -14659,6 +16541,20 @@
       <anchor>af94b0c396c2dba3ac4fb78412e34bb06</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_MessageList_itemClicked</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>ad312e6ba1915406a73d9b75b30a92443</anchor>
+      <arglist>(QTreeWidgetItem *item, int column)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_MessageList_itemDoubleClicked</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>ad5c87e6569948e9269222d43d440a1d8</anchor>
+      <arglist>(QTreeWidgetItem *item, int column)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>UpdateProcessingState</name>
@@ -14700,7 +16596,7 @@
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
     <templarg>UI</templarg>
     <templarg>WidgetType</templarg>
-    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</base>
+    <base>iqt2d::TViewExtenderCompBase</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
     <member kind="typedef">
@@ -14854,7 +16750,6 @@
   <compound kind="class">
     <name>iqtinsp::TSupplierGuiCompBase::ParamsObserver</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</filename>
-    <base>imod::CSingleModelObserverBase</base>
     <member kind="function">
       <type></type>
       <name>ParamsObserver</name>
@@ -14886,7 +16781,6 @@
   <compound kind="class">
     <name>iqtipr::CCaliperParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_caliper_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CCaliperParamsGuiComp, iipr::ICaliperParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCaliperParamsGuiComp, iipr::ICaliperParams &gt;</type>
       <name>BaseClass</name>
@@ -14933,7 +16827,6 @@
   <compound kind="class">
     <name>iqtipr::CCircleFinderParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CCircleFinderParamsGuiComp, iipr::ICircleFinderParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCircleFinderParamsGuiComp, iipr::ICircleFinderParams &gt;</type>
       <name>BaseClass</name>
@@ -14987,7 +16880,6 @@
   <compound kind="class">
     <name>iqtipr::CConvolution2dParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CConvolution2dParamsGuiComp, iipr::IConvolutionKernel2d &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CConvolution2dParamsGuiComp, iipr::IConvolutionKernel2d &gt;</type>
       <name>BaseClass</name>
@@ -15041,7 +16933,6 @@
   <compound kind="class">
     <name>iqtipr::CGeneralSearchParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_general_search_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CGeneralSearchParamsGuiComp, iipr::ISearchParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CGeneralSearchParamsGuiComp, iipr::ISearchParams &gt;</type>
       <name>BaseClass</name>
@@ -15268,8 +17159,6 @@
   <compound kind="class">
     <name>iqtipr::CMultiLineSupplierGuiComp::CShape</name>
     <filename>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</filename>
-    <base>iview::CShapeBase</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iview::CShapeBase</type>
       <name>BaseClass</name>
@@ -15323,7 +17212,6 @@
   <compound kind="class">
     <name>iqtipr::CMultiLineSupplierGuiComp::LineSelection</name>
     <filename>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_line_selection.html</filename>
-    <base>iprm::ISelectionParam</base>
     <member kind="function">
       <type></type>
       <name>LineSelection</name>
@@ -15377,7 +17265,6 @@
   <compound kind="class">
     <name>iqtipr::CProjectionShape</name>
     <filename>classiqtipr_1_1_c_projection_shape.html</filename>
-    <base>iview::CShapeBase</base>
     <member kind="typedef">
       <type>iview::CShapeBase</type>
       <name>BaseClass</name>
@@ -15665,7 +17552,6 @@
   <compound kind="class">
     <name>iqtmeas::CDataSequenceViewComp</name>
     <filename>classiqtmeas_1_1_c_data_sequence_view_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CDataSequenceViewComp, imeas::IDataSequence &gt;</base>
     <class kind="class">iqtmeas::CDataSequenceViewComp::DiagramWidget</class>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDataSequenceViewComp, imeas::IDataSequence &gt;</type>
@@ -15794,7 +17680,6 @@
   <compound kind="class">
     <name>iqtmeas::CDataStatisticsGuiComp</name>
     <filename>classiqtmeas_1_1_c_data_statistics_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CDataStatisticsGuiComp, imeas::IDataStatistics &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDataStatisticsGuiComp, imeas::IDataStatistics &gt;</type>
       <name>BaseClass</name>
@@ -15813,7 +17698,6 @@
   <compound kind="class">
     <name>iqtmeas::CNumericParamsGuiComp</name>
     <filename>classiqtmeas_1_1_c_numeric_params_gui_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt; &gt;</base>
     <member kind="typedef">
       <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -15923,10 +17807,8 @@
   <compound kind="class">
     <name>iqtmm::CFrameSeqVideoControllerComp</name>
     <filename>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</filename>
-    <base>QObject</base>
     <base>TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
-    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</type>
       <name>BaseClass</name>
@@ -15952,8 +17834,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
-      <anchor>acb42990b3904ff2a265d3865c6cf8ca6</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a3788f8907f5a79f8c6cca707b4e441ab</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -16085,9 +17967,7 @@
   <compound kind="class">
     <name>iqtmm::CMediaLoaderComp</name>
     <filename>classiqtmm_1_1_c_media_loader_comp.html</filename>
-    <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
+    <base>ibase::CLoggerComponentBase</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
@@ -16158,7 +18038,6 @@
   <compound kind="class">
     <name>iqtmm::CPhononVideoViewGuiComp</name>
     <filename>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; Phonon::VideoWidget &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; Phonon::VideoWidget &gt;</type>
@@ -16318,7 +18197,6 @@
   <compound kind="class">
     <name>iqtmm::CPlaybackControllerGuiComp</name>
     <filename>classiqtmm_1_1_c_playback_controller_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CPlaybackControllerGuiComp, imm::IVideoController &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPlaybackControllerGuiComp, imm::IVideoController &gt;</type>
       <name>BaseClass</name>
@@ -16351,9 +18229,7 @@
   <compound kind="class">
     <name>iqtmm::CSvgBitmapLoaderComp</name>
     <filename>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</filename>
-    <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
+    <base>ibase::CLoggerComponentBase</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
@@ -16430,8 +18306,6 @@
   <compound kind="class">
     <name>iqtmm::CVideoPlayerGuiComp</name>
     <filename>classiqtmm_1_1_c_video_player_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CVideoPlayerGuiComp &gt;</base>
-    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CVideoPlayerGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -16495,7 +18369,6 @@
   <compound kind="class">
     <name>iqtsig::CPulseParamsGuiComp</name>
     <filename>classiqtsig_1_1_c_pulse_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CPulseParamsGuiComp, isig::IPulseParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPulseParamsGuiComp, isig::IPulseParams &gt;</type>
       <name>BaseClass</name>
@@ -16549,7 +18422,6 @@
   <compound kind="class">
     <name>iqtsig::CSampleAcquisitionGuiComp</name>
     <filename>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CSampleAcquisitionGuiComp, QWidget &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSampleAcquisitionGuiComp, QWidget &gt;</type>
       <name>BaseClass</name>
@@ -16645,7 +18517,6 @@
   <compound kind="class">
     <name>iqtsig::CSampleContainerView</name>
     <filename>classiqtsig_1_1_c_sample_container_view.html</filename>
-    <base>TSingleModelObserverBase&lt; imeas::IDataSequence &gt;</base>
     <member kind="typedef">
       <type>QWidget</type>
       <name>BaseClass</name>
@@ -16692,7 +18563,6 @@
   <compound kind="class">
     <name>iqtsig::CSamplingParamsGuiComp</name>
     <filename>classiqtsig_1_1_c_sampling_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CSamplingParamsGuiComp, isig::ISamplingParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSamplingParamsGuiComp, isig::ISamplingParams &gt;</type>
       <name>BaseClass</name>
@@ -16732,7 +18602,7 @@
   <compound kind="class">
     <name>iqtsig::CScriptDataProcessorComp</name>
     <filename>classiqtsig_1_1_c_script_data_processor_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ibase::CLoggerComponentBase</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
@@ -16752,8 +18622,8 @@
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>aa8eb6c524209cd20317be01fe8a777f6</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>ad281b9d9964a03f3998d383751ee0e06</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
@@ -16794,7 +18664,6 @@
   <compound kind="class">
     <name>iqtsig::CTriggerParamsGuiComp</name>
     <filename>classiqtsig_1_1_c_trigger_params_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CTriggerParamsGuiComp, isig::ITriggerParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CTriggerParamsGuiComp, isig::ITriggerParams &gt;</type>
       <name>BaseClass</name>
@@ -16890,7 +18759,6 @@
   <compound kind="class">
     <name>isig::CPulseParamsComp</name>
     <filename>classisig_1_1_c_pulse_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::IPulseParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -16973,7 +18841,6 @@
   <compound kind="class">
     <name>isig::CSamplingParamsComp</name>
     <filename>classisig_1_1_c_sampling_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::ISamplingParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -17042,10 +18909,7 @@
   <compound kind="class">
     <name>isig::CTriggerParamsComp</name>
     <filename>classisig_1_1_c_trigger_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::ITriggerParams</base>
-    <base virtualness="virtual">iprm::ISelectionParam</base>
-    <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -17232,7 +19096,6 @@
   <compound kind="class">
     <name>isig::IPulseParams</name>
     <filename>classisig_1_1_i_pulse_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const IPulseConstraints *</type>
       <name>GetPulseConstraints</name>
@@ -17286,7 +19149,6 @@
   <compound kind="class">
     <name>isig::ISamplingConstraints</name>
     <filename>classisig_1_1_i_sampling_constraints.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetIntervalRange</name>
@@ -17319,7 +19181,6 @@
   <compound kind="class">
     <name>isig::ISamplingParams</name>
     <filename>classisig_1_1_i_sampling_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>SamplingMode</name>
       <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
@@ -17389,7 +19250,6 @@
   <compound kind="class">
     <name>isig::ITriggerConstraints</name>
     <filename>classisig_1_1_i_trigger_constraints.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
@@ -17401,7 +19261,6 @@
   <compound kind="class">
     <name>isig::ITriggerController</name>
     <filename>classisig_1_1_i_trigger_controller.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsSoftwareTriggerActive</name>
@@ -17420,7 +19279,6 @@
   <compound kind="class">
     <name>isig::ITriggerParams</name>
     <filename>classisig_1_1_i_trigger_params.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <name>TriggerMode</name>
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
@@ -17495,6 +19353,480 @@
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
       <anchor>a66ebe1c5c3511d7fbe95d5e8124d3887</anchor>
       <arglist>(int triggerMode)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iwiz</name>
+    <filename>namespaceiwiz.html</filename>
+    <class kind="class">iwiz::CComposedStateControllerComp</class>
+    <class kind="class">iwiz::CSelectionConsistencyControllerComp</class>
+    <class kind="class">iwiz::CStateControllerCompBase</class>
+    <class kind="class">iwiz::CWizardDocumentComp</class>
+    <class kind="class">iwiz::IParamsManagerWizard</class>
+    <class kind="class">iwiz::IWizardNavigationController</class>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CComposedStateControllerComp</name>
+    <filename>classiwiz_1_1_c_composed_state_controller_comp.html</filename>
+    <base virtualness="virtual">iproc::IStateController</base>
+    <member kind="typedef">
+      <type>iprm::CComposedParamsSetComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a9701c3f253aba37ed8f7a91fa4970334</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>aa26b373f9acfa70981a7d5f862839ea0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ae01b05d894373f89e0e7fdb53e0717ff</anchor>
+      <arglist>(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CComposedStateControllerComp</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ad07975defb35047a748bb9d4001dd961</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateEnabled</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>aa34fbe4558ea6542a3ae23b67683de76</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateActive</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a650c5e65a65b502b300a379742ca964a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnterAllowed</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>aa0a8ebb959d3cafee0b45764b064e011</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLeaveAllowed</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ae638535b53382e2fa04ef074cb531ae0</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryEnterState</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ad56897db51ee3cebb9e46b532df03e28</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryLeaveState</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a93ebbcf68555bd222ea01adba7876d5b</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateAllMembers</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>ad5ea9167db0aac87eb1be226ecaea79e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>aa059cd59fabdcd78ae888eba79471e28</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a37d705e28c88a392b07891d34ad8e244</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a827a61ac6618631142f8c3e1901a2d51</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CSelectionConsistencyControllerComp</name>
+    <filename>classiwiz_1_1_c_selection_consistency_controller_comp.html</filename>
+    <base virtualness="virtual">iproc::IStateController</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>a6f3bb0f309fdcc3677ca91570af306c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>aad41bd5d46c17e6425ce689d961b52c4</anchor>
+      <arglist>(m_enterDependenciesModelCompPtr, m_enterDependenciesCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>a78ffaac788513ba5a023fb951af04dea</anchor>
+      <arglist>(m_leaveCondParamModelsCompPtr, m_leaveCondParamsCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateEnabled</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>af70ee1565400bfef9844a8b124fecd7d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateActive</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>a6fc8965a21eeeffe4b159a88890a30aa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnterAllowed</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>ab561fb3578d3f0f6747e9ede5df7b6af</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLeaveAllowed</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>adb2b54ca995b5e0c912ade390f60c193</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryEnterState</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>a59778663108c255cb7692548d0fcbc7e</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryLeaveState</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>ab27e54bbfb3a8d617c5d3c447f60df1e</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureCacheValid</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>afd4520cee9dc51014ecab4804834c7ce</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckParamConsistency</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>a979b007e2905abaa789607dba38d358a</anchor>
+      <arglist>(const iprm::ISelectionParam &amp;param) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>a7c7d6006ef1988fb41c237713321cce6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>abb0fff8770aca84fe9173540ab72db0e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>a850e765b710a67ade3d79d2579653b05</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>af96287d76a58b6a6d2a9d5af136a995c</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CStateControllerCompBase</name>
+    <filename>classiwiz_1_1_c_state_controller_comp_base.html</filename>
+    <base virtualness="virtual">iproc::IStateController</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a9880da565b667dc07575726ec3659037</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CStateControllerCompBase</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a99ba33a45bba7da8802a98b02196cea7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateEnabled</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>ac13124fbb50151b993623a940026257f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateActive</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a3145d5629097dabf40500202eaab40f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnterAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a506d51ef30b7e46193435ae37eebaa94</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLeaveAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>aad776f793e4411937efd0e28b5844c22</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryEnterState</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>ae4a9d09e2338f1e9ecbd8b10aecb13f0</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TryLeaveState</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a968f83a78d97ae83d947f3e01f565182</anchor>
+      <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isStateActive</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>af88f2e5ad552056e01d1d08371c9617a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isStateEnabled</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a1552f05cbd09bee34d1be0ab868dd514</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isEnterAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a8c12d1e21cf7af8dbf3d6ac5148c1d02</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isLeaveAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a83cd677255434b57480c73330c15ab29</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::CWizardDocumentComp</name>
+    <filename>classiwiz_1_1_c_wizard_document_comp.html</filename>
+    <base virtualness="virtual">iwiz::IParamsManagerWizard</base>
+    <member kind="typedef">
+      <type>iprm::CParamsManagerComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>abc470d432c3be03c423963de26809408</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageSelectionAllowed</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a0c4cccfeafd1527041feca741f94d90e</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsFinishAllowed</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a0b1da6f1efbd0990141c4c8004e10d0a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPrevPageIndex</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>aa568b04659070a28e19bf24cca123bd1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNextPageIndex</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>af0d35cfe9b84fee6a4428bf4314fb7ac</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DoWizardFinish</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a502e1bd483103bd6e75e94ab6d18c041</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>acc18747a73e7f9fa0fab06550de423e3</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a9871dd469285f426c81601352598d18c</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::IParamsManagerWizard</name>
+    <filename>classiwiz_1_1_i_params_manager_wizard.html</filename>
+    <base virtualness="virtual">iwiz::IWizardNavigationController</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsPageSelectionAllowed</name>
+      <anchorfile>classiwiz_1_1_i_params_manager_wizard.html</anchorfile>
+      <anchor>ab28c47df3df34a3fc0bb3d0bd2c429a5</anchor>
+      <arglist>(int pageIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwiz::IWizardNavigationController</name>
+    <filename>classiwiz_1_1_i_wizard_navigation_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsFinishAllowed</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>aea789412f5e3d249c22a488500ef4b6c</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPrevPageIndex</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>aeb80543298870964c10c142496b74d4e</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetNextPageIndex</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>ac92a6df54b9c09499477be2136bf7596</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>DoWizardFinish</name>
+      <anchorfile>classiwiz_1_1_i_wizard_navigation_controller.html</anchorfile>
+      <anchor>a8085bb7e78105404c42c803ab498c34f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iwizgui</name>
+    <filename>namespaceiwizgui.html</filename>
+    <class kind="class">iwizgui::CWizardOptionsListGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iwizgui::CWizardOptionsListGuiComp</name>
+    <filename>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</filename>
+    <member kind="enumeration">
+      <name>DataRole</name>
+      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a5bb9855fc7af858d3d396694b8fda38e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_PAGE_INDEX</name>
+      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a5bb9855fc7af858d3d396694b8fda38ea1efcbaf7c9991dace6ae18ff869b1656</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CWizardOptionsListGuiComp, iwiz::IParamsManagerWizard &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>aa1cdca8d6dfd0eedd613d1a9cca6b819</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a56164f1aba89911a7fdf3fc214bf03d9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_OptionsList_itemSelectionChanged</name>
+      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a30a17cd10f3dd2fceb6ba0a80aec2821</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>af3d7eedc91ca5d28d0135347ecd1a2d7</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a0a2ff23e8f6a039465b37725d09c904e</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
 </tagfile>

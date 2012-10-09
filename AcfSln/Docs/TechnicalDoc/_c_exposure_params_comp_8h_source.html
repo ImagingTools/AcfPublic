@@ -28,7 +28,7 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define icam_CExposureParamsComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_exposure_params_8h.html">icam/IExposureParams.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_i_exposure_constraints_8h.html">icam/IExposureConstraints.h</a>&quot;</span>
@@ -41,11 +41,11 @@
 <a name="l00015"></a><a class="code" href="classicam_1_1_c_exposure_params_comp.html">00015</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_c_exposure_params_comp.html">CExposureParamsComp</a>: <span class="keyword">public</span> icomp::CComponentBase, <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classicam_1_1_i_exposure_params.html">IExposureParams</a>
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a><a class="code" href="classicam_1_1_c_exposure_params_comp.html#a2e6224a62e650a96fa5e032b39b228d0">00018</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classicam_1_1_c_exposure_params_comp.html#a2e6224a62e650a96fa5e032b39b228d0">BaseClass</a>;
+<a name="l00018"></a><a class="code" href="classicam_1_1_c_exposure_params_comp.html#a2e6224a62e650a96fa5e032b39b228d0">00018</a>        <span class="keyword">typedef</span> icomp::CComponentBase <a class="code" href="classicam_1_1_c_exposure_params_comp.html#a2e6224a62e650a96fa5e032b39b228d0">BaseClass</a>;
 <a name="l00019"></a>00019 
 <a name="l00020"></a>00020        I_BEGIN_COMPONENT(<a class="code" href="classicam_1_1_c_exposure_params_comp.html">CExposureParamsComp</a>);
 <a name="l00021"></a>00021               I_REGISTER_INTERFACE(<a class="code" href="classicam_1_1_i_exposure_params.html">IExposureParams</a>);
-<a name="l00022"></a>00022               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
+<a name="l00022"></a>00022               I_REGISTER_INTERFACE(iser::ISerializable);
 <a name="l00023"></a>00023               I_ASSIGN(m_exposureConstraintsCompPtr, <span class="stringliteral">&quot;Constraints&quot;</span>, <span class="stringliteral">&quot;Information about valid exposure parameters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Constraints&quot;</span>);
 <a name="l00024"></a>00024               I_ASSIGN(m_defaultShutterTimeAttrPtr, <span class="stringliteral">&quot;DefaultShutterTime&quot;</span>, <span class="stringliteral">&quot;Default value of shutter time in seconds&quot;</span>, <span class="keyword">true</span>, 0.001);
 <a name="l00025"></a>00025        I_END_COMPONENT;
@@ -62,7 +62,7 @@
 <a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicam_1_1_c_exposure_params_comp.html#a23d7c95c474b3777387b2655802206ca" title="Set exposure enabled (EEN) signal delay time.">SetEenDelay</a>(<span class="keywordtype">double</span> time);
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicam_1_1_c_exposure_params_comp.html#a0c4c94ca3fd12826f91e8b62b1da12aa">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicam_1_1_c_exposure_params_comp.html#a0c4c94ca3fd12826f91e8b62b1da12aa">Serialize</a>(iser::IArchive&amp; archive);
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">protected</span>:
 <a name="l00042"></a>00042        <span class="comment">// reimplemented (icomp::CComponentBase)</span>

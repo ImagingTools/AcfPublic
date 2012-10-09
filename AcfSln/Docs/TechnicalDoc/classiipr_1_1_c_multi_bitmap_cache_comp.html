@@ -37,7 +37,7 @@
 <div class="title">iipr::CMultiBitmapCacheComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CMultiBitmapCacheComp" --><!-- doxytag: inherits="icomp::CComponentBase,iipr::IMultiBitmapProvider" -->
+<!-- doxytag: class="iipr::CMultiBitmapCacheComp" --><!-- doxytag: inherits="iipr::IMultiBitmapProvider" -->
 <p>Multi bitmap provider returning always stored bitmaps.  
  <a href="classiipr_1_1_c_multi_bitmap_cache_comp.html#details">More...</a></p>
 
@@ -48,12 +48,8 @@ Inheritance diagram for iipr::CMultiBitmapCacheComp:</div>
  <div class="center">
   <img src="classiipr_1_1_c_multi_bitmap_cache_comp.png" usemap="#iipr::CMultiBitmapCacheComp_map" alt=""/>
   <map id="iipr::CMultiBitmapCacheComp_map" name="iipr::CMultiBitmapCacheComp_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,178,136"/>
-<area href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps." alt="iipr::IMultiBitmapProvider" shape="rect" coords="188,112,366,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,178,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="188,56,366,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,178,24"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="188,0,366,24"/>
+<area href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps." alt="iipr::IMultiBitmapProvider" shape="rect" coords="0,56,178,80"/>
+<area href="classistd_1_1_i_changeable.html" alt="IChangeable" shape="rect" coords="0,0,178,24"/>
 </map>
  </div></div>
 
@@ -61,21 +57,21 @@ Inheritance diagram for iipr::CMultiBitmapCacheComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef icomp::CComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a25f81226b1873d3e06cc5de300ac7f92">CMultiBitmapCacheComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a5e21492e96811ce1d101fb5222321c66">GetBitmapSelectionContraints</a> () const </td></tr>
+iprm::ISelectionConstraints *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a5e21492e96811ce1d101fb5222321c66">GetBitmapSelectionContraints</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional information about bitmaps in form of section contraints.  <a href="#a5e21492e96811ce1d101fb5222321c66"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a03025bb4473f7b1f9073102b37ba9e70">GetBitmapsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of produced bitmaps.  <a href="#a03025bb4473f7b1f9073102b37ba9e70"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a54007d2545576446ef50be04cfe42a0a">GetBitmap</a> (int bitmapIndex) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const iimg::IBitmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a54007d2545576446ef50be04cfe42a0a">GetBitmap</a> (int bitmapIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to produced bitmap object.  <a href="#a54007d2545576446ef50be04cfe42a0a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a1d98671a18b010063e14109b7f02103f">GetLogTransform</a> (int bitmapIndex) const </td></tr>
+i2d::ITransformation2d *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a1d98671a18b010063e14109b7f02103f">GetLogTransform</a> (int bitmapIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation from bitmap to logical positions.  <a href="#a1d98671a18b010063e14109b7f02103f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a5a9b3e28451dd73d780f51d82958ce7b">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a5a9b3e28451dd73d780f51d82958ce7b">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">IChangeable</a> &amp;object)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Multi bitmap provider returning always stored bitmaps. </p>
@@ -88,7 +84,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">iipr::CMultiBitmapCacheComp::BaseClass</a></td>
+          <td class="memname">typedef icomp::CComponentBase <a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">iipr::CMultiBitmapCacheComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -123,7 +119,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iipr::CMultiBitmapCacheComp::CopyFrom </td>
           <td>(</td>
-          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">IChangeable</a> &amp;&#160;</td>
           <td class="paramname"><em>object</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -138,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* iipr::CMultiBitmapCacheComp::GetBitmap </td>
+          <td class="memname">virtual const iimg::IBitmap* iipr::CMultiBitmapCacheComp::GetBitmap </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>bitmapIndex</em></td><td>)</td>
@@ -180,7 +176,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* iipr::CMultiBitmapCacheComp::GetBitmapSelectionContraints </td>
+          <td class="memname">virtual const iprm::ISelectionConstraints* iipr::CMultiBitmapCacheComp::GetBitmapSelectionContraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -201,7 +197,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iipr::CMultiBitmapCacheComp::GetLogTransform </td>
+          <td class="memname">virtual const i2d::ITransformation2d* iipr::CMultiBitmapCacheComp::GetLogTransform </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>bitmapIndex</em></td><td>)</td>

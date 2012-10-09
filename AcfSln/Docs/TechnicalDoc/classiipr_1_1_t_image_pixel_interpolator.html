@@ -47,7 +47,7 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef PixelComponentType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_image_pixel_interpolator.html#a092e365c0b415ddef7c5c5ad2babac30">PixelComponent</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_image_pixel_interpolator.html#aa205c5f67dcc4fe98c9c29a049c0550d">TImagePixelInterpolator</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;image, int interpolationMode)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_image_pixel_interpolator.html#aa205c5f67dcc4fe98c9c29a049c0550d">TImagePixelInterpolator</a> (const iimg::IBitmap &amp;image, int interpolationMode)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">PixelComponentType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_image_pixel_interpolator.html#af982690722c84baed74f922aa1efd37f">GetInterpolatedValue</a> (double x, double y, int componentIndex) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -84,7 +84,7 @@ template&lt;typename PixelComponentType &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classiipr_1_1_t_image_pixel_interpolator.html">iipr::TImagePixelInterpolator</a>&lt; PixelComponentType &gt;::<a class="el" href="classiipr_1_1_t_image_pixel_interpolator.html">TImagePixelInterpolator</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;&#160;</td>
+          <td class="paramtype">const iimg::IBitmap &amp;&#160;</td>
           <td class="paramname"><em>image</em>, </td>
         </tr>
         <tr>
@@ -103,8 +103,6 @@ template&lt;typename PixelComponentType &gt; </div>
 <div class="memdoc">
 
 <p>Definition at line <a class="el" href="_t_image_pixel_interpolator_8h_source.html#l00053">53</a> of file <a class="el" href="_t_image_pixel_interpolator_8h_source.html">TImagePixelInterpolator.h</a>.</p>
-
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01">iimg::IRasterImage::GetImageSize()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f">iimg::IBitmap::GetLinePtr()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a617e61e4de45b35f513c169b41a0c0fb">iimg::IBitmap::GetLinesDifference()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a14b90a702aeadc90850669f4ef81d611">iimg::IBitmap::GetPixelBitsCount()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">istd::CIndex2d::GetX()</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">istd::CIndex2d::GetY()</a>.</p>
 
 </div>
 </div>
@@ -144,7 +142,7 @@ template&lt;typename PixelComponentType &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_image_pixel_interpolator_8h_source.html#l00066">66</a> of file <a class="el" href="_t_image_pixel_interpolator_8h_source.html">TImagePixelInterpolator.h</a>.</p>
 
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a5952e0d7281d1ab784531120ea40c9c4">I_CRITICAL</a>, <a class="el" href="_i_image_interpolation_params_8h_source.html#l00026">iipr::IImageInterpolationParams::IM_BILINEAR</a>, and <a class="el" href="_i_image_interpolation_params_8h_source.html#l00025">iipr::IImageInterpolationParams::IM_NO_INTERPOLATION</a>.</p>
+<p>References <a class="el" href="_i_image_interpolation_params_8h_source.html#l00026">iipr::IImageInterpolationParams::IM_BILINEAR</a>, and <a class="el" href="_i_image_interpolation_params_8h_source.html#l00025">iipr::IImageInterpolationParams::IM_NO_INTERPOLATION</a>.</p>
 
 </div>
 </div>

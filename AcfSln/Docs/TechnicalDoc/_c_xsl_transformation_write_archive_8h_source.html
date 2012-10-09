@@ -35,9 +35,9 @@
 <a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtXml/QDomNode&gt;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_write_archive_base_8h.html">iser/CWriteArchiveBase.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_file_archive_info_8h.html">iser/CFileArchiveInfo.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_xml_document_info_base_8h.html">iser/CXmlDocumentInfoBase.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iser/CWriteArchiveBase.h&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;iser/CFileArchiveInfo.h&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;iser/CXmlDocumentInfoBase.h&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="iqtex_8h.html">iqtex/iqtex.h</a>&quot;</span>
 <a name="l00017"></a>00017 
@@ -52,15 +52,15 @@
 <a name="l00032"></a>00032                      <span class="keyword">public</span> iser::CXmlDocumentInfoBase
 <a name="l00033"></a>00033 {
 <a name="l00034"></a>00034 <span class="keyword">public</span>:
-<a name="l00035"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a289408cba8ed1ac3dd73d916b371bae2">00035</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_write_archive_base.html">iser::CWriteArchiveBase</a> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a289408cba8ed1ac3dd73d916b371bae2">BaseClass</a>;
-<a name="l00036"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a12046396899079d5c8c0d7c38486ec98">00036</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_file_archive_info.html">iser::CFileArchiveInfo</a> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a12046396899079d5c8c0d7c38486ec98">BaseClass2</a>;
+<a name="l00035"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a289408cba8ed1ac3dd73d916b371bae2">00035</a>        <span class="keyword">typedef</span> iser::CWriteArchiveBase <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a289408cba8ed1ac3dd73d916b371bae2">BaseClass</a>;
+<a name="l00036"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a12046396899079d5c8c0d7c38486ec98">00036</a>        <span class="keyword">typedef</span> iser::CFileArchiveInfo <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a12046396899079d5c8c0d7c38486ec98">BaseClass2</a>;
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#acbb2c8d10044c50b1dd1d00ee8303f74">CXslTransformationWriteArchive</a>(
 <a name="l00039"></a>00039                             <span class="keyword">const</span> QString&amp; filePath = <span class="stringliteral">&quot;&quot;</span>,
 <a name="l00040"></a>00040                             <span class="keyword">const</span> QString&amp; xslFilePath = <span class="stringliteral">&quot;&quot;</span>,
-<a name="l00041"></a>00041                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_version_info.html">iser::IVersionInfo</a>* versionInfoPtr = NULL,
+<a name="l00041"></a>00041                             <span class="keyword">const</span> iser::IVersionInfo* versionInfoPtr = NULL,
 <a name="l00042"></a>00042                             <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>,
-<a name="l00043"></a>00043                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; rootTag = <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>);
+<a name="l00043"></a>00043                             <span class="keyword">const</span> iser::CArchiveTag&amp; rootTag = s_acfRootTag);
 <a name="l00044"></a>00044        <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a33ff96c9f1fd889f1ccfa85a21d37124">~CXslTransformationWriteArchive</a>();
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 
@@ -71,9 +71,9 @@
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052        <span class="comment">// reimplemented (iser::IArchive)</span>
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#aea781f4c33a9ff198b4c621dc0e44f28">IsTagSkippingSupported</a>() <span class="keyword">const</span>;
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a2d05341ed699c3af622676bc7239569f">BeginTag</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; tag);
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a61f05839cab8d360149eaddfba91d9e9">BeginMultiTag</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; tag, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; subTag, <span class="keywordtype">int</span>&amp; count);
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a497c0c14282024332eda466aae8ab1de">EndTag</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; tag);
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a2d05341ed699c3af622676bc7239569f">BeginTag</a>(<span class="keyword">const</span> iser::CArchiveTag&amp; tag);
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a61f05839cab8d360149eaddfba91d9e9">BeginMultiTag</a>(<span class="keyword">const</span> iser::CArchiveTag&amp; tag, <span class="keyword">const</span> iser::CArchiveTag&amp; subTag, <span class="keywordtype">int</span>&amp; count);
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a497c0c14282024332eda466aae8ab1de">EndTag</a>(<span class="keyword">const</span> iser::CArchiveTag&amp; tag);
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a63f13254668529fc458c0041bad656fb">Process</a>(<span class="keywordtype">bool</span>&amp; value);
 <a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a63f13254668529fc458c0041bad656fb">Process</a>(<span class="keywordtype">char</span>&amp; value);
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a63f13254668529fc458c0041bad656fb">Process</a>(quint8&amp; value);
@@ -94,7 +94,7 @@
 <a name="l00077"></a>00077        <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a27f397d19dfc159862f00e93a8a3fbe0" title="Find the next text node and move the current node to the next sibling.">PushTextNode</a>(<span class="keyword">const</span> QString&amp; text);
 <a name="l00078"></a>00078 
 <a name="l00079"></a><a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a08a1ee5118547b8548167632a04a1482">00079</a>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtex_1_1_c_xsl_transformation_write_archive.html#a08a1ee5118547b8548167632a04a1482">SendLogMessage</a>(
-<a name="l00080"></a>00080               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category,
+<a name="l00080"></a>00080               istd::IInformationProvider::InformationCategory category,
 <a name="l00081"></a>00081               <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00082"></a>00082               <span class="keyword">const</span> QString&amp; message,
 <a name="l00083"></a>00083               <span class="keyword">const</span> QString&amp; messageSource,
@@ -112,7 +112,7 @@
 <a name="l00095"></a>00095        QString m_xslFilePath;
 <a name="l00096"></a>00096 
 <a name="l00097"></a>00097        <span class="keywordtype">bool</span> m_serializeHeader;
-<a name="l00098"></a>00098        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> m_rootTag;
+<a name="l00098"></a>00098        iser::CArchiveTag m_rootTag;
 <a name="l00099"></a>00099 
 <a name="l00100"></a>00100        <span class="keywordtype">bool</span> m_isSeparatorNeeded;
 <a name="l00101"></a>00101 };

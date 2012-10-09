@@ -44,11 +44,8 @@ Inheritance diagram for imeas::TDiscreteDataSequence&lt; Element &gt;:</div>
  <div class="center">
   <img src="classimeas_1_1_t_discrete_data_sequence.png" usemap="#imeas::TDiscreteDataSequence&lt; Element &gt;_map" alt=""/>
   <map id="imeas::TDiscreteDataSequence&lt; Element &gt;_map" name="imeas::TDiscreteDataSequence&lt; Element &gt;_map">
-<area href="classimeas_1_1_i_discrete_data_sequence.html" title="General definition of sequence contains discrete sample values in regular time grid." alt="imeas::IDiscreteDataSequence" shape="rect" coords="0,224,254,248"/>
-<area href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid." alt="imeas::IDataSequence" shape="rect" coords="0,168,254,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,254,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,254,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,254,24"/>
+<area href="classimeas_1_1_i_discrete_data_sequence.html" title="General definition of sequence contains discrete sample values in regular time grid." alt="imeas::IDiscreteDataSequence" shape="rect" coords="0,56,254,80"/>
+<area href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid." alt="imeas::IDataSequence" shape="rect" coords="0,0,254,24"/>
 </map>
  </div></div>
 
@@ -67,7 +64,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set discrete sample at specified position.  <a href="#a561fb705e0c901e22b79f2fb07ac4de8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a6ad4ba6126070b849f12bd46a2626786">CreateSequence</a> (int samplesCount, int channelsCount=1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence with specified number of samples, channels and sample depth.  <a href="#a6ad4ba6126070b849f12bd46a2626786"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a4439c86ecdd285afcb568c6eb3449933">CreateSequenceWithInfo</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a4439c86ecdd285afcb568c6eb3449933">CreateSequenceWithInfo</a> (const istd::TTransPtr&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create sequence and set the info object.  <a href="#a4439c86ecdd285afcb568c6eb3449933"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#aed4c9fae121805e5fc43e9378c4159aa">GetSequenceInfo</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get additional information about this sequence.  <a href="#aed4c9fae121805e5fc43e9378c4159aa"></a><br/></td></tr>
@@ -83,8 +80,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get sample value at specified index.  <a href="#ad517de32eeff0e42d234971dec4030cc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a302b6302a403e5eeeb6b106e6b179971">SetSample</a> (int index, int channel, double value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sample value at specified index.  <a href="#a302b6302a403e5eeeb6b106e6b179971"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">CopyFrom</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">CopyFrom</a> (const istd::IChangeable &amp;object)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Element&gt;<br/>
@@ -123,7 +120,7 @@ template&lt;typename Element &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::CopyFrom </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
+          <td class="paramtype">const istd::IChangeable &amp;&#160;</td>
           <td class="paramname"><em>object</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -131,11 +128,9 @@ template&lt;typename Element &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
-
 <p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00320">320</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
-<p>References <a class="el" href="classimeas_1_1_i_data_sequence.html#ae1107b606ee457830ba7937b870a2c3b">imeas::IDataSequence::GetChannelsCount()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>, <a class="el" href="classimeas_1_1_i_data_sequence.html#a267e07011ec9aa223952e06205046f1a">imeas::IDataSequence::GetSample()</a>, <a class="el" href="classimeas_1_1_i_data_sequence.html#a727eed299c40e7dd09be42cfd635bb41">imeas::IDataSequence::GetSamplesCount()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
+<p>References <a class="el" href="classimeas_1_1_i_data_sequence.html#ae1107b606ee457830ba7937b870a2c3b">imeas::IDataSequence::GetChannelsCount()</a>, <a class="el" href="classimeas_1_1_i_data_sequence.html#a267e07011ec9aa223952e06205046f1a">imeas::IDataSequence::GetSample()</a>, and <a class="el" href="classimeas_1_1_i_data_sequence.html#a727eed299c40e7dd09be42cfd635bb41">imeas::IDataSequence::GetSamplesCount()</a>.</p>
 
 </div>
 </div>
@@ -271,7 +266,7 @@ template&lt;typename Element &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::CreateSequenceWithInfo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const istd::TTransPtr&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>infoPtr</em>, </td>
         </tr>
         <tr>
@@ -541,7 +536,7 @@ template&lt;typename Element &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::Serialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramtype">iser::IArchive &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -549,11 +544,7 @@ template&lt;typename Element &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
-
 <p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00257">257</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
-
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">istd::TChangeNotifier&lt; class &gt;::SetPtr()</a>.</p>
 
 </div>
 </div>

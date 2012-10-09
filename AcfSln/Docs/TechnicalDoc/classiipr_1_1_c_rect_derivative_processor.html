@@ -47,14 +47,11 @@ Inheritance diagram for iipr::CRectDerivativeProcessor:</div>
  <div class="center">
   <img src="classiipr_1_1_c_rect_derivative_processor.png" usemap="#iipr::CRectDerivativeProcessor_map" alt=""/>
   <map id="iipr::CRectDerivativeProcessor_map" name="iipr::CRectDerivativeProcessor_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap&lt; class &gt;" shape="rect" coords="0,112,256,136"/>
-<area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="266,112,522,136"/>
-<area href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit." alt="imeas::IUnitInfo" shape="rect" coords="532,112,788,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,256,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="266,56,522,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="532,56,788,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="266,0,522,24"/>
-<area href="classiipr_1_1_c_rect_derivative_processor_comp.html" title="Component implemnetation of derivative processor using rectangular filter kernel." alt="iipr::CRectDerivativeProcessorComp" shape="rect" coords="266,224,522,248"/>
+<area href="classiproc_1_1_t_sync_processor_wrap.html" title="Wrapper of iproc::IProcessor for simple synchrone processor implementations." alt="iproc::TSyncProcessorWrap&lt; Base &gt;" shape="rect" coords="0,56,256,80"/>
+<area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="266,56,522,80"/>
+<area href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit." alt="imeas::IUnitInfo" shape="rect" coords="532,56,788,80"/>
+<area href="classistd_1_1_i_changeable.html" alt="IChangeable" shape="rect" coords="266,0,522,24"/>
+<area href="classiipr_1_1_c_rect_derivative_processor_comp.html" title="Component implemnetation of derivative processor using rectangular filter kernel." alt="iipr::CRectDerivativeProcessorComp" shape="rect" coords="266,168,522,192"/>
 </map>
  </div></div>
 
@@ -68,7 +65,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter ID used to extract caliper parameter object from parameter set.  <a href="#a2e3eccf6a79c5a8c066d381b5650ac92"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a46137174a88b447ec9f62e72aa3be75c">SetFilterParamsId</a> (const QByteArray &amp;id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parameter ID used to extract caliper parameter object from parameter set.  <a href="#a46137174a88b447ec9f62e72aa3be75c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#aab9377a4639fbe9b9d9649beb06392c4">DoProcessing</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a> *progressManagerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a3a5377066f46a464a5d55e66a43216e0">DoProcessing</a> (const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a8aaa5845f57f38aea453a90cdefe07ab">GetNumericValuesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of expected numeric values.  <a href="#a8aaa5845f57f38aea453a90cdefe07ab"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#ab9844cca4f7b282b578e7a3f1bfe892f">GetNumericValueName</a> (int index) const </td></tr>
@@ -83,9 +80,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of unit.  <a href="#a14117132ffb3483b18a7e85088592326"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a71683c5497afb431d988bfe3733a197f">GetDisplayMultiplicationFactor</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get multiplication factor used to calculate user input values.  <a href="#a71683c5497afb431d988bfe3733a197f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#af146bc0a65e5e5583ea415a5174e8835">GetValueRange</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual istd::CRange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#af146bc0a65e5e5583ea415a5174e8835">GetValueRange</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible value.  <a href="#af146bc0a65e5e5583ea415a5174e8835"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#acaa2fddf52ca73f302a3b00ee6436947">GetValueManip</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const imath::IDoubleManip &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#acaa2fddf52ca73f302a3b00ee6436947">GetValueManip</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number manipulator object for filter length value.  <a href="#acaa2fddf52ca73f302a3b00ee6436947"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -128,33 +125,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aab9377a4639fbe9b9d9649beb06392c4"></a><!-- doxytag: member="iipr::CRectDerivativeProcessor::DoProcessing" ref="aab9377a4639fbe9b9d9649beb06392c4" args="(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, iproc::IProgressManager *progressManagerPtr=NULL)" -->
+<a class="anchor" id="a3a5377066f46a464a5d55e66a43216e0"></a><!-- doxytag: member="iipr::CRectDerivativeProcessor::DoProcessing" ref="a3a5377066f46a464a5d55e66a43216e0" args="(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iipr::CRectDerivativeProcessor::DoProcessing </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
+          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
           <td class="paramname"><em>paramsPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramtype">const istd::IPolymorphic *&#160;</td>
           <td class="paramname"><em>inputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
+          <td class="paramtype">istd::IChangeable *&#160;</td>
           <td class="paramname"><em>outputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_progress_manager.html">iproc::IProgressManager</a> *&#160;</td>
-          <td class="paramname"><em>progressManagerPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+          <td class="paramtype">ibase::IProgressManager *&#160;</td>
+          <td class="paramname"><em>progressManagerPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -353,7 +350,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; iipr::CRectDerivativeProcessor::GetValueManip </td>
+          <td class="memname">virtual const imath::IDoubleManip&amp; iipr::CRectDerivativeProcessor::GetValueManip </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -373,7 +370,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> iipr::CRectDerivativeProcessor::GetValueRange </td>
+          <td class="memname">virtual istd::CRange iipr::CRectDerivativeProcessor::GetValueRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -404,7 +401,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set parameter ID used to extract caliper parameter object from parameter set. </p>
-<p>It is only needed while using general processing interface <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html">iproc::IProcessor</a>. </p>
+<p>It is only needed while using general processing interface <a class="el" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>. </p>
 
 <p>Definition at line <a class="el" href="_c_rect_derivative_processor_8h_source.html#l00076">76</a> of file <a class="el" href="_c_rect_derivative_processor_8h_source.html">CRectDerivativeProcessor.h</a>.</p>
 

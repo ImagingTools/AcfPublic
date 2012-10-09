@@ -36,35 +36,26 @@
 <div class="title">iwin::TComPtr&lt; Type &gt; Class Template Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iwin::TComPtr" --><!-- doxytag: inherits="istd::TPointerBase" -->
+<!-- doxytag: class="iwin::TComPtr" -->
 <p>Pointer wrapper providing access to Windows COM objects.  
  <a href="classiwin_1_1_t_com_ptr.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="iwin_2_t_com_ptr_8h_source.html">TComPtr.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for iwin::TComPtr&lt; Type &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classiwin_1_1_t_com_ptr.png" usemap="#iwin::TComPtr&lt; Type &gt;_map" alt=""/>
-  <map id="iwin::TComPtr&lt; Type &gt;_map" name="iwin::TComPtr&lt; Type &gt;_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html" alt="istd::TPointerBase&lt; Type &gt;" shape="rect" coords="0,0,164,24"/>
-</map>
- </div></div>
 
 <p><a href="classiwin_1_1_t_com_ptr-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html">istd::TPointerBase</a>&lt; Type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef istd::TPointerBase&lt; Type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a9dcbf2441958ea970056e5dde597a3b7">TComPtr</a> (Type *ptr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, bool addRef=true)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a9dcbf2441958ea970056e5dde597a3b7">TComPtr</a> (Type *ptr=NULL, bool addRef=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new value of internal pointer.  <a href="#a9dcbf2441958ea970056e5dde597a3b7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#afbdbca76d72e1589529249e6120b0159">TComPtr</a> (const <a class="el" href="classiwin_1_1_t_com_ptr.html">TComPtr</a> &amp;ptr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#afbdbca76d72e1589529249e6120b0159"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a23bd8eddf738d5b373e3ebbee09ee0a3">~TComPtr</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a23bd8eddf738d5b373e3ebbee09ee0a3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a0cf09d0de25db27195a38425d435908d">CoCreateInstance</a> (REFCLSID rclsid, IUnknown *outerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, quint32 clsContext=CLSCTX_ALL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a0cf09d0de25db27195a38425d435908d">CoCreateInstance</a> (REFCLSID rclsid, IUnknown *outerPtr=NULL, quint32 clsContext=CLSCTX_ALL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of COM object using its CLSID.  <a href="#a0cf09d0de25db27195a38425d435908d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwin_1_1_t_com_ptr.html#a338f3fc146bc2591e233d8bc837e2a67">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It decreses COM reference pointer and set this pointer to NULL.  <a href="#a338f3fc146bc2591e233d8bc837e2a67"></a><br/></td></tr>
@@ -98,7 +89,7 @@ class iwin::TComPtr&lt; Type &gt;</h3>
 template&lt;class Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html">istd::TPointerBase</a>&lt;Type&gt; <a class="el" href="classiwin_1_1_t_com_ptr.html">iwin::TComPtr</a>&lt; Type &gt;::<a class="el" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">BaseClass</a></td>
+          <td class="memname">typedef istd::TPointerBase&lt;Type&gt; <a class="el" href="classiwin_1_1_t_com_ptr.html">iwin::TComPtr</a>&lt; Type &gt;::<a class="el" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -119,7 +110,7 @@ template&lt;class Type &gt; </div>
           <td class="memname"><a class="el" href="classiwin_1_1_t_com_ptr.html">iwin::TComPtr</a>&lt; Type &gt;::<a class="el" href="classiwin_1_1_t_com_ptr.html">TComPtr</a> </td>
           <td>(</td>
           <td class="paramtype">Type *&#160;</td>
-          <td class="paramname"><em>ptr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>, </td>
+          <td class="paramname"><em>ptr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -210,7 +201,7 @@ template&lt;class Type &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">IUnknown *&#160;</td>
-          <td class="paramname"><em>outerPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>, </td>
+          <td class="paramname"><em>outerPtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -253,8 +244,6 @@ template&lt;class Type &gt; </div>
 
 <p>Definition at line <a class="el" href="iwin_2_t_com_ptr_8h_source.html#l00182">182</a> of file <a class="el" href="iwin_2_t_com_ptr_8h_source.html">TComPtr.h</a>.</p>
 
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a2af360fa6351b88f8f4b8f4de77d05e0"></a><!-- doxytag: member="iwin::TComPtr::IncRef" ref="a2af360fa6351b88f8f4b8f4de77d05e0" args="()" -->
@@ -276,8 +265,6 @@ template&lt;class Type &gt; </div>
 <p>Increase reference counter. </p>
 
 <p>Definition at line <a class="el" href="iwin_2_t_com_ptr_8h_source.html#l00170">170</a> of file <a class="el" href="iwin_2_t_com_ptr_8h_source.html">TComPtr.h</a>.</p>
-
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
 <p>Referenced by <a class="el" href="iwin_2_t_com_ptr_8h_source.html#l00090">iwin::TComPtr&lt; Type &gt;::TComPtr()</a>.</p>
 
@@ -326,8 +313,6 @@ template&lt;class Type &gt; </div>
 
 <p>Definition at line <a class="el" href="iwin_2_t_com_ptr_8h_source.html#l00194">194</a> of file <a class="el" href="iwin_2_t_com_ptr_8h_source.html">TComPtr.h</a>.</p>
 
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a1763f036774989ba3a7a46348588c028"></a><!-- doxytag: member="iwin::TComPtr::PopPtr" ref="a1763f036774989ba3a7a46348588c028" args="()" -->
@@ -349,8 +334,6 @@ template&lt;class Type &gt; </div>
 <p>Reset internal pointer value without decreasing of reference counter. </p>
 
 <p>Definition at line <a class="el" href="iwin_2_t_com_ptr_8h_source.html#l00135">135</a> of file <a class="el" href="iwin_2_t_com_ptr_8h_source.html">TComPtr.h</a>.</p>
-
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
 <p>Referenced by <a class="el" href="iwin_2_t_com_ptr_8h_source.html#l00145">iwin::TComPtr&lt; Type &gt;::TakeOver()</a>.</p>
 
@@ -374,11 +357,7 @@ template&lt;class Type &gt; </div>
 
 <p>It decreses COM reference pointer and set this pointer to NULL. </p>
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a54dff49514e5ca5505938fe0eaae3ebf">istd::TPointerBase&lt; Type &gt;</a>.</p>
-
 <p>Definition at line <a class="el" href="iwin_2_t_com_ptr_8h_source.html#l00115">115</a> of file <a class="el" href="iwin_2_t_com_ptr_8h_source.html">TComPtr.h</a>.</p>
-
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
 </div>
 </div>

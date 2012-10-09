@@ -36,7 +36,7 @@
 <div class="title">iipr::ISearchParams Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::ISearchParams" --><!-- doxytag: inherits="iser::ISerializable" -->
+<!-- doxytag: class="iipr::ISearchParams" -->
 <p>Common interface for a set of parameters for a model search.  
  <a href="classiipr_1_1_i_search_params.html#details">More...</a></p>
 
@@ -47,10 +47,7 @@ Inheritance diagram for iipr::ISearchParams:</div>
  <div class="center">
   <img src="classiipr_1_1_i_search_params.png" usemap="#iipr::ISearchParams_map" alt=""/>
   <map id="iipr::ISearchParams_map" name="iipr::ISearchParams_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,128,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,128,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,128,24"/>
-<area href="classiipr_1_1_c_search_params.html" title="Definition of standard search parameters." alt="iipr::CSearchParams" shape="rect" coords="0,224,128,248"/>
+<area href="classiipr_1_1_c_search_params.html" title="Definition of standard search parameters." alt="iipr::CSearchParams" shape="rect" coords="0,56,128,80"/>
 </map>
  </div></div>
 
@@ -64,13 +61,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get minimum score for a succefull search.  <a href="#a1db7e9dae7d78569ac67a0f70f43ea01"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a8bbb7f79fb3e93ffbff78990c47c8538">SetMinScore</a> (double minScore)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set minimum score for a succefull search.  <a href="#a8bbb7f79fb3e93ffbff78990c47c8538"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a388a2b254d790f8ba3db86befb178ed6">GetRotationRange</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const istd::CRange &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a388a2b254d790f8ba3db86befb178ed6">GetRotationRange</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get rotation range for the model search.  <a href="#a388a2b254d790f8ba3db86befb178ed6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a2345bbd541b1753e28e7a024ad994b4e">SetRotationRange</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;angleRange)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a2345bbd541b1753e28e7a024ad994b4e">SetRotationRange</a> (const istd::CRange &amp;angleRange)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rotation range for the model search.  <a href="#a2345bbd541b1753e28e7a024ad994b4e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#aca78512a786767871db8575871fd6f6c">GetScaleRange</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const istd::CRange &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#aca78512a786767871db8575871fd6f6c">GetScaleRange</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scale range for the model search.  <a href="#aca78512a786767871db8575871fd6f6c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a9251dec5c19467110f464b13dd5445e1">SetScaleRange</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;scaleRange)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#a9251dec5c19467110f464b13dd5445e1">SetScaleRange</a> (const istd::CRange &amp;scaleRange)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scale range for the model search.  <a href="#a9251dec5c19467110f464b13dd5445e1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_search_params.html#ae551a172057a394d39d5274ea00f0561">GetNominalModelsCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of models that should be found for a successfull search result.  <a href="#ae551a172057a394d39d5274ea00f0561"></a><br/></td></tr>
@@ -127,7 +124,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&amp; iipr::ISearchParams::GetRotationRange </td>
+          <td class="memname">virtual const istd::CRange&amp; iipr::ISearchParams::GetRotationRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -147,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&amp; iipr::ISearchParams::GetScaleRange </td>
+          <td class="memname">virtual const istd::CRange&amp; iipr::ISearchParams::GetScaleRange </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -238,7 +235,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void iipr::ISearchParams::SetRotationRange </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;&#160;</td>
+          <td class="paramtype">const istd::CRange &amp;&#160;</td>
           <td class="paramname"><em>angleRange</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -260,7 +257,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void iipr::ISearchParams::SetScaleRange </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a> &amp;&#160;</td>
+          <td class="paramtype">const istd::CRange &amp;&#160;</td>
           <td class="paramname"><em>scaleRange</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>

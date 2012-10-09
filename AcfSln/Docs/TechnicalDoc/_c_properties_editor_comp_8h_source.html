@@ -35,8 +35,8 @@
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_properties_manager_8h.html">iprop/IPropertiesManager.h</a>&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_item_delegate_8h.html">iqtgui/CItemDelegate.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iqtgui/TDesignerGuiObserverCompBase.h&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;iqtgui/CItemDelegate.h&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;iprop/Generated/ui_CPropertiesEditorComp.h&quot;</span>
 <a name="l00016"></a>00016 
@@ -51,7 +51,7 @@
 <a name="l00028"></a>00028 {
 <a name="l00029"></a>00029        Q_OBJECT
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a>00031        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
+<a name="l00031"></a>00031        <span class="keyword">typedef</span> iqtgui::TDesignerGuiObserverCompBase&lt;
 <a name="l00032"></a><a class="code" href="classiprop_1_1_c_properties_editor_comp.html#a9a521c9008e88de86ca3c12df139a799">00032</a>                             Ui::CPropertiesEditorComp, <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>&gt; <a class="code" href="classiprop_1_1_c_properties_editor_comp.html#a9a521c9008e88de86ca3c12df139a799">BaseClass</a>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a><a class="code" href="classiprop_1_1_c_properties_editor_comp.html#a7135d1b571e933816afb5f5f2890acc5">00034</a>        <span class="keyword">enum</span> <a class="code" href="classiprop_1_1_c_properties_editor_comp.html#a7135d1b571e933816afb5f5f2890acc5">ColumnType</a>
@@ -79,7 +79,7 @@
 <a name="l00056"></a>00056        <span class="keyword">class </span>EditorDelegate: <span class="keyword">public</span> iqtgui::CItemDelegate
 <a name="l00057"></a>00057        {
 <a name="l00058"></a>00058        <span class="keyword">public</span>:
-<a name="l00059"></a>00059               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_item_delegate.html">iqtgui::CItemDelegate</a> <a class="code" href="classiprop_1_1_c_properties_editor_comp.html#a9a521c9008e88de86ca3c12df139a799">BaseClass</a>;
+<a name="l00059"></a>00059               <span class="keyword">typedef</span> iqtgui::CItemDelegate <a class="code" href="classiprop_1_1_c_properties_editor_comp.html#a9a521c9008e88de86ca3c12df139a799">BaseClass</a>;
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061               EditorDelegate(<a class="code" href="classiprop_1_1_c_properties_editor_comp.html" title="Tree view based property editor component.">CPropertiesEditorComp</a>&amp; parent);
 <a name="l00062"></a>00062 

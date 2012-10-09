@@ -47,14 +47,10 @@ Inheritance diagram for imeas::CDataSequenceInfoBase:</div>
  <div class="center">
   <img src="classimeas_1_1_c_data_sequence_info_base.png" usemap="#imeas::CDataSequenceInfoBase_map" alt=""/>
   <map id="imeas::CDataSequenceInfoBase_map" name="imeas::CDataSequenceInfoBase_map">
-<area href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::IDataSequenceInfo" shape="rect" coords="100,168,290,192"/>
-<area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="0,112,190,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="200,112,390,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,190,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="200,56,390,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,190,24"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="200,0,390,24"/>
-<area href="classimeas_1_1_c_samples_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::CSamplesInfo" shape="rect" coords="100,280,290,304"/>
+<area href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::IDataSequenceInfo" shape="rect" coords="0,112,190,136"/>
+<area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="0,56,190,80"/>
+<area href="classistd_1_1_i_changeable.html" alt="IChangeable" shape="rect" coords="0,0,190,24"/>
+<area href="classimeas_1_1_c_samples_info.html" title="Stores additional data sequence data used to interpret samples value correctly." alt="imeas::CSamplesInfo" shape="rect" coords="0,224,190,248"/>
 </map>
  </div></div>
 
@@ -78,7 +74,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of numeric value for specified list index.  <a href="#a2b8ac66049cf3e28f4b76004ec5c4944"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#a98d19e6600310b548af2e2bbb45613cb">GetNumericValueUnitInfo</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#a98d19e6600310b548af2e2bbb45613cb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#af078794b6798ac77fdeb986c085f4c84">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html#af078794b6798ac77fdeb986c085f4c84">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Simple base class for implementations of interface <code><a class="el" href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly.">imeas::IDataSequenceInfo</a></code>. </p>
@@ -278,15 +274,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool imeas::CDataSequenceInfoBase::Serialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramtype">iser::IArchive &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classimeas_1_1_c_samples_info.html#a290d85c76a02ae9783ccbfcffba647b2">imeas::CSamplesInfo</a>.</p>
 

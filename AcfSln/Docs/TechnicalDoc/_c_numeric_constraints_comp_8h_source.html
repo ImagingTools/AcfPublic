@@ -29,8 +29,8 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;iser/ISerializable.h&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF-Solutions incldues</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_unit_info_8h.html">imeas/IUnitInfo.h</a>&quot;</span>
@@ -49,7 +49,7 @@
 <a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">protected</span> imeas::<a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">IUnitInfo</a>
 <a name="l00028"></a>00028 {
 <a name="l00029"></a>00029 <span class="keyword">public</span>:
-<a name="l00030"></a><a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a039838ce734e896c780ac5a2e0a6f986">00030</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a039838ce734e896c780ac5a2e0a6f986">BaseClass</a>;
+<a name="l00030"></a><a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a039838ce734e896c780ac5a2e0a6f986">00030</a>        <span class="keyword">typedef</span> icomp::CComponentBase <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a039838ce734e896c780ac5a2e0a6f986">BaseClass</a>;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html" title="Simple implementation of imeas::INumericConstraints interface.">CNumericConstraintsComp</a>);
 <a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>);
@@ -75,8 +75,8 @@
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#af5961bae317564dfc272f74f0f691d1a" title="Get type of unit.">GetUnitType</a>() <span class="keyword">const</span>;
 <a name="l00054"></a>00054        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a90c530a2f9d5af95a5a1e33dfeedcd68" title="Get name of unit.">GetUnitName</a>() <span class="keyword">const</span>;
 <a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#a795fb67cc15a119c3b66ed315f57d64e" title="Get multiplication factor used to calculate user input values.">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ad3d07ac8efbd610fb0303fefaa8c162e" title="Get range of possible value.">GetValueRange</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ac61407fc545cb06f6ba226eb296112b2" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> istd::CRange <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ad3d07ac8efbd610fb0303fefaa8c162e" title="Get range of possible value.">GetValueRange</a>() <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> imath::IDoubleManip&amp; <a class="code" href="classimeas_1_1_c_numeric_constraints_comp.html#ac61407fc545cb06f6ba226eb296112b2" title="Return number manipulator object for filter length value.">GetValueManip</a>() <span class="keyword">const</span>;
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">private</span>:
 <a name="l00060"></a>00060        I_ATTR(<span class="keywordtype">int</span>, m_dimensionsCountAttrPtr);

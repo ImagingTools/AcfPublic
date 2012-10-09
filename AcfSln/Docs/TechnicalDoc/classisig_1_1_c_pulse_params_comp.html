@@ -38,7 +38,7 @@
 <div class="title">isig::CPulseParamsComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="isig::CPulseParamsComp" --><!-- doxytag: inherits="icomp::CComponentBase,isig::IPulseParams" -->
+<!-- doxytag: class="isig::CPulseParamsComp" --><!-- doxytag: inherits="isig::IPulseParams" -->
 <p>Simple component implementation of <a class="el" href="classisig_1_1_i_pulse_params.html" title="Parammeters of single signal pulse.">IPulseParams</a> interface.  
  <a href="classisig_1_1_c_pulse_params_comp.html#details">More...</a></p>
 
@@ -49,13 +49,7 @@ Inheritance diagram for isig::CPulseParamsComp:</div>
  <div class="center">
   <img src="classisig_1_1_c_pulse_params_comp.png" usemap="#isig::CPulseParamsComp_map" alt=""/>
   <map id="isig::CPulseParamsComp_map" name="isig::CPulseParamsComp_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,168,151,192"/>
-<area href="classisig_1_1_i_pulse_params.html" title="Parammeters of single signal pulse." alt="isig::IPulseParams" shape="rect" coords="161,168,312,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,112,151,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="161,112,312,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,56,151,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="161,56,312,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="161,0,312,24"/>
+<area href="classisig_1_1_i_pulse_params.html" title="Parammeters of single signal pulse." alt="isig::IPulseParams" shape="rect" coords="0,0,151,24"/>
 </map>
  </div></div>
 
@@ -63,7 +57,7 @@ Inheritance diagram for isig::CPulseParamsComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_pulse_params_comp.html#ab093943e915a003b71de65254e197368">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef icomp::CComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_pulse_params_comp.html#ab093943e915a003b71de65254e197368">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_pulse_params_comp.html#a472e2ea45d4491d1142451e4f94588ee">CPulseParamsComp</a> ()</td></tr>
@@ -81,7 +75,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get relaxing time period after pulse ends needed to accept new begin.  <a href="#a4a8422857c07323d72c4df7f295fbf6f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_pulse_params_comp.html#af881376d2ab1c27be36051097ed60d95">SetRelaxingTime</a> (double time)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get relaxing time period after pulse ends needed to accept new begin.  <a href="#af881376d2ab1c27be36051097ed60d95"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_pulse_params_comp.html#a554833d46374d72b56657a54746a558b">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_pulse_params_comp.html#a554833d46374d72b56657a54746a558b">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_pulse_params_comp.html#a778420fd49cce87b37364e4b30372f5a">OnComponentCreated</a> ()</td></tr>
@@ -96,7 +90,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classisig_1_1_c_pulse_params_comp.html#ab093943e915a003b71de65254e197368">isig::CPulseParamsComp::BaseClass</a></td>
+          <td class="memname">typedef icomp::CComponentBase <a class="el" href="classisig_1_1_c_pulse_params_comp.html#ab093943e915a003b71de65254e197368">isig::CPulseParamsComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -221,8 +215,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html#a8a79eed0233a1ff69972975180f5210a">icomp::CComponentBase</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a554833d46374d72b56657a54746a558b"></a><!-- doxytag: member="isig::CPulseParamsComp::Serialize" ref="a554833d46374d72b56657a54746a558b" args="(iser::IArchive &amp;archive)" -->
@@ -232,15 +224,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool isig::CPulseParamsComp::Serialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramtype">iser::IArchive &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 </div>
 </div>

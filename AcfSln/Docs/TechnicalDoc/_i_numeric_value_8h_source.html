@@ -28,9 +28,9 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define imeas_INumericParams_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;iser/ISerializable.h&quot;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_var_vector_8h.html">imath/CVarVector.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;imath/CVarVector.h&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="keyword">namespace </span>imeas
@@ -70,11 +70,11 @@
 <a name="l00086"></a>00086 
 <a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>* <a class="code" href="classimeas_1_1_i_numeric_value.html#a0bb594ecbaeca794fd86b583c79a5f0a" title="Get parameter constraints describing possible parameter values.">GetNumericConstraints</a>() <span class="keyword">const</span> = 0;
 <a name="l00091"></a>00091 
-<a name="l00097"></a>00097        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> <a class="code" href="classimeas_1_1_i_numeric_value.html#a95dfecda838338e0327fb7fa0d07ff72" title="Get access to component value of the given type.">GetComponentValue</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span> = 0;
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> imath::CVarVector <a class="code" href="classimeas_1_1_i_numeric_value.html#a95dfecda838338e0327fb7fa0d07ff72" title="Get access to component value of the given type.">GetComponentValue</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span> = 0;
 <a name="l00098"></a>00098 
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> <a class="code" href="classimeas_1_1_i_numeric_value.html#a34bc23dcc6747c86589a722d50bb1f71" title="Get list of numeric values.">GetValues</a>() <span class="keyword">const</span> = 0;
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> imath::CVarVector <a class="code" href="classimeas_1_1_i_numeric_value.html#a34bc23dcc6747c86589a722d50bb1f71" title="Get list of numeric values.">GetValues</a>() <span class="keyword">const</span> = 0;
 <a name="l00103"></a>00103 
-<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_i_numeric_value.html#a320278040f8a7dfbe897c724bdc70a7f" title="Set list of numeric values.">SetValues</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&amp; values) = 0;
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_i_numeric_value.html#a320278040f8a7dfbe897c724bdc70a7f" title="Set list of numeric values.">SetValues</a>(<span class="keyword">const</span> imath::CVarVector&amp; values) = 0;
 <a name="l00108"></a>00108 };
 <a name="l00109"></a>00109 
 <a name="l00110"></a>00110 

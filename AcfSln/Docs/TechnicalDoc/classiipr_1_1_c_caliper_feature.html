@@ -48,11 +48,8 @@ Inheritance diagram for iipr::CCaliperFeature:</div>
  <div class="center">
   <img src="classiipr_1_1_c_caliper_feature.png" usemap="#iipr::CCaliperFeature_map" alt=""/>
   <map id="iipr::CCaliperFeature_map" name="iipr::CCaliperFeature_map">
-<area href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface." alt="imeas::CSimpleNumericValue" shape="rect" coords="0,224,176,248"/>
-<area href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values." alt="imeas::INumericValue" shape="rect" coords="0,168,176,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,176,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,176,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,176,24"/>
+<area href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface." alt="imeas::CSimpleNumericValue" shape="rect" coords="0,56,176,80"/>
+<area href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values." alt="imeas::INumericValue" shape="rect" coords="0,0,176,24"/>
 </map>
  </div></div>
 
@@ -72,9 +69,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_caliper_feature.html#a0c7222c02542325465c1be54084a1f9b">GetEdgeMode</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_caliper_feature.html#a751d71e2ff6614a480c88ac34d575372">IsValueTypeSupported</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the given value type (or value component) is supported.  <a href="#a751d71e2ff6614a480c88ac34d575372"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_caliper_feature.html#a506f91adb89e0a98558e053624d73db4">GetComponentValue</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual imath::CVarVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_caliper_feature.html#a506f91adb89e0a98558e053624d73db4">GetComponentValue</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component value of the given type.  <a href="#a506f91adb89e0a98558e053624d73db4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_caliper_feature.html#a7034ea0be5223bcb799fe8e6b3a2dd26">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_caliper_feature.html#a7034ea0be5223bcb799fe8e6b3a2dd26">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of INumericValue interface for caliper-extracted features. </p>
@@ -160,7 +157,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> iipr::CCaliperFeature::GetComponentValue </td>
+          <td class="memname">virtual imath::CVarVector iipr::CCaliperFeature::GetComponentValue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a>&#160;</td>
           <td class="paramname"><em>valueTypeId</em></td><td>)</td>
@@ -256,7 +253,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iipr::CCaliperFeature::Serialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramtype">iser::IArchive &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>

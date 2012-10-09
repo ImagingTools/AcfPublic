@@ -49,11 +49,8 @@ Inheritance diagram for iipr::TWeightedFeatureWrap&lt; BaseObject &gt;:</div>
  <div class="center">
   <img src="classiipr_1_1_t_weighted_feature_wrap.png" usemap="#iipr::TWeightedFeatureWrap&lt; BaseObject &gt;_map" alt=""/>
   <map id="iipr::TWeightedFeatureWrap&lt; BaseObject &gt;_map" name="iipr::TWeightedFeatureWrap&lt; BaseObject &gt;_map">
-<area href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface." alt="imeas::CSimpleNumericValue" shape="rect" coords="0,224,258,248"/>
-<area href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values." alt="imeas::INumericValue" shape="rect" coords="0,168,258,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,258,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,258,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,258,24"/>
+<area href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface." alt="imeas::CSimpleNumericValue" shape="rect" coords="0,56,258,80"/>
+<area href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values." alt="imeas::INumericValue" shape="rect" coords="0,0,258,24"/>
 </map>
  </div></div>
 
@@ -68,7 +65,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a5b9c8031e18165d0b5c85f7838814a84">TWeightedFeatureWrap</a> (double weight=1.0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a670784cb0eb876758dd5b47eaa40395f">GetWeight</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#aef12a2739f789cde29f56b01944cda48">SetWeight</a> (double weight)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a48120fa2978f81cf33d685fddc69bab9">m_weight</a></td></tr>
@@ -169,7 +166,7 @@ template&lt;class BaseObject &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html">iipr::TWeightedFeatureWrap</a>&lt; BaseObject &gt;::Serialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramtype">iser::IArchive &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -182,8 +179,6 @@ template&lt;class BaseObject &gt; </div>
 <p>Reimplemented in <a class="el" href="classiipr_1_1_c_search_feature.html#a3736d0349b7ce9cebda91144f73b2e96">iipr::CSearchFeature</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_weighted_feature_wrap_8h_source.html#l00067">67</a> of file <a class="el" href="_t_weighted_feature_wrap_8h_source.html">TWeightedFeatureWrap.h</a>.</p>
-
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>.</p>
 
 </div>
 </div>

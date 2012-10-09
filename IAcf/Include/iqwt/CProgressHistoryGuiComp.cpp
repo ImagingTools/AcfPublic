@@ -42,7 +42,7 @@ CProgressHistoryGuiComp::CProgressHistoryGuiComp()
 }
 
 
-// reimplemented (iproc::IProgressManager)
+// reimplemented (ibase::IProgressManager)
 
 int CProgressHistoryGuiComp::BeginProgressSession(
 			const QByteArray& progressId,
