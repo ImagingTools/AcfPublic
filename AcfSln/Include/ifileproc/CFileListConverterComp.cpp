@@ -14,7 +14,7 @@
 **	If you are unsure which license is appropriate for your use, please
 **	contact us at info@imagingtools.de.
 **
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
 **	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
@@ -90,7 +90,7 @@ int CFileListConverterComp::DoProcessing(
 		bool isConverted = false;
 
 		if (m_fileConvertCompPtr.IsValid()){
-			isConverted = m_fileConvertCompPtr->ConvertFile(inputFile, outputFileName, paramsPtr);
+			isConverted = m_fileConvertCompPtr->ConvertFiles(inputFile, outputFileName, paramsPtr);
 		}
 		else{
 			isConverted = QFile::copy(inputFile, outputFileName);

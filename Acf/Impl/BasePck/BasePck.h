@@ -1,0 +1,176 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef BasePck_included
+#define BasePck_included
+
+
+#include "imod/IObserver.h"
+
+#include "iser/CXmlFileReadArchive.h"
+#include "iser/CXmlFileWriteArchive.h"
+#include "iser/CFileReadArchive.h"
+#include "iser/CFileWriteArchive.h"
+
+#include "icomp/TModelCompWrap.h"
+#include "icomp/TMakeComponentWrap.h"
+
+#include "idoc/CSingleDocumentTemplateComp.h"
+#include "idoc/CCompositeDocumentTemplateComp.h"
+#include "idoc/CDocumentManagerListenerComp.h"
+#include "idoc/CSelectedDocModelBinderComp.h"
+#include "idoc/CSerializedUndoManager.h"
+
+#include "ibase/CComposedLoaderComp.h"
+#include "ibase/CTextFileLoaderComp.h"
+#include "ibase/CInstantiatorComp.h"
+#include "ibase/CVersionInfoComp.h"
+#include "ibase/CApplicationInfoComp.h"
+#include "ibase/CTextDocumentComp.h"
+#include "ibase/CModelProxyComp.h"
+#include "ibase/CModelBinderComp.h"
+#include "ibase/CAutoPersistenceComp.h"
+#include "ibase/CFileTypeInfoComp.h"
+#include "ibase/TFileSerializerComp.h"
+#include "ibase/CConsoleLogComp.h"
+#include "ibase/CTextFileLogComp.h"
+#include "ibase/CFileCopyOverLoaderComp.h"
+#include "ibase/CCopyAppComp.h"
+#include "ibase/CUuidComp.h"
+#include "ibase/CObjectQueueComp.h"
+#include "ibase/CLogComp.h"
+#include "ibase/CMultiObserverBinderComp.h"
+#include "ibase/CSingletonApplicationComp.h"
+#include "ibase/CQtVersionInfoComp.h"
+#include "ibase/CObjectSynchronizerComp.h"
+
+#include "iprm/CSelectableParamsSetComp.h"
+#include "iprm/CParamsManagerComp.h"
+#include "iprm/CComposedParamsSetComp.h"
+#include "iprm/CVariableParamComp.h"
+#include "iprm/CFileNameParamComp.h"
+#include "iprm/CEnableableParamComp.h"
+#include "iprm/CSelectionParamComp.h"
+#include "iprm/CManagerParamsSetShadowerComp.h"
+#include "iprm/CSelectionConstraintsComp.h"
+#include "iprm/CNameParamComp.h"
+#include "iprm/CMultiParamsManagerComp.h"
+#include "iprm/CRelativeFileNameParamComp.h"
+
+#include "i2d/CPosition2dComp.h"
+#include "i2d/CRectangleComp.h"
+#include "i2d/CCircleComp.h"
+#include "i2d/CAnnulusComp.h"
+#include "i2d/CAnnulusSegmentComp.h"
+#include "i2d/CLine2dComp.h"
+#include "i2d/CQuadrangleComp.h"
+#include "i2d/CPolygonComp.h"
+#include "i2d/CPolylineComp.h"
+#include "i2d/CAffineTransformation2dComp.h"
+#include "i2d/CStaticCalibrationProviderComp.h"
+#include "i2d/CTubePolylineComp.h"
+
+#include "imath/CSampledFunction2d.h"
+
+
+/**
+	Base system-undependent general package.
+*/
+namespace BasePck
+{
+
+
+typedef ibase::CFileTypeInfoComp FileTypeInfo;
+typedef ibase::TFileSerializerComp<iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive> XmlFileSerializer;
+typedef ibase::TFileSerializerComp<iser::CFileReadArchive, iser::CFileWriteArchive> BinaryFileSerializer;
+typedef ibase::CComposedLoaderComp ComposedLoader;
+typedef ibase::CTextFileLoaderComp TextFileLoader;
+typedef ibase::CInstantiatorComp Instantiator;
+typedef ibase::CVersionInfoComp VersionInfo;
+typedef ibase::CApplicationInfoComp ApplicationInfo;
+typedef ibase::CModelProxyComp ModelProxy;
+typedef ibase::CModelBinderComp ModelBinder;
+typedef ibase::CAutoPersistenceComp AutoPersistence;
+typedef ibase::CConsoleLogComp ConsoleLog;
+typedef ibase::CTextFileLogComp TextFileLog;
+typedef ibase::CFileCopyOverLoaderComp FileCopyOverLoader;
+typedef ibase::CCopyAppComp CopyApp;
+typedef icomp::TModelCompWrap<ibase::CUuidComp> Uuid;
+typedef ibase::CObjectQueueComp ObjectQueue;
+typedef icomp::TModelCompWrap<ibase::CLogComp> Log;
+typedef ibase::CMultiObserverBinderComp MultiObserverBinder;
+typedef ibase::CSingletonApplicationComp SingletonApplication;
+typedef ibase::CQtVersionInfoComp QtVersionInfo;
+typedef ibase::CObjectSynchronizerComp ObjectSynchronizer;
+
+typedef icomp::TModelCompWrap<iprm::CSelectableParamsSetComp> SelectableParamsSet;
+typedef icomp::TModelCompWrap<iprm::CParamsManagerComp> ParamsManager;
+typedef icomp::TModelCompWrap<iprm::CComposedParamsSetComp> ComposedParamsSet;
+typedef icomp::TModelCompWrap<iprm::CVariableParamComp> VariableParam;
+typedef icomp::TModelCompWrap<iprm::CFileNameParamComp> FileNameParam;
+typedef icomp::TModelCompWrap<iprm::CEnableableParamComp> EnableableParam;
+typedef icomp::TModelCompWrap<iprm::CSelectionParamComp> SelectionParam;
+typedef iprm::CManagerParamsSetShadowerComp ManagerParamsSetShadower;
+typedef iprm::CSelectionConstraintsComp SelectionConstraints;
+typedef icomp::TModelCompWrap<iprm::CNameParamComp> NameParam;
+
+typedef idoc::CSingleDocumentTemplateComp SingleDocumentTemplate;
+typedef idoc::CCompositeDocumentTemplateComp CompositeDocumentTemplate;
+typedef icomp::TModelCompWrap<idoc::CDocumentManagerListenerComp> DocumentManagerListener;
+typedef idoc::CSelectedDocModelBinderComp SelectedDocModelBinder;
+typedef icomp::TModelCompWrap< icomp::TMakeComponentWrap<
+			idoc::CSerializedUndoManager,
+			idoc::IUndoManager,
+			idoc::IDocumentStateComparator,
+			imod::IObserver> > SerializedUndoManager;
+
+typedef icomp::TModelCompWrap<i2d::CPosition2dComp> Position2d;
+typedef icomp::TModelCompWrap<i2d::CRectangleComp> Rectangle;
+typedef icomp::TModelCompWrap<i2d::CCircleComp> Circle;
+typedef icomp::TModelCompWrap<i2d::CAnnulusComp> Annulus;
+typedef icomp::TModelCompWrap<i2d::CAnnulusSegmentComp> AnnulusSegment;
+typedef icomp::TModelCompWrap<i2d::CLine2dComp> Line;
+typedef icomp::TModelCompWrap<i2d::CQuadrangleComp> Quadrangle;
+typedef icomp::TModelCompWrap<i2d::CPolygonComp> Polygon;
+typedef icomp::TModelCompWrap<i2d::CPolylineComp> Polyline;
+typedef icomp::TModelCompWrap<i2d::CAffineTransformation2dComp> AffineTransformation2d;
+typedef icomp::TModelCompWrap<i2d::CStaticCalibrationProviderComp> StaticCalibrationProvider;
+typedef icomp::TModelCompWrap<i2d::CTubePolylineComp> TubePolyline;
+
+typedef icomp::TModelCompWrap<ibase::CTextDocumentComp> TextDocument;
+
+typedef icomp::TMakeComponentWrap<
+			imod::TModelWrap<imath::CSampledFunction2d>,
+			imath::ISampledFunction2d,
+			istd::IChangeable,
+			imod::IModel> SampledFunction2d;
+
+typedef icomp::TModelCompWrap<iprm::CMultiParamsManagerComp> MultiParamsManager;
+typedef icomp::TModelCompWrap<iprm::CRelativeFileNameParamComp> RelativeFileNameParam;
+
+
+} // namespace BasePck
+
+
+#endif // !BasePck_included
+
+

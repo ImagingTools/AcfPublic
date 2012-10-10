@@ -37,7 +37,7 @@
 <div class="title">imeas::INumericValue Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="imeas::INumericValue" -->
+<!-- doxytag: class="imeas::INumericValue" --><!-- doxytag: inherits="iser::ISerializable" -->
 <p>General parameter set containing list of numeric values.  
  <a href="classimeas_1_1_i_numeric_value.html#details">More...</a></p>
 
@@ -48,15 +48,18 @@ Inheritance diagram for imeas::INumericValue:</div>
  <div class="center">
   <img src="classimeas_1_1_i_numeric_value.png" usemap="#imeas::INumericValue_map" alt=""/>
   <map id="imeas::INumericValue_map" name="imeas::INumericValue_map">
-<area href="classimeas_1_1_c_linear_adjust_params_comp.html" title="Basic implementation of component of linear adjust parameters." alt="imeas::CLinearAdjustParamsComp" shape="rect" coords="0,56,283,80"/>
-<area href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface." alt="imeas::CSimpleNumericValue" shape="rect" coords="586,56,869,80"/>
-<area href="classiipr_1_1_c_caliper_feature.html" title="Implementation of INumericValue interface for caliper-extracted features." alt="iipr::CCaliperFeature" shape="rect" coords="0,112,283,136"/>
-<area href="classiipr_1_1_t_weighted_feature_wrap.html" title="Wrapper allowing to create feature object from some another serializable one." alt="iipr::TWeightedFeatureWrap&lt; BaseObject &gt;" shape="rect" coords="293,112,576,136"/>
-<area href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericValue interface." alt="imeas::CNumericParamsComp" shape="rect" coords="586,112,869,136"/>
-<area href="classiipr_1_1_t_weighted_feature_wrap.html" alt="iipr::TWeightedFeatureWrap&lt; i2d::CLine2d &gt;" shape="rect" coords="879,112,1162,136"/>
-<area href="classiipr_1_1_t_weighted_feature_wrap.html" alt="iipr::TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;" shape="rect" coords="1172,112,1455,136"/>
-<area href="classiipr_1_1_c_caliper_distance_feature.html" title="Implementation of INumericValue interface for caliper based distance measurement feature." alt="iipr::CCaliperDistanceFeature" shape="rect" coords="879,168,1162,192"/>
-<area href="classiipr_1_1_c_search_feature.html" title="Implementation of the pattern search feature." alt="iipr::CSearchFeature" shape="rect" coords="1172,168,1455,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="293,112,576,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="293,56,576,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="293,0,576,24"/>
+<area href="classimeas_1_1_c_linear_adjust_params_comp.html" title="Basic implementation of component of linear adjust parameters." alt="imeas::CLinearAdjustParamsComp" shape="rect" coords="0,224,283,248"/>
+<area href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface." alt="imeas::CSimpleNumericValue" shape="rect" coords="586,224,869,248"/>
+<area href="classiipr_1_1_c_caliper_feature.html" title="Implementation of INumericValue interface for caliper-extracted features." alt="iipr::CCaliperFeature" shape="rect" coords="0,280,283,304"/>
+<area href="classiipr_1_1_t_weighted_feature_wrap.html" title="Wrapper allowing to create feature object from some another serializable one." alt="iipr::TWeightedFeatureWrap&lt; BaseObject &gt;" shape="rect" coords="293,280,576,304"/>
+<area href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericValue interface." alt="imeas::CNumericParamsComp" shape="rect" coords="586,280,869,304"/>
+<area href="classiipr_1_1_t_weighted_feature_wrap.html" alt="iipr::TWeightedFeatureWrap&lt; i2d::CLine2d &gt;" shape="rect" coords="879,280,1162,304"/>
+<area href="classiipr_1_1_t_weighted_feature_wrap.html" alt="iipr::TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;" shape="rect" coords="1172,280,1455,304"/>
+<area href="classiipr_1_1_c_caliper_distance_feature.html" title="Implementation of INumericValue interface for caliper based distance measurement feature." alt="iipr::CCaliperDistanceFeature" shape="rect" coords="879,336,1162,360"/>
+<area href="classiipr_1_1_c_search_feature.html" title="Implementation of the pattern search feature." alt="iipr::CSearchFeature" shape="rect" coords="1172,336,1455,360"/>
 </map>
  </div></div>
 
@@ -86,11 +89,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the given value type (or value component) is supported.  <a href="#ae80249c5b28cb227c78ab46408dfef69"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_numeric_constraints.html">INumericConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_value.html#a0bb594ecbaeca794fd86b583c79a5f0a">GetNumericConstraints</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter constraints describing possible parameter values.  <a href="#a0bb594ecbaeca794fd86b583c79a5f0a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual imath::CVarVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_value.html#a95dfecda838338e0327fb7fa0d07ff72">GetComponentValue</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_value.html#a95dfecda838338e0327fb7fa0d07ff72">GetComponentValue</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component value of the given type.  <a href="#a95dfecda838338e0327fb7fa0d07ff72"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual imath::CVarVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_value.html#a34bc23dcc6747c86589a722d50bb1f71">GetValues</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_value.html#a34bc23dcc6747c86589a722d50bb1f71">GetValues</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of numeric values.  <a href="#a34bc23dcc6747c86589a722d50bb1f71"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_value.html#a320278040f8a7dfbe897c724bdc70a7f">SetValues</a> (const imath::CVarVector &amp;values)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_numeric_value.html#a320278040f8a7dfbe897c724bdc70a7f">SetValues</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;values)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set list of numeric values.  <a href="#a320278040f8a7dfbe897c724bdc70a7f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -156,7 +159,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual imath::CVarVector imeas::INumericValue::GetComponentValue </td>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> imeas::INumericValue::GetComponentValue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a>&#160;</td>
           <td class="paramname"><em>valueTypeId</em></td><td>)</td>
@@ -199,7 +202,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual imath::CVarVector imeas::INumericValue::GetValues </td>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> imeas::INumericValue::GetValues </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -244,7 +247,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool imeas::INumericValue::SetValues </td>
           <td>(</td>
-          <td class="paramtype">const imath::CVarVector &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;&#160;</td>
           <td class="paramname"><em>values</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>

@@ -1,0 +1,283 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "iview/CImageShape.h"
+
+
+// Qt includes
+#include <QtGui/QPainter>
+
+
+// ACF includes
+#include "istd/TDelPtr.h"
+
+#include "imod/IModel.h"
+
+#include "iimg/IBitmap.h"
+
+#include "iqt/CBitmap.h"
+
+#include "iview/CScreenTransform.h"
+
+
+namespace iview
+{
+
+
+// public methods
+
+CImageShape::CImageShape(const icmm::IColorTransformation* colorTransformationPtr)
+:	m_colorTransformationPtr(colorTransformationPtr)
+{
+}
+
+
+// reimplemented (iview::IVisualizable)
+
+void CImageShape::Draw(QPainter& drawContext) const
+{
+	const iimg::IBitmap* bitmapPtr = dynamic_cast<const iimg::IBitmap*>(GetModelPtr());
+	if (IsDisplayConnected() && bitmapPtr != NULL){
+		ibase::CSize bitmapSize = bitmapPtr->GetImageSize();
+		if (!bitmapSize.IsNull()){
+			i2d::CRect bitmapArea(istd::CIndex2d(0, 0), bitmapSize);
+
+			i2d::CAffine2d destTransform = GetViewToScreenTransform();
+
+			i2d::CMatrix2d& deform = destTransform.GetDeformMatrixRef();
+
+			i2d::CMatrix2d::ColumnVector column0; 
+			i2d::CMatrix2d::ColumnVector column1;
+
+			deform.GetColumnVector(0, column0);
+			deform.GetColumnVector(1, column1);
+
+			column0 *= bitmapArea.GetRight();
+			column1 *= bitmapArea.GetBottom();
+
+			deform.SetColumnVector(0, column0);
+			deform.SetColumnVector(1, column1);
+
+			DrawBitmap(drawContext, *bitmapPtr, bitmapArea, destTransform);
+		}
+	}
+}
+
+
+// reimplemented (imod::IObserver)
+
+bool CImageShape::OnAttached(imod::IModel* modelPtr)
+{
+	iimg::IBitmap* bitmapPtr = dynamic_cast<iimg::IBitmap*>(modelPtr);
+	if (bitmapPtr != NULL){
+		return BaseClass::OnAttached(modelPtr);
+	}
+
+	return false;
+}
+
+
+void CImageShape::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+{
+	const iqt::IQImageProvider* providerPtr = dynamic_cast<const iqt::IQImageProvider*>(modelPtr);
+	istd::TDelPtr<iqt::CBitmap> qtBitmapPtr;
+	if (providerPtr == NULL){
+		qtBitmapPtr.SetPtr(new iqt::CBitmap);
+		providerPtr = qtBitmapPtr.GetPtr();
+		iimg::IBitmap* bitmapPtr = dynamic_cast<iimg::IBitmap*>(modelPtr);
+		I_ASSERT(bitmapPtr != NULL);
+
+		qtBitmapPtr->CopyFrom(*bitmapPtr);
+	}
+
+	QImage image = providerPtr->GetQImage();
+	if (m_colorTransformationPtr != NULL){
+		SetLookupTableToImage(image, *m_colorTransformationPtr);
+	}
+
+	m_pixmap = QPixmap::fromImage(image, Qt::AutoColor);
+
+	BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+}
+
+
+// reimplemented (iview::CShapeBase)
+
+i2d::CRect CImageShape::CalcBoundingBox() const
+{
+	i2d::CRect boundingBox = i2d::CRect::GetEmpty();
+
+	const imod::IModel* modelPtr = GetModelPtr();
+	if (modelPtr != NULL){
+		const iview::CScreenTransform& transform = GetViewToScreenTransform();
+
+		const iimg::IBitmap& model = *dynamic_cast<const iimg::IBitmap*>(modelPtr);
+		I_ASSERT(&model != NULL);
+
+		ibase::CSize size = model.GetImageSize();
+
+		istd::CIndex2d corners[4];
+
+		corners[0] = transform.GetScreenPosition(i2d::CVector2d(0, 0));
+		corners[1] = transform.GetScreenPosition(i2d::CVector2d(size.GetX(), 0));
+		corners[2] = transform.GetScreenPosition(i2d::CVector2d(0, size.GetY()));
+		corners[3] = transform.GetScreenPosition(i2d::CVector2d(size.GetX(), size.GetY()));
+
+		boundingBox = i2d::CRect(corners[0], corners[0]);
+		boundingBox.Union(corners[1]);
+		boundingBox.Union(corners[2]);
+		boundingBox.Union(corners[3]);
+	}
+
+	return boundingBox;
+}
+
+
+// reimplemented (iview::ITouchable)
+
+ITouchable::TouchState CImageShape::IsTouched(istd::CIndex2d position) const
+{
+	const imod::IModel* modelPtr = GetModelPtr();
+	if (modelPtr != NULL){
+		const iview::CScreenTransform& transform = GetViewToScreenTransform();
+
+		const iimg::IBitmap* bitmapPtr = dynamic_cast<const iimg::IBitmap*>(modelPtr);
+		I_ASSERT(bitmapPtr != NULL);
+
+		ibase::CSize size = bitmapPtr->GetImageSize();
+
+		istd::CIndex2d bitmapPosition = transform.GetClientPosition(position).ToIndex2d();
+		if (		(bitmapPosition.GetX() >= 0) &&
+					(bitmapPosition.GetY() >= 0) &&
+					(bitmapPosition.GetX() < size.GetX()) &&
+					(bitmapPosition.GetY() < size.GetY())){
+			return TS_INACTIVE;
+		}
+	}
+
+	return TS_NONE;
+}
+
+
+QString CImageShape::GetShapeDescriptionAt(istd::CIndex2d position) const
+{
+	const imod::IModel* modelPtr = GetModelPtr();
+	if (modelPtr != NULL){
+		const iview::CScreenTransform& transform = GetViewToScreenTransform();
+
+		const iimg::IBitmap* bitmapPtr = dynamic_cast<const iimg::IBitmap*>(modelPtr);
+		I_ASSERT(bitmapPtr != NULL);
+
+		ibase::CSize size = bitmapPtr->GetImageSize();
+
+		istd::CIndex2d bitmapPosition = transform.GetClientPosition(position).ToIndex2d();
+		if (		(bitmapPosition.GetX() >= 0) &&
+					(bitmapPosition.GetY() >= 0) &&
+					(bitmapPosition.GetX() < size.GetX()) &&
+					(bitmapPosition.GetY() < size.GetY())){
+			int pixelMode = bitmapPtr->GetPixelFormat();
+
+			icmm::CVarColor pixelValue = bitmapPtr->GetColorAt(bitmapPosition);
+			
+			switch (pixelMode){
+			case iimg::IBitmap::PF_GRAY:
+				return QObject::tr("Gray value %1%").arg(int(pixelValue[0] * 100));
+
+			case iimg::IBitmap::PF_RGB:
+				return QObject::tr("RGB value %1%, %2%, %3%")
+							.arg(int(pixelValue[0] * 100))
+							.arg(int(pixelValue[1] * 100))
+							.arg(int(pixelValue[2] * 100));
+
+			case iimg::IBitmap::PF_RGBA:
+				return QObject::tr("RGBA value %1%, %2%, %3%, %4%")
+							.arg(int(pixelValue[0] * 100))
+							.arg(int(pixelValue[1] * 100))
+							.arg(int(pixelValue[2] * 100))
+							.arg(int(pixelValue[3] * 100));
+			}
+		}
+	}
+
+	return "";
+}
+
+
+// protected methods
+
+void CImageShape::DrawBitmap(
+			QPainter& painter,
+			const iimg::IBitmap& bitmap,
+			const i2d::CRect& bitmapArea,
+			const i2d::CAffine2d& destTransform) const
+{
+	const iqt::CBitmap* bitmapPtr = dynamic_cast<const iqt::CBitmap*>(&bitmap);
+
+	if (bitmapPtr != NULL){
+		const i2d::CMatrix2d& deform = destTransform.GetDeformMatrix();
+		const i2d::CVector2d& pos = destTransform.GetTranslation();
+
+		QMatrix matrix(	deform.GetAt(0, 0) / double(bitmapArea.GetWidth()),
+						deform.GetAt(1, 0) / double(bitmapArea.GetWidth()),
+						deform.GetAt(0, 1) / double(bitmapArea.GetHeight()),
+						deform.GetAt(1, 1) / double(bitmapArea.GetHeight()),
+						pos.GetX(),
+						pos.GetY());
+		
+		painter.setMatrix(matrix);
+
+		painter.drawPixmap(0, 0, m_pixmap, bitmapArea.GetLeft(), bitmapArea.GetTop(), bitmapArea.GetRight(), bitmapArea.GetBottom());
+
+		painter.setMatrixEnabled(false);
+	}
+}
+
+
+// private methods
+
+void CImageShape::SetLookupTableToImage(QImage& image, const icmm::IColorTransformation& colorTransformation)
+{
+	if (image.isGrayscale()){
+		QVector<QRgb> rgbTable;
+		for (int colorIndex = 0; colorIndex < 256; colorIndex++){
+			icmm::CVarColor argumentColor;	
+			argumentColor.SetElementsCount(1);
+			argumentColor.SetElement(0, colorIndex / 255.0);
+
+			icmm::CVarColor result = colorTransformation.GetValueAt(argumentColor);
+			if (result.GetElementsCount() == 3){
+				rgbTable.append(qRgb(result[0] * 255, result[1] * 255, result[2] * 255));
+			}
+			else{
+				rgbTable.append(qRgb(colorIndex, colorIndex, colorIndex));
+			}
+		}
+
+		image.setNumColors(256);
+		image.setColorTable(rgbTable);
+	}
+}
+
+
+} // namespace iview
+
+

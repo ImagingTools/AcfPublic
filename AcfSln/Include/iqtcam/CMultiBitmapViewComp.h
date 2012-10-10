@@ -14,7 +14,7 @@
 **	If you are unsure which license is appropriate for your use, please
 **	contact us at info@imagingtools.de.
 **
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
 **	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
@@ -69,11 +69,18 @@ public:
 		I_ASSIGN(m_verticalViewsAttrPtr, "VerticalViewsCount", "Number of vertical views", false, 1);
 		I_ASSIGN_MULTI_0(m_informationProvidersCompPtr, "InformationProviders", "Information providers", false);
 		I_ASSIGN_TO(m_informationModelsCompPtr, m_informationProvidersCompPtr, true);
+		I_ASSIGN(m_generalInformationProviderCompPtr, "GeneralInformationProvider", "General information provider", false, "GeneralInformationProvider");
+		I_ASSIGN_TO(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, true);
 		I_ASSIGN_MULTI_0(m_viewExtendersCompPtr, "ViewExtenders", "View extenders", false);
 		I_ASSIGN(m_viewLabelPrefixAttrPtr, "ViewLabelPrefix", "Prefix used to title the single bitmap view", true, "Image");
+		I_ASSIGN(m_showStatusLabelAttrPtr, "ShowStatusLabel", "Makes status label visible or not", false, false);
 	I_END_COMPONENT;
 
 protected:
+	static const int GeneralStatusModelId = -1;
+
+	static QIcon GetCategoryIcon(istd::IInformationProvider::InformationCategory category);
+
 	// reimplemented (imod::CMultiModelDispatcherBase)
 	virtual void OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr);
 
@@ -123,10 +130,13 @@ protected:
 private:
 	I_ATTR(int, m_horizontalViewsAttrPtr);
 	I_ATTR(int, m_verticalViewsAttrPtr);
+	I_REF(istd::IInformationProvider, m_generalInformationProviderCompPtr);
+	I_REF(imod::IModel, m_generalInformationModelCompPtr);
 	I_MULTIREF(istd::IInformationProvider, m_informationProvidersCompPtr);
 	I_MULTIREF(imod::IModel, m_informationModelsCompPtr);
 	I_MULTIREF(iqt2d::IViewExtender, m_viewExtendersCompPtr);
 	I_ATTR(QString, m_viewLabelPrefixAttrPtr);
+	I_ATTR(bool, m_showStatusLabelAttrPtr);
 	
 	int m_rowCount;
 	int m_columnCount;

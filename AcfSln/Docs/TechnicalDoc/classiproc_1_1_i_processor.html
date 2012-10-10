@@ -37,7 +37,7 @@
 <div class="title">iproc::IProcessor Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iproc::IProcessor" -->
+<!-- doxytag: class="iproc::IProcessor" --><!-- doxytag: inherits="istd::IPolymorphic" -->
 <p>Interface for all synchrone and assynchrone processors with <em>"push data"</em> model.  
  <a href="classiproc_1_1_i_processor.html#details">More...</a></p>
 
@@ -48,14 +48,15 @@ Inheritance diagram for iproc::IProcessor:</div>
  <div class="center">
   <img src="classiproc_1_1_i_processor.png" usemap="#iproc::IProcessor_map" alt=""/>
   <map id="iproc::IProcessor_map" name="iproc::IProcessor_map">
-<area href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor." alt="icam::IBitmapAcquisition" shape="rect" coords="209,56,408,80"/>
-<area href="classiedge_1_1_i_edge_lines_processor.html" title="Interface for edge lines processing." alt="iedge::IEdgeLinesProcessor" shape="rect" coords="209,112,408,136"/>
-<area href="classiedge_1_1_i_edges_extractor.html" title="Interface for edge lines extraction from the image." alt="iedge::IEdgesExtractor" shape="rect" coords="209,168,408,192"/>
-<area href="classiipr_1_1_i_caliper_processor.html" alt="iipr::ICaliperProcessor" shape="rect" coords="209,224,408,248"/>
-<area href="classiipr_1_1_i_feature_to_feature_processor.html" title="Allow to extract some features from another one." alt="iipr::IFeatureToFeatureProcessor" shape="rect" coords="209,280,408,304"/>
-<area href="classiipr_1_1_i_image_to_feature_processor.html" title="Allow to extract some features from the image." alt="iipr::IImageToFeatureProcessor" shape="rect" coords="209,336,408,360"/>
-<area href="classiipr_1_1_i_line_projection_processor.html" alt="iipr::ILineProjectionProcessor" shape="rect" coords="209,392,408,416"/>
-<area href="classimeas_1_1_i_sample_acquisition.html" title="Sample acquisition processor." alt="imeas::ISampleAcquisition" shape="rect" coords="209,448,408,472"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,199,24"/>
+<area href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor." alt="icam::IBitmapAcquisition" shape="rect" coords="209,112,408,136"/>
+<area href="classiedge_1_1_i_edge_lines_processor.html" title="Interface for edge lines processing." alt="iedge::IEdgeLinesProcessor" shape="rect" coords="209,168,408,192"/>
+<area href="classiedge_1_1_i_edges_extractor.html" title="Interface for edge lines extraction from the image." alt="iedge::IEdgesExtractor" shape="rect" coords="209,224,408,248"/>
+<area href="classiipr_1_1_i_caliper_processor.html" alt="iipr::ICaliperProcessor" shape="rect" coords="209,280,408,304"/>
+<area href="classiipr_1_1_i_feature_to_feature_processor.html" title="Allow to extract some features from another one." alt="iipr::IFeatureToFeatureProcessor" shape="rect" coords="209,336,408,360"/>
+<area href="classiipr_1_1_i_image_to_feature_processor.html" title="Allow to extract some features from the image." alt="iipr::IImageToFeatureProcessor" shape="rect" coords="209,392,408,416"/>
+<area href="classiipr_1_1_i_line_projection_processor.html" alt="iipr::ILineProjectionProcessor" shape="rect" coords="209,448,408,472"/>
+<area href="classimeas_1_1_i_sample_acquisition.html" title="Sample acquisition processor." alt="imeas::ISampleAcquisition" shape="rect" coords="209,504,408,528"/>
 </map>
  </div></div>
 
@@ -84,13 +85,13 @@ Public Types</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe state of task.  <a href="classiproc_1_1_i_processor.html#a53fe9860f57b67e209887f985cf3ea73">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#a21bebcb085e8e93dc6920ad3dcf6c4ce">GetProcessorState</a> (const iprm::IParamsSet *paramsPtr) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#a21bebcb085e8e93dc6920ad3dcf6c4ce">GetProcessorState</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get state of this processor for processing of specified parameters.  <a href="#a21bebcb085e8e93dc6920ad3dcf6c4ce"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#a18d945c422d423fa69be5c2a136e1258">AreParamsAccepted</a> (const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#a18d945c422d423fa69be5c2a136e1258">AreParamsAccepted</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if specified parameter set is accepted for this processor.  <a href="#a18d945c422d423fa69be5c2a136e1258"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#ad5afd83168811f2e276fa4d57821b013">DoProcessing</a> (const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#ad5afd83168811f2e276fa4d57821b013">DoProcessing</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *progressManagerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do synchronized processing.  <a href="#ad5afd83168811f2e276fa4d57821b013"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#af214e4076c2fa524b9aa6de572e90170">BeginTask</a> (const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#af214e4076c2fa524b9aa6de572e90170">BeginTask</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *progressManagerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin new task for this processor and add them to queue.  <a href="#af214e4076c2fa524b9aa6de572e90170"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#abb082ed0fb7e87d975848e53aad84f89">WaitTaskFinished</a> (int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for task is finished.  <a href="#abb082ed0fb7e87d975848e53aad84f89"></a><br/></td></tr>
@@ -100,7 +101,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of any ready task.  <a href="#a4afcb910ebe56624cb240a09b998581a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#ab8c6e1b11221b853398eadc0953b2f07">GetTaskState</a> (int taskId=-1) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get actual task state.  <a href="#ab8c6e1b11221b853398eadc0953b2f07"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#a71cf33bedd0292459b281926cb2df448">InitProcessor</a> (const iprm::IParamsSet *paramsPtr)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_processor.html#a71cf33bedd0292459b281926cb2df448">InitProcessor</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Init processor to optimal process with specified params.  <a href="#a71cf33bedd0292459b281926cb2df448"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -217,19 +218,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iproc::IProcessor::AreParamsAccepted </td>
           <td>(</td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const istd::IPolymorphic *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
           <td class="paramname"><em>inputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const istd::IChangeable *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
           <td class="paramname"><em>outputPtr</em>&#160;</td>
         </tr>
         <tr>
@@ -262,26 +263,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual int iproc::IProcessor::BeginTask </td>
           <td>(</td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const istd::IPolymorphic *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
           <td class="paramname"><em>inputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">istd::IChangeable *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
           <td class="paramname"><em>outputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ibase::IProgressManager *&#160;</td>
-          <td class="paramname"><em>progressManagerPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *&#160;</td>
+          <td class="paramname"><em>progressManagerPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -342,26 +343,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual int iproc::IProcessor::DoProcessing </td>
           <td>(</td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const istd::IPolymorphic *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
           <td class="paramname"><em>inputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">istd::IChangeable *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
           <td class="paramname"><em>outputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ibase::IProgressManager *&#160;</td>
-          <td class="paramname"><em>progressManagerPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *&#160;</td>
+          <td class="paramname"><em>progressManagerPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -387,7 +388,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual int iproc::IProcessor::GetProcessorState </td>
           <td>(</td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -468,7 +469,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void iproc::IProcessor::InitProcessor </td>
           <td>(</td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>

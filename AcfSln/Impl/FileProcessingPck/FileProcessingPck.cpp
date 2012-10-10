@@ -14,7 +14,7 @@
 **	If you are unsure which license is appropriate for your use, please
 **	contact us at info@imagingtools.de.
 **
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
 **	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
@@ -71,9 +71,14 @@ I_EXPORT_COMPONENT(
 			"File Converter" IM_CATEGORY(I_DATA_PROCESSING I_SERVICE));
 
 I_EXPORT_COMPONENT(
-			CopyProcessor,
+			CopyFilesTree,
 			"Copy files from one directory to another one",
 			"Copy Dir Filter Installation Tool" IM_TAG("File Processing"));
+
+I_EXPORT_COMPONENT(
+			ComposedCopyFiles,
+			"Composed file copy",
+			"Copy Dir Files Composed Set List Multiple" IM_TAG("File Processing"));
 
 
 } // namespace FileProcessingPck

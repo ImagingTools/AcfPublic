@@ -34,8 +34,8 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtCore/QList&gt;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;iser/IFileLoader.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_i_locked_producer_8h.html">iproc/TILockedProducer.h</a>&quot;</span>
 <a name="l00015"></a>00015 
@@ -50,7 +50,7 @@
 <a name="l00029"></a>00029                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">TILockedProducer</a>&lt;Key, CacheObject&gt;
 <a name="l00030"></a>00030 {
 <a name="l00031"></a>00031 <span class="keyword">public</span>:
-<a name="l00032"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#af57ca634721f62f6f3ece442f582ebbd">00032</a>        <span class="keyword">typedef</span> icomp::CComponentBase <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#af57ca634721f62f6f3ece442f582ebbd">BaseClass</a>;
+<a name="l00032"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#af57ca634721f62f6f3ece442f582ebbd">00032</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#af57ca634721f62f6f3ece442f582ebbd">BaseClass</a>;
 <a name="l00033"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#aacdbbb443d1969232634d0ed05437ce6">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">TILockedProducer&lt;Key, CacheObject&gt;</a> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#aacdbbb443d1969232634d0ed05437ce6">LockedProducerType</a>;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html" title="Template base implementation iproc::TILockedProducer caching (buffering) objects using file system...">TFileCachedProducerCompBase</a>);
@@ -77,7 +77,7 @@
 <a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#aa3a79666d440d2204579865d39440f15" title="Get number of maximal cached files.">GetMaxCachedFilesCount</a>() <span class="keyword">const</span> = 0;
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 <span class="keyword">private</span>:
-<a name="l00068"></a>00068        I_REF(iser::IFileLoader, m_cacheLoaderCompPtr);
+<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_cacheLoaderCompPtr);
 <a name="l00069"></a>00069        I_TREF(<a class="code" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">LockedProducerType</a>, m_slaveCacheEngineCompPtr);
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071        <span class="keyword">typedef</span> QMap&lt;Key, QString&gt; KeyToFileNameMap;
@@ -102,7 +102,7 @@
 <a name="l00090"></a>00090               <span class="keyword">typename</span> KeyToFileNameMap::iterator foundIter = m_keyToFileNameMap.find(key);
 <a name="l00091"></a>00091               <span class="keywordflow">if</span> (foundIter != m_keyToFileNameMap.end()){
 <a name="l00092"></a>00092                      cacheFilePath = foundIter.value();
-<a name="l00093"></a>00093                      I_ASSERT(!cacheFilePath.isEmpty());
+<a name="l00093"></a>00093                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(!cacheFilePath.isEmpty());
 <a name="l00094"></a>00094               }
 <a name="l00095"></a>00095               <span class="keywordflow">else</span>{
 <a name="l00096"></a>00096                      cacheFilePath = CalcCacheFilePath(key);
@@ -110,17 +110,17 @@
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099               <span class="keywordflow">if</span> (!cacheFilePath.isEmpty()){
 <a name="l00100"></a>00100                      <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;IsOperationSupported(
-<a name="l00101"></a>00101                                           NULL,
+<a name="l00101"></a>00101                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00102"></a>00102                                           &amp;cacheFilePath,
-<a name="l00103"></a>00103                                           iser::IFileLoader::QF_LOAD | iser::IFileLoader::QF_FILE,
+<a name="l00103"></a>00103                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df">iser::IFileLoader::QF_LOAD</a> | <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb">iser::IFileLoader::QF_FILE</a>,
 <a name="l00104"></a>00104                                           <span class="keyword">false</span>)){
-<a name="l00105"></a>00105                             istd::TDelPtr&lt;CacheObject&gt; objectPtr(<span class="keyword">new</span> CacheObject);
+<a name="l00105"></a>00105                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CacheObject&gt;</a> objectPtr(<span class="keyword">new</span> CacheObject);
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107                             <span class="keywordflow">if</span> (objectPtr.IsValid()){
-<a name="l00108"></a>00108                                    <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;LoadFromFile(*objectPtr, cacheFilePath) == iser::IFileLoader::StateOk){
-<a name="l00109"></a>00109                                           m_ownedObjects.insert(objectPtr.GetPtr());
+<a name="l00107"></a>00107                             <span class="keywordflow">if</span> (objectPtr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">IsValid</a>()){
+<a name="l00108"></a>00108                                    <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;LoadFromFile(*objectPtr, cacheFilePath) == <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51a5a3b52788a1d74ae0252724e06ebe26d">iser::IFileLoader::StateOk</a>){
+<a name="l00109"></a>00109                                           m_ownedObjects.insert(objectPtr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951">GetPtr</a>());
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111                                           <span class="keywordflow">return</span> objectPtr.PopPtr();
+<a name="l00111"></a>00111                                           <span class="keywordflow">return</span> objectPtr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html#a699e9ff86495a4b8e5f22cbdc285c2cf">PopPtr</a>();
 <a name="l00112"></a>00112                                    }
 <a name="l00113"></a>00113                                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (foundIter != m_keyToFileNameMap.end()){
 <a name="l00114"></a>00114                                           m_keyToFileNameMap.erase(foundIter);
@@ -132,10 +132,10 @@
 <a name="l00120"></a>00120 
 <a name="l00121"></a>00121        <span class="keywordflow">if</span> (m_slaveCacheEngineCompPtr.IsValid()){
 <a name="l00122"></a>00122               <span class="keyword">const</span> CacheObject* objectPtr = m_slaveCacheEngineCompPtr-&gt;ProduceLockedObject(key);
-<a name="l00123"></a>00123               <span class="keywordflow">if</span> (objectPtr != NULL){
+<a name="l00123"></a>00123               <span class="keywordflow">if</span> (objectPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00124"></a>00124                      QString cacheFilePath = CalcCacheFilePath(key);
 <a name="l00125"></a>00125                      <span class="keywordflow">if</span> (!cacheFilePath.isEmpty() &amp;&amp; m_cacheLoaderCompPtr.IsValid()){
-<a name="l00126"></a>00126                             <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;SaveToFile(*const_cast&lt;CacheObject*&gt;(objectPtr), cacheFilePath) == iser::IFileLoader::StateOk){
+<a name="l00126"></a>00126                             <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;SaveToFile(*const_cast&lt;CacheObject*&gt;(objectPtr), cacheFilePath) == <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51a5a3b52788a1d74ae0252724e06ebe26d">iser::IFileLoader::StateOk</a>){
 <a name="l00127"></a>00127                                    OnCacheFileSaved(key, cacheFilePath);
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129                                    m_keyToFileNameMap[key] = cacheFilePath;
@@ -149,14 +149,14 @@
 <a name="l00137"></a>00137               }
 <a name="l00138"></a>00138        }
 <a name="l00139"></a>00139 
-<a name="l00140"></a>00140        <span class="keywordflow">return</span> NULL;
+<a name="l00140"></a>00140        <span class="keywordflow">return</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00141"></a>00141 }
 <a name="l00142"></a>00142 
 <a name="l00143"></a>00143 
 <a name="l00144"></a>00144 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Key, <span class="keyword">class</span> CacheObject&gt;
 <a name="l00145"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#adfff54da7c6cd1d18fa1ff31327fa097">00145</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#adfff54da7c6cd1d18fa1ff31327fa097" title="End of accessing to cached element.">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::UnlockObject</a>(<span class="keyword">const</span> CacheObject* objectPtr)
 <a name="l00146"></a>00146 {
-<a name="l00147"></a>00147        I_ASSERT(objectPtr != NULL);
+<a name="l00147"></a>00147        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(objectPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149        <span class="keyword">typename</span> OwnedObjects::iterator foundIter = m_ownedObjects.find(objectPtr);
 <a name="l00150"></a>00150        <span class="keywordflow">if</span> (foundIter != m_ownedObjects.end()){
@@ -196,7 +196,7 @@
 <a name="l00184"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a0b9bbf383285d893bcd31168a167a3f8">00184</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a0b9bbf383285d893bcd31168a167a3f8" title="Removes cache files if there is too many of them.">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::CleanFileList</a>()
 <a name="l00185"></a>00185 {
 <a name="l00186"></a>00186        <span class="keywordtype">int</span> maxCachedFiles = GetMaxCachedFilesCount();
-<a name="l00187"></a>00187        I_ASSERT(maxCachedFiles &gt;= 0);
+<a name="l00187"></a>00187        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(maxCachedFiles &gt;= 0);
 <a name="l00188"></a>00188 
 <a name="l00189"></a>00189        <span class="keywordflow">while</span> (<span class="keywordtype">int</span>(m_recentlyUsedKeys.size()) &gt; maxCachedFiles){
 <a name="l00190"></a>00190               <span class="keyword">const</span> QString&amp; key = m_recentlyUsedKeys.front();

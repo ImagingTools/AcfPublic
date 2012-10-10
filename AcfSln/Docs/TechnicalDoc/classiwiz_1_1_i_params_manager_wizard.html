@@ -36,7 +36,7 @@
 <div class="title">iwiz::IParamsManagerWizard Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iwiz::IParamsManagerWizard" --><!-- doxytag: inherits="iwiz::IWizardNavigationController" -->
+<!-- doxytag: class="iwiz::IParamsManagerWizard" --><!-- doxytag: inherits="iwiz::IWizardNavigationController,iprm::IParamsManager" -->
 <p>Interface for wizard implementation based on parameter manager.  
  <a href="classiwiz_1_1_i_params_manager_wizard.html#details">More...</a></p>
 
@@ -47,9 +47,15 @@ Inheritance diagram for iwiz::IParamsManagerWizard:</div>
  <div class="center">
   <img src="classiwiz_1_1_i_params_manager_wizard.png" usemap="#iwiz::IParamsManagerWizard_map" alt=""/>
   <map id="iwiz::IParamsManagerWizard_map" name="iwiz::IParamsManagerWizard_map">
-<area href="classiwiz_1_1_i_wizard_navigation_controller.html" title="Interface for wizard navigation." alt="iwiz::IWizardNavigationController" shape="rect" coords="0,56,197,80"/>
-<area href="classistd_1_1_i_changeable.html" alt="IChangeable" shape="rect" coords="0,0,197,24"/>
-<area href="classiwiz_1_1_c_wizard_document_comp.html" title="Component implementation of a wizard controller." alt="iwiz::CWizardDocumentComp" shape="rect" coords="0,168,197,192"/>
+<area href="classiwiz_1_1_i_wizard_navigation_controller.html" title="Interface for wizard navigation." alt="iwiz::IWizardNavigationController" shape="rect" coords="0,224,197,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html" alt="iprm::IParamsManager" shape="rect" coords="207,224,404,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,168,197,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html" alt="iprm::ISelectionParam" shape="rect" coords="207,168,404,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,112,197,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="207,112,404,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="207,56,404,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="207,0,404,24"/>
+<area href="classiwiz_1_1_c_wizard_document_comp.html" title="Component implementation of a wizard controller." alt="iwiz::CWizardDocumentComp" shape="rect" coords="103,336,300,360"/>
 </map>
  </div></div>
 
@@ -62,7 +68,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for wizard implementation based on parameter manager. </p>
-<p>In this concept each wizard page is stored as <code>iprm::IParamsSet</code> object. Pages are accessible using standard iprm::IParamsManager interface. Typically no inserting or deleting of page is supported. </p>
+<p>In this concept each wizard page is stored as <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a></code> object. Pages are accessible using standard <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html">iprm::IParamsManager</a> interface. Typically no inserting or deleting of page is supported. </p>
 
 <p>Definition at line <a class="el" href="_i_params_manager_wizard_8h_source.html#l00020">20</a> of file <a class="el" href="_i_params_manager_wizard_8h_source.html">IParamsManagerWizard.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
@@ -85,7 +91,7 @@ Public Member Functions</h2></td></tr>
 <p>It is used to avoid trying switch to inactive pages. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">pageIndex</td><td>index of page. It has the same interpretation as e.g. <code>index</code> in iprm::IParamsManager::GetParamsSet or <code>index</code> in iprm::ISelectionConstraints::GetOptionName. </td></tr>
+    <tr><td class="paramname">pageIndex</td><td>index of page. It has the same interpretation as e.g. <code>index</code> in <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html#a6adca790d307f482019f49ad5d36e594">iprm::IParamsManager::GetParamsSet</a> or <code>index</code> in <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints::GetOptionName</a>. </td></tr>
   </table>
   </dd>
 </dl>

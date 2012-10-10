@@ -38,7 +38,7 @@
 <div class="title">iproc::CIterativeProcessorComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iproc::CIterativeProcessorComp" --><!-- doxytag: inherits="ibase::CLoggerComponentBase,iproc::TSyncProcessorWrap" -->
+<!-- doxytag: class="iproc::CIterativeProcessorComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,iproc::TSyncProcessorWrap,iprm::ISelectionConstraints" -->
 <p>Processor wrapper for multiple executing of a slave processor.  
  <a href="classiproc_1_1_c_iterative_processor_comp.html#details">More...</a></p>
 
@@ -49,8 +49,18 @@ Inheritance diagram for iproc::CIterativeProcessorComp:</div>
  <div class="center">
   <img src="classiproc_1_1_c_iterative_processor_comp.png" usemap="#iproc::CIterativeProcessorComp_map" alt=""/>
   <map id="iproc::CIterativeProcessorComp_map" name="iproc::CIterativeProcessorComp_map">
-<area href="classibase_1_1_c_logger_component_base.html" alt="CLoggerComponentBase" shape="rect" coords="0,0,256,24"/>
-<area href="classiproc_1_1_t_sync_processor_wrap.html" title="Wrapper of iproc::IProcessor for simple synchrone processor implementations." alt="iproc::TSyncProcessorWrap&lt; Base &gt;" shape="rect" coords="266,0,522,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="266,168,522,192"/>
+<area href="classiproc_1_1_t_sync_processor_wrap.html" title="Wrapper of iproc::IProcessor for simple synchrone processor implementations." alt="iproc::TSyncProcessorWrap&lt; Base &gt;" shape="rect" coords="532,168,788,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html" alt="iprm::ISelectionConstraints" shape="rect" coords="798,168,1054,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="266,112,522,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="532,112,788,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="798,112,1054,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,256,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_loggable.html" alt="ibase::ILoggable" shape="rect" coords="266,56,522,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html" alt="istd::ILogger" shape="rect" coords="532,56,788,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="798,56,1054,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="266,0,522,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="532,0,788,24"/>
 </map>
  </div></div>
 
@@ -60,11 +70,11 @@ Inheritance diagram for iproc::CIterativeProcessorComp:</div>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a5c38e80996484bd73eaf8524eedba0ec">MessageId</a> { <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a5c38e80996484bd73eaf8524eedba0eca1bc0a262d6eed674d2e8526d7d9dd46a">MI_BAD_BUFFER</a> =  0x6b30
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef ibase::CLoggerComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#acbfe48bc4d178444aa91bd62893e68cf">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#acbfe48bc4d178444aa91bd62893e68cf">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceiproc.html#a20696afdd1463d42b09fe2b513b13b44">iproc::CSyncProcessorBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a7c0e084c8f13147f88adb132acab1cbb">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#ac47c207560f49b1d1da03fdcbd97a381">DoProcessing</a> (const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#ac47c207560f49b1d1da03fdcbd97a381">DoProcessing</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *progressManagerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#aeac3d10f3aac8be90d52bdb1a9fc3fef">GetConstraintsFlags</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a49477b1df2ddf39f0fa0ecc6f3f4874b">GetOptionsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a483bcb83a62e43e4ff7a1eeb322f009c">GetOptionName</a> (int index) const </td></tr>
@@ -72,7 +82,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a3171f4a1f484f2e144f357cdee5d9f61">GetOptionId</a> (int index) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a6fb1d1b9ee52373138103cac8b024714">ProcessSlave</a> (const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a6fb1d1b9ee52373138103cac8b024714">ProcessSlave</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a38ea594db0ebdfa99da890128d4a22c7">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -86,13 +96,13 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef ibase::CLoggerComponentBase <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#acbfe48bc4d178444aa91bd62893e68cf">iproc::CIterativeProcessorComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#acbfe48bc4d178444aa91bd62893e68cf">iproc::CIterativeProcessorComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a3b21fc424b686e6bcf4537b75d89adf3">iproc::TSyncProcessorWrap&lt; Base &gt;</a>.</p>
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_iterative_processor_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_iterative_processor_comp_8h_source.html">CIterativeProcessorComp.h</a>.</p>
 
@@ -143,26 +153,26 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual int iproc::CIterativeProcessorComp::DoProcessing </td>
           <td>(</td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const istd::IPolymorphic *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
           <td class="paramname"><em>inputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">istd::IChangeable *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
           <td class="paramname"><em>outputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ibase::IProgressManager *&#160;</td>
-          <td class="paramname"><em>progressManagerPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *&#160;</td>
+          <td class="paramname"><em>progressManagerPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -189,6 +199,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3">iprm::ISelectionConstraints</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a96784ce3ec10619c0d3bdd4e8e6edc8e"></a><!-- doxytag: member="iproc::CIterativeProcessorComp::GetOptionDescription" ref="a96784ce3ec10619c0d3bdd4e8e6edc8e" args="(int index) const " -->
@@ -205,6 +217,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -223,6 +237,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a483bcb83a62e43e4ff7a1eeb322f009c"></a><!-- doxytag: member="iproc::CIterativeProcessorComp::GetOptionName" ref="a483bcb83a62e43e4ff7a1eeb322f009c" args="(int index) const " -->
@@ -240,6 +256,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a49477b1df2ddf39f0fa0ecc6f3f4874b"></a><!-- doxytag: member="iproc::CIterativeProcessorComp::GetOptionsCount" ref="a49477b1df2ddf39f0fa0ecc6f3f4874b" args="() const " -->
@@ -255,6 +273,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>
@@ -272,6 +292,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a6fb1d1b9ee52373138103cac8b024714"></a><!-- doxytag: member="iproc::CIterativeProcessorComp::ProcessSlave" ref="a6fb1d1b9ee52373138103cac8b024714" args="(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr)" -->
@@ -281,19 +303,19 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int iproc::CIterativeProcessorComp::ProcessSlave </td>
           <td>(</td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const istd::IPolymorphic *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
           <td class="paramname"><em>inputPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">istd::IChangeable *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
           <td class="paramname"><em>outputPtr</em>&#160;</td>
         </tr>
         <tr>

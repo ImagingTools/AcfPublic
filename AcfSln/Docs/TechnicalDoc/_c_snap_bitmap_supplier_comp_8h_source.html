@@ -32,10 +32,10 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QPair&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;istd/TDelPtr.h&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;i2d/ITransformation2d.h&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;i2d/ICalibrationProvider.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iimg/IBitmap.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_transformation2d_8h.html">i2d/ITransformation2d.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_8h.html">iimg/IBitmap.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_comp_wrap_8h.html">iproc/TSupplierCompWrap.h</a>&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="comment">// ACF-Solutions includes</span>
@@ -50,24 +50,24 @@
 <a name="l00027"></a><a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html">00027</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html" title="Implementation of bitmap supplier based on image acquisition.">CSnapBitmapSupplierComp</a>:
 <a name="l00028"></a>00028                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; QPair&lt;istd::TDelPtr&lt;const i2d::ITransformation2d&gt;, istd::TDelPtr&lt;iimg::IBitmap&gt; &gt; &gt;,
 <a name="l00029"></a>00029                      <span class="keyword">virtual</span> <span class="keyword">public</span> iipr::IBitmapProvider,
-<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::<a class="code" href="classi2d_1_1_i_calibration_provider.html">ICalibrationProvider</a>
+<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
 <a name="l00031"></a>00031 {
 <a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a><a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#abf21d4ced5925945119c0b2a232a3eae">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">iproc::TSupplierCompWrap&lt; QPair&lt;istd::TDelPtr&lt;const i2d::ITransformation2d&gt;</a>,  istd::TDelPtr&lt;iimg::IBitmap&gt; &gt; &gt; <a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#abf21d4ced5925945119c0b2a232a3eae">BaseClass</a>;
+<a name="l00033"></a><a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#abf21d4ced5925945119c0b2a232a3eae">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Wrapper implementation of interface iproc::ISupplier with preparation for component implementation...">iproc::TSupplierCompWrap&lt; QPair&lt;istd::TDelPtr&lt;const i2d::ITransformation2d&gt;</a>,  <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iimg::IBitmap&gt;</a> &gt; &gt; <a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#abf21d4ced5925945119c0b2a232a3eae">BaseClass</a>;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        I_BEGIN_COMPONENT(<a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html" title="Implementation of bitmap supplier based on image acquisition.">CSnapBitmapSupplierComp</a>);
 <a name="l00036"></a>00036               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>);
-<a name="l00037"></a>00037               I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
+<a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>);
 <a name="l00038"></a>00038               I_ASSIGN(m_bitmapCompFact, <span class="stringliteral">&quot;BitmapFactory&quot;</span>, <span class="stringliteral">&quot;Use to create bitmap object&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapFactory&quot;</span>);
 <a name="l00039"></a>00039               I_ASSIGN(m_bitmapAcquisitionCompPtr, <span class="stringliteral">&quot;BitmapAcquisition&quot;</span>, <span class="stringliteral">&quot;Bitmap acquision object for image snap&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapAcquisition&quot;</span>);
 <a name="l00040"></a>00040               I_ASSIGN(m_calibrationCompPtr, <span class="stringliteral">&quot;Calibration&quot;</span>, <span class="stringliteral">&quot;Optional calibration object&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Calibration&quot;</span>);
 <a name="l00041"></a>00041        I_END_COMPONENT;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (iipr::IBitmapProvider)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keyword">const</span> iimg::IBitmap* <a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#a75c695192e6efec5d1cf378b5da900a6" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#a75c695192e6efec5d1cf378b5da900a6" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> i2d::ITransformation2d* <a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#a8a68ddc1f0ddaa674f516dabfc6a54cd">GetCalibration</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#a8a68ddc1f0ddaa674f516dabfc6a54cd">GetCalibration</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049 <span class="keyword">protected</span>:
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
@@ -75,10 +75,10 @@
 <a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#aa51d7c3220ef8671ea5db87d90c004d3">ProduceObject</a>(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054 <span class="keyword">private</span>:
-<a name="l00055"></a>00055        I_FACT(iimg::IBitmap, m_bitmapCompFact);
+<a name="l00055"></a>00055        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        I_REF(<a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>, m_bitmapAcquisitionCompPtr);
-<a name="l00058"></a>00058        I_REF(i2d::ITransformation2d, m_calibrationCompPtr);
+<a name="l00058"></a>00058        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>, m_calibrationCompPtr);
 <a name="l00059"></a>00059 };
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 

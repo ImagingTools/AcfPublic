@@ -37,7 +37,7 @@
 <div class="title">ifileproc::CFileConvertOverProcessorComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ifileproc::CFileConvertOverProcessorComp" --><!-- doxytag: inherits="ibase::CLoggerComponentBase" -->
+<!-- doxytag: class="ifileproc::CFileConvertOverProcessorComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,ibase::IFileConvertCopy" -->
 <p>Component for a file conversion over a data processor.  
  <a href="classifileproc_1_1_c_file_convert_over_processor_comp.html#details">More...</a></p>
 
@@ -48,7 +48,15 @@ Inheritance diagram for ifileproc::CFileConvertOverProcessorComp:</div>
  <div class="center">
   <img src="classifileproc_1_1_c_file_convert_over_processor_comp.png" usemap="#ifileproc::CFileConvertOverProcessorComp_map" alt=""/>
   <map id="ifileproc::CFileConvertOverProcessorComp_map" name="ifileproc::CFileConvertOverProcessorComp_map">
-<area href="classibase_1_1_c_logger_component_base.html" alt="CLoggerComponentBase" shape="rect" coords="0,0,258,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="268,168,526,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html" alt="ibase::IFileConvertCopy" shape="rect" coords="536,168,794,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="268,112,526,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="536,112,794,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,258,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_loggable.html" alt="ibase::ILoggable" shape="rect" coords="268,56,526,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html" alt="istd::ILogger" shape="rect" coords="536,56,794,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="268,0,526,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="536,0,794,24"/>
 </map>
  </div></div>
 
@@ -56,11 +64,11 @@ Inheritance diagram for ifileproc::CFileConvertOverProcessorComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef ibase::CLoggerComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_convert_over_processor_comp.html#a25e84206e80578e52f1f054f12450704">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_convert_over_processor_comp.html#a25e84206e80578e52f1f054f12450704">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_convert_over_processor_comp.html#a5e5b7e0cd41d6e60c34d314db3e34c1d">CFileConvertOverProcessorComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_convert_over_processor_comp.html#a57b8f9fe23771813e19619a4b9cc0930">ConvertFile</a> (const QString &amp;inputFilePath, const QString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_convert_over_processor_comp.html#a3f2a1745ad9b0327658cd5e163d4607a">ConvertFiles</a> (const QString &amp;inputPath, const QString &amp;outputPath, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component for a file conversion over a data processor. </p>
@@ -72,11 +80,13 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef ibase::CLoggerComponentBase <a class="el" href="classifileproc_1_1_c_file_convert_over_processor_comp.html#a25e84206e80578e52f1f054f12450704">ifileproc::CFileConvertOverProcessorComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classifileproc_1_1_c_file_convert_over_processor_comp.html#a25e84206e80578e52f1f054f12450704">ifileproc::CFileConvertOverProcessorComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_file_convert_over_processor_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_file_convert_over_processor_comp_8h_source.html">CFileConvertOverProcessorComp.h</a>.</p>
 
@@ -100,27 +110,27 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a57b8f9fe23771813e19619a4b9cc0930"></a><!-- doxytag: member="ifileproc::CFileConvertOverProcessorComp::ConvertFile" ref="a57b8f9fe23771813e19619a4b9cc0930" args="(const QString &amp;inputFilePath, const QString &amp;outputFilePath, const iprm::IParamsSet *paramsPtr=NULL) const " -->
+<a class="anchor" id="a3f2a1745ad9b0327658cd5e163d4607a"></a><!-- doxytag: member="ifileproc::CFileConvertOverProcessorComp::ConvertFiles" ref="a3f2a1745ad9b0327658cd5e163d4607a" args="(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool ifileproc::CFileConvertOverProcessorComp::ConvertFile </td>
+          <td class="memname">virtual bool ifileproc::CFileConvertOverProcessorComp::ConvertFiles </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>inputFilePath</em>, </td>
+          <td class="paramname"><em>inputPath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>outputFilePath</em>, </td>
+          <td class="paramname"><em>outputPath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
-          <td class="paramname"><em>paramsPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
+          <td class="paramname"><em>paramsPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -130,6 +140,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html#ad11442c7773dc7ace817074217e3ef4c">ibase::IFileConvertCopy</a>.</p>
 
 </div>
 </div>

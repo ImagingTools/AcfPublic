@@ -38,7 +38,7 @@
 <div class="title">ifileproc::CFileNamingParamsComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ifileproc::CFileNamingParamsComp" --><!-- doxytag: inherits="ifileproc::IFileNamingParams" -->
+<!-- doxytag: class="ifileproc::CFileNamingParamsComp" --><!-- doxytag: inherits="icomp::CComponentBase,ifileproc::IFileNamingParams" -->
 <p><code>#include &lt;<a class="el" href="_c_file_naming_params_comp_8h_source.html">CFileNamingParamsComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ifileproc::CFileNamingParamsComp:</div>
@@ -46,7 +46,13 @@ Inheritance diagram for ifileproc::CFileNamingParamsComp:</div>
  <div class="center">
   <img src="classifileproc_1_1_c_file_naming_params_comp.png" usemap="#ifileproc::CFileNamingParamsComp_map" alt=""/>
   <map id="ifileproc::CFileNamingParamsComp_map" name="ifileproc::CFileNamingParamsComp_map">
-<area href="classifileproc_1_1_i_file_naming_params.html" title="Interface for calculation parameters of the new file name for any file item." alt="ifileproc::IFileNamingParams" shape="rect" coords="0,0,210,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,168,210,192"/>
+<area href="classifileproc_1_1_i_file_naming_params.html" title="Interface for calculation parameters of the new file name for any file item." alt="ifileproc::IFileNamingParams" shape="rect" coords="220,168,430,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,112,210,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="220,112,430,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,56,210,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="220,56,430,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="220,0,430,24"/>
 </map>
  </div></div>
 
@@ -54,7 +60,7 @@ Inheritance diagram for ifileproc::CFileNamingParamsComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef icomp::CComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a9f93a7d613e1f76e2e5651e6a5f08149">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a9f93a7d613e1f76e2e5651e6a5f08149">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a24f32b7094354f7e0941f37e615b4ced">CFileNamingParamsComp</a> ()</td></tr>
@@ -73,7 +79,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of text patterns, that must be removed from the output file name.  <a href="#ab4fae40b6f399ed4e77df09e4919406f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a86d9a039cceecf955c86ee481c9d56b2">SetPatternsToRemove</a> (const QStringList &amp;patternsToRemove)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set list of text patterns, that must be removed from the output file name.  <a href="#a86d9a039cceecf955c86ee481c9d56b2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a7bcdbd60b2cd6089b7f3c354a4edef08">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a7bcdbd60b2cd6089b7f3c354a4edef08">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a44638976c7253ff544987d042fb4e737">OnComponentCreated</a> ()</td></tr>
@@ -87,7 +93,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef icomp::CComponentBase <a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a9f93a7d613e1f76e2e5651e6a5f08149">ifileproc::CFileNamingParamsComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classifileproc_1_1_c_file_naming_params_comp.html#a9f93a7d613e1f76e2e5651e6a5f08149">ifileproc::CFileNamingParamsComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -211,6 +217,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html#a8a79eed0233a1ff69972975180f5210a">icomp::CComponentBase</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7bcdbd60b2cd6089b7f3c354a4edef08"></a><!-- doxytag: member="ifileproc::CFileNamingParamsComp::Serialize" ref="a7bcdbd60b2cd6089b7f3c354a4edef08" args="(iser::IArchive &amp;archive)" -->
@@ -220,13 +228,15 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool ifileproc::CFileNamingParamsComp::Serialize </td>
           <td>(</td>
-          <td class="paramtype">iser::IArchive &amp;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 </div>
 </div>

@@ -69,9 +69,9 @@
 <a name="l00046"></a>00046 <span class="keyword">protected</span>:           
 <a name="l00047"></a>00047        <span class="comment">// reimplemented (iipr::CImageProcessorCompBase)</span>
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_unary_transform_processor_comp.html#afcd51796755229db92d633938e44b4a0">ProcessImage</a>(
-<a name="l00049"></a>00049                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr,
-<a name="l00050"></a>00050                             <span class="keyword">const</span> iimg::IBitmap&amp; inputImage,
-<a name="l00051"></a>00051                             iimg::IBitmap&amp; outputImage);
+<a name="l00049"></a>00049                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00050"></a>00050                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputImage,
+<a name="l00051"></a>00051                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage);
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 <span class="keyword">private</span>:
 <a name="l00054"></a>00054        Predicate m_predicate;
@@ -82,23 +82,23 @@
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PixelType, <span class="keyword">class</span> Predicate&gt; 
 <a name="l00061"></a><a class="code" href="classiipr_1_1_t_unary_transform_processor_comp.html#afcd51796755229db92d633938e44b4a0">00061</a> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_unary_transform_processor_comp.html#afcd51796755229db92d633938e44b4a0">TUnaryTransformProcessorComp&lt;PixelType, Predicate&gt;::ProcessImage</a>(
-<a name="l00062"></a>00062                      <span class="keyword">const</span> iprm::IParamsSet* <span class="comment">/*paramsPtr*/</span>,
-<a name="l00063"></a>00063                      <span class="keyword">const</span> iimg::IBitmap&amp; inputImage,
-<a name="l00064"></a>00064                      iimg::IBitmap&amp; outputImage)
+<a name="l00062"></a>00062                      <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* <span class="comment">/*paramsPtr*/</span>,
+<a name="l00063"></a>00063                      <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputImage,
+<a name="l00064"></a>00064                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage)
 <a name="l00065"></a>00065 {
-<a name="l00066"></a>00066        <span class="keywordflow">if</span> (!outputImage.CreateBitmap(inputImage.GetPixelFormat(), inputImage.GetImageSize())){
+<a name="l00066"></a>00066        <span class="keywordflow">if</span> (!outputImage.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a6591ed392c0fa6e0d4b32f3a7ac7cf9d">CreateBitmap</a>(inputImage.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#aa71b5c7fe94cd389e8b831a56935415e">GetPixelFormat</a>(), inputImage.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01">GetImageSize</a>())){
 <a name="l00067"></a>00067               SendErrorMessage(0, <span class="stringliteral">&quot;Output bitmap could not be created&quot;</span>);
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069               <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// cannot create output image</span>
 <a name="l00070"></a>00070        }
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072        <span class="keywordtype">int</span> imageWidth = inputImage.GetImageSize().GetX();
-<a name="l00073"></a>00073        <span class="keywordtype">int</span> imageHeight = inputImage.GetImageSize().GetY();
-<a name="l00074"></a>00074        <span class="keywordtype">int</span> componentsCount = inputImage.GetComponentsCount();
+<a name="l00072"></a>00072        <span class="keywordtype">int</span> imageWidth = inputImage.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01">GetImageSize</a>().<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>();
+<a name="l00073"></a>00073        <span class="keywordtype">int</span> imageHeight = inputImage.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01">GetImageSize</a>().<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>();
+<a name="l00074"></a>00074        <span class="keywordtype">int</span> componentsCount = inputImage.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_raster_image.html#a4a784fb8ff21098450892345638c0f68">GetComponentsCount</a>();
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; imageHeight; y++){
-<a name="l00077"></a>00077               PixelType* inputImageLinePtr = (PixelType*)inputImage.GetLinePtr(y);
-<a name="l00078"></a>00078               PixelType* outputImageLinePtr = (PixelType*)outputImage.GetLinePtr(y);
+<a name="l00077"></a>00077               PixelType* inputImageLinePtr = (PixelType*)inputImage.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f">GetLinePtr</a>(y);
+<a name="l00078"></a>00078               PixelType* outputImageLinePtr = (PixelType*)outputImage.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html#a2bcff0f9b40b1128dbb4a382206d442f">GetLinePtr</a>(y);
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; imageWidth; x++){
 <a name="l00081"></a>00081                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> colorComponentIndex = 0; colorComponentIndex &lt; componentsCount; colorComponentIndex++){

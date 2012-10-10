@@ -37,7 +37,7 @@
 <div class="title">icbox::CMemoryBankSerializerComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="icbox::CMemoryBankSerializerComp" --><!-- doxytag: inherits="ibase::CLoggerComponentBase" -->
+<!-- doxytag: class="icbox::CMemoryBankSerializerComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,iser::IFileLoader" -->
 <p><code>#include &lt;<a class="el" href="_c_memory_bank_serializer_comp_8h_source.html">CMemoryBankSerializerComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for icbox::CMemoryBankSerializerComp:</div>
@@ -45,7 +45,16 @@ Inheritance diagram for icbox::CMemoryBankSerializerComp:</div>
  <div class="center">
   <img src="classicbox_1_1_c_memory_bank_serializer_comp.png" usemap="#icbox::CMemoryBankSerializerComp_map" alt=""/>
   <map id="icbox::CMemoryBankSerializerComp_map" name="icbox::CMemoryBankSerializerComp_map">
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_logger_component_base.html" alt="CLoggerComponentBase" shape="rect" coords="0,0,217,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="227,168,444,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html" alt="iser::IFileLoader" shape="rect" coords="681,168,898,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="227,112,444,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html" alt="iser::IFileTypeInfo" shape="rect" coords="681,112,898,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,217,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_loggable.html" alt="ibase::ILoggable" shape="rect" coords="227,56,444,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html" alt="istd::ILogger" shape="rect" coords="454,56,671,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="681,56,898,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="227,0,444,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="454,0,671,24"/>
 </map>
  </div></div>
 
@@ -55,15 +64,15 @@ Inheritance diagram for icbox::CMemoryBankSerializerComp:</div>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#ad09059de033cc8d5eeca18f4c0306b79">MessageId</a> { <a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#ad09059de033cc8d5eeca18f4c0306b79a5e8cfd94201e0696c3922a69e09c1a12">MI_CBIOS_ERROR</a> =  0xad20
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef ibase::CLoggerComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a3a49499a42d29a56caf441bbb53d9c07">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a3a49499a42d29a56caf441bbb53d9c07">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#abdf7064b6330cff9ecb2abc4c7ec2983">CMemoryBankSerializerComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#afb75ed0d7a3029887fc4b1e004d14725">IsOperationSupported</a> (const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a9feb8a6bfddb2b4373dc4711f694b4f5">LoadFromFile</a> (istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#addbf48f5c3d47927affbdcc6b36b3c41">SaveToFile</a> (const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#afb75ed0d7a3029887fc4b1e004d14725">IsOperationSupported</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const QString *filePathPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, int flags=-1, bool beQuiet=true) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a9feb8a6bfddb2b4373dc4711f694b4f5">LoadFromFile</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#addbf48f5c3d47927affbdcc6b36b3c41">SaveToFile</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a7bd0ab973e4d1201472f69b7be173f63">GetFileExtensions</a> (QStringList &amp;result, int flags=-1, bool doAppend=false) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a4e3be8898630e880622ac43de886dad3">GetTypeDescription</a> (const QString *extensionPtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a4e3be8898630e880622ac43de886dad3">GetTypeDescription</a> (const QString *extensionPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a06eba6f5d6afef66a7c0cd45999e1206">CheckError</a> (quint32 errorCode) const </td></tr>
@@ -83,11 +92,13 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef ibase::CLoggerComponentBase <a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a3a49499a42d29a56caf441bbb53d9c07">icbox::CMemoryBankSerializerComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classicbox_1_1_c_memory_bank_serializer_comp.html#a3a49499a42d29a56caf441bbb53d9c07">icbox::CMemoryBankSerializerComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_memory_bank_serializer_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_memory_bank_serializer_comp_8h_source.html">CMemoryBankSerializerComp.h</a>.</p>
 
@@ -110,6 +121,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </dd>
 </dl>
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4">iser::IFileLoader</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_memory_bank_serializer_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_memory_bank_serializer_comp_8h_source.html">CMemoryBankSerializerComp.h</a>.</p>
 
@@ -213,6 +226,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2b1e53b1976bc7a962684a7f64577b70">iser::IFileTypeInfo</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a4e3be8898630e880622ac43de886dad3"></a><!-- doxytag: member="icbox::CMemoryBankSerializerComp::GetTypeDescription" ref="a4e3be8898630e880622ac43de886dad3" args="(const QString *extensionPtr=NULL) const " -->
@@ -223,12 +238,14 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual QString icbox::CMemoryBankSerializerComp::GetTypeDescription </td>
           <td>(</td>
           <td class="paramtype">const QString *&#160;</td>
-          <td class="paramname"><em>extensionPtr</em> = <code>NULL</code></td><td>)</td>
+          <td class="paramname"><em>extensionPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#af40e91e01c4040e96b9ed978a67eada8">iser::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -239,14 +256,14 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool icbox::CMemoryBankSerializerComp::IsOperationSupported </td>
           <td>(</td>
-          <td class="paramtype">const istd::IChangeable *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td>
           <td class="paramname"><em>dataObjectPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString *&#160;</td>
-          <td class="paramname"><em>filePathPtr</em> = <code>NULL</code>, </td>
+          <td class="paramname"><em>filePathPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -269,6 +286,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a4e5d8cde47513d09de802aa28697249d">iser::IFileLoader</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9feb8a6bfddb2b4373dc4711f694b4f5"></a><!-- doxytag: member="icbox::CMemoryBankSerializerComp::LoadFromFile" ref="a9feb8a6bfddb2b4373dc4711f694b4f5" args="(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const " -->
@@ -278,7 +297,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual int icbox::CMemoryBankSerializerComp::LoadFromFile </td>
           <td>(</td>
-          <td class="paramtype">istd::IChangeable &amp;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -296,6 +315,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a1515f5bff4437903bb15dafe82b56755">iser::IFileLoader</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abb3222c839521c5fe500f1628428afbf"></a><!-- doxytag: member="icbox::CMemoryBankSerializerComp::OnComponentCreated" ref="abb3222c839521c5fe500f1628428afbf" args="()" -->
@@ -311,6 +332,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 </div>
 </div>
@@ -370,7 +393,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual int icbox::CMemoryBankSerializerComp::SaveToFile </td>
           <td>(</td>
-          <td class="paramtype">const istd::IChangeable &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -387,6 +410,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a600870dbf0fc5a833bfe747bf1a60c1c">iser::IFileLoader</a>.</p>
 
 </div>
 </div>

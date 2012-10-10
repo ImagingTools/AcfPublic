@@ -38,8 +38,24 @@
 <div class="title">iedge::CEdgeLine Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iedge::CEdgeLine" -->
+<!-- doxytag: class="iedge::CEdgeLine" --><!-- doxytag: inherits="i2d::CObject2dBase" -->
 <p><code>#include &lt;<a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for iedge::CEdgeLine:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classiedge_1_1_c_edge_line.png" usemap="#iedge::CEdgeLine_map" alt=""/>
+  <map id="iedge::CEdgeLine_map" name="iedge::CEdgeLine_map">
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_object2d_base.html" alt="i2d::CObject2dBase" shape="rect" coords="79,224,227,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html" alt="i2d::IObject2d" shape="rect" coords="79,168,227,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,148,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html" alt="i2d::ICalibrationProvider" shape="rect" coords="158,112,306,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,148,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="158,56,306,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,148,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="158,0,306,24"/>
+</map>
+ </div></div>
 
 <p><a href="classiedge_1_1_c_edge_line-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -65,15 +81,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ad512fbfff6f874f9b72021ff522e39fc">GetMinWeight</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a023dd5148a084871138894f49d84a27a">GetMaxWeight</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#acde2e468afa74d7c098a98955e696c28">InsertNode</a> (const <a class="el" href="classiedge_1_1_c_edge_node.html">CEdgeNode</a> &amp;node)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a242c83bbd84723911a101091ccbe861e">CopyFromPolyline</a> (const i2d::CPolyline &amp;polyline, double weight=1.0, const i2d::CAffine2d *transformPtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a9aed1a073d7b4525f79d7c2aed8f0d46">CopyToPolyline</a> (i2d::CPolyline &amp;polyline, const i2d::CAffine2d *transformPtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual i2d::CVector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ad04631301646dde4857738acd89bb8bf">GetCenter</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a86725343db2e08c12c528ca88d0799b7">MoveCenterTo</a> (const i2d::CVector2d &amp;position)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a5abb8d4eef9681e63c25e8d8f62bc190">Transform</a> (const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a7aaed40624ff2c63dd7c83a1167234fe">InvTransform</a> (const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a189853afff2db9204e132d5081bf3f41">GetTransformed</a> (const i2d::ITransformation2d &amp;transformation, IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a88a5f051df9adf3cd6fb0d2eba1e2d2b">GetInvTransformed</a> (const i2d::ITransformation2d &amp;transformation, IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ab107da72006c2be0ca88a9e440c2e7b7">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a242c83bbd84723911a101091ccbe861e">CopyFromPolyline</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_polyline.html">i2d::CPolyline</a> &amp;polyline, double weight=1.0, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> *transformPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a9aed1a073d7b4525f79d7c2aed8f0d46">CopyToPolyline</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_polyline.html">i2d::CPolyline</a> &amp;polyline, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> *transformPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ad04631301646dde4857738acd89bb8bf">GetCenter</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a86725343db2e08c12c528ca88d0799b7">MoveCenterTo</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a5abb8d4eef9681e63c25e8d8f62bc190">Transform</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d::EM_NONE</a>, double *errorFactorPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a7aaed40624ff2c63dd7c83a1167234fe">InvTransform</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d::EM_NONE</a>, double *errorFactorPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a189853afff2db9204e132d5081bf3f41">GetTransformed</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, IObject2d &amp;result, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d::EM_NONE</a>, double *errorFactorPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a88a5f051df9adf3cd6fb0d2eba1e2d2b">GetInvTransformed</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, IObject2d &amp;result, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d::EM_NONE</a>, double *errorFactorPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ab107da72006c2be0ca88a9e440c2e7b7">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a139b13e1fd9b569cd73c25c011ce9e6c">CalcVolatile</a> () const </td></tr>
@@ -157,7 +173,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void iedge::CEdgeLine::CopyFromPolyline </td>
           <td>(</td>
-          <td class="paramtype">const i2d::CPolyline &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_polyline.html">i2d::CPolyline</a> &amp;&#160;</td>
           <td class="paramname"><em>polyline</em>, </td>
         </tr>
         <tr>
@@ -169,8 +185,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const i2d::CAffine2d *&#160;</td>
-          <td class="paramname"><em>transformPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> *&#160;</td>
+          <td class="paramname"><em>transformPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -190,14 +206,14 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void iedge::CEdgeLine::CopyToPolyline </td>
           <td>(</td>
-          <td class="paramtype">i2d::CPolyline &amp;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_polyline.html">i2d::CPolyline</a> &amp;&#160;</td>
           <td class="paramname"><em>polyline</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const i2d::CAffine2d *&#160;</td>
-          <td class="paramname"><em>transformPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> *&#160;</td>
+          <td class="paramname"><em>transformPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -215,7 +231,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual i2d::CVector2d iedge::CEdgeLine::GetCenter </td>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> iedge::CEdgeLine::GetCenter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -223,6 +239,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html#a49e87ff841963eb9041b62581e19eb70">i2d::IObject2d</a>.</p>
 
 </div>
 </div>
@@ -233,7 +251,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iedge::CEdgeLine::GetInvTransformed </td>
           <td>(</td>
-          <td class="paramtype">const i2d::ITransformation2d &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td>
           <td class="paramname"><em>transformation</em>, </td>
         </tr>
         <tr>
@@ -245,14 +263,14 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">i2d::ITransformation2d::ExactnessMode&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>i2d::ITransformation2d::EM_NONE</code>, </td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d::EM_NONE</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>errorFactorPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>errorFactorPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -418,7 +436,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iedge::CEdgeLine::GetTransformed </td>
           <td>(</td>
-          <td class="paramtype">const i2d::ITransformation2d &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td>
           <td class="paramname"><em>transformation</em>, </td>
         </tr>
         <tr>
@@ -430,14 +448,14 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">i2d::ITransformation2d::ExactnessMode&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>i2d::ITransformation2d::EM_NONE</code>, </td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d::EM_NONE</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>errorFactorPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>errorFactorPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -474,20 +492,20 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iedge::CEdgeLine::InvTransform </td>
           <td>(</td>
-          <td class="paramtype">const i2d::ITransformation2d &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td>
           <td class="paramname"><em>transformation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">i2d::ITransformation2d::ExactnessMode&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>i2d::ITransformation2d::EM_NONE</code>, </td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d::EM_NONE</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>errorFactorPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>errorFactorPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -497,6 +515,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_object2d_base.html#ae265e9ee5ad0fa90a7a32690ce12936b">i2d::CObject2dBase</a>.</p>
 
 </div>
 </div>
@@ -525,13 +545,15 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void iedge::CEdgeLine::MoveCenterTo </td>
           <td>(</td>
-          <td class="paramtype">const i2d::CVector2d &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
           <td class="paramname"><em>position</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html#a220864dd27c1973b54fa4788caee2630">i2d::IObject2d</a>.</p>
 
 </div>
 </div>
@@ -542,13 +564,15 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iedge::CEdgeLine::Serialize </td>
           <td>(</td>
-          <td class="paramtype">iser::IArchive &amp;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 </div>
 </div>
@@ -614,20 +638,20 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iedge::CEdgeLine::Transform </td>
           <td>(</td>
-          <td class="paramtype">const i2d::ITransformation2d &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td>
           <td class="paramname"><em>transformation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">i2d::ITransformation2d::ExactnessMode&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>i2d::ITransformation2d::EM_NONE</code>, </td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d::EM_NONE</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>errorFactorPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>errorFactorPtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -637,6 +661,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_object2d_base.html#a2fb83ed63f504dc07ecb1b90efa91cb7">i2d::CObject2dBase</a>.</p>
 
 </div>
 </div>

@@ -32,7 +32,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QList&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;istd/TDelPtr.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_i_locked_producer_8h.html">iproc/TILockedProducer.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
@@ -78,7 +78,7 @@
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060               Key key;
 <a name="l00061"></a>00061               <span class="keywordtype">double</span> weight;
-<a name="l00062"></a>00062               istd::TDelPtr&lt;CacheObject&gt; objectPtr;
+<a name="l00062"></a>00062               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CacheObject&gt;</a> objectPtr;
 <a name="l00063"></a>00063               <span class="keywordtype">int</span> lockedCount;
 <a name="l00064"></a>00064        };
 <a name="l00065"></a>00065 
@@ -126,10 +126,10 @@
 <a name="l00107"></a>00107        }
 <a name="l00108"></a>00108 
 <a name="l00109"></a>00109        <span class="keyword">const</span> SourceObject* sourcePtr = LockSourceObject(key);
-<a name="l00110"></a>00110        <span class="keywordflow">if</span> (sourcePtr != NULL){
-<a name="l00111"></a>00111               istd::TDelPtr&lt;CacheObject&gt; newObjectPtr(<span class="keyword">new</span> CacheObject);
-<a name="l00112"></a>00112               <span class="keywordflow">if</span> (!newObjectPtr.IsValid()){
-<a name="l00113"></a>00113                      <span class="keywordflow">return</span> NULL;
+<a name="l00110"></a>00110        <span class="keywordflow">if</span> (sourcePtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00111"></a>00111               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CacheObject&gt;</a> newObjectPtr(<span class="keyword">new</span> CacheObject);
+<a name="l00112"></a>00112               <span class="keywordflow">if</span> (!newObjectPtr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">IsValid</a>()){
+<a name="l00113"></a>00113                      <span class="keywordflow">return</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00114"></a>00114               }
 <a name="l00115"></a>00115 
 <a name="l00116"></a>00116               <span class="keywordtype">double</span> weight = CalcCacheObject(key, *sourcePtr, *newObjectPtr);
@@ -137,7 +137,7 @@
 <a name="l00118"></a>00118               UnlockSourceObject(key, sourcePtr);
 <a name="l00119"></a>00119 
 <a name="l00120"></a>00120               <span class="keywordflow">if</span> (weight &lt; 0){
-<a name="l00121"></a>00121                      <span class="keywordflow">return</span> NULL;
+<a name="l00121"></a>00121                      <span class="keywordflow">return</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00122"></a>00122               }
 <a name="l00123"></a>00123 
 <a name="l00124"></a>00124               m_cachedList.push_back(ListElement());
@@ -156,7 +156,7 @@
 <a name="l00137"></a>00137               <span class="keywordflow">return</span> element.objectPtr.GetPtr();
 <a name="l00138"></a>00138        }
 <a name="l00139"></a>00139 
-<a name="l00140"></a>00140        <span class="keywordflow">return</span> NULL;
+<a name="l00140"></a>00140        <span class="keywordflow">return</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00141"></a>00141 }
 <a name="l00142"></a>00142 
 <a name="l00143"></a>00143 

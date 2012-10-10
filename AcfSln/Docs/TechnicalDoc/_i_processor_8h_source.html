@@ -28,9 +28,9 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iproc_IProcessor_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;iprm/IParamsSet.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;ibase/IProgressManager.h&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_progress_manager_8h.html">ibase/IProgressManager.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="keyword">namespace </span>iproc
@@ -63,24 +63,24 @@
 <a name="l00083"></a><a class="code" href="classiproc_1_1_i_processor.html#a53fe9860f57b67e209887f985cf3ea73ae6084d2b3eadd5d5928353a9d5b59594">00083</a>               <a class="code" href="classiproc_1_1_i_processor.html#a53fe9860f57b67e209887f985cf3ea73ae6084d2b3eadd5d5928353a9d5b59594" title="Task finished but error is occured.">TS_INVALID</a>
 <a name="l00084"></a>00084        };
 <a name="l00085"></a>00085 
-<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_i_processor.html#a21bebcb085e8e93dc6920ad3dcf6c4ce" title="Get state of this processor for processing of specified parameters.">GetProcessorState</a>(<span class="keyword">const</span> iprm::IParamsSet* paramsPtr) <span class="keyword">const</span> = 0;
+<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_i_processor.html#a21bebcb085e8e93dc6920ad3dcf6c4ce" title="Get state of this processor for processing of specified parameters.">GetProcessorState</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span> = 0;
 <a name="l00092"></a>00092 
 <a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_i_processor.html#a18d945c422d423fa69be5c2a136e1258" title="Check if specified parameter set is accepted for this processor.">AreParamsAccepted</a>(
-<a name="l00100"></a>00100                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr,
-<a name="l00101"></a>00101                             <span class="keyword">const</span> istd::IPolymorphic* inputPtr,
-<a name="l00102"></a>00102                             <span class="keyword">const</span> istd::IChangeable* outputPtr) <span class="keyword">const</span> = 0;
+<a name="l00100"></a>00100                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00101"></a>00101                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00102"></a>00102                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr) <span class="keyword">const</span> = 0;
 <a name="l00103"></a>00103 
 <a name="l00108"></a>00108        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_i_processor.html#ad5afd83168811f2e276fa4d57821b013" title="Do synchronized processing.">DoProcessing</a>(
-<a name="l00109"></a>00109                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr,
-<a name="l00110"></a>00110                             <span class="keyword">const</span> istd::IPolymorphic* inputPtr,
-<a name="l00111"></a>00111                             istd::IChangeable* outputPtr,
-<a name="l00112"></a>00112                             ibase::IProgressManager* progressManagerPtr = NULL) = 0;
+<a name="l00109"></a>00109                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00110"></a>00110                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00111"></a>00111                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00112"></a>00112                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>* progressManagerPtr = NULL) = 0;
 <a name="l00113"></a>00113 
 <a name="l00129"></a>00129        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_i_processor.html#af214e4076c2fa524b9aa6de572e90170" title="Begin new task for this processor and add them to queue.">BeginTask</a>(
-<a name="l00130"></a>00130                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr,
-<a name="l00131"></a>00131                             <span class="keyword">const</span> istd::IPolymorphic* inputPtr,
-<a name="l00132"></a>00132                             istd::IChangeable* outputPtr,
-<a name="l00133"></a>00133                             ibase::IProgressManager* progressManagerPtr = NULL) = 0;
+<a name="l00130"></a>00130                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00131"></a>00131                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00132"></a>00132                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00133"></a>00133                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>* progressManagerPtr = NULL) = 0;
 <a name="l00134"></a>00134 
 <a name="l00143"></a>00143        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_i_processor.html#abb082ed0fb7e87d975848e53aad84f89" title="Wait for task is finished.">WaitTaskFinished</a>(
 <a name="l00144"></a>00144                                    <span class="keywordtype">int</span> taskId = -1,
@@ -93,7 +93,7 @@
 <a name="l00160"></a>00160 
 <a name="l00169"></a>00169        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_i_processor.html#ab8c6e1b11221b853398eadc0953b2f07" title="Get actual task state.">GetTaskState</a>(<span class="keywordtype">int</span> taskId = -1) <span class="keyword">const</span> = 0;
 <a name="l00170"></a>00170 
-<a name="l00180"></a>00180        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_i_processor.html#a71cf33bedd0292459b281926cb2df448" title="Init processor to optimal process with specified params.">InitProcessor</a>(<span class="keyword">const</span> iprm::IParamsSet* paramsPtr) = 0;
+<a name="l00180"></a>00180        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_i_processor.html#a71cf33bedd0292459b281926cb2df448" title="Init processor to optimal process with specified params.">InitProcessor</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) = 0;
 <a name="l00181"></a>00181 };
 <a name="l00182"></a>00182 
 <a name="l00183"></a>00183 

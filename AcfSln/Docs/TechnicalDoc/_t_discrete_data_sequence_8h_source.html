@@ -32,11 +32,11 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/qmath.h&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;istd/TChangeNotifier.h&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;istd/TOptDelPtr.h&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;istd/TSmartPtr.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iser/IArchive.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;iser/CArchiveTag.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_change_notifier_8h.html">istd/TChangeNotifier.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_opt_del_ptr_8h.html">istd/TOptDelPtr.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_smart_ptr_8h.html">istd/TSmartPtr.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_archive_8h.html">iser/IArchive.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_archive_tag_8h.html">iser/CArchiveTag.h</a>&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_discrete_data_sequence_8h.html">imeas/IDiscreteDataSequence.h</a>&quot;</span>
 <a name="l00016"></a>00016 
@@ -67,7 +67,7 @@
 <a name="l00041"></a>00041        <span class="comment">// reimplemented (imeas::IDataSequence)</span>
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a6ad4ba6126070b849f12bd46a2626786" title="Create container for sample sequence with specified number of samples, channels and sample depth...">CreateSequence</a>(<span class="keywordtype">int</span> samplesCount, <span class="keywordtype">int</span> channelsCount = 1);
 <a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a4439c86ecdd285afcb568c6eb3449933" title="Create sequence and set the info object.">CreateSequenceWithInfo</a>(
-<a name="l00044"></a>00044                             <span class="keyword">const</span> istd::TTransPtr&lt;const IDataSequenceInfo&gt;&amp; infoPtr,
+<a name="l00044"></a>00044                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr&lt;const IDataSequenceInfo&gt;</a>&amp; infoPtr,
 <a name="l00045"></a>00045                             <span class="keywordtype">int</span> samplesCount = -1,
 <a name="l00046"></a>00046                             <span class="keywordtype">int</span> channelsCount = -1);
 <a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_data_sequence_info.html" title="Stores additional data sequence data used to interpret samples value correctly.">IDataSequenceInfo</a>* <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#aed4c9fae121805e5fc43e9378c4159aa" title="Get additional information about this sequence.">GetSequenceInfo</a>() <span class="keyword">const</span>;
@@ -79,13 +79,13 @@
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a302b6302a403e5eeeb6b106e6b179971" title="Set sample value at specified index.">SetSample</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> channel, <span class="keywordtype">double</span> value);
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">Serialize</a>(iser::IArchive&amp; archive);
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00057"></a>00057 
 <a name="l00058"></a>00058        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">CopyFrom</a>(<span class="keyword">const</span> istd::IChangeable&amp; <span class="keywordtype">object</span>);
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">CopyFrom</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 <span class="keyword">private</span>:
-<a name="l00062"></a>00062        istd::TOptDelPtr&lt;Element, true&gt; m_sampleBuffer;
+<a name="l00062"></a>00062        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;Element, true&gt;</a> m_sampleBuffer;
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064        <span class="keywordtype">int</span> m_allocatedElementsCount;
 <a name="l00065"></a>00065        <span class="keywordtype">int</span> m_samplesCount;
@@ -94,7 +94,7 @@
 <a name="l00068"></a>00068        <span class="keywordtype">int</span> m_channelDiff;
 <a name="l00069"></a>00069        <span class="keywordtype">double</span> m_normFactor;
 <a name="l00070"></a>00070 
-<a name="l00071"></a>00071        istd::TSmartPtr&lt;const IDataSequenceInfo&gt; m_sequenceInfoPtr;
+<a name="l00071"></a>00071        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;const IDataSequenceInfo&gt;</a> m_sequenceInfoPtr;
 <a name="l00072"></a>00072 };
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074 
@@ -212,7 +212,7 @@
 <a name="l00186"></a>00186 
 <a name="l00187"></a>00187 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element&gt;
 <a name="l00188"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a4439c86ecdd285afcb568c6eb3449933">00188</a> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#a4439c86ecdd285afcb568c6eb3449933" title="Create sequence and set the info object.">TDiscreteDataSequence&lt;Element&gt;::CreateSequenceWithInfo</a>(
-<a name="l00189"></a>00189                      <span class="keyword">const</span> istd::TTransPtr&lt;const IDataSequenceInfo&gt;&amp; infoPtr,
+<a name="l00189"></a>00189                      <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr&lt;const IDataSequenceInfo&gt;</a>&amp; infoPtr,
 <a name="l00190"></a>00190                      <span class="keywordtype">int</span> samplesCount,
 <a name="l00191"></a>00191                      <span class="keywordtype">int</span> channelsCount)
 <a name="l00192"></a>00192 {
@@ -280,61 +280,61 @@
 <a name="l00254"></a>00254 <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00255"></a>00255 
 <a name="l00256"></a>00256 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element&gt;
-<a name="l00257"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">00257</a> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">TDiscreteDataSequence&lt;Element&gt;::Serialize</a>(iser::IArchive&amp; archive)
+<a name="l00257"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">00257</a> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">TDiscreteDataSequence&lt;Element&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
 <a name="l00258"></a>00258 {
 <a name="l00259"></a>00259        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
 <a name="l00260"></a>00260 
 <a name="l00261"></a>00261        <span class="keywordtype">int</span> channelsCount = GetChannelsCount();
-<a name="l00262"></a>00262        <span class="keyword">static</span> iser::CArchiveTag channelsCountTag(<span class="stringliteral">&quot;ChannelsCount&quot;</span>, <span class="stringliteral">&quot;Number of channels&quot;</span>);
-<a name="l00263"></a>00263        retVal = retVal &amp;&amp; archive.BeginTag(channelsCountTag);
-<a name="l00264"></a>00264        retVal = retVal &amp;&amp; archive.Process(channelsCount);
-<a name="l00265"></a>00265        retVal = retVal &amp;&amp; archive.EndTag(channelsCountTag);
+<a name="l00262"></a>00262        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> channelsCountTag(<span class="stringliteral">&quot;ChannelsCount&quot;</span>, <span class="stringliteral">&quot;Number of channels&quot;</span>);
+<a name="l00263"></a>00263        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(channelsCountTag);
+<a name="l00264"></a>00264        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(channelsCount);
+<a name="l00265"></a>00265        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(channelsCountTag);
 <a name="l00266"></a>00266 
 <a name="l00267"></a>00267        <span class="keywordtype">int</span> samplesCount = GetSamplesCount();
 <a name="l00268"></a>00268 
-<a name="l00269"></a>00269        <span class="keyword">static</span> iser::CArchiveTag samplesListTag(<span class="stringliteral">&quot;SampleList&quot;</span>, <span class="stringliteral">&quot;List of sample values&quot;</span>);
-<a name="l00270"></a>00270        <span class="keyword">static</span> iser::CArchiveTag channelsTag(<span class="stringliteral">&quot;Channels&quot;</span>, <span class="stringliteral">&quot;List of sample values&quot;</span>);
-<a name="l00271"></a>00271        retVal = retVal &amp;&amp; archive.BeginMultiTag(samplesListTag, channelsTag, samplesCount);
+<a name="l00269"></a>00269        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> samplesListTag(<span class="stringliteral">&quot;SampleList&quot;</span>, <span class="stringliteral">&quot;List of sample values&quot;</span>);
+<a name="l00270"></a>00270        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> channelsTag(<span class="stringliteral">&quot;Channels&quot;</span>, <span class="stringliteral">&quot;List of sample values&quot;</span>);
+<a name="l00271"></a>00271        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">BeginMultiTag</a>(samplesListTag, channelsTag, samplesCount);
 <a name="l00272"></a>00272 
 <a name="l00273"></a>00273        <span class="keywordflow">if</span> (!retVal){
 <a name="l00274"></a>00274               <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00275"></a>00275        }
 <a name="l00276"></a>00276 
-<a name="l00277"></a>00277        <span class="keywordtype">bool</span> isStoring = archive.IsStoring();
+<a name="l00277"></a>00277        <span class="keywordtype">bool</span> isStoring = archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">IsStoring</a>();
 <a name="l00278"></a>00278 
-<a name="l00279"></a>00279        istd::CChangeNotifier notifier(NULL);
+<a name="l00279"></a>00279        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> notifier(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00280"></a>00280 
 <a name="l00281"></a>00281        <span class="keywordflow">if</span> (isStoring){
 <a name="l00282"></a>00282               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; samplesCount; ++i){
-<a name="l00283"></a>00283                      retVal = retVal &amp;&amp; archive.BeginTag(channelsTag);
+<a name="l00283"></a>00283                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(channelsTag);
 <a name="l00284"></a>00284                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> channelIndex = 0; channelIndex &lt; channelsCount; ++channelIndex){
 <a name="l00285"></a>00285                             Element sample = Element(GetDiscrSample(i, channelIndex));
 <a name="l00286"></a>00286 
-<a name="l00287"></a>00287                             retVal = retVal &amp;&amp; archive.Process(sample);
+<a name="l00287"></a>00287                             retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(sample);
 <a name="l00288"></a>00288                      }
-<a name="l00289"></a>00289                      retVal = retVal &amp;&amp; archive.EndTag(channelsTag);
+<a name="l00289"></a>00289                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(channelsTag);
 <a name="l00290"></a>00290               }
 <a name="l00291"></a>00291        }
 <a name="l00292"></a>00292        <span class="keywordflow">else</span>{
-<a name="l00293"></a>00293               notifier.SetPtr(<span class="keyword">this</span>);
+<a name="l00293"></a>00293               notifier.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">SetPtr</a>(<span class="keyword">this</span>);
 <a name="l00294"></a>00294               <span class="keywordflow">if</span> ((samplesCount &lt; 0) || (channelsCount &lt; 0) || !CreateSequence(samplesCount, channelsCount)){
 <a name="l00295"></a>00295                      <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00296"></a>00296               }
 <a name="l00297"></a>00297 
 <a name="l00298"></a>00298               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; samplesCount; ++i){
-<a name="l00299"></a>00299                      retVal = retVal &amp;&amp; archive.BeginTag(channelsTag);
+<a name="l00299"></a>00299                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(channelsTag);
 <a name="l00300"></a>00300                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> channelIndex = 0; channelIndex &lt; channelsCount; ++channelIndex){
 <a name="l00301"></a>00301                             Element sample = 0;
 <a name="l00302"></a>00302 
-<a name="l00303"></a>00303                             retVal = retVal &amp;&amp; archive.Process(sample);
+<a name="l00303"></a>00303                             retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(sample);
 <a name="l00304"></a>00304 
 <a name="l00305"></a>00305                             SetDiscrSample(i, channelIndex, sample);
 <a name="l00306"></a>00306                      }
-<a name="l00307"></a>00307                      retVal = retVal &amp;&amp; archive.EndTag(channelsTag);
+<a name="l00307"></a>00307                      retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(channelsTag);
 <a name="l00308"></a>00308               }
 <a name="l00309"></a>00309        }
 <a name="l00310"></a>00310 
-<a name="l00311"></a>00311        retVal = retVal &amp;&amp; archive.EndTag(samplesListTag);
+<a name="l00311"></a>00311        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(samplesListTag);
 <a name="l00312"></a>00312 
 <a name="l00313"></a>00313        <span class="keywordflow">return</span> retVal;
 <a name="l00314"></a>00314 }
@@ -343,12 +343,12 @@
 <a name="l00317"></a>00317 <span class="comment">// reimplemented (istd::IChangeable)</span>
 <a name="l00318"></a>00318 
 <a name="l00319"></a>00319 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element&gt;
-<a name="l00320"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">00320</a> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">TDiscreteDataSequence&lt;Element&gt;::CopyFrom</a>(<span class="keyword">const</span> istd::IChangeable&amp; <span class="keywordtype">object</span>)
+<a name="l00320"></a><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">00320</a> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">TDiscreteDataSequence&lt;Element&gt;::CopyFrom</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>)
 <a name="l00321"></a>00321 {
 <a name="l00322"></a>00322        <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">IDataSequence</a>* sequencePtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">IDataSequence</a>*<span class="keyword">&gt;</span>(&amp;object);
-<a name="l00323"></a>00323        <span class="keywordflow">if</span> (sequencePtr != NULL){
+<a name="l00323"></a>00323        <span class="keywordflow">if</span> (sequencePtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00324"></a>00324               <span class="keyword">const</span> <a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;Element&gt;</a>* nativeSequencePtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">TDiscreteDataSequence&lt;Element&gt;</a>*<span class="keyword">&gt;</span>(sequencePtr);
-<a name="l00325"></a>00325               <span class="keywordflow">if</span> (          (nativeSequencePtr != NULL) &amp;&amp;
+<a name="l00325"></a>00325               <span class="keywordflow">if</span> (          (nativeSequencePtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp;
 <a name="l00326"></a>00326                                    (nativeSequencePtr-&gt;m_channelDiff == <span class="keyword">sizeof</span>(Element)) &amp;&amp;
 <a name="l00327"></a>00327                                    (nativeSequencePtr-&gt;m_sampleDiff == int(nativeSequencePtr-&gt;m_channelsCount * <span class="keyword">sizeof</span>(Element)))){
 <a name="l00328"></a>00328                      m_samplesCount = nativeSequencePtr-&gt;m_samplesCount;
@@ -362,7 +362,7 @@
 <a name="l00336"></a>00336                             m_sampleBuffer.SetPtr(<span class="keyword">new</span> Element[m_allocatedElementsCount], <span class="keyword">true</span>);
 <a name="l00337"></a>00337                             <span class="keywordflow">if</span> (m_sampleBuffer.IsValid()){
 <a name="l00338"></a>00338                                    std::memcpy(         m_sampleBuffer.GetPtr(),
-<a name="l00339"></a>00339                                                         nativeSequencePtr-&gt;m_sampleBuffer.GetPtr(),
+<a name="l00339"></a>00339                                                         nativeSequencePtr-&gt;m_sampleBuffer.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951">GetPtr</a>(),
 <a name="l00340"></a>00340                                                         m_allocatedElementsCount * <span class="keyword">sizeof</span>(Element));
 <a name="l00341"></a>00341                             }
 <a name="l00342"></a>00342                             <span class="keywordflow">else</span>{
@@ -380,8 +380,8 @@
 <a name="l00354"></a>00354                      <span class="keywordtype">int</span> samplesCount = sequencePtr-&gt;<a class="code" href="classimeas_1_1_i_data_sequence.html#a727eed299c40e7dd09be42cfd635bb41" title="Get size of this raster sequence.">GetSamplesCount</a>();
 <a name="l00355"></a>00355                      <span class="keywordtype">int</span> channelsCount = sequencePtr-&gt;<a class="code" href="classimeas_1_1_i_data_sequence.html#ae1107b606ee457830ba7937b870a2c3b" title="Get number of channels.">GetChannelsCount</a>();
 <a name="l00356"></a>00356 
-<a name="l00357"></a>00357                      I_ASSERT(samplesCount &gt;= 0);
-<a name="l00358"></a>00358                      I_ASSERT(channelsCount &gt;= 0);
+<a name="l00357"></a>00357                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(samplesCount &gt;= 0);
+<a name="l00358"></a>00358                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(channelsCount &gt;= 0);
 <a name="l00359"></a>00359 
 <a name="l00360"></a>00360                      <span class="keywordflow">if</span> (!CreateSequence(samplesCount, channelsCount)){
 <a name="l00361"></a>00361                             <span class="keywordflow">return</span> <span class="keyword">false</span>;

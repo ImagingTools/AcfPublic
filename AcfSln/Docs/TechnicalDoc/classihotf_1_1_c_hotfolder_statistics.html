@@ -39,7 +39,7 @@
 <div class="title">ihotf::CHotfolderStatistics Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ihotf::CHotfolderStatistics" --><!-- doxytag: inherits="ihotf::IHotfolderStatistics" -->
+<!-- doxytag: class="ihotf::CHotfolderStatistics" --><!-- doxytag: inherits="ihotf::IHotfolderStatistics,TSingleModelObserverBase&lt; ihotf::IHotfolderProcessingInfo &gt;" -->
 <p>Standard implementation if the <a class="el" href="classihotf_1_1_i_hotfolder_statistics.html" title="Interface for a simple static of the hotfolder processing.">IHotfolderStatistics</a> interface.  
  <a href="classihotf_1_1_c_hotfolder_statistics.html#details">More...</a></p>
 
@@ -50,7 +50,14 @@ Inheritance diagram for ihotf::CHotfolderStatistics:</div>
  <div class="center">
   <img src="classihotf_1_1_c_hotfolder_statistics.png" usemap="#ihotf::CHotfolderStatistics_map" alt=""/>
   <map id="ihotf::CHotfolderStatistics_map" name="ihotf::CHotfolderStatistics_map">
-<area href="classihotf_1_1_i_hotfolder_statistics.html" title="Interface for a simple static of the hotfolder processing." alt="ihotf::IHotfolderStatistics" shape="rect" coords="0,0,152,24"/>
+<area href="classihotf_1_1_i_hotfolder_statistics.html" title="Interface for a simple static of the hotfolder processing." alt="ihotf::IHotfolderStatistics" shape="rect" coords="0,168,396,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html" alt="imod::TSingleModelObserverBase&lt; ihotf::IHotfolderProcessingInfo &gt;" shape="rect" coords="406,168,802,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,396,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_single_model_observer_base.html" alt="imod::CSingleModelObserverBase" shape="rect" coords="406,112,802,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,396,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html" alt="imod::IObserver" shape="rect" coords="406,56,802,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,396,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="406,0,802,24"/>
 </map>
  </div></div>
 
@@ -59,7 +66,7 @@ Inheritance diagram for ihotf::CHotfolderStatistics:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-imod::TSingleModelObserverBase<br class="typebreak"/>
+<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase</a><br class="typebreak"/>
 &lt; <a class="el" href="classihotf_1_1_i_hotfolder_processing_info.html">ihotf::IHotfolderProcessingInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#a8088ab3e77aa0cae84f3a4ffb3a81b3e">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -69,9 +76,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#a1849c5f224c74c50b924e5bd5065e749">GetErrorsCount</a> (const QString &amp;directoryPath=QString()) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#ae83071a0deb6d260ea82483700a657f8">GetAbortedCount</a> (const QString &amp;directoryPath=QString()) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#a1bb7b4c8a0e5928951017c95202afcfb">GetProcessingTime</a> (const QString &amp;directoryPath=QString()) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#a164fba56570ef3365175ba4172706f71">OnUpdate</a> (int updateFlags, istd::IPolymorphic *updateParamsPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#aab663606ccdfa4723432e534e51c7895">OnAttached</a> (imod::IModel *modelPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#ad1502965971ab9da2ca3d62ef97d49a0">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#a164fba56570ef3365175ba4172706f71">OnUpdate</a> (int updateFlags, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#aab663606ccdfa4723432e534e51c7895">OnAttached</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#ad1502965971ab9da2ca3d62ef97d49a0">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#aadcf8d7b3df2d0fa9b8618c69d004e60">ResetStatistics</a> ()</td></tr>
@@ -92,11 +99,13 @@ Static Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef imod::TSingleModelObserverBase&lt;<a class="el" href="classihotf_1_1_i_hotfolder_processing_info.html">ihotf::IHotfolderProcessingInfo</a>&gt; <a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#a8088ab3e77aa0cae84f3a4ffb3a81b3e">ihotf::CHotfolderStatistics::BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase</a>&lt;<a class="el" href="classihotf_1_1_i_hotfolder_processing_info.html">ihotf::IHotfolderProcessingInfo</a>&gt; <a class="el" href="classihotf_1_1_c_hotfolder_statistics.html#a8088ab3e77aa0cae84f3a4ffb3a81b3e">ihotf::CHotfolderStatistics::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html#a4183ada6ca430e22ee43b62c1e03ef5d">imod::TSingleModelObserverBase&lt; ihotf::IHotfolderProcessingInfo &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_hotfolder_statistics_8h_source.html#l00029">29</a> of file <a class="el" href="_c_hotfolder_statistics_8h_source.html">CHotfolderStatistics.h</a>.</p>
 
@@ -239,13 +248,15 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool ihotf::CHotfolderStatistics::OnAttached </td>
           <td>(</td>
-          <td class="paramtype">imod::IModel *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
           <td class="paramname"><em>modelPtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html#a1fa929d4bb7490af4db5e9c4bc4b3282">imod::TSingleModelObserverBase&lt; ihotf::IHotfolderProcessingInfo &gt;</a>.</p>
 
 </div>
 </div>
@@ -262,7 +273,7 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">istd::IPolymorphic *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
           <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
         </tr>
         <tr>
@@ -273,6 +284,8 @@ Static Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">imod::CSingleModelObserverBase</a>.</p>
 
 </div>
 </div>
@@ -315,13 +328,15 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool ihotf::CHotfolderStatistics::Serialize </td>
           <td>(</td>
-          <td class="paramtype">iser::IArchive &amp;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 </div>
 </div>

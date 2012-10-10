@@ -29,13 +29,13 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;iser/IFileLoader.h&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;imod/IObserver.h&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;imod/TModelWrap.h&quot;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;i2d/CPosition2d.h&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_observer_8h.html">imod/IObserver.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_position2d_8h.html">i2d/CPosition2d.h</a>&quot;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_provider_8h.html">imeas/INumericValueProvider.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;iqtgui/IGuiObject.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iqtgui/TDesignerGuiObserverCompBase.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_gui_object_8h.html">iqtgui/IGuiObject.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_c_general_data_sequence_8h.html">imeas/CGeneralDataSequence.h</a>&quot;</span>
@@ -79,7 +79,7 @@
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#ac4d745df35322e7c765ec39dab0c4da7" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#ac9ebe456434e30fcd33b2623aea976e3">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">Shapes</a>&amp; result);
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#ac9ebe456434e30fcd33b2623aea976e3">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
 <a name="l00057"></a>00057 
 <a name="l00058"></a>00058        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#a8be5a2e26a406acec2365dff698169b5">OnGuiModelAttached</a>();
@@ -90,10 +90,10 @@
 <a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_line_projection_supplier_gui_comp.html#a81b79cf0034b245d650cf65ec0a1342b">OnGuiDestroyed</a>();
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 <span class="keyword">private</span>:
-<a name="l00067"></a>00067        imod::TModelWrap&lt;imeas::CGeneralDataSequence&gt; m_projectionData;
+<a name="l00067"></a>00067        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;imeas::CGeneralDataSequence&gt;</a> m_projectionData;
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069        I_REF(imod::IObserver, m_projectionObserverCompPtr);
-<a name="l00070"></a>00070        I_REF(iqtgui::IGuiObject, m_projectionObserverGuiCompPtr);
+<a name="l00069"></a>00069        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_projectionObserverCompPtr);
+<a name="l00070"></a>00070        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_projectionObserverGuiCompPtr);
 <a name="l00071"></a>00071 };
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073 

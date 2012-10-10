@@ -38,7 +38,7 @@
 <div class="title">iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt; Class Template Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iproc::TFileCachedProducerCompBase" --><!-- doxytag: inherits="iproc::TILockedProducer" -->
+<!-- doxytag: class="iproc::TFileCachedProducerCompBase" --><!-- doxytag: inherits="icomp::CComponentBase,iproc::TILockedProducer" -->
 <p>Template base implementation <a class="el" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">iproc::TILockedProducer</a> caching (buffering) objects using file system.  
  <a href="classiproc_1_1_t_file_cached_producer_comp_base.html#details">More...</a></p>
 
@@ -49,7 +49,11 @@ Inheritance diagram for iproc::TFileCachedProducerCompBase&lt; Key, CacheObject 
  <div class="center">
   <img src="classiproc_1_1_t_file_cached_producer_comp_base.png" usemap="#iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt;_map" alt=""/>
   <map id="iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt;_map" name="iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt;_map">
-<area href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data." alt="iproc::TILockedProducer&lt; Key, CacheObject &gt;" shape="rect" coords="0,0,361,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,361,136"/>
+<area href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data." alt="iproc::TILockedProducer&lt; Key, CacheObject &gt;" shape="rect" coords="371,112,732,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,361,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="371,56,732,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,361,24"/>
 </map>
  </div></div>
 
@@ -57,7 +61,7 @@ Inheritance diagram for iproc::TFileCachedProducerCompBase&lt; Key, CacheObject 
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef icomp::CComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_file_cached_producer_comp_base.html#af57ca634721f62f6f3ece442f582ebbd">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_file_cached_producer_comp_base.html#af57ca634721f62f6f3ece442f582ebbd">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiproc_1_1_t_i_locked_producer.html">TILockedProducer</a>&lt; Key, <br class="typebreak"/>
 CacheObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_file_cached_producer_comp_base.html#aacdbbb443d1969232634d0ed05437ce6">LockedProducerType</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -94,7 +98,7 @@ class iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt;</h3>
 template&lt;class Key , class CacheObject &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef icomp::CComponentBase <a class="el" href="classiproc_1_1_t_file_cached_producer_comp_base.html">iproc::TFileCachedProducerCompBase</a>&lt; Key, CacheObject &gt;::<a class="el" href="classiproc_1_1_t_file_cached_producer_comp_base.html#af57ca634721f62f6f3ece442f582ebbd">BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classiproc_1_1_t_file_cached_producer_comp_base.html">iproc::TFileCachedProducerCompBase</a>&lt; Key, CacheObject &gt;::<a class="el" href="classiproc_1_1_t_file_cached_producer_comp_base.html#af57ca634721f62f6f3ece442f582ebbd">BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -162,6 +166,8 @@ template&lt;class Key , class CacheObject &gt; </div>
 <p>Removes cache files if there is too many of them. </p>
 
 <p>Definition at line <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html#l00184">184</a> of file <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html">TFileCachedProducerCompBase.h</a>.</p>
+
+<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html#l00086">iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt;::ProduceLockedObject()</a>.</p>
 
@@ -273,7 +279,7 @@ template&lt;class Key , class CacheObject &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html#l00086">86</a> of file <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html">TFileCachedProducerCompBase.h</a>.</p>
 
-<p>References <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html#l00184">iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt;::CleanFileList()</a>.</p>
+<p>References <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html#l00184">iproc::TFileCachedProducerCompBase&lt; Key, CacheObject &gt;::CleanFileList()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">istd::TPointerBase&lt; Type &gt;::IsValid()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html#a699e9ff86495a4b8e5f22cbdc285c2cf">istd::TDelPtr&lt; Type, Accessor &gt;::PopPtr()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb">iser::IFileTypeInfo::QF_FILE</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df">iser::IFileTypeInfo::QF_LOAD</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51a5a3b52788a1d74ae0252724e06ebe26d">iser::IFileLoader::StateOk</a>.</p>
 
 </div>
 </div>
@@ -320,6 +326,8 @@ template&lt;class Key , class CacheObject &gt; </div>
 <p>Implements <a class="el" href="classiproc_1_1_t_i_locked_producer.html#ac88e2233c4a024d9a23d26053c870bac">iproc::TILockedProducer&lt; Key, CacheObject &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html#l00145">145</a> of file <a class="el" href="_t_file_cached_producer_comp_base_8h_source.html">TFileCachedProducerCompBase.h</a>.</p>
+
+<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
 </div>
 </div>

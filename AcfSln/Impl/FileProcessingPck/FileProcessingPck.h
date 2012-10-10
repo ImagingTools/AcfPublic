@@ -14,7 +14,7 @@
 **	If you are unsure which license is appropriate for your use, please
 **	contact us at info@imagingtools.de.
 **
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
 **	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
@@ -34,7 +34,8 @@
 #include "ifileproc/CSelectableFileConverterComp.h"
 #include "ifileproc/CFileConvertOverProcessorComp.h"
 #include "ifileproc/CExternalFileConverterComp.h"
-#include "ifileproc/CCopyProcessorComp.h"
+#include "ifileproc/CCopyFilesTreeComp.h"
+#include "ifileproc/CComposedCopyFilesComp.h"
 
 
 /**
@@ -56,7 +57,8 @@ typedef icomp::TMakeComponentWrap<
 typedef ifileproc::CExternalFileConverterComp ExternalFileConverter;
 typedef icomp::TModelCompWrap<ifileproc::CSelectableFileConverterComp> SelectableFileConverter;
 typedef ifileproc::CFileConvertOverProcessorComp FileConvertOverProcessor;
-typedef ifileproc::CCopyProcessorComp CopyProcessor;
+typedef ifileproc::CCopyFilesTreeComp CopyFilesTree;
+typedef ifileproc::CComposedCopyFilesComp ComposedCopyFiles;
 
 
 } // namespace FileProcessingPck

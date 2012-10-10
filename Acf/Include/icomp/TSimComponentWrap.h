@@ -1,0 +1,164 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef icomp_TSimComponentWrap_included
+#define icomp_TSimComponentWrap_included
+
+
+// ACF includes
+#include "icomp/ICompositeComponent.h"
+#include "icomp/TComponentWrap.h"
+#include "icomp/CSimComponentContextBase.h"
+
+
+namespace icomp
+{
+
+
+/**
+	Simulation wrapper of component.
+	It allows to use components directly from static linked libraries, without component framework.
+
+	\ingroup ComponentConcept
+*/
+template <class Base>
+class TSimComponentWrap:
+			public TComponentWrap<Base>,
+			public CSimComponentContextBase,
+			virtual public ICompositeComponent
+{
+public:
+	typedef TComponentWrap<Base> BaseClass;
+	typedef CSimComponentContextBase BaseClass2;
+
+	TSimComponentWrap();
+
+	/**
+		Initialilze component after setting all its attributes and references.
+	*/
+	void InitComponent();
+
+	// reimplemented (icomp::IComponentContext)
+	virtual const QByteArray& GetContextId() const;
+
+	// reimplemented (icomp::ICompositeComponent)
+	virtual IComponent* GetSubcomponent(const QByteArray& componentId) const;
+	virtual const IComponentContext* GetSubcomponentContext(const QByteArray& componentId) const;
+	virtual IComponent* CreateSubcomponent(const QByteArray& componentId) const;
+	virtual void OnSubcomponentDeleted(const IComponent* subcomponentPtr);
+
+	// reimplemented (icomp::IComponent)
+	virtual const ICompositeComponent* GetParentComponent(bool ownerOnly = false) const;
+};
+
+
+// public methods
+
+template <class Base>
+TSimComponentWrap<Base>::TSimComponentWrap()
+:	BaseClass(),
+	BaseClass2(&BaseClass::GetComponentStaticInfo())
+{
+}
+
+
+template <class Base>
+void TSimComponentWrap<Base>::InitComponent()
+{
+	SetComponentContext(this, NULL, false);
+}
+
+
+// reimplemented (icomp::IComponentContext)
+
+template <class Base>
+const QByteArray& TSimComponentWrap<Base>::GetContextId() const
+{
+	static QByteArray id = istd::CClassInfo::GetName<Base>();
+
+	return id;
+}
+
+
+// reimplemented (icomp::ICompositeComponent)
+
+template <class Base>
+IComponent* TSimComponentWrap<Base>::GetSubcomponent(const QByteArray& componentId) const
+{
+	BaseClass2::ComponentsMap::const_iterator iter = BaseClass2::m_componentsMap.find(componentId);
+
+	if (iter != BaseClass2::m_componentsMap.end()){
+		return iter.value();
+	}
+
+	return NULL;
+}
+
+
+template <class Base>
+const IComponentContext* TSimComponentWrap<Base>::GetSubcomponentContext(const QByteArray& /*componentId*/) const
+{
+	return NULL;
+}
+
+
+template <class Base>
+IComponent* TSimComponentWrap<Base>::CreateSubcomponent(const QByteArray& componentId) const
+{
+	FactoriesMap::const_iterator iter = m_factoriesMap.find(componentId);
+	if (iter != m_factoriesMap.end()){
+		I_ASSERT(iter.value() != NULL);
+
+		return iter.value()->CreateInstance();
+	}
+
+	return NULL;
+}
+
+
+template <class Base>
+void TSimComponentWrap<Base>::OnSubcomponentDeleted(const IComponent* /*subcomponentPtr*/)
+{
+	qFatal("Simulated component cannot have sub-components");
+}
+
+
+// reimplemented (icomp::IComponent)
+
+template <class Base>
+const ICompositeComponent* TSimComponentWrap<Base>::GetParentComponent(bool ownerOnly) const
+{
+	if (ownerOnly){
+		return NULL;
+	}
+	else{
+		return const_cast<TSimComponentWrap<Base>* >(this);
+	}
+}
+
+
+} // namespace icomp
+
+
+#endif // !icomp_TSimComponentWrap_included
+
+

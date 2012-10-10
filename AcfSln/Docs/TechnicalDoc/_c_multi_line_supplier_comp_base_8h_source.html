@@ -29,8 +29,8 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;i2d/CPolyline.h&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;iprm/IParamsSet.h&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_polyline_8h.html">i2d/CPolyline.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_comp_wrap_8h.html">iproc/TSupplierCompWrap.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF-Solutions includes</span>
@@ -61,23 +61,23 @@
 <a name="l00035"></a>00035        {
 <a name="l00036"></a>00036        <span class="keyword">public</span>:
 <a name="l00037"></a>00037               Line();
-<a name="l00038"></a>00038               Line(<span class="keyword">const</span> i2d::CLine2d&amp; line);
+<a name="l00038"></a>00038               Line(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_line2d.html">i2d::CLine2d</a>&amp; line);
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040               <span class="comment">// reimplemented (imeas::INumericValue)</span>
 <a name="l00041"></a>00041               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsValueTypeSupported(ValueTypeId valueTypeId) <span class="keyword">const</span>;
 <a name="l00042"></a>00042               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">imeas::INumericConstraints</a>* GetNumericConstraints() <span class="keyword">const</span>;
-<a name="l00043"></a>00043               <span class="keyword">virtual</span> imath::CVarVector GetComponentValue(ValueTypeId valueTypeId) <span class="keyword">const</span>;
-<a name="l00044"></a>00044               <span class="keyword">virtual</span> imath::CVarVector GetValues() <span class="keyword">const</span>;
-<a name="l00045"></a>00045               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SetValues(<span class="keyword">const</span> imath::CVarVector&amp; values);
+<a name="l00043"></a>00043               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> GetComponentValue(ValueTypeId valueTypeId) <span class="keyword">const</span>;
+<a name="l00044"></a>00044               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> GetValues() <span class="keyword">const</span>;
+<a name="l00045"></a>00045               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SetValues(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&amp; values);
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047               <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00048"></a>00048               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Serialize(iser::IArchive&amp; archive);
+<a name="l00048"></a>00048               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Serialize(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050               <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00051"></a>00051               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CopyFrom(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html">IChangeable</a>&amp; <span class="keywordtype">object</span>);
+<a name="l00051"></a>00051               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053        <span class="keyword">protected</span>:
-<a name="l00054"></a>00054               imath::CVarVector m_values;
+<a name="l00054"></a>00054               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> m_values;
 <a name="l00055"></a>00055        };
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        <span class="keyword">typedef</span> QMap&lt;int, Line&gt; LinesCache;

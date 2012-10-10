@@ -47,14 +47,15 @@ Inheritance diagram for icam::IBitmapAcquisition:</div>
  <div class="center">
   <img src="classicam_1_1_i_bitmap_acquisition.png" usemap="#icam::IBitmapAcquisition_map" alt=""/>
   <map id="icam::IBitmapAcquisition_map" name="icam::IBitmapAcquisition_map">
-<area href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model." alt="iproc::IProcessor" shape="rect" coords="276,0,634,24"/>
-<area href="classicam_1_1_c_camera_delegator_comp.html" title="Implementation of bitmap acquisition delegating all calls to some slave object." alt="icam::CCameraDelegatorComp" shape="rect" coords="0,112,358,136"/>
-<area href="classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;" shape="rect" coords="552,112,910,136"/>
-<area href="classicam_1_1_c_selection_param_camera_comp.html" alt="icam::CSelectionParamCameraComp" shape="rect" coords="0,168,358,192"/>
-<area href="classiqtcam_1_1_c_file_acquisition_comp.html" title="Bitmap loader component implementing interface icam::IBitmapAcquisition over iser::IFileLoader." alt="iqtcam::CFileAcquisitionComp" shape="rect" coords="368,168,726,192"/>
-<area href="classiproc_1_1_t_sync_processor_comp_base.html" alt="iproc::TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;" shape="rect" coords="736,168,1094,192"/>
-<area href="classiipr_1_1_c_processed_acquisition_comp.html" alt="iipr::CProcessedAcquisitionComp" shape="rect" coords="552,224,910,248"/>
-<area href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html" title="Component to play some image (frame) sequence from a directory." alt="iqtmm::CFrameSeqVideoControllerComp" shape="rect" coords="920,224,1278,248"/>
+<area href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model." alt="iproc::IProcessor" shape="rect" coords="276,56,634,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="276,0,634,24"/>
+<area href="classicam_1_1_c_camera_delegator_comp.html" title="Implementation of bitmap acquisition delegating all calls to some slave object." alt="icam::CCameraDelegatorComp" shape="rect" coords="0,168,358,192"/>
+<area href="classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;" shape="rect" coords="552,168,910,192"/>
+<area href="classicam_1_1_c_selection_param_camera_comp.html" alt="icam::CSelectionParamCameraComp" shape="rect" coords="0,224,358,248"/>
+<area href="classiqtcam_1_1_c_file_acquisition_comp.html" title="Bitmap loader component implementing interface icam::IBitmapAcquisition over iser::IFileLoader." alt="iqtcam::CFileAcquisitionComp" shape="rect" coords="368,224,726,248"/>
+<area href="classiproc_1_1_t_sync_processor_comp_base.html" alt="iproc::TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;" shape="rect" coords="736,224,1094,248"/>
+<area href="classiipr_1_1_c_processed_acquisition_comp.html" alt="iipr::CProcessedAcquisitionComp" shape="rect" coords="552,280,910,304"/>
+<area href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html" title="Component to play some image (frame) sequence from a directory." alt="iqtmm::CFrameSeqVideoControllerComp" shape="rect" coords="920,280,1278,304"/>
 </map>
  </div></div>
 
@@ -62,12 +63,12 @@ Inheritance diagram for icam::IBitmapAcquisition:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual istd::CIndex2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_i_bitmap_acquisition.html#ad1fd013eaa11fd644b41f2959b29fd7a">GetBitmapSize</a> (const iprm::IParamsSet *paramsPtr) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicam_1_1_i_bitmap_acquisition.html#ad1fd013eaa11fd644b41f2959b29fd7a">GetBitmapSize</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of acquired bitmap for specified parameters.  <a href="#ad1fd013eaa11fd644b41f2959b29fd7a"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Bitmap acquisition processor. </p>
-<p>This processor uses optional input parameter of type <code>istd::ITimeStamp</code> to identify the image by its trigger time. </p>
+<p>This processor uses optional input parameter of type <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_time_stamp.html">istd::ITimeStamp</a></code> to identify the image by its trigger time. </p>
 
 <p>Definition at line <a class="el" href="_i_bitmap_acquisition_8h_source.html#l00018">18</a> of file <a class="el" href="_i_bitmap_acquisition_8h_source.html">IBitmapAcquisition.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
@@ -76,9 +77,9 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual istd::CIndex2d icam::IBitmapAcquisition::GetBitmapSize </td>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> icam::IBitmapAcquisition::GetBitmapSize </td>
           <td>(</td>
-          <td class="paramtype">const iprm::IParamsSet *&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
           <td class="paramname"><em>paramsPtr</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -88,7 +89,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get size of acquired bitmap for specified parameters. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>if size of bitmap is known it returns this value. Elsewhere invalid size will be returned. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><code>istd::TIndex::IsValid()</code>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_index.html#adc9ffec0e27b28010cc88af1ebd33852">istd::TIndex::IsValid()</a></code>. </dd></dl>
 
 <p>Implemented in <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a034c5fac994e1ac0f1b20fd05ab8541a">iqtcam::CFileAcquisitionComp</a>, <a class="el" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#acac6c0e00469686686e148db1a287edd">iqtmm::CFrameSeqVideoControllerComp</a>, <a class="el" href="classicam_1_1_c_camera_delegator_comp.html#abbd047b5c2bb36f7c2d63d094a856cb6">icam::CCameraDelegatorComp</a>, <a class="el" href="classicam_1_1_c_selection_param_camera_comp.html#ae61961851e1620f8e901e18cc33d3664">icam::CSelectionParamCameraComp</a>, and <a class="el" href="classiipr_1_1_c_processed_acquisition_comp.html#a611b211a8a87843f02eb31b05230921c">iipr::CProcessedAcquisitionComp</a>.</p>
 

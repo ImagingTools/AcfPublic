@@ -29,12 +29,12 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;imod/TSingleModelObserverBase.h&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_single_model_observer_base_8h.html">imod/TSingleModelObserverBase.h</a>&quot;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;ibase/ITextDocument.h&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_text_document_8h.html">ibase/ITextDocument.h</a>&quot;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;iqtgui/TGuiComponentBase.h&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;iqtgui/TGuiObserverWrap.h&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_gui_observer_wrap_8h.html">iqtgui/TGuiObserverWrap.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_text_editor_8h.html">iqsci/CTextEditor.h</a>&quot;</span>
 <a name="l00014"></a>00014 
@@ -52,13 +52,13 @@
 <a name="l00026"></a>00026        Q_OBJECT
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
-<a name="l00029"></a>00029        <span class="keyword">typedef</span> iqtgui::TGuiObserverWrap&lt;
-<a name="l00030"></a>00030                             iqtgui::TGuiComponentBase&lt;CTextEditor&gt;,
-<a name="l00031"></a><a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#aeb4e2cf9d12956a25b7860db88fdfdf3">00031</a>                             imod::TSingleModelObserverBase&lt;ibase::ITextDocument&gt; &gt; <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#aeb4e2cf9d12956a25b7860db88fdfdf3">BaseClass</a>;
+<a name="l00029"></a>00029        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_gui_observer_wrap.html">iqtgui::TGuiObserverWrap</a>&lt;
+<a name="l00030"></a>00030                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;CTextEditor&gt;</a>,
+<a name="l00031"></a><a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#aeb4e2cf9d12956a25b7860db88fdfdf3">00031</a>                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;ibase::ITextDocument&gt;</a> &gt; <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#aeb4e2cf9d12956a25b7860db88fdfdf3">BaseClass</a>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html">CTextEditorGuiComp</a>);
-<a name="l00034"></a>00034               I_REGISTER_INTERFACE(ibase::ICommandsProvider);
-<a name="l00035"></a>00035               I_REGISTER_INTERFACE(imod::IObserver);
+<a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
+<a name="l00035"></a>00035               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>);
 <a name="l00036"></a>00036               I_ASSIGN(m_languageAttrPtr, <span class="stringliteral">&quot;Language&quot;</span>, <span class="stringliteral">&quot;Use syntax highlighting for defined language&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Language&quot;</span>);
 <a name="l00037"></a>00037               I_ASSIGN(m_useFoldingAttrPtr, <span class="stringliteral">&quot;UseFolding&quot;</span>, <span class="stringliteral">&quot;Use folding in the text document&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
 <a name="l00038"></a>00038               I_ASSIGN(m_readOnlyAttrPtr, <span class="stringliteral">&quot;ReadOnly&quot;</span>, <span class="stringliteral">&quot;Document view is read only&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
@@ -72,7 +72,7 @@
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad9b3fb8be8766613c0e23ff1f638adca">OnGuiModelDetached</a>();
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keyword">const</span> ibase::IHierarchicalCommand* <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad3ffb186808d13da2ba66df8890d66eb">GetCommands</a>() <span class="keyword">const</span>;
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_i_hierarchical.html">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqsci_1_1_c_text_editor_gui_comp.html#ad3ffb186808d13da2ba66df8890d66eb">GetCommands</a>() <span class="keyword">const</span>;
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 <span class="keyword">protected</span>:
 <a name="l00052"></a>00052        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>

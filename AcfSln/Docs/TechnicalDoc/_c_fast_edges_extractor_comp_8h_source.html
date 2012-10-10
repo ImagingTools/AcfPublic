@@ -29,8 +29,8 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;iimg/IBitmap.h&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;iimg/CScanlineMask.h&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_8h.html">iimg/IBitmap.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_scanline_mask_8h.html">iimg/CScanlineMask.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_t_sync_processor_comp_base_8h.html">iproc/TSyncProcessorCompBase.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF-Solutions includes</span>
@@ -62,16 +62,16 @@
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <span class="comment">//     reimplemented (iedge::IEdgesExtractor)</span>
 <a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_c_fast_edges_extractor_comp.html#aaa7f0066fe1284365eaa05ea846f5280">DoContourExtraction</a>(
-<a name="l00039"></a>00039                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr,
-<a name="l00040"></a>00040                             <span class="keyword">const</span> iimg::IBitmap&amp; bitmap,
+<a name="l00039"></a>00039                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00040"></a>00040                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; bitmap,
 <a name="l00041"></a>00041                             <a class="code" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (iproc::IProcessor)</span>
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_fast_edges_extractor_comp.html#a7bb77ac6c8fa671c552b3a75a004e6cd">DoProcessing</a>(
-<a name="l00045"></a>00045                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr,
-<a name="l00046"></a>00046                             <span class="keyword">const</span> istd::IPolymorphic* inputPtr,
-<a name="l00047"></a>00047                             istd::IChangeable* outputPtr,
-<a name="l00048"></a>00048                             ibase::IProgressManager* progressManagerPtr = NULL);
+<a name="l00045"></a>00045                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00046"></a>00046                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00047"></a>00047                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00048"></a>00048                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>* progressManagerPtr = NULL);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (imeas::INumericConstraints)</span>
 <a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_fast_edges_extractor_comp.html#a67e9b4d72546275ba3fa3b9d558e487d" title="Get number of expected numeric values.">GetNumericValuesCount</a>() <span class="keyword">const</span>;
@@ -88,8 +88,8 @@
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063        <span class="keyword">struct </span>ExtNode
 <a name="l00064"></a>00064        {
-<a name="l00065"></a>00065               i2d::CVector2d position;
-<a name="l00066"></a>00066               i2d::CVector2d derivative;
+<a name="l00065"></a>00065               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> position;
+<a name="l00066"></a>00066               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> derivative;
 <a name="l00067"></a>00067               <span class="keywordtype">double</span> rawWeight;
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069               ExtNode* prevPtr;
@@ -179,7 +179,7 @@
 <a name="l00153"></a>00153 
 <a name="l00154"></a>00154        I_REF(<a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>, m_defaultThresholdParamCompPtr);
 <a name="l00155"></a>00155        I_ATTR(QByteArray, m_thresholdParamIdAttrPtr);
-<a name="l00156"></a>00156        I_REF(i2d::IObject2d, m_defaultAoiCompPtr);
+<a name="l00156"></a>00156        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a>, m_defaultAoiCompPtr);
 <a name="l00157"></a>00157        I_ATTR(QByteArray, m_aoiParamIdAttrPtr);
 <a name="l00158"></a>00158        I_ATTR(<span class="keywordtype">int</span>, m_maxNodesCountAttrPtr);
 <a name="l00159"></a>00159 };

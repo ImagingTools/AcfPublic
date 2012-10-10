@@ -38,7 +38,7 @@
 <div class="title">iwiz::CStateControllerCompBase Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iwiz::CStateControllerCompBase" --><!-- doxytag: inherits="iproc::IStateController" -->
+<!-- doxytag: class="iwiz::CStateControllerCompBase" --><!-- doxytag: inherits="icomp::CComponentBase,iproc::IStateController" -->
 <p><code>#include &lt;<a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iwiz::CStateControllerCompBase:</div>
@@ -46,8 +46,12 @@ Inheritance diagram for iwiz::CStateControllerCompBase:</div>
  <div class="center">
   <img src="classiwiz_1_1_c_state_controller_comp_base.png" usemap="#iwiz::CStateControllerCompBase_map" alt=""/>
   <map id="iwiz::CStateControllerCompBase_map" name="iwiz::CStateControllerCompBase_map">
-<area href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info." alt="iproc::IStateController" shape="rect" coords="0,56,192,80"/>
-<area href="classistd_1_1_i_changeable.html" alt="IChangeable" shape="rect" coords="0,0,192,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,192,136"/>
+<area href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info." alt="iproc::IStateController" shape="rect" coords="202,112,394,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,192,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="202,56,394,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,192,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="202,0,394,24"/>
 </map>
  </div></div>
 
@@ -55,7 +59,7 @@ Inheritance diagram for iwiz::CStateControllerCompBase:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef icomp::CComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a9880da565b667dc07575726ec3659037">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a9880da565b667dc07575726ec3659037">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a99ba33a45bba7da8802a98b02196cea7">CStateControllerCompBase</a> ()</td></tr>
@@ -63,10 +67,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if state is enabled.  <a href="#ac13124fbb50151b993623a940026257f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a3145d5629097dabf40500202eaab40f3">IsStateActive</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this state is active.  <a href="#a3145d5629097dabf40500202eaab40f3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a506d51ef30b7e46193435ae37eebaa94">IsEnterAllowed</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#aad776f793e4411937efd0e28b5844c22">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#ae4a9d09e2338f1e9ecbd8b10aecb13f0">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a968f83a78d97ae83d947f3e01f565182">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a506d51ef30b7e46193435ae37eebaa94">IsEnterAllowed</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#aad776f793e4411937efd0e28b5844c22">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#ae4a9d09e2338f1e9ecbd8b10aecb13f0">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a968f83a78d97ae83d947f3e01f565182">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#af88f2e5ad552056e01d1d08371c9617a">m_isStateActive</a></td></tr>
@@ -83,7 +87,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef icomp::CComponentBase <a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a9880da565b667dc07575726ec3659037">iwiz::CStateControllerCompBase::BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a9880da565b667dc07575726ec3659037">iwiz::CStateControllerCompBase::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -125,7 +129,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -152,7 +156,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -222,7 +226,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -249,7 +253,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -45,7 +45,7 @@
 <a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">TILockedProducer</a>&lt;Key, CacheObject&gt;
 <a name="l00024"></a>00024 {
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00026"></a><a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a6ca12b6480bc45ac3f1741ac94260077">00026</a>        <span class="keyword">typedef</span> icomp::CComponentBase <a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a6ca12b6480bc45ac3f1741ac94260077">BaseClass</a>;
+<a name="l00026"></a><a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a6ca12b6480bc45ac3f1741ac94260077">00026</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a6ca12b6480bc45ac3f1741ac94260077">BaseClass</a>;
 <a name="l00027"></a><a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a04ea9a99f1898240afdac1597b5c0aa3">00027</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">TILockedProducer&lt;Key, CacheObject&gt;</a> <a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a04ea9a99f1898240afdac1597b5c0aa3">LockedProducerType</a>;
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html" title="Template implementation iproc::TILockedProducer buffering objects in memory cache.">TMemCachedProducerComp</a>);
@@ -101,7 +101,7 @@
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083        <span class="keywordflow">if</span> (m_slaveCacheEngineCompPtr.IsValid()){
 <a name="l00084"></a>00084               <span class="keyword">const</span> CacheObject* objectPtr = m_slaveCacheEngineCompPtr-&gt;ProduceLockedObject(key);
-<a name="l00085"></a>00085               <span class="keywordflow">if</span> (objectPtr != NULL){
+<a name="l00085"></a>00085               <span class="keywordflow">if</span> (objectPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00086"></a>00086                      m_cachedList.push_back(ListElement());
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088                      ListElement&amp; element = m_cachedList.back();
@@ -117,7 +117,7 @@
 <a name="l00098"></a>00098               }
 <a name="l00099"></a>00099        }
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101        <span class="keywordflow">return</span> NULL;
+<a name="l00101"></a>00101        <span class="keywordflow">return</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00102"></a>00102 }
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104 
@@ -125,10 +125,10 @@
 <a name="l00106"></a><a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a290f970f6953dfa5640e9af7c19321c0">00106</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a290f970f6953dfa5640e9af7c19321c0" title="End of accessing to cached element.">TMemCachedProducerComp&lt;Key, CacheObject&gt;::UnlockObject</a>(<span class="keyword">const</span> CacheObject* objectPtr)
 <a name="l00107"></a>00107 {
 <a name="l00108"></a>00108        <span class="keyword">typename</span> ObjectToListMap::iterator foundIter = m_objectToListMap.find(objectPtr);
-<a name="l00109"></a>00109        I_ASSERT(foundIter != m_objectToListMap.end());  <span class="comment">// if locked is done correctly, this element must exist.</span>
+<a name="l00109"></a>00109        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(foundIter != m_objectToListMap.end());  <span class="comment">// if locked is done correctly, this element must exist.</span>
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111        <span class="keyword">typename</span> CachedList::reverse_iterator objectIter = foundIter.value();
-<a name="l00112"></a>00112        I_ASSERT(objectIter != m_cachedList.rend());
+<a name="l00112"></a>00112        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(objectIter != m_cachedList.rend());
 <a name="l00113"></a>00113 
 <a name="l00114"></a>00114        objectIter-&gt;lockedCount--;
 <a name="l00115"></a>00115 
@@ -146,10 +146,10 @@
 <a name="l00127"></a>00127        <span class="keyword">typename</span> CachedList::iterator iter = m_cachedList.begin();
 <a name="l00128"></a>00128        <span class="keywordflow">while</span> (              (<span class="keywordtype">int</span>(m_cachedList.size()) &gt; maxCachedObjects) &amp;&amp;
 <a name="l00129"></a>00129                             (iter != m_cachedList.end())){
-<a name="l00130"></a>00130               I_ASSERT(m_objectToListMap.find(iter-&gt;objectPtr) != m_objectToListMap.end());       <span class="comment">// object is present in objects map</span>
+<a name="l00130"></a>00130               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_objectToListMap.find(iter-&gt;objectPtr) != m_objectToListMap.end());       <span class="comment">// object is present in objects map</span>
 <a name="l00131"></a>00131 
 <a name="l00132"></a>00132               <span class="keywordflow">if</span> (iter-&gt;lockedCount &lt;= 0){
-<a name="l00133"></a>00133                      I_ASSERT(m_slaveCacheEngineCompPtr.IsValid());
+<a name="l00133"></a>00133                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_slaveCacheEngineCompPtr.IsValid());
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135                      m_slaveCacheEngineCompPtr-&gt;UnlockObject(iter-&gt;objectPtr);
 <a name="l00136"></a>00136 
@@ -161,7 +161,7 @@
 <a name="l00142"></a>00142               }
 <a name="l00143"></a>00143        }
 <a name="l00144"></a>00144 
-<a name="l00145"></a>00145        I_ASSERT(m_cachedList.size() == m_objectToListMap.size());     <span class="comment">// this both structures are coupled, the number of elements must be the same</span>
+<a name="l00145"></a>00145        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_cachedList.size() == m_objectToListMap.size());     <span class="comment">// this both structures are coupled, the number of elements must be the same</span>
 <a name="l00146"></a>00146 }
 <a name="l00147"></a>00147 
 <a name="l00148"></a>00148 

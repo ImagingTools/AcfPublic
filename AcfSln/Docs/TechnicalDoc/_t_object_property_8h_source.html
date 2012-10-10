@@ -28,11 +28,11 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iprop_TObjectProperty_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;istd/CClassInfo.h&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;istd/TDelPtr.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_class_info_8h.html">istd/CClassInfo.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;iser/IArchive.h&quot;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;iser/CArchiveTag.h&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_archive_8h.html">iser/IArchive.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_archive_tag_8h.html">iser/CArchiveTag.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_property_base_8h.html">iprop/CPropertyBase.h</a>&quot;</span>
 <a name="l00012"></a>00012 
@@ -64,21 +64,21 @@
 <a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_t_object_property.html#a825e9cfcb5487f2ffb230037f94109e5">ResetValue</a>();
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iser::IProperty)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> iser::IObject* <a class="code" href="classiprop_1_1_t_object_property.html#aad3f882ae384e43d03ee13ee4f174f5d">GetDefaultPropertyPtr</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_object_property.html#aad3f882ae384e43d03ee13ee4f174f5d">GetDefaultPropertyPtr</a>() <span class="keyword">const</span>;
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="comment">// reimplemented (iser::IObject)</span>
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprop_1_1_t_object_property.html#a25f3e0a6d698cdc39ff4fc5e1d38d659">GetFactoryId</a>() <span class="keyword">const</span>;
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">Serialize</a>(iser::IArchive&amp; archive);
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053        <span class="comment">// static methods</span>
 <a name="l00054"></a>00054        <span class="keyword">static</span> QByteArray <a class="code" href="classiprop_1_1_t_object_property.html#af34c8c7ee76d920d694a350121b2ada9">GetTypeName</a>();
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056 <span class="keyword">protected</span>:
-<a name="l00057"></a><a class="code" href="classiprop_1_1_t_object_property.html#af58684533d196c2f7b87d5f55d647ee2">00057</a>        iser::TCopySerializedWrap&lt;Value&gt; <a class="code" href="classiprop_1_1_t_object_property.html#af58684533d196c2f7b87d5f55d647ee2">m_value</a>;
+<a name="l00057"></a><a class="code" href="classiprop_1_1_t_object_property.html#af58684533d196c2f7b87d5f55d647ee2">00057</a>        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_t_copy_serialized_wrap.html">iser::TCopySerializedWrap&lt;Value&gt;</a> <a class="code" href="classiprop_1_1_t_object_property.html#af58684533d196c2f7b87d5f55d647ee2">m_value</a>;
 <a name="l00058"></a>00058 
-<a name="l00059"></a><a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">00059</a>        <span class="keyword">mutable</span> istd::TDelPtr&lt;PropertyType&gt; <a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">m_defaultPropertyValuePtr</a>;
+<a name="l00059"></a><a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">00059</a>        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;PropertyType&gt;</a> <a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">m_defaultPropertyValuePtr</a>;
 <a name="l00060"></a>00060 };
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 
@@ -86,7 +86,7 @@
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00066"></a><a class="code" href="classiprop_1_1_t_object_property.html#aa71701d0e2b738435005410c470ec688">00066</a> <a class="code" href="classiprop_1_1_t_object_property.html#aa71701d0e2b738435005410c470ec688">TObjectProperty&lt;Value&gt;::TObjectProperty</a>()
-<a name="l00067"></a>00067        :<a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">BaseClass</a>()
+<a name="l00067"></a>00067        :<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html">BaseClass</a>()
 <a name="l00068"></a>00068 {
 <a name="l00069"></a>00069 }
 <a name="l00070"></a>00070 
@@ -99,9 +99,9 @@
 <a name="l00077"></a>00077                             <span class="keywordtype">int</span> propertyFlags,
 <a name="l00078"></a>00078                             <span class="keywordtype">int</span> changeFlags,
 <a name="l00079"></a>00079                             <span class="keyword">const</span> <a class="code" href="classiprop_1_1_t_object_property.html#a7639b27ea56c2a15884503717703165e">ValueType</a>&amp; defaultValue)
-<a name="l00080"></a>00080        :<a class="code" href="classiprop_1_1_c_property_base.html" title="Basic implementation of an property.">BaseClass</a>(propertyOwnerPtr, propertyName, propertyDescription, propertyFlags, changeFlags)
+<a name="l00080"></a>00080        :<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html">BaseClass</a>(propertyOwnerPtr, propertyName, propertyDescription, propertyFlags, changeFlags)
 <a name="l00081"></a>00081 {
-<a name="l00082"></a>00082        <a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">m_defaultPropertyValuePtr</a>.SetPtr(<span class="keyword">new</span> <a class="code" href="classiprop_1_1_t_object_property.html#aa951669404aff63e99ab3e5e33261dc8">PropertyType</a>());
+<a name="l00082"></a>00082        <a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">m_defaultPropertyValuePtr</a>.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">SetPtr</a>(<span class="keyword">new</span> <a class="code" href="classiprop_1_1_t_object_property.html#aa951669404aff63e99ab3e5e33261dc8">PropertyType</a>());
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084        <a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">m_defaultPropertyValuePtr</a>-&gt;SetValue(defaultValue);
 <a name="l00085"></a>00085 
@@ -139,7 +139,7 @@
 <a name="l00117"></a>00117 <span class="comment">// reimplemented (iser::IProperty)</span>
 <a name="l00118"></a>00118 
 <a name="l00119"></a>00119 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00120"></a><a class="code" href="classiprop_1_1_t_object_property.html#aad3f882ae384e43d03ee13ee4f174f5d">00120</a> <span class="keyword">const</span> iser::IObject* <a class="code" href="classiprop_1_1_t_object_property.html#aad3f882ae384e43d03ee13ee4f174f5d">TObjectProperty&lt;Value&gt;::GetDefaultPropertyPtr</a>()<span class="keyword"> const</span>
+<a name="l00120"></a><a class="code" href="classiprop_1_1_t_object_property.html#aad3f882ae384e43d03ee13ee4f174f5d">00120</a> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_object_property.html#aad3f882ae384e43d03ee13ee4f174f5d">TObjectProperty&lt;Value&gt;::GetDefaultPropertyPtr</a>()<span class="keyword"> const</span>
 <a name="l00121"></a>00121 <span class="keyword"></span>{
 <a name="l00122"></a>00122        <span class="keywordflow">return</span> m_defaultPropertyValuePtr.GetPtr();
 <a name="l00123"></a>00123 }
@@ -157,17 +157,17 @@
 <a name="l00135"></a>00135 <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00136"></a>00136 
 <a name="l00137"></a>00137 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00138"></a><a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">00138</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">TObjectProperty&lt;Value&gt;::Serialize</a>(iser::IArchive&amp; archive)
+<a name="l00138"></a><a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">00138</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_object_property.html#ae1e0ca489ffde2cd6f59feeded6ede98">TObjectProperty&lt;Value&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
 <a name="l00139"></a>00139 {
-<a name="l00140"></a>00140        <span class="keyword">static</span> iser::CArchiveTag valueTag(<span class="stringliteral">&quot;Value&quot;</span>, <span class="stringliteral">&quot;Property value&quot;</span>);
+<a name="l00140"></a>00140        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> valueTag(<span class="stringliteral">&quot;Value&quot;</span>, <span class="stringliteral">&quot;Property value&quot;</span>);
 <a name="l00141"></a>00141 
-<a name="l00142"></a>00142        istd::CChangeNotifier notifier(archive.IsStoring()? NULL: <span class="keyword">this</span>);
+<a name="l00142"></a>00142        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> notifier(archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">IsStoring</a>()? <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
 <a name="l00143"></a>00143 
 <a name="l00144"></a>00144        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146        retVal = retVal &amp;&amp; archive.BeginTag(valueTag);
+<a name="l00146"></a>00146        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(valueTag);
 <a name="l00147"></a>00147        retVal = retVal &amp;&amp; m_value.Serialize(archive);
-<a name="l00148"></a>00148        retVal = retVal &amp;&amp; archive.EndTag(valueTag);
+<a name="l00148"></a>00148        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(valueTag);
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150        <span class="keywordflow">return</span> retVal;
 <a name="l00151"></a>00151 }

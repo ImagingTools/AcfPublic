@@ -36,11 +36,11 @@
 <a name="l00010"></a>00010 <span class="preprocessor">#include &lt;QtCore/QMutex&gt;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="comment">// ACF includes</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;imod/TSingleModelObserverBase.h&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;ibase/TLoggerCompWrap.h&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;iprm/IParamsSet.h&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;iprm/IFileNameParam.h&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_single_model_observer_base_8h.html">imod/TSingleModelObserverBase.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="comment">// AcfSln includes</span>
 <a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_system_change_storage_8h.html">ihotf/IFileSystemChangeStorage.h</a>&quot;</span>
@@ -55,13 +55,13 @@
 <a name="l00029"></a>00029 
 <a name="l00033"></a><a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html">00033</a> <span class="keyword">class </span><a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html" title="Component for monitoring of the file folder.">CDirectoryMonitorComp</a>:
 <a name="l00034"></a>00034                      <span class="keyword">public</span> QThread,
-<a name="l00035"></a>00035                      <span class="keyword">public</span> ibase::<a class="code" href="classibase_1_1_c_logger_component_base.html">CLoggerComponentBase</a>,
+<a name="l00035"></a>00035                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
 <a name="l00036"></a>00036                      <span class="keyword">virtual</span> <span class="keyword">public</span> ihotf::IDirectoryMonitor
 <a name="l00037"></a>00037 {
 <a name="l00038"></a>00038        Q_OBJECT
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">public</span>:
-<a name="l00041"></a><a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">00041</a>        <span class="keyword">typedef</span> ibase::CLoggerComponentBase <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">BaseClass</a>;
+<a name="l00041"></a><a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">00041</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">BaseClass</a>;
 <a name="l00042"></a><a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#a37d528cb74450ee6f94f78e5fe918cb7">00042</a>        <span class="keyword">typedef</span> QThread <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#a37d528cb74450ee6f94f78e5fe918cb7">BaseClass2</a>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        I_BEGIN_COMPONENT(<a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html" title="Component for monitoring of the file folder.">CDirectoryMonitorComp</a>);
@@ -78,7 +78,7 @@
 <a name="l00055"></a>00055        <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#a2741ecbed1c7043af72a998401c25718">CDirectoryMonitorComp</a>();
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        <span class="comment">// reimplemented (ihotf::IDirectoryMonitor)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#ad0b82d8806bc11e8529ff7cae77181c0" title="Start observing process.">StartObserving</a>(<span class="keyword">const</span> iprm::IParamsSet* paramsSetPtr = NULL);
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#ad0b82d8806bc11e8529ff7cae77181c0" title="Start observing process.">StartObserving</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsSetPtr = NULL);
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#a68668878977709b0d69fb4f059aa778f" title="Stop observing process.">StopObserving</a>();
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 <span class="keyword">protected</span>:
@@ -102,7 +102,7 @@
 <a name="l00088"></a>00088        <span class="keywordtype">void</span> StartObserverThread();
 <a name="l00089"></a>00089        <span class="keywordtype">void</span> StopObserverThread();
 <a name="l00090"></a>00090        <span class="keywordtype">void</span> ResetFiles();
-<a name="l00091"></a>00091        <span class="keywordtype">bool</span> ConnectToParameterModel(<span class="keyword">const</span> iprm::IParamsSet&amp; paramsSet);
+<a name="l00091"></a>00091        <span class="keywordtype">bool</span> ConnectToParameterModel(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>&amp; paramsSet);
 <a name="l00092"></a>00092        <span class="keywordtype">void</span> DisconnectFromParameterModel();
 <a name="l00093"></a>00093        <span class="keywordtype">void</span> UpdateMonitoringSession() <span class="keyword">const</span>;
 <a name="l00094"></a>00094 
@@ -115,29 +115,29 @@
 <a name="l00101"></a>00101               QStringList attributeChangedFiles;
 <a name="l00102"></a>00102        };
 <a name="l00103"></a>00103 
-<a name="l00104"></a>00104        <span class="keyword">class </span>MonitoringParamsObserver: <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;ihotf::IDirectoryMonitorParams&gt;
+<a name="l00104"></a>00104        <span class="keyword">class </span>MonitoringParamsObserver: <span class="keyword">public</span> imod::<a class="code" href="class_t_single_model_observer_base.html">TSingleModelObserverBase</a>&lt;ihotf::IDirectoryMonitorParams&gt;
 <a name="l00105"></a>00105        {
 <a name="l00106"></a>00106        <span class="keyword">public</span>:
-<a name="l00107"></a>00107               <span class="keyword">typedef</span> imod::TSingleModelObserverBase&lt;ihotf::IDirectoryMonitorParams&gt; <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">BaseClass</a>;
+<a name="l00107"></a>00107               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;ihotf::IDirectoryMonitorParams&gt;</a> <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">BaseClass</a>;
 <a name="l00108"></a>00108 
 <a name="l00109"></a>00109               MonitoringParamsObserver(<a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html" title="Component for monitoring of the file folder.">CDirectoryMonitorComp</a>&amp; parent);
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111               <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00112"></a>00112               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(imod::IModel* modelPtr, <span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr);
+<a name="l00112"></a>00112               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00113"></a>00113 
 <a name="l00114"></a>00114        <span class="keyword">private</span>:
 <a name="l00115"></a>00115               <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html" title="Component for monitoring of the file folder.">CDirectoryMonitorComp</a>&amp; m_parent;
 <a name="l00116"></a>00116        };
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118        <span class="keyword">class </span>DirectoryParamsObserver: <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;iprm::IFileNameParam&gt;
+<a name="l00118"></a>00118        <span class="keyword">class </span>DirectoryParamsObserver: <span class="keyword">public</span> imod::<a class="code" href="class_t_single_model_observer_base.html">TSingleModelObserverBase</a>&lt;iprm::IFileNameParam&gt;
 <a name="l00119"></a>00119        {
 <a name="l00120"></a>00120        <span class="keyword">public</span>:
-<a name="l00121"></a>00121               <span class="keyword">typedef</span> imod::TSingleModelObserverBase&lt;iprm::IFileNameParam&gt; <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">BaseClass</a>;
+<a name="l00121"></a>00121               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;iprm::IFileNameParam&gt;</a> <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">BaseClass</a>;
 <a name="l00122"></a>00122 
 <a name="l00123"></a>00123               DirectoryParamsObserver(<a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#a2741ecbed1c7043af72a998401c25718">CDirectoryMonitorComp</a>&amp; parent);
 <a name="l00124"></a>00124 
 <a name="l00125"></a>00125               <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00126"></a>00126               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(imod::IModel* modelPtr, <span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr);
+<a name="l00126"></a>00126               <span class="keyword">virtual</span> <span class="keywordtype">void</span> AfterUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00127"></a>00127 
 <a name="l00128"></a>00128        <span class="keyword">private</span>:
 <a name="l00129"></a>00129               <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#a2741ecbed1c7043af72a998401c25718">CDirectoryMonitorComp</a>&amp; m_parent;
@@ -169,8 +169,8 @@
 <a name="l00155"></a>00155        DirectoryParamsObserver m_directoryParamsObserver;
 <a name="l00156"></a>00156 
 <a name="l00157"></a>00157        <span class="comment">// Component attributes</span>
-<a name="l00158"></a>00158        I_REF(iprm::IParamsSet, m_paramsSetCompPtr);
-<a name="l00159"></a>00159        I_REF(imod::IModel, m_paramsSetModelCompPtr);
+<a name="l00158"></a>00158        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>, m_paramsSetCompPtr);
+<a name="l00159"></a>00159        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_paramsSetModelCompPtr);
 <a name="l00160"></a>00160        I_REF(<a class="code" href="classihotf_1_1_i_monitoring_session_manager.html" title="Common interface for a monitoring session&#39;s manager.">ihotf::IMonitoringSessionManager</a>, m_monitoringSessionManagerCompPtr);
 <a name="l00161"></a>00161        I_REF(<a class="code" href="classihotf_1_1_i_file_system_change_storage.html" title="Common interface for a storage of files.">ihotf::IFileSystemChangeStorage</a>, m_fileSystemChangeStorageCompPtr);
 <a name="l00162"></a>00162        I_ATTR(QByteArray, m_directoryPathIdAttrPtr);

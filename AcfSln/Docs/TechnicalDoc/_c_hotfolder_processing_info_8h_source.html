@@ -35,11 +35,11 @@
 <a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtCore/QMutex&gt;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;istd/TOptPointerVector.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;istd/TDelPtr.h&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;istd/TSmartPtr.h&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;istd/TChangeDelegator.h&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;imod/TModelWrap.h&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_opt_pointer_vector_8h.html">istd/TOptPointerVector.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_smart_ptr_8h.html">istd/TSmartPtr.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_change_delegator_8h.html">istd/TChangeDelegator.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 <span class="comment">// AcfSln includes</span>
 <a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_i_hotfolder_processing_info_8h.html">ihotf/IHotfolderProcessingInfo.h</a>&quot;</span>
@@ -55,7 +55,7 @@
 <a name="l00032"></a>00032 <span class="keyword">public</span>:
 <a name="l00033"></a>00033        <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#acc9ce62616eb1aa0f4363405ab69d20e">CHotfolderProcessingInfo</a>();
 <a name="l00034"></a>00034 
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a4becbf0bbb9149683ca81d7ed61bc189" title="Return true if the item for the given input and output path already exists.">ItemExists</a>(<span class="keyword">const</span> QString&amp; inputFilePath, <a class="code" href="classihotf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ihotf::IHotfolderProcessingItem</a>** foundItemPtr = NULL) <span class="keyword">const</span>;
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a4becbf0bbb9149683ca81d7ed61bc189" title="Return true if the item for the given input and output path already exists.">ItemExists</a>(<span class="keyword">const</span> QString&amp; inputFilePath, <a class="code" href="classihotf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ihotf::IHotfolderProcessingItem</a>** foundItemPtr = <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a4becbf0bbb9149683ca81d7ed61bc189" title="Return true if the item for the given input and output path already exists.">ItemExists</a>(<span class="keyword">const</span> <a class="code" href="classihotf_1_1_i_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ihotf::IHotfolderProcessingItem</a>&amp; processingItem) <span class="keyword">const</span>;
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042        <span class="comment">// reimplemented (ihotf::IHotfolderProcessingInfo)</span>
@@ -69,15 +69,15 @@
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a79cca07e8678c60c51f2f42d9a6e19f8" title="If working is true, the hotfolder processing will be started or stopped otherwise.">SetWorking</a>(<span class="keywordtype">bool</span> working = <span class="keyword">true</span>);
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a301ad1b9fa7f8d77f3f0a9edd616030d">Serialize</a>(iser::IArchive&amp; archive);
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a301ad1b9fa7f8d77f3f0a9edd616030d">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055 <span class="keyword">protected</span>:
-<a name="l00056"></a>00056        <span class="keyword">typedef</span> imod::TModelWrap&lt;
-<a name="l00057"></a>00057                             istd::TChangeDelegator&lt;
+<a name="l00056"></a>00056        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap</a>&lt;
+<a name="l00057"></a>00057                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_delegator.html">istd::TChangeDelegator</a>&lt;
 <a name="l00058"></a><a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#ae451f0d9b96d283be3d67cf4fbf99b4a">00058</a>                                           <a class="code" href="classihotf_1_1_c_hotfolder_processing_item.html" title="Interface for a single processing item in the hotfolder.">ihotf::CHotfolderProcessingItem</a>&gt; &gt; <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#ae451f0d9b96d283be3d67cf4fbf99b4a">ProcessingItem</a>;
-<a name="l00059"></a><a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a6c5080ccefa5345728b127ad6b5f0b10">00059</a>        <span class="keyword">typedef</span> istd::TPointerVector&lt;ihotf::IHotfolderProcessingItem&gt; <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a6c5080ccefa5345728b127ad6b5f0b10">FileItems</a>;
+<a name="l00059"></a><a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a6c5080ccefa5345728b127ad6b5f0b10">00059</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;ihotf::IHotfolderProcessingItem&gt;</a> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a6c5080ccefa5345728b127ad6b5f0b10">FileItems</a>;
 <a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a98f65b2dabae358001f5586f8de402c4">00061</a>        <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a6c5080ccefa5345728b127ad6b5f0b10">FileItems</a> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a98f65b2dabae358001f5586f8de402c4">m_processingItems</a>;
+<a name="l00061"></a><a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a98f65b2dabae358001f5586f8de402c4">00061</a>        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">FileItems</a> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a98f65b2dabae358001f5586f8de402c4">m_processingItems</a>;
 <a name="l00062"></a>00062 
 <a name="l00063"></a><a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a8235fec3b2c27d3e6248cc9eebe6131f">00063</a>        <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_processing_info.html#a8235fec3b2c27d3e6248cc9eebe6131f">m_isWorking</a>;
 <a name="l00064"></a>00064 

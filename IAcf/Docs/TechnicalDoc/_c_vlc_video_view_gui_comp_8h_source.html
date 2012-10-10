@@ -33,7 +33,7 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;ActiveQt/QAxWidget&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;iqtgui/TGuiComponentBase.h&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_video_controller_8h.html">imm/IVideoController.h</a>&quot;</span>
@@ -51,10 +51,10 @@
 <a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> imm::IVideoController
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
-<a name="l00028"></a><a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a8c36d5704e815d9b53c7bc773a39c6c8">00028</a>        <span class="keyword">typedef</span> iqtgui::TGuiComponentBase&lt;QFrame&gt; <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a8c36d5704e815d9b53c7bc773a39c6c8">BaseClass</a>;
+<a name="l00028"></a><a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a8c36d5704e815d9b53c7bc773a39c6c8">00028</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;QFrame&gt;</a> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a8c36d5704e815d9b53c7bc773a39c6c8">BaseClass</a>;
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030        I_BEGIN_COMPONENT(<a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html">CVlcVideoViewGuiComp</a>);
-<a name="l00031"></a>00031               I_REGISTER_INTERFACE(istd::IChangeable);
+<a name="l00031"></a>00031               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>);
 <a name="l00032"></a>00032               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimm_1_1_i_media_controller.html">imm::IMediaController</a>);
 <a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimm_1_1_i_video_info.html">imm::IVideoInfo</a>);
 <a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimm_1_1_i_video_controller.html">imm::IVideoController</a>);
@@ -81,7 +81,7 @@
 <a name="l00055"></a>00055        <span class="comment">// reimplemented (imm::IVideoInfo)</span>
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#a53d51d068e461c13950fc55115fbb8f7">GetFramesCount</a>() <span class="keyword">const</span>;
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#adecd685f3c6d293a45fb8e7c24c89bd0">GetFrameIntervall</a>() <span class="keyword">const</span>;
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> istd::CIndex2d <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#aefd83f5c617729469b79759517c81a11">GetFrameSize</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#aefd83f5c617729469b79759517c81a11">GetFrameSize</a>() <span class="keyword">const</span>;
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiqaxmm_1_1_c_vlc_video_view_gui_comp.html#ae586ba3b11ac8bba63e667316dc4bf6a">GetPixelAspectRatio</a>() <span class="keyword">const</span>;
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061        <span class="comment">// reimplemented (imm::IVideoController)</span>

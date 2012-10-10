@@ -35,11 +35,11 @@
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;QtService.h&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;ibase/IApplication.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;ibase/TLoggerCompWrap.h&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_application_8h.html">ibase/IApplication.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;icomp/TAttribute.h&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_attribute_8h.html">icomp/TAttribute.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 <span class="comment">// IACF includes</span>
 <a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="iabc_8h.html">iabc/iabc.h</a>&quot;</span>
@@ -50,16 +50,16 @@
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 
 <a name="l00029"></a><a class="code" href="classiabc_1_1_c_service_application_comp.html">00029</a> <span class="keyword">class </span><a class="code" href="classiabc_1_1_c_service_application_comp.html" title="Qt based component for service-based application.">CServiceApplicationComp</a>:
-<a name="l00030"></a>00030                      <span class="keyword">public</span> QObject,
-<a name="l00031"></a>00031                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_logger_component_base.html">CLoggerComponentBase</a>,
+<a name="l00030"></a>00030                      <span class="keyword">public</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>,
+<a name="l00031"></a>00031                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
 <a name="l00032"></a>00032                      <span class="keyword">public</span> ibase::IApplication
 <a name="l00033"></a>00033 {
 <a name="l00034"></a>00034        Q_OBJECT
 <a name="l00035"></a>00035 <span class="keyword">public</span>:
-<a name="l00036"></a><a class="code" href="classiabc_1_1_c_service_application_comp.html#a8a301409f16050a07de1598ef06a76fe">00036</a>        <span class="keyword">typedef</span> ibase::CLoggerComponentBase <a class="code" href="classiabc_1_1_c_service_application_comp.html#a8a301409f16050a07de1598ef06a76fe">BaseClass</a>;
+<a name="l00036"></a><a class="code" href="classiabc_1_1_c_service_application_comp.html#a8a301409f16050a07de1598ef06a76fe">00036</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a8a301409f16050a07de1598ef06a76fe">BaseClass</a>;
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        I_BEGIN_COMPONENT(<a class="code" href="classiabc_1_1_c_service_application_comp.html" title="Qt based component for service-based application.">CServiceApplicationComp</a>);
-<a name="l00039"></a>00039               I_REGISTER_INTERFACE(ibase::IApplication);
+<a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>);
 <a name="l00040"></a>00040               I_ASSIGN(m_applicationCompPtr, <span class="stringliteral">&quot;ApplicationInstance&quot;</span>, <span class="stringliteral">&quot;Service application object&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Application&quot;</span>);
 <a name="l00041"></a>00041               I_ASSIGN(m_serviceDescriptionAttrPtr, <span class="stringliteral">&quot;SeriviceDescription&quot;</span>, <span class="stringliteral">&quot;Service description&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;This services provides...&quot;</span>);
 <a name="l00042"></a>00042               I_ASSIGN(m_serviceNameAttrPtr, <span class="stringliteral">&quot;ServiceName&quot;</span>, <span class="stringliteral">&quot;The name of the service&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MyService&quot;</span>);
@@ -75,7 +75,7 @@
 <a name="l00052"></a>00052        <span class="keyword">virtual</span> QStringList <a class="code" href="classiabc_1_1_c_service_application_comp.html#a490abd014bca7b6a40e38af648de6bb9">GetApplicationArguments</a>() <span class="keyword">const</span>;
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054        <span class="comment">// reimplemented (QObject)</span>
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a97b07f99dc5a13359b3828eb88813b6c">eventFilter</a>(QObject* sourcePtr, QEvent* eventPtr);
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a97b07f99dc5a13359b3828eb88813b6c">eventFilter</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 <span class="keyword">protected</span> Q_SLOTS:
 <a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classiabc_1_1_c_service_application_comp.html#a5d118a7b88c87d47b2dde416d77b9274">OnTrayIconActivated</a>(QSystemTrayIcon::ActivationReason reason);
@@ -87,7 +87,7 @@
 <a name="l00064"></a><a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a17eabad554f96b428dc5dadc96c9f6cd">00064</a>               <span class="keyword">typedef</span> QtServiceBase <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#a17eabad554f96b428dc5dadc96c9f6cd">BaseClass</a>;
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066               <a class="code" href="classiabc_1_1_c_service_application_comp_1_1_c_service.html#aeeb73bad539599de6c1a84b7b37faf87">CService</a>(<a class="code" href="classiabc_1_1_c_service_application_comp.html" title="Qt based component for service-based application.">CServiceApplicationComp</a>&amp; parent,
-<a name="l00067"></a>00067                                    ibase::IApplication&amp; application,
+<a name="l00067"></a>00067                                    <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>&amp; application,
 <a name="l00068"></a>00068                                    <span class="keywordtype">int</span> serviceArgc,
 <a name="l00069"></a>00069                                    <span class="keywordtype">char</span>** serviceArgv,
 <a name="l00070"></a>00070                                    <span class="keyword">const</span> QString &amp;name);
@@ -106,17 +106,17 @@
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084        <span class="keyword">private</span>:
 <a name="l00085"></a>00085               <a class="code" href="classiabc_1_1_c_service_application_comp.html" title="Qt based component for service-based application.">CServiceApplicationComp</a>&amp; m_parent;
-<a name="l00086"></a>00086               ibase::IApplication&amp; m_application;
+<a name="l00086"></a>00086               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>&amp; m_application;
 <a name="l00087"></a>00087               QStringList m_applicationArguments;
 <a name="l00088"></a>00088        };
 <a name="l00089"></a>00089 
 <a name="l00090"></a>00090 <span class="keyword">private</span>:
-<a name="l00091"></a>00091        I_REF(ibase::IApplication, m_applicationCompPtr);
+<a name="l00091"></a>00091        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_application.html">ibase::IApplication</a>, m_applicationCompPtr);
 <a name="l00092"></a>00092        I_ATTR(QString, m_serviceDescriptionAttrPtr);
 <a name="l00093"></a>00093        I_ATTR(QString, m_serviceNameAttrPtr);
 <a name="l00094"></a>00094        I_ATTR(<span class="keywordtype">bool</span>, m_manualStartupAttrPtr);
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096        istd::TDelPtr&lt;CService&gt; m_servicePtr;
+<a name="l00096"></a>00096        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CService&gt;</a> m_servicePtr;
 <a name="l00097"></a>00097 };
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099 

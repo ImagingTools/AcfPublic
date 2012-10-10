@@ -32,10 +32,10 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;istd/TDelPtr.h&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;istd/TChangeDelegator.h&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;istd/TPointerVector.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_change_delegator_8h.html">istd/TChangeDelegator.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="comment">// AcfSln includes</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_hotfolder_workflow_8h.html">ihotf/IHotfolderWorkflow.h</a>&quot;</span>
@@ -53,12 +53,12 @@
 <a name="l00030"></a>00030                             <span class="keyword">virtual</span> <span class="keyword">public</span> ihotf::<a class="code" href="classihotf_1_1_i_hotfolder_info_manager.html" title="Interface for getting some infos about a hotfolder.">IHotfolderInfoManager</a>
 <a name="l00031"></a>00031 {
 <a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a><a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a4dc24c9aa9845bf9489148eb74c87068">00033</a>        <span class="keyword">typedef</span> icomp::CComponentBase <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a4dc24c9aa9845bf9489148eb74c87068">BaseClass</a>;
+<a name="l00033"></a><a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a4dc24c9aa9845bf9489148eb74c87068">00033</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a4dc24c9aa9845bf9489148eb74c87068">BaseClass</a>;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        I_BEGIN_COMPONENT(<a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html" title="Implementation of the dynamic data model of the hotfolder.">CHotfolderWorkflowComp</a>);
 <a name="l00036"></a>00036               I_REGISTER_INTERFACE(<a class="code" href="classihotf_1_1_i_hotfolder_workflow.html" title="Common interface for a hotfolder workflow static model.">ihotf::IHotfolderWorkflow</a>);
 <a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="code" href="classihotf_1_1_i_hotfolder_info_manager.html" title="Interface for getting some infos about a hotfolder.">ihotf::IHotfolderInfoManager</a>);
-<a name="l00038"></a>00038               I_REGISTER_INTERFACE(iser::ISerializable);
+<a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040               I_ASSIGN_MULTI_0(m_hotoflderFactoriesCompPtr, <span class="stringliteral">&quot;HotfolderFactories&quot;</span>, <span class="stringliteral">&quot;List of factories for hotfolder creation&quot;</span>, <span class="keyword">true</span>);
 <a name="l00041"></a>00041               I_ASSIGN_MULTI_0(m_hotoflderFactoryIdsAttrPtr, <span class="stringliteral">&quot;HotfolderFactoryIds&quot;</span>, <span class="stringliteral">&quot;List of factory IDs for hotfolder creation&quot;</span>, <span class="keyword">true</span>);
@@ -77,25 +77,25 @@
 <a name="l00054"></a>00054        <span class="keyword">virtual</span> <a class="code" href="classihotf_1_1_i_hotfolder_workflow_item.html" title="Interface for getting some informations about properties of a given hotfolder.">ihotf::IHotfolderWorkflowItem</a>* <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#ad38d30e005c7f7c0813df6af4f850760" title="Get the hotfolder.">GetHotfolder</a>(<span class="keyword">const</span> QString&amp; hotfolderName) <span class="keyword">const</span>;
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a3f7239803a9d00d714f4f1ea6ad64baf">Serialize</a>(iser::IArchive&amp; archive);
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a3f7239803a9d00d714f4f1ea6ad64baf">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">protected</span>:
 <a name="l00060"></a><a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html">00060</a>        <span class="keyword">struct </span><a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html">HotfolderItem</a>
 <a name="l00061"></a>00061        {
-<a name="l00062"></a><a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html#ad71b3f4afc3ee5f3581a32ca83441b4a">00062</a>               istd::TDelPtr&lt;iprm::IParamsSet&gt; <a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html#ad71b3f4afc3ee5f3581a32ca83441b4a">hotfolderParamsPtr</a>;
-<a name="l00063"></a><a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html#a46f3fe0b691bdb1b702a57c5dec36510">00063</a>               istd::TDelPtr&lt;ihotf::IHotfolderWorkflowItem&gt; <a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html#a46f3fe0b691bdb1b702a57c5dec36510">elementPtr</a>;
+<a name="l00062"></a><a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html#ad71b3f4afc3ee5f3581a32ca83441b4a">00062</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iprm::IParamsSet&gt;</a> <a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html#ad71b3f4afc3ee5f3581a32ca83441b4a">hotfolderParamsPtr</a>;
+<a name="l00063"></a><a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html#a46f3fe0b691bdb1b702a57c5dec36510">00063</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;ihotf::IHotfolderWorkflowItem&gt;</a> <a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html#a46f3fe0b691bdb1b702a57c5dec36510">elementPtr</a>;
 <a name="l00064"></a>00064        };
 <a name="l00065"></a>00065 
-<a name="l00066"></a><a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a8c7fc532ac7bdd307b4ada28dbc9c386">00066</a>        <span class="keyword">typedef</span> istd::TPointerVector&lt;HotfolderItem&gt; <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a8c7fc532ac7bdd307b4ada28dbc9c386">Hotfolders</a>;
+<a name="l00066"></a><a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a8c7fc532ac7bdd307b4ada28dbc9c386">00066</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;HotfolderItem&gt;</a> <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a8c7fc532ac7bdd307b4ada28dbc9c386">Hotfolders</a>;
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068        <span class="keyword">virtual</span> <a class="code" href="structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html">HotfolderItem</a>* <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a4340a67825fe69ec21db4ab9d7ac455f">CreateHotfolder</a>(<span class="keyword">const</span> QString&amp; hotfolderName, <span class="keyword">const</span> QString&amp; hotfolderId = QString()) <span class="keyword">const</span>;
 <a name="l00069"></a>00069        <span class="keyword">virtual</span> <a class="code" href="classihotf_1_1_i_hotfolder_workflow_item.html" title="Interface for getting some informations about properties of a given hotfolder.">ihotf::IHotfolderWorkflowItem</a>* <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#adbd0216823589c3b55d6a8f91bcd9207">CreateWorkflowItem</a>(<span class="keyword">const</span> QString&amp; hotfolderId) <span class="keyword">const</span>;
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071 <span class="keyword">private</span>:
-<a name="l00072"></a>00072        I_MULTIFACT(iprm::IParamsSet, m_hotoflderFactoriesCompPtr);
+<a name="l00072"></a>00072        I_MULTIFACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>, m_hotoflderFactoriesCompPtr);
 <a name="l00073"></a>00073        I_MULTIATTR(QString, m_hotoflderFactoryIdsAttrPtr);
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <a class="code" href="classihotf_1_1_c_hotfolder_workflow_comp.html#a8c7fc532ac7bdd307b4ada28dbc9c386">Hotfolders</a> m_hotfolders;
+<a name="l00075"></a>00075        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Hotfolders</a> m_hotfolders;
 <a name="l00076"></a>00076 };
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 

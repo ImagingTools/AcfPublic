@@ -225,6 +225,10 @@
     <filename>izlib_8h</filename>
     <namespace>izlib</namespace>
   </compound>
+  <compound kind="class">
+    <name>TViewExtenderCompBase</name>
+    <filename>class_t_view_extender_comp_base.html</filename>
+  </compound>
   <compound kind="namespace">
     <name>iabc</name>
     <filename>namespaceiabc.html</filename>
@@ -233,7 +237,9 @@
   <compound kind="class">
     <name>iabc::CServiceApplicationComp</name>
     <filename>classiabc_1_1_c_service_application_comp.html</filename>
-    <base>ibase::CLoggerComponentBase</base>
+    <base>QObject</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <base>ibase::IApplication</base>
     <class kind="class">iabc::CServiceApplicationComp::CService</class>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
@@ -353,10 +359,6 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>ibase</name>
-    <filename>namespaceibase.html</filename>
-  </compound>
-  <compound kind="namespace">
     <name>icbox</name>
     <filename>namespaceicbox.html</filename>
     <class kind="class">icbox::CMemoryBankSerializerComp</class>
@@ -364,7 +366,8 @@
   <compound kind="class">
     <name>icbox::CMemoryBankSerializerComp</name>
     <filename>classicbox_1_1_c_memory_bank_serializer_comp.html</filename>
-    <base>ibase::CLoggerComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">iser::IFileLoader</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
@@ -529,7 +532,7 @@
   <compound kind="class">
     <name>ilibav::CLibAvVideoDecoderComp</name>
     <filename>classilibav_1_1_c_lib_av_video_decoder_comp.html</filename>
-    <base>ibase::CLoggerComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">icam::IBitmapAcquisition</base>
     <base virtualness="virtual">imeas::ISampleAcquisition</base>
     <base virtualness="virtual">imm::IVideoController</base>
@@ -867,7 +870,7 @@
   <compound kind="class">
     <name>iocv::COcvAcquisitionComp</name>
     <filename>classiocv_1_1_c_ocv_acquisition_comp.html</filename>
-    <base>ibase::CLoggerComponentBase</base>
+    <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
@@ -936,6 +939,7 @@
   <compound kind="class">
     <name>iocv::COcvImage</name>
     <filename>classiocv_1_1_c_ocv_image.html</filename>
+    <base protection="private" virtualness="virtual">iimg::CBitmapBase</base>
     <member kind="function">
       <type></type>
       <name>COcvImage</name>
@@ -1133,6 +1137,7 @@
   <compound kind="class">
     <name>iqaxmm::CVlcVideoViewGuiComp</name>
     <filename>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</filename>
+    <base>TGuiComponentBase&lt; QFrame &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QFrame &gt;</type>
@@ -1291,6 +1296,7 @@
   <compound kind="class">
     <name>iqsci::CTextEditor</name>
     <filename>classiqsci_1_1_c_text_editor.html</filename>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>QWidget</type>
       <name>BaseClass</name>
@@ -1407,6 +1413,8 @@
   <compound kind="class">
     <name>iqsci::CTextEditorGuiComp</name>
     <filename>classiqsci_1_1_c_text_editor_gui_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; ibase::ITextDocument &gt; &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; ibase::ITextDocument &gt; &gt;</type>
       <name>BaseClass</name>
@@ -1465,10 +1473,6 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>iqt2d</name>
-    <filename>namespaceiqt2d.html</filename>
-  </compound>
-  <compound kind="namespace">
     <name>iqwt</name>
     <filename>namespaceiqwt.html</filename>
     <class kind="class">iqwt::CHistogramViewComp</class>
@@ -1477,6 +1481,7 @@
   <compound kind="class">
     <name>iqwt::CHistogramViewComp</name>
     <filename>classiqwt_1_1_c_histogram_view_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</type>
       <name>BaseClass</name>
@@ -1516,6 +1521,8 @@
   <compound kind="class">
     <name>iqwt::CProgressHistoryGuiComp</name>
     <filename>classiqwt_1_1_c_progress_history_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CProgressHistoryGuiComp &gt;</base>
+    <base>ibase::IProgressManager</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CProgressHistoryGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -1595,6 +1602,8 @@
   <compound kind="class">
     <name>iqwt3d::CSurfaceViewComp</name>
     <filename>classiqwt3d_1_1_c_surface_view_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CSurfaceViewComp, imath::ISampledFunction2d &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="enumvalue">
       <name>GI_QWT3D</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
@@ -1680,10 +1689,6 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>istd</name>
-    <filename>namespaceistd.html</filename>
-  </compound>
-  <compound kind="namespace">
     <name>iwin</name>
     <filename>namespaceiwin.html</filename>
     <class kind="class">iwin::CPerformanceTimeStamp</class>
@@ -1694,6 +1699,7 @@
   <compound kind="class">
     <name>iwin::CPerformanceTimeStamp</name>
     <filename>classiwin_1_1_c_performance_time_stamp.html</filename>
+    <base virtualness="virtual">istd::ITimeStamp</base>
     <member kind="function">
       <type></type>
       <name>CPerformanceTimeStamp</name>
@@ -1800,6 +1806,7 @@
   <compound kind="class">
     <name>iwin::CTimeStampCacheComp</name>
     <filename>classiwin_1_1_c_time_stamp_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iinsp::ITimeStampProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -1827,6 +1834,7 @@
     <name>iwin::TComPtr</name>
     <filename>classiwin_1_1_t_com_ptr.html</filename>
     <templarg>Type</templarg>
+    <base>istd::TPointerBase</base>
     <member kind="typedef">
       <type>istd::TPointerBase&lt; Type &gt;</type>
       <name>BaseClass</name>
@@ -1928,6 +1936,8 @@
   <compound kind="class">
     <name>izlib::CGzXmlReadArchive</name>
     <filename>classizlib_1_1_c_gz_xml_read_archive.html</filename>
+    <base>iser::CXmlReadArchiveBase</base>
+    <base>iser::CFileArchiveInfo</base>
     <member kind="typedef">
       <type>iser::CXmlReadArchiveBase</type>
       <name>BaseClass</name>
@@ -1967,6 +1977,8 @@
   <compound kind="class">
     <name>izlib::CGzXmlWriteArchive</name>
     <filename>classizlib_1_1_c_gz_xml_write_archive.html</filename>
+    <base>iser::CXmlWriteArchiveBase</base>
+    <base>iser::CFileArchiveInfo</base>
     <member kind="typedef">
       <type>iser::CXmlWriteArchiveBase</type>
       <name>BaseClass</name>

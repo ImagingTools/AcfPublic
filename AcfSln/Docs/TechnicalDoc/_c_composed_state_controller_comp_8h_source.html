@@ -28,9 +28,9 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iwiz_CComposedStateControllerComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;imod/CMultiModelDispatcherBase.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_multi_model_dispatcher_base_8h.html">imod/CMultiModelDispatcherBase.h</a>&quot;</span>
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;iprm/CComposedParamsSetComp.h&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_composed_params_set_comp_8h.html">iprm/CComposedParamsSetComp.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_state_controller_8h.html">iproc/IStateController.h</a>&quot;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
@@ -46,8 +46,8 @@
 <a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::IStateController
 <a name="l00024"></a>00024 {
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00026"></a><a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#a9701c3f253aba37ed8f7a91fa4970334">00026</a>        <span class="keyword">typedef</span> iprm::CComposedParamsSetComp <a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#a9701c3f253aba37ed8f7a91fa4970334">BaseClass</a>;
-<a name="l00027"></a><a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa26b373f9acfa70981a7d5f862839ea0">00027</a>        <span class="keyword">typedef</span> imod::CMultiModelDispatcherBase <a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa26b373f9acfa70981a7d5f862839ea0">BaseClass2</a>;
+<a name="l00026"></a><a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#a9701c3f253aba37ed8f7a91fa4970334">00026</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_c_composed_params_set_comp.html">iprm::CComposedParamsSetComp</a> <a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#a9701c3f253aba37ed8f7a91fa4970334">BaseClass</a>;
+<a name="l00027"></a><a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa26b373f9acfa70981a7d5f862839ea0">00027</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_dispatcher_base.html">imod::CMultiModelDispatcherBase</a> <a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa26b373f9acfa70981a7d5f862839ea0">BaseClass2</a>;
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html" title="Component implementation of a wizard page.">CComposedStateControllerComp</a>);
 <a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info.">iproc::IStateController</a>);
@@ -71,7 +71,7 @@
 <a name="l00048"></a>00048        <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#ad5ea9167db0aac87eb1be226ecaea79e">UpdateAllMembers</a>();
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa059cd59fabdcd78ae888eba79471e28">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, istd::IPolymorphic* updateParamsPtr);
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#aa059cd59fabdcd78ae888eba79471e28">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_composed_state_controller_comp.html#a37d705e28c88a392b07891d34ad8e244">OnComponentCreated</a>();
@@ -82,7 +82,7 @@
 <a name="l00059"></a>00059        <span class="keywordtype">bool</span> m_isStateActive;
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061        I_MULTIREF(<a class="code" href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info.">iproc::IStateController</a>, m_slaveControllersCompPtr);
-<a name="l00062"></a>00062        I_MULTIREF(imod::IModel, m_slaveControllerModelsCompPtr);
+<a name="l00062"></a>00062        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_slaveControllerModelsCompPtr);
 <a name="l00063"></a>00063        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_processOnEnterCompPtr);
 <a name="l00064"></a>00064        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_processOnLeaveCompPtr);
 <a name="l00065"></a>00065 };

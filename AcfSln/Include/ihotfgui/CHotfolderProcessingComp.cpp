@@ -14,7 +14,7 @@
 **	If you are unsure which license is appropriate for your use, please
 **	contact us at info@imagingtools.de.
 **
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
 **	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
@@ -302,7 +302,7 @@ void CHotfolderProcessingComp::ItemProcessor::run()
 
 	QElapsedTimer timer;
 	
-	if (!m_parent.m_fileConvertCompPtr->ConvertFile(m_inputFilePath, m_outputFilePath)){
+	if (!m_parent.m_fileConvertCompPtr->ConvertFiles(m_inputFilePath, m_outputFilePath)){
 		m_parent.SendErrorMessage(0, QObject::tr("Processing of  %1 failed").arg(m_inputFilePath), "Hotfolder");
 
 		m_processingState = iproc::IProcessor::TS_INVALID;

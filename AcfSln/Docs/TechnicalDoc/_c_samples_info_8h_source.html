@@ -38,21 +38,21 @@
 <a name="l00015"></a><a class="code" href="classimeas_1_1_c_samples_info.html">00015</a> <span class="keyword">class </span><a class="code" href="classimeas_1_1_c_samples_info.html" title="Stores additional data sequence data used to interpret samples value correctly.">CSamplesInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classimeas_1_1_c_data_sequence_info_base.html" title="Simple base class for implementations of interface imeas::IDataSequenceInfo.">CDataSequenceInfoBase</a>
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a>00018        <a class="code" href="classimeas_1_1_c_samples_info.html#a9f272697d511ecc3bb2cdf70f03c3e00">CSamplesInfo</a>(<span class="keyword">const</span> istd::CRange&amp; logicalSamplesRange = istd::CRange::GetInvalid());
+<a name="l00018"></a>00018        <a class="code" href="classimeas_1_1_c_samples_info.html#a9f272697d511ecc3bb2cdf70f03c3e00">CSamplesInfo</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; logicalSamplesRange = <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html#a594568dc8932e671cbb94cf0538ed249">istd::CRange::GetInvalid</a>());
 <a name="l00019"></a>00019 
-<a name="l00025"></a>00025        <span class="keyword">const</span> istd::CRange&amp; <a class="code" href="classimeas_1_1_c_samples_info.html#a6e45ca9440bf4215ab2c927e932b426e" title="Get logical position range (time axis) of this data sequence.">GetLogicalSamplesRange</a>() <span class="keyword">const</span>;
-<a name="l00030"></a>00030        <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_samples_info.html#a67d7db65c77093dadbe41a9b4741ae5e" title="Set logical position range (time axis) of this data sequence.">SetLogicalSamplesRange</a>(<span class="keyword">const</span> istd::CRange&amp; range);
+<a name="l00025"></a>00025        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; <a class="code" href="classimeas_1_1_c_samples_info.html#a6e45ca9440bf4215ab2c927e932b426e" title="Get logical position range (time axis) of this data sequence.">GetLogicalSamplesRange</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030        <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_samples_info.html#a67d7db65c77093dadbe41a9b4741ae5e" title="Set logical position range (time axis) of this data sequence.">SetLogicalSamplesRange</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a>&amp; range);
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        <span class="comment">// reimplemented (imeas::IDataSequenceInfo)</span>
 <a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_samples_info.html#ab565faf5149b9570973ac501fd2d07d6" title="Get default number of samples.">GetDefaultSamplesCount</a>() <span class="keyword">const</span>;
 <a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_samples_info.html#a2aedd820128a93895552ed804fe328a5" title="Get default number of channels.">GetDefaultChannelsCount</a>() <span class="keyword">const</span>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_samples_info.html#a290d85c76a02ae9783ccbfcffba647b2">Serialize</a>(iser::IArchive&amp; archive);
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classimeas_1_1_c_samples_info.html#a290d85c76a02ae9783ccbfcffba647b2">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039 <span class="keyword">private</span>:
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041        istd::CRange m_logicalSamplesRange;
+<a name="l00041"></a>00041        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> m_logicalSamplesRange;
 <a name="l00042"></a>00042 };
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 

@@ -29,9 +29,9 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;i2d/ICalibrationProvider.h&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;i2d/CVector2d.h&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;i2d/CAffineTransformation2d.h&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_vector2d_8h.html">i2d/CVector2d.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_affine_transformation2d_8h.html">i2d/CAffineTransformation2d.h</a>&quot;</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_comp_wrap_8h.html">iproc/TSupplierCompWrap.h</a>&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_provider_8h.html">imeas/INumericValueProvider.h</a>&quot;</span>
@@ -48,14 +48,14 @@
 <a name="l00028"></a><a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html">00028</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html" title="Implementation of value supplier returning position on the image.">CPositionFromImageSupplierComp</a>:
 <a name="l00029"></a>00029                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt;imath::CVarVector&gt;,
 <a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> imeas::INumericValueProvider,
-<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::<a class="code" href="classi2d_1_1_i_calibration_provider.html">ICalibrationProvider</a>
+<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
 <a name="l00032"></a>00032 {
 <a name="l00033"></a>00033 <span class="keyword">public</span>:
 <a name="l00034"></a><a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#ab187d64547bef3091dba6aa44b96dc37">00034</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt;imath::CVarVector&gt;</a> <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#ab187d64547bef3091dba6aa44b96dc37">BaseClass</a>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html" title="Implementation of value supplier returning position on the image.">CPositionFromImageSupplierComp</a>);
 <a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values.">imeas::INumericValueProvider</a>);
-<a name="l00038"></a>00038               I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
+<a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>);
 <a name="l00039"></a>00039               I_ASSIGN(m_bitmapProviderCompPtr, <span class="stringliteral">&quot;BitmapProvider&quot;</span>, <span class="stringliteral">&quot;Provide image to analyse&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapProvider&quot;</span>);
 <a name="l00040"></a>00040               <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#af0e2eab9108af52e18ec896365e39493">I_ASSIGN_TO</a>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, <span class="keyword">false</span>);
 <a name="l00041"></a>00041               I_ASSIGN(m_calibrationProviderCompPtr, <span class="stringliteral">&quot;CalibrationProvider&quot;</span>, <span class="stringliteral">&quot;Provide 2D-calibration object&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;CalibrationProvider&quot;</span>);
@@ -67,29 +67,29 @@
 <a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>&amp; <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a1ed9118ef6cde2f62a737ec2b6192227" title="Returns a single numeric value from the list.">GetNumericValue</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keyword">const</span> i2d::ITransformation2d* <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#afb8637e8540b088973c12b84235119d6">GetCalibration</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#afb8637e8540b088973c12b84235119d6">GetCalibration</a>() <span class="keyword">const</span>;
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052 <span class="keyword">protected</span>:
 <a name="l00053"></a>00053        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a89dd14a9a7d2172a71d58101aec62f18" title="Produce single object.">ProduceObject</a>(imath::CVarVector&amp; result) <span class="keyword">const</span>;
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a89dd14a9a7d2172a71d58101aec62f18" title="Produce single object.">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a59c8e8cd4b452ab79c986998f3dd0542">OnComponentCreated</a>();
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">private</span>:
 <a name="l00060"></a>00060        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
-<a name="l00061"></a>00061        I_REF(imod::IModel, m_bitmapProviderModelCompPtr);
-<a name="l00062"></a>00062        I_REF(i2d::ICalibrationProvider, m_calibrationProviderCompPtr);
+<a name="l00061"></a>00061        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
+<a name="l00062"></a>00062        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
 <a name="l00063"></a>00063        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_processorCompPtr);
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="keyword">mutable</span> istd::TDelPtr&lt;const i2d::ITransformation2d&gt; m_outputCalibrationPtr;
+<a name="l00065"></a>00065        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;const i2d::ITransformation2d&gt;</a> m_outputCalibrationPtr;
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067        <span class="keyword">class </span>Position: <span class="keyword">public</span> imeas::CSimpleNumericValue
 <a name="l00068"></a>00068        {
 <a name="l00069"></a>00069        <span class="keyword">public</span>:
 <a name="l00070"></a>00070               <span class="comment">// reimplemented (imeas::INumericValue)</span>
 <a name="l00071"></a>00071               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsValueTypeSupported(ValueTypeId valueTypeId) <span class="keyword">const</span>;
-<a name="l00072"></a>00072               <span class="keyword">virtual</span> imath::CVarVector GetComponentValue(ValueTypeId valueTypeId) <span class="keyword">const</span>;
+<a name="l00072"></a>00072               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> GetComponentValue(ValueTypeId valueTypeId) <span class="keyword">const</span>;
 <a name="l00073"></a>00073        };
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075        <span class="keyword">mutable</span> Position m_position;

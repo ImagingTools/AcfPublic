@@ -28,11 +28,11 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iproc_TSyncProcessorCompBase_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;ibase/TLoggerCompWrap.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_t_sync_processor_wrap_8h.html">iproc/TSyncProcessorWrap.h</a>&quot;</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="keyword">namespace </span>iproc
@@ -41,11 +41,11 @@
 <a name="l00015"></a>00015 
 <a name="l00019"></a>00019 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base, <span class="keyword">class</span> Interface = Base&gt;
 <a name="l00020"></a><a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html" title="Simple definition macro for a synchronous processor.">TSyncProcessorCompBase</a>:
-<a name="l00021"></a>00021                      <span class="keyword">public</span> ibase::<a class="code" href="classibase_1_1_c_logger_component_base.html">CLoggerComponentBase</a>,
+<a name="l00021"></a>00021                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
 <a name="l00022"></a>00022                      <span class="keyword">public</span> iproc::<a class="code" href="classiproc_1_1_t_sync_processor_wrap.html" title="Wrapper of iproc::IProcessor for simple synchrone processor implementations.">TSyncProcessorWrap</a>&lt;Base&gt;
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00025"></a><a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#aba5b8a1659fcb233df925c946248ae58">00025</a>        <span class="keyword">typedef</span> ibase::CLoggerComponentBase <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#aba5b8a1659fcb233df925c946248ae58">BaseClass</a>;
+<a name="l00025"></a><a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#aba5b8a1659fcb233df925c946248ae58">00025</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#aba5b8a1659fcb233df925c946248ae58">BaseClass</a>;
 <a name="l00026"></a><a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#ae7231378d49277f210d184366095ac75">00026</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_sync_processor_wrap.html" title="Wrapper of iproc::IProcessor for simple synchrone processor implementations.">iproc::TSyncProcessorWrap&lt;Base&gt;</a> <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#ae7231378d49277f210d184366095ac75">BaseClass2</a>;
 <a name="l00027"></a><a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#aeb82b61f5619c5cfd1cfdefe18320b2d">00027</a>        <span class="keyword">typedef</span> Interface <a class="code" href="classiproc_1_1_t_sync_processor_comp_base.html#aeb82b61f5619c5cfd1cfdefe18320b2d">InterfaceType</a>;
 <a name="l00028"></a>00028 

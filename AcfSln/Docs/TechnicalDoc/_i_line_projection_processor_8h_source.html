@@ -28,11 +28,11 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iipr_ILineProjectionProcessor_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;i2d/CLine2d.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_line2d_8h.html">i2d/CLine2d.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;iimg/IBitmap.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_8h.html">iimg/IBitmap.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_data_sequence_8h.html">imeas/IDataSequence.h</a>&quot;</span>
 <a name="l00012"></a>00012 
@@ -48,8 +48,8 @@
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
 <a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_i_line_projection_processor.html#af120497a2463d4fe7b2c353269dff8f1" title="Do line projection with explicite projection parameters.">DoProjection</a>(
-<a name="l00028"></a>00028                             <span class="keyword">const</span> iimg::IBitmap&amp; bitmap,
-<a name="l00029"></a>00029                             <span class="keyword">const</span> i2d::CLine2d&amp; projectionLine,
+<a name="l00028"></a>00028                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; bitmap,
+<a name="l00029"></a>00029                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_line2d.html">i2d::CLine2d</a>&amp; projectionLine,
 <a name="l00030"></a>00030                             <span class="keyword">const</span> <a class="code" href="classiipr_1_1_i_projection_params.html" title="Describe parameter for projection 2D image to 1D structure.">IProjectionParams</a>* paramsPtr,
 <a name="l00031"></a>00031                             <a class="code" href="classimeas_1_1_i_data_sequence.html" title="General definition of sequence contains samples in regular time grid.">imeas::IDataSequence</a>&amp; results) = 0;
 <a name="l00032"></a>00032 };

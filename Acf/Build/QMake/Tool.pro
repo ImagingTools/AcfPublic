@@ -1,0 +1,16 @@
+TEMPLATE = subdirs
+CONFIG += ordered
+CONFIG += debug_and_release
+
+SUBDIRS += Acf
+SUBDIRS += Arxc
+SUBDIRS += CompositorMini
+SUBDIRS += Compositor
+
+Acf.file = ../../Impl/AcfExe/QMake/Acf.pro
+Arxc.file = ../../Impl/ArxcExe/QMake/Arxc.pro
+Arxc.depends = Acf
+CompositorMini.file = ../../Impl/CompositorMiniExe/QMake/CompositorMini.pro
+CompositorMini.depends = Acf
+Compositor.file = ../../Impl/CompositorExe/QMake/Compositor.pro
+Compositor.depends = Arxc

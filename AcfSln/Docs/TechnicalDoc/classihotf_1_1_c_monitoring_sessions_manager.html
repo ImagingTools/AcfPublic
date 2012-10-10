@@ -36,7 +36,7 @@
 <div class="title">ihotf::CMonitoringSessionsManager Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ihotf::CMonitoringSessionsManager" --><!-- doxytag: inherits="ihotf::IMonitoringSessionManager" -->
+<!-- doxytag: class="ihotf::CMonitoringSessionsManager" --><!-- doxytag: inherits="iser::ISerializable,ihotf::IMonitoringSessionManager" -->
 <p><code>#include &lt;<a class="el" href="_c_monitoring_sessions_manager_8h_source.html">CMonitoringSessionsManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ihotf::CMonitoringSessionsManager:</div>
@@ -44,7 +44,11 @@ Inheritance diagram for ihotf::CMonitoringSessionsManager:</div>
  <div class="center">
   <img src="classihotf_1_1_c_monitoring_sessions_manager.png" usemap="#ihotf::CMonitoringSessionsManager_map" alt=""/>
   <map id="ihotf::CMonitoringSessionsManager_map" name="ihotf::CMonitoringSessionsManager_map">
-<area href="classihotf_1_1_i_monitoring_session_manager.html" title="Common interface for a monitoring session&#39;s manager." alt="ihotf::IMonitoringSessionManager" shape="rect" coords="0,0,212,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,212,136"/>
+<area href="classihotf_1_1_i_monitoring_session_manager.html" title="Common interface for a monitoring session&#39;s manager." alt="ihotf::IMonitoringSessionManager" shape="rect" coords="222,112,434,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,212,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="222,56,434,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,212,24"/>
 </map>
  </div></div>
 
@@ -56,7 +60,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all session data.  <a href="#a62293fabfbb06d00dc9a2e726fda08aa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classihotf_1_1_i_monitoring_session.html">ihotf::IMonitoringSession</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_monitoring_sessions_manager.html#a3f8a294dd761afbdc632f3390ae0535f">GetSession</a> (const QString &amp;directoryPath) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get monitoring session for the given monitor and directory path.  <a href="#a3f8a294dd761afbdc632f3390ae0535f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_monitoring_sessions_manager.html#a03da74bfc7b31080aa2fac00463ffba3">Serialize</a> (iser::IArchive &amp;archive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotf_1_1_c_monitoring_sessions_manager.html#a03da74bfc7b31080aa2fac00463ffba3">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -110,13 +114,15 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool ihotf::CMonitoringSessionsManager::Serialize </td>
           <td>(</td>
-          <td class="paramtype">iser::IArchive &amp;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 </div>
 </div>

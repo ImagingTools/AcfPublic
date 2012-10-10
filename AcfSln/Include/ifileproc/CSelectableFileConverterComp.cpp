@@ -14,7 +14,7 @@
 **	If you are unsure which license is appropriate for your use, please
 **	contact us at info@imagingtools.de.
 **
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
 **	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
@@ -45,13 +45,13 @@ CSelectableFileConverterComp::CSelectableFileConverterComp()
 
 // reimplemented (ibase::IFileConvertCopy)
 
-bool CSelectableFileConverterComp::ConvertFile(
-			const QString& inputFilePath,
-			const QString& outputFilePath,
+bool CSelectableFileConverterComp::ConvertFiles(
+			const QString& inputPath,
+			const QString& outputPath,
 			const iprm::IParamsSet* /*paramsPtr*/) const
 {
 	if (m_selectedOptionIndex >= 0){
-		return m_slaveConvertersCompPtr[m_selectedOptionIndex]->ConvertFile(inputFilePath, outputFilePath);
+		return m_slaveConvertersCompPtr[m_selectedOptionIndex]->ConvertFiles(inputPath, outputPath);
 	}
 
 	return false;

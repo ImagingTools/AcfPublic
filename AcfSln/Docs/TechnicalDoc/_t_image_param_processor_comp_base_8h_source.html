@@ -29,7 +29,7 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;iprm/TParamsPtr.h&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_params_ptr_8h.html">iprm/TParamsPtr.h</a>&quot;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_image_processor_comp_base_8h.html">iipr/CImageProcessorCompBase.h</a>&quot;</span>
@@ -52,15 +52,15 @@
 <a name="l00029"></a>00029 <span class="keyword">protected</span>:
 <a name="l00030"></a>00030        <span class="comment">// reimplemented (iipr::CImageProcessorCompBase)</span>
 <a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_image_param_processor_comp_base.html#a4cc06678e44cdfcc49f2e343b695182f">ProcessImage</a>(
-<a name="l00032"></a>00032                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr, 
-<a name="l00033"></a>00033                             <span class="keyword">const</span> iimg::IBitmap&amp; inputImage,
-<a name="l00034"></a>00034                             iimg::IBitmap&amp; outputImage);
+<a name="l00032"></a>00032                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr, 
+<a name="l00033"></a>00033                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputImage,
+<a name="l00034"></a>00034                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage);
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        <span class="comment">// abstract methods</span>
 <a name="l00043"></a>00043 <span class="comment"></span>       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_image_param_processor_comp_base.html#a9d48a40b0bcb1644d116ca345c789f11" title="Do image processing with some (optional) parameter set.">ParamProcessImage</a>(
 <a name="l00044"></a>00044                             <span class="keyword">const</span> ParameterType* parameterPtr, 
-<a name="l00045"></a>00045                             <span class="keyword">const</span> iimg::IBitmap&amp; inputImage,
-<a name="l00046"></a>00046                             iimg::IBitmap&amp; outputImage) = 0;
+<a name="l00045"></a>00045                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputImage,
+<a name="l00046"></a>00046                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage) = 0;
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 <span class="keyword">private</span>:
 <a name="l00049"></a>00049        I_ATTR(QByteArray, m_paramsIdAttrPtr);
@@ -73,13 +73,13 @@
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 <span class="keyword">template</span> &lt;<span class="keyword">class</span> ParameterType&gt;
 <a name="l00058"></a><a class="code" href="classiipr_1_1_t_image_param_processor_comp_base.html#a4cc06678e44cdfcc49f2e343b695182f">00058</a> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_image_param_processor_comp_base.html#a4cc06678e44cdfcc49f2e343b695182f">TImageParamProcessorCompBase&lt;ParameterType&gt;::ProcessImage</a>(
-<a name="l00059"></a>00059                      <span class="keyword">const</span> iprm::IParamsSet* paramsPtr, 
-<a name="l00060"></a>00060                      <span class="keyword">const</span> iimg::IBitmap&amp; inputImage,
-<a name="l00061"></a>00061                      iimg::IBitmap&amp; outputImage)
+<a name="l00059"></a>00059                      <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr, 
+<a name="l00060"></a>00060                      <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputImage,
+<a name="l00061"></a>00061                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage)
 <a name="l00062"></a>00062 {
-<a name="l00063"></a>00063        iprm::TParamsPtr&lt;ParameterType&gt; processorParamsPtr;     
-<a name="l00064"></a>00064        <span class="keywordflow">if</span> ((paramsPtr != NULL) &amp;&amp; m_paramsIdAttrPtr.IsValid()){
-<a name="l00065"></a>00065               processorParamsPtr.Init(paramsPtr, *m_paramsIdAttrPtr);
+<a name="l00063"></a>00063        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_t_params_ptr.html">iprm::TParamsPtr&lt;ParameterType&gt;</a> processorParamsPtr;     
+<a name="l00064"></a>00064        <span class="keywordflow">if</span> ((paramsPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsIdAttrPtr.IsValid()){
+<a name="l00065"></a>00065               processorParamsPtr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_t_params_ptr.html#aef4f7e221c56b1f0cde4058c275e580c">Init</a>(paramsPtr, *m_paramsIdAttrPtr);
 <a name="l00066"></a>00066        }
 <a name="l00067"></a>00067        
 <a name="l00068"></a>00068        <span class="comment">// do image processing:</span>

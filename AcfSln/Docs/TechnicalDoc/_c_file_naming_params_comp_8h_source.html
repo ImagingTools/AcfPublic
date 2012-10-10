@@ -32,7 +32,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QStringList&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// AcfSln includes</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_naming_params_8h.html">ifileproc/IFileNamingParams.h</a>&quot;</span>
@@ -47,12 +47,12 @@
 <a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifileproc::<a class="code" href="classifileproc_1_1_i_file_naming_params.html" title="Interface for calculation parameters of the new file name for any file item.">IFileNamingParams</a>
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
-<a name="l00024"></a><a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html#a9f93a7d613e1f76e2e5651e6a5f08149">00024</a>        <span class="keyword">typedef</span> icomp::CComponentBase <a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html#a9f93a7d613e1f76e2e5651e6a5f08149">BaseClass</a>;
+<a name="l00024"></a><a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html#a9f93a7d613e1f76e2e5651e6a5f08149">00024</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html#a9f93a7d613e1f76e2e5651e6a5f08149">BaseClass</a>;
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026        <a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html#a24f32b7094354f7e0941f37e615b4ced">CFileNamingParamsComp</a>();
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028        I_BEGIN_COMPONENT(<a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html">ifileproc::CFileNamingParamsComp</a>);
-<a name="l00029"></a>00029               I_REGISTER_INTERFACE(iser::ISerializable);
+<a name="l00029"></a>00029               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
 <a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="code" href="classifileproc_1_1_i_file_naming_params.html" title="Interface for calculation parameters of the new file name for any file item.">ifileproc::IFileNamingParams</a>);
 <a name="l00031"></a>00031               I_ASSIGN(m_prefixAttrPtr, <span class="stringliteral">&quot;Prefix&quot;</span>, <span class="stringliteral">&quot;Prefix attached to the output file name&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>);
 <a name="l00032"></a>00032               I_ASSIGN(m_suffixAttrPtr, <span class="stringliteral">&quot;Suffix&quot;</span>, <span class="stringliteral">&quot;Suffix attached to the output file name&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>);
@@ -71,7 +71,7 @@
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html#a86d9a039cceecf955c86ee481c9d56b2" title="Set list of text patterns, that must be removed from the output file name.">SetPatternsToRemove</a>(<span class="keyword">const</span> QStringList&amp; patternsToRemove);
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html#a7bcdbd60b2cd6089b7f3c354a4edef08">Serialize</a>(iser::IArchive&amp; archive);
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifileproc_1_1_c_file_naming_params_comp.html#a7bcdbd60b2cd6089b7f3c354a4edef08">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 <span class="keyword">protected</span>:
 <a name="l00051"></a>00051        <span class="comment">// reimplemented (icomp::CComponentBase)</span>

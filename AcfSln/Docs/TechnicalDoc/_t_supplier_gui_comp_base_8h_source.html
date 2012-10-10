@@ -32,15 +32,15 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtGui/QMessageBox&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;istd/TChangeNotifier.h&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;iser/IFileLoader.h&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;imod/IObserver.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iprm/IParamsSet.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;i2d/ICalibrationProvider.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_change_notifier_8h.html">istd/TChangeNotifier.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_observer_8h.html">imod/IObserver.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_supplier_8h.html">iproc/ISupplier.h</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;iqtgui/IGuiObject.h&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;iqtgui/TDesignerGuiObserverCompBase.h&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;iqt2d/TViewExtenderCompBase.h&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_gui_object_8h.html">iqtgui/IGuiObject.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_view_extender_comp_base_8h.html">iqt2d/TViewExtenderCompBase.h</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="iqtinsp_8h.html">iqtinsp/iqtinsp.h</a>&quot;</span>
 <a name="l00020"></a>00020 
@@ -51,16 +51,16 @@
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType = QW<span class="keywordtype">id</span>get&gt;
 <a name="l00027"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">00027</a> <span class="keyword">class </span><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase</a>:
-<a name="l00028"></a>00028                      <span class="keyword">public</span> iqt2d::<a class="code" href="classiqt2d_1_1_t_view_extender_comp_base.html">TViewExtenderCompBase</a>&lt;
+<a name="l00028"></a>00028                      <span class="keyword">public</span> iqt2d::TViewExtenderCompBase&lt;
 <a name="l00029"></a>00029                                           iqtgui::TDesignerGuiObserverCompBase&lt;UI, iproc::ISupplier&gt; &gt;,
-<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::<a class="code" href="classi2d_1_1_i_calibration_provider.html">ICalibrationProvider</a>
+<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
 <a name="l00031"></a>00031 {
 <a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a>00033        <span class="keyword">typedef</span> iqt2d::TViewExtenderCompBase&lt;
-<a name="l00034"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afafc39b2e578fb4a77a7e25cb599ba40">00034</a>                                    iqtgui::TDesignerGuiObserverCompBase&lt;UI, iproc::ISupplier&gt; &gt; <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afafc39b2e578fb4a77a7e25cb599ba40">BaseClass</a>;
+<a name="l00033"></a>00033        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase</a>&lt;
+<a name="l00034"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afafc39b2e578fb4a77a7e25cb599ba40">00034</a>                                    <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase&lt;UI, iproc::ISupplier&gt;</a> &gt; <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afafc39b2e578fb4a77a7e25cb599ba40">BaseClass</a>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase</a>);
-<a name="l00037"></a>00037               I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
+<a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>);
 <a name="l00038"></a>00038               I_ASSIGN(m_paramsLoaderCompPtr, <span class="stringliteral">&quot;ParamsLoader&quot;</span>, <span class="stringliteral">&quot;Loads and saves parameters from and to file&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ParamsLoader&quot;</span>);
 <a name="l00039"></a>00039               I_ASSIGN(m_paramsSetGuiCompPtr, <span class="stringliteral">&quot;ParamsSetGui&quot;</span>, <span class="stringliteral">&quot;Shows parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ParamsSetGui&quot;</span>);
 <a name="l00040"></a>00040               <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a5e276cdf38b14ab332ff4ca2f85da2c9">I_ASSIGN_TO</a>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, <span class="keyword">false</span>);
@@ -70,14 +70,14 @@
 <a name="l00044"></a>00044        <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a93a1e2eb77a8f09cc034a697315e4613">TSupplierGuiCompBase</a>();
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a455a346553f22519cc62f8a2283d5b66">AddItemsToScene</a>(iqt2d::IViewProvider* providerPtr, <span class="keywordtype">int</span> flags);
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a93745769f36d860dc445b1c8319851b4">RemoveItemsFromScene</a>(iqt2d::IViewProvider* providerPtr);
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a455a346553f22519cc62f8a2283d5b66">AddItemsToScene</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a93745769f36d860dc445b1c8319851b4">RemoveItemsFromScene</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr);
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keyword">const</span> i2d::ITransformation2d* <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a0c9c1b128b2cc72f0435ef355da4bae9">GetCalibration</a>() <span class="keyword">const</span>;
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a0c9c1b128b2cc72f0435ef355da4bae9">GetCalibration</a>() <span class="keyword">const</span>;
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 <span class="keyword">protected</span>:
-<a name="l00054"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">00054</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> BaseClass::Shapes <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">Shapes</a>;
+<a name="l00054"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">00054</a>        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">BaseClass::Shapes</a> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">Shapes</a>;
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056        <span class="keyword">using</span> BaseClass::GetObjectPtr;
 <a name="l00057"></a>00057 
@@ -100,10 +100,10 @@
 <a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c94b477ef9e003078f52435ca5eebd7">OnGuiModelDetached</a>();
 <a name="l00097"></a>00097 
 <a name="l00098"></a>00098        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
-<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">Shapes</a>&amp; result);
+<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; result);
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">AfterUpdate</a>(imod::IModel* modelPtr, <span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr);
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104        <span class="comment">// abstract methods</span>
 <a name="l00110"></a>00110 <span class="comment"></span>       <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c61d390a1ca63f329d97352bea72536" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span> = 0;
@@ -114,11 +114,11 @@
 <a name="l00115"></a>00115        <span class="keyword">public</span>:
 <a name="l00116"></a>00116               <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a25bda61b821becc1a50fe24e2d6a880f">ParamsObserver</a>(<a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase</a>* parentPtr);
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118               <span class="keyword">using</span> imod::CSingleModelObserverBase::EnsureModelDetached;
+<a name="l00118"></a>00118               <span class="keyword">using</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_single_model_observer_base.html#a96b2bae380788b93b7d324b6e8947d97">imod::CSingleModelObserverBase::EnsureModelDetached</a>;
 <a name="l00119"></a>00119 
 <a name="l00120"></a>00120        <span class="keyword">protected</span>:
 <a name="l00121"></a>00121               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00122"></a>00122               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a7f0d77ec6f93ed6c5e44067e4e0601f0">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr);
+<a name="l00122"></a>00122               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a7f0d77ec6f93ed6c5e44067e4e0601f0">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00123"></a>00123 
 <a name="l00124"></a>00124        <span class="keyword">private</span>:
 <a name="l00125"></a>00125               <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase</a>&amp; m_parent;
@@ -127,12 +127,12 @@
 <a name="l00128"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a6de84d5d7a40d17563f8918342445f07">00128</a>        <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html">ParamsObserver</a> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a6de84d5d7a40d17563f8918342445f07">m_paramsObserver</a>;
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130 <span class="keyword">private</span>:
-<a name="l00131"></a>00131        I_REF(iser::IFileLoader, m_bitmapLoaderCompPtr);
-<a name="l00132"></a>00132        I_REF(iser::IFileLoader, m_paramsLoaderCompPtr);
+<a name="l00131"></a>00131        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_bitmapLoaderCompPtr);
+<a name="l00132"></a>00132        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_paramsLoaderCompPtr);
 <a name="l00133"></a>00133 
-<a name="l00134"></a>00134        I_REF(iqtgui::IGuiObject, m_paramsSetGuiCompPtr);
-<a name="l00135"></a>00135        I_REF(imod::IObserver, m_paramsSetObserverCompPtr);
-<a name="l00136"></a>00136        I_REF(iqt2d::IViewExtender, m_paramsSetExtenderCompPtr);
+<a name="l00134"></a>00134        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_paramsSetGuiCompPtr);
+<a name="l00135"></a>00135        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_paramsSetObserverCompPtr);
+<a name="l00136"></a>00136        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html">iqt2d::IViewExtender</a>, m_paramsSetExtenderCompPtr);
 <a name="l00137"></a>00137 
 <a name="l00138"></a>00138        <span class="keywordtype">bool</span> m_areParamsEditable;
 <a name="l00139"></a>00139 
@@ -153,11 +153,11 @@
 <a name="l00154"></a>00154 <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
 <a name="l00155"></a>00155 
 <a name="l00156"></a>00156 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00157"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a455a346553f22519cc62f8a2283d5b66">00157</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a455a346553f22519cc62f8a2283d5b66">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::AddItemsToScene</a>(iqt2d::IViewProvider* providerPtr, <span class="keywordtype">int</span> flags)
+<a name="l00157"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a455a346553f22519cc62f8a2283d5b66">00157</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a455a346553f22519cc62f8a2283d5b66">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::AddItemsToScene</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags)
 <a name="l00158"></a>00158 {
 <a name="l00159"></a>00159        BaseClass::AddItemsToScene(providerPtr, flags);
 <a name="l00160"></a>00160 
-<a name="l00161"></a>00161        <span class="keywordflow">if</span> ((flags &amp; iqt2d::IViewExtender::SF_DIRECT) != 0){
+<a name="l00161"></a>00161        <span class="keywordflow">if</span> ((flags &amp; <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html#afc3716716624595bd3e0d451eb8dec41a214cdb39d9c2faefaba55c8e01e02828">iqt2d::IViewExtender::SF_DIRECT</a>) != 0){
 <a name="l00162"></a>00162               <span class="keywordflow">if</span> (m_paramsSetExtenderCompPtr.IsValid()){
 <a name="l00163"></a>00163                      m_paramsSetExtenderCompPtr-&gt;AddItemsToScene(providerPtr, flags);
 <a name="l00164"></a>00164               }
@@ -166,7 +166,7 @@
 <a name="l00167"></a>00167 
 <a name="l00168"></a>00168 
 <a name="l00169"></a>00169 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00170"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a93745769f36d860dc445b1c8319851b4">00170</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a93745769f36d860dc445b1c8319851b4">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::RemoveItemsFromScene</a>(iqt2d::IViewProvider* providerPtr)
+<a name="l00170"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a93745769f36d860dc445b1c8319851b4">00170</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a93745769f36d860dc445b1c8319851b4">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::RemoveItemsFromScene</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr)
 <a name="l00171"></a>00171 {
 <a name="l00172"></a>00172        <span class="keywordflow">if</span> (m_paramsSetExtenderCompPtr.IsValid()){
 <a name="l00173"></a>00173               m_paramsSetExtenderCompPtr-&gt;RemoveItemsFromScene(providerPtr);
@@ -179,14 +179,14 @@
 <a name="l00180"></a>00180 <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
 <a name="l00181"></a>00181 
 <a name="l00182"></a>00182 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00183"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a0c9c1b128b2cc72f0435ef355da4bae9">00183</a> <span class="keyword">const</span> i2d::ITransformation2d* <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a0c9c1b128b2cc72f0435ef355da4bae9">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::GetCalibration</a>()<span class="keyword"> const</span>
+<a name="l00183"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a0c9c1b128b2cc72f0435ef355da4bae9">00183</a> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a0c9c1b128b2cc72f0435ef355da4bae9">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::GetCalibration</a>()<span class="keyword"> const</span>
 <a name="l00184"></a>00184 <span class="keyword"></span>{
-<a name="l00185"></a>00185        i2d::ICalibrationProvider* calibrationProviderPtr = <span class="keyword">dynamic_cast&lt;</span>i2d::ICalibrationProvider*<span class="keyword">&gt;</span>(GetObjectPtr());
-<a name="l00186"></a>00186        <span class="keywordflow">if</span> (calibrationProviderPtr != NULL){
-<a name="l00187"></a>00187               <span class="keywordflow">return</span> calibrationProviderPtr-&gt;GetCalibration();
+<a name="l00185"></a>00185        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>* calibrationProviderPtr = <span class="keyword">dynamic_cast&lt;</span><a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>*<span class="keyword">&gt;</span>(GetObjectPtr());
+<a name="l00186"></a>00186        <span class="keywordflow">if</span> (calibrationProviderPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00187"></a>00187               <span class="keywordflow">return</span> calibrationProviderPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">GetCalibration</a>();
 <a name="l00188"></a>00188        }
 <a name="l00189"></a>00189 
-<a name="l00190"></a>00190        <span class="keywordflow">return</span> NULL;
+<a name="l00190"></a>00190        <span class="keywordflow">return</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00191"></a>00191 }
 <a name="l00192"></a>00192 
 <a name="l00193"></a>00193 
@@ -203,13 +203,13 @@
 <a name="l00204"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a5b135f5bdaf8c57bc957c43beaadcb27">00204</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a5b135f5bdaf8c57bc957c43beaadcb27" title="Check if parameter loading is supported.">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::IsLoadParamsSupported</a>()<span class="keyword"> const</span>
 <a name="l00205"></a>00205 <span class="keyword"></span>{
 <a name="l00206"></a>00206        <span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>* supplierPtr = BaseClass::GetObjectPtr();
-<a name="l00207"></a>00207        <span class="keywordflow">if</span> ((supplierPtr != NULL) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
-<a name="l00208"></a>00208               <span class="keyword">const</span> iprm::IParamsSet* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
-<a name="l00209"></a>00209               <span class="keywordflow">if</span> (paramsPtr != NULL){
+<a name="l00207"></a>00207        <span class="keywordflow">if</span> ((supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
+<a name="l00208"></a>00208               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
+<a name="l00209"></a>00209               <span class="keywordflow">if</span> (paramsPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00210"></a>00210                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;IsOperationSupported(
 <a name="l00211"></a>00211                                           paramsPtr,
-<a name="l00212"></a>00212                                           NULL,
-<a name="l00213"></a>00213                                           iser::IFileLoader::QF_LOAD | iser::IFileLoader::QF_ANONYMOUS)){
+<a name="l00212"></a>00212                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
+<a name="l00213"></a>00213                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df">iser::IFileLoader::QF_LOAD</a> | <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9">iser::IFileLoader::QF_ANONYMOUS</a>)){
 <a name="l00214"></a>00214                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00215"></a>00215                      }
 <a name="l00216"></a>00216               }
@@ -223,13 +223,13 @@
 <a name="l00224"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ae768663d0842e6ea748260107fc5c5b9">00224</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ae768663d0842e6ea748260107fc5c5b9" title="Check if parameter storing is supported.">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::IsSaveParamsSupported</a>()<span class="keyword"> const</span>
 <a name="l00225"></a>00225 <span class="keyword"></span>{
 <a name="l00226"></a>00226        <span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>* supplierPtr = BaseClass::GetObjectPtr();
-<a name="l00227"></a>00227        <span class="keywordflow">if</span> ((supplierPtr != NULL) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
-<a name="l00228"></a>00228               <span class="keyword">const</span> iprm::IParamsSet* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
-<a name="l00229"></a>00229               <span class="keywordflow">if</span> (paramsPtr != NULL){
+<a name="l00227"></a>00227        <span class="keywordflow">if</span> ((supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
+<a name="l00228"></a>00228               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
+<a name="l00229"></a>00229               <span class="keywordflow">if</span> (paramsPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00230"></a>00230                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;IsOperationSupported(
 <a name="l00231"></a>00231                                           paramsPtr,
-<a name="l00232"></a>00232                                           NULL,
-<a name="l00233"></a>00233                                           iser::IFileLoader::QF_SAVE | iser::IFileLoader::QF_ANONYMOUS)){
+<a name="l00232"></a>00232                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
+<a name="l00233"></a>00233                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81">iser::IFileLoader::QF_SAVE</a> | <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9">iser::IFileLoader::QF_ANONYMOUS</a>)){
 <a name="l00234"></a>00234                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00235"></a>00235                      }
 <a name="l00236"></a>00236               }
@@ -243,15 +243,15 @@
 <a name="l00244"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a596baed6d56db375721673757cd7f4e2">00244</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a596baed6d56db375721673757cd7f4e2" title="Load parameters from external source (file).">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::LoadParams</a>()
 <a name="l00245"></a>00245 {
 <a name="l00246"></a>00246        <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>* supplierPtr = BaseClass::GetObjectPtr();
-<a name="l00247"></a>00247        <span class="keywordflow">if</span> ((supplierPtr != NULL) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
-<a name="l00248"></a>00248               iprm::IParamsSet* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
-<a name="l00249"></a>00249               <span class="keywordflow">if</span> (paramsPtr != NULL){
-<a name="l00250"></a>00250                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;LoadFromFile(*paramsPtr, <span class="stringliteral">&quot;&quot;</span>) != iser::IFileLoader::StateFailed){
+<a name="l00247"></a>00247        <span class="keywordflow">if</span> ((supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
+<a name="l00248"></a>00248               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
+<a name="l00249"></a>00249               <span class="keywordflow">if</span> (paramsPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00250"></a>00250                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;LoadFromFile(*paramsPtr, <span class="stringliteral">&quot;&quot;</span>) != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51aa09dcbc2185bb8c631d1537abd3c04a8">iser::IFileLoader::StateFailed</a>){
 <a name="l00251"></a>00251                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00252"></a>00252                      }
 <a name="l00253"></a>00253                      <span class="keywordflow">else</span>{
 <a name="l00254"></a>00254                             QMessageBox::information(
-<a name="l00255"></a>00255                                                  NULL,
+<a name="l00255"></a>00255                                                  <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00256"></a>00256                                                  QObject::tr(<span class="stringliteral">&quot;Error&quot;</span>),
 <a name="l00257"></a>00257                                                  QObject::tr(<span class="stringliteral">&quot;Cannot load parameters&quot;</span>));
 <a name="l00258"></a>00258                      }
@@ -266,15 +266,15 @@
 <a name="l00267"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a12252b5f658c5140ce9a50e0efa5d4d5">00267</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a12252b5f658c5140ce9a50e0efa5d4d5" title="Save parameters for example to file.">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::SaveParams</a>()
 <a name="l00268"></a>00268 {
 <a name="l00269"></a>00269        <span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>* supplierPtr = BaseClass::GetObjectPtr();
-<a name="l00270"></a>00270        <span class="keywordflow">if</span> ((supplierPtr != NULL) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
-<a name="l00271"></a>00271               <span class="keyword">const</span> iprm::IParamsSet* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
-<a name="l00272"></a>00272               <span class="keywordflow">if</span> (paramsPtr != NULL){
-<a name="l00273"></a>00273                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;SaveToFile(*paramsPtr, <span class="stringliteral">&quot;&quot;</span>) != iser::IFileLoader::StateFailed){
+<a name="l00270"></a>00270        <span class="keywordflow">if</span> ((supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
+<a name="l00271"></a>00271               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
+<a name="l00272"></a>00272               <span class="keywordflow">if</span> (paramsPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00273"></a>00273                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;SaveToFile(*paramsPtr, <span class="stringliteral">&quot;&quot;</span>) != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51aa09dcbc2185bb8c631d1537abd3c04a8">iser::IFileLoader::StateFailed</a>){
 <a name="l00274"></a>00274                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00275"></a>00275                      }
 <a name="l00276"></a>00276                      <span class="keywordflow">else</span>{
 <a name="l00277"></a>00277                             QMessageBox::information(
-<a name="l00278"></a>00278                                                  NULL,
+<a name="l00278"></a>00278                                                  <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00279"></a>00279                                                  QObject::tr(<span class="stringliteral">&quot;Error&quot;</span>),
 <a name="l00280"></a>00280                                                  QObject::tr(<span class="stringliteral">&quot;Cannot save parameters&quot;</span>));
 <a name="l00281"></a>00281                      }
@@ -289,7 +289,7 @@
 <a name="l00290"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#acf07d958d1c85d95214a89437e58aff5">00290</a> <span class="keywordtype">bool</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#acf07d958d1c85d95214a89437e58aff5" title="Do inspection test.">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::DoTest</a>()
 <a name="l00291"></a>00291 {
 <a name="l00292"></a>00292        <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>* supplierPtr = BaseClass::GetObjectPtr();
-<a name="l00293"></a>00293        <span class="keywordflow">if</span> (supplierPtr != NULL){
+<a name="l00293"></a>00293        <span class="keywordflow">if</span> (supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00294"></a>00294               supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a0496343d4f5ae9a3f71caf5163b35d13" title="Called to signalize that this supplier is invalid.">InvalidateSupplier</a>();
 <a name="l00295"></a>00295               supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a8407cf9f0d773e91bfa10d6616a36e4d" title="Ensure that all objects are produced.">EnsureWorkFinished</a>();
 <a name="l00296"></a>00296 
@@ -314,17 +314,17 @@
 <a name="l00315"></a>00315        BaseClass::OnGuiModelAttached();
 <a name="l00316"></a>00316 
 <a name="l00317"></a>00317        <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>* supplierPtr = BaseClass::GetObjectPtr();
-<a name="l00318"></a>00318        I_ASSERT(supplierPtr != NULL);     <span class="comment">// model must be attached</span>
+<a name="l00318"></a>00318        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);     <span class="comment">// model must be attached</span>
 <a name="l00319"></a>00319 
-<a name="l00320"></a>00320        iprm::IParamsSet* paramsPtr = <span class="keyword">const_cast&lt;</span>iprm::IParamsSet*<span class="keyword">&gt;</span>(supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>());
-<a name="l00321"></a>00321        imod::IModel* paramsModelPtr = <span class="keyword">dynamic_cast&lt;</span>imod::IModel*<span class="keyword">&gt;</span>(paramsPtr);
+<a name="l00320"></a>00320        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = <span class="keyword">const_cast&lt;</span><a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>*<span class="keyword">&gt;</span>(supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>());
+<a name="l00321"></a>00321        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* paramsModelPtr = <span class="keyword">dynamic_cast&lt;</span><a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>*<span class="keyword">&gt;</span>(paramsPtr);
 <a name="l00322"></a>00322 
 <a name="l00323"></a>00323        m_areParamsEditable = <span class="keyword">false</span>;
 <a name="l00324"></a>00324        <span class="keywordtype">bool</span> areParamsAttachedToEditor = <span class="keyword">false</span>;
 <a name="l00325"></a>00325        QWidget* paramsWidget = GetParamsWidget();
-<a name="l00326"></a>00326        <span class="keywordflow">if</span> (paramsWidget != NULL){
-<a name="l00327"></a>00327               <span class="keywordflow">if</span> ((paramsModelPtr != NULL) &amp;&amp; m_paramsSetGuiCompPtr.IsValid() &amp;&amp; m_paramsSetObserverCompPtr.IsValid()){
-<a name="l00328"></a>00328                      areParamsAttachedToEditor = paramsModelPtr-&gt;AttachObserver(m_paramsSetObserverCompPtr.GetPtr());
+<a name="l00326"></a>00326        <span class="keywordflow">if</span> (paramsWidget != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00327"></a>00327               <span class="keywordflow">if</span> ((paramsModelPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsSetGuiCompPtr.IsValid() &amp;&amp; m_paramsSetObserverCompPtr.IsValid()){
+<a name="l00328"></a>00328                      areParamsAttachedToEditor = paramsModelPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">AttachObserver</a>(m_paramsSetObserverCompPtr.GetPtr());
 <a name="l00329"></a>00329                      <span class="keywordflow">if</span> (!areParamsAttachedToEditor){
 <a name="l00330"></a>00330                             qWarning(<span class="stringliteral">&quot;Supplier parameters could not be connected to the editor&quot;</span>);
 <a name="l00331"></a>00331                      }
@@ -335,7 +335,7 @@
 <a name="l00336"></a>00336 
 <a name="l00337"></a>00337 
 <a name="l00338"></a>00338                      <span class="comment">// Attach internal parameter observer:</span>
-<a name="l00339"></a>00339                      paramsModelPtr-&gt;AttachObserver(&amp;m_paramsObserver);
+<a name="l00339"></a>00339                      paramsModelPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">AttachObserver</a>(&amp;m_paramsObserver);
 <a name="l00340"></a>00340               }
 <a name="l00341"></a>00341 
 <a name="l00342"></a>00342               paramsWidget-&gt;setVisible(m_areParamsEditable);
@@ -348,15 +348,15 @@
 <a name="l00349"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c94b477ef9e003078f52435ca5eebd7">00349</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a8c94b477ef9e003078f52435ca5eebd7">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::OnGuiModelDetached</a>()
 <a name="l00350"></a>00350 {
 <a name="l00351"></a>00351        <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>* supplierPtr = BaseClass::GetObjectPtr();
-<a name="l00352"></a>00352        I_ASSERT(supplierPtr != NULL);     <span class="comment">// model must be attached</span>
+<a name="l00352"></a>00352        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);     <span class="comment">// model must be attached</span>
 <a name="l00353"></a>00353 
-<a name="l00354"></a>00354        iprm::IParamsSet* paramsPtr = <span class="keyword">const_cast&lt;</span>iprm::IParamsSet*<span class="keyword">&gt;</span>(supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>());
-<a name="l00355"></a>00355        imod::IModel* paramsModelPtr = <span class="keyword">dynamic_cast&lt;</span>imod::IModel*<span class="keyword">&gt;</span>(paramsPtr);
+<a name="l00354"></a>00354        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = <span class="keyword">const_cast&lt;</span><a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>*<span class="keyword">&gt;</span>(supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>());
+<a name="l00355"></a>00355        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* paramsModelPtr = <span class="keyword">dynamic_cast&lt;</span><a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>*<span class="keyword">&gt;</span>(paramsPtr);
 <a name="l00356"></a>00356 
 <a name="l00357"></a>00357        <span class="keywordflow">if</span> (          m_paramsSetObserverCompPtr.IsValid() &amp;&amp;
-<a name="l00358"></a>00358                             (paramsModelPtr != NULL) &amp;&amp;
-<a name="l00359"></a>00359                             paramsModelPtr-&gt;IsAttached(m_paramsSetObserverCompPtr.GetPtr())){
-<a name="l00360"></a>00360               paramsModelPtr-&gt;DetachObserver(m_paramsSetObserverCompPtr.GetPtr());
+<a name="l00358"></a>00358                             (paramsModelPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp;
+<a name="l00359"></a>00359                             paramsModelPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#aedf078abe8a4b578ac22f154594e6679">IsAttached</a>(m_paramsSetObserverCompPtr.GetPtr())){
+<a name="l00360"></a>00360               paramsModelPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66">DetachObserver</a>(m_paramsSetObserverCompPtr.GetPtr());
 <a name="l00361"></a>00361        }
 <a name="l00362"></a>00362 
 <a name="l00363"></a>00363        <span class="keywordflow">if</span> (m_paramsSetGuiCompPtr.IsValid() &amp;&amp; m_paramsSetGuiCompPtr-&gt;IsGuiCreated()){
@@ -374,7 +374,7 @@
 <a name="l00375"></a>00375 <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
 <a name="l00376"></a>00376 
 <a name="l00377"></a>00377 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00378"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">00378</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::CreateShapes</a>(<span class="keywordtype">int</span> <span class="comment">/*sceneId*/</span>, <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#afced065323dcfedc4e755d24b667c05d">Shapes</a>&amp; <span class="comment">/*result*/</span>)
+<a name="l00378"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">00378</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#ad494e2beac100236a61573856ca6de8c">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::CreateShapes</a>(<span class="keywordtype">int</span> <span class="comment">/*sceneId*/</span>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">Shapes</a>&amp; <span class="comment">/*result*/</span>)
 <a name="l00379"></a>00379 {
 <a name="l00380"></a>00380 }
 <a name="l00381"></a>00381 
@@ -382,7 +382,7 @@
 <a name="l00383"></a>00383 <span class="comment">// reimplemented (imod::IObserver)</span>
 <a name="l00384"></a>00384 
 <a name="l00385"></a>00385 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00386"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">00386</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::AfterUpdate</a>(imod::IModel* modelPtr, <span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr)
+<a name="l00386"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">00386</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#aab1c890054066dea7a34f819ef086882">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr)
 <a name="l00387"></a>00387 {
 <a name="l00388"></a>00388        <span class="keywordflow">if</span> (!BaseClass::IsGuiCreated()){
 <a name="l00389"></a>00389               BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
@@ -396,8 +396,8 @@
 <a name="l00397"></a>00397        QString description;
 <a name="l00398"></a>00398 
 <a name="l00399"></a>00399        <span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>* supplierPtr = BaseClass::GetObjectPtr();
-<a name="l00400"></a>00400        <span class="keywordflow">if</span> (supplierPtr != NULL){
-<a name="l00401"></a>00401               <span class="keyword">const</span> istd::IInformationProvider* infoProviderPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>istd::IInformationProvider*<span class="keyword">&gt;</span>(supplierPtr);
+<a name="l00400"></a>00400        <span class="keywordflow">if</span> (supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00401"></a>00401               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>* infoProviderPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>*<span class="keyword">&gt;</span>(supplierPtr);
 <a name="l00402"></a>00402 
 <a name="l00403"></a>00403               <span class="keywordtype">int</span> workStatus = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb" title="Get status of last work.">GetWorkStatus</a>();
 <a name="l00404"></a>00404 
@@ -407,14 +407,14 @@
 <a name="l00408"></a>00408                      <span class="keywordflow">break</span>;
 <a name="l00409"></a>00409 
 <a name="l00410"></a>00410               <span class="keywordflow">case</span> <a class="code" href="classiproc_1_1_i_supplier.html#ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed" title="Work was done correctly and no error occure.">iproc::ISupplier::WS_OK</a>:
-<a name="l00411"></a>00411                      <span class="keywordflow">if</span> (infoProviderPtr != NULL){
-<a name="l00412"></a>00412                             <span class="keywordflow">switch</span> (infoProviderPtr-&gt;GetInformationCategory()){
-<a name="l00413"></a>00413                             <span class="keywordflow">case</span> istd::IInformationProvider::IC_WARNING:
+<a name="l00411"></a>00411                      <span class="keywordflow">if</span> (infoProviderPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00412"></a>00412                             <span class="keywordflow">switch</span> (infoProviderPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">GetInformationCategory</a>()){
+<a name="l00413"></a>00413                             <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152afdf1bdfc124526192bd59bbdbad614cb">istd::IInformationProvider::IC_WARNING</a>:
 <a name="l00414"></a>00414                                    statusText = QObject::tr(<span class="stringliteral">&quot;Processing completed with warnings&quot;</span>);
 <a name="l00415"></a>00415                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateWarning.svg&quot;</span>);
 <a name="l00416"></a>00416                                    <span class="keywordflow">break</span>;
 <a name="l00417"></a>00417 
-<a name="l00418"></a>00418                             <span class="keywordflow">case</span> istd::IInformationProvider::IC_ERROR:
+<a name="l00418"></a>00418                             <span class="keywordflow">case</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a0ffe506c6f69a959d14eb3b2260a24df">istd::IInformationProvider::IC_ERROR</a>:
 <a name="l00419"></a>00419                                    statusText = QObject::tr(<span class="stringliteral">&quot;Processing completed with errors&quot;</span>);
 <a name="l00420"></a>00420                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateInvalid.svg&quot;</span>);
 <a name="l00421"></a>00421                                    <span class="keywordflow">break</span>;
@@ -450,7 +450,7 @@
 <a name="l00451"></a>00451               }
 <a name="l00452"></a>00452        }
 <a name="l00453"></a>00453 
-<a name="l00454"></a>00454        istd::CChangeNotifier visualStatusNotifier(&amp;m_visualStatus);
+<a name="l00454"></a>00454        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> visualStatusNotifier(&amp;m_visualStatus);
 <a name="l00455"></a>00455        BaseClass::SetStatusIcon(statusIcon);
 <a name="l00456"></a>00456        BaseClass::SetStatusText(statusText);
 <a name="l00457"></a>00457 
@@ -464,15 +464,15 @@
 <a name="l00465"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a25bda61b821becc1a50fe24e2d6a880f">00465</a> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a25bda61b821becc1a50fe24e2d6a880f">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::ParamsObserver::ParamsObserver</a>(<a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase</a>* parentPtr)
 <a name="l00466"></a>00466        :m_parent(*parentPtr)
 <a name="l00467"></a>00467 {
-<a name="l00468"></a>00468        I_ASSERT(parentPtr != NULL);
+<a name="l00468"></a>00468        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(parentPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00469"></a>00469 }
 <a name="l00470"></a>00470 
 <a name="l00471"></a>00471 
 <a name="l00472"></a>00472 <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
 <a name="l00473"></a>00473 <span class="keyword">template</span> &lt;<span class="keyword">class</span> UI, <span class="keyword">class</span> W<span class="keywordtype">id</span>getType&gt;
-<a name="l00474"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a7f0d77ec6f93ed6c5e44067e4e0601f0">00474</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::ParamsObserver::OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* <span class="comment">/*updateParamsPtr*/</span>)
+<a name="l00474"></a><a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html#a7f0d77ec6f93ed6c5e44067e4e0601f0">00474</a> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">TSupplierGuiCompBase&lt;UI, WidgetType&gt;::ParamsObserver::OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
 <a name="l00475"></a>00475 {
-<a name="l00476"></a>00476        <span class="keywordflow">if</span> ((updateFlags &amp; istd::IChangeable::CF_MODEL) != 0){
+<a name="l00476"></a>00476        <span class="keywordflow">if</span> ((updateFlags &amp; <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9a3c86ebce4c2fe9371a8409708979b789">istd::IChangeable::CF_MODEL</a>) != 0){
 <a name="l00477"></a>00477               m_parent.<a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a9840a8c4375ef9691a24cc73489930d9" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
 <a name="l00478"></a>00478        }
 <a name="l00479"></a>00479 }

@@ -33,10 +33,10 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtNetwork/QTcpSocket&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;imod/IModel.h&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;imod/CSingleModelObserverBase.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iprm/IFileNameParam.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;iqtgui/TDesignerGuiCompBase.h&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_model_8h.html">imod/IModel.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_comp_base_8h.html">iqtgui/TDesignerGuiCompBase.h</a>&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;iqtex/Generated/Ui_CTcpTerminalGuiComp.h&quot;</span>
 <a name="l00016"></a>00016 
@@ -52,7 +52,7 @@
 <a name="l00029"></a>00029        Q_OBJECT
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 <span class="keyword">public</span>:
-<a name="l00032"></a><a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#a3af93ca5cd40147e040914152af1738d">00032</a>        <span class="keyword">typedef</span> iqtgui::TDesignerGuiCompBase&lt;Ui::CTcpTerminalGuiComp&gt; <a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#a3af93ca5cd40147e040914152af1738d">BaseClass</a>;
+<a name="l00032"></a><a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#a3af93ca5cd40147e040914152af1738d">00032</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase&lt;Ui::CTcpTerminalGuiComp&gt;</a> <a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#a3af93ca5cd40147e040914152af1738d">BaseClass</a>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html" title="Implementation of simple TCP terminal.">CTcpTerminalGuiComp</a>);
 <a name="l00035"></a>00035               I_ASSIGN(m_urlParamCompPtr, <span class="stringliteral">&quot;UrlParam&quot;</span>, <span class="stringliteral">&quot;URL parameter used to find out address and socket for TCP connection&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;UrlParam&quot;</span>);
@@ -69,7 +69,7 @@
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#a875199c2c32ba23164683e66e8c0281d">OnGuiCreated</a>();
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#a72083547deade224d75e50a69380bf95">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr);
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#a72083547deade224d75e50a69380bf95">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#affb35a87d060bdbfecd9c8c4ef41fff7">OnComponentCreated</a>();
@@ -84,8 +84,8 @@
 <a name="l00061"></a>00061        <span class="keywordtype">void</span> <a class="code" href="classiqtex_1_1_c_tcp_terminal_gui_comp.html#a4258273b97e72e7570f4d6993c621c5a">OnStateChanged</a>(QAbstractSocket::SocketState socketState);
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063 <span class="keyword">private</span>:
-<a name="l00064"></a>00064        I_REF(iprm::IFileNameParam, m_urlParamCompPtr);
-<a name="l00065"></a>00065        I_REF(imod::IModel, m_urlParamModelCompPtr);
+<a name="l00064"></a>00064        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_file_name_param.html">iprm::IFileNameParam</a>, m_urlParamCompPtr);
+<a name="l00065"></a>00065        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_urlParamModelCompPtr);
 <a name="l00066"></a>00066        I_MULTIATTR(QString, m_presetTextsAttrPtr);
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068        QTimer m_connectTimer;

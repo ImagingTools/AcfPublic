@@ -38,7 +38,7 @@
 <div class="title">iwiz::CSelectionConsistencyControllerComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iwiz::CSelectionConsistencyControllerComp" --><!-- doxytag: inherits="iproc::IStateController" -->
+<!-- doxytag: class="iwiz::CSelectionConsistencyControllerComp" --><!-- doxytag: inherits="icomp::CComponentBase,iproc::IStateController,imod::CMultiModelObserverBase" -->
 <p>Component implementation of a wizard controller.  
  <a href="classiwiz_1_1_c_selection_consistency_controller_comp.html#details">More...</a></p>
 
@@ -49,8 +49,15 @@ Inheritance diagram for iwiz::CSelectionConsistencyControllerComp:</div>
  <div class="center">
   <img src="classiwiz_1_1_c_selection_consistency_controller_comp.png" usemap="#iwiz::CSelectionConsistencyControllerComp_map" alt=""/>
   <map id="iwiz::CSelectionConsistencyControllerComp_map" name="iwiz::CSelectionConsistencyControllerComp_map">
-<area href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info." alt="iproc::IStateController" shape="rect" coords="0,56,257,80"/>
-<area href="classistd_1_1_i_changeable.html" alt="IChangeable" shape="rect" coords="0,0,257,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,257,136"/>
+<area href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info." alt="iproc::IStateController" shape="rect" coords="267,112,524,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_observer_base.html" alt="imod::CMultiModelObserverBase" shape="rect" coords="534,112,791,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,257,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="267,56,524,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html" alt="imod::IObserver" shape="rect" coords="534,56,791,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,257,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="267,0,524,24"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="534,0,791,24"/>
 </map>
  </div></div>
 
@@ -58,7 +65,7 @@ Inheritance diagram for iwiz::CSelectionConsistencyControllerComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef icomp::CComponentBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a6f3bb0f309fdcc3677ca91570af306c4">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a6f3bb0f309fdcc3677ca91570af306c4">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#aad41bd5d46c17e6425ce689d961b52c4">I_ASSIGN_TO</a> (m_enterDependenciesModelCompPtr, m_enterDependenciesCompPtr, false)</td></tr>
@@ -67,18 +74,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if state is enabled.  <a href="#af70ee1565400bfef9844a8b124fecd7d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a6fc8965a21eeeffe4b159a88890a30aa">IsStateActive</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this state is active.  <a href="#a6fc8965a21eeeffe4b159a88890a30aa"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#ab561fb3578d3f0f6747e9ede5df7b6af">IsEnterAllowed</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#adb2b54ca995b5e0c912ade390f60c193">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a59778663108c255cb7692548d0fcbc7e">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#ab27e54bbfb3a8d617c5d3c447f60df1e">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#ab561fb3578d3f0f6747e9ede5df7b6af">IsEnterAllowed</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#adb2b54ca995b5e0c912ade390f60c193">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a59778663108c255cb7692548d0fcbc7e">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#ab27e54bbfb3a8d617c5d3c447f60df1e">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#afd4520cee9dc51014ecab4804834c7ce">EnsureCacheValid</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a979b007e2905abaa789607dba38d358a">CheckParamConsistency</a> (const iprm::ISelectionParam &amp;param) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a979b007e2905abaa789607dba38d358a">CheckParamConsistency</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> &amp;param) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a7c7d6006ef1988fb41c237713321cce6">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#abb0fff8770aca84fe9173540ab72db0e">OnComponentDestroyed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a850e765b710a67ade3d79d2579653b05">BeforeUpdate</a> (imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af96287d76a58b6a6d2a9d5af136a995c">AfterUpdate</a> (imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a850e765b710a67ade3d79d2579653b05">BeforeUpdate</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af96287d76a58b6a6d2a9d5af136a995c">AfterUpdate</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component implementation of a wizard controller. </p>
@@ -90,7 +97,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef icomp::CComponentBase <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a6f3bb0f309fdcc3677ca91570af306c4">iwiz::CSelectionConsistencyControllerComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a6f3bb0f309fdcc3677ca91570af306c4">iwiz::CSelectionConsistencyControllerComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -108,7 +115,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void iwiz::CSelectionConsistencyControllerComp::AfterUpdate </td>
           <td>(</td>
-          <td class="paramtype">imod::IModel *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
           <td class="paramname"><em>modelPtr</em>, </td>
         </tr>
         <tr>
@@ -120,7 +127,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">istd::IPolymorphic *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
           <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
         </tr>
         <tr>
@@ -131,6 +138,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_observer_base.html#a52d553e4c021cd3022ca5beac156df1f">imod::CMultiModelObserverBase</a>.</p>
 
 </div>
 </div>
@@ -141,7 +150,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void iwiz::CSelectionConsistencyControllerComp::BeforeUpdate </td>
           <td>(</td>
-          <td class="paramtype">imod::IModel *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
           <td class="paramname"><em>modelPtr</em>, </td>
         </tr>
         <tr>
@@ -153,7 +162,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">istd::IPolymorphic *&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
           <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
         </tr>
         <tr>
@@ -165,6 +174,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_observer_base.html#a22234401b6906764d85a3a9b86f21686">imod::CMultiModelObserverBase</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a979b007e2905abaa789607dba38d358a"></a><!-- doxytag: member="iwiz::CSelectionConsistencyControllerComp::CheckParamConsistency" ref="a979b007e2905abaa789607dba38d358a" args="(const iprm::ISelectionParam &amp;param) const " -->
@@ -174,7 +185,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool iwiz::CSelectionConsistencyControllerComp::CheckParamConsistency </td>
           <td>(</td>
-          <td class="paramtype">const iprm::ISelectionParam &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> &amp;&#160;</td>
           <td class="paramname"><em>param</em></td><td>)</td>
           <td> const<code> [protected]</code></td>
         </tr>
@@ -280,7 +291,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -307,7 +318,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -371,11 +382,13 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void iwiz::CSelectionConsistencyControllerComp::OnComponentCreated </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html#a8a79eed0233a1ff69972975180f5210a">icomp::CComponentBase</a>.</p>
 
 </div>
 </div>
@@ -387,11 +400,13 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void iwiz::CSelectionConsistencyControllerComp::OnComponentDestroyed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html#a007550438603368acd5133e97547d73f">icomp::CComponentBase</a>.</p>
 
 </div>
 </div>
@@ -409,7 +424,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>prevStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>prevStatePtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -436,7 +451,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const IStateController *&#160;</td>
-          <td class="paramname"><em>nextStatePtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>nextStatePtr</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>

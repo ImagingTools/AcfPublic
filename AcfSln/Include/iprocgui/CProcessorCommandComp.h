@@ -14,7 +14,7 @@
 **	If you are unsure which license is appropriate for your use, please
 **	contact us at info@imagingtools.de.
 **
-** 	See http://www.imagingtools.de, write info@imagingtools.de or contact
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
 **	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
@@ -22,7 +22,6 @@
 
 #ifndef iprocgui_CProcessorCommandComp_included
 #define iprocgui_CProcessorCommandComp_included
-
 
 
 // ACF includes

@@ -36,7 +36,7 @@
 <div class="title">imm::IVideoInfo Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="imm::IVideoInfo" -->
+<!-- doxytag: class="imm::IVideoInfo" --><!-- doxytag: inherits="istd::IPolymorphic" -->
 <p><code>#include &lt;<a class="el" href="_i_video_info_8h_source.html">IVideoInfo.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for imm::IVideoInfo:</div>
@@ -44,9 +44,10 @@ Inheritance diagram for imm::IVideoInfo:</div>
  <div class="center">
   <img src="classimm_1_1_i_video_info.png" usemap="#imm::IVideoInfo_map" alt=""/>
   <map id="imm::IVideoInfo_map" name="imm::IVideoInfo_map">
-<area href="classimm_1_1_i_video_controller.html" alt="imm::IVideoController" shape="rect" coords="122,56,357,80"/>
-<area href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html" title="Component to play some image (frame) sequence from a directory." alt="iqtmm::CFrameSeqVideoControllerComp" shape="rect" coords="0,112,235,136"/>
-<area href="classiqtmm_1_1_c_phonon_video_view_gui_comp.html" alt="iqtmm::CPhononVideoViewGuiComp" shape="rect" coords="245,112,480,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="122,0,357,24"/>
+<area href="classimm_1_1_i_video_controller.html" alt="imm::IVideoController" shape="rect" coords="122,112,357,136"/>
+<area href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html" title="Component to play some image (frame) sequence from a directory." alt="iqtmm::CFrameSeqVideoControllerComp" shape="rect" coords="0,168,235,192"/>
+<area href="classiqtmm_1_1_c_phonon_video_view_gui_comp.html" alt="iqtmm::CPhononVideoViewGuiComp" shape="rect" coords="245,168,480,192"/>
 </map>
  </div></div>
 
@@ -58,7 +59,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return length of video in seconds.  <a href="#a0c5b8c33aca0d273b3c6bf38c34a0aaa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_video_info.html#a0042c9e46b917928773ff908100feccb">GetFrameIntervall</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return time difference between frames.  <a href="#a0042c9e46b917928773ff908100feccb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual istd::CIndex2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_video_info.html#a2e76c46d3287d1c4015ff4189a94804a">GetFrameSize</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_video_info.html#a2e76c46d3287d1c4015ff4189a94804a">GetFrameSize</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return size in pixels of single frame.  <a href="#a2e76c46d3287d1c4015ff4189a94804a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimm_1_1_i_video_info.html#a0b40fbd17d7be62d702032088b63e82f">GetPixelAspectRatio</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get frame aspect ratio.  <a href="#a0b40fbd17d7be62d702032088b63e82f"></a><br/></td></tr>
@@ -113,7 +114,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual istd::CIndex2d imm::IVideoInfo::GetFrameSize </td>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> imm::IVideoInfo::GetFrameSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -124,7 +125,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return size in pixels of single frame. </p>
 <p>If size is unknown, it returns invalid index object. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd>istd::CIndex2d::IsValid(). </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_index.html#adc9ffec0e27b28010cc88af1ebd33852">istd::CIndex2d::IsValid()</a>. </dd></dl>
 
 <p>Implemented in <a class="el" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#a2a6f9fc3cf99a7804f16d77cfb814277">iqtmm::CFrameSeqVideoControllerComp</a>, and <a class="el" href="classiqtmm_1_1_c_phonon_video_view_gui_comp.html#a196e370e974c8892505ec04c41f6043c">iqtmm::CPhononVideoViewGuiComp</a>.</p>
 

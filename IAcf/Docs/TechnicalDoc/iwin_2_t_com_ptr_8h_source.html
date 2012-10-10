@@ -32,7 +32,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;objbase.h&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;istd/TPointerBase.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_pointer_base_8h.html">istd/TPointerBase.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="keyword">namespace </span>iwin
@@ -43,7 +43,7 @@
 <a name="l00020"></a><a class="code" href="classiwin_1_1_t_com_ptr.html">00020</a> <span class="keyword">class </span><a class="code" href="classiwin_1_1_t_com_ptr.html" title="Pointer wrapper providing access to Windows COM objects.">TComPtr</a>: <span class="keyword">public</span> istd::TPointerBase&lt;Type&gt;
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">00023</a>        <span class="keyword">typedef</span> istd::TPointerBase&lt;Type&gt; <a class="code" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">BaseClass</a>;
+<a name="l00023"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">00023</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html">istd::TPointerBase&lt;Type&gt;</a> <a class="code" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">BaseClass</a>;
 <a name="l00024"></a>00024 
 <a name="l00028"></a>00028        <a class="code" href="classiwin_1_1_t_com_ptr.html#a9dcbf2441958ea970056e5dde597a3b7" title="Set new value of internal pointer.">TComPtr</a>(Type* ptr = NULL, <span class="keywordtype">bool</span> addRef = <span class="keyword">true</span>);
 <a name="l00029"></a>00029 
@@ -72,7 +72,7 @@
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;
 <a name="l00090"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#a9dcbf2441958ea970056e5dde597a3b7">00090</a> <span class="keyword">inline</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a9dcbf2441958ea970056e5dde597a3b7" title="Set new value of internal pointer.">TComPtr&lt;Type&gt;::TComPtr</a>(Type* ptr, <span class="keywordtype">bool</span> addRef)
-<a name="l00091"></a>00091 :      <a class="code" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">BaseClass</a>(ptr)
+<a name="l00091"></a>00091 :      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html">BaseClass</a>(ptr)
 <a name="l00092"></a>00092 {
 <a name="l00093"></a>00093        <span class="keywordflow">if</span> (addRef){
 <a name="l00094"></a>00094               <a class="code" href="classiwin_1_1_t_com_ptr.html#a2af360fa6351b88f8f4b8f4de77d05e0" title="Increase reference counter.">IncRef</a>();
@@ -82,7 +82,7 @@
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;
 <a name="l00100"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#afbdbca76d72e1589529249e6120b0159">00100</a> <span class="keyword">inline</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a9dcbf2441958ea970056e5dde597a3b7" title="Set new value of internal pointer.">TComPtr&lt;Type&gt;::TComPtr</a>(<span class="keyword">const</span> <a class="code" href="classiwin_1_1_t_com_ptr.html" title="Pointer wrapper providing access to Windows COM objects.">TComPtr&lt;Type&gt;</a>&amp; ptr)
-<a name="l00101"></a>00101 :      <a class="code" href="classiwin_1_1_t_com_ptr.html#abcf07685d61aac23fe29fd9bbf127bed">BaseClass</a>(ptr)
+<a name="l00101"></a>00101 :      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html">BaseClass</a>(ptr)
 <a name="l00102"></a>00102 {
 <a name="l00103"></a>00103        <a class="code" href="classiwin_1_1_t_com_ptr.html#a2af360fa6351b88f8f4b8f4de77d05e0" title="Increase reference counter.">IncRef</a>();
 <a name="l00104"></a>00104 }
@@ -98,7 +98,7 @@
 <a name="l00114"></a>00114 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;
 <a name="l00115"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#a338f3fc146bc2591e233d8bc837e2a67">00115</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a338f3fc146bc2591e233d8bc837e2a67" title="It decreses COM reference pointer and set this pointer to NULL.">TComPtr&lt;Type&gt;::Reset</a>()
 <a name="l00116"></a>00116 {
-<a name="l00117"></a>00117        SetPtr(NULL);
+<a name="l00117"></a>00117        SetPtr(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00118"></a>00118 }
 <a name="l00119"></a>00119 
 <a name="l00120"></a>00120 
@@ -119,7 +119,7 @@
 <a name="l00135"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#a1763f036774989ba3a7a46348588c028">00135</a> <span class="keyword">inline</span> Type* <a class="code" href="classiwin_1_1_t_com_ptr.html#a1763f036774989ba3a7a46348588c028" title="Reset internal pointer value without decreasing of reference counter.">TComPtr&lt;Type&gt;::PopPtr</a>()
 <a name="l00136"></a>00136 {
 <a name="l00137"></a>00137        Type* slavePtr = BaseClass::GetPtr();
-<a name="l00138"></a>00138        BaseClass::SetPtr(NULL);
+<a name="l00138"></a>00138        BaseClass::SetPtr(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140        <span class="keywordflow">return</span> slavePtr;
 <a name="l00141"></a>00141 }
@@ -154,7 +154,7 @@
 <a name="l00170"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#a2af360fa6351b88f8f4b8f4de77d05e0">00170</a> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a2af360fa6351b88f8f4b8f4de77d05e0" title="Increase reference counter.">TComPtr&lt;Type&gt;::IncRef</a>()
 <a name="l00171"></a>00171 {
 <a name="l00172"></a>00172        Type* ptr = BaseClass::GetPtr();
-<a name="l00173"></a>00173        <span class="keywordflow">if</span> (ptr == NULL){
+<a name="l00173"></a>00173        <span class="keywordflow">if</span> (ptr == <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00174"></a>00174               <span class="keywordflow">return</span>;
 <a name="l00175"></a>00175        }
 <a name="l00176"></a>00176 
@@ -166,7 +166,7 @@
 <a name="l00182"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#a6c64cb42fe689162fccf67e11f4c629d">00182</a> <span class="keywordtype">void</span> <a class="code" href="classiwin_1_1_t_com_ptr.html#a6c64cb42fe689162fccf67e11f4c629d" title="Decrease reference counter.">TComPtr&lt;Type&gt;::DecRef</a>()
 <a name="l00183"></a>00183 {
 <a name="l00184"></a>00184        Type* ptr = BaseClass::GetPtr();
-<a name="l00185"></a>00185        <span class="keywordflow">if</span> (ptr == NULL){
+<a name="l00185"></a>00185        <span class="keywordflow">if</span> (ptr == <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00186"></a>00186               <span class="keywordflow">return</span>;
 <a name="l00187"></a>00187        }
 <a name="l00188"></a>00188 
@@ -177,7 +177,7 @@
 <a name="l00193"></a>00193 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;
 <a name="l00194"></a><a class="code" href="classiwin_1_1_t_com_ptr.html#ac19055435702bb97cbae22a20cfbaa84">00194</a> <a class="code" href="classiwin_1_1_t_com_ptr.html" title="Pointer wrapper providing access to Windows COM objects.">TComPtr&lt;Type&gt;</a>&amp; <a class="code" href="classiwin_1_1_t_com_ptr.html#ac19055435702bb97cbae22a20cfbaa84" title="Assign operator.">TComPtr&lt;Type&gt;::operator=</a>(<span class="keyword">const</span> <a class="code" href="classiwin_1_1_t_com_ptr.html" title="Pointer wrapper providing access to Windows COM objects.">TComPtr</a>&amp; ptr)
 <a name="l00195"></a>00195 {
-<a name="l00196"></a>00196        SetPtr(ptr.GetPtr(), <span class="keyword">true</span>);
+<a name="l00196"></a>00196        SetPtr(ptr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951">GetPtr</a>(), <span class="keyword">true</span>);
 <a name="l00197"></a>00197 
 <a name="l00198"></a>00198        <span class="keywordflow">return</span> *<span class="keyword">this</span>;
 <a name="l00199"></a>00199 }

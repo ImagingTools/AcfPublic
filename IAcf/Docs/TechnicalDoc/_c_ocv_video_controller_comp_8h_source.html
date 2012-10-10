@@ -34,8 +34,8 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;highgui.h&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;istd/TDelPtr.h&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;icomp/CComponentBase.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_sync_processor_comp_base_8h.html">iproc/TSyncProcessorCompBase.h</a>&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="comment">// ACF-Solutions includes</span>
@@ -55,7 +55,7 @@
 <a name="l00032"></a><a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a8e0559a348a337b132488b6520d4117e">00032</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_t_sync_processor_comp_base.html">iproc::TSyncProcessorCompBase&lt;icam::IBitmapAcquisition&gt;</a> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a8e0559a348a337b132488b6520d4117e">BaseClass</a>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html" title="Component for video controlling using OpenCV API.">COcvVideoControllerComp</a>);
-<a name="l00035"></a>00035               I_REGISTER_INTERFACE(istd::IChangeable);
+<a name="l00035"></a>00035               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>);
 <a name="l00036"></a>00036               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimm_1_1_i_media_controller.html">imm::IMediaController</a>);
 <a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimm_1_1_i_video_info.html">imm::IVideoInfo</a>);
 <a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimm_1_1_i_video_controller.html">imm::IVideoController</a>);
@@ -65,14 +65,14 @@
 <a name="l00042"></a>00042        <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a446d59e8430994ffd31f47d71989c937">COcvVideoControllerComp</a>();
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (icam::IBitmapAcquisition)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> istd::CIndex2d <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#ada752da881c4fad86827ba0e6b1f8a20">GetBitmapSize</a>(<span class="keyword">const</span> iprm::IParamsSet* paramsPtr) <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#ada752da881c4fad86827ba0e6b1f8a20">GetBitmapSize</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="comment">// reimplemented (iproc::IProcessor)</span>
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#aabc0801f23541de3fe996395a7464a5d">DoProcessing</a>(
-<a name="l00049"></a>00049                             <span class="keyword">const</span> iprm::IParamsSet* paramsPtr,
-<a name="l00050"></a>00050                             <span class="keyword">const</span> istd::IPolymorphic* inputPtr,
-<a name="l00051"></a>00051                             istd::IChangeable* outputPtr,
-<a name="l00052"></a>00052                             ibase::IProgressManager* progressManagerPtr = NULL);
+<a name="l00049"></a>00049                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00050"></a>00050                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00051"></a>00051                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00052"></a>00052                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>* progressManagerPtr = NULL);
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054        <span class="comment">// reimplemented (imm::IMediaController)</span>
 <a name="l00055"></a>00055        <span class="keyword">virtual</span> QString <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a7363cba1ec4afd839452f8b1ecd95b26">GetOpenedMediumUrl</a>() <span class="keyword">const</span>;
@@ -88,7 +88,7 @@
 <a name="l00065"></a>00065        <span class="comment">// reimplemented (imm::IVideoInfo)</span>
 <a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a24f093828449772d3dcdb120197b0271">GetFramesCount</a>() <span class="keyword">const</span>;
 <a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a74ae882672ee6121a3bdb201cc914049">GetFrameIntervall</a>() <span class="keyword">const</span>;
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> istd::CIndex2d <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a8fb4073855376938f7cee47cb93bfed3">GetFrameSize</a>() <span class="keyword">const</span>;
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a8fb4073855376938f7cee47cb93bfed3">GetFrameSize</a>() <span class="keyword">const</span>;
 <a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a577bd83bf393efef79b1226ad1d596a6">GetPixelAspectRatio</a>() <span class="keyword">const</span>;
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071        <span class="comment">// reimplemented (imm::IVideoController)</span>
@@ -100,7 +100,7 @@
 <a name="l00077"></a>00077        <span class="keyword">virtual</span> QString <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a1cf654279d38ae8098e45c285cc83054">GetTypeDescription</a>(<span class="keyword">const</span> QString* extensionPtr = NULL) <span class="keyword">const</span>;
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079 <span class="keyword">protected</span>:
-<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a71b63629c15a11118143c57e186b2b90">GrabCurrentFrame</a>(iimg::IBitmap&amp; result) <span class="keyword">const</span>;
+<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a71b63629c15a11118143c57e186b2b90">GrabCurrentFrame</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_video_controller_comp.html#a567589b45bb2206064833933fba051f2">SeekToPosition</a>(<span class="keywordtype">int</span> frameIndex) <span class="keyword">const</span>;
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
@@ -112,7 +112,7 @@
 <a name="l00089"></a>00089        <span class="keywordtype">bool</span> MoveToNextFrame() <span class="keyword">const</span>;
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091 <span class="keyword">private</span>:
-<a name="l00092"></a>00092        I_REF(istd::IChangeable, m_frameDataCompPtr);
+<a name="l00092"></a>00092        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, m_frameDataCompPtr);
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094        QString m_mediumUrl;
 <a name="l00095"></a>00095        <span class="keywordtype">bool</span> m_isPlaying;
@@ -122,7 +122,7 @@
 <a name="l00099"></a>00099               <span class="keyword">static</span> <span class="keywordtype">void</span> Delete(CvCapture* ptr){<span class="keywordflow">if</span> (ptr != NULL) cvReleaseCapture(&amp;ptr);}
 <a name="l00100"></a>00100        };
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102        istd::TDelPtr&lt;CvCapture, CaptureAccessor&gt; m_capturePtr;
+<a name="l00102"></a>00102        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CvCapture, CaptureAccessor&gt;</a> m_capturePtr;
 <a name="l00103"></a>00103        <span class="keyword">mutable</span> <span class="keywordtype">int</span> m_currentFrameIndex;
 <a name="l00104"></a>00104        <span class="keywordtype">int</span> m_framesCount;
 <a name="l00105"></a>00105 };

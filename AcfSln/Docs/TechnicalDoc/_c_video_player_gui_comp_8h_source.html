@@ -28,14 +28,14 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtmm_CVideoPlayerGuiComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;imod/IModel.h&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;imod/CSingleModelObserverBase.h&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_model_8h.html">imod/IModel.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;iprm/IFileNameParam.h&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_media_controller_8h.html">imm/IMediaController.h</a>&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;iqtgui/TDesignerGuiCompBase.h&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_comp_base_8h.html">iqtgui/TDesignerGuiCompBase.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;Generated/ui_CVideoPlayerGuiComp.h&quot;</span>
 <a name="l00015"></a>00015 
@@ -49,7 +49,7 @@
 <a name="l00026"></a>00026                      <span class="keyword">protected</span> imod::CSingleModelObserverBase
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
-<a name="l00029"></a><a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html#ab5217c2fcee2175a5732942aaccf0d0c">00029</a>        <span class="keyword">typedef</span> iqtgui::TDesignerGuiCompBase&lt;Ui::CVideoPlayerGuiComp&gt; <a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html#ab5217c2fcee2175a5732942aaccf0d0c">BaseClass</a>;
+<a name="l00029"></a><a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html#ab5217c2fcee2175a5732942aaccf0d0c">00029</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_comp_base.html">iqtgui::TDesignerGuiCompBase&lt;Ui::CVideoPlayerGuiComp&gt;</a> <a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html#ab5217c2fcee2175a5732942aaccf0d0c">BaseClass</a>;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html" title="GUI component used to display video player.">CVideoPlayerGuiComp</a>);
 <a name="l00032"></a>00032               I_ASSIGN(m_mediaControllerCompPtr, <span class="stringliteral">&quot;MediaController&quot;</span>, <span class="stringliteral">&quot;Controller used to open and display media&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MediaController&quot;</span>);
@@ -66,7 +66,7 @@
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 <span class="keyword">protected</span>:
 <a name="l00045"></a>00045        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html#a7e07a16a5ddfdcb86104352e57fb8963">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr);
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html#a7e07a16a5ddfdcb86104352e57fb8963">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtmm_1_1_c_video_player_gui_comp.html#a9d9b77cbee3bbca6966f4e7ac96c8f26">OnComponentCreated</a>();
@@ -74,11 +74,11 @@
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052 <span class="keyword">private</span>:
 <a name="l00053"></a>00053        I_REF(<a class="code" href="classimm_1_1_i_media_controller.html">imm::IMediaController</a>, m_mediaControllerCompPtr);
-<a name="l00054"></a>00054        I_REF(iqtgui::IGuiObject, m_videoGuiCompPtr);
-<a name="l00055"></a>00055        I_REF(iqtgui::IGuiObject, m_urlParamsGuiCompPtr);
-<a name="l00056"></a>00056        I_REF(iqtgui::IGuiObject, m_controllerBarGuiCompPtr);
-<a name="l00057"></a>00057        I_REF(iprm::IFileNameParam, m_urlParamCompPtr);
-<a name="l00058"></a>00058        I_REF(imod::IModel, m_urlParamModelCompPtr);
+<a name="l00054"></a>00054        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_videoGuiCompPtr);
+<a name="l00055"></a>00055        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_urlParamsGuiCompPtr);
+<a name="l00056"></a>00056        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_controllerBarGuiCompPtr);
+<a name="l00057"></a>00057        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_file_name_param.html">iprm::IFileNameParam</a>, m_urlParamCompPtr);
+<a name="l00058"></a>00058        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_urlParamModelCompPtr);
 <a name="l00059"></a>00059 };
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 

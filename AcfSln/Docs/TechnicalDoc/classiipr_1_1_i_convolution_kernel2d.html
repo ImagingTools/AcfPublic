@@ -36,7 +36,7 @@
 <div class="title">iipr::IConvolutionKernel2d Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::IConvolutionKernel2d" -->
+<!-- doxytag: class="iipr::IConvolutionKernel2d" --><!-- doxytag: inherits="iser::ISerializable" -->
 <p>Interface for 2D-convolution filter kernel.  
  <a href="classiipr_1_1_i_convolution_kernel2d.html#details">More...</a></p>
 
@@ -47,7 +47,10 @@ Inheritance diagram for iipr::IConvolutionKernel2d:</div>
  <div class="center">
   <img src="classiipr_1_1_i_convolution_kernel2d.png" usemap="#iipr::IConvolutionKernel2d_map" alt=""/>
   <map id="iipr::IConvolutionKernel2d_map" name="iipr::IConvolutionKernel2d_map">
-<area href="classiipr_1_1_c_convolution_kernel2d.html" title="Implementation of a general 2D convolution kernel." alt="iipr::CConvolutionKernel2d" shape="rect" coords="0,56,163,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="0,112,163,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="0,56,163,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,163,24"/>
+<area href="classiipr_1_1_c_convolution_kernel2d.html" title="Implementation of a general 2D convolution kernel." alt="iipr::CConvolutionKernel2d" shape="rect" coords="0,224,163,248"/>
 </map>
  </div></div>
 
@@ -55,13 +58,13 @@ Inheritance diagram for iipr::IConvolutionKernel2d:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual istd::CIndex2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html#a9d7bd53714fc36c93b9aef1e3abf4f40">GetKernelSize</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html#a9d7bd53714fc36c93b9aef1e3abf4f40">GetKernelSize</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of this kernel.  <a href="#a9d7bd53714fc36c93b9aef1e3abf4f40"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html#a5e5b29ef2d7576df1b9061a2bc192e8f">SetKernelSize</a> (const istd::CIndex2d &amp;kernelSize)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html#a5e5b29ef2d7576df1b9061a2bc192e8f">SetKernelSize</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;kernelSize)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set size of this kernel.  <a href="#a5e5b29ef2d7576df1b9061a2bc192e8f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html#ab71eb7f2750ffd41129f5b5ac235bece">GetKernelElement</a> (const istd::CIndex2d &amp;index) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html#ab71eb7f2750ffd41129f5b5ac235bece">GetKernelElement</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;index) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get kernel element value at the given position <code>index</code>.  <a href="#ab71eb7f2750ffd41129f5b5ac235bece"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html#a4a3e8b5c7da979d7b3b22d1bfe9036c7">SetKernelElement</a> (const istd::CIndex2d &amp;index, double value)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html#a4a3e8b5c7da979d7b3b22d1bfe9036c7">SetKernelElement</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;index, double value)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set kernel element value at the given position <code>index</code>.  <a href="#a4a3e8b5c7da979d7b3b22d1bfe9036c7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -76,7 +79,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual double iipr::IConvolutionKernel2d::GetKernelElement </td>
           <td>(</td>
-          <td class="paramtype">const istd::CIndex2d &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -95,7 +98,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual istd::CIndex2d iipr::IConvolutionKernel2d::GetKernelSize </td>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> iipr::IConvolutionKernel2d::GetKernelSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -117,7 +120,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool iipr::IConvolutionKernel2d::SetKernelElement </td>
           <td>(</td>
-          <td class="paramtype">const istd::CIndex2d &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
           <td class="paramname"><em>index</em>, </td>
         </tr>
         <tr>
@@ -149,7 +152,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void iipr::IConvolutionKernel2d::SetKernelSize </td>
           <td>(</td>
-          <td class="paramtype">const istd::CIndex2d &amp;&#160;</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
           <td class="paramname"><em>kernelSize</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
