@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,19 +15,19 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
 
 
-#include "i2d/CTubeProjectionsGenerator.h"
+#include "iipr/CTubeProjectionsGenerator.h"
 
 
-namespace i2d
+namespace iipr
 {
 
 
-bool CTubeProjectionsGenerator::GeneratorProjections(const i2d::CTubePolyline& tube, int projectionsCount, ProjectionLines& projections)
+bool CTubeProjectionsGenerator::GenerateProjections(const i2d::CTubePolyline& tube, int projectionsCount, ProjectionLines& projections)
 {
 	int nodesCount = tube.GetNodesCount();
 
@@ -40,7 +40,7 @@ bool CTubeProjectionsGenerator::GeneratorProjections(const i2d::CTubePolyline& t
 	double step = tubeLength / projectionsCount;
 	i2d::CVector2d prevNode = tube.GetNode(0);
 	i2d::CVector2d kneeVector = tube.GetKneeVector(0);
-	const CTubeNode* tubeNodePtr = dynamic_cast<const CTubeNode*>(&tube.GetNodeData(0));
+	const i2d::CTubeNode* tubeNodePtr = dynamic_cast<const i2d::CTubeNode*>(&tube.GetNodeData(0));
 	if (tubeNodePtr == NULL){
 		return false;
 	}
@@ -62,7 +62,7 @@ bool CTubeProjectionsGenerator::GeneratorProjections(const i2d::CTubePolyline& t
 		while (lengthPos > lengthRange.GetMaxValue()){
 			nextNodeInex = (nextNodeInex + 1) % nodesCount;
 			const i2d::CVector2d& nextNode = tube.GetNode(nextNodeInex);
-			const CTubeNode* nextTubeDataPtr = dynamic_cast<const CTubeNode*>(&tube.GetNodeData(nextNodeInex));
+			const i2d::CTubeNode* nextTubeDataPtr = dynamic_cast<const i2d::CTubeNode*>(&tube.GetNodeData(nextNodeInex));
 			if (nextTubeDataPtr == NULL){
 				return false;
 			}
@@ -112,6 +112,6 @@ bool CTubeProjectionsGenerator::GeneratorProjections(const i2d::CTubePolyline& t
 }
 
 
-} // namespace i2d
+} // namespace iipr
 
 

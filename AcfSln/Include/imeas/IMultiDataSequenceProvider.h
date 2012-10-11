@@ -20,37 +20,39 @@
 ********************************************************************************/
 
 
-#ifndef iipr_IDataSequenceProvider_included
-#define iipr_IDataSequenceProvider_included
+#ifndef imeas_IMultiDataSequenceProvider_included
+#define imeas_IMultiDataSequenceProvider_included
 
 
 // ACF includes
-#include "istd/IChangeable.h"
-
-// ACF-Solutions includes
-#include "imeas/IDataSequence.h"
+#include "imeas/IDataSequenceProvider.h"
 
 
-namespace iipr
+namespace imeas
 {
 
 
 /**
-	Image line projection supplier.
+	Interface for a provider of more data sequence objects.
 */
-class IDataSequenceProvider: virtual public istd::IChangeable
+class IMultiDataSequenceProvider: virtual public istd::IChangeable
 {
 public:
 	/**
-		Get access to produced line projection object.
+		Get the number of available data sequences.
 	*/
-	virtual const imeas::IDataSequence* GetDataSequence() const = 0;
+	virtual int GetSequencesCount() const = 0;
+
+	/**
+		Get data sequence with the given index.
+	*/
+	virtual const imeas::IDataSequence* GetDataSequence(int index) const = 0;
 };
 
 
-} // namespace iipr
+} // namespace imeas
 
 
-#endif // !iipr_IDataSequenceProvider_included
+#endif // !imeas_IMultiDataSequenceProvider_included
 
 

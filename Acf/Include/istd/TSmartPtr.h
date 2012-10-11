@@ -121,6 +121,7 @@ protected:
 
 template <class Type, class Accessor>
 TSmartPtr<Type, Accessor>::TSmartPtr()
+	:BaseClass()
 {
 	BaseClass::m_counterPtr = NULL;
 }
@@ -128,6 +129,7 @@ TSmartPtr<Type, Accessor>::TSmartPtr()
 
 template <class Type, class Accessor>
 TSmartPtr<Type, Accessor>::TSmartPtr(Type* pointer)
+	:BaseClass()
 {
 	BaseClass::m_counterPtr = new RefCounter(pointer);
 }
@@ -135,6 +137,7 @@ TSmartPtr<Type, Accessor>::TSmartPtr(Type* pointer)
 
 template <class Type, class Accessor>
 TSmartPtr<Type, Accessor>::TSmartPtr(const TTransPtr<Type>& pointer)
+	:BaseClass()
 {
 	BaseClass::m_counterPtr = GetInternalCounter(pointer);
 
@@ -146,6 +149,7 @@ TSmartPtr<Type, Accessor>::TSmartPtr(const TTransPtr<Type>& pointer)
 
 template <class Type, class Accessor>
 TSmartPtr<Type, Accessor>::TSmartPtr(const TSmartPtr& pointer)
+	:BaseClass()
 {
 	BaseClass::m_counterPtr = GetInternalCounter(pointer);
 

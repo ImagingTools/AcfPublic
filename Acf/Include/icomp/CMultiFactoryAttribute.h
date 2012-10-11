@@ -49,9 +49,9 @@ public:
 		DAF_OPTIONAL = IAttributeStaticInfo::AF_NULLABLE | IAttributeStaticInfo::AF_MULTIPLE | IAttributeStaticInfo::AF_FACTORY
 	};
 
-	CMultiFactoryAttribute(){}
-	CMultiFactoryAttribute(const CMultiFactoryAttribute& attribute):BaseClass(attribute){}
-	CMultiFactoryAttribute(int elementsCount, QByteArray* valuesPtr):BaseClass(elementsCount, valuesPtr){}
+	CMultiFactoryAttribute();
+	CMultiFactoryAttribute(const CMultiFactoryAttribute& attribute);
+	CMultiFactoryAttribute(int elementsCount, QByteArray* valuesPtr);
 
 	// reimplemented (iser::IObject)
 	QByteArray GetFactoryId() const;

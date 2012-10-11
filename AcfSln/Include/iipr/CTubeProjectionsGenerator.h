@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,7 +15,7 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
 
@@ -27,7 +27,7 @@
 #include "i2d/CTubePolyline.h"
 
 
-namespace i2d
+namespace iipr
 {
 
 
@@ -37,7 +37,7 @@ namespace i2d
 class CTubeProjectionsGenerator
 {
 public:
-	typedef QVector<CLine2d> ProjectionLines;
+	typedef QVector<i2d::CLine2d> ProjectionLines;
 
 	/**
 		Create list of projections for the given tube region.
@@ -45,11 +45,11 @@ public:
 		\param projectionsCount Number of projections to be generated
 		\param projections	List of generated projection lines.
 	*/
-	static bool GeneratorProjections(const i2d::CTubePolyline& tube, int projectionsCount, ProjectionLines& projections);
+	static bool GenerateProjections(const i2d::CTubePolyline& tube, int projectionsCount, ProjectionLines& projections);
 };
 
 
-} // namespace i2d
+} // namespace iipr
 
 
 #endif // !i2d_CTubeProjectionsGenerator_included

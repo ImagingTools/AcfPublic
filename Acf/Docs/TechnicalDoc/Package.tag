@@ -361,14 +361,6 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
-    <name>CTubeProjectionsGenerator.h</name>
-    <path>C:/Temp/Acf/Include/i2d/</path>
-    <filename>_c_tube_projections_generator_8h</filename>
-    <includes id="_c_tube_polyline_8h" name="CTubePolyline.h" local="yes" imported="no">i2d/CTubePolyline.h</includes>
-    <class kind="class">i2d::CTubeProjectionsGenerator</class>
-    <namespace>i2d</namespace>
-  </compound>
-  <compound kind="file">
     <name>CVector2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_vector2d_8h</filename>
@@ -6436,7 +6428,6 @@
     <class kind="class">i2d::CStaticCalibrationProviderComp</class>
     <class kind="class">i2d::CTubeNode</class>
     <class kind="class">i2d::CTubePolylineComp</class>
-    <class kind="class">i2d::CTubeProjectionsGenerator</class>
     <class kind="class">i2d::CVector2d</class>
     <class kind="class">i2d::ICalibrationProvider</class>
     <class kind="class">i2d::IObject2d</class>
@@ -9968,24 +9959,6 @@
       <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
       <anchor>ac50329a9b70f6627eebae20a93d2110f</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>i2d::CTubeProjectionsGenerator</name>
-    <filename>classi2d_1_1_c_tube_projections_generator.html</filename>
-    <member kind="typedef">
-      <type>QVector&lt; CLine2d &gt;</type>
-      <name>ProjectionLines</name>
-      <anchorfile>classi2d_1_1_c_tube_projections_generator.html</anchorfile>
-      <anchor>abfe41f1fa969c1da114859f8919b9b2f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>GeneratorProjections</name>
-      <anchorfile>classi2d_1_1_c_tube_projections_generator.html</anchorfile>
-      <anchor>ae44aad091dd46639ab9dc3f67683667c</anchor>
-      <arglist>(const i2d::CTubePolyline &amp;tube, int projectionsCount, ProjectionLines &amp;projections)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21963,6 +21936,13 @@
       <anchor>aaf371b4a9945b9ba5c7388c17436221d</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>iser::TCopySerializedWrap&lt; iser::IObject &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
+      <anchor>a18a978e04801c79a8d7f037f61ba2cc9</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TAttribute</name>
@@ -22529,6 +22509,13 @@
       <name>ValueType</name>
       <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
       <anchor>a388df96973dc20c8e541d8a962513350</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iser::TCopySerializedWrap&lt; iser::IObject &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ab1bd4498b7d01e6dc30b5fda6f9afa1d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -30235,6 +30222,27 @@
       <anchor>addcf20af2470ec8177e0419cf84576be</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>iprm::CNameParam</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiprm_1_1_c_name_param_comp.html</anchorfile>
+      <anchor>aad1cac20189a6f254e8b947d1cb8d529</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetName</name>
+      <anchorfile>classiprm_1_1_c_name_param_comp.html</anchorfile>
+      <anchor>a7383bbb8249c68167c4eb9b380ab2e05</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsNameFixed</name>
+      <anchorfile>classiprm_1_1_c_name_param_comp.html</anchorfile>
+      <anchor>a38c2817f894a7cb0d4bc37441d72962f</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -34284,6 +34292,20 @@
       <anchor>a35626fa890256d20063edea1edf0179a</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CopyButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a8dbac8ba2b0ccd30f0ffd389265f0189</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PasteButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a3adb90150890a25794ae767f9c53eb98</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqt2d::CPolylineParamsGuiComp</name>
@@ -34315,6 +34337,20 @@
       <name>on_RemoveButton_clicked</name>
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>a610371022bb193ef4377b1e30b2cfa3c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CopyButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>ae0e2100ed0fa03e67c7afc123bca2f80</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PasteButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>acd9f60ffe3891cfcf1abc8eee50da8eb</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -55086,7 +55122,7 @@
   <compound kind="class">
     <name>iview::ISelectable</name>
     <filename>classiview_1_1_i_selectable.html</filename>
-    <base>iview::ITouchable</base>
+    <base virtualness="virtual">iview::ITouchable</base>
     <member kind="enumeration">
       <name>MousePointerMode</name>
       <anchorfile>classiview_1_1_i_selectable.html</anchorfile>

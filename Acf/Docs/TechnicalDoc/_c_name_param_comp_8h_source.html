@@ -45,29 +45,36 @@
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
 <a name="l00023"></a><a class="code" href="classiprm_1_1_c_name_param_comp.html#addcf20af2470ec8177e0419cf84576be">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classiprm_1_1_c_name_param_comp.html#addcf20af2470ec8177e0419cf84576be">BaseClass</a>;
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classiprm_1_1_c_name_param_comp.html" title="Component for automatic creation of the Universally Unique Identifier (UUID)">CNameParamComp</a>);
-<a name="l00026"></a>00026               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name.">iprm::INameParam</a>);
-<a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>);
-<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>);
-<a name="l00029"></a>00029               I_ASSIGN(m_defaultNameAttrPtr, <span class="stringliteral">&quot;DefaultName&quot;</span>, <span class="stringliteral">&quot;Default name&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00030"></a>00030        I_END_COMPONENT;
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">protected</span>:
-<a name="l00033"></a>00033        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_name_param_comp.html#ad9b9df82d98897f2348e79e68274b511">OnComponentCreated</a>();
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keyword">private</span>:
-<a name="l00037"></a>00037        I_ATTR(QString, m_defaultNameAttrPtr);
-<a name="l00038"></a>00038 };
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 } <span class="comment">// namespace iprm</span>
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="preprocessor">#endif // !iprm_CNameParamComp_included</span>
-<a name="l00045"></a>00045 <span class="preprocessor"></span>
+<a name="l00024"></a><a class="code" href="classiprm_1_1_c_name_param_comp.html#aad1cac20189a6f254e8b947d1cb8d529">00024</a>        <span class="keyword">typedef</span> <a class="code" href="classiprm_1_1_c_name_param.html" title="Implementation of a named object over iprm::INameParam interface.">iprm::CNameParam</a> <a class="code" href="classiprm_1_1_c_name_param_comp.html#aad1cac20189a6f254e8b947d1cb8d529">BaseClass2</a>;
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026        I_BEGIN_COMPONENT(<a class="code" href="classiprm_1_1_c_name_param_comp.html" title="Component for automatic creation of the Universally Unique Identifier (UUID)">CNameParamComp</a>);
+<a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name.">iprm::INameParam</a>);
+<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>);
+<a name="l00029"></a>00029               I_REGISTER_INTERFACE(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>);
+<a name="l00030"></a>00030               I_ASSIGN(m_defaultNameAttrPtr, <span class="stringliteral">&quot;DefaultName&quot;</span>, <span class="stringliteral">&quot;Default name&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00031"></a>00031               I_ASSIGN(m_isNameFixedAttrPtr, <span class="stringliteral">&quot;IsNameFixed&quot;</span>, <span class="stringliteral">&quot;When enabled, the name is fixed and cannot be changed during run tume&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00032"></a>00032        I_END_COMPONENT;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034        <span class="comment">// reimplemented (iprm::INameParam)</span>
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_name_param_comp.html#a7383bbb8249c68167c4eb9b380ab2e05" title="Set the object name.">SetName</a>(<span class="keyword">const</span> QString&amp; name);
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_name_param_comp.html#a38c2817f894a7cb0d4bc37441d72962f" title="Return true, if the name setting is enabled.">IsNameFixed</a>() <span class="keyword">const</span>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">protected</span>:
+<a name="l00039"></a>00039        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_name_param_comp.html#ad9b9df82d98897f2348e79e68274b511">OnComponentCreated</a>();
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="keyword">private</span>:
+<a name="l00043"></a>00043        I_ATTR(QString, m_defaultNameAttrPtr);
+<a name="l00044"></a>00044        I_ATTR(<span class="keywordtype">bool</span>, m_isNameFixedAttrPtr);
+<a name="l00045"></a>00045 };
 <a name="l00046"></a>00046 
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 } <span class="comment">// namespace iprm</span>
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iprm_CNameParamComp_included</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span>
+<a name="l00053"></a>00053 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

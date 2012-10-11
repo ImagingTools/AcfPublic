@@ -53,6 +53,7 @@ class TMultiAttribute: virtual public iser::TCopySerializedWrap<iser::IObject>
 {
 public:
 	typedef Value ValueType;
+	typedef iser::TCopySerializedWrap<iser::IObject> BaseClass;
 
 	enum DefaultAttributeFlags
 	{
@@ -99,19 +100,22 @@ protected:
 
 template <typename Value>
 TMultiAttribute<Value>::TMultiAttribute()
+	:BaseClass()
 {
 }
 
 
 template <typename Value>
 TMultiAttribute<Value>::TMultiAttribute(const TMultiAttribute& attribute)
-:	m_values(attribute.m_values)
+	:BaseClass(),
+	m_values(attribute.m_values)
 {
 }
 
 
 template <typename Value>
 TMultiAttribute<Value>::TMultiAttribute(int elementsCount, Value* valuesPtr)
+	:BaseClass()
 {
 	for (int i = 0; i < elementsCount; ++i){
 		Wrap wrap;

@@ -48,7 +48,7 @@ public:
 		CI_MAGENTA,
 		CI_YELLOW,
 		CI_BLACK,
-		CI_LAST = CI_BLACK,
+		CI_LAST = CI_BLACK
 	};
 
 	CCmyk(double c = 0.0, double m = 0.0, double y = 0.0, double k = 0.0);

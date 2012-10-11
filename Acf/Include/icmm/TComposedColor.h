@@ -123,6 +123,7 @@ public:
 
 template <int Size>
 inline TComposedColor<Size>::TComposedColor()
+	:BaseClass()
 {
 }
 

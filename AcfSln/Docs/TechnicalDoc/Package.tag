@@ -1027,9 +1027,9 @@
     <filename>_c_line_projection_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
-    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">iipr/IDataSequenceProvider.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
     <namespace>iipr</namespace>
@@ -1190,6 +1190,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CTubeProjectionsGenerator.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_tube_projections_generator_8h</filename>
+    <class kind="class">iipr::CTubeProjectionsGenerator</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>IBitmapProvider.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_bitmap_provider_8h</filename>
@@ -1227,14 +1234,6 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_convolution_kernel2d_8h</filename>
     <class kind="class">iipr::IConvolutionKernel2d</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IDataSequenceProvider.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_i_data_sequence_provider_8h</filename>
-    <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
-    <class kind="class">iipr::IDataSequenceProvider</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -1536,6 +1535,14 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>IDataSequenceProvider.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_i_data_sequence_provider_8h</filename>
+    <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
+    <class kind="class">imeas::IDataSequenceProvider</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>IDataSequenceStatistics.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_statistics_8h</filename>
@@ -1576,6 +1583,14 @@
     <name>imeas.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>imeas_8h</filename>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IMultiDataSequenceProvider.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_i_multi_data_sequence_provider_8h</filename>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
+    <class kind="class">imeas::IMultiDataSequenceProvider</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -2219,8 +2234,8 @@
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_line_projection_supplier_gui_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
-    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">iipr/IDataSequenceProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
@@ -7679,12 +7694,12 @@
     <class kind="class">iipr::CSearchParams</class>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
     <class kind="class">iipr::CTubeProjectionLinesProviderComp</class>
+    <class kind="class">iipr::CTubeProjectionsGenerator</class>
     <class kind="class">iipr::IBitmapProvider</class>
     <class kind="class">iipr::ICaliperParams</class>
     <class kind="class">iipr::ICaliperProcessor</class>
     <class kind="class">iipr::ICircleFinderParams</class>
     <class kind="class">iipr::IConvolutionKernel2d</class>
-    <class kind="class">iipr::IDataSequenceProvider</class>
     <class kind="class">iipr::IFeaturesConsumer</class>
     <class kind="class">iipr::IFeatureToFeatureProcessor</class>
     <class kind="class">iipr::IFeatureToImageMapper</class>
@@ -9163,7 +9178,7 @@
     <name>iipr::CLineProjectionSupplierComp</name>
     <filename>classiipr_1_1_c_line_projection_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</base>
-    <base virtualness="virtual">iipr::IDataSequenceProvider</base>
+    <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</type>
       <name>BaseClass</name>
@@ -10175,6 +10190,24 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CTubeProjectionsGenerator</name>
+    <filename>classiipr_1_1_c_tube_projections_generator.html</filename>
+    <member kind="typedef">
+      <type>QVector&lt; i2d::CLine2d &gt;</type>
+      <name>ProjectionLines</name>
+      <anchorfile>classiipr_1_1_c_tube_projections_generator.html</anchorfile>
+      <anchor>abd3ca98ae3ecac13605002a1c2060b5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>GenerateProjections</name>
+      <anchorfile>classiipr_1_1_c_tube_projections_generator.html</anchorfile>
+      <anchor>af232bf77406199ccdbcab83f8a05ec7f</anchor>
+      <arglist>(const i2d::CTubePolyline &amp;tube, int projectionsCount, ProjectionLines &amp;projections)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::IBitmapProvider</name>
     <filename>classiipr_1_1_i_bitmap_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
@@ -10427,18 +10460,6 @@
       <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
       <anchor>a4a3e8b5c7da979d7b3b22d1bfe9036c7</anchor>
       <arglist>(const istd::CIndex2d &amp;index, double value)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::IDataSequenceProvider</name>
-    <filename>classiipr_1_1_i_data_sequence_provider.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const imeas::IDataSequence *</type>
-      <name>GetDataSequence</name>
-      <anchorfile>classiipr_1_1_i_data_sequence_provider.html</anchorfile>
-      <anchor>afd8a62f06d9b48bf8b77e1564c1e5867</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10988,11 +11009,13 @@
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
     <class kind="class">imeas::IDataSequence</class>
     <class kind="class">imeas::IDataSequenceInfo</class>
+    <class kind="class">imeas::IDataSequenceProvider</class>
     <class kind="class">imeas::IDataSequenceStatistics</class>
     <class kind="class">imeas::IDataStatistics</class>
     <class kind="class">imeas::IDiscreteDataSequence</class>
     <class kind="class">imeas::ILinearAdjustConstraints</class>
     <class kind="class">imeas::ILinearAdjustParams</class>
+    <class kind="class">imeas::IMultiDataSequenceProvider</class>
     <class kind="class">imeas::INumericConstraints</class>
     <class kind="class">imeas::INumericValue</class>
     <class kind="class">imeas::INumericValueProvider</class>
@@ -12235,6 +12258,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imeas::IDataSequenceProvider</name>
+    <filename>classimeas_1_1_i_data_sequence_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_provider.html</anchorfile>
+      <anchor>a9ba42f3e04b84784aee09447f19f5377</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::IDataSequenceStatistics</name>
     <filename>classimeas_1_1_i_data_sequence_statistics.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -12397,6 +12432,25 @@
       <anchorfile>classimeas_1_1_i_linear_adjust_params.html</anchorfile>
       <anchor>ad5fb1a22f248061793f91c62089246b0</anchor>
       <arglist>(double offset)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::IMultiDataSequenceProvider</name>
+    <filename>classimeas_1_1_i_multi_data_sequence_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetSequencesCount</name>
+      <anchorfile>classimeas_1_1_i_multi_data_sequence_provider.html</anchorfile>
+      <anchor>a059c0080bf6cb4b86df2ac5274bd5b0a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classimeas_1_1_i_multi_data_sequence_provider.html</anchorfile>
+      <anchor>ab64d64663e4992a3543f96288d4be2a6</anchor>
+      <arglist>(int index) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17182,12 +17236,12 @@
   <compound kind="class">
     <name>iqtipr::CLineProjectionSupplierGuiComp</name>
     <filename>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, iipr::IDataSequenceProvider &gt;</base>
+    <base>TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, imeas::IDataSequenceProvider &gt;</base>
     <member kind="typedef">
-      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, iipr::IDataSequenceProvider &gt;</type>
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, imeas::IDataSequenceProvider &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>af812edf117339a24f89e5d23b171ac57</anchor>
+      <anchor>af6bb1838956213de290f68ece82680ab</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

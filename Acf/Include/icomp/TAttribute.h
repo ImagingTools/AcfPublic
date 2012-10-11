@@ -50,6 +50,7 @@ class TAttribute: virtual public iser::TCopySerializedWrap<iser::IObject>
 {
 public:
 	typedef Value ValueType;
+	typedef iser::TCopySerializedWrap<iser::IObject> BaseClass;
 
 	enum DefaultAttributeFlags
 	{
@@ -83,20 +84,23 @@ protected:
 
 template <typename Value>
 TAttribute<Value>::TAttribute()
+	:BaseClass()
 {
 }
 
 
 template <typename Value>
 TAttribute<Value>::TAttribute(const Value& value)
-:	m_value(value)
+	:BaseClass(),
+	m_value(value)
 {
 }
 
 
 template <typename Value>
 TAttribute<Value>::TAttribute(const TAttribute& attribute)
-:	m_value(attribute.GetValue())
+	:BaseClass(),
+	m_value(attribute.GetValue())
 {
 }
 
