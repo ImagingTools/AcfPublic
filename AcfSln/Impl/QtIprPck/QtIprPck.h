@@ -37,6 +37,7 @@
 #include "iqtipr/CGeneralSearchParamsGuiComp.h"
 #include "iqtipr/CConvolution2dParamsGuiComp.h"
 #include "iqtipr/CMultiLineSupplierGuiComp.h"
+#include "iqtipr/CMultiLineProjectionSupplierGuiComp.h"
 
 
 /**
@@ -54,6 +55,7 @@ typedef iqtipr::CSearchBasedFeaturesSupplierGuiComp SearchBasedFeaturesSupplierG
 typedef iqtipr::CGeneralSearchParamsGuiComp GeneralSearchParamsGui;
 typedef iqtipr::CConvolution2dParamsGuiComp Convolution2dParamsGui;
 typedef imod::TModelWrap<iqtipr::CMultiLineSupplierGuiComp> MultiLineSupplierGui;
+typedef iqtipr::CMultiLineProjectionSupplierGuiComp MultiLineProjectionSupplierGui;
 
 
 } // namespace QtIprPck

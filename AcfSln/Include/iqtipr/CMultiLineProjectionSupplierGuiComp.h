@@ -1,0 +1,92 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#ifndef iqtipr_CMultiLineProjectionSupplierGuiComp_included
+#define iqtipr_CMultiLineProjectionSupplierGuiComp_included
+
+
+// ACF includes
+#include "iprm/ISelectionParam.h"
+
+// ACF-Solutions includes
+#include "iqtinsp/TSupplierGuiCompBase.h"
+#include "imeas/IMultiDataSequenceProvider.h"
+#include "imeas/CGeneralDataSequence.h"
+#include "Generated/ui_CMultiLineProjectionSupplierGuiComp.h"
+
+
+namespace iqtipr
+{
+
+
+class CMultiLineProjectionSupplierGuiComp: public iqtinsp::TSupplierGuiCompBase<
+			Ui::CMultiLineProjectionSupplierGuiComp,
+			imeas::IMultiDataSequenceProvider>
+{
+	Q_OBJECT
+
+public:
+	typedef iqtinsp::TSupplierGuiCompBase<
+				Ui::CMultiLineProjectionSupplierGuiComp,
+				imeas::IMultiDataSequenceProvider> BaseClass;
+
+	I_BEGIN_COMPONENT(CMultiLineProjectionSupplierGuiComp);
+		I_ASSIGN(m_projectionObserverCompPtr, "ProjectionObserver", "Observer for the generated line projections", false, "ProjectionObserver");
+		I_ASSIGN_TO(m_projectionObserverGuiCompPtr, m_projectionObserverCompPtr, false);
+		I_ASSIGN(m_projectionSelectorCompPtr, "ProjectionSelector", "External selection of the current projection", false, "ProjectionSelector");
+	I_END_COMPONENT;
+
+protected Q_SLOTS:
+	void on_TestButton_clicked();
+	void on_ProjectionSlider_valueChanged(int value);
+	void on_ProjectionSpin_valueChanged(int value);
+
+protected:
+	// reimplemented (iqtgui::IGuiObject)
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
+
+	// reimplemented (iqtgui::TGuiObserverWrap)
+	virtual void OnGuiModelAttached();
+	virtual void OnGuiModelDetached();
+	virtual void UpdateGui(int updateFlags = 0);
+
+	// reimplemented (iqtinsp::TSupplierGuiCompBase)
+	virtual void OnSupplierParamsChanged();
+	virtual QWidget* GetParamsWidget() const;
+
+private:
+	void OnProjectionIndexChanged(int index);
+
+private:
+	imod::TModelWrap<imeas::CGeneralDataSequence> m_projectionData;
+
+	I_REF(imod::IObserver, m_projectionObserverCompPtr);
+	I_REF(iqtgui::IGuiObject, m_projectionObserverGuiCompPtr);
+	I_REF(iprm::ISelectionParam, m_projectionSelectorCompPtr);
+};
+
+
+} // namespace iqtipr
+
+
+#endif // !iqtipr_CMultiLineProjectionSupplierGuiComp_included

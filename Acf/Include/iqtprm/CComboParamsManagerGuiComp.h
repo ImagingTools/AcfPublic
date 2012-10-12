@@ -36,6 +36,9 @@ namespace iqtprm
 {
 
 
+/**
+	Simple parameter manager editor using a combo box to parameter selection.
+*/
 class CComboParamsManagerGuiComp: public iqtgui::TDesignerGuiObserverCompBase<
 			Ui::CComboParamsManagerGuiComp,
 			iprm::IParamsManager>

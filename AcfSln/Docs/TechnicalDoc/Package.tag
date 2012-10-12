@@ -1051,6 +1051,19 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiLineProjectionSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_multi_line_projection_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
+    <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
+    <class kind="class">iipr::CMultiLineProjectionSupplierComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CMultiLineSupplierCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_line_supplier_comp_base_8h</filename>
@@ -2239,6 +2252,16 @@
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMultiLineProjectionSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_multi_line_projection_supplier_gui_comp_8h</filename>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
+    <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
+    <class kind="class">iqtipr::CMultiLineProjectionSupplierGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
@@ -7679,6 +7702,7 @@
     <class kind="class">iipr::CLineProjectionSupplierComp</class>
     <class kind="class">iipr::CMorphologicalProcessorComp</class>
     <class kind="class">iipr::CMultiBitmapCacheComp</class>
+    <class kind="class">iipr::CMultiLineProjectionSupplierComp</class>
     <class kind="class">iipr::CMultiLineSupplierCompBase</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
@@ -9305,6 +9329,61 @@
       <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
       <anchor>a5a9b3e28451dd73d780f51d82958ce7b</anchor>
       <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CMultiLineProjectionSupplierComp</name>
+    <filename>classiipr_1_1_c_multi_line_projection_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; QVector&lt; imeas::CGeneralDataSequence &gt; &gt;</base>
+    <base virtualness="virtual">imeas::IMultiDataSequenceProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; QVector&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>adda6b02abcebff43b2d4f18379692a45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a6a54e3a724f6080fe368e3ac712702c8</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a6ebb28e826f91e289570bdb77dcf0e40</anchor>
+      <arglist>(m_linesProviderModelCompPtr, m_linesProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSequencesCount</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a6b49c6ce6cc3c7d62ecbf56605084305</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a9c3e9cb4455fc7119ab910a7838fe5eb</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a77e9513a4769ac5a2fd45400e2577757</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>ab3a5e09127f068c0ce91bef710001175</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17019,6 +17098,7 @@
     <class kind="class">iqtipr::CConvolution2dParamsGuiComp</class>
     <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
+    <class kind="class">iqtipr::CMultiLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
     <class kind="class">iqtipr::CProjectionShape</class>
     <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
@@ -17313,6 +17393,95 @@
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
       <anchor>a81b79cf0034b245d650cf65ec0a1342b</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CMultiLineProjectionSupplierGuiComp</name>
+    <filename>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</filename>
+    <base>TSupplierGuiCompBase&lt; Ui::CMultiLineProjectionSupplierGuiComp, imeas::IMultiDataSequenceProvider &gt;</base>
+    <member kind="typedef">
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CMultiLineProjectionSupplierGuiComp, imeas::IMultiDataSequenceProvider &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a22ae29d593f583e08b22c315798e6cfa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a489b58f1adf61f27643e299b9576294a</anchor>
+      <arglist>(m_projectionObserverGuiCompPtr, m_projectionObserverCompPtr, false)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_TestButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a270c0ee2270a1adafbb4d31c8b310ee7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ProjectionSlider_valueChanged</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a86a49d47c705deb29f71c3f65b31f84d</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ProjectionSpin_valueChanged</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>af3f90cc2a6794bf48d7f5d9a6c46ef0e</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a1a2abff911ef5064465038f45778d76a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a1f406d84f725eb39612011d158a94b36</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a0a896d8b824ceafacf777bca9098a1fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a49cdb0cc99ac8b8fab4efdee7384541b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>aed9490183efcab057212b2e7e79fab20</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a3417f9595ab9c090c5b236a6bcafb2f1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetParamsWidget</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>aec91733bb4e823baac8eb8a018d1ce81</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
