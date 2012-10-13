@@ -53,9 +53,9 @@ void CParamsManagerGuiComp::on_AddButton_clicked()
 	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		int selectedIndex = GetSelectedIndex();
-		I_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
+		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
-		objectPtr->InsertParamsSet("", selectedIndex);
+		objectPtr->InsertParamsSet(-1, selectedIndex);
 	}
 }
 
@@ -67,7 +67,7 @@ void CParamsManagerGuiComp::on_RemoveButton_clicked()
 		EnsureParamsGuiDetached();
 
 		int selectedIndex = GetSelectedIndex();
-		I_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
+		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
 		if (selectedIndex >= 0){
 			objectPtr->RemoveParamsSet(selectedIndex);
@@ -81,7 +81,7 @@ void CParamsManagerGuiComp::on_UpButton_clicked()
 	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		int selectedIndex = GetSelectedIndex();
-		I_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
+		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
 		if (selectedIndex < 1){
 			return;
@@ -100,7 +100,7 @@ void CParamsManagerGuiComp::on_DownButton_clicked()
 	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		int selectedIndex = GetSelectedIndex();
-		I_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
+		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
 		if ((selectedIndex < 0) || (selectedIndex >= objectPtr->GetParamsSetsCount() - 1)){
 			return;
@@ -172,7 +172,7 @@ void CParamsManagerGuiComp::on_ParamsTree_itemChanged(QTreeWidgetItem* item, int
 
 void CParamsManagerGuiComp::UpdateActions()
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	int flags = -1;
 	int prevFlags = -1;
@@ -252,7 +252,7 @@ void CParamsManagerGuiComp::UpdateParamsView(int selectedIndex)
 
 	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL && (selectedIndex >= 0)){
-		I_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
+		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
 		if (m_paramsObserverCompPtr.IsValid()){
 			modelPtr = dynamic_cast<imod::IModel*>(objectPtr->GetParamsSet(selectedIndex));
@@ -267,7 +267,7 @@ void CParamsManagerGuiComp::UpdateParamsView(int selectedIndex)
 		bool paramsFrameVisible = false;
 
 		if (modelPtr != NULL){
-			I_ASSERT(!modelPtr->IsAttached(m_paramsObserverCompPtr.GetPtr()));
+			Q_ASSERT(!modelPtr->IsAttached(m_paramsObserverCompPtr.GetPtr()));
 				
 			if (modelPtr->AttachObserver(m_paramsObserverCompPtr.GetPtr())){
 				m_lastConnectedModelPtr = modelPtr;
@@ -289,7 +289,7 @@ void CParamsManagerGuiComp::UpdateParamsView(int selectedIndex)
 
 int CParamsManagerGuiComp::GetSelectedIndex() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	int retVal = -1;
 	QList<QTreeWidgetItem*> items = ParamsTree->selectedItems();
@@ -340,27 +340,28 @@ void CParamsManagerGuiComp::OnGuiModelAttached()
 			areUpDownButtonsNeeded = ((flags & iprm::IParamsManager::MF_SUPPORT_SWAP) != 0);
 		}
 
-		iprm::IParamsManager::TypeIds typeIds = objectPtr->GetSupportedTypeIds();
+		m_startVariableMenus.clear();
 
-		if (typeIds.size() > 1){
-			iprm::IParamsManager::TypeIds::iterator i;
-			// fill the menu
-			
-			m_startVariableMenus.clear();
-			
-			for (i = typeIds.begin(); i != typeIds.end(); ++i){
-				//translate
-				QString typeName(*i);
-				QString translatedTypeName = tr(*i);
+		const iprm::ISelectionConstraints* typeConstraintsPtr = objectPtr->GetParamsTypeConstraints();
+		if (typeConstraintsPtr != NULL){
+			int typesCount = typeConstraintsPtr->GetOptionsCount();
 
-				QAction* action = m_startVariableMenus.addAction(translatedTypeName);
+			if (typesCount > 1){
+				Q_ASSERT(typeConstraintsPtr != NULL);
 
-				//store original type name
-				action->setData(typeName);
+				for (int i = 0; i < typesCount; ++i){
+					//translate
+					QString typeName = typeConstraintsPtr->GetOptionName(i);
+
+					QAction* action = m_startVariableMenus.addAction(typeName);
+
+					//store original type index
+					action->setData(i);
+				}
+
+				AddButton->setMenu(&m_startVariableMenus);
+				QObject::connect(&m_startVariableMenus, SIGNAL(triggered(QAction*)), this, SLOT(OnAddMenuOptionClicked(QAction*)));
 			}
-
-			AddButton->setMenu(&m_startVariableMenus);
-			QObject::connect(&m_startVariableMenus, SIGNAL(triggered(QAction*)), this, SLOT(OnAddMenuOptionClicked(QAction*)));
 		}
 	}
 
@@ -382,7 +383,7 @@ void CParamsManagerGuiComp::OnGuiModelDetached()
 
 void CParamsManagerGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	UpdateTree();
 }
@@ -418,9 +419,12 @@ void CParamsManagerGuiComp::OnAddMenuOptionClicked(QAction* action)
 {
 	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		QByteArray typeName = action->data().toByteArray();
+		int typeIndex = action->data().toInt();
 
-		objectPtr->InsertParamsSet(typeName, -1);
+		int selectedIndex = GetSelectedIndex();
+		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
+
+		objectPtr->InsertParamsSet(typeIndex, selectedIndex);
 	}
 }
 

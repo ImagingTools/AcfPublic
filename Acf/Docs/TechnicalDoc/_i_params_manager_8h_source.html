@@ -69,28 +69,28 @@
 <a name="l00076"></a>00076 
 <a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a5d210a6109d010b5bc4057db9b089f9c" title="Get number of managed set.">GetParamsSetsCount</a>() <span class="keyword">const</span> = 0;
 <a name="l00081"></a>00081 
-<a name="l00087"></a>00087        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a6db60f072b7d018848a44746727eaf8f">TypeIds</a> <a class="code" href="classiprm_1_1_i_params_manager.html#a0f3caf76422df683d3c979fa02374fce" title="Get list of IDs of supported parameters types for insert.">GetSupportedTypeIds</a>() <span class="keyword">const</span> = 0;
-<a name="l00088"></a>00088 
-<a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_params_manager.html#abed25fb4246287def5dc1b0030341355" title="Insert new parameters set at selected position.">InsertParamsSet</a>(<span class="keyword">const</span> QByteArray&amp; typeId = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> index = -1) = 0;
-<a name="l00099"></a>00099 
-<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#ac8e5810d12adbb2a28a2a6419caf27d8" title="Remove parameters set at selected position.">RemoveParamsSet</a>(<span class="keywordtype">int</span> index) = 0;
-<a name="l00104"></a>00104 
-<a name="l00108"></a>00108        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a07b93c9af890b569e13d14a8b761b2e8" title="Swap two parameter sets.">SwapParamsSet</a>(<span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) = 0;
-<a name="l00109"></a>00109 
-<a name="l00113"></a>00113        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* <a class="code" href="classiprm_1_1_i_params_manager.html#a6adca790d307f482019f49ad5d36e594" title="Get selected parameter set.">GetParamsSet</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
-<a name="l00114"></a>00114 
-<a name="l00118"></a>00118        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_i_params_manager.html#ae78973406e7c57a6e0fa933ccd895997" title="Get name of specified parameter set.">GetParamsSetName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
-<a name="l00119"></a>00119 
-<a name="l00123"></a>00123        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a02be7cef148d7993709296e4ab4740a7" title="Set name of specified parameter set.">SetParamsSetName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name) = 0;
-<a name="l00124"></a>00124 };
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* <a class="code" href="classiprm_1_1_i_params_manager.html#a228e9489fe89a24c9a929af76037f91b" title="Get selection contraints describing each supported type.">GetParamsTypeConstraints</a>() <span class="keyword">const</span> = 0;
+<a name="l00087"></a>00087 
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a234045bf4a452e12b08da92526fc5e24" title="Insert new parameters set at selected position.">InsertParamsSet</a>(<span class="keywordtype">int</span> typeIndex = -1, <span class="keywordtype">int</span> index = -1) = 0;
+<a name="l00098"></a>00098 
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#ac8e5810d12adbb2a28a2a6419caf27d8" title="Remove parameters set at selected position.">RemoveParamsSet</a>(<span class="keywordtype">int</span> index) = 0;
+<a name="l00103"></a>00103 
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a07b93c9af890b569e13d14a8b761b2e8" title="Swap two parameter sets.">SwapParamsSet</a>(<span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) = 0;
+<a name="l00108"></a>00108 
+<a name="l00112"></a>00112        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* <a class="code" href="classiprm_1_1_i_params_manager.html#a6adca790d307f482019f49ad5d36e594" title="Get selected parameter set.">GetParamsSet</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
+<a name="l00113"></a>00113 
+<a name="l00117"></a>00117        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_i_params_manager.html#ae78973406e7c57a6e0fa933ccd895997" title="Get name of specified parameter set.">GetParamsSetName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span> = 0;
+<a name="l00118"></a>00118 
+<a name="l00122"></a>00122        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_params_manager.html#a02be7cef148d7993709296e4ab4740a7" title="Set name of specified parameter set.">SetParamsSetName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name) = 0;
+<a name="l00123"></a>00123 };
+<a name="l00124"></a>00124 
 <a name="l00125"></a>00125 
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127 } <span class="comment">// namespace iprm</span>
+<a name="l00126"></a>00126 } <span class="comment">// namespace iprm</span>
+<a name="l00127"></a>00127 
 <a name="l00128"></a>00128 
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130 <span class="preprocessor">#endif // !iprm_IParamsManager_included</span>
-<a name="l00131"></a>00131 <span class="preprocessor"></span>
-<a name="l00132"></a>00132 
+<a name="l00129"></a>00129 <span class="preprocessor">#endif // !iprm_IParamsManager_included</span>
+<a name="l00130"></a>00130 <span class="preprocessor"></span>
+<a name="l00131"></a>00131 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -3004,6 +3004,8 @@
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <class kind="class">iprm::CMultiParamsManagerComp</class>
+    <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfo</class>
+    <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfoList</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -30001,6 +30003,8 @@
     <base virtualness="virtual">iprm::IParamsManager</base>
     <base virtualness="virtual">iprm::ISelectionConstraints</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfo</class>
+    <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfoList</class>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -30030,18 +30034,18 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual TypeIds</type>
-      <name>GetSupportedTypeIds</name>
+      <type>virtual const ISelectionConstraints *</type>
+      <name>GetParamsTypeConstraints</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>ab77cb6c187e2220a214619c1b512c4c8</anchor>
+      <anchor>a7322358e5ccf4615d8f8b37f1f33921e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>InsertParamsSet</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>ad0784ad16a866899645c3f58cba28533</anchor>
-      <arglist>(const QByteArray &amp;typeId=&quot;&quot;, int index=-1)</arglist>
+      <anchor>a1a852d47c2e74a29f96f2d0d2a5fe33f</anchor>
+      <arglist>(int typeIndex=-1, int index=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -30168,6 +30172,92 @@
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
       <anchor>aeb0f24a23abc405816eb74f9065efcdd</anchor>
       <arglist>(const QByteArray &amp;typeId, int index, const QString &amp;name)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iprm::CMultiParamsManagerComp::TypeInfo</name>
+    <filename>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>factoryIndex</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html</anchorfile>
+      <anchor>aad5367d7d7f02b3ddfab0d2fac268edd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QByteArray</type>
+      <name>id</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html</anchorfile>
+      <anchor>a47e5502a815a5f36154b426e1973e70e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>name</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html</anchorfile>
+      <anchor>aa178c04a433c3ade1aae8e6685994eee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>description</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html</anchorfile>
+      <anchor>ae669076bf1513cdfc226eb4624ec7bb8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iprm::CMultiParamsManagerComp::TypeInfoList</name>
+    <filename>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</filename>
+    <base>iprm::ISelectionConstraints</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetConstraintsFlags</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>aac071270871969573617f8ff4da17d86</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>a5b87290233e34ecc121908ab4151d807</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>ad98e53401cbae7893a9821a234d19cb7</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>a2871c1e7ad9be8097275f0966ad04cea</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>a8b7455e3140abcd29a5622d0a140a117</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>QVector&lt; TypeInfo &gt;</type>
+      <name>typeInfos</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>ad2e298b030091d5f943c82660aa1a752</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QMap&lt; QByteArray, int &gt;</type>
+      <name>typeIdToIndexMap</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>ae7accea8545bcb8e2ec743630a2b8d13</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30372,18 +30462,18 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual TypeIds</type>
-      <name>GetSupportedTypeIds</name>
+      <type>virtual const ISelectionConstraints *</type>
+      <name>GetParamsTypeConstraints</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a1d0d32401737b6b47409dce153d00d87</anchor>
+      <anchor>a72e3eb93b8174a835f46150106379448</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>InsertParamsSet</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a6981a205a8013f599c9aa6c08550dd18</anchor>
-      <arglist>(const QByteArray &amp;typeId=&quot;&quot;, int index=-1)</arglist>
+      <anchor>ab82378415def08b5bcde877e10946668</anchor>
+      <arglist>(int typeIndex=-1, int index=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -31253,18 +31343,18 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual TypeIds</type>
-      <name>GetSupportedTypeIds</name>
+      <type>virtual const ISelectionConstraints *</type>
+      <name>GetParamsTypeConstraints</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a0f3caf76422df683d3c979fa02374fce</anchor>
+      <anchor>a228e9489fe89a24c9a929af76037f91b</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>InsertParamsSet</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>abed25fb4246287def5dc1b0030341355</anchor>
-      <arglist>(const QByteArray &amp;typeId=&quot;&quot;, int index=-1)=0</arglist>
+      <anchor>a234045bf4a452e12b08da92526fc5e24</anchor>
+      <arglist>(int typeIndex=-1, int index=-1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>

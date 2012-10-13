@@ -81,10 +81,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operation control flags of some paramter set or whole manager.  <a href="#a6c6a8deb0948740fe4558d220a3c893c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#abc52794b2ed4df7cb6a872bd208ca638">GetParamsSetsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed set.  <a href="#abc52794b2ed4df7cb6a872bd208ca638"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_params_manager.html#a6db60f072b7d018848a44746727eaf8f">TypeIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a1d0d32401737b6b47409dce153d00d87">GetSupportedTypeIds</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of IDs of supported parameters types for insert.  <a href="#a1d0d32401737b6b47409dce153d00d87"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a6981a205a8013f599c9aa6c08550dd18">InsertParamsSet</a> (const QByteArray &amp;typeId=&quot;&quot;, int index=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new parameters set at selected position.  <a href="#a6981a205a8013f599c9aa6c08550dd18"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a72e3eb93b8174a835f46150106379448">GetParamsTypeConstraints</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selection contraints describing each supported type.  <a href="#a72e3eb93b8174a835f46150106379448"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#ab82378415def08b5bcde877e10946668">InsertParamsSet</a> (int typeIndex=-1, int index=-1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new parameters set at selected position.  <a href="#ab82378415def08b5bcde877e10946668"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a50f8d419f57ae6f5f06cee02da4f66e1">RemoveParamsSet</a> (int index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove parameters set at selected position.  <a href="#a50f8d419f57ae6f5f06cee02da4f66e1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#af193c485d9ef1b3c0037035dbc18cd9d">SwapParamsSet</a> (int index1, int index2)</td></tr>
@@ -376,6 +377,27 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a72e3eb93b8174a835f46150106379448"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetParamsTypeConstraints" ref="a72e3eb93b8174a835f46150106379448" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::CParamsManagerComp::GetParamsTypeConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get selection contraints describing each supported type. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>NULL, if only one annonymed type is supported. </dd></dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a228e9489fe89a24c9a929af76037f91b">iprm::IParamsManager</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4fd8b1b6be7963c766940994f118c77e"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetSelectedOptionIndex" ref="a4fd8b1b6be7963c766940994f118c77e" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -417,36 +439,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1d0d32401737b6b47409dce153d00d87"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetSupportedTypeIds" ref="a1d0d32401737b6b47409dce153d00d87" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_params_manager.html#a6db60f072b7d018848a44746727eaf8f">TypeIds</a> iprm::CParamsManagerComp::GetSupportedTypeIds </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get list of IDs of supported parameters types for insert. </p>
-<p>The IDs are context specified. Please note, that some existing parameters can use IDs outside this list. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a0f3caf76422df683d3c979fa02374fce">iprm::IParamsManager</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6981a205a8013f599c9aa6c08550dd18"></a><!-- doxytag: member="iprm::CParamsManagerComp::InsertParamsSet" ref="a6981a205a8013f599c9aa6c08550dd18" args="(const QByteArray &amp;typeId=&quot;&quot;, int index=&#45;1)" -->
+<a class="anchor" id="ab82378415def08b5bcde877e10946668"></a><!-- doxytag: member="iprm::CParamsManagerComp::InsertParamsSet" ref="ab82378415def08b5bcde877e10946668" args="(int typeIndex=&#45;1, int index=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iprm::CParamsManagerComp::InsertParamsSet </td>
           <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>typeId</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>typeIndex</em> = <code>-1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -467,13 +468,13 @@ Protected Member Functions</h2></td></tr>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>position in list of parameters or negative value to use default position. </td></tr>
-    <tr><td class="paramname">typeid</td><td>ID of parameter type. This ID is context specified and is used to indicate type of parameters should be added. If no ID is specified, type will be automatically selected. </td></tr>
+    <tr><td class="paramname">typeIndex</td><td>Index of parameter type. This index is context specified and is used to indicate type of parameters should be added. If equals negative value the type will be automatically selected. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>position of inserted new entry or negative value if no insert was possible. For specified index positions (positive <code>index</code> value) it will return the same index or negative value. </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#abed25fb4246287def5dc1b0030341355">iprm::IParamsManager</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a234045bf4a452e12b08da92526fc5e24">iprm::IParamsManager</a>.</p>
 
 </div>
 </div>
