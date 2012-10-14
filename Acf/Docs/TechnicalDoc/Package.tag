@@ -3478,6 +3478,17 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
+    <name>CSystemLocationComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_system_location_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <class kind="class">iqt::CSystemLocationComp</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTranslationManagerComp.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_translation_manager_comp_8h</filename>
@@ -31654,6 +31665,7 @@
     <class kind="class">iqt::CSettingsWriteArchive</class>
     <class kind="class">iqt::CSignalBlocker</class>
     <class kind="class">iqt::CSystem</class>
+    <class kind="class">iqt::CSystemLocationComp</class>
     <class kind="class">iqt::CTranslationManagerComp</class>
     <class kind="class">iqt::CXmlFileReadArchive</class>
     <class kind="class">iqt::CXmlFileWriteArchive</class>
@@ -33522,6 +33534,54 @@
       <anchorfile>classiqt_1_1_c_system.html</anchorfile>
       <anchor>aa87ebe27e9a3a889daf22374f6129046</anchor>
       <arglist>(const QString &amp;directoryPath)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CSystemLocationComp</name>
+    <filename>classiqt_1_1_c_system_location_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprm::IFileNameParam</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>acb3415acb8a3194063a7309fe41caf1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPathType</name>
+      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>a0ec02b0837e7d20326e11c224bc18aae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetPath</name>
+      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>a558dd152c01b811c75b820cc9e7d614f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>ac2d81a3753a25f077158338998b519a0</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>a65c565c065443b57011f4cb44dc61cbd</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>a719457a4ed9faddf8cf08ee080a22a4a</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43178,7 +43238,7 @@
       <anchor>a308558531cb95423a4c8d2f665d4e99c</anchor>
       <arglist>(const QString &amp;fileName)</arglist>
     </member>
-    <member kind="function" static="yes">
+    <member kind="function" protection="protected" static="yes">
       <type>static void</type>
       <name>UpdateCrc</name>
       <anchorfile>classistd_1_1_c_crc_calculator.html</anchorfile>

@@ -42,35 +42,39 @@
 <a name="l00015"></a>00015 <span class="keyword">namespace </span>istd
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 
-<a name="l00018"></a><a class="code" href="classistd_1_1_c_crc_calculator.html">00018</a> <span class="keyword">class </span><a class="code" href="classistd_1_1_c_crc_calculator.html">CCrcCalculator</a>
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020 <span class="keyword">public</span>:
-<a name="l00021"></a><a class="code" href="classistd_1_1_c_crc_calculator.html#a4a13d939888dab2ba2d9c815b8dfbbc6">00021</a>        <span class="keyword">typedef</span> QVector&lt;quint8&gt; <a class="code" href="classistd_1_1_c_crc_calculator.html#a4a13d939888dab2ba2d9c815b8dfbbc6">ByteStream</a>;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023        <span class="keyword">static</span> quint32 <a class="code" href="classistd_1_1_c_crc_calculator.html#abaeba72ab1756163d8677806349624f5">GetCrcFromData</a>(<span class="keyword">const</span> quint8* dataPtr, <span class="keywordtype">int</span> dataSize);
-<a name="l00024"></a>00024        <span class="keyword">static</span> quint32 <a class="code" href="classistd_1_1_c_crc_calculator.html#a80e67625cff67487d0f9cf7f87704496">GetCrcFromStream</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_crc_calculator.html#a4a13d939888dab2ba2d9c815b8dfbbc6">ByteStream</a>&amp; byteStream);
-<a name="l00025"></a>00025        <span class="keyword">static</span> quint32 <a class="code" href="classistd_1_1_c_crc_calculator.html#a308558531cb95423a4c8d2f665d4e99c">GetCrcFromFile</a>(<span class="keyword">const</span> QString&amp; fileName);
+<a name="l00018"></a>00018 
+<a name="l00022"></a><a class="code" href="classistd_1_1_c_crc_calculator.html">00022</a> <span class="keyword">class </span><a class="code" href="classistd_1_1_c_crc_calculator.html" title="Helper class for CRC-32 checksum calculation.">CCrcCalculator</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024 <span class="keyword">public</span>:
+<a name="l00025"></a><a class="code" href="classistd_1_1_c_crc_calculator.html#a4a13d939888dab2ba2d9c815b8dfbbc6">00025</a>        <span class="keyword">typedef</span> QVector&lt;quint8&gt; <a class="code" href="classistd_1_1_c_crc_calculator.html#a4a13d939888dab2ba2d9c815b8dfbbc6">ByteStream</a>;
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_c_crc_calculator.html#ac177b27b7b40fecf205ce49f45683f33">UpdateCrc</a>(<span class="keyword">const</span> quint8&amp; byte, quint32&amp; dwCrc32);
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="keyword">private</span>:
-<a name="l00030"></a>00030        <span class="keyword">static</span> quint32 s_crcTable[256];
-<a name="l00031"></a>00031 };
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="comment">// inline methods</span>
-<a name="l00035"></a>00035 
-<a name="l00036"></a><a class="code" href="classistd_1_1_c_crc_calculator.html#ac177b27b7b40fecf205ce49f45683f33">00036</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_c_crc_calculator.html#ac177b27b7b40fecf205ce49f45683f33">CCrcCalculator::UpdateCrc</a>(<span class="keyword">const</span> quint8&amp; byte, quint32&amp; crcValue)
-<a name="l00037"></a>00037 {
-<a name="l00038"></a>00038        crcValue = (crcValue &gt;&gt; 8) ^ s_crcTable[byte ^ (crcValue &amp; 0x000000FF)];
-<a name="l00039"></a>00039 }
-<a name="l00040"></a>00040 
+<a name="l00030"></a>00030        <span class="keyword">static</span> quint32 <a class="code" href="classistd_1_1_c_crc_calculator.html#abaeba72ab1756163d8677806349624f5" title="Get 32-bit CRC value for the given memory block.">GetCrcFromData</a>(<span class="keyword">const</span> quint8* dataPtr, <span class="keywordtype">int</span> dataSize);
+<a name="l00031"></a>00031 
+<a name="l00035"></a>00035        <span class="keyword">static</span> quint32 <a class="code" href="classistd_1_1_c_crc_calculator.html#a80e67625cff67487d0f9cf7f87704496" title="This is an overloaded member function, provided for convenience. It differs from the above function o...">GetCrcFromStream</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_crc_calculator.html#a4a13d939888dab2ba2d9c815b8dfbbc6">ByteStream</a>&amp; byteStream);
+<a name="l00036"></a>00036 
+<a name="l00040"></a>00040        <span class="keyword">static</span> quint32 <a class="code" href="classistd_1_1_c_crc_calculator.html#a308558531cb95423a4c8d2f665d4e99c" title="Get 32-bit CRC value for a given file.">GetCrcFromFile</a>(<span class="keyword">const</span> QString&amp; fileName);
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 } <span class="comment">// namespace istd</span>
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#endif // !istd_CCrcCalculator_included</span>
-<a name="l00046"></a>00046 <span class="preprocessor"></span>
+<a name="l00042"></a>00042 <span class="keyword">protected</span>:
+<a name="l00046"></a>00046        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_c_crc_calculator.html#ac177b27b7b40fecf205ce49f45683f33" title="Update CRC value for the new input.">UpdateCrc</a>(<span class="keyword">const</span> quint8&amp; byte, quint32&amp; dwCrc32);
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">private</span>:
+<a name="l00049"></a>00049        <span class="keyword">static</span> quint32 s_crcTable[256];
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="comment">// protected inline methods</span>
+<a name="l00054"></a>00054 
+<a name="l00055"></a><a class="code" href="classistd_1_1_c_crc_calculator.html#ac177b27b7b40fecf205ce49f45683f33">00055</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_c_crc_calculator.html#ac177b27b7b40fecf205ce49f45683f33" title="Update CRC value for the new input.">CCrcCalculator::UpdateCrc</a>(<span class="keyword">const</span> quint8&amp; byte, quint32&amp; crcValue)
+<a name="l00056"></a>00056 {
+<a name="l00057"></a>00057        crcValue = (crcValue &gt;&gt; 8) ^ s_crcTable[byte ^ (crcValue &amp; 0x000000FF)];
+<a name="l00058"></a>00058 }
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 } <span class="comment">// namespace istd</span>
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif // !istd_CCrcCalculator_included</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

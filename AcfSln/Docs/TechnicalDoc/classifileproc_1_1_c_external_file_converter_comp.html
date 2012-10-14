@@ -76,8 +76,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>File converter, which uses an external programm to perform the convert action. </p>
+<p>There are several ways to define how the command line parameter can be passed to the underlaying executable process. The simplest way is to define the complete command line in text attribute <code>DefaultProcessArguments</code>. It works only for use cases, where the command line can be statically defined and is known at the component definition time. For the situation, where the process arguments can be changed at runtime, you can use <code>m_additionalArgumentsCompPtr</code>. This is a list of <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_name_param.html">iprm::INameParam</a> objects. For integration into the command line, you can use placeholder (variable) in the form , where c\ n is the index in the object list of <code>additionalArgumentsCompPtr</code>. For example, in the command line &lt;MyProcess.exe &gt;, the  argument will be replaced by the additionalArgumentsCompPtr[0]-&gt;GetName(). For defining of the command line you can also use some predefined variables. Currently, following variables are supported:  - <code>inputPath</code> argument of ConvertFiles method is used.  - <code>outputPath</code> argument of ConvertFiles method is used.  - Output directory extracted from <code>outputPath</code> argument of ConvertFiles method is used. </p>
 
-<p>Definition at line <a class="el" href="_c_external_file_converter_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_external_file_converter_comp_8h_source.html">CExternalFileConverterComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_external_file_converter_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_external_file_converter_comp_8h_source.html">CExternalFileConverterComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a9a0354a6f2e63896166a06220d47276f"></a><!-- doxytag: member="ifileproc::CExternalFileConverterComp::BaseClass" ref="a9a0354a6f2e63896166a06220d47276f" args="" -->
 <div class="memitem">
@@ -92,7 +93,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_external_file_converter_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_external_file_converter_comp_8h_source.html">CExternalFileConverterComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_external_file_converter_comp_8h_source.html#l00044">44</a> of file <a class="el" href="_c_external_file_converter_comp_8h_source.html">CExternalFileConverterComp.h</a>.</p>
 
 </div>
 </div>

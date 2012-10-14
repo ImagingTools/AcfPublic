@@ -59,6 +59,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a9cbd50b25782d2d96e6cb2ea3d83e534">CAffine2d</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, parameters will be not initialized.  <a href="#a9cbd50b25782d2d96e6cb2ea3d83e534"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a7bd4d33141bca84caacd65e7e0239e1f">CAffine2d</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> &amp;transform)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor, transformation data will be copied from the input object.  <a href="#a7bd4d33141bca84caacd65e7e0239e1f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#ab7e5007dd130d75d0d3dae9ac26cc9be">CAffine2d</a> (const <a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;deform, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation=<a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>(0.0, 0.0))</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transform using specified deformation matrix and translation.  <a href="#ab7e5007dd130d75d0d3dae9ac26cc9be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#afc220d44ee3f8a113575de52f72e69bc">CAffine2d</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation)</td></tr>
@@ -72,15 +73,17 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a424ba978ff817d6c910c04843ea3864a">SetDeformMatrix</a> (const <a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;deform)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rotation, skew and skale part of this affine transformation.  <a href="#a424ba978ff817d6c910c04843ea3864a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a0bad9222bb122566cc74150770c88b4f">GetTranslationRef</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get internal reference to the translation vector.  <a href="#a0bad9222bb122566cc74150770c88b4f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#ae96dd32c12eaa25e596da295e5cb8c76">GetDeformMatrixRef</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get internal reference to the transformation matrix.  <a href="#ae96dd32c12eaa25e596da295e5cb8c76"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a172bcdc5a875f8344ff13efd5513f0c7">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to identity transformation.  <a href="#a172bcdc5a875f8344ff13efd5513f0c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a978a125c72959d8afcb77e71ad28f32a">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation.  <a href="#a978a125c72959d8afcb77e71ad28f32a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a7d19fcce2942854e530c4b91f60a37de">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation, double angle, double scale=1.0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation, rotation and scaling.  <a href="#a7d19fcce2942854e530c4b91f60a37de"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to a given translation, rotation and scaling.  <a href="#a7d19fcce2942854e530c4b91f60a37de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a96d12ded5d552dd7cb0775b31dc11199">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation, double angle, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;scale)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation, rotation and both axis scaling.  <a href="#a96d12ded5d552dd7cb0775b31dc11199"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to a given translation, rotation and both axis scaling.  <a href="#a96d12ded5d552dd7cb0775b31dc11199"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a0ec1ca37f5246375310f8187fba6624e">GetApply</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate transformed position.  <a href="#a0ec1ca37f5246375310f8187fba6624e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a28ec2a6d2ce584c6d6dd3868df348352">GetApply</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position, <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;result) const </td></tr>
@@ -112,6 +115,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a713e2938cc47ca6b438b1c749516b049">GetInverted</a> (<a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get inverted transformation.  <a href="#a713e2938cc47ca6b438b1c749516b049"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#ac88396787be04049fed6a7ab14db5e94">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize transformation parameters into/from archive.  <a href="#ac88396787be04049fed6a7ab14db5e94"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#abc801eee10e03ad319cfe5acc856da5c">operator==</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> &amp;transform) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a7e457b8ff35c5990e5d749f6b8405947">operator!=</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> &amp;transform) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#a14045010e7c528af8886aa819f3ffc09">operator=</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> &amp;transform)</td></tr>
@@ -140,9 +144,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Constructor, parameters will be not initialized. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00185">185</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00201">201</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00271">GetTranslated()</a>.</p>
+<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00287">GetTranslated()</a>.</p>
 
 </div>
 </div>
@@ -161,7 +165,9 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00190">190</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Copy constructor, transformation data will be copied from the input object. </p>
+
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00206">206</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 </div>
 </div>
@@ -287,7 +293,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Calculate transformed position. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00239">239</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00255">255</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 <p>References <a class="el" href="_c_matrix2d_8h_source.html#l00172">i2d::CMatrix2d::GetMultiplied()</a>.</p>
 
@@ -322,7 +328,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get position after this transformation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00248">248</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00264">264</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 <p>References <a class="el" href="_c_matrix2d_8h_source.html#l00172">i2d::CMatrix2d::GetMultiplied()</a>.</p>
 
@@ -408,7 +414,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Get difference vector after this transformation. </p>
 <p>Please note, that the translation will be not concidered for this transformation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00255">255</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00271">271</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 <p>References <a class="el" href="_c_matrix2d_8h_source.html#l00172">i2d::CMatrix2d::GetMultiplied()</a>.</p>
 
@@ -442,7 +448,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Get vector after this transformation. </p>
 <p>Please note, that the translation will be not concidered for this transformation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00265">265</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00281">281</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 <p>References <a class="el" href="_c_matrix2d_8h_source.html#l00172">i2d::CMatrix2d::GetMultiplied()</a>.</p>
 
@@ -464,7 +470,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get rotation, skew and skale part of this affine transformation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00211">211</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00227">227</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_parallelogram_8h_source.html#l00077">i2d::CParallelogram::GetDeformMatrix()</a>.</p>
 
@@ -484,9 +490,11 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00231">231</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Get internal reference to the transformation matrix. </p>
 
-<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00277">GetTranslated()</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00247">247</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00293">GetTranslated()</a>.</p>
 
 </div>
 </div>
@@ -504,7 +512,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00326">326</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00342">342</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 </div>
 </div>
@@ -526,7 +534,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#a908956c00ee0ffc2e46801d308266528">iview::CScreenTransform</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00300">300</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00316">316</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00109">iview::CInteractiveShapeBase::BeginDrag()</a>, <a class="el" href="_c_screen_transform_8h_source.html#l00158">iview::CScreenTransform::CalculateInvert()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00117">iview::CInteractiveShapeBase::SetDragPosition()</a>.</p>
 
@@ -568,7 +576,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Inverted operation to <a class="el" href="classi2d_1_1_c_affine2d.html#a0ec1ca37f5246375310f8187fba6624e" title="Calculate transformed position.">GetApply()</a>. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00290">290</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00306">306</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 </div>
 </div>
@@ -618,9 +626,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get some transformation combined with translation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00271">271</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00287">287</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_affine2d_8h_source.html#l00185">CAffine2d()</a>.</p>
+<p>References <a class="el" href="_c_affine2d_8h_source.html#l00201">CAffine2d()</a>.</p>
 
 </div>
 </div>
@@ -651,9 +659,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get some transformation combined with translation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00277">277</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00293">293</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_affine2d_8h_source.html#l00231">GetDeformMatrixRef()</a>, and <a class="el" href="_c_affine2d_8h_source.html#l00225">GetTranslationRef()</a>.</p>
+<p>References <a class="el" href="_c_affine2d_8h_source.html#l00247">GetDeformMatrixRef()</a>, and <a class="el" href="_c_affine2d_8h_source.html#l00241">GetTranslationRef()</a>.</p>
 
 </div>
 </div>
@@ -673,7 +681,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get translation part of this affine transformation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00199">199</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00215">215</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 </div>
 </div>
@@ -691,9 +699,11 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00225">225</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Get internal reference to the translation vector. </p>
 
-<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00277">GetTranslated()</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00241">241</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_affine2d_8h_source.html#l00293">GetTranslated()</a>.</p>
 
 </div>
 </div>
@@ -712,7 +722,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00318">318</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00334">334</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 </div>
 </div>
@@ -752,7 +762,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00312">312</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00328">328</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 </div>
 </div>
@@ -830,7 +840,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Set this transformation to translation, rotation and scaling. </p>
+<p>Set this transformation to a given translation, rotation and scaling. </p>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#a092aabed3b0e1e90fa28dbc52c4c572b">iview::CScreenTransform</a>.</p>
 
@@ -867,7 +877,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Set this transformation to translation, rotation and both axis scaling. </p>
+<p>Set this transformation to a given translation, rotation and both axis scaling. </p>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_screen_transform.html#adc58f4673514aaf28c93166017a666ad">iview::CScreenTransform</a>.</p>
 
@@ -888,6 +898,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Serialize transformation parameters into/from archive. </p>
+
 </div>
 </div>
 <a class="anchor" id="a424ba978ff817d6c910c04843ea3864a"></a><!-- doxytag: member="i2d::CAffine2d::SetDeformMatrix" ref="a424ba978ff817d6c910c04843ea3864a" args="(const CMatrix2d &amp;deform)" -->
@@ -907,7 +919,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Set rotation, skew and skale part of this affine transformation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00217">217</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00233">233</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_parallelogram_8h_source.html#l00083">i2d::CParallelogram::SetDeformMatrix()</a>.</p>
 
@@ -930,7 +942,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Set translation part of this affine transformation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00205">205</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00221">221</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 </div>
 </div>
@@ -951,7 +963,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Combine this transformation with translation. </p>
 
-<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00284">284</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00300">300</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
 </div>
 </div>

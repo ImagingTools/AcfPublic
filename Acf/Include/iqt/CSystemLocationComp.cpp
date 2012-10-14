@@ -20,40 +20,61 @@
 ********************************************************************************/
 
 
-#ifndef istd_CRandomNumber_included
-#define istd_CRandomNumber_included
+#include "iqt/CSystemLocationComp.h"
 
 
-namespace istd
+// Qt includes
+#include <QtGui/QDesktopServices>
+
+
+namespace iqt
 {
 
 
-/**
-	Helper class for calculation of a random number.
-*/
-class CRandomNumber
+// public methods
+
+// reimplemented (iprm::IFileNameParam)
+
+int CSystemLocationComp::GetPathType() const
 {
-public:
-	CRandomNumber();
-
-	/**
-		Get new random integer value in the given range.
-	*/
-	int GetNextInt(int minValue, int maxValue) const;
-
-	/**
-		Get new random real value in the given range.
-	*/
-	double GetNextDouble(double minValue, double maxValue) const;
-
-protected:
-	double GetNextUnitary() const;
-};
+	return PT_DIRECTORY;
+}
 
 
-} // namespace istd
+const QString& CSystemLocationComp::GetPath() const
+{
+	return m_storagePath;
+}
 
 
-#endif // !istd_CRandomNumber_included
+void CSystemLocationComp::SetPath(const QString& /*path*/)
+{
+	I_CRITICAL();
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CSystemLocationComp::Serialize(iser::IArchive& /*archive*/)
+{
+	return true;
+}
+
+
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CSystemLocationComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	I_ASSERT(m_locationTypeAttrPtr.IsValid());
+
+	m_storagePath = QDesktopServices::storageLocation(QDesktopServices::StandardLocation(*m_locationTypeAttrPtr));
+}
+
+
+} // namespace iqt
 
 

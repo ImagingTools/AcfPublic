@@ -31,6 +31,9 @@ namespace istd
 {
 
 
+/**
+	Helper class for bits manipulations.
+*/
 class CBitManip
 {
 public:

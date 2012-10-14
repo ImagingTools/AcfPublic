@@ -74,9 +74,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_screen_transform.html#a1196516a8730ae024d418bb41e897eac">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation.  <a href="#a1196516a8730ae024d418bb41e897eac"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_screen_transform.html#a092aabed3b0e1e90fa28dbc52c4c572b">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, double angle, double scale=1.0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation, rotation and scaling.  <a href="#a092aabed3b0e1e90fa28dbc52c4c572b"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to a given translation, rotation and scaling.  <a href="#a092aabed3b0e1e90fa28dbc52c4c572b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_screen_transform.html#adc58f4673514aaf28c93166017a666ad">Reset</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, double angle, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;scale)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to translation, rotation and both axis scaling.  <a href="#adc58f4673514aaf28c93166017a666ad"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this transformation to a given translation, rotation and both axis scaling.  <a href="#adc58f4673514aaf28c93166017a666ad"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_screen_transform.html#af47beeaa73153dbae457cfd2763e37c9">GetApply</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transform, <a class="el" href="classiview_1_1_c_screen_transform.html">CScreenTransform</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_screen_transform.html#a71a937c297b6f42b099ca86be7b2a85f">Apply</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transform)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine this transformation with another transformation.  <a href="#a71a937c297b6f42b099ca86be7b2a85f"></a><br/></td></tr>
@@ -247,7 +247,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_screen_transform_8h_source.html#l00158">158</a> of file <a class="el" href="_c_screen_transform_8h_source.html">CScreenTransform.h</a>.</p>
 
-<p>References <a class="el" href="_c_affine2d_8h_source.html#l00300">i2d::CAffine2d::GetInverted()</a>.</p>
+<p>References <a class="el" href="_c_affine2d_8h_source.html#l00316">i2d::CAffine2d::GetInverted()</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_screen_transform_8h_source.html#l00140">Apply()</a>, <a class="el" href="_c_screen_transform_8h_source.html#l00079">CScreenTransform()</a>, <a class="el" href="_c_screen_transform_8h_source.html#l00148">operator=()</a>, and <a class="el" href="_c_screen_transform_8h_source.html#l00108">Reset()</a>.</p>
 
@@ -301,7 +301,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_screen_transform_8h_source.html#l00086">86</a> of file <a class="el" href="_c_screen_transform_8h_source.html">CScreenTransform.h</a>.</p>
 
-<p>References <a class="el" href="_c_affine2d_8h_source.html#l00239">i2d::CAffine2d::GetApply()</a>, <a class="el" href="_c_index2d_8h_source.html#l00055">istd::CIndex2d::GetX()</a>, and <a class="el" href="_c_index2d_8h_source.html#l00067">istd::CIndex2d::GetY()</a>.</p>
+<p>References <a class="el" href="_c_affine2d_8h_source.html#l00255">i2d::CAffine2d::GetApply()</a>, <a class="el" href="_c_index2d_8h_source.html#l00055">istd::CIndex2d::GetX()</a>, and <a class="el" href="_c_index2d_8h_source.html#l00067">istd::CIndex2d::GetY()</a>.</p>
 
 </div>
 </div>
@@ -453,7 +453,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Set this transformation to translation, rotation and scaling. </p>
+<p>Set this transformation to a given translation, rotation and scaling. </p>
 
 <p>Reimplemented from <a class="el" href="classi2d_1_1_c_affine2d.html#a7d19fcce2942854e530c4b91f60a37de">i2d::CAffine2d</a>.</p>
 
@@ -494,7 +494,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Set this transformation to translation, rotation and both axis scaling. </p>
+<p>Set this transformation to a given translation, rotation and both axis scaling. </p>
 
 <p>Reimplemented from <a class="el" href="classi2d_1_1_c_affine2d.html#a96d12ded5d552dd7cb0775b31dc11199">i2d::CAffine2d</a>.</p>
 

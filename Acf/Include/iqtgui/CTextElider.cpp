@@ -29,7 +29,6 @@
 #include <QtGui/QFontMetrics>
 #include <QtCore/QEvent>
 
-
 // ACF includes
 #include "iqt/iqt.h"
 

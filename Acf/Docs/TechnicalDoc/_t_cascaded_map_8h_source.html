@@ -43,7 +43,7 @@
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
 <a name="l00024"></a>00024 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00025"></a><a class="code" href="classistd_1_1_t_cascaded_map.html">00025</a> <span class="keyword">class </span><a class="code" href="classistd_1_1_t_cascaded_map.html" title="Helper class used to manage list of many connected in cascade maps.">TCascadedMap</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_t_i_map.html">TIMap</a>&lt;Key, Value&gt;
+<a name="l00025"></a><a class="code" href="classistd_1_1_t_cascaded_map.html">00025</a> <span class="keyword">class </span><a class="code" href="classistd_1_1_t_cascaded_map.html" title="Helper class used to manage list of many connected in cascade maps.">TCascadedMap</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_t_i_map.html" title="Generic interface for a key/value mapping.">TIMap</a>&lt;Key, Value&gt;
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
 <a name="l00031"></a>00031        <a class="code" href="classistd_1_1_t_cascaded_map.html#afc10641879e8e23c3716ab608515bee3" title="Default constructor.">TCascadedMap</a>();
@@ -52,7 +52,7 @@
 <a name="l00040"></a>00040 
 <a name="l00044"></a>00044        <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_cascaded_map.html" title="Helper class used to manage list of many connected in cascade maps.">TCascadedMap&lt;Key, Value&gt;</a>* <a class="code" href="classistd_1_1_t_cascaded_map.html#a5c8cb6f0262568bbc4919400c4b8f1fd" title="Get access to parent map instance.">GetParent</a>() <span class="keyword">const</span>;
 <a name="l00045"></a>00045 
-<a name="l00049"></a>00049        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#a6ce3e83053db21f6499bf78250117cdc" title="Set instance of parent map.">SetParent</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html">TIMap&lt;Key, Value&gt;</a>* parentPtr);
+<a name="l00049"></a>00049        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#a6ce3e83053db21f6499bf78250117cdc" title="Set instance of parent map.">SetParent</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html" title="Generic interface for a key/value mapping.">TIMap&lt;Key, Value&gt;</a>* parentPtr);
 <a name="l00050"></a>00050 
 <a name="l00054"></a>00054        <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#ae5e8758c30586d1c8c451d311800dbb0" title="Find index index of specified key using local context only.">FindLocalIndex</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">KeyType</a>&amp; key) <span class="keyword">const</span>;
 <a name="l00055"></a>00055 
@@ -88,7 +88,7 @@
 <a name="l00118"></a>00118        <span class="comment">// TODO: add element removing and correct comment in class header.</span>
 <a name="l00119"></a>00119 
 <a name="l00120"></a>00120 <span class="keyword">private</span>:
-<a name="l00121"></a>00121        <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html">TIMap&lt;Key, Value&gt;</a>* m_parentPtr;
+<a name="l00121"></a>00121        <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html" title="Generic interface for a key/value mapping.">TIMap&lt;Key, Value&gt;</a>* m_parentPtr;
 <a name="l00122"></a>00122 
 <a name="l00123"></a>00123        <span class="keyword">typedef</span> QMap&lt;KeyType, int&gt; IndicesMap;
 <a name="l00124"></a>00124        <span class="keyword">typedef</span> QPair&lt;KeyType, ValueType&gt; Pair;
@@ -132,7 +132,7 @@
 <a name="l00162"></a>00162 
 <a name="l00163"></a>00163 
 <a name="l00164"></a>00164 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
-<a name="l00165"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a6ce3e83053db21f6499bf78250117cdc">00165</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#a6ce3e83053db21f6499bf78250117cdc" title="Set instance of parent map.">TCascadedMap&lt;Key, Value&gt;::SetParent</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html">TIMap&lt;Key, Value&gt;</a>* parentPtr)
+<a name="l00165"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a6ce3e83053db21f6499bf78250117cdc">00165</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_cascaded_map.html#a6ce3e83053db21f6499bf78250117cdc" title="Set instance of parent map.">TCascadedMap&lt;Key, Value&gt;::SetParent</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_map.html" title="Generic interface for a key/value mapping.">TIMap&lt;Key, Value&gt;</a>* parentPtr)
 <a name="l00166"></a>00166 {
 <a name="l00167"></a>00167        m_parentPtr = parentPtr;
 <a name="l00168"></a>00168 }
