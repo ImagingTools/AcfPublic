@@ -3326,6 +3326,16 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
+    <name>CGeneratedFileNameParamComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_generated_file_name_param_comp_8h</filename>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_c_relative_file_name_param_comp_8h" name="CRelativeFileNameParamComp.h" local="yes" imported="no">iprm/CRelativeFileNameParamComp.h</includes>
+    <class kind="class">iqt::CGeneratedFileNameParamComp</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
     <name>CIniSettingsProviderComp.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_ini_settings_provider_comp_8h</filename>
@@ -31650,6 +31660,7 @@
     <class kind="class">iqt::CFileInfoCopyComp</class>
     <class kind="class">iqt::CFileList</class>
     <class kind="class">iqt::CFileListProviderComp</class>
+    <class kind="class">iqt::CGeneratedFileNameParamComp</class>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
     <class kind="class">iqt::CPackagesLoaderComp</class>
@@ -32352,6 +32363,39 @@
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqt_1_1_c_file_list_provider_comp.html</anchorfile>
       <anchor>a80347c198ddab2e7e7c5b11b950d49cb</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CGeneratedFileNameParamComp</name>
+    <filename>classiqt_1_1_c_generated_file_name_param_comp.html</filename>
+    <base>TLoggerCompWrap&lt; iprm::CRelativeFileNameParamComp &gt;</base>
+    <member kind="typedef">
+      <type>ibase::TLoggerCompWrap&lt; iprm::CRelativeFileNameParamComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_generated_file_name_param_comp.html</anchorfile>
+      <anchor>a44a9b038f4b506854b67bc04906613ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classiqt_1_1_c_generated_file_name_param_comp.html</anchorfile>
+      <anchor>a3db05530cf00cb436fce2f63cef8c944</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqt_1_1_c_generated_file_name_param_comp.html</anchorfile>
+      <anchor>a417ec6b5f8a67885bc38115aa25aa909</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqt_1_1_c_generated_file_name_param_comp.html</anchorfile>
+      <anchor>ad407c101d63e1be5faec870fc0477453</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
