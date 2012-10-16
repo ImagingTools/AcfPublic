@@ -29,6 +29,12 @@ namespace iipr
 
 // reimplemented (iipr::IBitmapProvider)
 
+CDelegatedBitmapSupplierComp::CDelegatedBitmapSupplierComp()
+:	BaseClass(SWM_DIRECT_INPUT)
+{
+}
+
+
 const iimg::IBitmap* CDelegatedBitmapSupplierComp::GetBitmap() const
 {
 	const ProductType* productPtr = GetWorkProduct();

@@ -77,12 +77,16 @@ Classes</h2></td></tr>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9f">MessageId</a> { <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9faab1f299aea6b4bfa72738cc9cdb34670">MI_DURATION_TIME</a> =  0x077a1b
  }</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a2d038c8472c45e3c43f1d9c8b64f2712">SupplierWorkingMode</a> { <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a2d038c8472c45e3c43f1d9c8b64f2712a93709afe8c4e5eb28a0e46c0bf68e27e">SWM_EXPLICIT_INIT</a>, 
+<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a2d038c8472c45e3c43f1d9c8b64f2712a4991f65759aac4290dd3b60c0d77d806">SWM_IMPLICIT_INIT</a>, 
+<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a2d038c8472c45e3c43f1d9c8b64f2712a694fdd976e319b76b679bc7df15afebf">SWM_DIRECT_INPUT</a>
+ }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef Product&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a9f63ea1c39f5e17fabf56729c317cd1f">I_ASSIGN_TO</a> (m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a11d01e8db5c10dc62b7b795c1c38d358">TSupplierCompWrap</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#afa8a6d370714dae60c1e89789fdad444">TSupplierCompWrap</a> (<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a2d038c8472c45e3c43f1d9c8b64f2712">SupplierWorkingMode</a> mode=SWM_EXPLICIT_INIT)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5e0a872fbc23c641a87a0e722e7a3e2">InvalidateSupplier</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to signalize that this supplier is invalid.  <a href="#ad5e0a872fbc23c641a87a0e722e7a3e2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a448aa1751441a329a76510cbeb2894c6">EnsureWorkInitialized</a> ()</td></tr>
@@ -185,8 +189,41 @@ template&lt;class Product&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a2d038c8472c45e3c43f1d9c8b64f2712"></a><!-- doxytag: member="iproc::TSupplierCompWrap::SupplierWorkingMode" ref="a2d038c8472c45e3c43f1d9c8b64f2712" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Product&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a2d038c8472c45e3c43f1d9c8b64f2712">iproc::TSupplierCompWrap::SupplierWorkingMode</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a2d038c8472c45e3c43f1d9c8b64f2712a93709afe8c4e5eb28a0e46c0bf68e27e"></a><!-- doxytag: member="SWM_EXPLICIT_INIT" ref="a2d038c8472c45e3c43f1d9c8b64f2712a93709afe8c4e5eb28a0e46c0bf68e27e" args="" -->SWM_EXPLICIT_INIT</em>&nbsp;</td><td>
+<p>This supplier works in explicit initialization mode. </p>
+<p>It means, that this suppolier need explicite call of method <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a448aa1751441a329a76510cbeb2894c6" title="Force the supplier to initialize its work.">EnsureWorkInitialized()</a> to start its work. In this case, the products of supplier logically changes beetwen supplier invalidation and initialization. After call of method <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a448aa1751441a329a76510cbeb2894c6" title="Force the supplier to initialize its work.">EnsureWorkInitialized()</a> the supplier signalize that its state has been changed, the real calculation is postponed and will be done on demand without signalizing object changes. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a2d038c8472c45e3c43f1d9c8b64f2712a4991f65759aac4290dd3b60c0d77d806"></a><!-- doxytag: member="SWM_IMPLICIT_INIT" ref="a2d038c8472c45e3c43f1d9c8b64f2712a4991f65759aac4290dd3b60c0d77d806" args="" -->SWM_IMPLICIT_INIT</em>&nbsp;</td><td>
+<p>This supplier works in implicit initialization mode. </p>
+<p>It means, that this suppolier doesn't need the explicite call of method <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a448aa1751441a329a76510cbeb2894c6" title="Force the supplier to initialize its work.">EnsureWorkInitialized()</a>. Work will be started automatically after the supplier was initialized (inputs or parameters changed) and supplier change starts. After recalculation of results the supplier signalize that its state has been changed. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a2d038c8472c45e3c43f1d9c8b64f2712a694fdd976e319b76b679bc7df15afebf"></a><!-- doxytag: member="SWM_DIRECT_INPUT" ref="a2d038c8472c45e3c43f1d9c8b64f2712a694fdd976e319b76b679bc7df15afebf" args="" -->SWM_DIRECT_INPUT</em>&nbsp;</td><td>
+<p>This supplier works synchronized to its inputs. </p>
+<p>It means, it is during changes when one of its inputs is during changes. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00050">50</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a11d01e8db5c10dc62b7b795c1c38d358"></a><!-- doxytag: member="iproc::TSupplierCompWrap::TSupplierCompWrap" ref="a11d01e8db5c10dc62b7b795c1c38d358" args="()" -->
+<a class="anchor" id="afa8a6d370714dae60c1e89789fdad444"></a><!-- doxytag: member="iproc::TSupplierCompWrap::TSupplierCompWrap" ref="afa8a6d370714dae60c1e89789fdad444" args="(SupplierWorkingMode mode=SWM_EXPLICIT_INIT)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -195,14 +232,15 @@ template&lt;class Product &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap</a>&lt; Product &gt;::<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">TSupplierCompWrap</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a2d038c8472c45e3c43f1d9c8b64f2712">SupplierWorkingMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>SWM_EXPLICIT_INIT</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00164">164</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00193">193</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
@@ -230,7 +268,7 @@ template&lt;class Product &gt; </div>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_supplier.html#a9ca6810fbb13f002e9eaaece19ddf31a">iproc::ISupplier</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00244">244</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00292">292</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_supplier_8h_source.html#l00031">iproc::ISupplier::WS_INVALID</a>, and <a class="el" href="_i_supplier_8h_source.html#l00039">iproc::ISupplier::WS_LOCKED</a>.</p>
 
@@ -256,9 +294,9 @@ template&lt;class Product &gt; </div>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_supplier.html#a8407cf9f0d773e91bfa10d6616a36e4d">iproc::ISupplier</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00219">219</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00256">256</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
-<p>References <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00195">iproc::TSupplierCompWrap&lt; Product &gt;::EnsureWorkInitialized()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, and <a class="el" href="_i_supplier_8h_source.html#l00035">iproc::ISupplier::WS_INIT</a>.</p>
+<p>References <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00228">iproc::TSupplierCompWrap&lt; Product &gt;::EnsureWorkInitialized()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, and <a class="el" href="_i_supplier_8h_source.html#l00035">iproc::ISupplier::WS_INIT</a>.</p>
 
 </div>
 </div>
@@ -283,11 +321,11 @@ template&lt;class Product &gt; </div>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_supplier.html#a1d5a8103b4fc07f82c8d5f44794bb78e">iproc::ISupplier</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00195">195</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00228">228</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
-<p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, and <a class="el" href="_i_supplier_8h_source.html#l00035">iproc::ISupplier::WS_INIT</a>.</p>
+<p>References <a class="el" href="_i_supplier_8h_source.html#l00035">iproc::ISupplier::WS_INIT</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00219">iproc::TSupplierCompWrap&lt; Product &gt;::EnsureWorkFinished()</a>.</p>
+<p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00256">iproc::TSupplierCompWrap&lt; Product &gt;::EnsureWorkFinished()</a>.</p>
 
 </div>
 </div>
@@ -311,7 +349,7 @@ template&lt;class Product &gt; </div>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_elapsed_time_provider.html#a96344ffb77cdaf0127a43f629b0f4768">iproc::IElapsedTimeProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00279">279</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00338">338</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 </div>
 </div>
@@ -335,7 +373,7 @@ template&lt;class Product &gt; </div>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52">iproc::ISupplier</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00270">270</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00329">329</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +395,7 @@ template&lt;class Product &gt; </div>
 
 <p>Get current work product, if work was done correctly. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00301">301</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00360">360</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
@@ -384,7 +422,7 @@ template&lt;class Product &gt; </div>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_supplier.html#afcc7cf98a07ad365e35635eab32d8bcb">iproc::ISupplier</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00263">263</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00322">322</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 </div>
 </div>
@@ -444,7 +482,7 @@ template&lt;class Product &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a50a5b1bf93909570927231e657bfa842">icam::CMultiCameraBitmapSupplierComp</a>, and <a class="el" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#aa38cc48770f8ea39cba9ee46d57fac65">icam::CSnapBitmapSupplierComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00288">288</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00347">347</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 </div>
 </div>
@@ -470,11 +508,9 @@ template&lt;class Product &gt; </div>
 
 <p>Implements <a class="el" href="classiproc_1_1_i_supplier.html#a0496343d4f5ae9a3f71caf5163b35d13">iproc::ISupplier</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00178">178</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00209">209</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_supplier_8h_source.html#l00031">iproc::ISupplier::WS_INVALID</a>, and <a class="el" href="_i_supplier_8h_source.html#l00039">iproc::ISupplier::WS_LOCKED</a>.</p>
-
-<p>Referenced by <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00380">iproc::TSupplierCompWrap&lt; Product &gt;::InputsObserver::BeforeUpdate()</a>.</p>
 
 </div>
 </div>
@@ -496,9 +532,9 @@ template&lt;class Product &gt; </div>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adcf275024a5a474346cc994f96543b31">iipr::CColorBitmapSeparatorSupplierComp</a>, <a class="el" href="classicam_1_1_c_selectable_bitmap_supplier_comp.html#a7772420cfc23ea9f18cebf381452fd11">icam::CSelectableBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a59c8e8cd4b452ab79c986998f3dd0542">iipr::CPositionFromImageSupplierComp</a>, <a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a02c62def2d9d7e2964b87c6d35370a29">iipr::CDelegatedBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_difference_bitmap_supplier_comp.html#af7a48968a480ea74b04691e80632c748">iipr::CDifferenceBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a81741a268acf9a5682ee358f508b4746">iipr::CProcessedBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#add36d2addc89c5d2a8f7b3f17e7be2c2">iipr::CBitmapJoinerSupplierComp</a>, <a class="el" href="classiipr_1_1_c_edge_distances_supplier_comp.html#a9caa4f1976582446a196a7e9d07594d1">iipr::CEdgeDistancesSupplierComp</a>, <a class="el" href="classiipr_1_1_c_multi_line_projection_supplier_comp.html#ab3a5e09127f068c0ce91bef710001175">iipr::CMultiLineProjectionSupplierComp</a>, <a class="el" href="classiedge_1_1_c_extracted_edge_lines_supplier_comp.html#a12acbdda8cdb713a7d7b7ff6675720f0">iedge::CExtractedEdgeLinesSupplierComp</a>, <a class="el" href="classiipr_1_1_c_line_projection_supplier_comp.html#a949009c368a09afc4275e4257471251f">iipr::CLineProjectionSupplierComp</a>, <a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a45294bc7b659e636838c73d4651fff5c">iipr::CSearchBasedFeaturesSupplierComp</a>, and <a class="el" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#ae2d25a11298ed0aaf041933f63bc8270">iedge::CProcessedEdgeLinesSupplierComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adcf275024a5a474346cc994f96543b31">iipr::CColorBitmapSeparatorSupplierComp</a>, <a class="el" href="classicam_1_1_c_selectable_bitmap_supplier_comp.html#a7772420cfc23ea9f18cebf381452fd11">icam::CSelectableBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a02c62def2d9d7e2964b87c6d35370a29">iipr::CDelegatedBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a59c8e8cd4b452ab79c986998f3dd0542">iipr::CPositionFromImageSupplierComp</a>, <a class="el" href="classiipr_1_1_c_difference_bitmap_supplier_comp.html#af7a48968a480ea74b04691e80632c748">iipr::CDifferenceBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html#a81741a268acf9a5682ee358f508b4746">iipr::CProcessedBitmapSupplierComp</a>, <a class="el" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#add36d2addc89c5d2a8f7b3f17e7be2c2">iipr::CBitmapJoinerSupplierComp</a>, <a class="el" href="classiipr_1_1_c_edge_distances_supplier_comp.html#a9caa4f1976582446a196a7e9d07594d1">iipr::CEdgeDistancesSupplierComp</a>, <a class="el" href="classiipr_1_1_c_multi_line_projection_supplier_comp.html#ab3a5e09127f068c0ce91bef710001175">iipr::CMultiLineProjectionSupplierComp</a>, <a class="el" href="classiedge_1_1_c_extracted_edge_lines_supplier_comp.html#a12acbdda8cdb713a7d7b7ff6675720f0">iedge::CExtractedEdgeLinesSupplierComp</a>, <a class="el" href="classiipr_1_1_c_line_projection_supplier_comp.html#a949009c368a09afc4275e4257471251f">iipr::CLineProjectionSupplierComp</a>, <a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a45294bc7b659e636838c73d4651fff5c">iipr::CSearchBasedFeaturesSupplierComp</a>, and <a class="el" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#ae2d25a11298ed0aaf041933f63bc8270">iedge::CProcessedEdgeLinesSupplierComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00335">335</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00394">394</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, and <a class="el" href="_i_supplier_8h_source.html#l00031">iproc::ISupplier::WS_INVALID</a>.</p>
 
@@ -522,7 +558,7 @@ template&lt;class Product &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicam_1_1_c_selectable_bitmap_supplier_comp.html#afdcf1d6f121248edc60232a2ece8349f">icam::CSelectableBitmapSupplierComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00356">356</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00415">415</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 </div>
 </div>
@@ -545,7 +581,7 @@ template&lt;class Product &gt; </div>
 <p>Called if the supplier parameters was changed. </p>
 <p>Default implementation do nothing. It is dedicated to be overriden. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00295">295</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00354">354</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 </div>
 </div>
@@ -594,7 +630,7 @@ template&lt;class Product &gt; </div>
 <p>Register supplier input. </p>
 <p>Changes of supplier input will force this supplier invalidate. All registered inputs will be unregistered ducring component destroing (OnComponentDestryed method). </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00315">315</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00374">374</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">imod::IModel::AttachObserver()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
@@ -620,7 +656,7 @@ template&lt;class Product &gt; </div>
 <p>Unregister supplier input. </p>
 <p>Changes of this input will no more invalidate this supplier. </p>
 
-<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00323">323</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_supplier_comp_wrap_8h_source.html#l00382">382</a> of file <a class="el" href="_t_supplier_comp_wrap_8h_source.html">TSupplierCompWrap.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66">imod::IModel::DetachObserver()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 

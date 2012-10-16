@@ -8590,6 +8590,13 @@
       <anchor>a4d3cdff494dea97e02b218106afbac04</anchor>
       <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CDelegatedBitmapSupplierComp</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a9bd70bff67cb4b0411083bce50002aca</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
@@ -13889,6 +13896,30 @@
       <anchor>ae4928500a07bc7997704eb06d7effb9faab1f299aea6b4bfa72738cc9cdb34670</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>SupplierWorkingMode</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a2d038c8472c45e3c43f1d9c8b64f2712</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SWM_EXPLICIT_INIT</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a2d038c8472c45e3c43f1d9c8b64f2712a93709afe8c4e5eb28a0e46c0bf68e27e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SWM_IMPLICIT_INIT</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a2d038c8472c45e3c43f1d9c8b64f2712a4991f65759aac4290dd3b60c0d77d806</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SWM_DIRECT_INPUT</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a2d038c8472c45e3c43f1d9c8b64f2712a694fdd976e319b76b679bc7df15afebf</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -13914,8 +13945,8 @@
       <type></type>
       <name>TSupplierCompWrap</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a11d01e8db5c10dc62b7b795c1c38d358</anchor>
-      <arglist>()</arglist>
+      <anchor>afa8a6d370714dae60c1e89789fdad444</anchor>
+      <arglist>(SupplierWorkingMode mode=SWM_EXPLICIT_INIT)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -14041,6 +14072,13 @@
       <anchor>ad5c662418645b1e2e32b039ca5db024d</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
+      <anchor>a52686636ce85cff1ce996aeaf7762281</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>TSupplierCompWrap&lt; Product &gt; &amp;</type>
       <name>m_parent</name>
@@ -14059,6 +14097,13 @@
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
       <anchor>ada0299c62b020d51a0b302c4aaac654a</anchor>
       <arglist>(TSupplierCompWrap&lt; Product &gt; *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
+      <anchor>a00ae1b8e8ca4674b3c8774cdf517f891</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

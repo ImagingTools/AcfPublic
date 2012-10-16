@@ -64,6 +64,8 @@ public:
 		I_ASSIGN_TO(m_calibrationModelCompPtr, m_calibrationCompPtr, false);
 	I_END_COMPONENT;
 
+	CDelegatedBitmapSupplierComp();
+
 protected:
 	// reimplemented (iipr::IBitmapProvider)
 	virtual const iimg::IBitmap* GetBitmap() const;

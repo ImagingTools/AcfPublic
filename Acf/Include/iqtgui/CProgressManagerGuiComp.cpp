@@ -73,7 +73,7 @@ void CProgressManagerGuiComp::UpdateProgressBar()
 }
 
 
-// reimplemented (iproc::CDelegatedProgressManager)
+// reimplemented (ibase::CDelegatedProgressManager)
 
 void CProgressManagerGuiComp::OnCancelable(bool cancelState)
 {
