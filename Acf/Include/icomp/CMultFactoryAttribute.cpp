@@ -30,18 +30,19 @@ namespace icomp
 // public methods
 
 CMultiFactoryAttribute::CMultiFactoryAttribute()
+:	BaseClass()
 {
 }
 
 
 CMultiFactoryAttribute::CMultiFactoryAttribute(const CMultiFactoryAttribute& attribute)
-	:BaseClass(attribute)
+:	BaseClass(attribute)
 {
 }
 
 
 CMultiFactoryAttribute::CMultiFactoryAttribute(int elementsCount, QByteArray* valuesPtr)
-	:BaseClass(elementsCount, valuesPtr)
+:	BaseClass(elementsCount, valuesPtr)
 {
 }
 

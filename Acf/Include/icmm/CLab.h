@@ -60,8 +60,6 @@ public:
 	double GetB() const;
 	void SetB(double value);
 
-	bool Serialize(iser::IArchive& archive);
-
 	// operators
 	CLab operator+(const CLab& color) const;
 	CLab operator-(const CLab& color) const;
@@ -80,12 +78,16 @@ public:
 
 	const CLab& operator*=(double value);
 	const CLab& operator/=(double value);
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 };
 
 
 // inline methods
 
 inline CLab::CLab(double l, double a, double b)
+:	BaseClass()
 {
 	SetElement(CI_L, l);
 	SetElement(CI_A, a);
@@ -94,7 +96,7 @@ inline CLab::CLab(double l, double a, double b)
 
 
 inline CLab::CLab(const CLab& color)
-:	BaseClass(color)
+:	istd::IPolymorphic(), istd::IChangeable(), iser::ISerializable(), BaseClass(color)
 {
 }
 

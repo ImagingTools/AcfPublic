@@ -64,8 +64,6 @@ public:
 	double GetK() const;
 	void SetK(double value);
 
-	bool Serialize(iser::IArchive& archive);
-
 	// operators
 	CCmyk operator+(const CCmyk& color) const;
 	CCmyk operator-(const CCmyk& color) const;
@@ -84,12 +82,16 @@ public:
 
 	const CCmyk& operator*=(double value);
 	const CCmyk& operator/=(double value);
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 };
 
 
 // inline methods
 
 inline CCmyk::CCmyk(double c, double m, double y, double k)
+:	BaseClass()
 {
 	SetElement(CI_CYAN, c);
 	SetElement(CI_MAGENTA, m);
@@ -99,7 +101,7 @@ inline CCmyk::CCmyk(double c, double m, double y, double k)
 
 
 inline CCmyk::CCmyk(const CCmyk& color)
-:	BaseClass(color)
+:	istd::IPolymorphic(), istd::IChangeable(), iser::ISerializable(), BaseClass(color)
 {
 }
 
