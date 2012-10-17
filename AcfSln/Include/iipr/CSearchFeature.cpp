@@ -90,6 +90,7 @@ imath::CVarVector CSearchFeature::GetComponentValue(CSearchFeature::ValueTypeId 
 	imath::CVarVector result;
 
 	switch (valueTypeId){
+		case VTI_AUTO:
 		case VTI_POSITION:
 			return BaseClass::GetComponentValue(VTI_AUTO);
 
