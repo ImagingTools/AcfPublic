@@ -95,6 +95,11 @@ I_EXPORT_COMPONENT(
 			"Parameter with scale and offset for simple linear transformations",
 			"Parameter Scale Offset Shift Contrast Brightness Linear Power" IM_CATEGORY(I_DATA_MODEL) IM_TAG("Model Parameter") IM_AUTHOR("\"Witold Gantzke\""));
 
+I_EXPORT_COMPONENT(
+			NumericValuesJoiner,
+			"Joins several numeric values under the single interface",
+			"Numeric Value Join" IM_AUTHOR("\"Arseniy Masyuk\""));
+
 
 } // namespace MeasPck
 

@@ -85,6 +85,21 @@ const i2d::ITransformation2d& CSearchFeature::GetTransformation() const
 
 // reimplemented (imeas::INumericValue)
 
+bool CSearchFeature::IsValueTypeSupported(CSearchFeature::ValueTypeId valueTypeId) const
+{
+	switch (valueTypeId){
+		case VTI_AUTO:
+		case VTI_POSITION:
+		case VTI_ANGLE:
+		case VTI_WEIGHT:
+		case VTI_2D_TRANSFORM:
+			return true;
+	}
+
+	return false;
+}
+
+
 imath::CVarVector CSearchFeature::GetComponentValue(CSearchFeature::ValueTypeId valueTypeId) const
 {
 	imath::CVarVector result;
