@@ -509,7 +509,10 @@ bool CRectangle::Transform(
 		}
 
 		m_horizontalRange = istd::CRange(transLeftTop.GetX(), transRightBottom.GetX());
+		m_horizontalRange.Validate();
+
 		m_verticalRange = istd::CRange(transLeftTop.GetY(), transRightBottom.GetY());
+		m_verticalRange.Validate();
 
 		return true;
 	}
