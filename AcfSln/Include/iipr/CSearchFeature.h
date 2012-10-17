@@ -59,6 +59,9 @@ public:
 	const QString& GetId() const;
 	const i2d::ITransformation2d& GetTransformation() const;
 
+	// reimplemented (imeas::INumericValue)
+	virtual imath::CVarVector GetComponentValue(ValueTypeId valueTypeId) const;
+
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
