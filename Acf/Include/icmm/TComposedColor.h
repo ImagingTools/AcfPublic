@@ -95,7 +95,6 @@ public:
 	*/
 	void GetNormalized(TComposedColor<Size>& result) const;
 
-	// operators
 	TComposedColor<Size> operator+(const TComposedColor<Size>& color) const;
 	TComposedColor<Size> operator-(const TComposedColor<Size>& color) const;
 	TComposedColor<Size> operator*(const TComposedColor<Size>& color) const;
@@ -116,7 +115,7 @@ public:
 	const TComposedColor<Size>& operator/=(double value);
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
+	bool Serialize(iser::IArchive& archive);
 };
 
 

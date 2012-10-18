@@ -39774,6 +39774,13 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>OnTextEdited</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a18086e2de889e0aba2217607485fb57f</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>OnTextChanged</name>
       <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
       <anchor>a0367e9609f2d142c854498901fddb0b4</anchor>
@@ -39809,9 +39816,23 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a42235f7502fe352c84f43c1911c97a7e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
       <anchor>a5369b96b14dc0c0979339a1037e46e25</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a5799ff72c329f3b1976f5673ef194ac0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40229,6 +40250,13 @@
       <name>OnGuiShown</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>a13bf79e337e866b45b4774337c994320</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a4c0ac22a47c52cef97ad8a0527b34917</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

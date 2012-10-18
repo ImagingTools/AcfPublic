@@ -61,6 +61,8 @@ public:
 	double GetY() const;
 	void SetY(double value);
 
+	bool Serialize(iser::IArchive& archive);
+
 	// operators
 	CCmy operator+(const CCmy& color) const;
 	CCmy operator-(const CCmy& color) const;
@@ -79,16 +81,12 @@ public:
 
 	const CCmy& operator*=(double value);
 	const CCmy& operator/=(double value);
-
-	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
 };
 
 
 // inline methods
 
 inline CCmy::CCmy(double c, double m, double y)
-:	BaseClass()
 {
 	SetElement(CI_CYAN, c);
 	SetElement(CI_MAGENTA, m);
@@ -97,7 +95,7 @@ inline CCmy::CCmy(double c, double m, double y)
 
 
 inline CCmy::CCmy(const CCmy& color)
-:	istd::IPolymorphic(), istd::IChangeable(), iser::ISerializable(), BaseClass(color)
+:	BaseClass(color)
 {
 }
 

@@ -1500,6 +1500,14 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>CNumericValuesJoinerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_numeric_values_joiner_comp_8h</filename>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <class kind="class">imeas::CNumericValuesJoinerComp</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSamplesInfo.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_samples_info_8h</filename>
@@ -10019,6 +10027,20 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>a38734f1485a38e5ddaba4cfd4c1f6959</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>ac402a8ca167f9c0d8f0794c927a6d813</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>a3736d0349b7ce9cebda91144f73b2e96</anchor>
@@ -11089,6 +11111,7 @@
     <class kind="class">imeas::CMeasurementRange</class>
     <class kind="class">imeas::CNumericConstraintsComp</class>
     <class kind="class">imeas::CNumericParamsComp</class>
+    <class kind="class">imeas::CNumericValuesJoinerComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CSimpleNumericValue</class>
     <class kind="class">imeas::CSimpleNumericValueProvider</class>
@@ -11984,6 +12007,33 @@
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>a67272c6b08219c5211075a7475954365</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CNumericValuesJoinerComp</name>
+    <filename>classimeas_1_1_c_numeric_values_joiner_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
+      <anchor>a6c616ca1a545c6a395accaa30cab1b03</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
+      <anchor>a706f4b539cdffbca666cd12e01f11ebe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::INumericValue &amp;</type>
+      <name>GetNumericValue</name>
+      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
+      <anchor>a41f309cda40c6ef4c1a0afe092996be5</anchor>
+      <arglist>(int index) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15523,6 +15573,7 @@
     <name>iqtcam::CBitmapSupplierGuiComp</name>
     <filename>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</filename>
     <base>TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt;</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
     <member kind="typedef">
       <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -15536,6 +15587,13 @@
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>af6c71083a8dc0e40c727fb6a86f203e2</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a7e2ecdae93c513ac98a8230b1ff06025</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>

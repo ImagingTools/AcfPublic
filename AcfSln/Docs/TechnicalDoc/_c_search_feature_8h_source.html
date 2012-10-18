@@ -60,24 +60,28 @@
 <a name="l00037"></a>00037        <span class="keyword">const</span> QString&amp; <a class="code" href="classiipr_1_1_c_search_feature.html#a900d79d8c73354c11e90644bf312848c">GetId</a>() <span class="keyword">const</span>;
 <a name="l00038"></a>00038        <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>&amp; <a class="code" href="classiipr_1_1_c_search_feature.html#a9b75f993741fe8ff834b767cb98b754e">GetTransformation</a>() <span class="keyword">const</span>;
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_search_feature.html#a3736d0349b7ce9cebda91144f73b2e96">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">private</span>:
-<a name="l00044"></a>00044        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> m_scale;
-<a name="l00045"></a>00045        <span class="keywordtype">double</span> m_angle;
-<a name="l00046"></a>00046        <span class="keywordtype">int</span> m_index;
-<a name="l00047"></a>00047        QString m_id;
-<a name="l00048"></a>00048        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_affine_transformation2d.html">i2d::CAffineTransformation2d</a> m_transformation;
-<a name="l00049"></a>00049 };
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 } <span class="comment">// namespace iipr</span>
-<a name="l00053"></a>00053 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (imeas::INumericValue)</span>
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_search_feature.html#a38734f1485a38e5ddaba4cfd4c1f6959" title="Check if the given value type (or value component) is supported.">IsValueTypeSupported</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span>;
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> <a class="code" href="classiipr_1_1_c_search_feature.html#ac402a8ca167f9c0d8f0794c927a6d813" title="Get access to component value of the given type.">GetComponentValue</a>(<a class="code" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> valueTypeId) <span class="keyword">const</span>;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_search_feature.html#a3736d0349b7ce9cebda91144f73b2e96">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="keyword">private</span>:
+<a name="l00048"></a>00048        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> m_scale;
+<a name="l00049"></a>00049        <span class="keywordtype">double</span> m_angle;
+<a name="l00050"></a>00050        <span class="keywordtype">int</span> m_index;
+<a name="l00051"></a>00051        QString m_id;
+<a name="l00052"></a>00052        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_affine_transformation2d.html">i2d::CAffineTransformation2d</a> m_transformation;
+<a name="l00053"></a>00053 };
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iipr_CSearchFeature_included</span>
-<a name="l00056"></a>00056 <span class="preprocessor"></span>
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 } <span class="comment">// namespace iipr</span>
 <a name="l00057"></a>00057 
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="preprocessor">#endif // !iipr_CSearchFeature_included</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
+<a name="l00061"></a>00061 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -45,6 +45,16 @@ CBitmapSupplierGuiComp::CBitmapSupplierGuiComp()
 }
 
 
+// reimplemented (iipr::IBitmapProvider)
+
+const iimg::IBitmap* CBitmapSupplierGuiComp::GetBitmap() const
+{
+	return &m_bitmap;
+}
+
+
+// protected slots
+
 void CBitmapSupplierGuiComp::on_SnapImageButton_clicked()
 {
 	iproc::ISupplier* supplierPtr = GetObjectPtr();

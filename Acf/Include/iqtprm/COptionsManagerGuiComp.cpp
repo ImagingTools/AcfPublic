@@ -26,7 +26,6 @@
 // Qt includes
 #include <QtGui/QLineEdit>
 
-
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
@@ -91,7 +90,6 @@ void COptionsManagerGuiComp::OnGuiModelAttached()
 		connect(Selector->lineEdit(), SIGNAL(textEdited(const QString&)), this, SLOT(OnTextEdited(const QString&)));
 		connect(Selector->lineEdit(), SIGNAL(textChanged(const QString&)), this, SLOT(OnTextChanged(const QString&)));
 	}
-
 }
 
 
@@ -162,7 +160,6 @@ void COptionsManagerGuiComp::OnGuiCreated()
 
 void COptionsManagerGuiComp::OnGuiDestroyed()
 {
-	
 	m_selectorLabelPtr.Reset();
 
 	BaseClass::OnGuiDestroyed();
@@ -327,7 +324,6 @@ void COptionsManagerGuiComp::UpdateComboBox()
 	}
 
 	UpdateDescriptionFrame();
-
 }
 
 

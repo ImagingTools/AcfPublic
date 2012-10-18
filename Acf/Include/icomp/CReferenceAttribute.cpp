@@ -30,7 +30,6 @@ namespace icomp
 // public methods
 	
 CReferenceAttribute::CReferenceAttribute()
-	:BaseClass()
 {
 }
 

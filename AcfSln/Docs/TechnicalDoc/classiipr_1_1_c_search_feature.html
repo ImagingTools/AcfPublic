@@ -80,6 +80,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a1b9b60d3ee8b06a83b64ddab6a369bce">GetIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a900d79d8c73354c11e90644bf312848c">GetId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a9b75f993741fe8ff834b767cb98b754e">GetTransformation</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a38734f1485a38e5ddaba4cfd4c1f6959">IsValueTypeSupported</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the given value type (or value component) is supported.  <a href="#a38734f1485a38e5ddaba4cfd4c1f6959"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#ac402a8ca167f9c0d8f0794c927a6d813">GetComponentValue</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component value of the given type.  <a href="#ac402a8ca167f9c0d8f0794c927a6d813"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a3736d0349b7ce9cebda91144f73b2e96">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -173,6 +177,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac402a8ca167f9c0d8f0794c927a6d813"></a><!-- doxytag: member="iipr::CSearchFeature::GetComponentValue" ref="ac402a8ca167f9c0d8f0794c927a6d813" args="(ValueTypeId valueTypeId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> iipr::CSearchFeature::GetComponentValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a>&#160;</td>
+          <td class="paramname"><em>valueTypeId</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get access to component value of the given type. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1" title="Define standard numeric value types.">ValueTypeId</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>if data vector cannot be calculated it returns empty vector. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classimeas_1_1_c_simple_numeric_value.html#ab86360165a5bf223fe42f8602185c4cf">imeas::CSimpleNumericValue</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a900d79d8c73354c11e90644bf312848c"></a><!-- doxytag: member="iipr::CSearchFeature::GetId" ref="a900d79d8c73354c11e90644bf312848c" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -234,6 +261,29 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a38734f1485a38e5ddaba4cfd4c1f6959"></a><!-- doxytag: member="iipr::CSearchFeature::IsValueTypeSupported" ref="a38734f1485a38e5ddaba4cfd4c1f6959" args="(ValueTypeId valueTypeId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iipr::CSearchFeature::IsValueTypeSupported </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a>&#160;</td>
+          <td class="paramname"><em>valueTypeId</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if the given value type (or value component) is supported. </p>
+<p>If the value component is supported you can access this via GetComponentValue method. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiipr_1_1_c_search_feature.html#ac402a8ca167f9c0d8f0794c927a6d813" title="Get access to component value of the given type.">GetComponentValue</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classimeas_1_1_c_simple_numeric_value.html#ae171179f75cd4fd22ae95940c175ca95">imeas::CSimpleNumericValue</a>.</p>
 
 </div>
 </div>

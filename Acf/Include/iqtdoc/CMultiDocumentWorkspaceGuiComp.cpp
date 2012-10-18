@@ -37,7 +37,6 @@
 #include "iser/CXmlFileWriteArchive.h"
 #include "iser/CXmlFileReadArchive.h"
 
-
 #include "iqtgui/CFileDialogLoaderComp.h"
 
 #include "iqt/CSettingsWriteArchive.h"

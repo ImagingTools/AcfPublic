@@ -48,7 +48,9 @@ namespace iqtcam
 {
 
 
-class CBitmapSupplierGuiComp: public iqtinsp::TSupplierGuiCompBase<Ui::CBitmapSupplierGuiComp>
+class CBitmapSupplierGuiComp:
+			public iqtinsp::TSupplierGuiCompBase<Ui::CBitmapSupplierGuiComp>,
+			virtual public iipr::IBitmapProvider
 {
 	Q_OBJECT
 
@@ -56,10 +58,14 @@ public:
 	typedef iqtinsp::TSupplierGuiCompBase<Ui::CBitmapSupplierGuiComp> BaseClass;
 
 	I_BEGIN_COMPONENT(CBitmapSupplierGuiComp);
+		I_REGISTER_INTERFACE(iipr::IBitmapProvider);
 		I_ASSIGN(m_bitmapLoaderCompPtr, "BitmapLoader", "Saves bitmap to file", false, "BitmapLoader");
 	I_END_COMPONENT;
 
 	CBitmapSupplierGuiComp();
+
+	// reimplemented (iipr::IBitmapProvider)
+	virtual const iimg::IBitmap* GetBitmap() const;
 
 protected Q_SLOTS:
 	void on_SnapImageButton_clicked();
