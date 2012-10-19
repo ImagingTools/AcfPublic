@@ -386,6 +386,16 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>IMultiCalibrationProvider.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_i_multi_calibration_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_transformation2d_8h" name="ITransformation2d.h" local="yes" imported="no">i2d/ITransformation2d.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <class kind="class">i2d::IMultiCalibrationProvider</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>IObject2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_i_object2d_8h</filename>
@@ -6453,6 +6463,7 @@
     <class kind="class">i2d::CTubePolylineComp</class>
     <class kind="class">i2d::CVector2d</class>
     <class kind="class">i2d::ICalibrationProvider</class>
+    <class kind="class">i2d::IMultiCalibrationProvider</class>
     <class kind="class">i2d::IObject2d</class>
     <class kind="class">i2d::ISceneController</class>
     <class kind="class">i2d::ITransformation2d</class>
@@ -10202,6 +10213,32 @@
       <anchorfile>classi2d_1_1_i_calibration_provider.html</anchorfile>
       <anchor>aeea8b083da9ca252354e63a35358ea4d</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::IMultiCalibrationProvider</name>
+    <filename>classi2d_1_1_i_multi_calibration_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetCalibrationSelectionContraints</name>
+      <anchorfile>classi2d_1_1_i_multi_calibration_provider.html</anchorfile>
+      <anchor>a7b9ca3457e586ac7acf831755318bcfb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetCalibrationsCount</name>
+      <anchorfile>classi2d_1_1_i_multi_calibration_provider.html</anchorfile>
+      <anchor>ab86325489d5aaf4dee2e6b137df7e482</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classi2d_1_1_i_multi_calibration_provider.html</anchorfile>
+      <anchor>acd8e08404dc749e52810381483ed5be4</anchor>
+      <arglist>(int calibrationIndex) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -68,6 +68,7 @@
 #include "iipr/CTubeProjectionLinesProviderComp.h"
 #include "iipr/CMorphologicalProcessorComp.h"
 #include "iipr/CMultiLineProjectionSupplierComp.h"
+#include "iipr/CSelectableCalibrationSupplierComp.h"
 
 
 /**
@@ -141,6 +142,10 @@ typedef icomp::TModelCompWrap<iipr::CTubeProjectionLinesProviderComp> TubeProjec
 typedef iipr::CMorphologicalProcessorComp MorphologicalProcessor;
 typedef icomp::TModelCompWrap<
 			iipr::CMultiLineProjectionSupplierComp> MultiLineProjectionSupplier;
+
+typedef icomp::TModelCompWrap<
+			iipr::CSelectableCalibrationSupplierComp> SelectableCalibrationSupplier;
+
 
 
 } // namespace IprPck

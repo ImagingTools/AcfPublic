@@ -35,6 +35,7 @@ namespace i2d
 
 CAffineTransformation2d::CAffineTransformation2d()
 {
+	m_transformation.Reset();
 }
 
 

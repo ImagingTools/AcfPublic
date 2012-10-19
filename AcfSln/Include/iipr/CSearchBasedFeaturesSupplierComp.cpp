@@ -27,6 +27,31 @@ namespace iipr
 {
 
 
+// public methods
+
+// reimplemented (i2d::IMultiCalibrationProvider)
+
+const iprm::ISelectionConstraints* CSearchBasedFeaturesSupplierComp::GetCalibrationSelectionContraints() const
+{
+	return NULL;
+}
+
+
+int CSearchBasedFeaturesSupplierComp::GetCalibrationsCount() const
+{
+	return m_transformationList.count();
+}
+
+
+const i2d::ITransformation2d* CSearchBasedFeaturesSupplierComp::GetCalibration(int calibrationIndex) const
+{
+	I_ASSERT(calibrationIndex >= 0);
+	I_ASSERT(calibrationIndex < m_transformationList.count());
+
+	return &m_transformationList.at(calibrationIndex);
+}
+
+
 // reimplemented (imeas::INumericValueProvider)
 
 int CSearchBasedFeaturesSupplierComp::GetValuesCount() const
@@ -55,6 +80,8 @@ const imeas::INumericValue& CSearchBasedFeaturesSupplierComp::GetNumericValue(in
 
 int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) const
 {
+	m_transformationList.clear();
+
 	if (		m_bitmapProviderCompPtr.IsValid() &&
 				m_searchProcessorCompPtr.IsValid()){
 		const iimg::IBitmap* bitmapPtr = m_bitmapProviderCompPtr->GetBitmap();
@@ -68,6 +95,14 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 
 			if (searchState != iproc::IProcessor::TS_OK){
 				return WS_ERROR;
+			}
+
+			// Update calibration list:
+			int featuresCount = result.GetValuesCount();
+			for (int featureIndex = 0; featureIndex < featuresCount; featureIndex++){
+				i2d::CAffineTransformation2d transform;
+
+				m_transformationList.push_back(transform);
 			}
 
 			return WS_OK;
@@ -86,6 +121,16 @@ void CSearchBasedFeaturesSupplierComp::OnComponentCreated()
 
 	if (m_bitmapProviderModelCompPtr.IsValid()){
 		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr());
+	}
+}
+
+
+void CSearchBasedFeaturesSupplierComp::OnComponentDestroyed()
+{
+	BaseClass::OnComponentDestroyed();
+
+	if (m_bitmapProviderModelCompPtr.IsValid()){
+		UnregisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr());
 	}
 }
 

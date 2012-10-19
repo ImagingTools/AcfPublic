@@ -1186,6 +1186,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CSelectableCalibrationSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_selectable_calibration_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <class kind="class">iipr::CSelectableCalibrationSupplierComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSingleFeatureConsumer.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_single_feature_consumer_8h</filename>
@@ -7724,6 +7732,7 @@
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
     <class kind="class">iipr::CSearchFeature</class>
     <class kind="class">iipr::CSearchParams</class>
+    <class kind="class">iipr::CSelectableCalibrationSupplierComp</class>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
     <class kind="class">iipr::CTubeProjectionLinesProviderComp</class>
     <class kind="class">iipr::CTubeProjectionsGenerator</class>
@@ -9929,6 +9938,7 @@
     <filename>classiipr_1_1_c_search_based_features_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
@@ -9942,6 +9952,27 @@
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
       <anchor>af443611390935b7aa23e1fd3692c4c4a</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetCalibrationSelectionContraints</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>afc5731e755dcc22ccbef0bad207a45cb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCalibrationsCount</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>a379bd59919d1cb32e31aa314f4a4d7d4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>ab850f8e2f0afc99394ee63e511091542</anchor>
+      <arglist>(int calibrationIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -9969,6 +10000,13 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
       <anchor>a45294bc7b659e636838c73d4651fff5c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>a55c1329e598f40a216c8a1aed1a38a16</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -10197,6 +10235,68 @@
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
       <anchor>a0584125b6650dcc7e207d1ae4a0c824b</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CSelectableCalibrationSupplierComp</name>
+    <filename>classiipr_1_1_c_selectable_calibration_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt; &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
+      <anchor>a9af650544868837558551d5a63a9d258</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
+      <anchor>a8709b6001196331967d7c4a063cdbad3</anchor>
+      <arglist>(m_multiCalibrationSupplierCompPtr, m_multiCalibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
+      <anchor>ab511a8a80aeb5de4cab14ac123e61f2e</anchor>
+      <arglist>(m_multiCalibrationProviderModelCompPtr, m_multiCalibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
+      <anchor>a688d6fc570dec61e5033373b015e3c9f</anchor>
+      <arglist>(m_calibrationSelectionModelCompPtr, m_calibrationSelectionCompPtr, true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
+      <anchor>ac57ad8bddb6e5acecdaf9cc81c483298</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
+      <anchor>aba16f795f9d942bfaf8707d1c73bf245</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
+      <anchor>ac348f3906ae5318ce23dd2ba66c3c005</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
+      <anchor>a86d0284fef41b76ff62cd2eb1fb4b6bb</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

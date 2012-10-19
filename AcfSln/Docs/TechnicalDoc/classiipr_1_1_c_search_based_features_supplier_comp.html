@@ -38,7 +38,7 @@
 <div class="title">iipr::CSearchBasedFeaturesSupplierComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CSearchBasedFeaturesSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; CFeaturesContainer &gt;,imeas::INumericValueProvider" -->
+<!-- doxytag: class="iipr::CSearchBasedFeaturesSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; CFeaturesContainer &gt;,imeas::INumericValueProvider,i2d::IMultiCalibrationProvider" -->
 <p><code>#include &lt;<a class="el" href="_c_search_based_features_supplier_comp_8h_source.html">CSearchBasedFeaturesSupplierComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iipr::CSearchBasedFeaturesSupplierComp:</div>
@@ -48,16 +48,19 @@ Inheritance diagram for iipr::CSearchBasedFeaturesSupplierComp:</div>
   <map id="iipr::CSearchBasedFeaturesSupplierComp_map" name="iipr::CSearchBasedFeaturesSupplierComp_map">
 <area href="classiproc_1_1_t_supplier_comp_wrap.html" alt="iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;" shape="rect" coords="777,224,1078,248"/>
 <area href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values." alt="imeas::INumericValueProvider" shape="rect" coords="1555,224,1856,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html" alt="i2d::IMultiCalibrationProvider" shape="rect" coords="1866,224,2167,248"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="311,168,612,192"/>
 <area href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model..." alt="iproc::ISupplier" shape="rect" coords="622,168,923,192"/>
 <area href="classiproc_1_1_i_elapsed_time_provider.html" title="Provider of the elapsed time E.g." alt="iproc::IElapsedTimeProvider" shape="rect" coords="933,168,1234,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1244,168,1545,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1555,168,1856,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1866,168,2167,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="311,112,612,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="622,112,923,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="933,112,1234,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1244,112,1545,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1555,112,1856,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1866,112,2167,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,301,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_loggable.html" alt="ibase::ILoggable" shape="rect" coords="311,56,612,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html" alt="istd::ILogger" shape="rect" coords="622,56,923,80"/>
@@ -77,6 +80,11 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#af443611390935b7aa23e1fd3692c4c4a">I_ASSIGN_TO</a> (m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#afc5731e755dcc22ccbef0bad207a45cb">GetCalibrationSelectionContraints</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a379bd59919d1cb32e31aa314f4a4d7d4">GetCalibrationsCount</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#ab850f8e2f0afc99394ee63e511091542">GetCalibration</a> (int calibrationIndex) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#ae6283aedf0bf83f94b2a6fa6ce64b92d">GetValuesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of numeric values in the list.  <a href="#ae6283aedf0bf83f94b2a6fa6ce64b92d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
@@ -86,10 +94,11 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a1bf97d94023638cbc9f83a50cd02bbb4">ProduceObject</a> (<a class="el" href="classiipr_1_1_c_features_container.html">CFeaturesContainer</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a45294bc7b659e636838c73d4651fff5c">OnComponentCreated</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a55c1329e598f40a216c8a1aed1a38a16">OnComponentDestroyed</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_search_based_features_supplier_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_search_based_features_supplier_comp_8h_source.html">CSearchBasedFeaturesSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_search_based_features_supplier_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_search_based_features_supplier_comp_8h_source.html">CSearchBasedFeaturesSupplierComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="af22caa63961730d177fe0d64e9d29ddb"></a><!-- doxytag: member="iipr::CSearchBasedFeaturesSupplierComp::BaseClass" ref="af22caa63961730d177fe0d64e9d29ddb" args="" -->
 <div class="memitem">
@@ -104,11 +113,66 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_search_based_features_supplier_comp_8h_source.html#l00025">25</a> of file <a class="el" href="_c_search_based_features_supplier_comp_8h_source.html">CSearchBasedFeaturesSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_search_based_features_supplier_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_search_based_features_supplier_comp_8h_source.html">CSearchBasedFeaturesSupplierComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ab850f8e2f0afc99394ee63e511091542"></a><!-- doxytag: member="iipr::CSearchBasedFeaturesSupplierComp::GetCalibration" ref="ab850f8e2f0afc99394ee63e511091542" args="(int calibrationIndex) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iipr::CSearchBasedFeaturesSupplierComp::GetCalibration </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>calibrationIndex</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html#acd8e08404dc749e52810381483ed5be4">i2d::IMultiCalibrationProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a379bd59919d1cb32e31aa314f4a4d7d4"></a><!-- doxytag: member="iipr::CSearchBasedFeaturesSupplierComp::GetCalibrationsCount" ref="a379bd59919d1cb32e31aa314f4a4d7d4" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iipr::CSearchBasedFeaturesSupplierComp::GetCalibrationsCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html#ab86325489d5aaf4dee2e6b137df7e482">i2d::IMultiCalibrationProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc5731e755dcc22ccbef0bad207a45cb"></a><!-- doxytag: member="iipr::CSearchBasedFeaturesSupplierComp::GetCalibrationSelectionContraints" ref="afc5731e755dcc22ccbef0bad207a45cb" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* iipr::CSearchBasedFeaturesSupplierComp::GetCalibrationSelectionContraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html#a7b9ca3457e586ac7acf831755318bcfb">i2d::IMultiCalibrationProvider</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5d4911cddad190d545796c0acd388723"></a><!-- doxytag: member="iipr::CSearchBasedFeaturesSupplierComp::GetNumericValue" ref="a5d4911cddad190d545796c0acd388723" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -198,6 +262,24 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55c1329e598f40a216c8a1aed1a38a16"></a><!-- doxytag: member="iipr::CSearchBasedFeaturesSupplierComp::OnComponentDestroyed" ref="a55c1329e598f40a216c8a1aed1a38a16" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iipr::CSearchBasedFeaturesSupplierComp::OnComponentDestroyed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6c61739f6153e4f37b82ca110468afe">iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</a>.</p>
 
 </div>
 </div>
