@@ -33,6 +33,18 @@ namespace iipr
 {
 
 
+// reimplemented (i2d::ICalibrationProvider)
+
+const i2d::ITransformation2d* CTubeProjectionLinesProviderComp::GetCalibration() const
+{
+	if (m_calibrationProviderCompPtr.IsValid()){
+		return m_calibrationProviderCompPtr->GetCalibration();
+	}
+
+	return NULL;
+}
+
+
 // reimplemented (iipr::CMultiLineSupplierCompBase)
 
 int CTubeProjectionLinesProviderComp::ProduceObject(ProductType& result) const

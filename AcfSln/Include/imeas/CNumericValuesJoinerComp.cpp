@@ -43,8 +43,6 @@ int CNumericValuesJoinerComp::GetValuesCount() const
 
 const imeas::INumericValue& CNumericValuesJoinerComp::GetNumericValue(int index) const
 {
-	static imeas::CSimpleNumericValue dummy;
-
 	if (m_valueProvidersCompPtr.IsValid()){
 		int providerCount = m_valueProvidersCompPtr.GetCount();
 		if (providerCount > 0 && index >= 0){
@@ -56,7 +54,23 @@ const imeas::INumericValue& CNumericValuesJoinerComp::GetNumericValue(int index)
 		}
 	}
 
-	return dummy;
+	return *this;
+}
+
+
+// protected
+
+// reimplemented (imeas::CSimpleNumericValue)
+
+bool CNumericValuesJoinerComp::IsValueTypeSupported(imeas::INumericValue::ValueTypeId /*valueTypeId*/) const
+{
+	return false;
+}
+
+
+imath::CVarVector CNumericValuesJoinerComp::GetComponentValue(imeas::INumericValue::ValueTypeId /*valueTypeId*/) const
+{
+	return imath::CVarVector();
 }
 
 
