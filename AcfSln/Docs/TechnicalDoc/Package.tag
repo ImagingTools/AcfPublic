@@ -138,6 +138,7 @@
     <name>CSelectableBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selectable_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
@@ -225,6 +226,7 @@
     <name>CExtractedEdgeLinesSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_extracted_edge_lines_supplier_comp_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
@@ -248,6 +250,7 @@
     <name>CProcessedEdgeLinesSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_processed_edge_lines_supplier_comp_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
     <includes id="_i_edge_lines_processor_8h" name="IEdgeLinesProcessor.h" local="yes" imported="no">iedge/IEdgeLinesProcessor.h</includes>
@@ -708,10 +711,8 @@
     <name>CInspectionTaskComp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_inspection_task_comp_8h</filename>
-    <includes id="_i_elapsed_time_provider_8h" name="IElapsedTimeProvider.h" local="yes" imported="no">iproc/IElapsedTimeProvider.h</includes>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <class kind="class">iinsp::CInspectionTaskComp</class>
-    <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -748,6 +749,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_joiner_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
@@ -839,6 +841,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_color_bitmap_separator_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
@@ -901,6 +904,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_edge_distances_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
@@ -1026,6 +1030,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_line_projection_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
@@ -1054,6 +1059,7 @@
     <name>CMultiLineProjectionSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_line_projection_supplier_comp_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
@@ -1077,6 +1083,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
@@ -1098,6 +1105,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_processed_bitmap_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
@@ -1162,9 +1170,10 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_search_based_features_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
-    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
     <namespace>iipr</namespace>
@@ -1791,7 +1800,6 @@
     <name>ISupplier.h</name>
     <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_i_supplier_8h</filename>
-    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <class kind="class">iproc::ISupplier</class>
     <namespace>iproc</namespace>
   </compound>
@@ -1832,10 +1840,8 @@
     <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_t_supplier_comp_wrap_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_i_elapsed_time_provider_8h" name="IElapsedTimeProvider.h" local="yes" imported="no">iproc/IElapsedTimeProvider.h</includes>
     <class kind="class">iproc::TSupplierCompWrap</class>
-    <class kind="class">iproc::TSupplierCompWrap::InputsObserver</class>
-    <class kind="class">iproc::TSupplierCompWrap::ParamsObserver</class>
+    <class kind="class">iproc::TSupplierCompWrap::Timer</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -4145,8 +4151,22 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>a7238a2136a81f285f16d3b5e2d2edb6f</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
       <anchor>a73bd9af1cf628aa0dee77ddc9f009887</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>accdc3c970a727d5fceda5f0e38785493</anchor>
+      <arglist>(m_calibrationSupplierCompPtr, m_calibrationProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -4243,6 +4263,13 @@
       <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
       <anchor>aef022821ac87debda03eb9c11cd66ff7</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
+      <anchor>a21ed4bf0381502d7f69c2ceca62942c9</anchor>
+      <arglist>(m_edgeLinesSupplierCompPtr, m_edgeLinesProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -7316,11 +7343,9 @@
     <filename>classiinsp_1_1_c_inspection_task_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::IInspectionTask</base>
-    <base virtualness="virtual">ibase::IMessageContainer</base>
+    <base virtualness="virtual">iproc::ISupplier</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
-    <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
-    <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
@@ -7445,6 +7470,27 @@
       <arglist>(int subtaskIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetGeneralParameters</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a558e0d23e0a59231f3a938b153459c2d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ac80722d2ef85459f84449030e20512a8</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a159ce5ef379a6b99ab53177179023468</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateSupplier</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
@@ -7473,10 +7519,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorkStatus</name>
+      <type>virtual const ibase::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a159ce5ef379a6b99ab53177179023468</anchor>
+      <anchor>a1b67078b63e2605f4abe7389c0900292</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -7485,34 +7531,6 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>ae17f09b830020cb2017119e8a57b262a</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorstCategory</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a411f25807ee791f2188b6b9c90e91a97</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Messages</type>
-      <name>GetMessages</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a4a7c7e12d32036fb4a75c832bb70db2d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearMessages</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>ad75146ffc4fb28ce4b2dc85e88b0fc89</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>ac80722d2ef85459f84449030e20512a8</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QDateTime</type>
@@ -7556,13 +7574,6 @@
       <anchor>a136a36971cb1ece1303a522dfffefe7c</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetElapsedTime</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a283a83ff2dd87da7df0142bc38a16237</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>EnsureStatusKnown</name>
@@ -7593,54 +7604,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iinsp::CInspectionTaskComp::Parameters</name>
-    <filename>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</filename>
-    <base>imod::CMultiModelBridgeBase</base>
-    <base virtualness="virtual">iprm::IParamsSet</base>
-    <member kind="function">
-      <type></type>
-      <name>Parameters</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
-      <anchor>a18eab05a477eaa118e0e4d1914f11344</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetParent</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
-      <anchor>aec5b532e2cc11122abc37e0602238069</anchor>
-      <arglist>(CInspectionTaskComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Ids</type>
-      <name>GetParamIds</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
-      <anchor>a050452b093a50c4998d16a06c270641b</anchor>
-      <arglist>(bool editableOnly=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iser::ISerializable *</type>
-      <name>GetParameter</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
-      <anchor>a003c433c1ceb1c32cde7c7a828257a2d</anchor>
-      <arglist>(const QByteArray &amp;id) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iser::ISerializable *</type>
-      <name>GetEditableParameter</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
-      <anchor>a18ac508eea9cfa753c859fa7cdd94c08</anchor>
-      <arglist>(const QByteArray &amp;id)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
-      <anchor>afa621d1a2e2d77f2fcdb9c7e54fbe275</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iinsp::IIdProvider</name>
     <filename>classiinsp_1_1_i_id_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
@@ -7655,7 +7618,7 @@
   <compound kind="class">
     <name>iinsp::IInspectionTask</name>
     <filename>classiinsp_1_1_i_inspection_task.html</filename>
-    <base virtualness="virtual">iproc::ISupplier</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSubtasksCount</name>
@@ -7669,6 +7632,13 @@
       <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
       <anchor>ab712f2316f4406c10d17b0e505a3dc25</anchor>
       <arglist>(int subtaskIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetGeneralParameters</name>
+      <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
+      <anchor>acc84ce65b152a98a4121084041212f92</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7795,8 +7765,22 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
-      <anchor>a4cd75c889fb31c6dab44b34cee91fb76</anchor>
-      <arglist>(m_inputBitmapsProviderModelCompPtr, m_inputBitmapsProviderCompPtr, false)</arglist>
+      <anchor>abdc934bb36194da96c1235f32c1d06b4</anchor>
+      <arglist>(m_bitmapsSupplierCompPtr, m_bitmapsProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a0a90c14ad7ab253d26e62db2fe06bc58</anchor>
+      <arglist>(m_bitmapsProviderModelCompPtr, m_bitmapsProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
+      <anchor>a0bb0d6e6faa729dfc1319b05e9805d40</anchor>
+      <arglist>(m_calibrationSupplierCompPtr, m_calibrationCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -8383,8 +8367,22 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>aa09a9c1fd7c4dba7a4db96d04a459202</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
       <anchor>a8154330a73be7f8d65f0ccd26dd8d48a</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
+      <anchor>adae37e2452cd9e405d2f1e4b09004d7c</anchor>
+      <arglist>(m_calibrationSupplierCompPtr, m_calibrationCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -8583,20 +8581,6 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a0597dfa29b168beb07e8731186a66ddb</anchor>
-      <arglist>(m_inputBitmapProviderModelCompPtr, m_inputBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a9122af93a1b324f7aabd388990b6b175</anchor>
-      <arglist>(m_calibrationProviderCompPtr, m_inputBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a7ccbd1a36502e4e2ff19434b9d98d4b9</anchor>
       <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, false)</arglist>
     </member>
@@ -8609,10 +8593,24 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>CDelegatedBitmapSupplierComp</name>
+      <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a9bd70bff67cb4b0411083bce50002aca</anchor>
-      <arglist>()</arglist>
+      <anchor>a258a8466c947d0476691c508119df98b</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>adfa56376699d79f69accba268e82ba7d</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a6fc6c2088c400c245635a6d28eff6f71</anchor>
+      <arglist>(m_calibrationProviderCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
@@ -8660,8 +8658,22 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a15ecc43f76e845d2dfffdbb136bff515</anchor>
+      <arglist>(m_firstBitmapSupplierCompPtr, m_firstBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
       <anchor>a3dddd0889fc6a5fab2d881f81ea8b016</anchor>
       <arglist>(m_firstBitmapProviderModelCompPtr, m_firstBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a88e5782543bc494d2476775dcd705c6f</anchor>
+      <arglist>(m_secondBitmapSupplierCompPtr, m_secondBitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -8810,6 +8822,13 @@
       <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
       <anchor>aa6659152de54a0578a90afb12748bfa7</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
+      <anchor>ab28e309c09b47af3a3e06b906b57f4b7</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -9238,6 +9257,13 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a91043321e1fa032d982e63af7c65ec37</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
       <anchor>a05b7dfdcc2ac7bcf2ba536da9a60a4b7</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
@@ -9371,8 +9397,22 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a3e2108ab4974a8511bfbaf13a263a92e</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
       <anchor>a6a54e3a724f6080fe368e3ac712702c8</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>a3045e4a227e181d9f83ba1401bcb1366</anchor>
+      <arglist>(m_linesSupplierCompPtr, m_linesProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -9449,6 +9489,13 @@
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
       <anchor>ab187d64547bef3091dba6aa44b96dc37</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
+      <anchor>aa02fa1b4415ff027810681e055538c4d</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -9531,6 +9578,13 @@
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
       <anchor>af2209ade5fbce97f977f90eda8391f93</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a54bca2ebc021d243d25d683ecec4f761</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -9945,6 +9999,13 @@
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
       <anchor>af22caa63961730d177fe0d64e9d29ddb</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>a152a83fea5cc4dfb947e194e901f29ff</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -13769,6 +13830,13 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>afcc7cf98a07ad365e35635eab32d8bcb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>InvalidateSupplier</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
@@ -13797,10 +13865,10 @@
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetWorkStatus</name>
+      <type>virtual const ibase::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>afcc7cf98a07ad365e35635eab32d8bcb</anchor>
+      <anchor>af8b4ee0f60187163bc498a8b5106149c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -14030,10 +14098,9 @@
     <templarg>Product</templarg>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iproc::ISupplier</base>
-    <base virtualness="virtual">iproc::IElapsedTimeProvider</base>
     <base virtualness="virtual">istd::IChangeable</base>
-    <class kind="class">iproc::TSupplierCompWrap::InputsObserver</class>
-    <class kind="class">iproc::TSupplierCompWrap::ParamsObserver</class>
+    <base protection="protected" virtualness="virtual">ibase::IMessageConsumer</base>
+    <class kind="class">iproc::TSupplierCompWrap::Timer</class>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
@@ -14044,30 +14111,6 @@
       <name>MI_DURATION_TIME</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ae4928500a07bc7997704eb06d7effb9faab1f299aea6b4bfa72738cc9cdb34670</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>SupplierWorkingMode</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a2d038c8472c45e3c43f1d9c8b64f2712</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SWM_EXPLICIT_INIT</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a2d038c8472c45e3c43f1d9c8b64f2712a93709afe8c4e5eb28a0e46c0bf68e27e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SWM_IMPLICIT_INIT</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a2d038c8472c45e3c43f1d9c8b64f2712a4991f65759aac4290dd3b60c0d77d806</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SWM_DIRECT_INPUT</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a2d038c8472c45e3c43f1d9c8b64f2712a694fdd976e319b76b679bc7df15afebf</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -14095,8 +14138,15 @@
       <type></type>
       <name>TSupplierCompWrap</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>afa8a6d370714dae60c1e89789fdad444</anchor>
-      <arglist>(SupplierWorkingMode mode=SWM_EXPLICIT_INIT)</arglist>
+      <anchor>a11d01e8db5c10dc62b7b795c1c38d358</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>aae3ac83c656d4b0de834372fdca85ee2</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -14127,10 +14177,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorkStatus</name>
+      <type>virtual const ibase::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>aae3ac83c656d4b0de834372fdca85ee2</anchor>
+      <anchor>a2f54c6e93e652280137f5b8cbdc09239</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -14138,13 +14188,6 @@
       <name>GetModelParametersSet</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ab6f30ac3f2d05e657c1263026630fd6d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetElapsedTime</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad98023b29eb5e8f1091094b4df2bf33f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -14172,8 +14215,8 @@
       <type>virtual void</type>
       <name>RegisterSupplierInput</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6003440e8b69055a64692bcf5da84408</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a247f2b444973b6b94218f437ca057746</anchor>
+      <arglist>(imod::IModel *modelPtr, ISupplier *supplierPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -14188,6 +14231,20 @@
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
       <arglist>(Product &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a1fe91e45040ff8b41c43f7d28c5fea10</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a022dd25ac0bef5830e4be67f481435ff</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -14205,69 +14262,21 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iproc::TSupplierCompWrap::InputsObserver</name>
-    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</filename>
-    <base>imod::CMultiModelObserverBase</base>
+    <name>iproc::TSupplierCompWrap::Timer</name>
+    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html</filename>
     <member kind="function">
       <type></type>
-      <name>InputsObserver</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
-      <anchor>a4417edee8623247aab327f4e1dd6ead6</anchor>
-      <arglist>(TSupplierCompWrap&lt; Product &gt; *parentPtr)</arglist>
+      <name>Timer</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html</anchorfile>
+      <anchor>a9d1a054822e3eef727dace6129fbded4</anchor>
+      <arglist>(const TSupplierCompWrap *parentPtr, const QString &amp;measuredFeatureName)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeforeUpdate</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
-      <anchor>ad5c662418645b1e2e32b039ca5db024d</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
-      <anchor>a52686636ce85cff1ce996aeaf7762281</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>TSupplierCompWrap&lt; Product &gt; &amp;</type>
-      <name>m_parent</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_inputs_observer.html</anchorfile>
-      <anchor>a6013b20e728a1af76021962651331484</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iproc::TSupplierCompWrap::ParamsObserver</name>
-    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</filename>
-    <base>imod::CMultiModelObserverBase</base>
     <member kind="function">
       <type></type>
-      <name>ParamsObserver</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
-      <anchor>ada0299c62b020d51a0b302c4aaac654a</anchor>
-      <arglist>(TSupplierCompWrap&lt; Product &gt; *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeforeUpdate</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
-      <anchor>a00ae1b8e8ca4674b3c8774cdf517f891</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
-      <anchor>a204c6243398041b027d3ecf5fec1e19b</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>TSupplierCompWrap&lt; Product &gt; &amp;</type>
-      <name>m_parent</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_params_observer.html</anchorfile>
-      <anchor>a4140ae4ace7eaf7410c41ff092c126e6</anchor>
-      <arglist></arglist>
+      <name>~Timer</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html</anchorfile>
+      <anchor>a997a5ca668786cbe967f9798d97f03dd</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

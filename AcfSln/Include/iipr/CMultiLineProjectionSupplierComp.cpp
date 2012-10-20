@@ -39,6 +39,8 @@ int CMultiLineProjectionSupplierComp::ProduceObject(ProductType& result) const
 		if (bitmapPtr != NULL && projectionCount > 0){
 			result.resize(projectionCount);
 
+			Timer performanceTimer(this, "Extraction of projections");
+
 			for (int i = 0; i < projectionCount; i++){
 				imeas::CGeneralDataSequence& lineResult = result[i];
 
@@ -78,11 +80,11 @@ void CMultiLineProjectionSupplierComp::OnComponentCreated()
 	BaseClass::OnComponentCreated();
 
 	if (m_bitmapProviderModelCompPtr.IsValid()){
-		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr());
+		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr(), m_bitmapSupplierCompPtr.GetPtr());
 	}
 
 	if (m_linesProviderModelCompPtr.IsValid()){
-		RegisterSupplierInput(m_linesProviderModelCompPtr.GetPtr());
+		RegisterSupplierInput(m_linesProviderModelCompPtr.GetPtr(), m_linesSupplierCompPtr.GetPtr());
 	}
 }
 

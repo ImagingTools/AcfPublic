@@ -64,6 +64,7 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#ae82dfd88b4350ffefaf7629ea7feb91b">CComponentContext</a> (const <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> *elementPtr, const <a class="el" href="classicomp_1_1_i_component_static_info.html">IComponentStaticInfo</a> *staticInfoPtr, const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *parentPtr, const QByteArray &amp;contextId)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#ad370213d58104fca3076df8893861ce5">GetCompleteContextId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QByteArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#ab75ce7235bf5030745569b3944b8309f">GetContextId</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of this component in the context tree.  <a href="#ab75ce7235bf5030745569b3944b8309f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_registry_element.html">IRegistryElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#a6009a60fd7152af36a9387b6985639be">GetRegistryElement</a> () const </td></tr>
@@ -82,7 +83,6 @@ Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#a88f5475fc6ec59d4729f8f256b363b14">CalcAttributeInfo</a> (const QByteArray &amp;attributeId, <a class="el" href="structicomp_1_1_c_component_context_1_1_attribute_info.html">AttributeInfo</a> &amp;result) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_context.html#ad370213d58104fca3076df8893861ce5">GetCompleteContextId</a> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_base.html">Base</a> implementation of component session context. </p>
@@ -203,7 +203,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">QByteArray icomp::CComponentContext::GetCompleteContextId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [protected]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>

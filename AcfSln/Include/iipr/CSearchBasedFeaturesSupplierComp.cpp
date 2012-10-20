@@ -88,6 +88,8 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 		if (bitmapPtr != NULL){
 			iprm::IParamsSet* paramsSetPtr = GetModelParametersSet();
 
+			Timer performanceTimer(this, "Search of features");
+
 			int searchState = m_searchProcessorCompPtr->DoProcessing(
 							paramsSetPtr,
 							bitmapPtr,
@@ -120,7 +122,7 @@ void CSearchBasedFeaturesSupplierComp::OnComponentCreated()
 	BaseClass::OnComponentCreated();
 
 	if (m_bitmapProviderModelCompPtr.IsValid()){
-		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr());
+		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr(), m_bitmapSupplierCompPtr.GetPtr());
 	}
 }
 

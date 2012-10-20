@@ -134,62 +134,49 @@
 <a name="l00108"></a>00108        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ad5c87e6569948e9269222d43d440a1d8">on_MessageList_itemDoubleClicked</a>(QTreeWidgetItem* item, <span class="keywordtype">int</span> column);
 <a name="l00109"></a>00109 
 <a name="l00110"></a>00110 <span class="keyword">private</span>:
-<a name="l00111"></a>00111        <span class="keyword">class </span>TasksObserver: <span class="keyword">public</span> imod::CMultiModelObserverBase
-<a name="l00112"></a>00112        {
-<a name="l00113"></a>00113        <span class="keyword">public</span>:
-<a name="l00114"></a>00114               TasksObserver(<a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html">CInspectionTaskGuiComp</a>* parentPtr);
-<a name="l00115"></a>00115        <span class="keyword">protected</span>:
-<a name="l00116"></a>00116               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118        <span class="keyword">private</span>:
-<a name="l00119"></a>00119               <a class="code" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html">CInspectionTaskGuiComp</a>&amp; m_parent;
-<a name="l00120"></a>00120        };
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model_editor.html">imod::IModelEditor</a>, m_editorsCompPtr);
-<a name="l00123"></a>00123        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_editorGuisCompPtr);
-<a name="l00124"></a>00124        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_editorObserversCompPtr);
-<a name="l00125"></a>00125        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html">iqt2d::IViewExtender</a>, m_editorViewExtendersCompPtr);
-<a name="l00126"></a>00126        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_visual_status_provider.html">iqtgui::IVisualStatusProvider</a>, m_editorVisualInfosCompPtr);
-<a name="l00127"></a>00127        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_editorVisualModelsCompPtr);
-<a name="l00128"></a>00128        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_previewGuisCompPtr);
-<a name="l00129"></a>00129        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_previewObserversCompPtr);
-<a name="l00130"></a>00130        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>, m_previewSceneProvidersCompPtr);
-<a name="l00131"></a>00131        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_factory.html">iview::IShapeFactory</a>, m_resultShapeFactoryCompPtr);
-<a name="l00132"></a>00132        I_MULTIATTR(QString, m_namesAttrPtr);
-<a name="l00133"></a>00133        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_paramsLoaderCompPtr);
-<a name="l00134"></a>00134        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_generalParamsGuiCompPtr);
-<a name="l00135"></a>00135        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_generalParamsObserverCompPtr);
-<a name="l00136"></a>00136        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model_editor.html">imod::IModelEditor</a>, m_generalParamsEditorCompPtr);
-<a name="l00137"></a>00137        I_ATTR(<span class="keywordtype">bool</span>, m_useHorizontalLayoutAttrPtr);
-<a name="l00138"></a>00138        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
-<a name="l00139"></a>00139        I_ATTR(<span class="keywordtype">int</span>, m_designTypeAttrPtr);
-<a name="l00140"></a>00140        I_ATTR(<span class="keywordtype">bool</span>, m_useVerticalSpacerAttrPtr);
-<a name="l00141"></a>00141 
-<a name="l00142"></a>00142        TasksObserver m_tasksObserver;
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144        <span class="keywordtype">int</span> m_currentGuiIndex;
-<a name="l00145"></a>00145        <span class="keyword">typedef</span> QMap&lt;int, int&gt; GuiMap;
-<a name="l00146"></a>00146        GuiMap m_tabToStackIndexMap;       <span class="comment">// map GUI index (for editors) to stack index (for preview GUI)</span>
-<a name="l00147"></a>00147        GuiMap m_stackIndexToTabMap;       <span class="comment">// map stack index (for preview GUI) to GUI index (for editors)</span>
-<a name="l00148"></a>00148        GuiMap m_tabToGuiIndexMap;         <span class="comment">// map tab index to editor index</span>
+<a name="l00111"></a>00111        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model_editor.html">imod::IModelEditor</a>, m_editorsCompPtr);
+<a name="l00112"></a>00112        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_editorGuisCompPtr);
+<a name="l00113"></a>00113        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_editorObserversCompPtr);
+<a name="l00114"></a>00114        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html">iqt2d::IViewExtender</a>, m_editorViewExtendersCompPtr);
+<a name="l00115"></a>00115        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_visual_status_provider.html">iqtgui::IVisualStatusProvider</a>, m_editorVisualInfosCompPtr);
+<a name="l00116"></a>00116        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_editorVisualModelsCompPtr);
+<a name="l00117"></a>00117        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_previewGuisCompPtr);
+<a name="l00118"></a>00118        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_previewObserversCompPtr);
+<a name="l00119"></a>00119        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>, m_previewSceneProvidersCompPtr);
+<a name="l00120"></a>00120        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_factory.html">iview::IShapeFactory</a>, m_resultShapeFactoryCompPtr);
+<a name="l00121"></a>00121        I_MULTIATTR(QString, m_namesAttrPtr);
+<a name="l00122"></a>00122        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_paramsLoaderCompPtr);
+<a name="l00123"></a>00123        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_generalParamsGuiCompPtr);
+<a name="l00124"></a>00124        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_generalParamsObserverCompPtr);
+<a name="l00125"></a>00125        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model_editor.html">imod::IModelEditor</a>, m_generalParamsEditorCompPtr);
+<a name="l00126"></a>00126        I_ATTR(<span class="keywordtype">bool</span>, m_useHorizontalLayoutAttrPtr);
+<a name="l00127"></a>00127        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
+<a name="l00128"></a>00128        I_ATTR(<span class="keywordtype">int</span>, m_designTypeAttrPtr);
+<a name="l00129"></a>00129        I_ATTR(<span class="keywordtype">bool</span>, m_useVerticalSpacerAttrPtr);
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131        <span class="keywordtype">int</span> m_currentGuiIndex;
+<a name="l00132"></a>00132        <span class="keyword">typedef</span> QMap&lt;int, int&gt; GuiMap;
+<a name="l00133"></a>00133        GuiMap m_tabToStackIndexMap;       <span class="comment">// map GUI index (for editors) to stack index (for preview GUI)</span>
+<a name="l00134"></a>00134        GuiMap m_stackIndexToTabMap;       <span class="comment">// map stack index (for preview GUI) to GUI index (for editors)</span>
+<a name="l00135"></a>00135        GuiMap m_tabToGuiIndexMap;         <span class="comment">// map tab index to editor index</span>
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137        <span class="keyword">typedef</span> QMap&lt; int, istd::TPointerVector&lt;iview::IShape&gt; &gt; ResultShapesMap;    <span class="comment">// Map GUI index to list of result shapes</span>
+<a name="l00138"></a>00138        ResultShapesMap m_resultShapesMap;
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140        <span class="keyword">typedef</span> QSet&lt;imod::IModelEditor*&gt; EditorsList;
+<a name="l00141"></a>00141        EditorsList m_editorsList;
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143        QToolBox* m_toolBoxPtr;
+<a name="l00144"></a>00144        QTabWidget* m_tabWidgetPtr;
+<a name="l00145"></a>00145 };
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148 } <span class="comment">// namespace iqtinsp</span>
 <a name="l00149"></a>00149 
-<a name="l00150"></a>00150        <span class="keyword">typedef</span> QMap&lt; int, istd::TPointerVector&lt;iview::IShape&gt; &gt; ResultShapesMap;    <span class="comment">// Map GUI index to list of result shapes</span>
-<a name="l00151"></a>00151        ResultShapesMap m_resultShapesMap;
-<a name="l00152"></a>00152 
-<a name="l00153"></a>00153        <span class="keyword">typedef</span> QSet&lt;imod::IModelEditor*&gt; EditorsList;
-<a name="l00154"></a>00154        EditorsList m_editorsList;
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156        QToolBox* m_toolBoxPtr;
-<a name="l00157"></a>00157        QTabWidget* m_tabWidgetPtr;
-<a name="l00158"></a>00158 };
-<a name="l00159"></a>00159 
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161 } <span class="comment">// namespace iqtinsp</span>
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164 <span class="preprocessor">#endif // !iqtinsp_CInspectionTaskGuiComp_included</span>
-<a name="l00165"></a>00165 <span class="preprocessor"></span>
-<a name="l00166"></a>00166 
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151 <span class="preprocessor">#endif // !iqtinsp_CInspectionTaskGuiComp_included</span>
+<a name="l00152"></a>00152 <span class="preprocessor"></span>
+<a name="l00153"></a>00153 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

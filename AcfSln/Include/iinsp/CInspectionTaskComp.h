@@ -31,7 +31,6 @@
 #include "imod/CMultiModelBridgeBase.h"
 #include "ibase/IMessageContainer.h"
 #include "ibase/TLoggerCompWrap.h"
-#include "iproc/IElapsedTimeProvider.h"
 
 // ACF-Solutions includes
 #include "iinsp/IInspectionTask.h"
@@ -43,13 +42,13 @@ namespace iinsp
 
 /**
 	Standard component implementation of interface iinsp::IInspectionTask.
+	Serializing of this object serialize all inspection parameters.
 */
 class CInspectionTaskComp:
 			public ibase::CLoggerComponentBase,
 			virtual public IInspectionTask,
-			virtual public ibase::IMessageContainer,
+			virtual public iproc::ISupplier,
 			virtual public istd::IInformationProvider,
-			virtual public iproc::IElapsedTimeProvider,
 			protected imod::CMultiModelBridgeBase
 {
 public:
@@ -64,10 +63,10 @@ public:
 
 	I_BEGIN_COMPONENT(CInspectionTaskComp);
 		I_REGISTER_INTERFACE(IInspectionTask);
+		I_REGISTER_INTERFACE(iser::ISerializable);
 		I_REGISTER_INTERFACE(iproc::ISupplier);
 		I_REGISTER_INTERFACE(ibase::IMessageContainer);
 		I_REGISTER_INTERFACE(istd::IInformationProvider);
-		I_REGISTER_INTERFACE(iproc::IElapsedTimeProvider);
 		I_REGISTER_SUBELEMENT(Parameters);
 		I_REGISTER_SUBELEMENT_INTERFACE_T(Parameters, iprm::IParamsSet, ExtractParameters);
 		I_REGISTER_SUBELEMENT_INTERFACE_T(Parameters, iser::ISerializable, ExtractParameters);
@@ -89,22 +88,19 @@ public:
 	// reimplemented (iinsp::IInspectionTask)
 	virtual int GetSubtasksCount() const;
 	virtual iproc::ISupplier* GetSubtask(int subtaskIndex) const;
+	virtual iprm::IParamsSet* GetGeneralParameters() const;
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (iproc::ISupplier)
+	virtual int GetWorkStatus() const;
 	virtual void InvalidateSupplier();
 	virtual void EnsureWorkInitialized();
 	virtual void EnsureWorkFinished();
 	virtual void ClearWorkResults();
-	virtual int GetWorkStatus() const;
+	virtual const ibase::IMessageContainer* GetWorkMessages() const;
 	virtual iprm::IParamsSet* GetModelParametersSet() const;
-
-	// reimplemented (ibase::IMessageContainer)
-	virtual int GetWorstCategory() const;
-	virtual Messages GetMessages() const;
-	virtual void ClearMessages();
-
-	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (istd::IInformationProvider)
 	virtual QDateTime GetInformationTimeStamp() const;
@@ -113,9 +109,6 @@ public:
 	virtual QString GetInformationDescription() const;
 	virtual QString GetInformationSource() const;
 	virtual int GetInformationFlags() const;
-
-	// reimplemented (iproc::IElapsedTimeProvider)
-	virtual double GetElapsedTime() const;
 
 protected:
 	void EnsureStatusKnown();
@@ -132,6 +125,24 @@ public:
 #else
 private:
 #endif
+private:
+	class MessageContainer: virtual public ibase::IMessageContainer
+	{
+	public:
+		MessageContainer(CInspectionTaskComp* parentPtr);
+
+		// reimplemented (ibase::IMessageContainer)
+		virtual int GetWorstCategory() const;
+		virtual Messages GetMessages() const;
+		virtual void ClearMessages();
+
+		// reimplemented (iser::ISerializable)
+		virtual bool Serialize(iser::IArchive& archive);
+
+	private:
+		CInspectionTaskComp* m_parentPtr;
+	};
+
 	class Parameters:
 				public imod::CMultiModelBridgeBase,
 				virtual public iprm::IParamsSet
@@ -153,7 +164,6 @@ private:
 		CInspectionTaskComp* m_parentPtr;
 	};
 
-private:
 	I_MULTIREF(iproc::ISupplier, m_subtasksCompPtr);
 	I_MULTIREF(imod::IModel, m_subtaskModelsCompPtr);
 	I_MULTIREF(IInspectionTask, m_subtaskInspectionCompPtr);
@@ -181,6 +191,8 @@ private:
 	QDateTime m_resultTypeStamp;
 	InformationCategory m_resultCategory;
 	QString m_resultDescription;
+
+	MessageContainer m_messageContainer;
 
 	istd::CChangeNotifier m_productChangeNotifier;
 };

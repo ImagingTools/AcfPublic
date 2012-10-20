@@ -32,7 +32,6 @@
 // ACF includes
 #include "imod/IModel.h"
 #include "imod/IObserver.h"
-#include "iproc/IElapsedTimeProvider.h"
 #include "iview/IShapeView.h"
 #include "iview/IInteractiveShape.h"
 #include "iview/CShapeBase.h"
@@ -43,8 +42,7 @@ namespace iqtinsp
 
 
 CInspectionTaskGuiComp::CInspectionTaskGuiComp()
-:	m_tasksObserver(this),
-	m_currentGuiIndex(-1),
+:	m_currentGuiIndex(-1),
 	m_toolBoxPtr(NULL),
 	m_tabWidgetPtr(NULL)
 {
@@ -86,21 +84,15 @@ void CInspectionTaskGuiComp::UpdateEditor(int updateFlags)
 
 	iinsp::IInspectionTask* taskPtr = GetObjectPtr();
 
-	const iproc::IElapsedTimeProvider* processingTimeProviderPtr = dynamic_cast<const iproc::IElapsedTimeProvider*>(taskPtr);
-	if (processingTimeProviderPtr != NULL){
-		ProcessingTimeLabel->setText(QString(tr("%1 ms").arg(processingTimeProviderPtr->GetElapsedTime() * 1000, 1, 'f', 1)));
-		ProcessingTimeLabel->setVisible(true);
-	}
-	else{
-		ProcessingTimeLabel->setVisible(false);
-	}
-
 	if (taskPtr != NULL){
 		int subtasksCount = taskPtr->GetSubtasksCount();
 		for (int subTaskIndex = 0; subTaskIndex < subtasksCount; subTaskIndex++){
-			const ibase::IMessageContainer* messageContainerPtr = dynamic_cast<const ibase::IMessageContainer*>(taskPtr->GetSubtask(subTaskIndex));
-			if (messageContainerPtr != NULL){
-				AddTaskMessagesToLog(*messageContainerPtr, subTaskIndex);
+			iproc::ISupplier* subTaskPtr = taskPtr->GetSubtask(subTaskIndex);
+			if (subTaskPtr != NULL){
+				const ibase::IMessageContainer* messageContainerPtr = subTaskPtr->GetWorkMessages();
+				if (messageContainerPtr != NULL){
+					AddTaskMessagesToLog(*messageContainerPtr, subTaskIndex);
+				}
 			}
 		}
 	}
@@ -143,8 +135,6 @@ bool CInspectionTaskGuiComp::OnAttached(imod::IModel* modelPtr)
 			continue;
 		}
 
-		parameterModelPtr->AttachObserver(&m_tasksObserver);
-
 		if (i < m_editorObserversCompPtr.GetCount()){
 			imod::IObserver* observerPtr = m_editorObserversCompPtr[i];
 
@@ -170,7 +160,7 @@ bool CInspectionTaskGuiComp::OnAttached(imod::IModel* modelPtr)
 	}
 
 	if (m_generalParamsObserverCompPtr.IsValid()){
-		imod::IModel* generalParamsModelPtr = dynamic_cast<imod::IModel*>(inspectionTaskPtr->GetModelParametersSet());
+		imod::IModel* generalParamsModelPtr = dynamic_cast<imod::IModel*>(inspectionTaskPtr->GetGeneralParameters());
 		if (generalParamsModelPtr != NULL){
 			generalParamsModelPtr->AttachObserver(m_generalParamsObserverCompPtr.GetPtr());
 		}
@@ -194,8 +184,6 @@ bool CInspectionTaskGuiComp::OnDetached(imod::IModel* modelPtr)
 			continue;
 		}
 
-		parameterModelPtr->DetachObserver(&m_tasksObserver);
-
 		if (i < m_editorObserversCompPtr.GetCount()){
 			imod::IObserver* observerPtr = m_editorObserversCompPtr[i];
 
@@ -214,7 +202,7 @@ bool CInspectionTaskGuiComp::OnDetached(imod::IModel* modelPtr)
 	}
 
 	if (m_generalParamsObserverCompPtr.IsValid()){
-		imod::IModel* generalParamsModelPtr = dynamic_cast<imod::IModel*>(inspectionTaskPtr->GetModelParametersSet());
+		imod::IModel* generalParamsModelPtr = dynamic_cast<imod::IModel*>(inspectionTaskPtr->GetGeneralParameters());
 		if ((generalParamsModelPtr != NULL) && generalParamsModelPtr->IsAttached(m_generalParamsObserverCompPtr.GetPtr())){
 			generalParamsModelPtr->DetachObserver(m_generalParamsObserverCompPtr.GetPtr());
 		}
@@ -230,9 +218,9 @@ void CInspectionTaskGuiComp::UpdateProcessingState()
 {
 	int workStatus = iproc::ISupplier::WS_INVALID;
 
-	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
-	if (objectPtr != NULL){
-		workStatus = objectPtr->GetWorkStatus();
+	const iproc::ISupplier* supplierPtr = dynamic_cast<const iproc::ISupplier*>(GetObjectPtr());
+	if (supplierPtr != NULL){
+		workStatus = supplierPtr->GetWorkStatus();
 	}
 
 	switch (workStatus){
@@ -684,9 +672,11 @@ void CInspectionTaskGuiComp::OnEditorChanged(int index)
 
 void CInspectionTaskGuiComp::OnAutoTest()
 {
-	iproc::ISupplier* objectPtr = GetObjectPtr();
-	if (objectPtr != NULL){
-		objectPtr->EnsureWorkFinished();
+	iproc::ISupplier* supplierPtr = dynamic_cast<iproc::ISupplier*>(GetObjectPtr());
+	if (supplierPtr != NULL){
+		supplierPtr->InvalidateSupplier();
+		supplierPtr->EnsureWorkInitialized();
+		supplierPtr->EnsureWorkFinished();
 
 		UpdateProcessingState();
 	}
@@ -699,10 +689,11 @@ void CInspectionTaskGuiComp::on_TestAllButton_clicked()
 		m_generalParamsEditorCompPtr->UpdateModel();
 	}
 
-	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
-	if (objectPtr != NULL){
-		objectPtr->InvalidateSupplier();
-		objectPtr->EnsureWorkFinished();
+	iproc::ISupplier* supplierPtr = dynamic_cast<iproc::ISupplier*>(GetObjectPtr());
+	if (supplierPtr != NULL){
+		supplierPtr->InvalidateSupplier();
+		supplierPtr->EnsureWorkInitialized();
+		supplierPtr->EnsureWorkFinished();
 
 		UpdateProcessingState();
 	}
@@ -721,10 +712,7 @@ void CInspectionTaskGuiComp::on_LoadParamsButton_clicked()
 {
 	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		iprm::IParamsSet* parametersPtr = objectPtr->GetModelParametersSet();
-		if (parametersPtr != NULL){
-			m_paramsLoaderCompPtr->LoadFromFile(*parametersPtr);
-		}
+		m_paramsLoaderCompPtr->LoadFromFile(*objectPtr);
 	}
 }
 
@@ -733,10 +721,7 @@ void CInspectionTaskGuiComp::on_SaveParamsButton_clicked()
 {
 	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		iprm::IParamsSet* parametersPtr = objectPtr->GetModelParametersSet();
-		if (parametersPtr != NULL){
-			m_paramsLoaderCompPtr->SaveToFile(*parametersPtr);
-		}
+		m_paramsLoaderCompPtr->SaveToFile(*objectPtr);
 	}
 }
 
@@ -797,27 +782,6 @@ void CInspectionTaskGuiComp::on_MessageList_itemDoubleClicked(QTreeWidgetItem* i
 
 			return;
 		}
-	}
-}
-
-
-// public methods of embedded class TasksObserver
-
-CInspectionTaskGuiComp::TasksObserver::TasksObserver(CInspectionTaskGuiComp* parentPtr)
-:	m_parent(*parentPtr)
-{
-	I_ASSERT(parentPtr != NULL);
-}
-
-
-// protected methods of embedded class TasksObserver
-
-void CInspectionTaskGuiComp::TasksObserver::OnUpdate(imod::IModel* /*modelPtr*/, int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
-{
-	if (		m_parent.IsGuiCreated() &&
-				m_parent.AutoTestButton->isChecked() &&
-				((updateFlags & iproc::ISupplier::CF_SUPPLIER_RESULTS) != 0)){
-		emit m_parent.DoAutoTest();
 	}
 }
 

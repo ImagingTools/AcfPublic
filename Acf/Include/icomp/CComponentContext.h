@@ -53,6 +53,8 @@ public:
 				const IComponentContext* parentPtr,
 				const QByteArray& contextId);
 
+	QByteArray GetCompleteContextId() const;
+
 	// reimplemented (icomp::IComponentContext)
 	virtual const QByteArray& GetContextId() const;
 	virtual const IRegistryElement& GetRegistryElement() const;
@@ -74,7 +76,6 @@ protected:
 	};
 
 	bool CalcAttributeInfo(const QByteArray& attributeId, AttributeInfo& result) const;
-	QByteArray GetCompleteContextId() const;
 
 private:
 	const IRegistryElement& m_registryElement;

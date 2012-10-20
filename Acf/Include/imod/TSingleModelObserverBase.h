@@ -56,6 +56,9 @@ public:
 	virtual bool OnAttached(imod::IModel* modelPtr);
 	virtual bool OnDetached(imod::IModel* modelPtr);
 
+protected:
+	virtual ModelInterface* CastFromModel(imod::IModel* modelPtr) const;
+
 private:
 	ModelInterface* m_objectPtr;
 };
@@ -82,7 +85,7 @@ ModelInterface* TSingleModelObserverBase<ModelInterface>::GetObjectPtr() const
 template <class ModelInterface> 
 bool TSingleModelObserverBase<ModelInterface>::OnAttached(imod::IModel* modelPtr)
 {
-	m_objectPtr = dynamic_cast<ModelInterface*>(modelPtr);
+	m_objectPtr = CastFromModel(modelPtr);
 
 	I_IF_DEBUG(
 		if (m_objectPtr == NULL){
@@ -117,6 +120,15 @@ bool TSingleModelObserverBase<ModelInterface>::OnDetached(imod::IModel* modelPtr
 	}
 
 	return false;
+}
+
+
+// protected methods
+
+template <class ModelInterface> 
+typename ModelInterface* TSingleModelObserverBase<ModelInterface>::CastFromModel(imod::IModel* modelPtr) const
+{
+	return dynamic_cast<ModelInterface*>(modelPtr);
 }
 
 

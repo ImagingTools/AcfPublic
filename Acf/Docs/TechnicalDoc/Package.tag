@@ -3874,6 +3874,7 @@
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="yes" imported="no">iser/CMemoryWriteArchive.h</includes>
     <includes id="_c_memory_read_archive_8h" name="CMemoryReadArchive.h" local="yes" imported="no">iser/CMemoryReadArchive.h</includes>
     <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
+    <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
     <includes id="_c_signal_blocker_8h" name="CSignalBlocker.h" local="yes" imported="no">iqt/CSignalBlocker.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
     <class kind="class">iqt2d::TPolygonBasedParamsGuiComp</class>
@@ -19589,6 +19590,13 @@
       <anchor>ae82dfd88b4350ffefaf7629ea7feb91b</anchor>
       <arglist>(const IRegistryElement *elementPtr, const IComponentStaticInfo *staticInfoPtr, const IComponentContext *parentPtr, const QByteArray &amp;contextId)</arglist>
     </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetCompleteContextId</name>
+      <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
+      <anchor>ad370213d58104fca3076df8893861ce5</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QByteArray &amp;</type>
       <name>GetContextId</name>
@@ -19637,13 +19645,6 @@
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
       <anchor>a88f5475fc6ec59d4729f8f256b363b14</anchor>
       <arglist>(const QByteArray &amp;attributeId, AttributeInfo &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QByteArray</type>
-      <name>GetCompleteContextId</name>
-      <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>ad370213d58104fca3076df8893861ce5</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -23829,6 +23830,13 @@
       <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
       <anchor>abd30d0095abef4105cda83644081f8e5</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iser::ISerializable *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
+      <anchor>ac5aeda935d03cb3a11c65f5b14c0d07b</anchor>
+      <arglist>(imod::IModel *modelPtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -29761,6 +29769,13 @@
       <anchor>a72c8c671df6a05c06e182085bb96f028</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual ModelInterface *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
+      <arglist>(imod::IModel *modelPtr) const </arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>iprm</name>
@@ -34583,6 +34598,20 @@
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>acd9f60ffe3891cfcf1abc8eee50da8eb</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_NodeParamsTable_itemSelectionChanged</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a88850073053773f4db9e7ed14a46404d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CloseLineCheckBox_stateChanged</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a05a71d3e91467e4d1c68c3035572e25a</anchor>
+      <arglist>(int state)</arglist>
     </member>
   </compound>
   <compound kind="class">

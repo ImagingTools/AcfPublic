@@ -32,22 +32,16 @@ namespace iipr
 {
 
 
-class CTubeProjectionLinesProviderComp: 
-			public iipr::CMultiLineSupplierCompBase,
-			virtual public i2d::ICalibrationProvider
+class CTubeProjectionLinesProviderComp: public iipr::CMultiLineSupplierCompBase
 {
 public:
 	typedef iipr::CMultiLineSupplierCompBase BaseClass;
 
 	I_BEGIN_COMPONENT(CTubeProjectionLinesProviderComp);
-		I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
 		I_ASSIGN(m_tubeParamsIdAttrPtr, "TubeParamsId", "ID of the tube parameter in the parameter set", true, "TubeParamsId");
 		I_ASSIGN(m_linesCountParamsIdAttrPtr, "LinesCountParamsId", "ID of the line count parameter in the parameter set", true, "LinesCountParamsId");
 		I_ASSIGN(m_calibrationProviderCompPtr, "CalibrationProvider", "Provider of the transformation between logical and physical coordinate systems", false, "CalibrationProvider");
 	I_END_COMPONENT;
-
-	// reimplemented (i2d::ICalibrationProvider)
-	virtual const i2d::ITransformation2d* GetCalibration() const;
 
 protected:
 	// reimplemented (iipr::CMultiLineSupplierCompBase)

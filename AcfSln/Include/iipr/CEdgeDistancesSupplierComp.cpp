@@ -66,6 +66,8 @@ int CEdgeDistancesSupplierComp::ProduceObject(ProductType& result) const
 		if (bitmapPtr != NULL){
 			iprm::IParamsSet* paramsSetPtr = GetModelParametersSet();
 
+			Timer performanceTimer(this, "Distance calculation");
+
 			int processorState = m_processorCompPtr->DoProcessing(
 							paramsSetPtr,
 							bitmapPtr,
@@ -94,7 +96,7 @@ void CEdgeDistancesSupplierComp::OnComponentCreated()
 	BaseClass::OnComponentCreated();
 
 	if (m_bitmapProviderModelCompPtr.IsValid()){
-		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr());
+		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr(), m_bitmapSupplierCompPtr.GetPtr());
 	}
 }
 
