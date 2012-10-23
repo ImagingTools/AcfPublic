@@ -88,6 +88,12 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#acd9f60ffe3891cfcf1abc8eee50da8eb">on_PasteButton_clicked</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a88850073053773f4db9e7ed14a46404d">on_NodeParamsTable_itemSelectionChanged</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a05a71d3e91467e4d1c68c3035572e25a">on_CloseLineCheckBox_stateChanged</a> (int state)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#aed7aa09c251f85b5c98a3d15478aac24">OnGuiModelAttached</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#aed7aa09c251f85b5c98a3d15478aac24"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a4344502e47a6b20f49c1a81ec1e26d28">OnGuiModelDetached</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#a4344502e47a6b20f49c1a81ec1e26d28"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a8309556e62a995aac3b35988dffa1f7b">OnGuiCreated</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a8309556e62a995aac3b35988dffa1f7b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -205,6 +211,66 @@ Protected Slots</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8309556e62a995aac3b35988dffa1f7b"></a><!-- doxytag: member="iqt2d::CPolylineParamsGuiComp::OnGuiCreated" ref="a8309556e62a995aac3b35988dffa1f7b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqt2d::CPolylineParamsGuiComp::OnGuiCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called just after GUI is initialized. </p>
+
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a639829115b16468f337578e9eb36855b">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed7aa09c251f85b5c98a3d15478aac24"></a><!-- doxytag: member="iqt2d::CPolylineParamsGuiComp::OnGuiModelAttached" ref="aed7aa09c251f85b5c98a3d15478aac24" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqt2d::CPolylineParamsGuiComp::OnGuiModelAttached </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called when model is attached and GUI is created. </p>
+
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a30547f2127be843f4033f1392af6f5a9">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4344502e47a6b20f49c1a81ec1e26d28"></a><!-- doxytag: member="iqt2d::CPolylineParamsGuiComp::OnGuiModelDetached" ref="a4344502e47a6b20f49c1a81ec1e26d28" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqt2d::CPolylineParamsGuiComp::OnGuiModelDetached </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called when model is detached or GUI is destroyed. </p>
+
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#aacfff00b7914dc828ed70db3c8406731">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
 
 </div>
 </div>

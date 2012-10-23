@@ -44,7 +44,7 @@
 <a name="l00022"></a><a class="code" href="classiview_1_1_c_color_shema.html">00022</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_color_shema.html" title="Implementation of the color shema object.">CColorShema</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_color_shema_base.html">CColorShemaBase</a>
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00025"></a>00025     <span class="keyword">enum</span>
+<a name="l00025"></a>00025        <span class="keyword">enum</span>
 <a name="l00026"></a>00026        {
 <a name="l00030"></a><a class="code" href="classiview_1_1_c_color_shema.html#ab2d395a11a724ecac54da08b6fbdf22da080270e66bfef44eeabba05eba58557f">00030</a>               <a class="code" href="classiview_1_1_c_color_shema.html#ab2d395a11a724ecac54da08b6fbdf22da080270e66bfef44eeabba05eba58557f" title="Standard size of pens set.">NORMAL_SET_SIZE</a> = 16,
 <a name="l00031"></a>00031        };
@@ -52,8 +52,8 @@
 <a name="l00033"></a>00033        <a class="code" href="classiview_1_1_c_color_shema.html#aa961585d5d9f11036403e4a834c39003">CColorShema</a>();
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        <span class="comment">// reimplemented IColorShema</span>
-<a name="l00036"></a>00036     <span class="keyword">virtual</span> <span class="keyword">const</span> QFont&amp; <a class="code" href="classiview_1_1_c_color_shema.html#a47bb13132bfeccbaec358cc6a4b4cf25">GetFont</a>(<a class="code" href="classiview_1_1_i_color_shema.html#a73b0cc4ab2f15e0403df974d2abc42a4">IColorShema::StandardFont</a> fontType) <span class="keyword">const</span>;
-<a name="l00037"></a>00037     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_color_shema.html#a843101dfe5b26d78961001631664e0ba">SetFont</a>(<a class="code" href="classiview_1_1_i_color_shema.html#a73b0cc4ab2f15e0403df974d2abc42a4">iview::IColorShema::StandardFont</a> fontType, <span class="keyword">const</span> QFont&amp; font);
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keyword">const</span> QFont&amp; <a class="code" href="classiview_1_1_c_color_shema.html#a47bb13132bfeccbaec358cc6a4b4cf25">GetFont</a>(<a class="code" href="classiview_1_1_i_color_shema.html#a73b0cc4ab2f15e0403df974d2abc42a4">IColorShema::StandardFont</a> fontType) <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_color_shema.html#a843101dfe5b26d78961001631664e0ba">SetFont</a>(<a class="code" href="classiview_1_1_i_color_shema.html#a73b0cc4ab2f15e0403df974d2abc42a4">iview::IColorShema::StandardFont</a> fontType, <span class="keyword">const</span> QFont&amp; font);
 <a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keyword">const</span> QPen&amp; <a class="code" href="classiview_1_1_c_color_shema.html#ac4968183e1bcd869985829200a24ca17">GetPen</a>(<a class="code" href="classiview_1_1_i_color_shema.html#acc0e87733b0befc2cba2d66d80315e99">IColorShema::StandardPen</a> penType) <span class="keyword">const</span>;
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_color_shema.html#a85a3984c8df15e4d85f5d17896f02259">SetPen</a>(<a class="code" href="classiview_1_1_i_color_shema.html#acc0e87733b0befc2cba2d66d80315e99">iview::IColorShema::StandardPen</a> penType, <span class="keyword">const</span> QPen&amp; pen);
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> QBrush&amp; <a class="code" href="classiview_1_1_c_color_shema.html#aa44366ce1337c25a27759e84a6530d5b">GetBrush</a>(<a class="code" href="classiview_1_1_i_color_shema.html#a4788050ee4a1296518ffc95972f370e9">IColorShema::StandardBrush</a> brushType) <span class="keyword">const</span>;
@@ -75,19 +75,19 @@
 <a name="l00056"></a>00056 
 <a name="l00057"></a><a class="code" href="classiview_1_1_c_color_shema.html#a89c3d2f6980ec2137b2255fb02fe2ef3">00057</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_color_shema.html#a89c3d2f6980ec2137b2255fb02fe2ef3">CColorShema::SetBrush</a>(<a class="code" href="classiview_1_1_i_color_shema.html#a4788050ee4a1296518ffc95972f370e9">IColorShema::StandardBrush</a> brushType, <span class="keyword">const</span> QBrush&amp; brush)
 <a name="l00058"></a>00058 {
-<a name="l00059"></a>00059     m_brushes[brushType] = brush;
+<a name="l00059"></a>00059        m_brushes[brushType] = brush;
 <a name="l00060"></a>00060 }
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 
 <a name="l00063"></a><a class="code" href="classiview_1_1_c_color_shema.html#a843101dfe5b26d78961001631664e0ba">00063</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_color_shema.html#a843101dfe5b26d78961001631664e0ba">CColorShema::SetFont</a>(<a class="code" href="classiview_1_1_i_color_shema.html#a73b0cc4ab2f15e0403df974d2abc42a4">IColorShema::StandardFont</a> fontType, <span class="keyword">const</span> QFont&amp; font)
 <a name="l00064"></a>00064 {
-<a name="l00065"></a>00065     m_fonts[fontType] = font;
+<a name="l00065"></a>00065        m_fonts[fontType] = font;
 <a name="l00066"></a>00066 }
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 
 <a name="l00069"></a><a class="code" href="classiview_1_1_c_color_shema.html#a47bb13132bfeccbaec358cc6a4b4cf25">00069</a> <span class="keyword">inline</span> <span class="keyword">const</span> QFont&amp; <a class="code" href="classiview_1_1_c_color_shema.html#a47bb13132bfeccbaec358cc6a4b4cf25">CColorShema::GetFont</a>(<a class="code" href="classiview_1_1_i_color_shema.html#a73b0cc4ab2f15e0403df974d2abc42a4">IColorShema::StandardFont</a> fontType)<span class="keyword"> const</span>
 <a name="l00070"></a>00070 <span class="keyword"></span>{
-<a name="l00071"></a>00071     <span class="keywordflow">return</span> m_fonts[fontType];
+<a name="l00071"></a>00071        <span class="keywordflow">return</span> m_fonts[fontType];
 <a name="l00072"></a>00072 }
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074 

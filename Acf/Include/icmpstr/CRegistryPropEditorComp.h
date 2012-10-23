@@ -43,7 +43,7 @@ namespace icmpstr
 
 class CRegistryPropEditorComp: public iqtgui::TDesignerGuiObserverCompBase<Ui::CRegistryPropEditorComp, icomp::IRegistry>
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
 	typedef iqtgui::TDesignerGuiObserverCompBase<Ui::CRegistryPropEditorComp, icomp::IRegistry> BaseClass;

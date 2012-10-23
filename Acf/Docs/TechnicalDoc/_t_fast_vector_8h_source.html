@@ -137,7 +137,7 @@
 <a name="l00207"></a>00207        Element&amp; <a class="code" href="classimath_1_1_t_fast_vector.html#aa5bfbc8f03eeaeafc20e75be50bfb5d1">operator[]</a>(<span class="keywordtype">int</span> i);
 <a name="l00208"></a>00208 
 <a name="l00209"></a>00209 <span class="keyword">protected</span>:
-<a name="l00210"></a><a class="code" href="classimath_1_1_t_fast_vector.html#a90c50108ffdb81757f0e54439091be70">00210</a>     Element <a class="code" href="classimath_1_1_t_fast_vector.html#a90c50108ffdb81757f0e54439091be70">m_elements</a>[MaxSize];
+<a name="l00210"></a><a class="code" href="classimath_1_1_t_fast_vector.html#a90c50108ffdb81757f0e54439091be70">00210</a>        Element <a class="code" href="classimath_1_1_t_fast_vector.html#a90c50108ffdb81757f0e54439091be70">m_elements</a>[MaxSize];
 <a name="l00211"></a><a class="code" href="classimath_1_1_t_fast_vector.html#aa1f1cc2da58c6097643b0371024a372f">00211</a>        <span class="keywordtype">int</span> <a class="code" href="classimath_1_1_t_fast_vector.html#aa1f1cc2da58c6097643b0371024a372f">m_elementsCount</a>;
 <a name="l00212"></a>00212 };
 <a name="l00213"></a>00213 
@@ -633,8 +633,8 @@
 <a name="l00703"></a>00703        Element retVal = 0;
 <a name="l00704"></a>00704 
 <a name="l00705"></a>00705        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_elementsCount; ++i){
-<a name="l00706"></a>00706         retVal += m_elements[i];
-<a name="l00707"></a>00707     }
+<a name="l00706"></a>00706               retVal += m_elements[i];
+<a name="l00707"></a>00707        }
 <a name="l00708"></a>00708 
 <a name="l00709"></a>00709        <span class="keywordflow">return</span> retVal;
 <a name="l00710"></a>00710 }
@@ -643,17 +643,17 @@
 <a name="l00713"></a>00713 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> MaxSize, <span class="keyword">class</span> Element&gt;
 <a name="l00714"></a><a class="code" href="classimath_1_1_t_fast_vector.html#a31deb17a301821f9726bcfb3dd506ec5">00714</a> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_fast_vector.html#a31deb17a301821f9726bcfb3dd506ec5" title="Normalize vector to specified length.">TFastVector&lt;MaxSize, Element&gt;::Normalize</a>(Element length)
 <a name="l00715"></a>00715 {
-<a name="l00716"></a>00716     Element isLength = GetLength();
+<a name="l00716"></a>00716        Element isLength = GetLength();
 <a name="l00717"></a>00717 
-<a name="l00718"></a>00718     Element proportion = isLength / length;
+<a name="l00718"></a>00718        Element proportion = isLength / length;
 <a name="l00719"></a>00719 
 <a name="l00720"></a>00720        <span class="keywordflow">if</span> (qAbs(proportion) &gt; <a class="code" href="istd_8h.html#a72b20680a1401ded1768261f3e776916">I_BIG_EPSILON</a>){
 <a name="l00721"></a>00721               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_elementsCount; ++i){
-<a name="l00722"></a>00722             m_elements[i] = m_elements[i] / proportion;
-<a name="l00723"></a>00723         }
+<a name="l00722"></a>00722                      m_elements[i] = m_elements[i] / proportion;
+<a name="l00723"></a>00723               }
 <a name="l00724"></a>00724 
 <a name="l00725"></a>00725               <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00726"></a>00726     }
+<a name="l00726"></a>00726        }
 <a name="l00727"></a>00727        <span class="keywordflow">else</span>{
 <a name="l00728"></a>00728               <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00729"></a>00729        }
@@ -713,7 +713,7 @@
 <a name="l00783"></a>00783               <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00784"></a>00784        }
 <a name="l00785"></a>00785 
-<a name="l00786"></a>00786     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_elementsCount; ++i){
+<a name="l00786"></a>00786        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_elementsCount; ++i){
 <a name="l00787"></a>00787               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(elementTag);
 <a name="l00788"></a>00788               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(m_elements[i]);
 <a name="l00789"></a>00789               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(elementTag);

@@ -44,7 +44,7 @@
 <a name="l00017"></a><a class="code" href="classiview_1_1_c_color_shema_base.html">00017</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_color_shema_base.html">CColorShemaBase</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorShema</a>
 <a name="l00018"></a>00018 {
 <a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00020"></a>00020     <span class="keyword">enum</span>
+<a name="l00020"></a>00020        <span class="keyword">enum</span>
 <a name="l00021"></a>00021        {
 <a name="l00022"></a><a class="code" href="classiview_1_1_c_color_shema_base.html#a8e0071cbd112a71a5a39aa66da2259faa1dfe6bd898f8f83fbbe9139f0d3f46b3">00022</a>               <a class="code" href="classiview_1_1_c_color_shema_base.html#a8e0071cbd112a71a5a39aa66da2259faa1dfe6bd898f8f83fbbe9139f0d3f46b3">TICKER_SIZE</a> = 4,
 <a name="l00023"></a><a class="code" href="classiview_1_1_c_color_shema_base.html#a8e0071cbd112a71a5a39aa66da2259faa5556e383ab7e21d767aa2ac61e81ab41">00023</a>               <a class="code" href="classiview_1_1_c_color_shema_base.html#a8e0071cbd112a71a5a39aa66da2259faa5556e383ab7e21d767aa2ac61e81ab41">SMALL_TICKER_SIZE</a> = 2,
@@ -58,7 +58,7 @@
 <a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_color_shema_base.html#a3eaf384cfad757b037c321947473010f" title="Return width of line.">GetLogicalLineWidth</a>() <span class="keyword">const</span>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="keyword">protected</span>:
-<a name="l00034"></a>00034      <span class="comment">// static attributes</span>
+<a name="l00034"></a>00034        <span class="comment">// static attributes</span>
 <a name="l00035"></a><a class="code" href="classiview_1_1_c_color_shema_base.html#a42dd94e258c0b8ca8bb40ad6320d52f6">00035</a>        <span class="keyword">static</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_color_shema_base.html#a42dd94e258c0b8ca8bb40ad6320d52f6">s_tickersBoxes</a>[(int)<a class="code" href="classiview_1_1_i_color_shema.html#adb917a7a31141b77860d5329e3f693fea5c29fa24ea5338a1ceaa3f7da73a7d78" title="Max value.">TT_LAST</a> + (<span class="keywordtype">int</span>)1];
 <a name="l00036"></a>00036 };
 <a name="l00037"></a>00037 

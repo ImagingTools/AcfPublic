@@ -64,7 +64,7 @@ ITouchable::TouchState CInteractiveRectangleShape::IsTouched(istd::CIndex2d posi
 
 	const i2d::CRectangle* rectanglePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
 	if (rectanglePtr != NULL){
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 		if (!m_arePointsValid){
@@ -121,7 +121,7 @@ void CInteractiveRectangleShape::Draw(QPainter& drawContext) const
 
 	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
 	if (framePtr != NULL){
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 		if (!m_arePointsValid){
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
@@ -138,9 +138,9 @@ void CInteractiveRectangleShape::Draw(QPainter& drawContext) const
 		}
 
 		drawContext.drawLine(iqt::GetQPoint(m_corners[0][0]), iqt::GetQPoint(m_corners[0][1]));
-        drawContext.drawLine(iqt::GetQPoint(m_corners[0][1]), iqt::GetQPoint(m_corners[1][1]));
-        drawContext.drawLine(iqt::GetQPoint(m_corners[1][1]), iqt::GetQPoint(m_corners[1][0]));
-        drawContext.drawLine(iqt::GetQPoint(m_corners[1][0]), iqt::GetQPoint(m_corners[0][0]));
+		drawContext.drawLine(iqt::GetQPoint(m_corners[0][1]), iqt::GetQPoint(m_corners[1][1]));
+		drawContext.drawLine(iqt::GetQPoint(m_corners[1][1]), iqt::GetQPoint(m_corners[1][0]));
+		drawContext.drawLine(iqt::GetQPoint(m_corners[1][0]), iqt::GetQPoint(m_corners[0][0]));
 
 		if (IsSelected()){
 			colorShema.DrawTicker(drawContext, m_corners[0][0], IColorShema::TT_MOVE);
@@ -173,7 +173,7 @@ bool CInteractiveRectangleShape::OnMouseButton(istd::CIndex2d position, Qt::Mous
 	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
 	if (framePtr != NULL){
 		if (downFlag){
-            const IColorShema& colorShema = GetColorShema();
+			const IColorShema& colorShema = GetColorShema();
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 			if (!m_arePointsValid){
@@ -225,17 +225,17 @@ bool CInteractiveRectangleShape::OnMouseMove(istd::CIndex2d position)
 		i2d::CVector2d cp = transform.GetClientPosition(position);
 
 		i2d::CVector2d newPos;
-        i2d::CVector2d deltaTranslate = cp - m_referencePosition;
-        i2d::CRectangle translatedModel = modelArea.GetTranslated(deltaTranslate);
+		i2d::CVector2d deltaTranslate = cp - m_referencePosition;
+		i2d::CRectangle translatedModel = modelArea.GetTranslated(deltaTranslate);
 
 		switch (m_editNode){
 		case EN_CORNER11:
 			newPos = modelArea.GetLeftTop() + deltaTranslate;
 			if (newPos.GetX() > modelArea.GetRight()){
-			    newPos.SetX(modelArea.GetRight());
+				newPos.SetX(modelArea.GetRight());
 			}
 			if (newPos.GetY() > modelArea.GetBottom()){
-			    newPos.SetY(modelArea.GetBottom());
+				newPos.SetY(modelArea.GetBottom());
 			}
 			cp = newPos + m_referencePosition - modelArea.GetLeftTop();
 			modelArea.SetTopLeft(newPos);
@@ -244,10 +244,10 @@ bool CInteractiveRectangleShape::OnMouseMove(istd::CIndex2d position)
 		case EN_CORNER12:
 			newPos = modelArea.GetRightTop() + deltaTranslate;
 			if (newPos.GetX() < modelArea.GetLeft()){
-			    newPos.SetX(modelArea.GetLeft());
+				newPos.SetX(modelArea.GetLeft());
 			}
 			if (newPos.GetY() > modelArea.GetBottom()){
-			    newPos.SetY(modelArea.GetBottom());
+				newPos.SetY(modelArea.GetBottom());
 			}
 			cp = newPos + m_referencePosition - modelArea.GetRightTop();
 			modelArea.SetTopRight(newPos);
@@ -256,10 +256,10 @@ bool CInteractiveRectangleShape::OnMouseMove(istd::CIndex2d position)
 		case EN_CORNER21:
 			newPos = modelArea.GetLeftBottom() + deltaTranslate;
 			if (newPos.GetX() > modelArea.GetRight()){
-			    newPos.SetX(modelArea.GetRight());
+				newPos.SetX(modelArea.GetRight());
 			}
 			if (newPos.GetY() < modelArea.GetTop()){
-			    newPos.SetY(modelArea.GetTop());
+				newPos.SetY(modelArea.GetTop());
 			}
 			cp = newPos + m_referencePosition - modelArea.GetLeftBottom();
 			modelArea.SetBottomLeft(newPos);
@@ -268,10 +268,10 @@ bool CInteractiveRectangleShape::OnMouseMove(istd::CIndex2d position)
 		case EN_CORNER22:
 			newPos = modelArea.GetRightBottom() + deltaTranslate;
 			if (newPos.GetX() < modelArea.GetLeft()){
-			    newPos.SetX(modelArea.GetLeft());
+				newPos.SetX(modelArea.GetLeft());
 			}
 			if (newPos.GetY() < modelArea.GetTop()){
-			    newPos.SetY(modelArea.GetTop());
+				newPos.SetY(modelArea.GetTop());
 			}
 			cp = newPos + m_referencePosition - modelArea.GetRightBottom();
 			modelArea.SetBottomRight(newPos);

@@ -442,18 +442,18 @@
 <a name="l00467"></a>00467 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00468"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#abf78cfe619ad539140e007f97a4a3f17">00468</a> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#abf78cfe619ad539140e007f97a4a3f17" title="Normalize vector to specified length.">TMathVectorWrap&lt;Base&gt;::Normalize</a>(<span class="keyword">typename</span> Base::ElementType length)
 <a name="l00469"></a>00469 {
-<a name="l00470"></a>00470     <span class="keyword">typename</span> Base::ElementType isLength = GetLength();
+<a name="l00470"></a>00470        <span class="keyword">typename</span> Base::ElementType isLength = GetLength();
 <a name="l00471"></a>00471 
-<a name="l00472"></a>00472     <span class="keyword">typename</span> Base::ElementType proportion = isLength / length;
+<a name="l00472"></a>00472        <span class="keyword">typename</span> Base::ElementType proportion = isLength / length;
 <a name="l00473"></a>00473 
 <a name="l00474"></a>00474        <span class="keywordflow">if</span> (qAbs(proportion) &gt; <a class="code" href="istd_8h.html#a72b20680a1401ded1768261f3e776916">I_BIG_EPSILON</a>){
 <a name="l00475"></a>00475               <span class="keywordtype">int</span> elementsCount = BaseClass::GetElementsCount();
 <a name="l00476"></a>00476               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00477"></a>00477                      BaseClass::SetElement(i, BaseClass::GetElement(i) / proportion);
-<a name="l00478"></a>00478         }
+<a name="l00478"></a>00478               }
 <a name="l00479"></a>00479 
 <a name="l00480"></a>00480               <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00481"></a>00481     }
+<a name="l00481"></a>00481        }
 <a name="l00482"></a>00482        <span class="keywordflow">else</span>{
 <a name="l00483"></a>00483               <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00484"></a>00484        }
@@ -463,19 +463,19 @@
 <a name="l00488"></a>00488 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Base&gt;
 <a name="l00489"></a><a class="code" href="classimath_1_1_t_math_vector_wrap.html#a78ad484d1262ee2789d5cea43e0dcf3c">00489</a> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_t_math_vector_wrap.html#a78ad484d1262ee2789d5cea43e0dcf3c" title="Return normalized vector with the same direction and specified length.">TMathVectorWrap&lt;Base&gt;::GetNormalized</a>(<a class="code" href="classimath_1_1_t_math_vector_wrap.html" title="Implementation of mathematical vector with carthesian operations over elements container (vector)...">TMathVectorWrap&lt;Base&gt;</a>&amp; result, <span class="keyword">typename</span> Base::ElementType length)<span class="keyword"> const</span>
 <a name="l00490"></a>00490 <span class="keyword"></span>{
-<a name="l00491"></a>00491     <span class="keyword">typename</span> Base::ElementType isLength = GetLength();
+<a name="l00491"></a>00491        <span class="keyword">typename</span> Base::ElementType isLength = GetLength();
 <a name="l00492"></a>00492 
-<a name="l00493"></a>00493     <span class="keyword">typename</span> Base::ElementType proportion = isLength / length;
+<a name="l00493"></a>00493        <span class="keyword">typename</span> Base::ElementType proportion = isLength / length;
 <a name="l00494"></a>00494 
 <a name="l00495"></a>00495        <span class="keywordflow">if</span> (qAbs(proportion) &gt; <a class="code" href="istd_8h.html#a72b20680a1401ded1768261f3e776916">I_BIG_EPSILON</a>){
 <a name="l00496"></a>00496               <span class="keywordtype">int</span> elementsCount = BaseClass::GetElementsCount();
 <a name="l00497"></a>00497               result.SetElementsCount(elementsCount);
 <a name="l00498"></a>00498               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00499"></a>00499                      result.SetElement(i, BaseClass::GetElement(i) / proportion);
-<a name="l00500"></a>00500         }
+<a name="l00500"></a>00500               }
 <a name="l00501"></a>00501 
 <a name="l00502"></a>00502               <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00503"></a>00503     }
+<a name="l00503"></a>00503        }
 <a name="l00504"></a>00504        <span class="keywordflow">else</span>{
 <a name="l00505"></a>00505               <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00506"></a>00506        }
@@ -502,7 +502,7 @@
 <a name="l00527"></a>00527               BaseClass::SetElementsCount(elementsCount);
 <a name="l00528"></a>00528        }
 <a name="l00529"></a>00529 
-<a name="l00530"></a>00530     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
+<a name="l00530"></a>00530        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
 <a name="l00531"></a>00531               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(elementTag);
 <a name="l00532"></a>00532               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(BaseClass::GetElementRef(i));
 <a name="l00533"></a>00533               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(elementTag);

@@ -216,7 +216,7 @@
 <a name="l00326"></a>00326 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
 <a name="l00327"></a><a class="code" href="classimath_1_1_t_matrix.html#a8dfc35b4bb6e41d950c3abeed744ea72">00327</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Height, Width, Element&gt;</a> <a class="code" href="classimath_1_1_t_matrix.html#a8dfc35b4bb6e41d950c3abeed744ea72" title="Get transposed matrix.">TMatrix&lt;Width, Height, Element&gt;::GetTransposed</a>()<span class="keyword"> const</span>
 <a name="l00328"></a>00328 <span class="keyword"></span>{
-<a name="l00329"></a>00329     <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Height, Width, Element&gt;</a> retVal;
+<a name="l00329"></a>00329        <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Height, Width, Element&gt;</a> retVal;
 <a name="l00330"></a>00330 
 <a name="l00331"></a>00331        GetTransposed(retVal);
 <a name="l00332"></a>00332 
@@ -293,7 +293,7 @@
 <a name="l00403"></a>00403 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
 <a name="l00404"></a><a class="code" href="namespaceimath.html#ab961fb89e71138ce57596d2181b12a6e">00404</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">TMatrix&lt;Width, Height, Element&gt;</a> <a class="code" href="namespaceimath.html#af417c78d970670e8f17cd67093e57a41">operator*</a>(<span class="keywordtype">double</span> value, <span class="keyword">const</span> <a class="code" href="classimath_1_1_t_matrix.html" title="Definition of mathematical matrix with fixed dimensions.">imath::TMatrix&lt;Width, Height, Element&gt;</a>&amp; matrix)
 <a name="l00405"></a>00405 {
-<a name="l00406"></a>00406     <span class="keywordflow">return</span> matrix * value;
+<a name="l00406"></a>00406        <span class="keywordflow">return</span> matrix * value;
 <a name="l00407"></a>00407 }
 <a name="l00408"></a>00408 
 <a name="l00409"></a>00409 
@@ -541,7 +541,7 @@
 <a name="l00651"></a>00651                             retVal = value;
 <a name="l00652"></a>00652                      }
 <a name="l00653"></a>00653               }
-<a name="l00654"></a>00654     }
+<a name="l00654"></a>00654        }
 <a name="l00655"></a>00655 
 <a name="l00656"></a>00656        <span class="keywordflow">return</span> retVal;
 <a name="l00657"></a>00657 }
@@ -560,7 +560,7 @@
 <a name="l00670"></a>00670                             retVal = value;
 <a name="l00671"></a>00671                      }
 <a name="l00672"></a>00672               }
-<a name="l00673"></a>00673     }
+<a name="l00673"></a>00673        }
 <a name="l00674"></a>00674 
 <a name="l00675"></a>00675        <span class="keywordflow">return</span> retVal;
 <a name="l00676"></a>00676 }
@@ -645,7 +645,7 @@
 <a name="l00755"></a>00755                      <span class="keywordtype">double</span> value = m_elements[x][y];
 <a name="l00756"></a>00756                      retVal += double(value * value);
 <a name="l00757"></a>00757               }
-<a name="l00758"></a>00758     }
+<a name="l00758"></a>00758        }
 <a name="l00759"></a>00759        <span class="keywordflow">return</span> retVal;
 <a name="l00760"></a>00760 }
 <a name="l00761"></a>00761 

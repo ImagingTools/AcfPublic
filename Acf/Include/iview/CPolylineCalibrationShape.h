@@ -42,7 +42,7 @@ public:
 	bool IsOrientationVisible() const;
 	void SetOrientationVisible(bool state = true);
 
-    // reimplemented (iview::CPolygonCalibrationShape)
+	// reimplemented (iview::CPolygonCalibrationShape)
 	virtual bool IsTickerTouched(istd::CIndex2d position) const;
 
 	// reimplemented (imod::IObserver)

@@ -34613,6 +34613,27 @@
       <anchor>a05a71d3e91467e4d1c68c3035572e25a</anchor>
       <arglist>(int state)</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>aed7aa09c251f85b5c98a3d15478aac24</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a4344502e47a6b20f49c1a81ec1e26d28</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a8309556e62a995aac3b35988dffa1f7b</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqt2d::CQuadrangleParamsGuiComp</name>
@@ -45090,8 +45111,15 @@
       <type></type>
       <name>TChangeNotifier</name>
       <anchorfile>classistd_1_1_t_change_notifier.html</anchorfile>
-      <anchor>a459e6c6acc1872aa9bb8c7a250620e6d</anchor>
-      <arglist>(Changeable *changeablePtr, int changeFlags=IChangeable::CF_MODEL, istd::IPolymorphic *updateParamsPtr=0)</arglist>
+      <anchor>a5de6bca5adddb125a436ede21607150e</anchor>
+      <arglist>(Changeable *changeablePtr=0, int changeFlags=IChangeable::CF_MODEL, istd::IPolymorphic *updateParamsPtr=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TChangeNotifier</name>
+      <anchorfile>classistd_1_1_t_change_notifier.html</anchorfile>
+      <anchor>a85b92a76d2b6da1e7e92dd131b5fee70</anchor>
+      <arglist>(const TChangeNotifier &amp;notifier)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>

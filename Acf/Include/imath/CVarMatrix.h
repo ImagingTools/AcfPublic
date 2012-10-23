@@ -215,7 +215,7 @@ public:
 
 inline void CVarMatrix::Transpose()
 {
-    CVarMatrix result;
+	CVarMatrix result;
 
 	GetTransposed(result);
 
@@ -225,7 +225,7 @@ inline void CVarMatrix::Transpose()
 
 inline CVarMatrix CVarMatrix::operator+(const CVarMatrix& matrix) const
 {
-    CVarMatrix result;
+	CVarMatrix result;
 
 	GetAdded(matrix, result);
 
@@ -235,9 +235,9 @@ inline CVarMatrix CVarMatrix::operator+(const CVarMatrix& matrix) const
 
 inline CVarMatrix CVarMatrix::operator-(const CVarMatrix& matrix) const
 {
-    CVarMatrix result;
+	CVarMatrix result;
 
-    GetSubstracted(matrix, result);
+	GetSubstracted(matrix, result);
 
 	return result;
 }
@@ -255,9 +255,9 @@ inline CVarMatrix CVarMatrix::operator-()
 
 inline CVarMatrix CVarMatrix::operator*(const CVarMatrix& matrix) const
 {
-    CVarMatrix result;
+	CVarMatrix result;
 
-    GetMultiplied(matrix, result);
+	GetMultiplied(matrix, result);
 
 	return result;
 }
@@ -265,9 +265,9 @@ inline CVarMatrix CVarMatrix::operator*(const CVarMatrix& matrix) const
 
 inline CVarMatrix CVarMatrix::operator*(double value) const
 {
-    CVarMatrix result;
+	CVarMatrix result;
 
-    GetScaled(value, result);
+	GetScaled(value, result);
 
 	return result;
 }
@@ -275,7 +275,7 @@ inline CVarMatrix CVarMatrix::operator*(double value) const
 
 inline CVarMatrix operator*(double value, const imath::CVarMatrix& matrix)
 {
-    return matrix * value;
+	return matrix * value;
 }
 
 

@@ -50,7 +50,7 @@ namespace iview
 class IColorShema: virtual public istd::IPolymorphic
 {
 public:
-    enum StandardPen
+	enum StandardPen
 	{
 		SP_NORMAL,
 		SP_SELECTED,
@@ -59,11 +59,11 @@ public:
 		SP_IMPORTANT,
 		SP_ORIENT_DARK,
 		SP_ORIENT_BRIGHT,
-        SP_NORMAL_DASH,
+		SP_NORMAL_DASH,
 		SP_SELECTED_DASH,
-        SP_GUIDELINE1,
-        SP_GUIDELINE2,
-        SP_GUIDELINE3,
+		SP_GUIDELINE1,
+		SP_GUIDELINE2,
+		SP_GUIDELINE3,
 		SP_BLACK,
 		SP_WHITE,
 		SP_RED,
@@ -85,11 +85,11 @@ public:
 		SB_BACKGROUND,
 		SB_HALF_TRANSPARENT,
 		SB_HALF_TRANSPARENT2,
-        SB_TRANSPARENT,
+		SB_TRANSPARENT,
 		SB_LAST = SB_TRANSPARENT
 	};
 
-    enum StandardFont
+	enum StandardFont
 	{
 		SF_NORMAL = 0,
 		SF_LAST = SF_NORMAL
@@ -161,13 +161,13 @@ public:
 		TT_LAST = TT_CHECKBOX_OFF
 	};
 
-    virtual void Assign(const IColorShema& colorShema) = 0;
-    virtual const QPen& GetPen(StandardPen penType) const = 0;
-    virtual void SetPen(StandardPen penType, const QPen& pen) = 0;
+	virtual void Assign(const IColorShema& colorShema) = 0;
+	virtual const QPen& GetPen(StandardPen penType) const = 0;
+	virtual void SetPen(StandardPen penType, const QPen& pen) = 0;
 	virtual const QBrush& GetBrush(StandardBrush brushType) const = 0;
 	virtual void SetBrush(StandardBrush brushType, const QBrush& brush) = 0;
-    virtual const QFont& GetFont(StandardFont fontType) const = 0;
-    virtual void SetFont(StandardFont fontType, const QFont& font) = 0;
+	virtual const QFont& GetFont(StandardFont fontType) const = 0;
+	virtual void SetFont(StandardFont fontType, const QFont& font) = 0;
    
 	/**
 		Draw a ticker.

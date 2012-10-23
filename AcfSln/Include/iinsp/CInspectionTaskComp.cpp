@@ -154,6 +154,20 @@ void CInspectionTaskComp::EnsureWorkInitialized()
 	m_productChangeNotifier.SetPtr(this);
 
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
+
+
+	// set change notifier for each input supplier
+	QMap<iproc::ISupplier*, istd::CChangeNotifier> notifiers;
+	for (int i = 0; i < inspectionsCount; ++i){
+		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
+
+		istd::IChangeable* changeableSupplierPtr = dynamic_cast<istd::IChangeable*>(supplierPtr);
+
+		if (changeableSupplierPtr != NULL){
+			notifiers[supplierPtr].SetPtr(changeableSupplierPtr);
+		}
+	}
+
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
 		if (supplierPtr != NULL){
@@ -341,8 +355,6 @@ void CInspectionTaskComp::OnComponentCreated()
 
 void CInspectionTaskComp::OnComponentDestroyed()
 {
-	m_parameters.SetParent(NULL);
-
 	m_subtasks.clear();
 
 	EnsureModelsDetached();
@@ -384,12 +396,15 @@ ibase::IMessageContainer::Messages CInspectionTaskComp::MessageContainer::GetMes
 {
 	ibase::IMessageContainer::Messages retVal;
 
-	int subtasksCount = m_parentPtr->m_subtaskMessageContainerCompPtr.GetCount();
+	int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < subtasksCount; ++i){
-		const ibase::IMessageContainer* containerPtr = m_parentPtr->m_subtaskMessageContainerCompPtr[i];
+		const iproc::ISupplier* supplierPtr = m_parentPtr->m_subtasksCompPtr[i];
+		if (supplierPtr != NULL){
+			const ibase::IMessageContainer* containerPtr = supplierPtr->GetWorkMessages();
 
-		if (containerPtr != NULL){
-			retVal += containerPtr->GetMessages();
+			if (containerPtr != NULL){
+				retVal += containerPtr->GetMessages();
+			}
 		}
 	}
 
@@ -399,14 +414,6 @@ ibase::IMessageContainer::Messages CInspectionTaskComp::MessageContainer::GetMes
 
 void CInspectionTaskComp::MessageContainer::ClearMessages()
 {
-	int subtasksCount = m_parentPtr->m_subtaskMessageContainerCompPtr.GetCount();
-	for (int i = 0; i < subtasksCount; ++i){
-		ibase::IMessageContainer* containerPtr = m_parentPtr->m_subtaskMessageContainerCompPtr[i];
-
-		if (containerPtr != NULL){
-			containerPtr->ClearMessages();
-		}
-	}
 }
 
 
@@ -414,14 +421,21 @@ void CInspectionTaskComp::MessageContainer::ClearMessages()
 
 bool CInspectionTaskComp::MessageContainer::Serialize(iser::IArchive& archive)
 {
+	if (!archive.IsStoring()){
+		return false;
+	}
+
 	bool retVal = true;
 
-	int subtasksCount = m_parentPtr->m_subtaskMessageContainerCompPtr.GetCount();
+	int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < subtasksCount; ++i){
-		ibase::IMessageContainer* containerPtr = m_parentPtr->m_subtaskMessageContainerCompPtr[i];
+		iproc::ISupplier* supplierPtr = m_parentPtr->m_subtasksCompPtr[i];
+		if (supplierPtr != NULL){
+			ibase::IMessageContainer* containerPtr = const_cast<ibase::IMessageContainer*>(supplierPtr->GetWorkMessages());
 
-		if (containerPtr != NULL){
-			retVal = containerPtr->Serialize(archive) && retVal;
+			if (containerPtr != NULL){
+				retVal = containerPtr->Serialize(archive) && retVal;
+			}
 		}
 	}
 
@@ -453,13 +467,15 @@ void CInspectionTaskComp::Parameters::SetParent(CInspectionTaskComp* parentPtr)
 				m_parentPtr->m_generalParamsModelCompPtr->AttachObserver(this);
 			}
 
-			int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
-			for (int i = 0; i < subtasksCount; ++i){
-				const iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
-				if (subtaskPtr != NULL){
-					imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(subtaskPtr->GetModelParametersSet());
-					if (modelPtr != NULL){
-						modelPtr->AttachObserver(this);
+			if (*m_parentPtr->m_serializeSuppliersAttrPtr){
+				int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
+				for (int i = 0; i < subtasksCount; ++i){
+					const iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
+					if (subtaskPtr != NULL){
+						imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(subtaskPtr->GetModelParametersSet());
+						if (modelPtr != NULL){
+							modelPtr->AttachObserver(this);
+						}
 					}
 				}
 			}
@@ -479,13 +495,15 @@ iprm::IParamsSet::Ids CInspectionTaskComp::Parameters::GetParamIds(bool editable
 			retVal += m_parentPtr->m_generalParamsCompPtr->GetParamIds(editableOnly);
 		}
 
-		int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
-		for (int i = 0; i < subtasksCount; ++i){
-			const iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
-			if (subtaskPtr != NULL){
-				iprm::IParamsSet* paramsSetPtr = subtaskPtr->GetModelParametersSet();
-				if (paramsSetPtr != NULL){
-					retVal += paramsSetPtr->GetParamIds(editableOnly);
+		if (*m_parentPtr->m_serializeSuppliersAttrPtr){
+			int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
+			for (int i = 0; i < subtasksCount; ++i){
+				const iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
+				if (subtaskPtr != NULL){
+					iprm::IParamsSet* paramsSetPtr = subtaskPtr->GetModelParametersSet();
+					if (paramsSetPtr != NULL){
+						retVal += paramsSetPtr->GetParamIds(editableOnly);
+					}
 				}
 			}
 		}
@@ -505,15 +523,17 @@ const iser::ISerializable* CInspectionTaskComp::Parameters::GetParameter(const Q
 			}
 		}
 
-		int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
-		for (int i = 0; i < subtasksCount; ++i){
-			const iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
-			if (subtaskPtr != NULL){
-				iprm::IParamsSet* paramsSetPtr = subtaskPtr->GetModelParametersSet();
-				if (paramsSetPtr != NULL){
-					const iser::ISerializable* paramPtr = paramsSetPtr->GetParameter(id);
-					if (paramPtr != NULL){
-						return paramPtr;
+		if (*m_parentPtr->m_serializeSuppliersAttrPtr){
+			int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
+			for (int i = 0; i < subtasksCount; ++i){
+				const iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
+				if (subtaskPtr != NULL){
+					iprm::IParamsSet* paramsSetPtr = subtaskPtr->GetModelParametersSet();
+					if (paramsSetPtr != NULL){
+						const iser::ISerializable* paramPtr = paramsSetPtr->GetParameter(id);
+						if (paramPtr != NULL){
+							return paramPtr;
+						}
 					}
 				}
 			}
@@ -534,15 +554,17 @@ iser::ISerializable* CInspectionTaskComp::Parameters::GetEditableParameter(const
 			}
 		}
 
-		int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
-		for (int i = 0; i < subtasksCount; ++i){
-			iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
-			if (subtaskPtr != NULL){
-				iprm::IParamsSet* paramsSetPtr = subtaskPtr->GetModelParametersSet();
-				if (paramsSetPtr != NULL){
-					iser::ISerializable* paramPtr = paramsSetPtr->GetEditableParameter(id);
-					if (paramPtr != NULL){
-						return paramPtr;
+		if (*m_parentPtr->m_serializeSuppliersAttrPtr){
+			int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
+			for (int i = 0; i < subtasksCount; ++i){
+				iproc::ISupplier* subtaskPtr = m_parentPtr->m_subtasksCompPtr[i];
+				if (subtaskPtr != NULL){
+					iprm::IParamsSet* paramsSetPtr = subtaskPtr->GetModelParametersSet();
+					if (paramsSetPtr != NULL){
+						iser::ISerializable* paramPtr = paramsSetPtr->GetEditableParameter(id);
+						if (paramPtr != NULL){
+							return paramPtr;
+						}
 					}
 				}
 			}
@@ -558,7 +580,7 @@ iser::ISerializable* CInspectionTaskComp::Parameters::GetEditableParameter(const
 bool CInspectionTaskComp::Parameters::Serialize(iser::IArchive& archive)
 {
 	if (m_parentPtr != NULL){
-		return m_parentPtr->Serialize(archive);
+		return m_parentPtr->CInspectionTaskComp::Serialize(archive);
 	}
 
 	return false;

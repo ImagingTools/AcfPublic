@@ -43,22 +43,22 @@
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
 <a name="l00021"></a><a class="code" href="classi2d_1_1_t_data_node_polyline.html#a6b6ad9f09506a0de19e6222b4b3216f6">00021</a>        <span class="keyword">typedef</span> <a class="code" href="classi2d_1_1_c_polyline.html" title="2D-object representing a polyine.">CPolyline</a> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a6b6ad9f09506a0de19e6222b4b3216f6">BaseClass</a>;
 <a name="l00022"></a>00022 
-<a name="l00026"></a>00026     <span class="keyword">const</span> NodeData&amp; <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a0d7d0eb5137140cead3e18ff32ddf1b3" title="Get user data from the given node.">GetTNodeData</a>(<span class="keywordtype">int</span> nodeIndex) <span class="keyword">const</span>;
-<a name="l00027"></a>00027    
-<a name="l00031"></a>00031     NodeData&amp; <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a0d23fff4405c6aacff7eb990142d5f60" title="Get reference of user data in the given node.">GetTNodeDataRef</a>(<span class="keywordtype">int</span> nodeIndex);
+<a name="l00026"></a>00026        <span class="keyword">const</span> NodeData&amp; <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a0d7d0eb5137140cead3e18ff32ddf1b3" title="Get user data from the given node.">GetTNodeData</a>(<span class="keywordtype">int</span> nodeIndex) <span class="keyword">const</span>;
+<a name="l00027"></a>00027 
+<a name="l00031"></a>00031        NodeData&amp; <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a0d23fff4405c6aacff7eb990142d5f60" title="Get reference of user data in the given node.">GetTNodeDataRef</a>(<span class="keywordtype">int</span> nodeIndex);
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033     <span class="comment">// reimplemented (i2d::CDataNodePolylineBase)</span>
-<a name="l00034"></a>00034     <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; <a class="code" href="classi2d_1_1_t_data_node_polyline.html#ac486bd5a6e5e8c649d5edcfae460552c" title="Get user data from the given node.">GetNodeData</a>(<span class="keywordtype">int</span> nodeIndex) <span class="keyword">const</span>;
-<a name="l00035"></a>00035     <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a4b94f12d4fa71b118285ee195d348f12" title="This is an overloaded member function, provided for convenience. It differs from the above function o...">GetNodeDataRef</a>(<span class="keywordtype">int</span> nodeIndex);
+<a name="l00033"></a>00033        <span class="comment">// reimplemented (i2d::CDataNodePolylineBase)</span>
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; <a class="code" href="classi2d_1_1_t_data_node_polyline.html#ac486bd5a6e5e8c649d5edcfae460552c" title="Get user data from the given node.">GetNodeData</a>(<span class="keywordtype">int</span> nodeIndex) <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a4b94f12d4fa71b118285ee195d348f12" title="This is an overloaded member function, provided for convenience. It differs from the above function o...">GetNodeDataRef</a>(<span class="keywordtype">int</span> nodeIndex);
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037     <span class="comment">// reimplemented (i2d::CPolygon)</span>
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (i2d::CPolygon)</span>
 <a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a7649960d99c6638f722848dd9f5282fd" title="Removes all nodes.">Clear</a>();
 <a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#acf43b8d0bb7299c5eed71d2b415b92a6" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#acf43b8d0bb7299c5eed71d2b415b92a6" title="Insert a node at the end of node table.">InsertNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node);
 <a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a1df706697750c63cad83f66011448d15" title="Remove a node at specified index.">RemoveNode</a>(<span class="keywordtype">int</span> index);
-<a name="l00042"></a>00042        
+<a name="l00042"></a>00042 
 <a name="l00043"></a>00043 <span class="keyword">protected</span>:
-<a name="l00044"></a>00044     <span class="comment">// reimplemented (i2d::CPolygon)</span>
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (i2d::CPolygon)</span>
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#ab92692dc07e24d0b0abb86235ed808e5" title="Set new nodes count.">SetNodesCount</a>(<span class="keywordtype">int</span> count);
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="keyword">private</span>:
@@ -131,7 +131,7 @@
 <a name="l00114"></a>00114 <span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeData&gt;
 <a name="l00115"></a><a class="code" href="classi2d_1_1_t_data_node_polyline.html#a11903220d4d63bbdd86169d8e1f39980">00115</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#acf43b8d0bb7299c5eed71d2b415b92a6" title="Insert a node at the end of node table.">TDataNodePolyline&lt;NodeData&gt;::InsertNode</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; node)
 <a name="l00116"></a>00116 {
-<a name="l00117"></a>00117        NodesData::iterator iter = m_nodesData.begin();
+<a name="l00117"></a>00117        <span class="keyword">typename</span> NodesData::iterator iter = m_nodesData.begin();
 <a name="l00118"></a>00118        iter += index;
 <a name="l00119"></a>00119        m_nodesData.insert(iter, NodeData());
 <a name="l00120"></a>00120 
@@ -142,7 +142,7 @@
 <a name="l00125"></a>00125 <span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeData&gt;
 <a name="l00126"></a><a class="code" href="classi2d_1_1_t_data_node_polyline.html#a1df706697750c63cad83f66011448d15">00126</a> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a1df706697750c63cad83f66011448d15" title="Remove a node at specified index.">TDataNodePolyline&lt;NodeData&gt;::RemoveNode</a>(<span class="keywordtype">int</span> index)
 <a name="l00127"></a>00127 {
-<a name="l00128"></a>00128        NodesData::iterator iter = m_nodesData.begin();
+<a name="l00128"></a>00128        <span class="keyword">typename</span> NodesData::iterator iter = m_nodesData.begin();
 <a name="l00129"></a>00129        iter += index;
 <a name="l00130"></a>00130        m_nodesData.erase(iter);
 <a name="l00131"></a>00131 

@@ -229,7 +229,7 @@ public:
 	Element& operator[](int i);
 
 protected:
-    Element m_elements[MaxSize];
+	Element m_elements[MaxSize];
 	int m_elementsCount;
 };
 
@@ -725,8 +725,8 @@ Element TFastVector<MaxSize, Element>::GetElementsSum() const
 	Element retVal = 0;
 
 	for (int i = 0; i < m_elementsCount; ++i){
-        retVal += m_elements[i];
-    }
+		retVal += m_elements[i];
+	}
 
 	return retVal;
 }
@@ -735,17 +735,17 @@ Element TFastVector<MaxSize, Element>::GetElementsSum() const
 template <int MaxSize, class Element>
 bool TFastVector<MaxSize, Element>::Normalize(Element length)
 {
-    Element isLength = GetLength();
+	Element isLength = GetLength();
 
-    Element proportion = isLength / length;
+	Element proportion = isLength / length;
 
 	if (qAbs(proportion) > I_BIG_EPSILON){
 		for (int i = 0; i < m_elementsCount; ++i){
-            m_elements[i] = m_elements[i] / proportion;
-        }
+			m_elements[i] = m_elements[i] / proportion;
+		}
 
 		return true;
-    }
+	}
 	else{
 		return false;
 	}
@@ -805,7 +805,7 @@ bool TFastVector<MaxSize, Element>::Serialize(iser::IArchive& archive)
 		return false;
 	}
 
-    for (int i = 0; i < m_elementsCount; ++i){
+	for (int i = 0; i < m_elementsCount; ++i){
 		retVal = retVal && archive.BeginTag(elementTag);
 		retVal = retVal && archive.Process(m_elements[i]);
 		retVal = retVal && archive.EndTag(elementTag);

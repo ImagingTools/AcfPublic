@@ -62,7 +62,7 @@ public:
 		Get bounding box of client area.
 	*/
 	virtual i2d::CRect GetClientRect() const = 0;
-    
+
 	/**
 		Get color shema.
    */

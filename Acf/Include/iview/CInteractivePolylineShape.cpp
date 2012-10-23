@@ -57,7 +57,7 @@ bool CInteractivePolylineShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(modelPtr);
 	if (polylinePtr != NULL){
 		if (downFlag){
-            const IColorShema& colorShema = GetColorShema();
+			const IColorShema& colorShema = GetColorShema();
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 			int nodesCount = polylinePtr->GetNodesCount();
@@ -195,7 +195,7 @@ void CInteractivePolylineShape::DrawCurve(QPainter& drawContext) const
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (polylinePtr != NULL){
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 
 		int nodesCount = polylinePtr->GetNodesCount();
 		if (nodesCount > 0){
@@ -307,7 +307,7 @@ void CInteractivePolylineShape::DrawSelectionElements(QPainter& drawContext) con
 
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (polylinePtr != NULL){
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 		istd::CIndex2d sp;
@@ -378,7 +378,7 @@ bool CInteractivePolylineShape::IsCurveTouched(istd::CIndex2d position) const
 
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (polylinePtr != NULL){
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 		double proportions = ::sqrt(transform.GetDeformMatrix().GetDet());
@@ -428,11 +428,11 @@ ITouchable::TouchState CInteractivePolylineShape::IsTouched(istd::CIndex2d posit
 
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (polylinePtr != NULL){
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
-        istd::CIndex2d sp;
-        i2d::CVector2d point;
+		istd::CIndex2d sp;
+		i2d::CVector2d point;
 		int nodesCount = polylinePtr->GetNodesCount();
 
 		int editMode = GetEditMode();
@@ -452,7 +452,7 @@ ITouchable::TouchState CInteractivePolylineShape::IsTouched(istd::CIndex2d posit
 			}
 			break;
 
-        case ISelectable::EM_MOVE:
+		case ISelectable::EM_MOVE:
 			{
 				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_MOVE);
 				for (int i = 0; i < nodesCount; i++){
@@ -464,7 +464,7 @@ ITouchable::TouchState CInteractivePolylineShape::IsTouched(istd::CIndex2d posit
 			}
 			break;
 
-        case ISelectable::EM_REMOVE:
+		case ISelectable::EM_REMOVE:
 			{
 				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_DELETE);
 				for (int i = 0; i < nodesCount; i++){
@@ -510,7 +510,7 @@ ITouchable::TouchState CInteractivePolylineShape::IsTouched(istd::CIndex2d posit
 					}
 				}
 			}
-        }
+		}
 
 		if (IsCurveTouched(position)){
 			if (IsAlwaysMovable() || (editMode == ISelectable::EM_NONE)){

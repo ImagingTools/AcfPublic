@@ -7431,13 +7431,6 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a1c74eb8fdd63cf1e28c1461c7a4c9de3</anchor>
-      <arglist>(m_subtaskMessageContainerCompPtr, m_subtasksCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a805a1029cebadc8671793742043e042c</anchor>
       <arglist>(m_subtaskInfoProviderCompPtr, m_subtasksCompPtr, false)</arglist>
     </member>

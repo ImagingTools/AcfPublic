@@ -60,7 +60,8 @@ Public Types</h2></td></tr>
 &lt; Changeable &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_change_notifier.html#a5024ec97b43bf3650a5772e23253577d">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_change_notifier.html#a459e6c6acc1872aa9bb8c7a250620e6d">TChangeNotifier</a> (Changeable *changeablePtr, int changeFlags=IChangeable::CF_MODEL, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_change_notifier.html#a5de6bca5adddb125a436ede21607150e">TChangeNotifier</a> (Changeable *changeablePtr=0, int changeFlags=IChangeable::CF_MODEL, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_change_notifier.html#a85b92a76d2b6da1e7e92dd131b5fee70">TChangeNotifier</a> (const <a class="el" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a> &amp;notifier)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">~TChangeNotifier</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">SetPtr</a> (Changeable *changeablePtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow Attach to some 'changeable' pointer.  <a href="#a3bd524813e6c66d33ce42cc42a8be71b"></a><br/></td></tr>
@@ -101,7 +102,7 @@ template&lt;class Changeable &gt; </div>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a459e6c6acc1872aa9bb8c7a250620e6d"></a><!-- doxytag: member="istd::TChangeNotifier::TChangeNotifier" ref="a459e6c6acc1872aa9bb8c7a250620e6d" args="(Changeable *changeablePtr, int changeFlags=IChangeable::CF_MODEL, istd::IPolymorphic *updateParamsPtr=0)" -->
+<a class="anchor" id="a5de6bca5adddb125a436ede21607150e"></a><!-- doxytag: member="istd::TChangeNotifier::TChangeNotifier" ref="a5de6bca5adddb125a436ede21607150e" args="(Changeable *changeablePtr=0, int changeFlags=IChangeable::CF_MODEL, istd::IPolymorphic *updateParamsPtr=0)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -111,7 +112,7 @@ template&lt;class Changeable &gt; </div>
           <td class="memname"><a class="el" href="classistd_1_1_t_change_notifier.html">istd::TChangeNotifier</a>&lt; Changeable &gt;::<a class="el" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a> </td>
           <td>(</td>
           <td class="paramtype">Changeable *&#160;</td>
-          <td class="paramname"><em>changeablePtr</em>, </td>
+          <td class="paramname"><em>changeablePtr</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -134,9 +135,32 @@ template&lt;class Changeable &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00063">63</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00064">64</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85b92a76d2b6da1e7e92dd131b5fee70"></a><!-- doxytag: member="istd::TChangeNotifier::TChangeNotifier" ref="a85b92a76d2b6da1e7e92dd131b5fee70" args="(const TChangeNotifier &amp;notifier)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Changeable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_t_change_notifier.html">istd::TChangeNotifier</a>&lt; Changeable &gt;::<a class="el" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a>&lt; Changeable &gt; &amp;&#160;</td>
+          <td class="paramname"><em>notifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00076">76</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+
+<p>References <a class="el" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">istd::TPointerBase&lt; Changeable &gt;::IsValid()</a>, and <a class="el" href="classistd_1_1_t_pointer_base.html#a3eed23fa98f315a8cbfd153e334f5928">istd::TPointerBase&lt; Changeable &gt;::operator-&gt;()</a>.</p>
 
 </div>
 </div>
@@ -156,7 +180,7 @@ template&lt;class Changeable &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00075">75</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00088">88</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +204,7 @@ template&lt;class Changeable &gt; </div>
 <p>Similiar like method <a class="el" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec" title="Call update on attached object and detach it.">Reset()</a>, but update will be called with active flag CF_ABORTED. </p>
 <p>It should be used only if you are sure, that no changes was done, or result will be ignored. </p>
 
-<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00110">110</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00123">123</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
 
 <p>References <a class="el" href="_i_changeable_8h_source.html#l00035">istd::IChangeable::CF_ABORTED</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -204,7 +228,7 @@ template&lt;class Changeable &gt; </div>
 
 <p>Access to slave 'changeable' pointer. </p>
 
-<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00141">141</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00154">154</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -230,7 +254,7 @@ template&lt;class Changeable &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_t_pointer_base.html#a3eed23fa98f315a8cbfd153e334f5928">istd::TPointerBase&lt; Changeable &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00123">123</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00136">136</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -254,7 +278,7 @@ template&lt;class Changeable &gt; </div>
 
 <p>Method call operator returning slave 'changeable' pointer. </p>
 
-<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00132">132</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00145">145</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -280,7 +304,7 @@ template&lt;class Changeable &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_t_pointer_base.html#a54dff49514e5ca5505938fe0eaae3ebf">istd::TPointerBase&lt; Changeable &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00097">97</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00110">110</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -307,7 +331,7 @@ template&lt;class Changeable &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_t_pointer_base.html#a4aa81bbf92f2075f5cdab39224bd4be1">istd::TPointerBase&lt; Changeable &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00082">82</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_change_notifier_8h_source.html#l00095">95</a> of file <a class="el" href="_t_change_notifier_8h_source.html">TChangeNotifier.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 

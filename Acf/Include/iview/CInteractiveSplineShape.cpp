@@ -101,7 +101,7 @@ void CInteractiveSplineShape::DrawCurve(QPainter& drawContext) const
 	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetModelPtr());
 	if (IsDisplayConnected() && (splinePtr != NULL)){
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 
 		drawContext.save();
 		if (IsSelected()){
@@ -137,7 +137,7 @@ bool CInteractiveSplineShape::IsCurveTouched(istd::CIndex2d position) const
 {
 	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetModelPtr());
 	if (IsDisplayConnected() && (splinePtr != NULL)){
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 		double proportions = ::sqrt(transform.GetDeformMatrix().GetDet());
@@ -166,7 +166,7 @@ i2d::CRect CInteractiveSplineShape::CalcBoundingBox() const
 	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetModelPtr());
 	if (IsDisplayConnected() && (splinePtr != NULL)){
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 
 		int segmentCount = splinePtr->GetSegmentCount();
 		if (segmentCount > 0){

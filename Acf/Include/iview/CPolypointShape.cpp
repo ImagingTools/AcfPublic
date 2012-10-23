@@ -77,7 +77,7 @@ void CPolypointShape::Draw(QPainter& drawContext) const
 		const i2d::CPolypoint& polypoint = *dynamic_cast<const i2d::CPolypoint*>(modelPtr);
 		I_ASSERT(&polypoint != NULL);
 
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 		const i2d::CRect& clientArea = GetClientRect();
 
 		const QVector<i2d::CVector2d>& points = polypoint.GetPoints();
@@ -121,7 +121,7 @@ i2d::CRect CPolypointShape::CalcBoundingBox() const
 		const i2d::CPolypoint& polypoint = *dynamic_cast<const i2d::CPolypoint*>(modelPtr);
 		I_ASSERT(&polypoint != NULL);
 
-        const IColorShema& colorShema = GetColorShema();
+		const IColorShema& colorShema = GetColorShema();
 		const QVector<i2d::CVector2d>& points = polypoint.GetPoints();
 
 		if (!points.isEmpty()){

@@ -61,13 +61,20 @@
 <a name="l00034"></a>00034        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a88850073053773f4db9e7ed14a46404d">on_NodeParamsTable_itemSelectionChanged</a>();
 <a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a05a71d3e91467e4d1c68c3035572e25a">on_CloseLineCheckBox_stateChanged</a>(<span class="keywordtype">int</span> state);
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037 };
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 } <span class="comment">// namespace iqt2d</span>
+<a name="l00037"></a>00037        <span class="comment">// reimplemented from TPolygonBasedParamsGuiComp&lt;iview::CInteractivePolylineShape, i2d::CPolyline&gt;</span>
+<a name="l00038"></a>00038        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#aed7aa09c251f85b5c98a3d15478aac24" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a4344502e47a6b20f49c1a81ec1e26d28" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00040"></a>00040        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a8309556e62a995aac3b35988dffa1f7b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="preprocessor">#endif // !iqt2d_CPolylineParamsGuiComp_included</span>
+<a name="l00042"></a>00042 <span class="keyword">private</span>:
+<a name="l00046"></a>00046        <span class="keywordtype">void</span> updateClosedLineCheckBox(<span class="keywordtype">bool</span> forceEnabled, <span class="keywordtype">bool</span> forceHidden);
+<a name="l00047"></a>00047 };
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 } <span class="comment">// namespace iqt2d</span>
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="preprocessor">#endif // !iqt2d_CPolylineParamsGuiComp_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -42,28 +42,28 @@ class TDataNodePolyline: public CDataNodePolylineBase
 public:
 	typedef CPolyline BaseClass;
 
-    /**
+	/**
 		Get user data from the given node.
-    */
-    const NodeData& GetTNodeData(int nodeIndex) const;
-   
+	*/
+	const NodeData& GetTNodeData(int nodeIndex) const;
+
 	/**
 		Get reference of user data in the given node.
-    */
-    NodeData& GetTNodeDataRef(int nodeIndex);
+	*/
+	NodeData& GetTNodeDataRef(int nodeIndex);
 
-    // reimplemented (i2d::CDataNodePolylineBase)
-    virtual const iser::ISerializable& GetNodeData(int nodeIndex) const;
-    virtual iser::ISerializable& GetNodeDataRef(int nodeIndex);
+	// reimplemented (i2d::CDataNodePolylineBase)
+	virtual const iser::ISerializable& GetNodeData(int nodeIndex) const;
+	virtual iser::ISerializable& GetNodeDataRef(int nodeIndex);
 
-    // reimplemented (i2d::CPolygon)
+	// reimplemented (i2d::CPolygon)
 	virtual void Clear();
 	virtual bool InsertNode(const i2d::CVector2d& node);
 	virtual bool InsertNode(int index, const i2d::CVector2d& node);
 	virtual bool RemoveNode(int index);
-	
+
 protected:
-    // reimplemented (i2d::CPolygon)
+	// reimplemented (i2d::CPolygon)
 	virtual void SetNodesCount(int count);
 
 private:
@@ -136,7 +136,7 @@ inline bool TDataNodePolyline<NodeData>::InsertNode(const i2d::CVector2d& node)
 template<class NodeData>
 inline bool TDataNodePolyline<NodeData>::InsertNode(int index, const i2d::CVector2d& node)
 {
-	NodesData::iterator iter = m_nodesData.begin();
+	typename NodesData::iterator iter = m_nodesData.begin();
 	iter += index;
 	m_nodesData.insert(iter, NodeData());
 
@@ -147,7 +147,7 @@ inline bool TDataNodePolyline<NodeData>::InsertNode(int index, const i2d::CVecto
 template<class NodeData>
 bool TDataNodePolyline<NodeData>::RemoveNode(int index)
 {
-	NodesData::iterator iter = m_nodesData.begin();
+	typename NodesData::iterator iter = m_nodesData.begin();
 	iter += index;
 	m_nodesData.erase(iter);
 

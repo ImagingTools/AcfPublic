@@ -45,7 +45,6 @@ namespace iview
 
 CConsoleGui::CConsoleGui(QWidget* parent)
 :	BaseClass(parent),
-	m_isFullScreenMode(false),
 	m_commands("&View", 100),
 	m_gridVisibleCommand("Show Grid", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_ONOFF, CGI_CALIBRATION),
 	m_rulerVisibleCommand("Show Ruler", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_ONOFF, CGI_CALIBRATION),
@@ -59,7 +58,9 @@ CConsoleGui::CConsoleGui(QWidget* parent)
 	m_pointsMoveCommand("Modify Mode", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_EXCLUSIVE | ibase::ICommand::CF_ONOFF, CGI_SHAPE_EDITOR),
 	m_pointsAddCommand("Add Points", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_EXCLUSIVE | ibase::ICommand::CF_ONOFF, CGI_SHAPE_EDITOR),
 	m_pointsSubCommand("Remove Points", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR | ibase::ICommand::CF_EXCLUSIVE | ibase::ICommand::CF_ONOFF, CGI_SHAPE_EDITOR),
-	m_shapeStatusInfoPtr(NULL)
+	m_shapeStatusInfoPtr(NULL),
+	m_isFullScreenMode(false),
+	m_isViewMaximized(false)
 {
 	m_viewPtr = new iview::CViewport(this);
 
@@ -87,7 +88,7 @@ CConsoleGui::CConsoleGui(QWidget* parent)
 
 	m_viewPtr->setSizePolicy(expandingPolicy);
 
-	//    languageChange();
+	//	languageChange();
 	resize(QSize(604, 480).expandedTo(minimumSizeHint()));
 
 	SetRulerButtonVisible(false);
@@ -300,7 +301,7 @@ void CConsoleGui::UpdateScrollbarsValues()
 			}
 			int pageX = clientRect.GetWidth();
 
-			m_horizontalScrollbarPtr->setEnabled(true);			
+			m_horizontalScrollbarPtr->setEnabled(true);
 			m_horizontalScrollbarPtr->setMinimum(minX);
 			m_horizontalScrollbarPtr->setMaximum(maxX);
 			m_horizontalScrollbarPtr->setValue(posX);
@@ -308,7 +309,7 @@ void CConsoleGui::UpdateScrollbarsValues()
 			m_horizontalScrollbarPtr->setPageStep(pageX);
 		}
 		else{
-			m_horizontalScrollbarPtr->setEnabled(false);			
+			m_horizontalScrollbarPtr->setEnabled(false);
 			m_horizontalScrollbarPtr->setMinimum(0);
 			m_horizontalScrollbarPtr->setMaximum(0);
 			m_horizontalScrollbarPtr->setValue(0);
@@ -329,7 +330,7 @@ void CConsoleGui::UpdateScrollbarsValues()
 
 			int pageY = clientRect.GetHeight();
 
-			m_verticalScrollbarPtr->setEnabled(true);			
+			m_verticalScrollbarPtr->setEnabled(true);
 			m_verticalScrollbarPtr->setMinimum(minY);
 			m_verticalScrollbarPtr->setMaximum(maxY);
 			m_verticalScrollbarPtr->setValue(posY);
@@ -337,7 +338,7 @@ void CConsoleGui::UpdateScrollbarsValues()
 			m_verticalScrollbarPtr->setPageStep(pageY);
 		}
 		else{
-			m_verticalScrollbarPtr->setEnabled(false);			
+			m_verticalScrollbarPtr->setEnabled(false);
 			m_verticalScrollbarPtr->setMinimum(0);
 			m_verticalScrollbarPtr->setMaximum(0);
 			m_verticalScrollbarPtr->setValue(0);
@@ -348,7 +349,7 @@ void CConsoleGui::UpdateScrollbarsValues()
 		//Set scrollbar visibility in full screen mode
 		if(IsFullScreenMode()){
 			m_horizontalScrollbarPtr->setVisible(m_horizontalScrollbarPtr->isEnabled());
-			m_verticalScrollbarPtr->setVisible(m_verticalScrollbarPtr->isEnabled());	
+			m_verticalScrollbarPtr->setVisible(m_verticalScrollbarPtr->isEnabled());
 		}
 	}
 }
@@ -359,19 +360,19 @@ bool CConsoleGui::IsFullScreenMode() const
 }
 
 void CConsoleGui::SetFullScreenMode(bool fullScreenMode)
-{	
+{
 	if (fullScreenMode != m_isFullScreenMode){
-		m_isFullScreenMode = fullScreenMode;		
+		m_isFullScreenMode = fullScreenMode;
 
-		if(m_isFullScreenMode){			
+		if(m_isFullScreenMode){
 			m_horizontalScrollbarPtr->setVisible(false);
-			m_verticalScrollbarPtr->setVisible(false);			
-			
+			m_verticalScrollbarPtr->setVisible(false);
+
 			m_savedTransform = m_viewPtr->GetTransform();
 			m_isViewMaximized = isMaximized();
 			m_savedParentWidgetPtr = parentWidget();
 
-			setParent(NULL);						
+			setParent(NULL);
 			showFullScreen();
 
 			layout()->update();
@@ -379,24 +380,24 @@ void CConsoleGui::SetFullScreenMode(bool fullScreenMode)
 			//center image on screen
 			m_viewPtr->SetZoom(iview::CViewBase::ZM_FIT);
 			m_viewPtr->Update();
-			
+
 		}
-		else{			
+		else{
 			if (m_savedParentWidgetPtr != NULL){
-				setParent(m_savedParentWidgetPtr);				
-				
+				setParent(m_savedParentWidgetPtr);
+
 				m_savedParentWidgetPtr->layout()->addWidget(this);
 				m_savedParentWidgetPtr = NULL;
-			}		
-			
+			}
+
 			showNormal();
 			if(m_isViewMaximized){
 				showMaximized();
 			}
-			
+
 			m_viewPtr->SetTransform(m_savedTransform);
 			m_viewPtr->Update();
-		}		
+		}
 	}
 }
 
@@ -408,12 +409,12 @@ void CConsoleGui::UpdateCursorInfo(const i2d::CVector2d& pixelPos, const i2d::CV
 	istd::TChangeNotifier<IShapeStatusInfo> shapeInfoPtr(m_shapeStatusInfoPtr);
 	if (shapeInfoPtr.IsValid()){
 		m_shapeStatusInfoPtr->SetLogicalPosition(logicalPos);
-		m_shapeStatusInfoPtr->SetPixelPosition(pixelPos);	
-		m_shapeStatusInfoPtr->SetInfoText(infoText);	
+		m_shapeStatusInfoPtr->SetPixelPosition(pixelPos);
+		m_shapeStatusInfoPtr->SetInfoText(infoText);
 	}
 /*
 	if (IsPixelPositionVisible()){
-		m_positionLabelPtr->setText(tr("X: %1  Y: %2").arg(pixelPos.GetX()).arg(pixelPos.GetY()));		
+		m_positionLabelPtr->setText(tr("X: %1  Y: %2").arg(pixelPos.GetX()).arg(pixelPos.GetY()));
 		m_positionLabelPtr->show();
 	}
 	else{
@@ -453,7 +454,7 @@ void CConsoleGui::UpdateEditModeButtons()
 void CConsoleGui::UpdateButtonsState()
 {
 	UpdateZoomInOutState();
-	
+
 	const iview::IViewLayer& gridLayer = m_viewPtr->GetCalibrationLayer();
 	bool isGridLayerActive = !gridLayer.GetBoundingBox().IsEmpty();
 
@@ -475,13 +476,13 @@ void CConsoleGui::UpdateComponentsPosition()
 	iqtgui::CWidgetUpdateBlocker frameBlocker(this);
 	iqtgui::CWidgetUpdateBlocker viewBlocker(m_viewPtr);
 
-	// scroll bars	
+	// scroll bars
 	if(m_isFullScreenMode){
 		UpdateScrollbarsValues();
 	}
 	else{
 		bool isScrollHVisible = false;
-		bool isScrollVVisible = false;	
+		bool isScrollVVisible = false;
 
 		if (AreScrollbarsVisible()){
 			bool isZoomToFit = IsZoomToFit();
@@ -493,9 +494,9 @@ void CConsoleGui::UpdateComponentsPosition()
 		}
 
 		m_horizontalScrollbarPtr->setVisible(isScrollHVisible);
-		m_verticalScrollbarPtr->setVisible(isScrollVVisible);	
+		m_verticalScrollbarPtr->setVisible(isScrollVVisible);
 	}
-		
+
 
 	//	TODO: Implement rulers and mm button if m_isRulerVisible == true!
 
@@ -640,7 +641,7 @@ bool CConsoleGui::OnMouseDoubleClickEvent(QEvent* /*eventPtr*/)
 bool CConsoleGui::OnKeyReleaseEvent(QKeyEvent* eventPtr)
 {
 	switch(eventPtr->key()){
-	
+
 	case Qt::Key_Escape:
 		if (IsFullScreenMode()){
 			SetFullScreenMode(false);
@@ -675,12 +676,12 @@ bool CConsoleGui::OnWheelEvent(QWheelEvent* eventPtr)
 
 		istd::CIndex2d screenPos = iqt::GetCIndex2d(eventPtr->pos());
 		i2d::CVector2d logPos = transform.GetClientPosition(screenPos);
-		
+
 		i2d::CAffine2d zoomTransform;
 		zoomTransform.Reset(logPos * (1 - scale), 0, scale);
-		
+
 		transform.Apply(zoomTransform);
-		
+
 		m_viewPtr->SetTransform(transform);
 
 		UpdateZoomInOutState();
@@ -707,23 +708,23 @@ bool CConsoleGui::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 	if (sourcePtr != m_viewPtr){
 		return BaseClass::eventFilter(sourcePtr, eventPtr);
 	}
-	
+
 	switch(eventPtr->type()){
-	case QEvent::MouseButtonDblClick:		
+	case QEvent::MouseButtonDblClick:
 		if (OnMouseDoubleClickEvent(eventPtr)){
 			return true;
-		}			
+		}
 		break;
 
 	case QEvent::Wheel:
 		if (OnWheelEvent(dynamic_cast<QWheelEvent*>(eventPtr))){
 			return true;
 		}
-		break;	
+		break;
 
 	default:
 		break;
-	}	
+	}
 
 	return BaseClass::eventFilter(sourcePtr, eventPtr);
 }

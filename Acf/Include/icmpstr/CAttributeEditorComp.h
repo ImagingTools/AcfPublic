@@ -53,7 +53,7 @@ class CAttributeEditorComp:
 						iqtgui::TGuiObserverWrap<
 									iqtgui::TDesignerGuiCompBase<Ui::CAttributeEditorComp>, CElementSelectionInfoManagerBase> >
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
 	typedef ibase::TModelObserverCompWrap<

@@ -27,9 +27,9 @@
 // Qt includes
 #include <QtCore/QString>
 
-// ACF includes 
-#include "imod/CSingleModelObserverBase.h" 
-#include "imod/IModel.h" 
+// ACF includes
+#include "imod/CSingleModelObserverBase.h"
+#include "imod/IModel.h"
 
 
 namespace imod
@@ -41,7 +41,7 @@ namespace imod
 
 	\ingroup ModelObserver
 */
-template <class ModelInterface> 
+template <class ModelInterface>
 class TSingleModelObserverBase: public CSingleModelObserverBase
 {
 public:
@@ -66,14 +66,14 @@ private:
 
 // public methods
 
-template <class ModelInterface> 
+template <class ModelInterface>
 TSingleModelObserverBase<ModelInterface>::TSingleModelObserverBase()
 {
 	m_objectPtr = NULL;
 }
 
 
-template <class ModelInterface> 
+template <class ModelInterface>
 ModelInterface* TSingleModelObserverBase<ModelInterface>::GetObjectPtr() const
 {
 	return m_objectPtr;
@@ -82,7 +82,7 @@ ModelInterface* TSingleModelObserverBase<ModelInterface>::GetObjectPtr() const
 
 // reimplemented (imod::IObserver)
 
-template <class ModelInterface> 
+template <class ModelInterface>
 bool TSingleModelObserverBase<ModelInterface>::OnAttached(imod::IModel* modelPtr)
 {
 	m_objectPtr = CastFromModel(modelPtr);
@@ -107,7 +107,7 @@ bool TSingleModelObserverBase<ModelInterface>::OnAttached(imod::IModel* modelPtr
 }
 
 
-template <class ModelInterface> 
+template <class ModelInterface>
 bool TSingleModelObserverBase<ModelInterface>::OnDetached(imod::IModel* modelPtr)
 {
 	if (BaseClass::OnDetached(modelPtr)){
@@ -125,8 +125,8 @@ bool TSingleModelObserverBase<ModelInterface>::OnDetached(imod::IModel* modelPtr
 
 // protected methods
 
-template <class ModelInterface> 
-typename ModelInterface* TSingleModelObserverBase<ModelInterface>::CastFromModel(imod::IModel* modelPtr) const
+template <class ModelInterface>
+ModelInterface* TSingleModelObserverBase<ModelInterface>::CastFromModel(imod::IModel* modelPtr) const
 {
 	return dynamic_cast<ModelInterface*>(modelPtr);
 }
