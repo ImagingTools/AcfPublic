@@ -103,7 +103,7 @@ void CSelectableCalibrationSupplierComp::OnComponentCreated()
 	}
 
 	if (m_multiCalibrationProviderModelCompPtr.IsValid()){
-		RegisterSupplierInput(m_multiCalibrationProviderModelCompPtr.GetPtr());
+		RegisterSupplierInput(m_multiCalibrationProviderModelCompPtr.GetPtr(), m_multiCalibrationSupplierCompPtr.GetPtr());
 	}
 }
 

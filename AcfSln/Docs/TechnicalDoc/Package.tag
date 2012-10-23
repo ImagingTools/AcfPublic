@@ -1521,6 +1521,7 @@
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_numeric_values_joiner_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">imeas::CNumericValuesJoinerComp</class>
     <namespace>imeas</namespace>
   </compound>
@@ -10436,6 +10437,7 @@
     <name>iipr::CTubeProjectionLinesProviderComp</name>
     <filename>classiipr_1_1_c_tube_projection_lines_provider_comp.html</filename>
     <base>iipr::CMultiLineSupplierCompBase</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iipr::CMultiLineSupplierCompBase</type>
       <name>BaseClass</name>
@@ -10443,12 +10445,47 @@
       <anchor>ab5324e2988b8106663ff0b9628111d75</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
+      <anchor>a029d1325516806b7b4e8b838502cc7c0</anchor>
+      <arglist>(m_calibrationSupplierCompPtr, m_calibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
+      <anchor>a4712876f3e44f6480379aa9b0c19d5c9</anchor>
+      <arglist>(m_calibrationSupplierModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ITransformation2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
+      <anchor>a15504eb73d83880ffa0e99371a11cfb2</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
       <anchor>a77dabcf210a3b294d5fc0bc53fd0b0dd</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
+      <anchor>a67f19936afb40d53a485ecfb09da7b70</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
+      <anchor>ab34754ecdd2a2c1d5e1e406764095839</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12168,6 +12205,7 @@
     <filename>classimeas_1_1_c_numeric_values_joiner_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base protection="protected">imeas::CSimpleNumericValue</base>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -12188,6 +12226,20 @@
       <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
       <anchor>a41f309cda40c6ef4c1a0afe092996be5</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
+      <anchor>abf186b4c399856f5fbad66fab293dd81</anchor>
+      <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
+      <anchor>a74f050d1e29484cc1915d8f6089ed617</anchor>
+      <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
