@@ -156,7 +156,6 @@ private:
 	protected:
 		// reimplemented (imod::CMultiModelObserverBase)
 		virtual void BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
-		virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
 
 		TSupplierCompWrap<Product>& m_parent;
 	};
@@ -195,8 +194,6 @@ private:
 	mutable imod::TModelWrap<ibase::CMessageContainer> m_messageContainer;
 
 	bool m_areParametersValid;
-
-	int m_inputChangesCounter;
 };
 
 
@@ -208,8 +205,7 @@ TSupplierCompWrap<Product>::TSupplierCompWrap()
 	m_inputsObserver(this),
 	m_paramsObserver(this),
 	m_productChangeNotifier(NULL, CF_SUPPLIER_RESULTS | CF_MODEL),
-	m_areParametersValid(false),
-	m_inputChangesCounter(0)
+	m_areParametersValid(false)
 {
 }
 
@@ -234,14 +230,6 @@ void TSupplierCompWrap<Product>::InvalidateSupplier()
 		m_productChangeNotifier.SetPtr(this);
 
 		m_workStatus = WS_INVALID;
-
-		for (		InputSuppliersMap::ConstIterator inputSupplierIter = m_inputSuppliersMap.begin();
-					inputSupplierIter != m_inputSuppliersMap.end();
-					++inputSupplierIter){
-			ISupplier* inputSupplierPtr = inputSupplierIter.value();
-
-			inputSupplierPtr->InvalidateSupplier();
-		}
 	}
 }
 
@@ -434,6 +422,7 @@ void TSupplierCompWrap<Product>::OnComponentCreated()
 	}
 
 	m_workStatus = WS_INVALID;
+	m_productChangeNotifier.SetPtr(this);
 }
 
 
@@ -488,22 +477,11 @@ TSupplierCompWrap<Product>::InputsObserver::InputsObserver(TSupplierCompWrap<Pro
 template <class Product>
 void TSupplierCompWrap<Product>::InputsObserver::BeforeUpdate(imod::IModel* /*modelPtr*/, int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	if (m_parent.m_inputChangesCounter == 0){
-		if (m_parent.m_workStatus != WS_INVALID){
-			m_parent.m_productChangeNotifier.SetPtr(&m_parent);
+	if (m_parent.m_workStatus != WS_INVALID){
+		m_parent.m_productChangeNotifier.SetPtr(&m_parent);
 
-			m_parent.m_workStatus = WS_INVALID;
-		}
+		m_parent.m_workStatus = WS_INVALID;
 	}
-
-	++m_parent.m_inputChangesCounter;
-}
-
-
-template <class Product>
-void TSupplierCompWrap<Product>::InputsObserver::AfterUpdate(imod::IModel* /*modelPtr*/, int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
-{
-	--m_parent.m_inputChangesCounter;
 }
 
 
@@ -524,15 +502,11 @@ TSupplierCompWrap<Product>::ParamsObserver::ParamsObserver(TSupplierCompWrap<Pro
 template <class Product>
 void TSupplierCompWrap<Product>::ParamsObserver::BeforeUpdate(imod::IModel* /*modelPtr*/, int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	if (m_parent.m_inputChangesCounter == 0){
-		if (m_parent.m_workStatus != WS_INVALID){
-			m_parent.m_productChangeNotifier.SetPtr(&m_parent);
+	if (m_parent.m_workStatus != WS_INVALID){
+		m_parent.m_productChangeNotifier.SetPtr(&m_parent);
 
-			m_parent.m_workStatus = WS_INVALID;
-		}
+		m_parent.m_workStatus = WS_INVALID;
 	}
-
-	++m_parent.m_inputChangesCounter;
 }
 
 
@@ -540,8 +514,6 @@ template <class Product>
 void TSupplierCompWrap<Product>::ParamsObserver::AfterUpdate(imod::IModel* /*modelPtr*/, int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
 	m_parent.m_areParametersValid = false;
-
-	--m_parent.m_inputChangesCounter;
 }
 
 

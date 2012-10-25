@@ -90,14 +90,17 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if any shape is touched.  <a href="#a12e74574f335242770424f64ac810d26"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#ab1bae399f3f0f3fe0574f3c26cc72f35">DrawOrientationMarker</a> (QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const <a class="el" href="classi2d_1_1_c_line2d.html">i2d::CLine2d</a> &amp;segmentLine, double scale) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a28275e2fcae5b6fb98b86e4d9892b400">DrawCurve</a> (QPainter &amp;drawContext) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a855ec3e990514286817a81bcc9cf1c85">DrawArea</a> (QPainter &amp;drawContext) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a75b8b7f7dae2b0128efec8cf7382e914">DrawSelectionElements</a> (QPainter &amp;drawContext) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#a038d89361a356095d5b5cae8ef8877ce">IsCurveTouched</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#ab038ba253a306a505b6c87395d939ea8">CalcBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#ab038ba253a306a505b6c87395d939ea8"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_interactive_polyline_shape_8h_source.html#l00012">12</a> of file <a class="el" href="_c_interactive_polyline_shape_8h_source.html">CInteractivePolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_polyline_shape_8h_source.html#l00016">16</a> of file <a class="el" href="_c_interactive_polyline_shape_8h_source.html">CInteractivePolylineShape.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ac0a39f89a7ff0f43aa672a1334f40835"></a><!-- doxytag: member="iview::CInteractivePolylineShape::BaseClass" ref="ac0a39f89a7ff0f43aa672a1334f40835" args="" -->
 <div class="memitem">
@@ -114,7 +117,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a786bf02b49ee0df617c19758e2590e3c">iview::CInteractiveTubePolylineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#a509f5ff17e46e097702d2c7ca3962834">iview::CInteractiveSplineShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_polyline_shape_8h_source.html#l00015">15</a> of file <a class="el" href="_c_interactive_polyline_shape_8h_source.html">CInteractivePolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_polyline_shape_8h_source.html#l00019">19</a> of file <a class="el" href="_c_interactive_polyline_shape_8h_source.html">CInteractivePolylineShape.h</a>.</p>
 
 </div>
 </div>
@@ -136,6 +139,29 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ab038ba253a306a505b6c87395d939ea8"></a><!-- doxytag: member="iview::CInteractivePolylineShape::CalcBoundingBox" ref="ab038ba253a306a505b6c87395d939ea8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> iview::CInteractivePolylineShape::CalcBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calculate bounding box. </p>
+<p>You have to implement this method in your shapes implementations. </p>
+
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#a3455fe93a29b4acbb35185622e1d6ded">iview::CInteractivePolygonShape</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#aea87909b517488f1a9797c8ca60ef288">iview::CInteractiveTubePolylineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#ad8d4b609eac30caf5b1ae0072227f161">iview::CInteractiveSplineShape</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a855ec3e990514286817a81bcc9cf1c85"></a><!-- doxytag: member="iview::CInteractivePolylineShape::DrawArea" ref="a855ec3e990514286817a81bcc9cf1c85" args="(QPainter &amp;drawContext) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -173,6 +199,63 @@ Protected Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#a71819a97938b3cbe095bbf3cd5ba5ae9">iview::CInteractivePolygonShape</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#ac9fd4b3f3341430d6ecbbf531cb054f5">iview::CInteractiveTubePolylineShape</a>, and <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#a4a009fdd8ffb90cc2f244328f92f5031">iview::CInteractiveSplineShape</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1bae399f3f0f3fe0574f3c26cc72f35"></a><!-- doxytag: member="iview::CInteractivePolylineShape::DrawOrientationMarker" ref="ab1bae399f3f0f3fe0574f3c26cc72f35" args="(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iview::CInteractivePolylineShape::DrawOrientationMarker </td>
+          <td>(</td>
+          <td class="paramtype">QPainter &amp;&#160;</td>
+          <td class="paramname"><em>drawContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPen &amp;&#160;</td>
+          <td class="paramname"><em>rightPen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QBrush &amp;&#160;</td>
+          <td class="paramname"><em>rightBrush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPen &amp;&#160;</td>
+          <td class="paramname"><em>leftPen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QBrush &amp;&#160;</td>
+          <td class="paramname"><em>leftBrush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">i2d::CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>segmentLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -234,7 +317,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a8b64bed490d3cb243343149bc727f18a">iview::CInteractiveTubePolylineShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_polyline_shape_8h_source.html#l00043">43</a> of file <a class="el" href="_c_interactive_polyline_shape_8h_source.html">CInteractivePolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_polyline_shape_8h_source.html#l00058">58</a> of file <a class="el" href="_c_interactive_polyline_shape_8h_source.html">CInteractivePolylineShape.h</a>.</p>
 
 </div>
 </div>
@@ -351,7 +434,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a625bb90c16f29f0a62b818e6e4ea50f9">iview::CInteractiveTubePolylineShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_polyline_shape_8h_source.html#l00049">49</a> of file <a class="el" href="_c_interactive_polyline_shape_8h_source.html">CInteractivePolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_polyline_shape_8h_source.html#l00064">64</a> of file <a class="el" href="_c_interactive_polyline_shape_8h_source.html">CInteractivePolylineShape.h</a>.</p>
 
 </div>
 </div>

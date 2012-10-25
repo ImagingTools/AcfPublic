@@ -34634,6 +34634,13 @@
       <anchor>a8309556e62a995aac3b35988dffa1f7b</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iview::CInteractivePolylineShape *</type>
+      <name>CreateShape</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a4fa9cd1adb4adb95d831d5f04c24587c</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqt2d::CQuadrangleParamsGuiComp</name>
@@ -35329,6 +35336,13 @@
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
       <anchor>a27862fab2ed4e52b9f32a2a51d71f5f2</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Shape *</type>
+      <name>CreateShape</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a96f1bc16bf5a7adf65ddb2304ed5c33e</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -50526,6 +50540,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>DrawOrientationMarker</name>
+      <anchorfile>classiview_1_1_c_interactive_polyline_shape.html</anchorfile>
+      <anchor>ab1bae399f3f0f3fe0574f3c26cc72f35</anchor>
+      <arglist>(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>DrawCurve</name>
       <anchorfile>classiview_1_1_c_interactive_polyline_shape.html</anchorfile>
       <anchor>a28275e2fcae5b6fb98b86e4d9892b400</anchor>
@@ -50551,6 +50572,13 @@
       <anchorfile>classiview_1_1_c_interactive_polyline_shape.html</anchorfile>
       <anchor>a038d89361a356095d5b5cae8ef8877ce</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_interactive_polyline_shape.html</anchorfile>
+      <anchor>ab038ba253a306a505b6c87395d939ea8</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
