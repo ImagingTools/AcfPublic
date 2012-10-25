@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "istd/IPolymorphic.h"
+#include "istd/IChangeable.h"
 #include "ibase/IMessageContainer.h"
 #include "iprm/IParamsSet.h"
 
@@ -41,7 +41,7 @@ namespace iproc
 	The internal stored object should be created on demand.
 	\image html SupplierStates.svg
 */
-class ISupplier: virtual public istd::IPolymorphic
+class ISupplier: virtual public istd::IChangeable
 {
 public:
 	enum WorkStatus
@@ -86,6 +86,7 @@ public:
 
 	/**
 		Get status of last work.
+		Please note, that this status is not a part of supplier model and can be changed without any notification.
 		\return	work status defined in iproc::ISupplier::WorkStatus.
 	*/
 	virtual int GetWorkStatus() const = 0;
@@ -116,12 +117,15 @@ public:
 
 	/**
 		Get messages outputted by this work.
+		The pointed object will not be relocated - no reconnect is needed if it is observed.
 		If the supplier doesn't support list of messages, it returns NULL.
 	*/
 	virtual const ibase::IMessageContainer* GetWorkMessages() const = 0;
 
 	/**
 		Get parameter set using by this supplier.
+		The pointed object will not be relocated - no reconnect is needed if it is observed.
+		If the supplier doesn't support parameters, it returns NULL.
 	*/
 	virtual iprm::IParamsSet* GetModelParametersSet() const = 0;
 };

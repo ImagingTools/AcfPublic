@@ -13813,7 +13813,7 @@
   <compound kind="class">
     <name>iproc::ISupplier</name>
     <filename>classiproc_1_1_i_supplier.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <name>WorkStatus</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>

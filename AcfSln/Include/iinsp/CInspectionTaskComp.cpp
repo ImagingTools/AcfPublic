@@ -24,7 +24,6 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
@@ -137,8 +136,6 @@ int CInspectionTaskComp::GetWorkStatus() const
 
 void CInspectionTaskComp::InvalidateSupplier()
 {
-	m_productChangeNotifier.SetPtr(this);
-
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
@@ -155,19 +152,16 @@ void CInspectionTaskComp::EnsureWorkInitialized()
 
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 
-
 	// set change notifier for each input supplier
-	QMap<iproc::ISupplier*, istd::CChangeNotifier> notifiers;
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
 
-		istd::IChangeable* changeableSupplierPtr = dynamic_cast<istd::IChangeable*>(supplierPtr);
-
-		if (changeableSupplierPtr != NULL){
-			notifiers[supplierPtr].SetPtr(changeableSupplierPtr);
+		if (supplierPtr != NULL){
+			m_subtaskNotifiers[supplierPtr].SetPtr(supplierPtr);
 		}
 	}
 
+	// delegate the work initialization to each supplier
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
 		if (supplierPtr != NULL){
@@ -187,14 +181,13 @@ void CInspectionTaskComp::EnsureWorkFinished()
 		}
 	}
 
-	m_productChangeNotifier.SetPtr(NULL);
+	m_subtaskNotifiers.clear();
+	m_productChangeNotifier.Reset();
 }
 
 
 void CInspectionTaskComp::ClearWorkResults()
 {
-	m_productChangeNotifier.SetPtr(this);
-
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
@@ -202,6 +195,8 @@ void CInspectionTaskComp::ClearWorkResults()
 			supplierPtr->ClearWorkResults();
 		}
 	}
+
+	m_productChangeNotifier.Reset();
 }
 
 

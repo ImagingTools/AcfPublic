@@ -76,8 +76,8 @@
 <a name="l00050"></a>00050               I_ASSIGN(m_generalInformationProviderCompPtr, <span class="stringliteral">&quot;GeneralInformationProvider&quot;</span>, <span class="stringliteral">&quot;General information provider&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;GeneralInformationProvider&quot;</span>);
 <a name="l00051"></a>00051               <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#aa83b6a31cbdb6741b07214c1013fe26e">I_ASSIGN_TO</a>(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, <span class="keyword">true</span>);
 <a name="l00052"></a>00052               I_ASSIGN_MULTI_0(m_viewExtendersCompPtr, <span class="stringliteral">&quot;ViewExtenders&quot;</span>, <span class="stringliteral">&quot;View extenders&quot;</span>, <span class="keyword">false</span>);
-<a name="l00053"></a>00053               I_ASSIGN(m_viewLabelPrefixAttrPtr, <span class="stringliteral">&quot;ViewLabelPrefix&quot;</span>, <span class="stringliteral">&quot;Prefix used to title the single bitmap view&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Image&quot;</span>);
-<a name="l00054"></a>00054               I_ASSIGN(m_showStatusLabelAttrPtr, <span class="stringliteral">&quot;ShowStatusLabel&quot;</span>, <span class="stringliteral">&quot;Makes status label visible or not&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
+<a name="l00053"></a>00053               I_ASSIGN_MULTI_0(m_viewLabelPrefixesAttrPtr, <span class="stringliteral">&quot;ViewLabelPrefixes&quot;</span>, <span class="stringliteral">&quot;Prefixes used to title the single bitmap view. If none present, information from InformationProviders will be used.&quot;</span>, <span class="keyword">false</span>);
+<a name="l00054"></a>00054               I_ASSIGN(m_showStatusLabelAttrPtr, <span class="stringliteral">&quot;ShowStatusLabel&quot;</span>, <span class="stringliteral">&quot;Makes status label visible or not&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00055"></a>00055        I_END_COMPONENT;
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 <span class="keyword">protected</span>:
@@ -139,7 +139,7 @@
 <a name="l00113"></a>00113        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_informationProvidersCompPtr);
 <a name="l00114"></a>00114        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_informationModelsCompPtr);
 <a name="l00115"></a>00115        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html">iqt2d::IViewExtender</a>, m_viewExtendersCompPtr);
-<a name="l00116"></a>00116        I_ATTR(QString, m_viewLabelPrefixAttrPtr);
+<a name="l00116"></a>00116        I_MULTIATTR(QString, m_viewLabelPrefixesAttrPtr);
 <a name="l00117"></a>00117        I_ATTR(<span class="keywordtype">bool</span>, m_showStatusLabelAttrPtr);
 <a name="l00118"></a>00118        
 <a name="l00119"></a>00119        <span class="keywordtype">int</span> m_rowCount;
