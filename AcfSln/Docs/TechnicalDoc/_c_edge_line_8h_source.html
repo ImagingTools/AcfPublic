@@ -103,7 +103,7 @@
 <a name="l00090"></a>00090 <span class="keyword">private</span>:
 <a name="l00091"></a>00091        <span class="keyword">typedef</span> QList&lt;CEdgeNode&gt; Nodes;
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093        Nodes m_edgeLines;
+<a name="l00093"></a>00093        Nodes m_nodes;
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095        <span class="keywordtype">bool</span> m_isClosed;
 <a name="l00096"></a>00096 
@@ -129,13 +129,13 @@
 <a name="l00116"></a>00116 
 <a name="l00117"></a><a class="code" href="classiedge_1_1_c_edge_line.html#abf1846d234c56469a1b86ea94344533c">00117</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_line.html#abf1846d234c56469a1b86ea94344533c">CEdgeLine::GetNodesCount</a>()<span class="keyword"> const</span>
 <a name="l00118"></a>00118 <span class="keyword"></span>{
-<a name="l00119"></a>00119        <span class="keywordflow">return</span> m_edgeLines.size();
+<a name="l00119"></a>00119        <span class="keywordflow">return</span> m_nodes.size();
 <a name="l00120"></a>00120 }
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122 
 <a name="l00123"></a><a class="code" href="classiedge_1_1_c_edge_line.html#aba95040d83e39430102c174ad2b86995">00123</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_line.html#aba95040d83e39430102c174ad2b86995">CEdgeLine::GetSegmentsCount</a>()<span class="keyword"> const</span>
 <a name="l00124"></a>00124 <span class="keyword"></span>{
-<a name="l00125"></a>00125        <span class="keywordflow">return</span> m_isClosed? m_edgeLines.size(): m_edgeLines.size() - 1;
+<a name="l00125"></a>00125        <span class="keywordflow">return</span> m_isClosed? m_nodes.size(): m_nodes.size() - 1;
 <a name="l00126"></a>00126 }
 <a name="l00127"></a>00127 
 <a name="l00128"></a>00128 

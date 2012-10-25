@@ -37,7 +37,7 @@ CEdgeLine::CEdgeLine()
 
 
 CEdgeLine::CEdgeLine(const CEdgeLine& edge)
-:	m_edgeLines(edge.m_edgeLines),
+:	m_nodes(edge.m_nodes),
 	m_isClosed(false),
 	m_areVolatileValid(true),
 	m_totalLength(0),
@@ -49,7 +49,7 @@ CEdgeLine::CEdgeLine(const CEdgeLine& edge)
 
 void CEdgeLine::Clear()
 {
-	m_edgeLines.clear();
+	m_nodes.clear();
 	m_isClosed = false;
 	m_totalLength = 0;
 	m_minWeight = 0;
@@ -59,19 +59,19 @@ void CEdgeLine::Clear()
 
 const CEdgeNode& CEdgeLine::GetNode(int index) const
 {
-	return m_edgeLines[index];
+	return m_nodes[index];
 }
 
 
 CEdgeNode& CEdgeLine::GetNodeRef(int index)
 {
-	return m_edgeLines[index];
+	return m_nodes[index];
 }
 
 
 void CEdgeLine::SetNode(int index, const CEdgeNode& node)
 {
-	m_edgeLines[index] = node;
+	m_nodes[index] = node;
 
 	m_areVolatileValid = false;
 }
@@ -79,7 +79,7 @@ void CEdgeLine::SetNode(int index, const CEdgeNode& node)
 
 bool CEdgeLine::InsertNode(const CEdgeNode& node)
 {
-	m_edgeLines.push_back(node);
+	m_nodes.push_back(node);
 
 	m_areVolatileValid = false;
 
@@ -92,7 +92,7 @@ void CEdgeLine::CopyFromPolyline(const i2d::CPolyline& polyline, double weight, 
 	int size = polyline.GetNodesCount();
 
 	if (size <= 1){
-		m_edgeLines.clear();
+		m_nodes.clear();
 		m_isClosed = false;
 		m_areVolatileValid = false;
 
@@ -125,7 +125,7 @@ void CEdgeLine::CopyFromPolyline(const i2d::CPolyline& polyline, double weight, 
 
 				CEdgeNode node(position, derivative, weight);
 
-				m_edgeLines.push_back(node);
+				m_nodes.push_back(node);
 			}
 			position = nextPosition;
 			prevDelta = prevDelta;
@@ -144,18 +144,18 @@ void CEdgeLine::CopyFromPolyline(const i2d::CPolyline& polyline, double weight, 
 
 		for (int i = 0; i < size; ++i){
 			const i2d::CVector2d& nextPosition = polyline.GetNode(m_isClosed? (i + 1) % size: qMin(i + 1, size - 1));
-			i2d::CVector2d prevDelta = nextPosition - position;
-			i2d::CVector2d orthogonal = prevDelta.GetOrthogonal() + prevDelta.GetOrthogonal();
+			i2d::CVector2d nextDelta = nextPosition - position;
+			i2d::CVector2d orthogonal = prevDelta.GetOrthogonal() + nextDelta.GetOrthogonal();
 			if ((orthogonal.GetX() != 0) || (orthogonal.GetY() != 0)){
 				double orthogonalLength = orthogonal.GetLength();
 				i2d::CVector2d derivative = orthogonal * (weight / orthogonalLength);
 
 				CEdgeNode node(position, derivative, weight);
 
-				m_edgeLines.push_back(node);
+				m_nodes.push_back(node);
 			}
 			position = nextPosition;
-			prevDelta = prevDelta;
+			prevDelta = nextDelta;
 		}
 	}
 
@@ -168,8 +168,8 @@ void CEdgeLine::CopyToPolyline(i2d::CPolyline& polyline, const i2d::CAffine2d* t
 	polyline.Clear();
 
 	if (transformPtr != NULL){
-		for (		Nodes::ConstIterator iter = m_edgeLines.constBegin();
-					iter != m_edgeLines.constEnd();
+		for (		Nodes::ConstIterator iter = m_nodes.constBegin();
+					iter != m_nodes.constEnd();
 					++iter){
 			const CEdgeNode& node = *iter;
 
@@ -177,8 +177,8 @@ void CEdgeLine::CopyToPolyline(i2d::CPolyline& polyline, const i2d::CAffine2d* t
 		}
 	}
 	else{
-		for (		Nodes::ConstIterator iter = m_edgeLines.constBegin();
-					iter != m_edgeLines.constEnd();
+		for (		Nodes::ConstIterator iter = m_nodes.constBegin();
+					iter != m_nodes.constEnd();
 					++iter){
 			const CEdgeNode& node = *iter;
 
@@ -210,8 +210,8 @@ void CEdgeLine::MoveCenterTo(const i2d::CVector2d& position)
 
 	i2d::CVector2d diffVector = position - m_center;
 
-	for (		Nodes::Iterator iter = m_edgeLines.begin();
-				iter != m_edgeLines.end();
+	for (		Nodes::Iterator iter = m_nodes.begin();
+				iter != m_nodes.end();
 				++iter){
 		CEdgeNode& node = *iter;
 
@@ -230,8 +230,8 @@ bool CEdgeLine::Transform(
 		i2d::CAffine2d localTransform;
 		transformation.GetLocalTransform(i2d::CVector2d(0, 0), localTransform);
 
-		for (		Nodes::Iterator iter = m_edgeLines.begin();
-					iter != m_edgeLines.end();
+		for (		Nodes::Iterator iter = m_nodes.begin();
+					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
 
@@ -240,8 +240,8 @@ bool CEdgeLine::Transform(
 		}
 	}
 	else{
-		for (		Nodes::Iterator iter = m_edgeLines.begin();
-					iter != m_edgeLines.end();
+		for (		Nodes::Iterator iter = m_nodes.begin();
+					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
 
@@ -279,8 +279,8 @@ bool CEdgeLine::InvTransform(
 		i2d::CAffine2d localInvTransform;
 		transformation.GetLocalInvTransform(i2d::CVector2d(0, 0), localInvTransform);
 
-		for (		Nodes::Iterator iter = m_edgeLines.begin();
-					iter != m_edgeLines.end();
+		for (		Nodes::Iterator iter = m_nodes.begin();
+					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
 
@@ -289,8 +289,8 @@ bool CEdgeLine::InvTransform(
 		}
 	}
 	else{
-		for (		Nodes::Iterator iter = m_edgeLines.begin();
-					iter != m_edgeLines.end();
+		for (		Nodes::Iterator iter = m_nodes.begin();
+					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
 
@@ -332,8 +332,8 @@ bool CEdgeLine::GetTransformed(
 			i2d::CAffine2d localTransform;
 			transformation.GetLocalTransform(i2d::CVector2d(0, 0), localTransform);
 
-			for (		Nodes::ConstIterator iter = m_edgeLines.constBegin();
-						iter != m_edgeLines.constEnd();
+			for (		Nodes::ConstIterator iter = m_nodes.constBegin();
+						iter != m_nodes.constEnd();
 						++iter){
 				const CEdgeNode& node = *iter;
 
@@ -346,8 +346,8 @@ bool CEdgeLine::GetTransformed(
 			}
 		}
 		else{
-			for (		Nodes::ConstIterator iter = m_edgeLines.constBegin();
-						iter != m_edgeLines.constEnd();
+			for (		Nodes::ConstIterator iter = m_nodes.constBegin();
+						iter != m_nodes.constEnd();
 						++iter){
 				const CEdgeNode& node = *iter;
 
@@ -411,8 +411,8 @@ bool CEdgeLine::GetInvTransformed(
 			i2d::CAffine2d localInvTransform;
 			transformation.GetLocalInvTransform(i2d::CVector2d(0, 0), localInvTransform);
 
-			for (		Nodes::ConstIterator iter = m_edgeLines.constBegin();
-						iter != m_edgeLines.constEnd();
+			for (		Nodes::ConstIterator iter = m_nodes.constBegin();
+						iter != m_nodes.constEnd();
 						++iter){
 				const CEdgeNode& node = *iter;
 
@@ -425,8 +425,8 @@ bool CEdgeLine::GetInvTransformed(
 			}
 		}
 		else{
-			for (		Nodes::ConstIterator iter = m_edgeLines.constBegin();
-						iter != m_edgeLines.constEnd();
+			for (		Nodes::ConstIterator iter = m_nodes.constBegin();
+						iter != m_nodes.constEnd();
 						++iter){
 				const CEdgeNode& node = *iter;
 
@@ -469,11 +469,11 @@ bool CEdgeLine::Serialize(iser::IArchive& archive)
 	bool retVal = true;
 
 	if (archive.IsStoring()){
-		int nodesCount = m_edgeLines.size();
+		int nodesCount = m_nodes.size();
 
 		retVal = retVal && archive.BeginMultiTag(nodesTag, nodeTag, nodesCount);
-		for (		Nodes::Iterator iter = m_edgeLines.begin();
-					iter != m_edgeLines.end();
+		for (		Nodes::Iterator iter = m_nodes.begin();
+					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
 
@@ -492,11 +492,11 @@ bool CEdgeLine::Serialize(iser::IArchive& archive)
 			return false;
 		}
 
-		m_edgeLines.reserve(nodesCount);
+		m_nodes.reserve(nodesCount);
 
 		for (int i = 0; i < nodesCount; ++i){
-			m_edgeLines.push_back(CEdgeNode());
-			CEdgeNode& node = m_edgeLines.back();
+			m_nodes.push_back(CEdgeNode());
+			CEdgeNode& node = m_nodes.back();
 
 			retVal = retVal && archive.BeginTag(nodeTag);
 			retVal = retVal && node.Serialize(archive);
@@ -524,43 +524,55 @@ void CEdgeLine::CalcVolatile() const
 {
 	m_totalLength = 0;
 
-	if (!m_edgeLines.isEmpty()){
-		const CEdgeNode& firstNode = m_edgeLines.first();
-		double firstWeight = firstNode.GetWeight();
+	int nodesCount = m_nodes.size();
+	if (nodesCount > 0){
+		const CEdgeNode& firstNode = m_nodes.first();
+		double lastWeight = firstNode.GetWeight();
 		i2d::CVector2d lastPosition = firstNode.GetPosition();
-		m_center = lastPosition * firstWeight;
-		m_minWeight = firstWeight;
-		m_maxWeight = firstWeight;
 
-		double weightsSum = firstWeight;
+		m_minWeight = lastWeight;
+		m_maxWeight = lastWeight;
+		int segmentsCount = CEdgeLine::GetSegmentsCount();
+		if (segmentsCount > 0){
+			m_center.Reset();
 
-		for (		Nodes::ConstIterator iter = m_edgeLines.constBegin() + 1;
-					iter != m_edgeLines.constEnd();
-					++iter){
-			const CEdgeNode& node = *iter;
+			double centerWeightSum = 0;
 
-			const i2d::CVector2d& position = node.GetPosition();
+			// check all segments
+			for (		int segmentIndex = 0;
+						segmentIndex < segmentsCount;
+						++segmentIndex){
+				const CEdgeNode& node = m_nodes.at((segmentIndex + 1) % nodesCount);
 
-			m_totalLength += lastPosition.GetDistance(position);
-			double weight = node.GetWeight();
+				const i2d::CVector2d& position = node.GetPosition();
 
-			m_center = position * weight;
+				double segmentLength = lastPosition.GetDistance(position);
+				double weight = node.GetWeight();
 
-			if (weight < m_minWeight){
-				m_minWeight = weight;
+				m_center = position * weight + lastPosition * lastWeight;
+				centerWeightSum += weight + lastWeight;
+				m_totalLength += segmentLength;
+
+				if (weight < m_minWeight){
+					m_minWeight = weight;
+				}
+				else if (weight > m_maxWeight){
+					m_maxWeight = weight;
+				}
+
+				lastPosition = position;
+				lastWeight = weight;
 			}
-			else if (weight > m_maxWeight){
-				m_maxWeight = weight;
+
+			if (centerWeightSum > I_BIG_EPSILON){
+				m_center /= centerWeightSum;
 			}
-
-			lastPosition = position;
-		}
-
-		if (weightsSum > I_BIG_EPSILON){
-			m_center /= weightsSum;
+			else{
+				m_center = lastPosition;
+			}
 		}
 		else{
-			m_center.Reset();
+			m_center = lastPosition;
 		}
 	}
 	else{
