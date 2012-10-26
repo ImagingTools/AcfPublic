@@ -105,6 +105,8 @@ const i2d::ITransformation2d* CPositionFromImageSupplierComp::GetCalibration() c
 
 int CPositionFromImageSupplierComp::ProduceObject(imath::CVarVector& result) const
 {
+	result.Reset();
+
 	if (		m_bitmapProviderCompPtr.IsValid() &&
 				m_processorCompPtr.IsValid()){
 		const iimg::IBitmap* bitmapPtr = m_bitmapProviderCompPtr->GetBitmap();
