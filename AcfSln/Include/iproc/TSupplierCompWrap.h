@@ -127,6 +127,11 @@ protected:
 	*/
 	virtual void UnregisterSupplierInput(imod::IModel* modelPtr);
 
+	/**
+		Add ibase::CMessage to the internal message container (also from const functions).
+	*/
+	virtual void AddMessage(const ibase::CMessage* messagePtr) const;
+
 	// abstract methods
 	/**
 		Produce single object.
@@ -287,6 +292,8 @@ void TSupplierCompWrap<Product>::ClearWorkResults()
 	}
 
 	m_workStatus = WS_INVALID;
+	
+	m_messageContainer.ClearMessages();
 
 	m_productPtr.Reset();
 
@@ -354,6 +361,15 @@ void TSupplierCompWrap<Product>::UnregisterSupplierInput(imod::IModel* modelPtr)
 	}
 
 	m_inputSuppliersMap.remove(modelPtr);
+}
+
+
+template <class Product>
+void TSupplierCompWrap<Product>::AddMessage(const ibase::CMessage* messagePtr) const
+{
+	I_ASSERT(messagePtr != NULL);
+
+	m_messageContainer.AddMessage((const istd::TSmartPtr<const istd::IInformationProvider>)messagePtr);
 }
 
 

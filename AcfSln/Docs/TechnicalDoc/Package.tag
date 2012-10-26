@@ -14270,6 +14270,13 @@
       <anchor>af3699e19481feebf476a3f823ac98bfb</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a36b627cbfa39bad9b1a76cb7371560d8</anchor>
+      <arglist>(const ibase::CMessage *messagePtr) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>

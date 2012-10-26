@@ -104,9 +104,9 @@
 <a name="l00080"></a>00080                      QString exptectedObjectInterface = <span class="keyword">typeid</span>(ObserverComponent::ModelType).name();
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082                      QString debugMessage = QString(<span class="stringliteral">&quot;Component %1: Component model %2 doesn&#39;t implement observed interface %3&quot;</span>)
-<a name="l00083"></a>00083                             .arg(QString(observerComponentId))
-<a name="l00084"></a>00084                             .arg(QString(modelComponentId))
-<a name="l00085"></a>00085                             .arg(exptectedObjectInterface);
+<a name="l00083"></a>00083                                           .arg(QString(observerComponentId))
+<a name="l00084"></a>00084                                           .arg(QString(modelComponentId))
+<a name="l00085"></a>00085                                           .arg(exptectedObjectInterface);
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087                      qDebug(debugMessage.toUtf8());
 <a name="l00088"></a>00088               }
