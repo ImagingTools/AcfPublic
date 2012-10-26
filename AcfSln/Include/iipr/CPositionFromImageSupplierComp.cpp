@@ -56,7 +56,7 @@ const imeas::INumericValue& CPositionFromImageSupplierComp::GetNumericValue(int 
 	}
 	else{
 		// set wrong position (-1,-1) here
-		m_position.GetValues(imath::CVarVector(2, -1));		
+		m_position.SetValues(imath::CVarVector(2, -1));		
 	}
 
 	return m_position;
