@@ -89,6 +89,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this range is intersected by other range.  <a href="#a782b910b7b5370dd13c025f3ae207bfc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_range.html#af317ee7291dd0a07e1e5863f628d5bdb">IsOutsideOf</a> (const <a class="el" href="classistd_1_1_t_range.html">TRange</a> &amp;range) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this range is outside of the given range.  <a href="#af317ee7291dd0a07e1e5863f628d5bdb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_range.html">TRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_range.html#aafd4ecb986671044741ec65856a46d61">GetTranslated</a> (ValueType offset) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get translated position range.  <a href="#aafd4ecb986671044741ec65856a46d61"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_range.html#abc1ae55126fd77045a4daddf59ae3551">Translate</a> (ValueType offset)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Translated position of this range.  <a href="#abc1ae55126fd77045a4daddf59ae3551"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_range.html">TRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_range.html#ac1f5d563fd50eca3e15577106735a26e">GetIntersection</a> (const <a class="el" href="classistd_1_1_t_range.html">TRange</a> &amp;range) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get intersection with the second <code>range</code>.  <a href="#ac1f5d563fd50eca3e15577106735a26e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_range.html#a8948ed1f42ebac5706cdf729d42ad8e4">Intersection</a> (const <a class="el" href="classistd_1_1_t_range.html">TRange</a> &amp;range)</td></tr>
@@ -166,7 +170,7 @@ template&lt;typename ValueType &gt; </div>
 <p>Constructs an empty range object. </p>
 <p><a class="el" href="classistd_1_1_t_range.html#a42721dba39f159b7872df292308b059f" title="Return true if the bottom value is equal to the top value.">IsEmpty()</a> will return <code>true</code> for this object. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00271">271</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00283">283</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -189,7 +193,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Copy constructor. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00279">279</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00291">291</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -222,7 +226,7 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Constructs a range object from two numbers. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00287">287</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00299">299</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -247,7 +251,7 @@ template&lt;typename ValueType&gt; </div>
 <p>Returns <code>true</code>, if value is in range between <code>top</code> and <code>bottom</code>. </p>
 <p>This range must be valid. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00397">397</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00409">409</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -274,9 +278,9 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Returns <code>true</code>, if this range is inside of the <code>range</code>. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00406">406</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00418">418</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="_t_range_8h_source.html#l00295">istd::TRange&lt; ValueType &gt;::IsValid()</a>.</p>
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="_t_range_8h_source.html#l00307">istd::TRange&lt; ValueType &gt;::IsValid()</a>.</p>
 
 </div>
 </div>
@@ -300,7 +304,7 @@ template&lt;typename ValueType &gt; </div>
 <p>Set this range to be expanded. </p>
 <p>Expanding operation calculate simple sum for each components separately. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00532">532</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00559">559</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00561">i2d::CRect::Expand()</a>.</p>
 
@@ -331,7 +335,7 @@ template&lt;typename ValueType&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00593">593</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00620">620</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -355,7 +359,7 @@ template&lt;typename ValueType &gt; </div>
 <p>Get a combined range. </p>
 <p>It calculates combined range. Range [0, 1] is neutral element of this operation. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00607">607</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00634">634</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +382,7 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Get value clipped to the range. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00555">555</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00582">582</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -401,9 +405,9 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Get range clipped to the current range. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00569">569</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00596">596</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00337">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>, <a class="el" href="_t_range_8h_source.html#l00316">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>, <a class="el" href="_t_range_8h_source.html#l00351">istd::TRange&lt; ValueType &gt;::SetMaxValue()</a>, and <a class="el" href="_t_range_8h_source.html#l00330">istd::TRange&lt; ValueType &gt;::SetMinValue()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00349">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>, <a class="el" href="_t_range_8h_source.html#l00328">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>, <a class="el" href="_t_range_8h_source.html#l00363">istd::TRange&lt; ValueType &gt;::SetMaxValue()</a>, and <a class="el" href="_t_range_8h_source.html#l00342">istd::TRange&lt; ValueType &gt;::SetMinValue()</a>.</p>
 
 </div>
 </div>
@@ -427,7 +431,7 @@ template&lt;typename ValueType &gt; </div>
 <p>Get expanded range using the second <code>range</code>. </p>
 <p>Expanding operation calculate simple sum for each components separately. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00525">525</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00552">552</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -450,7 +454,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Get intersection with the second <code>range</code>. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00430">430</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00457">457</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -472,7 +476,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Return invalid range. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00741">741</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00768">768</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -493,7 +497,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00618">618</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00645">645</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -513,7 +517,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00631">631</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00658">658</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -536,9 +540,9 @@ template&lt;typename ValueType &gt; </div>
 <p>Get length of this range. </p>
 <p>Length is difference between top and bottom values. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00366">366</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00378">378</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00406">i2d::CRect::GetCenter()</a>, <a class="el" href="_c_rect_8h_source.html#l00364">i2d::CRect::GetHeight()</a>, <a class="el" href="_t_range_8h_source.html#l00600">istd::TRange&lt; ValueType &gt;::GetMappedTo()</a>, <a class="el" href="_c_rect_8h_source.html#l00249">i2d::CRect::GetRectangle()</a>, <a class="el" href="_c_rect_8h_source.html#l00438">i2d::CRect::GetSize()</a>, and <a class="el" href="_c_rect_8h_source.html#l00358">i2d::CRect::GetWidth()</a>.</p>
+<p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00406">i2d::CRect::GetCenter()</a>, <a class="el" href="_c_rect_8h_source.html#l00364">i2d::CRect::GetHeight()</a>, <a class="el" href="_t_range_8h_source.html#l00627">istd::TRange&lt; ValueType &gt;::GetMappedTo()</a>, <a class="el" href="_c_rect_8h_source.html#l00249">i2d::CRect::GetRectangle()</a>, <a class="el" href="_c_rect_8h_source.html#l00438">i2d::CRect::GetSize()</a>, and <a class="el" href="_c_rect_8h_source.html#l00358">i2d::CRect::GetWidth()</a>.</p>
 
 </div>
 </div>
@@ -579,9 +583,9 @@ template&lt;typename ValueType&gt; </div>
 </dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>This value must be in current range. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00600">600</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00627">627</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00366">istd::TRange&lt; ValueType &gt;::GetLength()</a>, and <a class="el" href="_t_range_8h_source.html#l00316">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00378">istd::TRange&lt; ValueType &gt;::GetLength()</a>, and <a class="el" href="_t_range_8h_source.html#l00328">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
 
 </div>
 </div>
@@ -603,9 +607,9 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Get the top value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00337">337</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00349">349</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_ranges_8h_source.html#l00739">istd::TRanges&lt; ValueType &gt;::GetAsList()</a>, <a class="el" href="_c_rect_8h_source.html#l00346">i2d::CRect::GetBottom()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00191">i2d::CRectangle::GetBottom()</a>, <a class="el" href="_t_range_8h_source.html#l00569">istd::TRange&lt; ValueType &gt;::GetClipped()</a>, <a class="el" href="_c_rect_8h_source.html#l00285">i2d::CRect::GetLeftBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00334">i2d::CRect::GetRight()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00185">i2d::CRectangle::GetRight()</a>, <a class="el" href="_c_rect_8h_source.html#l00298">i2d::CRect::GetRightBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00272">i2d::CRect::GetRightTop()</a>, <a class="el" href="_t_ranges_8h_source.html#l00255">istd::TRanges&lt; ValueType &gt;::IsInside()</a>, <a class="el" href="_c_rect_8h_source.html#l00611">i2d::CRect::Translate()</a>, and <a class="el" href="_t_ranges_8h_source.html#l00452">istd::TRanges&lt; ValueType &gt;::Union()</a>.</p>
+<p>Referenced by <a class="el" href="_t_ranges_8h_source.html#l00739">istd::TRanges&lt; ValueType &gt;::GetAsList()</a>, <a class="el" href="_c_rect_8h_source.html#l00346">i2d::CRect::GetBottom()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00191">i2d::CRectangle::GetBottom()</a>, <a class="el" href="_t_range_8h_source.html#l00596">istd::TRange&lt; ValueType &gt;::GetClipped()</a>, <a class="el" href="_c_rect_8h_source.html#l00285">i2d::CRect::GetLeftBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00334">i2d::CRect::GetRight()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00185">i2d::CRectangle::GetRight()</a>, <a class="el" href="_c_rect_8h_source.html#l00298">i2d::CRect::GetRightBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00272">i2d::CRect::GetRightTop()</a>, <a class="el" href="_t_ranges_8h_source.html#l00255">istd::TRanges&lt; ValueType &gt;::IsInside()</a>, <a class="el" href="_c_rect_8h_source.html#l00611">i2d::CRect::Translate()</a>, and <a class="el" href="_t_ranges_8h_source.html#l00452">istd::TRanges&lt; ValueType &gt;::Union()</a>.</p>
 
 </div>
 </div>
@@ -627,7 +631,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Get reference to the top value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00344">344</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00356">356</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -649,9 +653,9 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Get the bottom value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00316">316</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00328">328</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_ranges_8h_source.html#l00739">istd::TRanges&lt; ValueType &gt;::GetAsList()</a>, <a class="el" href="_c_rect_8h_source.html#l00406">i2d::CRect::GetCenter()</a>, <a class="el" href="_t_range_8h_source.html#l00569">istd::TRange&lt; ValueType &gt;::GetClipped()</a>, <a class="el" href="_c_rect_8h_source.html#l00311">i2d::CRect::GetLeft()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00173">i2d::CRectangle::GetLeft()</a>, <a class="el" href="_c_rect_8h_source.html#l00285">i2d::CRect::GetLeftBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00259">i2d::CRect::GetLeftTop()</a>, <a class="el" href="_t_range_8h_source.html#l00600">istd::TRange&lt; ValueType &gt;::GetMappedTo()</a>, <a class="el" href="_c_rect_8h_source.html#l00249">i2d::CRect::GetRectangle()</a>, <a class="el" href="_c_rect_8h_source.html#l00272">i2d::CRect::GetRightTop()</a>, <a class="el" href="_c_rect_8h_source.html#l00322">i2d::CRect::GetTop()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00179">i2d::CRectangle::GetTop()</a>, <a class="el" href="_t_ranges_8h_source.html#l00255">istd::TRanges&lt; ValueType &gt;::IsInside()</a>, <a class="el" href="_c_rect_8h_source.html#l00611">i2d::CRect::Translate()</a>, and <a class="el" href="_t_ranges_8h_source.html#l00452">istd::TRanges&lt; ValueType &gt;::Union()</a>.</p>
+<p>Referenced by <a class="el" href="_t_ranges_8h_source.html#l00739">istd::TRanges&lt; ValueType &gt;::GetAsList()</a>, <a class="el" href="_c_rect_8h_source.html#l00406">i2d::CRect::GetCenter()</a>, <a class="el" href="_t_range_8h_source.html#l00596">istd::TRange&lt; ValueType &gt;::GetClipped()</a>, <a class="el" href="_c_rect_8h_source.html#l00311">i2d::CRect::GetLeft()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00173">i2d::CRectangle::GetLeft()</a>, <a class="el" href="_c_rect_8h_source.html#l00285">i2d::CRect::GetLeftBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00259">i2d::CRect::GetLeftTop()</a>, <a class="el" href="_t_range_8h_source.html#l00627">istd::TRange&lt; ValueType &gt;::GetMappedTo()</a>, <a class="el" href="_c_rect_8h_source.html#l00249">i2d::CRect::GetRectangle()</a>, <a class="el" href="_c_rect_8h_source.html#l00272">i2d::CRect::GetRightTop()</a>, <a class="el" href="_c_rect_8h_source.html#l00322">i2d::CRect::GetTop()</a>, <a class="el" href="_c_rectangle_8h_source.html#l00179">i2d::CRectangle::GetTop()</a>, <a class="el" href="_t_ranges_8h_source.html#l00255">istd::TRanges&lt; ValueType &gt;::IsInside()</a>, <a class="el" href="_c_rect_8h_source.html#l00611">i2d::CRect::Translate()</a>, and <a class="el" href="_t_ranges_8h_source.html#l00452">istd::TRanges&lt; ValueType &gt;::Union()</a>.</p>
 
 </div>
 </div>
@@ -673,7 +677,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Get reference to the bottom value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00323">323</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00335">335</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -696,7 +700,7 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Get nearest value belonging to range. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00540">540</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00567">567</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -718,7 +722,31 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Return null range. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00734">734</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00761">761</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafd4ecb986671044741ec65856a46d61"></a><!-- doxytag: member="istd::TRange::GetTranslated" ref="aafd4ecb986671044741ec65856a46d61" args="(ValueType offset) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_t_range.html">TRange</a>&lt; ValueType &gt; <a class="el" href="classistd_1_1_t_range.html">istd::TRange</a>&lt; ValueType &gt;::GetTranslated </td>
+          <td>(</td>
+          <td class="paramtype">ValueType&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get translated position range. </p>
+<p>Translation adds the offset value to minimal and mavimal values. </p>
+
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00442">442</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -741,9 +769,9 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Get union with the second <code>range</code>. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00457">457</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00484">484</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00295">istd::TRange&lt; ValueType &gt;::IsValid()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00307">istd::TRange&lt; ValueType &gt;::IsValid()</a>.</p>
 
 </div>
 </div>
@@ -766,7 +794,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Get union with the second <code>range</code>. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00474">474</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00501">501</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -799,7 +827,7 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Return always valid range. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00725">725</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00752">752</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -822,7 +850,7 @@ template&lt;typename ValueType &gt; </div>
 <p>Get validated range, if it was invalid. </p>
 <p>Range is invalid if set min value is bigger than set max value. It returns range with smaller range value as minimum and bigger one as maximum. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00373">373</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00385">385</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -846,9 +874,9 @@ template&lt;typename ValueType &gt; </div>
 <p>Get validated range, if it was invalid. </p>
 <p>Range is invalid if set min value is bigger than set max value. It returns range with smaller range value as minimum and bigger one as maximum. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00382">382</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00394">394</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00351">istd::TRange&lt; ValueType &gt;::SetMaxValue()</a>, and <a class="el" href="_t_range_8h_source.html#l00330">istd::TRange&lt; ValueType &gt;::SetMinValue()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00363">istd::TRange&lt; ValueType &gt;::SetMaxValue()</a>, and <a class="el" href="_t_range_8h_source.html#l00342">istd::TRange&lt; ValueType &gt;::SetMinValue()</a>.</p>
 
 </div>
 </div>
@@ -877,7 +905,7 @@ template&lt;typename ValueType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00586">586</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00613">613</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -900,7 +928,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Set this range to be intersection of two ranges. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00442">442</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00469">469</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00584">i2d::CRect::Intersection()</a>.</p>
 
@@ -924,7 +952,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Return <code>true</code> if the bottom value is equal to the top value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00302">302</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00314">314</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00420">i2d::CRect::IsEmpty()</a>, and <a class="el" href="_t_ranges_8h_source.html#l00452">istd::TRanges&lt; ValueType &gt;::Union()</a>.</p>
 
@@ -950,7 +978,7 @@ template&lt;typename ValueType &gt; </div>
 <p>Check if this range is intersected by other range. </p>
 <p>Some range is intersected by another, if intercestion of this two ranges is not empty. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00416">416</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00428">428</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -973,7 +1001,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Check if this range is outside of the given range. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00423">423</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00435">435</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00466">i2d::CRect::IsOutside()</a>.</p>
 
@@ -997,9 +1025,9 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Return <code>true</code> if the bottom value is smaller or equal then the top value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00295">295</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00307">307</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_range_8h_source.html#l00406">istd::TRange&lt; ValueType &gt;::Contains()</a>, <a class="el" href="_t_range_8h_source.html#l00457">istd::TRange&lt; ValueType &gt;::GetUnion()</a>, <a class="el" href="_c_rect_8h_source.html#l00584">i2d::CRect::Intersection()</a>, <a class="el" href="_c_rect_8h_source.html#l00414">i2d::CRect::IsValid()</a>, and <a class="el" href="_t_range_8h_source.html#l00486">istd::TRange&lt; ValueType &gt;::Unite()</a>.</p>
+<p>Referenced by <a class="el" href="_t_range_8h_source.html#l00418">istd::TRange&lt; ValueType &gt;::Contains()</a>, <a class="el" href="_t_range_8h_source.html#l00484">istd::TRange&lt; ValueType &gt;::GetUnion()</a>, <a class="el" href="_c_rect_8h_source.html#l00584">i2d::CRect::Intersection()</a>, <a class="el" href="_c_rect_8h_source.html#l00414">i2d::CRect::IsValid()</a>, and <a class="el" href="_t_range_8h_source.html#l00513">istd::TRange&lt; ValueType &gt;::Unite()</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1049,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Return <code>true</code> if the range is valid and it is not empty. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00309">309</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00321">321</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00426">i2d::CRect::IsValidNonEmpty()</a>.</p>
 
@@ -1044,7 +1072,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00661">661</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00688">688</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1093,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00679">679</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00706">706</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1086,7 +1114,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00703">703</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00730">730</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1107,7 +1135,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00691">691</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00718">718</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1128,7 +1156,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00713">713</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00740">740</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1149,7 +1177,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00669">669</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00696">696</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1170,7 +1198,7 @@ template&lt;typename ValueType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00654">654</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00681">681</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1192,7 +1220,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Set this range to be empty. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00358">358</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00370">370</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00480">i2d::CRect::Reset()</a>.</p>
 
@@ -1233,7 +1261,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Set this range to be linear interpolated using two other ranges and adjast alpha value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00644">644</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00671">671</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1256,9 +1284,9 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Set the top value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00351">351</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00363">363</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_range_8h_source.html#l00569">istd::TRange&lt; ValueType &gt;::GetClipped()</a>, <a class="el" href="_t_range_8h_source.html#l00382">istd::TRange&lt; ValueType &gt;::GetValidated()</a>, <a class="el" href="_c_rect_8h_source.html#l00352">i2d::CRect::SetBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00291">i2d::CRect::SetLeftBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00340">i2d::CRect::SetRight()</a>, <a class="el" href="_c_rect_8h_source.html#l00304">i2d::CRect::SetRightBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00278">i2d::CRect::SetRightTop()</a>, and <a class="el" href="_c_rect_8h_source.html#l00611">i2d::CRect::Translate()</a>.</p>
+<p>Referenced by <a class="el" href="_t_range_8h_source.html#l00596">istd::TRange&lt; ValueType &gt;::GetClipped()</a>, <a class="el" href="_t_range_8h_source.html#l00394">istd::TRange&lt; ValueType &gt;::GetValidated()</a>, <a class="el" href="_c_rect_8h_source.html#l00352">i2d::CRect::SetBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00291">i2d::CRect::SetLeftBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00340">i2d::CRect::SetRight()</a>, <a class="el" href="_c_rect_8h_source.html#l00304">i2d::CRect::SetRightBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00278">i2d::CRect::SetRightTop()</a>, and <a class="el" href="_c_rect_8h_source.html#l00611">i2d::CRect::Translate()</a>.</p>
 
 </div>
 </div>
@@ -1281,9 +1309,33 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Set the bottom value. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00330">330</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00342">342</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_range_8h_source.html#l00569">istd::TRange&lt; ValueType &gt;::GetClipped()</a>, <a class="el" href="_t_range_8h_source.html#l00382">istd::TRange&lt; ValueType &gt;::GetValidated()</a>, <a class="el" href="_c_rect_8h_source.html#l00316">i2d::CRect::SetLeft()</a>, <a class="el" href="_c_rect_8h_source.html#l00291">i2d::CRect::SetLeftBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00265">i2d::CRect::SetLeftTop()</a>, <a class="el" href="_c_rect_8h_source.html#l00278">i2d::CRect::SetRightTop()</a>, <a class="el" href="_c_rect_8h_source.html#l00328">i2d::CRect::SetTop()</a>, and <a class="el" href="_c_rect_8h_source.html#l00611">i2d::CRect::Translate()</a>.</p>
+<p>Referenced by <a class="el" href="_t_range_8h_source.html#l00596">istd::TRange&lt; ValueType &gt;::GetClipped()</a>, <a class="el" href="_t_range_8h_source.html#l00394">istd::TRange&lt; ValueType &gt;::GetValidated()</a>, <a class="el" href="_c_rect_8h_source.html#l00316">i2d::CRect::SetLeft()</a>, <a class="el" href="_c_rect_8h_source.html#l00291">i2d::CRect::SetLeftBottom()</a>, <a class="el" href="_c_rect_8h_source.html#l00265">i2d::CRect::SetLeftTop()</a>, <a class="el" href="_c_rect_8h_source.html#l00278">i2d::CRect::SetRightTop()</a>, <a class="el" href="_c_rect_8h_source.html#l00328">i2d::CRect::SetTop()</a>, and <a class="el" href="_c_rect_8h_source.html#l00611">i2d::CRect::Translate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc1ae55126fd77045a4daddf59ae3551"></a><!-- doxytag: member="istd::TRange::Translate" ref="abc1ae55126fd77045a4daddf59ae3551" args="(ValueType offset)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classistd_1_1_t_range.html">istd::TRange</a>&lt; ValueType &gt;::Translate </td>
+          <td>(</td>
+          <td class="paramtype">ValueType&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Translated position of this range. </p>
+<p>Translation adds the offset value to minimal and mavimal values. </p>
+
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00449">449</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1306,9 +1358,9 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Set this range to be union of two ranges. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00486">486</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00513">513</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
-<p>References <a class="el" href="_t_range_8h_source.html#l00295">istd::TRange&lt; ValueType &gt;::IsValid()</a>.</p>
+<p>References <a class="el" href="_t_range_8h_source.html#l00307">istd::TRange&lt; ValueType &gt;::IsValid()</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_rect_8h_source.html#l00502">i2d::CRect::GetUnion()</a>, and <a class="el" href="_c_rect_8h_source.html#l00487">i2d::CRect::Union()</a>.</p>
 
@@ -1333,7 +1385,7 @@ template&lt;typename ValueType &gt; </div>
 
 <p>Set this range to be union of two ranges. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00506">506</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00533">533</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1408,7 @@ template&lt;typename ValueType &gt; </div>
 <p>Force this range to be valid. </p>
 <p>Range is invalid if set min value is bigger than set max value. It set smaller range value as minimum and bigger one as maximum. </p>
 
-<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00390">390</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_range_8h_source.html#l00402">402</a> of file <a class="el" href="_t_range_8h_source.html">TRange.h</a>.</p>
 
 </div>
 </div>

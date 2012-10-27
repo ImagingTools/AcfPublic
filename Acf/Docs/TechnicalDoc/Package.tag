@@ -46419,6 +46419,20 @@
     </member>
     <member kind="function">
       <type>TRange</type>
+      <name>GetTranslated</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>aafd4ecb986671044741ec65856a46d61</anchor>
+      <arglist>(ValueType offset) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Translate</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>abc1ae55126fd77045a4daddf59ae3551</anchor>
+      <arglist>(ValueType offset)</arglist>
+    </member>
+    <member kind="function">
+      <type>TRange</type>
       <name>GetIntersection</name>
       <anchorfile>classistd_1_1_t_range.html</anchorfile>
       <anchor>ac1f5d563fd50eca3e15577106735a26e</anchor>
