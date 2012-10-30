@@ -327,7 +327,7 @@ bool CLibAvVideoDecoderComp::OpenMediumUrl(const QString& url, bool /*autoPlay*/
 
 	CloseMedium();
 
-	if (		(avformat_open_input(&m_formatContextPtr, url.toLocal8Bit(), NULL, NULL) != 0) ||
+	if (		(av_open_input_file(&m_formatContextPtr, url.toLocal8Bit(), NULL, 0, NULL) != 0) ||
 				(m_formatContextPtr == NULL)){
 		SendInfoMessage(MI_CANNOT_OPEN, QString("Cannot open media file ") + url);
 
@@ -349,7 +349,7 @@ bool CLibAvVideoDecoderComp::OpenMediumUrl(const QString& url, bool /*autoPlay*/
 			continue;
 		}
 
-		if (m_bitmapObjectCompPtr.IsValid() && (m_videoCodecPtr == NULL) && (codecContextPtr->codec_type == AVMEDIA_TYPE_VIDEO)){
+		if (m_bitmapObjectCompPtr.IsValid() && (m_videoCodecPtr == NULL) && (codecContextPtr->codec_type == CODEC_TYPE_VIDEO)){
 			m_videoStreamId = i;
 			m_videoCodecContextPtr = codecContextPtr;
 
@@ -387,7 +387,7 @@ bool CLibAvVideoDecoderComp::OpenMediumUrl(const QString& url, bool /*autoPlay*/
 				m_videoCodecPtr = NULL;
 			}
 		}
-		else if (m_audioSampleObjectCompPtr.IsValid() && (m_audioCodecPtr == NULL) && (codecContextPtr->codec_type == AVMEDIA_TYPE_AUDIO)){
+		else if (m_audioSampleObjectCompPtr.IsValid() && (m_audioCodecPtr == NULL) && (codecContextPtr->codec_type == CODEC_TYPE_AUDIO)){
 			m_audioStreamId = i;
 
 			// Find the decoder for the video stream
@@ -661,34 +661,26 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 	// Decode packets until we have decoded a complete frame
 	while (true){
 		if (m_packet.stream_index == m_videoStreamId){
-			while ((m_rawDataPtr != NULL) && (m_packet.size > 0)){//m_bytesRemaining > 0
+			while ((m_rawDataPtr != NULL) && (m_bytesRemaining > 0)){
 				I_ASSERT(m_videoCodecContextPtr != NULL);
 
-				//int bytesToCopy = qMin(m_bytesRemaining, AVCODEC_MAX_AUDIO_FRAME_SIZE);
-				//std::memset(m_audioInputBuffer + bytesToCopy, 0, FF_INPUT_BUFFER_PADDING_SIZE);
-				//std::memcpy(m_audioInputBuffer, m_rawDataPtr, bytesToCopy);
+				int bytesToCopy = qMin(m_bytesRemaining, AVCODEC_MAX_AUDIO_FRAME_SIZE);
+				std::memset(m_audioInputBuffer + bytesToCopy, 0, FF_INPUT_BUFFER_PADDING_SIZE);
+				std::memcpy(m_audioInputBuffer, m_rawDataPtr, bytesToCopy);
 
 				// Decode the next chunk of data
 				int frameFinished = 0;
-				/*int bytesDecoded = avcodec_decode_video(
+				int bytesDecoded = avcodec_decode_video(
 							m_videoCodecContextPtr,
 							m_framePtr,
 							&frameFinished,
 							m_audioInputBuffer,
-							bytesToCopy);*/
-
-				int bytesDecoded = avcodec_decode_video2(
-							m_videoCodecContextPtr,
-							m_framePtr,
-							&frameFinished,
-							&m_packet);
+							bytesToCopy);
 
 				// Was there an error?
 				if (bytesDecoded > 0){
-					//m_bytesRemaining -= bytesDecoded;
-					//m_rawDataPtr += bytesDecoded;
-					m_packet.size -= bytesDecoded;
-					m_packet.data += bytesDecoded;
+					m_bytesRemaining -= bytesDecoded;
+					m_rawDataPtr += bytesDecoded;
 
 					if (minimalImageFrame >= 0){
 						if (m_packet.dts == AV_NOPTS_VALUE){
@@ -724,35 +716,27 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 			}
 		}
 		else if (m_packet.stream_index == m_audioStreamId){
-			while ((m_rawDataPtr != NULL) && (m_packet.size > 0)){//m_bytesRemaining > 0
+			while ((m_rawDataPtr != NULL) && (m_bytesRemaining > 0)){
 				I_ASSERT(m_audioCodecContextPtr != NULL);
 
-				//int bytesToCopy = qMin(m_bytesRemaining, AVCODEC_MAX_AUDIO_FRAME_SIZE);
-				//std::memset(m_audioInputBuffer + bytesToCopy, 0, FF_INPUT_BUFFER_PADDING_SIZE);
-				//std::memcpy(m_audioInputBuffer, m_rawDataPtr, bytesToCopy);
+				int bytesToCopy = qMin(m_bytesRemaining, AVCODEC_MAX_AUDIO_FRAME_SIZE);
+				std::memset(m_audioInputBuffer + bytesToCopy, 0, FF_INPUT_BUFFER_PADDING_SIZE);
+				std::memcpy(m_audioInputBuffer, m_rawDataPtr, bytesToCopy);
 
 				// Decode the next chunk of data
 				int audioBufferSize = AVCODEC_MAX_AUDIO_FRAME_SIZE;
 
-				/*int bytesDecoded = avcodec_decode_audio3(
+				int bytesDecoded = avcodec_decode_audio2(
 							m_audioCodecContextPtr,
 							m_audioOutputBuffer,
 							&audioBufferSize,
 							m_audioInputBuffer,
-							bytesToCopy);*/
-
-				int bytesDecoded = avcodec_decode_audio3(
-							m_audioCodecContextPtr,
-							m_audioOutputBuffer,
-							&audioBufferSize,
-							&m_packet);
+							bytesToCopy);
 
 				// Was there an error?
 				if (bytesDecoded > 0){
-					//m_bytesRemaining -= bytesDecoded;
-					//m_rawDataPtr += bytesDecoded;
-					m_packet.size -= bytesDecoded;
-					m_packet.data += bytesDecoded;
+					m_bytesRemaining -= bytesDecoded;
+					m_rawDataPtr += bytesDecoded;
 
 					if (minimalAudioFrame >= 0){
 						if (m_packet.dts == AV_NOPTS_VALUE){
@@ -768,23 +752,23 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 						int sampleRawSize = 0;
 
 						switch (m_audioCodecContextPtr->sample_fmt){
-						case AV_SAMPLE_FMT_U8:
+						case SAMPLE_FMT_U8:
 							sampleRawSize = sizeof(quint8);
 							break;
 
-						case AV_SAMPLE_FMT_S16:
+						case SAMPLE_FMT_S16:
 							sampleRawSize = sizeof(qint16);
 							break;
 
-						case AV_SAMPLE_FMT_S32:
+						case SAMPLE_FMT_S32:
 							sampleRawSize = sizeof(qint32);
 							break;
 
-						case AV_SAMPLE_FMT_FLT:
+						case SAMPLE_FMT_FLT:
 							sampleRawSize = sizeof(float);
 							break;
 
-						case AV_SAMPLE_FMT_DBL:
+						case SAMPLE_FMT_DBL:
 							sampleRawSize = sizeof(double);
 							break;
 
@@ -809,7 +793,7 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 						int allSamplesCount = samplesCount * channelsCount;
 
 						switch (m_audioCodecContextPtr->sample_fmt){
-						case AV_SAMPLE_FMT_U8:
+						case SAMPLE_FMT_U8:
 							{
 								quint8* samplesPtr = (quint8*)m_audioOutputBuffer;
 								for (int i = 0; i < allSamplesCount; ++i){
@@ -818,7 +802,7 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 							}
 							break;
 
-						case AV_SAMPLE_FMT_S16:
+						case SAMPLE_FMT_S16:
 							{
 								qint16* samplesPtr = (qint16*)m_audioOutputBuffer;
 								for (int i = 0; i < allSamplesCount; ++i){
@@ -827,7 +811,7 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 							}
 							break;
 
-						case AV_SAMPLE_FMT_S32:
+						case SAMPLE_FMT_S32:
 							{
 								qint32* samplesPtr = (qint32*)m_audioOutputBuffer;
 								for (int i = 0; i < allSamplesCount; ++i){
@@ -836,7 +820,7 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 							}
 							break;
 
-						case AV_SAMPLE_FMT_FLT:
+						case SAMPLE_FMT_FLT:
 							{
 								float* samplesPtr = (float*)m_audioOutputBuffer;
 								for (int i = 0; i < allSamplesCount; ++i){
@@ -845,7 +829,7 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 							}
 							break;
 
-						case AV_SAMPLE_FMT_DBL:
+						case SAMPLE_FMT_DBL:
 							{
 								double* samplesPtr = (double*)m_audioOutputBuffer;
 								for (int i = 0; i < allSamplesCount; ++i){
@@ -879,8 +863,6 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 bool CLibAvVideoDecoderComp::ReadNextPacket()
 {
 	if (m_packet.data != NULL){
-		m_packet.data = m_rawDataPtr;
-		m_packet.size = m_bytesRemaining;
 		av_free_packet(&m_packet);
 		m_packet.data = NULL;
 		m_rawDataPtr = NULL;

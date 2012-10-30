@@ -23,11 +23,11 @@
 #ifndef ilibav_CLibAvVideoDecoderComp_included
 #define ilibav_CLibAvVideoDecoderComp_included
 
-#define __STDC_CONSTANT_MACROS
 
 // LIBAV includes
 extern "C"{
 #define inline _inline
+#define __STDC_CONSTANT_MACROS
 #include <libavformat/avformat.h>
 #undef inline
 }
