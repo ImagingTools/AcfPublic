@@ -40,6 +40,11 @@ I_EXPORT_COMPONENT(
 			"Video decoder based on libAv library",
 			"Video Decoder Controller LibAv Bitmap Frame Grab AVI MPEG" IM_TAG("Multimedia"));
 
+I_EXPORT_COMPONENT(
+			LibAvRtspStreamingCamera,
+			"Video camera for rtsp stream with H264 codec based on liv555 library (stream) and libAv library (video)",
+			"Video Decoder Controller LibAv Bitmap Grab Stream RTSP H264" IM_TAG("Multimedia"));
+
 
 } // namespace FfMpegPck
 

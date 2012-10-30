@@ -43,7 +43,7 @@ namespace ilibav
 bool CLibAvConverter::ConvertBitmap(
 			const AVFrame& avFrame,
 			const istd::CIndex2d& size,
-			int frameFormat,
+			AVPixelFormat pixelFormat,
 			iimg::IBitmap& result)
 {
 	istd::CChangeNotifier notifier(&result);
@@ -52,7 +52,7 @@ bool CLibAvConverter::ConvertBitmap(
 		SwsContext* scaleContextPtr = sws_getContext(
 					size.GetX(),
 					size.GetY(),
-					frameFormat,
+					pixelFormat,
 					size.GetX(),
 					size.GetY(),
 					PIX_FMT_RGB32,
@@ -84,7 +84,6 @@ bool CLibAvConverter::ConvertBitmap(
 
 	return false;
 }
-
 
 } // namespace ilibav
 

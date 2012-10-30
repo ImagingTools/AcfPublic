@@ -27,6 +27,7 @@
 #include "icomp/TModelCompWrap.h"
 
 #include "ilibav/CLibAvVideoDecoderComp.h"
+#include "ilibav/CLibAvRtspStreamingCameraComp.h"
 
 
 /**
@@ -37,6 +38,7 @@ namespace FfMpegPck
 
 
 typedef icomp::TModelCompWrap<ilibav::CLibAvVideoDecoderComp> LibAvVideoDecoder;
+typedef ilibav::CLibAvRtspStreamingCameraComp LibAvRtspStreamingCamera;
 
 
 } // namespace FfMpegPck

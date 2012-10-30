@@ -24,6 +24,8 @@
 #define ilibav_CLibAvConverter_included
 
 
+#define __STDC_CONSTANT_MACROS
+
 // LIBAV includes
 extern "C"{
 #include "libavformat/avformat.h"
@@ -44,7 +46,7 @@ namespace ilibav
 class CLibAvConverter
 {
 public:
-	static bool ConvertBitmap(const AVFrame& avFrame, const istd::CIndex2d& size, int frameFormat, iimg::IBitmap& result);
+	static bool ConvertBitmap(const AVFrame& avFrame, const istd::CIndex2d& size, AVPixelFormat pixelFormat, iimg::IBitmap& result);	
 
 protected:
 	struct Rgba{
