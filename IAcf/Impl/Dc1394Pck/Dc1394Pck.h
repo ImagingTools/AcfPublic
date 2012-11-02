@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF-Solutions Toolkit.
+**	This file is part of the IACF Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,40 +15,33 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**	by Skype to ACF_infoline for further information about the IACF.
 **
 ********************************************************************************/
 
 
-#include "ifpf/CVisualHotfolderWorkflowComp.h"
+#ifndef Dc1394Pck_included
+#define Dc1394Pck_included
 
 
-// Qt includes
-#include <QtCore/QMutexLocker>
+#include "icomp/TModelCompWrap.h"
 
-// ACF includes
-#include "istd/TChangeNotifier.h"
-#include "iser/IArchive.h"
-#include "iser/CArchiveTag.h"
-#include "iproc/IProcessor.h"
+#include "idc1394/CSimpleCameraComp.h"
 
 
-namespace ifpf
+/**
+	Package based on FFMPEG library.
+*/
+namespace Dc1394Pck
 {
 
 
-// public methods
-
-// reimplemented (iser::ISerializable)
-
-bool CVisualHotfolderWorkflowComp::Serialize(iser::IArchive& /*archive*/)
-{
-	bool retVal = true;
-
-	return retVal;
-}
+typedef idc1394::CSimpleCameraComp SimpleCamera;
 
 
-} // namespace ifpf
+} // namespace Dc1394Pck
+
+
+#endif // !Dc1394Pck_included
 
 

@@ -511,13 +511,6 @@
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
-    <name>CVisualHotfolderWorkflowLoaderComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ihotf/</path>
-    <filename>_c_visual_hotfolder_workflow_loader_comp_8h</filename>
-    <class kind="class">ifpf::CHotfolderWorkflowComp</class>
-    <namespace>ifpf</namespace>
-  </compound>
-  <compound kind="file">
     <name>IDirectoryMonitor.h</name>
     <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_directory_monitor_8h</filename>
@@ -4991,79 +4984,6 @@
       <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
       <anchor>a3573570923b2dc556a10aebb7233ec97</anchor>
       <arglist>(const QStringList &amp;patternsToRemove)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>ifpf</name>
-    <filename>namespaceifpf.html</filename>
-    <class kind="class">ifpf::CHotfolderWorkflowComp</class>
-  </compound>
-  <compound kind="class">
-    <name>ifpf::CHotfolderWorkflowComp</name>
-    <filename>classifpf_1_1_c_hotfolder_workflow_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ae46bc4edd04290ce7249de98540d9dec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderWorkflowComp</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a70918bb98ad538f86d28cac051206207</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderProcessingInfo *</type>
-      <name>AddHotfolder</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a484a543079228b0cf478bbee1ff3923b</anchor>
-      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RemoveHotfolder</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a08f0acd90d47e1acc11ede45bb5f8a57</anchor>
-      <arglist>(const QString &amp;hotfolderName)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderProcessingInfo *</type>
-      <name>GetHotfolder</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a80964a62611070e03fdaa64feecfde01</anchor>
-      <arglist>(const QString &amp;hotfolderName) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetHotfoldersList</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a2cc556be2b701417dc11cee34a9b3b80</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorkingState</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>aa84adb89a61fbed926c1b47c0b402d48</anchor>
-      <arglist>(const QString &amp;hotfolderName) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a91f25e020813632ddf9d8bcb2d50686d</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual ifpf::IHotfolderProcessingInfo *</type>
-      <name>CreateHotfolder</name>
-      <anchorfile>classifpf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>aaad81cef04d1819a35bc723179c9337f</anchor>
-      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString()) const </arglist>
     </member>
   </compound>
   <compound kind="namespace">

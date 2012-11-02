@@ -29,6 +29,13 @@
     <namespace>icbox</namespace>
   </compound>
   <compound kind="file">
+    <name>CSimpleCameraComp.h</name>
+    <path>C:/Temp/Iacf/Include/idc1394/</path>
+    <filename>_c_simple_camera_comp_8h</filename>
+    <class kind="class">idc1394::CSimpleCameraComp</class>
+    <namespace>idc1394</namespace>
+  </compound>
+  <compound kind="file">
     <name>CLibAvConverter.h</name>
     <path>C:/Temp/Iacf/Include/ilibav/</path>
     <filename>_c_lib_av_converter_8h</filename>
@@ -79,7 +86,7 @@
     <name>CLibAvRtspStreamingDataSink.h</name>
     <path>C:/Temp/Iacf/Include/ilibav/</path>
     <filename>_c_lib_av_rtsp_streaming_data_sink_8h</filename>
-    <includes id="_c_lib_av_rtsp_streaming_client_8h" name="CLibAvRtspStreamingClient.h" local="yes" imported="no">CLibAvRtspStreamingClient.h</includes>
+    <includes id="_c_lib_av_rtsp_streaming_client_8h" name="CLibAvRtspStreamingClient.h" local="yes" imported="no">ilibav/CLibAvRtspStreamingClient.h</includes>
     <class kind="class">ilibav::CLibAvRtspStreamingDataSink</class>
     <namespace>ilibav</namespace>
     <member kind="define">
@@ -87,13 +94,6 @@
       <name>__STDC_CONSTANT_MACROS</name>
       <anchorfile>_c_lib_av_rtsp_streaming_data_sink_8h.html</anchorfile>
       <anchor>a786132414c30f947907be33a4c28125a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>ilibav_CLibAvRtspStreamingDataSink_included</name>
-      <anchorfile>_c_lib_av_rtsp_streaming_data_sink_8h.html</anchorfile>
-      <anchor>a6f2c7e3ba5689a7fc3652c3cf07a2601</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -105,16 +105,16 @@
     <namespace>ilibav</namespace>
     <member kind="define">
       <type>#define</type>
-      <name>__STDC_CONSTANT_MACROS</name>
+      <name>inline</name>
       <anchorfile>_c_lib_av_video_decoder_comp_8h.html</anchorfile>
-      <anchor>a786132414c30f947907be33a4c28125a</anchor>
+      <anchor>a00d24c7231be28dbaf71f5408f30e44c</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>inline</name>
+      <name>__STDC_CONSTANT_MACROS</name>
       <anchorfile>_c_lib_av_video_decoder_comp_8h.html</anchorfile>
-      <anchor>a00d24c7231be28dbaf71f5408f30e44c</anchor>
+      <anchor>a786132414c30f947907be33a4c28125a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -537,6 +537,77 @@
       <name>OnComponentDestroyed</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
       <anchor>a07f0ac668736e287a66e50f8448c78b5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>idc1394</name>
+    <filename>namespaceidc1394.html</filename>
+    <class kind="class">idc1394::CSimpleCameraComp</class>
+  </compound>
+  <compound kind="class">
+    <name>idc1394::CSimpleCameraComp</name>
+    <filename>classidc1394_1_1_c_simple_camera_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad730c02b8989c060e5f1debdbbce0e74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_FIND_CAMERA</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad730c02b8989c060e5f1debdbbce0e74a0cd4b261466e4ea1fcb0ecfc5443cefd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CAMERA</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad730c02b8989c060e5f1debdbbce0e74af1b7d9e878abd4917ef49c7bae523b1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>aeeae6b3856276db715aadfe6dd2a5331</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSimpleCameraComp</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>af3693f53b6341b5e1da3e2e7775517d6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a882b0f96c12186ff13902968f8a1b7a5</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetBitmapSize</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a4e54ce3d6498b21a58757d7eaf6adfc7</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a638e9e9393718aa43e6b151b31ef2a76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>adf1a7c914e13f1af70657c9544941fa0</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

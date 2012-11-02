@@ -24,69 +24,51 @@
 <div class="title">Include/ilibav/CLibAvConverter.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_lib_av_converter_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/********************************************************************************</span>
-<a name="l00002"></a>00002 <span class="comment">**</span>
-<a name="l00003"></a>00003 <span class="comment">**     Copyright (C) 2007-2011 Witold Gantzke &amp; Kirill Lepskiy</span>
-<a name="l00004"></a>00004 <span class="comment">**</span>
-<a name="l00005"></a>00005 <span class="comment">**     This file is part of the IACF Toolkit.</span>
-<a name="l00006"></a>00006 <span class="comment">**</span>
-<a name="l00007"></a>00007 <span class="comment">**     This file may be used under the terms of the GNU Lesser</span>
-<a name="l00008"></a>00008 <span class="comment">**     General Public License version 2.1 as published by the Free Software</span>
-<a name="l00009"></a>00009 <span class="comment">**     Foundation and appearing in the file LicenseLGPL.txt included in the</span>
-<a name="l00010"></a>00010 <span class="comment">**     packaging of this file.  Please review the following information to</span>
-<a name="l00011"></a>00011 <span class="comment">**     ensure the GNU Lesser General Public License version 2.1 requirements</span>
-<a name="l00012"></a>00012 <span class="comment">**     will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.</span>
-<a name="l00013"></a>00013 <span class="comment">**</span>
-<a name="l00014"></a>00014 <span class="comment">**     If you are unsure which license is appropriate for your use, please</span>
-<a name="l00015"></a>00015 <span class="comment">**     contact us at info@imagingtools.de.</span>
-<a name="l00016"></a>00016 <span class="comment">**</span>
-<a name="l00017"></a>00017 <span class="comment">**     See http://www.ilena.org, write info@imagingtools.de or contact</span>
-<a name="l00018"></a>00018 <span class="comment">**     by Skype to ACF_infoline for further information about the IACF.</span>
-<a name="l00019"></a>00019 <span class="comment">**</span>
-<a name="l00020"></a>00020 <span class="comment">********************************************************************************/</span>
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="preprocessor">#ifndef ilibav_CLibAvConverter_included</span>
-<a name="l00024"></a>00024 <span class="preprocessor"></span><span class="preprocessor">#define ilibav_CLibAvConverter_included</span>
-<a name="l00025"></a>00025 <span class="preprocessor"></span>
-<a name="l00026"></a>00026 
-<a name="l00027"></a><a class="code" href="_c_lib_av_converter_8h.html#a786132414c30f947907be33a4c28125a">00027</a> <span class="preprocessor">#define __STDC_CONSTANT_MACROS</span>
-<a name="l00028"></a>00028 <span class="preprocessor"></span>
-<a name="l00029"></a>00029 <span class="comment">// LIBAV includes</span>
-<a name="l00030"></a>00030 <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>{
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;libavformat/avformat.h&quot;</span>
-<a name="l00032"></a>00032 }
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="comment">// ACF includes</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_index2d_8h.html">istd/CIndex2d.h</a>&quot;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_8h.html">iimg/IBitmap.h</a>&quot;</span>
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 
-<a name="l00039"></a><a class="code" href="namespaceilibav.html">00039</a> <span class="keyword">namespace </span>ilibav
-<a name="l00040"></a>00040 {
+<a href="_c_lib_av_converter_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ilibav_CLibAvConverter_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ilibav_CLibAvConverter_included</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a><a class="code" href="_c_lib_av_converter_8h.html#a786132414c30f947907be33a4c28125a">00005</a> <span class="preprocessor">#define __STDC_CONSTANT_MACROS</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span>
+<a name="l00007"></a>00007 <span class="comment">// LIBAV includes</span>
+<a name="l00008"></a>00008 <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>{
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;libavformat/avformat.h&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#undef PixelFormat</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#undef BYTES_PER_SAMPLE</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#undef BITS_PER_SAMPLE</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#undef WAVE_FORMAT_PCM</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span>}
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="comment">// ACF includes</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_index2d_8h.html">istd/CIndex2d.h</a>&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_8h.html">iimg/IBitmap.h</a>&quot;</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 
+<a name="l00021"></a><a class="code" href="namespaceilibav.html">00021</a> <span class="keyword">namespace </span>ilibav
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 
+<a name="l00028"></a><a class="code" href="classilibav_1_1_c_lib_av_converter.html">00028</a> <span class="keyword">class </span><a class="code" href="classilibav_1_1_c_lib_av_converter.html" title="Helper class containing static methods to convert between AvLib and ACF classes.">CLibAvConverter</a>
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030 <span class="keyword">public</span>:
+<a name="l00031"></a>00031        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_converter.html#af8162bac8f826ea754007f7c0da7dd4d">ConvertBitmap</a>(<span class="keyword">const</span> AVFrame&amp; avFrame, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size, AVPixelFormat pixelFormat, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; result);     
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="keyword">protected</span>:
+<a name="l00034"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html">00034</a>        <span class="keyword">struct </span><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html">Rgba</a>{
+<a name="l00035"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a50db7994977a7ad022b4c956b46e078f">00035</a>               quint8 <a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a50db7994977a7ad022b4c956b46e078f">r</a>;
+<a name="l00036"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#ab81a488fcd6d82feaabfc6e27436ce1e">00036</a>               quint8 <a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#ab81a488fcd6d82feaabfc6e27436ce1e">g</a>;
+<a name="l00037"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a9e60ece58c0d11b6116d353d3d46b11d">00037</a>               quint8 <a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a9e60ece58c0d11b6116d353d3d46b11d">b</a>;
+<a name="l00038"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a81c969d65f0101a34846c96a74e63e42">00038</a>               quint8 <a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a81c969d65f0101a34846c96a74e63e42">a</a>;
+<a name="l00039"></a>00039        };
+<a name="l00040"></a>00040 };
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 
-<a name="l00046"></a><a class="code" href="classilibav_1_1_c_lib_av_converter.html">00046</a> <span class="keyword">class </span><a class="code" href="classilibav_1_1_c_lib_av_converter.html" title="Helper class containing static methods to convert between AvLib and ACF classes.">CLibAvConverter</a>
-<a name="l00047"></a>00047 {
-<a name="l00048"></a>00048 <span class="keyword">public</span>:
-<a name="l00049"></a>00049        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_converter.html#af8162bac8f826ea754007f7c0da7dd4d">ConvertBitmap</a>(<span class="keyword">const</span> AVFrame&amp; avFrame, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size, AVPixelFormat pixelFormat, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; result);     
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="keyword">protected</span>:
-<a name="l00052"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html">00052</a>        <span class="keyword">struct </span><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html">Rgba</a>{
-<a name="l00053"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a50db7994977a7ad022b4c956b46e078f">00053</a>               quint8 <a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a50db7994977a7ad022b4c956b46e078f">r</a>;
-<a name="l00054"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#ab81a488fcd6d82feaabfc6e27436ce1e">00054</a>               quint8 <a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#ab81a488fcd6d82feaabfc6e27436ce1e">g</a>;
-<a name="l00055"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a9e60ece58c0d11b6116d353d3d46b11d">00055</a>               quint8 <a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a9e60ece58c0d11b6116d353d3d46b11d">b</a>;
-<a name="l00056"></a><a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a81c969d65f0101a34846c96a74e63e42">00056</a>               quint8 <a class="code" href="structilibav_1_1_c_lib_av_converter_1_1_rgba.html#a81c969d65f0101a34846c96a74e63e42">a</a>;
-<a name="l00057"></a>00057        };
-<a name="l00058"></a>00058 };
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 } <span class="comment">// namespace ilibav</span>
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif // !ilibav_CLibAvConverter_included</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span>
-<a name="l00066"></a>00066 
+<a name="l00043"></a>00043 } <span class="comment">// namespace ilibav</span>
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="preprocessor">#endif // !ilibav_CLibAvConverter_included</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>
+<a name="l00048"></a>00048 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

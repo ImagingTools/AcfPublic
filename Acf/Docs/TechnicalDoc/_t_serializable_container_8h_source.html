@@ -56,7 +56,7 @@
 <a name="l00036"></a>00036 };
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="comment">// protected members </span>
+<a name="l00039"></a>00039 <span class="comment">// protected members</span>
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="comment">// reimplemented (iser::Serializable)</span>
 <a name="l00042"></a>00042 
@@ -82,7 +82,7 @@
 <a name="l00062"></a>00062               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> index = 0; index &lt; itemCount; index++){
 <a name="l00063"></a>00063                      BaseClass::PushBack(ItemClass());
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065                      ItemClass&amp; item = GetAt(index);
+<a name="l00065"></a>00065                      ItemClass&amp; item = BaseClass::GetAt(index);
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067                      <span class="keywordtype">bool</span> retVal = archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(itemTag);
 <a name="l00068"></a>00068 
@@ -93,7 +93,7 @@
 <a name="l00073"></a>00073        }
 <a name="l00074"></a>00074        <span class="keywordflow">else</span>{
 <a name="l00075"></a>00075               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> index = 0; index &lt; itemCount; index++){
-<a name="l00076"></a>00076                      ItemClass&amp; item = GetAt(index);
+<a name="l00076"></a>00076                      ItemClass&amp; item = BaseClass::GetAt(index);
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078                      <span class="keywordtype">bool</span> retVal = archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(itemTag);
 <a name="l00079"></a>00079 

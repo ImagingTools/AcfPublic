@@ -82,7 +82,7 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 
 			if (m_styleSheetPathAttrPtr.IsValid()){
 				if (!iqtgui::SetStyleSheet(*m_widgetPtr, *m_styleSheetPathAttrPtr)){
-					qDebug(QString("Style sheet file could not be set: %1").arg(*m_styleSheetPathAttrPtr).toLatin1());
+					qDebug("Style sheet file could not be set: %s", (*m_styleSheetPathAttrPtr).toLocal8Bit().constData());
 				}
 			}
 
@@ -300,7 +300,7 @@ CGuiComponentBase::LanguageChangeEventFilter::LanguageChangeEventFilter(CGuiComp
 
 
 // 	protected methods
-	
+
 // reimplemented (QObject)
 
 bool CGuiComponentBase::LanguageChangeEventFilter::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
