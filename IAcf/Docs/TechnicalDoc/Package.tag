@@ -35,6 +35,67 @@
     <class kind="class">ilibav::CLibAvConverter</class>
     <class kind="struct">ilibav::CLibAvConverter::Rgba</class>
     <namespace>ilibav</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>__STDC_CONSTANT_MACROS</name>
+      <anchorfile>_c_lib_av_converter_8h.html</anchorfile>
+      <anchor>a786132414c30f947907be33a4c28125a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CLibAvRtspStreamingCameraComp.h</name>
+    <path>C:/Temp/Iacf/Include/ilibav/</path>
+    <filename>_c_lib_av_rtsp_streaming_camera_comp_8h</filename>
+    <includes id="_c_lib_av_rtsp_streaming_client_8h" name="CLibAvRtspStreamingClient.h" local="yes" imported="no">CLibAvRtspStreamingClient.h</includes>
+    <class kind="class">ilibav::CLibAvRtspStreamingCameraCompBase</class>
+    <class kind="class">ilibav::CLibAvRtspStreamingCameraComp</class>
+    <namespace>ilibav</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>inline</name>
+      <anchorfile>_c_lib_av_rtsp_streaming_camera_comp_8h.html</anchorfile>
+      <anchor>a00d24c7231be28dbaf71f5408f30e44c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>__STDC_CONSTANT_MACROS</name>
+      <anchorfile>_c_lib_av_rtsp_streaming_camera_comp_8h.html</anchorfile>
+      <anchor>a786132414c30f947907be33a4c28125a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CLibAvRtspStreamingClient.h</name>
+    <path>C:/Temp/Iacf/Include/ilibav/</path>
+    <filename>_c_lib_av_rtsp_streaming_client_8h</filename>
+    <includes id="_c_lib_av_converter_8h" name="CLibAvConverter.h" local="yes" imported="no">ilibav/CLibAvConverter.h</includes>
+    <class kind="class">ilibav::CLibAvRtspStreamingClient</class>
+    <class kind="class">ilibav::CLibAvRtspStreamingClient::CLibAvRtspConnection</class>
+    <namespace>ilibav</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CLibAvRtspStreamingDataSink.h</name>
+    <path>C:/Temp/Iacf/Include/ilibav/</path>
+    <filename>_c_lib_av_rtsp_streaming_data_sink_8h</filename>
+    <includes id="_c_lib_av_rtsp_streaming_client_8h" name="CLibAvRtspStreamingClient.h" local="yes" imported="no">CLibAvRtspStreamingClient.h</includes>
+    <class kind="class">ilibav::CLibAvRtspStreamingDataSink</class>
+    <namespace>ilibav</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>__STDC_CONSTANT_MACROS</name>
+      <anchorfile>_c_lib_av_rtsp_streaming_data_sink_8h.html</anchorfile>
+      <anchor>a786132414c30f947907be33a4c28125a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>ilibav_CLibAvRtspStreamingDataSink_included</name>
+      <anchorfile>_c_lib_av_rtsp_streaming_data_sink_8h.html</anchorfile>
+      <anchor>a6f2c7e3ba5689a7fc3652c3cf07a2601</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CLibAvVideoDecoderComp.h</name>
@@ -44,16 +105,16 @@
     <namespace>ilibav</namespace>
     <member kind="define">
       <type>#define</type>
-      <name>inline</name>
+      <name>__STDC_CONSTANT_MACROS</name>
       <anchorfile>_c_lib_av_video_decoder_comp_8h.html</anchorfile>
-      <anchor>a00d24c7231be28dbaf71f5408f30e44c</anchor>
+      <anchor>a786132414c30f947907be33a4c28125a</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>__STDC_CONSTANT_MACROS</name>
+      <name>inline</name>
       <anchorfile>_c_lib_av_video_decoder_comp_8h.html</anchorfile>
-      <anchor>a786132414c30f947907be33a4c28125a</anchor>
+      <anchor>a00d24c7231be28dbaf71f5408f30e44c</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -483,6 +544,10 @@
     <name>ilibav</name>
     <filename>namespaceilibav.html</filename>
     <class kind="class">ilibav::CLibAvConverter</class>
+    <class kind="class">ilibav::CLibAvRtspStreamingCameraCompBase</class>
+    <class kind="class">ilibav::CLibAvRtspStreamingCameraComp</class>
+    <class kind="class">ilibav::CLibAvRtspStreamingClient</class>
+    <class kind="class">ilibav::CLibAvRtspStreamingDataSink</class>
     <class kind="class">ilibav::CLibAvVideoDecoderComp</class>
   </compound>
   <compound kind="class">
@@ -493,8 +558,8 @@
       <type>static bool</type>
       <name>ConvertBitmap</name>
       <anchorfile>classilibav_1_1_c_lib_av_converter.html</anchorfile>
-      <anchor>a0eb48e93ce6b8446110fae1081a4aeb4</anchor>
-      <arglist>(const AVFrame &amp;avFrame, const istd::CIndex2d &amp;size, int frameFormat, iimg::IBitmap &amp;result)</arglist>
+      <anchor>af8162bac8f826ea754007f7c0da7dd4d</anchor>
+      <arglist>(const AVFrame &amp;avFrame, const istd::CIndex2d &amp;size, AVPixelFormat pixelFormat, iimg::IBitmap &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -527,6 +592,283 @@
       <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
       <anchor>a81c969d65f0101a34846c96a74e63e42</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilibav::CLibAvRtspStreamingCameraCompBase</name>
+    <filename>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp_base.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base>QObject</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp_base.html</anchorfile>
+      <anchor>a9e53f65eb6085ff11f8d3cb33e0c3409</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilibav::CLibAvRtspStreamingCameraComp</name>
+    <filename>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</filename>
+    <base>ilibav::CLibAvRtspStreamingCameraCompBase</base>
+    <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
+    <member kind="typedef">
+      <type>CLibAvRtspStreamingCameraCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>af975de0344a4e4687ca7f154a881b7b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>frameArrived</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>aa0e472640b14ef7dfeff028b38f5388a</anchor>
+      <arglist>(AVFrame *, int, int, int)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>requestReceived</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>a66f8c737bd1ba24d33aca0ec65c75067</anchor>
+      <arglist>(QNetworkReply *)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLibAvRtspStreamingCameraComp</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>a8e792723b57096447c72962078c265f0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CLibAvRtspStreamingCameraComp</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>aac2f9df454d23c6957f83d6c36fed627</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetBitmapSize</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>a8fd0fbcf4cf2d93f0afd02ea196d9c94</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>a592a35aed6c119e24226af8302aa5379</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ReadParams</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>ae391f4e4c4fe030e55801a138b5c61eb</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>a44f4109ab1c05f1d31206691f3db99c3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>aac53b5f30f686a6b318293602aa06cc6</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilibav::CLibAvRtspStreamingClient</name>
+    <filename>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</filename>
+    <class kind="class">ilibav::CLibAvRtspStreamingClient::CLibAvRtspConnection</class>
+    <member kind="signal">
+      <type>void</type>
+      <name>frameReady</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a9c3cd8fbd2ebf5a37c72dbe9da14a0bc</anchor>
+      <arglist>(AVFrame *, int, int, int)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLibAvRtspStreamingClient</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a9d521e0a6104d4ff91d5720308910cad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CLibAvRtspStreamingClient</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>afef9da7d3cb3838881390af0f5f6115f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>OpenConnection</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>adbc03277c250dc7124833d2217f8e92e</anchor>
+      <arglist>(const QString &amp;url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CloseConnection</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>ac1e6cb358351eaef8fd352e928412bd3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>FrameArrived</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a44ac52bcb4fc1a11c39d331f52955d51</anchor>
+      <arglist>(AVFrame *frame, int width, int height, int pixelformat)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>run</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a21332747b85ec0d4f07cb6000dc8f392</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>continueAfterDESCRIBE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a543d3b36bebeb6690ef32f62300675da</anchor>
+      <arglist>(RTSPClient *rtspClient, int resultCode, char *resultString)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>setupNextSubsession</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a7004f2ab74c4d6cf7a1532c262cabc82</anchor>
+      <arglist>(RTSPClient *rtspClient)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>continueAfterSETUP</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>ae0fb5df365fe9ef3254df826b37e3a67</anchor>
+      <arglist>(RTSPClient *rtspClient, int resultCode, char *resultString)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>continueAfterPLAY</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>ad7e1a57f7a0780c9dea0b8740dedac4d</anchor>
+      <arglist>(RTSPClient *rtspClient, int resultCode, char *resultString)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>subsessionAfterPlaying</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a1cd1e8a5a05b9102e9fc3e3a029a9d17</anchor>
+      <arglist>(void *clientData)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>subsessionByeHandler</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a9e498cd8d626362822d4fdbc46d07dcd</anchor>
+      <arglist>(void *clientData)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>streamTimerHandler</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>abec49319d4c612928252aeea22397398</anchor>
+      <arglist>(void *clientData)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static void</type>
+      <name>shutdownStream</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a6b322b75ef8ca7f373fbe9e5215a6cd6</anchor>
+      <arglist>(RTSPClient *rtspClient, int exitCode=1)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilibav::CLibAvRtspStreamingClient::CLibAvRtspConnection</name>
+    <filename>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</filename>
+    <member kind="function" static="yes">
+      <type>static CLibAvRtspConnection *</type>
+      <name>createNew</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>ab1781aac6d12282826200d215a74dfe2</anchor>
+      <arglist>(CLibAvRtspStreamingClient *streamClient, UsageEnvironment &amp;env, char const *rtspURL, int verbosityLevel=0, char const *applicationName=NULL, portNumBits tunnelOverHTTPPortNum=0)</arglist>
+    </member>
+    <member kind="variable">
+      <type>MediaSubsessionIterator *</type>
+      <name>m_iter</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>a08a4ec45cd69e2648d58377a919b4265</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>MediaSession *</type>
+      <name>m_session</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>af34308a71e1c45e274508ea4f6160171</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>MediaSubsession *</type>
+      <name>m_subsession</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>a419ace41cbfb4073a3aee93d5caa035b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>TaskToken</type>
+      <name>m_streamTimerTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>a92afa5dcd5739a437decff5c41ad237b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>m_duration</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>a40fd7686a8a66e71d6b845a98e4b8e94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>CLibAvRtspStreamingClient *</type>
+      <name>m_streamClient</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>ae8113edcc489e064f4b1412f834d44e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CLibAvRtspConnection</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>a7160f33c6b99f461683c31039b6445fb</anchor>
+      <arglist>(CLibAvRtspStreamingClient *streamClient, UsageEnvironment &amp;env, char const *rtspURL, int verbosityLevel, char const *applicationName, portNumBits tunnelOverHTTPPortNum)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CLibAvRtspConnection</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html</anchorfile>
+      <anchor>a5ce4ff24ff3b803a963dff31155e5f4d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilibav::CLibAvRtspStreamingDataSink</name>
+    <filename>classilibav_1_1_c_lib_av_rtsp_streaming_data_sink.html</filename>
+    <member kind="function" static="yes">
+      <type>static CLibAvRtspStreamingDataSink *</type>
+      <name>createNew</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_data_sink.html</anchorfile>
+      <anchor>a44cd15285bae4268a948787dbca77855</anchor>
+      <arglist>(CLibAvRtspStreamingClient *streamClient, UsageEnvironment &amp;env, MediaSubsession &amp;subsession, char const *streamId=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">

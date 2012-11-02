@@ -143,6 +143,15 @@ void CInspectionTaskComp::InvalidateSupplier()
 			supplierPtr->InvalidateSupplier();
 		}
 	}
+
+	// additional suppliers
+	int addSuppliersCount = m_additionalSupppliersCompPtr.GetCount();
+	for (int i = 0; i < addSuppliersCount; ++i){
+		iproc::ISupplier* supplierPtr = m_additionalSupppliersCompPtr[i];
+		if (supplierPtr != NULL){
+			supplierPtr->InvalidateSupplier();
+		}
+	}
 }
 
 
@@ -155,7 +164,15 @@ void CInspectionTaskComp::EnsureWorkInitialized()
 	// set change notifier for each input supplier
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
+		if (supplierPtr != NULL){
+			m_subtaskNotifiers[supplierPtr].SetPtr(supplierPtr);
+		}
+	}
 
+	// set change notifier for additional suppliers
+	int addSuppliersCount = m_additionalSupppliersCompPtr.GetCount();
+	for (int i = 0; i < addSuppliersCount; ++i){
+		iproc::ISupplier* supplierPtr = m_additionalSupppliersCompPtr[i];
 		if (supplierPtr != NULL){
 			m_subtaskNotifiers[supplierPtr].SetPtr(supplierPtr);
 		}
@@ -164,6 +181,14 @@ void CInspectionTaskComp::EnsureWorkInitialized()
 	// delegate the work initialization to each supplier
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
+		if (supplierPtr != NULL){
+			supplierPtr->EnsureWorkInitialized();
+		}
+	}
+
+	// additional suppliers
+	for (int i = 0; i < addSuppliersCount; ++i){
+		iproc::ISupplier* supplierPtr = m_additionalSupppliersCompPtr[i];
 		if (supplierPtr != NULL){
 			supplierPtr->EnsureWorkInitialized();
 		}
@@ -181,6 +206,15 @@ void CInspectionTaskComp::EnsureWorkFinished()
 		}
 	}
 
+	// additional suppliers
+	int addSuppliersCount = m_additionalSupppliersCompPtr.GetCount();
+	for (int i = 0; i < addSuppliersCount; ++i){
+		iproc::ISupplier* supplierPtr = m_additionalSupppliersCompPtr[i];
+		if (supplierPtr != NULL){
+			supplierPtr->EnsureWorkInitialized();
+		}
+	}
+
 	m_subtaskNotifiers.clear();
 	m_productChangeNotifier.Reset();
 }
@@ -191,6 +225,15 @@ void CInspectionTaskComp::ClearWorkResults()
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
+		if (supplierPtr != NULL){
+			supplierPtr->ClearWorkResults();
+		}
+	}
+
+	// additional suppliers
+	int addSuppliersCount = m_additionalSupppliersCompPtr.GetCount();
+	for (int i = 0; i < addSuppliersCount; ++i){
+		iproc::ISupplier* supplierPtr = m_additionalSupppliersCompPtr[i];
 		if (supplierPtr != NULL){
 			supplierPtr->ClearWorkResults();
 		}
