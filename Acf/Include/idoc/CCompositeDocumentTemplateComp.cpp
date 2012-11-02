@@ -31,8 +31,8 @@ namespace idoc
 
 bool CCompositeDocumentTemplateComp::IsFeatureSupported(int featureFlags, const QByteArray& documentTypeId) const
 {
-	IdToTemplateMap::const_iterator foundTemplateIter = m_idToTemplateMap.find(documentTypeId);
-	if (foundTemplateIter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator foundTemplateIter = m_idToTemplateMap.constFind(documentTypeId);
+	if (foundTemplateIter != m_idToTemplateMap.constEnd()){
 		return foundTemplateIter.value()->IsFeatureSupported(featureFlags, documentTypeId);
 	}
 
@@ -44,8 +44,8 @@ IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIds() cons
 {
 	Ids retVal;
 
-	for (		IdToTemplateMap::const_iterator iter = m_idToTemplateMap.begin();
-				iter != m_idToTemplateMap.end();
+	for (		IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constBegin();
+				iter != m_idToTemplateMap.constEnd();
 				++iter){
 		const QByteArray& documentTypeId = iter.key();
 		if (!documentTypeId.isEmpty()){
@@ -59,8 +59,8 @@ IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIds() cons
 
 QString CCompositeDocumentTemplateComp::GetDocumentTypeName(const QByteArray& documentTypeId) const
 {
-	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
-	if (iter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
+	if (iter != m_idToTemplateMap.constEnd()){
 		I_ASSERT(iter.value() != NULL);
 
 		return iter.value()->GetDocumentTypeName(documentTypeId);
@@ -73,8 +73,8 @@ QString CCompositeDocumentTemplateComp::GetDocumentTypeName(const QByteArray& do
 
 iser::IFileTypeInfo* CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo(const QByteArray& documentTypeId) const
 {
-	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
-	if (iter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
+	if (iter != m_idToTemplateMap.constEnd()){
 		I_ASSERT(iter.value() != NULL);
 
 		return iter.value()->GetDocumentFileTypeInfo(documentTypeId);
@@ -106,8 +106,8 @@ IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetDocumentTypeIdsForFile
 QString CCompositeDocumentTemplateComp::GetDefaultDirectory(const QString& sugestedDir, const QByteArray* documentTypeIdPtr) const
 {
 	if (documentTypeIdPtr != NULL){
-		IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(*documentTypeIdPtr);
-		if (iter != m_idToTemplateMap.end()){
+		IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(*documentTypeIdPtr);
+		if (iter != m_idToTemplateMap.constEnd()){
 			I_ASSERT(iter.value() != NULL);
 
 			return iter.value()->GetDefaultDirectory(sugestedDir, documentTypeIdPtr);
@@ -136,8 +136,8 @@ QString CCompositeDocumentTemplateComp::GetDefaultDirectory(const QString& suges
 
 IDocumentTemplate::Ids CCompositeDocumentTemplateComp::GetViewTypeIds(const QByteArray& documentTypeId) const
 {
-	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
-	if (iter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
+	if (iter != m_idToTemplateMap.constEnd()){
 		I_ASSERT(iter.value() != NULL);
 
 		return iter.value()->GetViewTypeIds(documentTypeId);
@@ -152,8 +152,8 @@ QString CCompositeDocumentTemplateComp::GetViewTypeName(
 			const QByteArray& documentTypeId,
 			const QByteArray& viewTypeId) const
 {
-	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
-	if (iter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
+	if (iter != m_idToTemplateMap.constEnd()){
 		I_ASSERT(iter.value() != NULL);
 
 		return iter.value()->GetViewTypeName(documentTypeId, viewTypeId);
@@ -166,8 +166,8 @@ QString CCompositeDocumentTemplateComp::GetViewTypeName(
 
 iser::IFileLoader* CCompositeDocumentTemplateComp::GetFileLoader(const QByteArray& documentTypeId) const
 {
-	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
-	if (iter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
+	if (iter != m_idToTemplateMap.constEnd()){
 		I_ASSERT(iter.value() != NULL);
 
 		return iter.value()->GetFileLoader(documentTypeId);
@@ -180,8 +180,8 @@ iser::IFileLoader* CCompositeDocumentTemplateComp::GetFileLoader(const QByteArra
 
 istd::IChangeable* CCompositeDocumentTemplateComp::CreateDocument(const QByteArray& documentTypeId) const
 {
-	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
-	if (iter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
+	if (iter != m_idToTemplateMap.constEnd()){
 		I_ASSERT(iter.value() != NULL);
 
 		return iter.value()->CreateDocument(documentTypeId);
@@ -197,8 +197,8 @@ istd::IPolymorphic* CCompositeDocumentTemplateComp::CreateView(
 			istd::IChangeable* documentPtr,
 			const QByteArray& viewTypeId) const
 {
-	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
-	if (iter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
+	if (iter != m_idToTemplateMap.constEnd()){
 		I_ASSERT(iter.value() != NULL);
 
 		return iter.value()->CreateView(documentTypeId, documentPtr, viewTypeId);
@@ -211,8 +211,8 @@ istd::IPolymorphic* CCompositeDocumentTemplateComp::CreateView(
 
 idoc::IUndoManager* CCompositeDocumentTemplateComp::CreateUndoManager(const QByteArray& documentTypeId, istd::IChangeable* documentPtr) const
 {
-	IdToTemplateMap::const_iterator iter = m_idToTemplateMap.find(documentTypeId);
-	if (iter != m_idToTemplateMap.end()){
+	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
+	if (iter != m_idToTemplateMap.constEnd()){
 		I_ASSERT(iter.value() != NULL);
 
 		return iter.value()->CreateUndoManager(documentTypeId, documentPtr);

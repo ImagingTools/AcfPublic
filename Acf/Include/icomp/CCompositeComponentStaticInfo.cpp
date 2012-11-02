@@ -231,8 +231,8 @@ const IRegistry::ElementInfo* CCompositeComponentStaticInfo::GetElementInfoFromR
 			if (subRegistryPtr != NULL){
 				// get right component path for exported components:
 				const IRegistry::ExportedElementsMap& exportedComponentsMap = subRegistryPtr->GetExportedElementsMap();
-				const IRegistry::ExportedElementsMap::const_iterator foundComponentExportIter = exportedComponentsMap.find(subId);
-				if (foundComponentExportIter != exportedComponentsMap.end()){
+				const IRegistry::ExportedElementsMap::ConstIterator foundComponentExportIter = exportedComponentsMap.constFind(subId);
+				if (foundComponentExportIter != exportedComponentsMap.constEnd()){
 					subId = foundComponentExportIter.value();
 				}
 		

@@ -86,8 +86,8 @@ IComponent* CCompositeComponent::GetSubcomponent(const QByteArray& componentId) 
 		return componentInfo.componentPtr.GetPtr();
 	}
 	else{
-		ComponentMap::const_iterator iter = m_componentMap.find(componentId);
-		if (iter != m_componentMap.end()){
+		ComponentMap::ConstIterator iter = m_componentMap.constFind(componentId);
+		if (iter != m_componentMap.constEnd()){
 			return iter.value().componentPtr.GetPtr();
 		}
 		else{
@@ -110,8 +110,8 @@ const IComponentContext* CCompositeComponent::GetSubcomponentContext(const QByte
 		return componentInfo.contextPtr.GetPtr();
 	}
 	else{
-		ComponentMap::const_iterator iter = m_componentMap.find(componentId);
-		if (iter != m_componentMap.end()){
+		ComponentMap::ConstIterator iter = m_componentMap.constFind(componentId);
+		if (iter != m_componentMap.constEnd()){
 			return iter.value().contextPtr.GetPtr();
 		}
 		else{
@@ -228,8 +228,8 @@ void* CCompositeComponent::GetInterface(const istd::CClassInfo& interfaceType, c
 
 		const IRegistry::ExportedElementsMap& subcomponentMap = registry.GetExportedElementsMap();
 
-		IRegistry::ExportedElementsMap::const_iterator iter = subcomponentMap.find(componentId);
-		if (iter != subcomponentMap.end()){
+		IRegistry::ExportedElementsMap::ConstIterator iter = subcomponentMap.constFind(componentId);
+		if (iter != subcomponentMap.constEnd()){
 			const QByteArray& realComponentId = iter.value();
 			QByteArray subComponentId;
 			QByteArray subRestId;
@@ -281,8 +281,8 @@ void CCompositeComponent::SetComponentContext(
 		const IRegistry& registry = compositeContextPtr->GetRegistry();
 
 		IRegistry::Ids elementIds = registry.GetElementIds();
-		for (		IRegistry::Ids::const_iterator iter = elementIds.begin();
-					iter != elementIds.end();
+		for (		IRegistry::Ids::ConstIterator iter = elementIds.constBegin();
+					iter != elementIds.constEnd();
 					++iter){
 			const QByteArray& elementId = *iter;
 			const IRegistry::ElementInfo* infoPtr = registry.GetElementInfo(elementId);

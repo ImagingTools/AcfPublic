@@ -87,8 +87,8 @@
 <a name="l00088"></a>00088 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Object&gt;
 <a name="l00089"></a><a class="code" href="classimod_1_1_c_multi_model_dispatcher_base.html#ac95053e3935765098a79b3dcf127e968">00089</a> Object* <a class="code" href="classimod_1_1_c_multi_model_dispatcher_base.html#ac95053e3935765098a79b3dcf127e968" title="Get concrete object instance of the obsered model.">CMultiModelDispatcherBase::GetObjectAt</a>(<span class="keywordtype">int</span> modelId)<span class="keyword"> const</span>
 <a name="l00090"></a>00090 <span class="keyword"></span>{
-<a name="l00091"></a>00091        <span class="keyword">typename</span> ModelMap::const_iterator foundIter = m_modelMap.find(modelId);
-<a name="l00092"></a>00092        <span class="keywordflow">if</span> ((foundIter != m_modelMap.end()) &amp;&amp; foundIter.value().IsValid()){
+<a name="l00091"></a>00091        <span class="keyword">typename</span> ModelMap::ConstIterator foundIter = m_modelMap.constFind(modelId);
+<a name="l00092"></a>00092        <span class="keywordflow">if</span> ((foundIter != m_modelMap.constEnd()) &amp;&amp; foundIter.value().IsValid()){
 <a name="l00093"></a>00093               <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Object*<span class="keyword">&gt;</span>(foundIter.value()-&gt;GetModelPtr());
 <a name="l00094"></a>00094        }
 <a name="l00095"></a>00095 

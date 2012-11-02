@@ -308,178 +308,183 @@
 <a name="l00313"></a>00313 <span class="keyword"></span>{
 <a name="l00314"></a>00314        <span class="keyword">const_cast&lt;</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;</a>* <span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;EnsureWorkFinished();
 <a name="l00315"></a>00315 
-<a name="l00316"></a>00316        <span class="keywordflow">return</span> m_productPtr.GetPtr();
-<a name="l00317"></a>00317 }
-<a name="l00318"></a>00318 
-<a name="l00319"></a>00319 
-<a name="l00320"></a>00320 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00321"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a247f2b444973b6b94218f437ca057746">00321</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a247f2b444973b6b94218f437ca057746" title="Register supplier input.">TSupplierCompWrap&lt;Product&gt;::RegisterSupplierInput</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr)
-<a name="l00322"></a>00322 {
-<a name="l00323"></a>00323        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(modelPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00316"></a>00316        <span class="keywordflow">if</span> (m_workStatus &lt;= WS_OK){
+<a name="l00317"></a>00317               <span class="keywordflow">return</span> m_productPtr.GetPtr();
+<a name="l00318"></a>00318        }
+<a name="l00319"></a>00319        <span class="keywordflow">else</span>{
+<a name="l00320"></a>00320               <span class="keywordflow">return</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00321"></a>00321        }
+<a name="l00322"></a>00322 }
+<a name="l00323"></a>00323 
 <a name="l00324"></a>00324 
-<a name="l00325"></a>00325        modelPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">AttachObserver</a>(&amp;m_inputsObserver);
-<a name="l00326"></a>00326 
-<a name="l00327"></a>00327        <span class="keywordflow">if</span> (supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00328"></a>00328               m_inputSuppliersMap[modelPtr] = supplierPtr;
-<a name="l00329"></a>00329        }
-<a name="l00330"></a>00330 }
+<a name="l00325"></a>00325 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00326"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a247f2b444973b6b94218f437ca057746">00326</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a247f2b444973b6b94218f437ca057746" title="Register supplier input.">TSupplierCompWrap&lt;Product&gt;::RegisterSupplierInput</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr)
+<a name="l00327"></a>00327 {
+<a name="l00328"></a>00328        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(modelPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00329"></a>00329 
+<a name="l00330"></a>00330        modelPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#ac6c63f2699bce472fc0b7e556604c5cd">AttachObserver</a>(&amp;m_inputsObserver);
 <a name="l00331"></a>00331 
-<a name="l00332"></a>00332 
-<a name="l00333"></a>00333 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00334"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#af3699e19481feebf476a3f823ac98bfb">00334</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#af3699e19481feebf476a3f823ac98bfb" title="Unregister supplier input.">TSupplierCompWrap&lt;Product&gt;::UnregisterSupplierInput</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr)
-<a name="l00335"></a>00335 {
-<a name="l00336"></a>00336        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(modelPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00337"></a>00337        <span class="keywordflow">if</span> (m_inputsObserver.IsModelAttached(modelPtr)){
-<a name="l00338"></a>00338               modelPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66">DetachObserver</a>(&amp;m_inputsObserver);
-<a name="l00339"></a>00339        }
-<a name="l00340"></a>00340 
-<a name="l00341"></a>00341        m_inputSuppliersMap.remove(modelPtr);
-<a name="l00342"></a>00342 }
-<a name="l00343"></a>00343 
-<a name="l00344"></a>00344 
-<a name="l00345"></a>00345 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00346"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8">00346</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8" title="Add ibase::CMessage to the internal message container (also from const functions).">TSupplierCompWrap&lt;Product&gt;::AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_message.html">ibase::CMessage</a>* messagePtr)<span class="keyword"> const</span>
-<a name="l00347"></a>00347 <span class="keyword"></span>{
-<a name="l00348"></a>00348        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(messagePtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00332"></a>00332        <span class="keywordflow">if</span> (supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00333"></a>00333               m_inputSuppliersMap[modelPtr] = supplierPtr;
+<a name="l00334"></a>00334        }
+<a name="l00335"></a>00335 }
+<a name="l00336"></a>00336 
+<a name="l00337"></a>00337 
+<a name="l00338"></a>00338 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00339"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#af3699e19481feebf476a3f823ac98bfb">00339</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#af3699e19481feebf476a3f823ac98bfb" title="Unregister supplier input.">TSupplierCompWrap&lt;Product&gt;::UnregisterSupplierInput</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr)
+<a name="l00340"></a>00340 {
+<a name="l00341"></a>00341        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(modelPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00342"></a>00342        <span class="keywordflow">if</span> (m_inputsObserver.IsModelAttached(modelPtr)){
+<a name="l00343"></a>00343               modelPtr-&gt;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html#a7397e5498b4db60234160a97f570eb66">DetachObserver</a>(&amp;m_inputsObserver);
+<a name="l00344"></a>00344        }
+<a name="l00345"></a>00345 
+<a name="l00346"></a>00346        m_inputSuppliersMap.remove(modelPtr);
+<a name="l00347"></a>00347 }
+<a name="l00348"></a>00348 
 <a name="l00349"></a>00349 
-<a name="l00350"></a>00350        m_messageContainer.AddMessage((<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;const istd::IInformationProvider&gt;</a>)messagePtr);
-<a name="l00351"></a>00351 }
-<a name="l00352"></a>00352 
-<a name="l00353"></a>00353 
-<a name="l00354"></a>00354 <span class="comment">// reimplemented (ibase::IMessageConsumer)</span>
-<a name="l00355"></a>00355 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00356"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1fe91e45040ff8b41c43f7d28c5fea10">00356</a> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1fe91e45040ff8b41c43f7d28c5fea10">TSupplierCompWrap&lt;Product&gt;::IsMessageSupported</a>(
-<a name="l00357"></a>00357                      <span class="keywordtype">int</span> messageCategory,
-<a name="l00358"></a>00358                      <span class="keywordtype">int</span> messageId,
-<a name="l00359"></a>00359                      <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>* messagePtr)<span class="keyword"> const</span>
-<a name="l00360"></a>00360 <span class="keyword"></span>{
-<a name="l00361"></a>00361        <span class="keywordflow">return</span> m_messageContainer.IsMessageSupported(messageCategory, messageId, messagePtr);
-<a name="l00362"></a>00362 }
-<a name="l00363"></a>00363 
-<a name="l00364"></a>00364 
-<a name="l00365"></a>00365 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00366"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a022dd25ac0bef5830e4be67f481435ff">00366</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8" title="Add ibase::CMessage to the internal message container (also from const functions).">TSupplierCompWrap&lt;Product&gt;::AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a>&amp; messagePtr)
-<a name="l00367"></a>00367 {
-<a name="l00368"></a>00368        m_messageContainer.AddMessage(messagePtr);
-<a name="l00369"></a>00369 }
-<a name="l00370"></a>00370 
-<a name="l00371"></a>00371 
-<a name="l00372"></a>00372 <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00373"></a>00373 
-<a name="l00374"></a>00374 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00375"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">00375</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">TSupplierCompWrap&lt;Product&gt;::OnComponentCreated</a>()
-<a name="l00376"></a>00376 {
-<a name="l00377"></a>00377        BaseClass::OnComponentCreated();
+<a name="l00350"></a>00350 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00351"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8">00351</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8" title="Add ibase::CMessage to the internal message container (also from const functions).">TSupplierCompWrap&lt;Product&gt;::AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_message.html">ibase::CMessage</a>* messagePtr)<span class="keyword"> const</span>
+<a name="l00352"></a>00352 <span class="keyword"></span>{
+<a name="l00353"></a>00353        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(messagePtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00354"></a>00354 
+<a name="l00355"></a>00355        m_messageContainer.AddMessage((<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;const istd::IInformationProvider&gt;</a>)messagePtr);
+<a name="l00356"></a>00356 }
+<a name="l00357"></a>00357 
+<a name="l00358"></a>00358 
+<a name="l00359"></a>00359 <span class="comment">// reimplemented (ibase::IMessageConsumer)</span>
+<a name="l00360"></a>00360 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00361"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1fe91e45040ff8b41c43f7d28c5fea10">00361</a> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1fe91e45040ff8b41c43f7d28c5fea10">TSupplierCompWrap&lt;Product&gt;::IsMessageSupported</a>(
+<a name="l00362"></a>00362                      <span class="keywordtype">int</span> messageCategory,
+<a name="l00363"></a>00363                      <span class="keywordtype">int</span> messageId,
+<a name="l00364"></a>00364                      <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>* messagePtr)<span class="keyword"> const</span>
+<a name="l00365"></a>00365 <span class="keyword"></span>{
+<a name="l00366"></a>00366        <span class="keywordflow">return</span> m_messageContainer.IsMessageSupported(messageCategory, messageId, messagePtr);
+<a name="l00367"></a>00367 }
+<a name="l00368"></a>00368 
+<a name="l00369"></a>00369 
+<a name="l00370"></a>00370 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00371"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a022dd25ac0bef5830e4be67f481435ff">00371</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8" title="Add ibase::CMessage to the internal message container (also from const functions).">TSupplierCompWrap&lt;Product&gt;::AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a>&amp; messagePtr)
+<a name="l00372"></a>00372 {
+<a name="l00373"></a>00373        m_messageContainer.AddMessage(messagePtr);
+<a name="l00374"></a>00374 }
+<a name="l00375"></a>00375 
+<a name="l00376"></a>00376 
+<a name="l00377"></a>00377 <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00378"></a>00378 
-<a name="l00379"></a>00379        m_productChangeNotifier.Reset();
-<a name="l00380"></a>00380 
-<a name="l00381"></a>00381        <span class="keywordflow">if</span> (m_paramsSetModelCompPtr.IsValid()){
-<a name="l00382"></a>00382               m_paramsSetModelCompPtr-&gt;AttachObserver(&amp;m_paramsObserver);
-<a name="l00383"></a>00383        }
-<a name="l00384"></a>00384 
-<a name="l00385"></a>00385        <span class="keywordtype">int</span> inputsCount = m_additionalTriggerInputsCompPtr.GetCount();
-<a name="l00386"></a>00386        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; inputsCount; ++i){
-<a name="l00387"></a>00387               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* inputModelPtr = m_additionalTriggerInputsCompPtr[i];
-<a name="l00388"></a>00388               <span class="keywordflow">if</span> (inputModelPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00389"></a>00389                      RegisterSupplierInput(inputModelPtr);
-<a name="l00390"></a>00390               }
-<a name="l00391"></a>00391        }
-<a name="l00392"></a>00392 
-<a name="l00393"></a>00393        m_workStatus = WS_INVALID;
-<a name="l00394"></a>00394 }
-<a name="l00395"></a>00395 
-<a name="l00396"></a>00396 
-<a name="l00397"></a>00397 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00398"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6c61739f6153e4f37b82ca110468afe">00398</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6c61739f6153e4f37b82ca110468afe">TSupplierCompWrap&lt;Product&gt;::OnComponentDestroyed</a>()
-<a name="l00399"></a>00399 {
-<a name="l00400"></a>00400        m_inputsObserver.EnsureModelsDetached();
-<a name="l00401"></a>00401        m_paramsObserver.EnsureModelsDetached();
-<a name="l00402"></a>00402 
-<a name="l00403"></a>00403        m_productChangeNotifier.Reset();
-<a name="l00404"></a>00404 
-<a name="l00405"></a>00405        BaseClass::OnComponentDestroyed();
-<a name="l00406"></a>00406 }
+<a name="l00379"></a>00379 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00380"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">00380</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">TSupplierCompWrap&lt;Product&gt;::OnComponentCreated</a>()
+<a name="l00381"></a>00381 {
+<a name="l00382"></a>00382        BaseClass::OnComponentCreated();
+<a name="l00383"></a>00383 
+<a name="l00384"></a>00384        m_productChangeNotifier.Reset();
+<a name="l00385"></a>00385 
+<a name="l00386"></a>00386        <span class="keywordflow">if</span> (m_paramsSetModelCompPtr.IsValid()){
+<a name="l00387"></a>00387               m_paramsSetModelCompPtr-&gt;AttachObserver(&amp;m_paramsObserver);
+<a name="l00388"></a>00388        }
+<a name="l00389"></a>00389 
+<a name="l00390"></a>00390        <span class="keywordtype">int</span> inputsCount = m_additionalTriggerInputsCompPtr.GetCount();
+<a name="l00391"></a>00391        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; inputsCount; ++i){
+<a name="l00392"></a>00392               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* inputModelPtr = m_additionalTriggerInputsCompPtr[i];
+<a name="l00393"></a>00393               <span class="keywordflow">if</span> (inputModelPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00394"></a>00394                      RegisterSupplierInput(inputModelPtr);
+<a name="l00395"></a>00395               }
+<a name="l00396"></a>00396        }
+<a name="l00397"></a>00397 
+<a name="l00398"></a>00398        m_workStatus = WS_INVALID;
+<a name="l00399"></a>00399 }
+<a name="l00400"></a>00400 
+<a name="l00401"></a>00401 
+<a name="l00402"></a>00402 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00403"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6c61739f6153e4f37b82ca110468afe">00403</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6c61739f6153e4f37b82ca110468afe">TSupplierCompWrap&lt;Product&gt;::OnComponentDestroyed</a>()
+<a name="l00404"></a>00404 {
+<a name="l00405"></a>00405        m_inputsObserver.EnsureModelsDetached();
+<a name="l00406"></a>00406        m_paramsObserver.EnsureModelsDetached();
 <a name="l00407"></a>00407 
-<a name="l00408"></a>00408 
-<a name="l00409"></a>00409 <span class="comment">// public methods of embedded class Timer</span>
-<a name="l00410"></a>00410 
-<a name="l00411"></a>00411 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00412"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a9d1a054822e3eef727dace6129fbded4">00412</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a9d1a054822e3eef727dace6129fbded4">TSupplierCompWrap&lt;Product&gt;::Timer::Timer</a>(<span class="keyword">const</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>* parentPtr, <span class="keyword">const</span> QString&amp; measuredFeatureName)
-<a name="l00413"></a>00413 :      m_parentPtr(parentPtr), m_measuredFeatureName(measuredFeatureName)
-<a name="l00414"></a>00414 {
-<a name="l00415"></a>00415        m_timer.start();
-<a name="l00416"></a>00416 }
-<a name="l00417"></a>00417 
-<a name="l00418"></a>00418 
-<a name="l00419"></a>00419 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00420"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a997a5ca668786cbe967f9798d97f03dd">00420</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;::Timer::~Timer</a>()
-<a name="l00421"></a>00421 {
-<a name="l00422"></a>00422        <span class="keywordflow">if</span> ((m_parentPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; (m_parentPtr-&gt;m_diagnosticNameAttrPtr.IsValid())){
-<a name="l00423"></a>00423               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a> messagePtr(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_message.html">ibase::CMessage</a>(
-<a name="l00424"></a>00424                                    <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a42a989ac6baf47a23c6595f66cb30077">istd::IInformationProvider::IC_INFO</a>,
-<a name="l00425"></a>00425                                    0,
-<a name="l00426"></a>00426                                    QObject::tr(<span class="stringliteral">&quot;%1 took %2 ms&quot;</span>).arg(m_measuredFeatureName).arg(m_timer.elapsed()),
-<a name="l00427"></a>00427                                    *m_parentPtr-&gt;m_diagnosticNameAttrPtr));
-<a name="l00428"></a>00428               m_parentPtr-&gt;m_messageContainer.AddMessage(messagePtr);
-<a name="l00429"></a>00429        }
-<a name="l00430"></a>00430 }
-<a name="l00431"></a>00431 
-<a name="l00432"></a>00432 
-<a name="l00433"></a>00433 <span class="comment">// public methods of embedded class InputsObserver</span>
-<a name="l00434"></a>00434 
-<a name="l00435"></a>00435 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00436"></a>00436 <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;::InputsObserver::InputsObserver</a>(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;</a>* parentPtr)
-<a name="l00437"></a>00437 :      m_parent(*parentPtr)
-<a name="l00438"></a>00438 {
-<a name="l00439"></a>00439        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(parentPtr != NULL);
-<a name="l00440"></a>00440 }
-<a name="l00441"></a>00441 
-<a name="l00442"></a>00442 
-<a name="l00443"></a>00443 <span class="comment">// protected methods of embedded class InputsObserver</span>
-<a name="l00444"></a>00444 
-<a name="l00445"></a>00445 <span class="comment">// reimplemented (imod::CMultiModelObserverBase)</span>
+<a name="l00408"></a>00408        m_productChangeNotifier.Reset();
+<a name="l00409"></a>00409 
+<a name="l00410"></a>00410        BaseClass::OnComponentDestroyed();
+<a name="l00411"></a>00411 }
+<a name="l00412"></a>00412 
+<a name="l00413"></a>00413 
+<a name="l00414"></a>00414 <span class="comment">// public methods of embedded class Timer</span>
+<a name="l00415"></a>00415 
+<a name="l00416"></a>00416 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00417"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a9d1a054822e3eef727dace6129fbded4">00417</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a9d1a054822e3eef727dace6129fbded4">TSupplierCompWrap&lt;Product&gt;::Timer::Timer</a>(<span class="keyword">const</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>* parentPtr, <span class="keyword">const</span> QString&amp; measuredFeatureName)
+<a name="l00418"></a>00418 :      m_parentPtr(parentPtr), m_measuredFeatureName(measuredFeatureName)
+<a name="l00419"></a>00419 {
+<a name="l00420"></a>00420        m_timer.start();
+<a name="l00421"></a>00421 }
+<a name="l00422"></a>00422 
+<a name="l00423"></a>00423 
+<a name="l00424"></a>00424 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00425"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a997a5ca668786cbe967f9798d97f03dd">00425</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;::Timer::~Timer</a>()
+<a name="l00426"></a>00426 {
+<a name="l00427"></a>00427        <span class="keywordflow">if</span> ((m_parentPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; (m_parentPtr-&gt;m_diagnosticNameAttrPtr.IsValid())){
+<a name="l00428"></a>00428               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a> messagePtr(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_message.html">ibase::CMessage</a>(
+<a name="l00429"></a>00429                                    <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a42a989ac6baf47a23c6595f66cb30077">istd::IInformationProvider::IC_INFO</a>,
+<a name="l00430"></a>00430                                    0,
+<a name="l00431"></a>00431                                    QObject::tr(<span class="stringliteral">&quot;%1 took %2 ms&quot;</span>).arg(m_measuredFeatureName).arg(m_timer.elapsed()),
+<a name="l00432"></a>00432                                    *m_parentPtr-&gt;m_diagnosticNameAttrPtr));
+<a name="l00433"></a>00433               m_parentPtr-&gt;m_messageContainer.AddMessage(messagePtr);
+<a name="l00434"></a>00434        }
+<a name="l00435"></a>00435 }
+<a name="l00436"></a>00436 
+<a name="l00437"></a>00437 
+<a name="l00438"></a>00438 <span class="comment">// public methods of embedded class InputsObserver</span>
+<a name="l00439"></a>00439 
+<a name="l00440"></a>00440 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00441"></a>00441 <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;::InputsObserver::InputsObserver</a>(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;</a>* parentPtr)
+<a name="l00442"></a>00442 :      m_parent(*parentPtr)
+<a name="l00443"></a>00443 {
+<a name="l00444"></a>00444        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(parentPtr != NULL);
+<a name="l00445"></a>00445 }
 <a name="l00446"></a>00446 
-<a name="l00447"></a>00447 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00448"></a>00448 <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;::InputsObserver::BeforeUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* <span class="comment">/*modelPtr*/</span>, <span class="keywordtype">int</span> <span class="comment">/*updateFlags*/</span>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
-<a name="l00449"></a>00449 {
-<a name="l00450"></a>00450        m_parent.<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5e0a872fbc23c641a87a0e722e7a3e2" title="Called to signalize that this supplier is invalid.">InvalidateSupplier</a>();
-<a name="l00451"></a>00451 }
-<a name="l00452"></a>00452 
-<a name="l00453"></a>00453 
-<a name="l00454"></a>00454 <span class="comment">// public methods of embedded class ParamsObserver</span>
-<a name="l00455"></a>00455 
-<a name="l00456"></a>00456 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00457"></a>00457 TSupplierCompWrap&lt;Product&gt;::ParamsObserver::ParamsObserver(TSupplierCompWrap&lt;Product&gt;* parentPtr)
-<a name="l00458"></a>00458 :      m_parent(*parentPtr)
-<a name="l00459"></a>00459 {
-<a name="l00460"></a>00460        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(parentPtr != NULL);
-<a name="l00461"></a>00461 }
-<a name="l00462"></a>00462 
-<a name="l00463"></a>00463 
-<a name="l00464"></a>00464 <span class="comment">// protected methods of embedded class ParamsObserver</span>
-<a name="l00465"></a>00465 
-<a name="l00466"></a>00466 <span class="comment">// reimplemented (imod::CMultiModelObserverBase)</span>
+<a name="l00447"></a>00447 
+<a name="l00448"></a>00448 <span class="comment">// protected methods of embedded class InputsObserver</span>
+<a name="l00449"></a>00449 
+<a name="l00450"></a>00450 <span class="comment">// reimplemented (imod::CMultiModelObserverBase)</span>
+<a name="l00451"></a>00451 
+<a name="l00452"></a>00452 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00453"></a>00453 <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;::InputsObserver::BeforeUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* <span class="comment">/*modelPtr*/</span>, <span class="keywordtype">int</span> <span class="comment">/*updateFlags*/</span>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
+<a name="l00454"></a>00454 {
+<a name="l00455"></a>00455        m_parent.<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ad5e0a872fbc23c641a87a0e722e7a3e2" title="Called to signalize that this supplier is invalid.">InvalidateSupplier</a>();
+<a name="l00456"></a>00456 }
+<a name="l00457"></a>00457 
+<a name="l00458"></a>00458 
+<a name="l00459"></a>00459 <span class="comment">// public methods of embedded class ParamsObserver</span>
+<a name="l00460"></a>00460 
+<a name="l00461"></a>00461 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00462"></a>00462 TSupplierCompWrap&lt;Product&gt;::ParamsObserver::ParamsObserver(TSupplierCompWrap&lt;Product&gt;* parentPtr)
+<a name="l00463"></a>00463 :      m_parent(*parentPtr)
+<a name="l00464"></a>00464 {
+<a name="l00465"></a>00465        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(parentPtr != NULL);
+<a name="l00466"></a>00466 }
 <a name="l00467"></a>00467 
-<a name="l00468"></a>00468 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00469"></a>00469 <span class="keywordtype">void</span> TSupplierCompWrap&lt;Product&gt;::ParamsObserver::BeforeUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* <span class="comment">/*modelPtr*/</span>, <span class="keywordtype">int</span> <span class="comment">/*updateFlags*/</span>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
-<a name="l00470"></a>00470 {
-<a name="l00471"></a>00471        m_parent.InvalidateSupplier();
-<a name="l00472"></a>00472 }
-<a name="l00473"></a>00473 
-<a name="l00474"></a>00474 
-<a name="l00475"></a>00475 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00476"></a>00476 <span class="keywordtype">void</span> TSupplierCompWrap&lt;Product&gt;::ParamsObserver::AfterUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* <span class="comment">/*modelPtr*/</span>, <span class="keywordtype">int</span> <span class="comment">/*updateFlags*/</span>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
-<a name="l00477"></a>00477 {
-<a name="l00478"></a>00478        m_parent.m_areParametersValid = <span class="keyword">false</span>;
-<a name="l00479"></a>00479 }
-<a name="l00480"></a>00480 
-<a name="l00481"></a>00481 
-<a name="l00482"></a>00482 } <span class="comment">// namespace iproc</span>
-<a name="l00483"></a>00483 
-<a name="l00484"></a>00484 
-<a name="l00485"></a>00485 <span class="preprocessor">#endif // !iproc_TSupplierCompWrap_included</span>
-<a name="l00486"></a>00486 <span class="preprocessor"></span>
-<a name="l00487"></a>00487 
+<a name="l00468"></a>00468 
+<a name="l00469"></a>00469 <span class="comment">// protected methods of embedded class ParamsObserver</span>
+<a name="l00470"></a>00470 
+<a name="l00471"></a>00471 <span class="comment">// reimplemented (imod::CMultiModelObserverBase)</span>
+<a name="l00472"></a>00472 
+<a name="l00473"></a>00473 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00474"></a>00474 <span class="keywordtype">void</span> TSupplierCompWrap&lt;Product&gt;::ParamsObserver::BeforeUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* <span class="comment">/*modelPtr*/</span>, <span class="keywordtype">int</span> <span class="comment">/*updateFlags*/</span>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
+<a name="l00475"></a>00475 {
+<a name="l00476"></a>00476        m_parent.InvalidateSupplier();
+<a name="l00477"></a>00477 }
+<a name="l00478"></a>00478 
+<a name="l00479"></a>00479 
+<a name="l00480"></a>00480 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
+<a name="l00481"></a>00481 <span class="keywordtype">void</span> TSupplierCompWrap&lt;Product&gt;::ParamsObserver::AfterUpdate(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* <span class="comment">/*modelPtr*/</span>, <span class="keywordtype">int</span> <span class="comment">/*updateFlags*/</span>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* <span class="comment">/*updateParamsPtr*/</span>)
+<a name="l00482"></a>00482 {
+<a name="l00483"></a>00483        m_parent.m_areParametersValid = <span class="keyword">false</span>;
+<a name="l00484"></a>00484 }
+<a name="l00485"></a>00485 
+<a name="l00486"></a>00486 
+<a name="l00487"></a>00487 } <span class="comment">// namespace iproc</span>
+<a name="l00488"></a>00488 
+<a name="l00489"></a>00489 
+<a name="l00490"></a>00490 <span class="preprocessor">#endif // !iproc_TSupplierCompWrap_included</span>
+<a name="l00491"></a>00491 <span class="preprocessor"></span>
+<a name="l00492"></a>00492 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
