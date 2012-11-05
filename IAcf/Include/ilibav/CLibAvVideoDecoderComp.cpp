@@ -75,7 +75,7 @@ CLibAvVideoDecoderComp::CLibAvVideoDecoderComp()
 	m_audioCodecPtr(NULL),
 	m_framePtr(NULL),
 	m_frameRgbPtr(NULL),
-	m_bytesRemaining(0),
+	m_rawDataSize(0),
 	m_rawDataPtr(NULL),
 	m_currentFrame(0),
 	m_lastReadFrame(-1),
@@ -86,8 +86,7 @@ CLibAvVideoDecoderComp::CLibAvVideoDecoderComp()
 	av_register_all();
 
 	m_packet.data = NULL;
-
-	m_audioInputBuffer = (uint8_t*)av_malloc(AVCODEC_MAX_AUDIO_FRAME_SIZE + FF_INPUT_BUFFER_PADDING_SIZE);
+	
 	m_audioOutputBuffer = (int16_t*)av_malloc(AVCODEC_MAX_AUDIO_FRAME_SIZE);
 
 	m_ignoreFirstAudioFrame = false;
@@ -95,8 +94,7 @@ CLibAvVideoDecoderComp::CLibAvVideoDecoderComp()
 
 
 CLibAvVideoDecoderComp::~CLibAvVideoDecoderComp()
-{
-	av_free(m_audioInputBuffer);
+{	
 	av_free(m_audioOutputBuffer);
 }
 
@@ -469,7 +467,7 @@ void CLibAvVideoDecoderComp::CloseMedium()
 	m_audioCodecPtr = NULL;
 
 	m_packet.data = NULL;
-	m_bytesRemaining = 0;
+	m_rawDataSize = 0;
 	m_rawDataPtr = NULL;
 
 	m_currentFrame = 0;
@@ -683,21 +681,11 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 	// Decode packets until we have decoded a complete frame
 	while (true){
 		if (m_packet.stream_index == m_videoStreamId){
-			while ((m_rawDataPtr != NULL) && (m_packet.size > 0)){//m_bytesRemaining > 0
+			while ((m_rawDataPtr != NULL) && (m_packet.size > 0)){
 				I_ASSERT(m_videoCodecContextPtr != NULL);
 
-				//int bytesToCopy = qMin(m_bytesRemaining, AVCODEC_MAX_AUDIO_FRAME_SIZE);
-				//std::memset(m_audioInputBuffer + bytesToCopy, 0, FF_INPUT_BUFFER_PADDING_SIZE);
-				//std::memcpy(m_audioInputBuffer, m_rawDataPtr, bytesToCopy);
-
 				// Decode the next chunk of data
-				int frameFinished = 0;
-				/*int bytesDecoded = avcodec_decode_video(
-							m_videoCodecContextPtr,
-							m_framePtr,
-							&frameFinished,
-							m_audioInputBuffer,
-							bytesToCopy);*/
+				int frameFinished = 0;				
 
 				int bytesDecoded = avcodec_decode_video2(
 							m_videoCodecContextPtr,
@@ -707,8 +695,7 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 
 				// Was there an error?
 				if (bytesDecoded > 0){
-					//m_bytesRemaining -= bytesDecoded;
-					//m_rawDataPtr += bytesDecoded;
+
 					m_packet.size -= bytesDecoded;
 					m_packet.data += bytesDecoded;
 
@@ -746,22 +733,11 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 			}
 		}
 		else if (m_packet.stream_index == m_audioStreamId){
-			while ((m_rawDataPtr != NULL) && (m_packet.size > 0)){//m_bytesRemaining > 0
+			while ((m_rawDataPtr != NULL) && (m_packet.size > 0)){
 				I_ASSERT(m_audioCodecContextPtr != NULL);
-
-				//int bytesToCopy = qMin(m_bytesRemaining, AVCODEC_MAX_AUDIO_FRAME_SIZE);
-				//std::memset(m_audioInputBuffer + bytesToCopy, 0, FF_INPUT_BUFFER_PADDING_SIZE);
-				//std::memcpy(m_audioInputBuffer, m_rawDataPtr, bytesToCopy);
-
+				
 				// Decode the next chunk of data
-				int audioBufferSize = AVCODEC_MAX_AUDIO_FRAME_SIZE;
-
-				/*int bytesDecoded = avcodec_decode_audio3(
-							m_audioCodecContextPtr,
-							m_audioOutputBuffer,
-							&audioBufferSize,
-							m_audioInputBuffer,
-							bytesToCopy);*/
+				int audioBufferSize = AVCODEC_MAX_AUDIO_FRAME_SIZE;				
 
 				int bytesDecoded = avcodec_decode_audio3(
 							m_audioCodecContextPtr,
@@ -771,8 +747,6 @@ CLibAvVideoDecoderComp::FrameType CLibAvVideoDecoderComp::ReadNextFrame(
 
 				// Was there an error?
 				if (bytesDecoded > 0){
-					//m_bytesRemaining -= bytesDecoded;
-					//m_rawDataPtr += bytesDecoded;
 					m_packet.size -= bytesDecoded;
 					m_packet.data += bytesDecoded;
 
@@ -902,7 +876,7 @@ bool CLibAvVideoDecoderComp::ReadNextPacket()
 {
 	if (m_packet.data != NULL){
 		m_packet.data = m_rawDataPtr;
-		m_packet.size = m_bytesRemaining;
+		m_packet.size = m_rawDataSize;
 		av_free_packet(&m_packet);
 		m_packet.data = NULL;
 		m_rawDataPtr = NULL;
@@ -921,7 +895,7 @@ bool CLibAvVideoDecoderComp::ReadNextPacket()
 		return false;
 	}
 
-	m_bytesRemaining = m_packet.size;
+	m_rawDataSize = m_packet.size;
 	m_rawDataPtr = m_packet.data;
 
 	return true;

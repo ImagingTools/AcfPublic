@@ -196,6 +196,8 @@ void CFileDialogLoaderComp::AppendLoaderFilterList(const iser::IFileTypeInfo& fi
 			if (!extension.isEmpty()){
 				QString description = fileTypeInfo.GetTypeDescription(&extension);
 
+				allExt += extension;
+
 				result += description + " (*." + extension + ")";
 			}
 		}
