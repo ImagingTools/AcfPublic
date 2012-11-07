@@ -79,8 +79,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#a2fb83ed63f504dc07ecb1b90efa91cb7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#ae265e9ee5ad0fa90a7a32690ce12936b">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do inverse transformation of this object.  <a href="#ae265e9ee5ad0fa90a7a32690ce12936b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a112cd54e033e10804932b0079b6d286d">GetTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_c_object2d_base.html">CObject2dBase</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#aa3aeb8a92c2ac25a814e42449cf64b7f">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_c_object2d_base.html">CObject2dBase</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#ab744cb025d2c540c55102fcba629d92d">GetTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate transformation of the object into second one.  <a href="#ab744cb025d2c540c55102fcba629d92d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a9a571c33f3ade5aae6fc7539a7c7fdcc">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#a9a571c33f3ade5aae6fc7539a7c7fdcc"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_base.html">Base</a> class for 2D-objects implementing interface <a class="el" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">i2d::IObject2d</a>. </p>
@@ -143,7 +145,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa3aeb8a92c2ac25a814e42449cf64b7f"></a><!-- doxytag: member="i2d::CObject2dBase::GetInvTransformed" ref="aa3aeb8a92c2ac25a814e42449cf64b7f" args="(const ITransformation2d &amp;transformation, CObject2dBase &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
+<a class="anchor" id="a9a571c33f3ade5aae6fc7539a7c7fdcc"></a><!-- doxytag: member="i2d::CObject2dBase::GetInvTransformed" ref="a9a571c33f3ade5aae6fc7539a7c7fdcc" args="(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -156,7 +158,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classi2d_1_1_c_object2d_base.html">CObject2dBase</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
@@ -180,9 +182,24 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Calulate inverse transformation of the object into second one. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td class="paramname">errorFactorPtr</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+    <tr><td class="paramname">result</td><td>result object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#ab77a3500838d3439a2cc8cfb679fc860">i2d::IObject2d</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_line2d.html#a63707783c6d06f49c7736277d7c1fbf5">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_rectangle.html#a6f1895bf87989c2d49038b429311e204">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_polygon.html#ac4537d82fd57c0ada41467d3ae3f3db2">i2d::CPolygon</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a8e60a45da2f52b86f58694b1bbd69be0">icmpstr::CVisualRegistryElement</a>, <a class="el" href="classi2d_1_1_c_annulus.html#a46103c662f886313c1b115af1f5a0c54">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#af714f0d925b79a6ee2b54c33dfc7f8c1">i2d::CQuadrangle</a>, <a class="el" href="classi2d_1_1_c_circle.html#aae375505fc42f5eaaf1a7747883767dd">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_parallelogram.html#a85941fbd50c465b73b94ed8720526bf2">i2d::CParallelogram</a>, <a class="el" href="classi2d_1_1_c_polypoint.html#a41b73765b86e80db00f49eb9d3381f45">i2d::CPolypoint</a>, and <a class="el" href="classi2d_1_1_c_position2d.html#a9895f587143a792562037e83b3364288">i2d::CPosition2d</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a112cd54e033e10804932b0079b6d286d"></a><!-- doxytag: member="i2d::CObject2dBase::GetTransformed" ref="a112cd54e033e10804932b0079b6d286d" args="(const ITransformation2d &amp;transformation, CObject2dBase &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
+<a class="anchor" id="ab744cb025d2c540c55102fcba629d92d"></a><!-- doxytag: member="i2d::CObject2dBase::GetTransformed" ref="ab744cb025d2c540c55102fcba629d92d" args="(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -195,7 +212,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classi2d_1_1_c_object2d_base.html">CObject2dBase</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
@@ -218,6 +235,21 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Calulate transformation of the object into second one. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
+    <tr><td class="paramname">errorFactorPtr</td><td>optional output where approximated length of transformation error vector will be stored. Value 0 means that transformation is exactly done. </td></tr>
+    <tr><td class="paramname">result</td><td>result object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#a8013559af5f052dc7eda938f56cf9cf1">i2d::IObject2d</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_line2d.html#aeffd472978740ba08cbf4db08fb78d08">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_rectangle.html#a8ef4881cb2895deb17cde019cd07da70">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_polygon.html#a5ef3e3494a73c14f978d5e73cd252701">i2d::CPolygon</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a833baab4f49b1a72c0627928bed0ca45">icmpstr::CVisualRegistryElement</a>, <a class="el" href="classi2d_1_1_c_annulus.html#ab592f4f5aca23656ccdd2186efb99d7c">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#a9abe5cb297f16c7990ff8215b20ba6fc">i2d::CQuadrangle</a>, <a class="el" href="classi2d_1_1_c_circle.html#addbba93c936513fddd40c2978d5055ee">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_parallelogram.html#a07e1e64616155bcb38ec0c81b79065d2">i2d::CParallelogram</a>, <a class="el" href="classi2d_1_1_c_polypoint.html#ad3c6bc6bfb666119ebd4ccbeddf3b668">i2d::CPolypoint</a>, and <a class="el" href="classi2d_1_1_c_position2d.html#a06bf165ab4807970f8b2fc05ee9d8c9b">i2d::CPosition2d</a>.</p>
 
 </div>
 </div>

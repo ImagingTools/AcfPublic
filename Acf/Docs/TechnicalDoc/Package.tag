@@ -8096,15 +8096,15 @@
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>a112cd54e033e10804932b0079b6d286d</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, CObject2dBase &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+      <anchor>ab744cb025d2c540c55102fcba629d92d</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>aa3aeb8a92c2ac25a814e42449cf64b7f</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, CObject2dBase &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+      <anchor>a9a571c33f3ade5aae6fc7539a7c7fdcc</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -75,7 +75,7 @@ bool CObject2dBase::InvTransform(
 
 bool CObject2dBase::GetTransformed(
 			const ITransformation2d& /*transformation*/,
-			CObject2dBase& /*result*/,
+			IObject2d& /*result*/,
 			ITransformation2d::ExactnessMode /*mode*/,
 			double* /*errorFactorPtr*/) const
 {
@@ -85,7 +85,7 @@ bool CObject2dBase::GetTransformed(
 
 bool CObject2dBase::GetInvTransformed(
 			const ITransformation2d& /*transformation*/,
-			CObject2dBase& /*result*/,
+			IObject2d& /*result*/,
 			ITransformation2d::ExactnessMode /*mode*/,
 			double* /*errorFactorPtr*/) const
 {
