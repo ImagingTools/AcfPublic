@@ -17440,41 +17440,6 @@
       <anchor>a903626b7abb7c7678d0e3861dfdda07e</anchor>
       <arglist>(double factor)</arglist>
     </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetEmbeddedListSize</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>aaca98e22e91027e213ab41913274d4a1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>ClearEmbeddedList</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a20e9fe749496815eaa5820070fdd2e61</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>InsertEmbeddedIntoList</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ae5a0d788719026ad10ca5abe2ad3ef73</anchor>
-      <arglist>(QByteArray id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>RemoveEmbeddedFromList</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a6df41ef5f9d702ff119860e9da334fd3</anchor>
-      <arglist>(QByteArray id)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SelectEmbeddedInList</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ac50eef583875a56f0eb412c0f7388b94</anchor>
-      <arglist>(QByteArray id, bool propagateEvent=true)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
@@ -17615,13 +17580,6 @@
       <anchor>a2c734d994a9f91ccb439b6b1d4c2753b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_LocalCompositionSelectorList_itemSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>aa237fb782bf19ec9424b4f14e95061f5</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnResize</name>
@@ -17697,13 +17655,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a20f65b7fc506be58b9d87ae27aaa2dd9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>afd4996345848426a1cfc53af3abf8551</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

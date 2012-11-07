@@ -98,15 +98,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a6a103465bb6e5644eb9db127e409b6e7">CSceneProviderGuiComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#aa85103097a8a9b629bc1277a20ba8d54">GetIsotropyFactor</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a903626b7abb7c7678d0e3861dfdda07e">SetIsotropyFactor</a> (double factor)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#aaca98e22e91027e213ab41913274d4a1">GetEmbeddedListSize</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a20e9fe749496815eaa5820070fdd2e61">ClearEmbeddedList</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all elements from the embedded compositions list and hide it.  <a href="#a20e9fe749496815eaa5820070fdd2e61"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#ae5a0d788719026ad10ca5abe2ad3ef73">InsertEmbeddedIntoList</a> (QByteArray id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the embedded composition list and add an item with given id.  <a href="#ae5a0d788719026ad10ca5abe2ad3ef73"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a6df41ef5f9d702ff119860e9da334fd3">RemoveEmbeddedFromList</a> (QByteArray id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an element from the embedded compositions list.  <a href="#a6df41ef5f9d702ff119860e9da334fd3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#ac50eef583875a56f0eb412c0f7388b94">SelectEmbeddedInList</a> (QByteArray id, bool propagateEvent=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Select embedded composition list element with given id.  <a href="#ac50eef583875a56f0eb412c0f7388b94"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a7c35feafb0a2d3dd1fefe11d3db94211">GetCommands</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#a7c35feafb0a2d3dd1fefe11d3db94211"></a><br/></td></tr>
@@ -142,7 +133,6 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a020442f517e0484e41a3d164cf1e9d1c">OnResetScale</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#abe7041e3fb492ae30868c0f85a42fa18">OnAutoFit</a> (bool isAutoScale)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a2c734d994a9f91ccb439b6b1d4c2753b">OnSelectAllShapes</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#aa237fb782bf19ec9424b4f14e95061f5">on_LocalCompositionSelectorList_itemSelectionChanged</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a49683b5ebb5c6b6cde811b3df7657c48">OnResize</a> (QResizeEvent *eventPtr)</td></tr>
@@ -157,8 +147,6 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#abfb44d86142ee260280c86735a5a5728">ResetScene</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a20f65b7fc506be58b9d87ae27aaa2dd9">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a20f65b7fc506be58b9d87ae27aaa2dd9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#afd4996345848426a1cfc53af3abf8551">OnGuiDestroyed</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#afd4996345848426a1cfc53af3abf8551"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a31eea4df98270b8ae80a53b9a494b508">OnRetranslate</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when non-GUI elements (like commands) should be retranslated.  <a href="#a31eea4df98270b8ae80a53b9a494b508"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_scene_provider_gui_comp.html#a5eb4a1ed4ec859de744c6a0bf9429068">OnComponentCreated</a> ()</td></tr>
@@ -242,24 +230,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a20e9fe749496815eaa5820070fdd2e61"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::ClearEmbeddedList" ref="a20e9fe749496815eaa5820070fdd2e61" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void icmpstr::CSceneProviderGuiComp::ClearEmbeddedList </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Remove all elements from the embedded compositions list and hide it. </p>
-
-</div>
-</div>
 <a class="anchor" id="a283b9f55d219f7061405f9bb08717d35"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::DelegateDropEvent" ref="a283b9f55d219f7061405f9bb08717d35" args="(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)" -->
 <div class="memitem">
 <div class="memproto">
@@ -368,23 +338,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00243">243</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aaca98e22e91027e213ab41913274d4a1"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::GetEmbeddedListSize" ref="aaca98e22e91027e213ab41913274d4a1" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int icmpstr::CSceneProviderGuiComp::GetEmbeddedListSize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Definition at line <a class="el" href="_c_scene_provider_gui_comp_8h_source.html#l00217">217</a> of file <a class="el" href="_c_scene_provider_gui_comp_8h_source.html">CSceneProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -572,26 +526,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae5a0d788719026ad10ca5abe2ad3ef73"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::InsertEmbeddedIntoList" ref="ae5a0d788719026ad10ca5abe2ad3ef73" args="(QByteArray id)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void icmpstr::CSceneProviderGuiComp::InsertEmbeddedIntoList </td>
-          <td>(</td>
-          <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Show the embedded composition list and add an item with given id. </p>
-<p>First added element inserts &lt;&lt;root&gt;&gt; as well and makes the list visible. Each element is added only once. </p>
-
-</div>
-</div>
 <a class="anchor" id="ad8dc3554153b1a14af2b61d12f5a5796"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::IsFullScreenMode" ref="ad8dc3554153b1a14af2b61d12f5a5796" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -610,22 +544,6 @@ Protected Member Functions</h2></td></tr>
 <p>In full screen mode scene is shown on whole screen area. </p>
 
 <p>Implements <a class="el" href="classi2d_1_1_i_scene_controller.html#a665b6801ff1020780689d269f1fe13a9">i2d::ISceneController</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa237fb782bf19ec9424b4f14e95061f5"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::on_LocalCompositionSelectorList_itemSelectionChanged" ref="aa237fb782bf19ec9424b4f14e95061f5" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void icmpstr::CSceneProviderGuiComp::on_LocalCompositionSelectorList_itemSelectionChanged </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, slot]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
 
 </div>
 </div>
@@ -731,26 +649,6 @@ Protected Member Functions</h2></td></tr>
 <p>Called just after GUI is initialized. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ab66ecf3d13faa48018f89d871bd32ae3">iqtgui::CGuiComponentBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afd4996345848426a1cfc53af3abf8551"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::OnGuiDestroyed" ref="afd4996345848426a1cfc53af3abf8551" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void icmpstr::CSceneProviderGuiComp::OnGuiDestroyed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Called just before GUI is released. </p>
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a71e5a19907ff118fe8b99280b86c16ff">iqtgui::CGuiComponentBase</a>.</p>
 
 </div>
 </div>
@@ -922,26 +820,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6df41ef5f9d702ff119860e9da334fd3"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::RemoveEmbeddedFromList" ref="a6df41ef5f9d702ff119860e9da334fd3" args="(QByteArray id)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void icmpstr::CSceneProviderGuiComp::RemoveEmbeddedFromList </td>
-          <td>(</td>
-          <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Remove an element from the embedded compositions list. </p>
-<p>If it was the last one, hide the list </p>
-
-</div>
-</div>
 <a class="anchor" id="abfb44d86142ee260280c86735a5a5728"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::ResetScene" ref="abfb44d86142ee260280c86735a5a5728" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -972,35 +850,6 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac50eef583875a56f0eb412c0f7388b94"></a><!-- doxytag: member="icmpstr::CSceneProviderGuiComp::SelectEmbeddedInList" ref="ac50eef583875a56f0eb412c0f7388b94" args="(QByteArray id, bool propagateEvent=true)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void icmpstr::CSceneProviderGuiComp::SelectEmbeddedInList </td>
-          <td>(</td>
-          <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>propagateEvent</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Select embedded composition list element with given id. </p>
 
 </div>
 </div>

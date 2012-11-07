@@ -59,12 +59,13 @@ Signals</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#a9d521e0a6104d4ff91d5720308910cad">CLibAvRtspStreamingClient</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#afef9da7d3cb3838881390af0f5f6115f">~CLibAvRtspStreamingClient</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#adbc03277c250dc7124833d2217f8e92e">OpenConnection</a> (const QString &amp;url)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates rtsp streming connection.  <a href="#adbc03277c250dc7124833d2217f8e92e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#ac1e6cb358351eaef8fd352e928412bd3">CloseConnection</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops streaming loop (and connection)  <a href="#ac1e6cb358351eaef8fd352e928412bd3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#a44ac52bcb4fc1a11c39d331f52955d51">FrameArrived</a> (AVFrame *frame, int width, int height, int pixelformat)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">New frame has arrived.  <a href="#a44ac52bcb4fc1a11c39d331f52955d51"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#aa8654567bb54f05f1e3f56499d0fa4f0">OpenConnection</a> (const QUrl &amp;url)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates rtsp streming connection.  <a href="#aa8654567bb54f05f1e3f56499d0fa4f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#a915cb3fdc047d7a08bcdc2ca60b716ec">CloseConnection</a> (bool waitForClosed)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops streaming loop (and connection)  <a href="#a915cb3fdc047d7a08bcdc2ca60b716ec"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#ae161f3bfb515d92b6a00db90c5e2d7f4">DecodeFrame</a> (u_int8_t *frameData, unsigned frameSize)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">New frame has arrived.  <a href="#ae161f3bfb515d92b6a00db90c5e2d7f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#a1d2cc69cc3320fc99b6b3f32461b07a0">GetMutex</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#a21332747b85ec0d4f07cb6000dc8f392">run</a> ()</td></tr>
@@ -82,7 +83,7 @@ Static Protected Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class handles streaming rtsp client connection. </p>
 
-<p>Definition at line <a class="el" href="_c_lib_av_rtsp_streaming_client_8h_source.html#l00021">21</a> of file <a class="el" href="_c_lib_av_rtsp_streaming_client_8h_source.html">CLibAvRtspStreamingClient.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lib_av_rtsp_streaming_client_8h_source.html#l00035">35</a> of file <a class="el" href="_c_lib_av_rtsp_streaming_client_8h_source.html">CLibAvRtspStreamingClient.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a9d521e0a6104d4ff91d5720308910cad"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingClient::CLibAvRtspStreamingClient" ref="a9d521e0a6104d4ff91d5720308910cad" args="()" -->
 <div class="memitem">
@@ -117,14 +118,15 @@ Static Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac1e6cb358351eaef8fd352e928412bd3"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingClient::CloseConnection" ref="ac1e6cb358351eaef8fd352e928412bd3" args="()" -->
+<a class="anchor" id="a915cb3fdc047d7a08bcdc2ca60b716ec"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingClient::CloseConnection" ref="a915cb3fdc047d7a08bcdc2ca60b716ec" args="(bool waitForClosed)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ilibav::CLibAvRtspStreamingClient::CloseConnection </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>waitForClosed</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -234,33 +236,21 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a44ac52bcb4fc1a11c39d331f52955d51"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingClient::FrameArrived" ref="a44ac52bcb4fc1a11c39d331f52955d51" args="(AVFrame *frame, int width, int height, int pixelformat)" -->
+<a class="anchor" id="ae161f3bfb515d92b6a00db90c5e2d7f4"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingClient::DecodeFrame" ref="ae161f3bfb515d92b6a00db90c5e2d7f4" args="(u_int8_t *frameData, unsigned frameSize)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ilibav::CLibAvRtspStreamingClient::FrameArrived </td>
+          <td class="memname">void ilibav::CLibAvRtspStreamingClient::DecodeFrame </td>
           <td>(</td>
-          <td class="paramtype">AVFrame *&#160;</td>
-          <td class="paramname"><em>frame</em>, </td>
+          <td class="paramtype">u_int8_t *&#160;</td>
+          <td class="paramname"><em>frameData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pixelformat</em>&#160;</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>frameSize</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -316,14 +306,30 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adbc03277c250dc7124833d2217f8e92e"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingClient::OpenConnection" ref="adbc03277c250dc7124833d2217f8e92e" args="(const QString &amp;url)" -->
+<a class="anchor" id="a1d2cc69cc3320fc99b6b3f32461b07a0"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingClient::GetMutex" ref="a1d2cc69cc3320fc99b6b3f32461b07a0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex&amp; ilibav::CLibAvRtspStreamingClient::GetMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa8654567bb54f05f1e3f56499d0fa4f0"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingClient::OpenConnection" ref="aa8654567bb54f05f1e3f56499d0fa4f0" args="(const QUrl &amp;url)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool ilibav::CLibAvRtspStreamingClient::OpenConnection </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramtype">const QUrl &amp;&#160;</td>
           <td class="paramname"><em>url</em></td><td>)</td>
           <td></td>
         </tr>

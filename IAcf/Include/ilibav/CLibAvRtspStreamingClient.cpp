@@ -20,50 +20,68 @@
 ********************************************************************************/
 
 
-/********************************************************************************
-**
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the IACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the IACF.
-**
-********************************************************************************/
+#include "ilibav/CLibAvRtspStreamingClient.h"
+
 
 // Live555 includes
 #include "BasicUsageEnvironment.hh"
 
-#include "CLibAvRtspStreamingClient.h"
-#include "CLibAvRtspStreamingDataSink.h"
+// IACF includes
+#include "ilibav/CLibAvRtspStreamingDataSink.h"
+
 
 namespace ilibav
 {
 
+
 // public methods
 
-	CLibAvRtspStreamingClient::CLibAvRtspStreamingClient()
+CLibAvRtspStreamingClient::CLibAvRtspStreamingClient()	
 {
-	scheduler = BasicTaskScheduler::createNew();
-	env = BasicUsageEnvironment::createNew(*scheduler);
+	m_schedulerPtr = BasicTaskScheduler::createNew();
+	m_environmentPtr = BasicUsageEnvironment::createNew(*m_schedulerPtr);
+
+	//avlib codec initialization
+	m_formatCtxPtr = NULL;
+	m_codecContextPtr = NULL;
+	m_codecPtr = NULL;
+	m_framePtr = NULL;	
+
+	av_register_all();	
+	
+	m_codecPtr = avcodec_find_decoder(AV_CODEC_ID_H264);
+	if (!m_codecPtr){
+		return;
+	}
+
+	m_codecContextPtr = avcodec_alloc_context3(m_codecPtr);
+	if (!m_codecContextPtr){
+		return;
+	}	
+
+	/* open it */
+	if (avcodec_open2(m_codecContextPtr, m_codecPtr, NULL) < 0) {
+		return;
+	}	
+
+	m_inputBufferPtr = (uint8_t*)av_malloc(CLibAvRtspStreamingDataSink::DATA_SINK_RECEIVE_BUFFER_SIZE);
+
+	m_spsUnitBufferSize = 0;
+	m_ppsUnitBufferSize = 0;
+
+	av_init_packet(&m_packet);
+
+	//allocate frame
+	m_framePtr = avcodec_alloc_frame();	
 }
 
-bool CLibAvRtspStreamingClient::OpenConnection(const QString& url)
+bool CLibAvRtspStreamingClient::OpenConnection(const QUrl& url)
 {	
-	QByteArray bytes_array = url.toAscii();
-	char *c_url = bytes_array.data();
-	RTSPClient* rtspClient = CLibAvRtspStreamingClient::CLibAvRtspConnection::createNew(this, *env, c_url, RTSP_CLIENT_VERBOSITY_LEVEL, NULL, 0);	
-	if (rtspClient == NULL) {
+	QByteArray urlByteArray = url.toEncoded();
+	const char* urlText = urlByteArray.constData();
+	 
+	RTSPClient* rtspClientPtr = CLibAvRtspStreamingClient::CLibAvRtspConnection::createNew(this, *m_environmentPtr, urlText, RTSP_CLIENT_VERBOSITY_LEVEL, NULL, 0);	
+	if (rtspClientPtr == NULL){
 		//Failed to create a RTSP client for URL
 		return false; 		
 	}
@@ -71,81 +89,209 @@ bool CLibAvRtspStreamingClient::OpenConnection(const QString& url)
 	// Next, send a RTSP "DESCRIBE" command, to get a SDP description for the stream.
 	// Note that this command - like all RTSP commands - is sent asynchronously; we do not block, waiting for a response.
 	// Instead, the following function call returns immediately, and we handle the RTSP response later, from within the event loop:
-	rtspClient->sendDescribeCommand(&continueAfterDESCRIBE);
-	
+	rtspClientPtr->sendDescribeCommand(&continueAfterDESCRIBE);
+
 	// Start a new streaming thread
-	this->start();
+	start();
 
 	return true;
 }
 
-void CLibAvRtspStreamingClient::CloseConnection()
+
+void CLibAvRtspStreamingClient::CloseConnection(bool waitForClosed)
 {
 	//Set loop variable to non-zero - end loop
-	eventLoopWatchVariable = 1;
+	m_eventLoopWatchVariable = 1;
+
+	if (waitForClosed){
+		if (!wait(5000)){
+			terminate();
+		}
+	}
 }
 
-void CLibAvRtspStreamingClient::FrameArrived(AVFrame* frame, int width, int height, int pixelformat)
+
+void CLibAvRtspStreamingClient::DecodeFrame(u_int8_t* frameData, unsigned frameSize)
 {
-	Q_EMIT frameReady(frame, width, height, pixelformat);	
+	//check frame type
+	int nalUnitType = frameData[0] & 0x1f; 
+
+	if (nalUnitType == 7){
+		//SPS NAL Unit
+		std::memcpy(m_spsUnitBuffer, frameData, frameSize);
+		m_spsUnitBufferSize = frameSize;
+	}
+	else if (nalUnitType == 8){
+		//PPS NAL Unit
+		std::memcpy(m_ppsUnitBuffer, frameData, frameSize);
+		m_ppsUnitBufferSize = frameSize;
+	}
+	else{
+		//video frame
+		int usedBufferSize = 0;
+
+		if (m_spsUnitBufferSize != 0){
+			//Adding SPS Unit
+			//first add 4 bytes for unit header 0x00000001
+			m_inputBufferPtr[usedBufferSize++] = 0x00; 
+			m_inputBufferPtr[usedBufferSize++] = 0x00;
+			m_inputBufferPtr[usedBufferSize++] = 0x00;
+			m_inputBufferPtr[usedBufferSize++] = 0x01;
+
+			std::memcpy(m_inputBufferPtr + usedBufferSize, m_spsUnitBuffer, m_spsUnitBufferSize);		
+			usedBufferSize += m_spsUnitBufferSize;
+
+			m_spsUnitBufferSize = 0;
+		}
+
+		if (m_ppsUnitBufferSize != 0){
+			//Adding PPS Unit
+			//first add 4 bytes for unit header 0x00000001
+			m_inputBufferPtr[usedBufferSize++] = 0x00;
+			m_inputBufferPtr[usedBufferSize++] = 0x00;
+			m_inputBufferPtr[usedBufferSize++] = 0x00;
+			m_inputBufferPtr[usedBufferSize++] = 0x01;
+
+			std::memcpy(m_inputBufferPtr + usedBufferSize, m_ppsUnitBuffer, m_ppsUnitBufferSize);		
+			usedBufferSize += m_ppsUnitBufferSize;
+
+			m_ppsUnitBufferSize = 0;
+		}
+
+		//Add video frame data
+		//first add 4 bytes for unit header 0x00000001
+		m_inputBufferPtr[usedBufferSize++] = 0x00;
+		m_inputBufferPtr[usedBufferSize++] = 0x00;
+		m_inputBufferPtr[usedBufferSize++] = 0x00;
+		m_inputBufferPtr[usedBufferSize++] = 0x01;
+		
+		std::memcpy(m_inputBufferPtr + usedBufferSize, frameData, frameSize);
+		usedBufferSize += frameSize;
+
+		m_packet.size = usedBufferSize;
+		m_packet.data = m_inputBufferPtr;
+
+		while (m_packet.size > 0){
+			int gotFrame = 0;
+
+			m_mutex.lock();
+			int decodedLength = avcodec_decode_video2(m_codecContextPtr, m_framePtr, &gotFrame, &m_packet);
+			m_mutex.unlock();
+			
+			if (decodedLength < 0){
+				return;
+			}
+
+			if (gotFrame){
+								
+				Q_EMIT frameReady(
+					m_framePtr,
+					m_codecContextPtr->width,
+					m_codecContextPtr->height,
+					(int)m_codecContextPtr->pix_fmt);
+			}
+
+			m_packet.size -= decodedLength;
+			m_packet.data += decodedLength;
+		}
+	}		
+}
+
+QMutex& CLibAvRtspStreamingClient::GetMutex()
+{
+	return m_mutex;
 }
 
 CLibAvRtspStreamingClient::~CLibAvRtspStreamingClient()
 {
-	env->reclaim(); 
-	env = NULL;
-    delete scheduler; 
-	scheduler = NULL;
+	//free buffer
+	av_free(m_inputBufferPtr);	
+	
+	//free the YUV frame
+	if (m_framePtr){
+		avcodec_free_frame(&m_framePtr);
+	}
+	
+	//close the codec
+	if (m_codecContextPtr){
+		avcodec_close(m_codecContextPtr);
+		av_free(m_codecContextPtr);
+	}
+	
+	//close the video file
+	if (m_formatCtxPtr){
+		av_close_input_file(m_formatCtxPtr);
+	}
+	
+	m_environmentPtr->reclaim(); 
+	m_environmentPtr = NULL;
+    delete m_schedulerPtr; 
+	m_schedulerPtr = NULL;
 }
 
-CLibAvRtspStreamingClient::CLibAvRtspConnection* CLibAvRtspStreamingClient::CLibAvRtspConnection::createNew(CLibAvRtspStreamingClient *streamClient, UsageEnvironment& env, char const* rtspURL,
-																						  int verbosityLevel, char const* applicationName, portNumBits tunnelOverHTTPPortNum)
+
+CLibAvRtspStreamingClient::CLibAvRtspConnection* CLibAvRtspStreamingClient::CLibAvRtspConnection::createNew(
+			CLibAvRtspStreamingClient* streamClientPtr,
+			UsageEnvironment& env,
+			char const* rtspURL,
+			int verbosityLevel,
+			char const* applicationName,
+			portNumBits tunnelOverHTTPPortNum)
 {
-	return new CLibAvRtspConnection(streamClient, env, rtspURL, verbosityLevel, applicationName, tunnelOverHTTPPortNum);
+	return new CLibAvRtspConnection(streamClientPtr, env, rtspURL, verbosityLevel, applicationName, tunnelOverHTTPPortNum);
 }
 
-CLibAvRtspStreamingClient::CLibAvRtspConnection::CLibAvRtspConnection(CLibAvRtspStreamingClient *streamClient, UsageEnvironment& env, char const* rtspURL,
-															 int verbosityLevel, char const* applicationName, portNumBits tunnelOverHTTPPortNum)
-  : RTSPClient(env, rtspURL, verbosityLevel, applicationName, tunnelOverHTTPPortNum)
-{
-	m_streamClient = streamClient;
 
-	m_iter = NULL;
-	m_session = NULL;
-	m_subsession = NULL;
-	m_streamTimerTask = NULL;
+CLibAvRtspStreamingClient::CLibAvRtspConnection::CLibAvRtspConnection(
+			CLibAvRtspStreamingClient* streamClientPtr,
+			UsageEnvironment& env,
+			char const* rtspURL,
+			int verbosityLevel,
+			char const* applicationName,
+			portNumBits tunnelOverHTTPPortNum)
+:	RTSPClient(env, rtspURL, verbosityLevel, applicationName, tunnelOverHTTPPortNum)
+{
+	m_streamClientPtr = streamClientPtr;
+
+	m_subsessionIterPtr = NULL;
+	m_sessionPtr = NULL;
+	m_subsessionPtr = NULL;
+	m_streamTimerTaskPtr = NULL;
 	m_duration = 0.0;	
 }
 
+
 CLibAvRtspStreamingClient::CLibAvRtspConnection::~CLibAvRtspConnection()
 {
-	delete m_iter;
-	if (m_session != NULL) {
+	delete m_subsessionIterPtr;
+	if (m_sessionPtr != NULL) {
 		// We also need to delete "session", and unschedule "streamTimerTask" (if set)
-		UsageEnvironment& env = m_session->envir(); // alias
-		env.taskScheduler().unscheduleDelayedTask(m_streamTimerTask);
-		Medium::close(m_session);
+		UsageEnvironment& env = m_sessionPtr->envir(); // alias
+		env.taskScheduler().unscheduleDelayedTask(m_streamTimerTaskPtr);
+		Medium::close(m_sessionPtr);
 	}
 }
+
 
 // protected methods
 
 void CLibAvRtspStreamingClient::run()
 {
-	eventLoopWatchVariable = 0;
+	m_eventLoopWatchVariable = 0;
 
 	// All subsequent activity takes place within the event loop:
-	env->taskScheduler().doEventLoop(&eventLoopWatchVariable);
-	// This function call does not return, unless, at some point in time, "eventLoopWatchVariable" gets set to something non-zero.
+	m_environmentPtr->taskScheduler().doEventLoop(&m_eventLoopWatchVariable);
+	// This function call does not return, unless, at some point in time, "m_eventLoopWatchVariable" gets set to something non-zero.
 }
+
 
 // response handlers
 
-void CLibAvRtspStreamingClient::continueAfterDESCRIBE(RTSPClient* rtspClient, int resultCode, char* resultString) 
+void CLibAvRtspStreamingClient::continueAfterDESCRIBE(RTSPClient* rtspClientPtr, int resultCode, char* resultString) 
 {
-	do {
-		UsageEnvironment& env = rtspClient->envir(); // alias
-		CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClient);
+	do{
+		UsageEnvironment& env = rtspClientPtr->envir(); // alias
+		CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClientPtr);
 
 		Q_ASSERT(conn != NULL);
 
@@ -157,12 +303,12 @@ void CLibAvRtspStreamingClient::continueAfterDESCRIBE(RTSPClient* rtspClient, in
 		char* const sdpDescription = resultString;		
 
 		// Create a media session object from this SDP description:
-		conn->m_session = MediaSession::createNew(env, sdpDescription);
+		conn->m_sessionPtr = MediaSession::createNew(env, sdpDescription);
 		delete[] sdpDescription; // because we don't need it anymore
-		if (conn->m_session == NULL) {
+		if (conn->m_sessionPtr == NULL) {
 		  //Failed to create a MediaSession object from the SDP description
 		  break;
-		} else if (!conn->m_session->hasSubsessions()) {
+		} else if (!conn->m_sessionPtr->hasSubsessions()) {
 		  //This session has no media subsessions 
 		  break;
 		}
@@ -170,49 +316,51 @@ void CLibAvRtspStreamingClient::continueAfterDESCRIBE(RTSPClient* rtspClient, in
 		// Then, create and set up our data source objects for the session.  We do this by iterating over the session's 'subsessions',
 		// calling "MediaSubsession::initiate()", and then sending a RTSP "SETUP" command, on each one.
 		// (Each 'subsession' will have its own data source.)
-		conn->m_iter = new MediaSubsessionIterator(*(conn->m_session));
-		setupNextSubsession(rtspClient);
+		conn->m_subsessionIterPtr = new MediaSubsessionIterator(*(conn->m_sessionPtr));
+		setupNextSubsession(rtspClientPtr);
 		return;
 	} while (0);
 	
 	// An unrecoverable error occurred with this stream.
-	shutdownStream(rtspClient);
+	shutdownStream(rtspClientPtr);
 }
 
-void CLibAvRtspStreamingClient::setupNextSubsession(RTSPClient* rtspClient)
+
+void CLibAvRtspStreamingClient::setupNextSubsession(RTSPClient* rtspClientPtr)
 {
-	CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClient);
+	CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClientPtr);
 	Q_ASSERT(conn != NULL);
 	
-	conn->m_subsession = conn->m_iter->next();
+	conn->m_subsessionPtr = conn->m_subsessionIterPtr->next();
 	
-	if (conn->m_subsession != NULL) {
-		if (!conn->m_subsession->initiate()) {
+	if (conn->m_subsessionPtr != NULL) {
+		if (!conn->m_subsessionPtr->initiate()) {
 			//Failed to initiate the subsession
-			setupNextSubsession(rtspClient); // give up on this subsession; go to the next one
+			setupNextSubsession(rtspClientPtr); // give up on this subsession; go to the next one
 		} else {
 			//Initiated subsession			
 			// Continue setting up this subsession, by sending a RTSP "SETUP" command:
-			rtspClient->sendSetupCommand(*(conn->m_subsession), continueAfterSETUP);
+			rtspClientPtr->sendSetupCommand(*(conn->m_subsessionPtr), continueAfterSETUP);
 		}
 		return;
 	}
 	
 	// We've finished setting up all of the subsessions.  Now, send a RTSP "PLAY" command to start the streaming:
-	if (conn->m_session->absStartTime() != NULL) {
+	if (conn->m_sessionPtr->absStartTime() != NULL) {
 		// Special case: The stream is indexed by 'absolute' time, so send an appropriate "PLAY" command:
-		rtspClient->sendPlayCommand(*(conn->m_session), continueAfterPLAY, conn->m_session->absStartTime(), conn->m_session->absEndTime());
+		rtspClientPtr->sendPlayCommand(*(conn->m_sessionPtr), continueAfterPLAY, conn->m_sessionPtr->absStartTime(), conn->m_sessionPtr->absEndTime());
 	} else {
-		conn->m_duration = conn->m_session->playEndTime() - conn->m_session->playStartTime();
-		rtspClient->sendPlayCommand(*(conn->m_session), continueAfterPLAY);
+		conn->m_duration = conn->m_sessionPtr->playEndTime() - conn->m_sessionPtr->playStartTime();
+		rtspClientPtr->sendPlayCommand(*(conn->m_sessionPtr), continueAfterPLAY);
 	}
 }
 
-void CLibAvRtspStreamingClient::continueAfterSETUP(RTSPClient* rtspClient, int resultCode, char* /*resultString*/)
+
+void CLibAvRtspStreamingClient::continueAfterSETUP(RTSPClient* rtspClientPtr, int resultCode, char* /*resultString*/)
 {
-	do {
-		UsageEnvironment& env = rtspClient->envir(); // alias
-		CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClient);
+	do{
+		UsageEnvironment& env = rtspClientPtr->envir(); // alias
+		CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClientPtr);
 		Q_ASSERT(conn != NULL);
 
 		if (resultCode != 0) {
@@ -224,32 +372,35 @@ void CLibAvRtspStreamingClient::continueAfterSETUP(RTSPClient* rtspClient, int r
 		// (This will prepare the data sink to receive data; the actual flow of data from the client won't start happening until later,
 		// after we've sent a RTSP "PLAY" command.)
 		
-		conn->m_subsession->sink = CLibAvRtspStreamingDataSink::createNew(conn->m_streamClient, env, *(conn->m_subsession), rtspClient->url());		
+		conn->m_subsessionPtr->sink = CLibAvRtspStreamingDataSink::createNew(conn->m_streamClientPtr, env, *(conn->m_subsessionPtr));		
 		
-		if (conn->m_subsession->sink == NULL) {
+		if (conn->m_subsessionPtr->sink == NULL){
 			//Failed to create a data sink for the subsession			
 			break;
 		}
 		
 		//Created a data sink for the subsession
-		conn->m_subsession->miscPtr = rtspClient; // a hack to let subsession handle functions get the "RTSPClient" from the subsession 
-		conn->m_subsession->sink->startPlaying(*(conn->m_subsession->readSource()),
-			subsessionAfterPlaying, conn->m_subsession);
+		conn->m_subsessionPtr->miscPtr = rtspClientPtr; // a hack to let subsession handle functions get the "RTSPClient" from the subsession 
+		conn->m_subsessionPtr->sink->startPlaying(
+					*(conn->m_subsessionPtr->readSource()),
+					subsessionAfterPlaying,
+					conn->m_subsessionPtr);
 		
 		// Also set a handler to be called if a RTCP "BYE" arrives for this subsession:
-		if (conn->m_subsession->rtcpInstance() != NULL) {
-			conn->m_subsession->rtcpInstance()->setByeHandler(subsessionByeHandler, conn->m_subsession);
+		if (conn->m_subsessionPtr->rtcpInstance() != NULL){
+			conn->m_subsessionPtr->rtcpInstance()->setByeHandler(subsessionByeHandler, conn->m_subsessionPtr);
 		}
 	} while (0);
 	
 	// Set up the next subsession, if any:
-	setupNextSubsession(rtspClient);
+	setupNextSubsession(rtspClientPtr);
 }
 
-void CLibAvRtspStreamingClient::continueAfterPLAY(RTSPClient* rtspClient, int resultCode, char* /*resultString*/)
+
+void CLibAvRtspStreamingClient::continueAfterPLAY(RTSPClient* rtspClientPtr, int resultCode, char* /*resultString*/)
 {
 	do {
-		//CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClient);
+		//CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClientPtr);
 		
 		if (resultCode != 0) {
 			//Failed to start playing session
@@ -265,7 +416,7 @@ void CLibAvRtspStreamingClient::continueAfterPLAY(RTSPClient* rtspClient, int re
 		//	unsigned const delaySlop = 2; // number of seconds extra to delay, after the stream's expected duration.  (This is optional.)
 		//	conn->m_duration += delaySlop;
 		//	unsigned uSecsToDelay = (unsigned)(conn->m_duration*1000000);
-		//	conn->m_streamTimerTask = env.taskScheduler().scheduleDelayedTask(uSecsToDelay, (TaskFunc*)streamTimerHandler, rtspClient);
+		//	conn->m_streamTimerTaskPtr = env.taskScheduler().scheduleDelayedTask(uSecsToDelay, (TaskFunc*)streamTimerHandler, rtspClientPtr);
 		//}
 		
 		//Started playing session
@@ -277,13 +428,14 @@ void CLibAvRtspStreamingClient::continueAfterPLAY(RTSPClient* rtspClient, int re
 	} while (0);
 	
 	// An unrecoverable error occurred with this stream.
-	shutdownStream(rtspClient);
+	shutdownStream(rtspClientPtr);
 }
+
 
 void CLibAvRtspStreamingClient::subsessionAfterPlaying(void* clientData) 
 {
 	MediaSubsession* subsession = (MediaSubsession*)clientData;
-	RTSPClient* rtspClient = (RTSPClient*)(subsession->miscPtr);
+	RTSPClient* rtspClientPtr = (RTSPClient*)(subsession->miscPtr);
 	
 	// Begin by closing this subsession's stream:
 	Medium::close(subsession->sink);
@@ -298,13 +450,14 @@ void CLibAvRtspStreamingClient::subsessionAfterPlaying(void* clientData)
 	}
 	
 	// All subsessions' streams have now been closed, so shutdown the client:
-	shutdownStream(rtspClient);
+	shutdownStream(rtspClientPtr);
 }
+
 
 void CLibAvRtspStreamingClient::subsessionByeHandler(void* clientData) 
 {
 	MediaSubsession* subsession = (MediaSubsession*)clientData;
-	//RTSPClient* rtspClient = (RTSPClient*)subsession->miscPtr;	
+	//RTSPClient* rtspClientPtr = (RTSPClient*)subsession->miscPtr;	
 	
 	// Received RTCP "BYE" on subsession
 	// Now act as if the subsession had closed:
@@ -314,22 +467,23 @@ void CLibAvRtspStreamingClient::subsessionByeHandler(void* clientData)
 
 void CLibAvRtspStreamingClient::streamTimerHandler(void* clientData) 
 {
-	RTSPClient* rtspClient = (RTSPClient*)clientData;
-	CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClient);
-	conn->m_streamTimerTask = NULL;
+	RTSPClient* rtspClientPtr = (RTSPClient*)clientData;
+	CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClientPtr);
+	conn->m_streamTimerTaskPtr = NULL;
 	
 	// Shut down the stream:
-	shutdownStream(rtspClient);
+	shutdownStream(rtspClientPtr);
 }
 
-void CLibAvRtspStreamingClient::shutdownStream(RTSPClient* rtspClient, int /*exitCode*/) 
+
+void CLibAvRtspStreamingClient::shutdownStream(RTSPClient* rtspClientPtr, int /*exitCode*/) 
 {
-	CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClient);
+	CLibAvRtspConnection *conn = dynamic_cast<CLibAvRtspConnection*>(rtspClientPtr);
 	
 	// First, check whether any subsessions have still to be closed:
-	if (conn->m_session != NULL) {
+	if (conn->m_sessionPtr != NULL) {
 		Boolean someSubsessionsWereActive = False;
-		MediaSubsessionIterator iter(*(conn->m_session));
+		MediaSubsessionIterator iter(*(conn->m_sessionPtr));
 		MediaSubsession* subsession;
 		
 		while ((subsession = iter.next()) != NULL) {
@@ -348,19 +502,21 @@ void CLibAvRtspStreamingClient::shutdownStream(RTSPClient* rtspClient, int /*exi
 		if (someSubsessionsWereActive) {
 			// Send a RTSP "TEARDOWN" command, to tell the server to shutdown the stream.
 			// Don't bother handling the response to the "TEARDOWN".
-			rtspClient->sendTeardownCommand(*(conn->m_session), NULL);
+			rtspClientPtr->sendTeardownCommand(*(conn->m_sessionPtr), NULL);
 		}
 	}
 
 	//leave LIVE555 event loop - end of streaming	
-	if(conn->m_streamClient != NULL){
-		conn->m_streamClient->CloseConnection();
+	if (conn->m_streamClientPtr != NULL){
+		conn->m_streamClientPtr->CloseConnection(false);
 	}
-	
+
 	//Closing the stream
-	Medium::close(rtspClient);
-	// Note that this will also cause this stream's "StreamClientState" structure to get reclaimed.	
-	
+	Medium::close(rtspClientPtr);
+	// Note that this will also cause this stream's "StreamClientState" structure to get reclaimed.
 }
 
+
 }
+
+

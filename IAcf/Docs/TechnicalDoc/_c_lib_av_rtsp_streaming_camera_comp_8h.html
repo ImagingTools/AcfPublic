@@ -23,16 +23,16 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Defines</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">Include/ilibav/CLibAvRtspStreamingCameraComp.h File Reference</div>  </div>
 </div>
 <div class="contents">
-<div class="textblock"><code>#include &lt;libavformat/avformat.h&gt;</code><br/>
-<code>#include &lt;QMutex&gt;</code><br/>
+<div class="textblock"><code>#include &lt;QtCore/QMutex&gt;</code><br/>
+<code>#include &lt;QtCore/QMutexLocker&gt;</code><br/>
+<code>#include &lt;QtCore/QUrl&gt;</code><br/>
 <code>#include &lt;QtNetwork/QNetworkAccessManager&gt;</code><br/>
-<code>#include &lt;QtNetwork/QNetworkRequest&gt;</code><br/>
+<code>#include &quot;<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_index2d_8h.html">istd/CIndex2d.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_sync_processor_wrap_8h.html">iproc/TSyncProcessorWrap.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</code><br/>
@@ -46,48 +46,12 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp_base.html">ilibav::CLibAvRtspStreamingCameraCompBase</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html">ilibav::CLibAvRtspStreamingCameraComp</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_bitmap_acquisition.html">icam::IBitmapAcquisition</a> interface for streaming rtsp video using LibAv library for H.264 decoding.  <a href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilibav.html">ilibav</a></td></tr>
-<tr><td colspan="2"><h2><a name="define-members"></a>
-Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_lib_av_rtsp_streaming_camera_comp_8h.html#a00d24c7231be28dbaf71f5408f30e44c">inline</a>&#160;&#160;&#160;_inline</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_lib_av_rtsp_streaming_camera_comp_8h.html#a786132414c30f947907be33a4c28125a">__STDC_CONSTANT_MACROS</a></td></tr>
 </table>
-<hr/><h2>Define Documentation</h2>
-<a class="anchor" id="a786132414c30f947907be33a4c28125a"></a><!-- doxytag: member="CLibAvRtspStreamingCameraComp.h::__STDC_CONSTANT_MACROS" ref="a786132414c30f947907be33a4c28125a" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define __STDC_CONSTANT_MACROS</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_c_lib_av_rtsp_streaming_camera_comp_8h_source.html#l00008">8</a> of file <a class="el" href="_c_lib_av_rtsp_streaming_camera_comp_8h_source.html">CLibAvRtspStreamingCameraComp.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a00d24c7231be28dbaf71f5408f30e44c"></a><!-- doxytag: member="CLibAvRtspStreamingCameraComp.h::inline" ref="a00d24c7231be28dbaf71f5408f30e44c" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define inline&#160;&#160;&#160;_inline</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_c_lib_av_rtsp_streaming_camera_comp_8h_source.html#l00007">7</a> of file <a class="el" href="_c_lib_av_rtsp_streaming_camera_comp_8h_source.html">CLibAvRtspStreamingCameraComp.h</a>.</p>
-
-</div>
-</div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

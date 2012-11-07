@@ -31,6 +31,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QClipboard>
 #include <QtGui/QDesktopWidget>
+#include <QtGui/QToolButton>
 #include <QtGui/QPushButton>
 
 // ACF includes
@@ -60,7 +61,8 @@ CVisualRegistryEditorComp::CVisualRegistryEditorComp()
 :	m_environmentObserver(this),
 	m_ignoreUpdateFlags(0),
 	m_scenePtr(NULL),
-	m_isUpdating(false)
+	m_isUpdating(false),
+	m_buttonSpacerPtr(NULL)
 {
 	int lightToolFlags = ibase::IHierarchicalCommand::CF_GLOBAL_MENU | ibase::IHierarchicalCommand::CF_TOOLBAR;
 
@@ -204,8 +206,8 @@ void CVisualRegistryEditorComp::OnDropFinished(const QMimeData& mimeData, QEvent
 	}
 }
 
-// protected methods
 
+// protected methods
 
 icomp::IRegistry* CVisualRegistryEditorComp::GetSelectedRegistry() const
 {
@@ -278,41 +280,41 @@ void CVisualRegistryEditorComp::AddConnectorsToScene()
 				continue;
 			}
 
-				iser::ISerializable* attributePtr = attributeInfoPtr->attributePtr.GetPtr();
-				const icomp::CReferenceAttribute* referenceAttributePtr = dynamic_cast<icomp::CReferenceAttribute*>(attributePtr);
-				if (referenceAttributePtr != NULL){		
-					const QByteArray& componentId = referenceAttributePtr->GetValue();
+			iser::ISerializable* attributePtr = attributeInfoPtr->attributePtr.GetPtr();
+			const icomp::CReferenceAttribute* referenceAttributePtr = dynamic_cast<icomp::CReferenceAttribute*>(attributePtr);
+			if (referenceAttributePtr != NULL){		
+				const QByteArray& componentId = referenceAttributePtr->GetValue();
 				
+				AddConnector(*sourceShapePtr, componentId, attributeId);
+			}
+	
+			const icomp::CMultiReferenceAttribute* multiReferenceAttributePtr = dynamic_cast<icomp::CMultiReferenceAttribute*>(attributePtr);
+			if (multiReferenceAttributePtr != NULL){
+				for (int referenceIndex = 0; referenceIndex < multiReferenceAttributePtr->GetValuesCount(); referenceIndex++){
+					const QByteArray& componentId = multiReferenceAttributePtr->GetValueAt(referenceIndex);
+					
 					AddConnector(*sourceShapePtr, componentId, attributeId);
 				}
-	
-				const icomp::CMultiReferenceAttribute* multiReferenceAttributePtr = dynamic_cast<icomp::CMultiReferenceAttribute*>(attributePtr);
-				if (multiReferenceAttributePtr != NULL){
-					for (int referenceIndex = 0; referenceIndex < multiReferenceAttributePtr->GetValuesCount(); referenceIndex++){
-						const QByteArray& componentId = multiReferenceAttributePtr->GetValueAt(referenceIndex);
-						
-						AddConnector(*sourceShapePtr, componentId, attributeId);
-					}
-				}
+			}
 
-				const icomp::CFactoryAttribute* factoryAttributePtr = dynamic_cast<icomp::CFactoryAttribute*>(attributePtr);
-				if (factoryAttributePtr != NULL){		
-					const QByteArray& componentId = factoryAttributePtr->GetValue();
+			const icomp::CFactoryAttribute* factoryAttributePtr = dynamic_cast<icomp::CFactoryAttribute*>(attributePtr);
+			if (factoryAttributePtr != NULL){		
+				const QByteArray& componentId = factoryAttributePtr->GetValue();
+
+				AddConnector(*sourceShapePtr, componentId, attributeId, true);
+			}
+
+			const icomp::CMultiFactoryAttribute* multiFactoryAttributePtr = dynamic_cast<icomp::CMultiFactoryAttribute*>(attributePtr);
+			if (multiFactoryAttributePtr != NULL){
+				for (int referenceIndex = 0; referenceIndex < multiFactoryAttributePtr->GetValuesCount(); referenceIndex++){
+					const QByteArray& componentId = multiFactoryAttributePtr->GetValueAt(referenceIndex);
 
 					AddConnector(*sourceShapePtr, componentId, attributeId, true);
-				}
-	
-				const icomp::CMultiFactoryAttribute* multiFactoryAttributePtr = dynamic_cast<icomp::CMultiFactoryAttribute*>(attributePtr);
-				if (multiFactoryAttributePtr != NULL){
-					for (int referenceIndex = 0; referenceIndex < multiFactoryAttributePtr->GetValuesCount(); referenceIndex++){
-						const QByteArray& componentId = multiFactoryAttributePtr->GetValueAt(referenceIndex);
-
-						AddConnector(*sourceShapePtr, componentId, attributeId, true);
-					}
 				}
 			}
 		}
 	}
+}
 
 
 void CVisualRegistryEditorComp::AddConnector(
@@ -598,7 +600,6 @@ void CVisualRegistryEditorComp::DoRetranslate()
 
 // reimplemented (iqt2d::TScenographerCompBase)
 
-
 bool CVisualRegistryEditorComp::OnDropObject(const QMimeData& mimeData, QGraphicsSceneDragDropEvent* eventPtr)
 {
 	if (!mimeData.hasText()){
@@ -714,7 +715,7 @@ bool CVisualRegistryEditorComp::OnDetached(imod::IModel* modelPtr)
 }
 
 
-// namespace icmpstr
+// reimplemented (icomp::CComponentBase)
 
 void CVisualRegistryEditorComp::OnComponentCreated()
 {
@@ -883,6 +884,7 @@ void CVisualRegistryEditorComp::OnSelectionChanged()
 void CVisualRegistryEditorComp::OnCutCommand()
 {
 	OnCopyCommand();
+
 	OnRemoveComponent();
 }
 
@@ -1003,7 +1005,6 @@ void CVisualRegistryEditorComp::OnPasteCommand()
 	if (hasErrors){
 		QMessageBox::critical(NULL, tr("Error"), tr("Some components could not be added")); 
 	}
-
 }
 
 
@@ -1152,58 +1153,10 @@ void CVisualRegistryEditorComp::ToEmbeddedComponent()
 			QByteArray subId;
 			istd::CIdManipBase::SplitId(subcomponentIter.value(), baseId, subId);
 			if (baseId == elementName){
-				QByteArray completeElementId = istd::CIdManipBase::JoinId(elementName, subId);
-
-				newEmbeddedRegistryPtr->SetElementExported(subcomponentIter.key(), elementName);
+				newEmbeddedRegistryPtr->SetElementExported(subcomponentIter.key(), subcomponentIter.value());
 			}
 		}
-		/*
-		// this code requires a way to get interface type for referenced elements
 
-			// replace referenced interfaces of moved elements with exports
-			icomp::IRegistry::Ids ids = newEmbeddedRegistryPtr->GetElementIds();
-			for (icomp::IRegistry::Ids::const_iterator iter = ids.begin(); iter != ids.end(); iter++){
-				// skip moved elements themselves
-				if (m_selectedElementIds.contains(*iter)){
-					continue;
-				}
-
-				const icomp::IRegistry::ElementInfo* info = registryPtr->GetElementInfo(*iter);
-				if (info == NULL || !info->elementPtr.IsValid()){
-					continue;
-				}
-				// search for attributes referencing moved elements
-				icomp::IRegistry::Ids attrIds = info->elementPtr->GetAttributeIds();
-				for (icomp::IRegistry::Ids::const_iterator iter = attrIds.begin(); iter != attrIds.end(); iter++){
-					icomp::IRegistryElement::AttributeInfo* attrInfo = info->elementPtr->GetAttributeInfo(*iter);
-					if (attrInfo == NULL || !attrInfo->attributeTypeName.startsWith("Reference")){
-						continue;
-					}
-
-					icomp::CReferenceAttribute *attr = attrInfo->attributePtr.Cast<icomp::CReferenceAttribute *>();
-					icomp::CMultiReferenceAttribute *attrMulti = attrInfo->attributePtr.Cast<icomp::CMultiReferenceAttribute *>();
-					QSet<QByteArray>refElemNames;
-
-					if (attr != NULL){
-						QByteArray refElemName = attr->GetValue();
-						if (m_selectedElementIds.contains(refElemName)){
-							refElemNames.insert(refElemName);
-							attr->
-						}
-					}
-					else if (attrMulti != NULL){
-						for (int i = 0; i < attrMulti->GetValuesCount(); i++){
-							QByteArray refElemName = attrMulti->GetValueAt(i);
-							if (m_selectedElementIds.contains(refElemName)){
-								refElemNames.insert(refElemName);
-							}
-
-						}
-					}
-			
-				}
-			}
-		 */
 		registryPtr->RemoveElementInfo(elementName);
 	}
 
@@ -1332,7 +1285,7 @@ void CVisualRegistryEditorComp::OnShowRegistryTopology()
 
 void CVisualRegistryEditorComp::OnEmbeddedComponentButtonClicked()
 {
-	QPushButton* buttonPtr = dynamic_cast<QPushButton*>(sender());
+	QToolButton* buttonPtr = dynamic_cast<QToolButton*>(sender());
 	if ((buttonPtr != NULL) && (buttonPtr != RootButton)){
 		QByteArray id = buttonPtr->objectName().toAscii();
 
@@ -1357,6 +1310,7 @@ void CVisualRegistryEditorComp::UpdateEmbeddedRegistryButtons()
 	}
 
 	m_embeddedButtons.Reset();
+	EmbeddedComponentsLayout->removeItem(m_buttonSpacerPtr);
 
 	icomp::IRegistry::Ids embeddedIds = rootRegistryPtr->GetEmbeddedRegistryIds();
 
@@ -1369,16 +1323,17 @@ void CVisualRegistryEditorComp::UpdateEmbeddedRegistryButtons()
 	for (icomp::IRegistry::Ids::iterator iter = embeddedIds.begin(); iter != embeddedIds.end(); ++iter, ++buttonIndex){
 		const QByteArray& elementId = *iter;
 
-		QPushButton* newButtonPtr = NULL;
+		QToolButton* newButtonPtr = NULL;
 		if (buttonIndex < m_embeddedButtons.GetCount()){
 			newButtonPtr = m_embeddedButtons.GetAt(buttonIndex);
 		}
 		else{
-			newButtonPtr = new QPushButton();
+			newButtonPtr = new QToolButton();
 			m_embeddedButtons.PushBack(newButtonPtr);
 			connect(newButtonPtr, SIGNAL(clicked()), this, SLOT(OnEmbeddedComponentButtonClicked()));
 			newButtonPtr->setCheckable(true);
 			newButtonPtr->setAutoExclusive(true);
+			newButtonPtr->setMinimumSize(RootButton->minimumSize());
 
 			EmbeddedComponentsLayout->addWidget(newButtonPtr);
 		}
@@ -1388,6 +1343,10 @@ void CVisualRegistryEditorComp::UpdateEmbeddedRegistryButtons()
 		newButtonPtr->setChecked(elementId == m_embeddedRegistryId);
 	}
 
+	m_buttonSpacerPtr = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+	EmbeddedComponentsLayout->addSpacerItem(m_buttonSpacerPtr);
+
 	Q_ASSERT(buttonIndex <= m_embeddedButtons.GetCount());
 	m_embeddedButtons.SetCount(buttonIndex);
 }
@@ -1396,11 +1355,11 @@ void CVisualRegistryEditorComp::UpdateEmbeddedRegistryButtons()
 void CVisualRegistryEditorComp::UpdateEmbeddedRegistryView(const QByteArray& id)
 {
 	if (id != m_embeddedRegistryId){
+		istd::CChangeNotifier selectionNotifier(&m_selectionInfo, IElementSelectionInfo::CF_SELECTION);
+
 		m_embeddedRegistryId = id;
 
 		UpdateScene(0);
-
-		istd::CChangeNotifier selectionNotifier(&m_selectionInfo, IElementSelectionInfo::CF_SELECTION);
 	}
 }
 

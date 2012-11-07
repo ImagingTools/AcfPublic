@@ -30,7 +30,8 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">ilibav::CLibAvRtspStreamingDataSink Class Reference</div>  </div>
 </div>
@@ -46,14 +47,17 @@
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <br class="typebreak"/>
-<a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_data_sink.html">CLibAvRtspStreamingDataSink</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_data_sink.html#a44cd15285bae4268a948787dbca77855">createNew</a> (<a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html">CLibAvRtspStreamingClient</a> *streamClient, UsageEnvironment &amp;env, MediaSubsession &amp;subsession, char const *streamId=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_data_sink.html">CLibAvRtspStreamingDataSink</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_data_sink.html#a3ef77234ffa47aa4f4d5d5ab82ffa224">createNew</a> (<a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html">CLibAvRtspStreamingClient</a> *streamClient, UsageEnvironment &amp;env, MediaSubsession &amp;subsession)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_data_sink.html#a3476a9af3e44c7dc38f6c87160c14651">DATA_SINK_RECEIVE_BUFFER_SIZE</a> = 500000</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class for receiving data from rtsp stream. </p>
 
-<p>Definition at line <a class="el" href="_c_lib_av_rtsp_streaming_data_sink_8h_source.html#l00033">33</a> of file <a class="el" href="_c_lib_av_rtsp_streaming_data_sink_8h_source.html">CLibAvRtspStreamingDataSink.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lib_av_rtsp_streaming_data_sink_8h_source.html#l00017">17</a> of file <a class="el" href="_c_lib_av_rtsp_streaming_data_sink_8h_source.html">CLibAvRtspStreamingDataSink.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a44cd15285bae4268a948787dbca77855"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingDataSink::createNew" ref="a44cd15285bae4268a948787dbca77855" args="(CLibAvRtspStreamingClient *streamClient, UsageEnvironment &amp;env, MediaSubsession &amp;subsession, char const *streamId=NULL)" -->
+<a class="anchor" id="a3ef77234ffa47aa4f4d5d5ab82ffa224"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingDataSink::createNew" ref="a3ef77234ffa47aa4f4d5d5ab82ffa224" args="(CLibAvRtspStreamingClient *streamClient, UsageEnvironment &amp;env, MediaSubsession &amp;subsession)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -73,13 +77,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">MediaSubsession &amp;&#160;</td>
-          <td class="paramname"><em>subsession</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>streamId</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+          <td class="paramname"><em>subsession</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -89,6 +87,22 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a3476a9af3e44c7dc38f6c87160c14651"></a><!-- doxytag: member="ilibav::CLibAvRtspStreamingDataSink::DATA_SINK_RECEIVE_BUFFER_SIZE" ref="a3476a9af3e44c7dc38f6c87160c14651" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="classilibav_1_1_c_lib_av_rtsp_streaming_data_sink.html#a3476a9af3e44c7dc38f6c87160c14651">ilibav::CLibAvRtspStreamingDataSink::DATA_SINK_RECEIVE_BUFFER_SIZE</a> = 500000<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_lib_av_rtsp_streaming_data_sink_8h_source.html#l00026">26</a> of file <a class="el" href="_c_lib_av_rtsp_streaming_data_sink_8h_source.html">CLibAvRtspStreamingDataSink.h</a>.</p>
 
 </div>
 </div>

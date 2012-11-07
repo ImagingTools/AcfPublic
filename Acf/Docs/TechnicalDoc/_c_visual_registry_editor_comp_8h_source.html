@@ -279,38 +279,39 @@
 <a name="l00291"></a>00291        <span class="keywordtype">bool</span> m_isUpdating;
 <a name="l00292"></a>00292        QStringList m_acceptedMimeTypes;
 <a name="l00293"></a>00293 
-<a name="l00294"></a>00294        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QPushButton&gt;</a> m_embeddedButtons;
-<a name="l00295"></a>00295 
-<a name="l00296"></a>00296        <span class="comment">// static attributes</span>
-<a name="l00297"></a>00297        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementsListTag;
-<a name="l00298"></a>00298        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementTag;
-<a name="l00299"></a>00299        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementIdTag;
-<a name="l00300"></a>00300        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementAddressTag;
-<a name="l00301"></a>00301        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementCenterTag;
-<a name="l00302"></a>00302 };
-<a name="l00303"></a>00303 
+<a name="l00294"></a>00294        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QToolButton&gt;</a> m_embeddedButtons;
+<a name="l00295"></a>00295        QSpacerItem* m_buttonSpacerPtr;
+<a name="l00296"></a>00296 
+<a name="l00297"></a>00297        <span class="comment">// static attributes</span>
+<a name="l00298"></a>00298        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementsListTag;
+<a name="l00299"></a>00299        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementTag;
+<a name="l00300"></a>00300        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementIdTag;
+<a name="l00301"></a>00301        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementAddressTag;
+<a name="l00302"></a>00302        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementCenterTag;
+<a name="l00303"></a>00303 };
 <a name="l00304"></a>00304 
-<a name="l00305"></a>00305 <span class="comment">// inline methods</span>
-<a name="l00306"></a>00306 
+<a name="l00305"></a>00305 
+<a name="l00306"></a>00306 <span class="comment">// inline methods</span>
 <a name="l00307"></a>00307 
-<a name="l00308"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa98b336168a19656fae79d8f6433a6e2">00308</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa98b336168a19656fae79d8f6433a6e2">CVisualRegistryEditorComp::GetEnvironmentManager</a>()<span class="keyword"> const</span>
-<a name="l00309"></a>00309 <span class="keyword"></span>{
-<a name="l00310"></a>00310        <span class="keywordflow">return</span> m_envManagerCompPtr.GetPtr();
-<a name="l00311"></a>00311 }
-<a name="l00312"></a>00312 
+<a name="l00308"></a>00308 
+<a name="l00309"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa98b336168a19656fae79d8f6433a6e2">00309</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa98b336168a19656fae79d8f6433a6e2">CVisualRegistryEditorComp::GetEnvironmentManager</a>()<span class="keyword"> const</span>
+<a name="l00310"></a>00310 <span class="keyword"></span>{
+<a name="l00311"></a>00311        <span class="keywordflow">return</span> m_envManagerCompPtr.GetPtr();
+<a name="l00312"></a>00312 }
 <a name="l00313"></a>00313 
-<a name="l00314"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">00314</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">CVisualRegistryEditorComp::GetRegistryConsistInfo</a>()<span class="keyword"> const</span>
-<a name="l00315"></a>00315 <span class="keyword"></span>{
-<a name="l00316"></a>00316        <span class="keywordflow">return</span> m_consistencyInfoCompPtr.GetPtr();
-<a name="l00317"></a>00317 }
-<a name="l00318"></a>00318 
+<a name="l00314"></a>00314 
+<a name="l00315"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">00315</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">CVisualRegistryEditorComp::GetRegistryConsistInfo</a>()<span class="keyword"> const</span>
+<a name="l00316"></a>00316 <span class="keyword"></span>{
+<a name="l00317"></a>00317        <span class="keywordflow">return</span> m_consistencyInfoCompPtr.GetPtr();
+<a name="l00318"></a>00318 }
 <a name="l00319"></a>00319 
-<a name="l00320"></a>00320 } <span class="comment">// namespace icmpstr</span>
-<a name="l00321"></a>00321 
+<a name="l00320"></a>00320 
+<a name="l00321"></a>00321 } <span class="comment">// namespace icmpstr</span>
 <a name="l00322"></a>00322 
-<a name="l00323"></a>00323 <span class="preprocessor">#endif // !icmpstr_CVisualRegistryEditorComp_included</span>
-<a name="l00324"></a>00324 <span class="preprocessor"></span>
-<a name="l00325"></a>00325 
+<a name="l00323"></a>00323 
+<a name="l00324"></a>00324 <span class="preprocessor">#endif // !icmpstr_CVisualRegistryEditorComp_included</span>
+<a name="l00325"></a>00325 <span class="preprocessor"></span>
+<a name="l00326"></a>00326 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
