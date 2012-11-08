@@ -14,7 +14,7 @@ cd %ACFDIR%\Build\VC9
 msbuild AcfAll.sln /m
 
 cd %ACFDIR%\Docs\Tutorial\Build\VC9
-msbuild TutorialAcf.sln
+msbuild TutorialAcf.sln /m
 
 cd %ACFSLNDIR%\Build\VC9
 msbuild AcfSlnAll.sln /m
