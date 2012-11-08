@@ -37,7 +37,7 @@
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_type_info_8h.html">iser/IFileTypeInfo.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_c_ext_line_edit_8h.html">iqtgui/CExtLineEdit.h</a>&quot;</span>
@@ -51,12 +51,12 @@
 <a name="l00024"></a>00024 
 <a name="l00032"></a><a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html">00032</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html" title="UI component for visualization of file system contents.">CFileSystemExplorerGuiComp</a>:
 <a name="l00033"></a>00033                      <span class="keyword">public</span> iqtgui::<a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00034"></a>00034                                           Ui::CFileSystemExplorerGuiComp, iprm::IFileNameParam&gt;
+<a name="l00034"></a>00034                                           Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam&gt;
 <a name="l00035"></a>00035 {
 <a name="l00036"></a>00036        Q_OBJECT
 <a name="l00037"></a>00037 <span class="keyword">public</span>:
 <a name="l00038"></a>00038        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00039"></a><a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#aa369ab65ec17024dd82119a1842f1096">00039</a>                             Ui::CFileSystemExplorerGuiComp, <a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>&gt; <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#aa369ab65ec17024dd82119a1842f1096">BaseClass</a>;
+<a name="l00039"></a><a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a490300cd97852910c974f34caa4b13cc">00039</a>                             Ui::CFileSystemExplorerGuiComp, <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>&gt; <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a490300cd97852910c974f34caa4b13cc">BaseClass</a>;
 <a name="l00040"></a>00040        
 <a name="l00041"></a>00041        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html" title="UI component for visualization of file system contents.">CFileSystemExplorerGuiComp</a>);
 <a name="l00042"></a>00042               I_ASSIGN(m_filterInfoCompPtr, <span class="stringliteral">&quot;FilterInfo&quot;</span>, <span class="stringliteral">&quot;Provides information about supported files used to filter shown files&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;FilterInfo&quot;</span>);
@@ -95,7 +95,7 @@
 <a name="l00079"></a>00079        <span class="keyword">class </span>FileIconProvider: <span class="keyword">public</span> QFileIconProvider
 <a name="l00080"></a>00080        {
 <a name="l00081"></a>00081        <span class="keyword">public</span>:
-<a name="l00082"></a>00082               <span class="keyword">typedef</span> QFileIconProvider <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#aa369ab65ec17024dd82119a1842f1096">BaseClass</a>;
+<a name="l00082"></a>00082               <span class="keyword">typedef</span> QFileIconProvider <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a490300cd97852910c974f34caa4b13cc">BaseClass</a>;
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084               <span class="comment">// reimplemented (QFileIconProvider)</span>
 <a name="l00085"></a>00085               <span class="keyword">virtual</span> QIcon icon(<span class="keyword">const</span> QFileInfo&amp; fileInfo) <span class="keyword">const</span>;

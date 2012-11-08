@@ -30,7 +30,7 @@
 // ACF includes
 #include "icomp/IMetaInfoManager.h"
 
-#include "iprm/IFileNameParam.h"
+#include "ifile/IFileNameParam.h"
 
 #include "idoc/IHelpViewer.h"
 #include "idoc/IHelpFileProvider.h"
@@ -84,8 +84,8 @@ protected Q_SLOTS:
 
 private:
 	I_REF(idoc::IHelpFileProvider, m_descriptionFileProviderCompPtr);
-	I_REF(iprm::IFileNameParam, m_docuEditorFileParamsCompPtr);
-	I_REF(iprm::IFileNameParam, m_techDocuViewerFileParamsCompPtr);
+	I_REF(ifile::IFileNameParam, m_docuEditorFileParamsCompPtr);
+	I_REF(ifile::IFileNameParam, m_techDocuViewerFileParamsCompPtr);
 	I_REF(icomp::IMetaInfoManager, m_metaInfoManagerCompPtr);
 	I_REF(IExternalMetaInfoManager, m_externalMetaInfoManagerCompPtr);
 

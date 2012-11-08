@@ -92,7 +92,9 @@ void CComposedGuiComp::OnGuiCreated()
 
 	layoutPtr->setMargin(0);
 
-	if (*m_designTypeAttrPtr == 1){
+	bool isFlat = *m_flatViewAttrPtr;
+
+	if (*m_designTypeAttrPtr == 1){		// Tool Box
 		widgetPtr->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
 
 		QToolBox* toolBoxPtr = new QToolBox(widgetPtr);
@@ -126,11 +128,15 @@ void CComposedGuiComp::OnGuiCreated()
 
 		layoutPtr->addWidget(toolBoxPtr);
 	}
-	else if (*m_designTypeAttrPtr == 2){
+	else if (*m_designTypeAttrPtr == 2){	// Tab Widget
 		widgetPtr->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 
 		QTabWidget* tabWidgetPtr = new QTabWidget(widgetPtr);
 		tabWidgetPtr->setTabPosition(QTabWidget::TabPosition(*m_tabOrientationAttrPtr));
+
+		if (isFlat){
+			tabWidgetPtr->setTabShape(QTabWidget::Triangular);
+		}
 
 		int elementsCount = m_guisCompPtr.GetCount();
 		for (int i = 0; i < elementsCount; ++i){
@@ -156,9 +162,13 @@ void CComposedGuiComp::OnGuiCreated()
 
 		layoutPtr->addWidget(tabWidgetPtr);
 	}
-	else if (*m_designTypeAttrPtr == 3){
+	else if (*m_designTypeAttrPtr == 3){	// Splitter
 		int elementsCount = m_guisCompPtr.GetCount();
 		m_splitterPtr = new QSplitter(widgetPtr);
+
+		if (isFlat){
+			m_splitterPtr->setOpaqueResize(false);
+		}
 
 		if (*m_useHorizontalLayoutAttrPtr){
 			m_splitterPtr->setOrientation(Qt::Horizontal);
@@ -178,7 +188,7 @@ void CComposedGuiComp::OnGuiCreated()
 
 		layoutPtr->addWidget(m_splitterPtr);
 	}
-	else{
+	else{	// Group Box
 		int elementsCount = m_guisCompPtr.GetCount();
 		for (int i = 0; i < elementsCount; ++i){
 			iqtgui::IGuiObject* guiPtr = m_guisCompPtr[i];
@@ -193,6 +203,11 @@ void CComposedGuiComp::OnGuiCreated()
 
 				if (parentLayoutPtr != NULL){
 					parentLayoutPtr->addWidget(elementParentPtr);
+				}
+
+				if (isFlat){
+					((QGroupBox*)elementParentPtr)->setFlat(true);
+					elementParentPtr->layout()->setContentsMargins(0, 4, 0, 0);
 				}
 			}
 

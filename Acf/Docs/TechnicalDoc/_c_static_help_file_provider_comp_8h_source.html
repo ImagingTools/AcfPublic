@@ -31,7 +31,7 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_i_help_file_provider_8h.html">idoc/IHelpFileProvider.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 
@@ -59,7 +59,7 @@
 <a name="l00032"></a>00032        <span class="keyword">virtual</span> QString <a class="code" href="classiqtdoc_1_1_c_static_help_file_provider_comp.html#af38ad32af9b6cadcef6c3f22ff0c6c9d" title="Get access to help file path for specified help information.">GetHelpFilePath</a>(<span class="keyword">const</span> QString&amp; contextText, <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* contextObjectPtr) <span class="keyword">const</span>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="keyword">private</span>:
-<a name="l00035"></a>00035        I_REF(<a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>, m_helpFileDirCompPtr);
+<a name="l00035"></a>00035        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_helpFileDirCompPtr);
 <a name="l00036"></a>00036        I_ATTR(QString, m_defaultFileNameAttrPtr);
 <a name="l00037"></a>00037        I_ATTR(QString, m_contextPrefixAttrPtr);
 <a name="l00038"></a>00038        I_ATTR(QString, m_contextSuffixAttrPtr);

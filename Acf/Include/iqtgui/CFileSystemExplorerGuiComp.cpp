@@ -65,7 +65,7 @@ void CFileSystemExplorerGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
-	iprm::IFileNameParam* objectPtr = GetObjectPtr();
+	ifile::IFileNameParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		QString currentFilePath = iqt::CSystem::GetEnrolledPath(objectPtr->GetPath());
 
@@ -182,7 +182,7 @@ void CFileSystemExplorerGuiComp::OnFilterChanged()
 void CFileSystemExplorerGuiComp::OnSelectionChanged(const QItemSelection& selected, const QItemSelection&/* deselected*/)
 {
 	if (!selected.indexes().isEmpty()){
-		iprm::IFileNameParam* objectPtr = GetObjectPtr();
+		ifile::IFileNameParam* objectPtr = GetObjectPtr();
 		if (objectPtr != NULL){
 			QModelIndex selectedIndex = selected.indexes().at(0);
 
@@ -192,18 +192,18 @@ void CFileSystemExplorerGuiComp::OnSelectionChanged(const QItemSelection& select
 			bool isFile = fileInfo.isFile();
 			bool isDir = fileInfo.isDir();
 
-			int selectedFileType = iprm::IFileNameParam::PT_UNKNOWN;
+			int selectedFileType = ifile::IFileNameParam::PT_UNKNOWN;
 
 			if (isFile){
-				selectedFileType = iprm::IFileNameParam::PT_FILE;
+				selectedFileType = ifile::IFileNameParam::PT_FILE;
 			}
 
 			if (isDir){
-				selectedFileType = iprm::IFileNameParam::PT_DIRECTORY;
+				selectedFileType = ifile::IFileNameParam::PT_DIRECTORY;
 			}
 
 			int supportedPathType = objectPtr->GetPathType();
-			if ((supportedPathType == iprm::IFileNameParam::PT_UNKNOWN) || (supportedPathType == selectedFileType)){
+			if ((supportedPathType == ifile::IFileNameParam::PT_UNKNOWN) || (supportedPathType == selectedFileType)){
 				objectPtr->SetPath(currentFilePath);
 			}
 			else{

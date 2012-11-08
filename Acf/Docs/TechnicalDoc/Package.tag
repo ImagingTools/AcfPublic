@@ -467,7 +467,7 @@
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ibase::CAutoPersistenceComp</class>
     <namespace>ibase</namespace>
   </compound>
@@ -689,7 +689,7 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_text_file_log_comp_8h</filename>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ibase/CStreamLogCompBase.h</includes>
     <class kind="class">ibase::CTextFileLogComp</class>
     <namespace>ibase</namespace>
@@ -1247,7 +1247,7 @@
     <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
     <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
@@ -1273,7 +1273,7 @@
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_quick_help_gui_comp_8h</filename>
     <includes id="_i_meta_info_manager_8h" name="IMetaInfoManager.h" local="yes" imported="no">icomp/IMetaInfoManager.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
     <includes id="_i_help_file_provider_8h" name="IHelpFileProvider.h" local="yes" imported="no">idoc/IHelpFileProvider.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
@@ -1318,7 +1318,7 @@
     <filename>_c_registry_preview_comp_8h</filename>
     <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
     <class kind="class">icmpstr::CRegistryPreviewComp</class>
     <namespace>icmpstr</namespace>
@@ -2460,6 +2460,95 @@
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
+    <name>CDirList.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_dir_list_8h</filename>
+    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
+    <class kind="class">ifile::CDirList</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileList.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_list_8h</filename>
+    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
+    <class kind="class">ifile::CFileList</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileListProviderComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_list_provider_comp_8h</filename>
+    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ibase/IFileListProvider.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
+    <class kind="class">ifile::CFileListProviderComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileNameParamComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_name_param_comp_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <class kind="class">ifile::CFileNameParamComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CGeneratedFileNameParamComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_generated_file_name_param_comp_8h</filename>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_c_relative_file_name_param_comp_8h" name="CRelativeFileNameParamComp.h" local="yes" imported="no">ifile/CRelativeFileNameParamComp.h</includes>
+    <class kind="class">ifile::CGeneratedFileNameParamComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRelativeFileNameParamComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_relative_file_name_param_comp_8h</filename>
+    <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">ifile/CFileNameParamComp.h</includes>
+    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
+    <class kind="class">ifile::CRelativeFileNameParamComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSystemLocationComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_system_location_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <class kind="class">ifile::CSystemLocationComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ifile.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>ifile_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
+    <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
+    <includes id="icomp_8h" name="icomp.h" local="yes" imported="no">icomp/icomp.h</includes>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFileNameParam.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_name_param_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
+    <class kind="class">ifile::IFileNameParam</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CBitmapBase.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_bitmap_base_8h</filename>
@@ -2856,6 +2945,7 @@
     <name>CMultiModelDispatcherBase.h</name>
     <path>C:/Temp/Acf/Include/imod/</path>
     <filename>_c_multi_model_dispatcher_base_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
@@ -2980,16 +3070,6 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
-    <name>CFileNameParamComp.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_c_file_name_param_comp_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
-    <class kind="class">iprm::CFileNameParamComp</class>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
     <name>CManagerParamsSetShadowerComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_manager_params_set_shadower_comp_8h</filename>
@@ -3073,15 +3153,6 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
-    <name>CRelativeFileNameParamComp.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_c_relative_file_name_param_comp_8h</filename>
-    <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">iprm/CFileNameParamComp.h</includes>
-    <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
-    <class kind="class">iprm::CRelativeFileNameParamComp</class>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSelectableParamsSetComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_selectable_params_set_comp_8h</filename>
@@ -3139,15 +3210,6 @@
     <filename>_i_enableable_param_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">iprm::IEnableableParam</class>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileNameParam.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_i_file_name_param_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
-    <class kind="class">iprm::IFileNameParam</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -3295,14 +3357,6 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
-    <name>CDirList.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_dir_list_8h</filename>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CDirList</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
     <name>CFileInfoCopyComp.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_file_info_copy_comp_8h</filename>
@@ -3311,38 +3365,6 @@
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CFileInfoCopyComp</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileList.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_file_list_8h</filename>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CFileList</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileListProviderComp.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_file_list_provider_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ibase/IFileListProvider.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CFileListProviderComp</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CGeneratedFileNameParamComp.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_generated_file_name_param_comp_8h</filename>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_c_relative_file_name_param_comp_8h" name="CRelativeFileNameParamComp.h" local="yes" imported="no">iprm/CRelativeFileNameParamComp.h</includes>
-    <class kind="class">iqt::CGeneratedFileNameParamComp</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -3375,7 +3397,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_composite_package_static_info_8h" name="CCompositePackageStaticInfo.h" local="yes" imported="no">icomp/CCompositePackageStaticInfo.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">iqt::CPackagesLoaderComp</class>
     <class kind="class">iqt::CPackagesLoaderComp::LogingRegistry</class>
     <namespace>iqt</namespace>
@@ -3401,7 +3423,7 @@
     <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">iqt::CRegistriesManagerComp</class>
     <namespace>iqt</namespace>
   </compound>
@@ -3415,7 +3437,7 @@
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">iqt::CRegistryCodeSaverComp</class>
     <namespace>iqt</namespace>
@@ -3495,17 +3517,6 @@
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_system_8h</filename>
     <class kind="class">iqt::CSystem</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSystemLocationComp.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_system_location_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
-    <class kind="class">iqt::CSystemLocationComp</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -4011,7 +4022,7 @@
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_c_static_help_file_provider_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_help_file_provider_8h" name="IHelpFileProvider.h" local="yes" imported="no">idoc/IHelpFileProvider.h</includes>
     <class kind="class">iqtdoc::CStaticHelpFileProviderComp</class>
     <namespace>iqtdoc</namespace>
@@ -4151,7 +4162,7 @@
     <includes id="_i_file_loader_info_8h" name="IFileLoaderInfo.h" local="yes" imported="no">iser/IFileLoaderInfo.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::CFileDialogLoaderComp</class>
     <namespace>iqtgui</namespace>
@@ -4179,7 +4190,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_file_system_explorer_gui_comp_8h</filename>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_ext_line_edit_8h" name="CExtLineEdit.h" local="yes" imported="no">iqtgui/CExtLineEdit.h</includes>
     <class kind="class">iqtgui::CFileSystemExplorerGuiComp</class>
@@ -4313,7 +4324,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_object_preview_gui_comp_8h</filename>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
     <namespace>iqtgui</namespace>
@@ -4609,7 +4620,7 @@
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_file_name_param_gui_comp_8h</filename>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">iprm/IFileNameParam.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
     <namespace>iqtprm</namespace>
@@ -24742,6 +24753,345 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>ifile</name>
+    <filename>namespaceifile.html</filename>
+    <class kind="class">ifile::CDirList</class>
+    <class kind="class">ifile::CFileList</class>
+    <class kind="class">ifile::CFileListProviderComp</class>
+    <class kind="class">ifile::CFileNameParamComp</class>
+    <class kind="class">ifile::CGeneratedFileNameParamComp</class>
+    <class kind="class">ifile::CRelativeFileNameParamComp</class>
+    <class kind="class">ifile::CSystemLocationComp</class>
+    <class kind="class">ifile::IFileNameParam</class>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CDirList</name>
+    <filename>classifile_1_1_c_dir_list.html</filename>
+    <base>QObject</base>
+    <member kind="signal">
+      <type>void</type>
+      <name>currentDir</name>
+      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
+      <anchor>a61af200868d44a75e25ecfe83ed90d9d</anchor>
+      <arglist>(const QString &amp;dir)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDirList</name>
+      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
+      <anchor>a9716b5a2abc2b2b15cdb93b64bac6683</anchor>
+      <arglist>(QObject *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDirList</name>
+      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
+      <anchor>aa12b8ed5f29c3c0c33ed258ce27c8920</anchor>
+      <arglist>(QObject *parent, const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Create</name>
+      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
+      <anchor>a20e79f6587bcc6af34b544cf513d1cd9</anchor>
+      <arglist>(const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0, bool doAppend=false)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoSearch</name>
+      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
+      <anchor>a8eb9774cd46686cd489518f2fddb5626</anchor>
+      <arglist>(const QDir &amp;root, int minRecursionDepth, int maxRecursionDepth)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileList</name>
+    <filename>classifile_1_1_c_file_list.html</filename>
+    <base>QObject</base>
+    <member kind="signal">
+      <type>void</type>
+      <name>currentFile</name>
+      <anchorfile>classifile_1_1_c_file_list.html</anchorfile>
+      <anchor>adcef9427da85b148a2b24cbff68b6fd6</anchor>
+      <arglist>(const QString &amp;file)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFileList</name>
+      <anchorfile>classifile_1_1_c_file_list.html</anchorfile>
+      <anchor>a2079606187039140bc71dd2b1a87180e</anchor>
+      <arglist>(QObject *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Create</name>
+      <anchorfile>classifile_1_1_c_file_list.html</anchorfile>
+      <anchor>a8348155894553b4662efadb32b95ced2</anchor>
+      <arglist>(const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0, const QStringList &amp;nameFilters=QStringList(), QDir::SortFlags sortSpec=QDir::Name|QDir::IgnoreCase)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileListProviderComp</name>
+    <filename>classifile_1_1_c_file_list_provider_comp.html</filename>
+    <base>QObject</base>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ibase::IFileListProvider</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
+      <anchor>a3ae4b0ac5ba1190621fe14ea2c03474a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetFileList</name>
+      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
+      <anchor>a2f4722ed003a5798e83ad58f84f5df44</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
+      <anchor>a57ded2035ba70ed081c87e4835aaebbf</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
+      <anchor>a2fb55a17c7c14821932c5921618cfab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
+      <anchor>a69e67eda0bc0fd2ed52fc8ff6738381a</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileNameParamComp</name>
+    <filename>classifile_1_1_c_file_name_param_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ifile::IFileNameParam</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>a54916fac30870586074c12eb2c83acbb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPathType</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>a63b266e2943b72a665fdc113be7aeabe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetPath</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>ace9355f63a67e573dbe2da501a9ed575</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>a009892529003c83bd103cdfec4480bb7</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>adde5e22bcf1bafd39452aa69a730a2de</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>a828fd0bec0cd35df995fd2f94cce35bb</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CGeneratedFileNameParamComp</name>
+    <filename>classifile_1_1_c_generated_file_name_param_comp.html</filename>
+    <base>TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;</base>
+    <member kind="typedef">
+      <type>ibase::TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_generated_file_name_param_comp.html</anchorfile>
+      <anchor>aa73ed12d6405043d1a690f962796ad00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classifile_1_1_c_generated_file_name_param_comp.html</anchorfile>
+      <anchor>a212c9f36d566007bc9a4f45c5bed3e9b</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_generated_file_name_param_comp.html</anchorfile>
+      <anchor>a8f9b3aa23eae9f9e9daf92bbbf146a29</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_generated_file_name_param_comp.html</anchorfile>
+      <anchor>a635f4eae828ce169c14678cd71759017</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CRelativeFileNameParamComp</name>
+    <filename>classifile_1_1_c_relative_file_name_param_comp.html</filename>
+    <base>ifile::CFileNameParamComp</base>
+    <member kind="typedef">
+      <type>ifile::CFileNameParamComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>ae0bc05b807c6b3e2c2d7daa6053e2181</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetPath</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>af81764c97d1218d16dbd14a31ce9510e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a19b054baae0c48d9405552525dfd33fb</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a31db3271b593e7df6e578c8ed171d29b</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CSystemLocationComp</name>
+    <filename>classifile_1_1_c_system_location_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ifile::IFileNameParam</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>abf639bb50cb4e8c2d10f4d181cd1bfa5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPathType</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>aa3abc993444cceba6dd08e67ab91c127</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetPath</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>a3f09731c27645c594df4d9e540f9be34</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>aaa4e0db3758e33e5f35e7d6d26d9a987</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>ac7b3f3f5f2c4b90db954943f7004622b</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>a2a4cf007ae148c02c5fef67ffe718cfd</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::IFileNameParam</name>
+    <filename>classifile_1_1_i_file_name_param.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <name>PathType</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_UNKNOWN</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233a69ea3cd1b252410b35793147aed4ca72</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_FILE</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233ac6d1bfe787beaad1e522aee73d3e179c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_DIRECTORY</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233ac2f6f5f0c409ad2e3a7c731fdac00589</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_URL</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233a62633ab94bb960da2ea71268e14729a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPathType</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a3adaa9c8ccea4022daf929860aba168a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QString &amp;</type>
+      <name>GetPath</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a276032aaa1cf4e13aa5788cb9a1e33c5</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>aeeb97c75a7d380ed9b99ea3bec451b8a</anchor>
+      <arglist>(const QString &amp;path)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>iimg</name>
     <filename>namespaceiimg.html</filename>
     <class kind="class">iimg::CBitmapBase</class>
@@ -29224,8 +29574,8 @@
       <type>bool</type>
       <name>RegisterModel</name>
       <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>a5463cae647ee22796d9389bac721692f</anchor>
-      <arglist>(IModel *modelPtr, int modelId=0, int relevantFlags=0)</arglist>
+      <anchor>a276d11f3ca9488e2fc47127916a20b39</anchor>
+      <arglist>(IModel *modelPtr, int modelId=0, int relevantFlags=istd::IChangeable::CF_MODEL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -29734,7 +30084,6 @@
     <class kind="class">iprm::CComposedParamsSetComp</class>
     <class kind="class">iprm::CEnableableParam</class>
     <class kind="class">iprm::CEnableableParamComp</class>
-    <class kind="class">iprm::CFileNameParamComp</class>
     <class kind="class">iprm::CManagerParamsSetShadowerComp</class>
     <class kind="class">iprm::CMultiParamsManagerComp</class>
     <class kind="class">iprm::CNameParam</class>
@@ -29742,14 +30091,12 @@
     <class kind="class">iprm::COptionsManagerComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
     <class kind="class">iprm::CParamsSet</class>
-    <class kind="class">iprm::CRelativeFileNameParamComp</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
     <class kind="class">iprm::CSelectionConstraintsComp</class>
     <class kind="class">iprm::CSelectionParam</class>
     <class kind="class">iprm::CSelectionParamComp</class>
     <class kind="class">iprm::CVariableParamComp</class>
     <class kind="class">iprm::IEnableableParam</class>
-    <class kind="class">iprm::IFileNameParam</class>
     <class kind="class">iprm::INameParam</class>
     <class kind="class">iprm::IOptionsManager</class>
     <class kind="class">iprm::IParamsManager</class>
@@ -29907,54 +30254,6 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiprm_1_1_c_enableable_param_comp.html</anchorfile>
       <anchor>aa54b431d01c863a04c20c8b81ab501b6</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprm::CFileNameParamComp</name>
-    <filename>classiprm_1_1_c_file_name_param_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iprm::IFileNameParam</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiprm_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>a1a3d13c39b83d646565f28c5c21ffc4b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetPathType</name>
-      <anchorfile>classiprm_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>a93c36286b28666ef00922eacbbcf22ad</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QString &amp;</type>
-      <name>GetPath</name>
-      <anchorfile>classiprm_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>ab1a321a2c7b97f2d003034a73a1b883e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPath</name>
-      <anchorfile>classiprm_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>a0cbd623fc84a08a9df56dc6960b8ea8b</anchor>
-      <arglist>(const QString &amp;path)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiprm_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>a46abcc9b9807e0da0704fc99adf0de54</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiprm_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>a257a23abfdd538f776527c460e7d4eca</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -30764,39 +31063,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iprm::CRelativeFileNameParamComp</name>
-    <filename>classiprm_1_1_c_relative_file_name_param_comp.html</filename>
-    <base>iprm::CFileNameParamComp</base>
-    <member kind="typedef">
-      <type>iprm::CFileNameParamComp</type>
-      <name>BaseClass</name>
-      <anchorfile>classiprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>aeab0397d34db8fd01d7d0127d3442889</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QString &amp;</type>
-      <name>GetPath</name>
-      <anchorfile>classiprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>af152dd57b9acb56b57b1d9b789a44d80</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPath</name>
-      <anchorfile>classiprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a505309dc77dbe736ce4b5b2832090bfb</anchor>
-      <arglist>(const QString &amp;path)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiprm_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>afbc8fc35d10b3eb8a72f23760a199805</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iprm::CSelectableParamsSetComp</name>
     <filename>classiprm_1_1_c_selectable_params_set_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -31160,62 +31426,6 @@
       <anchorfile>classiprm_1_1_i_enableable_param.html</anchorfile>
       <anchor>a73999d835aea7e904dc84f11bbc5b1bf</anchor>
       <arglist>(bool isEnabled=true)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprm::IFileNameParam</name>
-    <filename>classiprm_1_1_i_file_name_param.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>PathType</name>
-      <anchorfile>classiprm_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a9f4b04c96c4d735785b5f9a79c38103f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PT_UNKNOWN</name>
-      <anchorfile>classiprm_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a9f4b04c96c4d735785b5f9a79c38103fa3143c65d61e0fa8f973ca74d9653992d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PT_FILE</name>
-      <anchorfile>classiprm_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a9f4b04c96c4d735785b5f9a79c38103fab9a0405114618005e9f63b1c6ccf4fc4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PT_DIRECTORY</name>
-      <anchorfile>classiprm_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a9f4b04c96c4d735785b5f9a79c38103faf5115326f7c83b202f973eb7a86c6177</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PT_URL</name>
-      <anchorfile>classiprm_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a9f4b04c96c4d735785b5f9a79c38103fa37d04a4a6e1ae0528ad4b1367a642a2e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetPathType</name>
-      <anchorfile>classiprm_1_1_i_file_name_param.html</anchorfile>
-      <anchor>ac094cbd158649b49561b93bb6eedea93</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const QString &amp;</type>
-      <name>GetPath</name>
-      <anchorfile>classiprm_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a6c2592466876ec0b6f8b0508316bebb4</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetPath</name>
-      <anchorfile>classiprm_1_1_i_file_name_param.html</anchorfile>
-      <anchor>adfa731d40e4ae3e840f634cdf768f942</anchor>
-      <arglist>(const QString &amp;path)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31659,11 +31869,7 @@
     <class kind="class">iqt::CBitmapSurface</class>
     <class kind="class">iqt::CClipboardSerializerComp</class>
     <class kind="class">iqt::CComponentAccessor</class>
-    <class kind="class">iqt::CDirList</class>
     <class kind="class">iqt::CFileInfoCopyComp</class>
-    <class kind="class">iqt::CFileList</class>
-    <class kind="class">iqt::CFileListProviderComp</class>
-    <class kind="class">iqt::CGeneratedFileNameParamComp</class>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
     <class kind="class">iqt::CPackagesLoaderComp</class>
@@ -31679,7 +31885,6 @@
     <class kind="class">iqt::CSettingsWriteArchive</class>
     <class kind="class">iqt::CSignalBlocker</class>
     <class kind="class">iqt::CSystem</class>
-    <class kind="class">iqt::CSystemLocationComp</class>
     <class kind="class">iqt::CTranslationManagerComp</class>
     <class kind="class">iqt::CXmlFileReadArchive</class>
     <class kind="class">iqt::CXmlFileWriteArchive</class>
@@ -32197,46 +32402,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt::CDirList</name>
-    <filename>classiqt_1_1_c_dir_list.html</filename>
-    <base>QObject</base>
-    <member kind="signal">
-      <type>void</type>
-      <name>currentDir</name>
-      <anchorfile>classiqt_1_1_c_dir_list.html</anchorfile>
-      <anchor>ad454a205e9cd21b106ec7a0067160d64</anchor>
-      <arglist>(const QString &amp;dir)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDirList</name>
-      <anchorfile>classiqt_1_1_c_dir_list.html</anchorfile>
-      <anchor>a32e8731e66ea269853936b2ee9583350</anchor>
-      <arglist>(QObject *parent=0)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDirList</name>
-      <anchorfile>classiqt_1_1_c_dir_list.html</anchorfile>
-      <anchor>a1513c9edb0f2b3716e2238566dd28c0e</anchor>
-      <arglist>(QObject *parent, const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>Create</name>
-      <anchorfile>classiqt_1_1_c_dir_list.html</anchorfile>
-      <anchor>a6366f7134008194b82fcc4d309f25cb4</anchor>
-      <arglist>(const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0, bool doAppend=false)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DoSearch</name>
-      <anchorfile>classiqt_1_1_c_dir_list.html</anchorfile>
-      <anchor>a60668451c9c6892db2f100299037f91c</anchor>
-      <arglist>(const QDir &amp;root, int minRecursionDepth, int maxRecursionDepth)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt::CFileInfoCopyComp</name>
     <filename>classiqt_1_1_c_file_info_copy_comp.html</filename>
     <base>QObject</base>
@@ -32298,108 +32463,6 @@
       <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
       <anchor>a70be5ecc4b27697c4d0154091bfdb4a8</anchor>
       <arglist>(const QString &amp;tag, QString &amp;result) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CFileList</name>
-    <filename>classiqt_1_1_c_file_list.html</filename>
-    <base>QObject</base>
-    <member kind="signal">
-      <type>void</type>
-      <name>currentFile</name>
-      <anchorfile>classiqt_1_1_c_file_list.html</anchorfile>
-      <anchor>adc44039e0da500e88c84d6aab3beb2e2</anchor>
-      <arglist>(const QString &amp;file)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CFileList</name>
-      <anchorfile>classiqt_1_1_c_file_list.html</anchorfile>
-      <anchor>a2e26c6d84dffd7f2c23786ce280a83e9</anchor>
-      <arglist>(QObject *parent=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>Create</name>
-      <anchorfile>classiqt_1_1_c_file_list.html</anchorfile>
-      <anchor>ab0008bd91f532bcc6544371f675e3147</anchor>
-      <arglist>(const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0, const QStringList &amp;nameFilters=QStringList(), QDir::SortFlags sortSpec=QDir::Name|QDir::IgnoreCase)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CFileListProviderComp</name>
-    <filename>classiqt_1_1_c_file_list_provider_comp.html</filename>
-    <base>QObject</base>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ibase::IFileListProvider</base>
-    <base protection="protected">imod::CSingleModelObserverBase</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>a50bbeea28baf76154b820364dc26b109</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetFileList</name>
-      <anchorfile>classiqt_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>a73f7c55fa8255badf1482f2d600e8376</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classiqt_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>af97904a245cda581de77a905effbb9d6</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqt_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>aa6a24cd60647e24ba66530e9fcd2b25b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqt_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>a80347c198ddab2e7e7c5b11b950d49cb</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CGeneratedFileNameParamComp</name>
-    <filename>classiqt_1_1_c_generated_file_name_param_comp.html</filename>
-    <base>TLoggerCompWrap&lt; iprm::CRelativeFileNameParamComp &gt;</base>
-    <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; iprm::CRelativeFileNameParamComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt_1_1_c_generated_file_name_param_comp.html</anchorfile>
-      <anchor>a44a9b038f4b506854b67bc04906613ad</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPath</name>
-      <anchorfile>classiqt_1_1_c_generated_file_name_param_comp.html</anchorfile>
-      <anchor>a3db05530cf00cb436fce2f63cef8c944</anchor>
-      <arglist>(const QString &amp;path)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqt_1_1_c_generated_file_name_param_comp.html</anchorfile>
-      <anchor>a417ec6b5f8a67885bc38115aa25aa909</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqt_1_1_c_generated_file_name_param_comp.html</anchorfile>
-      <anchor>ad407c101d63e1be5faec870fc0477453</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33581,54 +33644,6 @@
       <anchorfile>classiqt_1_1_c_system.html</anchorfile>
       <anchor>aa87ebe27e9a3a889daf22374f6129046</anchor>
       <arglist>(const QString &amp;directoryPath)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CSystemLocationComp</name>
-    <filename>classiqt_1_1_c_system_location_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iprm::IFileNameParam</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
-      <anchor>acb3415acb8a3194063a7309fe41caf1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetPathType</name>
-      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
-      <anchor>a0ec02b0837e7d20326e11c224bc18aae</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QString &amp;</type>
-      <name>GetPath</name>
-      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
-      <anchor>a558dd152c01b811c75b820cc9e7d614f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPath</name>
-      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
-      <anchor>ac2d81a3753a25f077158338998b519a0</anchor>
-      <arglist>(const QString &amp;path)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
-      <anchor>a65c565c065443b57011f4cb44dc61cbd</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqt_1_1_c_system_location_comp.html</anchorfile>
-      <anchor>a719457a4ed9faddf8cf08ee080a22a4a</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37100,12 +37115,12 @@
   <compound kind="class">
     <name>iqtgui::CFileSystemExplorerGuiComp</name>
     <filename>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, iprm::IFileNameParam &gt;</base>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam &gt;</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, iprm::IFileNameParam &gt;</type>
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
-      <anchor>aa369ab65ec17024dd82119a1842f1096</anchor>
+      <anchor>a490300cd97852910c974f34caa4b13cc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -38138,12 +38153,12 @@
   <compound kind="class">
     <name>iqtgui::CObjectPreviewGuiComp</name>
     <filename>classiqtgui_1_1_c_object_preview_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CObjectPreviewGuiComp, iprm::IFileNameParam &gt;</base>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CObjectPreviewGuiComp, ifile::IFileNameParam &gt;</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CObjectPreviewGuiComp, iprm::IFileNameParam &gt;</type>
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CObjectPreviewGuiComp, ifile::IFileNameParam &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>a1ffb8daf2774caee49a97a9fbe6ad01f</anchor>
+      <anchor>a2696b18195cee9b535213dfb92a1f484</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -39650,12 +39665,12 @@
   <compound kind="class">
     <name>iqtprm::CFileNameParamGuiComp</name>
     <filename>classiqtprm_1_1_c_file_name_param_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileNameParamGuiComp, iprm::IFileNameParam &gt;</base>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileNameParamGuiComp, ifile::IFileNameParam &gt;</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileNameParamGuiComp, iprm::IFileNameParam &gt;</type>
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileNameParamGuiComp, ifile::IFileNameParam &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
-      <anchor>a7e1b8ea1ae98674c2652a8714e6d6ac8</anchor>
+      <anchor>a255ad14a29672ad07951f2614884987e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">

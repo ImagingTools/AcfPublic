@@ -35,7 +35,7 @@
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_type_info_8h.html">iser/IFileTypeInfo.h</a>&quot;</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
 <a name="l00014"></a>00014 
@@ -48,14 +48,14 @@
 <a name="l00021"></a>00021 
 <a name="l00022"></a><a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html">00022</a> <span class="keyword">class </span><a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html">CFileNameParamGuiComp</a>: <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;
 <a name="l00023"></a>00023                      Ui::CFileNameParamGuiComp,
-<a name="l00024"></a>00024                      iprm::IFileNameParam&gt;
+<a name="l00024"></a>00024                      ifile::IFileNameParam&gt;
 <a name="l00025"></a>00025 {
 <a name="l00026"></a>00026        Q_OBJECT
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a>00029        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
 <a name="l00030"></a>00030                             Ui::CFileNameParamGuiComp,
-<a name="l00031"></a><a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a7e1b8ea1ae98674c2652a8714e6d6ac8">00031</a>                             <a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>&gt; <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a7e1b8ea1ae98674c2652a8714e6d6ac8">BaseClass</a>;
+<a name="l00031"></a><a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a255ad14a29672ad07951f2614884987e">00031</a>                             <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>&gt; <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a255ad14a29672ad07951f2614884987e">BaseClass</a>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html">CFileNameParamGuiComp</a>);
 <a name="l00034"></a>00034               I_ASSIGN(m_pathLabelAttrPtr, <span class="stringliteral">&quot;PathLabel&quot;</span>, <span class="stringliteral">&quot;Label for the file editor&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Directory&quot;</span>);

@@ -29,7 +29,7 @@
 
 // ACF includes
 #include "ibase/CFileSerializerCompBase.h"
-#include "iprm/IFileNameParam.h"
+#include "ifile/IFileNameParam.h"
 
 
 namespace iqtex
@@ -60,8 +60,8 @@ protected:
 	virtual void OnReadError(const iser::IArchive& archive, const istd::IChangeable& data, const QString& filePath) const;
 
 private:
-	I_REF(iprm::IFileNameParam, m_xslReadFilePath);
-	I_REF(iprm::IFileNameParam, m_xslWriteFilePath);
+	I_REF(ifile::IFileNameParam, m_xslReadFilePath);
+	I_REF(ifile::IFileNameParam, m_xslWriteFilePath);
 };
 
 

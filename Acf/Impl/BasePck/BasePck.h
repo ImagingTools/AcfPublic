@@ -67,14 +67,12 @@
 #include "iprm/CParamsManagerComp.h"
 #include "iprm/CComposedParamsSetComp.h"
 #include "iprm/CVariableParamComp.h"
-#include "iprm/CFileNameParamComp.h"
 #include "iprm/CEnableableParamComp.h"
 #include "iprm/CSelectionParamComp.h"
 #include "iprm/CManagerParamsSetShadowerComp.h"
 #include "iprm/CSelectionConstraintsComp.h"
 #include "iprm/CNameParamComp.h"
 #include "iprm/CMultiParamsManagerComp.h"
-#include "iprm/CRelativeFileNameParamComp.h"
 
 #include "i2d/CPosition2dComp.h"
 #include "i2d/CRectangleComp.h"
@@ -126,7 +124,6 @@ typedef icomp::TModelCompWrap<iprm::CSelectableParamsSetComp> SelectableParamsSe
 typedef icomp::TModelCompWrap<iprm::CParamsManagerComp> ParamsManager;
 typedef icomp::TModelCompWrap<iprm::CComposedParamsSetComp> ComposedParamsSet;
 typedef icomp::TModelCompWrap<iprm::CVariableParamComp> VariableParam;
-typedef icomp::TModelCompWrap<iprm::CFileNameParamComp> FileNameParam;
 typedef icomp::TModelCompWrap<iprm::CEnableableParamComp> EnableableParam;
 typedef icomp::TModelCompWrap<iprm::CSelectionParamComp> SelectionParam;
 typedef iprm::CManagerParamsSetShadowerComp ManagerParamsSetShadower;
@@ -165,7 +162,6 @@ typedef icomp::TMakeComponentWrap<
 			imod::IModel> SampledFunction2d;
 
 typedef icomp::TModelCompWrap<iprm::CMultiParamsManagerComp> MultiParamsManager;
-typedef icomp::TModelCompWrap<iprm::CRelativeFileNameParamComp> RelativeFileNameParam;
 
 
 } // namespace BasePck

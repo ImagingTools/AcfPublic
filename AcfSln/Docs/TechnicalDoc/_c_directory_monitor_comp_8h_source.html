@@ -40,7 +40,7 @@
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="comment">// AcfSln includes</span>
 <a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_system_change_storage_8h.html">ihotf/IFileSystemChangeStorage.h</a>&quot;</span>
@@ -129,10 +129,10 @@
 <a name="l00115"></a>00115               <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html" title="Component for monitoring of the file folder.">CDirectoryMonitorComp</a>&amp; m_parent;
 <a name="l00116"></a>00116        };
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118        <span class="keyword">class </span>DirectoryParamsObserver: <span class="keyword">public</span> imod::<a class="code" href="class_t_single_model_observer_base.html">TSingleModelObserverBase</a>&lt;iprm::IFileNameParam&gt;
+<a name="l00118"></a>00118        <span class="keyword">class </span>DirectoryParamsObserver: <span class="keyword">public</span> imod::<a class="code" href="class_t_single_model_observer_base.html">TSingleModelObserverBase</a>&lt;ifile::IFileNameParam&gt;
 <a name="l00119"></a>00119        {
 <a name="l00120"></a>00120        <span class="keyword">public</span>:
-<a name="l00121"></a>00121               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;iprm::IFileNameParam&gt;</a> <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">BaseClass</a>;
+<a name="l00121"></a>00121               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;ifile::IFileNameParam&gt;</a> <a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#aa1730388980c671c3b3235983ed43513">BaseClass</a>;
 <a name="l00122"></a>00122 
 <a name="l00123"></a>00123               DirectoryParamsObserver(<a class="code" href="classihotfgui_1_1_c_directory_monitor_comp.html#a2741ecbed1c7043af72a998401c25718">CDirectoryMonitorComp</a>&amp; parent);
 <a name="l00124"></a>00124 

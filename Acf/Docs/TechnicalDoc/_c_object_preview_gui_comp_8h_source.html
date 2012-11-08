@@ -36,7 +36,7 @@
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">iprm/IFileNameParam.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;iqtgui/Generated/ui_CObjectPreviewGuiComp.h&quot;</span>
@@ -48,13 +48,13 @@
 <a name="l00021"></a>00021 
 <a name="l00022"></a><a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html">00022</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html">CObjectPreviewGuiComp</a>:
 <a name="l00023"></a>00023                      <span class="keyword">public</span> iqtgui::<a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00024"></a>00024                                           Ui::CObjectPreviewGuiComp, iprm::IFileNameParam&gt;
+<a name="l00024"></a>00024                                           Ui::CObjectPreviewGuiComp, ifile::IFileNameParam&gt;
 <a name="l00025"></a>00025 {
 <a name="l00026"></a>00026        Q_OBJECT
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a>00029        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI componentes.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00030"></a><a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html#a1ffb8daf2774caee49a97a9fbe6ad01f">00030</a>                             Ui::CObjectPreviewGuiComp, <a class="code" href="classiprm_1_1_i_file_name_param.html" title="Common interface for a file system item settings.">iprm::IFileNameParam</a>&gt; <a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html#a1ffb8daf2774caee49a97a9fbe6ad01f">BaseClass</a>;
+<a name="l00030"></a><a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html#a2696b18195cee9b535213dfb92a1f484">00030</a>                             Ui::CObjectPreviewGuiComp, <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>&gt; <a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html#a2696b18195cee9b535213dfb92a1f484">BaseClass</a>;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_object_preview_gui_comp.html">CObjectPreviewGuiComp</a>);
 <a name="l00033"></a>00033               I_ASSIGN(m_fileLoaderCompPtr, <span class="stringliteral">&quot;FileLoader&quot;</span>, <span class="stringliteral">&quot;Object loader&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileLoader&quot;</span>);

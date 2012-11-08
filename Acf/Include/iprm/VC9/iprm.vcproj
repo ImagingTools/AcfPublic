@@ -174,10 +174,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CFileNameParamComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="..\CManagerParamsSetShadowerComp.cpp"
 				>
 			</File>
@@ -203,10 +199,6 @@
 			</File>
 			<File
 				RelativePath="..\CParamsSet.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CRelativeFileNameParamComp.cpp"
 				>
 			</File>
 			<File
@@ -279,10 +271,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CRelativeFileNameParamComp.h"
-				>
-			</File>
-			<File
 				RelativePath="..\CSelectableParamsSetComp.h"
 				>
 			</File>
@@ -304,10 +292,6 @@
 			</File>
 			<File
 				RelativePath="..\IEnableableParam.h"
-				>
-			</File>
-			<File
-				RelativePath="..\IFileNameParam.h"
 				>
 			</File>
 			<File

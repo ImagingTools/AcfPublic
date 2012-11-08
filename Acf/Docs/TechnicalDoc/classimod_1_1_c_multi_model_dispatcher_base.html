@@ -68,8 +68,8 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_dispatcher_base_1_1_observer_proxy.html">ObserverProxy</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#a5463cae647ee22796d9389bac721692f">RegisterModel</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr, int modelId=0, int relevantFlags=0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the data model to be observed.  <a href="#a5463cae647ee22796d9389bac721692f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#a276d11f3ca9488e2fc47127916a20b39">RegisterModel</a> (<a class="el" href="classimod_1_1_i_model.html">IModel</a> *modelPtr, int modelId=0, int relevantFlags=istd::IChangeable::CF_MODEL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the data model to be observed.  <a href="#a276d11f3ca9488e2fc47127916a20b39"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#ae131419147b8d67ae7600f426465804b">UnregisterModel</a> (int modelId=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister the data model object.  <a href="#ae131419147b8d67ae7600f426465804b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#a870c0f1ab69a56f2b01fbc136d36ce76">UnregisterAllModels</a> ()</td></tr>
@@ -87,7 +87,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="note"><dt><b>Note:</b></dt><dd>Notification consumer class must implement the method void <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#aa28b9338ca45e28b03cadaf4454f14e8">OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr)</a> to support the notification callback. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan...">imod::CMultiModelBridgeBase</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html#l00029">29</a> of file <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html">CMultiModelDispatcherBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html#l00031">31</a> of file <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html">CMultiModelDispatcherBase.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ac95053e3935765098a79b3dcf127e968"></a><!-- doxytag: member="imod::CMultiModelDispatcherBase::GetObjectAt" ref="ac95053e3935765098a79b3dcf127e968" args="(int modelId) const " -->
 <div class="memitem">
@@ -108,7 +108,7 @@ template&lt;class Object &gt; </div>
 
 <p>Get concrete object instance of the obsered model. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html#l00089">89</a> of file <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html">CMultiModelDispatcherBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html#l00091">91</a> of file <a class="el" href="_c_multi_model_dispatcher_base_8h_source.html">CMultiModelDispatcherBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -149,7 +149,7 @@ template&lt;class Object &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a5463cae647ee22796d9389bac721692f"></a><!-- doxytag: member="imod::CMultiModelDispatcherBase::RegisterModel" ref="a5463cae647ee22796d9389bac721692f" args="(IModel *modelPtr, int modelId=0, int relevantFlags=0)" -->
+<a class="anchor" id="a276d11f3ca9488e2fc47127916a20b39"></a><!-- doxytag: member="imod::CMultiModelDispatcherBase::RegisterModel" ref="a276d11f3ca9488e2fc47127916a20b39" args="(IModel *modelPtr, int modelId=0, int relevantFlags=istd::IChangeable::CF_MODEL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -169,7 +169,7 @@ template&lt;class Object &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>relevantFlags</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>relevantFlags</em> = <code>istd::IChangeable::CF_MODEL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -233,7 +233,7 @@ template&lt;class Object &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#a5463cae647ee22796d9389bac721692f" title="Register the data model to be observed.">RegisterModel</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#a276d11f3ca9488e2fc47127916a20b39" title="Register the data model to be observed.">RegisterModel</a> </dd></dl>
 
 </div>
 </div>

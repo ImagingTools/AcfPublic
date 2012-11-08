@@ -36,7 +36,7 @@
 #include "icomp/CComponentBase.h"
 #include "ibase/TLoggerCompWrap.h"
 #include "iprm/IParamsSet.h"
-#include "iprm/IFileNameParam.h"
+#include "ifile/IFileNameParam.h"
 
 // AcfSln includes
 #include "ihotf/IFileSystemChangeStorage.h"
@@ -137,10 +137,10 @@ private:
 		CDirectoryMonitorComp& m_parent;
 	};
 
-	class DirectoryParamsObserver: public imod::TSingleModelObserverBase<iprm::IFileNameParam>
+	class DirectoryParamsObserver: public imod::TSingleModelObserverBase<ifile::IFileNameParam>
 	{
 	public:
-		typedef imod::TSingleModelObserverBase<iprm::IFileNameParam> BaseClass;
+		typedef imod::TSingleModelObserverBase<ifile::IFileNameParam> BaseClass;
 
 		DirectoryParamsObserver(CDirectoryMonitorComp& parent);
 

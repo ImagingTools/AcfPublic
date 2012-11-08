@@ -35,6 +35,7 @@
 
 // ACF packages includes
 #include "BasePck/BasePck.h"
+#include "FilePck/FilePck.h"
 #include "QtPck/QtPck.h"
 #include "QtGuiPck/QtGuiPck.h"
 #include "QtViewPck/QtViewPck.h"

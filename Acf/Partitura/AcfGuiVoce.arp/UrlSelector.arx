@@ -154,7 +154,7 @@
         UrlParam
       </Id>
       <PackageId>
-        BasePck
+        FilePck
       </PackageId>
       <ComponentId>
         FileNameParam
@@ -240,7 +240,7 @@
     </Interface>
     <Interface>
       <InterfaceId>
-        iprm::IFileNameParam
+        ifile::IFileNameParam
       </InterfaceId>
       <ComponentId>
         UrlParam

@@ -27,7 +27,7 @@
 // ACF includes
 #include "iser/IFileLoader.h"
 #include "icomp/CComponentBase.h"
-#include "iprm/IFileNameParam.h"
+#include "ifile/IFileNameParam.h"
 #include "iimg/CGeneralBitmap.h"
 #include "iproc/TSyncProcessorWrap.h"
 
