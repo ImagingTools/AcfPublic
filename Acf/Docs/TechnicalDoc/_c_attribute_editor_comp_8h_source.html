@@ -90,7 +90,7 @@
 <a name="l00063"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a86eaede74d385e14b136c7508037aa6e">00063</a>               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a86eaede74d385e14b136c7508037aa6e">AM_REFERENCE</a>,
 <a name="l00064"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a6974b9498aebbd6f3c3f384a75ab94b5">00064</a>               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a6974b9498aebbd6f3c3f384a75ab94b5">AM_MULTI_REFERENCE</a>,
 <a name="l00065"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a6cc3fee462776ac9cb3bf5b62eca5c6a">00065</a>               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a6cc3fee462776ac9cb3bf5b62eca5c6a">AM_ATTRIBUTE</a>,
-<a name="l00066"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03aac46db096b71f1f38681ea31944515ed">00066</a>               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03aac46db096b71f1f38681ea31944515ed">AM_SELECTABLE_ATTRIBUTE</a>,
+<a name="l00066"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a53a7cded218bb7c51b08bf77a2e4f12f">00066</a>               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a53a7cded218bb7c51b08bf77a2e4f12f">AM_BOOL_ATTRIBUTE</a>,
 <a name="l00067"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03adb98c2aec039784d63ab2198c5992ebb">00067</a>               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03adb98c2aec039784d63ab2198c5992ebb">AM_MULTI_ATTRIBUTE</a>,
 <a name="l00068"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a47d6e3869de7aa1be5316609f3ae04af">00068</a>               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a47d6e3869de7aa1be5316609f3ae04af">AM_EXPORTED_ATTR</a>,
 <a name="l00069"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03ac1310d8b63af960cb18f4c5da12fb836">00069</a>               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03ac1310d8b63af960cb18f4c5da12fb836">AM_EXPORTED_COMP</a>,
@@ -138,147 +138,161 @@
 <a name="l00111"></a>00111        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1ef26478c8b5b803e9d4f91678bb9a17">AfterSubcomponentsChange</a>();
 <a name="l00112"></a>00112 
 <a name="l00113"></a>00113 <span class="keyword">protected</span>:
-<a name="l00114"></a>00114        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a41af6ccf2e52cb2fecd7f347f931b0c0">SetAttributeToItem</a>(
-<a name="l00115"></a>00115                             QTreeWidgetItem&amp; attributeItem,
-<a name="l00116"></a>00116                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00117"></a>00117                             <span class="keyword">const</span> QByteArray&amp; attributeId,
-<a name="l00118"></a>00118                             <span class="keyword">const</span> ElementIdToAttrInfoMap&amp; infos,
-<a name="l00119"></a>00119                             <span class="keywordtype">bool</span>&amp; hasError,
-<a name="l00120"></a>00120                             <span class="keywordtype">bool</span>&amp; hasWarning,
-<a name="l00121"></a>00121                             <span class="keywordtype">bool</span>&amp; hasExport) <span class="keyword">const</span>;
-<a name="l00122"></a>00122        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a43c87471790c8d21e309c6190bc249c4">SetInterfaceToItem</a>(
-<a name="l00123"></a>00123                             QTreeWidgetItem&amp; item,
-<a name="l00124"></a>00124                             <a class="code" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">icomp::IRegistry::ExportedInterfacesMap</a>* interfacesMapPtr,
-<a name="l00125"></a>00125                             <span class="keyword">const</span> QByteArray&amp; elementId,
-<a name="l00126"></a>00126                             <span class="keyword">const</span> QByteArray&amp; interfaceName,
-<a name="l00127"></a>00127                             <span class="keywordtype">bool</span>&amp; hasWarning,
-<a name="l00128"></a>00128                             <span class="keywordtype">bool</span>&amp; hasExport) <span class="keyword">const</span>;
-<a name="l00129"></a>00129        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a10fec0062e01215bc8e84f807ad9220a">ResetItem</a>(QTreeWidgetItem&amp; item);
-<a name="l00130"></a>00130        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a2353ae27a3a95ccc32663723e2fe3f8c">DecodeAttribute</a>(
-<a name="l00131"></a>00131                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; attribute,
-<a name="l00132"></a>00132                             QString&amp; text,
-<a name="l00133"></a>00133                             <span class="keywordtype">int</span>&amp; meaning) <span class="keyword">const</span>;
-<a name="l00134"></a>00134        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#abe84b77d79389d96a9417f55565f706f">EncodeAttribute</a>(
-<a name="l00135"></a>00135                             <span class="keyword">const</span> QString&amp; text,
-<a name="l00136"></a>00136                             <span class="keywordtype">int</span> meaning,
-<a name="l00137"></a>00137                             <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00138"></a>00138 
-<a name="l00139"></a>00139        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a61b2e621f8b43af937e0bf1f8fcd57ea">CreateInterfacesTree</a>(
-<a name="l00140"></a>00140                             <span class="keyword">const</span> QByteArray&amp; elementId,
-<a name="l00141"></a>00141                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>* infoPtr,
-<a name="l00142"></a>00142                             <a class="code" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">icomp::IRegistry::ExportedInterfacesMap</a>&amp; registryInterfaces,
-<a name="l00143"></a>00143                             QTreeWidgetItem* parentItemPtr,
-<a name="l00144"></a>00144                             <span class="keywordtype">bool</span>&amp; hasWarning,
-<a name="l00145"></a>00145                             <span class="keywordtype">bool</span>&amp; hasExport,
-<a name="l00146"></a>00146                             <span class="keywordtype">bool</span> includeSubelement);
-<a name="l00147"></a>00147        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#adccaaae8270689783b821601f9d03d0b">CreateExportedComponentsTree</a>(
-<a name="l00148"></a>00148                             <span class="keyword">const</span> QByteArray&amp; elementId,
-<a name="l00149"></a>00149                             <span class="keyword">const</span> QByteArray&amp; globalElementId,
-<a name="l00150"></a>00150                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>* elementMetaInfoPtr,
-<a name="l00151"></a>00151                             QTreeWidgetItem&amp; item,
-<a name="l00152"></a>00152                             <span class="keywordtype">bool</span>&amp; hasWarning,
-<a name="l00153"></a>00153                             <span class="keywordtype">bool</span>&amp; hasExport) <span class="keyword">const</span>;
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155        <span class="comment">// reimplemented (iqt::TGuiObserverWrap)</span>
-<a name="l00156"></a>00156        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#abecebea584444d4ef69a39284085492a" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00157"></a>00157        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#acb0af3380168193e389704b9e94847a0" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159        <span class="comment">// reimplemented (CGuiComponentBase)</span>
-<a name="l00160"></a>00160        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7310e6015410d5e1cdb1bb1e21ba74a8" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00161"></a>00161        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a820f48a4a1a2552d7b6dd255801f91ae" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163        <span class="comment">// static methods</span>
-<a name="l00164"></a>00164        <span class="keyword">static</span> QString <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a58cefc45dfd7dddb7d06fb98feada259">DecodeFromEdit</a>(<span class="keyword">const</span> QString&amp; text);
-<a name="l00165"></a>00165        <span class="keyword">static</span> QString <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a31ad707c08f99ae6a0bd6b584c85987d">EncodeToEdit</a>(<span class="keyword">const</span> QString&amp; text);
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167 <span class="keyword">private</span>:
-<a name="l00168"></a>00168        <span class="keyword">class </span>AttributeItemDelegate: <span class="keyword">public</span> iqtgui::CItemDelegate
-<a name="l00169"></a>00169        {
-<a name="l00170"></a>00170        <span class="keyword">public</span>:
-<a name="l00171"></a>00171               <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_c_item_delegate.html" title="Standard ACF item view delegator.">iqtgui::CItemDelegate</a> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a0c77ba80f9c0832dd5fb5eb8f1eefadd">BaseClass</a>;
+<a name="l00114"></a><a class="code" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html">00114</a>        <span class="keyword">struct </span><a class="code" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html">AttrInfo</a>
+<a name="l00115"></a>00115        {
+<a name="l00116"></a><a class="code" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html#ad932a2271d5167352abb656bc26e0498">00116</a>               <a class="code" href="classistd_1_1_t_pointer_base.html">istd::TPointerBase&lt;icomp::IRegistryElement&gt;</a> <a class="code" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html#ad932a2271d5167352abb656bc26e0498">elementPtr</a>;
+<a name="l00117"></a><a class="code" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html#ad7a4e7cfcfe26ab1491319e2eeae39d0">00117</a>               <a class="code" href="classistd_1_1_t_pointer_base.html">istd::TPointerBase&lt;icomp::IRegistryElement::AttributeInfo&gt;</a> <a class="code" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html#ad7a4e7cfcfe26ab1491319e2eeae39d0">infoPtr</a>;
+<a name="l00118"></a><a class="code" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html#a65738552e552f54762f2adefcb29f795">00118</a>               <a class="code" href="classistd_1_1_t_pointer_base.html">istd::TPointerBase&lt;const icomp::IAttributeStaticInfo&gt;</a> <a class="code" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html#a65738552e552f54762f2adefcb29f795">staticInfoPtr</a>;
+<a name="l00119"></a>00119        };
+<a name="l00120"></a>00120 
+<a name="l00121"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">00121</a>        <span class="keyword">typedef</span> QMap&lt;QByteArray, AttrInfo&gt; <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">ElementIdToAttrInfoMap</a>;
+<a name="l00122"></a><a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ab6815e194696bb53f1ec1d78488ce2de">00122</a>        <span class="keyword">typedef</span> QMap&lt;QByteArray, ElementIdToAttrInfoMap&gt; <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ab6815e194696bb53f1ec1d78488ce2de">AttrInfosMap</a>;
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a41af6ccf2e52cb2fecd7f347f931b0c0">SetAttributeToItem</a>(
+<a name="l00125"></a>00125                             QTreeWidgetItem&amp; attributeItem,
+<a name="l00126"></a>00126                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
+<a name="l00127"></a>00127                             <span class="keyword">const</span> QByteArray&amp; attributeId,
+<a name="l00128"></a>00128                             <span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">ElementIdToAttrInfoMap</a>&amp; infos,
+<a name="l00129"></a>00129                             <span class="keywordtype">bool</span>&amp; hasError,
+<a name="l00130"></a>00130                             <span class="keywordtype">bool</span>&amp; hasWarning,
+<a name="l00131"></a>00131                             <span class="keywordtype">bool</span>&amp; hasExport) <span class="keyword">const</span>;
+<a name="l00132"></a>00132        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a43c87471790c8d21e309c6190bc249c4">SetInterfaceToItem</a>(
+<a name="l00133"></a>00133                             QTreeWidgetItem&amp; item,
+<a name="l00134"></a>00134                             <a class="code" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">icomp::IRegistry::ExportedInterfacesMap</a>* interfacesMapPtr,
+<a name="l00135"></a>00135                             <span class="keyword">const</span> QByteArray&amp; elementId,
+<a name="l00136"></a>00136                             <span class="keyword">const</span> QByteArray&amp; interfaceName,
+<a name="l00137"></a>00137                             <span class="keywordtype">bool</span>&amp; hasWarning,
+<a name="l00138"></a>00138                             <span class="keywordtype">bool</span>&amp; hasExport) <span class="keyword">const</span>;
+<a name="l00139"></a>00139        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a10fec0062e01215bc8e84f807ad9220a">ResetItem</a>(QTreeWidgetItem&amp; item);
+<a name="l00140"></a>00140        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a2353ae27a3a95ccc32663723e2fe3f8c">DecodeAttribute</a>(
+<a name="l00141"></a>00141                             <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; attribute,
+<a name="l00142"></a>00142                             QString&amp; text,
+<a name="l00143"></a>00143                             <span class="keywordtype">int</span>&amp; meaning) <span class="keyword">const</span>;
+<a name="l00144"></a>00144        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#abe84b77d79389d96a9417f55565f706f">EncodeAttribute</a>(
+<a name="l00145"></a>00145                             <span class="keyword">const</span> QString&amp; text,
+<a name="l00146"></a>00146                             <span class="keywordtype">int</span> meaning,
+<a name="l00147"></a>00147                             <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a61b2e621f8b43af937e0bf1f8fcd57ea">CreateInterfacesTree</a>(
+<a name="l00150"></a>00150                             <span class="keyword">const</span> QByteArray&amp; elementId,
+<a name="l00151"></a>00151                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>* infoPtr,
+<a name="l00152"></a>00152                             <a class="code" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093" title="Map assigning interface ID (undecorated) to component ID exporting this interface.">icomp::IRegistry::ExportedInterfacesMap</a>&amp; registryInterfaces,
+<a name="l00153"></a>00153                             QTreeWidgetItem* parentItemPtr,
+<a name="l00154"></a>00154                             <span class="keywordtype">bool</span>&amp; hasWarning,
+<a name="l00155"></a>00155                             <span class="keywordtype">bool</span>&amp; hasExport,
+<a name="l00156"></a>00156                             <span class="keywordtype">bool</span> includeSubelement);
+<a name="l00157"></a>00157        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#adccaaae8270689783b821601f9d03d0b">CreateExportedComponentsTree</a>(
+<a name="l00158"></a>00158                             <span class="keyword">const</span> QByteArray&amp; elementId,
+<a name="l00159"></a>00159                             <span class="keyword">const</span> QByteArray&amp; globalElementId,
+<a name="l00160"></a>00160                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_element_static_info.html" title="This interface provide static information about element meta info.">icomp::IElementStaticInfo</a>* elementMetaInfoPtr,
+<a name="l00161"></a>00161                             QTreeWidgetItem&amp; item,
+<a name="l00162"></a>00162                             <span class="keywordtype">bool</span>&amp; hasWarning,
+<a name="l00163"></a>00163                             <span class="keywordtype">bool</span>&amp; hasExport) <span class="keyword">const</span>;
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165        <span class="comment">// reimplemented (iqt::TGuiObserverWrap)</span>
+<a name="l00166"></a>00166        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#abecebea584444d4ef69a39284085492a" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00167"></a>00167        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#acb0af3380168193e389704b9e94847a0" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169        <span class="comment">// reimplemented (CGuiComponentBase)</span>
+<a name="l00170"></a>00170        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7310e6015410d5e1cdb1bb1e21ba74a8" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00171"></a>00171        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a820f48a4a1a2552d7b6dd255801f91ae" title="Called just before GUI is released.">OnGuiDestroyed</a>();
 <a name="l00172"></a>00172 
-<a name="l00173"></a>00173               AttributeItemDelegate(<a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html">CAttributeEditorComp</a>* parentPtr);
-<a name="l00174"></a>00174 
-<a name="l00175"></a>00175               <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttributeImpl&gt;
-<a name="l00176"></a>00176               <span class="keyword">static</span> QString GetMultiAttributeValueAsString(<span class="keyword">const</span> AttributeImpl&amp; attribute);
-<a name="l00177"></a>00177               
-<a name="l00178"></a>00178               <span class="comment">// reimplemented (QItemDelegate)</span>
-<a name="l00179"></a>00179               <span class="keyword">virtual</span> QWidget* createEditor(QWidget* parent, <span class="keyword">const</span> QStyleOptionViewItem&amp; option, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
-<a name="l00180"></a>00180               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEditorData(QWidget* editor, <span class="keyword">const</span> QModelIndex&amp; index ) <span class="keyword">const</span>;
-<a name="l00181"></a>00181               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setModelData(QWidget* editor, QAbstractItemModel* model, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
+<a name="l00173"></a>00173        <span class="comment">// static methods</span>
+<a name="l00174"></a>00174        <span class="keyword">static</span> QString <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a58cefc45dfd7dddb7d06fb98feada259">DecodeFromEdit</a>(<span class="keyword">const</span> QString&amp; text);
+<a name="l00175"></a>00175        <span class="keyword">static</span> QString <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a31ad707c08f99ae6a0bd6b584c85987d">EncodeToEdit</a>(<span class="keyword">const</span> QString&amp; text);
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177 <span class="keyword">private</span>:
+<a name="l00178"></a>00178        <span class="keyword">class </span>AttributeItemDelegate: <span class="keyword">public</span> iqtgui::CItemDelegate
+<a name="l00179"></a>00179        {
+<a name="l00180"></a>00180        <span class="keyword">public</span>:
+<a name="l00181"></a>00181               <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_c_item_delegate.html" title="Standard ACF item view delegator.">iqtgui::CItemDelegate</a> <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a0c77ba80f9c0832dd5fb5eb8f1eefadd">BaseClass</a>;
 <a name="l00182"></a>00182 
-<a name="l00183"></a>00183        <span class="keyword">protected</span>:
-<a name="l00184"></a>00184               <span class="keywordtype">bool</span> SetComponentExportEditor(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> QString&amp; defaultValue, QWidget&amp; editor) <span class="keyword">const</span>;
-<a name="l00185"></a>00185               <span class="keywordtype">bool</span> SetAttributeExportEditor(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QByteArray&amp; exportId, QWidget&amp; editor) <span class="keyword">const</span>;
-<a name="l00186"></a>00186               <span class="keywordtype">bool</span> SetAttributeValueEditor(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>, <span class="keywordtype">int</span> propertyMining, QWidget&amp; editor) <span class="keyword">const</span>;
+<a name="l00183"></a>00183               AttributeItemDelegate(<a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html">CAttributeEditorComp</a>* parentPtr);
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185               <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttributeImpl&gt;
+<a name="l00186"></a>00186               <span class="keyword">static</span> QString GetMultiAttributeValueAsString(<span class="keyword">const</span> AttributeImpl&amp; attribute);
 <a name="l00187"></a>00187 
-<a name="l00188"></a>00188               <span class="keywordtype">bool</span> SetComponentExportData(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> QWidget&amp; editor) <span class="keyword">const</span>;
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190        <span class="keyword">private</span>:
-<a name="l00191"></a>00191               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html">CAttributeEditorComp</a>&amp; m_parent;
-<a name="l00192"></a>00192        };
-<a name="l00193"></a>00193 
-<a name="l00194"></a>00194        <span class="keyword">class </span>RegistryObserver: <span class="keyword">public</span> imod::CSingleModelObserverBase
-<a name="l00195"></a>00195        {
-<a name="l00196"></a>00196        <span class="keyword">public</span>:
-<a name="l00197"></a>00197               RegistryObserver(<a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7080437833d523b1baad9011458c7a35">CAttributeEditorComp</a>* parentPtr);
-<a name="l00198"></a>00198 
-<a name="l00199"></a>00199        <span class="keyword">protected</span>:
-<a name="l00200"></a>00200               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00201"></a>00201               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00202"></a>00202 
-<a name="l00203"></a>00203        <span class="keyword">private</span>:
-<a name="l00204"></a>00204               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7080437833d523b1baad9011458c7a35">CAttributeEditorComp</a>&amp; m_parent;
-<a name="l00205"></a>00205        };
-<a name="l00206"></a>00206 
-<a name="l00207"></a>00207        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_metaInfoManagerCompPtr);
-<a name="l00208"></a>00208        I_REF(IAttributeSelectionObserver, m_attributeSelectionObserverCompPtr);
-<a name="l00209"></a>00209        I_REF(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>, m_quickHelpViewerCompPtr);
-<a name="l00210"></a>00210        I_REF(IRegistryConsistInfo, m_consistInfoCompPtr);
-<a name="l00211"></a>00211        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_registryPropGuiCompPtr);
-<a name="l00212"></a>00212        I_REF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_registryPropObserverCompPtr);
+<a name="l00188"></a>00188               <span class="comment">// reimplemented (QItemDelegate)</span>
+<a name="l00189"></a>00189               <span class="keyword">virtual</span> QWidget* createEditor(QWidget* parent, <span class="keyword">const</span> QStyleOptionViewItem&amp; option, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
+<a name="l00190"></a>00190               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEditorData(QWidget* editor, <span class="keyword">const</span> QModelIndex&amp; index ) <span class="keyword">const</span>;
+<a name="l00191"></a>00191               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setModelData(QWidget* editor, QAbstractItemModel* model, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
+<a name="l00192"></a>00192 
+<a name="l00193"></a>00193        <span class="keyword">protected</span>:
+<a name="l00194"></a>00194               <span class="keywordtype">bool</span> SetComponentExportEditor(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> QString&amp; defaultValue, QWidget&amp; editor) <span class="keyword">const</span>;
+<a name="l00195"></a>00195               <span class="keywordtype">bool</span> SetAttributeExportEditor(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QByteArray&amp; exportId, QWidget&amp; editor) <span class="keyword">const</span>;
+<a name="l00196"></a>00196               <span class="keywordtype">bool</span> SetAttributeValueEditor(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>, <span class="keywordtype">int</span> propertyMining, QWidget&amp; editor) <span class="keyword">const</span>;
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198               <span class="keywordtype">bool</span> SetComponentValue(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keywordtype">int</span> propertyMining, <span class="keyword">const</span> QString&amp; value) <span class="keyword">const</span>;
+<a name="l00199"></a>00199               <span class="keywordtype">bool</span> SetComponentExportData(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> QString&amp; value) <span class="keyword">const</span>;
+<a name="l00200"></a>00200 
+<a name="l00201"></a>00201        <span class="keyword">private</span>:
+<a name="l00202"></a>00202               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html">CAttributeEditorComp</a>&amp; m_parent;
+<a name="l00203"></a>00203        };
+<a name="l00204"></a>00204 
+<a name="l00205"></a>00205        <span class="keyword">class </span>RegistryObserver: <span class="keyword">public</span> imod::CSingleModelObserverBase
+<a name="l00206"></a>00206        {
+<a name="l00207"></a>00207        <span class="keyword">public</span>:
+<a name="l00208"></a>00208               RegistryObserver(<a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html">CAttributeEditorComp</a>* parentPtr);
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210        <span class="keyword">protected</span>:
+<a name="l00211"></a>00211               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00212"></a>00212               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00213"></a>00213 
-<a name="l00214"></a>00214        AttributeItemDelegate m_attributeItemDelegate;
-<a name="l00215"></a>00215        RegistryObserver m_registryObserver;
-<a name="l00216"></a>00216 
-<a name="l00217"></a>00217        <span class="keyword">typedef</span> QMap&lt;QByteArray, QString&gt; AttributeTypesMap;
-<a name="l00218"></a>00218        AttributeTypesMap m_attributeTypesMap;
-<a name="l00219"></a>00219        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iqtgui::CTreeWidgetFilter&gt;</a> m_attributesTreeFilter;
-<a name="l00220"></a>00220        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iqtgui::CTreeWidgetFilter&gt;</a> m_interfacesTreeFilter;
-<a name="l00221"></a>00221        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iqtgui::CTreeWidgetFilter&gt;</a> m_subcomponentsTreeFilter;
-<a name="l00222"></a>00222 
-<a name="l00223"></a>00223        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_lastRegistryModelPtr;
+<a name="l00214"></a>00214        <span class="keyword">private</span>:
+<a name="l00215"></a>00215               <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html">CAttributeEditorComp</a>&amp; m_parent;
+<a name="l00216"></a>00216        };
+<a name="l00217"></a>00217 
+<a name="l00218"></a>00218        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_metaInfoManagerCompPtr);
+<a name="l00219"></a>00219        I_REF(IAttributeSelectionObserver, m_attributeSelectionObserverCompPtr);
+<a name="l00220"></a>00220        I_REF(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>, m_quickHelpViewerCompPtr);
+<a name="l00221"></a>00221        I_REF(IRegistryConsistInfo, m_consistInfoCompPtr);
+<a name="l00222"></a>00222        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_registryPropGuiCompPtr);
+<a name="l00223"></a>00223        I_REF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_registryPropObserverCompPtr);
 <a name="l00224"></a>00224 
-<a name="l00225"></a>00225        QIcon m_invalidIcon;
-<a name="l00226"></a>00226        QIcon m_warningIcon;
-<a name="l00227"></a>00227        QIcon m_exportIcon;
-<a name="l00228"></a>00228        QIcon m_importIcon;
-<a name="l00229"></a>00229 };
+<a name="l00225"></a>00225        AttributeItemDelegate m_attributeItemDelegate;
+<a name="l00226"></a>00226        RegistryObserver m_registryObserver;
+<a name="l00227"></a>00227 
+<a name="l00228"></a>00228        <span class="keyword">typedef</span> QMap&lt;QByteArray, QString&gt; AttributeTypesMap;
+<a name="l00229"></a>00229        AttributeTypesMap m_attributeTypesMap;
 <a name="l00230"></a>00230 
-<a name="l00231"></a>00231 
-<a name="l00232"></a>00232 <span class="comment">// public static methods</span>
-<a name="l00233"></a>00233 
-<a name="l00234"></a>00234 <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttributeImpl&gt;
-<a name="l00235"></a>00235 QString CAttributeEditorComp::AttributeItemDelegate::GetMultiAttributeValueAsString(<span class="keyword">const</span> AttributeImpl&amp; attribute)
-<a name="l00236"></a>00236 {
-<a name="l00237"></a>00237        QString valuesString;
-<a name="l00238"></a>00238        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> index = 0; index &lt; attribute.GetValuesCount(); index++){
-<a name="l00239"></a>00239               <span class="keywordflow">if</span> (!valuesString.isEmpty()){
-<a name="l00240"></a>00240                      valuesString += <span class="stringliteral">&quot;;&quot;</span>;
-<a name="l00241"></a>00241               }
-<a name="l00242"></a>00242 
-<a name="l00243"></a>00243               valuesString += attribute.GetValueAt(index);
-<a name="l00244"></a>00244        }
+<a name="l00231"></a>00231        <a class="code" href="classicmpstr_1_1_c_attribute_editor_comp.html#ab6815e194696bb53f1ec1d78488ce2de">AttrInfosMap</a> m_attrInfosMap;       <span class="comment">// all current displayed attributes</span>
+<a name="l00232"></a>00232 
+<a name="l00233"></a>00233        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iqtgui::CTreeWidgetFilter&gt;</a> m_attributesTreeFilter;
+<a name="l00234"></a>00234        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iqtgui::CTreeWidgetFilter&gt;</a> m_interfacesTreeFilter;
+<a name="l00235"></a>00235        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;iqtgui::CTreeWidgetFilter&gt;</a> m_subcomponentsTreeFilter;
+<a name="l00236"></a>00236 
+<a name="l00237"></a>00237        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_lastRegistryModelPtr;
+<a name="l00238"></a>00238 
+<a name="l00239"></a>00239        QIcon m_invalidIcon;
+<a name="l00240"></a>00240        QIcon m_warningIcon;
+<a name="l00241"></a>00241        QIcon m_exportIcon;
+<a name="l00242"></a>00242        QIcon m_importIcon;
+<a name="l00243"></a>00243 };
+<a name="l00244"></a>00244 
 <a name="l00245"></a>00245 
-<a name="l00246"></a>00246        <span class="keywordflow">return</span> valuesString;
-<a name="l00247"></a>00247 }
-<a name="l00248"></a>00248 
-<a name="l00249"></a>00249 
-<a name="l00250"></a>00250 } <span class="comment">// namespace icmpstr</span>
-<a name="l00251"></a>00251 
-<a name="l00252"></a>00252 
-<a name="l00253"></a>00253 <span class="preprocessor">#endif // !icmpstr_CAttributeEditorComp_included</span>
-<a name="l00254"></a>00254 <span class="preprocessor"></span>
+<a name="l00246"></a>00246 <span class="comment">// public static methods</span>
+<a name="l00247"></a>00247 
+<a name="l00248"></a>00248 <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttributeImpl&gt;
+<a name="l00249"></a>00249 QString CAttributeEditorComp::AttributeItemDelegate::GetMultiAttributeValueAsString(<span class="keyword">const</span> AttributeImpl&amp; attribute)
+<a name="l00250"></a>00250 {
+<a name="l00251"></a>00251        QString valuesString;
+<a name="l00252"></a>00252        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> index = 0; index &lt; attribute.GetValuesCount(); index++){
+<a name="l00253"></a>00253               <span class="keywordflow">if</span> (!valuesString.isEmpty()){
+<a name="l00254"></a>00254                      valuesString += <span class="stringliteral">&quot;;&quot;</span>;
+<a name="l00255"></a>00255               }
+<a name="l00256"></a>00256 
+<a name="l00257"></a>00257               valuesString += attribute.GetValueAt(index);
+<a name="l00258"></a>00258        }
+<a name="l00259"></a>00259 
+<a name="l00260"></a>00260        <span class="keywordflow">return</span> valuesString;
+<a name="l00261"></a>00261 }
+<a name="l00262"></a>00262 
+<a name="l00263"></a>00263 
+<a name="l00264"></a>00264 } <span class="comment">// namespace icmpstr</span>
+<a name="l00265"></a>00265 
+<a name="l00266"></a>00266 
+<a name="l00267"></a>00267 <span class="preprocessor">#endif // !icmpstr_CAttributeEditorComp_included</span>
+<a name="l00268"></a>00268 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

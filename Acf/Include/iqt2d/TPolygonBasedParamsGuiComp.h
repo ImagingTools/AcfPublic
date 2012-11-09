@@ -31,6 +31,7 @@
 #include <QtGui/QClipboard>
 #include <QtCore/QMimeData>
 #include <QtCore/QByteArray>
+#include <QtGui/QMenu>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
@@ -53,9 +54,9 @@ namespace iqt2d
 
 template <class PolygonBasedShape, class PolygonBasedModel>
 class TPolygonBasedParamsGuiComp: public iqt2d::TShapeParamsGuiCompBase<
-			Ui::CPolygonParamsGuiComp,
-			PolygonBasedShape,
-			PolygonBasedModel>
+Ui::CPolygonParamsGuiComp,
+PolygonBasedShape,
+PolygonBasedModel>
 {
 public:
 
@@ -112,6 +113,13 @@ protected:
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
 
+	/**
+		Enable or disable the Tools button depending on model type and dynamically build its menu.
+	 */
+	void UpdateToolsMenuButton();
+
+	void OnToolsButtonMenuActionTriggered(QAction* action);
+
 protected:
 	using BaseClass::GetObjectPtr;
 	using BaseClass::DoUpdateModel;
@@ -129,7 +137,13 @@ protected:
 			editorPtr->setValidator(new QDoubleValidator());
 			return editorPtr;
 		}
-	} ; // CPolygonParamsGuiItemDelegate
+	}; // CPolygonParamsGuiItemDelegate
+
+
+	enum MenuAction
+	{
+		ActionFlipHorizontally, ActionFlipVertically, ActionRotateClockwise, ActionRotateCounterclockwise, ActionReverseLine
+	};
 };
 
 
@@ -205,7 +219,7 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnCopyDat
 		QByteArray data((const char*)archive.GetBuffer(), archive.GetBufferSize());
 
 		QMimeData* dataPtr = new QMimeData();
-		dataPtr->setData(typeid(PolygonBasedModel).name(), data);
+		dataPtr->setData(typeid (PolygonBasedModel).name(), data);
 
 		QApplication::clipboard()->setMimeData(dataPtr);
 	}
@@ -222,8 +236,8 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnPasteDa
 
 	const QMimeData* dataPtr = QApplication::clipboard()->mimeData();
 	if (dataPtr != NULL){
-		if (dataPtr->hasFormat(typeid(PolygonBasedModel).name())){
-			QByteArray data(dataPtr->data(typeid(PolygonBasedModel).name()));
+		if (dataPtr->hasFormat(typeid (PolygonBasedModel).name())){
+			QByteArray data(dataPtr->data(typeid (PolygonBasedModel).name()));
 
 			iser::CMemoryReadArchive archive(data.data(), data.size());
 
@@ -255,12 +269,16 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiMode
 	BaseClass::OnGuiModelAttached();
 
 	QObject::connect(NodeParamsTable, SIGNAL(cellChanged(int, int)), this, SLOT(OnParamsChanged()));
+
+	UpdateToolsMenuButton();
 }
 
 
 template <class PolygonBasedShape, class PolygonBasedModel>
 void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiModelDetached()
 {
+	UpdateToolsMenuButton();
+
 	NodeParamsTable->disconnect();
 
 	BaseClass::OnGuiModelDetached();
@@ -300,7 +318,110 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiCrea
 	CPolygonParamsGuiItemDelegate* columnDelegate = new CPolygonParamsGuiItemDelegate();
 	NodeParamsTable->setItemDelegateForColumn(0, columnDelegate);
 	NodeParamsTable->setItemDelegateForColumn(1, columnDelegate);
+
+	CloseLineCheckBox->setHidden(true);
+	UpdateToolsMenuButton();
 }
+
+
+template <class PolygonBasedShape, class PolygonBasedModel>
+void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::UpdateToolsMenuButton()
+{
+	ToolsButton->setHidden(true);
+	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(GetModelPtr());
+	i2d::CPolygon* polygonPtr = dynamic_cast<i2d::CPolygon*>(GetModelPtr());
+
+	if (polylinePtr != NULL || polygonPtr != NULL){
+		ToolsButton->setHidden(false);
+		if (ToolsButton->menu() == NULL){
+			ToolsButton->setMenu(new QMenu(ToolsButton));
+			connect(ToolsButton->menu(), SIGNAL(triggered(QAction*)),
+					this, SLOT(OnToolsButtonMenuActionTriggered(QAction*)));
+		}
+
+		QMenu& menu = *ToolsButton->menu();
+		menu.clear();
+
+		menu.addAction("Flip horizontally")->setData(ActionFlipHorizontally);
+		menu.addAction("Flip vertically")->setData(ActionFlipVertically);
+		menu.addAction("Rotate clockwise")->setData(ActionRotateClockwise);
+		menu.addAction("Rotate counterclockwise")->setData(ActionRotateCounterclockwise);
+		if (polylinePtr != NULL){
+			menu.addAction("Reverse line")->setData(ActionReverseLine);
+		}
+	}
+}
+
+
+template <class PolygonBasedShape, class PolygonBasedModel>
+void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnToolsButtonMenuActionTriggered(QAction* action)
+{
+	i2d::CPolygon* polygonPtr = dynamic_cast<i2d::CPolygon*>(GetModelPtr());
+	if (polygonPtr != NULL){
+		istd::CChangeNotifier notifier(polygonPtr);
+
+		i2d::CVector2d center = polygonPtr->GetCenter();
+		int count = polygonPtr->GetNodesCount();
+
+		switch (action->data().toInt()){
+			case ActionFlipHorizontally:
+				for (int i = 0; i < count; i++){
+					i2d::CVector2d node = polygonPtr->GetNode(i);
+					node.SetX(center.GetX() + (center.GetX() - node.GetX()));
+					polygonPtr->SetNode(i, node);
+				}
+				break;
+
+			case ActionFlipVertically:
+				for (int i = 0; i < count; i++){
+					i2d::CVector2d node = polygonPtr->GetNode(i);
+					node.SetY(center.GetY() + (center.GetY() - node.GetY()));
+					polygonPtr->SetNode(i, node);
+				}
+				break;
+
+			case ActionRotateClockwise:
+			{
+				i2d::CAffineTransformation2d translateTo00;
+				translateTo00.Reset(-center);
+				i2d::CAffineTransformation2d rotate;
+				rotate.Reset(i2d::CVector2d(0, 0), M_PI / 2);
+				i2d::CAffineTransformation2d translateBackToCenter;
+				translateBackToCenter.Reset(center);
+				polygonPtr->Transform(translateTo00);
+				polygonPtr->Transform(rotate);
+				polygonPtr->Transform(translateBackToCenter);
+			}
+				break;
+
+			case ActionRotateCounterclockwise:
+			{
+				i2d::CAffineTransformation2d translateTo00;
+				translateTo00.Reset(-center);
+				i2d::CAffineTransformation2d rotate;
+				rotate.Reset(i2d::CVector2d(0, 0), -M_PI / 2);
+				i2d::CAffineTransformation2d translateBackToCenter;
+				translateBackToCenter.Reset(center);
+				polygonPtr->Transform(translateTo00);
+				polygonPtr->Transform(rotate);
+				polygonPtr->Transform(translateBackToCenter);
+			}
+				break;
+
+			case ActionReverseLine:
+				for (int i = 0; i < count / 2; i++){
+					i2d::CVector2d node1 = polygonPtr->GetNode(i);
+					i2d::CVector2d node2 = polygonPtr->GetNode(count - 1 - i);
+					polygonPtr->SetNode(i, node2);
+					polygonPtr->SetNode(count - 1 - i, node1);
+				}
+				break;
+
+			default: break;
+		}
+	}
+}
+
 
 
 } // namespace iqt2d

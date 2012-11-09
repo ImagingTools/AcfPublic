@@ -54,7 +54,7 @@
     <name>CLibAvRtspStreamingCameraComp.h</name>
     <path>C:/Temp/Iacf/Include/ilibav/</path>
     <filename>_c_lib_av_rtsp_streaming_camera_comp_8h</filename>
-    <includes id="_c_lib_av_rtsp_streaming_client_8h" name="CLibAvRtspStreamingClient.h" local="yes" imported="no">CLibAvRtspStreamingClient.h</includes>
+    <includes id="_c_lib_av_rtsp_streaming_client_8h" name="CLibAvRtspStreamingClient.h" local="yes" imported="no">ilibav/CLibAvRtspStreamingClient.h</includes>
     <class kind="class">ilibav::CLibAvRtspStreamingCameraComp</class>
     <namespace>ilibav</namespace>
   </compound>

@@ -31,9 +31,11 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a>  </div>
@@ -68,6 +70,9 @@ Inheritance diagram for icmpstr::CAttributeEditorComp:</div>
 
 <p><a href="classicmpstr_1_1_c_attribute_editor_comp-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html">AttrInfo</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a263dc5f2a5775ec1b68ce8fc3ad608cf">TabIndex</a> { <br/>
@@ -85,7 +90,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a6974b9498aebbd6f3c3f384a75ab94b5">AM_MULTI_REFERENCE</a>, 
 <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a6cc3fee462776ac9cb3bf5b62eca5c6a">AM_ATTRIBUTE</a>, 
 <br/>
-&#160;&#160;<a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03aac46db096b71f1f38681ea31944515ed">AM_SELECTABLE_ATTRIBUTE</a>, 
+&#160;&#160;<a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a53a7cded218bb7c51b08bf77a2e4f12f">AM_BOOL_ATTRIBUTE</a>, 
 <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03adb98c2aec039784d63ab2198c5992ebb">AM_MULTI_ATTRIBUTE</a>, 
 <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03a47d6e3869de7aa1be5316609f3ae04af">AM_EXPORTED_ATTR</a>, 
 <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad8b45c49f2f9036d9a63fbb828752a03ac1310d8b63af960cb18f4c5da12fb836">AM_EXPORTED_COMP</a>, 
@@ -125,6 +130,12 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ad466c87b2391669b99abb9a164b96869">GetMetaInfoManagerPtr</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classicmpstr_1_1_i_registry_consist_info.html">icmpstr::IRegistryConsistInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a2feaa0d0c73d8eabb21f906a45eeac83">GetConsistencyInfoPtr</a> () const </td></tr>
+<tr><td colspan="2"><h2><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QByteArray, <br class="typebreak"/>
+<a class="el" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html">AttrInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">ElementIdToAttrInfoMap</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QByteArray, <br class="typebreak"/>
+<a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">ElementIdToAttrInfoMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ab6815e194696bb53f1ec1d78488ce2de">AttrInfosMap</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a6b767eb6dc450ef91ca391343ce65bb2">on_AttributeTree_itemSelectionChanged</a> ()</td></tr>
@@ -139,7 +150,7 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a79e32636f76494b313a9775f57e58505">UpdateSubcomponentsView</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a41af6ccf2e52cb2fecd7f347f931b0c0">SetAttributeToItem</a> (QTreeWidgetItem &amp;attributeItem, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a41af6ccf2e52cb2fecd7f347f931b0c0">SetAttributeToItem</a> (QTreeWidgetItem &amp;attributeItem, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;attributeId, const <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">ElementIdToAttrInfoMap</a> &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a43c87471790c8d21e309c6190bc249c4">SetInterfaceToItem</a> (QTreeWidgetItem &amp;item, <a class="el" href="classicomp_1_1_i_registry.html#a6e5b9f6f38330d397dc61498ce1e4093">icomp::IRegistry::ExportedInterfacesMap</a> *interfacesMapPtr, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool &amp;hasWarning, bool &amp;hasExport) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a10fec0062e01215bc8e84f807ad9220a">ResetItem</a> (QTreeWidgetItem &amp;item)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a2353ae27a3a95ccc32663723e2fe3f8c">DecodeAttribute</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QString &amp;text, int &amp;meaning) const </td></tr>
@@ -163,6 +174,21 @@ Static Protected Member Functions</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_attribute_editor_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_attribute_editor_comp_8h_source.html">CAttributeEditorComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="ab6815e194696bb53f1ec1d78488ce2de"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::AttrInfosMap" ref="ab6815e194696bb53f1ec1d78488ce2de" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QMap&lt;QByteArray, <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">ElementIdToAttrInfoMap</a>&gt; <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#ab6815e194696bb53f1ec1d78488ce2de">icmpstr::CAttributeEditorComp::AttrInfosMap</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_attribute_editor_comp_8h_source.html#l00122">122</a> of file <a class="el" href="_c_attribute_editor_comp_8h_source.html">CAttributeEditorComp.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0c77ba80f9c0832dd5fb5eb8f1eefadd"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::BaseClass" ref="a0c77ba80f9c0832dd5fb5eb8f1eefadd" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +203,21 @@ Static Protected Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#afa3fcab514bf33fbdb6ec2f83eb8f075">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_attribute_editor_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_attribute_editor_comp_8h_source.html">CAttributeEditorComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a695fc267e112f9e765ec6d35c6708a28"></a><!-- doxytag: member="icmpstr::CAttributeEditorComp::ElementIdToAttrInfoMap" ref="a695fc267e112f9e765ec6d35c6708a28" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QMap&lt;QByteArray, <a class="el" href="structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html">AttrInfo</a>&gt; <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">icmpstr::CAttributeEditorComp::ElementIdToAttrInfoMap</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_attribute_editor_comp_8h_source.html#l00121">121</a> of file <a class="el" href="_c_attribute_editor_comp_8h_source.html">CAttributeEditorComp.h</a>.</p>
 
 </div>
 </div>
@@ -254,7 +295,7 @@ Static Protected Member Functions</h2></td></tr>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="ad8b45c49f2f9036d9a63fbb828752a03a6cc3fee462776ac9cb3bf5b62eca5c6a"></a><!-- doxytag: member="AM_ATTRIBUTE" ref="ad8b45c49f2f9036d9a63fbb828752a03a6cc3fee462776ac9cb3bf5b62eca5c6a" args="" -->AM_ATTRIBUTE</em>&nbsp;</td><td>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="ad8b45c49f2f9036d9a63fbb828752a03aac46db096b71f1f38681ea31944515ed"></a><!-- doxytag: member="AM_SELECTABLE_ATTRIBUTE" ref="ad8b45c49f2f9036d9a63fbb828752a03aac46db096b71f1f38681ea31944515ed" args="" -->AM_SELECTABLE_ATTRIBUTE</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="ad8b45c49f2f9036d9a63fbb828752a03a53a7cded218bb7c51b08bf77a2e4f12f"></a><!-- doxytag: member="AM_BOOL_ATTRIBUTE" ref="ad8b45c49f2f9036d9a63fbb828752a03a53a7cded218bb7c51b08bf77a2e4f12f" args="" -->AM_BOOL_ATTRIBUTE</em>&nbsp;</td><td>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="ad8b45c49f2f9036d9a63fbb828752a03adb98c2aec039784d63ab2198c5992ebb"></a><!-- doxytag: member="AM_MULTI_ATTRIBUTE" ref="ad8b45c49f2f9036d9a63fbb828752a03adb98c2aec039784d63ab2198c5992ebb" args="" -->AM_MULTI_ATTRIBUTE</em>&nbsp;</td><td>
 </td></tr>
@@ -845,7 +886,7 @@ Static Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ElementIdToAttrInfoMap &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a695fc267e112f9e765ec6d35c6708a28">ElementIdToAttrInfoMap</a> &amp;&#160;</td>
           <td class="paramname"><em>infos</em>, </td>
         </tr>
         <tr>

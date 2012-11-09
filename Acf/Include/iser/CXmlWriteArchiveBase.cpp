@@ -106,7 +106,7 @@ bool CXmlWriteArchiveBase::Process(QString& value)
 
 	QByteArray xmlText;
 
-	EncodeXml(value.toLocal8Bit(), xmlText);
+	EncodeXml(value, xmlText);
 
 	retVal = retVal && WriteString(xmlText) && WriteString("\n");
 

@@ -598,8 +598,6 @@ void CVisualRegistryEditorComp::DoRetranslate()
 }
 
 
-// reimplemented (iqt2d::TScenographerCompBase)
-
 bool CVisualRegistryEditorComp::OnDropObject(const QMimeData& mimeData, QGraphicsSceneDragDropEvent* eventPtr)
 {
 	if (!mimeData.hasText()){

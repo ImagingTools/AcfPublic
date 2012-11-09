@@ -1170,6 +1170,7 @@
     <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
     <includes id="_c_multi_attribute_editor_8h" name="CMultiAttributeEditor.h" local="yes" imported="no">icmpstr/CMultiAttributeEditor.h</includes>
     <class kind="class">icmpstr::CAttributeEditorComp</class>
+    <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -1210,7 +1211,6 @@
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <class kind="class">icmpstr::CElementSelectionInfoManagerBase</class>
-    <class kind="struct">icmpstr::CElementSelectionInfoManagerBase::AttrInfo</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -1510,16 +1510,6 @@
     <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
     <includes id="_t_shape_base_8h" name="TShapeBase.h" local="yes" imported="no">icmpstr/TShapeBase.h</includes>
     <class kind="class">icmpstr::TObjectShapeBase</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TScenographerCompBase.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_t_scenographer_comp_base_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
-    <class kind="class">icmpstr::TScenographerCompBase</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -15349,13 +15339,13 @@
     <class kind="class">icmpstr::IRegistryPreview</class>
     <class kind="class">icmpstr::ISceneProvider</class>
     <class kind="class">icmpstr::TObjectShapeBase</class>
-    <class kind="class">icmpstr::TScenographerCompBase</class>
     <class kind="class">icmpstr::TShapeBase</class>
   </compound>
   <compound kind="class">
     <name>icmpstr::CAttributeEditorComp</name>
     <filename>classicmpstr_1_1_c_attribute_editor_comp.html</filename>
     <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</base>
+    <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
     <member kind="enumeration">
       <name>TabIndex</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
@@ -15423,9 +15413,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>AM_SELECTABLE_ATTRIBUTE</name>
+      <name>AM_BOOL_ATTRIBUTE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03aac46db096b71f1f38681ea31944515ed</anchor>
+      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a53a7cded218bb7c51b08bf77a2e4f12f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -15567,6 +15557,20 @@
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a2feaa0d0c73d8eabb21f906a45eeac83</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; QByteArray, AttrInfo &gt;</type>
+      <name>ElementIdToAttrInfoMap</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a695fc267e112f9e765ec6d35c6708a28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; QByteArray, ElementIdToAttrInfoMap &gt;</type>
+      <name>AttrInfosMap</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>ab6815e194696bb53f1ec1d78488ce2de</anchor>
+      <arglist></arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -15730,6 +15734,31 @@
       <arglist>(const QString &amp;text)</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>icmpstr::CAttributeEditorComp::AttrInfo</name>
+    <filename>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</filename>
+    <member kind="variable">
+      <type>istd::TPointerBase&lt; icomp::IRegistryElement &gt;</type>
+      <name>elementPtr</name>
+      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
+      <anchor>ad932a2271d5167352abb656bc26e0498</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TPointerBase&lt; icomp::IRegistryElement::AttributeInfo &gt;</type>
+      <name>infoPtr</name>
+      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
+      <anchor>ad7a4e7cfcfe26ab1491319e2eeae39d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TPointerBase&lt; const icomp::IAttributeStaticInfo &gt;</type>
+      <name>staticInfoPtr</name>
+      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
+      <anchor>a65738552e552f54762f2adefcb29f795</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>icmpstr::CComponentHelpFileProviderComp</name>
     <filename>classicmpstr_1_1_c_component_help_file_provider_comp.html</filename>
@@ -15865,7 +15894,6 @@
     <name>icmpstr::CElementSelectionInfoManagerBase</name>
     <filename>classicmpstr_1_1_c_element_selection_info_manager_base.html</filename>
     <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
-    <class kind="struct">icmpstr::CElementSelectionInfoManagerBase::AttrInfo</class>
     <member kind="typedef">
       <type>imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</type>
       <name>BaseClass</name>
@@ -15930,20 +15958,6 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QMap&lt; QByteArray, AttrInfo &gt;</type>
-      <name>ElementIdToAttrInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>ac361b95692c72cbb3aeef09d3b5a5ac9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QMap&lt; QByteArray, ElementIdToAttrInfoMap &gt;</type>
-      <name>AttrInfosMap</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a36733e528a191d82bcf37ba50e4c0a02</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
       <type>QMap&lt; icomp::CComponentAddress, istd::TOptDelPtr&lt; const icomp::IComponentStaticInfo &gt; &gt;</type>
       <name>AddressToInfoMap</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
@@ -15969,24 +15983,6 @@
       <name>m_adressToMetaInfoMap</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
       <anchor>a9772d07e41ecc103d5d4fdf1b9737e2e</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>icmpstr::CElementSelectionInfoManagerBase::AttrInfo</name>
-    <filename>structicmpstr_1_1_c_element_selection_info_manager_base_1_1_attr_info.html</filename>
-    <member kind="variable">
-      <type>istd::TPointerBase&lt; const icomp::IRegistryElement::AttributeInfo &gt;</type>
-      <name>infoPtr</name>
-      <anchorfile>structicmpstr_1_1_c_element_selection_info_manager_base_1_1_attr_info.html</anchorfile>
-      <anchor>a0b4e4987a605ce0b7293839f7e9ed7ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>istd::TPointerBase&lt; const icomp::IAttributeStaticInfo &gt;</type>
-      <name>staticInfoPtr</name>
-      <anchorfile>structicmpstr_1_1_c_element_selection_info_manager_base_1_1_attr_info.html</anchorfile>
-      <anchor>affbeddf3db4717c371fdce7e955b5eb2</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -18846,125 +18842,6 @@
       <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
       <anchor>ab7b096e6f596a53bf1331dbdb25ec99e</anchor>
       <arglist>(const ObjectClass &amp;object)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::TScenographerCompBase</name>
-    <filename>classicmpstr_1_1_t_scenographer_comp_base.html</filename>
-    <templarg></templarg>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iqtgui::IDropConsumer</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a3592a0dacc1ae809b7604dad62b721a5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Observer</type>
-      <name>BaseClass2</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a019476ae4605116a282fcf3f85c6eaff</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TScenographerCompBase</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a346cc785b881e6a0865687a830c4964d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetIgnoreChanges</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a13be93598739068c9e8672deb5c848fd</anchor>
-      <arglist>(int ignoreUpdateFlags)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetAcceptedMimeTypes</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>aac0296a00a1bb7a4ceac4c8a98c1b8fa</anchor>
-      <arglist>(const QStringList &amp;mimeTypes)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetAcceptedMimeIds</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a3807ea995e234ed327710f92bcc16b86</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnDropFinished</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a5dd796cf98480104c5eae5df83c10bca</anchor>
-      <arglist>(const QMimeData &amp;mimeData, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>ab7d292525b79259aecdf6602a4d8dd2c</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDropObject</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a733fbbc59f075481c04d8289f78737c3</anchor>
-      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateScene</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>acd56fe6ad9dcc4576b8278d73bdedc13</anchor>
-      <arglist>(int updateFlags)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a6498623fd0c52992ca96a467e77ed79d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>ad0a30d8b1705195ce1ecff3463b1ff91</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QGraphicsScene *</type>
-      <name>m_scenePtr</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a4e24d2d0bd8e909d67f38369676d277f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_isUpdating</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a88510ba8db107633fb5a1f1ffd46fde2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_ignoreUpdateFlags</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>a4d422054dad3f53a4fd2c60716e684e0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QStringList</type>
-      <name>m_acceptedMimeTypes</name>
-      <anchorfile>classicmpstr_1_1_t_scenographer_comp_base.html</anchorfile>
-      <anchor>ad5e68a6b3efac11893432ee1550585d4</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34518,6 +34395,13 @@
       <anchor>a3adb90150890a25794ae767f9c53eb98</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnToolsButtonMenuActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>af93d9ea2ae206dfcd6d4278c8c621d05</anchor>
+      <arglist>(QAction *action)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqt2d::CPolylineParamsGuiComp</name>
@@ -34599,6 +34483,13 @@
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>a8309556e62a995aac3b35988dffa1f7b</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnToolsButtonMenuActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a5faec4dbebf465c38af818f4212e752a</anchor>
+      <arglist>(QAction *action)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iview::CInteractivePolylineShape *</type>
@@ -35186,6 +35077,42 @@
       <anchor>a4ad33e128116c9c72a6f4a4a129f5000</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="enumeration">
+      <name>MenuAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae2b46c30185beae1811d6885681e143c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ActionFlipHorizontally</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae2b46c30185beae1811d6885681e143ca71d750e0f97a331eedc769df3c737ce4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ActionFlipVertically</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae2b46c30185beae1811d6885681e143ca46ffba8bfb34b7ab1685db1fb7f2e729</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ActionRotateClockwise</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae2b46c30185beae1811d6885681e143ca98391b249b20cc54f1722f756911d90d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ActionRotateCounterclockwise</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae2b46c30185beae1811d6885681e143ca18094062aa98692d6b52fb86982352a3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ActionReverseLine</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae2b46c30185beae1811d6885681e143ca6c5bd3432ca3727e12f7077dc1eb05e5</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QTableWidget *</type>
       <name>GetNodeTable</name>
@@ -35248,6 +35175,20 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateToolsMenuButton</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnToolsButtonMenuActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
+      <arglist>(QAction *action)</arglist>
     </member>
   </compound>
   <compound kind="class">
