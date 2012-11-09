@@ -54,9 +54,9 @@
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classidc1394_1_1_c_simple_camera_comp.html" title="Simple fire wire camera implementation based on library libDC1394.">CSimpleCameraComp</a>);
 <a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_bitmap_acquisition.html">icam::IBitmapAcquisition</a>);
-<a name="l00034"></a>00034               I_ASSIGN(m_waitForFrameAttrPtr, <span class="stringliteral">&quot;WaitForFrames&quot;</span>, <span class="stringliteral">&quot;It allowing to waiting for images, if disabled only already taken images can be acquired&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00035"></a>00035               I_ASSIGN(m_only8BitDepthAttrPtr, <span class="stringliteral">&quot;Only8Bit&quot;</span>, <span class="stringliteral">&quot;Only modes with 8 bits will be accepted&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00036"></a>00036               I_ASSIGN(m_bufferSizeAttrPtr, <span class="stringliteral">&quot;BufferSize&quot;</span>, <span class="stringliteral">&quot;Number of frames in camera buffer&quot;</span>, <span class="keyword">true</span>, 1);
+<a name="l00034"></a>00034               I_ASSIGN(m_only8BitDepthAttrPtr, <span class="stringliteral">&quot;Only8Bit&quot;</span>, <span class="stringliteral">&quot;Only modes with 8 bits will be accepted&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
+<a name="l00035"></a>00035               I_ASSIGN(m_bufferSizeAttrPtr, <span class="stringliteral">&quot;BufferSize&quot;</span>, <span class="stringliteral">&quot;Number of frames in camera buffer&quot;</span>, <span class="keyword">true</span>, 1);
+<a name="l00036"></a>00036               I_ASSIGN(m_waitTimeoutAttrPtr, <span class="stringliteral">&quot;WaitTimeout&quot;</span>, <span class="stringliteral">&quot;Wait timeout for capture, if not set only frames currently acquired will be taken&quot;</span>, <span class="keyword">false</span>, 1);
 <a name="l00037"></a>00037        I_END_COMPONENT;
 <a name="l00038"></a>00038 
 <a name="l00039"></a><a class="code" href="classidc1394_1_1_c_simple_camera_comp.html#ad730c02b8989c060e5f1debdbbce0e74">00039</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html#a71f0e6f70fcf044073f7055a0e0f5225">MessageId</a>
@@ -83,9 +83,9 @@
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classidc1394_1_1_c_simple_camera_comp.html#adf1a7c914e13f1af70657c9544941fa0">OnComponentDestroyed</a>();
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 <span class="keyword">private</span>:
-<a name="l00063"></a>00063        I_ATTR(<span class="keywordtype">bool</span>, m_waitForFrameAttrPtr);
-<a name="l00064"></a>00064        I_ATTR(<span class="keywordtype">bool</span>, m_only8BitDepthAttrPtr);
-<a name="l00065"></a>00065        I_ATTR(<span class="keywordtype">int</span>, m_bufferSizeAttrPtr);
+<a name="l00063"></a>00063        I_ATTR(<span class="keywordtype">bool</span>, m_only8BitDepthAttrPtr);
+<a name="l00064"></a>00064        I_ATTR(<span class="keywordtype">int</span>, m_bufferSizeAttrPtr);
+<a name="l00065"></a>00065        I_ATTR(<span class="keywordtype">double</span>, m_waitTimeoutAttrPtr);
 <a name="l00066"></a>00066        dc1394_t * m_libraryPtr;
 <a name="l00067"></a>00067        dc1394camera_t *m_cameraPtr;
 <a name="l00068"></a>00068 };
