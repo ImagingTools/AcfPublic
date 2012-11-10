@@ -69,6 +69,7 @@
 #include "iipr/CMorphologicalProcessorComp.h"
 #include "iipr/CMultiLineProjectionSupplierComp.h"
 #include "iipr/CSelectableCalibrationSupplierComp.h"
+#include "iipr/CCheckerboardPatternGeneratorComp.h"
 
 
 /**
@@ -146,7 +147,7 @@ typedef icomp::TModelCompWrap<
 typedef icomp::TModelCompWrap<
 			iipr::CSelectableCalibrationSupplierComp> SelectableCalibrationSupplier;
 
-
+typedef iipr::CCheckerboardPatternGeneratorComp CheckerboardPatternGenerator;
 
 } // namespace IprPck
 

@@ -37,7 +37,7 @@ namespace ifile
 {
 
 
-// reimplemented (ibase::IFileListProvider)
+// reimplemented (ifile::IFileListProvider)
 
 QStringList CFileListProviderComp::GetFileList() const
 {

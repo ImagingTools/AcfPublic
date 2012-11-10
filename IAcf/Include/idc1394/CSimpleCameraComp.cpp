@@ -30,7 +30,7 @@
 #include "istd/TChangeNotifier.h"
 #include "iprm/IParamsSet.h"
 #include "iimg/IBitmap.h"
-#include "iqt/CSystem.h"
+#include "istd/CSystem.h"
 
 
 namespace idc1394
@@ -84,7 +84,7 @@ int CSimpleCameraComp::DoProcessing(
 			break;
 		}
 		else{
-			iqt::CSystem::Sleep(0.01);
+			istd::CSystem::Sleep(0.01);
 		}
 	} while (m_waitTimeoutAttrPtr.IsValid() && (!timer.hasExpired(*m_waitTimeoutAttrPtr * 1000)));
 

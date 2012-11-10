@@ -38,7 +38,7 @@
 
 #include "ibase/IObjectSnap.h"
 
-#include "iqt/CBitmap.h"
+#include "iimg/CBitmap.h"
 
 
 namespace iqt
@@ -92,7 +92,7 @@ private:
 	struct FileInfo
 	{
 		QDateTime fileTimeStamp;
-		istd::TSmartPtr<iqt::CBitmap> fileBitmapPtr;
+		istd::TSmartPtr<iimg::CBitmap> fileBitmapPtr;
 	};
 
 	typedef QMap<QString, FileInfo> PreviewCache;

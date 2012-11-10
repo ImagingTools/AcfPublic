@@ -31,10 +31,10 @@
 #include <QtGui/QApplication>
 
 // ACF includes
+#include "istd/CSystem.h"
 #include "icomp/TSimComponentWrap.h"
 #include "icomp/TSimComponentsFactory.h"
 #include "icomp/TModelCompWrap.h"
-#include "iqt/CSystem.h"
 
 // ACF packages includes
 #include "QtPck/QtPck.h"
@@ -118,9 +118,9 @@ int main(int argc, char *argv[])
 	if (verboseEnabled){
 		std::cout << "ARX Compiler started in: " << QDir::currentPath().toLocal8Bit().constData() << std::endl;
 
-		iqt::CSystem::EnvironmentVariables environmentVariables = iqt::CSystem::GetEnvironmentVariables();
+		istd::CSystem::EnvironmentVariables environmentVariables = istd::CSystem::GetEnvironmentVariables();
 
-		for (		iqt::CSystem::EnvironmentVariables::const_iterator index = environmentVariables.begin();
+		for (		istd::CSystem::EnvironmentVariables::const_iterator index = environmentVariables.begin();
 					index != environmentVariables.end();
 					++index){
 			std::cout << index.key().toLocal8Bit().constData() << " = " << index.value().toLocal8Bit().constData() << std::endl;
@@ -147,7 +147,7 @@ int main(int argc, char *argv[])
 	registryLoaderComp.SetBoolAttr("EnableVerbose", verboseEnabled);
 	registryLoaderComp.InitComponent();
 
-	icomp::TSimComponentWrap<QtPck::RegistriesManager> registriesManagerComp;
+	icomp::TSimComponentWrap<CompositorPck::RegistriesManager> registriesManagerComp;
 	registriesManagerComp.SetRef("RegistryLoader", &registryLoaderComp);
 	registriesManagerComp.SetRef("Log", &log);
 	registriesManagerComp.SetBoolAttr("EnableVerbose", verboseEnabled);
@@ -159,7 +159,7 @@ int main(int argc, char *argv[])
 	dependsBasePathComp.SetStringAttr("DefaultPath", baseDependsPath);
 	dependsBasePathComp.InitComponent();
 
-	icomp::TSimComponentWrap<QtPck::RegistryCodeSaver> codeSaverComp;
+	icomp::TSimComponentWrap<CompositorPck::RegistryCodeSaver> codeSaverComp;
 	codeSaverComp.SetRef("Log", &log);
 	codeSaverComp.SetRef("PackagesManager", &registriesManagerComp);
 	codeSaverComp.SetRef("RegistriesManager", &registriesManagerComp);

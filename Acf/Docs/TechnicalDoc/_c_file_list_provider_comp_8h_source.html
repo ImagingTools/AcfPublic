@@ -41,7 +41,7 @@
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_list_provider_8h.html">ibase/IFileListProvider.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_list_provider_8h.html">ifile/IFileListProvider.h</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
 <a name="l00020"></a>00020 
@@ -55,7 +55,7 @@
 <a name="l00031"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html">00031</a> <span class="keyword">class </span><a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>:
 <a name="l00032"></a>00032                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
 <a name="l00033"></a>00033                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00034"></a>00034                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IFileListProvider,
+<a name="l00034"></a>00034                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::<a class="code" href="classifile_1_1_i_file_list_provider.html" title="Provide access to some parameter list.">IFileListProvider</a>,
 <a name="l00035"></a>00035                      <span class="keyword">protected</span> imod::CSingleModelObserverBase
 <a name="l00036"></a>00036 {
 <a name="l00037"></a>00037        Q_OBJECT
@@ -64,7 +64,7 @@
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041        I_BEGIN_COMPONENT(<a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>);
 <a name="l00042"></a>00042               I_REGISTER_INTERFACE(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>);
-<a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_file_list_provider.html" title="Provide access to some parameter list.">ibase::IFileListProvider</a>);
+<a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_list_provider.html" title="Provide access to some parameter list.">ifile::IFileListProvider</a>);
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045               I_ASSIGN(m_dirParamCompPtr, <span class="stringliteral">&quot;DirParam&quot;</span>, <span class="stringliteral">&quot;Parameter storing root directory&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirParam&quot;</span>);
 <a name="l00046"></a>00046               I_ASSIGN(m_dirParamModelCompPtr, <span class="stringliteral">&quot;DirParam&quot;</span>, <span class="stringliteral">&quot;Parameter storing root directory&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DirParam&quot;</span>);
@@ -74,7 +74,7 @@
 <a name="l00050"></a>00050               I_ASSIGN(m_maxRecurDepthAttrPtr, <span class="stringliteral">&quot;MaxRecurDepth&quot;</span>, <span class="stringliteral">&quot;Maximal recursion depth for file search, negative value means no depth limit&quot;</span>, <span class="keyword">true</span>, 0);
 <a name="l00051"></a>00051        I_END_COMPONENT;
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (ibase::IFileListProvider)</span>
+<a name="l00053"></a>00053        <span class="comment">// reimplemented (ifile::IFileListProvider)</span>
 <a name="l00054"></a>00054        <span class="keyword">virtual</span> QStringList <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a2f4722ed003a5798e83ad58f84f5df44" title="Get list of files.">GetFileList</a>() <span class="keyword">const</span>;
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056 <span class="keyword">protected</span>:

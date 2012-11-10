@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iqt/CReflectedBitmapBase.h Source File</title>
+<title>Include/iimg/CReflectedBitmapBase.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,54 +22,54 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iqt/CReflectedBitmapBase.h</div>  </div>
+<div class="title">Include/iimg/CReflectedBitmapBase.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_reflected_bitmap_base_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqt_CReflectedBitmapBase_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqt_CReflectedBitmapBase_included</span>
+<a href="_c_reflected_bitmap_base_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iimg_CReflectedBitmapBase_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iimg_CReflectedBitmapBase_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_t_cached_update_manager_wrap_8h.html">istd/TCachedUpdateManagerWrap.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_general_bitmap_8h.html">iimg/CGeneralBitmap.h</a>&quot;</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_q_image_provider_8h.html">iqt/IQImageProvider.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_q_image_provider_8h.html">iimg/IQImageProvider.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">namespace </span>iqt
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>iimg
 <a name="l00013"></a>00013 {
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
-<a name="l00020"></a><a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html" title="Implementation of bitmap storing internal additionaly QImage object reflecting state of main bitmap a...">CReflectedBitmapBase</a>:
+<a name="l00020"></a><a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html">00020</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html" title="Implementation of bitmap storing internal additionaly QImage object reflecting state of main bitmap a...">CReflectedBitmapBase</a>:
 <a name="l00021"></a>00021                      <span class="keyword">public</span> istd::TCachedUpdateManagerWrap&lt;iimg::CGeneralBitmap&gt;,
-<a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiqt_1_1_i_q_image_provider.html">IQImageProvider</a>
+<a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiimg_1_1_i_q_image_provider.html">IQImageProvider</a>
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
-<a name="l00025"></a><a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#a4f7483499db2dfdcde2463f656a56ea6">00025</a>        <span class="keyword">enum</span> <a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#a4f7483499db2dfdcde2463f656a56ea6">ChangeFlags</a>
+<a name="l00025"></a><a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a7222291b46c8e20a515ede9cde7da5b6">00025</a>        <span class="keyword">enum</span> <a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a7222291b46c8e20a515ede9cde7da5b6">ChangeFlags</a>
 <a name="l00026"></a>00026        {
-<a name="l00027"></a><a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#a4f7483499db2dfdcde2463f656a56ea6a6402a2b141e5d460c6571bfd9119c922">00027</a>               <a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#a4f7483499db2dfdcde2463f656a56ea6a6402a2b141e5d460c6571bfd9119c922">CF_BLOCK_BITMAP_CONVERSION</a> = 1 &lt;&lt; 21
+<a name="l00027"></a><a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a7222291b46c8e20a515ede9cde7da5b6a67bca970a464b195bc2c1d10eddb57eb">00027</a>               <a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a7222291b46c8e20a515ede9cde7da5b6a67bca970a464b195bc2c1d10eddb57eb">CF_BLOCK_BITMAP_CONVERSION</a> = 1 &lt;&lt; 21
 <a name="l00028"></a>00028        };
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="comment">// reimplemented (iqt::IQImageProvider)</span>
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keyword">const</span> QImage&amp; <a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#ac5f6523b1dbc52f44437486b9193a8ea">GetQImage</a>() <span class="keyword">const</span>;
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#a031fc1332fa0e4a8d5255aacd75a7d42">CopyImageFrom</a>(<span class="keyword">const</span> QImage&amp; image);
+<a name="l00030"></a>00030        <span class="comment">// reimplemented (iimg::IQImageProvider)</span>
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keyword">const</span> QImage&amp; <a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a313b55edc5329ff5546b22d22723c40a">GetQImage</a>() <span class="keyword">const</span>;
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a801378529367a894beb8450a985538a8">CopyImageFrom</a>(<span class="keyword">const</span> QImage&amp; image);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="keyword">protected</span>:
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#a19660f371d8b12f743fa9b19b46afd27">ConvertFromQImage</a>(<span class="keyword">const</span> QImage&amp; image) = 0;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#a14d5e6440881a911754f91d5a1750fba">ConvertToQImage</a>(QImage&amp; result) <span class="keyword">const</span> = 0;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a7c0c0eb651f07351ea05cc17c040bc1d">ConvertFromQImage</a>(<span class="keyword">const</span> QImage&amp; image) = 0;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a343e4a9c8ae4109918720b3417f55df7">ConvertToQImage</a>(QImage&amp; result) <span class="keyword">const</span> = 0;
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <span class="comment">// reimplmented (istd::TCachedUpdateManagerWrap)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_reflected_bitmap_base.html#a164fdb7c77c03cebcd7a37af78c8f83f" title="Calculate cache.">CalculateCache</a>(<span class="keywordtype">int</span> changeFlags);
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_reflected_bitmap_base.html#a74c5c9406f1568060cb432b62d0d9e2b" title="Calculate cache.">CalculateCache</a>(<span class="keywordtype">int</span> changeFlags);
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">private</span>:
 <a name="l00042"></a>00042        QImage m_image;
 <a name="l00043"></a>00043 };
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046 } <span class="comment">// namespace iqt</span>
+<a name="l00046"></a>00046 } <span class="comment">// namespace iimg</span>
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="preprocessor">#endif // !iqt_CReflectedBitmapBase_included</span>
+<a name="l00049"></a>00049 <span class="preprocessor">#endif // !iimg_CReflectedBitmapBase_included</span>
 <a name="l00050"></a>00050 <span class="preprocessor"></span>
 <a name="l00051"></a>00051 
 </pre></div></div>

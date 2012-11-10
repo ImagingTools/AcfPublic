@@ -54,7 +54,7 @@ bool CLabel::Serialize(iser::IArchive& archive)
 {
 	static iser::CArchiveTag textTag("Text", "Text of label");
 
-	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL);
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, CF_OBJECT_POSITION | CF_MODEL);
 
 	bool retVal = true;
 

@@ -799,6 +799,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CCheckerboardPatternGeneratorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_checkerboard_pattern_generator_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <class kind="class">iipr::CCheckerboardPatternGeneratorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCircleFinderParams.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_circle_finder_params_8h</filename>
@@ -4766,7 +4774,7 @@
   <compound kind="class">
     <name>ifileproc::CFilePathesContainer</name>
     <filename>classifileproc_1_1_c_file_pathes_container.html</filename>
-    <base virtualness="virtual">ibase::IFileListProvider</base>
+    <base virtualness="virtual">ifile::IFileListProvider</base>
     <member kind="function">
       <type>void</type>
       <name>ResetFiles</name>
@@ -7577,6 +7585,7 @@
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
     <class kind="class">iipr::CCaliperParamsComp</class>
+    <class kind="class">iipr::CCheckerboardPatternGeneratorComp</class>
     <class kind="class">iipr::CCircleFinderParams</class>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
@@ -8039,6 +8048,25 @@
       <anchorfile>classiipr_1_1_c_caliper_params_comp.html</anchorfile>
       <anchor>a6adce4a883a9827de58eeb10e7860827</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CCheckerboardPatternGeneratorComp</name>
+    <filename>classiipr_1_1_c_checkerboard_pattern_generator_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_checkerboard_pattern_generator_comp.html</anchorfile>
+      <anchor>ad878c221ff74a97a5dcae35d676f600f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_checkerboard_pattern_generator_comp.html</anchorfile>
+      <anchor>a078096462628b27442212269a398eb30</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16137,10 +16165,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>imod::TModelWrap&lt; iqt::CBitmap &gt;</type>
+      <type>imod::TModelWrap&lt; iimg::CBitmap &gt;</type>
       <name>m_backgroundModel</name>
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
-      <anchor>a33aa7be6b1b545aa6f25a1cf763cc009</anchor>
+      <anchor>a7a94fd23ad59ab1b869fe6013554f0fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">

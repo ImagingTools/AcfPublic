@@ -24,7 +24,7 @@
 #define iqtgui_CFileListProviderGuiComp_included
 
 
-#include "ibase/IFileListProvider.h"
+#include "ifile/IFileListProvider.h"
 
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 #include "iqtgui/Generated/ui_CFileListProviderGuiComp.h"
@@ -36,13 +36,13 @@ namespace iqtgui
 
 class CFileListProviderGuiComp:
 			public iqtgui::TDesignerGuiObserverCompBase<
-						Ui::CFileListProviderGuiComp, ibase::IFileListProvider>
+						Ui::CFileListProviderGuiComp, ifile::IFileListProvider>
 {
 	Q_OBJECT
 
 public:
 	typedef iqtgui::TDesignerGuiObserverCompBase<
-				Ui::CFileListProviderGuiComp, ibase::IFileListProvider> BaseClass;
+				Ui::CFileListProviderGuiComp, ifile::IFileListProvider> BaseClass;
 
 	I_BEGIN_COMPONENT(CFileListProviderGuiComp);
 	I_END_COMPONENT;

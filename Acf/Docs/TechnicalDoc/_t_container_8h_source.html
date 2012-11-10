@@ -96,7 +96,7 @@
 <a name="l00072"></a>00072 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00073"></a><a class="code" href="classibase_1_1_t_container.html#a403ba514ed797a203804d88f62d9adb0">00073</a> ItemClass&amp; <a class="code" href="classibase_1_1_t_container.html#a403ba514ed797a203804d88f62d9adb0">TContainer&lt;ItemClass&gt;::PushBack</a>(<span class="keyword">const</span> ItemClass&amp; item)
 <a name="l00074"></a>00074 {
-<a name="l00075"></a>00075        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_ELEMENT_ADDED);
+<a name="l00075"></a>00075        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_MODEL | CF_ELEMENT_ADDED);
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077        m_items.append(item);
 <a name="l00078"></a>00078 
@@ -107,7 +107,7 @@
 <a name="l00083"></a>00083 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00084"></a><a class="code" href="classibase_1_1_t_container.html#a7332abf2a1625e0755dc40fa42866abd">00084</a> ItemClass&amp; <a class="code" href="classibase_1_1_t_container.html#a7332abf2a1625e0755dc40fa42866abd">TContainer&lt;ItemClass&gt;::PushFront</a>(<span class="keyword">const</span> ItemClass&amp; item)
 <a name="l00085"></a>00085 {
-<a name="l00086"></a>00086        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_ELEMENT_ADDED);
+<a name="l00086"></a>00086        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_MODEL | CF_ELEMENT_ADDED);
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088        m_items.prepend(item);
 <a name="l00089"></a>00089 
@@ -118,7 +118,7 @@
 <a name="l00094"></a>00094 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00095"></a><a class="code" href="classibase_1_1_t_container.html#aa4b1142236969d36b28d71773b9869e4">00095</a> ItemClass&amp; <a class="code" href="classibase_1_1_t_container.html#aa4b1142236969d36b28d71773b9869e4">TContainer&lt;ItemClass&gt;::InsertAt</a>(<span class="keyword">const</span> ItemClass&amp; item, <span class="keywordtype">int</span> index)
 <a name="l00096"></a>00096 {
-<a name="l00097"></a>00097        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_ELEMENT_ADDED);
+<a name="l00097"></a>00097        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_MODEL | CF_ELEMENT_ADDED);
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099        <span class="keywordflow">if</span> ((index &lt; 0) || (index &gt;= m_items.size())){
 <a name="l00100"></a>00100               m_items.append(item);
@@ -136,7 +136,7 @@
 <a name="l00112"></a>00112 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00113"></a><a class="code" href="classibase_1_1_t_container.html#a09ac63c55d7524b9bf6e683f6ada16cd">00113</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_container.html#a09ac63c55d7524b9bf6e683f6ada16cd">TContainer&lt;ItemClass&gt;::PopBack</a>()
 <a name="l00114"></a>00114 {
-<a name="l00115"></a>00115        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_ELEMENT_REMOVED);
+<a name="l00115"></a>00115        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_MODEL | CF_ELEMENT_REMOVED);
 <a name="l00116"></a>00116 
 <a name="l00117"></a>00117        m_items.pop_back();
 <a name="l00118"></a>00118 }
@@ -145,7 +145,7 @@
 <a name="l00121"></a>00121 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00122"></a><a class="code" href="classibase_1_1_t_container.html#a9e8fc08d4962c192fdd98cde9068c4c2">00122</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_container.html#a9e8fc08d4962c192fdd98cde9068c4c2">TContainer&lt;ItemClass&gt;::PopFront</a>()
 <a name="l00123"></a>00123 {
-<a name="l00124"></a>00124        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_ELEMENT_REMOVED);
+<a name="l00124"></a>00124        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_MODEL | CF_ELEMENT_REMOVED);
 <a name="l00125"></a>00125 
 <a name="l00126"></a>00126        m_items.pop_front();
 <a name="l00127"></a>00127 }
@@ -158,7 +158,7 @@
 <a name="l00134"></a>00134        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_items.size()));
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136        <span class="keywordflow">if</span> (index &lt; <span class="keywordtype">int</span>(m_items.size())){
-<a name="l00137"></a>00137               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_ELEMENT_REMOVED);
+<a name="l00137"></a>00137               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_MODEL | CF_ELEMENT_REMOVED);
 <a name="l00138"></a>00138        
 <a name="l00139"></a>00139               m_items.erase(m_items.begin()  + index);
 <a name="l00140"></a>00140        }
@@ -168,7 +168,7 @@
 <a name="l00144"></a>00144 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00145"></a><a class="code" href="classibase_1_1_t_container.html#a0c41d14c6ccd399b328e11b79fb1aec3">00145</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_container.html#a0c41d14c6ccd399b328e11b79fb1aec3">TContainer&lt;ItemClass&gt;::Reset</a>()
 <a name="l00146"></a>00146 {
-<a name="l00147"></a>00147        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_RESET);
+<a name="l00147"></a>00147        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_MODEL | CF_RESET);
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149        m_items.clear();
 <a name="l00150"></a>00150 }

@@ -31,7 +31,7 @@
 #include <QtCore/QFileInfo>
 
 // ACF includes
-#include "iqt/CSystem.h"
+#include "istd/CSystem.h"
 
 
 namespace ifile
@@ -88,7 +88,7 @@ void CGeneratedFileNameParamComp::OnComponentDestroyed()
 
 		QFileInfo fileInfo(path);
 		if (fileInfo.isDir()){
-			iqt::CSystem::RemoveDirectory(path);
+			istd::CSystem::RemoveDirectory(path);
 		}
 		else{
 			QFile::remove(path);

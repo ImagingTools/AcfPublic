@@ -32,7 +32,7 @@
 #include "istd/TChangeNotifier.h"
 
 #include "iqt/CSignalBlocker.h"
-#include "iqt/CSystem.h"
+#include "istd/CSystem.h"
 
 #include "iqtgui/CExtLineEdit.h"
 #include "iqtgui/CFileDialogLoaderComp.h"
@@ -344,7 +344,7 @@ QIcon CFileNameParamGuiComp::GetFileIcon(const QString& filePath) const
 
 	QIcon fileIcon = QIcon(":/Icons/Warning.svg");
 
-	QModelIndex index = m_directoryModel.index(iqt::CSystem::GetEnrolledPath(filePath));
+	QModelIndex index = m_directoryModel.index(istd::CSystem::GetEnrolledPath(filePath));
 	if (index.isValid()){
 		fileIcon = m_directoryModel.fileIcon(index);
 	}

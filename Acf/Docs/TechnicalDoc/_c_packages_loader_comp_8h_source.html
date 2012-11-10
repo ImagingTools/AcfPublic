@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iqt/CPackagesLoaderComp.h Source File</title>
+<title>Include/icmpstr/CPackagesLoaderComp.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,11 +22,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iqt/CPackagesLoaderComp.h</div>  </div>
+<div class="title">Include/icmpstr/CPackagesLoaderComp.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_packages_loader_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqt_CPackagesLoaderComp_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqt_CPackagesLoaderComp_included</span>
+<a href="_c_packages_loader_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef icmpstr_CPackagesLoaderComp_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define icmpstr_CPackagesLoaderComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
@@ -51,27 +51,27 @@
 <a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027 <span class="keyword">namespace </span>iqt
+<a name="l00027"></a>00027 <span class="keyword">namespace </span>icmpstr
 <a name="l00028"></a>00028 {
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 
-<a name="l00034"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp.html">00034</a> <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>:
+<a name="l00034"></a><a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html">00034</a> <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>:
 <a name="l00035"></a>00035                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
 <a name="l00036"></a>00036                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defininig base class for simple components outputing log messages.">CLoggerComponentBase</a>,
 <a name="l00037"></a>00037                      <span class="keyword">public</span> icomp::CEnvironmentManagerBase,
 <a name="l00038"></a>00038                      <span class="keyword">virtual</span> <span class="keyword">public</span> icomp::IRegistryLoader
 <a name="l00039"></a>00039 {
 <a name="l00040"></a>00040 <span class="keyword">public</span>:
-<a name="l00041"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aa5fb622b8cd76bf63980674471093044">00041</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aa5fb622b8cd76bf63980674471093044">BaseClass</a>;
-<a name="l00042"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a6626d1dd531cf23e6f967f88e2811536">00042</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_environment_manager_base.html">icomp::CEnvironmentManagerBase</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a6626d1dd531cf23e6f967f88e2811536">BaseClass2</a>;
+<a name="l00041"></a><a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a5ae14b1f980af7afcd9733a52b68bb3f">00041</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a5ae14b1f980af7afcd9733a52b68bb3f">BaseClass</a>;
+<a name="l00042"></a><a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a78ef8d3cb2a5f1a3510c261a9ab16d1d">00042</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_environment_manager_base.html">icomp::CEnvironmentManagerBase</a> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a78ef8d3cb2a5f1a3510c261a9ab16d1d">BaseClass2</a>;
 <a name="l00043"></a>00043 
-<a name="l00044"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0a8dfd4b7215fc622fbbc748b57aeafd">00044</a>        <span class="keyword">enum</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0a8dfd4b7215fc622fbbc748b57aeafd">MessageId</a>
+<a name="l00044"></a><a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a8f6f2d4387bd1f251cc5a86b059d4ec2">00044</a>        <span class="keyword">enum</span> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a8f6f2d4387bd1f251cc5a86b059d4ec2">MessageId</a>
 <a name="l00045"></a>00045        {
-<a name="l00046"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0a8dfd4b7215fc622fbbc748b57aeafda59f59a2f394ca5b4071ef947c0be55b0">00046</a>               <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0a8dfd4b7215fc622fbbc748b57aeafda59f59a2f394ca5b4071ef947c0be55b0">MI_CANNOT_REGISTER</a> = 650,
-<a name="l00047"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0a8dfd4b7215fc622fbbc748b57aeafdaabe7ef22a7af2a7dcf579cf378b122ee">00047</a>               <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0a8dfd4b7215fc622fbbc748b57aeafdaabe7ef22a7af2a7dcf579cf378b122ee">MI_CANNOT_CREATE_ELEMENT</a>
+<a name="l00046"></a><a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a8f6f2d4387bd1f251cc5a86b059d4ec2a8082c79f2f2159517104676aef4166b6">00046</a>               <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a8f6f2d4387bd1f251cc5a86b059d4ec2a8082c79f2f2159517104676aef4166b6">MI_CANNOT_REGISTER</a> = 650,
+<a name="l00047"></a><a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a8f6f2d4387bd1f251cc5a86b059d4ec2a0c9dcf3a8a73cc8d32ff82214bb41226">00047</a>               <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a8f6f2d4387bd1f251cc5a86b059d4ec2a0c9dcf3a8a73cc8d32ff82214bb41226">MI_CANNOT_CREATE_ELEMENT</a>
 <a name="l00048"></a>00048        };
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050        I_BEGIN_COMPONENT(<a class="code" href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>);
+<a name="l00050"></a>00050        I_BEGIN_COMPONENT(<a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>);
 <a name="l00051"></a>00051               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_registry_loader.html" title="Interface for a ACF registry loader.">icomp::IRegistryLoader</a>);
 <a name="l00052"></a>00052               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>);
 <a name="l00053"></a>00053               I_REGISTER_INTERFACE(<a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">icomp::IComponentStaticInfo</a>);
@@ -83,50 +83,50 @@
 <a name="l00059"></a>00059        I_END_COMPONENT;
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061        <span class="comment">// reimplemented (icomp::IRegistryLoader)</span>
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a9bd78e61e5afa740d396e8a7c4c72143" title="Get an ACF registry from a given file.">GetRegistryFromFile</a>(<span class="keyword">const</span> QString&amp; path) <span class="keyword">const</span>;
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#af8fff961f31ecd9f3048df9b17da430a" title="Get an ACF registry from a given file.">GetRegistryFromFile</a>(<span class="keyword">const</span> QString&amp; path) <span class="keyword">const</span>;
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064        <span class="comment">// reimplemented (icomp::IComponentEnvironmentManager)</span>
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> QString <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a8161a972f2ed3f2400697a99ca9f5014" title="Get file path of real used config file.">GetConfigFilePath</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> QString <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#aa954eea9c63242e5f2b780ad5733ca85" title="Get file path of real used config file.">GetConfigFilePath</a>() <span class="keyword">const</span>;
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067        <span class="comment">// reimplemented (icomp::IPackagesManager)</span>
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a81a93113adf8f8c340c009586ae4f11d" title="Configure environment for specified file path.">LoadPackages</a>(<span class="keyword">const</span> QString&amp; configFilePath = QString());
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a00dbae572e8fca352efdce9e4461fb99" title="Get type of package as defined in PackageType.">GetPackageType</a>(<span class="keyword">const</span> QByteArray&amp; packageId) <span class="keyword">const</span>;
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> QString <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#ace8e1b16f346f0ff7b975bd0b302949a" title="Get directory path of specified component package.">GetPackagePath</a>(<span class="keyword">const</span> QByteArray&amp; packageId) <span class="keyword">const</span>;
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#ac05a3afc9183b425388d16b6b7aab01d" title="Configure environment for specified file path.">LoadPackages</a>(<span class="keyword">const</span> QString&amp; configFilePath = QString());
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a90137c5f9ad0f3e58b591bd79b82e154" title="Get type of package as defined in PackageType.">GetPackageType</a>(<span class="keyword">const</span> QByteArray&amp; packageId) <span class="keyword">const</span>;
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> QString <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#afe3396b75913054f24e29d80447159ca" title="Get directory path of specified component package.">GetPackagePath</a>(<span class="keyword">const</span> QByteArray&amp; packageId) <span class="keyword">const</span>;
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072        <span class="comment">// reimplemented (icomp::IRegistriesManager)</span>
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#aa2daa7c05ad6c3ce70002d08ac8e8df7" title="Get access to stored registry.">GetRegistry</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* contextRegistryPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a47d9943a0478849faa05b5876a61253a" title="Get access to stored registry.">GetRegistry</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* contextRegistryPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075        <span class="comment">// reimplemented (icomp::IMetaInfoManager)</span>
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">ComponentAddresses</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a562448f22c083a5cd840fde095f39288" title="Get addresses of known components.">GetComponentAddresses</a>(<span class="keywordtype">int</span> typeFlag = <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a9b6818ea2ee2385a8216f49aef6a14caa15594ca56ac70e36ac74a0e9ea3f8a3b">CTF_ALL</a>) <span class="keyword">const</span>;
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a5cec64ff37d3ef338014d19e48ee5cab">ComponentAddresses</a> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#ab12ed0abb66e3d282e5797e1a7a753c5" title="Get addresses of known components.">GetComponentAddresses</a>(<span class="keywordtype">int</span> typeFlag = <a class="code" href="classicomp_1_1_i_meta_info_manager.html#a9b6818ea2ee2385a8216f49aef6a14caa15594ca56ac70e36ac74a0e9ea3f8a3b">CTF_ALL</a>) <span class="keyword">const</span>;
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a0b5bcb075bb0966d0be1de557ee201b4">OnComponentCreated</a>();
+<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a22c48a33ce1f14172440a67fd21d849f">OnComponentCreated</a>();
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081 <span class="keyword">protected</span>:
-<a name="l00082"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html">00082</a>        <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html">LogingRegistry</a>: <span class="keyword">public</span> icomp::CRegistry
+<a name="l00082"></a><a class="code" href="classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html">00082</a>        <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html">LogingRegistry</a>: <span class="keyword">public</span> icomp::CRegistry
 <a name="l00083"></a>00083        {
 <a name="l00084"></a>00084        <span class="keyword">public</span>:
-<a name="l00085"></a><a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#aca07475b3315025165ff0e0b1a51731a">00085</a>               <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_registry.html" title="Standard implementation of registry.">icomp::CRegistry</a> <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#aca07475b3315025165ff0e0b1a51731a">BaseClass</a>;
+<a name="l00085"></a><a class="code" href="classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html#ae776c684e305f49b0a00f14e7ae3733b">00085</a>               <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_registry.html" title="Standard implementation of registry.">icomp::CRegistry</a> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html#ae776c684e305f49b0a00f14e7ae3733b">BaseClass</a>;
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087               <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#a17e98e82c652ba4f8dba5069247abaec">LogingRegistry</a>(<a class="code" href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>* parentPtr);
+<a name="l00087"></a>00087               <a class="code" href="classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html#aeb6c1c989c03233add7b0c3ea68c5d63">LogingRegistry</a>(<a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>* parentPtr);
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089               <span class="comment">// reimplemented (icomp::IRegistry)</span>
-<a name="l00090"></a>00090               <span class="keyword">virtual</span> <a class="code" href="structicomp_1_1_i_registry_1_1_element_info.html" title="Describe information stored with each element.">ElementInfo</a>* <a class="code" href="classiqt_1_1_c_packages_loader_comp_1_1_loging_registry.html#a3ae640ef8c08d229b46db19dfc0140a2" title="Insert new attribute info object to collection of attributes.">InsertElementInfo</a>(
+<a name="l00090"></a>00090               <span class="keyword">virtual</span> <a class="code" href="structicomp_1_1_i_registry_1_1_element_info.html" title="Describe information stored with each element.">ElementInfo</a>* <a class="code" href="classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html#a795b96da8d20cd7c7f106d48cbc26331" title="Insert new attribute info object to collection of attributes.">InsertElementInfo</a>(
 <a name="l00091"></a>00091                                    <span class="keyword">const</span> QByteArray&amp; elementId,
 <a name="l00092"></a>00092                                    <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address,
 <a name="l00093"></a>00093                                    <span class="keywordtype">bool</span> ensureElementCreated = <span class="keyword">true</span>);
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095        <span class="keyword">private</span>:
-<a name="l00096"></a>00096               <a class="code" href="classiqt_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>&amp; m_parent;
+<a name="l00096"></a>00096               <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries.">CPackagesLoaderComp</a>&amp; m_parent;
 <a name="l00097"></a>00097        };
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a1a8e94faafaaa263121eb0d09289ae1b">RegisterPackageFile</a>(<span class="keyword">const</span> QString&amp; file);
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#ae16fedaf6f730869f26d890dbb7e1e02">RegisterPackagesDir</a>(<span class="keyword">const</span> QString&amp; subDir);
-<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#ac77d10d1b31c1dac9f11e42a30fc543b">LoadConfigFile</a>(<span class="keyword">const</span> QString&amp; configFile);
+<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#ab65007a04ebc62eb40eb1c60a61f96fb">RegisterPackageFile</a>(<span class="keyword">const</span> QString&amp; file);
+<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#ab35da698da27101f475d220780a6218a">RegisterPackagesDir</a>(<span class="keyword">const</span> QString&amp; subDir);
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#afb79a6aa5be77fd849b2e1c7d1fd48fe">LoadConfigFile</a>(<span class="keyword">const</span> QString&amp; configFile);
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103        QLibrary&amp; <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a871076ffac68c8c499ed56cb55c5c492">GetLibrary</a>(<span class="keyword">const</span> QFileInfo&amp; fileInfo);
+<a name="l00103"></a>00103        QLibrary&amp; <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#abcccda473af77c11d05a949129600422">GetLibrary</a>(<span class="keyword">const</span> QFileInfo&amp; fileInfo);
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105        <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_packages_loader_comp.html#a8094c67450718c0a22e9be2cde371a5b">CheckAndMarkPath</a>(<span class="keyword">const</span> QDir&amp; directory, <span class="keyword">const</span> QString&amp; path, QString&amp; resultPath) <span class="keyword">const</span>;
+<a name="l00105"></a>00105        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_packages_loader_comp.html#a7b92a341343931063f4efad2b6ff8234">CheckAndMarkPath</a>(<span class="keyword">const</span> QDir&amp; directory, <span class="keyword">const</span> QString&amp; path, QString&amp; resultPath) <span class="keyword">const</span>;
 <a name="l00106"></a>00106 
 <a name="l00107"></a>00107 <span class="keyword">private</span>:
 <a name="l00108"></a>00108        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;QLibrary&gt;</a> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">LibraryPtr</a>;
@@ -162,10 +162,10 @@
 <a name="l00147"></a>00147 };
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149 
-<a name="l00150"></a>00150 } <span class="comment">// namespace iqt</span>
+<a name="l00150"></a>00150 } <span class="comment">// namespace icmpstr</span>
 <a name="l00151"></a>00151 
 <a name="l00152"></a>00152 
-<a name="l00153"></a>00153 <span class="preprocessor">#endif // !iqt_CPackagesLoaderComp_included</span>
+<a name="l00153"></a>00153 <span class="preprocessor">#endif // !icmpstr_CPackagesLoaderComp_included</span>
 <a name="l00154"></a>00154 <span class="preprocessor"></span>
 <a name="l00155"></a>00155 
 </pre></div></div>

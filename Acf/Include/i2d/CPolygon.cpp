@@ -121,7 +121,7 @@ void CPolygon::MoveCenterTo(const CVector2d& position)
 {
 	i2d::CVector2d offset = position - GetCenter();
 	if (offset != i2d::CVector2d(0, 0)){
-		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL);
+		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | CF_MODEL);
 
 		int nodesCount = GetNodesCount();
 		for (int i = 0; i < nodesCount; i++){
@@ -137,7 +137,7 @@ bool CPolygon::Transform(
 			double* errorFactorPtr)
 {
 	if (ApplyTransform(m_nodes, transformation, mode, errorFactorPtr)){
-		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL);
+		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | CF_MODEL);
 
 		return true;
 	}
@@ -152,7 +152,7 @@ bool CPolygon::InvTransform(
 			double* errorFactorPtr)
 {
 	if (ApplyInverseTransform(m_nodes, transformation, mode, errorFactorPtr)){
-		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL);
+		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | CF_MODEL);
 
 		return true;
 	}
@@ -172,7 +172,7 @@ bool CPolygon::GetTransformed(
 		polygonPtr->m_nodes = m_nodes;
 
 		if (ApplyTransform(polygonPtr->m_nodes, transformation, mode, errorFactorPtr)){
-			istd::CChangeNotifier notifier(polygonPtr, CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL);
+			istd::CChangeNotifier notifier(polygonPtr, CF_OBJECT_POSITION | CF_MODEL);
 
 			return true;
 		}
@@ -193,7 +193,7 @@ bool CPolygon::GetInvTransformed(
 		polygonPtr->m_nodes = m_nodes;
 
 		if (ApplyInverseTransform(polygonPtr->m_nodes, transformation, mode, errorFactorPtr)){
-			istd::CChangeNotifier notifier(polygonPtr, CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL);
+			istd::CChangeNotifier notifier(polygonPtr, CF_OBJECT_POSITION | CF_MODEL);
 
 			return true;
 		}
@@ -210,7 +210,7 @@ bool CPolygon::Serialize(iser::IArchive& archive)
 	static iser::CArchiveTag polygonTag("Polygon", "Polygon");
 	static iser::CArchiveTag vectorTag("V", "Vector");
 
-	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, CF_OBJECT_POSITION | istd::IChangeable::CF_MODEL);
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, CF_OBJECT_POSITION | CF_MODEL);
 
 	int nodesCount = m_nodes.size();
 	bool retVal = true;

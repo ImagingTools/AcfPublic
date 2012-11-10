@@ -359,7 +359,7 @@ void CMultiDocumentManagerBase::FileClose(int documentIndex, bool* ignoredPtr)
 			}
 		}
 
-		int changeFlags = CF_DOCUMENT_REMOVED | CF_DOCUMENT_COUNT_CHANGED;
+		int changeFlags = CF_MODEL | CF_DOCUMENT_REMOVED | CF_DOCUMENT_COUNT_CHANGED;
 		
 		// If last document was closed, force view activation update:
 		if (m_documentInfos.GetCount() == 1){
@@ -416,7 +416,7 @@ void CMultiDocumentManagerBase::FileClose(int documentIndex, bool* ignoredPtr)
 void CMultiDocumentManagerBase::SetActiveView(istd::IPolymorphic* viewPtr)
 {
 	if (m_activeViewPtr != viewPtr){
-		istd::CChangeNotifier changePtr(this, CF_VIEW_ACTIVATION_CHANGED);
+		istd::CChangeNotifier changePtr(this, CF_VIEW_ACTIVATION_CHANGED | CF_MODEL);
 
 		m_activeViewPtr = viewPtr;
 	}
@@ -468,7 +468,7 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
 	IDocumentTemplate::Ids documentIds = documentTemplatePtr->GetDocumentTypeIdsForFile(filePath);
 
 	if (!documentIds.isEmpty()){
-		istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED);
+		istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED | CF_MODEL);
 
 		documentTypeId = documentIds.front();
 		istd::TDelPtr<SingleDocumentData> infoPtr(CreateDocument(documentTypeId, createView, viewTypeId));
@@ -504,7 +504,7 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
 
 void CMultiDocumentManagerBase::CloseAllDocuments()
 {
-	istd::CChangeNotifier notifierPtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_REMOVED);
+	istd::CChangeNotifier notifierPtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_REMOVED | CF_MODEL);
 
 	m_documentInfos.Reset();
 }
@@ -623,7 +623,7 @@ bool CMultiDocumentManagerBase::RegisterDocument(SingleDocumentData* infoPtr)
 {
 	I_ASSERT(infoPtr != NULL);
 
-	istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED);
+	istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED | CF_MODEL);
 
 	m_documentInfos.PushBack(infoPtr);
 

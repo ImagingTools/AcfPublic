@@ -156,7 +156,7 @@ bool CSingleDocumentManagerBase::FileNew(
 			const QByteArray& viewTypeId,
 			istd::IChangeable** newDocumentPtr)
 {
-	istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED);
+	istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED | CF_MODEL);
 
 	bool isCloseIgnored = false;
 
@@ -287,7 +287,7 @@ void CSingleDocumentManagerBase::FileClose(int /*documentIndex*/, bool* ignoredP
 			}
 		}
 
-		istd::CChangeNotifier notifier(this, CF_DOCUMENT_REMOVED | CF_DOCUMENT_COUNT_CHANGED | CF_VIEW_ACTIVATION_CHANGED);
+		istd::CChangeNotifier notifier(this, CF_DOCUMENT_REMOVED | CF_DOCUMENT_COUNT_CHANGED | CF_VIEW_ACTIVATION_CHANGED | CF_MODEL);
 
 		EnsureViewRemoved();
 
@@ -353,7 +353,7 @@ bool CSingleDocumentManagerBase::OpenDocument(
 	if (!documentIds.isEmpty()){
 		documentTypeId = documentIds.front();
 
-		istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED);
+		istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED | CF_MODEL);
 
 		if (NewDocument(documentTypeId, createView, viewTypeId)){
 			I_ASSERT(m_documentPtr.IsValid());

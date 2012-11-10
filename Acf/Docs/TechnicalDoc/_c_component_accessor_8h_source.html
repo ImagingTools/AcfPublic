@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iqt/CComponentAccessor.h Source File</title>
+<title>Include/icmpstr/CComponentAccessor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,11 +22,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iqt/CComponentAccessor.h</div>  </div>
+<div class="title">Include/icmpstr/CComponentAccessor.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_component_accessor_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqt_CComponentAccessor_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqt_CComponentAccessor_included</span>
+<a href="_c_component_accessor_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef icmpstr_CComponentAccessor_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define icmpstr_CComponentAccessor_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
@@ -36,19 +36,19 @@
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_composite_component_8h.html">icomp/CCompositeComponent.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">namespace </span>iqt
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>icmpstr
 <a name="l00013"></a>00013 {
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
-<a name="l00016"></a><a class="code" href="classiqt_1_1_c_component_accessor.html">00016</a> <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_component_accessor.html">CComponentAccessor</a>
+<a name="l00016"></a><a class="code" href="classicmpstr_1_1_c_component_accessor.html">00016</a> <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_component_accessor.html">CComponentAccessor</a>
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 <span class="keyword">public</span>:
-<a name="l00019"></a>00019        <span class="keyword">explicit</span> <a class="code" href="classiqt_1_1_c_component_accessor.html#a3924b1745d9eaa1e3216e49c63ef9f02">CComponentAccessor</a>(
+<a name="l00019"></a>00019        <span class="keyword">explicit</span> <a class="code" href="classicmpstr_1_1_c_component_accessor.html#a1c3e5849fab95815cf42f4a5cd62bdb1">CComponentAccessor</a>(
 <a name="l00020"></a>00020                             <span class="keyword">const</span> QString&amp; registryFile, 
 <a name="l00021"></a>00021                             <span class="keyword">const</span> QString&amp; configFile = QString());
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
-<a name="l00024"></a>00024        InterfaceType* <a class="code" href="classiqt_1_1_c_component_accessor.html#afce2c4eb5b54419af9c680a6bbdb12fa">GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; componentId = QByteArray());
+<a name="l00024"></a>00024        InterfaceType* <a class="code" href="classicmpstr_1_1_c_component_accessor.html#af9ce41de3fc70729c6b30034fe05c527">GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; componentId = QByteArray());
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 <span class="keyword">private</span>:
 <a name="l00027"></a>00027        <a class="code" href="classicomp_1_1_c_composite_component.html">icomp::CCompositeComponent</a> m_mainComponent;
@@ -61,7 +61,7 @@
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
-<a name="l00037"></a><a class="code" href="classiqt_1_1_c_component_accessor.html#afce2c4eb5b54419af9c680a6bbdb12fa">00037</a> InterfaceType* <a class="code" href="classiqt_1_1_c_component_accessor.html#afce2c4eb5b54419af9c680a6bbdb12fa">CComponentAccessor::GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; componentId)
+<a name="l00037"></a><a class="code" href="classicmpstr_1_1_c_component_accessor.html#af9ce41de3fc70729c6b30034fe05c527">00037</a> InterfaceType* <a class="code" href="classicmpstr_1_1_c_component_accessor.html#af9ce41de3fc70729c6b30034fe05c527">CComponentAccessor::GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; componentId)
 <a name="l00038"></a>00038 {
 <a name="l00039"></a>00039        InterfaceType* interfacePtr = m_mainComponent.<a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd">GetComponentInterface</a>&lt;InterfaceType&gt;(componentId);
 <a name="l00040"></a>00040 
@@ -75,10 +75,10 @@
 <a name="l00048"></a>00048 }
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 } <span class="comment">// namespace iqt</span>
+<a name="l00051"></a>00051 } <span class="comment">// namespace icmpstr</span>
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif // !iqt_CComponentAccessor_included</span>
+<a name="l00054"></a>00054 <span class="preprocessor">#endif // !icmpstr_CComponentAccessor_included</span>
 <a name="l00055"></a>00055 <span class="preprocessor"></span>
 <a name="l00056"></a>00056 
 </pre></div></div>

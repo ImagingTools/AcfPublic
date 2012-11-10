@@ -24,6 +24,10 @@
 #define istd_CIndex2d_included
 
 
+// Qt includes
+#include <QtCore/QSize>
+
+// ACF includes
 #include "istd/TIndex.h"
 
 
@@ -39,6 +43,7 @@ public:
 	CIndex2d();
 	CIndex2d(int x, int y);
 	CIndex2d(const TIndex<2>& index);
+	CIndex2d(const QSize& size);
 
 	int GetX() const;
 	void SetX(int value);
@@ -71,6 +76,12 @@ inline CIndex2d::CIndex2d(int x, int y)
 inline CIndex2d::CIndex2d(const TIndex<2>& index)
 :	BaseClass(index)
 {
+}
+
+inline CIndex2d::CIndex2d(const QSize& size)
+{
+	SetAt(0, size.width());
+	SetAt(1, size.height());
 }
 
 

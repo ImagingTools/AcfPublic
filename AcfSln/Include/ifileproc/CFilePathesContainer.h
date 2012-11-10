@@ -28,7 +28,7 @@
 #include <QFileInfoList>
 
 // ACF includes
-#include "ibase/IFileListProvider.h"
+#include "ifile/IFileListProvider.h"
 
 #include "ifileproc/ifileproc.h"
 
@@ -37,7 +37,7 @@ namespace ifileproc
 {
 
 
-class CFilePathesContainer: virtual public ibase::IFileListProvider
+class CFilePathesContainer: virtual public ifile::IFileListProvider
 {
 public:
 	void ResetFiles();
@@ -48,7 +48,7 @@ public:
 	*/
 	virtual bool InsertFile(const QString& file, int index = -1, bool ignoreNonExistingFiles = false);
 
-	// reimplemented (ibase::IFileListProvider)
+	// reimplemented (ifile::IFileListProvider)
 	virtual QStringList GetFileList() const;
 
 private:

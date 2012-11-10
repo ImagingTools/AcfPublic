@@ -70,7 +70,7 @@ bool CFilePathesContainer::InsertFile(const QString& file, int index, bool ignor
 }
 
 
-// reimplemented (ibase::IFileListProvider)
+// reimplemented (ifile::IFileListProvider)
 
 QStringList CFilePathesContainer::GetFileList() const
 {

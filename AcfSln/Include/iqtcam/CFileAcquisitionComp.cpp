@@ -33,7 +33,7 @@
 #include "istd/TChangeNotifier.h"
 #include "iprm/IParamsSet.h"
 #include "iimg/IRasterImage.h"
-#include "iqt/IQImageProvider.h"
+#include "iimg/IQImageProvider.h"
 #include "iprm/TParamsPtr.h"
 
 

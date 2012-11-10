@@ -42,6 +42,10 @@
 #include "icmpstr/CSceneProviderGuiComp.h"
 #include "icmpstr/CXpcEditorComp.h"
 #include "icmpstr/CRegistryTreeViewComp.h"
+#include "icmpstr/CPackagesLoaderComp.h"
+#include "icmpstr/CRegistriesManagerComp.h"
+#include "icmpstr/CRegistryCodeSaverComp.h"
+
 
 /**
 	Component manipulation package.
@@ -84,6 +88,9 @@ typedef icomp::TMakeComponentWrap<
 			imod::IModel> XpcModel;
 typedef icmpstr::CXpcEditorComp XpcEditorGui;
 typedef icmpstr::CRegistryTreeViewComp RegistryTreeView;
+typedef icmpstr::CPackagesLoaderComp PackagesLoader;
+typedef icmpstr::CRegistriesManagerComp RegistriesManager;
+typedef icmpstr::CRegistryCodeSaverComp RegistryCodeSaver;
 
 
 } // namespace CompositorPck

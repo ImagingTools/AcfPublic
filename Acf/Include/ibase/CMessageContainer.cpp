@@ -198,7 +198,7 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 	{
 		istd::TChangeNotifier<IMessageContainer> changePtr(
 					this,
-					IMessageContainer::CF_MESSAGE_ADDED,
+					CF_MODEL | CF_MESSAGE_ADDED,
 					const_cast<istd::IInformationProvider*>(messagePtr.GetPtr()));
 
 		m_messages.push_back(messagePtr);
@@ -216,7 +216,7 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 
 			istd::TChangeNotifier<IMessageContainer> changePtr(
 						this,
-						IMessageContainer::CF_MESSAGE_REMOVED,
+						CF_MODEL | CF_MESSAGE_REMOVED,
 						const_cast<istd::IInformationProvider*>(messageToRemovePtr.GetPtr()));
 
 			int removeCategory = messageToRemovePtr->GetInformationCategory();
@@ -236,7 +236,7 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 
 void CMessageContainer::ClearMessages()
 {
-	istd::TChangeNotifier<IMessageContainer> changePtr(this, IMessageContainer::CF_RESET);
+	istd::TChangeNotifier<IMessageContainer> changePtr(this, CF_MODEL | CF_RESET);
 	
 	m_messages.clear();
 

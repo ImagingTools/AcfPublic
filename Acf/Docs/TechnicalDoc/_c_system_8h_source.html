@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iqt/CSystem.h Source File</title>
+<title>Include/istd/CSystem.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,11 +22,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iqt/CSystem.h</div>  </div>
+<div class="title">Include/istd/CSystem.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_system_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqt_CSystem_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqt_CSystem_included</span>
+<a href="_c_system_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef istd_CSystem_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define istd_CSystem_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
@@ -34,37 +34,37 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QMap&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">namespace </span>iqt
+<a name="l00010"></a>00010 <span class="keyword">namespace </span>istd
 <a name="l00011"></a>00011 {
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00017"></a><a class="code" href="classiqt_1_1_c_system.html">00017</a> <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_system.html" title="Implementation of global system helpers based on QT.">CSystem</a>
+<a name="l00017"></a><a class="code" href="classistd_1_1_c_system.html">00017</a> <span class="keyword">class </span><a class="code" href="classistd_1_1_c_system.html" title="Implementation of global system helpers based on QT.">CSystem</a>
 <a name="l00018"></a>00018 {
 <a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00020"></a><a class="code" href="classiqt_1_1_c_system.html#a24fd7f9658f88455a9ce12672bcfcb43">00020</a>        <span class="keyword">typedef</span> QMap&lt;QString, QString&gt; <a class="code" href="classiqt_1_1_c_system.html#a24fd7f9658f88455a9ce12672bcfcb43">EnvironmentVariables</a>;
+<a name="l00020"></a><a class="code" href="classistd_1_1_c_system.html#ada9991b256aadaf6f980523719629460">00020</a>        <span class="keyword">typedef</span> QMap&lt;QString, QString&gt; <a class="code" href="classistd_1_1_c_system.html#ada9991b256aadaf6f980523719629460">EnvironmentVariables</a>;
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022        <span class="comment">// static methods</span>
 <a name="l00023"></a>00023 
-<a name="l00027"></a>00027        <span class="keyword">static</span> QString <a class="code" href="classiqt_1_1_c_system.html#a45576d6fbd34142a2c92fef497fdf960" title="Get normalized path with enrolled system variables.">GetNormalizedPath</a>(<span class="keyword">const</span> QString&amp; path);
+<a name="l00027"></a>00027        <span class="keyword">static</span> QString <a class="code" href="classistd_1_1_c_system.html#a8c2c4d447f3a9255e628d2cfb6c737c8" title="Get normalized path with enrolled system variables.">GetNormalizedPath</a>(<span class="keyword">const</span> QString&amp; path);
 <a name="l00028"></a>00028 
-<a name="l00032"></a>00032        <span class="keyword">static</span> QString <a class="code" href="classiqt_1_1_c_system.html#ad907d09c093363178ae933de7fe80a9a" title="Get value of system variables.">FindVariableValue</a>(<span class="keyword">const</span> QString&amp; varName);
+<a name="l00032"></a>00032        <span class="keyword">static</span> QString <a class="code" href="classistd_1_1_c_system.html#a586b766208d0c2190d6270f8150ff9a4" title="Get value of system variables.">FindVariableValue</a>(<span class="keyword">const</span> QString&amp; varName);
 <a name="l00033"></a>00033 
-<a name="l00037"></a>00037        <span class="keyword">static</span> QString <a class="code" href="classiqt_1_1_c_system.html#a1803dec41c66e3984b07589954b7277b" title="Get path with enrolled system variables.">GetEnrolledPath</a>(<span class="keyword">const</span> QString&amp; path);
+<a name="l00037"></a>00037        <span class="keyword">static</span> QString <a class="code" href="classistd_1_1_c_system.html#aa3a005c620f1ec3b6f93237a07f92fe7" title="Get path with enrolled system variables.">GetEnrolledPath</a>(<span class="keyword">const</span> QString&amp; path);
 <a name="l00038"></a>00038 
-<a name="l00042"></a>00042        <span class="keyword">static</span> <a class="code" href="classiqt_1_1_c_system.html#a24fd7f9658f88455a9ce12672bcfcb43">EnvironmentVariables</a> <a class="code" href="classiqt_1_1_c_system.html#afe9c6a75002da02c8f8a6c42a3c8cf7e" title="Get list of environment valiables related to the current process.">GetEnvironmentVariables</a>();
+<a name="l00042"></a>00042        <span class="keyword">static</span> <a class="code" href="classistd_1_1_c_system.html#ada9991b256aadaf6f980523719629460">EnvironmentVariables</a> <a class="code" href="classistd_1_1_c_system.html#aab90aab216ba2f7dc3966eb22dc13965" title="Get list of environment valiables related to the current process.">GetEnvironmentVariables</a>();
 <a name="l00043"></a>00043 
-<a name="l00047"></a>00047        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_system.html#abbebd83c1fdf25b698267cfa4af8761d" title="Set path for for temporary data to the current process.">SetTempDirectoryPath</a>(<span class="keyword">const</span> QString&amp; tempPath);
+<a name="l00047"></a>00047        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_c_system.html#a531537c4023a40ddd7cda5af2d3fc717" title="Set path for for temporary data to the current process.">SetTempDirectoryPath</a>(<span class="keyword">const</span> QString&amp; tempPath);
 <a name="l00048"></a>00048 
-<a name="l00052"></a>00052        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_system.html#ac568999a6d59287edc20e8134472c0b4" title="Sleep current thread.">Sleep</a>(<span class="keywordtype">double</span> seconds);
+<a name="l00052"></a>00052        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_c_system.html#a370555a3f4d5651054f3a8257ff5e4d2" title="Sleep current thread.">Sleep</a>(<span class="keywordtype">double</span> seconds);
 <a name="l00053"></a>00053 
-<a name="l00057"></a>00057        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_system.html#aa87ebe27e9a3a889daf22374f6129046" title="Remove a given directory with all contents.">RemoveDirectory</a>(<span class="keyword">const</span> QString&amp; directoryPath);
+<a name="l00057"></a>00057        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_c_system.html#a6c5405628a87d53871dee81b64fea0e0" title="Remove a given directory with all contents.">RemoveDirectory</a>(<span class="keyword">const</span> QString&amp; directoryPath);
 <a name="l00058"></a>00058 };
 <a name="l00059"></a>00059 
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 } <span class="comment">// namespace iqt</span>
+<a name="l00061"></a>00061 } <span class="comment">// namespace istd</span>
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif // !iqt_CSystem_included</span>
+<a name="l00064"></a>00064 <span class="preprocessor">#endif // !istd_CSystem_included</span>
 <a name="l00065"></a>00065 <span class="preprocessor"></span>
 <a name="l00066"></a>00066 
 </pre></div></div>

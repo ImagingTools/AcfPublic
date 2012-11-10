@@ -35,7 +35,7 @@ void CFileListProviderGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
-	ibase::IFileListProvider* objectPtr = GetObjectPtr();
+	ifile::IFileListProvider* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		FileList->clear();
 

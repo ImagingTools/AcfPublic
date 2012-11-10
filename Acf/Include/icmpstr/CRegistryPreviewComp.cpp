@@ -36,7 +36,7 @@
 
 #include "iser/CXmlFileWriteArchive.h"
 
-#include "iqt/CSystem.h"
+#include "istd/CSystem.h"
 
 
 Q_DECLARE_METATYPE(QProcess::ProcessState);
@@ -68,7 +68,7 @@ bool CRegistryPreviewComp::StartRegistry(const icomp::IRegistry& registry)
 		return false;
 	}
 
-	QString acfExeFile = iqt::CSystem::GetEnrolledPath(m_commandFileNameCompPtr->GetPath());
+	QString acfExeFile = istd::CSystem::GetEnrolledPath(m_commandFileNameCompPtr->GetPath());
 
 	QDir applicationDir(QCoreApplication::applicationDirPath());
 	QString acfApplicationPath = QDir::toNativeSeparators(applicationDir.absoluteFilePath(acfExeFile));

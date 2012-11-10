@@ -31,7 +31,7 @@
 #include <QtXml/QDomNode>
 
 #include "iqt/CSignalBlocker.h"
-#include "iqt/CSystem.h"
+#include "istd/CSystem.h"
 
 
 namespace icmpstr
@@ -108,7 +108,7 @@ void CQuickHelpGuiComp::ShowHelp(const QString& contextText, const istd::IPolymo
 							QDomElement root = domDocument.firstChildElement("CompositorInfo");
 
 							if (root.isElement()){
-								QString doxygenPath = iqt::CSystem::GetEnrolledPath(root.firstChildElement("DoxyGenPath").text().trimmed());
+								QString doxygenPath = istd::CSystem::GetEnrolledPath(root.firstChildElement("DoxyGenPath").text().trimmed());
 								if (!doxygenPath.isEmpty()){
 									QDir doxygenDir(infoDir.absoluteFilePath(doxygenPath));
 									QString doxyFileName = CalcDoxygenFileName(classInfo);
