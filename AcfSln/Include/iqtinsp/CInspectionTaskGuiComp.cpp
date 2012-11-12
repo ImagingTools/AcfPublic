@@ -324,29 +324,8 @@ void CInspectionTaskGuiComp::OnGuiCreated()
 		layoutPtr->addWidget(m_toolBoxPtr);
 	}
 	else{
-		static QString horitontalTabStyle("QTabWidget#local > QTabBar::tab:!selected{width:%1px;}");
-		static QString verticalTabStyle("QTabWidget#local > QTabBar::tab:!selected{height:%1px;}");
-
-		QTabWidget::TabPosition tabPosition = QTabWidget::TabPosition(*m_tabOrientationAttrPtr);
-
 		m_tabWidgetPtr = new QTabWidget(ParamsFrame);
-		m_tabWidgetPtr->setTabPosition(tabPosition);
-		m_tabWidgetPtr->setObjectName("local");
-		m_tabWidgetPtr->setElideMode(Qt::ElideRight);
-
-		if (m_tabWidgetPtr->styleSheet().isEmpty() && m_compactSizeAttrPtr.IsValid()){
-			int tabSize = *m_compactSizeAttrPtr;
-			if (tabSize <= 0){
-				m_tabWidgetPtr->setUsesScrollButtons(false);
-			}
-			else
-			if (tabPosition == QTabWidget::North || tabPosition == QTabWidget::South){
-				m_tabWidgetPtr->setStyleSheet(horitontalTabStyle.arg(tabSize));
-			}
-			else{
-				m_tabWidgetPtr->setStyleSheet(verticalTabStyle.arg(*m_compactSizeAttrPtr));
-			}
-		}
+		m_tabWidgetPtr->setTabPosition(QTabWidget::TabPosition(*m_tabOrientationAttrPtr));
 
 		int subtasksCount = m_editorGuisCompPtr.GetCount();
 		for (int i = 0; i < subtasksCount; ++i){
@@ -681,15 +660,6 @@ QIcon CInspectionTaskGuiComp::GetCategoryIcon(istd::IInformationProvider::Inform
 void CInspectionTaskGuiComp::OnEditorChanged(int index)
 {
 	if (index != m_currentGuiIndex){
-		// a workaround: reset the stylesheet to update style of the currently selected tab
-		if (m_tabWidgetPtr != NULL){
-			QString oldStyle = m_tabWidgetPtr->styleSheet();
-			if (!oldStyle.isEmpty()){
-				m_tabWidgetPtr->setStyleSheet("");
-				m_tabWidgetPtr->setStyleSheet(oldStyle);
-			}
-		}
-
 		int extendersCount = m_editorViewExtendersCompPtr.GetCount();
 		int previewProvidersCount = m_previewSceneProvidersCompPtr.GetCount();
 

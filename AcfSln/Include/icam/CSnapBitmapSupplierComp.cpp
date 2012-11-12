@@ -90,7 +90,7 @@ int CSnapBitmapSupplierComp::ProduceObject(ProductType& result) const
 		}
 	}
 
-	if (m_bitmapAcquisitionCompPtr.IsValid()){
+	if (result.second.IsValid() && m_bitmapAcquisitionCompPtr.IsValid()){
 		Timer performanceTimer(this, "Image acquisition");
 
 		int status = m_bitmapAcquisitionCompPtr->DoProcessing(GetModelParametersSet(), NULL, result.second.GetPtr());
