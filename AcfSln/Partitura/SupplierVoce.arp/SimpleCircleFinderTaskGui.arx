@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2646
+          2556
         </Number>
         <Description>
           ACF
@@ -102,23 +102,7 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="3">
-          <AttributeInfo>
-            <Id>
-              DesignType
-            </Id>
-            <Type>
-              Integer
-            </Type>
-            <ExportId>
-              DesignType
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
+        <AttributeInfoMap count="2">
           <AttributeInfo>
             <Id>
               UnitName
