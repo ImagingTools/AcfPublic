@@ -185,12 +185,6 @@ inline bool CEdgeLine::IsClosed() const
 }
 
 
-inline void CEdgeLine::SetClosed(bool state)
-{
-	m_isClosed = state;
-}
-
-
 } // namespace iedge
 
 
