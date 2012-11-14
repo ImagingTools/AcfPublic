@@ -80,6 +80,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#a6520dbc1e14b0bd281180c7d1b4cff91"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a4bced32048f834a04d0a2d40fc81548d">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Move object to position <code>position</code>.  <a href="#a4bced32048f834a04d0a2d40fc81548d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a4dde1e07df3feb69b8e56180ac28e208">GetBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of this shape.  <a href="#a4dde1e07df3feb69b8e56180ac28e208"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a6786b9a5ebbd0c89474d9b813de8cd14">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#a6786b9a5ebbd0c89474d9b813de8cd14"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#ac444f10fc9d82abe56f5addca2f1f213">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">i2d::ITransformation2d::ExactnessMode</a> mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
@@ -140,7 +142,28 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00081">81</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00082">82</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4dde1e07df3feb69b8e56180ac28e208"></a><!-- doxytag: member="icmpstr::CVisualRegistryElement::GetBoundingBox" ref="a4dde1e07df3feb69b8e56180ac28e208" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> icmpstr::CVisualRegistryElement::GetBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get bounding box of this shape. </p>
+<p>Please note, this bounding box is in logical units, the calibration will not be considered. </p>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#aa8b9b2eddb7170b1ba39f3b0aeedc007">i2d::IObject2d</a>.</p>
 
 </div>
 </div>
@@ -230,7 +253,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00087">87</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00088">88</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
 
 </div>
 </div>
@@ -264,7 +287,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00075">75</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_element_8h_source.html#l00076">76</a> of file <a class="el" href="_c_visual_registry_element_8h_source.html">CVisualRegistryElement.h</a>.</p>
 
 </div>
 </div>

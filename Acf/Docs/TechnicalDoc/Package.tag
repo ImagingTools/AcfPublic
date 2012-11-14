@@ -153,6 +153,23 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>COrientedCircle.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_oriented_circle_8h</filename>
+    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
+    <class kind="class">i2d::COrientedCircle</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>COrientedCircleComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_oriented_circle_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_oriented_circle_8h" name="COrientedCircle.h" local="yes" imported="no">i2d/COrientedCircle.h</includes>
+    <class kind="class">i2d::COrientedCircleComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CParallelogram.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_parallelogram_8h</filename>
@@ -3387,6 +3404,9 @@
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_t_params_ptr_8h</filename>
     <includes id="_t_pointer_base_8h" name="TPointerBase.h" local="yes" imported="no">istd/TPointerBase.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_attribute_member_8h" name="TAttributeMember.h" local="yes" imported="no">icomp/TAttributeMember.h</includes>
+    <includes id="_t_reference_member_8h" name="TReferenceMember.h" local="yes" imported="no">icomp/TReferenceMember.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <class kind="class">iprm::TParamsPtr</class>
     <namespace>iprm</namespace>
@@ -6443,6 +6463,8 @@
     <class kind="class">i2d::CLine2dComp</class>
     <class kind="class">i2d::CMatrix2d</class>
     <class kind="class">i2d::CObject2dBase</class>
+    <class kind="class">i2d::COrientedCircle</class>
+    <class kind="class">i2d::COrientedCircleComp</class>
     <class kind="class">i2d::CParallelogram</class>
     <class kind="class">i2d::CPolygon</class>
     <class kind="class">i2d::CPolygonComp</class>
@@ -6987,13 +7009,6 @@
       <anchor>abed33ca2ccca59a25d06e28e0d3a6af6</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a14075121660042631e65d078a1607349</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
@@ -7007,6 +7022,13 @@
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
       <anchor>a396c24871c18b3c44379e0634e92e453</anchor>
       <arglist>(const CAnnulus &amp;annulus) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>a14075121660042631e65d078a1607349</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -7124,19 +7146,19 @@
       <anchor>a99fd2f31860f6b8088cf7ac19ba46d32</anchor>
       <arglist>(double angle)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>a86a8fc2bce1be65640919f73090296f6</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function">
       <type>bool</type>
       <name>Contains</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
       <anchor>a1da68bae004a00805c316751609417c9</anchor>
       <arglist>(const i2d::CVector2d &amp;point) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
+      <anchor>a86a8fc2bce1be65640919f73090296f6</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -7205,13 +7227,6 @@
       <anchor>a188908a05dd12664adad71b2b14d640c</anchor>
       <arglist>(double radius)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a78aee945e2a7ae1dd717604b4657e309</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
@@ -7225,6 +7240,13 @@
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
       <anchor>a6d1242b3528e7742d741661f17d9c3d8</anchor>
       <arglist>(const CCircle &amp;circle) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a78aee945e2a7ae1dd717604b4657e309</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -7657,13 +7679,6 @@
       <anchor>a127e8bf9cdfc5cba30e92cf735c4158a</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a7f8070893a03fc8a7cbca5038b309339</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function">
       <type>double</type>
       <name>GetCutXPos</name>
@@ -7782,6 +7797,13 @@
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
       <anchor>adc52d2ade237a9765830c7a3d67b38c5</anchor>
       <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a7f8070893a03fc8a7cbca5038b309339</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8109,6 +8131,87 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::COrientedCircle</name>
+    <filename>classi2d_1_1_c_oriented_circle.html</filename>
+    <base>i2d::CCircle</base>
+    <member kind="typedef">
+      <type>CCircle</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>a9ba45d6698dc1a7c01889be99bc51e68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>COrientedCircle</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>a87c507cacd090dd480555f6dddbea0a6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>COrientedCircle</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>a64c5a5402b8f97ce80aa5a7622b9e9d9</anchor>
+      <arglist>(double radius, const CVector2d &amp;center, bool orientatedOutside)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsOrientedOutside</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>acadad01b4d23dc4e0e7b3e725b97c9e5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetOrientedOutside</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>a1344cc026b209d2a5e60196b389fd6ec</anchor>
+      <arglist>(bool orientatedOutside)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>ad6c1b276a0df98f41717db173b5a1b72</anchor>
+      <arglist>(const COrientedCircle &amp;circle) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>aafe2b3bf6e4991c8896ddec076e21beb</anchor>
+      <arglist>(const COrientedCircle &amp;circle) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>a2e5d7c0dcd981d318f1477c546bd4822</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::COrientedCircleComp</name>
+    <filename>classi2d_1_1_c_oriented_circle_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::COrientedCircle</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle_comp.html</anchorfile>
+      <anchor>add8ab43bf131d436e906b1d2de57819c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle_comp.html</anchorfile>
+      <anchor>acf994f602211d69c19b6e8e052ece9b1</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CParallelogram</name>
     <filename>classi2d_1_1_c_parallelogram.html</filename>
     <base>i2d::CObject2dBase</base>
@@ -8264,13 +8367,6 @@
       <anchor>a72c2492397c3e1b6c2c3b3bc702e9d7d</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a9cbc6a7741b3e95f10a8fece510d70c4</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function">
       <type>const CPolygon &amp;</type>
       <name>operator=</name>
@@ -8291,6 +8387,13 @@
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
       <anchor>a53880a9685e64d6fb4db7c765ff5a5a6</anchor>
       <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a9cbc6a7741b3e95f10a8fece510d70c4</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8608,6 +8711,13 @@
       <arglist>(const CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>a356428b70d35996f1f153662a15ef527</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
@@ -8731,13 +8841,6 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>acbc76d7f559b4bd5964f6ffa1427af1b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
       <type>const CLine2d &amp;</type>
       <name>GetFirstDiagonal</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
@@ -8778,6 +8881,13 @@
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
       <anchor>a36544533ffc1a3211dc7016ef9a491ec</anchor>
       <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>acbc76d7f559b4bd5964f6ffa1427af1b</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -9614,13 +9724,6 @@
       <arglist>(const CRectangle &amp;rect) const </arglist>
     </member>
     <member kind="function">
-      <type>CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a52f6c08b24a544152c4a6c4e067b57e6</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
       <type>CVector2d</type>
       <name>GetNearestPointTo</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
@@ -9654,6 +9757,13 @@
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>adc3c5a147d9454bff9c98d17322ac6c6</anchor>
       <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a1bf245be78f36c38d565b5a309e73d3b</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -10273,6 +10383,13 @@
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
       <anchor>a220864dd27c1973b54fa4788caee2630</anchor>
       <arglist>(const CVector2d &amp;position)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>aa8b9b2eddb7170b1ba39f3b0aeedc007</anchor>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -19024,6 +19141,13 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
       <anchor>a4bced32048f834a04d0a2d40fc81548d</anchor>
       <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
+      <anchor>a4dde1e07df3feb69b8e56180ac28e208</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32728,11 +32852,25 @@
       <arglist>(const IParamsSet *parameterSetPtr, const QByteArray &amp;parameterId, bool isObligatory=true)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>TParamsPtr</name>
+      <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
+      <anchor>a8d108019353aa114153829ddbc21a0f8</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const icomp::TAttributeMember&lt; icomp::CIdAttribute &gt; &amp;parameterIdAttribute, const icomp::TReferenceMember&lt; ParameterInterace &gt; &amp;defaultRef, bool isObligatory=true)</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>Init</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
       <anchor>aef4f7e221c56b1f0cde4058c275e580c</anchor>
       <arglist>(const IParamsSet *parameterSetPtr, const QByteArray &amp;parameterId, bool isObligatory=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Init</name>
+      <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
+      <anchor>a831d16c739a8145bfe514ee9a6adf7a2</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const icomp::TAttributeMember&lt; icomp::CIdAttribute &gt; &amp;parameterIdAttribute, const icomp::TReferenceMember&lt; ParameterInterace &gt; &amp;defaultRef, bool isObligatory=true)</arglist>
     </member>
   </compound>
   <compound kind="namespace">

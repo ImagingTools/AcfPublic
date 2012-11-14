@@ -53,23 +53,23 @@
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 
-<a name="l00033"></a><a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html">00033</a> <span class="keyword">class </span><a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html" title="Implementation of icam::IBitmapAcquisition interface for streaming rtsp video using LibAv library for...">CLibAvRtspStreamingCameraComp</a>:      
+<a name="l00033"></a><a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html">00033</a> <span class="keyword">class </span><a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html" title="Implementation of icam::IBitmapAcquisition interface for streaming rtsp video using LibAv library for...">CLibAvRtspStreamingCameraComp</a>:
 <a name="l00034"></a>00034                      <span class="keyword">public</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>,
 <a name="l00035"></a>00035                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
 <a name="l00036"></a>00036                      <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::TSyncProcessorWrap&lt;icam::IBitmapAcquisition&gt;
 <a name="l00037"></a>00037 {
 <a name="l00038"></a>00038        Q_OBJECT
-<a name="l00039"></a>00039               
+<a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">public</span>:
-<a name="l00041"></a><a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#a91524bd7ce3b5dd744fdda90079a8b8e">00041</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#a91524bd7ce3b5dd744fdda90079a8b8e">BaseClass</a>;   
+<a name="l00041"></a><a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#a91524bd7ce3b5dd744fdda90079a8b8e">00041</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#a91524bd7ce3b5dd744fdda90079a8b8e">BaseClass</a>;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        I_BEGIN_COMPONENT(<a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html" title="Implementation of icam::IBitmapAcquisition interface for streaming rtsp video using LibAv library for...">CLibAvRtspStreamingCameraComp</a>);
 <a name="l00044"></a>00044               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_bitmap_acquisition.html">icam::IBitmapAcquisition</a>);
-<a name="l00045"></a>00045               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_exposure_constraints.html">icam::IExposureConstraints</a>);              
-<a name="l00046"></a>00046               I_ASSIGN(m_urlParamsIdAttrPtr, <span class="stringliteral">&quot;UrlParamId&quot;</span>, <span class="stringliteral">&quot;ID used to get m_camera URL from the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;UrlParamId&quot;</span>);
-<a name="l00047"></a>00047               I_ASSIGN(m_adjustParamsIdAttrPtr, <span class="stringliteral">&quot;AdjustParamsId&quot;</span>, <span class="stringliteral">&quot;ID used to get m_brightness and m_contrast adjust parameters from the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;AdjustParams&quot;</span>);             
-<a name="l00048"></a>00048               I_ASSIGN(m_defaultUrlParamCompPtr, <span class="stringliteral">&quot;DefaultUrlParam&quot;</span>, <span class="stringliteral">&quot;Default m_camera URL used if no URL is defined&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DefaultUrlParam&quot;</span>);          
-<a name="l00049"></a>00049               I_ASSIGN(m_defaultAdjustParamsCompPtr, <span class="stringliteral">&quot;DefaultAdjustParams&quot;</span>, <span class="stringliteral">&quot;Default m_contrast and m_brightness adjust parameters that will be used&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DefaultAdjustParams&quot;</span>);        
+<a name="l00045"></a>00045               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_exposure_constraints.html">icam::IExposureConstraints</a>);
+<a name="l00046"></a>00046               I_ASSIGN(m_urlParamsIdAttrPtr, <span class="stringliteral">&quot;UrlParamId&quot;</span>, <span class="stringliteral">&quot;ID used to get camera URL from the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;UrlParamId&quot;</span>);
+<a name="l00047"></a>00047               I_ASSIGN(m_adjustParamsIdAttrPtr, <span class="stringliteral">&quot;AdjustParamsId&quot;</span>, <span class="stringliteral">&quot;ID used to get brightness and contrast adjust parameters from the parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;AdjustParams&quot;</span>);
+<a name="l00048"></a>00048               I_ASSIGN(m_defaultUrlParamCompPtr, <span class="stringliteral">&quot;DefaultUrlParam&quot;</span>, <span class="stringliteral">&quot;Default camera URL used if no URL is defined&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DefaultUrlParam&quot;</span>);
+<a name="l00049"></a>00049               I_ASSIGN(m_defaultAdjustParamsCompPtr, <span class="stringliteral">&quot;DefaultAdjustParams&quot;</span>, <span class="stringliteral">&quot;Default contrast and brightness adjust parameters that will be used&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DefaultAdjustParams&quot;</span>);
 <a name="l00050"></a>00050        I_END_COMPONENT;
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052        <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#a8e792723b57096447c72962078c265f0">CLibAvRtspStreamingCameraComp</a>();
@@ -89,24 +89,24 @@
 <a name="l00066"></a>00066        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#a66f8c737bd1ba24d33aca0ec65c75067">requestReceived</a>(QNetworkReply*);
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 <span class="keyword">protected</span>:
-<a name="l00072"></a>00072        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#af5dfd149ce5ec528588bf586c8a701ce" title="Reads parameters from set and starts connection if not connected yet.">EnsureConnected</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr);              
+<a name="l00072"></a>00072        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#af5dfd149ce5ec528588bf586c8a701ce" title="Reads parameters from set and starts connection if not connected yet.">EnsureConnected</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr);
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00075"></a>00075        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#a44f4109ab1c05f1d31206691f3db99c3">OnComponentCreated</a>();
 <a name="l00076"></a>00076        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html#aac53b5f30f686a6b318293602aa06cc6">OnComponentDestroyed</a>();
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="keyword">private</span>:      
+<a name="l00078"></a>00078 <span class="keyword">private</span>:
 <a name="l00079"></a>00079        I_ATTR(QByteArray, m_urlParamsIdAttrPtr);
 <a name="l00080"></a>00080        I_ATTR(QByteArray, m_adjustParamsIdAttrPtr);
-<a name="l00081"></a>00081        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_name_param.html">ifile::IFileNameParam</a>, m_defaultUrlParamCompPtr); 
+<a name="l00081"></a>00081        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_name_param.html">ifile::IFileNameParam</a>, m_defaultUrlParamCompPtr);
 <a name="l00082"></a>00082        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimeas_1_1_i_linear_adjust_params.html">imeas::ILinearAdjustParams</a>, m_defaultAdjustParamsCompPtr);
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084        QUrl m_currentCameraUrl;    
+<a name="l00084"></a>00084        QUrl m_currentCameraUrl;
 <a name="l00085"></a>00085        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CLibAvRtspStreamingClient&gt;</a> m_streamingClientPtr;
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_lastImageSize;
 <a name="l00088"></a>00088        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* m_frameBitmapPtr;
-<a name="l00089"></a>00089        
+<a name="l00089"></a>00089 
 <a name="l00090"></a>00090        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QNetworkAccessManager&gt;</a> m_networkAccessManagerPtr;
 <a name="l00091"></a>00091 
 <a name="l00092"></a>00092        QMutex *m_mutexPtr;

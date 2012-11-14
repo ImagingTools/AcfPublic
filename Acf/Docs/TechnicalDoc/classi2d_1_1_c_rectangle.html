@@ -126,7 +126,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a77c8d95e5e40d55a272de1064a8cccf0">operator=</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> &amp;rect)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a518a24b3992a7ba6f29512efdcdc3bf7">operator==</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> &amp;rect) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ae54cffcf49308977162c85f361ebf928">operator!=</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> &amp;rect) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a52f6c08b24a544152c4a6c4e067b57e6">GetBoundingBox</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#aa8e82c89b272ba97f33db0dcee23dfb2">GetNearestPointTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;point) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the nearest point in the rectangle for the some given point.  <a href="#aa8e82c89b272ba97f33db0dcee23dfb2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a2e2185d12a0c9745751f27c0ea1e79db">Translate</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;delta)</td></tr>
@@ -135,6 +134,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#a2cc1192c185e4ff9adce2fdb1f12ca5c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#adc3c5a147d9454bff9c98d17322ac6c6">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Move object to position <code>position</code>.  <a href="#adc3c5a147d9454bff9c98d17322ac6c6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a1bf245be78f36c38d565b5a309e73d3b">GetBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of this shape.  <a href="#a1bf245be78f36c38d565b5a309e73d3b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#ac7255f6da8137970250ff79063c7809e">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#ac7255f6da8137970250ff79063c7809e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a93a38c4b97932ac545551e25198e4b53">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
@@ -394,7 +395,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00191">191</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00190">190</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_t_range_8h_source.html#l00349">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>.</p>
 
@@ -402,19 +403,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a52f6c08b24a544152c4a6c4e067b57e6"></a><!-- doxytag: member="i2d::CRectangle::GetBoundingBox" ref="a52f6c08b24a544152c4a6c4e067b57e6" args="() const " -->
+<a class="anchor" id="a1bf245be78f36c38d565b5a309e73d3b"></a><!-- doxytag: member="i2d::CRectangle::GetBoundingBox" ref="a1bf245be78f36c38d565b5a309e73d3b" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> i2d::CRectangle::GetBoundingBox </td>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> i2d::CRectangle::GetBoundingBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get bounding box of this shape. </p>
+<p>Please note, this bounding box is in logical units, the calibration will not be considered. </p>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#aa8b9b2eddb7170b1ba39f3b0aeedc007">i2d::IObject2d</a>.</p>
 
 </div>
 </div>
@@ -485,7 +491,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00197">197</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00196">196</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +509,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00203">203</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00202">202</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -611,7 +617,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00173">173</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00172">172</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_t_range_8h_source.html#l00328">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
 
@@ -686,7 +692,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00185">185</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00184">184</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_t_range_8h_source.html#l00349">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>.</p>
 
@@ -758,7 +764,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00179">179</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00178">178</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_t_range_8h_source.html#l00328">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
 
@@ -883,7 +889,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00209">209</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00208">208</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -901,7 +907,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00215">215</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00214">214</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>

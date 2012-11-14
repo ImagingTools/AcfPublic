@@ -96,12 +96,12 @@ public:
 	// font getters used by CRegistryElementShape
 	const QFont& GetElementNameFont() const;
 	const QFont& GetElementDetailFont() const;
-	
+
 	const icomp::IComponentEnvironmentManager* GetEnvironmentManager() const;
 	const IRegistryConsistInfo* GetRegistryConsistInfo() const;
 
 	/**
-		Try to open the composite component's registry in a new window. 
+		Try to open the composite component's registry in a new window.
 		If the element is a composite component the function returns \c true, otherwise a \c false.
 	*/
 	bool TryOpenComponent(const CVisualRegistryElement& registryElement);
@@ -178,7 +178,7 @@ protected:
 				const i2d::CVector2d& position);
 
 	/**
-		Used by TryCreateComponent() when an existing component is pasted (?) to 
+		Used by TryCreateComponent() when an existing component is pasted (?) to
 		update attributes referencing it, in all registry elements.
 		\param componentRole registry element id
 	*/
@@ -210,8 +210,7 @@ protected:
 	static imod::IModel* ExtractSelectionInterfaceModel(CVisualRegistryEditorComp& component);
 	static istd::IChangeable* ExtractSelectionInterfaceChangeable(CVisualRegistryEditorComp& component);
 
-	protected
-Q_SLOTS:
+protected Q_SLOTS:
 	void OnSelectionChanged();
 
 	void OnCutCommand();
@@ -229,15 +228,15 @@ Q_SLOTS:
 	void OnShowRegistryTopology();
 
 	/**
-	 Selects (checks) a button representing an embedded composition
-	 */
+		Selects (checks) a button representing an embedded composition
+	*/
 	void OnEmbeddedComponentButtonClicked();
 	/**
-	 Clear and fill the embedded registry button box (used when the number of registry elements changes)
-	 */
+		Clear and fill the embedded registry button box (used when the number of registry elements changes)
+	*/
 	void UpdateEmbeddedRegistryButtons();
-	/** 
-	 Update the scene to display currently selected embedded composition
+	/**
+		Update the scene to display currently selected embedded composition
 	*/
 	void UpdateEmbeddedRegistryView(const QByteArray& id);
 
@@ -274,7 +273,7 @@ private:
 	I_REF(imod::IModel, m_registryValidationStatusModelCompPtr);
 	I_REF(ISceneProvider, m_sceneProviderCompPtr);
 	I_REF(iqtgui::IGuiObject, m_sceneProviderGuiCompPtr);
-	
+
 	iqtgui::CHierarchicalCommand m_registryCommand;
 	iqtgui::CHierarchicalCommand m_editMenu;
 	iqtgui::CHierarchicalCommand m_cutCommand;
@@ -322,7 +321,6 @@ private:
 
 
 // inline methods
-
 
 inline const icomp::IComponentEnvironmentManager* CVisualRegistryEditorComp::GetEnvironmentManager() const
 {

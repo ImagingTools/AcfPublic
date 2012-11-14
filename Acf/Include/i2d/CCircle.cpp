@@ -59,6 +59,20 @@ void CCircle::SetRadius(double radius)
 }
 
 
+bool CCircle::operator==(const CCircle& ref) const
+{
+	return (ref.GetRadius() == GetRadius() && ref.GetPosition() == GetPosition());
+}
+
+
+bool CCircle::operator!=(const CCircle& ref) const
+{
+	return !operator==(ref);
+}
+
+
+// reimplemented (i2d::IObject2d)
+
 CRectangle CCircle::GetBoundingBox() const
 {
 	return CRectangle(
@@ -68,20 +82,6 @@ CRectangle CCircle::GetBoundingBox() const
 				2 * m_radius); 
 }
 
-
-bool CCircle::operator ==(const CCircle & ref) const
-{
-	return (ref.GetRadius() == GetRadius() && ref.GetPosition() == GetPosition()) ? true : false;
-}
-
-
-bool CCircle::operator !=(const CCircle & ref) const
-{
-	return !operator ==(ref);
-}
-
-
-// reimplemented (i2d::IObject2d)
 
 bool CCircle::Transform(
 			const ITransformation2d& transformation,

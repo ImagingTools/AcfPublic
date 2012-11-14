@@ -562,6 +562,34 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a1fc78353bc329ca4271282b906cad741</anchor>
+      <arglist>(AdjustConstraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a51c6ac1942ae9aa972e9b3ae4d4dae07</anchor>
+      <arglist>(AdjustConstraints, imeas::ILinearAdjustConstraints, ExtractAdjustContraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a3ebfa80d0f88de3ec91215c4e326abde</anchor>
+      <arglist>(ExposureConstraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a09920bb780cd86274139b641154452ff</anchor>
+      <arglist>(ExposureConstraints, icam::IExposureConstraints, ExtractExposureContraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CSimpleCameraComp</name>
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>af3693f53b6341b5e1da3e2e7775517d6</anchor>
@@ -580,6 +608,34 @@
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>a4e54ce3d6498b21a58757d7eaf6adfc7</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad7bcc345314b5e82bf2fcfa18a2bd45a</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetParametersToCamera</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>af6d1430d5bf59257aba2278bd68bced0</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>GetAbsoluteFeatureRange</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ae63768e02e4f517a5a7f4e5a4f5ddec3</anchor>
+      <arglist>(dc1394camera_t &amp;camera, dc1394feature_t feature, istd::CRange &amp;range) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SetAbsoluteFeatureValue</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>afb358a9036404272978613d2c522076d</anchor>
+      <arglist>(dc1394camera_t &amp;camera, dc1394feature_t feature, double value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

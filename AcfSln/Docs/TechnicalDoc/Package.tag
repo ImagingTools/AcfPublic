@@ -3932,6 +3932,13 @@
       <arglist>(const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a43f77f4f7a55ee7f7245e1f106783400</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>

@@ -88,14 +88,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a node at specified index.  <a href="#a9ae30d587ee316efdc1bd8ed5ab73ad1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a72c2492397c3e1b6c2c3b3bc702e9d7d">GetOutlineLength</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get outline length of this polygon.  <a href="#a72c2492397c3e1b6c2c3b3bc702e9d7d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a9cbc6a7741b3e95f10a8fece510d70c4">GetBoundingBox</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box (the same as above but returns result directly).  <a href="#a9cbc6a7741b3e95f10a8fece510d70c4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_polygon.html">CPolygon</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a9e1dde0d9fb0012232676d84aabea088">operator=</a> (const <a class="el" href="classi2d_1_1_c_polygon.html">CPolygon</a> &amp;polygon)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="#a9e1dde0d9fb0012232676d84aabea088"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#aa79c771195f0826b3872394f9197b302">GetCenter</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#aa79c771195f0826b3872394f9197b302"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a53880a9685e64d6fb4db7c765ff5a5a6">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Move object to position <code>position</code>.  <a href="#a53880a9685e64d6fb4db7c765ff5a5a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a9cbc6a7741b3e95f10a8fece510d70c4">GetBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box (the same as above but returns result directly).  <a href="#a9cbc6a7741b3e95f10a8fece510d70c4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a53e82055ed15ac596a74cf635af324d9">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#a53e82055ed15ac596a74cf635af324d9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a363ad5b2f229beb54391ab1cdd96f6c0">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00137">137</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00136">136</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 </div>
 </div>
@@ -168,6 +168,8 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Calculate bounding box (the same as above but returns result directly). </p>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#aa8b9b2eddb7170b1ba39f3b0aeedc007">i2d::IObject2d</a>.</p>
 
 </div>
 </div>
@@ -268,7 +270,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00150">150</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00149">149</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 
@@ -292,7 +294,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return size of node table. </p>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00144">144</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00143">143</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_polygon_based_params_gui_comp_8h_source.html#l00333">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;::OnToolsButtonMenuActionTriggered()</a>, and <a class="el" href="_t_polygon_based_params_gui_comp_8h_source.html#l00265">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;::UpdateGui()</a>.</p>
 
@@ -505,7 +507,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Assignment operator. </p>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00166">166</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00165">165</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 </div>
 </div>
@@ -589,7 +591,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00158">158</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00157">157</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
 

@@ -78,6 +78,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#a49e87ff841963eb9041b62581e19eb70"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_object2d.html#a220864dd27c1973b54fa4788caee2630">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Move object to position <code>position</code>.  <a href="#a220864dd27c1973b54fa4788caee2630"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_object2d.html#aa8b9b2eddb7170b1ba39f3b0aeedc007">GetBoundingBox</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of this shape.  <a href="#aa8b9b2eddb7170b1ba39f3b0aeedc007"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_object2d.html#a3c2325cbf5ccb7e1efb14104667822a6">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#a3c2325cbf5ccb7e1efb14104667822a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_object2d.html#adcb2ccc83d1ab6b7104966b3ecf1a2e2">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)=0</td></tr>
@@ -90,7 +92,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for describing the 2D-objects. </p>
 
-<p>Definition at line <a class="el" href="_i_object2d_8h_source.html#l00021">21</a> of file <a class="el" href="_i_object2d_8h_source.html">IObject2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_object2d_8h_source.html#l00022">22</a> of file <a class="el" href="_i_object2d_8h_source.html">IObject2d.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="ad93b4b065f29fa85330055454c837aca"></a><!-- doxytag: member="i2d::IObject2d::ChangeFlags" ref="ad93b4b065f29fa85330055454c837aca" args="" -->
 <div class="memitem">
@@ -111,11 +113,32 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_object2d_8h_source.html#l00026">26</a> of file <a class="el" href="_i_object2d_8h_source.html">IObject2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_object2d_8h_source.html#l00027">27</a> of file <a class="el" href="_i_object2d_8h_source.html">IObject2d.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa8b9b2eddb7170b1ba39f3b0aeedc007"></a><!-- doxytag: member="i2d::IObject2d::GetBoundingBox" ref="aa8b9b2eddb7170b1ba39f3b0aeedc007" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> i2d::IObject2d::GetBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get bounding box of this shape. </p>
+<p>Please note, this bounding box is in logical units, the calibration will not be considered. </p>
+
+<p>Implemented in <a class="el" href="classi2d_1_1_c_line2d.html#a7f8070893a03fc8a7cbca5038b309339">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_rectangle.html#a1bf245be78f36c38d565b5a309e73d3b">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_polygon.html#a9cbc6a7741b3e95f10a8fece510d70c4">i2d::CPolygon</a>, <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a4dde1e07df3feb69b8e56180ac28e208">icmpstr::CVisualRegistryElement</a>, <a class="el" href="classi2d_1_1_c_annulus.html#a14075121660042631e65d078a1607349">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#acbc76d7f559b4bd5964f6ffa1427af1b">i2d::CQuadrangle</a>, <a class="el" href="classi2d_1_1_c_annulus_segment.html#a86a8fc2bce1be65640919f73090296f6">i2d::CAnnulusSegment</a>, <a class="el" href="classi2d_1_1_c_circle.html#a78aee945e2a7ae1dd717604b4657e309">i2d::CCircle</a>, and <a class="el" href="classi2d_1_1_c_position2d.html#a356428b70d35996f1f153662a15ef527">i2d::CPosition2d</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a49e87ff841963eb9041b62581e19eb70"></a><!-- doxytag: member="i2d::IObject2d::GetCenter" ref="a49e87ff841963eb9041b62581e19eb70" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">

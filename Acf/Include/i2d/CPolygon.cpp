@@ -91,24 +91,6 @@ double CPolygon::GetOutlineLength() const
 }
 
 
-i2d::CRectangle CPolygon::GetBoundingBox() const
-{
-	int nodesCount = GetNodesCount();
-
-	if (nodesCount > 0){
-		i2d::CVector2d sp = GetNode(0);
-		i2d::CRectangle boundingBox(sp, sp);
-		for (int i = 1; i < nodesCount; i++){
-			sp = GetNode(i);
-			boundingBox.Unite(sp);
-		}
-		return boundingBox;
-	}
-
-	return i2d::CRectangle();
-}
-
-
 // reimplemented (i2d::IObject2d)
 
 CVector2d CPolygon::GetCenter() const
@@ -128,6 +110,24 @@ void CPolygon::MoveCenterTo(const CVector2d& position)
 			SetNode(i, GetNode(i) + offset);
 		}
 	}
+}
+
+
+i2d::CRectangle CPolygon::GetBoundingBox() const
+{
+	int nodesCount = GetNodesCount();
+
+	if (nodesCount > 0){
+		i2d::CVector2d sp = GetNode(0);
+		i2d::CRectangle boundingBox(sp, sp);
+		for (int i = 1; i < nodesCount; i++){
+			sp = GetNode(i);
+			boundingBox.Unite(sp);
+		}
+		return boundingBox;
+	}
+
+	return i2d::CRectangle();
 }
 
 
