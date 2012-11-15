@@ -415,7 +415,7 @@
 <a name="l00453"></a>00453 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00454"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#ad6be5d6d51bec977e220060b765baeed">00454</a> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_array_1_1_iterator.html">TArray&lt;Element, Dimensions&gt;::Iterator</a>&amp; <a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray&lt;Element, Dimensions&gt;::Iterator::operator++</a>()
 <a name="l00455"></a>00455 {
-<a name="l00456"></a>00456        <span class="keywordflow">if</span> ((m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; !Increase(m_arrayPtr-&gt;GetSizes())){
+<a name="l00456"></a>00456        <span class="keywordflow">if</span> ((m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; !BaseClass::Increase(m_arrayPtr-&gt;GetSizes())){
 <a name="l00457"></a>00457               m_arrayPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00458"></a>00458        }
 <a name="l00459"></a>00459 
@@ -428,7 +428,7 @@
 <a name="l00466"></a>00466 {
 <a name="l00467"></a>00467        <a class="code" href="classistd_1_1_t_index.html#a94973cb5f29f55c4fa9192f3b8980a21">Iterator</a> retVal = *<span class="keyword">this</span>;
 <a name="l00468"></a>00468 
-<a name="l00469"></a>00469        <span class="keywordflow">if</span> ((m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; !Increase(m_arrayPtr-&gt;GetSizes())){
+<a name="l00469"></a>00469        <span class="keywordflow">if</span> ((m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; !BaseClass::Increase(m_arrayPtr-&gt;GetSizes())){
 <a name="l00470"></a>00470               m_arrayPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00471"></a>00471        }
 <a name="l00472"></a>00472 
@@ -493,7 +493,7 @@
 <a name="l00531"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a41b7f692da3743b443f435cbca20f5eb">00531</a> <a class="code" href="classistd_1_1_t_index.html#a94973cb5f29f55c4fa9192f3b8980a21">TArray&lt;Element, Dimensions&gt;::Iterator::Iterator</a>(<a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray</a>* arrayPtr)
 <a name="l00532"></a>00532 :      <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">BaseClass</a>(0), m_arrayPtr(arrayPtr)
 <a name="l00533"></a>00533 {
-<a name="l00534"></a>00534        <span class="keywordflow">if</span> ((m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; !<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">IsInside</a>(m_arrayPtr-&gt;<a class="code" href="classistd_1_1_t_array.html#a04392b4ef9af90701e03c039e5fe0a09" title="Get list of all sizes.">GetSizes</a>())){
+<a name="l00534"></a>00534        <span class="keywordflow">if</span> ((m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; !<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">BaseClass::IsInside</a>(m_arrayPtr-&gt;<a class="code" href="classistd_1_1_t_array.html#a04392b4ef9af90701e03c039e5fe0a09" title="Get list of all sizes.">GetSizes</a>())){
 <a name="l00535"></a>00535               m_arrayPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;   <span class="comment">// if it is not inside of array set it directly to the end iterator state</span>
 <a name="l00536"></a>00536        }
 <a name="l00537"></a>00537 }

@@ -317,7 +317,7 @@
 <a name="l00311"></a>00311               BaseClass::ToolsButton-&gt;setHidden(<span class="keyword">false</span>);
 <a name="l00312"></a>00312               <span class="keywordflow">if</span> (BaseClass::ToolsButton-&gt;menu() == <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00313"></a>00313                      BaseClass::ToolsButton-&gt;setMenu(<span class="keyword">new</span> QMenu(BaseClass::ToolsButton));
-<a name="l00314"></a>00314                      connect(BaseClass::ToolsButton-&gt;menu(), SIGNAL(triggered(QAction*)),
+<a name="l00314"></a>00314                      BaseClass::connect(BaseClass::ToolsButton-&gt;menu(), SIGNAL(triggered(QAction*)),
 <a name="l00315"></a>00315                                    <span class="keyword">this</span>, SLOT(OnToolsButtonMenuActionTriggered(QAction*)));
 <a name="l00316"></a>00316               }
 <a name="l00317"></a>00317 
