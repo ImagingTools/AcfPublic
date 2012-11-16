@@ -8,6 +8,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -97,13 +98,13 @@
 <a name="l00076"></a>00076 
 <a name="l00077"></a><a class="code" href="classi2d_1_1_c_parallelogram.html#a72e174c32d2f6afdee4e1bce7379ff9d">00077</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">i2d::CMatrix2d</a>&amp; <a class="code" href="classi2d_1_1_c_parallelogram.html#a72e174c32d2f6afdee4e1bce7379ff9d">CParallelogram::GetDeformMatrix</a>()<span class="keyword"> const</span>
 <a name="l00078"></a>00078 <span class="keyword"></span>{
-<a name="l00079"></a>00079        <span class="keywordflow">return</span> m_transform.<a class="code" href="classi2d_1_1_c_affine2d.html#a73941ef231851205b3bbbaddc14b28b9" title="Get rotation, skew and skale part of this affine transformation.">GetDeformMatrix</a>();
+<a name="l00079"></a>00079        <span class="keywordflow">return</span> m_transform.<a class="code" href="classi2d_1_1_c_affine2d.html#a73941ef231851205b3bbbaddc14b28b9" title="Get rotation, skew and scale part of this affine transformation.">GetDeformMatrix</a>();
 <a name="l00080"></a>00080 }
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082 
 <a name="l00083"></a><a class="code" href="classi2d_1_1_c_parallelogram.html#aa71979c553fc26b5e1d233f742032081">00083</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_parallelogram.html#aa71979c553fc26b5e1d233f742032081">CParallelogram::SetDeformMatrix</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">i2d::CMatrix2d</a>&amp; deform)
 <a name="l00084"></a>00084 {
-<a name="l00085"></a>00085        m_transform.<a class="code" href="classi2d_1_1_c_affine2d.html#a424ba978ff817d6c910c04843ea3864a" title="Set rotation, skew and skale part of this affine transformation.">SetDeformMatrix</a>(deform);
+<a name="l00085"></a>00085        m_transform.<a class="code" href="classi2d_1_1_c_affine2d.html#a424ba978ff817d6c910c04843ea3864a" title="Set rotation, skew and scale part of this affine transformation.">SetDeformMatrix</a>(deform);
 <a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088 

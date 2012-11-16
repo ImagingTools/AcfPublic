@@ -75,12 +75,12 @@ void CSelectionParamGuiComp::UpdateGui(int /*updateFlags*/)
 	switch (uiMode){
 		case UM_COMBOBOX:
 			UpdateComboBoxesView();
-			return;
+			break;
 
 		case UM_RADIOBUTTON_HORIZONTAL:
 		case UM_RADIOBUTTON_VERTICAL:
 			UpdateRadioButtonView();
-			return;
+			break;
 	}
 
 	UpdateDescriptionFrame();

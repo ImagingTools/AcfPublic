@@ -373,6 +373,14 @@
     <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
+    <name>CProcessingResultsReviewComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_c_processing_results_review_comp_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <class kind="class">ifileproc::CProcessingResultsReviewComp</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableFileConverterComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_selectable_file_converter_comp_8h</filename>
@@ -4491,6 +4499,7 @@
     <class kind="class">ifileproc::CFileNamingComp</class>
     <class kind="class">ifileproc::CFileNamingParamsComp</class>
     <class kind="class">ifileproc::CFilePathesContainer</class>
+    <class kind="class">ifileproc::CProcessingResultsReviewComp</class>
     <class kind="class">ifileproc::CSelectableFileConverterComp</class>
     <class kind="class">ifileproc::IFileNaming</class>
     <class kind="class">ifileproc::IFileNamingParams</class>
@@ -4802,6 +4811,33 @@
       <anchorfile>classifileproc_1_1_c_file_pathes_container.html</anchorfile>
       <anchor>a5fdf400339a5dd41d3366eaa43188b53</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifileproc::CProcessingResultsReviewComp</name>
+    <filename>classifileproc_1_1_c_processing_results_review_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">ibase::IFileConvertCopy</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
+      <anchor>af055d8f69fce28b38250a603b9d650a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
+      <anchor>ae1ed0d7504060481b8a19b6489883442</anchor>
+      <arglist>(m_outputSupplierSerializerPtr, m_outputSupplierPtr, true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConvertFiles</name>
+      <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
+      <anchor>ad6c4ab9149671a87422bc9f678360acb</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17778,13 +17814,6 @@
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
       <anchor>a1bde2cc20a10345284f8a439ce178978</anchor>
       <arglist>(CMultiLineSupplierGuiComp &amp;component)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>imod::TModelWrap&lt; imeas::CSimpleNumericValueProvider &gt;</type>
-      <name>m_results</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>a2c7497508b7b0ff204cf57ef6422234f</anchor>
-      <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>imod::TModelWrap&lt; LineSelection &gt;</type>

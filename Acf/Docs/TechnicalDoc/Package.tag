@@ -3760,6 +3760,16 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>COrientedCircleEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_oriented_circle_editor_comp_8h</filename>
+    <includes id="_c_oriented_circle_8h" name="COrientedCircle.h" local="yes" imported="no">i2d/COrientedCircle.h</includes>
+    <includes id="_c_oriented_circle_shape_8h" name="COrientedCircleShape.h" local="yes" imported="no">iview/COrientedCircleShape.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <class kind="class">iqt2d::COrientedCircleEditorComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPolygonParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_polygon_params_gui_comp_8h</filename>
@@ -5805,6 +5815,14 @@
     <filename>_c_none_calibration_shape_8h</filename>
     <includes id="_c_calibration_shape_base_8h" name="CCalibrationShapeBase.h" local="yes" imported="no">iview/CCalibrationShapeBase.h</includes>
     <class kind="class">iview::CNoneCalibrationShape</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
+    <name>COrientedCircleShape.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_oriented_circle_shape_8h</filename>
+    <includes id="_c_interactive_circle_shape_8h" name="CInteractiveCircleShape.h" local="yes" imported="no">iview/CInteractiveCircleShape.h</includes>
+    <class kind="class">iview::COrientedCircleShape</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -8152,8 +8170,8 @@
       <type></type>
       <name>COrientedCircle</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>a64c5a5402b8f97ce80aa5a7622b9e9d9</anchor>
-      <arglist>(double radius, const CVector2d &amp;center, bool orientatedOutside)</arglist>
+      <anchor>a84697a8d4e243a73ce836cd4ebb086b8</anchor>
+      <arglist>(double radius, const CVector2d &amp;center, bool orientedOutside)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -8166,8 +8184,8 @@
       <type>void</type>
       <name>SetOrientedOutside</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>a1344cc026b209d2a5e60196b389fd6ec</anchor>
-      <arglist>(bool orientatedOutside)</arglist>
+      <anchor>a46022846b399fdc49faf002498b995a4</anchor>
+      <arglist>(bool orientedOutside)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -34155,6 +34173,7 @@
     <class kind="class">iqt2d::CExtendedConsoleGuiComp</class>
     <class kind="class">iqt2d::CImageViewComp</class>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
+    <class kind="class">iqt2d::COrientedCircleEditorComp</class>
     <class kind="class">iqt2d::CPolygonParamsGuiComp</class>
     <class kind="class">iqt2d::CPolylineParamsGuiComp</class>
     <class kind="class">iqt2d::CQuadrangleParamsGuiComp</class>
@@ -34423,6 +34442,60 @@
       <name>UpdateGui</name>
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
       <anchor>af54d69ad10fc16e61e227d407abe563d</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::COrientedCircleEditorComp</name>
+    <filename>classiqt2d_1_1_c_oriented_circle_editor_comp.html</filename>
+    <base>TShapeParamsGuiCompBase&lt; Ui::COrientedCircleEditorComp, iview::COrientedCircleShape, i2d::COrientedCircle &gt;</base>
+    <member kind="typedef">
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::COrientedCircleEditorComp, iview::COrientedCircleShape, i2d::COrientedCircle &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a16ed23f60fabf014ea34ba0f2064b89b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a935d3580272894cb35006af587b34cb3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a9e39077efff2e9637c6fb3f0b08a318b</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AxisOrientationCheckBox_stateChanged</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>ac653754a8553fd9dd7b6a3874b5d9bd7</anchor>
+      <arglist>(int state)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>ad5e333084ad9b59ec0ceca712e89e572</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>af6222da81bf956663f6c718e0ee80026</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a3d7680e773d2ccba8397e400a5caa243</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
@@ -47507,6 +47580,7 @@
     <class kind="class">iview::CInteractiveViewLayer</class>
     <class kind="class">iview::CNoneCalibration</class>
     <class kind="class">iview::CNoneCalibrationShape</class>
+    <class kind="class">iview::COrientedCircleShape</class>
     <class kind="class">iview::CPerspectiveCalibration</class>
     <class kind="class">iview::CPerspectiveCalibrationShape</class>
     <class kind="class">iview::CPinCalibrationShape</class>
@@ -51936,6 +52010,39 @@
       <anchorfile>classiview_1_1_c_none_calibration_shape.html</anchorfile>
       <anchor>a2645caefa06f23809fc18d932319c9d5</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::COrientedCircleShape</name>
+    <filename>classiview_1_1_c_oriented_circle_shape.html</filename>
+    <base>iview::CInteractiveCircleShape</base>
+    <member kind="typedef">
+      <type>CInteractiveCircleShape</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_oriented_circle_shape.html</anchorfile>
+      <anchor>a8e28021a2b14d8e7d397087bba5bfe3d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>COrientedCircleShape</name>
+      <anchorfile>classiview_1_1_c_oriented_circle_shape.html</anchorfile>
+      <anchor>a4de10190a65585af130318abab51bb48</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiview_1_1_c_oriented_circle_shape.html</anchorfile>
+      <anchor>a6b1fd7805d0a15791f5851ec431c010f</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiview_1_1_c_oriented_circle_shape.html</anchorfile>
+      <anchor>af5aeee16cbf4c94778c02484d1348fa2</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

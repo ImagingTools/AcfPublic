@@ -36,6 +36,7 @@
 #include "ifileproc/CExternalFileConverterComp.h"
 #include "ifileproc/CCopyFilesTreeComp.h"
 #include "ifileproc/CComposedCopyFilesComp.h"
+#include "ifileproc/CProcessingResultsReviewComp.h"
 
 
 /**
@@ -59,6 +60,8 @@ typedef icomp::TModelCompWrap<ifileproc::CSelectableFileConverterComp> Selectabl
 typedef ifileproc::CFileConvertOverProcessorComp FileConvertOverProcessor;
 typedef ifileproc::CCopyFilesTreeComp CopyFilesTree;
 typedef ifileproc::CComposedCopyFilesComp ComposedCopyFiles;
+
+typedef ifileproc::CProcessingResultsReviewComp ProcessingResultsReview;
 
 
 } // namespace FileProcessingPck

@@ -8,6 +8,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -38,7 +39,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="i2d::COrientedCircle" --><!-- doxytag: inherits="i2d::CCircle" -->
-<p>Definition of graphical circle object with orientatedOutside.  
+<p>Definition of an oriented graphical circle object.  
  <a href="classi2d_1_1_c_oriented_circle.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_oriented_circle_8h_source.html">COrientedCircle.h</a>&gt;</code></p>
@@ -70,18 +71,20 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#a87c507cacd090dd480555f6dddbea0a6">COrientedCircle</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#a64c5a5402b8f97ce80aa5a7622b9e9d9">COrientedCircle</a> (double radius, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;center, bool orientatedOutside)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#a84697a8d4e243a73ce836cd4ebb086b8">COrientedCircle</a> (double radius, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;center, bool orientedOutside)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#acadad01b4d23dc4e0e7b3e725b97c9e5">IsOrientedOutside</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#a1344cc026b209d2a5e60196b389fd6ec">SetOrientedOutside</a> (bool orientatedOutside)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#a46022846b399fdc49faf002498b995a4">SetOrientedOutside</a> (bool orientedOutside)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#ad6c1b276a0df98f41717db173b5a1b72">operator==</a> (const <a class="el" href="classi2d_1_1_c_oriented_circle.html">COrientedCircle</a> &amp;circle) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#aafe2b3bf6e4991c8896ddec076e21beb">operator!=</a> (const <a class="el" href="classi2d_1_1_c_oriented_circle.html">COrientedCircle</a> &amp;circle) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_oriented_circle.html#a2e5d7c0dcd981d318f1477c546bd4822">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a2e5d7c0dcd981d318f1477c546bd4822"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Definition of graphical circle object with orientatedOutside. </p>
+<div class="textblock"><p>Definition of an oriented graphical circle object. </p>
+<p>The circle can be oriented outside or inside.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Determine what is the reference point of orientation (camera or screen) and if it's camera, update COrientedCircleShape to reflect this (currently displays orientation relative to the screen). </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_oriented_circle_8h_source.html#l00015">15</a> of file <a class="el" href="_c_oriented_circle_8h_source.html">COrientedCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_oriented_circle_8h_source.html#l00021">21</a> of file <a class="el" href="_c_oriented_circle_8h_source.html">COrientedCircle.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a9ba45d6698dc1a7c01889be99bc51e68"></a><!-- doxytag: member="i2d::COrientedCircle::BaseClass" ref="a9ba45d6698dc1a7c01889be99bc51e68" args="" -->
 <div class="memitem">
@@ -98,7 +101,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_oriented_circle_comp.html#add8ab43bf131d436e906b1d2de57819c">i2d::COrientedCircleComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_oriented_circle_8h_source.html#l00018">18</a> of file <a class="el" href="_c_oriented_circle_8h_source.html">COrientedCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_oriented_circle_8h_source.html#l00024">24</a> of file <a class="el" href="_c_oriented_circle_8h_source.html">COrientedCircle.h</a>.</p>
 
 </div>
 </div>
@@ -119,7 +122,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a64c5a5402b8f97ce80aa5a7622b9e9d9"></a><!-- doxytag: member="i2d::COrientedCircle::COrientedCircle" ref="a64c5a5402b8f97ce80aa5a7622b9e9d9" args="(double radius, const CVector2d &amp;center, bool orientatedOutside)" -->
+<a class="anchor" id="a84697a8d4e243a73ce836cd4ebb086b8"></a><!-- doxytag: member="i2d::COrientedCircle::COrientedCircle" ref="a84697a8d4e243a73ce836cd4ebb086b8" args="(double radius, const CVector2d &amp;center, bool orientedOutside)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -139,7 +142,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>orientatedOutside</em>&#160;</td>
+          <td class="paramname"><em>orientedOutside</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -167,7 +170,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_oriented_circle_8h_source.html#l00039">39</a> of file <a class="el" href="_c_oriented_circle_8h_source.html">COrientedCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_oriented_circle_8h_source.html#l00045">45</a> of file <a class="el" href="_c_oriented_circle_8h_source.html">COrientedCircle.h</a>.</p>
 
 </div>
 </div>
@@ -228,7 +231,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1344cc026b209d2a5e60196b389fd6ec"></a><!-- doxytag: member="i2d::COrientedCircle::SetOrientedOutside" ref="a1344cc026b209d2a5e60196b389fd6ec" args="(bool orientatedOutside)" -->
+<a class="anchor" id="a46022846b399fdc49faf002498b995a4"></a><!-- doxytag: member="i2d::COrientedCircle::SetOrientedOutside" ref="a46022846b399fdc49faf002498b995a4" args="(bool orientedOutside)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -236,7 +239,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void i2d::COrientedCircle::SetOrientedOutside </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>orientatedOutside</em></td><td>)</td>
+          <td class="paramname"><em>orientedOutside</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

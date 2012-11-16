@@ -8,6 +8,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -310,7 +311,7 @@
 <a name="l00304"></a><a class="code" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a1d0ab5de4589426871b97f361da07ce4">00304</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a1d0ab5de4589426871b97f361da07ce4" title="Enable or disable the Tools button depending on model type and dynamically build its menu...">TPolygonBasedParamsGuiComp&lt;PolygonBasedShape, PolygonBasedModel&gt;::UpdateToolsMenuButton</a>()
 <a name="l00305"></a>00305 {
 <a name="l00306"></a>00306        BaseClass::ToolsButton-&gt;setHidden(<span class="keyword">true</span>);
-<a name="l00307"></a>00307        <a class="code" href="classi2d_1_1_c_polyline.html" title="2D-object representing a polyine.">i2d::CPolyline</a>* polylinePtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classi2d_1_1_c_polyline.html" title="2D-object representing a polyine.">i2d::CPolyline</a>*<span class="keyword">&gt;</span>(BaseClass::GetModelPtr());
+<a name="l00307"></a>00307        <a class="code" href="classi2d_1_1_c_polyline.html" title="2D-object representing a polyline.">i2d::CPolyline</a>* polylinePtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classi2d_1_1_c_polyline.html" title="2D-object representing a polyline.">i2d::CPolyline</a>*<span class="keyword">&gt;</span>(BaseClass::GetModelPtr());
 <a name="l00308"></a>00308        <a class="code" href="classi2d_1_1_c_polygon.html" title="Definition of the data model for a polygon.">i2d::CPolygon</a>* polygonPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classi2d_1_1_c_polygon.html" title="Definition of the data model for a polygon.">i2d::CPolygon</a>*<span class="keyword">&gt;</span>(BaseClass::GetModelPtr());
 <a name="l00309"></a>00309 
 <a name="l00310"></a>00310        <span class="keywordflow">if</span> (polylinePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> || polygonPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
