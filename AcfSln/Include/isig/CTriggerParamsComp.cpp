@@ -201,6 +201,17 @@ QByteArray CTriggerParamsComp::GetOptionId(int index) const
 }
 
 
+bool CTriggerParamsComp::IsOptionEnabled(int /*index*/) const
+{
+	return true;
+}
+
+
+void CTriggerParamsComp::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
+{
+}
+
+
 // reimplemented (icomp::CComponentBase)
 
 void CTriggerParamsComp::OnComponentCreated()

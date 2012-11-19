@@ -25,6 +25,7 @@
 
 
 // ACF includes
+#include "icomp/IComponent.h"
 #include "icomp/TAttributeMember.h"
 #include "icomp/CInterfaceManipBase.h"
 #include "icomp/CReferenceAttribute.h"

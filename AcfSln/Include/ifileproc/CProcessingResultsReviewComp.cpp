@@ -86,7 +86,6 @@ bool CProcessingResultsReviewComp::CProcessSerializer::Serialize(iser::IArchive&
 	static iser::CArchiveTag outputDataTag("OutputData", "OutputData");
 
 	bool retVal = true;
-	bool a = archive.IsStoring();
 
 	int pathType = m_parentPtr->m_inputPathObjectPtr->GetPathType();
 

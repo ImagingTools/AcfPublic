@@ -118,6 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description for a option with the index <code>index</code>.  <a href="#a7ea78cdcbcc6fc415d97c9ce1a3f2533"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a42ef743ef676f52d8adf082ecb0fda26">GetOptionId</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#a42ef743ef676f52d8adf082ecb0fda26"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a8673e0236772ead7203a0c8eedc01768">IsOptionEnabled</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the option is enabled and can be selected.  <a href="#a8673e0236772ead7203a0c8eedc01768"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a85d81a7ea701cb3534805028efe40589">SetOptionEnabled</a> (int index, bool isEnabled=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a given option.  <a href="#a85d81a7ea701cb3534805028efe40589"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a6d00888e21687f7b8f07206d7289a0c0">OnComponentCreated</a> ()</td></tr>
@@ -479,6 +483,28 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8673e0236772ead7203a0c8eedc01768"></a><!-- doxytag: member="iprm::CParamsManagerComp::IsOptionEnabled" ref="a8673e0236772ead7203a0c8eedc01768" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::CParamsManagerComp::IsOptionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>true</code> if the option is enabled and can be selected. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a85d81a7ea701cb3534805028efe40589" title="Enables a given option.">SetOptionEnabled</a> </dd></dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">iprm::ISelectionConstraints</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6d00888e21687f7b8f07206d7289a0c0"></a><!-- doxytag: member="iprm::CParamsManagerComp::OnComponentCreated" ref="a6d00888e21687f7b8f07206d7289a0c0" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -556,6 +582,39 @@ Protected Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
 
 <p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85d81a7ea701cb3534805028efe40589"></a><!-- doxytag: member="iprm::CParamsManagerComp::SetOptionEnabled" ref="a85d81a7ea701cb3534805028efe40589" args="(int index, bool isEnabled=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iprm::CParamsManagerComp::SetOptionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isEnabled</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enables a given option. </p>
+<p>Only enabled options can be selected. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd>GetOptionEnabled </dd></dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#aabd31d5331d685f0aa61899e7e2b3498">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>

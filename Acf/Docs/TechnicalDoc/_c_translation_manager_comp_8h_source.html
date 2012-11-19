@@ -93,45 +93,47 @@
 <a name="l00065"></a>00065        <span class="keyword">virtual</span> QString <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#a3b8f0efb0126d10ffa820a4c2226d180" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00066"></a>00066        <span class="keyword">virtual</span> QString <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#aa3dd12e47ac42ad0c1fd8320791740c6" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00067"></a>00067        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#a893bebc2b1f9e6c4471407e70c7ee373" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">private</span>:
-<a name="l00070"></a>00070        <span class="keyword">class </span>LanguageSelectionObserver: <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;iprm::ISelectionParam&gt;
-<a name="l00071"></a>00071        {
-<a name="l00072"></a>00072        <span class="keyword">public</span>:
-<a name="l00073"></a>00073               LanguageSelectionObserver(<a class="code" href="classiqt_1_1_c_translation_manager_comp.html">CTranslationManagerComp</a>&amp; parent);
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="keyword">protected</span>:
-<a name="l00076"></a>00076               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00077"></a>00077               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="keyword">private</span>:
-<a name="l00080"></a>00080               <a class="code" href="classiqt_1_1_c_translation_manager_comp.html">CTranslationManagerComp</a>&amp; m_parent;
-<a name="l00081"></a>00081        };
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="keyword">private</span>:
-<a name="l00084"></a>00084        I_ATTR(QString, m_translationFilePathAttrPtr);
-<a name="l00085"></a>00085        I_ATTR(QByteArray, m_translationFilePrefixAttrPtr);
-<a name="l00086"></a>00086        I_MULTIATTR(QByteArray, m_languagesAttrPtr);
-<a name="l00087"></a>00087        I_REF(<a class="code" href="classiqt_1_1_i_translation_manager.html">iqt::ITranslationManager</a>, m_slaveTranslationManagerCompPtr);
-<a name="l00088"></a>00088        I_REF(<a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>, m_languageSelectionCompPtr);
-<a name="l00089"></a>00089        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_languageSelectionModelCompPtr);
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QTranslator&gt;</a> TranslatorsList;
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#a392edc92b484a85eb72289b7b56a11ff" title="Return true if the option is enabled and can be selected.">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_c_translation_manager_comp.html#aa3ab9e3b2b1b85e83ab204727804dd2f" title="Enables a given option.">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="keyword">private</span>:
+<a name="l00072"></a>00072        <span class="keyword">class </span>LanguageSelectionObserver: <span class="keyword">public</span> imod::TSingleModelObserverBase&lt;iprm::ISelectionParam&gt;
+<a name="l00073"></a>00073        {
+<a name="l00074"></a>00074        <span class="keyword">public</span>:
+<a name="l00075"></a>00075               LanguageSelectionObserver(<a class="code" href="classiqt_1_1_c_translation_manager_comp.html">CTranslationManagerComp</a>&amp; parent);
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077        <span class="keyword">protected</span>:
+<a name="l00078"></a>00078               <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00079"></a>00079               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081        <span class="keyword">private</span>:
+<a name="l00082"></a>00082               <a class="code" href="classiqt_1_1_c_translation_manager_comp.html">CTranslationManagerComp</a>&amp; m_parent;
+<a name="l00083"></a>00083        };
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="keyword">private</span>:
+<a name="l00086"></a>00086        I_ATTR(QString, m_translationFilePathAttrPtr);
+<a name="l00087"></a>00087        I_ATTR(QByteArray, m_translationFilePrefixAttrPtr);
+<a name="l00088"></a>00088        I_MULTIATTR(QByteArray, m_languagesAttrPtr);
+<a name="l00089"></a>00089        I_REF(<a class="code" href="classiqt_1_1_i_translation_manager.html">iqt::ITranslationManager</a>, m_slaveTranslationManagerCompPtr);
+<a name="l00090"></a>00090        I_REF(<a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>, m_languageSelectionCompPtr);
+<a name="l00091"></a>00091        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_languageSelectionModelCompPtr);
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093        TranslatorsList m_translatorsList;
+<a name="l00093"></a>00093        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QTranslator&gt;</a> TranslatorsList;
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095        LanguageSelectionObserver m_selectionObserver;
+<a name="l00095"></a>00095        TranslatorsList m_translatorsList;
 <a name="l00096"></a>00096 
-<a name="l00097"></a>00097        <span class="keywordtype">int</span> m_currentLanguageIndex;
-<a name="l00098"></a>00098 };
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 } <span class="comment">// namespace iqt</span>
+<a name="l00097"></a>00097        LanguageSelectionObserver m_selectionObserver;
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099        <span class="keywordtype">int</span> m_currentLanguageIndex;
+<a name="l00100"></a>00100 };
+<a name="l00101"></a>00101 
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104 <span class="preprocessor">#endif // !iqt_CTranslationManagerComp_included</span>
-<a name="l00105"></a>00105 <span class="preprocessor"></span>
-<a name="l00106"></a>00106 
+<a name="l00103"></a>00103 } <span class="comment">// namespace iqt</span>
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 <span class="preprocessor">#endif // !iqt_CTranslationManagerComp_included</span>
+<a name="l00107"></a>00107 <span class="preprocessor"></span>
+<a name="l00108"></a>00108 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

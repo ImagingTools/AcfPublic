@@ -86,21 +86,23 @@
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> QString <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a2813c800728aec6e9ebf64bb2b0809e4">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> QString <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a96a7a18fbaf204c76323dd8397dea22c">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00062"></a>00062        <span class="keyword">virtual</span> QByteArray <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#af8c83113238e4559a4a7ed0cd0e44487">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keyword">private</span>:
-<a name="l00065"></a>00065        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html">ibase::IFileConvertCopy</a>, m_slaveConvertersCompPtr);
-<a name="l00066"></a>00066        I_MULTIATTR(QString, m_slaveConverterNamesAttrPtr);
-<a name="l00067"></a>00067        I_MULTIATTR(QString, m_slaveConverterDescriptionsAttrPtr);
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="keywordtype">int</span> m_optionsCount;
-<a name="l00070"></a>00070        <span class="keywordtype">int</span> m_selectedOptionIndex;
-<a name="l00071"></a>00071 };
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 } <span class="comment">// namespace ifileproc</span>
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#aa293971865c76e31eee0175c026369f1">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#ae8695841403046aa4a27483be04d35fb">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">private</span>:
+<a name="l00067"></a>00067        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html">ibase::IFileConvertCopy</a>, m_slaveConvertersCompPtr);
+<a name="l00068"></a>00068        I_MULTIATTR(QString, m_slaveConverterNamesAttrPtr);
+<a name="l00069"></a>00069        I_MULTIATTR(QString, m_slaveConverterDescriptionsAttrPtr);
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071        <span class="keywordtype">int</span> m_optionsCount;
+<a name="l00072"></a>00072        <span class="keywordtype">int</span> m_selectedOptionIndex;
+<a name="l00073"></a>00073 };
+<a name="l00074"></a>00074 
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="preprocessor">#endif // !ifileproc_CSelectableFileConverterComp_included</span>
+<a name="l00076"></a>00076 } <span class="comment">// namespace ifileproc</span>
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <span class="preprocessor">#endif // !ifileproc_CSelectableFileConverterComp_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -28,6 +28,7 @@
 #include <QtCore/QCoreApplication>
 
 // ACF includes
+#include "icomp/ICompositeComponent.h"
 #include "icomp/IComponentContext.h"
 #include "icomp/IRealAttributeStaticInfo.h"
 #include "icomp/TAttribute.h"
@@ -162,7 +163,7 @@ bool TAttributeMemberBase<Attribute>::Init(
 		qCritical(	"Error during resolving of attribute: %s in component %s: Component context not set",
 					CComponentContext::GetHierarchyAddress(componentContextPtr).constData(),
 					attributeId.constData());
-		
+
 		m_attributePtr = NULL;
 	}
 

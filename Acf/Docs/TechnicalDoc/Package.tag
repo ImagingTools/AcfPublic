@@ -854,6 +854,14 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>IQtItemModelProvider.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_i_qt_item_model_provider_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">ibase::IQtItemModelProvider</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>ITextDocument.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_i_text_document_8h</filename>
@@ -2104,6 +2112,7 @@
     <name>TAttributeMember.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_attribute_member_8h</filename>
+    <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="yes" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_i_real_attribute_static_info_8h" name="IRealAttributeStaticInfo.h" local="yes" imported="no">icomp/IRealAttributeStaticInfo.h</includes>
     <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
@@ -2288,6 +2297,7 @@
     <name>TReferenceMember.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_reference_member_8h</filename>
+    <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
     <includes id="_t_attribute_member_8h" name="TAttributeMember.h" local="yes" imported="no">icomp/TAttributeMember.h</includes>
     <includes id="_c_interface_manip_base_8h" name="CInterfaceManipBase.h" local="yes" imported="no">icomp/CInterfaceManipBase.h</includes>
     <includes id="_c_reference_attribute_8h" name="CReferenceAttribute.h" local="yes" imported="no">icomp/CReferenceAttribute.h</includes>
@@ -2540,9 +2550,9 @@
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
     <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ifile/IFileListProvider.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
     <class kind="class">ifile::CFileListProviderComp</class>
     <namespace>ifile</namespace>
   </compound>
@@ -4419,6 +4429,14 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CTableBasedModelEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_table_based_model_editor_comp_8h</filename>
+    <includes id="_t_item_model_editor_comp_base_8h" name="TItemModelEditorCompBase.h" local="yes" imported="no">iqtgui/TItemModelEditorCompBase.h</includes>
+    <class kind="class">iqtgui::CTableBasedModelEditorComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTextElider.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_text_elider_8h</filename>
@@ -4586,6 +4604,16 @@
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <class kind="class">iqtgui::TGuiObserverWrap</class>
     <class kind="class">iqtgui::TGuiObserverWrap::UpdateBlocker</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TItemModelEditorCompBase.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_t_item_model_editor_comp_base_8h</filename>
+    <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
+    <class kind="class">iqtgui::TItemModelEditorCompBase</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -6449,6 +6477,10 @@
   <compound kind="class">
     <name>SelectionInfoImpl</name>
     <filename>class_selection_info_impl.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>TGuiObserverWrap</name>
+    <filename>class_t_gui_observer_wrap.html</filename>
   </compound>
   <compound kind="class">
     <name>VisualStatus</name>
@@ -11052,6 +11084,7 @@
     <class kind="class">ibase::IObjectQueue</class>
     <class kind="class">ibase::IObjectSnap</class>
     <class kind="class">ibase::IProgressManager</class>
+    <class kind="class">ibase::IQtItemModelProvider</class>
     <class kind="class">ibase::ITextDocument</class>
     <class kind="class">ibase::TCommandsProviderCompWrap</class>
     <class kind="class">ibase::TComposedFactoryComp</class>
@@ -13122,6 +13155,18 @@
       <anchorfile>classibase_1_1_i_progress_manager.html</anchorfile>
       <anchor>acba232a9e12ff34ea027d08e25d45f31</anchor>
       <arglist>(int sessionId) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::IQtItemModelProvider</name>
+    <filename>classibase_1_1_i_qt_item_model_provider.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QAbstractItemModel *</type>
+      <name>GetItemModel</name>
+      <anchorfile>classibase_1_1_i_qt_item_model_provider.html</anchorfile>
+      <anchor>a356dba9808b21c271f932969867f5978</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17152,6 +17197,20 @@
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>a8c3ced8a71ce08ccafb17eeb61930c4d</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ab5368b32bebf953889f714525f9c40cf</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a081d662a50254d5e033dad9088674bec</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QSet&lt; icomp::CComponentAddress &gt;</type>
@@ -25439,6 +25498,7 @@
     <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ifile::IFileListProvider</base>
+    <base virtualness="virtual">ibase::IQtItemModelProvider</base>
     <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -25452,6 +25512,13 @@
       <name>GetFileList</name>
       <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
       <anchor>a2f4722ed003a5798e83ad58f84f5df44</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QAbstractItemModel *</type>
+      <name>GetItemModel</name>
+      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
+      <anchor>a13b0dd885ce7b2b439a456d29e43168d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -31492,6 +31559,20 @@
       <anchor>a28a207370d92c50e9b5ea9f5a9ace120</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>aaf7beca237ea3254593d4968d73812d5</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a603e59479a77c8f4cdaeefd8b23a5714</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -31584,6 +31665,20 @@
       <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
       <anchor>a8b7455e3140abcd29a5622d0a140a117</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>ac4022c61643ea5e121c1da2845d69260</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
+      <anchor>ae609146f8cddd943dff5de85b59d80a4</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="variable">
       <type>QVector&lt; TypeInfo &gt;</type>
@@ -31729,6 +31824,20 @@
       <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
       <anchor>af7bb147231b51043030bd37efac88964</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>adf407ad005e30f4156855aed93ac2403</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
+      <anchor>a439d8a967d46503d7db6f34128ee97b5</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -31919,6 +32028,20 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>a42ef743ef676f52d8adf082ecb0fda26</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a8673e0236772ead7203a0c8eedc01768</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a85d81a7ea701cb3534805028efe40589</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -32207,6 +32330,20 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>a8901032aacd4c37426afe69368071a24</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>ae3a773f204a325cc96d3a345bc26abcf</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
@@ -32267,6 +32404,20 @@
       <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
       <anchor>ad9c9a0d04561c8a23a4b32e986c8869c</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
+      <anchor>afafb15dccaad85b748bcd0132a13da13</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
+      <anchor>a3d74c5d2bdd34196dab24bf2b82df9ad</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32750,6 +32901,20 @@
       <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
       <anchor>a5498d1707cbd1845247a77edd24f9841</anchor>
       <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
+      <anchor>a5e04d9da7ae89ff970fcef5c01cd8f6a</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
+      <anchor>aabd31d5331d685f0aa61899e7e2b3498</anchor>
+      <arglist>(int index, bool isEnabled=true)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33754,6 +33919,20 @@
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
       <anchor>a893bebc2b1f9e6c4471407e70c7ee373</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>a392edc92b484a85eb72289b7b56a11ff</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
+      <anchor>aa3ab9e3b2b1b85e83ab204727804dd2f</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36562,6 +36741,7 @@
     <class kind="class">iqtgui::CStatusBarWidgetComp</class>
     <class kind="class">iqtgui::CTabbedMultiViewGuiComp</class>
     <class kind="class">iqtgui::CTabContainerGuiComp</class>
+    <class kind="class">iqtgui::CTableBasedModelEditorComp</class>
     <class kind="class">iqtgui::CTextElider</class>
     <class kind="class">iqtgui::CToolBarGuiCompBase</class>
     <class kind="class">iqtgui::CToolBarWidgetGuiComp</class>
@@ -36580,6 +36760,7 @@
     <class kind="class">iqtgui::TDesignerGuiObserverCompBase</class>
     <class kind="class">iqtgui::TGuiComponentBase</class>
     <class kind="class">iqtgui::TGuiObserverWrap</class>
+    <class kind="class">iqtgui::TItemModelEditorCompBase</class>
     <class kind="class">iqtgui::TRestorableGuiWrap</class>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -38812,6 +38993,25 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::CTableBasedModelEditorComp</name>
+    <filename>classiqtgui_1_1_c_table_based_model_editor_comp.html</filename>
+    <base>TItemModelEditorCompBase&lt; QTableView &gt;</base>
+    <member kind="typedef">
+      <type>TItemModelEditorCompBase&lt; QTableView &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_table_based_model_editor_comp.html</anchorfile>
+      <anchor>ad72e75cf792a0677f2a95adf040a1d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_table_based_model_editor_comp.html</anchorfile>
+      <anchor>abaee4278e7a1321ce841f036d8d75868</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtgui::CTextElider</name>
     <filename>classiqtgui_1_1_c_text_elider.html</filename>
     <base>QObject</base>
@@ -39250,147 +39450,147 @@
       <type></type>
       <name>TGuiObserverWrap</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a5aeac1835aa60016ff9440290b495581</anchor>
+      <anchor>a09fb7243e1d224ac412b8a564829b1dc</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnAttached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a1e5ea143e01a0798090e8989ded7fb94</anchor>
+      <anchor>a53ec52d67c28d66f7ed6071f6c3a5372</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnDetached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>adc9cd1c668357a08d839a51b6403a40c</anchor>
+      <anchor>aac5a5d0fb2a15e063b28af1d4dfa559f</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetUpdateFilter</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a98e753135493b8d0db040e502d2c30d5</anchor>
+      <anchor>a7e38b33938c19dc1e6b2b429aed157a2</anchor>
       <arglist>(int updateFlags)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>abb88b93f9501687206f5e602465d7a48</anchor>
+      <anchor>a6e1e9439a54d7de3aad840876873b2bb</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>af9079aec3cd669b2bf0e0825a26d5d31</anchor>
+      <anchor>af5816aed01b78c27e233a55f075fd78c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>aff6d896cdddc470303094516269eaecd</anchor>
+      <anchor>a171dcddc85378f81d53c29c8367f7364</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ab80f93ad4b306c693eac5fde8f975112</anchor>
+      <anchor>afc147af79bf4d1551e4a41800c1461d0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsUpdateBlocked</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a4f4368d3ca716cc5c05b495be1b5a1ea</anchor>
+      <anchor>a3adb0f4d0b73693cbc326817f52014c6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>DoUpdateModel</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a683527b484df73ed72386338530d2fce</anchor>
+      <anchor>a42050aa9718b58876741c8f7f6871b6a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a4006cbfcb625457199435c24a00f581a</anchor>
+      <anchor>a2a108ca09fa12c1102c340df331c8bfc</anchor>
       <arglist>(int updateFlags)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a806337a93835b5e6b1c577ce85a65674</anchor>
+      <anchor>ab10a895b1aee5db26e3c299e51f02af9</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a39ad878eb561d7510fa512c9a985a92b</anchor>
+      <anchor>abcbab4e791342130d28df5db810f95b8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>af1ee16cea3b1ae16d82da61fe61b3a09</anchor>
+      <anchor>a25770e920ca8d48a4d07e6adbd9be8ab</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a5e55184b9b6696fc8653cd473127bf34</anchor>
+      <anchor>aee8694519e89700cb4d0d92b4d952b71</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ab3580750fd2f0dc661cc082648044594</anchor>
+      <anchor>a45eba5a0c0a00d4a3a7e671dd8e4afc4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ad9c99838dff86b005fc5cf32198c332d</anchor>
+      <anchor>ac57a710831aca6724b034983717d1a12</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ae6d3a0820a47c572289ddd3d07a7da51</anchor>
+      <anchor>a21ea58f03167fc90ff7bccb51d1a2ead</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a0414b4fb5a17cea42400a88d0df13d5a</anchor>
+      <anchor>a92633a181178349247fbf491ee39b729</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>afee371d7a2c525948e04be390c07076f</anchor>
+      <anchor>a97d7b10f6b4167206b3bdabbe8be659c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ab121962cf9345f48d3aa1deedc65422d</anchor>
+      <anchor>a71927e7a9688911c9b1071434e9f17d5</anchor>
       <arglist>(bool state)</arglist>
     </member>
   </compound>
@@ -39409,6 +39609,33 @@
       <name>~UpdateBlocker</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap_1_1_update_blocker.html</anchorfile>
       <anchor>a4dac705658a82e4552c54977ec947ba9</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::TItemModelEditorCompBase</name>
+    <filename>classiqtgui_1_1_t_item_model_editor_comp_base.html</filename>
+    <templarg>ItemWidgetClass</templarg>
+    <base>TModelObserverCompWrap&lt; TGuiObserverWrap&lt; TGuiComponentBase&lt; ItemWidgetClass &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</base>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; TGuiObserverWrap&lt; TGuiComponentBase&lt; ItemWidgetClass &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_t_item_model_editor_comp_base.html</anchorfile>
+      <anchor>abceb39bc2241bd6fa25df96830efca9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_t_item_model_editor_comp_base.html</anchorfile>
+      <anchor>a2cbf845c9b76f6a9358619e955bf2760</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtgui_1_1_t_item_model_editor_comp_base.html</anchorfile>
+      <anchor>afb5561d2c25a77fdde2cc2361289a17a</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

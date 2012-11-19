@@ -105,6 +105,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a3f6649862bc81b5bea6b9e2b100f6ff9">GetOptionName</a> (int index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ad02605c7913eff9f86132ff779dc1366">GetOptionDescription</a> (int index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#accfe764f0b9dcce4f12bdd8fc75dc681">GetOptionId</a> (int index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a36c9599e43c7d8fedecc0fd1041a7a01">IsOptionEnabled</a> (int index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ae44cb8f21c82c9ef0bf8e799381caaff">SetOptionEnabled</a> (int index, bool isEnabled=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a008b04ae9dba20b8821be8bf8f15610c">ProduceObject</a> (<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce single object.  <a href="#a008b04ae9dba20b8821be8bf8f15610c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adcf275024a5a474346cc994f96543b31">OnComponentCreated</a> ()</td></tr>
@@ -460,6 +462,25 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a36c9599e43c7d8fedecc0fd1041a7a01"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::IsOptionEnabled" ref="a36c9599e43c7d8fedecc0fd1041a7a01" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iipr::CColorBitmapSeparatorSupplierComp::IsOptionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">iprm::ISelectionConstraints</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adcf275024a5a474346cc994f96543b31"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::OnComponentCreated" ref="adcf275024a5a474346cc994f96543b31" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -498,6 +519,35 @@ Protected Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd>iproc::WorkStatus </dd></dl>
 
 <p>Implements <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6230575f0d5b0ccfd28cdf7082866c62">iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae44cb8f21c82c9ef0bf8e799381caaff"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::SetOptionEnabled" ref="ae44cb8f21c82c9ef0bf8e799381caaff" args="(int index, bool isEnabled=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iipr::CColorBitmapSeparatorSupplierComp::SetOptionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isEnabled</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#aabd31d5331d685f0aa61899e7e2b3498">iprm::ISelectionConstraints</a>.</p>
 
 </div>
 </div>

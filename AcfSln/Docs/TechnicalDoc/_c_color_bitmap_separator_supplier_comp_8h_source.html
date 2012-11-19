@@ -78,34 +78,36 @@
 <a name="l00055"></a>00055        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a3f6649862bc81b5bea6b9e2b100f6ff9">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00056"></a>00056        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ad02605c7913eff9f86132ff779dc1366">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#accfe764f0b9dcce4f12bdd8fc75dc681">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a008b04ae9dba20b8821be8bf8f15610c" title="Produce single object.">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adcf275024a5a474346cc994f96543b31">OnComponentCreated</a>();
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="keyword">private</span>:
-<a name="l00066"></a>00066        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
-<a name="l00069"></a>00069        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_bitmapSupplierCompPtr);
-<a name="l00070"></a>00070        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>, m_calibrationCompPtr);
-<a name="l00073"></a>00073        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_calibrationSupplierCompPtr);
-<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_calibrationModelCompPtr);
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076        I_ATTR(<span class="keywordtype">bool</span>, m_useAlphaChannelAttrPtr);
-<a name="l00077"></a>00077 };
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 } <span class="comment">// namespace iipr</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a36c9599e43c7d8fedecc0fd1041a7a01">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ae44cb8f21c82c9ef0bf8e799381caaff">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a008b04ae9dba20b8821be8bf8f15610c" title="Produce single object.">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adcf275024a5a474346cc994f96543b31">OnComponentCreated</a>();
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">private</span>:
+<a name="l00068"></a>00068        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
+<a name="l00071"></a>00071        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_bitmapSupplierCompPtr);
+<a name="l00072"></a>00072        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>, m_calibrationCompPtr);
+<a name="l00075"></a>00075        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_calibrationSupplierCompPtr);
+<a name="l00076"></a>00076        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_calibrationModelCompPtr);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        I_ATTR(<span class="keywordtype">bool</span>, m_useAlphaChannelAttrPtr);
+<a name="l00079"></a>00079 };
+<a name="l00080"></a>00080 
 <a name="l00081"></a>00081 
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="preprocessor">#endif // !iipr_CColorBitmapSeparatorSupplierComp_included</span>
-<a name="l00084"></a>00084 <span class="preprocessor"></span>
-<a name="l00085"></a>00085 
+<a name="l00082"></a>00082 } <span class="comment">// namespace iipr</span>
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="preprocessor">#endif // !iipr_CColorBitmapSeparatorSupplierComp_included</span>
+<a name="l00086"></a>00086 <span class="preprocessor"></span>
+<a name="l00087"></a>00087 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

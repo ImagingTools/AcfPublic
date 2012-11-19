@@ -388,9 +388,21 @@ QString CMultiParamsManagerComp::GetOptionName(int index) const
 	return GetParamsSetName(index);
 }
 
+
 QString CMultiParamsManagerComp::GetOptionDescription(int /*index*/) const
 {
 	return QString();
+}
+
+
+bool CMultiParamsManagerComp::IsOptionEnabled(int /*index*/) const
+{
+	return true;
+}
+
+
+void CMultiParamsManagerComp::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
+{
 }
 
 
@@ -601,6 +613,17 @@ QByteArray CMultiParamsManagerComp::TypeInfoList::GetOptionId(int index) const
 	const TypeInfo& info = typeInfos[index];
 
 	return info.id;
+}
+
+
+bool CMultiParamsManagerComp::TypeInfoList::IsOptionEnabled(int /*index*/) const
+{
+	return true;
+}
+
+
+void CMultiParamsManagerComp::TypeInfoList::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
+{
 }
 
 

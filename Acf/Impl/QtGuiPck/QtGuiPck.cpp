@@ -268,6 +268,11 @@ I_EXPORT_COMPONENT(
 			"UI for showing a list of files",
 			"File List");
 
+I_EXPORT_COMPONENT(
+			TableBasedModelEditor,
+			"Table-based editor for Qt item model compatible data",
+			"Table");
+
 
 } // namespace QtGuiPck
 

@@ -80,32 +80,34 @@
 <a name="l00058"></a>00058        <span class="keyword">virtual</span> QString <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a483bcb83a62e43e4ff7a1eeb322f009c">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> QString <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a96784ce3ec10619c0d3bdd4e8e6edc8e">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a3171f4a1f484f2e144f357cdee5d9f61">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="keyword">protected</span>:
-<a name="l00063"></a>00063        <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a6fb1d1b9ee52373138103cac8b024714">ProcessSlave</a>(
-<a name="l00064"></a>00064                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00065"></a>00065                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
-<a name="l00066"></a>00066                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr);
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a38ea594db0ebdfa99da890128d4a22c7">OnComponentCreated</a>();
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 <span class="keyword">private</span>:
-<a name="l00072"></a>00072        I_ATTR(QByteArray, m_paramsIdAttrPtr);
-<a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">int</span>, m_maxIterationsCountAttrPtr);
-<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, m_bufferObjectCompPtr);
-<a name="l00075"></a>00075        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_slaveProcessorCompPtr);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        QVector&lt;QString&gt; m_iterationNames;
-<a name="l00078"></a>00078 };
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 } <span class="comment">// namespace iproc</span>
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a6da70b393056e8253e9bfc2ced0d8438">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a82a554e53b74d305d6d7f5fe83e36d69">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">protected</span>:
+<a name="l00065"></a>00065        <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a6fb1d1b9ee52373138103cac8b024714">ProcessSlave</a>(
+<a name="l00066"></a>00066                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00067"></a>00067                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00068"></a>00068                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_c_iterative_processor_comp.html#a38ea594db0ebdfa99da890128d4a22c7">OnComponentCreated</a>();
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="keyword">private</span>:
+<a name="l00074"></a>00074        I_ATTR(QByteArray, m_paramsIdAttrPtr);
+<a name="l00075"></a>00075        I_ATTR(<span class="keywordtype">int</span>, m_maxIterationsCountAttrPtr);
+<a name="l00076"></a>00076        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, m_bufferObjectCompPtr);
+<a name="l00077"></a>00077        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_slaveProcessorCompPtr);
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079        QVector&lt;QString&gt; m_iterationNames;
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="preprocessor">#endif // !iproc_CIterativeProcessorComp_included</span>
-<a name="l00085"></a>00085 <span class="preprocessor"></span>
-<a name="l00086"></a>00086 
+<a name="l00083"></a>00083 } <span class="comment">// namespace iproc</span>
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="preprocessor">#endif // !iproc_CIterativeProcessorComp_included</span>
+<a name="l00087"></a>00087 <span class="preprocessor"></span>
+<a name="l00088"></a>00088 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -406,6 +406,7 @@ void CSelectionParamGuiComp::UpdateRadioButtonView()
 		if (constraintsPtr != NULL){
 			int optionsCount = constraintsPtr->GetOptionsCount();
 			int selectedIndex = selectionPtr->GetSelectedOptionIndex();
+			bool isOptionEnabled = constraintsPtr->IsOptionEnabled(selectedIndex);
 
 			for (int i = 0; i < optionsCount; ++i){
 				QString name = constraintsPtr->GetOptionName(i);
@@ -416,6 +417,7 @@ void CSelectionParamGuiComp::UpdateRadioButtonView()
 				}
 
 				radioButtonPtr->setText(name);
+				radioButtonPtr->setEnabled(isOptionEnabled);
 				m_radioButtons.PushBack(radioButtonPtr);
 
 				buttonLayoutPtr->addWidget(radioButtonPtr);

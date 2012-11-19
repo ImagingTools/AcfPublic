@@ -86,6 +86,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description for a option with the index <code>index</code>.  <a href="#a0a88f5abd55974d0fd943e9e338996bf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">GetOptionId</a> (int index) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#a5498d1707cbd1845247a77edd24f9841"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">IsOptionEnabled</a> (int index) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the option is enabled and can be selected.  <a href="#a5e04d9da7ae89ff970fcef5c01cd8f6a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_constraints.html#aabd31d5331d685f0aa61899e7e2b3498">SetOptionEnabled</a> (int index, bool isEnabled=true)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a given option.  <a href="#aabd31d5331d685f0aa61899e7e2b3498"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Constraints of selection from set of possibilities. </p>
@@ -251,6 +255,61 @@ Public Member Functions</h2></td></tr>
 <p>Get number of managed options. </p>
 
 <p>Implemented in <a class="el" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a5b87290233e34ecc121908ab4151d807">iprm::CMultiParamsManagerComp::TypeInfoList</a>, <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a3d3b230d9af4ca181d3b35e7b7fc576d">icmpstr::CRegistryCodeSaverComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#ac0839252bfb7cdb764554ac7a3887847">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4278fa18405a7caf92af87848e907c79">iprm::CMultiParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#afb132afb680e660db4e12567c955f43c">iprm::CSelectableParamsSetComp</a>, <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#a332815e5227548cca6183ad8bf0ca468">iqt::CTranslationManagerComp</a>, <a class="el" href="classiprm_1_1_c_options_manager_comp.html#aa229f5434f7a8b3ef39d71a4c76b41b0">iprm::COptionsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_selection_constraints_comp.html#a9bad2d8c5ed6f399ca3b273212c5bcaa">iprm::CSelectionConstraintsComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e04d9da7ae89ff970fcef5c01cd8f6a"></a><!-- doxytag: member="iprm::ISelectionConstraints::IsOptionEnabled" ref="a5e04d9da7ae89ff970fcef5c01cd8f6a" args="(int index) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::ISelectionConstraints::IsOptionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>true</code> if the option is enabled and can be selected. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_selection_constraints.html#aabd31d5331d685f0aa61899e7e2b3498" title="Enables a given option.">SetOptionEnabled</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ac4022c61643ea5e121c1da2845d69260">iprm::CMultiParamsManagerComp::TypeInfoList</a>, <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab5368b32bebf953889f714525f9c40cf">icmpstr::CRegistryCodeSaverComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a8673e0236772ead7203a0c8eedc01768">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aaf7beca237ea3254593d4968d73812d5">iprm::CMultiParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a8901032aacd4c37426afe69368071a24">iprm::CSelectableParamsSetComp</a>, <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#a392edc92b484a85eb72289b7b56a11ff">iqt::CTranslationManagerComp</a>, <a class="el" href="classiprm_1_1_c_options_manager_comp.html#adf407ad005e30f4156855aed93ac2403">iprm::COptionsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_selection_constraints_comp.html#afafb15dccaad85b748bcd0132a13da13">iprm::CSelectionConstraintsComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aabd31d5331d685f0aa61899e7e2b3498"></a><!-- doxytag: member="iprm::ISelectionConstraints::SetOptionEnabled" ref="aabd31d5331d685f0aa61899e7e2b3498" args="(int index, bool isEnabled=true)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iprm::ISelectionConstraints::SetOptionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isEnabled</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enables a given option. </p>
+<p>Only enabled options can be selected. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd>GetOptionEnabled </dd></dl>
+
+<p>Implemented in <a class="el" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ae609146f8cddd943dff5de85b59d80a4">iprm::CMultiParamsManagerComp::TypeInfoList</a>, <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a081d662a50254d5e033dad9088674bec">icmpstr::CRegistryCodeSaverComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a85d81a7ea701cb3534805028efe40589">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a603e59479a77c8f4cdaeefd8b23a5714">iprm::CMultiParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ae3a773f204a325cc96d3a345bc26abcf">iprm::CSelectableParamsSetComp</a>, <a class="el" href="classiqt_1_1_c_translation_manager_comp.html#aa3ab9e3b2b1b85e83ab204727804dd2f">iqt::CTranslationManagerComp</a>, <a class="el" href="classiprm_1_1_c_options_manager_comp.html#a439d8a967d46503d7db6f34128ee97b5">iprm::COptionsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_selection_constraints_comp.html#a3d74c5d2bdd34196dab24bf2b82df9ad">iprm::CSelectionConstraintsComp</a>.</p>
 
 </div>
 </div>

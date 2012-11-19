@@ -25,7 +25,6 @@
 
 
 // ACF includes
-//#include "icomp/CComponentBase.h"
 #include "ifile/IFileNameParam.h"
 #include "iser/IFileLoader.h"
 #include "ibase/IFileConvertCopy.h"
