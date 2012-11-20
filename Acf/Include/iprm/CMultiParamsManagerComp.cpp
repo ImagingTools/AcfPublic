@@ -401,11 +401,6 @@ bool CMultiParamsManagerComp::IsOptionEnabled(int /*index*/) const
 }
 
 
-void CMultiParamsManagerComp::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
-{
-}
-
-
 QByteArray CMultiParamsManagerComp::GetOptionId(int index) const
 {
 	return GetParamsSetName(index).toLocal8Bit();
@@ -619,11 +614,6 @@ QByteArray CMultiParamsManagerComp::TypeInfoList::GetOptionId(int index) const
 bool CMultiParamsManagerComp::TypeInfoList::IsOptionEnabled(int /*index*/) const
 {
 	return true;
-}
-
-
-void CMultiParamsManagerComp::TypeInfoList::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
-{
 }
 
 

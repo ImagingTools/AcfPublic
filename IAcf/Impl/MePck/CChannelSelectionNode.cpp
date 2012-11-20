@@ -153,11 +153,6 @@ bool CChannelSelectionNode::IsOptionEnabled(int /*index*/) const
 }
 
 
-void CChannelSelectionNode::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
-{
-}
-
-
 // reimplemented (iser::ISerializable)
 
 bool CChannelSelectionNode::Serialize(iser::IArchive& archive)

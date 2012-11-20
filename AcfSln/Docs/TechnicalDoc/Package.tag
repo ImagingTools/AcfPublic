@@ -4952,13 +4952,6 @@
       <anchor>aa293971865c76e31eee0175c026369f1</anchor>
       <arglist>(int index) const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>ae8695841403046aa4a27483be04d35fb</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>ifileproc::IFileNaming</name>
@@ -8466,13 +8459,6 @@
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
       <anchor>a36c9599e43c7d8fedecc0fd1041a7a01</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>ae44cb8f21c82c9ef0bf8e799381caaff</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -13531,13 +13517,6 @@
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
       <anchor>a6da70b393056e8253e9bfc2ced0d8438</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
-      <anchor>a82a554e53b74d305d6d7f5fe83e36d69</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
@@ -19764,13 +19743,6 @@
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
       <anchor>a2fa30a041972a6794faadcc20b5ea41a</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>a915f2591aca062844170a2ed234de422</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

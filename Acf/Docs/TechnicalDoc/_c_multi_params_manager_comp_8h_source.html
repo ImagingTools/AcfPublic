@@ -101,70 +101,68 @@
 <a name="l00076"></a>00076        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#a84c9efb3b0cde90880876afc250faf14" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00077"></a>00077        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#a28a207370d92c50e9b5ea9f5a9ace120" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#aaf7beca237ea3254593d4968d73812d5" title="Return true if the option is enabled and can be selected.">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#a603e59479a77c8f4cdaeefd8b23a5714" title="Enables a given option.">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="keyword">protected</span>:
-<a name="l00082"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html">00082</a>        <span class="keyword">struct </span><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html">TypeInfo</a>
-<a name="l00083"></a>00083        {
-<a name="l00084"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#aad5367d7d7f02b3ddfab0d2fac268edd">00084</a>               <span class="keywordtype">int</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#aad5367d7d7f02b3ddfab0d2fac268edd">factoryIndex</a>;
-<a name="l00085"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#a47e5502a815a5f36154b426e1973e70e">00085</a>               QByteArray <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#a47e5502a815a5f36154b426e1973e70e">id</a>;
-<a name="l00086"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#aa178c04a433c3ade1aae8e6685994eee">00086</a>               QString <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#aa178c04a433c3ade1aae8e6685994eee">name</a>;
-<a name="l00087"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#ae669076bf1513cdfc226eb4624ec7bb8">00087</a>               QString <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#ae669076bf1513cdfc226eb4624ec7bb8">description</a>;
-<a name="l00088"></a>00088        };
-<a name="l00089"></a>00089 
-<a name="l00090"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html">00090</a>        <span class="keyword">struct </span><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html">TypeInfoList</a>: <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>
-<a name="l00091"></a>00091        {
-<a name="l00092"></a>00092               <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00093"></a>00093               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#aac071270871969573617f8ff4da17d86" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
-<a name="l00094"></a>00094               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a5b87290233e34ecc121908ab4151d807" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00095"></a>00095               <span class="keyword">virtual</span> QString <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ad98e53401cbae7893a9821a234d19cb7" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00096"></a>00096               <span class="keyword">virtual</span> QString <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a2871c1e7ad9be8097275f0966ad04cea" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00097"></a>00097               <span class="keyword">virtual</span> QByteArray <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a8b7455e3140abcd29a5622d0a140a117" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00098"></a>00098               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ac4022c61643ea5e121c1da2845d69260" title="Return true if the option is enabled and can be selected.">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00099"></a>00099               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ae609146f8cddd943dff5de85b59d80a4" title="Enables a given option.">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="keyword">protected</span>:
+<a name="l00081"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html">00081</a>        <span class="keyword">struct </span><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html">TypeInfo</a>
+<a name="l00082"></a>00082        {
+<a name="l00083"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#aad5367d7d7f02b3ddfab0d2fac268edd">00083</a>               <span class="keywordtype">int</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#aad5367d7d7f02b3ddfab0d2fac268edd">factoryIndex</a>;
+<a name="l00084"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#a47e5502a815a5f36154b426e1973e70e">00084</a>               QByteArray <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#a47e5502a815a5f36154b426e1973e70e">id</a>;
+<a name="l00085"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#aa178c04a433c3ade1aae8e6685994eee">00085</a>               QString <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#aa178c04a433c3ade1aae8e6685994eee">name</a>;
+<a name="l00086"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#ae669076bf1513cdfc226eb4624ec7bb8">00086</a>               QString <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info.html#ae669076bf1513cdfc226eb4624ec7bb8">description</a>;
+<a name="l00087"></a>00087        };
+<a name="l00088"></a>00088 
+<a name="l00089"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html">00089</a>        <span class="keyword">struct </span><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html">TypeInfoList</a>: <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>
+<a name="l00090"></a>00090        {
+<a name="l00091"></a>00091               <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
+<a name="l00092"></a>00092               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#aac071270871969573617f8ff4da17d86" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
+<a name="l00093"></a>00093               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a5b87290233e34ecc121908ab4151d807" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
+<a name="l00094"></a>00094               <span class="keyword">virtual</span> QString <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ad98e53401cbae7893a9821a234d19cb7" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00095"></a>00095               <span class="keyword">virtual</span> QString <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a2871c1e7ad9be8097275f0966ad04cea" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00096"></a>00096               <span class="keyword">virtual</span> QByteArray <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a8b7455e3140abcd29a5622d0a140a117" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00097"></a>00097               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ac4022c61643ea5e121c1da2845d69260" title="Return true if the option is enabled and can be selected.">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00098"></a>00098 
+<a name="l00099"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ad2e298b030091d5f943c82660aa1a752">00099</a>               QVector&lt;TypeInfo&gt; <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ad2e298b030091d5f943c82660aa1a752">typeInfos</a>;
 <a name="l00100"></a>00100 
-<a name="l00101"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ad2e298b030091d5f943c82660aa1a752">00101</a>               QVector&lt;TypeInfo&gt; <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ad2e298b030091d5f943c82660aa1a752">typeInfos</a>;
-<a name="l00102"></a>00102 
-<a name="l00103"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ae7accea8545bcb8e2ec743630a2b8d13">00103</a>               QMap&lt;QByteArray, int&gt; <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ae7accea8545bcb8e2ec743630a2b8d13">typeIdToIndexMap</a>;
-<a name="l00104"></a>00104        };
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#a23952cc12c590db6db7579fb511eebac">OnComponentCreated</a>();
-<a name="l00108"></a>00108        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#af61615da54317ad382cf08c5da5aa11f">OnComponentDestroyed</a>();
-<a name="l00109"></a>00109 
-<a name="l00116"></a>00116        <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#aeb0f24a23abc405816eb74f9065efcdd" title="Ensure some parameter exist and has correct type.">EnsureParamExist</a>(<span class="keyword">const</span> QByteArray&amp; typeId, <span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name);
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="keyword">private</span>:
-<a name="l00119"></a>00119        I_MULTIREF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_fixedParamSetsCompPtr);
-<a name="l00120"></a>00120        I_MULTIATTR(QString, m_fixedSetNamesAttrPtr);
-<a name="l00121"></a>00121        I_ATTR(QString, m_defaultSetNameAttrPtr); 
-<a name="l00122"></a>00122        I_MULTIFACT(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>, m_paramSetsFactoriesPtr);
-<a name="l00123"></a>00123        I_MULTIATTR(QString, m_factoryNameNameAttrPtr);  
-<a name="l00124"></a>00124        I_MULTIATTR(QString, m_factoryDescriptionAttrPtr);      
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126        <span class="keyword">struct </span>ParamSet
-<a name="l00127"></a>00127        {
-<a name="l00128"></a>00128               <a class="code" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;IParamsSet&gt;</a> paramSetPtr;
-<a name="l00129"></a>00129               QString name;
-<a name="l00130"></a>00130               QByteArray typeId;
-<a name="l00131"></a>00131        };
+<a name="l00101"></a><a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ae7accea8545bcb8e2ec743630a2b8d13">00101</a>               QMap&lt;QByteArray, int&gt; <a class="code" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ae7accea8545bcb8e2ec743630a2b8d13">typeIdToIndexMap</a>;
+<a name="l00102"></a>00102        };
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#a23952cc12c590db6db7579fb511eebac">OnComponentCreated</a>();
+<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#af61615da54317ad382cf08c5da5aa11f">OnComponentDestroyed</a>();
+<a name="l00107"></a>00107 
+<a name="l00114"></a>00114        <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#aeb0f24a23abc405816eb74f9065efcdd" title="Ensure some parameter exist and has correct type.">EnsureParamExist</a>(<span class="keyword">const</span> QByteArray&amp; typeId, <span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name);
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="keyword">private</span>:
+<a name="l00117"></a>00117        I_MULTIREF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_fixedParamSetsCompPtr);
+<a name="l00118"></a>00118        I_MULTIATTR(QString, m_fixedSetNamesAttrPtr);
+<a name="l00119"></a>00119        I_ATTR(QString, m_defaultSetNameAttrPtr); 
+<a name="l00120"></a>00120        I_MULTIFACT(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>, m_paramSetsFactoriesPtr);
+<a name="l00121"></a>00121        I_MULTIATTR(QString, m_factoryNameNameAttrPtr);  
+<a name="l00122"></a>00122        I_MULTIATTR(QString, m_factoryDescriptionAttrPtr);      
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124        <span class="keyword">struct </span>ParamSet
+<a name="l00125"></a>00125        {
+<a name="l00126"></a>00126               <a class="code" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;IParamsSet&gt;</a> paramSetPtr;
+<a name="l00127"></a>00127               QString name;
+<a name="l00128"></a>00128               QByteArray typeId;
+<a name="l00129"></a>00129        };
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
 <a name="l00132"></a>00132 
-<a name="l00133"></a>00133        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
+<a name="l00133"></a>00133        ParamSets m_paramSets;
 <a name="l00134"></a>00134 
-<a name="l00135"></a>00135        ParamSets m_paramSets;
+<a name="l00135"></a>00135        <span class="keywordtype">int</span> m_selectedIndex;
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137        <span class="keywordtype">int</span> m_selectedIndex;
-<a name="l00138"></a>00138 
-<a name="l00139"></a>00139        TypeInfoList m_typeInfoList;
-<a name="l00140"></a>00140 };
-<a name="l00141"></a>00141 
+<a name="l00137"></a>00137        TypeInfoList m_typeInfoList;
+<a name="l00138"></a>00138 };
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 } <span class="comment">// namespace iprm</span>
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143 } <span class="comment">// namespace iprm</span>
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146 <span class="preprocessor">#endif // !iprm_CMultiParamsManagerComp_included</span>
-<a name="l00147"></a>00147 <span class="preprocessor"></span>
-<a name="l00148"></a>00148 
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144 <span class="preprocessor">#endif // !iprm_CMultiParamsManagerComp_included</span>
+<a name="l00145"></a>00145 <span class="preprocessor"></span>
+<a name="l00146"></a>00146 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

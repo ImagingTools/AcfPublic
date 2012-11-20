@@ -274,11 +274,6 @@ bool CSelectableParamsSetComp::IsOptionEnabled(int index) const
 }
 
 
-void CSelectableParamsSetComp::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
-{
-}
-
-
 // reimplemented (icomp::CComponentBase)
 
 void CSelectableParamsSetComp::OnComponentCreated()

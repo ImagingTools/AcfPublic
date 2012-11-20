@@ -89,34 +89,33 @@
 <a name="l00066"></a>00066        <span class="keyword">virtual</span> QString <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a0e272a938f59922d8b211fc28c8b5643">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00067"></a>00067        <span class="keyword">virtual</span> QByteArray <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a240b19c9591683f080aa7c423ce29293">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a2fa30a041972a6794faadcc20b5ea41a">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a915f2591aca062844170a2ed234de422">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a0d20fcd9935ffc329ddf54541baa8c6b">OnComponentCreated</a>();
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 <span class="keyword">private</span>:
-<a name="l00075"></a>00075        <span class="keywordtype">int</span> m_triggerMode;
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        <span class="keyword">struct </span>SelectionEntry
-<a name="l00078"></a>00078        {
-<a name="l00079"></a>00079               QString name;
-<a name="l00080"></a>00080               QString description;
-<a name="l00081"></a>00081               <span class="keywordtype">int</span> triggerMode;
-<a name="l00082"></a>00082        };
-<a name="l00083"></a>00083        <span class="keyword">typedef</span> QVector&lt;SelectionEntry&gt; SelectionList;
-<a name="l00084"></a>00084        SelectionList m_selectionList;
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086        I_REF(<a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">isig::ITriggerConstraints</a>, m_triggerConstraintsCompPtr);
-<a name="l00087"></a>00087        I_ATTR(<span class="keywordtype">int</span>, m_triggerModeAttrPtr);
-<a name="l00088"></a>00088 };
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classisig_1_1_c_trigger_params_comp.html#a0d20fcd9935ffc329ddf54541baa8c6b">OnComponentCreated</a>();
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="keyword">private</span>:
+<a name="l00074"></a>00074        <span class="keywordtype">int</span> m_triggerMode;
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076        <span class="keyword">struct </span>SelectionEntry
+<a name="l00077"></a>00077        {
+<a name="l00078"></a>00078               QString name;
+<a name="l00079"></a>00079               QString description;
+<a name="l00080"></a>00080               <span class="keywordtype">int</span> triggerMode;
+<a name="l00081"></a>00081        };
+<a name="l00082"></a>00082        <span class="keyword">typedef</span> QVector&lt;SelectionEntry&gt; SelectionList;
+<a name="l00083"></a>00083        SelectionList m_selectionList;
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085        I_REF(<a class="code" href="classisig_1_1_i_trigger_constraints.html" title="Interface for AVT camera parameters.">isig::ITriggerConstraints</a>, m_triggerConstraintsCompPtr);
+<a name="l00086"></a>00086        I_ATTR(<span class="keywordtype">int</span>, m_triggerModeAttrPtr);
+<a name="l00087"></a>00087 };
+<a name="l00088"></a>00088 
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091 } <span class="comment">// namespace isig</span>
+<a name="l00090"></a>00090 } <span class="comment">// namespace isig</span>
+<a name="l00091"></a>00091 
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 <span class="preprocessor">#endif // !isig_CTriggerParamsComp_included</span>
-<a name="l00095"></a>00095 <span class="preprocessor"></span>
-<a name="l00096"></a>00096 
+<a name="l00093"></a>00093 <span class="preprocessor">#endif // !isig_CTriggerParamsComp_included</span>
+<a name="l00094"></a>00094 <span class="preprocessor"></span>
+<a name="l00095"></a>00095 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

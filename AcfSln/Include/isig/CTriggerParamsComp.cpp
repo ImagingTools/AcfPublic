@@ -207,11 +207,6 @@ bool CTriggerParamsComp::IsOptionEnabled(int /*index*/) const
 }
 
 
-void CTriggerParamsComp::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
-{
-}
-
-
 // reimplemented (icomp::CComponentBase)
 
 void CTriggerParamsComp::OnComponentCreated()

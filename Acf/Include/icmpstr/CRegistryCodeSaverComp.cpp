@@ -280,11 +280,6 @@ bool CRegistryCodeSaverComp::IsOptionEnabled(int index) const
 }
 
 
-void CRegistryCodeSaverComp::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
-{
-}
-
-
 // protected methods
 
 bool CRegistryCodeSaverComp::AppendAddresses(

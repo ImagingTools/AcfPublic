@@ -739,11 +739,6 @@ bool CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::IsOptionEnabled(int 
 }
 
 
-void CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::SetOptionEnabled(int /*index*/, bool /*isEnabled*/)
-{
-}
-
-
 // reimplemented (iser::ISerializable)
 
 bool CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::Serialize(iser::IArchive& /*archive*/)

@@ -3249,7 +3249,6 @@
     <filename>_c_options_manager_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <class kind="class">iprm::COptionsManagerComp</class>
     <namespace>iprm</namespace>
   </compound>
@@ -3352,7 +3351,7 @@
     <name>IOptionsManager.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_i_options_manager_8h</filename>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
     <class kind="class">iprm::IOptionsManager</class>
     <namespace>iprm</namespace>
   </compound>
@@ -17204,13 +17203,6 @@
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>ab5368b32bebf953889f714525f9c40cf</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a081d662a50254d5e033dad9088674bec</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QSet&lt; icomp::CComponentAddress &gt;</type>
@@ -31566,13 +31558,6 @@
       <anchor>aaf7beca237ea3254593d4968d73812d5</anchor>
       <arglist>(int index) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a603e59479a77c8f4cdaeefd8b23a5714</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -31672,13 +31657,6 @@
       <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
       <anchor>ac4022c61643ea5e121c1da2845d69260</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
-      <anchor>ae609146f8cddd943dff5de85b59d80a4</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="variable">
       <type>QVector&lt; TypeInfo &gt;</type>
@@ -31782,7 +31760,6 @@
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iprm::IOptionsManager</base>
     <base virtualness="virtual">iser::ISerializable</base>
-    <base virtualness="virtual">iprm::ISelectionConstraints</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -32035,13 +32012,6 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>a8673e0236772ead7203a0c8eedc01768</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a85d81a7ea701cb3534805028efe40589</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -32338,13 +32308,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>ae3a773f204a325cc96d3a345bc26abcf</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>a0e31b9e305ff327511f8fd4eb2e8458b</anchor>
@@ -32411,13 +32374,6 @@
       <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
       <anchor>afafb15dccaad85b748bcd0132a13da13</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
-      <anchor>a3d74c5d2bdd34196dab24bf2b82df9ad</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32625,7 +32581,7 @@
   <compound kind="class">
     <name>iprm::IOptionsManager</name>
     <filename>classiprm_1_1_i_options_manager.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">iprm::ISelectionConstraints</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
@@ -32643,6 +32599,13 @@
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
       <anchor>a8e1c581835bcc37db3e25212902013ccaa89e24c84d49356fdead922551e903dc</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>abd4585a3b03792f011f6b798945b102e</anchor>
+      <arglist>(int index, bool isEnabled=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -32908,13 +32871,6 @@
       <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
       <anchor>a5e04d9da7ae89ff970fcef5c01cd8f6a</anchor>
       <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>aabd31d5331d685f0aa61899e7e2b3498</anchor>
-      <arglist>(int index, bool isEnabled=true)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33926,13 +33882,6 @@
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
       <anchor>a392edc92b484a85eb72289b7b56a11ff</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOptionEnabled</name>
-      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>aa3ab9e3b2b1b85e83ab204727804dd2f</anchor>
-      <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
   </compound>
   <compound kind="class">
