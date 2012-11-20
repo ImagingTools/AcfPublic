@@ -753,6 +753,34 @@
       <anchor>a592a35aed6c119e24226af8302aa5379</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>ac0d707a4eaf6ea9f1f8c1b9d920c9919</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>a23a2ec7ab2a6530a8fc614ecb565f7c1</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>ab5b05a3d8bec7597b90622216d22a268</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
+      <anchor>a25f961b844543f60f538f81018002f1e</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>EnsureConnected</name>

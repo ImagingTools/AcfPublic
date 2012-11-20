@@ -32,6 +32,7 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ibase::IFileConvertCopy Class Reference</div>  </div>
@@ -56,6 +57,11 @@ Inheritance diagram for ibase::IFileConvertCopy:</div>
 
 <p><a href="classibase_1_1_i_file_convert_copy-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_file_convert_copy.html#ab38aa73cdbe7cdf4bd29c30cee30f061">MessageId</a> { <a class="el" href="classibase_1_1_i_file_convert_copy.html#ab38aa73cdbe7cdf4bd29c30cee30f061a87172119ccfef21e1bab64a3f4c52b0b">MI_INPUT_PATH</a> =  0x5cd40, 
+<a class="el" href="classibase_1_1_i_file_convert_copy.html#ab38aa73cdbe7cdf4bd29c30cee30f061a6f45c46864df50c737d0ca2b96572513">MI_OUTPUT_PATH</a>
+ }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_file_convert_copy.html#ad11442c7773dc7ace817074217e3ef4c">ConvertFiles</a> (const QString &amp;inputPath, const QString &amp;outputPath, const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr=NULL) const =0</td></tr>
@@ -65,7 +71,35 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Common interface for copy a file. </p>
 
 <p>Definition at line <a class="el" href="_i_file_convert_copy_8h_source.html#l00024">24</a> of file <a class="el" href="_i_file_convert_copy_8h_source.html">IFileConvertCopy.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="ab38aa73cdbe7cdf4bd29c30cee30f061"></a><!-- doxytag: member="ibase::IFileConvertCopy::MessageId" ref="ab38aa73cdbe7cdf4bd29c30cee30f061" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classibase_1_1_i_file_convert_copy.html#ab38aa73cdbe7cdf4bd29c30cee30f061">ibase::IFileConvertCopy::MessageId</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ab38aa73cdbe7cdf4bd29c30cee30f061a87172119ccfef21e1bab64a3f4c52b0b"></a><!-- doxytag: member="MI_INPUT_PATH" ref="ab38aa73cdbe7cdf4bd29c30cee30f061a87172119ccfef21e1bab64a3f4c52b0b" args="" -->MI_INPUT_PATH</em>&nbsp;</td><td>
+<p>Message ID if input path is invalid. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ab38aa73cdbe7cdf4bd29c30cee30f061a6f45c46864df50c737d0ca2b96572513"></a><!-- doxytag: member="MI_OUTPUT_PATH" ref="ab38aa73cdbe7cdf4bd29c30cee30f061a6f45c46864df50c737d0ca2b96572513" args="" -->MI_OUTPUT_PATH</em>&nbsp;</td><td>
+<p>Message ID if output path is invalid. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classiqt_1_1_c_file_info_copy_comp.html#a864bcab4d6c92ba737c87c106a8441a2">iqt::CFileInfoCopyComp</a>.</p>
+
+<p>Definition at line <a class="el" href="_i_file_convert_copy_8h_source.html#l00027">27</a> of file <a class="el" href="_i_file_convert_copy_8h_source.html">IFileConvertCopy.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ad11442c7773dc7ace817074217e3ef4c"></a><!-- doxytag: member="ibase::IFileConvertCopy::ConvertFiles" ref="ad11442c7773dc7ace817074217e3ef4c" args="(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const =0" -->
 <div class="memitem">
 <div class="memproto">

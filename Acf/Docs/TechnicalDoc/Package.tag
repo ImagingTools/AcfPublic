@@ -12912,6 +12912,24 @@
     <name>ibase::IFileConvertCopy</name>
     <filename>classibase_1_1_i_file_convert_copy.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classibase_1_1_i_file_convert_copy.html</anchorfile>
+      <anchor>ab38aa73cdbe7cdf4bd29c30cee30f061</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_INPUT_PATH</name>
+      <anchorfile>classibase_1_1_i_file_convert_copy.html</anchorfile>
+      <anchor>ab38aa73cdbe7cdf4bd29c30cee30f061a87172119ccfef21e1bab64a3f4c52b0b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_OUTPUT_PATH</name>
+      <anchorfile>classibase_1_1_i_file_convert_copy.html</anchorfile>
+      <anchor>ab38aa73cdbe7cdf4bd29c30cee30f061a6f45c46864df50c737d0ca2b96572513</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>ConvertFiles</name>

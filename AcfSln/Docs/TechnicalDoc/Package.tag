@@ -4829,8 +4829,8 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
-      <anchor>ae1ed0d7504060481b8a19b6489883442</anchor>
-      <arglist>(m_outputSupplierSerializerPtr, m_outputSupplierPtr, true)</arglist>
+      <anchor>a7c2849ad014565f3354c9efad8449e17</anchor>
+      <arglist>(m_outputSupplierSerializerCompPtr, m_outputSupplierCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4838,6 +4838,13 @@
       <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
       <anchor>ad6c4ab9149671a87422bc9f678360acb</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessSingleFile</name>
+      <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
+      <anchor>a18f4dcff96bb067b4e0985fba07f5442</anchor>
+      <arglist>(const QString &amp;filePath, iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
