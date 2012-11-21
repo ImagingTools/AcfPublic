@@ -35128,6 +35128,13 @@
       <anchor>a2ac8fda09899d4fa0fbfc861c78b64ff</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnToolsButtonMenuActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a989afead933717938d5d52fda21e234a</anchor>
+      <arglist>(QAction *action)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnInsertNode</name>

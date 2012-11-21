@@ -720,13 +720,6 @@
     </member>
     <member kind="slot">
       <type>void</type>
-      <name>frameArrived</name>
-      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
-      <anchor>aa0e472640b14ef7dfeff028b38f5388a</anchor>
-      <arglist>(AVFrame *, int, int, int)</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
       <name>requestReceived</name>
       <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
       <anchor>a66f8c737bd1ba24d33aca0ec65c75067</anchor>
@@ -807,13 +800,6 @@
     <name>ilibav::CLibAvRtspStreamingClient</name>
     <filename>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</filename>
     <class kind="class">ilibav::CLibAvRtspStreamingClient::CLibAvRtspConnection</class>
-    <member kind="signal">
-      <type>void</type>
-      <name>frameReady</name>
-      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
-      <anchor>a9c3cd8fbd2ebf5a37c72dbe9da14a0bc</anchor>
-      <arglist>(AVFrame *, int, int, int)</arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CLibAvRtspStreamingClient</name>
@@ -839,8 +825,15 @@
       <type>void</type>
       <name>CloseConnection</name>
       <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
-      <anchor>a915cb3fdc047d7a08bcdc2ca60b716ec</anchor>
-      <arglist>(bool waitForClosed)</arglist>
+      <anchor>ac1e6cb358351eaef8fd352e928412bd3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>QuitStreaming</name>
+      <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
+      <anchor>a1a7e64d6f6803701d008d446cf771216</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -850,11 +843,11 @@
       <arglist>(u_int8_t *frameData, unsigned frameSize)</arglist>
     </member>
     <member kind="function">
-      <type>QMutex &amp;</type>
-      <name>GetMutex</name>
+      <type>bool</type>
+      <name>RetrieveFrame</name>
       <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_client.html</anchorfile>
-      <anchor>a1d2cc69cc3320fc99b6b3f32461b07a0</anchor>
-      <arglist>()</arglist>
+      <anchor>a4bd882a6ef3c58d25e8f727866d31e76</anchor>
+      <arglist>(iimg::IBitmap *frameBitmap)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

@@ -325,12 +325,12 @@
 <a name="l00318"></a>00318               QMenu&amp; menu = *BaseClass::ToolsButton-&gt;menu();
 <a name="l00319"></a>00319               menu.clear();
 <a name="l00320"></a>00320 
-<a name="l00321"></a>00321               menu.addAction(<span class="stringliteral">&quot;Flip horizontally&quot;</span>)-&gt;setData(ActionFlipHorizontally);
-<a name="l00322"></a>00322               menu.addAction(<span class="stringliteral">&quot;Flip vertically&quot;</span>)-&gt;setData(ActionFlipVertically);
-<a name="l00323"></a>00323               menu.addAction(<span class="stringliteral">&quot;Rotate clockwise&quot;</span>)-&gt;setData(ActionRotateClockwise);
-<a name="l00324"></a>00324               menu.addAction(<span class="stringliteral">&quot;Rotate counterclockwise&quot;</span>)-&gt;setData(ActionRotateCounterclockwise);
+<a name="l00321"></a>00321               menu.addAction(QIcon(<span class="stringliteral">&quot;:/Icons/FlipHorizontal.svg&quot;</span>), tr(<span class="stringliteral">&quot;Flip horizontally&quot;</span>))-&gt;setData(ActionFlipHorizontally);
+<a name="l00322"></a>00322               menu.addAction(QIcon(<span class="stringliteral">&quot;:/Icons/FlipVertical.svg&quot;</span>), tr(<span class="stringliteral">&quot;Flip vertically&quot;</span>))-&gt;setData(ActionFlipVertically);
+<a name="l00323"></a>00323               menu.addAction(QIcon(<span class="stringliteral">&quot;:/Icons/RotateRight.svg&quot;</span>), tr(<span class="stringliteral">&quot;Rotate clockwise&quot;</span>))-&gt;setData(ActionRotateClockwise);
+<a name="l00324"></a>00324               menu.addAction(QIcon(<span class="stringliteral">&quot;:/Icons/RotateLeft.svg&quot;</span>), tr(<span class="stringliteral">&quot;Rotate counterclockwise&quot;</span>))-&gt;setData(ActionRotateCounterclockwise);
 <a name="l00325"></a>00325               <span class="keywordflow">if</span> (polylinePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00326"></a>00326                      menu.addAction(<span class="stringliteral">&quot;Reverse line&quot;</span>)-&gt;setData(ActionReverseLine);
+<a name="l00326"></a>00326                      menu.addAction(QIcon(<span class="stringliteral">&quot;:/Icons/Reverse.svg&quot;</span>), tr(<span class="stringliteral">&quot;Reverse line&quot;</span>))-&gt;setData(ActionReverseLine);
 <a name="l00327"></a>00327               }
 <a name="l00328"></a>00328        }
 <a name="l00329"></a>00329 }

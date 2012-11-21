@@ -46,19 +46,7 @@ namespace ilibav
 
 CLibAvRtspStreamingCameraComp::CLibAvRtspStreamingCameraComp()
 {	
-	m_mutexPtr = NULL;
-}
-
-
-void CLibAvRtspStreamingCameraComp::frameArrived(AVFrame* frame, int width, int height, int pixelformat)
-{
-	QMutexLocker locker(m_mutexPtr);
-
-	m_lastImageSize = istd::CIndex2d(width, height);
-
-	istd::CChangeNotifier notifier(m_frameBitmapPtr);
-
-	CLibAvConverter::ConvertBitmap(*frame, m_lastImageSize, (AVPixelFormat)pixelformat, *m_frameBitmapPtr);
+	m_mutexPtr = NULL;	
 }
 
 
@@ -82,9 +70,9 @@ int CLibAvRtspStreamingCameraComp::DoProcessing(
 			istd::IChangeable* outputPtr,
 			ibase::IProgressManager* /*progressManagerPtr*/)
 {
-	m_frameBitmapPtr = dynamic_cast<iimg::IBitmap*>(outputPtr);
+	iimg::IBitmap* bitmapPtr = dynamic_cast<iimg::IBitmap*>(outputPtr);
 
-	if (m_frameBitmapPtr == NULL){
+	if (bitmapPtr == NULL){
 		return TS_OK;
 	}
 
@@ -94,24 +82,20 @@ int CLibAvRtspStreamingCameraComp::DoProcessing(
 		connect(	m_networkAccessManagerPtr.GetPtr(),
 					SIGNAL(finished(QNetworkReply*)),
 					this,
-					SLOT(requestReceived(QNetworkReply*)),
-					Qt::QueuedConnection);
+					SLOT(requestReceived(QNetworkReply*))
+					);
 	}
 
 	if (!m_streamingClientPtr.IsValid()){
-		m_streamingClientPtr.SetPtr(new CLibAvRtspStreamingClient());		
-
-		connect(	m_streamingClientPtr.GetPtr(),
-					SIGNAL(frameReady(AVFrame*, int, int, int)),
-					this,
-					SLOT(frameArrived(AVFrame*, int , int, int)),
-					Qt::QueuedConnection);
-
+		m_streamingClientPtr.SetPtr(new CLibAvRtspStreamingClient());
 	}	
 	
 	EnsureConnected(paramsPtr);	
 
-	return TS_OK;	
+	if(m_streamingClientPtr->RetrieveFrame(bitmapPtr))
+		return TS_OK;
+	
+	return TS_INVALID;	
 }
 
 // reimplemented (imeas::INumericConstraints)
@@ -247,18 +231,9 @@ void CLibAvRtspStreamingCameraComp::EnsureConnected(const iprm::IParamsSet* para
 	}
 
 	if (cameraUrl != m_currentCameraUrl){
-		if (m_streamingClientPtr->isRunning()){		
-			//stop streaming thread
-			m_streamingClientPtr->CloseConnection(true);		
-		}		
-
-		/*if (m_streamingClientPtr->OpenConnection(cameraUrl)){
-			m_currentCameraUrl = cameraUrl;
-			
-			if(m_mutexPtr == NULL){
-				m_mutexPtr = &m_streamingClientPtr->GetMutex();
-			}
-		}*/
+		if (m_streamingClientPtr->OpenConnection(cameraUrl)){
+			m_currentCameraUrl = cameraUrl;			
+		}
 	}
 }
 
@@ -274,10 +249,8 @@ void CLibAvRtspStreamingCameraComp::OnComponentCreated()
 void CLibAvRtspStreamingCameraComp::OnComponentDestroyed()
 {
 	if (m_streamingClientPtr.IsValid()){
-		if (m_streamingClientPtr->isRunning()){			
-			//stop streaming thread
-			m_streamingClientPtr->CloseConnection(true);
-		}
+		//Close connection if exists
+		m_streamingClientPtr->CloseConnection();		
 
 		disconnect(	m_streamingClientPtr.GetPtr(),
 					SIGNAL(frameReady(AVFrame*, int, int, int)),
