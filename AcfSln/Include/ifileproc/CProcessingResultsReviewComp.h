@@ -33,7 +33,9 @@
 // ACF-Solutions includes
 #include "iproc/ISupplier.h"
 
+
 class iser::IArchive;
+
 
 namespace ifileproc
 {
