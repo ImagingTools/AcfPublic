@@ -49,6 +49,21 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 		RegisterInterfaceExtractor(interfaceName, NULL);
 	}
 
+	// register embedded components
+	const IRegistry::Ids& embeddedComponentIds = registry.GetEmbeddedRegistryIds();
+	for (		IRegistry::Ids::const_iterator embeddedIter = embeddedComponentIds.begin();
+				embeddedIter != embeddedComponentIds.end();
+				++embeddedIter){
+		const QByteArray& embeddedComponentId = *embeddedIter;
+
+		const IRegistry* embeddedRegistryPtr = registry.GetEmbeddedRegistry(embeddedComponentId);
+		if (embeddedRegistryPtr == NULL){
+			continue;
+		}
+
+		m_embeddedComponentInfos[embeddedComponentId].SetPtr(new icomp::CCompositeComponentStaticInfo(*embeddedRegistryPtr, manager, this));
+	}
+
 	// register exported subcomponents
 	const IRegistry::ExportedElementsMap& exportedComponentsMap = registry.GetExportedElementsMap();
 	for (		IRegistry::ExportedElementsMap::const_iterator subcomponentIter = exportedComponentsMap.begin();
@@ -66,7 +81,21 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 			continue;
 		}
 
-		const IElementStaticInfo* subMetaInfoPtr = manager.GetComponentMetaInfo(elementInfoPtr->address);
+		const IElementStaticInfo* subMetaInfoPtr = NULL;
+
+		const QByteArray& packageId = elementInfoPtr->address.GetPackageId();
+		if (!packageId.isEmpty()){
+			// get non-embedded component
+			subMetaInfoPtr = manager.GetComponentMetaInfo(elementInfoPtr->address);
+		}
+		else{
+			//  get embedded component
+			EmbeddedComponentInfos::ConstIterator findEmbeddIter = m_embeddedComponentInfos.constFind(elementInfoPtr->address.GetComponentId());
+			if (findEmbeddIter != m_embeddedComponentInfos.constEnd()){
+				subMetaInfoPtr = findEmbeddIter.value().GetPtr();
+			}
+		}
+
 		if (subMetaInfoPtr == NULL){
 			continue;
 		}
@@ -79,21 +108,6 @@ CCompositeComponentStaticInfo::CCompositeComponentStaticInfo(
 		}
 
 		RegisterSubelementInfo(subcomponentId, subMetaInfoPtr);
-	}
-
-	// register embedded components
-	const IRegistry::Ids& embeddedComponentIds = registry.GetEmbeddedRegistryIds();
-	for (		IRegistry::Ids::const_iterator embeddedIter = embeddedComponentIds.begin();
-				embeddedIter != embeddedComponentIds.end();
-				++embeddedIter){
-		const QByteArray& embeddedComponentId = *embeddedIter;
-
-		const IRegistry* embeddedRegistryPtr = registry.GetEmbeddedRegistry(embeddedComponentId);
-		if (embeddedRegistryPtr == NULL){
-			continue;
-		}
-
-		m_embeddedComponentInfos[embeddedComponentId].SetPtr(new icomp::CCompositeComponentStaticInfo(*embeddedRegistryPtr, manager, this));
 	}
 
 	// register exported attributes
@@ -287,7 +301,7 @@ IElementStaticInfo::Ids CCompositeComponentStaticInfo::AttrAsOptionalDelegator::
 
 int CCompositeComponentStaticInfo::AttrAsOptionalDelegator::GetAttributeFlags() const
 {
-	return AF_NULLABLE;
+	return (m_slave.GetAttributeFlags() & ~AF_OBLIGATORY) | AF_NULLABLE;
 }
 
 
