@@ -80,6 +80,8 @@ void CValueSupplierGuiComp::OnSupplierParamsChanged()
 
 void CValueSupplierGuiComp::CreateShapes(int /*sceneId*/, Shapes& result)
 {
+	m_foundModel.DetachAllObservers();
+
 	iview::CInteractiveCircleShape* circleShapePtr = new iview::CInteractiveCircleShape();
 	if (circleShapePtr != NULL){
 		circleShapePtr->SetVisible(false);

@@ -365,6 +365,8 @@ void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelAttached()
 		paramsWidget->setVisible(m_areParamsEditable);
 		paramsWidget->setEnabled(areParamsAttachedToEditor);
 	}
+
+	BaseClass::SetStatusIcon(QIcon(":/Icons/StateUnknown.svg"));
 }
 
 
