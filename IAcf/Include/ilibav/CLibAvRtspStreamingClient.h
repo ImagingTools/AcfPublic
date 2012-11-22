@@ -65,7 +65,7 @@ public:
 	~CLibAvRtspStreamingClient();	
 
 	/**
-		Creates rtsp streming connection
+		Creates rtsp streming connection or reconnects if client is already connected
 	*/
 	bool OpenConnection(const QUrl& url);
 
@@ -85,7 +85,7 @@ public:
 	void DecodeFrame(u_int8_t* frameData, unsigned frameSize);
 
 	/**
-		Waits for frame to arrive and then convert to bitmap
+		Waits for frame to arrive and then converts to bitmap
 	*/
 	bool RetrieveFrame(iimg::IBitmap* frameBitmap);	
 
@@ -165,8 +165,7 @@ private:
 
 	CLibAvRtspStreamingClient* m_streamClientPtr;
 
-	iimg::IBitmap* m_frameBitmapPtr;
-	bool m_frameRetrieved;
+	iimg::IBitmap* m_frameBitmapPtr;	
 	int m_frameRetrieveTimeoutMs;
 
 	QMutex m_mutex;

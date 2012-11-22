@@ -67,7 +67,6 @@ Inheritance diagram for ibase::CMessageContainer:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#a658b006be1bea0c2311ba3975f281542">CMessageContainer</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#a29041cd7c456c043fd3a83762467817d">~CMessageContainer</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#aa331e77e82c301148a24880866fca9d7">AddChildContainer</a> (<a class="el" href="namespaceibase.html#a1cb6747206bcf8cab703d7f6c3f05282">IHierarchicalMessageContainer</a> *childContainerPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#ac96787fcd2d4df915eab139c29164be7">SetSlaveConsumer</a> (<a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *consumerPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#afddbd67f0c5a6d30ce8bf1aa62eabc20">SetMaxMessageCount</a> (int maxMessageCount=-1)</td></tr>
@@ -85,11 +84,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#abb7d4257a9425546d21f23e39a3741dd">GetChildsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a1cb6747206bcf8cab703d7f6c3f05282">IHierarchicalMessageContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#aacb0d3680b600054a53c7f2ebc469993">GetChild</a> (int index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#aff1fe19bfb61760bff60c3a66a5e20ae">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#aff1fe19bfb61760bff60c3a66a5e20ae"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Basic implementation of a message container. </p>
 
-<p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00023">23</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00024">24</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a658b006be1bea0c2311ba3975f281542"></a><!-- doxytag: member="ibase::CMessageContainer::CMessageContainer" ref="a658b006be1bea0c2311ba3975f281542" args="()" -->
 <div class="memitem">
@@ -100,22 +101,6 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a29041cd7c456c043fd3a83762467817d"></a><!-- doxytag: member="ibase::CMessageContainer::~CMessageContainer" ref="a29041cd7c456c043fd3a83762467817d" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ibase::CMessageContainer::~CMessageContainer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -175,6 +160,28 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff1fe19bfb61760bff60c3a66a5e20ae"></a><!-- doxytag: member="ibase::CMessageContainer::CopyFrom" ref="aff1fe19bfb61760bff60c3a66a5e20ae" args="(const istd::IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ibase::CMessageContainer::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Copy this object from another one. </p>
+<p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a> do nothing. </p>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
 
 </div>
 </div>

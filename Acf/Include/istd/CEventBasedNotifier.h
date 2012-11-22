@@ -20,18 +20,19 @@
 ********************************************************************************/
 
 
-#ifndef iqt_CSafeNotifier_included
-#define iqt_CSafeNotifier_included
+#ifndef istd_CEventBasedNotifier_included
+#define istd_CEventBasedNotifier_included
 
 
-#include "iqt/iqt.h"
+// Qt includes
+#include <QtCore/QObject>
 
-
+// ACF includes
 #include "istd/CChangeDelegator.h"
 #include "istd/TChangeNotifier.h"
 
 
-namespace iqt
+namespace istd
 {
 
 
@@ -41,11 +42,11 @@ class NotificationTarget;
 /**
 	Implementation of model changes notification between different threads.
 */
-class CSafeNotifier
+class CEventBasedNotifier
 {
 public:
-	explicit CSafeNotifier(istd::IChangeable* slavePtr, int changeFlags = 0, istd::IPolymorphic* changeParamsPtr = NULL);
-	~CSafeNotifier();
+	explicit CEventBasedNotifier(istd::IChangeable* slavePtr, int changeFlags = 0, istd::IPolymorphic* changeParamsPtr = NULL);
+	~CEventBasedNotifier();
 
 private:
 	NotificationTarget* m_notificationTarget;
@@ -57,36 +58,40 @@ private:
 
 	Help class to realize the post-processing of istd::IChangeable::EndChanges()
 */
-class NotificationTarget: protected QObject, protected istd::CChangeDelegator
+class NotificationTarget: protected QObject
 {
 	Q_OBJECT
 
-	friend class CSafeNotifier;
+	friend class CEventBasedNotifier;
 
 protected:
-	typedef istd::CChangeDelegator BaseClass;
-
 	NotificationTarget(istd::IChangeable* slavePtr, int changeFlags = 0, istd::IPolymorphic* changeParamsPtr = NULL);
 
 	void Reset();
 
-	// reimplemented (istd::IChangeable)
-	virtual void EndChanges(int changeFlags, istd::IPolymorphic* changeParamsPtr = NULL);
 protected Q_SLOTS:
-	void DoEndChanges(int changeFlags, istd::IPolymorphic* changeParamsPtr);
+	void DoBeginChanges(int changeFlags = 0, istd::IPolymorphic* changeParamsPtr = NULL);
+	void DoEndChanges(int changeFlags = 0, istd::IPolymorphic* changeParamsPtr = NULL);
 
 Q_SIGNALS:
+	void EmitBeginChanges(int changeFlags, istd::IPolymorphic* changeParamsPtr);
 	void EmitEndChanges(int changeFlags, istd::IPolymorphic* changeParamsPtr);
 
 private:
+	istd::IChangeable* m_slavePtr;
 	int m_changeFlags;
 	istd::IPolymorphic* m_changeParamsPtr;
+
+	/**
+		Flag to inidicate, that BeginChange notification was sent.
+	*/
+	bool m_isBeginPending;
 };
 
 
-} // namespace iqt
+} // namespace istd
 
 
-#endif // !iqt_CSafeNotifier_included
+#endif // !istd_CEventBasedNotifier_included
 
 

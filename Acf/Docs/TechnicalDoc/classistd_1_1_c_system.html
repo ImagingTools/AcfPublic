@@ -65,6 +65,10 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep current thread.  <a href="#a370555a3f4d5651054f3a8257ff5e4d2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_system.html#a6c5405628a87d53871dee81b64fea0e0">RemoveDirectory</a> (const QString &amp;directoryPath)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a given directory with all contents.  <a href="#a6c5405628a87d53871dee81b64fea0e0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_system.html#a8de24725c1d1e7ba3b8528fbf57db52a">FileCopy</a> (const QString &amp;source, const QString &amp;result, bool overWrite=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy file to directory.  <a href="#a8de24725c1d1e7ba3b8528fbf57db52a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_system.html#a5e1521202395d7ed4a91a84accda949e">EnsurePathExists</a> (const QString &amp;filePath)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that the given path exists.  <a href="#a5e1521202395d7ed4a91a84accda949e"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of global system helpers based on QT. </p>
@@ -87,6 +91,61 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a5e1521202395d7ed4a91a84accda949e"></a><!-- doxytag: member="istd::CSystem::EnsurePathExists" ref="a5e1521202395d7ed4a91a84accda949e" args="(const QString &amp;filePath)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool istd::CSystem::EnsurePathExists </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ensure that the given path exists. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8de24725c1d1e7ba3b8528fbf57db52a"></a><!-- doxytag: member="istd::CSystem::FileCopy" ref="a8de24725c1d1e7ba3b8528fbf57db52a" args="(const QString &amp;source, const QString &amp;result, bool overWrite=false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool istd::CSystem::FileCopy </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>overWrite</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Copy file to directory. </p>
+<p>When result directory doesn't exist create it. </p>
+
+</div>
+</div>
 <a class="anchor" id="a586b766208d0c2190d6270f8150ff9a4"></a><!-- doxytag: member="istd::CSystem::FindVariableValue" ref="a586b766208d0c2190d6270f8150ff9a4" args="(const QString &amp;varName)" -->
 <div class="memitem">
 <div class="memproto">

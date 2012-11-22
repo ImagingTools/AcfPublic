@@ -65,7 +65,7 @@
 <a name="l00042"></a>00042        <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#a9d521e0a6104d4ff91d5720308910cad">CLibAvRtspStreamingClient</a>();
 <a name="l00043"></a>00043        <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#afef9da7d3cb3838881390af0f5f6115f">~CLibAvRtspStreamingClient</a>();      
 <a name="l00044"></a>00044 
-<a name="l00048"></a>00048        <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#aa8654567bb54f05f1e3f56499d0fa4f0" title="Creates rtsp streming connection.">OpenConnection</a>(<span class="keyword">const</span> QUrl&amp; url);
+<a name="l00048"></a>00048        <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#aa8654567bb54f05f1e3f56499d0fa4f0" title="Creates rtsp streming connection or reconnects if client is already connected.">OpenConnection</a>(<span class="keyword">const</span> QUrl&amp; url);
 <a name="l00049"></a>00049 
 <a name="l00053"></a>00053        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#ac1e6cb358351eaef8fd352e928412bd3" title="Closes connection and stops streaming loop.">CloseConnection</a>();
 <a name="l00054"></a>00054 
@@ -73,7 +73,7 @@
 <a name="l00059"></a>00059 
 <a name="l00063"></a>00063        <span class="keywordtype">void</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#ae161f3bfb515d92b6a00db90c5e2d7f4" title="New frame has arrived.">DecodeFrame</a>(u_int8_t* frameData, <span class="keywordtype">unsigned</span> frameSize);
 <a name="l00064"></a>00064 
-<a name="l00068"></a>00068        <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#a4bd882a6ef3c58d25e8f727866d31e76" title="Waits for frame to arrive and then convert to bitmap.">RetrieveFrame</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* frameBitmap);  
+<a name="l00068"></a>00068        <span class="keywordtype">bool</span> <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html#a4bd882a6ef3c58d25e8f727866d31e76" title="Waits for frame to arrive and then converts to bitmap.">RetrieveFrame</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* frameBitmap);  
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070 <span class="keyword">protected</span>:
 <a name="l00074"></a><a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html">00074</a>        <span class="keyword">class </span><a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client_1_1_c_lib_av_rtsp_connection.html" title="Class representation of rtsp connection.">CLibAvRtspConnection</a>: <span class="keyword">public</span> RTSPClient
@@ -143,20 +143,19 @@
 <a name="l00143"></a>00143 
 <a name="l00144"></a>00144        <a class="code" href="classilibav_1_1_c_lib_av_rtsp_streaming_client.html" title="Class handles streaming rtsp client connection.">CLibAvRtspStreamingClient</a>* m_streamClientPtr;
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* m_frameBitmapPtr;
-<a name="l00147"></a>00147        <span class="keywordtype">bool</span> m_frameRetrieved;
-<a name="l00148"></a>00148        <span class="keywordtype">int</span> m_frameRetrieveTimeoutMs;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150        QMutex m_mutex;
-<a name="l00151"></a>00151 
-<a name="l00152"></a>00152        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> RTSP_CLIENT_VERBOSITY_LEVEL = 1;
-<a name="l00153"></a>00153 };
+<a name="l00146"></a>00146        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* m_frameBitmapPtr;   
+<a name="l00147"></a>00147        <span class="keywordtype">int</span> m_frameRetrieveTimeoutMs;
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149        QMutex m_mutex;
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> RTSP_CLIENT_VERBOSITY_LEVEL = 1;
+<a name="l00152"></a>00152 };
+<a name="l00153"></a>00153 
 <a name="l00154"></a>00154 
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156 }
+<a name="l00155"></a>00155 }
+<a name="l00156"></a>00156 
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159 <span class="preprocessor">#endif //ilibav_CLibAvRtspStreamingClient_included</span>
+<a name="l00158"></a>00158 <span class="preprocessor">#endif //ilibav_CLibAvRtspStreamingClient_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

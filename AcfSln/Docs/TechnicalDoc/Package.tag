@@ -9317,6 +9317,18 @@
       <anchor>a647cec348b95ec86f153c44508962228a1b11f08282c852e60404285ce08a43fb</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>PM_OPENING</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228a3d41ed4ae74ff62b402c8adb068e6dce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PM_CLOSING</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228a2f2a6b1e8b700f6027d8f13d07187592</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>

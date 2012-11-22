@@ -3484,17 +3484,6 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
-    <name>CSafeNotifier.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_safe_notifier_8h</filename>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <includes id="_c_change_delegator_8h" name="CChangeDelegator.h" local="yes" imported="no">istd/CChangeDelegator.h</includes>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <class kind="class">iqt::CSafeNotifier</class>
-    <class kind="class">iqt::NotificationTarget</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSettingsArchiveBase.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_settings_archive_base_8h</filename>
@@ -5125,6 +5114,16 @@
     <filename>_c_crc_calculator_8h</filename>
     <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::CCrcCalculator</class>
+    <namespace>istd</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CEventBasedNotifier.h</name>
+    <path>C:/Temp/Acf/Include/istd/</path>
+    <filename>_c_event_based_notifier_8h</filename>
+    <includes id="_c_change_delegator_8h" name="CChangeDelegator.h" local="yes" imported="no">istd/CChangeDelegator.h</includes>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
+    <class kind="class">istd::CEventBasedNotifier</class>
+    <class kind="class">istd::NotificationTarget</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -11781,13 +11780,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CMessageContainer</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>a29041cd7c456c043fd3a83762467817d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddChildContainer</name>
       <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
@@ -11870,6 +11862,13 @@
       <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
       <anchor>aacb0d3680b600054a53c7f2ebc469993</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>aff1fe19bfb61760bff60c3a66a5e20ae</anchor>
+      <arglist>(const istd::IChangeable &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33039,8 +33038,6 @@
     <class kind="class">iqt::CIniSettingsProviderComp</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
     <class kind="class">iqt::CRenderedObjectFileLoaderComp</class>
-    <class kind="class">iqt::CSafeNotifier</class>
-    <class kind="class">iqt::NotificationTarget</class>
     <class kind="class">iqt::CSettingsArchiveBase</class>
     <class kind="class">iqt::CSettingsReadArchive</class>
     <class kind="class">iqt::CSettingsSerializerComp</class>
@@ -33404,79 +33401,6 @@
       <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
       <anchor>ac515121b82b2b3964f6daf7b2ba1b770</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CSafeNotifier</name>
-    <filename>classiqt_1_1_c_safe_notifier.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CSafeNotifier</name>
-      <anchorfile>classiqt_1_1_c_safe_notifier.html</anchorfile>
-      <anchor>a8d15a93349a4d82ef44456d96891a516</anchor>
-      <arglist>(istd::IChangeable *slavePtr, int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~CSafeNotifier</name>
-      <anchorfile>classiqt_1_1_c_safe_notifier.html</anchorfile>
-      <anchor>a2fb0ee63ff29a8e94e198101903b0147</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::NotificationTarget</name>
-    <filename>classiqt_1_1_notification_target.html</filename>
-    <base protection="protected">QObject</base>
-    <base protection="protected">istd::CChangeDelegator</base>
-    <member kind="signal">
-      <type>void</type>
-      <name>EmitEndChanges</name>
-      <anchorfile>classiqt_1_1_notification_target.html</anchorfile>
-      <anchor>a89286f54695f0108898460948922bc6e</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>istd::CChangeDelegator</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt_1_1_notification_target.html</anchorfile>
-      <anchor>aabeef0fbd3a1b3ec89b75e0ead304908</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>DoEndChanges</name>
-      <anchorfile>classiqt_1_1_notification_target.html</anchorfile>
-      <anchor>a0abd566e0fd8b68af230a7bb15dd60e3</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>NotificationTarget</name>
-      <anchorfile>classiqt_1_1_notification_target.html</anchorfile>
-      <anchor>a7147be0a698f01a1029d6d4f1dde8ad0</anchor>
-      <arglist>(istd::IChangeable *slavePtr, int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classiqt_1_1_notification_target.html</anchorfile>
-      <anchor>ae96bbfdff32ec06872fc9fefcbf4fd36</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EndChanges</name>
-      <anchorfile>classiqt_1_1_notification_target.html</anchorfile>
-      <anchor>af5197efcb42fe1c397d20bcdd6c9b147</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend class</type>
-      <name>CSafeNotifier</name>
-      <anchorfile>classiqt_1_1_notification_target.html</anchorfile>
-      <anchor>a3fe393485908d2af4606e45a39f40b21</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43225,6 +43149,8 @@
     <class kind="class">istd::CChangeDelegator</class>
     <class kind="class">istd::CClassInfo</class>
     <class kind="class">istd::CCrcCalculator</class>
+    <class kind="class">istd::CEventBasedNotifier</class>
+    <class kind="class">istd::NotificationTarget</class>
     <class kind="class">istd::CFastBinaryIndex</class>
     <class kind="class">istd::CGeneralTimeStamp</class>
     <class kind="class">istd::CIdManipBase</class>
@@ -43676,6 +43602,78 @@
       <anchorfile>classistd_1_1_c_crc_calculator.html</anchorfile>
       <anchor>ac177b27b7b40fecf205ce49f45683f33</anchor>
       <arglist>(const quint8 &amp;byte, quint32 &amp;dwCrc32)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::CEventBasedNotifier</name>
+    <filename>classistd_1_1_c_event_based_notifier.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CEventBasedNotifier</name>
+      <anchorfile>classistd_1_1_c_event_based_notifier.html</anchorfile>
+      <anchor>a924d9bb08360887919f2660f71d4764a</anchor>
+      <arglist>(istd::IChangeable *slavePtr, int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CEventBasedNotifier</name>
+      <anchorfile>classistd_1_1_c_event_based_notifier.html</anchorfile>
+      <anchor>aef3600f43d692094b892147dfd54e13a</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::NotificationTarget</name>
+    <filename>classistd_1_1_notification_target.html</filename>
+    <base protection="protected">QObject</base>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitBeginChanges</name>
+      <anchorfile>classistd_1_1_notification_target.html</anchorfile>
+      <anchor>a789fdaae1d87df16a69a3ff6c983a0e6</anchor>
+      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitEndChanges</name>
+      <anchorfile>classistd_1_1_notification_target.html</anchorfile>
+      <anchor>af5ddc88b8b998cf76ee2a0261a4aff45</anchor>
+      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>DoBeginChanges</name>
+      <anchorfile>classistd_1_1_notification_target.html</anchorfile>
+      <anchor>a8ceb35c56c3d107d14045665dea36c18</anchor>
+      <arglist>(int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>DoEndChanges</name>
+      <anchorfile>classistd_1_1_notification_target.html</anchorfile>
+      <anchor>a69afb08bd3db7b122e4782717db7c140</anchor>
+      <arglist>(int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>NotificationTarget</name>
+      <anchorfile>classistd_1_1_notification_target.html</anchorfile>
+      <anchor>a1342a337156f24530bd4b56f26720867</anchor>
+      <arglist>(istd::IChangeable *slavePtr, int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classistd_1_1_notification_target.html</anchorfile>
+      <anchor>a6baeab22a9507b5062d4b0e288c4eb51</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>CEventBasedNotifier</name>
+      <anchorfile>classistd_1_1_notification_target.html</anchorfile>
+      <anchor>a81738a7f244213e999195c97b3bf610a</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44217,6 +44215,20 @@
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
       <anchor>a6c5405628a87d53871dee81b64fea0e0</anchor>
       <arglist>(const QString &amp;directoryPath)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>FileCopy</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>a8de24725c1d1e7ba3b8528fbf57db52a</anchor>
+      <arglist>(const QString &amp;source, const QString &amp;result, bool overWrite=false)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>EnsurePathExists</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>a5e1521202395d7ed4a91a84accda949e</anchor>
+      <arglist>(const QString &amp;filePath)</arglist>
     </member>
   </compound>
   <compound kind="class">

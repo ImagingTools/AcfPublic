@@ -26,6 +26,7 @@
 
 // Qt includes
 #include <QtCore/QList>
+#include <QtCore/QMutex>
 
 // ACF includes
 #include "istd/IInformationProvider.h"
@@ -48,7 +49,6 @@ class CMessageContainer:
 {
 public:
 	CMessageContainer();
-	virtual ~CMessageContainer();
 
 	virtual void AddChildContainer(IHierarchicalMessageContainer* childContainerPtr);
 
@@ -88,6 +88,9 @@ public:
 	virtual int GetChildsCount() const;
 	virtual IHierarchicalMessageContainer* GetChild(int index) const;
 
+	// reimplemented (istd::IChangeable)
+	virtual bool CopyFrom(const istd::IChangeable& object);
+
 private:
 	typedef QList<IMessageConsumer::MessagePtr> MessageList;
 	MessageList m_messages;
@@ -101,6 +104,8 @@ private:
 	int m_maxLiveTime;
 
 	int m_worstCategory;
+
+	mutable QMutex m_lock;
 };
 
 
