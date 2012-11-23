@@ -5120,8 +5120,8 @@
     <name>CEventBasedNotifier.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_c_event_based_notifier_8h</filename>
-    <includes id="_c_change_delegator_8h" name="CChangeDelegator.h" local="yes" imported="no">istd/CChangeDelegator.h</includes>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
     <class kind="class">istd::CEventBasedNotifier</class>
     <class kind="class">istd::NotificationTarget</class>
     <namespace>istd</namespace>
@@ -11723,6 +11723,13 @@
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
       <anchor>ae2caf86fbb1f6c94ac737c5aeb38ea6a</anchor>
       <arglist>(const istd::IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classibase_1_1_c_message.html</anchorfile>
+      <anchor>a662550bb43d0c6ede26b78d6bf7ed778</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::IInformationProvider::InformationCategory</type>
@@ -43630,29 +43637,29 @@
       <type>void</type>
       <name>EmitBeginChanges</name>
       <anchorfile>classistd_1_1_notification_target.html</anchorfile>
-      <anchor>a789fdaae1d87df16a69a3ff6c983a0e6</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+      <anchor>a58973f2ab04ebf7894e0c6eaed894089</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="signal">
       <type>void</type>
       <name>EmitEndChanges</name>
       <anchorfile>classistd_1_1_notification_target.html</anchorfile>
-      <anchor>af5ddc88b8b998cf76ee2a0261a4aff45</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+      <anchor>ada45f38951df9b0e9a4e079e0cc202b7</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>DoBeginChanges</name>
       <anchorfile>classistd_1_1_notification_target.html</anchorfile>
-      <anchor>a8ceb35c56c3d107d14045665dea36c18</anchor>
-      <arglist>(int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
+      <anchor>a5972bc29835a79e45596bd8068157e3d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>DoEndChanges</name>
       <anchorfile>classistd_1_1_notification_target.html</anchorfile>
-      <anchor>a69afb08bd3db7b122e4782717db7c140</anchor>
-      <arglist>(int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
+      <anchor>a332fc526c7c4c82f24bfd78892ab2604</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>

@@ -56,12 +56,12 @@ Inheritance diagram for istd::NotificationTarget:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signals</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#a789fdaae1d87df16a69a3ff6c983a0e6">EmitBeginChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#af5ddc88b8b998cf76ee2a0261a4aff45">EmitEndChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#a58973f2ab04ebf7894e0c6eaed894089">EmitBeginChanges</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#ada45f38951df9b0e9a4e079e0cc202b7">EmitEndChanges</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#a8ceb35c56c3d107d14045665dea36c18">DoBeginChanges</a> (int changeFlags=0, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#a69afb08bd3db7b122e4782717db7c140">DoEndChanges</a> (int changeFlags=0, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#a5972bc29835a79e45596bd8068157e3d">DoBeginChanges</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#a332fc526c7c4c82f24bfd78892ab2604">DoEndChanges</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_notification_target.html#a1342a337156f24530bd4b56f26720867">NotificationTarget</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *slavePtr, int changeFlags=0, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr=NULL)</td></tr>
@@ -108,26 +108,15 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8ceb35c56c3d107d14045665dea36c18"></a><!-- doxytag: member="istd::NotificationTarget::DoBeginChanges" ref="a8ceb35c56c3d107d14045665dea36c18" args="(int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)" -->
+<a class="anchor" id="a5972bc29835a79e45596bd8068157e3d"></a><!-- doxytag: member="istd::NotificationTarget::DoBeginChanges" ref="a5972bc29835a79e45596bd8068157e3d" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void istd::NotificationTarget::DoBeginChanges </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>changeFlags</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>changeParamsPtr</em> = <code>NULL</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, slot]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -135,26 +124,15 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a69afb08bd3db7b122e4782717db7c140"></a><!-- doxytag: member="istd::NotificationTarget::DoEndChanges" ref="a69afb08bd3db7b122e4782717db7c140" args="(int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)" -->
+<a class="anchor" id="a332fc526c7c4c82f24bfd78892ab2604"></a><!-- doxytag: member="istd::NotificationTarget::DoEndChanges" ref="a332fc526c7c4c82f24bfd78892ab2604" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void istd::NotificationTarget::DoEndChanges </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>changeFlags</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>changeParamsPtr</em> = <code>NULL</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, slot]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -162,26 +140,15 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a789fdaae1d87df16a69a3ff6c983a0e6"></a><!-- doxytag: member="istd::NotificationTarget::EmitBeginChanges" ref="a789fdaae1d87df16a69a3ff6c983a0e6" args="(int changeFlags, istd::IPolymorphic *changeParamsPtr)" -->
+<a class="anchor" id="a58973f2ab04ebf7894e0c6eaed894089"></a><!-- doxytag: member="istd::NotificationTarget::EmitBeginChanges" ref="a58973f2ab04ebf7894e0c6eaed894089" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void istd::NotificationTarget::EmitBeginChanges </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>changeFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>changeParamsPtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [signal]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
         </tr>
       </table>
 </div>
@@ -189,26 +156,15 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af5ddc88b8b998cf76ee2a0261a4aff45"></a><!-- doxytag: member="istd::NotificationTarget::EmitEndChanges" ref="af5ddc88b8b998cf76ee2a0261a4aff45" args="(int changeFlags, istd::IPolymorphic *changeParamsPtr)" -->
+<a class="anchor" id="ada45f38951df9b0e9a4e079e0cc202b7"></a><!-- doxytag: member="istd::NotificationTarget::EmitEndChanges" ref="ada45f38951df9b0e9a4e079e0cc202b7" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void istd::NotificationTarget::EmitEndChanges </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>changeFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>changeParamsPtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [signal]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
         </tr>
       </table>
 </div>

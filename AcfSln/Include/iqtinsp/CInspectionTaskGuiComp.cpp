@@ -425,8 +425,6 @@ void CInspectionTaskGuiComp::OnGuiCreated()
 		GeneralParamsFrame->hide();
 	}
 
-	UpdateTaskMessages();
-
 	OnEditorChanged(0);
 
 	UpdateVisualElements();
