@@ -46,6 +46,7 @@ IShape* CSimpleShapeFactoryComp::CreateShape(const i2d::IObject2d& object, bool 
 {
 	istd::TDelPtr<IShape> shapePtr(CreateShapeInstance(object));
 
+
 	if (connectToModel){
 		imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(const_cast<i2d::IObject2d*>(&object));
 		if (modelPtr != NULL){
