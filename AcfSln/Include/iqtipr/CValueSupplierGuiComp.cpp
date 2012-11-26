@@ -210,6 +210,14 @@ void CValueSupplierGuiComp::OnGuiDestroyed()
 }
 
 
+void CValueSupplierGuiComp::OnGuiHidden()
+{
+	AutoUpdateButton->setChecked(false);
+
+	BaseClass::OnGuiHidden();
+}
+
+
 // reimplemented (icomp::IComponentBase)
 
 void CValueSupplierGuiComp::OnComponentDestroyed()

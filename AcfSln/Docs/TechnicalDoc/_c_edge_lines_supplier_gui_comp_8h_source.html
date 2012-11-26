@@ -85,26 +85,27 @@
 <a name="l00059"></a>00059        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#ac068b930cd22438a00577e27587b209f">OnGuiCreated</a>();
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#ae39027385cb4dd7b787db097bc9c7766">OnGuiDestroyed</a>();
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a1dfec64cedacf82fae78846a74076f13">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="keyword">private</span>:
-<a name="l00067"></a>00067        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_color_shema.html">iview::IColorShema</a>, m_contoursColorShemaCompPtr);
-<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_intermediateResultsGuiCompPtr);
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iedge::CEdgeLine::Container&gt;</a> m_foundModel;
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_color_shema.html">iview::CColorShema</a> m_edgesColorShema;
-<a name="l00073"></a>00073 };
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 }<span class="comment">//namespace iedgegui</span>
-<a name="l00076"></a>00076 
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a9e36be4744673dc4d25952fe0fb1a5d7">OnGuiHidden</a>();
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a1dfec64cedacf82fae78846a74076f13">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">private</span>:
+<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_color_shema.html">iview::IColorShema</a>, m_contoursColorShemaCompPtr);
+<a name="l00069"></a>00069        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_intermediateResultsGuiCompPtr);
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iedge::CEdgeLine::Container&gt;</a> m_foundModel;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_color_shema.html">iview::CColorShema</a> m_edgesColorShema;
+<a name="l00074"></a>00074 };
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 }<span class="comment">//namespace iedgegui</span>
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="preprocessor">#endif // !iedgegui_CEdgeLinesSupplierGuiComp_included</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span>
-<a name="l00081"></a>00081 
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="preprocessor">#endif // !iedgegui_CEdgeLinesSupplierGuiComp_included</span>
+<a name="l00081"></a>00081 <span class="preprocessor"></span>
+<a name="l00082"></a>00082 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -425,6 +425,8 @@ void CInspectionTaskGuiComp::OnGuiCreated()
 		GeneralParamsFrame->hide();
 	}
 
+	UpdateTaskMessages();
+
 	OnEditorChanged(0);
 
 	UpdateVisualElements();
@@ -482,6 +484,14 @@ void CInspectionTaskGuiComp::OnGuiDestroyed()
 	m_tabToGuiIndexMap.clear();
 
 	BaseClass::OnGuiDestroyed();
+}
+
+
+void CInspectionTaskGuiComp::OnGuiHidden()
+{
+	AutoTestButton->setChecked(false);
+
+	BaseClass::OnGuiHidden();
 }
 
 

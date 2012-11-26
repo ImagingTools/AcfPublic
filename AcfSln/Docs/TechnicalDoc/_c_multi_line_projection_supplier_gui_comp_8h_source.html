@@ -68,32 +68,33 @@
 <a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
 <a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a1a2abff911ef5064465038f45778d76a">OnGuiCreated</a>();
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a1f406d84f725eb39612011d158a94b36">OnGuiDestroyed</a>();
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a0a896d8b824ceafacf777bca9098a1fd">OnGuiModelAttached</a>();
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a49cdb0cc99ac8b8fab4efdee7384541b">OnGuiModelDetached</a>();
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#aed9490183efcab057212b2e7e79fab20">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a3417f9595ab9c090c5b236a6bcafb2f1" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#aec91733bb4e823baac8eb8a018d1ce81" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="keyword">private</span>:
-<a name="l00056"></a>00056        <span class="keywordtype">void</span> OnProjectionIndexChanged(<span class="keywordtype">int</span> index);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;imeas::CGeneralDataSequence&gt;</a> m_projectionData;
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_projectionObserverCompPtr);
-<a name="l00062"></a>00062        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_projectionObserverGuiCompPtr);
-<a name="l00063"></a>00063        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>, m_projectionSelectorCompPtr);
-<a name="l00064"></a>00064 };
-<a name="l00065"></a>00065 
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a462c1991df0c620e8412698cdc1960a7">OnGuiHidden</a>();
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a0a896d8b824ceafacf777bca9098a1fd">OnGuiModelAttached</a>();
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a49cdb0cc99ac8b8fab4efdee7384541b">OnGuiModelDetached</a>();
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#aed9490183efcab057212b2e7e79fab20">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#a3417f9595ab9c090c5b236a6bcafb2f1" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html#aec91733bb4e823baac8eb8a018d1ce81" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="keyword">private</span>:
+<a name="l00057"></a>00057        <span class="keywordtype">void</span> OnProjectionIndexChanged(<span class="keywordtype">int</span> index);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">private</span>:
+<a name="l00060"></a>00060        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;imeas::CGeneralDataSequence&gt;</a> m_projectionData;
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_projectionObserverCompPtr);
+<a name="l00063"></a>00063        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_projectionObserverGuiCompPtr);
+<a name="l00064"></a>00064        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>, m_projectionSelectorCompPtr);
+<a name="l00065"></a>00065 };
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067 } <span class="comment">// namespace iqtipr</span>
-<a name="l00068"></a>00068 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 } <span class="comment">// namespace iqtipr</span>
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070 <span class="preprocessor">#endif // !iqtipr_CMultiLineProjectionSupplierGuiComp_included</span>
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#endif // !iqtipr_CMultiLineProjectionSupplierGuiComp_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -90,6 +90,7 @@ protected:
 
 	// reimplemented (iqtgui::IGuiObject)
 	virtual void OnGuiCreated();
+	virtual void OnGuiHidden();
 
 	// reimplemented (icomp::IComponentBase)
 	virtual void OnComponentDestroyed();

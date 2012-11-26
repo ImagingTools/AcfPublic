@@ -151,6 +151,14 @@ void CSnapImageGuiComp::OnGuiDestroyed()
 }
 
 
+void CSnapImageGuiComp::OnGuiHidden()
+{
+	LiveImageButton->setChecked(false);
+
+	BaseClass::OnGuiHidden();
+}
+
+
 // reimplemented (icomp::CComponentBase)
 
 void CSnapImageGuiComp::OnComponentCreated()

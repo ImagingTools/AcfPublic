@@ -72,6 +72,9 @@ protected:
 	// reimplemented (iqt2d::TViewExtenderCompBase)
 	virtual void CreateShapes(int sceneId, Shapes& result);
 
+	// reimplemented (iqtgui::CGuiComponentBase)
+	virtual void OnGuiHidden();
+
 protected:
 	class LineSelection: public iprm::ISelectionParam
 	{

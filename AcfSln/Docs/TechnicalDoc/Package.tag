@@ -4482,6 +4482,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a9e36be4744673dc4d25952fe0fb1a5d7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
       <anchor>a1dfec64cedacf82fae78846a74076f13</anchor>
@@ -15837,6 +15844,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a2150109a96286521900211014d02910f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
@@ -16058,6 +16072,13 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>a7cafbe84e7a1ae512fd3e9c279c91a0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>aca5136e99050fd3e127dd791d6adedd3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -16404,6 +16425,13 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
       <anchor>ace398d36c92e317269f704daa0c2fba7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>ad52134190f4bf9ee248bcb0b88a91186</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -17204,6 +17232,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a17341706955cb3c685324ebfaba268ad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a5456e17087ad36bbf8cc26c9a5c29a5e</anchor>
@@ -17745,6 +17780,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a462c1991df0c620e8412698cdc1960a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
       <anchor>a0a896d8b824ceafacf777bca9098a1fd</anchor>
@@ -17847,6 +17889,13 @@
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
       <anchor>a89dc417d46e6dd4c85c035e8856fb456</anchor>
       <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a455576d3ace084545da6fcad851af3eb</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
       <type>static iprm::ISelectionParam *</type>
@@ -18157,6 +18206,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a20bd4d8c4def46cb7cf5749235e71012</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>af9d2735f53f3df11fa336ad78dcc827b</anchor>
@@ -18242,6 +18298,13 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
       <anchor>a81524cf0dd4f101573bb6a44bb62dee8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a734628ad9cb7bc1406f34be70fe6e304</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
