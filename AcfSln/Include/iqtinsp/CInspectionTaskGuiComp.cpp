@@ -513,10 +513,9 @@ void CInspectionTaskGuiComp::OnModelChanged(int modelId, int /*changeFlags*/, is
 
 void CInspectionTaskGuiComp::AddTaskMessagesToLog(const ibase::IMessageContainer& messageContainer, int taskIndex)
 {
-	m_resultMessagesMap[taskIndex] = messageContainer.GetMessages();
-	ibase::IMessageContainer::Messages& messagesList = m_resultMessagesMap[taskIndex];
+	ibase::IMessageContainer::Messages messageList = messageContainer.GetMessages();
+	int messagesCount = messageList.count();
 
-	int messagesCount = messagesList.count();
 	if (messagesCount == 0){
 		return;
 	}
@@ -538,7 +537,7 @@ void CInspectionTaskGuiComp::AddTaskMessagesToLog(const ibase::IMessageContainer
 	}
 
 	for (int messageIndex = 0; messageIndex < messagesCount; messageIndex++){
-		ibase::IMessageConsumer::MessagePtr messagePtr = messagesList[messageIndex];
+		ibase::IMessageConsumer::MessagePtr messagePtr = messageList[messageIndex];
 
 		int shapeIndex = -1;
 

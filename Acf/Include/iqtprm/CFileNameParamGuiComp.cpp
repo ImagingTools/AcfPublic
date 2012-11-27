@@ -177,15 +177,7 @@ void CFileNameParamGuiComp::on_BrowseButton_clicked()
 		int pathType = objectPtr->GetPathType();
 
 		if (pathType == ifile::IFileNameParam::PT_DIRECTORY){
-			QString pathToSearch = GetPathFromEditor();
-			if (!QFile::exists(pathToSearch) && m_defaultDirPtr.IsValid()){
-				pathToSearch = m_defaultDirPtr->GetPath();
-			}		
-
-			QString filePath = QFileDialog::getExistingDirectory(
-				GetQtWidget(), 
-				tr("Select directory"), 
-				pathToSearch);
+			QString filePath = QFileDialog::getExistingDirectory(GetQtWidget(), tr("Select directory"), GetPathFromEditor());
 			if (!filePath.isEmpty()){
 				OnPathEdited(filePath);
 			}
@@ -206,15 +198,10 @@ void CFileNameParamGuiComp::on_BrowseButton_clicked()
 				}
 			}
 
-			QString pathToSearch = QFileInfo(GetPathFromEditor()).dir().absolutePath();
-			if (!QFile::exists(pathToSearch) && m_defaultDirPtr.IsValid()){
-				pathToSearch = m_defaultDirPtr->GetPath();
-			}
-
 			QString filePath = QFileDialog::getOpenFileName(
 						GetQtWidget(),
 						tr("Select file"),
-						pathToSearch,
+						QFileInfo(GetPathFromEditor()).dir().absolutePath(),
 						filterList.join("\n"));
 			if (!filePath.isEmpty()){
 				OnPathEdited(filePath);
