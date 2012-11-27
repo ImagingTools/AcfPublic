@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2671
+          2500
         </Number>
         <Description>
           ACF
@@ -18,7 +18,7 @@
           1023
         </Id>
         <Number>
-          264194
+          264192
         </Number>
         <Description>
           Qt Framework
@@ -56,6 +56,4 @@
       </Note>
     </Element>
   </PositionMap>
-  <EmbeddedRegistries count="0">
-  </EmbeddedRegistries>
 </Acf>

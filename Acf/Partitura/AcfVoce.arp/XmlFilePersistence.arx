@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2671
+          2500
         </Number>
         <Description>
           ACF
@@ -18,7 +18,7 @@
           1023
         </Id>
         <Number>
-          264194
+          264192
         </Number>
         <Description>
           Qt Framework
@@ -154,39 +154,7 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="5">
-          <AttributeInfo>
-            <Id>
-              AutoCreatePath
-            </Id>
-            <Type>
-              Boolean
-            </Type>
-            <ExportId>
-              AutoCreatePath
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              EnableVerbose
-            </Id>
-            <Type>
-              Boolean
-            </Type>
-            <ExportId>
-              EnableVerbose
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
+        <AttributeInfoMap count="3">
           <AttributeInfo>
             <Id>
               FileExtensions

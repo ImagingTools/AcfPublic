@@ -26,7 +26,6 @@
 
 // Qt includes
 #include <QtCore/QObject>
-#include <QtCore/QDir>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
@@ -48,7 +47,6 @@ public:
 	typedef CFileSerializerCompBase BaseClass;
 
 	I_BEGIN_COMPONENT(TFileSerializerComp);
-		I_ASSIGN(m_autoCreateDirectoryAttrPtr, "AutoCreatePath", "Create directory/file path automatically if not exists", true, false);
 	I_END_COMPONENT;
 
 	// reimplemented (iser::IFileLoader)
@@ -135,12 +133,9 @@ protected:
 	};
 
 	/**
-		Called if read error is occurred.
+		Called if read error is occured.
 	*/
 	virtual void OnReadError(const ReadArchive& archive, const istd::IChangeable& data, const QString& filePath) const;
-
-protected:
-	I_ATTR(bool, m_autoCreateDirectoryAttrPtr);
 };
 
 
@@ -178,13 +173,6 @@ int TFileSerializerComp<ReadArchive, WriteArchive>::LoadFromFile(istd::IChangeab
 template <class ReadArchive, class WriteArchive>
 int TFileSerializerComp<ReadArchive, WriteArchive>::SaveToFile(const istd::IChangeable& data, const QString& filePath) const
 {
-	if (*m_autoCreateDirectoryAttrPtr){
-		QFileInfo fileInfo(filePath);
-		if (!QDir().mkpath(fileInfo.absolutePath())){
-			SendErrorMessage(MI_CANNOT_SAVE, QObject::tr("Cannot create path to file"));
-		}
-	}
-
 	if (IsOperationSupported(&data, &filePath, QF_SAVE | QF_FILE, false)){
 		WriteArchiveEx archive(filePath, GetVersionInfo(), this);
 		I_ASSERT(archive.IsStoring());
