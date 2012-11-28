@@ -930,6 +930,7 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_file_serializer_comp_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
+    <includes id="_c_system_8h" name="CSystem.h" local="yes" imported="no">istd/CSystem.h</includes>
     <includes id="_c_file_serializer_comp_base_8h" name="CFileSerializerCompBase.h" local="yes" imported="no">ibase/CFileSerializerCompBase.h</includes>
     <class kind="class">ibase::TFileSerializerComp</class>
     <class kind="class">ibase::TFileSerializerComp::ReadArchiveEx</class>

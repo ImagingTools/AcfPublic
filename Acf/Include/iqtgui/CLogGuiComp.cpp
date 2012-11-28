@@ -167,7 +167,6 @@ void CLogGuiComp::OnGuiCreated()
 		LogView->header()->show();
 	}
 
-	LogView->setSortingEnabled(true);
 	LogView->header()->setResizeMode(CT_ICON, QHeaderView::Fixed);
 	LogView->header()->resizeSection(CT_ICON, itemDelegate->GetItemHeight());
 
@@ -291,7 +290,7 @@ void CLogGuiComp::OnAddMessage(const istd::IInformationProvider* messagePtr, boo
 	QTreeWidgetItem* itemPtr = CreateGuiItem(*messagePtr);
 
 	// add message item to the list
-	LogView->addTopLevelItem(itemPtr);
+	LogView->insertTopLevelItem(0, itemPtr);
 
 	int itemCategory = itemPtr->data(0, DR_CATEGORY).toInt();
 

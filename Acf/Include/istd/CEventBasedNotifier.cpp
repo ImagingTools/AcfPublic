@@ -38,7 +38,9 @@ CEventBasedNotifier::CEventBasedNotifier(istd::IChangeable* slavePtr,  int chang
 {
 	m_notificationTarget = new NotificationTarget(slavePtr, changeFlags, changeParamsPtr);
 
-	m_notificationTarget->moveToThread(QCoreApplication::instance()->thread());
+	if (QCoreApplication::instance() != NULL){
+		m_notificationTarget->moveToThread(QCoreApplication::instance()->thread());
+	}
 
 	m_notificationTarget->connect(m_notificationTarget, SIGNAL(EmitBeginChanges()), m_notificationTarget, SLOT(DoBeginChanges()));
 	m_notificationTarget->connect(m_notificationTarget, SIGNAL(EmitEndChanges()), m_notificationTarget, SLOT(DoEndChanges()));
@@ -62,8 +64,11 @@ NotificationTarget::NotificationTarget(istd::IChangeable* slavePtr, int changeFl
 	m_changeFlags(changeFlags),
  	m_isBeginPending(true)
 {
-	QThread* applicationThreadPtr =  QCoreApplication::instance()->thread();
-	I_ASSERT(applicationThreadPtr != NULL);
+	QThread* applicationThreadPtr = NULL;
+	if (QCoreApplication::instance() != NULL){
+		applicationThreadPtr = QCoreApplication::instance()->thread();
+		I_ASSERT(applicationThreadPtr != NULL);
+	}
 
 	QThread* objectThread = thread();
 
