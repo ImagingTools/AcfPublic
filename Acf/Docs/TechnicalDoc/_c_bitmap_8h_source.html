@@ -30,102 +30,99 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iimg_CBitmap_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_t_opt_del_ptr_8h.html">istd/TOptDelPtr.h</a>&quot;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_bitmap_base_8h.html">iimg/CBitmapBase.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_object_snap_8h.html">ibase/IObjectSnap.h</a>&quot;</span>
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_affine_transformation2d_8h.html">i2d/CAffineTransformation2d.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_t_opt_del_ptr_8h.html">istd/TOptDelPtr.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_object_snap_8h.html">ibase/IObjectSnap.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_affine_transformation2d_8h.html">i2d/CAffineTransformation2d.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_bitmap_base_8h.html">iimg/CBitmapBase.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_q_image_provider_8h.html">iimg/IQImageProvider.h</a>&quot;</span>
+<a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_q_image_provider_8h.html">iimg/IQImageProvider.h</a>&quot;</span>
-<a name="l00015"></a>00015 
+<a name="l00014"></a><a class="code" href="namespaceiimg.html">00014</a> <span class="keyword">namespace </span>iimg
+<a name="l00015"></a>00015 {
 <a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="namespaceiimg.html">00017</a> <span class="keyword">namespace </span>iimg
-<a name="l00018"></a>00018 {
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020 
-<a name="l00024"></a><a class="code" href="classiimg_1_1_c_bitmap.html">00024</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_c_bitmap.html" title="Bitmap implementation based on Qt QImage.">CBitmap</a>:
-<a name="l00025"></a>00025                      <span class="keyword">public</span> iimg::<a class="code" href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods.">CBitmapBase</a>,
-<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiimg_1_1_i_q_image_provider.html">IQImageProvider</a>,
-<a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IObjectSnap,
-<a name="l00028"></a>00028                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
-<a name="l00029"></a>00029 {
-<a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a><a class="code" href="classiimg_1_1_c_bitmap.html#aea58008ac622a9c69f4061e86d12b170">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods.">iimg::CBitmapBase</a> <a class="code" href="classiimg_1_1_c_bitmap.html#aea58008ac622a9c69f4061e86d12b170">BaseClass</a>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <a class="code" href="classiimg_1_1_c_bitmap.html#a784eb752df2a6980c56b3054af45b5fb">CBitmap</a>();
-<a name="l00034"></a>00034        <a class="code" href="classiimg_1_1_c_bitmap.html#a784eb752df2a6980c56b3054af45b5fb">CBitmap</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_c_bitmap.html" title="Bitmap implementation based on Qt QImage.">CBitmap</a>&amp; bitmap);
-<a name="l00035"></a>00035        <a class="code" href="classiimg_1_1_c_bitmap.html#a784eb752df2a6980c56b3054af45b5fb">CBitmap</a>(<span class="keyword">const</span> QImage&amp; image);
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        QImage&amp; <a class="code" href="classiimg_1_1_c_bitmap.html#aed49aef4c512a177325f34c846f61089">GetQImageRef</a>();
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iimg::IQImageProvider)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> QImage&amp; <a class="code" href="classiimg_1_1_c_bitmap.html#ad2acf051153926923f55ca3437fc415a">GetQImage</a>() <span class="keyword">const</span>;
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a7d3c86576eec4fedd36e56bd2a27814c">CopyImageFrom</a>(<span class="keyword">const</span> QImage&amp; image);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (ibase::IObjectSnap)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a0b2cbd4e7b7baa9c70a9f170a57b6b84" title="Get bitmap snap for the data object data.">GetSnap</a>(
-<a name="l00045"></a>00045                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; data,
-<a name="l00046"></a>00046                             <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>&amp; objectSnap,
-<a name="l00047"></a>00047                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size) <span class="keyword">const</span>;
+<a name="l00017"></a>00017 
+<a name="l00021"></a><a class="code" href="classiimg_1_1_c_bitmap.html">00021</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_c_bitmap.html" title="Bitmap implementation based on Qt QImage.">CBitmap</a>:
+<a name="l00022"></a>00022                      <span class="keyword">public</span> iimg::<a class="code" href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods.">CBitmapBase</a>,
+<a name="l00023"></a>00023                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiimg_1_1_i_q_image_provider.html">IQImageProvider</a>,
+<a name="l00024"></a>00024                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IObjectSnap,
+<a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00028"></a><a class="code" href="classiimg_1_1_c_bitmap.html#aea58008ac622a9c69f4061e86d12b170">00028</a>        <span class="keyword">typedef</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods.">iimg::CBitmapBase</a> <a class="code" href="classiimg_1_1_c_bitmap.html#aea58008ac622a9c69f4061e86d12b170">BaseClass</a>;
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030        <a class="code" href="classiimg_1_1_c_bitmap.html#a784eb752df2a6980c56b3054af45b5fb">CBitmap</a>();
+<a name="l00031"></a>00031        <a class="code" href="classiimg_1_1_c_bitmap.html#a784eb752df2a6980c56b3054af45b5fb">CBitmap</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_c_bitmap.html" title="Bitmap implementation based on Qt QImage.">CBitmap</a>&amp; bitmap);
+<a name="l00032"></a>00032        <a class="code" href="classiimg_1_1_c_bitmap.html#a784eb752df2a6980c56b3054af45b5fb">CBitmap</a>(<span class="keyword">const</span> QImage&amp; image);
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034        QImage&amp; <a class="code" href="classiimg_1_1_c_bitmap.html#aed49aef4c512a177325f34c846f61089">GetQImageRef</a>();
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036        <span class="comment">// reimplemented (iimg::IQImageProvider)</span>
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> QImage&amp; <a class="code" href="classiimg_1_1_c_bitmap.html#ad2acf051153926923f55ca3437fc415a">GetQImage</a>() <span class="keyword">const</span>;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a7d3c86576eec4fedd36e56bd2a27814c">CopyImageFrom</a>(<span class="keyword">const</span> QImage&amp; image);
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (ibase::IObjectSnap)</span>
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a0b2cbd4e7b7baa9c70a9f170a57b6b84" title="Get bitmap snap for the data object data.">GetSnap</a>(
+<a name="l00042"></a>00042                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; data,
+<a name="l00043"></a>00043                             <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>&amp; objectSnap,
+<a name="l00044"></a>00044                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size) <span class="keyword">const</span>;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiimg_1_1_c_bitmap.html#a31fc742d5bf7b4390de6557be32fa521" title="Get access to transformation object, which transforms a local logical coordinate system to global one...">GetCalibration</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* <a class="code" href="classiimg_1_1_c_bitmap.html#a23f0a63dbb0c1923494a0d8aca2b2118" title="Get access to transformation object, which transforms a local logical coordinate system to global one...">GetCalibration</a>() <span class="keyword">const</span>;
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="comment">// reimplemented (iimg::IBitmap)</span>
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a1181aa870a5e007faf432466954f1a49" title="Get true if the pixel format is supported by the bitmap implementation.">IsFormatSupported</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat) <span class="keyword">const</span>;
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> <a class="code" href="classiimg_1_1_c_bitmap.html#a660b7a4279d22e4abcf3db4d95a2947a" title="Get the bitmap&#39;s pixel format.">GetPixelFormat</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a06672150e1885e1f2a232dc08ef1b41e" title="Create bitmap with specified size and format.">CreateBitmap</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size);
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a06672150e1885e1f2a232dc08ef1b41e" title="Create bitmap with specified size and format.">CreateBitmap</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size, <span class="keywordtype">void</span>* dataPtr, <span class="keywordtype">bool</span> releaseFlag, <span class="keywordtype">int</span> linesDifference = 0);
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#accd4bc7b7423ccf4f3f4e1afde65200e" title="Get address difference between next and previous line.">GetLinesDifference</a>() <span class="keyword">const</span>;
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#ae3c7e421238c40af015efc751f5202c8" title="Get address difference between next and previous pixel.">GetPixelsDifference</a>() <span class="keyword">const</span>;
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#af446a07012253e14032b7755221637e4" title="Get total number of bits per single pixel.">GetPixelBitsCount</a>() <span class="keyword">const</span>;
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classiimg_1_1_c_bitmap.html#ad432b12a52b40e8ee79246d1a16195cf" title="Get pointer to buffer for single line.">GetLinePtr</a>(<span class="keywordtype">int</span> positionY) <span class="keyword">const</span>;
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classiimg_1_1_c_bitmap.html#ad432b12a52b40e8ee79246d1a16195cf" title="Get pointer to buffer for single line.">GetLinePtr</a>(<span class="keywordtype">int</span> positionY);
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="comment">// reimplemented (iimg::IRasterImage)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a721bce52fbf31a50124a4ad24b8e619c" title="Reset this image.">ResetImage</a>();
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiimg_1_1_c_bitmap.html#ab73ccdb2f05b798a9f113390ddce0acf" title="Get size of this raster image.">GetImageSize</a>() <span class="keyword">const</span>;
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a7dcd89a63e167acf44e79f461805ffbd" title="Get number of color components.">GetComponentsCount</a>() <span class="keyword">const</span>;
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a> <a class="code" href="classiimg_1_1_c_bitmap.html#ad4d7aca23738484d91643dec90e8ce82" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span>;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a3d9e82b028b10761c4686f974b4ba61d" title="Get set of flags for supported operations.">GetSupportedOperations</a>() <span class="keyword">const</span>;
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a10241aff9cbe3664092264333f0f31ba" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classiimg_1_1_c_bitmap.html#adc8f1378e18bd1b9aedef8e604f0b05e" title="Make a copy of this object.">CloneMe</a>() <span class="keyword">const</span>;
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 <span class="keyword">protected</span>:
-<a name="l00075"></a>00075        QImage::Format <a class="code" href="classiimg_1_1_c_bitmap.html#a87356c7324a5b7dc7c0956a64f56610f">CalcQtFormat</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat) <span class="keyword">const</span>;
-<a name="l00076"></a>00076        <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> <a class="code" href="classiimg_1_1_c_bitmap.html#a9065a41a882ea2ab434e57c08b9668f5">CalcFromQtFormat</a>(QImage::Format imageFormat) <span class="keyword">const</span>;
-<a name="l00077"></a>00077        <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#ae542113e57fe5bbf2d5e7eaa37cf63c6">SetQImage</a>(<span class="keyword">const</span> QImage&amp; image);
+<a name="l00049"></a>00049        <span class="comment">// reimplemented (iimg::IBitmap)</span>
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a1181aa870a5e007faf432466954f1a49" title="Get true if the pixel format is supported by the bitmap implementation.">IsFormatSupported</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat) <span class="keyword">const</span>;
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> <a class="code" href="classiimg_1_1_c_bitmap.html#a660b7a4279d22e4abcf3db4d95a2947a" title="Get the bitmap&#39;s pixel format.">GetPixelFormat</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a06672150e1885e1f2a232dc08ef1b41e" title="Create bitmap with specified size and format.">CreateBitmap</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size);
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a06672150e1885e1f2a232dc08ef1b41e" title="Create bitmap with specified size and format.">CreateBitmap</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat, <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size, <span class="keywordtype">void</span>* dataPtr, <span class="keywordtype">bool</span> releaseFlag, <span class="keywordtype">int</span> linesDifference = 0);
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#accd4bc7b7423ccf4f3f4e1afde65200e" title="Get address difference between next and previous line.">GetLinesDifference</a>() <span class="keyword">const</span>;
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#ae3c7e421238c40af015efc751f5202c8" title="Get address difference between next and previous pixel.">GetPixelsDifference</a>() <span class="keyword">const</span>;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#af446a07012253e14032b7755221637e4" title="Get total number of bits per single pixel.">GetPixelBitsCount</a>() <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classiimg_1_1_c_bitmap.html#ad432b12a52b40e8ee79246d1a16195cf" title="Get pointer to buffer for single line.">GetLinePtr</a>(<span class="keywordtype">int</span> positionY) <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classiimg_1_1_c_bitmap.html#ad432b12a52b40e8ee79246d1a16195cf" title="Get pointer to buffer for single line.">GetLinePtr</a>(<span class="keywordtype">int</span> positionY);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        <span class="comment">// reimplemented (iimg::IRasterImage)</span>
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a721bce52fbf31a50124a4ad24b8e619c" title="Reset this image.">ResetImage</a>();
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiimg_1_1_c_bitmap.html#ab73ccdb2f05b798a9f113390ddce0acf" title="Get size of this raster image.">GetImageSize</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a7dcd89a63e167acf44e79f461805ffbd" title="Get number of color components.">GetComponentsCount</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a> <a class="code" href="classiimg_1_1_c_bitmap.html#ad4d7aca23738484d91643dec90e8ce82" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a3d9e82b028b10761c4686f974b4ba61d" title="Get set of flags for supported operations.">GetSupportedOperations</a>() <span class="keyword">const</span>;
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#a10241aff9cbe3664092264333f0f31ba" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>);
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classiimg_1_1_c_bitmap.html#adc8f1378e18bd1b9aedef8e604f0b05e" title="Make a copy of this object.">CloneMe</a>() <span class="keyword">const</span>;
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="keyword">protected</span>:
+<a name="l00072"></a>00072        QImage::Format <a class="code" href="classiimg_1_1_c_bitmap.html#a87356c7324a5b7dc7c0956a64f56610f">CalcQtFormat</a>(<a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> pixelFormat) <span class="keyword">const</span>;
+<a name="l00073"></a>00073        <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">PixelFormat</a> <a class="code" href="classiimg_1_1_c_bitmap.html#a9065a41a882ea2ab434e57c08b9668f5">CalcFromQtFormat</a>(QImage::Format imageFormat) <span class="keyword">const</span>;
+<a name="l00074"></a>00074        <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap.html#ae542113e57fe5bbf2d5e7eaa37cf63c6">SetQImage</a>(<span class="keyword">const</span> QImage&amp; image);
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 <span class="keyword">private</span>:
+<a name="l00077"></a>00077        <span class="keywordtype">void</span> EnsureLogTransformCalculated() <span class="keyword">const</span>;
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079 <span class="keyword">private</span>:
-<a name="l00080"></a>00080        <span class="keywordtype">void</span> EnsureLogTransformCalculated() <span class="keyword">const</span>;
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 <span class="keyword">private</span>:
-<a name="l00083"></a>00083        <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;quint8, true&gt;</a> m_externalBuffer;
-<a name="l00084"></a>00084        QImage m_image;
+<a name="l00080"></a>00080        <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;quint8, true&gt;</a> m_externalBuffer;
+<a name="l00081"></a>00081        QImage m_image;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083        <span class="keyword">mutable</span> <a class="code" href="classi2d_1_1_c_affine_transformation2d.html" title="Affine transformation for 2D spaces.">i2d::CAffineTransformation2d</a> m_logTransform;
+<a name="l00084"></a>00084 };
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086        <span class="keyword">mutable</span> <a class="code" href="classi2d_1_1_c_affine_transformation2d.html" title="Affine transformation for 2D spaces.">i2d::CAffineTransformation2d</a> m_logTransform;
-<a name="l00087"></a>00087 };
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="comment">// inline methods</span>
 <a name="l00088"></a>00088 
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 <span class="comment">// inline methods</span>
-<a name="l00091"></a>00091 
-<a name="l00092"></a><a class="code" href="classiimg_1_1_c_bitmap.html#aed49aef4c512a177325f34c846f61089">00092</a> <span class="keyword">inline</span> QImage&amp; <a class="code" href="classiimg_1_1_c_bitmap.html#aed49aef4c512a177325f34c846f61089">CBitmap::GetQImageRef</a>()
-<a name="l00093"></a>00093 {
-<a name="l00094"></a>00094        <span class="keywordflow">return</span> m_image;
-<a name="l00095"></a>00095 }
+<a name="l00089"></a><a class="code" href="classiimg_1_1_c_bitmap.html#aed49aef4c512a177325f34c846f61089">00089</a> <span class="keyword">inline</span> QImage&amp; <a class="code" href="classiimg_1_1_c_bitmap.html#aed49aef4c512a177325f34c846f61089">CBitmap::GetQImageRef</a>()
+<a name="l00090"></a>00090 {
+<a name="l00091"></a>00091        <span class="keywordflow">return</span> m_image;
+<a name="l00092"></a>00092 }
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 } <span class="comment">// namespace iimg</span>
 <a name="l00096"></a>00096 
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098 } <span class="comment">// namespace iimg</span>
-<a name="l00099"></a>00099 
+<a name="l00098"></a>00098 <span class="preprocessor">#endif //!iimg_CBitmap_included</span>
+<a name="l00099"></a>00099 <span class="preprocessor"></span>
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101 <span class="preprocessor">#endif //!iimg_CBitmap_included</span>
-<a name="l00102"></a>00102 <span class="preprocessor"></span>
-<a name="l00103"></a>00103 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -85,8 +85,6 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#aa09a9c1fd7c4dba7a4db96d04a459202">I_ASSIGN_TO</a> (m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a8154330a73be7f8d65f0ccd26dd8d48a">I_ASSIGN_TO</a> (m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adae37e2452cd9e405d2f1e4b09004d7c">I_ASSIGN_TO</a> (m_calibrationSupplierCompPtr, m_calibrationCompPtr, false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#add811097b033bec2672b93d28265d309">I_ASSIGN_TO</a> (m_calibrationModelCompPtr, m_calibrationCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ac3bb508790b32cd3d4bc216f81b6dfe6">GetBitmapSelectionContraints</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional information about bitmaps in form of section contraints.  <a href="#ac3bb508790b32cd3d4bc216f81b6dfe6"></a><br/></td></tr>
@@ -94,9 +92,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of produced bitmaps.  <a href="#abb9fcd1011858fb991e00e8c276bc04b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a6c9a06dc1983c4716926ded9c6118571">GetBitmap</a> (int bitmapIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to produced bitmap object.  <a href="#a6c9a06dc1983c4716926ded9c6118571"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a09ae5bfd6c3c54979321ac8855d25293">GetLogTransform</a> (int bitmapIndex) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation from bitmap to logical positions.  <a href="#a09ae5bfd6c3c54979321ac8855d25293"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adbeea9ccf7c93c398844005ead7e2ea6">EnsureBitmapCreated</a> (<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a> &amp;result) const </td></tr>
@@ -231,29 +226,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a09ae5bfd6c3c54979321ac8855d25293"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::GetLogTransform" ref="a09ae5bfd6c3c54979321ac8855d25293" args="(int bitmapIndex) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iipr::CColorBitmapSeparatorSupplierComp::GetLogTransform </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bitmapIndex</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get access to transformation from bitmap to logical positions. </p>
-<p>Please note, not all implementations must support this information. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>pointer to transformation if it is accessible, or NULL. </dd></dl>
-
-<p>Implements <a class="el" href="classiipr_1_1_i_multi_bitmap_provider.html#a057e0b21e14709b95fb1e19e5f3fcb9b">iipr::IMultiBitmapProvider</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ad02605c7913eff9f86132ff779dc1366"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::GetOptionDescription" ref="ad02605c7913eff9f86132ff779dc1366" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -376,72 +348,6 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">m_bitmapProviderCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">false&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="adae37e2452cd9e405d2f1e4b09004d7c"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::I_ASSIGN_TO" ref="adae37e2452cd9e405d2f1e4b09004d7c" args="(m_calibrationSupplierCompPtr, m_calibrationCompPtr, false)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iipr::CColorBitmapSeparatorSupplierComp::I_ASSIGN_TO </td>
-          <td>(</td>
-          <td class="paramtype">m_calibrationSupplierCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">m_calibrationCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">false&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="add811097b033bec2672b93d28265d309"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::I_ASSIGN_TO" ref="add811097b033bec2672b93d28265d309" args="(m_calibrationModelCompPtr, m_calibrationCompPtr, false)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iipr::CColorBitmapSeparatorSupplierComp::I_ASSIGN_TO </td>
-          <td>(</td>
-          <td class="paramtype">m_calibrationModelCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">m_calibrationCompPtr&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>

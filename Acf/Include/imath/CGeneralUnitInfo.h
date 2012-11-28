@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF-Solutions Toolkit.
+**	This file is part of the ACF Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,20 +15,20 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**	by Skype to ACF_infoline for further information about the ACF.
 **
 ********************************************************************************/
 
 
-#ifndef imeas_CGeneralUnitInfo_included
-#define imeas_CGeneralUnitInfo_included
+#ifndef imath_CGeneralUnitInfo_included
+#define imath_CGeneralUnitInfo_included
 
 
-// ACF-Solutions includes
-#include "imeas/IUnitInfo.h"
+// ACF includes
+#include "imath/IUnitInfo.h"
 
 
-namespace imeas
+namespace imath
 {
 
 
@@ -49,7 +49,7 @@ public:
 	void SetDisplayMultiplicationFactor(double factor);
 	void SetValueRange(const istd::CRange& range);
 
-	//	reimplemented (imeas::IUnitInfo)
+	//	reimplemented (imath::IUnitInfo)
 	virtual int GetUnitType() const;
 	virtual QString GetUnitName() const;
 	virtual double GetDisplayMultiplicationFactor() const;
@@ -64,9 +64,9 @@ private:
 };
 
 
-} // namespace imeas
+} // namespace imath
 
 
-#endif // !imeas_CGeneralUnitInfo_included
+#endif // !imath_CGeneralUnitInfo_included
 
 

@@ -38,7 +38,7 @@
 <div class="title">iview::CPerspectiveCalibration Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::CPerspectiveCalibration" --><!-- doxytag: inherits="i2d::ITransformation2d" -->
+<!-- doxytag: class="iview::CPerspectiveCalibration" --><!-- doxytag: inherits="i2d::CNoneCalibration2d" -->
 <p>Perspective calibration.  
  <a href="classiview_1_1_c_perspective_calibration.html#details">More...</a></p>
 
@@ -49,6 +49,8 @@ Inheritance diagram for iview::CPerspectiveCalibration:</div>
  <div class="center">
   <img src="classiview_1_1_c_perspective_calibration.png" usemap="#iview::CPerspectiveCalibration_map" alt=""/>
   <map id="iview::CPerspectiveCalibration_map" name="iview::CPerspectiveCalibration_map">
+<area href="classi2d_1_1_c_none_calibration2d.html" title="Identity calibration, no transformation will be done." alt="i2d::CNoneCalibration2d" shape="rect" coords="155,280,456,304"/>
+<area href="classi2d_1_1_i_calibration2d.html" alt="i2d::ICalibration2d" shape="rect" coords="155,224,456,248"/>
 <area href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects." alt="i2d::ITransformation2d" shape="rect" coords="155,168,456,192"/>
 <area href="classimath_1_1_t_i_surject_function.html" alt="imath::TISurjectFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,112,301,136"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="311,112,612,136"/>
@@ -98,9 +100,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local transformation (from original to transformed coordinate system) at some original position.  <a href="#a09222bb7cee9c793f92f8a157f814562"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_perspective_calibration.html#a3942a7a93fbc60996cee893b28cd0224">GetLocalInvTransform</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;transfPosition, <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local transformation (from transformed to original coordinate system) at some transformed position.  <a href="#a3942a7a93fbc60996cee893b28cd0224"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_perspective_calibration.html#a4536adbe29354c1daafa5680d08a90c1">CreateCombinedTransformation</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;transform) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new transformation being combination of this transformation and the second one.  <a href="#a4536adbe29354c1daafa5680d08a90c1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_perspective_calibration.html#a29613caca42292d96829992a149b940c">GetInvValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;argument, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_perspective_calibration.html#aba63c6f02f6daab6e8209b1aab87380b">GetInvValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;argument) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_perspective_calibration.html#a8b27318fd4c112f623e26e05403fdd63">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;argument, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result) const </td></tr>
@@ -360,29 +359,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4536adbe29354c1daafa5680d08a90c1"></a><!-- doxytag: member="iview::CPerspectiveCalibration::CreateCombinedTransformation" ref="a4536adbe29354c1daafa5680d08a90c1" args="(const i2d::ITransformation2d &amp;transform) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iview::CPerspectiveCalibration::CreateCombinedTransformation </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>transform</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Create new transformation being combination of this transformation and the second one. </p>
-<p>Please note, that created object is owned by the caller and the caller must remove them. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>new transformation object (owned by the caller) or NULL if creatiion was not possible. </dd></dl>
-
-<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#a8fc470864ca01db179322443f52ffcb8">i2d::ITransformation2d</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="adc097f11138f9ad02e37f0e479a810d3"></a><!-- doxytag: member="iview::CPerspectiveCalibration::DoCalibration" ref="adc097f11138f9ad02e37f0e479a810d3" args="(const i2d::CVector2d *logicalPoints, const i2d::CVector2d *viewPoints, int pointsCount)" -->
 <div class="memitem">
 <div class="memproto">
@@ -434,7 +410,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get logical coordinates bounds. </p>
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00154">154</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00153">153</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +463,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#ab81b43d90130362a22d788ebd4710d00">i2d::ITransformation2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a14555bee02f7519ce0cc7861141989c7">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -533,7 +509,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#a7821530bcc886a5920e632fe3c1a91ed">i2d::ITransformation2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a2631ab774913d8554e21ba673bfb1e35">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -562,6 +538,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a3554cbd246909fa5eb83205f0eb594f7">i2d::CNoneCalibration2d</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aba63c6f02f6daab6e8209b1aab87380b"></a><!-- doxytag: member="iview::CPerspectiveCalibration::GetInvValueAt" ref="aba63c6f02f6daab6e8209b1aab87380b" args="(const i2d::CVector2d &amp;argument) const " -->
@@ -578,6 +556,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a958e259ff4b73df992790c5e066d6f6f">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -623,7 +603,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#af7f159bd12d686543beee0c5f9210d99">i2d::ITransformation2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a90fa27d418060284f4a662b99c1d5d4f">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -669,7 +649,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#adbb8dfe9b050fd67c5ea18faa2296ad6">i2d::ITransformation2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#ad80b6d7961542f98ac4b175d06bc7a89">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -687,7 +667,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00166">166</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00165">165</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -705,7 +685,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00178">178</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00177">177</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -723,7 +703,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00190">190</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00189">189</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -775,7 +755,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00222">222</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00221">221</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 <p>References <a class="el" href="_c_vector2d_8h_source.html#l00159">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00171">i2d::CVector2d::GetY()</a>.</p>
 
@@ -823,7 +803,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#a66a97873ee8c42d3dac119032f8bb8d5">i2d::ITransformation2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#aee84f7c51f79cbd58577c7558a5a5f42">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -843,7 +823,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get flags of describing type of this transformation. </p>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#a68f590d710df7df8eda66f06a8273915">i2d::ITransformation2d</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a20f3d7da2a836eacdae7b525ee4b4bee">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -872,6 +852,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a4ccb50bc883271c2043335bf0f734bf6">i2d::CNoneCalibration2d</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a788a3a33df96cf923f25b2c5742ee1cd"></a><!-- doxytag: member="iview::CPerspectiveCalibration::GetValueAt" ref="a788a3a33df96cf923f25b2c5742ee1cd" args="(const i2d::CVector2d &amp;argument) const " -->
@@ -889,6 +871,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a76db2f9bb3f6d33c4ce45ac94afe0cb2">i2d::CNoneCalibration2d</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac0651bef2d86e928aa74fa7a3285b707"></a><!-- doxytag: member="iview::CPerspectiveCalibration::GetViewCenter" ref="ac0651bef2d86e928aa74fa7a3285b707" args="() const " -->
@@ -905,7 +889,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00202">202</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00201">201</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -924,7 +908,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00230">230</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00229">229</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 <p>References <a class="el" href="_c_vector2d_8h_source.html#l00159">i2d::CVector2d::GetX()</a>, and <a class="el" href="_c_vector2d_8h_source.html#l00171">i2d::CVector2d::GetY()</a>.</p>
 
@@ -945,7 +929,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00214">214</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00213">213</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_c_perspective_calibration.html#a5faacf00b2a3b6020599685dcd9ad93d">operator==()</a>.</p>
 
@@ -966,7 +950,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="_c_perspective_calibration_8h_source.html#l00214">operator!=()</a>.</p>
+<p>Referenced by <a class="el" href="_c_perspective_calibration_8h_source.html#l00213">operator!=()</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +1007,7 @@ Protected Member Functions</h2></td></tr>
 <p>Type of operation is depending on archive type. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a6ef37cf30da5cdcdc1e23f3d57c82d70">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1028,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set locical coordinates bounds. </p>
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00160">160</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00159">159</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -1090,7 +1074,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00172">172</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00171">171</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -1109,7 +1093,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00184">184</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00183">183</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -1128,7 +1112,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00196">196</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00195">195</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1131,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00208">208</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_perspective_calibration_8h_source.html#l00207">207</a> of file <a class="el" href="_c_perspective_calibration_8h_source.html">CPerspectiveCalibration.h</a>.</p>
 
 </div>
 </div>

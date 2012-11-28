@@ -70,7 +70,7 @@ public:
 	virtual void RemoveItemsFromScene(iqt2d::IViewProvider* providerPtr);
 
 	// reimplemented (i2d::ICalibrationProvider)
-	virtual const i2d::ITransformation2d* GetCalibration() const;
+	virtual const i2d::ICalibration2d* GetCalibration() const;
 
 protected:
 	typedef typename BaseClass::Shapes Shapes;
@@ -202,7 +202,7 @@ void TSupplierGuiCompBase<UI, WidgetType>::RemoveItemsFromScene(iqt2d::IViewProv
 // reimplemented (i2d::ICalibrationProvider)
 
 template <class UI, class WidgetType>
-const i2d::ITransformation2d* TSupplierGuiCompBase<UI, WidgetType>::GetCalibration() const
+const i2d::ICalibration2d* TSupplierGuiCompBase<UI, WidgetType>::GetCalibration() const
 {
 	i2d::ICalibrationProvider* calibrationProviderPtr = CompCastPtr<i2d::ICalibrationProvider>(GetObjectPtr());
 	if (calibrationProviderPtr != NULL){

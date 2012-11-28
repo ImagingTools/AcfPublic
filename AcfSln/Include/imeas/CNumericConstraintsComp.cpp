@@ -64,7 +64,7 @@ QString CNumericConstraintsComp::GetNumericValueDescription(int index) const
 }
 
 
-const imeas::IUnitInfo& CNumericConstraintsComp::GetNumericValueUnitInfo(int /*index*/) const
+const imath::IUnitInfo& CNumericConstraintsComp::GetNumericValueUnitInfo(int /*index*/) const
 {
 	return *this;
 }
@@ -72,7 +72,7 @@ const imeas::IUnitInfo& CNumericConstraintsComp::GetNumericValueUnitInfo(int /*i
 
 // protected methods
 
-// reimplemented (imeas::IUnitInfo)
+// reimplemented (imath::IUnitInfo)
 
 int CNumericConstraintsComp::GetUnitType() const
 {

@@ -38,7 +38,7 @@
 <div class="title">iipr::CRectImageSmoothProcessorComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CRectImageSmoothProcessorComp" --><!-- doxytag: inherits="TImageParamProcessorCompBase&lt; imeas::INumericValue &gt;,imeas::INumericConstraints,imeas::IUnitInfo" -->
+<!-- doxytag: class="iipr::CRectImageSmoothProcessorComp" --><!-- doxytag: inherits="TImageParamProcessorCompBase&lt; imeas::INumericValue &gt;,imeas::INumericConstraints,imath::IUnitInfo" -->
 <p>Implementation of image smooth operator with homogeneous rectangle kernel.  
  <a href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#details">More...</a></p>
 
@@ -51,7 +51,7 @@ Inheritance diagram for iipr::CRectImageSmoothProcessorComp:</div>
   <map id="iipr::CRectImageSmoothProcessorComp_map" name="iipr::CRectImageSmoothProcessorComp_map">
 <area href="classiipr_1_1_t_image_param_processor_comp_base.html" alt="iipr::TImageParamProcessorCompBase&lt; imeas::INumericValue &gt;" shape="rect" coords="577,336,952,360"/>
 <area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="962,336,1337,360"/>
-<area href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit." alt="imeas::IUnitInfo" shape="rect" coords="1347,336,1722,360"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html" alt="imath::IUnitInfo" shape="rect" coords="1347,336,1722,360"/>
 <area href="classiipr_1_1_c_image_processor_comp_base.html" title="Basic implementation for a simple bitmap processor." alt="iipr::CImageProcessorCompBase" shape="rect" coords="577,280,952,304"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="962,280,1337,304"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1347,280,1722,304"/>
@@ -91,22 +91,17 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of numeric value for specified list index.  <a href="#ace3dfd70dbb6334b9c451f1a815ac4d8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#af392d7780d8d68a5296669e79892fea3">GetNumericValueDescription</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of numeric value for specified list index.  <a href="#af392d7780d8d68a5296669e79892fea3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ae33a423a10270dcd8a27479cba698ae3">GetNumericValueUnitInfo</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#ae33a423a10270dcd8a27479cba698ae3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ab2304a9a781bee83df0ab648b7a77c29">GetNumericValueUnitInfo</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#ab2304a9a781bee83df0ab648b7a77c29"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#a959f0a400d4ab7cdef5dbf439f2f1e9d">ParamProcessImage</a> (const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;inputImage, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;outputImage)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do image processing with some (optional) parameter set.  <a href="#a959f0a400d4ab7cdef5dbf439f2f1e9d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad29e44d4dea5acd9b900e8d8e8c5cbba">GetUnitType</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of unit.  <a href="#ad29e44d4dea5acd9b900e8d8e8c5cbba"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad802414194a0d3513d4765ce1f366646">GetUnitName</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of unit.  <a href="#ad802414194a0d3513d4765ce1f366646"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#abb296d8ab35fa5e44e1612e701238b62">GetDisplayMultiplicationFactor</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get multiplication factor used to calculate user input values.  <a href="#abb296d8ab35fa5e44e1612e701238b62"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#ad863e90199ab1a3ed1284b0d72ee138c">GetValueRange</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible value.  <a href="#ad863e90199ab1a3ed1284b0d72ee138c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_image_smooth_processor_comp.html#adbf9f15b2cf3d9c99818945965c1aabd">GetValueManip</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number manipulator object for filter length value.  <a href="#adbf9f15b2cf3d9c99818945965c1aabd"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of image smooth operator with homogeneous rectangle kernel. </p>
@@ -195,9 +190,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get multiplication factor used to calculate user input values. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#ac436177409b9434bebfd5e6aaf584104">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a2296f0ba47bb6e0b28e7e82c37f0a99f">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -275,12 +268,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae33a423a10270dcd8a27479cba698ae3"></a><!-- doxytag: member="iipr::CRectImageSmoothProcessorComp::GetNumericValueUnitInfo" ref="ae33a423a10270dcd8a27479cba698ae3" args="(int index) const " -->
+<a class="anchor" id="ab2304a9a781bee83df0ab648b7a77c29"></a><!-- doxytag: member="iipr::CRectImageSmoothProcessorComp::GetNumericValueUnitInfo" ref="ab2304a9a781bee83df0ab648b7a77c29" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a>&amp; iipr::CRectImageSmoothProcessorComp::GetNumericValueUnitInfo </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a>&amp; iipr::CRectImageSmoothProcessorComp::GetNumericValueUnitInfo </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -298,7 +291,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#a5fe12b84ab6af1e5c7220a7925583950">imeas::INumericConstraints</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#afc12e7bbf5f51a8c2cb12076c5a2acfd">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div>
@@ -316,9 +309,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get name of unit. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a0a420f7c02d2181c87cffffb593fe4f0">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a2e810caa715e5a816dcabe4df53898d8">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -336,9 +327,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get type of unit. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a8994df8847910c86d7dec55ae3020f6f">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a948a1e6801be92bfe8abac011c80a22f">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -356,9 +345,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Return number manipulator object for filter length value. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#ad3bc9f6511af9a8013e2dda73e4bb2b7">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a26b107f355db2bfc12f1966d1adce490">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -376,9 +363,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get range of possible value. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a2af82f2fa9b39ec00daf544178eb4002">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a923b2b438fcf0138d8493f6352ee6ec7">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>

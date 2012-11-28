@@ -72,10 +72,10 @@ Inheritance diagram for i2d::CObject2dBase:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#ab00780b19a69d586c8d7e6ea37e7df3d">CObject2dBase</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a016af1dc4f10d78f5eab57fe5b040350">CObject2dBase</a> (const <a class="el" href="classi2d_1_1_c_object2d_base.html">CObject2dBase</a> &amp;object2d)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a0db72061ef94ce499b1aa3fd86789965">SetCalibration</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> *calibrationPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set calibration of this object.  <a href="#a0db72061ef94ce499b1aa3fd86789965"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a746af84cc92775cf8ede5c5797197f76">GetCalibration</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a local logical coordinate system to global one.  <a href="#a746af84cc92775cf8ede5c5797197f76"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a213a59e47d3a6f059ee95fafd14d351a">SetCalibration</a> (const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a> *calibrationPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set calibration of this object.  <a href="#a213a59e47d3a6f059ee95fafd14d351a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a7c9398ad12709b1d17bbd82ff8c10776">GetCalibration</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a local logical coordinate system to global one.  <a href="#a7c9398ad12709b1d17bbd82ff8c10776"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a2fb83ed63f504dc07ecb1b90efa91cb7">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#a2fb83ed63f504dc07ecb1b90efa91cb7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#ae265e9ee5ad0fa90a7a32690ce12936b">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
@@ -125,12 +125,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a746af84cc92775cf8ede5c5797197f76"></a><!-- doxytag: member="i2d::CObject2dBase::GetCalibration" ref="a746af84cc92775cf8ede5c5797197f76" args="() const " -->
+<a class="anchor" id="a7c9398ad12709b1d17bbd82ff8c10776"></a><!-- doxytag: member="i2d::CObject2dBase::GetCalibration" ref="a7c9398ad12709b1d17bbd82ff8c10776" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a>* i2d::CObject2dBase::GetCalibration </td>
+          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a>* i2d::CObject2dBase::GetCalibration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <p>Get access to transformation object, which transforms a local logical coordinate system to global one. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to transformation if it is accessible, or NULL. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
+<p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#acfd7dbf4befb0b89c0fa693a3483ec55">i2d::ICalibrationProvider</a>.</p>
 
 </div>
 </div>
@@ -301,14 +301,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0db72061ef94ce499b1aa3fd86789965"></a><!-- doxytag: member="i2d::CObject2dBase::SetCalibration" ref="a0db72061ef94ce499b1aa3fd86789965" args="(const ITransformation2d *calibrationPtr)" -->
+<a class="anchor" id="a213a59e47d3a6f059ee95fafd14d351a"></a><!-- doxytag: member="i2d::CObject2dBase::SetCalibration" ref="a213a59e47d3a6f059ee95fafd14d351a" args="(const ICalibration2d *calibrationPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void i2d::CObject2dBase::SetCalibration </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a> *&#160;</td>
           <td class="paramname"><em>calibrationPtr</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>

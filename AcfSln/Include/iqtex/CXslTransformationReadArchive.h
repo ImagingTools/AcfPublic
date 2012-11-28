@@ -91,8 +91,6 @@ private:
 
 	bool m_serializeHeader;
 	iser::CArchiveTag m_rootTag;
-
-	friend class ReadArchiveMessageHandler;
 };
 
 

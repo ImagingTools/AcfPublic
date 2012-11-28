@@ -57,56 +57,48 @@
 <a name="l00034"></a>00034               I_ASSIGN(m_bitmapProviderCompPtr, <span class="stringliteral">&quot;BitmapSupplier&quot;</span>, <span class="stringliteral">&quot;Provide input image&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapSupplier&quot;</span>);
 <a name="l00035"></a>00035               <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#aa09a9c1fd7c4dba7a4db96d04a459202">I_ASSIGN_TO</a>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, <span class="keyword">false</span>);
 <a name="l00036"></a>00036               <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#aa09a9c1fd7c4dba7a4db96d04a459202">I_ASSIGN_TO</a>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, <span class="keyword">false</span>);
-<a name="l00037"></a>00037               I_ASSIGN(m_calibrationCompPtr, <span class="stringliteral">&quot;Calibration&quot;</span>, <span class="stringliteral">&quot;Optional calibration object&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Calibration&quot;</span>);
-<a name="l00038"></a>00038               <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#aa09a9c1fd7c4dba7a4db96d04a459202">I_ASSIGN_TO</a>(m_calibrationSupplierCompPtr, m_calibrationCompPtr, <span class="keyword">false</span>);
-<a name="l00039"></a>00039               <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#aa09a9c1fd7c4dba7a4db96d04a459202">I_ASSIGN_TO</a>(m_calibrationModelCompPtr, m_calibrationCompPtr, <span class="keyword">false</span>);
-<a name="l00040"></a>00040               I_ASSIGN(m_useAlphaChannelAttrPtr, <span class="stringliteral">&quot;UseAlphaChannel&quot;</span>, <span class="stringliteral">&quot;If enabled and image format of bitmap is RGBA, create bitmap for alpha chanel&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);             
-<a name="l00041"></a>00041        I_END_COMPONENT;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (iipr::IMultiBitmapProvider)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ac3bb508790b32cd3d4bc216f81b6dfe6" title="Get optional information about bitmaps in form of section contraints.">GetBitmapSelectionContraints</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#abb9fcd1011858fb991e00e8c276bc04b" title="Get number of produced bitmaps.">GetBitmapsCount</a>() <span class="keyword">const</span>;
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a6c9a06dc1983c4716926ded9c6118571" title="Get access to produced bitmap object.">GetBitmap</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a09ae5bfd6c3c54979321ac8855d25293" title="Get access to transformation from bitmap to logical positions.">GetLogTransform</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;       
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">protected</span>:
-<a name="l00050"></a>00050        <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adbeea9ccf7c93c398844005ead7e2ea6">EnsureBitmapCreated</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ad80af70bad9caf68eab0d65de3feaf0a">GetConstraintsFlags</a>() <span class="keyword">const</span>;
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a0db7889559855c54fe44674b2785d305">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a3f6649862bc81b5bea6b9e2b100f6ff9">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ad02605c7913eff9f86132ff779dc1366">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#accfe764f0b9dcce4f12bdd8fc75dc681">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a36c9599e43c7d8fedecc0fd1041a7a01">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a008b04ae9dba20b8821be8bf8f15610c" title="Produce single object.">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adcf275024a5a474346cc994f96543b31">OnComponentCreated</a>();
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="keyword">private</span>:
-<a name="l00067"></a>00067        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
+<a name="l00037"></a>00037               I_ASSIGN(m_useAlphaChannelAttrPtr, <span class="stringliteral">&quot;UseAlphaChannel&quot;</span>, <span class="stringliteral">&quot;If enabled and image format of bitmap is RGBA, create bitmap for alpha chanel&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);             
+<a name="l00038"></a>00038        I_END_COMPONENT;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (iipr::IMultiBitmapProvider)</span>
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ac3bb508790b32cd3d4bc216f81b6dfe6" title="Get optional information about bitmaps in form of section contraints.">GetBitmapSelectionContraints</a>() <span class="keyword">const</span>;
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#abb9fcd1011858fb991e00e8c276bc04b" title="Get number of produced bitmaps.">GetBitmapsCount</a>() <span class="keyword">const</span>;
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a6c9a06dc1983c4716926ded9c6118571" title="Get access to produced bitmap object.">GetBitmap</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="keyword">protected</span>:
+<a name="l00046"></a>00046        <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adbeea9ccf7c93c398844005ead7e2ea6">EnsureBitmapCreated</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ad80af70bad9caf68eab0d65de3feaf0a">GetConstraintsFlags</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a0db7889559855c54fe44674b2785d305">GetOptionsCount</a>() <span class="keyword">const</span>;
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a3f6649862bc81b5bea6b9e2b100f6ff9">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> QString <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ad02605c7913eff9f86132ff779dc1366">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#accfe764f0b9dcce4f12bdd8fc75dc681">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a36c9599e43c7d8fedecc0fd1041a7a01">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a008b04ae9dba20b8821be8bf8f15610c" title="Produce single object.">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adcf275024a5a474346cc994f96543b31">OnComponentCreated</a>();
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="keyword">private</span>:
+<a name="l00063"></a>00063        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
+<a name="l00066"></a>00066        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_bitmapSupplierCompPtr);
+<a name="l00067"></a>00067        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
-<a name="l00070"></a>00070        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_bitmapSupplierCompPtr);
-<a name="l00071"></a>00071        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
+<a name="l00069"></a>00069        I_ATTR(<span class="keywordtype">bool</span>, m_useAlphaChannelAttrPtr);
+<a name="l00070"></a>00070 };
+<a name="l00071"></a>00071 
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>, m_calibrationCompPtr);
-<a name="l00074"></a>00074        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_calibrationSupplierCompPtr);
-<a name="l00075"></a>00075        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_calibrationModelCompPtr);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        I_ATTR(<span class="keywordtype">bool</span>, m_useAlphaChannelAttrPtr);
-<a name="l00078"></a>00078 };
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 } <span class="comment">// namespace iipr</span>
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="preprocessor">#endif // !iipr_CColorBitmapSeparatorSupplierComp_included</span>
-<a name="l00085"></a>00085 <span class="preprocessor"></span>
-<a name="l00086"></a>00086 
+<a name="l00073"></a>00073 } <span class="comment">// namespace iipr</span>
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 <span class="preprocessor">#endif // !iipr_CColorBitmapSeparatorSupplierComp_included</span>
+<a name="l00077"></a>00077 <span class="preprocessor"></span>
+<a name="l00078"></a>00078 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

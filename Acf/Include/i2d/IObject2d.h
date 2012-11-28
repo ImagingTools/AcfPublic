@@ -26,7 +26,7 @@
 
 // ACF includes
 #include "iser/ISerializable.h"
-#include "i2d/ITransformation2d.h"
+#include "i2d/ICalibration2d.h"
 #include "i2d/ICalibrationProvider.h"
 
 

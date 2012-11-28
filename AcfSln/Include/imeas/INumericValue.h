@@ -54,6 +54,7 @@ public:
 
 		/**
 			Weight of some value
+			This value should be normalized to range [0, 1].
 		*/
 		VTI_WEIGHT,
 
@@ -68,10 +69,9 @@ public:
 		VTI_RADIUS,
 
 		/**
-			Quality factor.
-			This value should be normalized to range [0, 1].
+			Scaling factor(s).
 		*/
-		VTI_QUALITY,
+		VTI_SCALE,
 
 		/**
 			Angle in radian.

@@ -38,7 +38,7 @@
 <div class="title">imeas::CNumericParamsComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="imeas::CNumericParamsComp" --><!-- doxytag: inherits="icomp::CComponentBase,imeas::CSimpleNumericValue,imeas::INumericConstraints,imeas::IUnitInfo" -->
+<!-- doxytag: class="imeas::CNumericParamsComp" --><!-- doxytag: inherits="icomp::CComponentBase,imeas::CSimpleNumericValue,imeas::INumericConstraints,imath::IUnitInfo" -->
 <p>Component implementating <a class="el" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a> interface.  
  <a href="classimeas_1_1_c_numeric_params_comp.html#details">More...</a></p>
 
@@ -52,7 +52,7 @@ Inheritance diagram for imeas::CNumericParamsComp:</div>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,224,180,248"/>
 <area href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface." alt="imeas::CSimpleNumericValue" shape="rect" coords="190,224,370,248"/>
 <area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="380,224,560,248"/>
-<area href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit." alt="imeas::IUnitInfo" shape="rect" coords="570,224,750,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html" alt="imath::IUnitInfo" shape="rect" coords="570,224,750,248"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,168,180,192"/>
 <area href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values." alt="imeas::INumericValue" shape="rect" coords="190,168,370,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="380,168,560,192"/>
@@ -84,18 +84,13 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of numeric value for specified list index.  <a href="#a8e120a246115a3659eb3e7929160ecaf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a9fe3317941b0928c2452a81b13ed62de">GetNumericValueDescription</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of numeric value for specified list index.  <a href="#a9fe3317941b0928c2452a81b13ed62de"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#ab68e7942771ae4172f14b7fc66778549">GetNumericValueUnitInfo</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#ab68e7942771ae4172f14b7fc66778549"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a5f84432a11fa3d5e72f0781be63bca48">GetNumericValueUnitInfo</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#a5f84432a11fa3d5e72f0781be63bca48"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#afc86be53b80f6d8d2d67790f37f65b94">GetUnitType</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of unit.  <a href="#afc86be53b80f6d8d2d67790f37f65b94"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a577c62f05575438eda291047f6166ab0">GetUnitName</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of unit.  <a href="#a577c62f05575438eda291047f6166ab0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#ac45c462ca6aa584848e8a72b8467e30d">GetDisplayMultiplicationFactor</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get multiplication factor used to calculate user input values.  <a href="#ac45c462ca6aa584848e8a72b8467e30d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#aca365623bf951247a03fb39e4fa2bfd7">GetValueRange</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible value.  <a href="#aca365623bf951247a03fb39e4fa2bfd7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_numeric_params_comp.html#a67272c6b08219c5211075a7475954365">GetValueManip</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number manipulator object for filter length value.  <a href="#a67272c6b08219c5211075a7475954365"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component implementating <a class="el" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a> interface. </p>
@@ -148,9 +143,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get multiplication factor used to calculate user input values. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#ac436177409b9434bebfd5e6aaf584104">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a2296f0ba47bb6e0b28e7e82c37f0a99f">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -248,12 +241,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab68e7942771ae4172f14b7fc66778549"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetNumericValueUnitInfo" ref="ab68e7942771ae4172f14b7fc66778549" args="(int index) const " -->
+<a class="anchor" id="a5f84432a11fa3d5e72f0781be63bca48"></a><!-- doxytag: member="imeas::CNumericParamsComp::GetNumericValueUnitInfo" ref="a5f84432a11fa3d5e72f0781be63bca48" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a>&amp; imeas::CNumericParamsComp::GetNumericValueUnitInfo </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a>&amp; imeas::CNumericParamsComp::GetNumericValueUnitInfo </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -271,7 +264,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#a5fe12b84ab6af1e5c7220a7925583950">imeas::INumericConstraints</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#afc12e7bbf5f51a8c2cb12076c5a2acfd">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div>
@@ -289,9 +282,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get name of unit. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a0a420f7c02d2181c87cffffb593fe4f0">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a2e810caa715e5a816dcabe4df53898d8">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -309,9 +300,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get type of unit. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a8994df8847910c86d7dec55ae3020f6f">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a948a1e6801be92bfe8abac011c80a22f">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -329,9 +318,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Return number manipulator object for filter length value. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#ad3bc9f6511af9a8013e2dda73e4bb2b7">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a26b107f355db2bfc12f1966d1adce490">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -349,9 +336,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get range of possible value. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a2af82f2fa9b39ec00daf544178eb4002">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a923b2b438fcf0138d8493f6352ee6ec7">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>

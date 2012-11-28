@@ -62,7 +62,7 @@ void CEdgeLineContainerShape::Draw(QPainter& drawContext) const
 			for (int lineIndex = 0; lineIndex < numLines; lineIndex++){
 				const iedge::CEdgeLine& line = containerPtr->GetAt(lineIndex);
 
-				const i2d::ITransformation2d* calibrationPtr = line.GetCalibration();
+				const i2d::ICalibration2d* calibrationPtr = line.GetCalibration();
 
 				int nodesCount = line.GetNodesCount();
 
@@ -141,7 +141,7 @@ i2d::CRect CEdgeLineContainerShape::CalcBoundingBox() const
 		for (int lineIndex = 0; lineIndex < containerPtr->GetItemsCount(); lineIndex++){
 			const iedge::CEdgeLine& line = containerPtr->GetAt(lineIndex);
 
-			const i2d::ITransformation2d* calibrationPtr = line.GetCalibration();
+			const i2d::ICalibration2d* calibrationPtr = line.GetCalibration();
 			int nodesCount = line.GetNodesCount();
 
 			for (int i = 0; i < nodesCount; i++){

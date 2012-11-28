@@ -768,10 +768,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classilibav_1_1_c_lib_av_rtsp_streaming_camera_comp.html</anchorfile>
-      <anchor>a25f961b844543f60f538f81018002f1e</anchor>
+      <anchor>af508d3228d0fe434f2cb7182806f14bc</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected">

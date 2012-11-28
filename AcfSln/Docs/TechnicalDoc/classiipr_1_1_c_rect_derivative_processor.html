@@ -36,7 +36,7 @@
 <div class="title">iipr::CRectDerivativeProcessor Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CRectDerivativeProcessor" --><!-- doxytag: inherits="iproc::TSyncProcessorWrap,imeas::INumericConstraints,imeas::IUnitInfo" -->
+<!-- doxytag: class="iipr::CRectDerivativeProcessor" --><!-- doxytag: inherits="iproc::TSyncProcessorWrap,imeas::INumericConstraints,imath::IUnitInfo" -->
 <p>Calculate derivative of projection using rectangular filter kernel.  
  <a href="classiipr_1_1_c_rect_derivative_processor.html#details">More...</a></p>
 
@@ -49,7 +49,7 @@ Inheritance diagram for iipr::CRectDerivativeProcessor:</div>
   <map id="iipr::CRectDerivativeProcessor_map" name="iipr::CRectDerivativeProcessor_map">
 <area href="classiproc_1_1_t_sync_processor_wrap.html" title="Wrapper of iproc::IProcessor for simple synchrone processor implementations." alt="iproc::TSyncProcessorWrap&lt; Base &gt;" shape="rect" coords="0,112,256,136"/>
 <area href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values." alt="imeas::INumericConstraints" shape="rect" coords="266,112,522,136"/>
-<area href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit." alt="imeas::IUnitInfo" shape="rect" coords="532,112,788,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html" alt="imath::IUnitInfo" shape="rect" coords="532,112,788,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,256,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="266,56,522,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="532,56,788,80"/>
@@ -75,18 +75,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of numeric value for specified list index.  <a href="#ab9844cca4f7b282b578e7a3f1bfe892f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a0fd88a4782e5e91ec9f9c0319b6df93c">GetNumericValueDescription</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description of numeric value for specified list index.  <a href="#a0fd88a4782e5e91ec9f9c0319b6df93c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a87bd4a695300f85c2526d6bb04279642">GetNumericValueUnitInfo</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#a87bd4a695300f85c2526d6bb04279642"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#adeea235002e305aca9a54846dc660235">GetNumericValueUnitInfo</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible numeric values for specified list index.  <a href="#adeea235002e305aca9a54846dc660235"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a1f7091b5f0e9e4df0a59d151bac45219">GetUnitType</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of unit.  <a href="#a1f7091b5f0e9e4df0a59d151bac45219"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a14117132ffb3483b18a7e85088592326">GetUnitName</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of unit.  <a href="#a14117132ffb3483b18a7e85088592326"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#a71683c5497afb431d988bfe3733a197f">GetDisplayMultiplicationFactor</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get multiplication factor used to calculate user input values.  <a href="#a71683c5497afb431d988bfe3733a197f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/namespaceistd.html#afdd381b0ad57baa197378147ab9e98e2">istd::CRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#af146bc0a65e5e5583ea415a5174e8835">GetValueRange</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of possible value.  <a href="#af146bc0a65e5e5583ea415a5174e8835"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_rect_derivative_processor.html#acaa2fddf52ca73f302a3b00ee6436947">GetValueManip</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number manipulator object for filter length value.  <a href="#acaa2fddf52ca73f302a3b00ee6436947"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Calculate derivative of projection using rectangular filter kernel. </p>
@@ -181,9 +176,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get multiplication factor used to calculate user input values. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#ac436177409b9434bebfd5e6aaf584104">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a2296f0ba47bb6e0b28e7e82c37f0a99f">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -281,12 +274,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a87bd4a695300f85c2526d6bb04279642"></a><!-- doxytag: member="iipr::CRectDerivativeProcessor::GetNumericValueUnitInfo" ref="a87bd4a695300f85c2526d6bb04279642" args="(int index) const " -->
+<a class="anchor" id="adeea235002e305aca9a54846dc660235"></a><!-- doxytag: member="iipr::CRectDerivativeProcessor::GetNumericValueUnitInfo" ref="adeea235002e305aca9a54846dc660235" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classimeas_1_1_i_unit_info.html">imeas::IUnitInfo</a>&amp; iipr::CRectDerivativeProcessor::GetNumericValueUnitInfo </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a>&amp; iipr::CRectDerivativeProcessor::GetNumericValueUnitInfo </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -304,7 +297,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#a5fe12b84ab6af1e5c7220a7925583950">imeas::INumericConstraints</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_numeric_constraints.html#afc12e7bbf5f51a8c2cb12076c5a2acfd">imeas::INumericConstraints</a>.</p>
 
 </div>
 </div>
@@ -322,9 +315,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get name of unit. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a0a420f7c02d2181c87cffffb593fe4f0">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a2e810caa715e5a816dcabe4df53898d8">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -342,9 +333,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get type of unit. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a8994df8847910c86d7dec55ae3020f6f">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a948a1e6801be92bfe8abac011c80a22f">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -362,9 +351,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Return number manipulator object for filter length value. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#ad3bc9f6511af9a8013e2dda73e4bb2b7">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a26b107f355db2bfc12f1966d1adce490">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>
@@ -382,9 +369,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get range of possible value. </p>
-
-<p>Implements <a class="el" href="classimeas_1_1_i_unit_info.html#a2af82f2fa9b39ec00daf544178eb4002">imeas::IUnitInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html#a923b2b438fcf0138d8493f6352ee6ec7">imath::IUnitInfo</a>.</p>
 
 </div>
 </div>

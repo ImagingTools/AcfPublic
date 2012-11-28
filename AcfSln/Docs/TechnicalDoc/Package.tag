@@ -762,7 +762,6 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_operations_8h</filename>
     <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
-    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
     <class kind="class">iipr::CBitmapOperations</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1126,7 +1125,6 @@
     <filename>_c_rect_derivative_processor_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
-    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <class kind="class">iipr::CRectDerivativeProcessor</class>
     <namespace>iipr</namespace>
@@ -1143,7 +1141,6 @@
     <name>CRectImageSmoothProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rect_image_smooth_processor_comp_8h</filename>
-    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
@@ -1470,14 +1467,6 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
-    <name>CGeneralUnitInfo.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_c_general_unit_info_8h</filename>
-    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
-    <class kind="class">imeas::CGeneralUnitInfo</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
     <name>CHistogramStatisticsProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_histogram_statistics_processor_comp_8h</filename>
@@ -1493,7 +1482,6 @@
     <includes id="_i_linear_adjust_constraints_8h" name="ILinearAdjustConstraints.h" local="yes" imported="no">imeas/ILinearAdjustConstraints.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
-    <includes id="_c_general_unit_info_8h" name="CGeneralUnitInfo.h" local="yes" imported="no">imeas/CGeneralUnitInfo.h</includes>
     <class kind="class">imeas::CLinearAdjustParamsComp</class>
     <namespace>imeas</namespace>
   </compound>
@@ -1509,7 +1497,6 @@
     <name>CNumericConstraintsComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_numeric_constraints_comp_8h</filename>
-    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <class kind="class">imeas::CNumericConstraintsComp</class>
@@ -1519,7 +1506,6 @@
     <name>CNumericParamsComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_numeric_params_comp_8h</filename>
-    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">imeas::CNumericParamsComp</class>
@@ -1645,7 +1631,6 @@
     <name>INumericConstraints.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_numeric_constraints_8h</filename>
-    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <class kind="class">imeas::INumericConstraints</class>
     <namespace>imeas</namespace>
@@ -1671,13 +1656,6 @@
     <filename>_i_sample_acquisition_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">imeas::ISampleAcquisition</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IUnitInfo.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_i_unit_info_8h</filename>
-    <class kind="class">imeas::IUnitInfo</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -2371,7 +2349,6 @@
     <name>CNumericValueWidget.h</name>
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_numeric_value_widget_8h</filename>
-    <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="yes" imported="no">imeas/IUnitInfo.h</includes>
     <class kind="class">iqtmeas::CNumericValueWidget</class>
     <namespace>iqtmeas</namespace>
   </compound>
@@ -3418,6 +3395,7 @@
     <filename>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</base>
     <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
@@ -3447,17 +3425,10 @@
       <arglist>(int bitmapIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
-      <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a0f89271a58e8be57f4a3c20c7daaaf55</anchor>
-      <arglist>(int bitmapIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a3091d7239019c8f26f6e7fc8d3c53911</anchor>
+      <anchor>a714b60e1ef75d753e096f8c71336a084</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -3478,15 +3449,29 @@
   <compound kind="class">
     <name>icam::CSelectableBitmapSupplierComp</name>
     <filename>classicam_1_1_c_selectable_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ad2d999768aaa66b482edd2e25fe8062b</anchor>
+      <anchor>a5cae1596e25e8b4e3caecc7b706e7067</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a2d3a48b5d9e3aa22d76b4a430d947fe0</anchor>
+      <arglist>(m_multiBitmapCalibCompPtr, m_multiBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ae8f6d185e45b99a0836a7082a020edcb</anchor>
+      <arglist>(m_multiBitmapMultiCalibCompPtr, m_multiBitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -3517,10 +3502,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ab0a3e5cf37944d482b7067c1be5d774b</anchor>
+      <anchor>a4fe2d0373d534a41447547696a54b3ea</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -3664,14 +3649,14 @@
   <compound kind="class">
     <name>icam::CSnapBitmapSupplierComp</name>
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ITransformation2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>abf21d4ced5925945119c0b2a232a3eae</anchor>
+      <anchor>af44b1b5c0db08b4d2dfe5f8746c2252f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -3682,10 +3667,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a8a68ddc1f0ddaa674f516dabfc6a54cd</anchor>
+      <anchor>a34a3e67be1704a857449eb887cea5f97</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -4131,10 +4116,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
-      <anchor>ad95d7bb8d0abbdbe0cc427eaddad6a89</anchor>
+      <anchor>a6ee826594fd1b0796444a45fe559281d</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -4262,10 +4247,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
-      <anchor>aa2cf55f07d2d2a9ee25518281ff2eca9</anchor>
+      <anchor>a74560029de9e7e9afe2d25b0817afef1</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -7762,20 +7747,6 @@
       <anchor>a0a90c14ad7ab253d26e62db2fe06bc58</anchor>
       <arglist>(m_bitmapsProviderModelCompPtr, m_bitmapsProviderCompPtr, false)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
-      <anchor>a0bb0d6e6faa729dfc1319b05e9805d40</anchor>
-      <arglist>(m_calibrationSupplierCompPtr, m_calibrationCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
-      <anchor>a945e0e6c32382a81264ec512543be165</anchor>
-      <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
@@ -7900,10 +7871,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
-      <anchor>aa6253dd2d5ccca94a78037989b5c3918</anchor>
+      <anchor>ac50b3514a1c2e73f08b61f7ac3d0cbb7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8383,20 +8354,6 @@
       <anchor>a8154330a73be7f8d65f0ccd26dd8d48a</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>adae37e2452cd9e405d2f1e4b09004d7c</anchor>
-      <arglist>(m_calibrationSupplierCompPtr, m_calibrationCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>add811097b033bec2672b93d28265d309</anchor>
-      <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iprm::ISelectionConstraints *</type>
       <name>GetBitmapSelectionContraints</name>
@@ -8416,13 +8373,6 @@
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
       <anchor>a6c9a06dc1983c4716926ded9c6118571</anchor>
-      <arglist>(int bitmapIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a09ae5bfd6c3c54979321ac8855d25293</anchor>
       <arglist>(int bitmapIndex) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -8580,14 +8530,14 @@
   <compound kind="class">
     <name>iipr::CDelegatedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; const i2d::ICalibration2d *, const iimg::IBitmap * &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; const i2d::ITransformation2d *, const iimg::IBitmap * &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; const i2d::ICalibration2d *, const iimg::IBitmap * &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ab4b38cd324f13e21d1ce80f32fe599d8</anchor>
+      <anchor>a5d84ade33a9d07f3e1bbdfa92a4ebf1c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -8633,10 +8583,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a555ad46c29c3d2440209fa8458b1c1a3</anchor>
+      <anchor>a02a4b87632584389261adf3934db213c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8657,14 +8607,14 @@
   <compound kind="class">
     <name>iipr::CDifferenceBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_difference_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a86a6c257e8e9c3dae02e3b7e94ffcb61</anchor>
+      <anchor>aca0598d7dbc5acac22ed70b229097d7b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -8710,10 +8660,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a4ccbcf6a0bbb12f3c0f992f140107817</anchor>
+      <anchor>a99e5991fca38bee7b7cca2a458422341</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -9356,6 +9306,7 @@
     <filename>classiipr_1_1_c_multi_bitmap_cache_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
+    <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -9392,11 +9343,25 @@
       <arglist>(int bitmapIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
+      <type>virtual const iprm::ISelectionConstraints *</type>
+      <name>GetCalibrationSelectionContraints</name>
       <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
-      <anchor>a1d98671a18b010063e14109b7f02103f</anchor>
-      <arglist>(int bitmapIndex) const </arglist>
+      <anchor>a0daae8d5c32e97b3afa67a5aba129be3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCalibrationsCount</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a3b259732128de8c3e30baba91df531af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a14c4b0dfc6960698a1f32e1cd5751a2c</anchor>
+      <arglist>(int calibrationIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -9544,10 +9509,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>afb8637e8540b088973c12b84235119d6</anchor>
+      <anchor>a24d0ac12a39463061ed891ac9d884bae</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -9594,14 +9559,14 @@
   <compound kind="class">
     <name>iipr::CProcessedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; const i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; QPair&lt; const i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; const i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; const i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>af2209ade5fbce97f977f90eda8391f93</anchor>
+      <anchor>ae2360a51e0269fbe4cfc62f9d15a4154</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -9640,10 +9605,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a54a0ca0953038fc07b9ce2e6d2729f1f</anchor>
+      <anchor>a911732ac8e8882f54474a4f7d9f6e8bc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -9666,7 +9631,7 @@
     <filename>classiipr_1_1_c_rect_derivative_processor.html</filename>
     <base>iproc::TSyncProcessorWrap</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
+    <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoDerivativeProcessing</name>
@@ -9717,10 +9682,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a87bd4a695300f85c2526d6bb04279642</anchor>
+      <anchor>adeea235002e305aca9a54846dc660235</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9791,7 +9756,7 @@
     <filename>classiipr_1_1_c_rect_image_smooth_processor_comp.html</filename>
     <base>TImageParamProcessorCompBase&lt; imeas::INumericValue &gt;</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
+    <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="enumeration">
       <name>UnitMode</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
@@ -9863,10 +9828,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>ae33a423a10270dcd8a27479cba698ae3</anchor>
+      <anchor>ab2304a9a781bee83df0ab648b7a77c29</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -10054,10 +10019,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>ab850f8e2f0afc99394ee63e511091542</anchor>
+      <anchor>a2918e451a514f5a7dacdabc04fcaacef</anchor>
       <arglist>(int calibrationIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -10326,13 +10291,13 @@
   <compound kind="class">
     <name>iipr::CSelectableCalibrationSupplierComp</name>
     <filename>classiipr_1_1_c_selectable_calibration_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ITransformation2d &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>a9af650544868837558551d5a63a9d258</anchor>
+      <anchor>aa5ddff824c03fb2d710c811cc6f705b3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -10357,10 +10322,10 @@
       <arglist>(m_calibrationSelectionModelCompPtr, m_calibrationSelectionCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>ac57ad8bddb6e5acecdaf9cc81c483298</anchor>
+      <anchor>a13ec002f62073bce83ce76696615dbbe</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -10491,10 +10456,10 @@
       <arglist>(m_calibrationSupplierModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
-      <anchor>a15504eb73d83880ffa0e99371a11cfb2</anchor>
+      <anchor>a7bb1a61fb63a5d97ed211b7c948b79bc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -10939,13 +10904,6 @@
       <anchor>a4ae922bcc1d3c6b663f00c5ac85dae88</anchor>
       <arglist>(int bitmapIndex) const =0</arglist>
     </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const i2d::ITransformation2d *</type>
-      <name>GetLogTransform</name>
-      <anchorfile>classiipr_1_1_i_multi_bitmap_provider.html</anchorfile>
-      <anchor>a057e0b21e14709b95fb1e19e5f3fcb9b</anchor>
-      <arglist>(int bitmapIndex) const =0</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iipr::IProjectionConstraints</name>
@@ -11327,7 +11285,6 @@
     <class kind="class">imeas::CDataSequenceStatistics</class>
     <class kind="class">imeas::CDataStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
-    <class kind="class">imeas::CGeneralUnitInfo</class>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <class kind="class">imeas::CLinearAdjustParamsComp</class>
     <class kind="class">imeas::CMeasurementRange</class>
@@ -11351,7 +11308,6 @@
     <class kind="class">imeas::INumericValue</class>
     <class kind="class">imeas::INumericValueProvider</class>
     <class kind="class">imeas::ISampleAcquisition</class>
-    <class kind="class">imeas::IUnitInfo</class>
     <class kind="class">imeas::TDiscreteDataSequence</class>
     <member kind="typedef">
       <type>TDiscreteDataSequence&lt; quint8 &gt;</type>
@@ -11436,10 +11392,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a98d19e6600310b548af2e2bbb45613cb</anchor>
+      <anchor>aa8ca79fcd8edca25b46a4763e29494e9</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11719,81 +11675,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>imeas::CGeneralUnitInfo</name>
-    <filename>classimeas_1_1_c_general_unit_info.html</filename>
-    <base virtualness="virtual">imeas::IUnitInfo</base>
-    <member kind="function">
-      <type></type>
-      <name>CGeneralUnitInfo</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>ad1eeb958e74ae4cfb9ce84ce6e5167c2</anchor>
-      <arglist>(int type=UT_UNKNOWN, const QString &amp;name=&quot;&quot;, double displayMultFactor=1.0, const istd::CRange &amp;range=istd::CRange::GetInvalid())</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetUnitType</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a10275b918a7129bbef633a0990fded52</anchor>
-      <arglist>(int type)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetUnitName</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a3b59d1acb3434e734e183aa1716e84eb</anchor>
-      <arglist>(const QString &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetDisplayMultiplicationFactor</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a31b73304ee4ad9ef5514743d4c4b4a9d</anchor>
-      <arglist>(double factor)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetValueRange</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a33f22a4fdcff85245593da1126291909</anchor>
-      <arglist>(const istd::CRange &amp;range)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetUnitType</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a088ece85e4daa4e5998ffe87a1e9115a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetUnitName</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a57dd5620f8e91326f8d98e8f90d5bb75</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetDisplayMultiplicationFactor</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>aa6327fb477b4e39ed8be0b74f6d305c1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetValueRange</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>ac498f548f15b02e15300cd1ba7a4db97</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IDoubleManip &amp;</type>
-      <name>GetValueManip</name>
-      <anchorfile>classimeas_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a071e0bff964d461a1d1b1c443e6d57db</anchor>
-      <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>imeas::CHistogramStatisticsProcessorComp</name>
     <filename>classimeas_1_1_c_histogram_statistics_processor_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
@@ -11932,10 +11813,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_c_linear_adjust_params_comp.html</anchorfile>
-      <anchor>a738a677451e03bf8ef0eb98b8b5730c3</anchor>
+      <anchor>aeaecd46cf90ff10762dd7167d7201465</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -12060,7 +11941,7 @@
     <filename>classimeas_1_1_c_numeric_constraints_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
+    <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -12090,10 +11971,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
-      <anchor>ad0069c9bdc0c0901e6edb2b84fefa3ff</anchor>
+      <anchor>ae8f0e5ca2194c91cbecb1836476c3fd3</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -12138,7 +12019,7 @@
     <base>icomp::CComponentBase</base>
     <base>imeas::CSimpleNumericValue</base>
     <base protection="protected" virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imeas::IUnitInfo</base>
+    <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -12189,10 +12070,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>ab68e7942771ae4172f14b7fc66778549</anchor>
+      <anchor>a5f84432a11fa3d5e72f0781be63bca48</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -12852,10 +12733,10 @@
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const imeas::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo &amp;</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>a5fe12b84ab6af1e5c7220a7925583950</anchor>
+      <anchor>afc12e7bbf5f51a8c2cb12076c5a2acfd</anchor>
       <arglist>(int index) const =0</arglist>
     </member>
   </compound>
@@ -12894,9 +12775,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>VTI_QUALITY</name>
+      <name>VTI_SCALE</name>
       <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a74778c2fa8de80a7b06dc863dcad09b2</anchor>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a6323f380af6a4ef0b36a1cf9335c7c92</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -12994,82 +12875,6 @@
       <anchorfile>classimeas_1_1_i_sample_acquisition.html</anchorfile>
       <anchor>aaa1397d31afa7898d533fd04efd29f72</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imeas::IUnitInfo</name>
-    <filename>classimeas_1_1_i_unit_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>UnitType</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a590f3660129c9cd7aed62b3a148fdd97</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>UT_UNKNOWN</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a590f3660129c9cd7aed62b3a148fdd97a9ecf28fad195778d4694f6a4404f320b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>UT_PHYSICAL</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a590f3660129c9cd7aed62b3a148fdd97a0f4fdd509041ea186b66562ef3b979ba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>UT_TECHNICAL</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a590f3660129c9cd7aed62b3a148fdd97a97e93306b278a6cc376a53ba3a3bea1d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>UT_RELATIVE</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a590f3660129c9cd7aed62b3a148fdd97aacd984f9ec52cd5cb35a5f6547f01095</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>UT_COUNTER</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a590f3660129c9cd7aed62b3a148fdd97a32d7134994422498e1a745090c96b655</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetUnitType</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a8994df8847910c86d7dec55ae3020f6f</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetUnitName</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a0a420f7c02d2181c87cffffb593fe4f0</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetDisplayMultiplicationFactor</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>ac436177409b9434bebfd5e6aaf584104</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual istd::CRange</type>
-      <name>GetValueRange</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>a2af82f2fa9b39ec00daf544178eb4002</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const imath::IDoubleManip &amp;</type>
-      <name>GetValueManip</name>
-      <anchorfile>classimeas_1_1_i_unit_info.html</anchorfile>
-      <anchor>ad3bc9f6511af9a8013e2dda73e4bb2b7</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16746,13 +16551,6 @@
       <anchor>a8f610be8cdfe33e12472d375a99227dc</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="friend" protection="private">
-      <type>friend class</type>
-      <name>ReadArchiveMessageHandler</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>af738ff8f140a1170f2c4cc3fddb6d39f</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iqtex::CXslTransformationWriteArchive</name>
@@ -17296,10 +17094,10 @@
       <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ITransformation2d *</type>
+      <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a0c9c1b128b2cc72f0435ef355da4bae9</anchor>
+      <anchor>a5f85056053c22536e29512ba91177020</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -18539,8 +18337,8 @@
       <type>void</type>
       <name>SetUnitInfo</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
-      <anchor>a47087199665fed1c0318993392709fbe</anchor>
-      <arglist>(const QString &amp;description, const imeas::IUnitInfo &amp;unitInfo)</arglist>
+      <anchor>af4f16faa9ca6ced21c1ce8dccecacdd6</anchor>
+      <arglist>(const QString &amp;description, const imath::IUnitInfo &amp;unitInfo)</arglist>
     </member>
     <member kind="function">
       <type>double</type>

@@ -62,21 +62,20 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional information about calibration objects in form of section contraints.  <a href="#a7b9ca3457e586ac7acf831755318bcfb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_multi_calibration_provider.html#ab86325489d5aaf4dee2e6b137df7e482">GetCalibrationsCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of available calibrations.  <a href="#ab86325489d5aaf4dee2e6b137df7e482"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_multi_calibration_provider.html#acd8e08404dc749e52810381483ed5be4">GetCalibration</a> (int calibrationIndex) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object with a given index, which transforms a local logical coordinate system to global one.  <a href="#acd8e08404dc749e52810381483ed5be4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_multi_calibration_provider.html#aa9f417389a1272c87bfe0428f8166310">GetCalibration</a> (int calibrationIndex) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object with a given index, which transforms a local logical coordinate system to global one.  <a href="#aa9f417389a1272c87bfe0428f8166310"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for an object, which delivers a list of 2D-calibration objects. </p>
 
-<p>Definition at line <a class="el" href="_i_multi_calibration_provider_8h_source.html#l00020">20</a> of file <a class="el" href="_i_multi_calibration_provider_8h_source.html">IMultiCalibrationProvider.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_multi_calibration_provider_8h_source.html#l00018">18</a> of file <a class="el" href="_i_multi_calibration_provider_8h_source.html">IMultiCalibrationProvider.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="acd8e08404dc749e52810381483ed5be4"></a><!-- doxytag: member="i2d::IMultiCalibrationProvider::GetCalibration" ref="acd8e08404dc749e52810381483ed5be4" args="(int calibrationIndex) const =0" -->
+<a class="anchor" id="aa9f417389a1272c87bfe0428f8166310"></a><!-- doxytag: member="i2d::IMultiCalibrationProvider::GetCalibration" ref="aa9f417389a1272c87bfe0428f8166310" args="(int calibrationIndex) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* i2d::IMultiCalibrationProvider::GetCalibration </td>
+          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a>* i2d::IMultiCalibrationProvider::GetCalibration </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>calibrationIndex</em></td><td>)</td>

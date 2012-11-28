@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF-Solutions Toolkit.
+**	This file is part of the ACF Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,19 +15,19 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**	by Skype to ACF_infoline for further information about the ACF.
 **
 ********************************************************************************/
 
 
-#include "imeas/CGeneralUnitInfo.h"
+#include "imath/CGeneralUnitInfo.h"
 
 
 // ACF includes
 #include "imath/CDoubleManip.h"
 
 
-namespace imeas
+namespace imath
 {
 
 
@@ -68,7 +68,7 @@ void CGeneralUnitInfo::SetValueRange(const istd::CRange& range)
 }
 
 
-//	reimplemented (imeas::IUnitInfo)
+//	reimplemented (imath::IUnitInfo)
 
 int CGeneralUnitInfo::GetUnitType() const
 {
@@ -102,6 +102,6 @@ const imath::IDoubleManip& CGeneralUnitInfo::GetValueManip() const
 }
 
 
-} // namespace imeas
+} // namespace imath
 
 

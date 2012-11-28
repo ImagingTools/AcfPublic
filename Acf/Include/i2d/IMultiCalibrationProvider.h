@@ -26,9 +26,7 @@
 
 // ACF includes
 #include "istd/IChangeable.h"
-
-#include "i2d/ITransformation2d.h"
-
+#include "i2d/ICalibration2d.h"
 #include "iprm/ISelectionConstraints.h"
 
 
@@ -57,7 +55,7 @@ public:
 		Get access to transformation object with a given index, which transforms a local logical coordinate system to global one.
 		\return		Pointer to transformation if it is accessible, or NULL.
 	*/
-	virtual const i2d::ITransformation2d* GetCalibration(int calibrationIndex) const = 0;
+	virtual const ICalibration2d* GetCalibration(int calibrationIndex) const = 0;
 };
 
 

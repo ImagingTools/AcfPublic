@@ -74,7 +74,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a3202e36c514857630781b3f7ca0a15fe">VTI_POSITION</a>, 
 <a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a283de4d8f4ea03b1995dd9df7998879b">VTI_RADIUS</a>, 
 <br/>
-&#160;&#160;<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a74778c2fa8de80a7b06dc863dcad09b2">VTI_QUALITY</a>, 
+&#160;&#160;<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a6323f380af6a4ef0b36a1cf9335c7c92">VTI_SCALE</a>, 
 <a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a29f01062af8ba6db91e14da24ba7824b">VTI_ANGLE</a>, 
 <a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a680eac0c4e2548609ad4667927f46a3c">VT_ALPHA</a>, 
 <a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1a464ba9647d480f0169d3254768f13041">VTI_LENGTH</a>, 
@@ -119,7 +119,7 @@ Public Member Functions</h2></td></tr>
 <p>Automatic value, implementation specific. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a840dc03c17a580cc816b8bf799ddc9e1a7da2b23a42572b65b520efc699d8954f"></a><!-- doxytag: member="VTI_WEIGHT" ref="a840dc03c17a580cc816b8bf799ddc9e1a7da2b23a42572b65b520efc699d8954f" args="" -->VTI_WEIGHT</em>&nbsp;</td><td>
-<p>Weight of some value. </p>
+<p>Weight of some value This value should be normalized to range [0, 1]. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a840dc03c17a580cc816b8bf799ddc9e1a3202e36c514857630781b3f7ca0a15fe"></a><!-- doxytag: member="VTI_POSITION" ref="a840dc03c17a580cc816b8bf799ddc9e1a3202e36c514857630781b3f7ca0a15fe" args="" -->VTI_POSITION</em>&nbsp;</td><td>
 <p>Value of position (can be N-dimensional). </p>
@@ -127,9 +127,8 @@ Public Member Functions</h2></td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a840dc03c17a580cc816b8bf799ddc9e1a283de4d8f4ea03b1995dd9df7998879b"></a><!-- doxytag: member="VTI_RADIUS" ref="a840dc03c17a580cc816b8bf799ddc9e1a283de4d8f4ea03b1995dd9df7998879b" args="" -->VTI_RADIUS</em>&nbsp;</td><td>
 <p>Value of radius. </p>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a840dc03c17a580cc816b8bf799ddc9e1a74778c2fa8de80a7b06dc863dcad09b2"></a><!-- doxytag: member="VTI_QUALITY" ref="a840dc03c17a580cc816b8bf799ddc9e1a74778c2fa8de80a7b06dc863dcad09b2" args="" -->VTI_QUALITY</em>&nbsp;</td><td>
-<p>Quality factor. </p>
-<p>This value should be normalized to range [0, 1]. </p>
+<tr><td valign="top"><em><a class="anchor" id="a840dc03c17a580cc816b8bf799ddc9e1a6323f380af6a4ef0b36a1cf9335c7c92"></a><!-- doxytag: member="VTI_SCALE" ref="a840dc03c17a580cc816b8bf799ddc9e1a6323f380af6a4ef0b36a1cf9335c7c92" args="" -->VTI_SCALE</em>&nbsp;</td><td>
+<p>Scaling factor(s). </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a840dc03c17a580cc816b8bf799ddc9e1a29f01062af8ba6db91e14da24ba7824b"></a><!-- doxytag: member="VTI_ANGLE" ref="a840dc03c17a580cc816b8bf799ddc9e1a29f01062af8ba6db91e14da24ba7824b" args="" -->VTI_ANGLE</em>&nbsp;</td><td>
 <p>Angle in radian. </p>

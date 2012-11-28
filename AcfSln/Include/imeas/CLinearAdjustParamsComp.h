@@ -24,8 +24,9 @@
 #define imeas_CLinearAdjustParamsComp_included
 
 
+// ACF includes
+#include "imath/CGeneralUnitInfo.h"
 #include "iser/ISerializable.h"
-
 #include "icomp/CComponentBase.h"
 
 // ACF-Solutions includes
@@ -33,7 +34,6 @@
 #include "imeas/ILinearAdjustConstraints.h"
 #include "imeas/INumericValue.h"
 #include "imeas/INumericConstraints.h"
-#include "imeas/CGeneralUnitInfo.h"
 
 
 namespace imeas
@@ -85,7 +85,7 @@ protected:
 	virtual int GetNumericValuesCount() const;
 	virtual QString GetNumericValueName(int index) const;
 	virtual QString GetNumericValueDescription(int index) const;
-	virtual const imeas::IUnitInfo& GetNumericValueUnitInfo(int index) const;
+	virtual const imath::IUnitInfo& GetNumericValueUnitInfo(int index) const;
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
@@ -98,8 +98,8 @@ private:
 	double m_scale;
 	double m_offset;
 
-	imeas::CGeneralUnitInfo m_offsetUnitInfo;
-	imeas::CGeneralUnitInfo m_scaleUnitInfo;
+	imath::CGeneralUnitInfo m_offsetUnitInfo;
+	imath::CGeneralUnitInfo m_scaleUnitInfo;
 };
 
 

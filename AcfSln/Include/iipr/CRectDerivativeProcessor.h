@@ -29,7 +29,7 @@
 
 // ACF-Solutions includes
 #include "imeas/IDataSequence.h"
-#include "imeas/IUnitInfo.h"
+#include "imath/IUnitInfo.h"
 #include "imeas/INumericConstraints.h"
 
 
@@ -43,7 +43,7 @@ namespace iipr
 class CRectDerivativeProcessor:
 			public iproc::CSyncProcessorBase,
 			virtual public imeas::INumericConstraints,
-			virtual protected imeas::IUnitInfo
+			virtual protected imath::IUnitInfo
 {
 public:
 	/**
@@ -73,9 +73,9 @@ public:
 	virtual int GetNumericValuesCount() const;
 	virtual QString GetNumericValueName(int index) const;
 	virtual QString GetNumericValueDescription(int index) const;
-	virtual const imeas::IUnitInfo& GetNumericValueUnitInfo(int index) const;
+	virtual const imath::IUnitInfo& GetNumericValueUnitInfo(int index) const;
 
-	// reimplemented (imeas::IUnitInfo)
+	// reimplemented (imath::IUnitInfo)
 	virtual int GetUnitType() const;
 	virtual QString GetUnitName() const;
 	virtual double GetDisplayMultiplicationFactor() const;

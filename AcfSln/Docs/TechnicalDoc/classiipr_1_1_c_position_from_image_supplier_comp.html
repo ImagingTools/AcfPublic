@@ -89,8 +89,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a1ed9118ef6cde2f62a737ec2b6192227">GetNumericValue</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a single numeric value from the list.  <a href="#a1ed9118ef6cde2f62a737ec2b6192227"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#afb8637e8540b088973c12b84235119d6">GetCalibration</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a24d0ac12a39463061ed891ac9d884bae">GetCalibration</a> () const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a89dd14a9a7d2172a71d58101aec62f18">ProduceObject</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;result) const </td></tr>
@@ -101,7 +100,7 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Implementation of value supplier returning position on the image. </p>
 <p>To calculate this position is some processor used. This processor must accept image object as input and produce some set of features containing position into feature consumer. This supplier takes the feature with the higher weight value and output it as found position value. </p>
 
-<p>Definition at line <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html">CPositionFromImageSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html">CPositionFromImageSupplierComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ab187d64547bef3091dba6aa44b96dc37"></a><!-- doxytag: member="iipr::CPositionFromImageSupplierComp::BaseClass" ref="ab187d64547bef3091dba6aa44b96dc37" args="" -->
 <div class="memitem">
@@ -116,17 +115,17 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html">CPositionFromImageSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_position_from_image_supplier_comp_8h_source.html">CPositionFromImageSupplierComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="afb8637e8540b088973c12b84235119d6"></a><!-- doxytag: member="iipr::CPositionFromImageSupplierComp::GetCalibration" ref="afb8637e8540b088973c12b84235119d6" args="() const " -->
+<a class="anchor" id="a24d0ac12a39463061ed891ac9d884bae"></a><!-- doxytag: member="iipr::CPositionFromImageSupplierComp::GetCalibration" ref="a24d0ac12a39463061ed891ac9d884bae" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iipr::CPositionFromImageSupplierComp::GetCalibration </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* iipr::CPositionFromImageSupplierComp::GetCalibration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -135,7 +134,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html#acfd7dbf4befb0b89c0fa693a3483ec55">i2d::ICalibrationProvider</a>.</p>
 
 </div>
 </div>

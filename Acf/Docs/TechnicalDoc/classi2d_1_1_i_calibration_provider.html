@@ -76,21 +76,20 @@ Inheritance diagram for i2d::ICalibrationProvider:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">GetCalibration</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a local logical coordinate system to global one.  <a href="#aeea8b083da9ca252354e63a35358ea4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_calibration_provider.html#acfd7dbf4befb0b89c0fa693a3483ec55">GetCalibration</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a local logical coordinate system to global one.  <a href="#acfd7dbf4befb0b89c0fa693a3483ec55"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for an object, which delivers a 2D-calibration. </p>
 
 <p>Definition at line <a class="el" href="_i_calibration_provider_8h_source.html#l00018">18</a> of file <a class="el" href="_i_calibration_provider_8h_source.html">ICalibrationProvider.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aeea8b083da9ca252354e63a35358ea4d"></a><!-- doxytag: member="i2d::ICalibrationProvider::GetCalibration" ref="aeea8b083da9ca252354e63a35358ea4d" args="() const =0" -->
+<a class="anchor" id="acfd7dbf4befb0b89c0fa693a3483ec55"></a><!-- doxytag: member="i2d::ICalibrationProvider::GetCalibration" ref="acfd7dbf4befb0b89c0fa693a3483ec55" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* i2d::ICalibrationProvider::GetCalibration </td>
+          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a>* i2d::ICalibrationProvider::GetCalibration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -102,7 +101,7 @@ Public Member Functions</h2></td></tr>
 <p>Get access to transformation object, which transforms a local logical coordinate system to global one. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to transformation if it is accessible, or NULL. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_calibrated_view_base.html#ab99e55de7f2adb278eb7e9e306c9593f">iview::CCalibratedViewBase</a>, <a class="el" href="classiimg_1_1_c_bitmap.html#a23f0a63dbb0c1923494a0d8aca2b2118">iimg::CBitmap</a>, <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#a0f98aea10d5fbe4f1b9d013ff20b0400">iqt2d::CImageViewComp</a>, <a class="el" href="classi2d_1_1_c_static_calibration_provider_comp.html#ab212101a55ad80a530273a2ba5be2584">i2d::CStaticCalibrationProviderComp</a>, and <a class="el" href="classi2d_1_1_c_object2d_base.html#a746af84cc92775cf8ede5c5797197f76">i2d::CObject2dBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a04f3fe4050cf42b23e1fbd4d62857148">iview::CCalibratedViewBase</a>, <a class="el" href="classiimg_1_1_c_bitmap.html#a31fc742d5bf7b4390de6557be32fa521">iimg::CBitmap</a>, <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#ac4599083e8721a54103c8ccf65b50fe3">iqt2d::CImageViewComp</a>, <a class="el" href="classi2d_1_1_c_static_calibration_provider_comp.html#a8195cbf7ab2640f49159249fafc0c3e3">i2d::CStaticCalibrationProviderComp</a>, and <a class="el" href="classi2d_1_1_c_object2d_base.html#a7c9398ad12709b1d17bbd82ff8c10776">i2d::CObject2dBase</a>.</p>
 
 </div>
 </div>

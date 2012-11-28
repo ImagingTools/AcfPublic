@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF-Solutions Toolkit.
+**	This file is part of the ACF Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,24 +15,25 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**	by Skype to ACF_infoline for further information about the ACF.
 **
 ********************************************************************************/
 
 
-#ifndef imeas_IUnitInfo_included
-#define imeas_IUnitInfo_included
+#ifndef imath_IUnitInfo_included
+#define imath_IUnitInfo_included
 
+
+// Qt includes
+#include <QtCore/QString>
 
 // ACF includes
 #include "istd/IPolymorphic.h"
 #include "istd/TRange.h"
-#include <QtCore/QString>
-
 #include "imath/IDoubleManip.h"
 
 
-namespace imeas
+namespace imath
 {
 
 
@@ -96,9 +97,9 @@ public:
 };
 
 
-} // namespace imeas
+} // namespace imath
 
 
-#endif // !imeas_IUnitInfo_included
+#endif // !imath_IUnitInfo_included
 
 

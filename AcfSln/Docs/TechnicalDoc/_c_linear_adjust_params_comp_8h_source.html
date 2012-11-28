@@ -28,16 +28,16 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define imeas_CLinearAdjustParamsComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_linear_adjust_params_8h.html">imeas/ILinearAdjustParams.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_linear_adjust_constraints_8h.html">imeas/ILinearAdjustConstraints.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_8h.html">imeas/INumericValue.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_constraints_8h.html">imeas/INumericConstraints.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_c_general_unit_info_8h.html">imeas/CGeneralUnitInfo.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_general_unit_info_8h.html">imath/CGeneralUnitInfo.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="comment">// ACF-Solutions includes</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_linear_adjust_params_8h.html">imeas/ILinearAdjustParams.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_linear_adjust_constraints_8h.html">imeas/ILinearAdjustConstraints.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_8h.html">imeas/INumericValue.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_constraints_8h.html">imeas/INumericConstraints.h</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 <span class="keyword">namespace </span>imeas
@@ -86,7 +86,7 @@
 <a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_linear_adjust_params_comp.html#ad3e26bcf3fc2d11eba62c976010d2954" title="Get number of expected numeric values.">GetNumericValuesCount</a>() <span class="keyword">const</span>;
 <a name="l00064"></a>00064        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_linear_adjust_params_comp.html#af0e5f73348f7929cee35d9c515b6099c" title="Get human readable name of numeric value for specified list index.">GetNumericValueName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00065"></a>00065        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_linear_adjust_params_comp.html#a1583ed60ba8d7af3b457f96c4d36d7eb" title="Get human readable description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_unit_info.html" title="Common interface to get information about a measurement unit.">imeas::IUnitInfo</a>&amp; <a class="code" href="classimeas_1_1_c_linear_adjust_params_comp.html#a738a677451e03bf8ef0eb98b8b5730c3" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a>&amp; <a class="code" href="classimeas_1_1_c_linear_adjust_params_comp.html#aeaecd46cf90ff10762dd7167d7201465" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_linear_adjust_params_comp.html#ad5ffe1beb899c12fba3f4b45d2cb6ee1">OnComponentCreated</a>();
@@ -99,8 +99,8 @@
 <a name="l00076"></a>00076        <span class="keywordtype">double</span> m_scale;
 <a name="l00077"></a>00077        <span class="keywordtype">double</span> m_offset;
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <a class="code" href="classimeas_1_1_c_general_unit_info.html" title="General implementation of the IUnitInfo interface.">imeas::CGeneralUnitInfo</a> m_offsetUnitInfo;
-<a name="l00080"></a>00080        <a class="code" href="classimeas_1_1_c_general_unit_info.html" title="General implementation of the IUnitInfo interface.">imeas::CGeneralUnitInfo</a> m_scaleUnitInfo;
+<a name="l00079"></a>00079        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_general_unit_info.html">imath::CGeneralUnitInfo</a> m_offsetUnitInfo;
+<a name="l00080"></a>00080        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_general_unit_info.html">imath::CGeneralUnitInfo</a> m_scaleUnitInfo;
 <a name="l00081"></a>00081 };
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083 

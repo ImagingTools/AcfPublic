@@ -82,9 +82,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap.html#a7d3c86576eec4fedd36e56bd2a27814c">CopyImageFrom</a> (const QImage &amp;image)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap.html#a0b2cbd4e7b7baa9c70a9f170a57b6b84">GetSnap</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, <a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;objectSnap, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bitmap snap for the data object <code>data</code>.  <a href="#a0b2cbd4e7b7baa9c70a9f170a57b6b84"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap.html#a23f0a63dbb0c1923494a0d8aca2b2118">GetCalibration</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a local logical coordinate system to global one.  <a href="#a23f0a63dbb0c1923494a0d8aca2b2118"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap.html#a31fc742d5bf7b4390de6557be32fa521">GetCalibration</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a local logical coordinate system to global one.  <a href="#a31fc742d5bf7b4390de6557be32fa521"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap.html#a1181aa870a5e007faf432466954f1a49">IsFormatSupported</a> (<a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code> if the pixel format is supported by the bitmap implementation.  <a href="#a1181aa870a5e007faf432466954f1a49"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap.html#a660b7a4279d22e4abcf3db4d95a2947a">GetPixelFormat</a> () const </td></tr>
@@ -126,7 +125,7 @@ Protected Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Bitmap implementation based on Qt QImage. </p>
 
-<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00024">24</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00021">21</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aea58008ac622a9c69f4061e86d12b170"></a><!-- doxytag: member="iimg::CBitmap::BaseClass" ref="aea58008ac622a9c69f4061e86d12b170" args="" -->
 <div class="memitem">
@@ -141,7 +140,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiimg_1_1_c_bitmap_surface.html#a5ff8e09f7fc3c787cc649208c911e389">iimg::CBitmapSurface</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00031">31</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00028">28</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
 
 </div>
 </div>
@@ -402,12 +401,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a23f0a63dbb0c1923494a0d8aca2b2118"></a><!-- doxytag: member="iimg::CBitmap::GetCalibration" ref="a23f0a63dbb0c1923494a0d8aca2b2118" args="() const " -->
+<a class="anchor" id="a31fc742d5bf7b4390de6557be32fa521"></a><!-- doxytag: member="iimg::CBitmap::GetCalibration" ref="a31fc742d5bf7b4390de6557be32fa521" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iimg::CBitmap::GetCalibration </td>
+          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* iimg::CBitmap::GetCalibration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -419,7 +418,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get access to transformation object, which transforms a local logical coordinate system to global one. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to transformation if it is accessible, or NULL. </dd></dl>
 
-<p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#aeea8b083da9ca252354e63a35358ea4d">i2d::ICalibrationProvider</a>.</p>
+<p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#acfd7dbf4befb0b89c0fa693a3483ec55">i2d::ICalibrationProvider</a>.</p>
 
 </div>
 </div>
@@ -657,7 +656,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00092">92</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_8h_source.html#l00089">89</a> of file <a class="el" href="_c_bitmap_8h_source.html">CBitmap.h</a>.</p>
 
 </div>
 </div>

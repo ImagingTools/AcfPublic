@@ -41,7 +41,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="iview::CCalibrationShapeBase" --><!-- doxytag: inherits="iview::CInteractiveShapeBase" -->
-<p><a class="el" href="class_base.html">Base</a> class for all shapes using <a class="el" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a> to transform between logical and physical positions.  
+<p><a class="el" href="class_base.html">Base</a> class for all shapes using <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> to transform between logical and physical positions.  
  <a href="classiview_1_1_c_calibration_shape_base.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>&gt;</code></p>
@@ -74,9 +74,8 @@ Inheritance diagram for iview::CCalibrationShapeBase:</div>
 <area href="classiview_1_1_c_none_calibration_shape.html" title="Shape object for none calibration." alt="iview::CNoneCalibrationShape" shape="rect" coords="1350,392,1640,416"/>
 <area href="classiview_1_1_c_pin_calibration_shape.html" alt="iview::CPinCalibrationShape" shape="rect" coords="1650,392,1940,416"/>
 <area href="classiview_1_1_c_transformable_rectangle_calibration_shape.html" alt="iview::CTransformableRectangleCalibrationShape" shape="rect" coords="1950,392,2240,416"/>
-<area href="classiview_1_1_c_affinite_calibration_shape.html" title="Shape object for affinite calibration." alt="iview::CAffiniteCalibrationShape" shape="rect" coords="1050,448,1340,472"/>
-<area href="classiview_1_1_c_perspective_calibration_shape.html" title="Shape object for perspective calibration." alt="iview::CPerspectiveCalibrationShape" shape="rect" coords="1350,448,1640,472"/>
-<area href="classiview_1_1_c_scale_calibration_shape.html" title="Shape object for perspective calibration." alt="iview::CScaleCalibrationShape" shape="rect" coords="1650,448,1940,472"/>
+<area href="classiview_1_1_c_affinite_calibration_shape.html" title="Shape object for affinite calibration." alt="iview::CAffiniteCalibrationShape" shape="rect" coords="1200,448,1490,472"/>
+<area href="classiview_1_1_c_perspective_calibration_shape.html" title="Shape object for perspective calibration." alt="iview::CPerspectiveCalibrationShape" shape="rect" coords="1500,448,1790,472"/>
 <area href="classiview_1_1_c_polygon_calibration_shape.html" alt="iview::CPolygonCalibrationShape" shape="rect" coords="1950,448,2240,472"/>
 <area href="classiview_1_1_c_polyline_calibration_shape.html" alt="iview::CPolylineCalibrationShape" shape="rect" coords="1950,504,2240,528"/>
 </map>
@@ -103,18 +102,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after display is disconnected.  <a href="#ad1887283b9c2f94f74441e8da100fdcf"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a155aac7b9686fc204ab6fafe97c57f1f">GetIsomorphCalib</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to calibration object.  <a href="#a155aac7b9686fc204ab6fafe97c57f1f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#aa8b9759417c4dffee4861cc69b261c97">GetIsomorphCalib</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to calibration object.  <a href="#aa8b9759417c4dffee4861cc69b261c97"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a064fcb43846cddd9b7be21606e8ad87c">GetDisplayChangesMask</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get display changes mask.  <a href="#a064fcb43846cddd9b7be21606e8ad87c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static const <br class="typebreak"/>
-<a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a9df8f0d76057adb0ad828e3d13233e4f">FindCalibration</a> (const <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> &amp;display)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibration_shape_base.html#a8b3662fd321d643f17d568110fab4855">FindCalibration</a> (const <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> &amp;display)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_base.html">Base</a> class for all shapes using <a class="el" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a> to transform between logical and physical positions. </p>
+<div class="textblock"><p><a class="el" href="class_base.html">Base</a> class for all shapes using <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> to transform between logical and physical positions. </p>
 
 <p>Definition at line <a class="el" href="_c_calibration_shape_base_8h_source.html#l00018">18</a> of file <a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
@@ -131,7 +128,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a2519be921b203b8d599a02ec2917c9e6">iview::CInteractiveShapeBase</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiview_1_1_c_polygon_calibration_shape.html#a88876d9cbb6e33fae410278dfd0e6ae3">iview::CPolygonCalibrationShape</a>, <a class="el" href="classiview_1_1_c_affinite_calibration_shape.html#a253c72422c5214ed8a8031aaf2ab86ac">iview::CAffiniteCalibrationShape</a>, <a class="el" href="classiview_1_1_c_scale_calibration_shape.html#ad1ae862be06529378b3bb4cb3e862652">iview::CScaleCalibrationShape</a>, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#a4d6f4175e180f96fb78c4299e72c54b2">iview::CNoneCalibrationShape</a>, <a class="el" href="classiview_1_1_c_perspective_calibration_shape.html#a5d3c89099346571f9a69f9fc6e064aa2">iview::CPerspectiveCalibrationShape</a>, <a class="el" href="classiview_1_1_c_pin_calibration_shape.html#adcc1b91bee42acbbefa51008dd5e0d7c">iview::CPinCalibrationShape</a>, <a class="el" href="classiview_1_1_c_transformable_rectangle_calibration_shape.html#a8701009a6e2f574280ca793d9445927f">iview::CTransformableRectangleCalibrationShape</a>, and <a class="el" href="classiview_1_1_c_polyline_calibration_shape.html#a7bbeb0f9c110ca6e6db43b97f87dc4f3">iview::CPolylineCalibrationShape</a>.</p>
+<p>Reimplemented in <a class="el" href="classiview_1_1_c_polygon_calibration_shape.html#a88876d9cbb6e33fae410278dfd0e6ae3">iview::CPolygonCalibrationShape</a>, <a class="el" href="classiview_1_1_c_affinite_calibration_shape.html#a253c72422c5214ed8a8031aaf2ab86ac">iview::CAffiniteCalibrationShape</a>, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#a4d6f4175e180f96fb78c4299e72c54b2">iview::CNoneCalibrationShape</a>, <a class="el" href="classiview_1_1_c_perspective_calibration_shape.html#a5d3c89099346571f9a69f9fc6e064aa2">iview::CPerspectiveCalibrationShape</a>, <a class="el" href="classiview_1_1_c_pin_calibration_shape.html#adcc1b91bee42acbbefa51008dd5e0d7c">iview::CPinCalibrationShape</a>, <a class="el" href="classiview_1_1_c_transformable_rectangle_calibration_shape.html#a8701009a6e2f574280ca793d9445927f">iview::CTransformableRectangleCalibrationShape</a>, and <a class="el" href="classiview_1_1_c_polyline_calibration_shape.html#a7bbeb0f9c110ca6e6db43b97f87dc4f3">iview::CPolylineCalibrationShape</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_calibration_shape_base_8h_source.html#l00021">21</a> of file <a class="el" href="_c_calibration_shape_base_8h_source.html">CCalibrationShapeBase.h</a>.</p>
 
@@ -177,12 +174,12 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9df8f0d76057adb0ad828e3d13233e4f"></a><!-- doxytag: member="iview::CCalibrationShapeBase::FindCalibration" ref="a9df8f0d76057adb0ad828e3d13233e4f" args="(const iview::IDisplay &amp;display)" -->
+<a class="anchor" id="a8b3662fd321d643f17d568110fab4855"></a><!-- doxytag: member="iview::CCalibrationShapeBase::FindCalibration" ref="a8b3662fd321d643f17d568110fab4855" args="(const iview::IDisplay &amp;display)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* iview::CCalibrationShapeBase::FindCalibration </td>
+          <td class="memname">static const <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* iview::CCalibrationShapeBase::FindCalibration </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> &amp;&#160;</td>
           <td class="paramname"><em>display</em></td><td>)</td>
@@ -219,12 +216,12 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a155aac7b9686fc204ab6fafe97c57f1f"></a><!-- doxytag: member="iview::CCalibrationShapeBase::GetIsomorphCalib" ref="a155aac7b9686fc204ab6fafe97c57f1f" args="() const " -->
+<a class="anchor" id="aa8b9759417c4dffee4861cc69b261c97"></a><!-- doxytag: member="iview::CCalibrationShapeBase::GetIsomorphCalib" ref="aa8b9759417c4dffee4861cc69b261c97" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp; iview::CCalibrationShapeBase::GetIsomorphCalib </td>
+          <td class="memname">const <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> &amp; iview::CCalibrationShapeBase::GetIsomorphCalib </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [inline, protected, virtual]</code></td>

@@ -39,17 +39,17 @@
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_acquisition_8h.html">icam/IBitmapAcquisition.h</a>&quot;</span>
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_i_multi_bitmap_provider_8h.html">iipr/IMultiBitmapProvider.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_multi_bitmap_provider_8h.html">iipr/IMultiBitmapProvider.h</a>&quot;</span>
+<a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="keyword">namespace </span>icam
-<a name="l00021"></a>00021 {
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>icam
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023 
-<a name="l00029"></a><a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html">00029</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html" title="Implementation of multi-bitmap camera supplier.">CMultiCameraBitmapSupplierComp</a>:
-<a name="l00030"></a>00030                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt;const iimg::IBitmap&gt; &gt;,
-<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> iipr::IMultiBitmapProvider
+<a name="l00028"></a><a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html">00028</a> <span class="keyword">class </span><a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html" title="Implementation of multi-bitmap camera supplier.">CMultiCameraBitmapSupplierComp</a>:
+<a name="l00029"></a>00029                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt;const iimg::IBitmap&gt; &gt;,
+<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> iipr::IMultiBitmapProvider,
+<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
 <a name="l00032"></a>00032 {
 <a name="l00033"></a>00033 <span class="keyword">public</span>:
 <a name="l00034"></a><a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a6ae28fb24e53c51727c9009cd4d74d00">00034</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt;const iimg::IBitmap&gt;</a> &gt; <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a6ae28fb24e53c51727c9009cd4d74d00">BaseClass</a>;
@@ -67,33 +67,32 @@
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a1a12e90681c61ddd992c678dac43e141" title="Get optional information about bitmaps in form of section contraints.">GetBitmapSelectionContraints</a>() <span class="keyword">const</span>;
 <a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a8b83e96dbd26bd3a38d52587bf5f35a1" title="Get number of produced bitmaps.">GetBitmapsCount</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a2f82412f136e1ec83e95734f2bb88be1" title="Get access to produced bitmap object.">GetBitmap</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a0f89271a58e8be57f4a3c20c7daaaf55" title="Get access to transformation from bitmap to logical positions.">GetLogTransform</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a3091d7239019c8f26f6e7fc8d3c53911">GetCalibration</a>() <span class="keyword">const</span>;
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="keyword">protected</span>:
-<a name="l00055"></a>00055        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a50a5b1bf93909570927231e657bfa842" title="Called if the new work should be initialized.">InitializeWork</a>();
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#ac0f8481ef76f20d83f61197970ac0857">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keyword">private</span>:
-<a name="l00063"></a>00063        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
-<a name="l00064"></a>00064 
-<a name="l00068"></a>00068        I_REF(<a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>, m_bitmapAcquisitionCompPtr);
-<a name="l00069"></a>00069 
-<a name="l00073"></a>00073        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>, m_logTransformCompPtr);
-<a name="l00074"></a>00074 
-<a name="l00078"></a>00078        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html">iprm::IParamsManager</a>, m_cameraParamsManagerCompPtr);
-<a name="l00079"></a>00079 };
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a714b60e1ef75d753e096f8c71336a084">GetCalibration</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="keyword">protected</span>:
+<a name="l00054"></a>00054        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#a50a5b1bf93909570927231e657bfa842" title="Called if the new work should be initialized.">InitializeWork</a>();
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classicam_1_1_c_multi_camera_bitmap_supplier_comp.html#ac0f8481ef76f20d83f61197970ac0857">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 <span class="keyword">private</span>:
+<a name="l00062"></a>00062        I_FACT(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
+<a name="l00063"></a>00063 
+<a name="l00067"></a>00067        I_REF(<a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>, m_bitmapAcquisitionCompPtr);
+<a name="l00068"></a>00068 
+<a name="l00072"></a>00072        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>, m_logTransformCompPtr);
+<a name="l00073"></a>00073 
+<a name="l00077"></a>00077        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_manager.html">iprm::IParamsManager</a>, m_cameraParamsManagerCompPtr);
+<a name="l00078"></a>00078 };
+<a name="l00079"></a>00079 
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 } <span class="comment">// namespace icam</span>
+<a name="l00081"></a>00081 } <span class="comment">// namespace icam</span>
+<a name="l00082"></a>00082 
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085 <span class="preprocessor">#endif // !icam_CMultiCameraBitmapSupplierComp_included</span>
-<a name="l00086"></a>00086 <span class="preprocessor"></span>
-<a name="l00087"></a>00087 
+<a name="l00084"></a>00084 <span class="preprocessor">#endif // !icam_CMultiCameraBitmapSupplierComp_included</span>
+<a name="l00085"></a>00085 <span class="preprocessor"></span>
+<a name="l00086"></a>00086 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
