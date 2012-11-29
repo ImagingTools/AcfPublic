@@ -26,8 +26,8 @@
 <div class="title">Include/iprm/IOptionsManager.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_i_options_manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iprm_ISelectionConstraintsController_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iprm_ISelectionConstraintsController_included</span>
+<a href="_i_options_manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iprm_IOptionsManager_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iprm_IOptionsManager_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
@@ -49,22 +49,22 @@
 <a name="l00024"></a>00024 
 <a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_i_options_manager.html#abd4585a3b03792f011f6b798945b102e" title="Enables a given option.">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>) = 0;
 <a name="l00030"></a>00030 
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_i_options_manager.html#a264d6c67e287329971fda82993f8c4fc" title="Remove an option at the given index.">RemoveOption</a>(<span class="keywordtype">int</span> index) = 0;
-<a name="l00035"></a>00035 
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#ac86b1bb9a30fc6474e82322d4b52ade4" title="Insert an option with the at the given option name and ID.">InsertOption</a>(
-<a name="l00040"></a>00040                             QString&amp; optionName,
-<a name="l00041"></a>00041                             <span class="keyword">const</span> QByteArray&amp; optionId,
-<a name="l00042"></a>00042                             <span class="keyword">const</span> QString&amp; optionDescription = QString(),
-<a name="l00043"></a>00043                             <span class="keywordtype">int</span> index = -1) = 0;
-<a name="l00044"></a>00044 };
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 } <span class="comment">// namespace iprm</span>
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#a460843f2069a96f01fb981836a5a1c16" title="Remove an option at the given index.">RemoveOption</a>(<span class="keywordtype">int</span> index) = 0;
+<a name="l00036"></a>00036 
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#ac86b1bb9a30fc6474e82322d4b52ade4" title="Insert an option with the at the given option name and ID.">InsertOption</a>(
+<a name="l00042"></a>00042                             QString&amp; optionName,
+<a name="l00043"></a>00043                             <span class="keyword">const</span> QByteArray&amp; optionId,
+<a name="l00044"></a>00044                             <span class="keyword">const</span> QString&amp; optionDescription = QString(),
+<a name="l00045"></a>00045                             <span class="keywordtype">int</span> index = -1) = 0;
+<a name="l00046"></a>00046 };
+<a name="l00047"></a>00047 
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="preprocessor">#endif // !iprm_ISelectionConstraintsController_included</span>
-<a name="l00051"></a>00051 <span class="preprocessor"></span>
-<a name="l00052"></a>00052 
+<a name="l00049"></a>00049 } <span class="comment">// namespace iprm</span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iprm_IOptionsManager_included</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00054"></a>00054 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

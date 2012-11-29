@@ -52,7 +52,8 @@ Inheritance diagram for iprm::IOptionsManager:</div>
 <area href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities." alt="iprm::ISelectionConstraints" shape="rect" coords="0,112,177,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,177,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,177,24"/>
-<area href="classiprm_1_1_c_options_manager_comp.html" title="Implementation of selection constraints." alt="iprm::COptionsManagerComp" shape="rect" coords="0,224,177,248"/>
+<area href="classiprm_1_1_c_options_manager.html" title="Implementation of a simple options manager." alt="iprm::COptionsManager" shape="rect" coords="0,224,177,248"/>
+<area href="classiprm_1_1_c_options_manager_comp.html" title="Implementation of selection constraints." alt="iprm::COptionsManagerComp" shape="rect" coords="0,280,177,304"/>
 </map>
  </div></div>
 
@@ -68,8 +69,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#abd4585a3b03792f011f6b798945b102e">SetOptionEnabled</a> (int index, bool isEnabled=true)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a given option.  <a href="#abd4585a3b03792f011f6b798945b102e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#a264d6c67e287329971fda82993f8c4fc">RemoveOption</a> (int index)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an option at the given index.  <a href="#a264d6c67e287329971fda82993f8c4fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#a460843f2069a96f01fb981836a5a1c16">RemoveOption</a> (int index)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an option at the given index.  <a href="#a460843f2069a96f01fb981836a5a1c16"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#ac86b1bb9a30fc6474e82322d4b52ade4">InsertOption</a> (QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an option with the at the given option name and ID.  <a href="#ac86b1bb9a30fc6474e82322d4b52ade4"></a><br/></td></tr>
 </table>
@@ -144,17 +145,18 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Insert an option with the at the given option name and ID. </p>
+<p>Returns <code>true</code> if the operation was successull. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager_comp.html#a761ed39e3af95733402e096cc57cbbc7">iprm::COptionsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#a9b7ed625eb0a4af45e6fe19eb1cd5f5f">iprm::COptionsManager</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a264d6c67e287329971fda82993f8c4fc"></a><!-- doxytag: member="iprm::IOptionsManager::RemoveOption" ref="a264d6c67e287329971fda82993f8c4fc" args="(int index)=0" -->
+<a class="anchor" id="a460843f2069a96f01fb981836a5a1c16"></a><!-- doxytag: member="iprm::IOptionsManager::RemoveOption" ref="a460843f2069a96f01fb981836a5a1c16" args="(int index)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iprm::IOptionsManager::RemoveOption </td>
+          <td class="memname">virtual bool iprm::IOptionsManager::RemoveOption </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -165,8 +167,9 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Remove an option at the given index. </p>
+<p>Returns <code>true</code> if the operation was successull. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager_comp.html#a0d6f3e60aebc039a47e3caa8ef4a39f4">iprm::COptionsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#a74834c67f53702d61b78a3e9856fbcfd">iprm::COptionsManager</a>.</p>
 
 </div>
 </div>
@@ -199,7 +202,7 @@ Public Member Functions</h2></td></tr>
 <p>Only enabled options can be selected. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>GetOptionEnabled </dd></dl>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager_comp.html#a439d8a967d46503d7db6f34128ee97b5">iprm::COptionsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#ac4eca4e6a15b6f6288f3ba3ca106dd80">iprm::COptionsManager</a>.</p>
 
 </div>
 </div>
