@@ -69,6 +69,8 @@ void CSelectableParamsSetGuiComp::OnGuiModelAttached()
 {
 	ConnectCurrentEditor();
 
+	LineSeparator->setVisible(*m_showSeparatorAttrPtr);
+
 	BaseClass::OnGuiModelAttached();
 }
 

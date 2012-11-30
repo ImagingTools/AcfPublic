@@ -137,6 +137,7 @@ private:
 	void UpdateComboBoxesView();
 	void UpdateRadioButtonView();
 	void UpdateDescriptionFrame();
+	void UpdateSelectorLabel();
 	void ResetWidgets();
 
 private:
