@@ -66,7 +66,7 @@
 <a name="l00041"></a>00041               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>);
 <a name="l00042"></a>00042               I_ASSIGN_MULTI_0(m_fixedParamSetsCompPtr, <span class="stringliteral">&quot;FixedParamSets&quot;</span>, <span class="stringliteral">&quot;List of references to fixed parameter set&quot;</span>, <span class="keyword">false</span>);
 <a name="l00043"></a>00043               I_ASSIGN_MULTI_0(m_fixedSetNamesAttrPtr, <span class="stringliteral">&quot;FixedSetNames&quot;</span>, <span class="stringliteral">&quot;List of fixed parameter names&quot;</span>, <span class="keyword">false</span>);
-<a name="l00044"></a>00044               I_ASSIGN(m_defaultSetNameAttrPtr, <span class="stringliteral">&quot;DefaultSetName&quot;</span>, <span class="stringliteral">&quot;Default name of parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&lt;noname&gt;&quot;</span>);
+<a name="l00044"></a>00044               I_ASSIGN(m_defaultSetNameAttrPtr, <span class="stringliteral">&quot;DefaultSetName&quot;</span>, <span class="stringliteral">&quot;Default name of parameter set. Use %1 to insert automatic enumeration&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&lt;noname&gt;&quot;</span>);
 <a name="l00045"></a>00045               I_ASSIGN(m_paramsSetTypeIdAttrPtr, <span class="stringliteral">&quot;ParamsSetTypeId&quot;</span>, <span class="stringliteral">&quot;ID of factorisied parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Default&quot;</span>);
 <a name="l00046"></a>00046               I_ASSIGN(m_paramSetsFactPtr, <span class="stringliteral">&quot;ParamsSetFactory&quot;</span>, <span class="stringliteral">&quot;Factory of variable parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ParamsSet&quot;</span>);
 <a name="l00047"></a>00047        I_END_COMPONENT;
@@ -120,21 +120,23 @@
 <a name="l00095"></a>00095               <a class="code" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;IParamsSet&gt;</a> paramSetPtr;
 <a name="l00096"></a>00096               QString name;
 <a name="l00097"></a>00097        };
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
+<a name="l00098"></a>00098        
+<a name="l00099"></a>00099        <span class="keywordtype">int</span> FindParamSetIndex(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101        ParamSets m_paramSets;
+<a name="l00101"></a>00101        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103        <span class="keywordtype">int</span> m_selectedIndex;
-<a name="l00104"></a>00104 };
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 } <span class="comment">// namespace iprm</span>
+<a name="l00103"></a>00103        ParamSets m_paramSets;
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105        <span class="keywordtype">int</span> m_selectedIndex;
+<a name="l00106"></a>00106 };
+<a name="l00107"></a>00107 
 <a name="l00108"></a>00108 
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110 <span class="preprocessor">#endif // !iprm_CParamsManagerComp_included</span>
-<a name="l00111"></a>00111 <span class="preprocessor"></span>
-<a name="l00112"></a>00112 
+<a name="l00109"></a>00109 } <span class="comment">// namespace iprm</span>
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 <span class="preprocessor">#endif // !iprm_CParamsManagerComp_included</span>
+<a name="l00113"></a>00113 <span class="preprocessor"></span>
+<a name="l00114"></a>00114 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -138,7 +138,6 @@ void CSelectableGuiComp::OnGuiCreated()
 	}
 	else{
 		SelectorFrame->hide();
-		LineSeparator->hide();
 	}
 }
 

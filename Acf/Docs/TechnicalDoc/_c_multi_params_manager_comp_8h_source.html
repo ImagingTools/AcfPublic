@@ -66,7 +66,7 @@
 <a name="l00041"></a>00041               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>);
 <a name="l00042"></a>00042               I_ASSIGN_MULTI_0(m_fixedParamSetsCompPtr, <span class="stringliteral">&quot;FixedParamSets&quot;</span>, <span class="stringliteral">&quot;List of references to fixed parameter set&quot;</span>, <span class="keyword">false</span>);
 <a name="l00043"></a>00043               I_ASSIGN_MULTI_0(m_fixedSetNamesAttrPtr, <span class="stringliteral">&quot;FixedSetNames&quot;</span>, <span class="stringliteral">&quot;List of fixed parameter names&quot;</span>, <span class="keyword">false</span>);
-<a name="l00044"></a>00044               I_ASSIGN(m_defaultSetNameAttrPtr, <span class="stringliteral">&quot;DefaultSetName&quot;</span>, <span class="stringliteral">&quot;Default name of parameter set&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&lt;noname&gt;&quot;</span>);         
+<a name="l00044"></a>00044               I_ASSIGN(m_defaultSetNameAttrPtr, <span class="stringliteral">&quot;DefaultSetName&quot;</span>, <span class="stringliteral">&quot;Default name of parameter set. Use %1 to insert automatic enumeration &quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&lt;noname&gt;&quot;</span>);          
 <a name="l00045"></a>00045               I_ASSIGN_MULTI_0(m_paramSetsFactoriesPtr, <span class="stringliteral">&quot;ParamSetsFactories&quot;</span>, <span class="stringliteral">&quot;List of factories for parameter sets creation&quot;</span>, <span class="keyword">true</span>);              
 <a name="l00046"></a>00046               I_ASSIGN_MULTI_0(m_factoryNameNameAttrPtr, <span class="stringliteral">&quot;ParamSetsFactorieNames&quot;</span>, <span class="stringliteral">&quot;List of names associated with the parameter factories&quot;</span>, <span class="keyword">true</span>);
 <a name="l00047"></a>00047               I_ASSIGN_MULTI_0(m_factoryDescriptionAttrPtr, <span class="stringliteral">&quot;ParamSetsFactorieDesciption&quot;</span>, <span class="stringliteral">&quot;List of descriptions associated with the parameter factories&quot;</span>, <span class="keyword">true</span>);
@@ -147,22 +147,24 @@
 <a name="l00128"></a>00128               QByteArray typeId;
 <a name="l00129"></a>00129        };
 <a name="l00130"></a>00130 
-<a name="l00131"></a>00131        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
+<a name="l00131"></a>00131        <span class="keywordtype">int</span> FindParamSetIndex(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;
 <a name="l00132"></a>00132 
-<a name="l00133"></a>00133        ParamSets m_paramSets;
+<a name="l00133"></a>00133        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
 <a name="l00134"></a>00134 
-<a name="l00135"></a>00135        <span class="keywordtype">int</span> m_selectedIndex;
+<a name="l00135"></a>00135        ParamSets m_paramSets;
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137        TypeInfoList m_typeInfoList;
-<a name="l00138"></a>00138 };
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141 } <span class="comment">// namespace iprm</span>
+<a name="l00137"></a>00137        <span class="keywordtype">int</span> m_selectedIndex;
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139        TypeInfoList m_typeInfoList;
+<a name="l00140"></a>00140 };
+<a name="l00141"></a>00141 
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144 <span class="preprocessor">#endif // !iprm_CMultiParamsManagerComp_included</span>
-<a name="l00145"></a>00145 <span class="preprocessor"></span>
-<a name="l00146"></a>00146 
+<a name="l00143"></a>00143 } <span class="comment">// namespace iprm</span>
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146 <span class="preprocessor">#endif // !iprm_CMultiParamsManagerComp_included</span>
+<a name="l00147"></a>00147 <span class="preprocessor"></span>
+<a name="l00148"></a>00148 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

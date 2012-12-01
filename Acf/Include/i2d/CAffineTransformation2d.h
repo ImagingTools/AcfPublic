@@ -43,7 +43,7 @@ public:
 
 	explicit CAffineTransformation2d(const i2d::CAffine2d& transformation);
 
-		/**
+	/**
 		Get used transformation object.
 	*/
 	const i2d::CAffine2d& GetTransformation() const;
