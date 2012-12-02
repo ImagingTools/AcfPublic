@@ -87,6 +87,7 @@ private:
 		i2d::CVector2d position;
 		i2d::CVector2d derivative;
 		double rawWeight;
+		bool isHorizontal;
 
 		ExtNode* prevPtr;
 		ExtNode* nextPtr;
@@ -113,7 +114,10 @@ private:
 
 		bool IsContainerFull() const;
 
-		void ExtractContours(double weightScale, CEdgeLine::Container& result);
+		void ExtractLines(
+					double weightScale,
+					CEdgeLine::Container& result,
+					bool keepSingletons = false);
 
 		ExtNode* AddElementToList();
 
@@ -133,6 +137,7 @@ private:
 				double posX,
 				double posY,
 				double rawWeight,
+				bool isHorizontal,
 				PixelDescriptor* destLine1,
 				PixelDescriptor* destLine2,
 				int x,

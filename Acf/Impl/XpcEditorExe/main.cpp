@@ -20,25 +20,33 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+// Qt includes
+#include <QtCore/QCoreApplication>
+#include <QtGui/QApplication>
+
+// ACF includes
+#include "ibase/IApplication.h"
+
+#include "Generated/CXpcEditor.h"
 
 
-namespace istd
+int main(int argc, char *argv[])
 {
+	Q_INIT_RESOURCE(iqtgui);
+	Q_INIT_RESOURCE(icmpstr);
+	Q_INIT_RESOURCE(AcfLoc);
+	Q_INIT_RESOURCE(XpcEditor);
 
+	QApplication::setStyle("plastique");
 
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  2685,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	CXpcEditor instance;
 
+	ibase::IApplication* applicationPtr = instance.GetInterface<ibase::IApplication>();
+	if (applicationPtr != NULL){
+		return applicationPtr->Execute(argc, argv);
+	}
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+	return -1;
+}
 
 

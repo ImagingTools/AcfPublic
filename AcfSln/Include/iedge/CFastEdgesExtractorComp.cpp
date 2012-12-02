@@ -138,7 +138,7 @@ bool CFastEdgesExtractorComp::DoContourExtraction(
 		}
 	}
 
-	container.ExtractContours(weightScale, result);
+	container.ExtractLines(weightScale, result);
 
 	if (container.IsContainerFull()){
 		SendErrorMessage(0, "Container of nodes is full");
@@ -247,9 +247,11 @@ inline void CFastEdgesExtractorComp::TryConnectElements(
 	if (derivativeDotProduct > 0){
 		double derivativeAngleCos = derivativeDotProduct / (nodePtr->derivative.GetLength() * neightborNodePtr->derivative.GetLength());
 
+		double coherenceFactor = (nodePtr->isHorizontal == neightborNodePtr->isHorizontal)? 1: 0.5;
+
 		double orientationFactor = (nodePtr->derivative + neightborNodePtr->derivative).GetCrossProductZ(displacement) / displacement.GetLength2();
 		if (orientationFactor >= 0){
-			double connectionWeight = orientationFactor * derivativeAngleCos;
+			double connectionWeight = orientationFactor * derivativeAngleCos * coherenceFactor;
 			if (			(connectionWeight > nodePtr->nextWeight) &&
 							((neightborNodePtr->prevPtr == NULL) || (neightborNodePtr->prevWeight < connectionWeight))){
 				// disconnect neighbor from previous connection
@@ -273,7 +275,7 @@ inline void CFastEdgesExtractorComp::TryConnectElements(
 			}
 		}
 		else{
-			double connectionWeight = -orientationFactor * derivativeAngleCos;
+			double connectionWeight = -orientationFactor * derivativeAngleCos * coherenceFactor;
 			if (			(connectionWeight > nodePtr->prevWeight) &&
 							((neightborNodePtr->nextPtr == NULL) || (neightborNodePtr->nextWeight < connectionWeight))){
 				// disconnect neighbor from previous connection
@@ -304,11 +306,13 @@ inline CFastEdgesExtractorComp::ExtNode* CFastEdgesExtractorComp::AddPointToCont
 			double posX,
 			double posY,
 			double rawWeight,
+			bool isHorizontal,
 			PixelDescriptor* destLine1,
 			PixelDescriptor* destLine2,
 			int x,
 			int /*y*/,
-			InternalContainer& container){
+			InternalContainer& container)
+{
 	ExtNode* nodePtr = container.AddElementToList();
 	if (nodePtr != NULL){
 		PixelDescriptor& pixelDescriptor = destLine2[x];
@@ -320,6 +324,7 @@ inline CFastEdgesExtractorComp::ExtNode* CFastEdgesExtractorComp::AddPointToCont
 		nodePtr->nextPtr = NULL;
 		nodePtr->prevWeight = 0;
 		nodePtr->nextWeight = 0;
+		nodePtr->isHorizontal = isHorizontal;
 
 		pixelDescriptor.listReference = nodePtr;
 
@@ -423,6 +428,7 @@ inline void CFastEdgesExtractorComp::CalcPoint(
 						AddPointToContour(
 									x + 0.5 + shift, y + 1,
 									rawWeight,
+									true,
 									destLine1, destLine2,
 									x, y,
 									container);
@@ -440,6 +446,7 @@ inline void CFastEdgesExtractorComp::CalcPoint(
 						AddPointToContour(
 									x + 1, y + 0.5 + shift,
 									rawWeight,
+									false,
 									destLine1, destLine2,
 									x, y,
 									container);
@@ -500,7 +507,10 @@ bool CFastEdgesExtractorComp::InternalContainer::IsContainerFull() const
 }
 
 
-void CFastEdgesExtractorComp::InternalContainer::ExtractContours(double weightScale, CEdgeLine::Container& result)
+void CFastEdgesExtractorComp::InternalContainer::ExtractLines(
+			double weightScale,
+			CEdgeLine::Container& result,
+			bool keepSingletons)
 {
 	// mark all as not extracted
 	for (int i = 0; i < m_freeIndex; ++i){
@@ -513,6 +523,11 @@ void CFastEdgesExtractorComp::InternalContainer::ExtractContours(double weightSc
 		ExtNode& node = m_buffer[i];
 
 		if (!node.isExtracted && (node.prevPtr == NULL)){	// check if it was not processed yet and is first node
+			if (!keepSingletons && (node.nextPtr == NULL)){
+				node.isExtracted = true;
+				continue;	// skip singleton
+			}
+
 			CEdgeLine& resultLine = result.PushBack(CEdgeLine());
 			resultLine.SetClosed(false);
 
@@ -539,6 +554,11 @@ void CFastEdgesExtractorComp::InternalContainer::ExtractContours(double weightSc
 		ExtNode& node = m_buffer[i];
 
 		if (!node.isExtracted){	// check if it was not processed yet
+			if (!keepSingletons && (node.nextPtr == node.prevPtr)){
+				node.isExtracted = true;
+				continue;	// skip singleton
+			}
+
 			CEdgeLine& resultLine = result.PushBack(CEdgeLine());
 			resultLine.SetClosed(true);
 
