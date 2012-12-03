@@ -74,6 +74,7 @@ protected:
 	virtual const i2d::ICalibration2d* GetCalibration() const;
 
 	// reimplemented (iproc::TSupplierCompWrap)
+	virtual void InvalidateSupplier();
 	virtual int ProduceObject(ProductType& result) const;
 
 	// reimplemented (icomp::CComponentBase)

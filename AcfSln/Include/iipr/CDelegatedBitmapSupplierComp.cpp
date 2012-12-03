@@ -56,9 +56,19 @@ const i2d::ICalibration2d* CDelegatedBitmapSupplierComp::GetCalibration() const
 }
 
 
-//protected methods
+// protected methods
 
 // reimplemented (iproc::TSupplierCompWrap)
+
+void CDelegatedBitmapSupplierComp::InvalidateSupplier()
+{
+	if (m_bitmapSupplierCompPtr.IsValid()){
+		m_bitmapSupplierCompPtr->InvalidateSupplier();
+	}
+
+	BaseClass::InvalidateSupplier();
+}
+
 
 int CDelegatedBitmapSupplierComp::ProduceObject(ProductType& result) const
 {
