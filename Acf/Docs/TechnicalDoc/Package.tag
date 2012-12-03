@@ -54,8 +54,8 @@
     <name>CAnnulusComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_annulus_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CAnnulusComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -71,8 +71,8 @@
     <name>CAnnulusSegmentComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_annulus_segment_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_annulus_segment_8h" name="CAnnulusSegment.h" local="yes" imported="no">i2d/CAnnulusSegment.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CAnnulusSegmentComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -88,8 +88,8 @@
     <name>CCircleComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_circle_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CCircleComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -130,8 +130,8 @@
     <name>CLine2dComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_line2d_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CLine2dComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -172,7 +172,7 @@
     <name>COrientedCircleComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_oriented_circle_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_oriented_circle_8h" name="COrientedCircle.h" local="yes" imported="no">i2d/COrientedCircle.h</includes>
     <class kind="class">i2d::COrientedCircleComp</class>
     <namespace>i2d</namespace>
@@ -202,8 +202,8 @@
     <name>CPolygonComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polygon_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CPolygonComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -230,8 +230,8 @@
     <name>CPolylineComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polyline_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CPolylineComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -268,8 +268,8 @@
     <name>CPosition2dComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_position2d_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_position2d_8h" name="CPosition2d.h" local="yes" imported="no">i2d/CPosition2d.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CPosition2dComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -287,8 +287,8 @@
     <name>CQuadrangleComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_quadrangle_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_quadrangle_8h" name="CQuadrangle.h" local="yes" imported="no">i2d/CQuadrangle.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CQuadrangleComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -319,8 +319,8 @@
     <name>CRectangleComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_rectangle_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">i2d::CRectangleComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -381,7 +381,7 @@
     <name>CTubePolylineComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_tube_polyline_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
     <includes id="_c_tube_polyline_8h" name="CTubePolyline.h" local="yes" imported="no">i2d/CTubePolyline.h</includes>
     <class kind="class">i2d::CTubePolylineComp</class>
     <namespace>i2d</namespace>
@@ -466,6 +466,15 @@
     <filename>_t_data_node_polyline_8h</filename>
     <includes id="_c_data_node_polyline_base_8h" name="CDataNodePolylineBase.h" local="yes" imported="no">i2d/CDataNodePolylineBase.h</includes>
     <class kind="class">i2d::TDataNodePolyline</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TObject2dCompWrap.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_t_object2d_comp_wrap_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
+    <class kind="class">i2d::TObject2dCompWrap</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -6569,6 +6578,7 @@
     <class kind="class">i2d::ISceneController</class>
     <class kind="class">i2d::ITransformation2d</class>
     <class kind="class">i2d::TDataNodePolyline</class>
+    <class kind="class">i2d::TObject2dCompWrap</class>
     <member kind="typedef">
       <type>TDataNodePolyline&lt; CTubeNode &gt;</type>
       <name>CTubePolyline</name>
@@ -7181,13 +7191,12 @@
   <compound kind="class">
     <name>i2d::CAnnulusComp</name>
     <filename>classi2d_1_1_c_annulus_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CAnnulus</base>
+    <base>TObject2dCompWrap&lt; CAnnulus &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CAnnulus &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_annulus_comp.html</anchorfile>
-      <anchor>a68591567776f3db7f7b9aeeb65daa9be</anchor>
+      <anchor>a61ddf3c4dcd17657580495bb0e60e529</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -7276,13 +7285,12 @@
   <compound kind="class">
     <name>i2d::CAnnulusSegmentComp</name>
     <filename>classi2d_1_1_c_annulus_segment_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CAnnulusSegment</base>
+    <base>TObject2dCompWrap&lt; CAnnulusSegment &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CAnnulusSegment &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_annulus_segment_comp.html</anchorfile>
-      <anchor>ab993e15461273426b19ace62931675cd</anchor>
+      <anchor>a241af0a3f5080d7ebb719f686de985fb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -7399,13 +7407,12 @@
   <compound kind="class">
     <name>i2d::CCircleComp</name>
     <filename>classi2d_1_1_c_circle_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CCircle</base>
+    <base>TObject2dCompWrap&lt; CCircle &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CCircle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_circle_comp.html</anchorfile>
-      <anchor>a9fb4c7babbac94a9a083679f6aa20e01</anchor>
+      <anchor>ad7606d37cf68f5c0f1342bfb2220f61d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -7949,13 +7956,12 @@
   <compound kind="class">
     <name>i2d::CLine2dComp</name>
     <filename>classi2d_1_1_c_line2d_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CLine2d</base>
+    <base>TObject2dCompWrap&lt; CLine2d &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CLine2d &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_line2d_comp.html</anchorfile>
-      <anchor>ac6bc659134b96f96d57f08bea82c64d7</anchor>
+      <anchor>a16a4b775eae1fcce84644e9608c148ae</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8409,13 +8415,12 @@
   <compound kind="class">
     <name>i2d::COrientedCircleComp</name>
     <filename>classi2d_1_1_c_oriented_circle_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::COrientedCircle</base>
+    <base>TObject2dCompWrap&lt; COrientedCircle &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; COrientedCircle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_oriented_circle_comp.html</anchorfile>
-      <anchor>add8ab43bf131d436e906b1d2de57819c</anchor>
+      <anchor>a33380d4013b38a6fd93045932ee31f33</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8649,20 +8654,12 @@
   <compound kind="class">
     <name>i2d::CPolygonComp</name>
     <filename>classi2d_1_1_c_polygon_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CPolygon</base>
+    <base>TObject2dCompWrap&lt; CPolygon &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CPolygon &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_polygon_comp.html</anchorfile>
-      <anchor>ac93130bb483718ec8392df33995b5b03</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CPolygon</type>
-      <name>BaseClass2</name>
-      <anchorfile>classi2d_1_1_c_polygon_comp.html</anchorfile>
-      <anchor>a66a3244c735e06cb480c5b7f62112819</anchor>
+      <anchor>a42bbf1332804128bc4955f9c0bdd01b6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8748,20 +8745,12 @@
   <compound kind="class">
     <name>i2d::CPolylineComp</name>
     <filename>classi2d_1_1_c_polyline_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CPolyline</base>
+    <base>TObject2dCompWrap&lt; CPolyline &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CPolyline &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_polyline_comp.html</anchorfile>
-      <anchor>a8bc8507d70a5c641d5e7a7075859c403</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CPolyline</type>
-      <name>BaseClass2</name>
-      <anchorfile>classi2d_1_1_c_polyline_comp.html</anchorfile>
-      <anchor>a8fa55dbe6e000d039522b18d4154ec2b</anchor>
+      <anchor>a843f0a1bfac37268206a564efbd228fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8978,13 +8967,12 @@
   <compound kind="class">
     <name>i2d::CPosition2dComp</name>
     <filename>classi2d_1_1_c_position2d_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CPosition2d</base>
+    <base>TObject2dCompWrap&lt; CPosition2d &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CPosition2d &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_position2d_comp.html</anchorfile>
-      <anchor>aef37de94a7b89e40b9e7bd72fb53693a</anchor>
+      <anchor>a0ec5e0bfe9d486c1145c64ac69ce873b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -9143,13 +9131,12 @@
   <compound kind="class">
     <name>i2d::CQuadrangleComp</name>
     <filename>classi2d_1_1_c_quadrangle_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CQuadrangle</base>
+    <base>TObject2dCompWrap&lt; CQuadrangle &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CQuadrangle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_quadrangle_comp.html</anchorfile>
-      <anchor>a90b1bba3ac677cee1db75c8ef33a7f48</anchor>
+      <anchor>a59d8f9225db664d224a3e273665ec14b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -10019,13 +10006,12 @@
   <compound kind="class">
     <name>i2d::CRectangleComp</name>
     <filename>classi2d_1_1_c_rectangle_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::CRectangle</base>
+    <base>TObject2dCompWrap&lt; CRectangle &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CRectangle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_rectangle_comp.html</anchorfile>
-      <anchor>a205f1151ac2f60c9e505dd4f2c52ec0c</anchor>
+      <anchor>a2c83e53309969bdfe162033b6fe550f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -10277,20 +10263,12 @@
   <compound kind="class">
     <name>i2d::CTubePolylineComp</name>
     <filename>classi2d_1_1_c_tube_polyline_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>i2d::TDataNodePolyline</base>
+    <base>TObject2dCompWrap&lt; CTubePolyline &gt;</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>TObject2dCompWrap&lt; CTubePolyline &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
-      <anchor>abc20670af97a14600f494980ea7f985d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CTubePolyline</type>
-      <name>BaseClass2</name>
-      <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
-      <anchor>a22b29f8431fd27b357fb1f39b7d22dd8</anchor>
+      <anchor>a841d4a1d43e76b9ca988883f24c90efa</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11047,6 +11025,33 @@
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
       <anchor>ab92692dc07e24d0b0abb86235ed808e5</anchor>
       <arglist>(int count)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::TObject2dCompWrap</name>
+    <filename>classi2d_1_1_t_object2d_comp_wrap.html</filename>
+    <templarg>BaseObject2d</templarg>
+    <base>icomp::CComponentBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_object2d_comp_wrap.html</anchorfile>
+      <anchor>a4e7dbee55ab86d2b0e51e17fa162fa3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BaseObject2d</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_t_object2d_comp_wrap.html</anchorfile>
+      <anchor>af4791b7bcfeb29877dfb95f86bea181e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_t_object2d_comp_wrap.html</anchorfile>
+      <anchor>a3e8b821652990c761fac5e16fd3c9395</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">

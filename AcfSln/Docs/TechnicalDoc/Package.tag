@@ -8530,14 +8530,24 @@
   <compound kind="class">
     <name>iipr::CDelegatedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; const i2d::ICalibration2d *, const iimg::IBitmap * &gt; &gt;</base>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">iproc::ISupplier</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; const i2d::ICalibration2d *, const iimg::IBitmap * &gt; &gt;</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a5d84ade33a9d07f3e1bbdfa92a4ebf1c</anchor>
+      <anchor>a0f71629291f6d6fbbd0863b7316846a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelBridgeBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a243ec036da3d9ebb3d67aa13afa2d7b8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -8591,16 +8601,65 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
-      <name>ProduceObject</name>
+      <name>GetWorkStatus</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a6054a1c2b5856e22d6529357d72f3c1f</anchor>
-      <arglist>(ProductType &amp;result) const </arglist>
+      <anchor>a41e2d09d2166cbcfa375f22dfbffc1af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a351380bb7bcfa58eb3b54d674b653feb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a944f5e65aba9af254b6f4e5355434d59</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a05cc33d0a5668cb2301476fb33bd9ba4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a0489251b80e02af442241147d89c7d1d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const ibase::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>aa511440d2efa4b9ad4957949904f4738</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a06296593c05775770298541cbf04c092</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a02c62def2d9d7e2964b87c6d35370a29</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a3dc8acf51b529498be7280f6d042fa3b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

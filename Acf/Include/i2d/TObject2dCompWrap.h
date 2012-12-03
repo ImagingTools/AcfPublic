@@ -20,34 +20,35 @@
 ********************************************************************************/
 
 
-#ifndef i2d_CCircleComp_included
-#define i2d_CCircleComp_included
+#ifndef i2d_TObject2dCompWrap_included
+#define i2d_TObject2dCompWrap_included
 
 
 // ACF includes
-#include "i2d/TObject2dCompWrap.h"
-#include "i2d/CCircle.h"
+#include "icomp/CComponentBase.h"
+#include "i2d/ICalibration2d.h"
 
 
 namespace i2d
-{		
+{
 
 
 /**
-	Implementation of a circle as a component.
-	It gives the possibility to define a circle model via component attributes.
+	Base class for all components implementing 2D objects.
+	The template paramter \c BaseObject2d should be set to non-component 2D object implementing interface \c i2d::IObject2d.
 */
-class CCircleComp: public TObject2dCompWrap<CCircle>
+template <class BaseObject2d>
+class TObject2dCompWrap: public icomp::CComponentBase, public BaseObject2d
 {
 public:
-	typedef TObject2dCompWrap<CCircle> BaseClass;
+	typedef icomp::CComponentBase BaseClass;
+	typedef BaseObject2d BaseClass2;
 
-	I_BEGIN_COMPONENT(CCircleComp);
-		I_REGISTER_INTERFACE(CCircle);
-		I_REGISTER_INTERFACE(CPosition2d);
-		I_ASSIGN(m_centerXAttrPtr, "X", "X-Position of the circle center", true, 0);
-		I_ASSIGN(m_centerYAttrPtr, "Y", "Y-Position of the circle center", true, 0);
-		I_ASSIGN(m_radiusAttrPtr, "Radius", "Radius of the circle", true, 0);
+	I_BEGIN_COMPONENT(TObject2dCompWrap);
+		I_REGISTER_INTERFACE(IObject2d);
+		I_REGISTER_INTERFACE(iser::ISerializable);
+		I_REGISTER_INTERFACE(istd::IChangeable);
+		I_ASSIGN(m_calibrationCompPtr, "Calibration", "Calibaration associated with this 2d object", false, "Calibration");
 	I_END_COMPONENT;
 
 protected:
@@ -55,15 +56,26 @@ protected:
 	virtual void OnComponentCreated();
 
 private:
-	I_ATTR(double, m_centerXAttrPtr);
-	I_ATTR(double, m_centerYAttrPtr);
-	I_ATTR(double, m_radiusAttrPtr);
+	I_REF(i2d::ICalibration2d, m_calibrationCompPtr);
 };
+
+
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+template <class BaseObject2d>
+void TObject2dCompWrap<BaseObject2d>::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	BaseClass2::SetCalibration(m_calibrationCompPtr.GetPtr());
+}
 
 
 } // namespace i2d
 
 
-#endif // !i2d_CCircleComp_included
+#endif // !i2d_TObject2dCompWrap_included
 
 

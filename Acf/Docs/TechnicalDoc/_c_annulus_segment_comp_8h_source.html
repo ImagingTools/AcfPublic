@@ -30,19 +30,19 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define i2d_CAnnulusSegmentComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_annulus_segment_8h.html">i2d/CAnnulusSegment.h</a>&quot;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_t_object2d_comp_wrap_8h.html">i2d/TObject2dCompWrap.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_annulus_segment_8h.html">i2d/CAnnulusSegment.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="keyword">namespace </span>i2d
 <a name="l00011"></a>00011 {             
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00018"></a><a class="code" href="classi2d_1_1_c_annulus_segment_comp.html">00018</a> <span class="keyword">class </span><a class="code" href="classi2d_1_1_c_annulus_segment_comp.html" title="Implementation of a annulus segment as a component.">CAnnulusSegmentComp</a>: <span class="keyword">public</span> icomp::CComponentBase, <span class="keyword">public</span> <a class="code" href="classi2d_1_1_c_annulus_segment.html" title="Radial segment of the annulus object.">CAnnulusSegment</a>
+<a name="l00018"></a><a class="code" href="classi2d_1_1_c_annulus_segment_comp.html">00018</a> <span class="keyword">class </span><a class="code" href="classi2d_1_1_c_annulus_segment_comp.html" title="Implementation of a annulus segment as a component.">CAnnulusSegmentComp</a>: <span class="keyword">public</span> <a class="code" href="classi2d_1_1_t_object2d_comp_wrap.html" title="Base class for all components implementing 2D objects.">TObject2dCompWrap</a>&lt;CAnnulusSegment&gt;
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 <span class="keyword">public</span>:
-<a name="l00021"></a><a class="code" href="classi2d_1_1_c_annulus_segment_comp.html#ab993e15461273426b19ace62931675cd">00021</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classi2d_1_1_c_annulus_segment_comp.html#ab993e15461273426b19ace62931675cd">BaseClass</a>;
+<a name="l00021"></a><a class="code" href="classi2d_1_1_c_annulus_segment_comp.html#a241af0a3f5080d7ebb719f686de985fb">00021</a>        <span class="keyword">typedef</span> <a class="code" href="classi2d_1_1_t_object2d_comp_wrap.html">TObject2dCompWrap&lt;CAnnulusSegment&gt;</a> <a class="code" href="classi2d_1_1_c_annulus_segment_comp.html#a241af0a3f5080d7ebb719f686de985fb">BaseClass</a>;
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023        I_BEGIN_COMPONENT(<a class="code" href="classi2d_1_1_c_annulus_segment_comp.html" title="Implementation of a annulus segment as a component.">CAnnulusSegmentComp</a>);
 <a name="l00024"></a>00024               I_REGISTER_INTERFACE(<a class="code" href="classi2d_1_1_c_annulus_segment.html" title="Radial segment of the annulus object.">CAnnulusSegment</a>);

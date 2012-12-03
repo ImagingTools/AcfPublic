@@ -29,7 +29,7 @@
 
 // ACF includes
 #include "imod/IModel.h"
-#include "imod/CMultiModelObserverBase.h"
+#include "imod/CMultiModelBridgeBase.h"
 #include "i2d/ICalibration2d.h"
 #include "i2d/ICalibrationProvider.h"
 #include "iproc/TSupplierCompWrap.h"
@@ -46,14 +46,19 @@ namespace iipr
 	Image supplier delegating the calls to another one or accessing some bitmap object directly.
 */
 class CDelegatedBitmapSupplierComp:
-			public iproc::TSupplierCompWrap< QPair<const i2d::ICalibration2d*, const iimg::IBitmap*> >,
+			public ibase::CLoggerComponentBase,
+			virtual public iproc::ISupplier,
+			virtual public istd::IChangeable,
 			virtual public IBitmapProvider,
-			virtual public i2d::ICalibrationProvider
+			virtual public i2d::ICalibrationProvider,
+			protected imod::CMultiModelBridgeBase
 {
 public:
-	typedef iproc::TSupplierCompWrap< QPair<const i2d::ICalibration2d*, const iimg::IBitmap*> > BaseClass;
+	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef imod::CMultiModelBridgeBase BaseClass2;
 
 	I_BEGIN_COMPONENT(CDelegatedBitmapSupplierComp);
+		I_REGISTER_INTERFACE(iproc::ISupplier);
 		I_REGISTER_INTERFACE(IBitmapProvider);
 		I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
 		I_ASSIGN(m_bitmapCompPtr, "BitmapObject", "Bitmap object used if no slave supplier is provided", false, "BitmapObject");
@@ -73,12 +78,18 @@ protected:
 	// reimplemented (i2d::ICalibrationProvider)
 	virtual const i2d::ICalibration2d* GetCalibration() const;
 
-	// reimplemented (iproc::TSupplierCompWrap)
+	// reimplemented (iproc::ISupplier)
+	virtual int GetWorkStatus() const;
 	virtual void InvalidateSupplier();
-	virtual int ProduceObject(ProductType& result) const;
+	virtual void EnsureWorkInitialized();
+	virtual void EnsureWorkFinished();
+	virtual void ClearWorkResults();
+	virtual const ibase::IMessageContainer* GetWorkMessages() const;
+	virtual iprm::IParamsSet* GetModelParametersSet() const;
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 private:
 	I_REF(iimg::IBitmap, m_bitmapCompPtr);
