@@ -474,6 +474,7 @@
     <filename>_t_object2d_comp_wrap_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
+    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
     <class kind="class">i2d::TObject2dCompWrap</class>
     <namespace>i2d</namespace>
   </compound>
