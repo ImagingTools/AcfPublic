@@ -2138,6 +2138,14 @@
     <namespace>iqtcam</namespace>
   </compound>
   <compound kind="file">
+    <name>CScaleCalibrationEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
+    <filename>_c_scale_calibration_editor_comp_8h</filename>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <class kind="class">iqtcam::CScaleCalibrationEditorComp</class>
+    <namespace>iqtcam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSnapImageGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_snap_image_gui_comp_8h</filename>
@@ -2352,14 +2360,6 @@
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_numeric_value_widget_8h</filename>
     <class kind="class">iqtmeas::CNumericValueWidget</class>
-    <namespace>iqtmeas</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CScaleCalibrationEditorComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
-    <filename>_c_scale_calibration_editor_comp_8h</filename>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
-    <class kind="class">iqtmeas::CScaleCalibrationEditorComp</class>
     <namespace>iqtmeas</namespace>
   </compound>
   <compound kind="file">
@@ -15704,6 +15704,7 @@
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
     <class kind="class">iqtcam::CMultiBitmapSupplierGuiComp</class>
     <class kind="class">iqtcam::CMultiBitmapViewComp</class>
+    <class kind="class">iqtcam::CScaleCalibrationEditorComp</class>
     <class kind="class">iqtcam::CSnapImageGuiComp</class>
   </compound>
   <compound kind="class">
@@ -16233,6 +16234,39 @@
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
       <anchor>a1730dff2f3690ff472b349476a984125</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtcam::CScaleCalibrationEditorComp</name>
+    <filename>classiqtcam_1_1_c_scale_calibration_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CScaleCalibrationEditorComp, imeas::INumericValue &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CScaleCalibrationEditorComp, imeas::INumericValue &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a796add38f325a0903b86af77695a0ca5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>aa575081126f42680a2ba1a7ce9c4ce65</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a51456bb8bf4f792b70306118444316d2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a54c2805661f1a0c3f1fd6eb886a4d7c7</anchor>
+      <arglist>(int changeFlags)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18253,7 +18287,6 @@
     <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
     <class kind="class">iqtmeas::CNumericParamsGuiComp</class>
     <class kind="class">iqtmeas::CNumericValueWidget</class>
-    <class kind="class">iqtmeas::CScaleCalibrationEditorComp</class>
   </compound>
   <compound kind="class">
     <name>iqtmeas::CDataSequenceViewComp</name>
@@ -18501,67 +18534,6 @@
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>a02af3b5f5b151fda2ebbe7321a126a9a</anchor>
       <arglist>(int value)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtmeas::CScaleCalibrationEditorComp</name>
-    <filename>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CScaleCalibrationEditorComp, imeas::INumericValue &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CScaleCalibrationEditorComp, imeas::INumericValue &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>a895f0e947ad75960046ceed934869702</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnValueChanged</name>
-      <anchorfile>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>a65bb1b0437be27d7267f21a7b1d90c5f</anchor>
-      <arglist>(double)</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>on_CalibrateButton_clicked</name>
-      <anchorfile>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>a9c3fc8193cc37ce5134c8259bcfc9487</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>on_NominalRadiusSpinBox_valueChanged</name>
-      <anchorfile>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>a784d86650325b4ff0df8412cac46155d</anchor>
-      <arglist>(double d)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>adef397afcbb4a0677b67b96a84c0d23d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>a78ef0317676f7628e8d1f10691a2bade</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>ab77f366bc58a1a4b25f13f250e75f75a</anchor>
-      <arglist>(int changeFlags)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtmeas_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>abb56b86808e481b2593a29a0fe74c0df</anchor>
-      <arglist>(int changeFlags)</arglist>
     </member>
   </compound>
   <compound kind="namespace">

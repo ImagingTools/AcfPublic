@@ -25,6 +25,7 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
+#include "istd/CIdManipBase.h"
 
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
@@ -55,6 +56,21 @@ bool CComponentAddress::IsValid() const
 QString CComponentAddress::ToString() const
 {
 	return m_packageId + "/" + m_componentId;
+}
+
+
+bool CComponentAddress::FromString(const QString& address)
+{
+	QByteArray packageId;
+	QByteArray componentId;
+	if (istd::CIdManipBase::SplitId(address.toUtf8(), packageId, componentId)){
+		m_packageId = packageId;
+		m_componentId = componentId;
+
+		return true;
+	}
+
+	return false;
 }
 
 

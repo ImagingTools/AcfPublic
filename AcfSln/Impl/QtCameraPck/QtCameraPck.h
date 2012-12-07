@@ -30,6 +30,7 @@
 #include "iqtcam/CBitmapSupplierGuiComp.h"
 #include "iqtcam/CMultiBitmapSupplierGuiComp.h"
 #include "iqtcam/CMultiBitmapViewComp.h"
+#include <iqtcam/CScaleCalibrationEditorComp.h>
 
 
 /**
@@ -45,6 +46,7 @@ typedef iqtcam::CExposureParamsGuiComp ExposureParamsGui;
 typedef iqtcam::CBitmapSupplierGuiComp SnapBitmapSupplierGui;
 typedef iqtcam::CMultiBitmapSupplierGuiComp SnapMultiBitmapSupplierGui;
 typedef iqtcam::CMultiBitmapViewComp MultiBitmapView;
+typedef iqtcam::CScaleCalibrationEditorComp ScaleCalibrationEditor;
 
 
 } // namespace QtCameraPck

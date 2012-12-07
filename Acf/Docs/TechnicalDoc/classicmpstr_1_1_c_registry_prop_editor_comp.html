@@ -34,6 +34,8 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
@@ -76,14 +78,29 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html">TextLog</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#ad9ff19a492913cba2e361bf84d6268a6">ItemType</a> { <a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#ad9ff19a492913cba2e361bf84d6268a6a4f5ef2bf067c535d3d308bb54e5b1121">IT_EXPORTED_INTERFACE</a>, 
+<a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#ad9ff19a492913cba2e361bf84d6268a6a167a416c365d71eb70eeda2e1eaaea48">IT_EXPORTED_COMPONENT</a>
+ }</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a2017d4c1d45860a5b900029b7ce5bddd">DataRole</a> { <a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a2017d4c1d45860a5b900029b7ce5bddda2a1ffc2d21f0ea8a43c680e002f69bd7">DR_COMPONENT_ID</a> =  Qt::UserRole + 1, 
+<a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a2017d4c1d45860a5b900029b7ce5bddda1d6ced433a05697d0220136b43b300a0">DR_ITEM_TYPE</a> =  Qt::UserRole + 2, 
+<a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a2017d4c1d45860a5b900029b7ce5bdddabbe08122217fef89e12ea11dcff0c2aa">DR_EXPORT_ID</a> =  Qt::UserRole + 3
+ }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak"/>
 &lt; Ui::CRegistryPropEditorComp, <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a7f563286d72f70f0876c597aab4df7fb">BaseClass</a></td></tr>
+<tr><td colspan="2"><h2><a name="signals"></a>
+Signals</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#ad939ae74d4897aa3b0399ac4e3368ec6">AfterExportsChanged</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a6c84ce3dcc221ea075e122ef7c25b2b0">I_ASSIGN_TO</a> (m_envManagerModelCompPtr, m_envManagerCompPtr, false)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a19c2cba91104605272949b3fdd7ece2b">on_DescriptionEdit_editingFinished</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a59687224cc8abcbd0293f5ed1e4a3d22">OnUpdateExportsTree</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a2c333abe41d8d056a4abddea54268c84">OnUpdateKeywords</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a19c2cba91104605272949b3fdd7ece2b">on_DescriptionEdit_editingFinished</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a2bc276d95cdd7d26b760358cda6ea5bf">on_OverviewTree_itemChanged</a> (QTreeWidgetItem *itemPtr, int column)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#abcf81cdf39601a8fa85a5314b38cd1ea">CreateOverview</a> ()</td></tr>
@@ -117,7 +134,73 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a2017d4c1d45860a5b900029b7ce5bddd"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::DataRole" ref="a2017d4c1d45860a5b900029b7ce5bddd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#a2017d4c1d45860a5b900029b7ce5bddd">icmpstr::CRegistryPropEditorComp::DataRole</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a2017d4c1d45860a5b900029b7ce5bddda2a1ffc2d21f0ea8a43c680e002f69bd7"></a><!-- doxytag: member="DR_COMPONENT_ID" ref="a2017d4c1d45860a5b900029b7ce5bddda2a1ffc2d21f0ea8a43c680e002f69bd7" args="" -->DR_COMPONENT_ID</em>&nbsp;</td><td>
+<p>ID of the interface or. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a2017d4c1d45860a5b900029b7ce5bddda1d6ced433a05697d0220136b43b300a0"></a><!-- doxytag: member="DR_ITEM_TYPE" ref="a2017d4c1d45860a5b900029b7ce5bddda1d6ced433a05697d0220136b43b300a0" args="" -->DR_ITEM_TYPE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a2017d4c1d45860a5b900029b7ce5bdddabbe08122217fef89e12ea11dcff0c2aa"></a><!-- doxytag: member="DR_EXPORT_ID" ref="a2017d4c1d45860a5b900029b7ce5bdddabbe08122217fef89e12ea11dcff0c2aa" args="" -->DR_EXPORT_ID</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_c_registry_prop_editor_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_registry_prop_editor_comp_8h_source.html">CRegistryPropEditorComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad9ff19a492913cba2e361bf84d6268a6"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::ItemType" ref="ad9ff19a492913cba2e361bf84d6268a6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp.html#ad9ff19a492913cba2e361bf84d6268a6">icmpstr::CRegistryPropEditorComp::ItemType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ad9ff19a492913cba2e361bf84d6268a6a4f5ef2bf067c535d3d308bb54e5b1121"></a><!-- doxytag: member="IT_EXPORTED_INTERFACE" ref="ad9ff19a492913cba2e361bf84d6268a6a4f5ef2bf067c535d3d308bb54e5b1121" args="" -->IT_EXPORTED_INTERFACE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad9ff19a492913cba2e361bf84d6268a6a167a416c365d71eb70eeda2e1eaaea48"></a><!-- doxytag: member="IT_EXPORTED_COMPONENT" ref="ad9ff19a492913cba2e361bf84d6268a6a167a416c365d71eb70eeda2e1eaaea48" args="" -->IT_EXPORTED_COMPONENT</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_c_registry_prop_editor_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_registry_prop_editor_comp_8h_source.html">CRegistryPropEditorComp.h</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ad939ae74d4897aa3b0399ac4e3368ec6"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::AfterExportsChanged" ref="ad939ae74d4897aa3b0399ac4e3368ec6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CRegistryPropEditorComp::AfterExportsChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="abcf81cdf39601a8fa85a5314b38cd1ea"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::CreateOverview" ref="abcf81cdf39601a8fa85a5314b38cd1ea" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -134,6 +217,39 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6c84ce3dcc221ea075e122ef7c25b2b0"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::I_ASSIGN_TO" ref="a6c84ce3dcc221ea075e122ef7c25b2b0" args="(m_envManagerModelCompPtr, m_envManagerCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">icmpstr::CRegistryPropEditorComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_envManagerModelCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_envManagerCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a19c2cba91104605272949b3fdd7ece2b"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::on_DescriptionEdit_editingFinished" ref="a19c2cba91104605272949b3fdd7ece2b" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -143,6 +259,33 @@ Protected Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2bc276d95cdd7d26b760358cda6ea5bf"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::on_OverviewTree_itemChanged" ref="a2bc276d95cdd7d26b760358cda6ea5bf" args="(QTreeWidgetItem *itemPtr, int column)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CRegistryPropEditorComp::on_OverviewTree_itemChanged </td>
+          <td>(</td>
+          <td class="paramtype">QTreeWidgetItem *&#160;</td>
+          <td class="paramname"><em>itemPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -207,6 +350,22 @@ Protected Member Functions</h2></td></tr>
 <p>Called when model is detached or GUI is destroyed. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#afc147af79bf4d1551e4a41800c1461d0">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CRegistryPropEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a59687224cc8abcbd0293f5ed1e4a3d22"></a><!-- doxytag: member="icmpstr::CRegistryPropEditorComp::OnUpdateExportsTree" ref="a59687224cc8abcbd0293f5ed1e4a3d22" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void icmpstr::CRegistryPropEditorComp::OnUpdateExportsTree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

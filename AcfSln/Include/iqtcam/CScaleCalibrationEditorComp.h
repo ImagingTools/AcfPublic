@@ -27,8 +27,8 @@
  * Created on 29 listopad 2012, 13:50
  */
 
-#ifndef iqtmeas_CScaleCalibrationEditorComp_included
-#define	iqtmeas_CScaleCalibrationEditorComp_included
+#ifndef iqtcam_CScaleCalibrationEditorComp_included
+#define	iqtcam_CScaleCalibrationEditorComp_included
 
 
 // Qt includes
@@ -36,14 +36,17 @@
 #include <QtGui/QGroupBox>
 
 
-// ACF includes
+// Acf includes
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
-#include <imeas/INumericValueProvider.h>
 #include <istd/TPointerVector.h>
+
+// AcfSln includes
+#include <imeas/INumericValueProvider.h>
+
 
 #include "Generated/ui_CScaleCalibrationEditorComp.h"
 
-namespace iqtmeas
+namespace iqtcam
 {
 
 
@@ -51,7 +54,6 @@ class CScaleCalibrationEditorComp:
 public iqtgui::TDesignerGuiObserverCompBase<
 Ui::CScaleCalibrationEditorComp, imeas::INumericValue>
 {
-	Q_OBJECT
 public:
 	typedef iqtgui::TDesignerGuiObserverCompBase<
 	Ui::CScaleCalibrationEditorComp, imeas::INumericValue> BaseClass;
@@ -72,21 +74,19 @@ protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void UpdateGui(int changeFlags);
 
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateEditor(int changeFlags);
-
-	public
-Q_SLOTS:
+	Q_OBJECT
+	private Q_SLOTS:
 	void OnValueChanged(double);
 	void on_CalibrateButton_clicked();
 	void on_NominalRadiusSpinBox_valueChanged(double d);
+
 private:
 	I_REF(imeas::INumericValueProvider, m_circleProviderPtr);
 };
 
 
-} // namespace iqtmeas
+} // namespace iqtcam
 
 
-#endif	/* iqtmeas_CScaleCalibrationEditorComp_included */
+#endif	/* iqtcam_CScaleCalibrationEditorComp_included */
 

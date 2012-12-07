@@ -1432,6 +1432,7 @@
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_registry_prop_editor_comp_8h</filename>
     <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
+    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
     <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_checkable_combo_box_8h" name="CCheckableComboBox.h" local="yes" imported="no">iqtgui/CCheckableComboBox.h</includes>
@@ -4455,6 +4456,17 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CStatusGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_status_gui_comp_8h</filename>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="yes" imported="no">ibase/TModelObserverCompWrap.h</includes>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
+    <class kind="class">iqtgui::CStatusGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTabbedMultiViewGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_tabbed_multi_view_gui_comp_8h</filename>
@@ -5680,6 +5692,16 @@
     <filename>_c_color_shema_base_8h</filename>
     <includes id="_i_color_shema_8h" name="IColorShema.h" local="yes" imported="no">iview/IColorShema.h</includes>
     <class kind="class">iview::CColorShemaBase</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CColorShemaComp.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_color_shema_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_color_shema_8h" name="CColorShema.h" local="yes" imported="no">iview/CColorShema.h</includes>
+    <class kind="class">iview::CColorShemaCompAttr</class>
+    <class kind="class">iview::CColorShemaComp</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -12508,6 +12530,13 @@
       <anchor>a3ed96cb6c8fc2272e3f2768dec162165</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>a9846eb811712ac2f6b5fd830e0844bcb</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ibase::CSize</name>
@@ -17990,12 +18019,82 @@
     <filename>classicmpstr_1_1_c_registry_prop_editor_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CRegistryPropEditorComp, icomp::IRegistry &gt;</base>
     <class kind="class">icmpstr::CRegistryPropEditorComp::TextLog</class>
+    <member kind="enumeration">
+      <name>ItemType</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ad9ff19a492913cba2e361bf84d6268a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IT_EXPORTED_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ad9ff19a492913cba2e361bf84d6268a6a4f5ef2bf067c535d3d308bb54e5b1121</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>IT_EXPORTED_COMPONENT</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ad9ff19a492913cba2e361bf84d6268a6a167a416c365d71eb70eeda2e1eaaea48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>DataRole</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a2017d4c1d45860a5b900029b7ce5bddd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_COMPONENT_ID</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a2017d4c1d45860a5b900029b7ce5bddda2a1ffc2d21f0ea8a43c680e002f69bd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_ITEM_TYPE</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a2017d4c1d45860a5b900029b7ce5bddda1d6ced433a05697d0220136b43b300a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_EXPORT_ID</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a2017d4c1d45860a5b900029b7ce5bdddabbe08122217fef89e12ea11dcff0c2aa</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CRegistryPropEditorComp, icomp::IRegistry &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>a7f563286d72f70f0876c597aab4df7fb</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>AfterExportsChanged</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ad939ae74d4897aa3b0399ac4e3368ec6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a6c84ce3dcc221ea075e122ef7c25b2b0</anchor>
+      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnUpdateExportsTree</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a59687224cc8abcbd0293f5ed1e4a3d22</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnUpdateKeywords</name>
+      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a2c333abe41d8d056a4abddea54268c84</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -18006,10 +18105,10 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>OnUpdateKeywords</name>
+      <name>on_OverviewTree_itemChanged</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2c333abe41d8d056a4abddea54268c84</anchor>
-      <arglist>()</arglist>
+      <anchor>a2bc276d95cdd7d26b760358cda6ea5bf</anchor>
+      <arglist>(QTreeWidgetItem *itemPtr, int column)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -18149,22 +18248,22 @@
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a7126ee713526d3fa9d708679a90d00ae</anchor>
-      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface)</arglist>
+      <anchor>a3be850de34f944af6d007944c8b1d84c</anchor>
+      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>ada3f5b36cb97b4f55b9528d024ecb365</anchor>
-      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel)</arglist>
+      <anchor>aa356fe794040936c194f88bee98e291b</anchor>
+      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a6fab23972905eb5d932805e41047aa3e</anchor>
-      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable)</arglist>
+      <anchor>a680647bcd3ed46dfb4845ad01d1b4a38</anchor>
+      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -18291,27 +18390,6 @@
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>a46868cad39114b2305d075cbfa52797c</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static IElementSelectionInfo *</type>
-      <name>ExtractSelectionInterface</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a5234adeefe64dbcc43c4f1dd96b7e8e2</anchor>
-      <arglist>(CRegistryTreeViewComp &amp;component)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static imod::IModel *</type>
-      <name>ExtractSelectionInterfaceModel</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a3735d95675b6483ccc224acd1d807768</anchor>
-      <arglist>(CRegistryTreeViewComp &amp;component)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static istd::IChangeable *</type>
-      <name>ExtractSelectionInterfaceChangeable</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>afbc72362f098310ffe5f9b6ee2cbc204</anchor>
-      <arglist>(CRegistryTreeViewComp &amp;component)</arglist>
     </member>
     <member kind="friend">
       <type>friend class</type>
@@ -18881,22 +18959,22 @@
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ad6823f83b1eb612268ed27447f4e810a</anchor>
-      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface)</arglist>
+      <anchor>a8ddf4c8f53b700d096a67c75de0adcf5</anchor>
+      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a8823c212bee5d338d5fdc4001acebee4</anchor>
-      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel)</arglist>
+      <anchor>abb429094bada7d2e9e7823b6760203b9</anchor>
+      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ad2ef8080be4f247a47ff6063032e6517</anchor>
-      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable)</arglist>
+      <anchor>a86948f76cad0f1f62cacc96c31aa3eed</anchor>
+      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -19296,27 +19374,6 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>ab5b47a8ef4c9e14d2fb82421a9f8036f</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static IElementSelectionInfo *</type>
-      <name>ExtractSelectionInterface</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a552f47a4770b653aa992d2351edfb555</anchor>
-      <arglist>(CVisualRegistryEditorComp &amp;component)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static imod::IModel *</type>
-      <name>ExtractSelectionInterfaceModel</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a027eede96df6977af9b5b40c84cf2543</anchor>
-      <arglist>(CVisualRegistryEditorComp &amp;component)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static istd::IChangeable *</type>
-      <name>ExtractSelectionInterfaceChangeable</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a6e68c1b3cf8ceba830a8f158012223e9</anchor>
-      <arglist>(CVisualRegistryEditorComp &amp;component)</arglist>
     </member>
     <member kind="friend">
       <type>friend class</type>
@@ -20297,6 +20354,13 @@
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
       <anchor>ab2113545edc370cbfd94ae69be3f05a3</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>FromString</name>
+      <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
+      <anchor>a099673f7182aa8abe0c9e6c5725d11bb</anchor>
+      <arglist>(const QString &amp;address)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -36535,29 +36599,29 @@
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a2e2dd9cb592cf660cf350efc62f5cdde</anchor>
-      <arglist>(DocumentSelection, iprm::ISelectionParam, ExtractSelectionInterface)</arglist>
+      <anchor>acdff88af57bd5bbf8c8e25b92fc386f4</anchor>
+      <arglist>(DocumentSelection, iprm::ISelectionParam, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>ae45043f63f881c395ed5af376232c428</anchor>
-      <arglist>(DocumentSelection, imod::IModel, ExtractSelectionInterfaceModel)</arglist>
+      <anchor>af16ab0c417f1056f6a9318a8e067cf61</anchor>
+      <arglist>(DocumentSelection, imod::IModel, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a6a181e71347da640d7986210b9980708</anchor>
-      <arglist>(DocumentSelection, istd::IChangeable, ExtractSelectionInterfaceChangeable)</arglist>
+      <anchor>a1a0c247b5704fa11c108103536f62adf</anchor>
+      <arglist>(DocumentSelection, istd::IChangeable, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>aaf6305e6839d78cdc42c6f590b6423e3</anchor>
-      <arglist>(DocumentSelection, iprm::ISelectionConstraints, ExtractSelectionInterfaceConstraints)</arglist>
+      <anchor>a5d03eee5e6e70caf3a8592165302431d</anchor>
+      <arglist>(DocumentSelection, iprm::ISelectionConstraints, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -37016,6 +37080,7 @@
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <class kind="class">iqtgui::CStatusBarWidgetComp</class>
+    <class kind="class">iqtgui::CStatusGuiComp</class>
     <class kind="class">iqtgui::CTabbedMultiViewGuiComp</class>
     <class kind="class">iqtgui::CTabContainerGuiComp</class>
     <class kind="class">iqtgui::CTableBasedModelEditorComp</class>
@@ -39185,6 +39250,32 @@
       <anchorfile>classiqtgui_1_1_c_status_bar_widget_comp.html</anchorfile>
       <anchor>a95f80f155dc4bd36bcb27060b340b057</anchor>
       <arglist>(QMainWindow &amp;mainWindow)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CStatusGuiComp</name>
+    <filename>classiqtgui_1_1_c_status_gui_comp.html</filename>
+    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QLabel &gt;, imod::TSingleModelObserverBase&lt; istd::IInformationProvider &gt; &gt; &gt;</base>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QLabel &gt;, imod::TSingleModelObserverBase&lt; istd::IInformationProvider &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_status_gui_comp.html</anchorfile>
+      <anchor>aab4aeb9cda7c2f9523edeb448971088f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtgui_1_1_c_status_gui_comp.html</anchorfile>
+      <anchor>aa5a236d4984011a8b5eb7b0a268007f2</anchor>
+      <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_status_gui_comp.html</anchorfile>
+      <anchor>a14fdec1abc89476fb18a4691e8f1d016</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -48204,6 +48295,8 @@
     <class kind="class">iview::CCalibrationShapeBase</class>
     <class kind="class">iview::CColorShema</class>
     <class kind="class">iview::CColorShemaBase</class>
+    <class kind="class">iview::CColorShemaCompAttr</class>
+    <class kind="class">iview::CColorShemaComp</class>
     <class kind="class">iview::CConsoleBase</class>
     <class kind="class">iview::CConsoleGui</class>
     <class kind="class">iview::CDrawBuffer</class>
@@ -48754,6 +48847,38 @@
       <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
       <anchor>a42dd94e258c0b8ca8bb40ad6320d52f6</anchor>
       <arglist>[(int) TT_LAST+(int) 1]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CColorShemaCompAttr</name>
+    <filename>classiview_1_1_c_color_shema_comp_attr.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iview::CColorShema</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_color_shema_comp_attr.html</anchorfile>
+      <anchor>a1b3f3fea6eb22303d44f6595659c2863</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CColorShemaComp</name>
+    <filename>classiview_1_1_c_color_shema_comp.html</filename>
+    <base>iview::CColorShemaCompAttr</base>
+    <member kind="typedef">
+      <type>CColorShemaCompAttr</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_color_shema_comp.html</anchorfile>
+      <anchor>a9d9472663f6e4f6e5797ed44176e24d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiview_1_1_c_color_shema_comp.html</anchorfile>
+      <anchor>a19df88117b54dec3c0d50875c3c264b5</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

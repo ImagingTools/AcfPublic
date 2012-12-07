@@ -576,6 +576,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a6ce03d62ec88ab97a1e4afa9f8b93ba2</anchor>
+      <arglist>(AdjustConstraints, istd::IChangeable, ExtractAdjustContraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>I_REGISTER_SUBELEMENT</name>
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>a3ebfa80d0f88de3ec91215c4e326abde</anchor>
@@ -587,6 +594,13 @@
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>a09920bb780cd86274139b641154452ff</anchor>
       <arglist>(ExposureConstraints, icam::IExposureConstraints, ExtractExposureContraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>acd8960063a9cd71e164a1704ba15bb4a</anchor>
+      <arglist>(ExposureConstraints, istd::IChangeable, ExtractExposureContraints)</arglist>
     </member>
     <member kind="function">
       <type></type>

@@ -86,9 +86,9 @@
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059        I_BEGIN_COMPONENT(<a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>);
 <a name="l00060"></a>00060               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#aa411c26929e956e859e22c0b969e8609">I_REGISTER_SUBELEMENT</a>(SelectionInfo);
-<a name="l00061"></a>00061               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a7126ee713526d3fa9d708679a90d00ae">I_REGISTER_SUBELEMENT_INTERFACE</a>(SelectionInfo, <a class="code" href="classicmpstr_1_1_i_element_selection_info.html" title="Interface containing all information about registry selected element.">IElementSelectionInfo</a>, <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a5234adeefe64dbcc43c4f1dd96b7e8e2">ExtractSelectionInterface</a>);
-<a name="l00062"></a>00062               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a7126ee713526d3fa9d708679a90d00ae">I_REGISTER_SUBELEMENT_INTERFACE</a>(SelectionInfo, <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a3735d95675b6483ccc224acd1d807768">ExtractSelectionInterfaceModel</a>);
-<a name="l00063"></a>00063               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a7126ee713526d3fa9d708679a90d00ae">I_REGISTER_SUBELEMENT_INTERFACE</a>(SelectionInfo, <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>, <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#afbc72362f098310ffe5f9b6ee2cbc204">ExtractSelectionInterfaceChangeable</a>);
+<a name="l00061"></a>00061               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a3be850de34f944af6d007944c8b1d84c">I_REGISTER_SUBELEMENT_INTERFACE</a>(SelectionInfo, <a class="code" href="classicmpstr_1_1_i_element_selection_info.html" title="Interface containing all information about registry selected element.">IElementSelectionInfo</a>, ExtractSelectionInfo);
+<a name="l00062"></a>00062               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a3be850de34f944af6d007944c8b1d84c">I_REGISTER_SUBELEMENT_INTERFACE</a>(SelectionInfo, <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, ExtractSelectionInfo);
+<a name="l00063"></a>00063               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a3be850de34f944af6d007944c8b1d84c">I_REGISTER_SUBELEMENT_INTERFACE</a>(SelectionInfo, <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>, ExtractSelectionInfo);
 <a name="l00064"></a>00064               I_ASSIGN(m_envManagerCompPtr, <span class="stringliteral">&quot;MetaInfoManager&quot;</span>, <span class="stringliteral">&quot;Allows access to component meta information&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MetaInfoManager&quot;</span>);
 <a name="l00065"></a>00065               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a760efde492bdaa904643a49069355ebe">I_ASSIGN_TO</a>(m_envManagerModelCompPtr, m_envManagerCompPtr, <span class="keyword">false</span>);
 <a name="l00066"></a>00066               I_ASSIGN(m_consistInfoCompPtr, <span class="stringliteral">&quot;ConsistencyInfo&quot;</span>, <span class="stringliteral">&quot;Allows to check consistency of registries and attributes&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ConsistencyInfo&quot;</span>);
@@ -143,65 +143,67 @@
 <a name="l00129"></a>00129        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a2a7154a1725b761d3ff3a562214514ef">OnComponentCreated</a>();
 <a name="l00130"></a>00130        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a46868cad39114b2305d075cbfa52797c">OnComponentDestroyed</a>();
 <a name="l00131"></a>00131 
-<a name="l00132"></a>00132        <span class="comment">// static methods</span>
-<a name="l00133"></a>00133        <span class="keyword">static</span> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html" title="Interface containing all information about registry selected element.">IElementSelectionInfo</a>* <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a5234adeefe64dbcc43c4f1dd96b7e8e2">ExtractSelectionInterface</a>(<a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>&amp; component);
-<a name="l00134"></a>00134        <span class="keyword">static</span> <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a3735d95675b6483ccc224acd1d807768">ExtractSelectionInterfaceModel</a>(<a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>&amp; component);
-<a name="l00135"></a>00135        <span class="keyword">static</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#afbc72362f098310ffe5f9b6ee2cbc204">ExtractSelectionInterfaceChangeable</a>(<a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>&amp; component);
-<a name="l00136"></a>00136 
-<a name="l00137"></a>00137 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00138"></a>00138        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#ae919cd4f57bd58a5da90584b226950b3">on_RegistryTree_itemSelectionChanged</a>();
-<a name="l00139"></a>00139        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a5d46540820341fab37b940c4a5111855">on_RegistryTree_itemDoubleClicked</a>(QTreeWidgetItem* itemPtr, <span class="keywordtype">int</span> column);
-<a name="l00140"></a>00140        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a52e20c218ba9ba5ac50481a431f7d921">on_FilterEdit_textChanged</a>(<span class="keyword">const</span> QString&amp; filterText);
-<a name="l00141"></a>00141        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#aa0992bd84925b9f59cac28e19d7b8925">on_ShowOnlyErrorsCheck_stateChanged</a>(<span class="keywordtype">int</span> state);
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143 <span class="keyword">private</span>:
-<a name="l00144"></a>00144        <span class="keyword">class </span>SelectionInfoImpl: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html" title="Interface containing all information about registry selected element.">IElementSelectionInfo</a>
-<a name="l00145"></a>00145        {
-<a name="l00146"></a>00146        <span class="keyword">public</span>:
-<a name="l00147"></a>00147               <span class="keywordtype">void</span> SetParent(<a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>* parentPtr);
-<a name="l00148"></a>00148 
-<a name="l00149"></a>00149               <span class="comment">// reimplemented (icmpstr::IElementSelectionInfo)</span>
-<a name="l00150"></a>00150               <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* GetSelectedRegistry() <span class="keyword">const</span>;
-<a name="l00151"></a>00151               <span class="keyword">virtual</span> Elements GetSelectedElements() <span class="keyword">const</span>;
-<a name="l00152"></a>00152 
-<a name="l00153"></a>00153        <span class="keyword">private</span>:
-<a name="l00154"></a>00154               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>* m_parentPtr;
-<a name="l00155"></a>00155        };
-<a name="l00156"></a>00156 
-<a name="l00157"></a><a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a1ecffae37bd7adb0d052fdefe2de32db">00157</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classimod_1_1_t_model_wrap.html" title="This model wrapper provides a simple connection between a concrete istd::IChangeable implementation a...">imod::TModelWrap</a>&lt;SelectionInfoImpl&gt;;
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
-<a name="l00160"></a>00160        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_envManagerModelCompPtr);
-<a name="l00161"></a>00161        I_REF(<a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>, m_consistInfoCompPtr);
-<a name="l00162"></a>00162        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164        <span class="keyword">typedef</span> QSet&lt;QByteArray&gt; ElementIds;
-<a name="l00165"></a>00165        
-<a name="l00166"></a>00166        <span class="keyword">struct </span>SelectedElements
-<a name="l00167"></a>00167        {
-<a name="l00168"></a>00168               SelectedElements()
-<a name="l00169"></a>00169                      :registryPtr(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)
-<a name="l00170"></a>00170               {
-<a name="l00171"></a>00171               }
-<a name="l00172"></a>00172 
-<a name="l00173"></a>00173               ElementIds selectedElementIds;
-<a name="l00174"></a>00174               <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* registryPtr;
-<a name="l00175"></a>00175        };
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177        SelectedElements m_selectedElements;
+<a name="l00132"></a>00132 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00133"></a>00133        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#ae919cd4f57bd58a5da90584b226950b3">on_RegistryTree_itemSelectionChanged</a>();
+<a name="l00134"></a>00134        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a5d46540820341fab37b940c4a5111855">on_RegistryTree_itemDoubleClicked</a>(QTreeWidgetItem* itemPtr, <span class="keywordtype">int</span> column);
+<a name="l00135"></a>00135        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a52e20c218ba9ba5ac50481a431f7d921">on_FilterEdit_textChanged</a>(<span class="keyword">const</span> QString&amp; filterText);
+<a name="l00136"></a>00136        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#aa0992bd84925b9f59cac28e19d7b8925">on_ShowOnlyErrorsCheck_stateChanged</a>(<span class="keywordtype">int</span> state);
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138 <span class="keyword">private</span>:
+<a name="l00139"></a>00139        <span class="keyword">class </span>SelectionInfoImpl: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html" title="Interface containing all information about registry selected element.">IElementSelectionInfo</a>
+<a name="l00140"></a>00140        {
+<a name="l00141"></a>00141        <span class="keyword">public</span>:
+<a name="l00142"></a>00142               <span class="keywordtype">void</span> SetParent(<a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>* parentPtr);
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144               <span class="comment">// reimplemented (icmpstr::IElementSelectionInfo)</span>
+<a name="l00145"></a>00145               <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* GetSelectedRegistry() <span class="keyword">const</span>;
+<a name="l00146"></a>00146               <span class="keyword">virtual</span> Elements GetSelectedElements() <span class="keyword">const</span>;
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148        <span class="keyword">private</span>:
+<a name="l00149"></a>00149               <a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>* m_parentPtr;
+<a name="l00150"></a>00150        };
+<a name="l00151"></a>00151 
+<a name="l00152"></a><a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a1ecffae37bd7adb0d052fdefe2de32db">00152</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classimod_1_1_t_model_wrap.html" title="This model wrapper provides a simple connection between a concrete istd::IChangeable implementation a...">imod::TModelWrap</a>&lt;SelectionInfoImpl&gt;;
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154        <span class="comment">// static template methods for subelement access</span>
+<a name="l00155"></a>00155        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
+<a name="l00156"></a>00156        <span class="keyword">static</span> InterfaceType* ExtractSelectionInfo(<a class="code" href="classicmpstr_1_1_c_registry_tree_view_comp.html">CRegistryTreeViewComp</a>&amp; component)
+<a name="l00157"></a>00157        {
+<a name="l00158"></a>00158               <span class="keywordflow">return</span> &amp;component.m_selectionInfo;
+<a name="l00159"></a>00159        }
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
+<a name="l00162"></a>00162        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_envManagerModelCompPtr);
+<a name="l00163"></a>00163        I_REF(<a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>, m_consistInfoCompPtr);
+<a name="l00164"></a>00164        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166        <span class="keyword">typedef</span> QSet&lt;QByteArray&gt; ElementIds;
+<a name="l00167"></a>00167        
+<a name="l00168"></a>00168        <span class="keyword">struct </span>SelectedElements
+<a name="l00169"></a>00169        {
+<a name="l00170"></a>00170               SelectedElements()
+<a name="l00171"></a>00171                      :registryPtr(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)
+<a name="l00172"></a>00172               {
+<a name="l00173"></a>00173               }
+<a name="l00174"></a>00174 
+<a name="l00175"></a>00175               ElementIds selectedElementIds;
+<a name="l00176"></a>00176               <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* registryPtr;
+<a name="l00177"></a>00177        };
 <a name="l00178"></a>00178 
-<a name="l00179"></a>00179        EnvironmentObserver m_environmentObserver;
+<a name="l00179"></a>00179        SelectedElements m_selectedElements;
 <a name="l00180"></a>00180 
-<a name="l00181"></a>00181        <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;SelectionInfoImpl&gt;</a> m_selectionInfo;
-<a name="l00182"></a>00182 };
-<a name="l00183"></a>00183 
-<a name="l00184"></a>00184 
-<a name="l00185"></a>00185 } <span class="comment">// namespace icmpstr</span>
+<a name="l00181"></a>00181        EnvironmentObserver m_environmentObserver;
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183        <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;SelectionInfoImpl&gt;</a> m_selectionInfo;
+<a name="l00184"></a>00184 };
+<a name="l00185"></a>00185 
 <a name="l00186"></a>00186 
-<a name="l00187"></a>00187 
-<a name="l00188"></a>00188 <span class="preprocessor">#endif // !icmpstr_CRegistryTreeViewComp_included</span>
-<a name="l00189"></a>00189 <span class="preprocessor"></span>
-<a name="l00190"></a>00190 
+<a name="l00187"></a>00187 } <span class="comment">// namespace icmpstr</span>
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189 
+<a name="l00190"></a>00190 <span class="preprocessor">#endif // !icmpstr_CRegistryTreeViewComp_included</span>
+<a name="l00191"></a>00191 <span class="preprocessor"></span>
+<a name="l00192"></a>00192 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

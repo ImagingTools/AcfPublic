@@ -69,26 +69,27 @@
 <a name="l00045"></a>00045 <span class="keyword">protected</span>:
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a3ed96cb6c8fc2272e3f2768dec162165">OnComponentCreated</a>();
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">private</span>:
-<a name="l00053"></a>00053        <span class="keyword">struct </span>RunningProcessInfo
-<a name="l00054"></a>00054        {
-<a name="l00055"></a>00055               qint64 processId;
-<a name="l00056"></a>00056        };
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
-<a name="l00059"></a>00059        I_REF(<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a>, m_slaveApplicationCompPtr);
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QSharedMemory&gt;</a> m_processData;
-<a name="l00062"></a>00062        <span class="keywordtype">bool</span> m_isAlreadyRunning;
-<a name="l00063"></a>00063 };
-<a name="l00064"></a>00064 
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a9846eb811712ac2f6b5fd830e0844bcb">OnComponentDestroyed</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keyword">private</span>:
+<a name="l00054"></a>00054        <span class="keyword">struct </span>RunningProcessInfo
+<a name="l00055"></a>00055        {
+<a name="l00056"></a>00056               qint64 processId;
+<a name="l00057"></a>00057        };
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
+<a name="l00060"></a>00060        I_REF(<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a>, m_slaveApplicationCompPtr);
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QSharedMemory&gt;</a> m_processData;
+<a name="l00063"></a>00063        <span class="keywordtype">bool</span> m_isAlreadyRunning;
+<a name="l00064"></a>00064 };
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066 } <span class="comment">// namespace ibase</span>
-<a name="l00067"></a>00067 
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 } <span class="comment">// namespace ibase</span>
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="preprocessor">#endif // ibase_CSingletonApplicationComp_included</span>
-<a name="l00070"></a>00070 <span class="preprocessor"></span>
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="preprocessor">#endif // ibase_CSingletonApplicationComp_included</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

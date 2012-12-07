@@ -38,7 +38,6 @@
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">icmpstr::CVisualRegistryEditorComp Class Reference</div>  </div>
@@ -88,9 +87,9 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a2be0ca698a596382a666aeca507de9a9">I_REGISTER_SUBELEMENT</a> (SelectionInfo)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ad6823f83b1eb612268ed27447f4e810a">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classicmpstr_1_1_i_element_selection_info.html">IElementSelectionInfo</a>, ExtractSelectionInterface)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8823c212bee5d338d5fdc4001acebee4">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>, ExtractSelectionInterfaceModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ad2ef8080be4f247a47ff6063032e6517">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractSelectionInterfaceChangeable)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8ddf4c8f53b700d096a67c75de0adcf5">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classicmpstr_1_1_i_element_selection_info.html">IElementSelectionInfo</a>, ExtractSelectionInfo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#abb429094bada7d2e9e7823b6760203b9">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>, ExtractSelectionInfo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a86948f76cad0f1f62cacc96c31aa3eed">I_REGISTER_SUBELEMENT_INTERFACE</a> (SelectionInfo, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractSelectionInfo)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a0c4a36fcb6f07ee291614101d9c3f2d2">I_ASSIGN_TO</a> (m_sceneProviderGuiCompPtr, m_sceneProviderCompPtr, true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ab3b9115aaaf6bd8e11e484fcd50f0c49">I_ASSIGN_TO</a> (m_envManagerModelCompPtr, m_envManagerCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ae7389e7d6c27724af87baf8d5956cf04">I_ASSIGN_TO</a> (m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</td></tr>
@@ -183,11 +182,6 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be detached.  <a href="#af4d64289ff0173a223146e2a0a72445f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8205212eeb4d97087b2ac4b2d47686b4">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ab5b47a8ef4c9e14d2fb82421a9f8036f">OnComponentDestroyed</a> ()</td></tr>
-<tr><td colspan="2"><h2><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classicmpstr_1_1_i_element_selection_info.html">IElementSelectionInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a552f47a4770b653aa992d2351edfb555">ExtractSelectionInterface</a> (<a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a> &amp;component)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a027eede96df6977af9b5b40c84cf2543">ExtractSelectionInterfaceModel</a> (<a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a> &amp;component)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a6e68c1b3cf8ceba830a8f158012223e9">ExtractSelectionInterfaceChangeable</a> (<a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a> &amp;component)</td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a1ecffae37bd7adb0d052fdefe2de32db">imod::TModelWrap&lt; SelectionInfoImpl &gt;</a></td></tr>
@@ -399,57 +393,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a552f47a4770b653aa992d2351edfb555"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::ExtractSelectionInterface" ref="a552f47a4770b653aa992d2351edfb555" args="(CVisualRegistryEditorComp &amp;component)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="classicmpstr_1_1_i_element_selection_info.html">IElementSelectionInfo</a>* icmpstr::CVisualRegistryEditorComp::ExtractSelectionInterface </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a> &amp;&#160;</td>
-          <td class="paramname"><em>component</em></td><td>)</td>
-          <td><code> [static, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6e68c1b3cf8ceba830a8f158012223e9"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::ExtractSelectionInterfaceChangeable" ref="a6e68c1b3cf8ceba830a8f158012223e9" args="(CVisualRegistryEditorComp &amp;component)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* icmpstr::CVisualRegistryEditorComp::ExtractSelectionInterfaceChangeable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a> &amp;&#160;</td>
-          <td class="paramname"><em>component</em></td><td>)</td>
-          <td><code> [static, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a027eede96df6977af9b5b40c84cf2543"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::ExtractSelectionInterfaceModel" ref="a027eede96df6977af9b5b40c84cf2543" args="(CVisualRegistryEditorComp &amp;component)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>* icmpstr::CVisualRegistryEditorComp::ExtractSelectionInterfaceModel </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a> &amp;&#160;</td>
-          <td class="paramname"><em>component</em></td><td>)</td>
-          <td><code> [static, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="abd12be132c99494d0ef120818c896c92"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::GetAcceptedMimeIds" ref="abd12be132c99494d0ef120818c896c92" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -537,7 +480,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00303">303</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00305">305</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
 
 </div>
 </div>
@@ -555,7 +498,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00309">309</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00311">311</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +669,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad6823f83b1eb612268ed27447f4e810a"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="ad6823f83b1eb612268ed27447f4e810a" args="(SelectionInfo, IElementSelectionInfo, ExtractSelectionInterface)" -->
+<a class="anchor" id="a8ddf4c8f53b700d096a67c75de0adcf5"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="a8ddf4c8f53b700d096a67c75de0adcf5" args="(SelectionInfo, IElementSelectionInfo, ExtractSelectionInfo)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -745,7 +688,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ExtractSelectionInterface&#160;</td>
+          <td class="paramtype">ExtractSelectionInfo&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -759,7 +702,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8823c212bee5d338d5fdc4001acebee4"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="a8823c212bee5d338d5fdc4001acebee4" args="(SelectionInfo, imod::IModel, ExtractSelectionInterfaceModel)" -->
+<a class="anchor" id="abb429094bada7d2e9e7823b6760203b9"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="abb429094bada7d2e9e7823b6760203b9" args="(SelectionInfo, imod::IModel, ExtractSelectionInfo)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -778,7 +721,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ExtractSelectionInterfaceModel&#160;</td>
+          <td class="paramtype">ExtractSelectionInfo&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -792,7 +735,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad2ef8080be4f247a47ff6063032e6517"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="ad2ef8080be4f247a47ff6063032e6517" args="(SelectionInfo, istd::IChangeable, ExtractSelectionInterfaceChangeable)" -->
+<a class="anchor" id="a86948f76cad0f1f62cacc96c31aa3eed"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="a86948f76cad0f1f62cacc96c31aa3eed" args="(SelectionInfo, istd::IChangeable, ExtractSelectionInfo)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -811,7 +754,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ExtractSelectionInterfaceChangeable&#160;</td>
+          <td class="paramtype">ExtractSelectionInfo&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -1457,7 +1400,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00239">239</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00234">234</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
 
 </div>
 </div>

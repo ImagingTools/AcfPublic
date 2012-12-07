@@ -22,7 +22,6 @@
 
 #include "QtMeasPck.h"
 
-
 #include "icomp/export.h"
 
 #include "iqtgui/iqtgui.h"
@@ -54,12 +53,6 @@ I_EXPORT_COMPONENT(
 			NumericParamsGui,
 			"Editor for numeric parameters",
 			"Numeric Values Filter Ranges Parameter Editor");
-
-I_EXPORT_COMPONENT(
-			ScaleCalibrationEditor,
-			"Editor for scale calibration parameters",
-			"Scale Calibration Numeric Values Filter Ranges Parameter Editor");
-
 
 } // namespace QtMeasPck
 

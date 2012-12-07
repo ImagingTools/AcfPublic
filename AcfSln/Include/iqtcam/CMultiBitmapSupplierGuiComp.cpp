@@ -24,7 +24,7 @@
 
 
 // Qt includes
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 // ACF includes
 #include "iview/CImageShape.h"
