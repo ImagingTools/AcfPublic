@@ -3966,6 +3966,7 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_shape_params_gui_comp_base_8h</filename>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_i_color_shema_8h" name="IColorShema.h" local="yes" imported="no">iview/IColorShema.h</includes>
     <includes id="_c_shape_control_8h" name="CShapeControl.h" local="yes" imported="no">iview/CShapeControl.h</includes>
     <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="yes" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
