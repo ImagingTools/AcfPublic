@@ -37642,8 +37642,8 @@
       <type>static void</type>
       <name>AppendLoaderFilterList</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a0d294bee6aff390daabd58ac83187d0f</anchor>
-      <arglist>(const iser::IFileTypeInfo &amp;fileTypeInfo, int flags, QString &amp;allExt, QStringList &amp;result)</arglist>
+      <anchor>a13bfc6a8db73cf5b9ba79a1cb53898ea</anchor>
+      <arglist>(const iser::IFileTypeInfo &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
