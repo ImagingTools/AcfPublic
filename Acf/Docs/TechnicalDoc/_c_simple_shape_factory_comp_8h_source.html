@@ -50,25 +50,27 @@
 <a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classiview_1_1_c_simple_shape_factory_comp.html" title="Simple shape factory for common 2D-objects.">CSimpleShapeFactoryComp</a>);
 <a name="l00026"></a>00026               I_REGISTER_INTERFACE(<a class="code" href="classiview_1_1_i_shape_factory.html" title="Interface for creation of visualization shapes of some geometrical object.">IShapeFactory</a>);
 <a name="l00027"></a>00027               I_ASSIGN(m_useInteractiveShapesAttrPtr, <span class="stringliteral">&quot;UseInteractiveShapes&quot;</span>, <span class="stringliteral">&quot;If true, the created shapes will be editable&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00028"></a>00028        I_END_COMPONENT;
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="comment">// reimplemented (IShapeFactory)</span>
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">IShape</a>* <a class="code" href="classiview_1_1_c_simple_shape_factory_comp.html#ab876f759b4fbe669cc73173510bede85" title="Create a graphical representation of the given 2D-object object.">CreateShape</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">i2d::IObject2d</a>&amp; <span class="keywordtype">object</span>, <span class="keywordtype">bool</span> connectToModel = <span class="keyword">false</span>) <span class="keyword">const</span>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">protected</span>:
-<a name="l00034"></a>00034        <a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">IShape</a>* <a class="code" href="classiview_1_1_c_simple_shape_factory_comp.html#aabaab327ca685abc6f879353f39451ad">CreateShapeInstance</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">i2d::IObject2d</a>&amp; <span class="keywordtype">object</span>) <span class="keyword">const</span>;
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keyword">private</span>:
-<a name="l00037"></a>00037        I_ATTR(<span class="keywordtype">bool</span>, m_useInteractiveShapesAttrPtr);
-<a name="l00038"></a>00038 };
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 } <span class="comment">// namespace iview</span>
+<a name="l00028"></a>00028               I_ASSIGN(m_colorSchemaCompPtr, <span class="stringliteral">&quot;ShapeColorShema&quot;</span>, <span class="stringliteral">&quot;Color shema used by displayed shape&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ShapeColorShema&quot;</span>);
+<a name="l00029"></a>00029        I_END_COMPONENT;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031        <span class="comment">// reimplemented (IShapeFactory)</span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">IShape</a>* <a class="code" href="classiview_1_1_c_simple_shape_factory_comp.html#ab876f759b4fbe669cc73173510bede85" title="Create a graphical representation of the given 2D-object object.">CreateShape</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">i2d::IObject2d</a>&amp; <span class="keywordtype">object</span>, <span class="keywordtype">bool</span> connectToModel = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="keyword">protected</span>:
+<a name="l00035"></a>00035        <a class="code" href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes.">IShape</a>* <a class="code" href="classiview_1_1_c_simple_shape_factory_comp.html#aabaab327ca685abc6f879353f39451ad">CreateShapeInstance</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects.">i2d::IObject2d</a>&amp; <span class="keywordtype">object</span>) <span class="keyword">const</span>;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keyword">private</span>:
+<a name="l00038"></a>00038        I_ATTR(<span class="keywordtype">bool</span>, m_useInteractiveShapesAttrPtr);
+<a name="l00039"></a>00039        I_REF(<a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">iview::IColorShema</a>, m_colorSchemaCompPtr);
+<a name="l00040"></a>00040 };
+<a name="l00041"></a>00041 
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="preprocessor">#endif // !iview_CSimpleShapeFactoryComp_included</span>
-<a name="l00045"></a>00045 <span class="preprocessor"></span>
-<a name="l00046"></a>00046 
+<a name="l00043"></a>00043 } <span class="comment">// namespace iview</span>
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="preprocessor">#endif // !iview_CSimpleShapeFactoryComp_included</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>
+<a name="l00048"></a>00048 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
