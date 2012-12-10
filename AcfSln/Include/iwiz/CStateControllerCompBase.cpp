@@ -100,5 +100,11 @@ bool CStateControllerCompBase::TryLeaveState(bool /*isActionAllowed*/, const ISt
 }
 
 
+bool CStateControllerCompBase::IsResetAllowed() const
+{
+	return true;
+}
+
+
 } // namespace iwiz
 

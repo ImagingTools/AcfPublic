@@ -71,6 +71,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#aad776f793e4411937efd0e28b5844c22">IsLeaveAllowed</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#ae4a9d09e2338f1e9ecbd8b10aecb13f0">TryEnterState</a> (bool isActionAllowed=true, const IStateController *prevStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a968f83a78d97ae83d947f3e01f565182">TryLeaveState</a> (bool isActionAllowed=true, const IStateController *nextStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a87c27ae0a29ab6a7eb5318e0c6150145">IsResetAllowed</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if reseting is allowed.  <a href="#a87c27ae0a29ab6a7eb5318e0c6150145"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#af88f2e5ad552056e01d1d08371c9617a">m_isStateActive</a></td></tr>
@@ -166,6 +168,27 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a87c27ae0a29ab6a7eb5318e0c6150145"></a><!-- doxytag: member="iwiz::CStateControllerCompBase::IsResetAllowed" ref="a87c27ae0a29ab6a7eb5318e0c6150145" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iwiz::CStateControllerCompBase::IsResetAllowed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if reseting is allowed. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a506d51ef30b7e46193435ae37eebaa94">IsEnterAllowed</a></code>. </dd></dl>
+
+<p>Implements <a class="el" href="classiproc_1_1_i_state_controller.html#a4b9408b12c5261468ff9c400a3dbae85">iproc::IStateController</a>.</p>
 
 </div>
 </div>
@@ -278,7 +301,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_state_controller_comp_base_8h_source.html#l00040">40</a> of file <a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_state_controller_comp_base_8h_source.html#l00041">41</a> of file <a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -293,7 +316,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_state_controller_comp_base_8h_source.html#l00041">41</a> of file <a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_state_controller_comp_base_8h_source.html#l00042">42</a> of file <a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -308,7 +331,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_state_controller_comp_base_8h_source.html#l00038">38</a> of file <a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_state_controller_comp_base_8h_source.html#l00039">39</a> of file <a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -323,7 +346,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_state_controller_comp_base_8h_source.html#l00039">39</a> of file <a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_state_controller_comp_base_8h_source.html#l00040">40</a> of file <a class="el" href="_c_state_controller_comp_base_8h_source.html">CStateControllerCompBase.h</a>.</p>
 
 </div>
 </div>

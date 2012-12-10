@@ -66,43 +66,44 @@
 <a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#adb2b54ca995b5e0c912ade390f60c193">IsLeaveAllowed</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* nextStatePtr = NULL) <span class="keyword">const</span>;
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a59778663108c255cb7692548d0fcbc7e">TryEnterState</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* prevStatePtr = NULL);
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#ab27e54bbfb3a8d617c5d3c447f60df1e">TryLeaveState</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* nextStatePtr = NULL);
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">protected</span>:
-<a name="l00048"></a>00048        <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#afd4520cee9dc51014ecab4804834c7ce">EnsureCacheValid</a>() <span class="keyword">const</span>;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a979b007e2905abaa789607dba38d358a">CheckParamConsistency</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>&amp; param) <span class="keyword">const</span>;
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00053"></a>00053        <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a7c7d6006ef1988fb41c237713321cce6">OnComponentCreated</a>();
-<a name="l00054"></a>00054        <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#abb0fff8770aca84fe9173540ab72db0e">OnComponentDestroyed</a>();
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a850e765b710a67ade3d79d2579653b05">BeforeUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af96287d76a58b6a6d2a9d5af136a995c">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="keyword">private</span>:
-<a name="l00061"></a>00061        I_MULTIREF(<a class="code" href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info.">iproc::IStateController</a>, m_enterDependenciesCompPtr);
-<a name="l00062"></a>00062        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_enterDependenciesModelCompPtr);
-<a name="l00063"></a>00063        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>, m_leaveCondParamsCompPtr);
-<a name="l00064"></a>00064        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_leaveCondParamModelsCompPtr);
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="keywordtype">bool</span> m_isStateActive;
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isCacheValid;
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <span class="comment">// cached values</span>
-<a name="l00071"></a>00071        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isStateEnabled;
-<a name="l00072"></a>00072        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isEnterAllowed;
-<a name="l00073"></a>00073        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isLeaveAllowed;
-<a name="l00074"></a>00074 };
-<a name="l00075"></a>00075 
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a8d57f0b1a34604c7f538932a9e91c613" title="Check if reseting is allowed.">IsResetAllowed</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">protected</span>:
+<a name="l00049"></a>00049        <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#afd4520cee9dc51014ecab4804834c7ce">EnsureCacheValid</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a979b007e2905abaa789607dba38d358a">CheckParamConsistency</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>&amp; param) <span class="keyword">const</span>;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00054"></a>00054        <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a7c7d6006ef1988fb41c237713321cce6">OnComponentCreated</a>();
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#abb0fff8770aca84fe9173540ab72db0e">OnComponentDestroyed</a>();
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a850e765b710a67ade3d79d2579653b05">BeforeUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#af96287d76a58b6a6d2a9d5af136a995c">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="keyword">private</span>:
+<a name="l00062"></a>00062        I_MULTIREF(<a class="code" href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info.">iproc::IStateController</a>, m_enterDependenciesCompPtr);
+<a name="l00063"></a>00063        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_enterDependenciesModelCompPtr);
+<a name="l00064"></a>00064        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>, m_leaveCondParamsCompPtr);
+<a name="l00065"></a>00065        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_leaveCondParamModelsCompPtr);
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="keywordtype">bool</span> m_isStateActive;
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isCacheValid;
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071        <span class="comment">// cached values</span>
+<a name="l00072"></a>00072        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isStateEnabled;
+<a name="l00073"></a>00073        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isEnterAllowed;
+<a name="l00074"></a>00074        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isLeaveAllowed;
+<a name="l00075"></a>00075 };
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077 } <span class="comment">// namespace iwiz</span>
-<a name="l00078"></a>00078 
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 } <span class="comment">// namespace iwiz</span>
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="preprocessor">#endif // !iwiz_CSelectionConsistencyController_included</span>
-<a name="l00081"></a>00081 <span class="preprocessor"></span>
-<a name="l00082"></a>00082 
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif // !iwiz_CSelectionConsistencyController_included</span>
+<a name="l00082"></a>00082 <span class="preprocessor"></span>
+<a name="l00083"></a>00083 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -79,6 +79,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Try enter this state.  <a href="#a206ddfb8927d571047516503ca243b3d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_state_controller.html#adec23e99e03a45c23beef49b5e56e264">TryLeaveState</a> (bool isActionAllowed=true, const <a class="el" href="classiproc_1_1_i_state_controller.html">IStateController</a> *nextStatePtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Try leave this state.  <a href="#adec23e99e03a45c23beef49b5e56e264"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiproc_1_1_i_state_controller.html#a4b9408b12c5261468ff9c400a3dbae85">IsResetAllowed</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if reseting is allowed.  <a href="#a4b9408b12c5261468ff9c400a3dbae85"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for a wizard page status info. </p>
@@ -186,6 +188,27 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if this state can be leaved. If state is not active, it return true, if we can enter and then leave this state. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b9408b12c5261468ff9c400a3dbae85"></a><!-- doxytag: member="iproc::IStateController::IsResetAllowed" ref="a4b9408b12c5261468ff9c400a3dbae85" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iproc::IStateController::IsResetAllowed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if reseting is allowed. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><code><a class="el" href="classiproc_1_1_i_state_controller.html#a6ed859c9b3171d0e77e3a0d3268b6782" title="Check if entering of this page is allowed.">IsEnterAllowed</a></code>. </dd></dl>
+
+<p>Implemented in <a class="el" href="classiwiz_1_1_c_composed_state_controller_comp.html#a36228b2c0bd2cbce1d969eb9694b83f2">iwiz::CComposedStateControllerComp</a>, <a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html#a8d57f0b1a34604c7f538932a9e91c613">iwiz::CSelectionConsistencyControllerComp</a>, and <a class="el" href="classiwiz_1_1_c_state_controller_comp_base.html#a87c27ae0a29ab6a7eb5318e0c6150145">iwiz::CStateControllerCompBase</a>.</p>
 
 </div>
 </div>

@@ -57,15 +57,17 @@
 <a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_i_state_controller.html#a206ddfb8927d571047516503ca243b3d" title="Try enter this state.">TryEnterState</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info.">IStateController</a>* prevStatePtr = NULL) = 0;
 <a name="l00065"></a>00065 
 <a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_i_state_controller.html#adec23e99e03a45c23beef49b5e56e264" title="Try leave this state.">TryLeaveState</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> <a class="code" href="classiproc_1_1_i_state_controller.html" title="Interface for a wizard page status info.">IStateController</a>* nextStatePtr = NULL) = 0;
-<a name="l00073"></a>00073 };
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 } <span class="comment">// namespace iproc</span>
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="preprocessor">#endif // !iproc_IStateController_included</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span>
+<a name="l00073"></a>00073 
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_i_state_controller.html#a4b9408b12c5261468ff9c400a3dbae85" title="Check if reseting is allowed.">IsResetAllowed</a>() <span class="keyword">const</span> = 0;
+<a name="l00079"></a>00079 };
+<a name="l00080"></a>00080 
 <a name="l00081"></a>00081 
+<a name="l00082"></a>00082 } <span class="comment">// namespace iproc</span>
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="preprocessor">#endif // !iproc_IStateController_included</span>
+<a name="l00086"></a>00086 <span class="preprocessor"></span>
+<a name="l00087"></a>00087 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

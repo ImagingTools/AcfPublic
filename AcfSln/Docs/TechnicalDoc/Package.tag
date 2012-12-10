@@ -13785,6 +13785,13 @@
       <anchor>adec23e99e03a45c23beef49b5e56e264</anchor>
       <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)=0</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsResetAllowed</name>
+      <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
+      <anchor>a4b9408b12c5261468ff9c400a3dbae85</anchor>
+      <arglist>() const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iproc::ISupplier</name>
@@ -20216,6 +20223,13 @@
       <anchor>a93ebbcf68555bd222ea01adba7876d5b</anchor>
       <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsResetAllowed</name>
+      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
+      <anchor>a36228b2c0bd2cbce1d969eb9694b83f2</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>UpdateAllMembers</name>
@@ -20313,6 +20327,13 @@
       <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
       <anchor>ab27e54bbfb3a8d617c5d3c447f60df1e</anchor>
       <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsResetAllowed</name>
+      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
+      <anchor>a8d57f0b1a34604c7f538932a9e91c613</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -20418,6 +20439,13 @@
       <anchor>a968f83a78d97ae83d947f3e01f565182</anchor>
       <arglist>(bool isActionAllowed=true, const IStateController *nextStatePtr=NULL)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsResetAllowed</name>
+      <anchorfile>classiwiz_1_1_c_state_controller_comp_base.html</anchorfile>
+      <anchor>a87c27ae0a29ab6a7eb5318e0c6150145</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
       <name>m_isStateActive</name>
@@ -20507,6 +20535,13 @@
       <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
       <anchor>a9871dd469285f426c81601352598d18c</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>a7423cfd6033e42b53f514eeaa300b2e9</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

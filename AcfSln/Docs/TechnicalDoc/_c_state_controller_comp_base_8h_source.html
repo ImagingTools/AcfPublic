@@ -59,21 +59,22 @@
 <a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#aad776f793e4411937efd0e28b5844c22">IsLeaveAllowed</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* nextStatePtr = NULL) <span class="keyword">const</span>;
 <a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#ae4a9d09e2338f1e9ecbd8b10aecb13f0">TryEnterState</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* prevStatePtr = NULL);
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a968f83a78d97ae83d947f3e01f565182">TryLeaveState</a>(<span class="keywordtype">bool</span> isActionAllowed = <span class="keyword">true</span>, <span class="keyword">const</span> IStateController* nextStatePtr = NULL);
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keyword">protected</span>:
-<a name="l00038"></a><a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#af88f2e5ad552056e01d1d08371c9617a">00038</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#af88f2e5ad552056e01d1d08371c9617a">m_isStateActive</a>;
-<a name="l00039"></a><a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a1552f05cbd09bee34d1be0ab868dd514">00039</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a1552f05cbd09bee34d1be0ab868dd514">m_isStateEnabled</a>;
-<a name="l00040"></a><a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a8c12d1e21cf7af8dbf3d6ac5148c1d02">00040</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a8c12d1e21cf7af8dbf3d6ac5148c1d02">m_isEnterAllowed</a>;
-<a name="l00041"></a><a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a83cd677255434b57480c73330c15ab29">00041</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a83cd677255434b57480c73330c15ab29">m_isLeaveAllowed</a>;
-<a name="l00042"></a>00042 };
-<a name="l00043"></a>00043 
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a87c27ae0a29ab6a7eb5318e0c6150145" title="Check if reseting is allowed.">IsResetAllowed</a>() <span class="keyword">const</span>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">protected</span>:
+<a name="l00039"></a><a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#af88f2e5ad552056e01d1d08371c9617a">00039</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#af88f2e5ad552056e01d1d08371c9617a">m_isStateActive</a>;
+<a name="l00040"></a><a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a1552f05cbd09bee34d1be0ab868dd514">00040</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a1552f05cbd09bee34d1be0ab868dd514">m_isStateEnabled</a>;
+<a name="l00041"></a><a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a8c12d1e21cf7af8dbf3d6ac5148c1d02">00041</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a8c12d1e21cf7af8dbf3d6ac5148c1d02">m_isEnterAllowed</a>;
+<a name="l00042"></a><a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a83cd677255434b57480c73330c15ab29">00042</a>        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="classiwiz_1_1_c_state_controller_comp_base.html#a83cd677255434b57480c73330c15ab29">m_isLeaveAllowed</a>;
+<a name="l00043"></a>00043 };
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 } <span class="comment">// namespace iwiz</span>
-<a name="l00046"></a>00046 
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 } <span class="comment">// namespace iwiz</span>
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="preprocessor">#endif // !iwiz_CStateControllerCompBase_included</span>
-<a name="l00049"></a>00049 <span class="preprocessor"></span>
-<a name="l00050"></a>00050 
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="preprocessor">#endif // !iwiz_CStateControllerCompBase_included</span>
+<a name="l00050"></a>00050 <span class="preprocessor"></span>
+<a name="l00051"></a>00051 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

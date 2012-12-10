@@ -177,7 +177,8 @@ bool CWizardDocumentComp::SetSelectedOptionIndex(int index)
 		return BaseClass::SetSelectedOptionIndex(index);
 	}
 	else{
-		return BaseClass::SetSelectedOptionIndex(-1);
+		BaseClass::SetSelectedOptionIndex(-1);
+		return false;
 	}
 }
 
@@ -204,7 +205,20 @@ bool CWizardDocumentComp::Serialize(iser::IArchive& archive)
 		}
 	}
 
-	bool retVal = BaseClass::Serialize(archive);
+	bool retVal = true;
+	if (m_additionalObjectsCompPtr.IsValid())
+	{
+		static iser::CArchiveTag additionalObjectsTag("AdditionalObjects", "Additional persistent objects");
+		retVal = retVal && archive.BeginTag(additionalObjectsTag);
+		int count = m_additionalObjectsCompPtr.GetCount();
+		for (int index = 0; retVal && (index < count); ++index)
+		{
+			retVal = retVal && m_additionalObjectsCompPtr[index]->Serialize(archive);
+		}
+		retVal = retVal && archive.EndTag(additionalObjectsTag);
+	}
+
+	retVal = retVal && BaseClass::Serialize(archive);
 
 	if (!isStoring){
 		int index = BaseClass::GetSelectedOptionIndex();
@@ -223,6 +237,20 @@ bool CWizardDocumentComp::Serialize(iser::IArchive& archive)
 	}
 
 	return retVal;
+}
+
+
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CWizardDocumentComp::OnComponentCreated()
+{
+	if (m_defaultPageIndexAttrPtr.IsValid()){
+		SetSelectedOptionIndex(*m_defaultPageIndexAttrPtr);
+	}
+
+	BaseClass::OnComponentCreated();
 }
 
 
