@@ -165,7 +165,7 @@
 <a name="l00155"></a>00155               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">iprm::ISelectionConstraints</a>* GetSelectionConstraints() <span class="keyword">const</span>;
 <a name="l00156"></a>00156               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetSelectedOptionIndex() <span class="keyword">const</span>;
 <a name="l00157"></a>00157               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SetSelectedOptionIndex(<span class="keywordtype">int</span> index);
-<a name="l00158"></a>00158               <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* GetActiveSubselection() <span class="keyword">const</span>;
+<a name="l00158"></a>00158               <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* GetSubselection(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00159"></a>00159 
 <a name="l00160"></a>00160               <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
 <a name="l00161"></a>00161               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetConstraintsFlags() <span class="keyword">const</span>;

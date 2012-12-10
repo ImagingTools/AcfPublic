@@ -4687,6 +4687,16 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CButtonBasedSelectionParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_button_based_selection_param_gui_comp_8h</filename>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtprm::CButtonBasedSelectionParamGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComboParamsManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_combo_params_manager_gui_comp_8h</filename>
@@ -31939,10 +31949,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>aa642cc2504bf5bbe95af78381c29eafa</anchor>
-      <arglist>() const </arglist>
+      <anchor>a542a100c3001ad0d297fdfd1b6373056</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32420,10 +32430,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a5e13a614caf1a70ad6e85325a876bd0b</anchor>
-      <arglist>() const </arglist>
+      <anchor>a4e9891005ac21c1c28d2f74a75e62a52</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32706,10 +32716,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a27d019f8c45d1b5bd1c31f3a4ea10364</anchor>
-      <arglist>() const </arglist>
+      <anchor>aa537c7c79285e3f418d7f6bdf2ae04f4</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32856,11 +32866,25 @@
       <arglist>(const ISelectionConstraints *constraintsPtr)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>SetSubselection</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>aedd786e17d3d57b37a3a3e6e01c40f2f</anchor>
+      <arglist>(int selectionIndex, ISelectionParam *selectionPtr)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>SetSelectedOptionById</name>
       <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
       <anchor>a25c45d6ac68349909993e7f2b7e08b23</anchor>
       <arglist>(const QByteArray &amp;selectedOptionId)</arglist>
+    </member>
+    <member kind="function">
+      <type>ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>aca40eeff3ae32951568150e8532f3f30</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ISelectionConstraints *</type>
@@ -32885,10 +32909,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>af49f760d6dc5aa409769052fa22af133</anchor>
-      <arglist>() const </arglist>
+      <anchor>acfc90335e62fb551c2b3db2b9daa67f7</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32919,10 +32943,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classiprm_1_1_c_selection_param_comp.html</anchorfile>
-      <anchor>a22fa27d40192dca98d0cc91afdb82c2c</anchor>
-      <arglist>() const </arglist>
+      <anchor>a49df58f637ea48caeabf45406af3910e</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -33379,10 +33403,10 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a5050ae7fc751c58748ebf67f7562fde1</anchor>
-      <arglist>() const =0</arglist>
+      <anchor>a65122ebc0e6fe3d5c654e63b6be39fdd</anchor>
+      <arglist>(int index) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40107,6 +40131,7 @@
   <compound kind="namespace">
     <name>iqtprm</name>
     <filename>namespaceiqtprm.html</filename>
+    <class kind="class">iqtprm::CButtonBasedSelectionParamGuiComp</class>
     <class kind="class">iqtprm::CComboParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CEnableableParamGuiComp</class>
@@ -40119,6 +40144,46 @@
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamIndexGuiComp</class>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::CButtonBasedSelectionParamGuiComp</name>
+    <filename>classiqtprm_1_1_c_button_based_selection_param_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CButtonBasedSelectionParamGuiComp, iprm::ISelectionParam &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CButtonBasedSelectionParamGuiComp, iprm::ISelectionParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>ad6b4d1a180eb3dba885152a6cfecc2c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnButtonClicked</name>
+      <anchorfile>classiqtprm_1_1_c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>ad108174262552f83e4420fe236449bda</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>a0f624911f06d8dcaf724ff6db25af016</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>a2a5206aad1af7836e0e43009ebbc0bf6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>a132d894e3cc5d99469f15fbabf83b45f</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtprm::CComboParamsManagerGuiComp</name>

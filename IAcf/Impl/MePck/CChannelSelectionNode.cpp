@@ -96,7 +96,7 @@ bool CChannelSelectionNode::SetSelectedOptionIndex(int index)
 }
 
 
-iprm::ISelectionParam* CChannelSelectionNode::GetActiveSubselection() const
+iprm::ISelectionParam* CChannelSelectionNode::GetSubselection(int /*index*/) const
 {
 	if (m_selectedIndex >= GetOptionsCount()){
 		return NULL;
@@ -181,7 +181,7 @@ bool CChannelSelectionNode::Serialize(iser::IArchive& archive)
 
 int CChannelSelectionNode::CalcSelectionDepth() const
 {
-	const CChannelSelectionNode* selectionPtr = dynamic_cast<CChannelSelectionNode*>(GetActiveSubselection());
+	const CChannelSelectionNode* selectionPtr = dynamic_cast<CChannelSelectionNode*>(GetSubselection(GetSelectedOptionIndex()));
 	if (selectionPtr != NULL){
 		return selectionPtr->CalcSelectionDepth() + 1;
 	}
@@ -210,7 +210,7 @@ bool CChannelSelectionNode::SerializeNode(iser::IArchive& archive, const iser::C
 		return false;
 	}
 
-	CChannelSelectionNode* selectionPtr = dynamic_cast<CChannelSelectionNode*>(GetActiveSubselection());
+	CChannelSelectionNode* selectionPtr = dynamic_cast<CChannelSelectionNode*>(GetSubselection(GetSelectedOptionIndex()));
 	if (selectionPtr != NULL){
 		return selectionPtr->SerializeNode(archive, nodeTag, count - 1);
 	}

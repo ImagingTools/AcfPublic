@@ -78,8 +78,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selected index.  <a href="#a0a417884429ac3874a717cfbb5a738f6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_param.html#a312f0ee035e39cd63d7d1c55b1e3c68a">SetSelectedOptionIndex</a> (int index)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set index of selected option.  <a href="#a312f0ee035e39cd63d7d1c55b1e3c68a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_param.html#a5050ae7fc751c58748ebf67f7562fde1">GetActiveSubselection</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#a5050ae7fc751c58748ebf67f7562fde1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_selection_param.html#a65122ebc0e6fe3d5c654e63b6be39fdd">GetSubselection</a> (int index) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#a65122ebc0e6fe3d5c654e63b6be39fdd"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface allowing to select single option from list of options. </p>
@@ -133,27 +133,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5050ae7fc751c58748ebf67f7562fde1"></a><!-- doxytag: member="iprm::ISelectionParam::GetActiveSubselection" ref="a5050ae7fc751c58748ebf67f7562fde1" args="() const =0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a>* iprm::ISelectionParam::GetActiveSubselection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get subselection for specified option. </p>
-<p>Please note, that returned options tree belongs to selection data model. </p>
-
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aa642cc2504bf5bbe95af78381c29eafa">iprm::CMultiParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a5e13a614caf1a70ad6e85325a876bd0b">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a27d019f8c45d1b5bd1c31f3a4ea10364">iprm::CSelectableParamsSetComp</a>, <a class="el" href="classiprm_1_1_c_selection_param_comp.html#a22fa27d40192dca98d0cc91afdb82c2c">iprm::CSelectionParamComp</a>, and <a class="el" href="classiprm_1_1_c_selection_param.html#af49f760d6dc5aa409769052fa22af133">iprm::CSelectionParam</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a0a417884429ac3874a717cfbb5a738f6"></a><!-- doxytag: member="iprm::ISelectionParam::GetSelectedOptionIndex" ref="a0a417884429ac3874a717cfbb5a738f6" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -192,6 +171,28 @@ Public Member Functions</h2></td></tr>
 <p>Constraints describes some additional information about allowed parameter ranges and related informations. </p>
 
 <p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#af78a2a3d3d37f830cd8b75a06a1dac3d">iprm::CMultiParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a016bc3ca5660823acc36f19f48a266c7">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a9102de3ef0cb0802961861b61f9372e1">iprm::CSelectableParamsSetComp</a>, and <a class="el" href="classiprm_1_1_c_selection_param.html#a34b4ebde658bfe48886ecd737d5fb697">iprm::CSelectionParam</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65122ebc0e6fe3d5c654e63b6be39fdd"></a><!-- doxytag: member="iprm::ISelectionParam::GetSubselection" ref="a65122ebc0e6fe3d5c654e63b6be39fdd" args="(int index) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a>* iprm::ISelectionParam::GetSubselection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get subselection for specified option. </p>
+<p>Please note, that returned options tree belongs to selection data model. </p>
+
+<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a542a100c3001ad0d297fdfd1b6373056">iprm::CMultiParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a4e9891005ac21c1c28d2f74a75e62a52">iprm::CParamsManagerComp</a>, <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#aa537c7c79285e3f418d7f6bdf2ae04f4">iprm::CSelectableParamsSetComp</a>, <a class="el" href="classiprm_1_1_c_selection_param.html#acfc90335e62fb551c2b3db2b9daa67f7">iprm::CSelectionParam</a>, and <a class="el" href="classiprm_1_1_c_selection_param_comp.html#a49df58f637ea48caeabf45406af3910e">iprm::CSelectionParamComp</a>.</p>
 
 </div>
 </div>

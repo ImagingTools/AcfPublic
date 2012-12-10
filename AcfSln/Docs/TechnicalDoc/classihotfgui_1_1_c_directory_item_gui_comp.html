@@ -69,7 +69,7 @@ Public Member Functions</h2></td></tr>
 <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotfgui_1_1_c_directory_item_gui_comp.html#ae2439ce949dbe3e43a990ee9f7f14a93">GetSelectionConstraints</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotfgui_1_1_c_directory_item_gui_comp.html#ac86ed061b6a8a323de011cc7ee5a3ca1">GetSelectedOptionIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotfgui_1_1_c_directory_item_gui_comp.html#a299f7cd0a14879b3ebee352cc96dc0a2">SetSelectedOptionIndex</a> (int index)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotfgui_1_1_c_directory_item_gui_comp.html#a03ab02b92347b85ff6ad942186c902ca">GetActiveSubselection</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotfgui_1_1_c_directory_item_gui_comp.html#a7b844dffac5e253bcc002e1d4926a769">GetSubselection</a> (int index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotfgui_1_1_c_directory_item_gui_comp.html#aff06c7f17c2a2b70dcbd8f0d81fea557">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classihotfgui_1_1_c_directory_item_gui_comp.html#a3e0723ff2cc4009e5e191b63d6ebe9c4">UpdateGui</a> (int updateFlags=0)</td></tr>
 </table>
@@ -112,24 +112,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a03ab02b92347b85ff6ad942186c902ca"></a><!-- doxytag: member="ihotfgui::CDirectoryItemGuiComp::GetActiveSubselection" ref="a03ab02b92347b85ff6ad942186c902ca" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>* ihotfgui::CDirectoryItemGuiComp::GetActiveSubselection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html#a5050ae7fc751c58748ebf67f7562fde1">iprm::ISelectionParam</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ac86ed061b6a8a323de011cc7ee5a3ca1"></a><!-- doxytag: member="ihotfgui::CDirectoryItemGuiComp::GetSelectedOptionIndex" ref="ac86ed061b6a8a323de011cc7ee5a3ca1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -163,6 +145,25 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html#a663506bb922ab4ac3ebc0bd52d741ff7">iprm::ISelectionParam</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b844dffac5e253bcc002e1d4926a769"></a><!-- doxytag: member="ihotfgui::CDirectoryItemGuiComp::GetSubselection" ref="a7b844dffac5e253bcc002e1d4926a769" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>* ihotfgui::CDirectoryItemGuiComp::GetSubselection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html#a65122ebc0e6fe3d5c654e63b6be39fdd">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div>

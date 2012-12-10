@@ -4921,10 +4921,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>ab8956a029e24f516ce185e4a417295d8</anchor>
-      <arglist>() const </arglist>
+      <anchor>af9524567f851f1a7b171aa5613c3b1c1</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -6610,10 +6610,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a03ab02b92347b85ff6ad942186c902ca</anchor>
-      <arglist>() const </arglist>
+      <anchor>a7b844dffac5e253bcc002e1d4926a769</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -17973,10 +17973,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_line_selection.html</anchorfile>
-      <anchor>abe9d2ed6ab11feba86c1bf80f51c6d5d</anchor>
-      <arglist>() const </arglist>
+      <anchor>a0f0158640f1908a78f4015cb38e9d6fd</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -19737,10 +19737,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
+      <name>GetSubselection</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>a119dd721625d290b7ee6cee31ca24e59</anchor>
-      <arglist>() const </arglist>
+      <anchor>a4a58786b10833aa65ddecd9bb897f250</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

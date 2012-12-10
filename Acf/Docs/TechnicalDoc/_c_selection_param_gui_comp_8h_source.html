@@ -121,30 +121,31 @@
 <a name="l00117"></a>00117        <span class="keywordtype">void</span> UpdateDescriptionFrame();
 <a name="l00118"></a>00118        <span class="keywordtype">void</span> UpdateSelectorLabel();
 <a name="l00119"></a>00119        <span class="keywordtype">void</span> ResetWidgets();
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121 <span class="keyword">private</span>:
-<a name="l00122"></a>00122        I_ATTR(QString, m_optionsLabelAttrPtr);
-<a name="l00123"></a>00123        I_ATTR(QString, m_infoLabelAttrPtr);
-<a name="l00124"></a>00124        I_ATTR(<span class="keywordtype">int</span>, m_uiModeAttrPtr);
-<a name="l00125"></a>00125        I_ATTR(<span class="keywordtype">int</span>, m_labelPositionAttrPtr);
-<a name="l00126"></a>00126        I_ATTR(<span class="keywordtype">int</span>, m_labelAlignAttrPtr);
-<a name="l00127"></a>00127        I_ATTR(<span class="keywordtype">int</span>, m_labelWidthAttrPtr);
-<a name="l00128"></a>00128        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_infoIconProviderCompPtr);
-<a name="l00129"></a>00129        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
-<a name="l00130"></a>00130 
-<a name="l00131"></a>00131        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QLabel&gt;</a> m_selectorLabelPtr;
-<a name="l00132"></a>00132        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QComboBox&gt;</a> m_comboBoxes;
-<a name="l00133"></a>00133        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QRadioButton&gt;</a> m_radioButtons;
-<a name="l00134"></a>00134        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QFrame&gt;</a> m_radioButtonFramePtr;
-<a name="l00135"></a>00135 };
-<a name="l00136"></a>00136 
+<a name="l00120"></a>00120        <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* GetActiveSubselection(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* selectionPtr) <span class="keyword">const</span>;
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="keyword">private</span>:
+<a name="l00123"></a>00123        I_ATTR(QString, m_optionsLabelAttrPtr);
+<a name="l00124"></a>00124        I_ATTR(QString, m_infoLabelAttrPtr);
+<a name="l00125"></a>00125        I_ATTR(<span class="keywordtype">int</span>, m_uiModeAttrPtr);
+<a name="l00126"></a>00126        I_ATTR(<span class="keywordtype">int</span>, m_labelPositionAttrPtr);
+<a name="l00127"></a>00127        I_ATTR(<span class="keywordtype">int</span>, m_labelAlignAttrPtr);
+<a name="l00128"></a>00128        I_ATTR(<span class="keywordtype">int</span>, m_labelWidthAttrPtr);
+<a name="l00129"></a>00129        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_infoIconProviderCompPtr);
+<a name="l00130"></a>00130        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QLabel&gt;</a> m_selectorLabelPtr;
+<a name="l00133"></a>00133        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QComboBox&gt;</a> m_comboBoxes;
+<a name="l00134"></a>00134        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QRadioButton&gt;</a> m_radioButtons;
+<a name="l00135"></a>00135        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QFrame&gt;</a> m_radioButtonFramePtr;
+<a name="l00136"></a>00136 };
 <a name="l00137"></a>00137 
-<a name="l00138"></a>00138 } <span class="comment">// namespace iqtprm</span>
-<a name="l00139"></a>00139 
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139 } <span class="comment">// namespace iqtprm</span>
 <a name="l00140"></a>00140 
-<a name="l00141"></a>00141 <span class="preprocessor">#endif // !iqtprm_CSelectionParamGuiComp_included</span>
-<a name="l00142"></a>00142 <span class="preprocessor"></span>
-<a name="l00143"></a>00143 
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142 <span class="preprocessor">#endif // !iqtprm_CSelectionParamGuiComp_included</span>
+<a name="l00143"></a>00143 <span class="preprocessor"></span>
+<a name="l00144"></a>00144 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

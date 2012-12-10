@@ -49,6 +49,12 @@ void CSelectionParam::SetSelectionConstraints(const ISelectionConstraints* const
 }
 
 
+void CSelectionParam::SetSubselection(int selectionIndex, ISelectionParam* selectionPtr)
+{
+	m_subselectionMap[selectionIndex] = selectionPtr;
+}
+
+
 bool CSelectionParam::SetSelectedOptionById(const QByteArray& selectedOptionId)
 {
 	I_ASSERT(!selectedOptionId.isEmpty());
@@ -67,6 +73,12 @@ bool CSelectionParam::SetSelectedOptionById(const QByteArray& selectedOptionId)
 	}
 
 	return false;
+}
+
+
+ISelectionParam* CSelectionParam::GetActiveSubselection() const
+{
+	return GetSubselection(m_selectedOptionIndex);
 }
 
 
@@ -104,8 +116,12 @@ bool CSelectionParam::SetSelectedOptionIndex(int index)
 }
 
 
-ISelectionParam* CSelectionParam::GetActiveSubselection() const
+ISelectionParam* CSelectionParam::GetSubselection(int index) const
 {
+	if (m_subselectionMap.contains(index)){
+		return m_subselectionMap[index];
+	}
+
 	return NULL;
 }
 

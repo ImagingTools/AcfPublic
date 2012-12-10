@@ -148,7 +148,7 @@ bool CSelectableParamsSetComp::SetSelectedOptionIndex(int index)
 }
 
 
-ISelectionParam* CSelectableParamsSetComp::GetActiveSubselection() const
+ISelectionParam* CSelectableParamsSetComp::GetSubselection(int /*index*/) const
 {
 	return NULL;
 }

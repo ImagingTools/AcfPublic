@@ -63,8 +63,13 @@ Inheritance diagram for iprm::CSelectionParam:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a682856613dedea8993eb43c39494dd28">CSelectionParam</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#ac61221fa183aa46fc798f165ac6f83bd">SetSelectionConstraints</a> (const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *constraintsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set selection constraints for this selection object.  <a href="#ac61221fa183aa46fc798f165ac6f83bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#aedd786e17d3d57b37a3a3e6e01c40f2f">SetSubselection</a> (int selectionIndex, <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *selectionPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sub-selection for a given option index.  <a href="#aedd786e17d3d57b37a3a3e6e01c40f2f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a25c45d6ac68349909993e7f2b7e08b23">SetSelectedOptionById</a> (const QByteArray &amp;selectedOptionId)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set selection index according to a given option ID.  <a href="#a25c45d6ac68349909993e7f2b7e08b23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#aca40eeff3ae32951568150e8532f3f30">GetActiveSubselection</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get sub-selection for the currently selected option.  <a href="#aca40eeff3ae32951568150e8532f3f30"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a34b4ebde658bfe48886ecd737d5fb697">GetSelectionConstraints</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#a34b4ebde658bfe48886ecd737d5fb697"></a><br/></td></tr>
@@ -72,8 +77,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selected index.  <a href="#a83de7a8b64b9a62a5ca877cf8ef03833"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a15a4c0f6a678cbce6057640185ce12e2">SetSelectedOptionIndex</a> (int index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set index of selected option.  <a href="#a15a4c0f6a678cbce6057640185ce12e2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#af49f760d6dc5aa409769052fa22af133">GetActiveSubselection</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#af49f760d6dc5aa409769052fa22af133"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#acfc90335e62fb551c2b3db2b9daa67f7">GetSubselection</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#acfc90335e62fb551c2b3db2b9daa67f7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a9181ff52653483ce16ba8d67268a8e86">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a9181ff52653483ce16ba8d67268a8e86"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -83,7 +88,7 @@ Protected Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Basic implementation of selection parameter. </p>
 
-<p>Definition at line <a class="el" href="_c_selection_param_8h_source.html#l00017">17</a> of file <a class="el" href="_c_selection_param_8h_source.html">CSelectionParam.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_selection_param_8h_source.html#l00021">21</a> of file <a class="el" href="_c_selection_param_8h_source.html">CSelectionParam.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a682856613dedea8993eb43c39494dd28"></a><!-- doxytag: member="iprm::CSelectionParam::CSelectionParam" ref="a682856613dedea8993eb43c39494dd28" args="()" -->
 <div class="memitem">
@@ -102,26 +107,21 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af49f760d6dc5aa409769052fa22af133"></a><!-- doxytag: member="iprm::CSelectionParam::GetActiveSubselection" ref="af49f760d6dc5aa409769052fa22af133" args="() const " -->
+<a class="anchor" id="aca40eeff3ae32951568150e8532f3f30"></a><!-- doxytag: member="iprm::CSelectionParam::GetActiveSubselection" ref="aca40eeff3ae32951568150e8532f3f30" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a>* iprm::CSelectionParam::GetActiveSubselection </td>
+          <td class="memname"><a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a>* iprm::CSelectionParam::GetActiveSubselection </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get subselection for specified option. </p>
-<p>Please note, that returned options tree belongs to selection data model. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a5050ae7fc751c58748ebf67f7562fde1">iprm::ISelectionParam</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classiprm_1_1_c_selection_param_comp.html#a22fa27d40192dca98d0cc91afdb82c2c">iprm::CSelectionParamComp</a>.</p>
+<p>Get sub-selection for the currently selected option. </p>
 
 </div>
 </div>
@@ -163,6 +163,30 @@ Protected Attributes</h2></td></tr>
 <p>Constraints describes some additional information about allowed parameter ranges and related informations. </p>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a663506bb922ab4ac3ebc0bd52d741ff7">iprm::ISelectionParam</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acfc90335e62fb551c2b3db2b9daa67f7"></a><!-- doxytag: member="iprm::CSelectionParam::GetSubselection" ref="acfc90335e62fb551c2b3db2b9daa67f7" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a>* iprm::CSelectionParam::GetSubselection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get subselection for specified option. </p>
+<p>Please note, that returned options tree belongs to selection data model. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a65122ebc0e6fe3d5c654e63b6be39fdd">iprm::ISelectionParam</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiprm_1_1_c_selection_param_comp.html#a49df58f637ea48caeabf45406af3910e">iprm::CSelectionParamComp</a>.</p>
 
 </div>
 </div>
@@ -245,6 +269,37 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Set selection constraints for this selection object. </p>
+
+</div>
+</div>
+<a class="anchor" id="aedd786e17d3d57b37a3a3e6e01c40f2f"></a><!-- doxytag: member="iprm::CSelectionParam::SetSubselection" ref="aedd786e17d3d57b37a3a3e6e01c40f2f" args="(int selectionIndex, ISelectionParam *selectionPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iprm::CSelectionParam::SetSubselection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selectionIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td>
+          <td class="paramname"><em>selectionPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set sub-selection for a given option index. </p>
+
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
@@ -259,7 +314,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_selection_param_8h_source.html#l00039">39</a> of file <a class="el" href="_c_selection_param_8h_source.html">CSelectionParam.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_selection_param_8h_source.html#l00056">56</a> of file <a class="el" href="_c_selection_param_8h_source.html">CSelectionParam.h</a>.</p>
 
 </div>
 </div>

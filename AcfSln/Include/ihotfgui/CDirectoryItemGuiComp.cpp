@@ -76,7 +76,7 @@ bool CDirectoryItemGuiComp::SetSelectedOptionIndex(int index)
 }
 
 
-iprm::ISelectionParam* CDirectoryItemGuiComp::GetActiveSubselection() const
+iprm::ISelectionParam* CDirectoryItemGuiComp::GetSubselection(int /*index*/) const
 {
 	return NULL;
 }
