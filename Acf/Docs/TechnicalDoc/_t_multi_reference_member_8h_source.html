@@ -50,7 +50,7 @@
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027        <a class="code" href="classicomp_1_1_t_multi_reference_member.html#a3fff5dcbd9ea59117b0a68f62d9791ee">TMultiReferenceMember</a>();
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_multi_reference_member.html#ad12da9202f85cbd5c529c975497d45f5">Init</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* ownerPtr, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_attribute_static_info.html" title="Interface adding to attribute static info functionality existing only for real attributes.">IRealAttributeStaticInfo</a>&amp; staticInfo);
+<a name="l00029"></a>00029        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_multi_reference_member.html#ad12da9202f85cbd5c529c975497d45f5" title="Internal initialize of attribute.">Init</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* ownerPtr, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_attribute_static_info.html" title="Interface adding to attribute static info functionality existing only for real attributes.">IRealAttributeStaticInfo</a>&amp; staticInfo);
 <a name="l00030"></a>00030 
 <a name="l00034"></a>00034        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_t_multi_reference_member.html#ab7292292f8dd5fbdc5d1380b90def73e" title="Check if this reference can be resolved.">IsValid</a>() <span class="keyword">const</span>;
 <a name="l00035"></a>00035 
@@ -80,9 +80,9 @@
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
-<a name="l00066"></a><a class="code" href="classicomp_1_1_t_multi_reference_member.html#ad12da9202f85cbd5c529c975497d45f5">00066</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_multi_reference_member.html#ad12da9202f85cbd5c529c975497d45f5">TMultiReferenceMember&lt;Interface&gt;::Init</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* ownerPtr, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_attribute_static_info.html" title="Interface adding to attribute static info functionality existing only for real attributes.">IRealAttributeStaticInfo</a>&amp; staticInfo)
+<a name="l00066"></a><a class="code" href="classicomp_1_1_t_multi_reference_member.html#ad12da9202f85cbd5c529c975497d45f5">00066</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_multi_reference_member.html#ad12da9202f85cbd5c529c975497d45f5" title="Internal initialize of attribute.">TMultiReferenceMember&lt;Interface&gt;::Init</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* ownerPtr, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_attribute_static_info.html" title="Interface adding to attribute static info functionality existing only for real attributes.">IRealAttributeStaticInfo</a>&amp; staticInfo)
 <a name="l00067"></a>00067 {
-<a name="l00068"></a>00068        BaseClass::Init(ownerPtr, staticInfo, &amp;m_definitionComponentPtr);
+<a name="l00068"></a>00068        BaseClass::InitInternal(ownerPtr, staticInfo, &amp;m_definitionComponentPtr);
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070        m_components.clear();
 <a name="l00071"></a>00071 }

@@ -69,6 +69,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_reference_member.html#a3fff5dcbd9ea59117b0a68f62d9791ee">TMultiReferenceMember</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_reference_member.html#ad12da9202f85cbd5c529c975497d45f5">Init</a> (const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *ownerPtr, const <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html">IRealAttributeStaticInfo</a> &amp;staticInfo)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal initialize of attribute.  <a href="#ad12da9202f85cbd5c529c975497d45f5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_reference_member.html#ab7292292f8dd5fbdc5d1380b90def73e">IsValid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this reference can be resolved.  <a href="#ab7292292f8dd5fbdc5d1380b90def73e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_multi_reference_member.html#a1893df9a4be3eceecb0076b893f7148b">operator[]</a> (int index) const </td></tr>
@@ -231,6 +232,18 @@ template&lt;class Interface &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Internal initialize of attribute. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ownerPtr</td><td>pointer to parent component of this attribute. </td></tr>
+    <tr><td class="paramname">staticInfo</td><td>static info structure creating this attribute. </td></tr>
+    <tr><td class="paramname">definitionComponentPtr</td><td>optional pointer will be set with pointer to component defining this attribute. If this attribute was exported it will differ from parent component. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classicomp_1_1_t_multi_attribute_member_base.html#a32d61c2ec88949b68f6af2b34bb3727b">icomp::TMultiAttributeMemberBase&lt; CMultiReferenceAttribute &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_multi_reference_member_8h_source.html#l00066">66</a> of file <a class="el" href="_t_multi_reference_member_8h_source.html">TMultiReferenceMember.h</a>.</p>
 

@@ -146,6 +146,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate transformation of the object into second one.  <a href="#a8ef4881cb2895deb17cde019cd07da70"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a6f1895bf87989c2d49038b429311e204">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#a6f1895bf87989c2d49038b429311e204"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#af23062c4fe5ecf27807a8245475f9346">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#af23062c4fe5ecf27807a8245475f9346"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#acefb352208f1ec14bfc2d3a2dfb256ed">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#a08c6bb896e268924df434797d17a49c0">CloneMe</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a08c6bb896e268924df434797d17a49c0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_rectangle.html#aaa9e66e407475792d749c755f0523a12">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#aaa9e66e407475792d749c755f0523a12"></a><br/></td></tr>
 </table>
@@ -315,6 +320,27 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a08c6bb896e268924df434797d17a49c0"></a><!-- doxytag: member="i2d::CRectangle::CloneMe" ref="a08c6bb896e268924df434797d17a49c0" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CRectangle::CloneMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a21b302bf07df4fc9903036743430ac55"></a><!-- doxytag: member="i2d::CRectangle::Contains" ref="a21b302bf07df4fc9903036743430ac55" args="(const CVector2d &amp;point) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -366,6 +392,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acefb352208f1ec14bfc2d3a2dfb256ed"></a><!-- doxytag: member="i2d::CRectangle::CopyFrom" ref="acefb352208f1ec14bfc2d3a2dfb256ed" args="(const IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CRectangle::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4be04d7d766724cab02bfbda4d30a411"></a><!-- doxytag: member="i2d::CRectangle::Expand" ref="a4be04d7d766724cab02bfbda4d30a411" args="(const CRectangle &amp;rect)" -->
 <div class="memitem">
 <div class="memproto">
@@ -397,7 +440,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00190">190</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00195">195</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_t_range_8h_source.html#l00349">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>.</p>
 
@@ -493,7 +536,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00196">196</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00201">201</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -511,7 +554,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00202">202</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00207">207</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -619,7 +662,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00172">172</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00177">177</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_t_range_8h_source.html#l00328">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
 
@@ -694,7 +737,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00184">184</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00189">189</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_t_range_8h_source.html#l00349">istd::TRange&lt; ValueType &gt;::GetMaxValue()</a>.</p>
 
@@ -752,6 +795,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af23062c4fe5ecf27807a8245475f9346"></a><!-- doxytag: member="i2d::CRectangle::GetSupportedOperations" ref="af23062c4fe5ecf27807a8245475f9346" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int i2d::CRectangle::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get set of flags for supported operations. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a9577d4917a5131637c35ef6b6e9fc42a">istd::IChangeable</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac99a58e3e256278be0a389e418b2e048"></a><!-- doxytag: member="i2d::CRectangle::GetTop" ref="ac99a58e3e256278be0a389e418b2e048" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -766,7 +830,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00178">178</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00183">183</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 <p>References <a class="el" href="_t_range_8h_source.html#l00328">istd::TRange&lt; ValueType &gt;::GetMinValue()</a>.</p>
 
@@ -891,7 +955,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00208">208</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00213">213</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>
@@ -909,7 +973,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00214">214</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_rectangle_8h_source.html#l00219">219</a> of file <a class="el" href="_c_rectangle_8h_source.html">CRectangle.h</a>.</p>
 
 </div>
 </div>

@@ -184,6 +184,7 @@
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <class kind="class">i2d::CParallelogram</class>
     <namespace>i2d</namespace>
   </compound>
@@ -252,6 +253,7 @@
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <class kind="class">i2d::CPolypoint</class>
     <namespace>i2d</namespace>
   </compound>
@@ -337,7 +339,7 @@
     <name>CSplineSegment.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_spline_segment_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CSplineSegment</class>
     <namespace>i2d</namespace>
@@ -7208,6 +7210,27 @@
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>af257e630f78a9106f9897a83c302bfe1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>a5d4d8fe5fd9ec8066664db96b1771933</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>aa7397227866e674c77682e8ceee1b00b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
@@ -7306,6 +7329,27 @@
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
       <anchor>a86a8fc2bce1be65640919f73090296f6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
+      <anchor>a072d67b4d6db058f3d7c5364951db4af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
+      <anchor>a6d80095a517cdd125ad4ea7393311614</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
+      <anchor>a66c67d9537267de63824cc75dc25c247</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -7422,6 +7466,27 @@
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
       <anchor>aae375505fc42f5eaaf1a7747883767dd</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a7d1b521356a76871f7de96a2c15ca119</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a9f8fc1bf403742d9ead22d8539b566b5</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a31b04208e4f751d8b5d536ab7309ccf8</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -7980,6 +8045,27 @@
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>aea6c8b8bb641970802eaa89b411a0aaa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>aed2f5d4e79d9a622e9f7ad9103ac1fcb</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a8debdb1e27d3185fbad49dae5ce5d69b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
@@ -8439,6 +8525,27 @@
       <arglist>(const COrientedCircle &amp;circle) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>a52f6b6a9b9c028ba402b153e873a4a66</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>aca2f62da632e69cc2037090b044a29fe</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>a71b986a6ac890ac1722af2ee98116daa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
@@ -8512,6 +8619,13 @@
       <arglist>(const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>aefc2c0ac7cd76500a816de42078a6359</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
@@ -8538,6 +8652,27 @@
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
       <anchor>a85941fbd50c465b73b94ed8720526bf2</anchor>
       <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>ae53461a7455838ce31845f2f1c1b3d84</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a145e9e13b37a85b18071c64a2fcf200a</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a47d70394f1684e7b03285027367d57e3</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8678,6 +8813,27 @@
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>ab2e6665ff802d40b6817ee549c43bcf2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a7e776b2bd69538f538f4ea53a43b1679</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>ac58fdced2e6ffb74d153b261c6ef2ada</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
@@ -8775,6 +8931,27 @@
       <anchor>a466e90b8ab72643c744604a75eb5c696</anchor>
       <arglist>(int nodeIndex) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a99b3a4ca1ce41057e822aa6094e9e96e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>ae5a87b5663f89c08921a31a199916626</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>aa45eb45f242f01229f2dd4d04502dd14</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CPolylineComp</name>
@@ -8818,6 +8995,20 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>GetPoint</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a59ee3e8e958d6b6c3849aca05b4d99ee</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetPointsCount</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a64f617c70a68a08261c994688778750f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>Insert</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
@@ -8853,6 +9044,13 @@
       <arglist>(const CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a4dac129a092ca5a776105c0bd9bcd540</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
@@ -8879,6 +9077,27 @@
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
       <anchor>a41b73765b86e80db00f49eb9d3381f45</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>add29cacdf51401c27d444511753efac0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a77be36ebbde1613444892771d8cf83b8</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a3a6d401b38d3d2cb14ed84e06b19106d</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8982,6 +9201,27 @@
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>a9895f587143a792562037e83b3364288</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>a92f14c245c32228d6c124d97c216974d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>ae7db57e951923177343680407caa7477</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>af5981c97570606752879f95b57d377c1</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -9153,6 +9393,27 @@
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
       <anchor>af714f0d925b79a6ee2b54c33dfc7f8c1</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>a87d55a1c7acbed3b3ba8812e4f7745ca</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>a2faf2a46df8fb9cea47f7c42b229493d</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>a1db13e694665f31192a411a4e805b44b</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -10030,6 +10291,27 @@
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>af23062c4fe5ecf27807a8245475f9346</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>acefb352208f1ec14bfc2d3a2dfb256ed</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a08c6bb896e268924df434797d17a49c0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
@@ -10088,6 +10370,34 @@
       <anchor>ae34f2fc39860d36c207de8c806f41b27</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertSplineSegment</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>a10a1074c20027daa44dc0d4a849a50a5</anchor>
+      <arglist>(const CSplineSegment &amp;segment)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>a3d965097a12e35cb0dfd437126970136</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>a9a75080adfe2880c690b34e0a40d510c</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
+      <anchor>aee2d0776940e4a0943189aaec5df45f9</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CalcAllSegments</name>
@@ -10099,7 +10409,7 @@
   <compound kind="class">
     <name>i2d::CSplineSegment</name>
     <filename>classi2d_1_1_c_spline_segment.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
       <name>GetPointInSegment</name>
@@ -10232,6 +10542,27 @@
       <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
       <anchor>a59f47d7dc8e50744f9e4129d59778828</anchor>
       <arglist>(const i2d::CVector2d &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>a03ec87e00f08cd51ba0bcc3272435165</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>acb5a217e7a7186d33208f38e1686b088</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
+      <anchor>ae18fc8338a76e69317389b95b4581ade</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23042,11 +23373,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>Init</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
-      <anchor>a7b5257350b0f63dd78afd9c56c9be08e</anchor>
-      <arglist>(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo, const IComponent **definitionComponentPtr=NULL)</arglist>
+      <anchor>a02c009fa9c34f4576f47cdc62e527c99</anchor>
+      <arglist>(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -23082,6 +23413,13 @@
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
       <anchor>af6067c6dfd567f736f06eae27dff865c</anchor>
       <arglist>(const Attribute *attributePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>InitInternal</name>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a21f2dd72740d8790f84f981e252f7605</anchor>
+      <arglist>(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo, const IComponent **definitionComponentPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23649,11 +23987,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>Init</name>
       <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
-      <anchor>af37ee47a65c0299246c6ce3615b7894f</anchor>
-      <arglist>(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo, const IComponent **definitionComponentPtr=NULL)</arglist>
+      <anchor>a32d61c2ec88949b68f6af2b34bb3727b</anchor>
+      <arglist>(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -23675,6 +24013,13 @@
       <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
       <anchor>accd54ff6f8bd572166faeb2b58aaf216</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>InitInternal</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>a9dfb8bb53b26adfb872408f8bd715818</anchor>
+      <arglist>(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo, const IComponent **definitionComponentPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

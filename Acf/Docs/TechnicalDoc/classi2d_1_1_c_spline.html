@@ -72,6 +72,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of segments.  <a href="#a89d69bcebf6a93a064be6636566c10f2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_c_spline_segment.html">CSplineSegment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#ae34f2fc39860d36c207de8c806f41b27">GetSplineSegment</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get segment in polynomial.  <a href="#ae34f2fc39860d36c207de8c806f41b27"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#a10a1074c20027daa44dc0d4a849a50a5">InsertSplineSegment</a> (const <a class="el" href="classi2d_1_1_c_spline_segment.html">CSplineSegment</a> &amp;segment)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a segment at the end of spline segment table.  <a href="#a10a1074c20027daa44dc0d4a849a50a5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#a3d965097a12e35cb0dfd437126970136">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a3d965097a12e35cb0dfd437126970136"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#a9a75080adfe2880c690b34e0a40d510c">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#aee2d0776940e4a0943189aaec5df45f9">CloneMe</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#aee2d0776940e4a0943189aaec5df45f9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#ad124d826016fef5f441975b0908d839e">CalcAllSegments</a> () const </td></tr>
@@ -131,6 +138,46 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aee2d0776940e4a0943189aaec5df45f9"></a><!-- doxytag: member="i2d::CSpline::CloneMe" ref="aee2d0776940e4a0943189aaec5df45f9" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CSpline::CloneMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polyline.html#aa45eb45f242f01229f2dd4d04502dd14">i2d::CPolyline</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a75080adfe2880c690b34e0a40d510c"></a><!-- doxytag: member="i2d::CSpline::CopyFrom" ref="a9a75080adfe2880c690b34e0a40d510c" args="(const IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CSpline::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polyline.html#ae5a87b5663f89c08921a31a199916626">i2d::CPolyline</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a89d69bcebf6a93a064be6636566c10f2"></a><!-- doxytag: member="i2d::CSpline::GetSegmentCount" ref="a89d69bcebf6a93a064be6636566c10f2" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -171,6 +218,46 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d965097a12e35cb0dfd437126970136"></a><!-- doxytag: member="i2d::CSpline::GetSupportedOperations" ref="a3d965097a12e35cb0dfd437126970136" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int i2d::CSpline::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get set of flags for supported operations. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polyline.html#a99b3a4ca1ce41057e822aa6094e9e96e">i2d::CPolyline</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10a1074c20027daa44dc0d4a849a50a5"></a><!-- doxytag: member="i2d::CSpline::InsertSplineSegment" ref="a10a1074c20027daa44dc0d4a849a50a5" args="(const CSplineSegment &amp;segment)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CSpline::InsertSplineSegment </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_spline_segment.html">CSplineSegment</a> &amp;&#160;</td>
+          <td class="paramname"><em>segment</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Insert a segment at the end of spline segment table. </p>
 
 </div>
 </div>

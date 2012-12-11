@@ -25,7 +25,8 @@
 
 // ACF includes
 #include "i2d/CSplineSegment.h"
-
+#include "istd/TDelPtr.h"
+#include "istd/TChangeNotifier.h"
 
 namespace i2d
 {
@@ -50,6 +51,52 @@ const CSplineSegment& CSpline::GetSplineSegment(int index) const
 	}
 
 	return m_segments[index];
+}
+
+bool CSpline::InsertSplineSegment(const CSplineSegment& segment)
+{
+	m_segments.push_back(segment);
+
+	return true;
+}
+
+// reimplemented (istd::IChangeable)
+
+int CSpline::GetSupportedOperations() const
+{
+	return SO_COPY | SO_CLONE;
+}
+
+bool CSpline::CopyFrom(const IChangeable& object)
+{
+	const CSpline* splinePtr = dynamic_cast<const CSpline*>(&object);
+
+	if (splinePtr != NULL){	
+
+		istd::CChangeNotifier notifier(this);		
+		
+		BaseClass::CopyFrom(object);
+		
+		int sourceSegmentCount = splinePtr->GetSegmentCount();
+		for (int segmentIndex = 0; segmentIndex < sourceSegmentCount; segmentIndex++){
+			InsertSplineSegment(splinePtr->GetSplineSegment(segmentIndex));			
+		}
+
+		return true;
+	}	
+
+	return false;
+}
+
+istd::IChangeable* CSpline::CloneMe() const 
+{
+	istd::TDelPtr<CSpline> clonePtr(new CSpline);
+
+	if (clonePtr->CopyFrom(*this)){
+		return clonePtr.PopPtr();
+	}
+
+	return NULL;
 }
 
 

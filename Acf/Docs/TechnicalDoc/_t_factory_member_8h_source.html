@@ -57,7 +57,7 @@
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <a class="code" href="classicomp_1_1_t_factory_member.html#ad8d3fe1f76788458c4efe9bb6e095823">TFactoryMember</a>();
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_factory_member.html#aa61ae1338101dade0adf5b1cf24c9426">Init</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* ownerPtr, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_attribute_static_info.html" title="Interface adding to attribute static info functionality existing only for real attributes.">IRealAttributeStaticInfo</a>&amp; staticInfo);
+<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_factory_member.html#aa61ae1338101dade0adf5b1cf24c9426" title="Initialize this attribute.">Init</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* ownerPtr, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_attribute_static_info.html" title="Interface adding to attribute static info functionality existing only for real attributes.">IRealAttributeStaticInfo</a>&amp; staticInfo);
 <a name="l00037"></a>00037 
 <a name="l00042"></a>00042        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_t_factory_member.html#a9abfbfb341943b264d16046b53268033" title="Check if this factory can be resolved.">IsValid</a>() <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
@@ -89,9 +89,9 @@
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084 
 <a name="l00085"></a>00085 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Interface&gt;
-<a name="l00086"></a><a class="code" href="classicomp_1_1_t_factory_member.html#aa61ae1338101dade0adf5b1cf24c9426">00086</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_factory_member.html#aa61ae1338101dade0adf5b1cf24c9426">TFactoryMember&lt;Interface&gt;::Init</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* ownerPtr, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_attribute_static_info.html" title="Interface adding to attribute static info functionality existing only for real attributes.">IRealAttributeStaticInfo</a>&amp; staticInfo)
+<a name="l00086"></a><a class="code" href="classicomp_1_1_t_factory_member.html#aa61ae1338101dade0adf5b1cf24c9426">00086</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_factory_member.html#aa61ae1338101dade0adf5b1cf24c9426" title="Initialize this attribute.">TFactoryMember&lt;Interface&gt;::Init</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* ownerPtr, <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_attribute_static_info.html" title="Interface adding to attribute static info functionality existing only for real attributes.">IRealAttributeStaticInfo</a>&amp; staticInfo)
 <a name="l00087"></a>00087 {
-<a name="l00088"></a>00088        BaseClass::Init(ownerPtr, staticInfo, &amp;m_definitionComponentPtr);
+<a name="l00088"></a>00088        BaseClass::InitInternal(ownerPtr, staticInfo, &amp;m_definitionComponentPtr);
 <a name="l00089"></a>00089 }
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091 

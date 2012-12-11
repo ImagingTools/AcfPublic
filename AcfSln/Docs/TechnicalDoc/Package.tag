@@ -11403,6 +11403,13 @@
       <anchor>a97ae2b01e85ae32c589aa154cee0e9e4</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>aa9680ecc36f8a70e1b30549eefb61e46</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>double</type>
       <name>m_weight</name>

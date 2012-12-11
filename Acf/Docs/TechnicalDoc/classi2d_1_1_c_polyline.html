@@ -87,6 +87,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get length of this polyline.  <a href="#ac5d5c6ea4c6cb984dc92313be7c400f8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polyline.html#a466e90b8ab72643c744604a75eb5c696">GetKneeVector</a> (int nodeIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return vector for knee, that has the same angle to both neighbor segments.  <a href="#a466e90b8ab72643c744604a75eb5c696"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polyline.html#a99b3a4ca1ce41057e822aa6094e9e96e">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a99b3a4ca1ce41057e822aa6094e9e96e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polyline.html#ae5a87b5663f89c08921a31a199916626">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polyline.html#aa45eb45f242f01229f2dd4d04502dd14">CloneMe</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#aa45eb45f242f01229f2dd4d04502dd14"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>2D-object representing a polyline. </p>
@@ -126,11 +131,55 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polyline_8h_source.html#l00059">59</a> of file <a class="el" href="_c_polyline_8h_source.html">CPolyline.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polyline_8h_source.html#l00065">65</a> of file <a class="el" href="_c_polyline_8h_source.html">CPolyline.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa45eb45f242f01229f2dd4d04502dd14"></a><!-- doxytag: member="i2d::CPolyline::CloneMe" ref="aa45eb45f242f01229f2dd4d04502dd14" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CPolyline::CloneMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polygon.html#ac58fdced2e6ffb74d153b261c6ef2ada">i2d::CPolygon</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_spline.html#aee2d0776940e4a0943189aaec5df45f9">i2d::CSpline</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5a87b5663f89c08921a31a199916626"></a><!-- doxytag: member="i2d::CPolyline::CopyFrom" ref="ae5a87b5663f89c08921a31a199916626" args="(const IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CPolyline::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polygon.html#a7e776b2bd69538f538f4ea53a43b1679">i2d::CPolygon</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_spline.html#a9a75080adfe2880c690b34e0a40d510c">i2d::CSpline</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a466e90b8ab72643c744604a75eb5c696"></a><!-- doxytag: member="i2d::CPolyline::GetKneeVector" ref="a466e90b8ab72643c744604a75eb5c696" args="(int nodeIndex) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -205,6 +254,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a99b3a4ca1ce41057e822aa6094e9e96e"></a><!-- doxytag: member="i2d::CPolyline::GetSupportedOperations" ref="a99b3a4ca1ce41057e822aa6094e9e96e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int i2d::CPolyline::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get set of flags for supported operations. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polygon.html#ab2e6665ff802d40b6817ee549c43bcf2">i2d::CPolygon</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_spline.html#a3d965097a12e35cb0dfd437126970136">i2d::CSpline</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="afe39b68b46059f45d65cf28cdc7fe38f"></a><!-- doxytag: member="i2d::CPolyline::IsClosed" ref="afe39b68b46059f45d65cf28cdc7fe38f" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +291,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polyline_8h_source.html#l00065">65</a> of file <a class="el" href="_c_polyline_8h_source.html">CPolyline.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polyline_8h_source.html#l00071">71</a> of file <a class="el" href="_c_polyline_8h_source.html">CPolyline.h</a>.</p>
 
 </div>
 </div>

@@ -74,6 +74,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#ad8d3fe1f76788458c4efe9bb6e095823">TFactoryMember</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#aa61ae1338101dade0adf5b1cf24c9426">Init</a> (const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *ownerPtr, const <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html">IRealAttributeStaticInfo</a> &amp;staticInfo)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this attribute.  <a href="#aa61ae1338101dade0adf5b1cf24c9426"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#a9abfbfb341943b264d16046b53268033">IsValid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this factory can be resolved.  <a href="#a9abfbfb341943b264d16046b53268033"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_factory_member.html#a4ff275e88eac06a043a85c6d8e385a0a">CreateComponent</a> () const </td></tr>
@@ -366,6 +367,17 @@ template&lt;class Interface &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Initialize this attribute. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ownerPtr</td><td>pointer to parent component of this attribute. </td></tr>
+    <tr><td class="paramname">staticInfo</td><td>static info structure creating this attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classicomp_1_1_t_attribute_member_base.html#a02c009fa9c34f4576f47cdc62e527c99">icomp::TAttributeMemberBase&lt; CFactoryAttribute &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_factory_member_8h_source.html#l00086">86</a> of file <a class="el" href="_t_factory_member_8h_source.html">TFactoryMember.h</a>.</p>
 

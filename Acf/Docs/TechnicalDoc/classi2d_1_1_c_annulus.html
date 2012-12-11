@@ -95,6 +95,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate transformation of the object into second one.  <a href="#ab592f4f5aca23656ccdd2186efb99d7c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a46103c662f886313c1b115af1f5a0c54">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#a46103c662f886313c1b115af1f5a0c54"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#af257e630f78a9106f9897a83c302bfe1">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#af257e630f78a9106f9897a83c302bfe1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a5d4d8fe5fd9ec8066664db96b1771933">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#aa7397227866e674c77682e8ceee1b00b">CloneMe</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#aa7397227866e674c77682e8ceee1b00b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a007c1e575f9e4241d1282c1da5932522">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a007c1e575f9e4241d1282c1da5932522"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -175,6 +180,50 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa7397227866e674c77682e8ceee1b00b"></a><!-- doxytag: member="i2d::CAnnulus::CloneMe" ref="aa7397227866e674c77682e8ceee1b00b" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CAnnulus::CloneMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#af5981c97570606752879f95b57d377c1">i2d::CPosition2d</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus_segment.html#a66c67d9537267de63824cc75dc25c247">i2d::CAnnulusSegment</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d4d8fe5fd9ec8066664db96b1771933"></a><!-- doxytag: member="i2d::CAnnulus::CopyFrom" ref="a5d4d8fe5fd9ec8066664db96b1771933" args="(const IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CAnnulus::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#ae7db57e951923177343680407caa7477">i2d::CPosition2d</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus_segment.html#a6d80095a517cdd125ad4ea7393311614">i2d::CAnnulusSegment</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a14075121660042631e65d078a1607349"></a><!-- doxytag: member="i2d::CAnnulus::GetBoundingBox" ref="a14075121660042631e65d078a1607349" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -311,6 +360,29 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af257e630f78a9106f9897a83c302bfe1"></a><!-- doxytag: member="i2d::CAnnulus::GetSupportedOperations" ref="af257e630f78a9106f9897a83c302bfe1" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int i2d::CAnnulus::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get set of flags for supported operations. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#a92f14c245c32228d6c124d97c216974d">i2d::CPosition2d</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus_segment.html#a072d67b4d6db058f3d7c5364951db4af">i2d::CAnnulusSegment</a>.</p>
 
 </div>
 </div>
@@ -577,7 +649,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_annulus_8h_source.html#l00066">66</a> of file <a class="el" href="_c_annulus_8h_source.html">CAnnulus.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_annulus_8h_source.html#l00071">71</a> of file <a class="el" href="_c_annulus_8h_source.html">CAnnulus.h</a>.</p>
 
 </div>
 </div>

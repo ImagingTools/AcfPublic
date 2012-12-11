@@ -64,6 +64,8 @@ Inheritance diagram for i2d::CPolypoint:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a83746e7ebacb4ce16704be5834ef6339">CPolypoint</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a59ee3e8e958d6b6c3849aca05b4d99ee">GetPoint</a> (int index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a64f617c70a68a08261c994688778750f">GetPointsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#abfeee7b9c0530bfb9edd99a3e6bae04b">Insert</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;vector)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a2b45306c9da492925b14ad72be054d40">Clear</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QVector&lt; <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#aedd9eb3cdfd66e24ea7fd02dc7ff0442">GetPoints</a> () const </td></tr>
@@ -71,6 +73,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#a17d495856781a74182f986b04a969a5c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a9beb63dc77f466e256779350a0f4ac70">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;position)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Move object to position <code>position</code>.  <a href="#a9beb63dc77f466e256779350a0f4ac70"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a4dac129a092ca5a776105c0bd9bcd540">GetBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of this shape.  <a href="#a4dac129a092ca5a776105c0bd9bcd540"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a902c1469a1610d8c7c07d944122a5d8a">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform this object using some transformation.  <a href="#a902c1469a1610d8c7c07d944122a5d8a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#af0d98aba8231c48b55bd6ad7e2013811">InvTransform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
@@ -79,13 +83,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate transformation of the object into second one.  <a href="#ad3c6bc6bfb666119ebd4ccbeddf3b668"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a41b73765b86e80db00f49eb9d3381f45">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#a41b73765b86e80db00f49eb9d3381f45"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#add29cacdf51401c27d444511753efac0">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#add29cacdf51401c27d444511753efac0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a77be36ebbde1613444892771d8cf83b8">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a3a6d401b38d3d2cb14ed84e06b19106d">CloneMe</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a3a6d401b38d3d2cb14ed84e06b19106d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polypoint.html#a403658023d97353d4720ab74899ba2c4">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a403658023d97353d4720ab74899ba2c4"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>2D-object given by the simple set of points. </p>
 
-<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00021">21</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00022">22</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a83746e7ebacb4ce16704be5834ef6339"></a><!-- doxytag: member="i2d::CPolypoint::CPolypoint" ref="a83746e7ebacb4ce16704be5834ef6339" args="()" -->
 <div class="memitem">
@@ -101,7 +110,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00064">64</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00073">73</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
 
 </div>
 </div>
@@ -120,7 +129,66 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00075">75</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00095">95</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a6d401b38d3d2cb14ed84e06b19106d"></a><!-- doxytag: member="i2d::CPolypoint::CloneMe" ref="a3a6d401b38d3d2cb14ed84e06b19106d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CPolypoint::CloneMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a77be36ebbde1613444892771d8cf83b8"></a><!-- doxytag: member="i2d::CPolypoint::CopyFrom" ref="a77be36ebbde1613444892771d8cf83b8" args="(const IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CPolypoint::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4dac129a092ca5a776105c0bd9bcd540"></a><!-- doxytag: member="i2d::CPolypoint::GetBoundingBox" ref="a4dac129a092ca5a776105c0bd9bcd540" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a> i2d::CPolypoint::GetBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get bounding box of this shape. </p>
+<p>Please note, this bounding box is in logical units, the calibration will not be considered. </p>
+
+<p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#aa8b9b2eddb7170b1ba39f3b0aeedc007">i2d::IObject2d</a>.</p>
 
 </div>
 </div>
@@ -196,6 +264,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a59ee3e8e958d6b6c3849aca05b4d99ee"></a><!-- doxytag: member="i2d::CPolypoint::GetPoint" ref="a59ee3e8e958d6b6c3849aca05b4d99ee" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp; i2d::CPolypoint::GetPoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00077">77</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+
+<p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aedd9eb3cdfd66e24ea7fd02dc7ff0442"></a><!-- doxytag: member="i2d::CPolypoint::GetPoints" ref="aedd9eb3cdfd66e24ea7fd02dc7ff0442" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +299,46 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00081">81</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00101">101</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64f617c70a68a08261c994688778750f"></a><!-- doxytag: member="i2d::CPolypoint::GetPointsCount" ref="a64f617c70a68a08261c994688778750f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i2d::CPolypoint::GetPointsCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00084">84</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="add29cacdf51401c27d444511753efac0"></a><!-- doxytag: member="i2d::CPolypoint::GetSupportedOperations" ref="add29cacdf51401c27d444511753efac0" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int i2d::CPolypoint::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get set of flags for supported operations. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a9577d4917a5131637c35ef6b6e9fc42a">istd::IChangeable</a>.</p>
 
 </div>
 </div>
@@ -281,7 +409,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00069">69</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polypoint_8h_source.html#l00089">89</a> of file <a class="el" href="_c_polypoint_8h_source.html">CPolypoint.h</a>.</p>
 
 </div>
 </div>

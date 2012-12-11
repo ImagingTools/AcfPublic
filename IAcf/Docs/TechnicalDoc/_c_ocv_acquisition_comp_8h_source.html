@@ -29,87 +29,86 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// OpenCV includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;cxtypes.h&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;cv.h&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;highgui.h&quot;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#undef min</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#undef max</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span>
-<a name="l00012"></a>00012 <span class="comment">// ACF includes</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_rectangle_8h.html">i2d/CRectangle.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_sync_processor_wrap_8h.html">iproc/TSyncProcessorWrap.h</a>&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_acquisition_8h.html">icam/IBitmapAcquisition.h</a>&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_exposure_constraints_8h.html">icam/IExposureConstraints.h</a>&quot;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_exposure_params_8h.html">icam/IExposureParams.h</a>&quot;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_trigger_params_8h.html">isig/ITriggerParams.h</a>&quot;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_trigger_constraints_8h.html">isig/ITriggerConstraints.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;opencv/cv.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;opencv/highgui.h&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#undef min</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#undef max</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_rectangle_8h.html">i2d/CRectangle.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_sync_processor_wrap_8h.html">iproc/TSyncProcessorWrap.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="comment">// ACF-Solutions includes</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_bitmap_acquisition_8h.html">icam/IBitmapAcquisition.h</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_exposure_constraints_8h.html">icam/IExposureConstraints.h</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_exposure_params_8h.html">icam/IExposureParams.h</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_trigger_params_8h.html">isig/ITriggerParams.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_trigger_constraints_8h.html">isig/ITriggerConstraints.h</a>&quot;</span>
+<a name="l00023"></a>00023 
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 
-<a name="l00026"></a><a class="code" href="namespaceiocv.html">00026</a> <span class="keyword">namespace </span>iocv
-<a name="l00027"></a>00027 {
+<a name="l00025"></a><a class="code" href="namespaceiocv.html">00025</a> <span class="keyword">namespace </span>iocv
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027 
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 
-<a name="l00033"></a><a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html">00033</a> <span class="keyword">class </span><a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html" title="Open CV based camera component implementation.">COcvAcquisitionComp</a>:
-<a name="l00034"></a>00034                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
-<a name="l00035"></a>00035                      <span class="keyword">virtual</span> <span class="keyword">public</span> isig::ITriggerConstraints,
-<a name="l00036"></a>00036                      <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::TSyncProcessorWrap&lt;icam::IBitmapAcquisition&gt;
-<a name="l00037"></a>00037 {
-<a name="l00038"></a>00038 <span class="keyword">public</span>:
-<a name="l00039"></a><a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aa0ee535d1bc6aa64c53be2f79d8e74ba">00039</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aa0ee535d1bc6aa64c53be2f79d8e74ba">BaseClass</a>;
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041        I_BEGIN_COMPONENT(<a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html" title="Open CV based camera component implementation.">COcvAcquisitionComp</a>);
-<a name="l00042"></a>00042               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_bitmap_acquisition.html">icam::IBitmapAcquisition</a>);
-<a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisig_1_1_i_trigger_constraints.html">isig::ITriggerConstraints</a>);
-<a name="l00044"></a>00044        I_END_COMPONENT;
-<a name="l00045"></a>00045 
-<a name="l00046"></a><a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aeccc867e45d338bbb44145d69b62e24d">00046</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html#a71f0e6f70fcf044073f7055a0e0f5225">MessageId</a>
-<a name="l00047"></a>00047        {
-<a name="l00048"></a>00048        };
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a51d27aae4ca682c2cb799477bea4dabb">COcvAcquisitionComp</a>();
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a60fe39d2f91594a455a9c3f28c326e60">IsCameraValid</a>() <span class="keyword">const</span>;
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <span class="comment">// reimplemented (iproc::TSyncProcessorWrap&lt;icam::IBitmapAcquisition&gt;)</span>
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a23ade91e68639c811dce9f8513620c5c">DoProcessing</a>(
-<a name="l00056"></a>00056                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00057"></a>00057                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
-<a name="l00058"></a>00058                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
-<a name="l00059"></a>00059                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>* progressManagerPtr = NULL);
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061        <span class="comment">// reimplemented (icam::IBitmapAcquisition)</span>
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a2f421ded15797848b6f474a587ebf5e2">GetBitmapSize</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064        <span class="comment">// reimplemented (isig::ITriggerConstraints)</span>
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aac566bdb5c9b922cec4d4610bedde958">IsTriggerModeSupported</a>(<span class="keywordtype">int</span> triggerMode) <span class="keyword">const</span>;
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="keyword">protected</span>:
-<a name="l00068"></a>00068        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aa3b92bb978a2d9c290707c0c9eb8bed8">OnComponentCreated</a>();
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a34db5ccc34e5b6ce35c9ebfc2e5f53ee">OnComponentDestroyed</a>();
-<a name="l00071"></a>00071        
-<a name="l00072"></a>00072 <span class="keyword">private</span>:
-<a name="l00073"></a>00073        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_exposure_params.html">icam::IExposureParams</a>, m_defaultExposureParamsCompPtr);
-<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisig_1_1_i_trigger_params.html">isig::ITriggerParams</a>, m_triggerParamsCompPtr);
-<a name="l00075"></a>00075        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>, m_imageRegionParamsCompPtr);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        I_ATTR(<span class="keywordtype">bool</span>, m_singleShootAttrPtr);
-<a name="l00078"></a>00078        I_ATTR(<span class="keywordtype">double</span>, m_timeoutAttrPtr);
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080        CvCapture* m_cameraPtr;
-<a name="l00081"></a>00081 };
+<a name="l00032"></a><a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html">00032</a> <span class="keyword">class </span><a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html" title="Open CV based camera component implementation.">COcvAcquisitionComp</a>:
+<a name="l00033"></a>00033                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
+<a name="l00034"></a>00034                      <span class="keyword">virtual</span> <span class="keyword">public</span> isig::ITriggerConstraints,
+<a name="l00035"></a>00035                      <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::TSyncProcessorWrap&lt;icam::IBitmapAcquisition&gt;
+<a name="l00036"></a>00036 {
+<a name="l00037"></a>00037 <span class="keyword">public</span>:
+<a name="l00038"></a><a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aa0ee535d1bc6aa64c53be2f79d8e74ba">00038</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aa0ee535d1bc6aa64c53be2f79d8e74ba">BaseClass</a>;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        I_BEGIN_COMPONENT(<a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html" title="Open CV based camera component implementation.">COcvAcquisitionComp</a>);
+<a name="l00041"></a>00041               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_bitmap_acquisition.html">icam::IBitmapAcquisition</a>);
+<a name="l00042"></a>00042               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisig_1_1_i_trigger_constraints.html">isig::ITriggerConstraints</a>);
+<a name="l00043"></a>00043        I_END_COMPONENT;
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aeccc867e45d338bbb44145d69b62e24d">00045</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiproc_1_1_i_processor.html#a71f0e6f70fcf044073f7055a0e0f5225">MessageId</a>
+<a name="l00046"></a>00046        {
+<a name="l00047"></a>00047        };
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049        <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a51d27aae4ca682c2cb799477bea4dabb">COcvAcquisitionComp</a>();
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a60fe39d2f91594a455a9c3f28c326e60">IsCameraValid</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        <span class="comment">// reimplemented (iproc::TSyncProcessorWrap&lt;icam::IBitmapAcquisition&gt;)</span>
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a23ade91e68639c811dce9f8513620c5c">DoProcessing</a>(
+<a name="l00055"></a>00055                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00056"></a>00056                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00057"></a>00057                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00058"></a>00058                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>* progressManagerPtr = NULL);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        <span class="comment">// reimplemented (icam::IBitmapAcquisition)</span>
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a2f421ded15797848b6f474a587ebf5e2">GetBitmapSize</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="comment">// reimplemented (isig::ITriggerConstraints)</span>
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aac566bdb5c9b922cec4d4610bedde958">IsTriggerModeSupported</a>(<span class="keywordtype">int</span> triggerMode) <span class="keyword">const</span>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">protected</span>:
+<a name="l00067"></a>00067        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#aa3b92bb978a2d9c290707c0c9eb8bed8">OnComponentCreated</a>();
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiocv_1_1_c_ocv_acquisition_comp.html#a34db5ccc34e5b6ce35c9ebfc2e5f53ee">OnComponentDestroyed</a>();
+<a name="l00070"></a>00070        
+<a name="l00071"></a>00071 <span class="keyword">private</span>:
+<a name="l00072"></a>00072        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicam_1_1_i_exposure_params.html">icam::IExposureParams</a>, m_defaultExposureParamsCompPtr);
+<a name="l00073"></a>00073        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classisig_1_1_i_trigger_params.html">isig::ITriggerParams</a>, m_triggerParamsCompPtr);
+<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_c_rectangle.html">i2d::CRectangle</a>, m_imageRegionParamsCompPtr);
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076        I_ATTR(<span class="keywordtype">bool</span>, m_singleShootAttrPtr);
+<a name="l00077"></a>00077        I_ATTR(<span class="keywordtype">double</span>, m_timeoutAttrPtr);
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079        CvCapture* m_cameraPtr;
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 } <span class="comment">// namespace iocv</span>
+<a name="l00083"></a>00083 } <span class="comment">// namespace iocv</span>
+<a name="l00084"></a>00084 
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087 <span class="preprocessor">#endif // !iocv_COcvAcquisitionComp_included</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span>
-<a name="l00089"></a>00089 
+<a name="l00086"></a>00086 <span class="preprocessor">#endif // !iocv_COcvAcquisitionComp_included</span>
+<a name="l00087"></a>00087 <span class="preprocessor"></span>
+<a name="l00088"></a>00088 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

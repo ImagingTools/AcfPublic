@@ -87,7 +87,7 @@ TMultiReferenceMember<Interface>::TMultiReferenceMember()
 template <class Interface>
 void TMultiReferenceMember<Interface>::Init(const IComponent* ownerPtr, const IRealAttributeStaticInfo& staticInfo)
 {
-	BaseClass::Init(ownerPtr, staticInfo, &m_definitionComponentPtr);
+	BaseClass::InitInternal(ownerPtr, staticInfo, &m_definitionComponentPtr);
 
 	m_components.clear();
 }

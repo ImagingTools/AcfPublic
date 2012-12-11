@@ -499,25 +499,17 @@ void CInspectionTaskGuiComp::OnGuiHidden()
 
 void CInspectionTaskGuiComp::OnModelChanged(int modelId, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
+	UpdateVisualElements();
+
 	if (modelId == m_currentGuiIndex){
-		DoUpdateCurrentTab();
+		UpdateTaskMessages();
+
+		DoUpdateEditor(m_currentGuiIndex);
 	}
 }
 
 
 // private methods
-
-void CInspectionTaskGuiComp::DoUpdateCurrentTab()
-{
-	m_currentGuiUpdated = true;
-
-	UpdateVisualElements();
-
-	UpdateTaskMessages();
-
-	DoUpdateEditor(m_currentGuiIndex);
-}
-
 
 void CInspectionTaskGuiComp::AddTaskMessagesToLog(const ibase::IMessageContainer& messageContainer, int taskIndex)
 {
@@ -760,17 +752,11 @@ void CInspectionTaskGuiComp::OnEditorChanged(int index)
 
 void CInspectionTaskGuiComp::OnAutoTest()
 {
-	m_currentGuiUpdated = false;
-
 	iproc::ISupplier* supplierPtr = dynamic_cast<iproc::ISupplier*>(GetObjectPtr());
 	if (supplierPtr != NULL){
 		supplierPtr->InvalidateSupplier();
 		supplierPtr->EnsureWorkInitialized();
 		supplierPtr->EnsureWorkFinished();
-
-		if (!m_currentGuiUpdated){
-			DoUpdateCurrentTab();
-		}
 
 		UpdateProcessingState();
 	}
@@ -783,7 +769,14 @@ void CInspectionTaskGuiComp::on_TestAllButton_clicked()
 		m_generalParamsEditorCompPtr->UpdateModel();
 	}
 
-	OnAutoTest();
+	iproc::ISupplier* supplierPtr = dynamic_cast<iproc::ISupplier*>(GetObjectPtr());
+	if (supplierPtr != NULL){
+		supplierPtr->InvalidateSupplier();
+		supplierPtr->EnsureWorkInitialized();
+		supplierPtr->EnsureWorkFinished();
+
+		UpdateProcessingState();
+	}
 }
 
 

@@ -28,6 +28,7 @@
 
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
+#include "istd/TDelPtr.h"
 
 
 namespace i2d
@@ -65,6 +66,43 @@ bool COrientedCircle::operator==(const COrientedCircle& ref) const
 bool COrientedCircle::operator!=(const COrientedCircle& ref) const
 {
 	return BaseClass::operator!=(ref) || (ref.m_orientedOutside != m_orientedOutside);
+}
+
+// reimplemented (istd::IChangeable)
+
+int COrientedCircle::GetSupportedOperations() const
+{
+	return SO_COPY | SO_CLONE;
+}
+
+bool COrientedCircle::CopyFrom(const IChangeable& object)
+{
+	const COrientedCircle* orientedCirclePtr = dynamic_cast<const COrientedCircle*>(&object);
+
+	if (orientedCirclePtr != NULL){
+
+		istd::CChangeNotifier notifier(this);
+		
+		SetCalibration(orientedCirclePtr->GetCalibration());		
+		SetPosition(orientedCirclePtr->GetPosition());
+		SetRadius(orientedCirclePtr->GetRadius());
+		SetOrientedOutside(orientedCirclePtr->IsOrientedOutside());
+
+		return true;
+	}	
+
+	return false;
+}
+
+istd::IChangeable* COrientedCircle::CloneMe() const 
+{
+	istd::TDelPtr<COrientedCircle> clonePtr(new COrientedCircle);
+
+	if (clonePtr->CopyFrom(*this)){
+		return clonePtr.PopPtr();
+	}
+
+	return NULL;
 }
 
 

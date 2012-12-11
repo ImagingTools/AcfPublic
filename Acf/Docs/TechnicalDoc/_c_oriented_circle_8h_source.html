@@ -51,28 +51,33 @@
 <a name="l00032"></a>00032        <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html#ad6c1b276a0df98f41717db173b5a1b72">operator==</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html" title="Definition of an oriented graphical circle object.">COrientedCircle</a>&amp; circle) <span class="keyword">const</span>;
 <a name="l00033"></a>00033        <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html#aafe2b3bf6e4991c8896ddec076e21beb">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html" title="Definition of an oriented graphical circle object.">COrientedCircle</a>&amp; circle) <span class="keyword">const</span>;
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html#a2e5d7c0dcd981d318f1477c546bd4822" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">private</span>:
-<a name="l00039"></a>00039        <span class="keywordtype">bool</span> m_orientedOutside;
-<a name="l00040"></a>00040 };
-<a name="l00041"></a>00041 
+<a name="l00035"></a>00035        <span class="comment">//reimplemented istd::IChangeable</span>
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html#a52f6b6a9b9c028ba402b153e873a4a66" title="Get set of flags for supported operations.">GetSupportedOperations</a>() <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html#aca2f62da632e69cc2037090b044a29fe">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classi2d_1_1_c_oriented_circle.html#a71b986a6ac890ac1722af2ee98116daa" title="Make a copy of this object.">CloneMe</a>() <span class="keyword">const</span>;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html#a2e5d7c0dcd981d318f1477c546bd4822" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="comment">// inline methods</span>
-<a name="l00044"></a>00044 
-<a name="l00045"></a><a class="code" href="classi2d_1_1_c_oriented_circle.html#acadad01b4d23dc4e0e7b3e725b97c9e5">00045</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html#acadad01b4d23dc4e0e7b3e725b97c9e5">COrientedCircle::IsOrientedOutside</a>()<span class="keyword"> const</span>
-<a name="l00046"></a>00046 <span class="keyword"></span>{
-<a name="l00047"></a>00047        <span class="keywordflow">return</span> m_orientedOutside;
-<a name="l00048"></a>00048 }
+<a name="l00043"></a>00043 <span class="keyword">private</span>:
+<a name="l00044"></a>00044        <span class="keywordtype">bool</span> m_orientedOutside;
+<a name="l00045"></a>00045 };
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="comment">// inline methods</span>
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 } <span class="comment">// namespace i2d</span>
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif // !i2d_COrientedCircle_included</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span>
-<a name="l00056"></a>00056 
+<a name="l00050"></a><a class="code" href="classi2d_1_1_c_oriented_circle.html#acadad01b4d23dc4e0e7b3e725b97c9e5">00050</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_oriented_circle.html#acadad01b4d23dc4e0e7b3e725b97c9e5">COrientedCircle::IsOrientedOutside</a>()<span class="keyword"> const</span>
+<a name="l00051"></a>00051 <span class="keyword"></span>{
+<a name="l00052"></a>00052        <span class="keywordflow">return</span> m_orientedOutside;
+<a name="l00053"></a>00053 }
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 } <span class="comment">// namespace i2d</span>
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="preprocessor">#endif // !i2d_COrientedCircle_included</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
+<a name="l00061"></a>00061 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

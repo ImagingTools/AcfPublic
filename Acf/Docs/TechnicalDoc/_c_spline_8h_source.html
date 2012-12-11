@@ -56,22 +56,29 @@
 <a name="l00031"></a>00031        
 <a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_spline_segment.html">CSplineSegment</a>&amp; <a class="code" href="classi2d_1_1_c_spline.html#ae34f2fc39860d36c207de8c806f41b27" title="Get segment in polynomial.">GetSplineSegment</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">protected</span>:
-<a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_spline.html#ad124d826016fef5f441975b0908d839e">CalcAllSegments</a>() <span class="keyword">const</span>;
-<a name="l00040"></a>00040        
-<a name="l00041"></a>00041 <span class="keyword">private</span>:
-<a name="l00042"></a>00042        <span class="keyword">static</span> <span class="keywordtype">void</span> SolveOpen(<span class="keywordtype">double</span>* d,<span class="keywordtype">int</span> count);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="keyword">mutable</span> QVector&lt;CSplineSegment&gt; m_segments;
-<a name="l00045"></a>00045        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isInvalidated;
-<a name="l00046"></a>00046 };
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_spline.html#a10a1074c20027daa44dc0d4a849a50a5" title="Insert a segment at the end of spline segment table.">InsertSplineSegment</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_spline_segment.html">CSplineSegment</a>&amp; segment);
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043        <span class="comment">//reimplemented istd::IChangeable</span>
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_spline.html#a3d965097a12e35cb0dfd437126970136" title="Get set of flags for supported operations.">GetSupportedOperations</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_spline.html#a9a75080adfe2880c690b34e0a40d510c">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classi2d_1_1_c_spline.html#aee2d0776940e4a0943189aaec5df45f9" title="Make a copy of this object.">CloneMe</a>() <span class="keyword">const</span>;
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 } <span class="comment">// namespace i2d</span>
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="preprocessor">#endif // !i2d_CSpline_included</span>
-<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00048"></a>00048 <span class="keyword">protected</span>:
+<a name="l00049"></a>00049        <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_spline.html#ad124d826016fef5f441975b0908d839e">CalcAllSegments</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050        
+<a name="l00051"></a>00051 <span class="keyword">private</span>:
+<a name="l00052"></a>00052        <span class="keyword">static</span> <span class="keywordtype">void</span> SolveOpen(<span class="keywordtype">double</span>* d,<span class="keywordtype">int</span> count);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054        <span class="keyword">mutable</span> QVector&lt;CSplineSegment&gt; m_segments;
+<a name="l00055"></a>00055        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isInvalidated;
+<a name="l00056"></a>00056 };
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 } <span class="comment">// namespace i2d</span>
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="preprocessor">#endif // !i2d_CSpline_included</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

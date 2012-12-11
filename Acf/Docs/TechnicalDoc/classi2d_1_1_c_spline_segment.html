@@ -37,7 +37,7 @@
 <div class="title">i2d::CSplineSegment Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="i2d::CSplineSegment" --><!-- doxytag: inherits="istd::IPolymorphic" -->
+<!-- doxytag: class="i2d::CSplineSegment" --><!-- doxytag: inherits="istd::IChangeable" -->
 <p><code>#include &lt;<a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for i2d::CSplineSegment:</div>
@@ -45,6 +45,7 @@ Inheritance diagram for i2d::CSplineSegment:</div>
  <div class="center">
   <img src="classi2d_1_1_c_spline_segment.png" usemap="#i2d::CSplineSegment_map" alt=""/>
   <map id="i2d::CSplineSegment_map" name="i2d::CSplineSegment_map">
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,127,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,127,24"/>
 </map>
  </div></div>
@@ -83,6 +84,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline_segment.html#ad5ad72ca08b5f87ef240d36603579e0a">C</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline_segment.html#a9762d4a4c9479a6111713cd98e613cc8">D</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline_segment.html#a59f47d7dc8e50744f9e4129d59778828">D</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline_segment.html#a03ec87e00f08cd51ba0bcc3272435165">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a03ec87e00f08cd51ba0bcc3272435165"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline_segment.html#acb5a217e7a7186d33208f38e1686b088">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline_segment.html#ae18fc8338a76e69317389b95b4581ade">CloneMe</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#ae18fc8338a76e69317389b95b4581ade"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -102,7 +108,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00161">161</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00166">166</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -121,7 +127,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00167">167</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00172">172</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -139,7 +145,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00173">173</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00178">178</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -158,7 +164,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00179">179</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00184">184</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -176,7 +182,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00185">185</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00190">190</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +201,45 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00191">191</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00196">196</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae18fc8338a76e69317389b95b4581ade"></a><!-- doxytag: member="i2d::CSplineSegment::CloneMe" ref="ae18fc8338a76e69317389b95b4581ade" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CSplineSegment::CloneMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb5a217e7a7186d33208f38e1686b088"></a><!-- doxytag: member="i2d::CSplineSegment::CopyFrom" ref="acb5a217e7a7186d33208f38e1686b088" args="(const IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CSplineSegment::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -213,7 +257,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00197">197</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00202">202</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -232,7 +276,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00203">203</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00208">208</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +296,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get first Bezier's control point. </p>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00129">129</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00134">134</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -272,7 +316,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get second Bezier's control point. </p>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00135">135</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00140">140</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -292,7 +336,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get derivation in begin point. </p>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00105">105</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00110">110</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -312,7 +356,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get derivation in end point. </p>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00111">111</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00116">116</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +383,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00099">99</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00104">104</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -360,7 +404,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get a first half segment. </p>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00141">141</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00146">146</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -381,7 +425,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get a second half segment. </p>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00150">150</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00155">155</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -401,7 +445,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get begin point. </p>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00117">117</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00122">122</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -421,7 +465,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get end point. </p>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00123">123</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00128">128</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +492,28 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00093">93</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_spline_segment_8h_source.html#l00098">98</a> of file <a class="el" href="_c_spline_segment_8h_source.html">CSplineSegment.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03ec87e00f08cd51ba0bcc3272435165"></a><!-- doxytag: member="i2d::CSplineSegment::GetSupportedOperations" ref="a03ec87e00f08cd51ba0bcc3272435165" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int i2d::CSplineSegment::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get set of flags for supported operations. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a9577d4917a5131637c35ef6b6e9fc42a">istd::IChangeable</a>.</p>
 
 </div>
 </div>

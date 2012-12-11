@@ -54,7 +54,7 @@ public:
 				TGuiObserverWrap<
 							TGuiComponentBase<ItemWidgetClass>,
 							imod::TSingleModelObserverBase<ibase::IQtItemModelProvider> > > BaseClass;
-	
+
 	I_BEGIN_COMPONENT(TItemModelEditorCompBase);
 		I_ASSIGN(m_sortingEnabledAttrPtr, "SortingEnabled", "If set, sorting of table data is enabled", true, true);
 	I_END_COMPONENT;
@@ -83,12 +83,12 @@ void TItemModelEditorCompBase<ItemWidgetClass>::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	ibase::IQtItemModelProvider* objectPtr = GetObjectPtr();
+	ibase::IQtItemModelProvider* objectPtr = BaseClass::GetObjectPtr();
 	I_ASSERT(objectPtr != NULL);
 
 	QAbstractItemModel* itemModelPtr = const_cast<QAbstractItemModel*>(objectPtr->GetItemModel());
 	if (itemModelPtr != NULL){
-		ItemWidgetClass* viewPtr = GetQtWidget();
+		ItemWidgetClass* viewPtr = BaseClass::GetQtWidget();
 		I_ASSERT(viewPtr != NULL);
 
 		viewPtr->setModel(itemModelPtr);
@@ -103,7 +103,7 @@ void TItemModelEditorCompBase<ItemWidgetClass>::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
-	ItemWidgetClass* viewPtr = GetQtWidget();
+	ItemWidgetClass* viewPtr = BaseClass::GetQtWidget();
 
 	I_ASSERT(viewPtr != NULL);
 	I_ASSERT(m_sortingEnabledAttrPtr.IsValid());

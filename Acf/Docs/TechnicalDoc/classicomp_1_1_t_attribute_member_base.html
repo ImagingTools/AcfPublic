@@ -64,8 +64,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_member_base.html#ad526b8faee3a62a9e7a9dd5717f1f939">TAttributeMemberBase</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_member_base.html#a7b5257350b0f63dd78afd9c56c9be08e">Init</a> (const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *ownerPtr, const <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html">IRealAttributeStaticInfo</a> &amp;staticInfo, const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> **definitionComponentPtr=NULL)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this attribute.  <a href="#a7b5257350b0f63dd78afd9c56c9be08e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_member_base.html#a02c009fa9c34f4576f47cdc62e527c99">Init</a> (const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *ownerPtr, const <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html">IRealAttributeStaticInfo</a> &amp;staticInfo)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this attribute.  <a href="#a02c009fa9c34f4576f47cdc62e527c99"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_member_base.html#a1b34d4e097baa12a13d7722213e506f5">IsValid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this attribute is valid.  <a href="#a1b34d4e097baa12a13d7722213e506f5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Attribute *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_member_base.html#a954033811b2adce62f76cc3c8cfaf51c">GetAttributePtr</a> () const </td></tr>
@@ -77,6 +77,8 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_member_base.html#af6067c6dfd567f736f06eae27dff865c">SetAttribute</a> (const Attribute *attributePtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_attribute_member_base.html#a21f2dd72740d8790f84f981e252f7605">InitInternal</a> (const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *ownerPtr, const <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html">IRealAttributeStaticInfo</a> &amp;staticInfo, const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> **definitionComponentPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal initialize of attribute.  <a href="#a21f2dd72740d8790f84f981e252f7605"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Attribute&gt;<br/>
@@ -156,7 +158,7 @@ template&lt;typename Attribute &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00078">78</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00085">85</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
 
 </div>
 </div>
@@ -179,18 +181,18 @@ template&lt;typename Attribute &gt; </div>
 
 <p>Access to internal attribute pointer. </p>
 
-<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00162">162</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00110">110</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7b5257350b0f63dd78afd9c56c9be08e"></a><!-- doxytag: member="icomp::TAttributeMemberBase::Init" ref="a7b5257350b0f63dd78afd9c56c9be08e" args="(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo, const IComponent **definitionComponentPtr=NULL)" -->
+<a class="anchor" id="a02c009fa9c34f4576f47cdc62e527c99"></a><!-- doxytag: member="icomp::TAttributeMemberBase::Init" ref="a02c009fa9c34f4576f47cdc62e527c99" args="(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Attribute &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classicomp_1_1_t_attribute_member_base.html">icomp::TAttributeMemberBase</a>&lt; Attribute &gt;::Init </td>
+          <td class="memname">void <a class="el" href="classicomp_1_1_t_attribute_member_base.html">icomp::TAttributeMemberBase</a>&lt; Attribute &gt;::Init </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td>
           <td class="paramname"><em>ownerPtr</em>, </td>
@@ -199,13 +201,7 @@ template&lt;typename Attribute &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html">IRealAttributeStaticInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>staticInfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> **&#160;</td>
-          <td class="paramname"><em>definitionComponentPtr</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>staticInfo</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -221,12 +217,62 @@ template&lt;typename Attribute &gt; </div>
   <table class="params">
     <tr><td class="paramname">ownerPtr</td><td>pointer to parent component of this attribute. </td></tr>
     <tr><td class="paramname">staticInfo</td><td>static info structure creating this attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classicomp_1_1_t_factory_member.html#aa61ae1338101dade0adf5b1cf24c9426">icomp::TFactoryMember&lt; Interface &gt;</a>, and <a class="el" href="classicomp_1_1_t_reference_member.html#a845401204fa7c95d0adaaaa333fce9d7">icomp::TReferenceMember&lt; Interface &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00093">93</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
+
+<p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a21f2dd72740d8790f84f981e252f7605"></a><!-- doxytag: member="icomp::TAttributeMemberBase::InitInternal" ref="a21f2dd72740d8790f84f981e252f7605" args="(const IComponent *ownerPtr, const IRealAttributeStaticInfo &amp;staticInfo, const IComponent **definitionComponentPtr)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Attribute &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classicomp_1_1_t_attribute_member_base.html">icomp::TAttributeMemberBase</a>&lt; Attribute &gt;::InitInternal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td>
+          <td class="paramname"><em>ownerPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html">IRealAttributeStaticInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>staticInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> **&#160;</td>
+          <td class="paramname"><em>definitionComponentPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Internal initialize of attribute. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ownerPtr</td><td>pointer to parent component of this attribute. </td></tr>
+    <tr><td class="paramname">staticInfo</td><td>static info structure creating this attribute. </td></tr>
     <tr><td class="paramname">definitionComponentPtr</td><td>optional pointer will be set with pointer to component defining this attribute. If this attribute was exported it will differ from parent component. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00086">86</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00146">146</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_i_component_context.html#a64139316ee985bfb1882e23b09ed8af0">icomp::IComponentContext::GetAttribute()</a>, <a class="el" href="classicomp_1_1_i_real_attribute_static_info.html#ac5dc202409dff163b254b9559e993397">icomp::IRealAttributeStaticInfo::GetAttributeId()</a>, <a class="el" href="classicomp_1_1_i_component.html#aee8a0c5e74e964fa34c091bc282a9060">icomp::IComponent::GetComponentContext()</a>, <a class="el" href="classicomp_1_1_c_component_context.html#ae64dfff260e096c6f203d25f6e8dccad">icomp::CComponentContext::GetHierarchyAddress()</a>, <a class="el" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1">icomp::IComponent::GetParentComponent()</a>, <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -252,7 +298,7 @@ template&lt;typename Attribute &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicomp_1_1_t_factory_member.html#a9abfbfb341943b264d16046b53268033">icomp::TFactoryMember&lt; Interface &gt;</a>, and <a class="el" href="classicomp_1_1_t_reference_member.html#a356cac6e4bbfd2c3d9e6a84b8e8e56c7">icomp::TReferenceMember&lt; Interface &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00153">153</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00101">101</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -278,7 +324,7 @@ template&lt;typename Attribute &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicomp_1_1_t_attribute_member_3_01_t_attribute_3_01_q_string_01_4_01_4.html#af62f88563e61cbb53c3c5ac3e73ac83f">icomp::TAttributeMember&lt; TAttribute&lt; QString &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00180">180</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00128">128</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00054">I_ASSERT</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -304,7 +350,7 @@ template&lt;typename Attribute &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicomp_1_1_t_reference_member.html#a6de7cc35ff4bd7cf8640d38fd0ed4ac8">icomp::TReferenceMember&lt; Interface &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00171">171</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00119">119</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
 
 </div>
 </div>
@@ -325,7 +371,7 @@ template&lt;typename Attribute&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00191">191</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_attribute_member_8h_source.html#l00139">139</a> of file <a class="el" href="_t_attribute_member_8h_source.html">TAttributeMember.h</a>.</p>
 
 </div>
 </div>

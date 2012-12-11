@@ -22,6 +22,9 @@
 
 #include "i2d/CPolyline.h"
 
+#include "istd/TDelPtr.h"
+#include "istd/TChangeNotifier.h"
+
 
 namespace i2d
 {
@@ -118,6 +121,40 @@ i2d::CVector2d CPolyline::GetKneeVector(int nodeIndex) const
 	}
 
 	return kneeVector;
+}
+
+// reimplemented (istd::IChangeable)
+
+int CPolyline::GetSupportedOperations() const
+{
+	return SO_COPY | SO_CLONE;
+}
+
+bool CPolyline::CopyFrom(const IChangeable& object)
+{
+	const CPolyline* polylinePtr = dynamic_cast<const CPolyline*>(&object);
+
+	if (polylinePtr != NULL){
+
+		istd::CChangeNotifier notifier(this);
+
+		BaseClass::CopyFrom(object);
+		SetClosed(polylinePtr->IsClosed());
+		return true;
+	}	
+
+	return false;
+}
+
+istd::IChangeable* CPolyline::CloneMe() const 
+{
+	istd::TDelPtr<CPolyline> clonePtr(new CPolyline);
+
+	if (clonePtr->CopyFrom(*this)){
+		return clonePtr.PopPtr();
+	}
+
+	return NULL;
 }
 
 

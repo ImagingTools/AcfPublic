@@ -90,6 +90,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate transformation of the object into second one.  <a href="#addbba93c936513fddd40c2978d5055ee"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#aae375505fc42f5eaaf1a7747883767dd">GetInvTransformed</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_object2d.html">IObject2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#aae375505fc42f5eaaf1a7747883767dd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a7d1b521356a76871f7de96a2c15ca119">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a7d1b521356a76871f7de96a2c15ca119"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a9f8fc1bf403742d9ead22d8539b566b5">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a31b04208e4f751d8b5d536ab7309ccf8">CloneMe</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a31b04208e4f751d8b5d536ab7309ccf8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a192c7508130cf4243165eed039f7a253">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a192c7508130cf4243165eed039f7a253"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -164,6 +169,50 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a31b04208e4f751d8b5d536ab7309ccf8"></a><!-- doxytag: member="i2d::CCircle::CloneMe" ref="a31b04208e4f751d8b5d536ab7309ccf8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CCircle::CloneMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#af5981c97570606752879f95b57d377c1">i2d::CPosition2d</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_oriented_circle.html#a71b986a6ac890ac1722af2ee98116daa">i2d::COrientedCircle</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f8fc1bf403742d9ead22d8539b566b5"></a><!-- doxytag: member="i2d::CCircle::CopyFrom" ref="a9f8fc1bf403742d9ead22d8539b566b5" args="(const IChangeable &amp;object)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CCircle::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#ae7db57e951923177343680407caa7477">i2d::CPosition2d</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_oriented_circle.html#aca2f62da632e69cc2037090b044a29fe">i2d::COrientedCircle</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a78aee945e2a7ae1dd717604b4657e309"></a><!-- doxytag: member="i2d::CCircle::GetBoundingBox" ref="a78aee945e2a7ae1dd717604b4657e309" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -251,9 +300,32 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00064">64</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00069">69</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
 
-<p>References <a class="el" href="_c_circle_8h_source.html#l00058">m_radius</a>.</p>
+<p>References <a class="el" href="_c_circle_8h_source.html#l00063">m_radius</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d1b521356a76871f7de96a2c15ca119"></a><!-- doxytag: member="i2d::CCircle::GetSupportedOperations" ref="a7d1b521356a76871f7de96a2c15ca119" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int i2d::CCircle::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get set of flags for supported operations. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#a92f14c245c32228d6c124d97c216974d">i2d::CPosition2d</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_oriented_circle.html#a52f6b6a9b9c028ba402b153e873a4a66">i2d::COrientedCircle</a>.</p>
 
 </div>
 </div>
@@ -487,9 +559,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00058">58</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00063">63</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_circle_8h_source.html#l00064">GetRadius()</a>.</p>
+<p>Referenced by <a class="el" href="_c_circle_8h_source.html#l00069">GetRadius()</a>.</p>
 
 </div>
 </div>
