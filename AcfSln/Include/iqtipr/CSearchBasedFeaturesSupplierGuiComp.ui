@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>348</width>
+    <width>652</width>
     <height>543</height>
    </rect>
   </property>
@@ -28,16 +28,12 @@
      <property name="text">
       <string>Test</string>
      </property>
-     <property name="icon">
-      <iconset resource="../../../Acf/Include/iqtgui/iqtgui.qrc">
-       <normaloff>:/Icons/Play.svg</normaloff>:/Icons/Play.svg</iconset>
-     </property>
     </widget>
    </item>
    <item row="0" column="1">
     <widget class="QToolButton" name="AutoUpdateButton">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+      <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
@@ -46,7 +42,7 @@
       <string/>
      </property>
      <property name="icon">
-      <iconset resource="../../../Acf/Include/iqtgui/iqtgui.qrc">
+      <iconset>
        <normaloff>:/Icons/AutoUpdate.svg</normaloff>:/Icons/AutoUpdate.svg</iconset>
      </property>
      <property name="checkable">
@@ -56,12 +52,6 @@
    </item>
    <item row="1" column="0" colspan="2">
     <widget class="QGroupBox" name="ParamsGB">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
      <property name="title">
       <string>Parameters</string>
      </property>
@@ -122,12 +112,6 @@
    </item>
    <item row="2" column="0" colspan="2">
     <widget class="QGroupBox" name="groupBox_2">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
      <property name="title">
       <string>Results</string>
      </property>
@@ -197,8 +181,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="../../../Acf/Include/iqtgui/iqtgui.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

@@ -548,7 +548,7 @@ Protected Member Functions</h2></td></tr>
     <tr><td class="paramname">attributeName</td><td>name of attribute in specified registry element. </td></tr>
     <tr><td class="paramname">attributeName</td><td>name of registry element in specified registry. </td></tr>
     <tr><td class="paramname">registry</td><td>registry object. </td></tr>
-    <tr><td class="paramname">ignoreUndef</td><td>if true, udefined elements will be ignored. </td></tr>
+    <tr><td class="paramname">ignoreUndef</td><td>if true, undefined elements will be ignored. </td></tr>
     <tr><td class="paramname">allReasons</td><td>if true, all reasons will be explained. </td></tr>
     <tr><td class="paramname">reasonConsumerPtr</td><td>optional consumer of messages explaining reason of calculated result. </td></tr>
   </table>
@@ -607,7 +607,7 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">attributeName</td><td>name of registry element in specified registry. </td></tr>
     <tr><td class="paramname">registry</td><td>registry object. </td></tr>
-    <tr><td class="paramname">ignoreUndef</td><td>if true, udefined elements will be ignored. </td></tr>
+    <tr><td class="paramname">ignoreUndef</td><td>if true, undefined elements will be ignored. </td></tr>
     <tr><td class="paramname">allReasons</td><td>if true, all reasons will be explained. </td></tr>
     <tr><td class="paramname">reasonConsumerPtr</td><td>optional consumer of messages explaining reason of calculated result. </td></tr>
   </table>
@@ -713,10 +713,11 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Check if registry is valid. </p>
+<p>A registry is invalid when it contains unresolved component references.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">registry</td><td>registry object. </td></tr>
-    <tr><td class="paramname">ignoreUndef</td><td>if true, udefined elements will be ignored. </td></tr>
+    <tr><td class="paramname">ignoreUndef</td><td>if true, undefined elements will be ignored. </td></tr>
     <tr><td class="paramname">allReasons</td><td>if true, all reasons will be explained. </td></tr>
     <tr><td class="paramname">reasonConsumerPtr</td><td>optional consumer of messages explaining reason of calculated result. </td></tr>
   </table>

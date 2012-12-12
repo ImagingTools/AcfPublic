@@ -63,36 +63,36 @@
 <a name="l00046"></a>00046                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
 <a name="l00047"></a>00047                             <span class="keywordtype">int</span> queryFlags = <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#a17277f70a9bf291a4806d392aa37d8b2af792ec43d28e8c197e6c2ffc97a6fc39">QF_NONE</a>) <span class="keyword">const</span> = 0;
 <a name="l00048"></a>00048 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#a84a07d820edbb8f542ca577bbf7dd8b9" title="Check if registry is valid.">IsRegistryValid</a>(
-<a name="l00057"></a>00057                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00058"></a>00058                             <span class="keywordtype">bool</span> ignoreUndef,
-<a name="l00059"></a>00059                             <span class="keywordtype">bool</span> allReasons,
-<a name="l00060"></a>00060                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
-<a name="l00061"></a>00061 
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#a7a5f49e5acecb6c03518b6c68fc167db" title="Check if element is valid.">IsElementValid</a>(
-<a name="l00071"></a>00071                             <span class="keyword">const</span> QByteArray&amp; elementName,
-<a name="l00072"></a>00072                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00073"></a>00073                             <span class="keywordtype">bool</span> ignoreUndef,
-<a name="l00074"></a>00074                             <span class="keywordtype">bool</span> allReasons,
-<a name="l00075"></a>00075                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
-<a name="l00076"></a>00076 
-<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#a111097da538f262f69ee108da356b051" title="Check if attribute is valid.">IsAttributeValid</a>(
-<a name="l00087"></a>00087                             <span class="keyword">const</span> QByteArray&amp; attributeName,
-<a name="l00088"></a>00088                             <span class="keyword">const</span> QByteArray&amp; elementName,
-<a name="l00089"></a>00089                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
-<a name="l00090"></a>00090                             <span class="keywordtype">bool</span> ignoreUndef,
-<a name="l00091"></a>00091                             <span class="keywordtype">bool</span> allReasons,
-<a name="l00092"></a>00092                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
-<a name="l00096"></a>00096        <span class="keyword">virtual</span> QIcon <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#adfe758e659238dc37492c437179d8c31" title="Get icon of component.">GetComponentIcon</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address) <span class="keyword">const</span> = 0;
-<a name="l00097"></a>00097 };
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 } <span class="comment">// namespace icmpstr</span>
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#a84a07d820edbb8f542ca577bbf7dd8b9" title="Check if registry is valid.">IsRegistryValid</a>(
+<a name="l00060"></a>00060                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
+<a name="l00061"></a>00061                             <span class="keywordtype">bool</span> ignoreUndef,
+<a name="l00062"></a>00062                             <span class="keywordtype">bool</span> allReasons,
+<a name="l00063"></a>00063                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
+<a name="l00064"></a>00064 
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#a7a5f49e5acecb6c03518b6c68fc167db" title="Check if element is valid.">IsElementValid</a>(
+<a name="l00074"></a>00074                             <span class="keyword">const</span> QByteArray&amp; elementName,
+<a name="l00075"></a>00075                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
+<a name="l00076"></a>00076                             <span class="keywordtype">bool</span> ignoreUndef,
+<a name="l00077"></a>00077                             <span class="keywordtype">bool</span> allReasons,
+<a name="l00078"></a>00078                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
+<a name="l00079"></a>00079 
+<a name="l00089"></a>00089        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#a111097da538f262f69ee108da356b051" title="Check if attribute is valid.">IsAttributeValid</a>(
+<a name="l00090"></a>00090                             <span class="keyword">const</span> QByteArray&amp; attributeName,
+<a name="l00091"></a>00091                             <span class="keyword">const</span> QByteArray&amp; elementName,
+<a name="l00092"></a>00092                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>&amp; registry,
+<a name="l00093"></a>00093                             <span class="keywordtype">bool</span> ignoreUndef,
+<a name="l00094"></a>00094                             <span class="keywordtype">bool</span> allReasons,
+<a name="l00095"></a>00095                             <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* reasonConsumerPtr) <span class="keyword">const</span> = 0;
+<a name="l00099"></a>00099        <span class="keyword">virtual</span> QIcon <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html#adfe758e659238dc37492c437179d8c31" title="Get icon of component.">GetComponentIcon</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address) <span class="keyword">const</span> = 0;
+<a name="l00100"></a>00100 };
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103 <span class="preprocessor">#endif // !icmpstr_IRegistryConsistInfo_included</span>
-<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00103"></a>00103 } <span class="comment">// namespace icmpstr</span>
+<a name="l00104"></a>00104 
 <a name="l00105"></a>00105 
+<a name="l00106"></a>00106 <span class="preprocessor">#endif // !icmpstr_IRegistryConsistInfo_included</span>
+<a name="l00107"></a>00107 <span class="preprocessor"></span>
+<a name="l00108"></a>00108 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

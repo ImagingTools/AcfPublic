@@ -165,7 +165,7 @@ void CBitmapSupplierGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	ParamsFrame->setVisible(AreParamsEditable());
+	ParamsGB->setVisible(AreParamsEditable() || IsLoadParamsSupported());
 
 	LoadParamsButton->setVisible(IsLoadParamsSupported());
 	SaveParamsButton->setVisible(IsSaveParamsSupported());

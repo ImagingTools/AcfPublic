@@ -70,8 +70,11 @@ public:
 
 	/**
 		Check if registry is valid.
+	 
+		A registry is invalid when it contains unresolved component references.
+ 
 		\param	registry			registry object.
-		\param	ignoreUndef			if true, udefined elements will be ignored.
+		\param	ignoreUndef			if true, undefined elements will be ignored.
 		\param	allReasons			if true, all reasons will be explained.
 		\param	reasonConsumerPtr	optional consumer of messages explaining reason of calculated result.
 	*/
@@ -85,7 +88,7 @@ public:
 		Check if element is valid.
 		\param	attributeName		name of registry element in specified registry.
 		\param	registry			registry object.
-		\param	ignoreUndef			if true, udefined elements will be ignored.
+		\param	ignoreUndef			if true, undefined elements will be ignored.
 		\param	allReasons			if true, all reasons will be explained.
 		\param	reasonConsumerPtr	optional consumer of messages explaining reason of calculated result.
 	*/
@@ -101,7 +104,7 @@ public:
 		\param	attributeName		name of attribute in specified registry element.
 		\param	attributeName		name of registry element in specified registry.
 		\param	registry			registry object.
-		\param	ignoreUndef			if true, udefined elements will be ignored.
+		\param	ignoreUndef			if true, undefined elements will be ignored.
 		\param	allReasons			if true, all reasons will be explained.
 		\param	reasonConsumerPtr	optional consumer of messages explaining reason of calculated result.
 	*/

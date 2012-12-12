@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          2707
+          2652
         </Number>
         <Description>
           ACF
@@ -420,7 +420,31 @@
       </ComponentId>
     </Interface>
   </ExportedInterfaces>
-  <ExportedComponents count="2">
+  <ExportedComponents count="5">
+    <Component>
+      <ExportedId>
+        AnnulusSegment
+      </ExportedId>
+      <ComponentId>
+        SimpleCircleFinderParamsSet/AnnulusSegment
+      </ComponentId>
+    </Component>
+    <Component>
+      <ExportedId>
+        CaliperParams
+      </ExportedId>
+      <ComponentId>
+        SimpleCircleFinderParamsSet/CaliperParams
+      </ComponentId>
+    </Component>
+    <Component>
+      <ExportedId>
+        Line
+      </ExportedId>
+      <ComponentId>
+        LineCaliperParamsSet/Line
+      </ComponentId>
+    </Component>
     <Component>
       <ExportedId>
         ParamsGui
