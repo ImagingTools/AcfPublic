@@ -3676,13 +3676,6 @@
       <anchor>aaee9c247a6db7b9333ba3e16b9ab16c0</anchor>
       <arglist>(ScaleConstraints)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>afc619f3d3061bd462a49ce5cdbc06e8a</anchor>
-      <arglist>(ScaleConstraints, const imeas::INumericConstraints, GetScaleConstraints)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
@@ -3696,13 +3689,6 @@
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
       <anchor>a34a3e67be1704a857449eb887cea5f97</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const imeas::INumericConstraints *</type>
-      <name>GetScaleConstraints</name>
-      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a86ccaffd21719b48bf4b907d83b3f915</anchor>
-      <arglist>(CSnapBitmapSupplierComp &amp;)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>

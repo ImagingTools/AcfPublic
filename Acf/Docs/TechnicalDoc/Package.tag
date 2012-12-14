@@ -481,6 +481,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CMatrix3d.h</name>
+    <path>C:/Temp/Acf/Include/i3d/</path>
+    <filename>_c_matrix3d_8h</filename>
+    <includes id="_t_matrix_8h" name="TMatrix.h" local="yes" imported="no">imath/TMatrix.h</includes>
+    <includes id="_c_vector3d_8h" name="CVector3d.h" local="yes" imported="no">i3d/CVector3d.h</includes>
+    <class kind="class">i3d::CMatrix3d</class>
+    <namespace>i3d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CVector3d.h</name>
     <path>C:/Temp/Acf/Include/i3d/</path>
     <filename>_c_vector3d_8h</filename>
@@ -11422,7 +11431,195 @@
   <compound kind="namespace">
     <name>i3d</name>
     <filename>namespacei3d.html</filename>
+    <class kind="class">i3d::CMatrix3d</class>
     <class kind="class">i3d::CVector3d</class>
+  </compound>
+  <compound kind="class">
+    <name>i3d::CMatrix3d</name>
+    <filename>classi3d_1_1_c_matrix3d.html</filename>
+    <base>TMatrix&lt; 3, 3 &gt;</base>
+    <member kind="typedef">
+      <type>imath::TMatrix&lt; 3, 3 &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a553e2da7268defb4b7010290571243a3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatrix3d</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a0a0c9290cd1eeadcab12a9b84dc4ad29</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatrix3d</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>abd0c174118bd4f190b40e135bc454dfb</anchor>
+      <arglist>(const CMatrix3d &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatrix3d</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a92f5c09100c34ebb5a8e8a47e4e34d3e</anchor>
+      <arglist>(const CVector3d &amp;axisX, const CVector3d &amp;axisY, const CVector3d &amp;axisZ)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatrix3d</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>acf59fa546528d0a784c2e29789fbeee3</anchor>
+      <arglist>(double m11, double m12, double m13, double m21, double m22, double m23, double m31, double m32, double m33)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a1717e2087baea87638b15cbd4220efde</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CVector3d</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a01a8de0b1d8ef4427c1a966bbdadc0e8</anchor>
+      <arglist>(const CVector3d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix3d</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a2b88d32d6705a4851b2498171bfedd76</anchor>
+      <arglist>(const CMatrix3d &amp;matrix) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Multiply</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>ac1cad27c13a2e8a9234fb3c72d1cc3df</anchor>
+      <arglist>(const CMatrix3d &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>MultiplyLeft</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>ae4e83906c97a749327c7dbd73f2800cf</anchor>
+      <arglist>(const CMatrix3d &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>CVector3d</type>
+      <name>GetAxisX</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>aee0c2ca37d1a4564754a5e1648a4a642</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector3d</type>
+      <name>GetAxisY</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a719aedb1318934f15d9229db35c30956</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector3d</type>
+      <name>GetAxisZ</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a067a6fb4c9d5d957d1c856f32ec234ea</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector3d</type>
+      <name>GetAxesLengths</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>ab0e7d6bfd9c9170f9c5a87a871050f71</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetAxesLengths</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a95196cbb61479eb2de6d05da2ca8df64</anchor>
+      <arglist>(CVector3d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>i3d::CVector3d</type>
+      <name>GetInvMultiplied</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a711899ed52e158968512f0ec68e840a9</anchor>
+      <arglist>(const i3d::CVector3d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetInvMultiplied</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a1da9fcb03c89d72b027bf99c8d1d32bb</anchor>
+      <arglist>(const i3d::CVector3d &amp;position, i3d::CVector3d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix3d</type>
+      <name>GetInverted</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a1c961074fbd2595ec162112898a8d263</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetInverted</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>af131d01eebc37a371906ef6a3a190969</anchor>
+      <arglist>(CMatrix3d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix3d</type>
+      <name>GetTransposed</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a60614e26cc16877b71ee9a8e05a9f9c8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetDecompositionQDQ</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a869400e48d46f99822f94a2374d7c32b</anchor>
+      <arglist>(i3d::CMatrix3d &amp;matrixQ, i3d::CVector3d &amp;diagonalD)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetDet</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a0254ac5d25d62922cd5e8513bf4c40e6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix3d &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>ab6578c6719c74f206d507353556ce8f3</anchor>
+      <arglist>(const CMatrix3d &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix3d</type>
+      <name>operator*</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a954042f48ff9a2475394635dd1e79768</anchor>
+      <arglist>(double scale) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix3d</type>
+      <name>operator/</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a6526759422d795fc5266b7e4c19d2017</anchor>
+      <arglist>(double scale) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const CMatrix3d &amp;</type>
+      <name>GetIdentity</name>
+      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
+      <anchor>a2fad68c02857ea5c8f2180b910f545c3</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i3d::CVector3d</name>
