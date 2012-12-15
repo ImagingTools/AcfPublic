@@ -60,51 +60,53 @@
 <a name="l00035"></a>00035               I_ASSIGN(m_iconProviderCompPtr, <span class="stringliteral">&quot;IconProvider&quot;</span>, <span class="stringliteral">&quot;Provider of the button icons&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IconProvider&quot;</span>);
 <a name="l00036"></a>00036               I_ASSIGN(m_fontSizeAttrPtr, <span class="stringliteral">&quot;FontSize&quot;</span>, <span class="stringliteral">&quot;Font Size&quot;</span>, <span class="keyword">true</span>, 8);
 <a name="l00037"></a>00037               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Icon Size&quot;</span>, <span class="keyword">true</span>, 16);
-<a name="l00038"></a>00038               I_ASSIGN(m_layoutTypeAttrPtr, <span class="stringliteral">&quot;LayoutType&quot;</span>, <span class="stringliteral">&quot;0 - horizontal\n1 - vertical\n2 and more - number of columns&quot;</span>, <span class="keyword">true</span>, 1);
-<a name="l00039"></a>00039               I_ASSIGN(m_descriptionTypeAttrPtr, <span class="stringliteral">&quot;DescriptionType&quot;</span>, <span class="stringliteral">&quot;0 - No description visible\n1 - Default (description is alvays visible)\n2 - Compact (description is visible for checked button only)&quot;</span>, <span class="keyword">true</span>, 1);
-<a name="l00040"></a>00040               I_ASSIGN(m_showTooltipAttrPtr, <span class="stringliteral">&quot;DescriptionAsTooltip&quot;</span>, <span class="stringliteral">&quot;Show description as tooltip&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00041"></a>00041        I_END_COMPONENT;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">protected</span>:
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_button_based_selection_param_gui_comp.html#a0f624911f06d8dcaf724ff6db25af016" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_button_based_selection_param_gui_comp.html#a2a5206aad1af7836e0e43009ebbc0bf6" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_button_based_selection_param_gui_comp.html#a132d894e3cc5d99469f15fbabf83b45f" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00050"></a>00050        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_button_based_selection_param_gui_comp.html#ad108174262552f83e4420fe236449bda">OnButtonClicked</a>(<span class="keywordtype">int</span> index);
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">private</span>:
-<a name="l00053"></a>00053        <span class="keyword">struct </span>SelectionInfo{
-<a name="l00054"></a>00054               SelectionInfo* parentInfoPtr;
-<a name="l00055"></a>00055               <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* paramPtr;
-<a name="l00056"></a>00056               <span class="keywordtype">int</span> index;
-<a name="l00057"></a>00057        };
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059        QList&lt;SelectionInfo*&gt; m_selectionInfos;
-<a name="l00060"></a>00060        QList&lt;SelectionInfo*&gt; m_allSelectionInfos;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="keywordtype">void</span> CreateButtons(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* paramPtr, SelectionInfo* parentSelectionInfoPtr, <span class="keywordtype">int</span>&amp; totalButtons);
-<a name="l00063"></a>00063        QAbstractButton* CreateButton(QWidget* parentPtr, <span class="keyword">const</span> QString&amp; description);
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="keyword">private</span>:
-<a name="l00066"></a>00066        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_iconProviderCompPtr);
-<a name="l00067"></a>00067        I_ATTR(<span class="keywordtype">int</span>, m_fontSizeAttrPtr);
-<a name="l00068"></a>00068        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
-<a name="l00069"></a>00069        I_ATTR(<span class="keywordtype">bool</span>, m_showTooltipAttrPtr);
-<a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">int</span>, m_layoutTypeAttrPtr);
-<a name="l00071"></a>00071        I_ATTR(<span class="keywordtype">int</span>, m_descriptionTypeAttrPtr);
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073        QButtonGroup m_buttonsGroup;
-<a name="l00074"></a>00074 };
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 } <span class="comment">// namespace iqtprm</span>
+<a name="l00038"></a>00038               I_ASSIGN(m_minWidthAttrPtr, <span class="stringliteral">&quot;MinimumWidth&quot;</span>, <span class="stringliteral">&quot;Minimum width of the buttons (0 - default)&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00039"></a>00039               I_ASSIGN(m_layoutTypeAttrPtr, <span class="stringliteral">&quot;LayoutType&quot;</span>, <span class="stringliteral">&quot;0 - horizontal\n1 - vertical\n2 and more - number of columns&quot;</span>, <span class="keyword">true</span>, 1);
+<a name="l00040"></a>00040               I_ASSIGN(m_descriptionTypeAttrPtr, <span class="stringliteral">&quot;DescriptionType&quot;</span>, <span class="stringliteral">&quot;0 - No description visible\n1 - Default (description is alvays visible)\n2 - Compact (description is visible for checked button only)&quot;</span>, <span class="keyword">true</span>, 1);
+<a name="l00041"></a>00041               I_ASSIGN(m_showTooltipAttrPtr, <span class="stringliteral">&quot;DescriptionAsTooltip&quot;</span>, <span class="stringliteral">&quot;Show description as tooltip&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00042"></a>00042        I_END_COMPONENT;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="keyword">protected</span>:
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_button_based_selection_param_gui_comp.html#a0f624911f06d8dcaf724ff6db25af016" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_button_based_selection_param_gui_comp.html#a2a5206aad1af7836e0e43009ebbc0bf6" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_button_based_selection_param_gui_comp.html#a132d894e3cc5d99469f15fbabf83b45f" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00051"></a>00051        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_button_based_selection_param_gui_comp.html#ad108174262552f83e4420fe236449bda">OnButtonClicked</a>(<span class="keywordtype">int</span> index);
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="keyword">private</span>:
+<a name="l00054"></a>00054        <span class="keyword">struct </span>SelectionInfo{
+<a name="l00055"></a>00055               SelectionInfo* parentInfoPtr;
+<a name="l00056"></a>00056               <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* paramPtr;
+<a name="l00057"></a>00057               <span class="keywordtype">int</span> index;
+<a name="l00058"></a>00058        };
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        QList&lt;SelectionInfo*&gt; m_selectionInfos;
+<a name="l00061"></a>00061        QList&lt;SelectionInfo*&gt; m_allSelectionInfos;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="keywordtype">void</span> CreateButtons(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* paramPtr, SelectionInfo* parentSelectionInfoPtr, <span class="keywordtype">int</span>&amp; totalButtons);
+<a name="l00064"></a>00064        QAbstractButton* CreateButton(QWidget* parentPtr, <span class="keyword">const</span> QString&amp; description);
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">private</span>:
+<a name="l00067"></a>00067        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_iconProviderCompPtr);
+<a name="l00068"></a>00068        I_ATTR(<span class="keywordtype">int</span>, m_fontSizeAttrPtr);
+<a name="l00069"></a>00069        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
+<a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">int</span>, m_minWidthAttrPtr);
+<a name="l00071"></a>00071        I_ATTR(<span class="keywordtype">bool</span>, m_showTooltipAttrPtr);
+<a name="l00072"></a>00072        I_ATTR(<span class="keywordtype">int</span>, m_layoutTypeAttrPtr);
+<a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">int</span>, m_descriptionTypeAttrPtr);
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075        QButtonGroup m_buttonsGroup;
+<a name="l00076"></a>00076 };
+<a name="l00077"></a>00077 
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="preprocessor">#endif // !iqtprm_CButtonBasedSelectionParamGuiComp_included</span>
-<a name="l00081"></a>00081 <span class="preprocessor"></span>
-<a name="l00082"></a>00082 
+<a name="l00079"></a>00079 } <span class="comment">// namespace iqtprm</span>
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="preprocessor">#endif // !iqtprm_CButtonBasedSelectionParamGuiComp_included</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>
+<a name="l00084"></a>00084 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
