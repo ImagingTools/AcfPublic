@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iview_CColorShemaBase_included
-#define iview_CColorShemaBase_included
+#ifndef iview_CColorSchemaBase_included
+#define iview_CColorSchemaBase_included
 
 
 // Qt includes
@@ -29,14 +29,14 @@
 
 
 // ACF includes
-#include "iview/IColorShema.h"
+#include "iview/IColorSchema.h"
 
 
 namespace iview
 {
 
 
-class CColorShemaBase: public IColorShema
+class CColorSchemaBase: public IColorSchema
 {
 public:
 	enum
@@ -46,10 +46,10 @@ public:
 		LOGICAL_LINE_WIDTH = 4
 	};
 
-	// reimplemented (IColorShema)
-	virtual void Assign(const IColorShema& colorShema);
-	virtual void DrawTicker(QPainter& drawContext, istd::CIndex2d point, IColorShema::TickerType tickerType) const;
-	virtual const i2d::CRect& GetTickerBox(IColorShema::TickerType tickerType) const;
+	// reimplemented (IColorSchema)
+	virtual void Assign(const IColorSchema& colorSchema);
+	virtual void DrawTicker(QPainter& drawContext, istd::CIndex2d point, IColorSchema::TickerType tickerType) const;
+	virtual const i2d::CRect& GetTickerBox(IColorSchema::TickerType tickerType) const;
 	virtual int GetLogicalLineWidth() const;
 
 protected:
@@ -58,7 +58,7 @@ protected:
 };
 
 
-inline int CColorShemaBase::GetLogicalLineWidth() const
+inline int CColorSchemaBase::GetLogicalLineWidth() const
 {
 	return LOGICAL_LINE_WIDTH;
 }
@@ -67,7 +67,7 @@ inline int CColorShemaBase::GetLogicalLineWidth() const
 } // namespace iview
 
 
-#endif // !iview_CColorShemaBase_included
+#endif // !iview_CColorSchemaBase_included
 
 
 

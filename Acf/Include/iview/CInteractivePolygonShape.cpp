@@ -34,7 +34,7 @@
 
 #include "iqt/iqt.h"
 
-#include "iview/IColorShema.h"
+#include "iview/IColorSchema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -61,7 +61,7 @@ bool CInteractivePolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseB
 	i2d::CPolygon* polygonPtr = dynamic_cast<i2d::CPolygon*>(modelPtr);
 	if (polygonPtr != NULL){
 		if (downFlag){
-			const IColorShema& colorShema = GetColorShema();
+			const IColorSchema& colorSchema = GetColorSchema();
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 			int nodesCount = polygonPtr->GetNodesCount();
@@ -76,7 +76,7 @@ bool CInteractivePolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseB
 
 			case ISelectable::EM_MOVE:
 				{
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_MOVE);
+					const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_MOVE);
 
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& cp = polygonPtr->GetNode(i);
@@ -100,7 +100,7 @@ bool CInteractivePolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseB
 					cpLast = GetSegmentMiddle(nodesCount - 1);
 					istd::CIndex2d spLast = transform.GetScreenPosition(cpLast);
 
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_INSERT);
+					const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_INSERT);
 
 					if (tickerBox.IsInside(position - spLast)){
 						BeginModelChanges();
@@ -133,7 +133,7 @@ bool CInteractivePolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseB
 
 			case ISelectable::EM_REMOVE:
 				if (nodesCount > 2){
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_DELETE);
+					const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_DELETE);
 
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& cp = polygonPtr->GetNode(i);
@@ -211,7 +211,7 @@ void CInteractivePolygonShape::Draw(QPainter& drawContext) const
 		int nodesCount = polygonPtr->GetNodesCount();
 		if (nodesCount > 0){
 			const iview::CScreenTransform transform = GetLogToScreenTransform();
-			const IColorShema& colorShema = GetColorShema();
+			const IColorSchema& colorSchema = GetColorSchema();
 
 			istd::CIndex2d sp;
 
@@ -219,9 +219,9 @@ void CInteractivePolygonShape::Draw(QPainter& drawContext) const
 			DrawCurve(drawContext);
 
 			drawContext.save();
-			drawContext.setPen(colorShema.GetPen(IColorShema::SP_TICKER));
+			drawContext.setPen(colorSchema.GetPen(IColorSchema::SP_TICKER));
 			drawContext.save();
-			drawContext.setBrush(colorShema.GetBrush(IColorShema::SB_TICKER));
+			drawContext.setBrush(colorSchema.GetBrush(IColorSchema::SB_TICKER));
 
 			if (IsSelected()){
 				DrawSelectionElements(drawContext);
@@ -229,7 +229,7 @@ void CInteractivePolygonShape::Draw(QPainter& drawContext) const
 			else{
 				if (m_isFirstVisible && (nodesCount > 0)){
 					sp = transform.GetScreenPosition(polygonPtr->GetNode(0));
-					colorShema.DrawTicker(drawContext, sp, IColorShema::TT_INACTIVE);
+					colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_INACTIVE);
 				}
 			}
 
@@ -256,7 +256,7 @@ ITouchable::TouchState CInteractivePolygonShape::IsTouched(istd::CIndex2d positi
 {
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (IsDisplayConnected() && (polygonPtr != NULL)){
-		const IColorShema& colorShema = GetColorShema();
+		const IColorSchema& colorSchema = GetColorSchema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 		int nodesCount = polygonPtr->GetNodesCount();
@@ -280,7 +280,7 @@ ITouchable::TouchState CInteractivePolygonShape::IsTouched(istd::CIndex2d positi
 
 		case ISelectable::EM_MOVE:
 			{
-				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_MOVE: IColorShema::TT_INACTIVE);
+				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_MOVE: IColorSchema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
 					istd::CIndex2d sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
 					if (tickerBox.IsInside(position - sp)){
@@ -292,7 +292,7 @@ ITouchable::TouchState CInteractivePolygonShape::IsTouched(istd::CIndex2d positi
 
 		case ISelectable::EM_REMOVE:
 			{
-				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_DELETE: IColorShema::TT_INACTIVE);
+				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_DELETE: IColorSchema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
 					istd::CIndex2d sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
 					if (tickerBox.IsInside(position - sp)){
@@ -304,7 +304,7 @@ ITouchable::TouchState CInteractivePolygonShape::IsTouched(istd::CIndex2d positi
 
 		case ISelectable::EM_ADD:
 			{
-				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_INSERT: IColorShema::TT_INACTIVE);
+				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_INSERT: IColorSchema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
 					istd::CIndex2d sp = transform.GetScreenPosition(GetSegmentMiddle(i));
 					if (tickerBox.IsInside(position - sp)){
@@ -376,14 +376,14 @@ void CInteractivePolygonShape::DrawCurve(QPainter& drawContext) const
 		const i2d::CPolygon& polygon = *dynamic_cast<const i2d::CPolygon*>(modelPtr);
 		I_ASSERT(&polygon != NULL);
 
-		const IColorShema& colorShema = GetColorShema();
+		const IColorSchema& colorSchema = GetColorSchema();
 		if (IsSelected()){
 			drawContext.save();
-			drawContext.setPen(colorShema.GetPen(IColorShema::SP_SELECTED));
+			drawContext.setPen(colorSchema.GetPen(IColorSchema::SP_SELECTED));
 		}
 		else{
 			drawContext.save();
-			drawContext.setPen(colorShema.GetPen(IColorShema::SP_NORMAL));
+			drawContext.setPen(colorSchema.GetPen(IColorSchema::SP_NORMAL));
 		}
 
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
@@ -413,7 +413,7 @@ void CInteractivePolygonShape::DrawArea(QPainter& drawContext) const
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (polygonPtr != NULL){
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const IColorShema& colorShema = GetColorShema();
+		const IColorSchema& colorSchema = GetColorSchema();
 
 		int nodesCount = polygonPtr->GetNodesCount();
 
@@ -428,11 +428,11 @@ void CInteractivePolygonShape::DrawArea(QPainter& drawContext) const
 
 			if (IsSelected()){
 				drawContext.save();
-				drawContext.setBrush(colorShema.GetBrush(IColorShema::SB_HALF_TRANSPARENT));
+				drawContext.setBrush(colorSchema.GetBrush(IColorSchema::SB_HALF_TRANSPARENT));
 			}
 			else{
 				drawContext.save();
-				drawContext.setBrush(colorShema.GetBrush(IColorShema::SB_HALF_TRANSPARENT2));
+				drawContext.setBrush(colorSchema.GetBrush(IColorSchema::SB_HALF_TRANSPARENT2));
 			}
 			
 			drawContext.drawPolygon(m_screenPoints);
@@ -450,7 +450,7 @@ void CInteractivePolygonShape::DrawSelectionElements(QPainter& drawContext) cons
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (polygonPtr != NULL){
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const IColorShema& colorShema = GetColorShema();
+		const IColorSchema& colorSchema = GetColorSchema();
 
 		int nodesCount = polygonPtr->GetNodesCount();
 		int editMode = GetEditMode();
@@ -468,7 +468,7 @@ void CInteractivePolygonShape::DrawSelectionElements(QPainter& drawContext) cons
 			for (i = 0; i < nodesCount; i++){
 				sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
 
-				colorShema.DrawTicker(drawContext, sp, IColorShema::TT_MOVE);
+				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_MOVE);
 			}
 			break;
 
@@ -477,7 +477,7 @@ void CInteractivePolygonShape::DrawSelectionElements(QPainter& drawContext) cons
 				for (i = 0; i < nodesCount; i++){
 					sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
 
-					colorShema.DrawTicker(drawContext, sp, IColorShema::TT_DELETE);
+					colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_DELETE);
 				}
 			}
 			break;
@@ -486,7 +486,7 @@ void CInteractivePolygonShape::DrawSelectionElements(QPainter& drawContext) cons
 			for (i = 0; i < nodesCount; i++){
 				sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
 
-				colorShema.DrawTicker(drawContext, sp, IColorShema::TT_SELECTED_INACTIVE);
+				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_SELECTED_INACTIVE);
 			}
 			break;
 		}
@@ -495,7 +495,7 @@ void CInteractivePolygonShape::DrawSelectionElements(QPainter& drawContext) cons
 			for (int i = 0; i < nodesCount; i++){
 				sp = transform.GetScreenPosition(GetSegmentMiddle(i));
 
-				colorShema.DrawTicker(drawContext, sp, IColorShema::TT_INSERT);
+				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_INSERT);
 			}
 		}
 	}
@@ -513,9 +513,9 @@ bool CInteractivePolygonShape::IsCurveTouched(istd::CIndex2d position) const
 			return false;
 		}
 
-		const IColorShema& colorShema = GetColorShema();
+		const IColorSchema& colorSchema = GetColorSchema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		double logicalLineWidth = colorShema.GetLogicalLineWidth();
+		double logicalLineWidth = colorSchema.GetLogicalLineWidth();
 
 		i2d::CLine2d segmentLine;
 		segmentLine.SetPoint2(transform.GetScreenPosition(polygonPtr->GetNode(nodesCount - 1)));
@@ -640,7 +640,7 @@ i2d::CRect CInteractivePolygonShape::CalcBoundingBox() const
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (polygonPtr != NULL){
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const IColorShema& colorShema = GetColorShema();
+		const IColorSchema& colorSchema = GetColorSchema();
 
 		int nodesCount = polygonPtr->GetNodesCount();
 
@@ -654,21 +654,21 @@ i2d::CRect CInteractivePolygonShape::CalcBoundingBox() const
 
 			boundingBox.Expand(i2d::CRect(-1,-1, 1, 1));
 
-			IColorShema::TickerType tickerType;
+			IColorSchema::TickerType tickerType;
 
 			if (IsSelected()){
 				int editMode = GetEditMode();
 				switch (editMode){
 				case ISelectable::EM_MOVE:
-					tickerType = IColorShema::TT_MOVE;
+					tickerType = IColorSchema::TT_MOVE;
 					break;
 
 				case ISelectable::EM_ADD:
-					tickerType = IColorShema::TT_INSERT;
+					tickerType = IColorSchema::TT_INSERT;
 					break;
 
 				case ISelectable::EM_REMOVE:
-					tickerType = IColorShema::TT_DELETE;
+					tickerType = IColorSchema::TT_DELETE;
 					break;
 
 				default:
@@ -676,10 +676,10 @@ i2d::CRect CInteractivePolygonShape::CalcBoundingBox() const
 				}
 			}
 			else{
-				tickerType = IColorShema::TT_INACTIVE;
+				tickerType = IColorSchema::TT_INACTIVE;
 			}
 
-			return boundingBox.GetExpanded(colorShema.GetTickerBox(tickerType));
+			return boundingBox.GetExpanded(colorSchema.GetTickerBox(tickerType));
 		}
 	}
 

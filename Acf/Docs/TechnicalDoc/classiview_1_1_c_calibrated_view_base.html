@@ -95,8 +95,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#ab2a827d462f2452ec20299ae9592b6e6">SetGridInMm</a> (bool state=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if grid should be shown in milimeter.  <a href="#ab2a827d462f2452ec20299ae9592b6e6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiview_1_1_i_view_layer.html">iview::IViewLayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a3957c2b9787df64fbaa07e2892c10737">GetCalibrationLayer</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#abaa7c4bada0ea318e1505db317c923c3">SetDefaultColorShema</a> (const <a class="el" href="classiview_1_1_i_color_shema.html">IColorShema</a> *colorShemaPtr, bool releaseFlag=false)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default color shema object.  <a href="#abaa7c4bada0ea318e1505db317c923c3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a45a1e4210f8d14d0e791ffcae14d805e">SetDefaultColorSchema</a> (const <a class="el" href="classiview_1_1_i_color_schema.html">IColorSchema</a> *colorSchemaPtr, bool releaseFlag=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default color schema object.  <a href="#a45a1e4210f8d14d0e791ffcae14d805e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a1d7274deb0450cdf230d5ca1d2f2595a">IsBackgroundBufferActive</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a048cc11d6231adee980a2fed8cd42e1d">SetBackgroundBufferActive</a> (bool state=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a1b2a442b848a3a5493e364dc10226ac5">IsDoubleBufferActive</a> () const </td></tr>
@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if found that display area was resized.  <a href="#a907d7f2b8d57d6126d039c7563272d67"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a76c31f33af210cfc14f0ebd2e71b1556">CheckResize</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if size size was changed and invalidation and <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a907d7f2b8d57d6126d039c7563272d67" title="Called if found that display area was resized.">OnResize()</a> should be done.  <a href="#a76c31f33af210cfc14f0ebd2e71b1556"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_color_shema.html">iview::IColorShema</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a808e54b859e44d92320c4380131dcc90">GetDefaultColorShema</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_color_schema.html">iview::IColorSchema</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a1c2ad28489292752850622ec399b1037">GetDefaultColorSchema</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a5034161e88f77b5397e954fdae0603e0">UpdateAllShapes</a> (int changeFlag)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform all shapes about changes.  <a href="#a5034161e88f77b5397e954fdae0603e0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_calibrated_view_base.html#a78329039f72a0cd2a790d7cd00bc17c9">InsertDefaultLayers</a> ()</td></tr>
@@ -346,12 +346,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a808e54b859e44d92320c4380131dcc90"></a><!-- doxytag: member="iview::CCalibratedViewBase::GetDefaultColorShema" ref="a808e54b859e44d92320c4380131dcc90" args="() const " -->
+<a class="anchor" id="a1c2ad28489292752850622ec399b1037"></a><!-- doxytag: member="iview::CCalibratedViewBase::GetDefaultColorSchema" ref="a1c2ad28489292752850622ec399b1037" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classiview_1_1_i_color_shema.html">iview::IColorShema</a>&amp; iview::CCalibratedViewBase::GetDefaultColorShema </td>
+          <td class="memname">virtual const <a class="el" href="classiview_1_1_i_color_schema.html">iview::IColorSchema</a>&amp; iview::CCalibratedViewBase::GetDefaultColorSchema </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -360,7 +360,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classiview_1_1_c_view_base.html#a72a7210a6b3919fc551c687d3586dc9f">iview::CViewBase</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_view_base.html#accbdf23f2f6d636e15ef5c0178e35194">iview::CViewBase</a>.</p>
 
 </div>
 </div>
@@ -640,15 +640,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abaa7c4bada0ea318e1505db317c923c3"></a><!-- doxytag: member="iview::CCalibratedViewBase::SetDefaultColorShema" ref="abaa7c4bada0ea318e1505db317c923c3" args="(const IColorShema *colorShemaPtr, bool releaseFlag=false)" -->
+<a class="anchor" id="a45a1e4210f8d14d0e791ffcae14d805e"></a><!-- doxytag: member="iview::CCalibratedViewBase::SetDefaultColorSchema" ref="a45a1e4210f8d14d0e791ffcae14d805e" args="(const IColorSchema *colorSchemaPtr, bool releaseFlag=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iview::CCalibratedViewBase::SetDefaultColorShema </td>
+          <td class="memname">void iview::CCalibratedViewBase::SetDefaultColorSchema </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiview_1_1_i_color_shema.html">IColorShema</a> *&#160;</td>
-          <td class="paramname"><em>colorShemaPtr</em>, </td>
+          <td class="paramtype">const <a class="el" href="classiview_1_1_i_color_schema.html">IColorSchema</a> *&#160;</td>
+          <td class="paramname"><em>colorSchemaPtr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -665,10 +665,10 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Set default color shema object. </p>
+<p>Set default color schema object. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">colorShemaPtr</td><td>pointer to color shema object. </td></tr>
+    <tr><td class="paramname">colorSchemaPtr</td><td>pointer to color schema object. </td></tr>
     <tr><td class="paramname">releaseFlag</td><td>if its true, object will be automatically removed. </td></tr>
   </table>
   </dd>

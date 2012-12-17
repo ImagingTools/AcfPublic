@@ -61,8 +61,8 @@ public:
 	// reimplemented (iview::IShape)
 	virtual int GetLayerType() const;
 	virtual i2d::CRect GetBoundingBox() const;
-	virtual const IColorShema* GetUserColorShema() const;
-	virtual void SetUserColorShema(const IColorShema* shemaPtr);
+	virtual const IColorSchema* GetUserColorSchema() const;
+	virtual void SetUserColorSchema(const IColorSchema* schemaPtr);
 
 	// reimplemented (iview::IVisualizable)
 	virtual bool IsVisible() const;
@@ -110,10 +110,10 @@ protected:
 	bool IsDisplayConnected() const;
 
 	/**
-		Get color shema for this shape.
+		Get color schema for this shape.
 		It can be called only when display is connected \sa IsDisplayConnected().
 	*/
-	const IColorShema& GetColorShema() const;
+	const IColorSchema& GetColorSchema() const;
 	
 	/**
 		Get display client rectangle.
@@ -136,7 +136,7 @@ protected:
 	virtual i2d::CRect CalcBoundingBox() const = 0;
 
 private:
-	const IColorShema* m_userColorShemaPtr;
+	const IColorSchema* m_userColorSchemaPtr;
 	IDisplay* m_displayPtr;
 	mutable bool m_isBoundingBoxValid;
 	mutable i2d::CRect m_boundingBox;

@@ -32,7 +32,7 @@
 
 #include "iqt/iqt.h"
 
-#include "iview/IColorShema.h"
+#include "iview/IColorSchema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -54,7 +54,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(modelPtr);
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
 		if (downFlag){
-			const iview::IColorShema& colorShema = GetColorShema();
+			const iview::IColorSchema& colorSchema = GetColorSchema();
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 			const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
@@ -73,7 +73,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 
 			case iview::ISelectable::EM_MOVE:
 				{
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_MOVE);
+					const i2d::CRect& tickerBox = colorSchema.GetTickerBox(iview::IColorSchema::TT_MOVE);
 
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& logPos = polylinePtr->GetNode(i);
@@ -93,7 +93,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 
 			case iview::ISelectable::EM_ADD:
 				{
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_INSERT);
+					const i2d::CRect& tickerBox = colorSchema.GetTickerBox(iview::IColorSchema::TT_INSERT);
 
 					i2d::CVector2d logLast, viewLast;
 					if (!polylinePtr->IsClosed()){
@@ -151,7 +151,7 @@ bool CPolylineCalibrationShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 
 			case iview::ISelectable::EM_REMOVE:
 				if (nodesCount > 2){
-					const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_DELETE);
+					const i2d::CRect& tickerBox = colorSchema.GetTickerBox(iview::IColorSchema::TT_DELETE);
 
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& logPos = polylinePtr->GetNode(i);
@@ -193,7 +193,7 @@ void CPolylineCalibrationShape::DrawCurve(QPainter& drawContext) const
 {
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
-		const iview::IColorShema& colorShema = GetColorShema();
+		const iview::IColorSchema& colorSchema = GetColorSchema();
 		int nodesCount = polylinePtr->GetNodesCount();
 		if (nodesCount > 0){
 			int secondPointIndex;
@@ -217,8 +217,8 @@ void CPolylineCalibrationShape::DrawCurve(QPainter& drawContext) const
 				secondPointIndex = 1;
 			}
 			if (m_isOrientationVisible && IsSelected()){
-				const QPen& darkPen = colorShema.GetPen(iview::IColorShema::SP_ORIENT_DARK);
-				const QPen& brightPen = colorShema.GetPen(iview::IColorShema::SP_ORIENT_BRIGHT);
+				const QPen& darkPen = colorSchema.GetPen(iview::IColorSchema::SP_ORIENT_DARK);
+				const QPen& brightPen = colorSchema.GetPen(iview::IColorSchema::SP_ORIENT_BRIGHT);
 
 				point1 = firstPoint;
 				for (pointIndex = secondPointIndex; pointIndex < nodesCount; ++pointIndex){
@@ -281,12 +281,12 @@ void CPolylineCalibrationShape::DrawCurve(QPainter& drawContext) const
 			if (IsSelected()){
 				drawContext.save();
 
-				drawContext.setPen(colorShema.GetPen(iview::IColorShema::SP_SELECTED));
+				drawContext.setPen(colorSchema.GetPen(iview::IColorSchema::SP_SELECTED));
 			}
 			else{
 				drawContext.save();
 
-				drawContext.setPen(colorShema.GetPen(iview::IColorShema::SP_NORMAL));
+				drawContext.setPen(colorSchema.GetPen(iview::IColorSchema::SP_NORMAL));
 			}
 
 			point1 = firstPoint;
@@ -318,7 +318,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
-		const iview::IColorShema& colorShema = GetColorShema();
+		const iview::IColorSchema& colorSchema = GetColorSchema();
 		int nodesCount = polylinePtr->GetNodesCount();
 		int editMode = GetEditMode();
 
@@ -336,7 +336,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 				calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_MOVE);
+				colorSchema.DrawTicker(drawContext, screenPos, iview::IColorSchema::TT_MOVE);
 			}
 			break;
 
@@ -347,7 +347,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 					calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
 					istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-					colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_DELETE);
+					colorSchema.DrawTicker(drawContext, screenPos, iview::IColorSchema::TT_DELETE);
 				}
 			}
 			break;
@@ -358,7 +358,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 				calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_SELECTED_INACTIVE);
+				colorSchema.DrawTicker(drawContext, screenPos, iview::IColorSchema::TT_SELECTED_INACTIVE);
 			}
 			break;
 		}
@@ -370,7 +370,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 				calib.GetInvPositionAt(polylinePtr->GetNode(0), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INSERT);
+				colorSchema.DrawTicker(drawContext, screenPos, iview::IColorSchema::TT_INSERT);
 			}
 
 			int segmentsCount = polylinePtr->GetSegmentsCount();
@@ -379,7 +379,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 				calib.GetInvPositionAt(GetSegmentMiddle(i), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INSERT);
+				colorSchema.DrawTicker(drawContext, screenPos, iview::IColorSchema::TT_INSERT);
 			}
 
 			if (isOpened){
@@ -387,7 +387,7 @@ void CPolylineCalibrationShape::DrawSelectionElements(QPainter& drawContext) con
 				calib.GetInvPositionAt(polylinePtr->GetNode(nodesCount - 1), viewPos);
 				istd::CIndex2d screenPos = transform.GetScreenPosition(viewPos);
 
-				colorShema.DrawTicker(drawContext, screenPos, iview::IColorShema::TT_INSERT);
+				colorSchema.DrawTicker(drawContext, screenPos, iview::IColorSchema::TT_INSERT);
 			}
 		}
 	}
@@ -405,7 +405,7 @@ bool CPolylineCalibrationShape::IsCurveTouched(istd::CIndex2d position) const
 			}
 		}
 
-		const iview::IColorShema& colorShema = GetColorShema();
+		const iview::IColorSchema& colorSchema = GetColorSchema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
@@ -424,7 +424,7 @@ bool CPolylineCalibrationShape::IsCurveTouched(istd::CIndex2d position) const
 			i = 1;
 		}
 
-		double logicalLineWidth = colorShema.GetLogicalLineWidth();
+		double logicalLineWidth = colorSchema.GetLogicalLineWidth();
 
 		i2d::CVector2d mousePos = transform.GetClientPosition(position);
 
@@ -454,7 +454,7 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 {
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
-		const iview::IColorShema& colorShema = GetColorShema();
+		const iview::IColorSchema& colorSchema = GetColorSchema();
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const i2d::ITransformation2d& calib = GetIsomorphCalib();
 
@@ -474,7 +474,7 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 
 		case iview::ISelectable::EM_MOVE:
 			{
-				const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_MOVE);
+				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(iview::IColorSchema::TT_MOVE);
 				for (int i = 0; i < nodesCount; i++){
 					i2d::CVector2d viewPos;
 					calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
@@ -488,7 +488,7 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 
 		case iview::ISelectable::EM_REMOVE:
 			{
-				const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_DELETE);
+				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(iview::IColorSchema::TT_DELETE);
 				for (int i = 0; i < nodesCount; i++){
 					i2d::CVector2d viewPos;
 					calib.GetInvPositionAt(polylinePtr->GetNode(i), viewPos);
@@ -502,7 +502,7 @@ bool CPolylineCalibrationShape::IsTickerTouched(istd::CIndex2d position) const
 
 		case iview::ISelectable::EM_ADD:
 			{
-				const i2d::CRect& tickerBox = colorShema.GetTickerBox(iview::IColorShema::TT_INACTIVE);
+				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(iview::IColorSchema::TT_INACTIVE);
 				int lastIndex;
 
 				bool isOpened = !polylinePtr->IsClosed();

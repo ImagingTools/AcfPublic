@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iview_IColorShema_included
-#define iview_IColorShema_included
+#ifndef iview_IColorSchema_included
+#define iview_IColorSchema_included
 
 
 // Qt includes
@@ -47,7 +47,7 @@ namespace iview
 /**
 	Defines set of standard pens, brushes and simple management of unions.
 */
-class IColorShema: virtual public istd::IPolymorphic
+class IColorSchema: virtual public istd::IPolymorphic
 {
 public:
 	enum StandardPen
@@ -161,7 +161,7 @@ public:
 		TT_LAST = TT_CHECKBOX_OFF
 	};
 
-	virtual void Assign(const IColorShema& colorShema) = 0;
+	virtual void Assign(const IColorSchema& colorSchema) = 0;
 	virtual const QPen& GetPen(StandardPen penType) const = 0;
 	virtual void SetPen(StandardPen penType, const QPen& pen) = 0;
 	virtual const QBrush& GetBrush(StandardBrush brushType) const = 0;
@@ -188,15 +188,15 @@ public:
 };
 
 
-inline iview::IColorShema::TickerType operator|(iview::IColorShema::TickerType tickerType1, iview::IColorShema::TickerType tickerType2)
+inline iview::IColorSchema::TickerType operator|(iview::IColorSchema::TickerType tickerType1, iview::IColorSchema::TickerType tickerType2)
 {
-	return (iview::IColorShema::TickerType)(int(tickerType1) | int(tickerType2));
+	return (iview::IColorSchema::TickerType)(int(tickerType1) | int(tickerType2));
 }
 
 
 } // namespace iview
 
 
-#endif // !iview_IColorShema_included
+#endif // !iview_IColorSchema_included
 
 

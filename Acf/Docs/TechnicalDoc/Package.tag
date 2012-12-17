@@ -3926,6 +3926,7 @@
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_i_color_schema_8h" name="IColorSchema.h" local="yes" imported="no">iview/IColorSchema.h</includes>
     <includes id="_c_console_gui_8h" name="CConsoleGui.h" local="yes" imported="no">iview/CConsoleGui.h</includes>
     <includes id="_c_affinite_calibration_shape_8h" name="CAffiniteCalibrationShape.h" local="yes" imported="no">iview/CAffiniteCalibrationShape.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
@@ -3977,7 +3978,7 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_shape_params_gui_comp_base_8h</filename>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_i_color_shema_8h" name="IColorShema.h" local="yes" imported="no">iview/IColorShema.h</includes>
+    <includes id="_i_color_schema_8h" name="IColorSchema.h" local="yes" imported="no">iview/IColorSchema.h</includes>
     <includes id="_c_shape_control_8h" name="CShapeControl.h" local="yes" imported="no">iview/CShapeControl.h</includes>
     <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="yes" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
@@ -5687,7 +5688,7 @@
     <includes id="_i_visual_calibration_info_8h" name="IVisualCalibrationInfo.h" local="yes" imported="no">iview/IVisualCalibrationInfo.h</includes>
     <includes id="_c_view_base_8h" name="CViewBase.h" local="yes" imported="no">iview/CViewBase.h</includes>
     <includes id="_c_draw_buffer_8h" name="CDrawBuffer.h" local="yes" imported="no">iview/CDrawBuffer.h</includes>
-    <includes id="_c_color_shema_8h" name="CColorShema.h" local="yes" imported="no">iview/CColorShema.h</includes>
+    <includes id="_c_color_schema_8h" name="CColorSchema.h" local="yes" imported="no">iview/CColorSchema.h</includes>
     <class kind="class">iview::CCalibratedViewBase</class>
     <namespace>iview</namespace>
   </compound>
@@ -5701,29 +5702,29 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>CColorShema.h</name>
+    <name>CColorSchema.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_color_shema_8h</filename>
-    <includes id="_c_color_shema_base_8h" name="CColorShemaBase.h" local="yes" imported="no">iview/CColorShemaBase.h</includes>
-    <class kind="class">iview::CColorShema</class>
+    <filename>_c_color_schema_8h</filename>
+    <includes id="_c_color_schema_base_8h" name="CColorSchemaBase.h" local="yes" imported="no">iview/CColorSchemaBase.h</includes>
+    <class kind="class">iview::CColorSchema</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>CColorShemaBase.h</name>
+    <name>CColorSchemaBase.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_color_shema_base_8h</filename>
-    <includes id="_i_color_shema_8h" name="IColorShema.h" local="yes" imported="no">iview/IColorShema.h</includes>
-    <class kind="class">iview::CColorShemaBase</class>
+    <filename>_c_color_schema_base_8h</filename>
+    <includes id="_i_color_schema_8h" name="IColorSchema.h" local="yes" imported="no">iview/IColorSchema.h</includes>
+    <class kind="class">iview::CColorSchemaBase</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>CColorShemaComp.h</name>
+    <name>CColorSchemaComp.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_color_shema_comp_8h</filename>
+    <filename>_c_color_schema_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_c_color_shema_8h" name="CColorShema.h" local="yes" imported="no">iview/CColorShema.h</includes>
-    <class kind="class">iview::CColorShemaCompAttr</class>
-    <class kind="class">iview::CColorShemaComp</class>
+    <includes id="_c_color_schema_8h" name="CColorSchema.h" local="yes" imported="no">iview/CColorSchema.h</includes>
+    <class kind="class">iview::CColorSchemaCompAttr</class>
+    <class kind="class">iview::CColorSchemaComp</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -6102,20 +6103,20 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>IColorShema.h</name>
+    <name>IColorSchema.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_i_color_shema_8h</filename>
+    <filename>_i_color_schema_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
     <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
-    <class kind="class">iview::IColorShema</class>
+    <class kind="class">iview::IColorSchema</class>
     <namespace>iview</namespace>
     <member kind="function">
-      <type>iview::IColorShema::TickerType</type>
+      <type>iview::IColorSchema::TickerType</type>
       <name>operator|</name>
       <anchorfile>namespaceiview.html</anchorfile>
-      <anchor>a37d257450f81a128e7dda3d28bfd83c1</anchor>
-      <arglist>(iview::IColorShema::TickerType tickerType1, iview::IColorShema::TickerType tickerType2)</arglist>
+      <anchor>a480fdbd655b5cf0ba74515e2406c767b</anchor>
+      <arglist>(iview::IColorSchema::TickerType tickerType1, iview::IColorSchema::TickerType tickerType2)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -36111,9 +36112,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>BM_SOLID</name>
+      <name>BM_COLOR_SCHEMA</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>ac7121dfbb7f404a509abd1544e6d00a8aabad66b5b688b1f39482ebcdcf191fa5</anchor>
+      <anchor>ac7121dfbb7f404a509abd1544e6d00a8a0a506ff08897fb82aefa5121ea7061a6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -41134,7 +41135,7 @@
   <compound kind="class">
     <name>iqtprm::COptionsManagerGuiComp</name>
     <filename>classiqtprm_1_1_c_options_manager_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsManagerGuiComp, iprm::ISelectionParam &gt;</base>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsManagerGuiComp, iprm::IOptionsManager &gt;</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <name>LabelPosition</name>
@@ -41155,10 +41156,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsManagerGuiComp, iprm::ISelectionParam &gt;</type>
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsManagerGuiComp, iprm::IOptionsManager &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtprm_1_1_c_options_manager_gui_comp.html</anchorfile>
-      <anchor>ab56765c1e3207cdcc6cabefc014c5ef4</anchor>
+      <anchor>a201952e00f72e1decaba34c3b52951dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -48901,10 +48902,10 @@
     <class kind="class">iview::CAffiniteCalibrationShape</class>
     <class kind="class">iview::CCalibratedViewBase</class>
     <class kind="class">iview::CCalibrationShapeBase</class>
-    <class kind="class">iview::CColorShema</class>
-    <class kind="class">iview::CColorShemaBase</class>
-    <class kind="class">iview::CColorShemaCompAttr</class>
-    <class kind="class">iview::CColorShemaComp</class>
+    <class kind="class">iview::CColorSchema</class>
+    <class kind="class">iview::CColorSchemaBase</class>
+    <class kind="class">iview::CColorSchemaCompAttr</class>
+    <class kind="class">iview::CColorSchemaComp</class>
     <class kind="class">iview::CConsoleBase</class>
     <class kind="class">iview::CConsoleGui</class>
     <class kind="class">iview::CDrawBuffer</class>
@@ -48945,7 +48946,7 @@
     <class kind="class">iview::CViewBase</class>
     <class kind="class">iview::CViewLayer</class>
     <class kind="class">iview::CViewport</class>
-    <class kind="class">iview::IColorShema</class>
+    <class kind="class">iview::IColorSchema</class>
     <class kind="class">iview::IDisplay</class>
     <class kind="class">iview::IDraggable</class>
     <class kind="class">iview::IInteractiveShape</class>
@@ -49021,11 +49022,11 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>iview::IColorShema::TickerType</type>
+      <type>iview::IColorSchema::TickerType</type>
       <name>operator|</name>
       <anchorfile>namespaceiview.html</anchorfile>
-      <anchor>a37d257450f81a128e7dda3d28bfd83c1</anchor>
-      <arglist>(iview::IColorShema::TickerType tickerType1, iview::IColorShema::TickerType tickerType2)</arglist>
+      <anchor>a480fdbd655b5cf0ba74515e2406c767b</anchor>
+      <arglist>(iview::IColorSchema::TickerType tickerType1, iview::IColorSchema::TickerType tickerType2)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -49111,10 +49112,10 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>SetDefaultColorShema</name>
+      <name>SetDefaultColorSchema</name>
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
-      <anchor>abaa7c4bada0ea318e1505db317c923c3</anchor>
-      <arglist>(const IColorShema *colorShemaPtr, bool releaseFlag=false)</arglist>
+      <anchor>a45a1e4210f8d14d0e791ffcae14d805e</anchor>
+      <arglist>(const IColorSchema *colorSchemaPtr, bool releaseFlag=false)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -49187,10 +49188,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iview::IColorShema &amp;</type>
-      <name>GetDefaultColorShema</name>
+      <type>virtual const iview::IColorSchema &amp;</type>
+      <name>GetDefaultColorSchema</name>
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
-      <anchor>a808e54b859e44d92320c4380131dcc90</anchor>
+      <anchor>a1c2ad28489292752850622ec399b1037</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -49340,152 +49341,152 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::CColorShema</name>
-    <filename>classiview_1_1_c_color_shema.html</filename>
-    <base>iview::CColorShemaBase</base>
+    <name>iview::CColorSchema</name>
+    <filename>classiview_1_1_c_color_schema.html</filename>
+    <base>iview::CColorSchemaBase</base>
     <member kind="enumvalue">
       <name>NORMAL_SET_SIZE</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>ab2d395a11a724ecac54da08b6fbdf22da080270e66bfef44eeabba05eba58557f</anchor>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>aff301eff627298d9deb0a4432b0f9523a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>CColorShema</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>aa961585d5d9f11036403e4a834c39003</anchor>
+      <name>CColorSchema</name>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>a186037948e0c3d582b41102f6f1e252a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QFont &amp;</type>
       <name>GetFont</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>a47bb13132bfeccbaec358cc6a4b4cf25</anchor>
-      <arglist>(IColorShema::StandardFont fontType) const </arglist>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>a139c374bdb16fe6ae7c4628181c79491</anchor>
+      <arglist>(IColorSchema::StandardFont fontType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetFont</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>a843101dfe5b26d78961001631664e0ba</anchor>
-      <arglist>(iview::IColorShema::StandardFont fontType, const QFont &amp;font)</arglist>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>a8aeecda70dd3e174eeba4299626ea52b</anchor>
+      <arglist>(iview::IColorSchema::StandardFont fontType, const QFont &amp;font)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QPen &amp;</type>
       <name>GetPen</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>ac4968183e1bcd869985829200a24ca17</anchor>
-      <arglist>(IColorShema::StandardPen penType) const </arglist>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>aaa6d4a45111032bc29a33866d2db417d</anchor>
+      <arglist>(IColorSchema::StandardPen penType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPen</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>a85a3984c8df15e4d85f5d17896f02259</anchor>
-      <arglist>(iview::IColorShema::StandardPen penType, const QPen &amp;pen)</arglist>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>a78af365c3788c3652a2c7d6fcf9dfff9</anchor>
+      <arglist>(iview::IColorSchema::StandardPen penType, const QPen &amp;pen)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QBrush &amp;</type>
       <name>GetBrush</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>aa44366ce1337c25a27759e84a6530d5b</anchor>
-      <arglist>(IColorShema::StandardBrush brushType) const </arglist>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>ab4c40f462b686fc833851037b9b9ee5f</anchor>
+      <arglist>(IColorSchema::StandardBrush brushType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetBrush</name>
-      <anchorfile>classiview_1_1_c_color_shema.html</anchorfile>
-      <anchor>a89c3d2f6980ec2137b2255fb02fe2ef3</anchor>
-      <arglist>(iview::IColorShema::StandardBrush brushType, const QBrush &amp;brush)</arglist>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>ae0962f50541c6c9464c8551dd2cd7e05</anchor>
+      <arglist>(iview::IColorSchema::StandardBrush brushType, const QBrush &amp;brush)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::CColorShemaBase</name>
-    <filename>classiview_1_1_c_color_shema_base.html</filename>
-    <base>iview::IColorShema</base>
+    <name>iview::CColorSchemaBase</name>
+    <filename>classiview_1_1_c_color_schema_base.html</filename>
+    <base>iview::IColorSchema</base>
     <member kind="enumvalue">
       <name>TICKER_SIZE</name>
-      <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
-      <anchor>a8e0071cbd112a71a5a39aa66da2259faa1dfe6bd898f8f83fbbe9139f0d3f46b3</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131a7b9aaadf57b04e96b6d901d25229edec</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SMALL_TICKER_SIZE</name>
-      <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
-      <anchor>a8e0071cbd112a71a5a39aa66da2259faa5556e383ab7e21d767aa2ac61e81ab41</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131ab62460c925c9513455eea5005dc64220</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LOGICAL_LINE_WIDTH</name>
-      <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
-      <anchor>a8e0071cbd112a71a5a39aa66da2259faaa44fb0d0aac9989591c8ed16a7a6dbc0</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131a664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Assign</name>
-      <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
-      <anchor>aa2dc43984b9abc355d170b2ec7949211</anchor>
-      <arglist>(const IColorShema &amp;colorShema)</arglist>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>a7b58e572f1c4af3b5e25253ab2883135</anchor>
+      <arglist>(const IColorSchema &amp;colorSchema)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawTicker</name>
-      <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
-      <anchor>ace1dbb5434af5c046f7dcd2864e1cdc0</anchor>
-      <arglist>(QPainter &amp;drawContext, istd::CIndex2d point, IColorShema::TickerType tickerType) const </arglist>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>a9987897e0649380f741fdaf6f922a5b7</anchor>
+      <arglist>(QPainter &amp;drawContext, istd::CIndex2d point, IColorSchema::TickerType tickerType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::CRect &amp;</type>
       <name>GetTickerBox</name>
-      <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
-      <anchor>a868b374779656e1522a87761755002eb</anchor>
-      <arglist>(IColorShema::TickerType tickerType) const </arglist>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>aa7f24282975ecbefeba236f686ec92f9</anchor>
+      <arglist>(IColorSchema::TickerType tickerType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetLogicalLineWidth</name>
-      <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
-      <anchor>a3eaf384cfad757b037c321947473010f</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>a4b06ef0057a262255483e4b7e43a9e3b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
       <type>static i2d::CRect</type>
       <name>s_tickersBoxes</name>
-      <anchorfile>classiview_1_1_c_color_shema_base.html</anchorfile>
-      <anchor>a42dd94e258c0b8ca8bb40ad6320d52f6</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>a130c7e8698751c481c6a1c90b5714dd7</anchor>
       <arglist>[(int) TT_LAST+(int) 1]</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::CColorShemaCompAttr</name>
-    <filename>classiview_1_1_c_color_shema_comp_attr.html</filename>
+    <name>iview::CColorSchemaCompAttr</name>
+    <filename>classiview_1_1_c_color_schema_comp_attr.html</filename>
     <base>icomp::CComponentBase</base>
-    <base>iview::CColorShema</base>
+    <base>iview::CColorSchema</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_color_shema_comp_attr.html</anchorfile>
-      <anchor>a1b3f3fea6eb22303d44f6595659c2863</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_comp_attr.html</anchorfile>
+      <anchor>ab6b84a34d1174820195f706884615cce</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::CColorShemaComp</name>
-    <filename>classiview_1_1_c_color_shema_comp.html</filename>
-    <base>iview::CColorShemaCompAttr</base>
+    <name>iview::CColorSchemaComp</name>
+    <filename>classiview_1_1_c_color_schema_comp.html</filename>
+    <base>iview::CColorSchemaCompAttr</base>
     <member kind="typedef">
-      <type>CColorShemaCompAttr</type>
+      <type>CColorSchemaCompAttr</type>
       <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_color_shema_comp.html</anchorfile>
-      <anchor>a9d9472663f6e4f6e5797ed44176e24d4</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_comp.html</anchorfile>
+      <anchor>a232fc9ec7b9abc29c5c1248d709a477c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classiview_1_1_c_color_shema_comp.html</anchorfile>
-      <anchor>a19df88117b54dec3c0d50875c3c264b5</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_comp.html</anchorfile>
+      <anchor>a2bebf98f913171d944327833abb3cdeb</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -54230,18 +54231,18 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IColorShema *</type>
-      <name>GetUserColorShema</name>
+      <type>virtual const IColorSchema *</type>
+      <name>GetUserColorSchema</name>
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
-      <anchor>ae9b87f570f243d2a21a240203da6286c</anchor>
+      <anchor>a1df5c4e6181927b3c224188f7371231b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>SetUserColorShema</name>
+      <name>SetUserColorSchema</name>
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
-      <anchor>a754a420e02e4c417bffd037fd22c14ba</anchor>
-      <arglist>(const IColorShema *shemaPtr)</arglist>
+      <anchor>a6cea0263a33b261c730c6755c98c0515</anchor>
+      <arglist>(const IColorSchema *schemaPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -54349,10 +54350,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>const IColorShema &amp;</type>
-      <name>GetColorShema</name>
+      <type>const IColorSchema &amp;</type>
+      <name>GetColorSchema</name>
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
-      <anchor>a5787787996b60fe0124cebdc1c98164a</anchor>
+      <anchor>ac4df77d29b1db520bd12fdc0a66ac66b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -55409,10 +55410,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IColorShema &amp;</type>
-      <name>GetColorShema</name>
+      <type>virtual const IColorSchema &amp;</type>
+      <name>GetColorSchema</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>aadea25104796de8bed45deafb57f4d0e</anchor>
+      <anchor>aa4db6a936b8bcef7639ec830f9e63a47</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -55472,10 +55473,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const IColorShema &amp;</type>
-      <name>GetDefaultColorShema</name>
+      <type>virtual const IColorSchema &amp;</type>
+      <name>GetDefaultColorSchema</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a72a7210a6b3919fc551c687d3586dc9f</anchor>
+      <anchor>accbdf23f2f6d636e15ef5c0178e35194</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -55799,10 +55800,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IColorShema &amp;</type>
-      <name>GetColorShema</name>
+      <type>virtual const IColorSchema &amp;</type>
+      <name>GetColorSchema</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a3f5f2b54b3f292119f07686508422aa4</anchor>
+      <anchor>ae6f63f5bde2a44e3fa0920ae8929e4f8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -56128,389 +56129,389 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::IColorShema</name>
-    <filename>classiview_1_1_i_color_shema.html</filename>
+    <name>iview::IColorSchema</name>
+    <filename>classiview_1_1_i_color_schema.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <name>StandardPen</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_NORMAL</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99aa6223045bc0b456dcf3377dbc0be96c9</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca74749681a0b39c83026c8fb2d84546fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_SELECTED</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99acdd8e566a0d86ca79c784891e19392e8</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca7a3a042d1e6aa49e0345d868ba55d96a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_SELECTED_TICKER</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a1d2280cc703c177f2997b0b9aeadc7e6</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca524c1e355b526dd4d9b2f440c2df1d25</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_TICKER</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99afc2af421350c8274fafed555e08b4f3a</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca0a785bd870a483e992f3a1ef38a44c15</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_IMPORTANT</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a6b8e378847f0cbd425386746dedbf47e</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68eccac88a88c1156a4a2763adaa638910243f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_ORIENT_DARK</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a94ddc7416c76f58b2105158a137b1f55</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68eccadbc636b6f4ce0d2ed8693f65d6885968</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_ORIENT_BRIGHT</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99aaf018f3dc3239d015d6f166ad9303b70</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68eccad39c0156c16d2d011c7ee70e4f3f1fe0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_NORMAL_DASH</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a20eaaeb1aa62ef8c315c40692448bac7</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68eccae0d110257f70fb28859d50381837ad34</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_SELECTED_DASH</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a5f4846b455a82260c2e1e88d4acb7c5a</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68eccad7b6c9e8160bb2214d4e038fab956474</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_GUIDELINE1</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a295d22800e69a5d0ad77d9261713269e</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca6eb61aac3ff5763174077dc91bcc5081</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_GUIDELINE2</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a148a5c61ea40b369cb19e6b71807a441</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca12ed952e46c9717bb101954f29b43551</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_GUIDELINE3</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99ad79ff1c37f014985aa4becaa2d15cb9d</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca733633fb9e2d735c4ccef38bb18198ab</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_BLACK</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99ae17973365d91e7a4f794bf959a5b8761</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca4adfca285792225c4678b1d3acbb8bba</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_WHITE</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a7f2025391fed77dbeb8f5e48a2de4336</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca84b72c73ee040b05552bb4d08e877341</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_RED</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a02744044ce71abb83fd0135a1c582614</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca90292067941ed320194bf41b6dd38e39</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_GREEN</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a7392caae0bc1b55c09bbc58fd0c2069c</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca5ca83222b8e4ed9ae87ddbc4463d4499</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_BLUE</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a95fbd750890806cfa403c6871317bb97</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68eccab0f80d38ce56aaa999c718ca08cf1eaf</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_CYAN</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99ac9b75fc0ef3d6145e2218d9edabeccc4</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca54c7b56ef7a1610620f5bdbe455259dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_YELLOW</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a7794da304eb0b964bbec099f951d4c2c</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca26522e5c1f5cc78bb63c9ef0e753d5a5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_MAGENTA</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99a59f657ba303e5b6daf18706e310f10a0</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68ecca37762c96f64899dd284cff93562f3389</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SP_LAST</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>acc0e87733b0befc2cba2d66d80315e99af59d17b2e85dde6364550197d4f54100</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ac159bb4c326b29cd083e70136ab68eccaf219e5eaca7b4fd0c6ebbebf9fdb334a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>StandardBrush</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_NORMAL</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9ac424fccc53f9ac0017fd5486de898d64</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3abdb2982ad566b28318237442eae0f34c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_SELECTED</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9a6ca3d0c96b2e90fc34331dfd0578b30f</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3a5be02778c889d9a0fdfee79c2e11d2e9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_TICKER</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9af9fc4f19d6cf74ca60ae6814ba9949db</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3a2935ce930bd40d6e6086e78947b2ee26</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_SELECTED_TICKER</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9a11387f88ffbeaffefe8525272aa4ef1a</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3a00abc75729a08814b99e97100bf61b66</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_IMPORTANT</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9a4c526f04215f3d61bec7e6c180a29574</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3a9494d2503a2084dc6cdf3b5e364b5216</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_BACKGROUND</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9a4032e5721a1128beffbcfbd0dcd9e6d2</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3a959e9849f3bb2b3e2d02295b83185140</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_HALF_TRANSPARENT</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9a7276b3a716f3f461e2ea03aef41a21ba</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3ac92d6412e0dce5f02047ca2e6159e36c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_HALF_TRANSPARENT2</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9af66bbf3e937489a69f0efa1dd07a2971</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3a3caa25db0ef05a23b3ae39299359ebf8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_TRANSPARENT</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9aee5ec40044786ed8878a9a97d70da6b1</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3acc1495ac086afb2be3faf9db75c70c00</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SB_LAST</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4788050ee4a1296518ffc95972f370e9a8a4165513aea418246e88ebd97b4f5dd</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a016abc1c9e258d0ae07c787db971ada3a66f510004deaa9046cf5e6600b377a68</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>StandardFont</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a73b0cc4ab2f15e0403df974d2abc42a4</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a383f7922c19a1b7cd0113f8946cc2a82</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SF_NORMAL</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a73b0cc4ab2f15e0403df974d2abc42a4ab291a6591a4b1b6c8b121a2f557fc97f</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a383f7922c19a1b7cd0113f8946cc2a82a620e4d1b3c93f6167000e395c6ceabd7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SF_LAST</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a73b0cc4ab2f15e0403df974d2abc42a4aaeecb811dd7ea25fa74382d67a16e1f2</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a383f7922c19a1b7cd0113f8946cc2a82afe2becdc32cd99f6e7f35729fa1e8175</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <name>TickerType</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fe</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_SMALL</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fead630ca2755680418c9e1e1be8882feeb</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36a09a8d794f1e18441c1567baed55bf865</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_INACTIVE_SMALL</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea44468d5585805672bb98eceeafd7fe7d</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36adaffea10246a99544428f6be5db57ec1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_SELECTED_INACTIVE_SMALL</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea17780ce59bcae1f08bd9177ef9cdb1aa</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36a7ab091ae37ac5eea306fee760b74dd48</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_NORMAL</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693feaaf2c35544929f7e3922e9e3e2bff6be6</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36a53814c0a4583ec2f118994554021dfda</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_INACTIVE</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea481cfe1bf0f31c44b0525b6cae174fa5</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36ae6e335a662b471dba33a1e7df9e9963f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_SELECTED_INACTIVE</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea66c603d6b1e2627c2e5d28013b2dd380</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36a0a73c6271d3bcf4f1fdd1697bd7f7f72</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_MOVE</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693feacb97bd13f1645982498f5574b96f6915</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36af47a22c0446e9579e98a2c01786bbd8f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_MOVE_CENTER</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea3d9a4825dfbbb5e4d64dc29fc16836aa</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36ae542ef5542dcec140d8243b01308ea9a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_INSERT</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea39a645fc0acedfcad2b115bb0960a0f0</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36a157a387041ae2d75c204d12b90cd194b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_DELETE</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea656a572e70aece7c6bdadf50314e8342</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36a703b4bb67c0720fa13e46de4a60fe2e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_ROTATE</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea2a2ce5c95d4054a1fbf47a7a9ead3f0a</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36a397842bc4d64dfe47b6a7ae4ce6b3acf</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_SKEW</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea5ae505fe81d3a21a1a27d6abe64d3209</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36aaf3b875e92642976f788453447a039e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_CHECKBOX_ON</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea2e677798e0344a62b332c5a577c2315b</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36a7ffe4c02e2c2128849cd4360cfe82ffe</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_CHECKBOX_OFF</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea1b4401bdcb223b3c2fc5295c9b21306d</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36ab83e650a09623b2c4cf8654d58c7d657</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>TT_LAST</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>adb917a7a31141b77860d5329e3f693fea5c29fa24ea5338a1ceaa3f7da73a7d78</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a4a4bf075365df19219b0d847fe8bdc36aaeefb85147331cd2f4b4afabf02cd5e3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>Assign</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>af1a82475de0f50cb6021bcd96b0b6a32</anchor>
-      <arglist>(const IColorShema &amp;colorShema)=0</arglist>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a5638a7fc8d4c0b1c93f9e4af2a8f2a8e</anchor>
+      <arglist>(const IColorSchema &amp;colorSchema)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const QPen &amp;</type>
       <name>GetPen</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a717ffd62439faf547f62baf325f397a8</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a68644637e2e184497e8d254cc7da915a</anchor>
       <arglist>(StandardPen penType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetPen</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a77de868bc7cca6064967f99422a4daf1</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a5f22d580b923b575cb33f04b7478abc3</anchor>
       <arglist>(StandardPen penType, const QPen &amp;pen)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const QBrush &amp;</type>
       <name>GetBrush</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a9fb4328d92d81d79d872b54f53b1d1bb</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>aff1f5f9141eff99eaa8159661e05261e</anchor>
       <arglist>(StandardBrush brushType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetBrush</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>aa8ab22300c12b7a59cb992e5a1239520</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>ab72b8473f394b17c1e2aca7ab772d680</anchor>
       <arglist>(StandardBrush brushType, const QBrush &amp;brush)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const QFont &amp;</type>
       <name>GetFont</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>af78574909ab9198aa12aef3f191a5ec7</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>acb36622199a567f645174f38d336bbc1</anchor>
       <arglist>(StandardFont fontType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetFont</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a082feaaee850f648252ee155e2d6d7b8</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a82fc6e980ae8be15f3578d55c6548aa6</anchor>
       <arglist>(StandardFont fontType, const QFont &amp;font)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>DrawTicker</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a87fd73ae193bcb2df9d09b2e99202ff4</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>abc97d794ed1c4ad4ff8fc0633903f902</anchor>
       <arglist>(QPainter &amp;drawContext, istd::CIndex2d point, TickerType tickerType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const i2d::CRect &amp;</type>
       <name>GetTickerBox</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a67b5789bd202df172f7932085cdec9d3</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>a04ef974965418f62d5638dd73862885b</anchor>
       <arglist>(TickerType tickerType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetLogicalLineWidth</name>
-      <anchorfile>classiview_1_1_i_color_shema.html</anchorfile>
-      <anchor>a4acde57c7262d933ef5fc6b85f1e5859</anchor>
+      <anchorfile>classiview_1_1_i_color_schema.html</anchorfile>
+      <anchor>aaea2c70cf76c435453fa281ba907c170</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -56547,10 +56548,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const IColorShema &amp;</type>
-      <name>GetColorShema</name>
+      <type>virtual const IColorSchema &amp;</type>
+      <name>GetColorSchema</name>
       <anchorfile>classiview_1_1_i_display.html</anchorfile>
-      <anchor>ae093eac99810763ac7ef3ea40a3db4f0</anchor>
+      <anchor>a654016c3111cf15b2d2aba021ae413c0</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -57021,16 +57022,16 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>SetUserColorShema</name>
+      <name>SetUserColorSchema</name>
       <anchorfile>classiview_1_1_i_shape.html</anchorfile>
-      <anchor>a32e67529ecdd06d4a8d22c79b5213b2b</anchor>
-      <arglist>(const IColorShema *shemaPtr)=0</arglist>
+      <anchor>adbd6c1fffb483790fd8c4cff31f48d0c</anchor>
+      <arglist>(const IColorSchema *schemaPtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const iview::IColorShema *</type>
-      <name>GetUserColorShema</name>
+      <type>virtual const iview::IColorSchema *</type>
+      <name>GetUserColorSchema</name>
       <anchorfile>classiview_1_1_i_shape.html</anchorfile>
-      <anchor>aceaf509648d94de5e893938201667392</anchor>
+      <anchor>a358a0165447e857a15e3cb16767c7cf5</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

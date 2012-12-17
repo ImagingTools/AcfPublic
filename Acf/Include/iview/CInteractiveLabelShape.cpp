@@ -32,7 +32,7 @@
 
 #include "iqt/iqt.h"
 
-#include "iview/IColorShema.h"
+#include "iview/IColorSchema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -62,14 +62,14 @@ bool CInteractiveLabelShape::OnMouseButton(istd::CIndex2d position, Qt::MouseBut
 	const i2d::CLabel* labelPtr = dynamic_cast<const i2d::CLabel*>(GetModelPtr());
 	if (labelPtr != NULL){
 		if (downFlag){
-			const IColorShema& colorShema = GetColorShema();
+			const IColorSchema& colorSchema = GetColorSchema();
 
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 			const i2d::CVector2d& cp = labelPtr->GetPosition();
 			istd::CIndex2d sp = transform.GetScreenPosition(cp);
 			istd::CIndex2d offsetSp = sp + m_drawOffset;
 
-			const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_MOVE: IColorShema::TT_INACTIVE);
+			const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_MOVE: IColorSchema::TT_INACTIVE);
 
 			if (IsEditableOffset() && tickerBox.IsInside(position - offsetSp)){
 				m_editMode = EM_OFFSET;
@@ -147,7 +147,7 @@ void CInteractiveLabelShape::Draw(QPainter& drawContext) const
 	if (labelPtr != NULL){
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
-		const IColorShema& colorShema = GetColorShema();
+		const IColorSchema& colorSchema = GetColorSchema();
 
 		istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
 		istd::CIndex2d offsetSp = sp + m_drawOffset;
@@ -159,25 +159,25 @@ void CInteractiveLabelShape::Draw(QPainter& drawContext) const
 		drawContext.save();
 
 		if (IsSelected()){
-			drawContext.setPen(colorShema.GetPen(IColorShema::SP_SELECTED));
+			drawContext.setPen(colorSchema.GetPen(IColorSchema::SP_SELECTED));
 		}
 		else{
-			drawContext.setPen(colorShema.GetPen(IColorShema::SP_NORMAL));
+			drawContext.setPen(colorSchema.GetPen(IColorSchema::SP_NORMAL));
 		}
 
 		if (IsBackgroundTransparent()){
-			drawContext.setBrush(colorShema.GetBrush(iview::IColorShema::SB_TRANSPARENT));
+			drawContext.setBrush(colorSchema.GetBrush(iview::IColorSchema::SB_TRANSPARENT));
 			if (IsSelected()){
 				drawContext.drawRect(iqt::GetQRect(expandedBox));
 			}
 		}
 		else{
-			drawContext.setBrush(colorShema.GetBrush(iview::IColorShema::SB_NORMAL));
+			drawContext.setBrush(colorSchema.GetBrush(iview::IColorSchema::SB_NORMAL));
 			drawContext.drawRect(iqt::GetQRect(expandedBox));
 		}
 
 		//draw text
-		drawContext.setFont(colorShema.GetFont(iview::IColorShema::SF_NORMAL));
+		drawContext.setFont(colorSchema.GetFont(iview::IColorSchema::SF_NORMAL));
 		DrawText(drawContext, textBox.GetLeftTop(), labelPtr->GetText());
 
 		//draw line
@@ -204,7 +204,7 @@ void CInteractiveLabelShape::Draw(QPainter& drawContext) const
 		if (IsPositionVisible()){
 			BaseClass::Draw(drawContext);
 			if (IsSelected() && IsEditableOffset()){
-				colorShema.DrawTicker(drawContext, offsetSp, IColorShema::TT_MOVE);
+				colorSchema.DrawTicker(drawContext, offsetSp, IColorSchema::TT_MOVE);
 			}
 		}
 	}
@@ -237,11 +237,11 @@ ITouchable::TouchState CInteractiveLabelShape::IsTouched(istd::CIndex2d position
 
 			if (IsSelected() && IsEditableOffset()){
 				const iview::CScreenTransform& transform = GetLogToScreenTransform();
-				const IColorShema& colorShema = GetColorShema();
+				const IColorSchema& colorSchema = GetColorSchema();
 				istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
 				istd::CIndex2d offsetSp = sp + m_drawOffset;
 
-				const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_MOVE);
+				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_MOVE);
 				if (tickerBox.GetTranslated(offsetSp).IsInside(position))
 					return TS_TICKER;
 			}
@@ -266,8 +266,8 @@ void CInteractiveLabelShape::CalculateTextOriginSize(i2d::CRect& textBox) const
 	const IDisplay* displayPtr = GetDisplayPtr();
 	const i2d::CLabel* labelPtr = dynamic_cast<const i2d::CLabel*>(GetModelPtr());
 	if (IsDisplayConnected() && (displayPtr != NULL) && (labelPtr != NULL)){
-		const IColorShema& colorShema = GetColorShema();
-		const QFont& font = colorShema.GetFont(iview::IColorShema::SF_NORMAL);
+		const IColorSchema& colorSchema = GetColorSchema();
+		const QFont& font = colorSchema.GetFont(iview::IColorSchema::SF_NORMAL);
 
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
@@ -381,12 +381,12 @@ i2d::CRect CInteractiveLabelShape::CalcBoundingBox() const
 		CalculateTextOriginSize(boundingBox);
 		boundingBox.Expand(i2d::CRect(-3, -3, 3, 3));
 
-		const IColorShema& colorShema = GetColorShema();
+		const IColorSchema& colorSchema = GetColorSchema();
 		istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
 		istd::CIndex2d offsetSp = sp + m_drawOffset;
 
 		if (IsPositionVisible()){
-			const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_MOVE: IColorShema::TT_INACTIVE);
+			const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_MOVE: IColorSchema::TT_INACTIVE);
 			boundingBox.Union(tickerBox.GetTranslated(sp));
 			if (IsEditableOffset())
 				boundingBox.Union(tickerBox.GetTranslated(offsetSp));

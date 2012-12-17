@@ -59,7 +59,7 @@
 <a name="l00033"></a><a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#afb5e2a56499f91b992ab609b24207004">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt;Ui::CEdgeLinesSupplierGuiComp&gt;</a> <a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#afb5e2a56499f91b992ab609b24207004">BaseClass</a>;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        I_BEGIN_COMPONENT(<a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html">CEdgeLinesSupplierGuiComp</a>);
-<a name="l00036"></a>00036               I_ASSIGN(m_contoursColorShemaCompPtr, <span class="stringliteral">&quot;ContourColorShema&quot;</span>, <span class="stringliteral">&quot;Color shema for contour visualization&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ContourColorShema&quot;</span>);
+<a name="l00036"></a>00036               I_ASSIGN(m_contoursColorSchemaCompPtr, <span class="stringliteral">&quot;ContourColorSchema&quot;</span>, <span class="stringliteral">&quot;Color schema for contour visualization&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ContourColorSchema&quot;</span>);
 <a name="l00037"></a>00037               I_ASSIGN(m_intermediateResultsGuiCompPtr, <span class="stringliteral">&quot;IntermediateResultsGui&quot;</span>, <span class="stringliteral">&quot;GUI integrated in group &#39;Intermediate Results&#39;&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IntermediateResultsGui&quot;</span>);
 <a name="l00038"></a>00038        I_END_COMPONENT;
 <a name="l00039"></a>00039 
@@ -91,12 +91,12 @@
 <a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html#a1dfec64cedacf82fae78846a74076f13">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 <span class="keyword">private</span>:
-<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_color_shema.html">iview::IColorShema</a>, m_contoursColorShemaCompPtr);
+<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_color_schema.html">iview::IColorSchema</a>, m_contoursColorSchemaCompPtr);
 <a name="l00069"></a>00069        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_intermediateResultsGuiCompPtr);
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iedge::CEdgeLine::Container&gt;</a> m_foundModel;
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_color_shema.html">iview::CColorShema</a> m_edgesColorShema;
+<a name="l00073"></a>00073        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_color_schema.html">iview::CColorSchema</a> m_edgesColorSchema;
 <a name="l00074"></a>00074 };
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 }<span class="comment">//namespace iedgegui</span>

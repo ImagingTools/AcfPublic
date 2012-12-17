@@ -91,10 +91,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get layer type of this shape object.  <a href="#ae87e78fa4921bf3e0a89eba0c48e41f9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#a3c683e05c0c2ca46e9ce3a9d2b67a199">GetBoundingBox</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return bounding box in client window coordinates.  <a href="#a3c683e05c0c2ca46e9ce3a9d2b67a199"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#a32e67529ecdd06d4a8d22c79b5213b2b">SetUserColorShema</a> (const <a class="el" href="classiview_1_1_i_color_shema.html">IColorShema</a> *shemaPtr)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color shema to draw shape.  <a href="#a32e67529ecdd06d4a8d22c79b5213b2b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_color_shema.html">iview::IColorShema</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#aceaf509648d94de5e893938201667392">GetUserColorShema</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color shema from view or user defined.  <a href="#aceaf509648d94de5e893938201667392"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#adbd6c1fffb483790fd8c4cff31f48d0c">SetUserColorSchema</a> (const <a class="el" href="classiview_1_1_i_color_schema.html">IColorSchema</a> *schemaPtr)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color schema to draw shape.  <a href="#adbd6c1fffb483790fd8c4cff31f48d0c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiview_1_1_i_color_schema.html">iview::IColorSchema</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape.html#a358a0165447e857a15e3cb16767c7cf5">GetUserColorSchema</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color schema from view or user defined.  <a href="#a358a0165447e857a15e3cb16767c7cf5"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for all display console shapes. </p>
@@ -168,12 +168,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aceaf509648d94de5e893938201667392"></a><!-- doxytag: member="iview::IShape::GetUserColorShema" ref="aceaf509648d94de5e893938201667392" args="() const =0" -->
+<a class="anchor" id="a358a0165447e857a15e3cb16767c7cf5"></a><!-- doxytag: member="iview::IShape::GetUserColorSchema" ref="a358a0165447e857a15e3cb16767c7cf5" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classiview_1_1_i_color_shema.html">iview::IColorShema</a>* iview::IShape::GetUserColorShema </td>
+          <td class="memname">virtual const <a class="el" href="classiview_1_1_i_color_schema.html">iview::IColorSchema</a>* iview::IShape::GetUserColorSchema </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -182,30 +182,30 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get color shema from view or user defined. </p>
+<p>Get color schema from view or user defined. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_shape_base.html#ae9b87f570f243d2a21a240203da6286c">iview::CShapeBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_shape_base.html#a1df5c4e6181927b3c224188f7371231b">iview::CShapeBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a32e67529ecdd06d4a8d22c79b5213b2b"></a><!-- doxytag: member="iview::IShape::SetUserColorShema" ref="a32e67529ecdd06d4a8d22c79b5213b2b" args="(const IColorShema *shemaPtr)=0" -->
+<a class="anchor" id="adbd6c1fffb483790fd8c4cff31f48d0c"></a><!-- doxytag: member="iview::IShape::SetUserColorSchema" ref="adbd6c1fffb483790fd8c4cff31f48d0c" args="(const IColorSchema *schemaPtr)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::IShape::SetUserColorShema </td>
+          <td class="memname">virtual void iview::IShape::SetUserColorSchema </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiview_1_1_i_color_shema.html">IColorShema</a> *&#160;</td>
-          <td class="paramname"><em>shemaPtr</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classiview_1_1_i_color_schema.html">IColorSchema</a> *&#160;</td>
+          <td class="paramname"><em>schemaPtr</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Set color shema to draw shape. </p>
+<p>Set color schema to draw shape. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_shape_base.html#a754a420e02e4c417bffd037fd22c14ba">iview::CShapeBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_shape_base.html#a6cea0263a33b261c730c6755c98c0515">iview::CShapeBase</a>.</p>
 
 </div>
 </div>

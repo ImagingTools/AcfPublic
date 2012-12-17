@@ -182,7 +182,7 @@ public:
 	virtual IDisplay* GetParentDisplayPtr() const;
 	virtual const iview::CScreenTransform& GetTransform() const;
 	virtual i2d::CRect GetBoundingBox() const;
-	virtual const IColorShema& GetColorShema() const;
+	virtual const IColorSchema& GetColorSchema() const;
 	virtual void OnAreaInvalidated(const i2d::CRect& prevArea, const i2d::CRect& newArea);
 
 	// reimplemented (iview::IShapeObserver)
@@ -197,7 +197,7 @@ public:
 	virtual void EndDrag();
 
 	// abstract methods
-	virtual const IColorShema& GetDefaultColorShema() const = 0;
+	virtual const IColorSchema& GetDefaultColorSchema() const = 0;
 
 protected:
 	typedef QVector<IViewLayer*> Layers;
@@ -494,9 +494,9 @@ inline i2d::CRect CViewBase::GetBoundingBox() const
 }
 
 
-inline const IColorShema& CViewBase::GetColorShema() const
+inline const IColorSchema& CViewBase::GetColorSchema() const
 {
-	return GetDefaultColorShema();
+	return GetDefaultColorSchema();
 }
 
 

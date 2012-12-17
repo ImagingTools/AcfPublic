@@ -33,7 +33,7 @@
 
 #include "iqt/iqt.h"
 
-#include "iview/IColorShema.h"
+#include "iview/IColorSchema.h"
 #include "iview/CScreenTransform.h"
 
 
@@ -70,7 +70,7 @@ bool CInteractiveAnnulusSegmentShape::OnMouseButton(istd::CIndex2d position, Qt:
 	const i2d::CAnnulusSegment* objectPtr = dynamic_cast<const i2d::CAnnulusSegment*>(GetModelPtr());
 	if (objectPtr != NULL){
 		if (downFlag && IsEditableRadius()){
-			const IColorShema& colorShema = GetColorShema();
+			const IColorSchema& colorSchema = GetColorSchema();
 			i2d::CVector2d center = objectPtr->GetPosition();
 			double radius = objectPtr->GetInnerRadius();
 			double radius2 = objectPtr->GetOuterRadius();
@@ -83,7 +83,7 @@ bool CInteractiveAnnulusSegmentShape::OnMouseButton(istd::CIndex2d position, Qt:
 			istd::CIndex2d ticker1 = GetScreenPosition(center + tickerDirection * radius, calibrationPtr).ToIndex2d();
 			istd::CIndex2d ticker2 = GetScreenPosition(center + tickerDirection * radius2, calibrationPtr).ToIndex2d();
 
-			const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_NORMAL: IColorShema::TT_INACTIVE);
+			const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_NORMAL: IColorSchema::TT_INACTIVE);
 
 			if (tickerBox.IsInside(position - ticker1)){
 				m_editRadiusMode = true;
@@ -106,7 +106,7 @@ bool CInteractiveAnnulusSegmentShape::OnMouseButton(istd::CIndex2d position, Qt:
 		m_editRadius2Mode = false;
 
 		if (downFlag && IsEditableAngles()){
-			const IColorShema& colorShema = GetColorShema();
+			const IColorSchema& colorSchema = GetColorSchema();
 			i2d::CVector2d center = objectPtr->GetPosition();
 			double radius = objectPtr->GetInnerRadius();
 			double radius2 = objectPtr->GetOuterRadius();
@@ -121,7 +121,7 @@ bool CInteractiveAnnulusSegmentShape::OnMouseButton(istd::CIndex2d position, Qt:
 			istd::CIndex2d ticker3 = GetScreenPosition(center + delta1, calibrationPtr).ToIndex2d();
 			istd::CIndex2d ticker4 = GetScreenPosition(center + delta2, calibrationPtr).ToIndex2d();
 
-			const i2d::CRect& tickerBox = colorShema.GetTickerBox(IsSelected()? IColorShema::TT_NORMAL: IColorShema::TT_INACTIVE);
+			const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_NORMAL: IColorSchema::TT_INACTIVE);
 
 			if (tickerBox.IsInside(position - ticker3)){
 				m_editAngle1Mode = true;
@@ -229,7 +229,7 @@ void CInteractiveAnnulusSegmentShape::Draw(QPainter& drawContext) const
 
 	const i2d::ICalibration2d* calibrationPtr = objectPtr->GetCalibration();
 
-	const IColorShema& colorShema = GetColorShema();
+	const IColorSchema& colorSchema = GetColorSchema();
 	const i2d::CVector2d& center = objectPtr->GetPosition();
 	i2d::CVector2d screenCenter = GetScreenPosition(center, calibrationPtr);
 
@@ -244,13 +244,13 @@ void CInteractiveAnnulusSegmentShape::Draw(QPainter& drawContext) const
 
 	if (IsSelected()){
 		drawContext.save();
-		drawContext.setPen(colorShema.GetPen(IColorShema::SP_SELECTED));
-		drawContext.setBrush(colorShema.GetBrush(IColorShema::SB_HALF_TRANSPARENT));
+		drawContext.setPen(colorSchema.GetPen(IColorSchema::SP_SELECTED));
+		drawContext.setBrush(colorSchema.GetBrush(IColorSchema::SB_HALF_TRANSPARENT));
 	}
 	else{
 		drawContext.save();
-		drawContext.setPen(colorShema.GetPen(IColorShema::SP_NORMAL));
-		drawContext.setBrush(colorShema.GetBrush(IColorShema::SB_HALF_TRANSPARENT2));
+		drawContext.setPen(colorSchema.GetPen(IColorSchema::SP_NORMAL));
+		drawContext.setBrush(colorSchema.GetBrush(IColorSchema::SB_HALF_TRANSPARENT2));
 	}
 
 	DrawArea(	drawContext,
@@ -269,8 +269,8 @@ void CInteractiveAnnulusSegmentShape::Draw(QPainter& drawContext) const
 		istd::CIndex2d ticker1 = GetScreenPosition(center + tickerDirection * radius, calibrationPtr).ToIndex2d();
 		istd::CIndex2d ticker2 = GetScreenPosition(center + tickerDirection * radius2, calibrationPtr).ToIndex2d();
 
-		colorShema.DrawTicker(drawContext, ticker1, IColorShema::TT_NORMAL);
-		colorShema.DrawTicker(drawContext, ticker2, IColorShema::TT_NORMAL);
+		colorSchema.DrawTicker(drawContext, ticker1, IColorSchema::TT_NORMAL);
+		colorSchema.DrawTicker(drawContext, ticker2, IColorSchema::TT_NORMAL);
 	}
 
 	if (m_editableAngle && IsSelected()){
@@ -283,8 +283,8 @@ void CInteractiveAnnulusSegmentShape::Draw(QPainter& drawContext) const
 		istd::CIndex2d ticker3 = GetScreenPosition(center + delta1, calibrationPtr).ToIndex2d();
 		istd::CIndex2d ticker4 = GetScreenPosition(center + delta2, calibrationPtr).ToIndex2d();
 
-		colorShema.DrawTicker(drawContext, ticker3, IColorShema::TT_CHECKBOX_ON);
-		colorShema.DrawTicker(drawContext, ticker4, IColorShema::TT_CHECKBOX_ON);
+		colorSchema.DrawTicker(drawContext, ticker3, IColorSchema::TT_CHECKBOX_ON);
+		colorSchema.DrawTicker(drawContext, ticker4, IColorSchema::TT_CHECKBOX_ON);
 	}
 }
 
@@ -311,7 +311,7 @@ ITouchable::TouchState CInteractiveAnnulusSegmentShape::IsTouched(istd::CIndex2d
 
 	const i2d::ICalibration2d* calibrationPtr = objectPtr->GetCalibration();
 
-	const IColorShema& colorShema = GetColorShema();
+	const IColorSchema& colorSchema = GetColorSchema();
 
 	double proportions = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
 
@@ -334,7 +334,7 @@ ITouchable::TouchState CInteractiveAnnulusSegmentShape::IsTouched(istd::CIndex2d
 		istd::CIndex2d ticker1 = GetScreenPosition(center + tickerDirection * radius, calibrationPtr).ToIndex2d();
 		istd::CIndex2d ticker2 = GetScreenPosition(center + tickerDirection * radius2, calibrationPtr).ToIndex2d();
 
-		const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_NORMAL);
+		const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_NORMAL);
 
 		if (		tickerBox.IsInside(position - ticker1) ||
 					tickerBox.IsInside(position - ticker2)){
@@ -351,7 +351,7 @@ ITouchable::TouchState CInteractiveAnnulusSegmentShape::IsTouched(istd::CIndex2d
 		istd::CIndex2d ticker3 = GetScreenPosition(center + delta1, calibrationPtr).ToIndex2d();
 		istd::CIndex2d ticker4 = GetScreenPosition(center + delta2, calibrationPtr).ToIndex2d();
 
-		const i2d::CRect& tickerBox = colorShema.GetTickerBox(IColorShema::TT_NORMAL);
+		const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_NORMAL);
 
 		if (		tickerBox.IsInside(position - ticker3) ||
 					tickerBox.IsInside(position - ticker4)){
@@ -359,7 +359,7 @@ ITouchable::TouchState CInteractiveAnnulusSegmentShape::IsTouched(istd::CIndex2d
 		}
 	}
 
-	double logicalLineWidth = colorShema.GetLogicalLineWidth();
+	double logicalLineWidth = colorSchema.GetLogicalLineWidth();
 	double angle = cpToCenterVector.GetAngle();
 	if (angle < beginAngle){
 		angle += 2 * I_PI;

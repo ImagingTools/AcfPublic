@@ -50,7 +50,7 @@
 <a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classiview_1_1_c_simple_shape_factory_comp.html" title="Simple shape factory for common 2D-objects.">CSimpleShapeFactoryComp</a>);
 <a name="l00026"></a>00026               I_REGISTER_INTERFACE(<a class="code" href="classiview_1_1_i_shape_factory.html" title="Interface for creation of visualization shapes of some geometrical object.">IShapeFactory</a>);
 <a name="l00027"></a>00027               I_ASSIGN(m_useInteractiveShapesAttrPtr, <span class="stringliteral">&quot;UseInteractiveShapes&quot;</span>, <span class="stringliteral">&quot;If true, the created shapes will be editable&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00028"></a>00028               I_ASSIGN(m_colorSchemaCompPtr, <span class="stringliteral">&quot;ShapeColorShema&quot;</span>, <span class="stringliteral">&quot;Color shema used by displayed shape&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ShapeColorShema&quot;</span>);
+<a name="l00028"></a>00028               I_ASSIGN(m_colorSchemaCompPtr, <span class="stringliteral">&quot;ShapeColorSchema&quot;</span>, <span class="stringliteral">&quot;Color schema used by displayed shape&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ShapeColorSchema&quot;</span>);
 <a name="l00029"></a>00029        I_END_COMPONENT;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <span class="comment">// reimplemented (IShapeFactory)</span>
@@ -61,7 +61,7 @@
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keyword">private</span>:
 <a name="l00038"></a>00038        I_ATTR(<span class="keywordtype">bool</span>, m_useInteractiveShapesAttrPtr);
-<a name="l00039"></a>00039        I_REF(<a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">iview::IColorShema</a>, m_colorSchemaCompPtr);
+<a name="l00039"></a>00039        I_REF(<a class="code" href="classiview_1_1_i_color_schema.html" title="Defines set of standard pens, brushes and simple management of unions.">iview::IColorSchema</a>, m_colorSchemaCompPtr);
 <a name="l00040"></a>00040 };
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 

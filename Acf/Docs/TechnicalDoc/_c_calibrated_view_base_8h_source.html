@@ -40,7 +40,7 @@
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_visual_calibration_info_8h.html">iview/IVisualCalibrationInfo.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_view_base_8h.html">iview/CViewBase.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_c_draw_buffer_8h.html">iview/CDrawBuffer.h</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_c_color_shema_8h.html">iview/CColorShema.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_c_color_schema_8h.html">iview/CColorSchema.h</a>&quot;</span>
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 <span class="keyword">namespace </span>iview
@@ -69,7 +69,7 @@
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view.">iview::IViewLayer</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a3957c2b9787df64fbaa07e2892c10737">GetCalibrationLayer</a>() <span class="keyword">const</span>;
 <a name="l00064"></a>00064 
-<a name="l00070"></a>00070        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#abaa7c4bada0ea318e1505db317c923c3" title="Set default color shema object.">SetDefaultColorShema</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorShema</a>* colorShemaPtr, <span class="keywordtype">bool</span> releaseFlag = <span class="keyword">false</span>);
+<a name="l00070"></a>00070        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a45a1e4210f8d14d0e791ffcae14d805e" title="Set default color schema object.">SetDefaultColorSchema</a>(<span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_schema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorSchema</a>* colorSchemaPtr, <span class="keywordtype">bool</span> releaseFlag = <span class="keyword">false</span>);
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a1d7274deb0450cdf230d5ca1d2f2595a">IsBackgroundBufferActive</a>() <span class="keyword">const</span>;
 <a name="l00073"></a>00073        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a048cc11d6231adee980a2fed8cd42e1d">SetBackgroundBufferActive</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
@@ -86,7 +86,7 @@
 <a name="l00090"></a>00090        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a76c31f33af210cfc14f0ebd2e71b1556" title="Check if size size was changed and invalidation and OnResize() should be done.">CheckResize</a>();
 <a name="l00091"></a>00091 
 <a name="l00092"></a>00092        <span class="comment">// reimplemented (iview::CViewBase)</span>
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_shema.html" title="Defines set of standard pens, brushes and simple management of unions.">iview::IColorShema</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a808e54b859e44d92320c4380131dcc90">GetDefaultColorShema</a>() <span class="keyword">const</span>;
+<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_schema.html" title="Defines set of standard pens, brushes and simple management of unions.">iview::IColorSchema</a>&amp; <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a1c2ad28489292752850622ec399b1037">GetDefaultColorSchema</a>() <span class="keyword">const</span>;
 <a name="l00094"></a>00094        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a5034161e88f77b5397e954fdae0603e0" title="Inform all shapes about changes.">UpdateAllShapes</a>(<span class="keywordtype">int</span> changeFlag);
 <a name="l00095"></a>00095        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a78329039f72a0cd2a790d7cd00bc17c9" title="Insert default layers, when there is no one user layer.">InsertDefaultLayers</a>();
 <a name="l00096"></a>00096 
@@ -109,7 +109,7 @@
 <a name="l00113"></a>00113        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_calibrated_view_base.html#a26261d7a8f8a6f7b7ab23f8b318d8dd2">DrawToContext</a>(QPaintDevice&amp; nativeContext, QPainter&amp; context, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; invalidatedBox);
 <a name="l00114"></a>00114 
 <a name="l00115"></a>00115 <span class="keyword">private</span>:
-<a name="l00116"></a>00116        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;const IColorShema&gt;</a> m_defaultColorShemaPtr;
+<a name="l00116"></a>00116        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;const IColorSchema&gt;</a> m_defaultColorSchemaPtr;
 <a name="l00117"></a>00117 
 <a name="l00118"></a>00118        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a> m_backgroundBuffer;
 <a name="l00119"></a>00119        <a class="code" href="classiview_1_1_c_draw_buffer.html">iview::CDrawBuffer</a> m_doubleBuffer;

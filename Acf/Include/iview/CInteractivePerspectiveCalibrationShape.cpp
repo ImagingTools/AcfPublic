@@ -54,7 +54,7 @@ iview::ITouchable::TouchState CInteractivePerspectiveCalibrationShape::IsTouched
 		calibPtr->GetInvPositionAt(bounds.GetRightBottom(), viewRightBottom);
 
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const iview::IColorShema& colorShema = GetColorShema();
+		const iview::IColorSchema& colorSchema = GetColorSchema();
 
 		i2d::CVector2d viewPos = transform.GetClientPosition(position);
 
@@ -65,7 +65,7 @@ iview::ITouchable::TouchState CInteractivePerspectiveCalibrationShape::IsTouched
 
 		double proportions = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
 
-		double maxDistance = colorShema.GetLogicalLineWidth() / proportions;
+		double maxDistance = colorSchema.GetLogicalLineWidth() / proportions;
 
 		if (			(viewLeft.GetDistance(viewPos) < maxDistance) ||
 						(viewRight.GetDistance(viewPos) < maxDistance) ||
@@ -96,11 +96,11 @@ void CInteractivePerspectiveCalibrationShape::Draw(QPainter& drawContext) const
 		calibPtr->GetInvPositionAt(bounds.GetRightBottom(), viewRightBottom);
 
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-		const iview::IColorShema& colorShema = GetColorShema();
+		const iview::IColorSchema& colorSchema = GetColorSchema();
 
 		bool isSelected = IsSelected();
 		drawContext.save();
-		drawContext.setPen(colorShema.GetPen(isSelected? iview::IColorShema::SP_SELECTED: iview::IColorShema::SP_NORMAL));
+		drawContext.setPen(colorSchema.GetPen(isSelected? iview::IColorSchema::SP_SELECTED: iview::IColorSchema::SP_NORMAL));
 
 		QPoint screenLeftTop = iqt::GetQPoint(transform.GetScreenPosition(viewLeftTop));
 		QPoint screenLeftBottom = iqt::GetQPoint(transform.GetScreenPosition(viewLeftBottom));
@@ -139,7 +139,7 @@ bool CInteractivePerspectiveCalibrationShape::OnMouseButton(istd::CIndex2d posit
 			calibPtr->GetInvPositionAt(bounds.GetRightBottom(), viewRightBottom);
 
 			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-			const iview::IColorShema& colorShema = GetColorShema();
+			const iview::IColorSchema& colorSchema = GetColorSchema();
 
 			i2d::CVector2d viewPos = transform.GetClientPosition(position);
 
@@ -150,7 +150,7 @@ bool CInteractivePerspectiveCalibrationShape::OnMouseButton(istd::CIndex2d posit
 
 			double proportions = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
 
-			double maxDistance = colorShema.GetLogicalLineWidth() / proportions;
+			double maxDistance = colorSchema.GetLogicalLineWidth() / proportions;
 
 			if (viewLeft.GetDistance(viewPos) < maxDistance){
 				m_editBound = EB_LEFT;

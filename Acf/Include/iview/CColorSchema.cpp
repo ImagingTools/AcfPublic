@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iview/CColorShema.h"
+#include "iview/CColorSchema.h"
 
 
 // Qt includes
@@ -32,7 +32,7 @@ namespace iview
 {
 
 
-CColorShema::CColorShema()
+CColorSchema::CColorSchema()
 {
 	m_pens[SP_NORMAL] = QColor(0, 255, 0);
 	m_pens[SP_SELECTED] = QColor(255, 255, 0);
@@ -69,7 +69,7 @@ CColorShema::CColorShema()
 	m_brushes[SB_HALF_TRANSPARENT2] = QBrush(QColor(0, 0, 255, 50));
 	m_brushes[SB_TRANSPARENT] = QBrush(QColor(0, 0, 0), Qt::NoBrush);
 
-	m_fonts[iview::IColorShema::SF_NORMAL] = QFont("Arial");
+	m_fonts[iview::IColorSchema::SF_NORMAL] = QFont("Arial");
 }
 
 
