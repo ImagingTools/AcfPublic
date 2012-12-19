@@ -24,8 +24,9 @@
 
 
 // Qt includes
-#include <QtGui/QApplication>
 #include <QtCore/QString>
+
+#include <QtGui/QApplication>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QIcon>
 
@@ -80,7 +81,7 @@ int CGuiApplicationComp::Execute(int argc, char** argv)
 			}
 			else{
 				m_mainGuiCompPtr->CreateGui(NULL);
-				
+
 				m_mainWidgetPtr.SetPtr(m_mainGuiCompPtr->GetWidget());
 			}
 
@@ -120,6 +121,8 @@ int CGuiApplicationComp::Execute(int argc, char** argv)
 
 			I_ASSERT(m_mainGuiCompPtr.IsValid());
 			m_mainGuiCompPtr->DestroyGui();
+
+			m_mainWidgetPtr.Reset();
 		}
 	}
 

@@ -215,8 +215,8 @@
 <a name="l00220"></a>00220               m_messageContainer.ClearMessages();
 <a name="l00221"></a>00221 
 <a name="l00222"></a>00222               <span class="comment">// distribute initializing to input...</span>
-<a name="l00223"></a>00223               <span class="keywordflow">for</span> (         InputSuppliersMap::ConstIterator inputSupplierIter = m_inputSuppliersMap.begin();
-<a name="l00224"></a>00224                                    inputSupplierIter != m_inputSuppliersMap.end();
+<a name="l00223"></a>00223               <span class="keywordflow">for</span> (         InputSuppliersMap::ConstIterator inputSupplierIter = m_inputSuppliersMap.constBegin();
+<a name="l00224"></a>00224                                    inputSupplierIter != m_inputSuppliersMap.constEnd();
 <a name="l00225"></a>00225                                    ++inputSupplierIter){
 <a name="l00226"></a>00226                      <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr = inputSupplierIter.value();
 <a name="l00227"></a>00227 

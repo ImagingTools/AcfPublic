@@ -26,8 +26,8 @@
 
 // ACF includes
 #include "icomp/CComponentBase.h"
-
 #include "iview/IShapeFactory.h"
+#include "iview/IColorSchema.h"
 
 
 namespace iview

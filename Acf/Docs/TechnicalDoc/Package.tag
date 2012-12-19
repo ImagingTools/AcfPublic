@@ -6053,6 +6053,7 @@
     <filename>_c_simple_shape_factory_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_shape_factory_8h" name="IShapeFactory.h" local="yes" imported="no">iview/IShapeFactory.h</includes>
+    <includes id="_i_color_schema_8h" name="IColorSchema.h" local="yes" imported="no">iview/IColorSchema.h</includes>
     <class kind="class">iview::CSimpleShapeFactoryComp</class>
     <namespace>iview</namespace>
   </compound>
