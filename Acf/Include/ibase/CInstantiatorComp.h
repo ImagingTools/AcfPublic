@@ -32,8 +32,8 @@ namespace ibase
 
 
 /**
-	This help component simply instanciate set of dependent components during its instantiation.
-	\depricated
+	This help component simply instantiate a set of dependent components during its instantiation.
+	\deprecated
 */
 class CInstantiatorComp: public icomp::CComponentBase
 {

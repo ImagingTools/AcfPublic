@@ -56,226 +56,226 @@
 <a name="l00035"></a>00035        <a class="code" href="classibase_1_1_t_factorisable_container.html#a691e13dadb4eaabc0ccff32e30ca75a6">TFactorisableContainer</a>();
 <a name="l00036"></a>00036        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#a6d320404d5941ed2142dce13836ac6e0">~TFactorisableContainer</a>();
 <a name="l00037"></a>00037 
-<a name="l00041"></a>00041        InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#a88ed17094a5d7d018d85c8315f56fb19" title="Insert the element to the container at the given index.">InsertElement</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QByteArray&amp; elementFactoryKey);
+<a name="l00041"></a>00041        InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#a88ed17094a5d7d018d85c8315f56fb19" title="Insert an element into the container at given index.">InsertElement</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QByteArray&amp; elementFactoryKey);
 <a name="l00042"></a>00042 
-<a name="l00046"></a>00046        InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#aff23e7c8f245489b1327c6ad9c64a64e" title="Add the element to container.">AddElement</a>(<span class="keyword">const</span> QByteArray&amp; elementFactoryKey);
+<a name="l00046"></a>00046        InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#aff23e7c8f245489b1327c6ad9c64a64e" title="Add an element to the container.">AddElement</a>(<span class="keyword">const</span> QByteArray&amp; elementFactoryKey);
 <a name="l00047"></a>00047 
-<a name="l00052"></a>00052        InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#ad2adfac2abb7e929880cd46fd23144f3" title="Gets the element with the index elementIndex from container.">GetElement</a>(<span class="keywordtype">int</span> elementIndex) <span class="keyword">const</span>;
-<a name="l00053"></a>00053 
-<a name="l00057"></a>00057        <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#a0708771b8bb4827332162bd0e2c10a27" title="Gets the element index from container.">GetElementIndex</a>(<span class="keyword">const</span> InterfaceClass&amp; elementRef) <span class="keyword">const</span>;
-<a name="l00058"></a>00058 
-<a name="l00062"></a>00062        QByteArray <a class="code" href="classibase_1_1_t_factorisable_container.html#a1e74258c6fd0f93cd371d8002023902b" title="Gets the element key associated with the element the index elementIndex from container.">GetElementKey</a>(<span class="keywordtype">int</span> elementIndex) <span class="keyword">const</span>;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#af7a22a61b34324fe53b88775f267514f">RegisterItemFactory</a>(<a class="code" href="classistd_1_1_t_i_factory.html">istd::TIFactory&lt;InterfaceClass&gt;</a>* itemFactoryPtr);
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00067"></a>00067        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#afe309e6db604f59a38df28eee66795e9" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">protected</span>:
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#a9929e7f23c3d66eb1aaecc906882e78b">CreateElement</a>(<span class="keyword">const</span> QByteArray&amp; itemKey);
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#ab0e084dfad1bd7bd119d4725d537dac4">OnElementCreated</a>(InterfaceClass* elementPtr);
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073        <span class="comment">// reimplemented (ibase::TContainer)</span>
-<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#af4fc0747949fd4452aad4bfeb3288d0f" title="Serialize a single item in the container.">SerializeItem</a>(<a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>&amp; item, <a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="keyword">protected</span>:
-<a name="l00077"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#adb49f2f3eb3993c83073f9c421600793">00077</a>        <a class="code" href="classistd_1_1_t_i_factory.html">istd::TIFactory&lt;InterfaceClass&gt;</a>* <a class="code" href="classibase_1_1_t_factorisable_container.html#adb49f2f3eb3993c83073f9c421600793">m_itemFactoryPtr</a>;
-<a name="l00078"></a>00078 };
-<a name="l00079"></a>00079 
+<a name="l00053"></a>00053        InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#ad2adfac2abb7e929880cd46fd23144f3" title="Gets an element with given index elementIndex from the container.">GetElement</a>(<span class="keywordtype">int</span> elementIndex) <span class="keyword">const</span>;
+<a name="l00054"></a>00054 
+<a name="l00058"></a>00058        <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#a0708771b8bb4827332162bd0e2c10a27" title="Gets the index of given element from the container.">GetElementIndex</a>(<span class="keyword">const</span> InterfaceClass&amp; elementRef) <span class="keyword">const</span>;
+<a name="l00059"></a>00059 
+<a name="l00063"></a>00063        QByteArray <a class="code" href="classibase_1_1_t_factorisable_container.html#a1e74258c6fd0f93cd371d8002023902b" title="Gets the element key associated with the element with given elementIndex from the container...">GetElementKey</a>(<span class="keywordtype">int</span> elementIndex) <span class="keyword">const</span>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#af7a22a61b34324fe53b88775f267514f">RegisterItemFactory</a>(<a class="code" href="classistd_1_1_t_i_factory.html">istd::TIFactory&lt;InterfaceClass&gt;</a>* itemFactoryPtr);
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00068"></a>00068        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#afe309e6db604f59a38df28eee66795e9" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="keyword">protected</span>:
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#a9929e7f23c3d66eb1aaecc906882e78b">CreateElement</a>(<span class="keyword">const</span> QByteArray&amp; itemKey);
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#ab0e084dfad1bd7bd119d4725d537dac4">OnElementCreated</a>(InterfaceClass* elementPtr);
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        <span class="comment">// reimplemented (ibase::TContainer)</span>
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#af4fc0747949fd4452aad4bfeb3288d0f" title="Serialize a single item in the container.">SerializeItem</a>(<a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>&amp; item, <a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 <span class="keyword">protected</span>:
+<a name="l00078"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#adb49f2f3eb3993c83073f9c421600793">00078</a>        <a class="code" href="classistd_1_1_t_i_factory.html">istd::TIFactory&lt;InterfaceClass&gt;</a>* <a class="code" href="classibase_1_1_t_factorisable_container.html#adb49f2f3eb3993c83073f9c421600793">m_itemFactoryPtr</a>;
+<a name="l00079"></a>00079 };
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00082"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a691e13dadb4eaabc0ccff32e30ca75a6">00082</a> <a class="code" href="classibase_1_1_t_factorisable_container.html#a691e13dadb4eaabc0ccff32e30ca75a6">TFactorisableContainer&lt;InterfaceClass&gt;::TFactorisableContainer</a>()
-<a name="l00083"></a>00083 {
-<a name="l00084"></a>00084        m_itemFactoryPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00085"></a>00085 }
-<a name="l00086"></a>00086 
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00083"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a691e13dadb4eaabc0ccff32e30ca75a6">00083</a> <a class="code" href="classibase_1_1_t_factorisable_container.html#a691e13dadb4eaabc0ccff32e30ca75a6">TFactorisableContainer&lt;InterfaceClass&gt;::TFactorisableContainer</a>()
+<a name="l00084"></a>00084 {
+<a name="l00085"></a>00085        m_itemFactoryPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00089"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a6d320404d5941ed2142dce13836ac6e0">00089</a> <a class="code" href="classibase_1_1_t_factorisable_container.html#a6d320404d5941ed2142dce13836ac6e0">TFactorisableContainer&lt;InterfaceClass&gt;::~TFactorisableContainer</a>()
-<a name="l00090"></a>00090 {
-<a name="l00091"></a>00091        BaseClass::Reset();
-<a name="l00092"></a>00092 }
-<a name="l00093"></a>00093 
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00090"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a6d320404d5941ed2142dce13836ac6e0">00090</a> <a class="code" href="classibase_1_1_t_factorisable_container.html#a6d320404d5941ed2142dce13836ac6e0">TFactorisableContainer&lt;InterfaceClass&gt;::~TFactorisableContainer</a>()
+<a name="l00091"></a>00091 {
+<a name="l00092"></a>00092        BaseClass::Reset();
+<a name="l00093"></a>00093 }
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00096"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#aff23e7c8f245489b1327c6ad9c64a64e">00096</a> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#aff23e7c8f245489b1327c6ad9c64a64e" title="Add the element to container.">TFactorisableContainer&lt;InterfaceClass&gt;::AddElement</a>(<span class="keyword">const</span> QByteArray&amp; elementFactoryKey)
-<a name="l00097"></a>00097 {
-<a name="l00098"></a>00098        <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;InterfaceClass&gt;</a> elementPtr(CreateElement(elementFactoryKey));
-<a name="l00099"></a>00099        <span class="keywordflow">if</span> (elementPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#ad5818e39639b1ce9b4ef5cf9c8769f4e" title="Check, whether the object is in valid state.">IsValid</a>()){
-<a name="l00100"></a>00100               BaseClass::PushBack(<a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>(elementPtr, elementFactoryKey));
-<a name="l00101"></a>00101        }
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103        <span class="keywordflow">return</span> elementPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#a3a7cff9d381bbad6c0743f1c8ed95a12" title="Get access to pointed object.">GetPtr</a>();
-<a name="l00104"></a>00104 }
-<a name="l00105"></a>00105 
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00097"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#aff23e7c8f245489b1327c6ad9c64a64e">00097</a> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#aff23e7c8f245489b1327c6ad9c64a64e" title="Add an element to the container.">TFactorisableContainer&lt;InterfaceClass&gt;::AddElement</a>(<span class="keyword">const</span> QByteArray&amp; elementFactoryKey)
+<a name="l00098"></a>00098 {
+<a name="l00099"></a>00099        <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;InterfaceClass&gt;</a> elementPtr(CreateElement(elementFactoryKey));
+<a name="l00100"></a>00100        <span class="keywordflow">if</span> (elementPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#ad5818e39639b1ce9b4ef5cf9c8769f4e" title="Check, whether the object is in valid state.">IsValid</a>()){
+<a name="l00101"></a>00101               BaseClass::PushBack(<a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>(elementPtr, elementFactoryKey));
+<a name="l00102"></a>00102        }
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104        <span class="keywordflow">return</span> elementPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#a3a7cff9d381bbad6c0743f1c8ed95a12" title="Get access to pointed object.">GetPtr</a>();
+<a name="l00105"></a>00105 }
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00108"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a88ed17094a5d7d018d85c8315f56fb19">00108</a> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#a88ed17094a5d7d018d85c8315f56fb19" title="Insert the element to the container at the given index.">TFactorisableContainer&lt;InterfaceClass&gt;::InsertElement</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QByteArray&amp; elementFactoryKey)
-<a name="l00109"></a>00109 {
-<a name="l00110"></a>00110        <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;InterfaceClass&gt;</a> elementPtr(CreateElement(elementFactoryKey));
-<a name="l00111"></a>00111        <span class="keywordflow">if</span> (elementPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#ad5818e39639b1ce9b4ef5cf9c8769f4e" title="Check, whether the object is in valid state.">IsValid</a>()){
-<a name="l00112"></a>00112               BaseClass::InsertAt(<a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>(elementPtr, elementFactoryKey), index);
-<a name="l00113"></a>00113        }
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115        <span class="keywordflow">return</span> elementPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#a3a7cff9d381bbad6c0743f1c8ed95a12" title="Get access to pointed object.">GetPtr</a>();
-<a name="l00116"></a>00116 }
-<a name="l00117"></a>00117 
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00109"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a88ed17094a5d7d018d85c8315f56fb19">00109</a> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#a88ed17094a5d7d018d85c8315f56fb19" title="Insert an element into the container at given index.">TFactorisableContainer&lt;InterfaceClass&gt;::InsertElement</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QByteArray&amp; elementFactoryKey)
+<a name="l00110"></a>00110 {
+<a name="l00111"></a>00111        <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">istd::TSmartPtr&lt;InterfaceClass&gt;</a> elementPtr(CreateElement(elementFactoryKey));
+<a name="l00112"></a>00112        <span class="keywordflow">if</span> (elementPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#ad5818e39639b1ce9b4ef5cf9c8769f4e" title="Check, whether the object is in valid state.">IsValid</a>()){
+<a name="l00113"></a>00113               BaseClass::InsertAt(<a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>(elementPtr, elementFactoryKey), index);
+<a name="l00114"></a>00114        }
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116        <span class="keywordflow">return</span> elementPtr.<a class="code" href="classistd_1_1_t_trans_ptr.html#a3a7cff9d381bbad6c0743f1c8ed95a12" title="Get access to pointed object.">GetPtr</a>();
+<a name="l00117"></a>00117 }
 <a name="l00118"></a>00118 
-<a name="l00119"></a>00119 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00120"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#ad2adfac2abb7e929880cd46fd23144f3">00120</a> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#ad2adfac2abb7e929880cd46fd23144f3" title="Gets the element with the index elementIndex from container.">TFactorisableContainer&lt;InterfaceClass&gt;::GetElement</a>(<span class="keywordtype">int</span> elementIndex)<span class="keyword"> const</span>
-<a name="l00121"></a>00121 <span class="keyword"></span>{
-<a name="l00122"></a>00122        <span class="keywordflow">if</span> (elementIndex &lt; BaseClass::GetItemsCount() &amp;&amp; elementIndex &gt;= 0){
-<a name="l00123"></a>00123               <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>InterfaceClass*<span class="keyword">&gt;</span>(BaseClass::GetAt(elementIndex).first.GetPtr());
-<a name="l00124"></a>00124        }
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00127"></a>00127 }
-<a name="l00128"></a>00128 
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00121"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#ad2adfac2abb7e929880cd46fd23144f3">00121</a> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#ad2adfac2abb7e929880cd46fd23144f3" title="Gets an element with given index elementIndex from the container.">TFactorisableContainer&lt;InterfaceClass&gt;::GetElement</a>(<span class="keywordtype">int</span> elementIndex)<span class="keyword"> const</span>
+<a name="l00122"></a>00122 <span class="keyword"></span>{
+<a name="l00123"></a>00123        <span class="keywordflow">if</span> (elementIndex &lt; BaseClass::GetItemsCount() &amp;&amp; elementIndex &gt;= 0){
+<a name="l00124"></a>00124               <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>InterfaceClass*<span class="keyword">&gt;</span>(BaseClass::GetAt(elementIndex).first.GetPtr());
+<a name="l00125"></a>00125        }
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00128"></a>00128 }
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00131"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a0708771b8bb4827332162bd0e2c10a27">00131</a> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#a0708771b8bb4827332162bd0e2c10a27" title="Gets the element index from container.">TFactorisableContainer&lt;InterfaceClass&gt;::GetElementIndex</a>(<span class="keyword">const</span> InterfaceClass&amp; elementRef)<span class="keyword"> const</span>
-<a name="l00132"></a>00132 <span class="keyword"></span>{
-<a name="l00133"></a>00133        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> itemIndex = 0; itemIndex &lt; BaseClass::GetItemsCount(); itemIndex++){
-<a name="l00134"></a>00134               InterfaceClass* elementPtr = GetElement(itemIndex);
-<a name="l00135"></a>00135               <span class="keywordflow">if</span> (elementPtr == &amp;elementRef){
-<a name="l00136"></a>00136                      <span class="keywordflow">return</span> itemIndex;
-<a name="l00137"></a>00137               }
-<a name="l00138"></a>00138        }
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140        <span class="keywordflow">return</span> -1;
-<a name="l00141"></a>00141 }
-<a name="l00142"></a>00142 
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00132"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a0708771b8bb4827332162bd0e2c10a27">00132</a> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#a0708771b8bb4827332162bd0e2c10a27" title="Gets the index of given element from the container.">TFactorisableContainer&lt;InterfaceClass&gt;::GetElementIndex</a>(<span class="keyword">const</span> InterfaceClass&amp; elementRef)<span class="keyword"> const</span>
+<a name="l00133"></a>00133 <span class="keyword"></span>{
+<a name="l00134"></a>00134        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> itemIndex = 0; itemIndex &lt; BaseClass::GetItemsCount(); itemIndex++){
+<a name="l00135"></a>00135               InterfaceClass* elementPtr = GetElement(itemIndex);
+<a name="l00136"></a>00136               <span class="keywordflow">if</span> (elementPtr == &amp;elementRef){
+<a name="l00137"></a>00137                      <span class="keywordflow">return</span> itemIndex;
+<a name="l00138"></a>00138               }
+<a name="l00139"></a>00139        }
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141        <span class="keywordflow">return</span> -1;
+<a name="l00142"></a>00142 }
 <a name="l00143"></a>00143 
-<a name="l00144"></a>00144 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00145"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a1e74258c6fd0f93cd371d8002023902b">00145</a> QByteArray <a class="code" href="classibase_1_1_t_factorisable_container.html#a1e74258c6fd0f93cd371d8002023902b" title="Gets the element key associated with the element the index elementIndex from container.">TFactorisableContainer&lt;InterfaceClass&gt;::GetElementKey</a>(<span class="keywordtype">int</span> elementIndex)<span class="keyword"> const</span>
-<a name="l00146"></a>00146 <span class="keyword"></span>{
-<a name="l00147"></a>00147        <span class="keywordflow">if</span> (elementIndex &lt; BaseClass::GetItemsCount() &amp;&amp;  elementIndex &gt;= 0){
-<a name="l00148"></a>00148               <span class="keywordflow">return</span> BaseClass::GetAt(elementIndex).second;
-<a name="l00149"></a>00149        }
-<a name="l00150"></a>00150 
-<a name="l00151"></a>00151        <span class="keywordflow">return</span> QByteArray();
-<a name="l00152"></a>00152 }
-<a name="l00153"></a>00153 
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00146"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a1e74258c6fd0f93cd371d8002023902b">00146</a> QByteArray <a class="code" href="classibase_1_1_t_factorisable_container.html#a1e74258c6fd0f93cd371d8002023902b" title="Gets the element key associated with the element with given elementIndex from the container...">TFactorisableContainer&lt;InterfaceClass&gt;::GetElementKey</a>(<span class="keywordtype">int</span> elementIndex)<span class="keyword"> const</span>
+<a name="l00147"></a>00147 <span class="keyword"></span>{
+<a name="l00148"></a>00148        <span class="keywordflow">if</span> (elementIndex &lt; BaseClass::GetItemsCount() &amp;&amp;  elementIndex &gt;= 0){
+<a name="l00149"></a>00149               <span class="keywordflow">return</span> BaseClass::GetAt(elementIndex).second;
+<a name="l00150"></a>00150        }
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152        <span class="keywordflow">return</span> QByteArray();
+<a name="l00153"></a>00153 }
 <a name="l00154"></a>00154 
-<a name="l00155"></a>00155 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00156"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#af7a22a61b34324fe53b88775f267514f">00156</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#af7a22a61b34324fe53b88775f267514f">TFactorisableContainer&lt;InterfaceClass&gt;::RegisterItemFactory</a>(<a class="code" href="classistd_1_1_t_i_factory.html">istd::TIFactory&lt;InterfaceClass&gt;</a>* itemFactoryPtr)
-<a name="l00157"></a>00157 {
-<a name="l00158"></a>00158        m_itemFactoryPtr = itemFactoryPtr;
-<a name="l00159"></a>00159 }
-<a name="l00160"></a>00160 
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00157"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#af7a22a61b34324fe53b88775f267514f">00157</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#af7a22a61b34324fe53b88775f267514f">TFactorisableContainer&lt;InterfaceClass&gt;::RegisterItemFactory</a>(<a class="code" href="classistd_1_1_t_i_factory.html">istd::TIFactory&lt;InterfaceClass&gt;</a>* itemFactoryPtr)
+<a name="l00158"></a>00158 {
+<a name="l00159"></a>00159        m_itemFactoryPtr = itemFactoryPtr;
+<a name="l00160"></a>00160 }
 <a name="l00161"></a>00161 
-<a name="l00162"></a>00162 <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00165"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#afe309e6db604f59a38df28eee66795e9">00165</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#afe309e6db604f59a38df28eee66795e9" title="Load or store state of this object as a archive stream.">TFactorisableContainer&lt;InterfaceClass&gt;::Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive)
-<a name="l00166"></a>00166 {
-<a name="l00167"></a>00167        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> itemsTag(<span class="stringliteral">&quot;Items&quot;</span>, <span class="stringliteral">&quot;List of items&quot;</span>);
-<a name="l00168"></a>00168        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> itemTag(<span class="stringliteral">&quot;Item&quot;</span>, <span class="stringliteral">&quot;Item&quot;</span>);
-<a name="l00169"></a>00169 
-<a name="l00170"></a>00170        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>()? <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
-<a name="l00171"></a>00171 
-<a name="l00172"></a>00172        <span class="keywordflow">if</span> (!archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>()){
-<a name="l00173"></a>00173               this-&gt;Reset();
-<a name="l00174"></a>00174        }
-<a name="l00175"></a>00175 
-<a name="l00176"></a>00176        <span class="keywordtype">int</span> itemCount = BaseClass::GetItemsCount();
-<a name="l00177"></a>00177 
-<a name="l00178"></a>00178        <span class="keywordtype">bool</span> retVal = archive.<a class="code" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e" title="Begin of archive tag containing set of subelements of the same type.">BeginMultiTag</a>(itemsTag, itemTag, itemCount);
-<a name="l00179"></a>00179        <span class="keywordflow">if</span> (!retVal){
-<a name="l00180"></a>00180               <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00181"></a>00181        }
-<a name="l00182"></a>00182 
-<a name="l00183"></a>00183        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> index = 0; index &lt; itemCount; index++){
-<a name="l00184"></a>00184               <a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a> item;
-<a name="l00185"></a>00185               QByteArray itemKey;
-<a name="l00186"></a>00186 
-<a name="l00187"></a>00187               <span class="keywordflow">if</span> (archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>()){
-<a name="l00188"></a>00188                      itemKey = BaseClass::GetAt(index).second;
-<a name="l00189"></a>00189               }
-<a name="l00190"></a>00190 
-<a name="l00191"></a>00191               <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> keyTag(<span class="stringliteral">&quot;ItemKey&quot;</span>, <span class="stringliteral">&quot;Factory key of the item&quot;</span>);
-<a name="l00192"></a>00192 
-<a name="l00193"></a>00193               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(keyTag);
-<a name="l00194"></a>00194               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(itemKey);
-<a name="l00195"></a>00195               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(keyTag);
-<a name="l00196"></a>00196 
-<a name="l00197"></a>00197               <span class="keywordflow">if</span> (!archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>()){  
-<a name="l00198"></a>00198                      item.second = itemKey;
-<a name="l00199"></a>00199                      InterfaceClass* interfacePtr = CreateElement(itemKey);
-<a name="l00200"></a>00200                      <span class="keywordflow">if</span> (interfacePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00201"></a>00201                             item.first.SetPtr(interfacePtr);
-<a name="l00202"></a>00202 
-<a name="l00203"></a>00203                             BaseClass::PushBack(item);
-<a name="l00204"></a>00204                      }
-<a name="l00205"></a>00205                      <span class="keywordflow">else</span>{
-<a name="l00206"></a>00206                             <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00207"></a>00207                      }
-<a name="l00208"></a>00208               }
-<a name="l00209"></a>00209 
-<a name="l00210"></a>00210               <a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>&amp; containerItem = BaseClass::GetAt(index);
-<a name="l00211"></a>00211 
-<a name="l00212"></a>00212               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(itemTag);
-<a name="l00213"></a>00213               retVal = retVal &amp;&amp; SerializeItem(containerItem, archive);
-<a name="l00214"></a>00214               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(itemTag);
-<a name="l00215"></a>00215        }
-<a name="l00216"></a>00216 
-<a name="l00217"></a>00217        retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(itemsTag);
-<a name="l00218"></a>00218 
-<a name="l00219"></a>00219        <span class="keywordflow">return</span> retVal;
-<a name="l00220"></a>00220 }
-<a name="l00221"></a>00221 
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163 <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00166"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#afe309e6db604f59a38df28eee66795e9">00166</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#afe309e6db604f59a38df28eee66795e9" title="Load or store state of this object as a archive stream.">TFactorisableContainer&lt;InterfaceClass&gt;::Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive)
+<a name="l00167"></a>00167 {
+<a name="l00168"></a>00168        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> itemsTag(<span class="stringliteral">&quot;Items&quot;</span>, <span class="stringliteral">&quot;List of items&quot;</span>);
+<a name="l00169"></a>00169        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> itemTag(<span class="stringliteral">&quot;Item&quot;</span>, <span class="stringliteral">&quot;Item&quot;</span>);
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>()? <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173        <span class="keywordflow">if</span> (!archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>()){
+<a name="l00174"></a>00174               this-&gt;Reset();
+<a name="l00175"></a>00175        }
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177        <span class="keywordtype">int</span> itemCount = BaseClass::GetItemsCount();
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179        <span class="keywordtype">bool</span> retVal = archive.<a class="code" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e" title="Begin of archive tag containing set of subelements of the same type.">BeginMultiTag</a>(itemsTag, itemTag, itemCount);
+<a name="l00180"></a>00180        <span class="keywordflow">if</span> (!retVal){
+<a name="l00181"></a>00181               <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00182"></a>00182        }
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> index = 0; index &lt; itemCount; index++){
+<a name="l00185"></a>00185               <a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a> item;
+<a name="l00186"></a>00186               QByteArray itemKey;
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188               <span class="keywordflow">if</span> (archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>()){
+<a name="l00189"></a>00189                      itemKey = BaseClass::GetAt(index).second;
+<a name="l00190"></a>00190               }
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192               <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> keyTag(<span class="stringliteral">&quot;ItemKey&quot;</span>, <span class="stringliteral">&quot;Factory key of the item&quot;</span>);
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(keyTag);
+<a name="l00195"></a>00195               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575" title="Process primitive type.">Process</a>(itemKey);
+<a name="l00196"></a>00196               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(keyTag);
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198               <span class="keywordflow">if</span> (!archive.<a class="code" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31" title="Check if this archive is loading or storing.">IsStoring</a>()){  
+<a name="l00199"></a>00199                      item.second = itemKey;
+<a name="l00200"></a>00200                      InterfaceClass* interfacePtr = CreateElement(itemKey);
+<a name="l00201"></a>00201                      <span class="keywordflow">if</span> (interfacePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00202"></a>00202                             item.first.SetPtr(interfacePtr);
+<a name="l00203"></a>00203 
+<a name="l00204"></a>00204                             BaseClass::PushBack(item);
+<a name="l00205"></a>00205                      }
+<a name="l00206"></a>00206                      <span class="keywordflow">else</span>{
+<a name="l00207"></a>00207                             <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00208"></a>00208                      }
+<a name="l00209"></a>00209               }
+<a name="l00210"></a>00210 
+<a name="l00211"></a>00211               <a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>&amp; containerItem = BaseClass::GetAt(index);
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(itemTag);
+<a name="l00214"></a>00214               retVal = retVal &amp;&amp; SerializeItem(containerItem, archive);
+<a name="l00215"></a>00215               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(itemTag);
+<a name="l00216"></a>00216        }
+<a name="l00217"></a>00217 
+<a name="l00218"></a>00218        retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(itemsTag);
+<a name="l00219"></a>00219 
+<a name="l00220"></a>00220        <span class="keywordflow">return</span> retVal;
+<a name="l00221"></a>00221 }
 <a name="l00222"></a>00222 
-<a name="l00223"></a>00223 <span class="comment">// protected methods</span>
-<a name="l00224"></a>00224 
-<a name="l00225"></a>00225 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00226"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a9929e7f23c3d66eb1aaecc906882e78b">00226</a> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#a9929e7f23c3d66eb1aaecc906882e78b">TFactorisableContainer&lt;InterfaceClass&gt;::CreateElement</a>(<span class="keyword">const</span> QByteArray&amp; itemKey)
-<a name="l00227"></a>00227 {
-<a name="l00228"></a>00228        <span class="keywordflow">if</span> (m_itemFactoryPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00229"></a>00229               <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* polymorphicPtr = m_itemFactoryPtr-&gt;CreateInstance(itemKey);
-<a name="l00230"></a>00230               <span class="keywordflow">if</span> (polymorphicPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00231"></a>00231                      InterfaceClass* interfacePtr = <span class="keyword">dynamic_cast&lt;</span>InterfaceClass*<span class="keyword">&gt;</span>(polymorphicPtr);
-<a name="l00232"></a>00232                      <span class="keywordflow">if</span> (interfacePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00233"></a>00233                             OnElementCreated(interfacePtr);
-<a name="l00234"></a>00234 
-<a name="l00235"></a>00235                             <span class="keywordflow">return</span> interfacePtr;
-<a name="l00236"></a>00236                      }
-<a name="l00237"></a>00237                      <span class="keywordflow">else</span>{
-<a name="l00238"></a>00238                             <span class="keyword">delete</span> polymorphicPtr;
-<a name="l00239"></a>00239                             
-<a name="l00240"></a>00240                             <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00241"></a>00241                      }
-<a name="l00242"></a>00242               }
-<a name="l00243"></a>00243        }
-<a name="l00244"></a>00244        
-<a name="l00245"></a>00245        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00246"></a>00246 }
-<a name="l00247"></a>00247 
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224 <span class="comment">// protected methods</span>
+<a name="l00225"></a>00225 
+<a name="l00226"></a>00226 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00227"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#a9929e7f23c3d66eb1aaecc906882e78b">00227</a> InterfaceClass* <a class="code" href="classibase_1_1_t_factorisable_container.html#a9929e7f23c3d66eb1aaecc906882e78b">TFactorisableContainer&lt;InterfaceClass&gt;::CreateElement</a>(<span class="keyword">const</span> QByteArray&amp; itemKey)
+<a name="l00228"></a>00228 {
+<a name="l00229"></a>00229        <span class="keywordflow">if</span> (m_itemFactoryPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00230"></a>00230               <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* polymorphicPtr = m_itemFactoryPtr-&gt;CreateInstance(itemKey);
+<a name="l00231"></a>00231               <span class="keywordflow">if</span> (polymorphicPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00232"></a>00232                      InterfaceClass* interfacePtr = <span class="keyword">dynamic_cast&lt;</span>InterfaceClass*<span class="keyword">&gt;</span>(polymorphicPtr);
+<a name="l00233"></a>00233                      <span class="keywordflow">if</span> (interfacePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00234"></a>00234                             OnElementCreated(interfacePtr);
+<a name="l00235"></a>00235 
+<a name="l00236"></a>00236                             <span class="keywordflow">return</span> interfacePtr;
+<a name="l00237"></a>00237                      }
+<a name="l00238"></a>00238                      <span class="keywordflow">else</span>{
+<a name="l00239"></a>00239                             <span class="keyword">delete</span> polymorphicPtr;
+<a name="l00240"></a>00240                             
+<a name="l00241"></a>00241                             <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00242"></a>00242                      }
+<a name="l00243"></a>00243               }
+<a name="l00244"></a>00244        }
+<a name="l00245"></a>00245        
+<a name="l00246"></a>00246        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00247"></a>00247 }
 <a name="l00248"></a>00248 
-<a name="l00249"></a>00249 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00250"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#ab0e084dfad1bd7bd119d4725d537dac4">00250</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#ab0e084dfad1bd7bd119d4725d537dac4">TFactorisableContainer&lt;InterfaceClass&gt;::OnElementCreated</a>(InterfaceClass* <span class="comment">/*elementPtr*/</span>)
-<a name="l00251"></a>00251 {
-<a name="l00252"></a>00252 }
-<a name="l00253"></a>00253 
+<a name="l00249"></a>00249 
+<a name="l00250"></a>00250 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00251"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#ab0e084dfad1bd7bd119d4725d537dac4">00251</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#ab0e084dfad1bd7bd119d4725d537dac4">TFactorisableContainer&lt;InterfaceClass&gt;::OnElementCreated</a>(InterfaceClass* <span class="comment">/*elementPtr*/</span>)
+<a name="l00252"></a>00252 {
+<a name="l00253"></a>00253 }
 <a name="l00254"></a>00254 
-<a name="l00255"></a>00255 <span class="comment">// reimplemented (ibase::TContainer)</span>
-<a name="l00256"></a>00256 
-<a name="l00257"></a>00257 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
-<a name="l00258"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#af4fc0747949fd4452aad4bfeb3288d0f">00258</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#af4fc0747949fd4452aad4bfeb3288d0f" title="Serialize a single item in the container.">TFactorisableContainer&lt;InterfaceClass&gt;::SerializeItem</a>(<a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>&amp; item, <a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive)
-<a name="l00259"></a>00259 {
-<a name="l00260"></a>00260        <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* serializablePtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>*<span class="keyword">&gt;</span>(item.first.GetPtr());
-<a name="l00261"></a>00261        <span class="keywordflow">if</span> (serializablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00262"></a>00262               <span class="keywordflow">return</span> serializablePtr-&gt;<a class="code" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59" title="Load or store state of this object as a archive stream.">Serialize</a>(archive);
-<a name="l00263"></a>00263        }
-<a name="l00264"></a>00264 
-<a name="l00265"></a>00265        <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00266"></a>00266 }
-<a name="l00267"></a>00267 
+<a name="l00255"></a>00255 
+<a name="l00256"></a>00256 <span class="comment">// reimplemented (ibase::TContainer)</span>
+<a name="l00257"></a>00257 
+<a name="l00258"></a>00258 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceClass&gt;
+<a name="l00259"></a><a class="code" href="classibase_1_1_t_factorisable_container.html#af4fc0747949fd4452aad4bfeb3288d0f">00259</a> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_t_factorisable_container.html#af4fc0747949fd4452aad4bfeb3288d0f" title="Serialize a single item in the container.">TFactorisableContainer&lt;InterfaceClass&gt;::SerializeItem</a>(<a class="code" href="classibase_1_1_t_factorisable_container.html#a33abea88e39fdb40dc5c0a2a00b1d09b">ItemClass</a>&amp; item, <a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive)
+<a name="l00260"></a>00260 {
+<a name="l00261"></a>00261        <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* serializablePtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>*<span class="keyword">&gt;</span>(item.first.GetPtr());
+<a name="l00262"></a>00262        <span class="keywordflow">if</span> (serializablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00263"></a>00263               <span class="keywordflow">return</span> serializablePtr-&gt;<a class="code" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59" title="Load or store state of this object as a archive stream.">Serialize</a>(archive);
+<a name="l00264"></a>00264        }
+<a name="l00265"></a>00265 
+<a name="l00266"></a>00266        <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00267"></a>00267 }
 <a name="l00268"></a>00268 
-<a name="l00269"></a>00269 } <span class="comment">// namespace ibase</span>
-<a name="l00270"></a>00270 
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270 } <span class="comment">// namespace ibase</span>
 <a name="l00271"></a>00271 
-<a name="l00272"></a>00272 <span class="preprocessor">#endif // !ibase_TFactorisableContainer_included</span>
-<a name="l00273"></a>00273 <span class="preprocessor"></span>
+<a name="l00272"></a>00272 
+<a name="l00273"></a>00273 <span class="preprocessor">#endif // !ibase_TFactorisableContainer_included</span>
+<a name="l00274"></a>00274 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

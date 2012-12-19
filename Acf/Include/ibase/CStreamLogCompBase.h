@@ -61,7 +61,7 @@ public:
 
 protected:
 	/**
-		Write formatted the message to the output stream.
+		Write formatted message to the output stream.
 	*/
 	virtual void WriteMessageToStream(const istd::IInformationProvider& message);
 	

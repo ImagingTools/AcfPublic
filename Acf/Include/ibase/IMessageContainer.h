@@ -41,7 +41,7 @@ namespace ibase
 
 
 /**
-	Common interface for an message container.
+	Common interface for a message container.
 */
 class IMessageContainer: virtual public iser::ISerializable
 {

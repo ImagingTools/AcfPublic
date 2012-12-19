@@ -50,7 +50,7 @@
 <a name="l00022"></a>00022 
 <a name="l00039"></a><a class="code" href="classiqt_1_1_c_file_info_copy_comp.html">00039</a> <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_file_info_copy_comp.html" title="Copy of text files with some tags substitution and optional license attachment.">CFileInfoCopyComp</a>:
 <a name="l00040"></a>00040                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
-<a name="l00041"></a>00041                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defininig base class for simple components outputing log messages.">CLoggerComponentBase</a>,
+<a name="l00041"></a>00041                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defining base class for simple components outputting log messages.">CLoggerComponentBase</a>,
 <a name="l00042"></a>00042                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IFileConvertCopy
 <a name="l00043"></a>00043 {
 <a name="l00044"></a>00044 <span class="keyword">public</span>:
@@ -66,7 +66,7 @@
 <a name="l00054"></a>00054        };
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056        I_BEGIN_COMPONENT(<a class="code" href="classiqt_1_1_c_file_info_copy_comp.html" title="Copy of text files with some tags substitution and optional license attachment.">CFileInfoCopyComp</a>);
-<a name="l00057"></a>00057               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_file_convert_copy.html" title="Common interface for copy a file.">ibase::IFileConvertCopy</a>);
+<a name="l00057"></a>00057               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_file_convert_copy.html" title="Common interface for file copying.">ibase::IFileConvertCopy</a>);
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059               I_ASSIGN(m_applicationInfoCompPtr, <span class="stringliteral">&quot;ApplicationInfo&quot;</span>, <span class="stringliteral">&quot;Provide information about versions for substitution&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;VersionInfo&quot;</span>);
 <a name="l00060"></a>00060               I_ASSIGN(m_licensePathAttrPtr, <span class="stringliteral">&quot;LicensePath&quot;</span>, <span class="stringliteral">&quot;Path of license file will be included at begin of copied file&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;License.txt&quot;</span>);

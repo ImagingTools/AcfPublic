@@ -50,7 +50,7 @@
 <a name="l00029"></a>00029                             <span class="keyword">const</span> QString&amp; description,
 <a name="l00030"></a>00030                             <span class="keywordtype">bool</span> isCancelable = <span class="keyword">false</span>) = 0;
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_progress_manager.html#a2498ec6e0d285b6c6bf84dc79e1c2461" title="Close progress report session.">EndProgressSession</a>(<span class="keywordtype">int</span> sessionId) = 0;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_progress_manager.html#a5f23acaf3a9afdeb03059526a0af1777" title="Callback function for an progress event.">OnProgress</a>(<span class="keywordtype">int</span> sessionId, <span class="keywordtype">double</span> currentProgress) = 0;
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_progress_manager.html#a5f23acaf3a9afdeb03059526a0af1777" title="Callback function for a progress event.">OnProgress</a>(<span class="keywordtype">int</span> sessionId, <span class="keywordtype">double</span> currentProgress) = 0;
 <a name="l00041"></a>00041 
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_i_progress_manager.html#acba232a9e12ff34ea027d08e25d45f31" title="Check if this processing operation should be canceled.">IsCanceled</a>(<span class="keywordtype">int</span> sessionId) <span class="keyword">const</span> = 0;
 <a name="l00047"></a>00047 };

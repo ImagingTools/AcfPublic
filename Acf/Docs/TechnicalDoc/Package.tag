@@ -22267,6 +22267,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>SetIdAttr</name>
+      <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
+      <anchor>a218cccd3e27a6f9d0911cb5e151c1eaf</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>SetSingleAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
       <anchor>a67601a151d153012917cd7ca76a3f3a8</anchor>

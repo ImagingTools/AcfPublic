@@ -41,7 +41,7 @@ namespace ibase
 
 
 /**
-	Common interface for copy a file.
+	Common interface for file copying.
 */
 class IFileConvertCopy: virtual public istd::IPolymorphic
 {

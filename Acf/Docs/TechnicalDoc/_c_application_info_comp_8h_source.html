@@ -54,7 +54,7 @@
 <a name="l00029"></a>00029               I_ASSIGN(m_companyNameAttrPtr, <span class="stringliteral">&quot;CompanyName&quot;</span>, <span class="stringliteral">&quot;Company name&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&lt;my company&gt;&quot;</span>);
 <a name="l00030"></a>00030               I_ASSIGN(m_productNameAttrPtr, <span class="stringliteral">&quot;ProductName&quot;</span>, <span class="stringliteral">&quot;Product name, the same for all applications in one product&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&lt;my product&gt;&quot;</span>);
 <a name="l00031"></a>00031               I_ASSIGN(m_applicationNameAttrPtr, <span class="stringliteral">&quot;ApplicationName&quot;</span>, <span class="stringliteral">&quot;Application name&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ACF Application&quot;</span>);
-<a name="l00032"></a>00032               I_ASSIGN(m_applicationSubnameAttrPtr, <span class="stringliteral">&quot;ApplicationSubname&quot;</span>, <span class="stringliteral">&quot;Subname of application&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00032"></a>00032               I_ASSIGN(m_applicationSubnameAttrPtr, <span class="stringliteral">&quot;ApplicationSubname&quot;</span>, <span class="stringliteral">&quot;Sub-name of application&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
 <a name="l00033"></a>00033               I_ASSIGN(m_applicationTypeAttrPtr, <span class="stringliteral">&quot;ApplicationType&quot;</span>, <span class="stringliteral">&quot;Application type&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Server&quot;</span>);
 <a name="l00034"></a>00034               I_ASSIGN(m_legalCopyrightAttrPtr, <span class="stringliteral">&quot;LegalCopyright&quot;</span>, <span class="stringliteral">&quot;Legal copyright of this application&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;\x00A9 Copyright xxxx &lt;my company&gt;&quot;</span>);
 <a name="l00035"></a>00035               I_ASSIGN(m_mainVersionIdAttrPtr, <span class="stringliteral">&quot;MainVersionId&quot;</span>, <span class="stringliteral">&quot;ID of main module version as defined in version info&quot;</span>, <span class="keyword">false</span>, 0);
@@ -74,9 +74,9 @@
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> QString <a class="code" href="classibase_1_1_c_application_info_comp.html#a94128d9c2b6cd54d8107fc7e6a23b805" title="Encode version number to human readable form.">GetEncodedVersionName</a>(<span class="keywordtype">int</span> versionId, quint32 versionNumber) <span class="keyword">const</span>;
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 <span class="keyword">private</span>:
-<a name="l00052"></a>00052        I_ATTR(QString, m_companyNameAttrPtr);
+<a name="l00052"></a>00052        I_ATTR(QByteArray, m_companyNameAttrPtr);
 <a name="l00053"></a>00053        I_ATTR(QString, m_productNameAttrPtr);
-<a name="l00054"></a>00054        I_ATTR(QString, m_applicationNameAttrPtr);
+<a name="l00054"></a>00054        I_ATTR(QByteArray, m_applicationNameAttrPtr);
 <a name="l00055"></a>00055        I_ATTR(QString, m_applicationSubnameAttrPtr);
 <a name="l00056"></a>00056        I_ATTR(QString, m_applicationTypeAttrPtr);
 <a name="l00057"></a>00057        I_ATTR(QString, m_legalCopyrightAttrPtr);

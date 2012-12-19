@@ -36,9 +36,9 @@ namespace ibase
 
 
 /**
-	Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer.
-	Access to interface ibase::IMessageConsumer must be registered by user.
-	To register it use interface ibase::ILoggable implemented by this wrapper.
+	Class wrapper implementing istd::ILogger interface sending log messages over ibase::IMessageConsumer.
+	Access to ibase::IMessageConsumer interface must be registered by the user.
+	To register it, use ibase::ILoggable interface, implemented by this wrapper.
 
 	\ingroup Helpers
 */
@@ -56,7 +56,7 @@ protected:
 	/**
 		Send info message to log.
 		\sa istd::IInformationProvider for message meaning documentation.
-		\param	id				binary id identifying this message type for automatical processing.
+		\param	id				binary id identifying this message type for automatic processing.
 		\param	message			message text will be send.
 		\param	messageSource	source of the message
 	*/
@@ -69,7 +69,7 @@ protected:
 	/**
 		Send warning message to log.
 		\sa istd::IInformationProvider for message meaning documentation.
-		\param	id				binary id identifying this message type for automatical processing.
+		\param	id				binary id identifying this message type for automatic processing.
 		\param	message			message text will be send.
 		\param	messageSource	source of the message
 	*/
@@ -82,7 +82,7 @@ protected:
 	/**
 		Send error message to log.
 		\sa istd::IInformationProvider for message meaning documentation.
-		\param	id				binary id identifying this message type for automatical processing.
+		\param	id				binary id identifying this message type for automatic processing.
 		\param	message			message text will be send.
 		\param	messageSource	source of the message
 	*/
@@ -95,7 +95,7 @@ protected:
 	/**
 		Send critical message to log.
 		\sa istd::IInformationProvider for message meaning documentation.
-		\param	id				binary id identifying this message type for automatical processing.
+		\param	id				binary id identifying this message type for automatic processing.
 		\param	message			message text will be send.
 		\param	messageSource	optional human readable description of message source.
 	*/

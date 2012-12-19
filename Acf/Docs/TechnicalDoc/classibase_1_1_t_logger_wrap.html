@@ -39,7 +39,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="ibase::TLoggerWrap" --><!-- doxytag: inherits="Base,ibase::ILoggable,istd::ILogger" -->
-<p>Class wrapper implementing interface <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>.  
+<p>Class wrapper implementing <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> interface sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>.  
  <a href="classibase_1_1_t_logger_wrap.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>&gt;</code></p>
@@ -98,8 +98,8 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;class Base&gt;<br/>
 class ibase::TLoggerWrap&lt; Base &gt;</h3>
 
-<p>Class wrapper implementing interface <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>. </p>
-<p>Access to interface <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a> must be registered by user. To register it use interface <a class="el" href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the.">ibase::ILoggable</a> implemented by this wrapper. </p>
+<p>Class wrapper implementing <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> interface sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>. </p>
+<p>Access to <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a> interface must be registered by the user. To register it, use <a class="el" href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the.">ibase::ILoggable</a> interface, implemented by this wrapper. </p>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00024">24</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -231,7 +231,7 @@ template&lt;class Base &gt; </div>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> for message meaning documentation. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatical processing. </td></tr>
+    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatic processing. </td></tr>
     <tr><td class="paramname">message</td><td>message text will be send. </td></tr>
     <tr><td class="paramname">messageSource</td><td>optional human readable description of message source. </td></tr>
   </table>
@@ -287,7 +287,7 @@ template&lt;class Base &gt; </div>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> for message meaning documentation. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatical processing. </td></tr>
+    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatic processing. </td></tr>
     <tr><td class="paramname">message</td><td>message text will be send. </td></tr>
     <tr><td class="paramname">messageSource</td><td>source of the message </td></tr>
   </table>
@@ -343,7 +343,7 @@ template&lt;class Base &gt; </div>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> for message meaning documentation. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatical processing. </td></tr>
+    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatic processing. </td></tr>
     <tr><td class="paramname">message</td><td>message text will be send. </td></tr>
     <tr><td class="paramname">messageSource</td><td>source of the message </td></tr>
   </table>
@@ -467,7 +467,7 @@ template&lt;class Base &gt; </div>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> for message meaning documentation. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatical processing. </td></tr>
+    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatic processing. </td></tr>
     <tr><td class="paramname">message</td><td>message text will be send. </td></tr>
     <tr><td class="paramname">messageSource</td><td>source of the message </td></tr>
   </table>

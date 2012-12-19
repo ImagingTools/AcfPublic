@@ -35,7 +35,7 @@ namespace ibase
 
 
 /**
-	Template based implementation of a heriarchical object. 
+	Template based implementation of a hierarchical object. 
 	This class is a pseudo-implementation of istd::TIHierarchical template interface.
 */
 template <class Base, class Interface = typename Base::InterfaceType>
@@ -80,7 +80,7 @@ void THierarchicalBase<Base, Interface>::SetParentPtr(Interface* parentPtr)
 }
 
 
-// peudeo-reimplemented (istd::TIHierarchical<Interface>)
+// pseudo-reimplemented (istd::TIHierarchical<Interface>)
 
 template <class Base, class Interface>
 int THierarchicalBase<Base, Interface>::GetHierarchicalFlags() const

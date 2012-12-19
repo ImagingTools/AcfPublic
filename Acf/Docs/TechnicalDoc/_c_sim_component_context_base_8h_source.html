@@ -75,90 +75,92 @@
 <a name="l00070"></a>00070 
 <a name="l00074"></a>00074        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a86f91ab1974823920127a1367c1d5951" title="Set instance of QString attribute.">SetStringAttr</a>(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> QString&amp; value);
 <a name="l00075"></a>00075 
-<a name="l00079"></a>00079        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Attribute&gt;
-<a name="l00080"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a67601a151d153012917cd7ca76a3f3a8">00080</a>        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a67601a151d153012917cd7ca76a3f3a8" title="Set instance of simple attribute.">SetSingleAttr</a>(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> Attribute&amp; attribute)
-<a name="l00081"></a>00081        {
-<a name="l00082"></a>00082               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2" title="Check if attribute type is corrected.">IsAttributeTypeCorrect</a>&lt;<a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;Attribute&gt;</a> &gt;(attributeId));
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084               <span class="keywordflow">return</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a74f789777478b44a15793a67056b5679" title="Set named attribute.">SetAttr</a>(attributeId, <span class="keyword">new</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;Attribute&gt;</a>(attribute));
-<a name="l00085"></a>00085        }
-<a name="l00086"></a>00086 
-<a name="l00092"></a>00092        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Attribute&gt;
-<a name="l00093"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a688776b9ccd01ff4a667bb4f03d6e83d">00093</a>        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a688776b9ccd01ff4a667bb4f03d6e83d" title="Insert new attribute to multi attributes.">InsertMultiAttr</a>(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> Attribute&amp; attribute)
-<a name="l00094"></a>00094        {
-<a name="l00095"></a>00095               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2" title="Check if attribute type is corrected.">IsAttributeTypeCorrect</a>&lt;<a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a> &gt;(attributeId));
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097               <a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a>* multiAttrPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099               <span class="keyword">const</span> <a class="code" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html" title="Describe information stored with each attribute.">IRegistryElement::AttributeInfo</a>* existingInfoPtr = m_registryElement.<a class="code" href="classicomp_1_1_c_registry_element.html#a45f4474eba1554f4cca8c3d1312631c3">GetAttributeInfo</a>(attributeId);
-<a name="l00100"></a>00100               <span class="keywordflow">if</span> (existingInfoPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00101"></a>00101                      multiAttrPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a>*<span class="keyword">&gt;</span>(existingInfoPtr-&gt;<a class="code" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html#aa843663d1e14cf48eec03d6f89909599">attributePtr</a>.GetPtr());
-<a name="l00102"></a>00102               }
-<a name="l00103"></a>00103               <span class="keywordflow">else</span>{
-<a name="l00104"></a>00104                      <a class="code" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html" title="Describe information stored with each attribute.">IRegistryElement::AttributeInfo</a>* newInfoPtr = m_registryElement.<a class="code" href="classicomp_1_1_c_registry_element.html#a83f563734ecf207b21ab7a188d84ee4e" title="Insert new attribute info object to collection of attributes.">InsertAttributeInfo</a>(attributeId, <a class="code" href="classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e" title="Get undecorated and platform undependent class name.">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a> &gt;());
-<a name="l00105"></a>00105                      <span class="keywordflow">if</span> (newInfoPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00106"></a>00106                             <a class="code" href="classistd_1_1_t_del_ptr.html">IRegistryElement::AttributePtr</a>&amp; attributePtr = newInfoPtr-&gt;<a class="code" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html#aa843663d1e14cf48eec03d6f89909599">attributePtr</a>;
-<a name="l00107"></a>00107                             <span class="keywordflow">if</span> (!attributePtr.<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf" title="Check if internal pointer not NULL.">IsValid</a>()){
-<a name="l00108"></a>00108                                    attributePtr.<a class="code" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08" title="Set new value of internal pointer.">SetPtr</a>(<span class="keyword">new</span> <a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a>);
-<a name="l00109"></a>00109                             }
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111                             multiAttrPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a>*<span class="keyword">&gt;</span>(attributePtr.<a class="code" href="classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951" title="Return access to internal stored pointer.">GetPtr</a>());
-<a name="l00112"></a>00112                      }
-<a name="l00113"></a>00113               }
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115               <span class="keywordflow">if</span> (multiAttrPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00116"></a>00116                      multiAttrPtr-&gt;<a class="code" href="classicomp_1_1_t_multi_attribute.html#a9e56288747c422302cbcefb615d487c8">InsertValue</a>(attribute);
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118                      <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00119"></a>00119               }
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121               <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00122"></a>00122        }
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124        <span class="comment">// reimplemeted (icomp::IComponentContext)</span>
-<a name="l00125"></a>00125        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry_element.html" title="Represents element of registry describing component parameters.">IRegistryElement</a>&amp; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#ab001be9a30e506a464ef675c134ca4ad" title="Get access to component registry element object.">GetRegistryElement</a>() <span class="keyword">const</span>;
-<a name="l00126"></a>00126        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">IComponentStaticInfo</a>&amp; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#adf327430460b04378c2fd5d87f539a70" title="Get component static info associated with this context.">GetStaticInfo</a>() <span class="keyword">const</span>;
-<a name="l00127"></a>00127        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">IComponentContext</a>* <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a1f8d334a9a79905c18552c1113d04388" title="Get access to parent component context.">GetParentContext</a>() <span class="keyword">const</span>;
-<a name="l00128"></a>00128        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a2dcb50d9dbdb80d3c127aed93c6fbe89" title="Get attribute using its ID.">GetAttribute</a>(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keywordtype">int</span>* definitionLevelPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130 <span class="keyword">protected</span>:
-<a name="l00134"></a>00134        <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttrType&gt;
-<a name="l00135"></a>00135        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2" title="Check if attribute type is corrected.">IsAttributeTypeCorrect</a>(<span class="keyword">const</span> QByteArray&amp; attributeId);
-<a name="l00136"></a>00136 
-<a name="l00137"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3b3f2cfbe337154cde593f12f5391e5f">00137</a>        <span class="keyword">typedef</span> QMap&lt;QByteArray, IComponent*&gt; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3b3f2cfbe337154cde593f12f5391e5f">ComponentsMap</a>;
-<a name="l00138"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8c2d13a82ac95c1847edda42c75ceee6">00138</a>        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3b3f2cfbe337154cde593f12f5391e5f">ComponentsMap</a> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8c2d13a82ac95c1847edda42c75ceee6">m_componentsMap</a>;
-<a name="l00139"></a>00139 
-<a name="l00140"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3fe5412e806817ea83165992b05c632f">00140</a>        <span class="keyword">typedef</span> QMap&lt; QByteArray, const ComponentsFactory* &gt; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3fe5412e806817ea83165992b05c632f">FactoriesMap</a>;
-<a name="l00141"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#abe193a448206d9ea37ed9816d6015900">00141</a>        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3fe5412e806817ea83165992b05c632f">FactoriesMap</a> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#abe193a448206d9ea37ed9816d6015900">m_factoriesMap</a>;
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143 <span class="keyword">private</span>:
-<a name="l00144"></a>00144        <a class="code" href="classicomp_1_1_c_registry_element.html">CRegistryElement</a> m_registryElement;
-<a name="l00145"></a>00145        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">IComponentStaticInfo</a>&amp; m_metaInfo;
-<a name="l00146"></a>00146 };
+<a name="l00079"></a>00079        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a218cccd3e27a6f9d0911cb5e151c1eaf" title="Set instance of QByteArray attribute.">SetIdAttr</a>(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> QByteArray&amp; value);
+<a name="l00080"></a>00080 
+<a name="l00084"></a>00084        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Attribute&gt;
+<a name="l00085"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a67601a151d153012917cd7ca76a3f3a8">00085</a>        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a67601a151d153012917cd7ca76a3f3a8" title="Set instance of simple attribute.">SetSingleAttr</a>(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> Attribute&amp; attribute)
+<a name="l00086"></a>00086        {
+<a name="l00087"></a>00087               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2" title="Check if attribute type is corrected.">IsAttributeTypeCorrect</a>&lt;<a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;Attribute&gt;</a> &gt;(attributeId));
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089               <span class="keywordflow">return</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a74f789777478b44a15793a67056b5679" title="Set named attribute.">SetAttr</a>(attributeId, <span class="keyword">new</span> <a class="code" href="classicomp_1_1_t_attribute.html" title="Template implementation of single component attribute.">TAttribute&lt;Attribute&gt;</a>(attribute));
+<a name="l00090"></a>00090        }
+<a name="l00091"></a>00091 
+<a name="l00097"></a>00097        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Attribute&gt;
+<a name="l00098"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a688776b9ccd01ff4a667bb4f03d6e83d">00098</a>        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a688776b9ccd01ff4a667bb4f03d6e83d" title="Insert new attribute to multi attributes.">InsertMultiAttr</a>(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keyword">const</span> Attribute&amp; attribute)
+<a name="l00099"></a>00099        {
+<a name="l00100"></a>00100               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2" title="Check if attribute type is corrected.">IsAttributeTypeCorrect</a>&lt;<a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a> &gt;(attributeId));
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102               <a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a>* multiAttrPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104               <span class="keyword">const</span> <a class="code" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html" title="Describe information stored with each attribute.">IRegistryElement::AttributeInfo</a>* existingInfoPtr = m_registryElement.<a class="code" href="classicomp_1_1_c_registry_element.html#a45f4474eba1554f4cca8c3d1312631c3">GetAttributeInfo</a>(attributeId);
+<a name="l00105"></a>00105               <span class="keywordflow">if</span> (existingInfoPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00106"></a>00106                      multiAttrPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a>*<span class="keyword">&gt;</span>(existingInfoPtr-&gt;<a class="code" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html#aa843663d1e14cf48eec03d6f89909599">attributePtr</a>.GetPtr());
+<a name="l00107"></a>00107               }
+<a name="l00108"></a>00108               <span class="keywordflow">else</span>{
+<a name="l00109"></a>00109                      <a class="code" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html" title="Describe information stored with each attribute.">IRegistryElement::AttributeInfo</a>* newInfoPtr = m_registryElement.<a class="code" href="classicomp_1_1_c_registry_element.html#a83f563734ecf207b21ab7a188d84ee4e" title="Insert new attribute info object to collection of attributes.">InsertAttributeInfo</a>(attributeId, <a class="code" href="classistd_1_1_c_class_info.html#a50153ca3d3239acbba2d116abc88852e" title="Get undecorated and platform undependent class name.">istd::CClassInfo::GetName</a>&lt;<a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a> &gt;());
+<a name="l00110"></a>00110                      <span class="keywordflow">if</span> (newInfoPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00111"></a>00111                             <a class="code" href="classistd_1_1_t_del_ptr.html">IRegistryElement::AttributePtr</a>&amp; attributePtr = newInfoPtr-&gt;<a class="code" href="structicomp_1_1_i_registry_element_1_1_attribute_info.html#aa843663d1e14cf48eec03d6f89909599">attributePtr</a>;
+<a name="l00112"></a>00112                             <span class="keywordflow">if</span> (!attributePtr.<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf" title="Check if internal pointer not NULL.">IsValid</a>()){
+<a name="l00113"></a>00113                                    attributePtr.<a class="code" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08" title="Set new value of internal pointer.">SetPtr</a>(<span class="keyword">new</span> <a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a>);
+<a name="l00114"></a>00114                             }
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116                             multiAttrPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classicomp_1_1_t_multi_attribute.html" title="Template implementation of multiple component attribute.">TMultiAttribute&lt;Attribute&gt;</a>*<span class="keyword">&gt;</span>(attributePtr.<a class="code" href="classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951" title="Return access to internal stored pointer.">GetPtr</a>());
+<a name="l00117"></a>00117                      }
+<a name="l00118"></a>00118               }
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120               <span class="keywordflow">if</span> (multiAttrPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00121"></a>00121                      multiAttrPtr-&gt;<a class="code" href="classicomp_1_1_t_multi_attribute.html#a9e56288747c422302cbcefb615d487c8">InsertValue</a>(attribute);
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123                      <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00124"></a>00124               }
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126               <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00127"></a>00127        }
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129        <span class="comment">// reimplemeted (icomp::IComponentContext)</span>
+<a name="l00130"></a>00130        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_registry_element.html" title="Represents element of registry describing component parameters.">IRegistryElement</a>&amp; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#ab001be9a30e506a464ef675c134ca4ad" title="Get access to component registry element object.">GetRegistryElement</a>() <span class="keyword">const</span>;
+<a name="l00131"></a>00131        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">IComponentStaticInfo</a>&amp; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#adf327430460b04378c2fd5d87f539a70" title="Get component static info associated with this context.">GetStaticInfo</a>() <span class="keyword">const</span>;
+<a name="l00132"></a>00132        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">IComponentContext</a>* <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a1f8d334a9a79905c18552c1113d04388" title="Get access to parent component context.">GetParentContext</a>() <span class="keyword">const</span>;
+<a name="l00133"></a>00133        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects.">iser::IObject</a>* <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a2dcb50d9dbdb80d3c127aed93c6fbe89" title="Get attribute using its ID.">GetAttribute</a>(<span class="keyword">const</span> QByteArray&amp; attributeId, <span class="keywordtype">int</span>* definitionLevelPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00134"></a>00134 
+<a name="l00135"></a>00135 <span class="keyword">protected</span>:
+<a name="l00139"></a>00139        <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttrType&gt;
+<a name="l00140"></a>00140        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2" title="Check if attribute type is corrected.">IsAttributeTypeCorrect</a>(<span class="keyword">const</span> QByteArray&amp; attributeId);
+<a name="l00141"></a>00141 
+<a name="l00142"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3b3f2cfbe337154cde593f12f5391e5f">00142</a>        <span class="keyword">typedef</span> QMap&lt;QByteArray, IComponent*&gt; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3b3f2cfbe337154cde593f12f5391e5f">ComponentsMap</a>;
+<a name="l00143"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8c2d13a82ac95c1847edda42c75ceee6">00143</a>        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3b3f2cfbe337154cde593f12f5391e5f">ComponentsMap</a> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8c2d13a82ac95c1847edda42c75ceee6">m_componentsMap</a>;
+<a name="l00144"></a>00144 
+<a name="l00145"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3fe5412e806817ea83165992b05c632f">00145</a>        <span class="keyword">typedef</span> QMap&lt; QByteArray, const ComponentsFactory* &gt; <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3fe5412e806817ea83165992b05c632f">FactoriesMap</a>;
+<a name="l00146"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#abe193a448206d9ea37ed9816d6015900">00146</a>        <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a3fe5412e806817ea83165992b05c632f">FactoriesMap</a> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#abe193a448206d9ea37ed9816d6015900">m_factoriesMap</a>;
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148 
-<a name="l00149"></a>00149 <span class="comment">// protected methods</span>
-<a name="l00150"></a>00150 
-<a name="l00151"></a>00151 <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttrType&gt;
-<a name="l00152"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2">00152</a> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2" title="Check if attribute type is corrected.">CSimComponentContextBase::IsAttributeTypeCorrect</a>(<span class="keyword">const</span> QByteArray&amp; attributeId)
-<a name="l00153"></a>00153 {
-<a name="l00154"></a>00154        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a>* attributeInfoPtr = m_metaInfo.<a class="code" href="classicomp_1_1_i_component_static_info.html#a07a70c398447a9ce12d7685a5202fd3f" title="Get set of attributes.">GetAttributeInfo</a>(attributeId);
-<a name="l00155"></a>00155        <span class="keywordflow">if</span> (attributeInfoPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00156"></a>00156               QByteArray attributeType = attributeInfoPtr-&gt;<a class="code" href="classicomp_1_1_i_attribute_static_info.html#a733e48286d0d6c83359604d3c6819990" title="Return attribute type description.">GetAttributeTypeName</a>();
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158               <span class="keywordflow">return</span> attributeType == AttrType::GetTypeName();
-<a name="l00159"></a>00159        }
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161        <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00162"></a>00162 }
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164 
-<a name="l00165"></a>00165 } <span class="comment">// namespace icomp</span>
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167 
-<a name="l00168"></a>00168 <span class="preprocessor">#endif // !icomp_CSimComponentContextBase_included</span>
-<a name="l00169"></a>00169 <span class="preprocessor"></span>
-<a name="l00170"></a>00170 
+<a name="l00148"></a>00148 <span class="keyword">private</span>:
+<a name="l00149"></a>00149        <a class="code" href="classicomp_1_1_c_registry_element.html">CRegistryElement</a> m_registryElement;
+<a name="l00150"></a>00150        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_static_info.html" title="This interface provide static information about component meta info.">IComponentStaticInfo</a>&amp; m_metaInfo;
+<a name="l00151"></a>00151 };
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 <span class="comment">// protected methods</span>
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156 <span class="keyword">template</span> &lt;<span class="keyword">class</span> AttrType&gt;
+<a name="l00157"></a><a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2">00157</a> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_sim_component_context_base.html#a8237cfada666133531229f82fb97d6e2" title="Check if attribute type is corrected.">CSimComponentContextBase::IsAttributeTypeCorrect</a>(<span class="keyword">const</span> QByteArray&amp; attributeId)
+<a name="l00158"></a>00158 {
+<a name="l00159"></a>00159        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_attribute_static_info.html">IAttributeStaticInfo</a>* attributeInfoPtr = m_metaInfo.<a class="code" href="classicomp_1_1_i_component_static_info.html#a07a70c398447a9ce12d7685a5202fd3f" title="Get set of attributes.">GetAttributeInfo</a>(attributeId);
+<a name="l00160"></a>00160        <span class="keywordflow">if</span> (attributeInfoPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00161"></a>00161               QByteArray attributeType = attributeInfoPtr-&gt;<a class="code" href="classicomp_1_1_i_attribute_static_info.html#a733e48286d0d6c83359604d3c6819990" title="Return attribute type description.">GetAttributeTypeName</a>();
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163               <span class="keywordflow">return</span> attributeType == AttrType::GetTypeName();
+<a name="l00164"></a>00164        }
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166        <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00167"></a>00167 }
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169 
+<a name="l00170"></a>00170 } <span class="comment">// namespace icomp</span>
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173 <span class="preprocessor">#endif // !icomp_CSimComponentContextBase_included</span>
+<a name="l00174"></a>00174 <span class="preprocessor"></span>
+<a name="l00175"></a>00175 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
