@@ -23600,6 +23600,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>const AttributeValueType &amp;</type>
+      <name>GetOriginalValue</name>
+      <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
+      <anchor>a3321e4653334d344c2cc212fe7367a42</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>const Attribute *</type>
       <name>operator-&gt;</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
