@@ -3720,7 +3720,7 @@
   <compound kind="class">
     <name>icam::IExposureConstraints</name>
     <filename>classicam_1_1_i_exposure_constraints.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetShutterTimeRange</name>

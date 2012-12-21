@@ -49,7 +49,7 @@ Inheritance diagram for ibase::ILoggable:</div>
   <img src="classibase_1_1_i_loggable.png" usemap="#ibase::ILoggable_map" alt=""/>
   <map id="ibase::ILoggable_map" name="ibase::ILoggable_map">
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="784,0,1166,24"/>
-<area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing istd::ILogger interface sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="0,112,382,136"/>
+<area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="0,112,382,136"/>
 <area href="classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;" shape="rect" coords="784,112,1166,136"/>
 <area href="classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; ifile::CRelativeFileNameParamComp &gt;" shape="rect" coords="1176,112,1558,136"/>
 <area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="0,168,382,192"/>
@@ -80,6 +80,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Install log.  <a href="#a057a0bba2008982bd14ab84e02716576"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_consumer.html">IMessageConsumer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_loggable.html#a9c8169f96643b91a14e803b8c2310abb">GetLogPtr</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get log.  <a href="#a9c8169f96643b91a14e803b8c2310abb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_loggable.html#a69d23a922c84cc79a058be79c593d97b">SetTracingEnabled</a> (bool trace)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable tracing.  <a href="#a69d23a922c84cc79a058be79c593d97b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_i_loggable.html#a608e8afc44b145e13e34cf0d10f6beab">IsTracingEnabled</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if tracing enabled.  <a href="#a608e8afc44b145e13e34cf0d10f6beab"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Inteface for object, which support the. </p>
@@ -106,6 +110,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a608e8afc44b145e13e34cf0d10f6beab"></a><!-- doxytag: member="ibase::ILoggable::IsTracingEnabled" ref="a608e8afc44b145e13e34cf0d10f6beab" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ibase::ILoggable::IsTracingEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns true if tracing enabled. </p>
+
+<p>Implemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#a9d3b09b6f3bb953d6811ecf9f8a98f5f">ibase::TLoggerWrap&lt; Base &gt;</a>, <a class="el" href="classibase_1_1_t_logger_wrap.html#a9d3b09b6f3bb953d6811ecf9f8a98f5f">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#a9d3b09b6f3bb953d6811ecf9f8a98f5f">ibase::TLoggerWrap&lt; ifile::CRelativeFileNameParamComp &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a057a0bba2008982bd14ab84e02716576"></a><!-- doxytag: member="ibase::ILoggable::SetLogPtr" ref="a057a0bba2008982bd14ab84e02716576" args="(IMessageConsumer *logPtr)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -124,6 +148,27 @@ Public Member Functions</h2></td></tr>
 <p>Install log. </p>
 
 <p>Implemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0">ibase::TLoggerWrap&lt; Base &gt;</a>, <a class="el" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#a6f5c8250b60c1899ebdbbc5d43334ae0">ibase::TLoggerWrap&lt; ifile::CRelativeFileNameParamComp &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69d23a922c84cc79a058be79c593d97b"></a><!-- doxytag: member="ibase::ILoggable::SetTracingEnabled" ref="a69d23a922c84cc79a058be79c593d97b" args="(bool trace)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ibase::ILoggable::SetTracingEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>trace</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enable/disable tracing. </p>
+
+<p>Implemented in <a class="el" href="classibase_1_1_t_logger_wrap.html#aa8d73ed0eb72efc40c0c271c13613b97">ibase::TLoggerWrap&lt; Base &gt;</a>, <a class="el" href="classibase_1_1_t_logger_wrap.html#aa8d73ed0eb72efc40c0c271c13613b97">ibase::TLoggerWrap&lt; CFileTypeInfoComp &gt;</a>, and <a class="el" href="classibase_1_1_t_logger_wrap.html#aa8d73ed0eb72efc40c0c271c13613b97">ibase::TLoggerWrap&lt; ifile::CRelativeFileNameParamComp &gt;</a>.</p>
 
 </div>
 </div>

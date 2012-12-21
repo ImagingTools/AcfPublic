@@ -39,7 +39,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="ibase::TLoggerWrap" --><!-- doxytag: inherits="Base,ibase::ILoggable,istd::ILogger" -->
-<p>Class wrapper implementing <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> interface sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>.  
+<p>Class wrapper implementing interface <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>.  
  <a href="classibase_1_1_t_logger_wrap.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>&gt;</code></p>
@@ -79,6 +79,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Install log.  <a href="#a6f5c8250b60c1899ebdbbc5d43334ae0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#ac66e43fec85060af81a884d4d98c1cc6">GetLogPtr</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get log.  <a href="#ac66e43fec85060af81a884d4d98c1cc6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#aa8d73ed0eb72efc40c0c271c13613b97">SetTracingEnabled</a> (bool trace)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable tracing.  <a href="#aa8d73ed0eb72efc40c0c271c13613b97"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#a9d3b09b6f3bb953d6811ecf9f8a98f5f">IsTracingEnabled</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if tracing enabled.  <a href="#a9d3b09b6f3bb953d6811ecf9f8a98f5f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_logger_wrap.html#ab956c62c01c4bb63500ae2c0b93fbd42">SendInfoMessage</a> (int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </td></tr>
@@ -98,8 +102,8 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;class Base&gt;<br/>
 class ibase::TLoggerWrap&lt; Base &gt;</h3>
 
-<p>Class wrapper implementing <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> interface sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>. </p>
-<p>Access to <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a> interface must be registered by the user. To register it, use <a class="el" href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the.">ibase::ILoggable</a> interface, implemented by this wrapper. </p>
+<p>Class wrapper implementing interface <a class="el" href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info.">istd::ILogger</a> sending log messages over <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>. </p>
+<p>Access to interface <a class="el" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a> must be registered by user. To register it use interface <a class="el" href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the.">ibase::ILoggable</a> implemented by this wrapper. </p>
 
 <p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00024">24</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -119,7 +123,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00105">105</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00108">108</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -144,7 +148,7 @@ template&lt;class Base &gt; </div>
 
 <p>Implements <a class="el" href="classibase_1_1_i_loggable.html#a9c8169f96643b91a14e803b8c2310abb">ibase::ILoggable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00121">121</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00125">125</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -180,11 +184,35 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#a880404a3500d83e8d2260d5304e16ce1">istd::ILogger</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00160">160</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00180">180</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_file_serializer_comp_8h_source.html#l00051">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::ReadArchiveEx::IsLogConsumed()</a>, and <a class="el" href="_t_file_serializer_comp_8h_source.html#l00090">ibase::TFileSerializerComp&lt; ReadArchive, WriteArchive &gt;::WriteArchiveEx::IsLogConsumed()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d3b09b6f3bb953d6811ecf9f8a98f5f"></a><!-- doxytag: member="ibase::TLoggerWrap::IsTracingEnabled" ref="a9d3b09b6f3bb953d6811ecf9f8a98f5f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classibase_1_1_t_logger_wrap.html">ibase::TLoggerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::IsTracingEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns true if tracing enabled. </p>
+
+<p>Implements <a class="el" href="classibase_1_1_i_loggable.html#a608e8afc44b145e13e34cf0d10f6beab">ibase::ILoggable</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00141">141</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -238,7 +266,7 @@ template&lt;class Base &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00151">151</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00171">171</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_information_provider_8h_source.html#l00032">istd::IInformationProvider::IC_CRITICAL</a>.</p>
 
@@ -294,7 +322,7 @@ template&lt;class Base &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00144">144</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00164">164</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_information_provider_8h_source.html#l00031">istd::IInformationProvider::IC_ERROR</a>.</p>
 
@@ -350,7 +378,7 @@ template&lt;class Base &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00130">130</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00150">150</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_information_provider_8h_source.html#l00029">istd::IInformationProvider::IC_INFO</a>.</p>
 
@@ -416,7 +444,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#ac9045cc3d95a7b501480155f548bbe1a">istd::ILogger</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00169">169</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00189">189</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -474,7 +502,7 @@ template&lt;class Base &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00137">137</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00157">157</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_information_provider_8h_source.html#l00030">istd::IInformationProvider::IC_WARNING</a>.</p>
 
@@ -501,7 +529,32 @@ template&lt;class Base &gt; </div>
 
 <p>Implements <a class="el" href="classibase_1_1_i_loggable.html#a057a0bba2008982bd14ab84e02716576">ibase::ILoggable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00114">114</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00118">118</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8d73ed0eb72efc40c0c271c13613b97"></a><!-- doxytag: member="ibase::TLoggerWrap::SetTracingEnabled" ref="aa8d73ed0eb72efc40c0c271c13613b97" args="(bool trace)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classibase_1_1_t_logger_wrap.html">ibase::TLoggerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::SetTracingEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>trace</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enable/disable tracing. </p>
+
+<p>Implements <a class="el" href="classibase_1_1_i_loggable.html#a69d23a922c84cc79a058be79c593d97b">ibase::ILoggable</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00134">134</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>

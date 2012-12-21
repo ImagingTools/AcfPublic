@@ -48,6 +48,16 @@ public:
 		Get log.
 	*/
 	virtual IMessageConsumer* GetLogPtr() const = 0;
+
+	/**
+		Enable/disable tracing.
+	*/
+	virtual void SetTracingEnabled(bool trace) = 0;
+
+	/**
+		Returns true if tracing enabled.
+	*/
+	virtual bool IsTracingEnabled() const = 0;
 };
 
 

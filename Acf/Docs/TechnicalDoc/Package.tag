@@ -11918,8 +11918,8 @@
       <type>virtual QString</type>
       <name>GetApplicationAttribute</name>
       <anchorfile>classibase_1_1_c_application_info_comp.html</anchorfile>
-      <anchor>a8002a00aca09e978bd59e05e535be6ed</anchor>
-      <arglist>(int attributeId) const </arglist>
+      <anchor>a12cca39736e1c965402f280ac6f08d5d</anchor>
+      <arglist>(int attributeId, bool allowTranslation=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -13528,8 +13528,8 @@
       <type>virtual QString</type>
       <name>GetApplicationAttribute</name>
       <anchorfile>classibase_1_1_i_application_info.html</anchorfile>
-      <anchor>a730ee27e910dc44994d93e05b8126d21</anchor>
-      <arglist>(int attributeId) const =0</arglist>
+      <anchor>ab51eff1ee2b90c044e1d8cef696ab978</anchor>
+      <arglist>(int attributeId, bool allowTranslation=true) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -13722,6 +13722,20 @@
       <name>GetLogPtr</name>
       <anchorfile>classibase_1_1_i_loggable.html</anchorfile>
       <anchor>a9c8169f96643b91a14e803b8c2310abb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetTracingEnabled</name>
+      <anchorfile>classibase_1_1_i_loggable.html</anchorfile>
+      <anchor>a69d23a922c84cc79a058be79c593d97b</anchor>
+      <arglist>(bool trace)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsTracingEnabled</name>
+      <anchorfile>classibase_1_1_i_loggable.html</anchorfile>
+      <anchor>a608e8afc44b145e13e34cf0d10f6beab</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -14485,6 +14499,20 @@
       <name>GetLogPtr</name>
       <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
       <anchor>ac66e43fec85060af81a884d4d98c1cc6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetTracingEnabled</name>
+      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa8d73ed0eb72efc40c0c271c13613b97</anchor>
+      <arglist>(bool trace)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTracingEnabled</name>
+      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a9d3b09b6f3bb953d6811ecf9f8a98f5f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">

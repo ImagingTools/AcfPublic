@@ -45,15 +45,19 @@
 <a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_loggable.html#a057a0bba2008982bd14ab84e02716576" title="Install log.">SetLogPtr</a>(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">IMessageConsumer</a>* logPtr) = 0;
 <a name="l00024"></a>00024        
 <a name="l00028"></a>00028        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">IMessageConsumer</a>* <a class="code" href="classibase_1_1_i_loggable.html#a9c8169f96643b91a14e803b8c2310abb" title="Get log.">GetLogPtr</a>() <span class="keyword">const</span> = 0;
-<a name="l00029"></a>00029 };
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 } <span class="comment">// namespace ibase</span>
-<a name="l00033"></a>00033 
+<a name="l00029"></a>00029 
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_loggable.html#a69d23a922c84cc79a058be79c593d97b" title="Enable/disable tracing.">SetTracingEnabled</a>(<span class="keywordtype">bool</span> trace) = 0;
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="preprocessor">#endif // !ibase_ILoggable_included</span>
-<a name="l00036"></a>00036 <span class="preprocessor"></span>
-<a name="l00037"></a>00037 
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_i_loggable.html#a608e8afc44b145e13e34cf0d10f6beab" title="Returns true if tracing enabled.">IsTracingEnabled</a>() <span class="keyword">const</span> = 0;
+<a name="l00039"></a>00039 };
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 } <span class="comment">// namespace ibase</span>
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="preprocessor">#endif // !ibase_ILoggable_included</span>
+<a name="l00046"></a>00046 <span class="preprocessor"></span>
+<a name="l00047"></a>00047 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
