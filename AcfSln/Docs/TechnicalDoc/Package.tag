@@ -12068,6 +12068,7 @@
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
+    <base protection="protected">imath::CDoubleManip</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -12137,6 +12138,20 @@
       <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
       <anchor>ac61407fc545cb06f6ba226eb296112b2</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPrecision</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a1fc88f197fa952637f4100aff8476be4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a5921992684e0a8e4d40afa8af778417a</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15710,13 +15725,13 @@
   <compound kind="class">
     <name>iqtcam::CBitmapSupplierGuiComp</name>
     <filename>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt;</base>
+    <base>TLoggerCompWrap&lt; iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <member kind="typedef">
-      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt;</type>
+      <type>ibase::TLoggerCompWrap&lt; iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a52d8572b4c335331a5659a09962a39f9</anchor>
+      <anchor>a560a704f4a9227adc2fe35a53f791395</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

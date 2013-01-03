@@ -3959,6 +3959,21 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>TMultiViewExtenderDelegatorCompWrap.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_t_multi_view_extender_delegator_comp_wrap_8h</filename>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
+    <class kind="class">iqt2d::TMultiViewExtenderDelegatorCompWrap</class>
+    <namespace>iqt2d</namespace>
+    <member kind="typedef">
+      <type>TMultiViewExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>CMultiViewExtenderDelegatorComp</name>
+      <anchorfile>namespaceiqt2d.html</anchorfile>
+      <anchor>a48f602d47625f996a8e6c88827a29cc2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>TPolygonBasedParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_polygon_based_params_gui_comp_8h</filename>
@@ -35309,10 +35324,18 @@
     <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <class kind="class">iqt2d::IViewExtender</class>
     <class kind="class">iqt2d::IViewProvider</class>
+    <class kind="class">iqt2d::TMultiViewExtenderDelegatorCompWrap</class>
     <class kind="class">iqt2d::TPolygonBasedParamsGuiComp</class>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <class kind="class">iqt2d::TViewExtenderCompBase</class>
     <class kind="class">iqt2d::TViewExtenderDelegatorCompWrap</class>
+    <member kind="typedef">
+      <type>TMultiViewExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>CMultiViewExtenderDelegatorComp</name>
+      <anchorfile>namespaceiqt2d.html</anchorfile>
+      <anchor>a48f602d47625f996a8e6c88827a29cc2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>TViewExtenderDelegatorCompWrap&lt; icomp::CComponentBase &gt;</type>
       <name>CViewExtenderDelegatorComp</name>
@@ -36311,6 +36334,34 @@
       <anchorfile>classiqt2d_1_1_i_view_provider.html</anchorfile>
       <anchor>aed42332764dc5898f6efc543aded8d54</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::TMultiViewExtenderDelegatorCompWrap</name>
+    <filename>classiqt2d_1_1_t_multi_view_extender_delegator_comp_wrap.html</filename>
+    <templarg></templarg>
+    <base>Base</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_t_multi_view_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>ac1e7eff245c7089c3b95e2747316ad53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqt2d_1_1_t_multi_view_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>aa7abd1d059e1c70b4251f3c2aa1c0ce3</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqt2d_1_1_t_multi_view_extender_delegator_comp_wrap.html</anchorfile>
+      <anchor>ad81a01420630baf61247720f2240ee1d</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
