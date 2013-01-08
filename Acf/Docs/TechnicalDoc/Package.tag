@@ -77,6 +77,17 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CCalibration2dProxyComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_calibration2d_proxy_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
+    <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
+    <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
+    <class kind="class">i2d::CCalibration2dProxyComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCircle.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_circle_8h</filename>
@@ -349,6 +360,7 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_static_calibration_provider_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
     <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
     <class kind="class">i2d::CStaticCalibrationProviderComp</class>
@@ -6600,6 +6612,7 @@
     <class kind="class">i2d::CAnnulusComp</class>
     <class kind="class">i2d::CAnnulusSegment</class>
     <class kind="class">i2d::CAnnulusSegmentComp</class>
+    <class kind="class">i2d::CCalibration2dProxyComp</class>
     <class kind="class">i2d::CCircle</class>
     <class kind="class">i2d::CCircleComp</class>
     <class kind="class">i2d::CDataNodePolylineBase</class>
@@ -7402,6 +7415,139 @@
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_annulus_segment_comp.html</anchorfile>
       <anchor>afc3743dcac9bc22779f957257261be4c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CCalibration2dProxyComp</name>
+    <filename>classi2d_1_1_c_calibration2d_proxy_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::ICalibration2d</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>afcea2322ac14ad36950af9b66b7d36d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a51b8f1608fa90f18cd567784fd2d9903</anchor>
+      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetArgumentUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a474e08f497aa445f36c17f6242db1d40</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetResultUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a82b046e9a80b47fe266ea361ba8a063a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICalibration2d *</type>
+      <name>CreateCombinedCalibration</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a61be492c3f23a0ef862a16d5e3f9564c</anchor>
+      <arglist>(const ICalibration2d &amp;calibration) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTransformationFlags</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>abcdf156c88701b02c42c0568d04096f0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetDistance</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a359b46453a4d2e92d11ed9a763e659ab</anchor>
+      <arglist>(const CVector2d &amp;origPos1, const CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetPositionAt</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a800d5cdee623e81ca2f34cae36d16cf3</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvPositionAt</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>af03cc1d8e690e11eb5a3b1f555889b73</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalTransform</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>ad14c7db15c1a315c1efe317843500e3d</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalInvTransform</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a2cad9315f127f7112c018cbc90ae7e5e</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a65dec55e3851bff12c119914924ff014</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CVector2d</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>ae6aabf772ccf3823b23c25da79beaa8e</anchor>
+      <arglist>(const CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a8b7b42f9c4f5bc53e639c2c9fb08cb16</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CVector2d</type>
+      <name>GetValueAt</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>ab31f670f17dc4ef2fc237ac60498e94d</anchor>
+      <arglist>(const CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a1983706707d0943f82d0c814b80b3a36</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a675f8c1be7881b6fc79067a178329bdb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>abfec9c6c557c8cc7fce427de3ad826be</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -10596,6 +10742,7 @@
     <filename>classi2d_1_1_c_static_calibration_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base>i2d::ICalibrationProvider</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -10603,12 +10750,33 @@
       <anchor>aeb916b741626129487f8c00d902f453f</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classi2d_1_1_c_static_calibration_provider_comp.html</anchorfile>
+      <anchor>a2776a0221652b5b0026065995e60a839</anchor>
+      <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classi2d_1_1_c_static_calibration_provider_comp.html</anchorfile>
       <anchor>a8195cbf7ab2640f49159249fafc0c3e3</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_static_calibration_provider_comp.html</anchorfile>
+      <anchor>ad8cc5a5374dea079249621b1df2d76d9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classi2d_1_1_c_static_calibration_provider_comp.html</anchorfile>
+      <anchor>ab541a2e9ae5072129d825f475f6f2c0b</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

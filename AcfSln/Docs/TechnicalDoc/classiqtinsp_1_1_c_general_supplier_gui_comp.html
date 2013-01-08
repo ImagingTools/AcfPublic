@@ -74,7 +74,10 @@ Protected Slots</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ab8ca1190d3a8ced0d9b69bac1ed5c497">GetParamsWidget</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameters widget object.  <a href="#ab8ca1190d3a8ced0d9b69bac1ed5c497"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#aa59fc0079d42002a462aee69a91541e7">OnSupplierParamsChanged</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Method will be called every time if the parameter set of the supplier has been changed.  <a href="#aa59fc0079d42002a462aee69a91541e7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a292de76a8651f5a98731df87c0d6c82a">OnGuiModelAttached</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a40e3de099ffff8e7f5700ec7e612f911">OnGuiHidden</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#aa635fb30331f46d5efc33b4adb2f192f">UpdateGui</a> (int updateFlags=0)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -168,6 +171,22 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a40e3de099ffff8e7f5700ec7e612f911"></a><!-- doxytag: member="iqtinsp::CGeneralSupplierGuiComp::OnGuiHidden" ref="a40e3de099ffff8e7f5700ec7e612f911" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtinsp::CGeneralSupplierGuiComp::OnGuiHidden </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a292de76a8651f5a98731df87c0d6c82a"></a><!-- doxytag: member="iqtinsp::CGeneralSupplierGuiComp::OnGuiModelAttached" ref="a292de76a8651f5a98731df87c0d6c82a" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -183,6 +202,27 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a10421a5f009909833e71dbc9bca46dc5">iqtinsp::TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iproc::ISupplier &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa59fc0079d42002a462aee69a91541e7"></a><!-- doxytag: member="iqtinsp::CGeneralSupplierGuiComp::OnSupplierParamsChanged" ref="aa59fc0079d42002a462aee69a91541e7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtinsp::CGeneralSupplierGuiComp::OnSupplierParamsChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Method will be called every time if the parameter set of the supplier has been changed. </p>
+<p>Default implementation does nothing. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html#a9840a8c4375ef9691a24cc73489930d9">iqtinsp::TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iproc::ISupplier &gt;</a>.</p>
 
 </div>
 </div>

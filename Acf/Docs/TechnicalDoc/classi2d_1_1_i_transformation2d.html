@@ -49,17 +49,18 @@ Inheritance diagram for i2d::ITransformation2d:</div>
  <div class="center">
   <img src="classi2d_1_1_i_transformation2d.png" usemap="#i2d::ITransformation2d_map" alt=""/>
   <map id="i2d::ITransformation2d_map" name="i2d::ITransformation2d_map">
-<area href="classimath_1_1_t_i_surject_function.html" alt="imath::TISurjectFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,112,301,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="311,112,612,136"/>
-<area href="classimath_1_1_t_i_math_function.html" alt="imath::TIMathFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,56,301,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="311,56,612,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,301,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="311,0,612,24"/>
-<area href="classi2d_1_1_i_calibration2d.html" alt="i2d::ICalibration2d" shape="rect" coords="155,224,456,248"/>
+<area href="classimath_1_1_t_i_surject_function.html" alt="imath::TISurjectFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="155,112,456,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="466,112,767,136"/>
+<area href="classimath_1_1_t_i_math_function.html" alt="imath::TIMathFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="155,56,456,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="466,56,767,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="155,0,456,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="466,0,767,24"/>
+<area href="classi2d_1_1_i_calibration2d.html" alt="i2d::ICalibration2d" shape="rect" coords="311,224,612,248"/>
 <area href="classi2d_1_1_c_affine_transformation2d.html" title="Affine transformation for 2D spaces." alt="i2d::CAffineTransformation2d" shape="rect" coords="0,280,301,304"/>
-<area href="classi2d_1_1_c_none_calibration2d.html" title="Identity calibration, no transformation will be done." alt="i2d::CNoneCalibration2d" shape="rect" coords="311,280,612,304"/>
+<area href="classi2d_1_1_c_calibration2d_proxy_comp.html" title="Implementation of a proxy of ICalibration2d interface realized over ICalibrationProvider access..." alt="i2d::CCalibration2dProxyComp" shape="rect" coords="311,280,612,304"/>
+<area href="classi2d_1_1_c_none_calibration2d.html" title="Identity calibration, no transformation will be done." alt="i2d::CNoneCalibration2d" shape="rect" coords="622,280,923,304"/>
 <area href="classi2d_1_1_c_affine_transformation2d_comp.html" title="Attributable component for affine transformation." alt="i2d::CAffineTransformation2dComp" shape="rect" coords="0,336,301,360"/>
-<area href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration." alt="iview::CPerspectiveCalibration" shape="rect" coords="311,336,612,360"/>
+<area href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration." alt="iview::CPerspectiveCalibration" shape="rect" coords="622,336,923,360"/>
 </map>
  </div></div>
 
@@ -234,7 +235,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a988967453a370d2f8add535a6be9923b">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a8d8ac117c27f5366c3c476a6212812cc">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a14555bee02f7519ce0cc7861141989c7">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a988967453a370d2f8add535a6be9923b">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a8d8ac117c27f5366c3c476a6212812cc">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a359b46453a4d2e92d11ed9a763e659ab">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a14555bee02f7519ce0cc7861141989c7">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -280,7 +281,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a9e8ce493f4b7fc7409c7f8034bf70322">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a018f355b0d815f41d61aca32260a1475">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a2631ab774913d8554e21ba673bfb1e35">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a9e8ce493f4b7fc7409c7f8034bf70322">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a018f355b0d815f41d61aca32260a1475">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#af03cc1d8e690e11eb5a3b1f555889b73">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a2631ab774913d8554e21ba673bfb1e35">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -326,7 +327,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a3942a7a93fbc60996cee893b28cd0224">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#ae10832bdf89c32e1a4688256887aa532">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a90fa27d418060284f4a662b99c1d5d4f">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a3942a7a93fbc60996cee893b28cd0224">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#ae10832bdf89c32e1a4688256887aa532">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a2cad9315f127f7112c018cbc90ae7e5e">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a90fa27d418060284f4a662b99c1d5d4f">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -372,7 +373,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a09222bb7cee9c793f92f8a157f814562">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#aeda5e9b9388b9e86110185d6464880c6">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#ad80b6d7961542f98ac4b175d06bc7a89">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a09222bb7cee9c793f92f8a157f814562">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#aeda5e9b9388b9e86110185d6464880c6">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#ad14c7db15c1a315c1efe317843500e3d">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#ad80b6d7961542f98ac4b175d06bc7a89">i2d::CNoneCalibration2d</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_view_extender_comp_base_8h_source.html#l00262">iqt2d::TViewExtenderCompBase&lt; Base &gt;::UpdateViewCalibration()</a>.</p>
 
@@ -420,7 +421,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if calculation done correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a2b33003812ec5148ae6266e428b63edb">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#abc4dc3326126b6b057f87fa14de29898">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#aee84f7c51f79cbd58577c7558a5a5f42">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#a2b33003812ec5148ae6266e428b63edb">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#abc4dc3326126b6b057f87fa14de29898">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a800d5cdee623e81ca2f34cae36d16cf3">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#aee84f7c51f79cbd58577c7558a5a5f42">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -440,7 +441,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get flags of describing type of this transformation. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#aceb0f7855189f660b498be630a7e8468">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#adaa094ede3fb8d976cf132a8ac7977fc">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a20f3d7da2a836eacdae7b525ee4b4bee">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_perspective_calibration.html#aceb0f7855189f660b498be630a7e8468">iview::CPerspectiveCalibration</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#adaa094ede3fb8d976cf132a8ac7977fc">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#abcdf156c88701b02c42c0568d04096f0">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a20f3d7da2a836eacdae7b525ee4b4bee">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>

@@ -1203,6 +1203,15 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CSearchParamsComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_search_params_comp_8h</filename>
+    <includes id="_i_search_constraints_8h" name="ISearchConstraints.h" local="yes" imported="no">iipr/ISearchConstraints.h</includes>
+    <includes id="_c_search_params_8h" name="CSearchParams.h" local="yes" imported="no">iipr/CSearchParams.h</includes>
+    <class kind="class">iipr::CSearchParamsComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableCalibrationSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_selectable_calibration_supplier_comp_8h</filename>
@@ -7691,6 +7700,7 @@
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
     <class kind="class">iipr::CSearchFeature</class>
     <class kind="class">iipr::CSearchParams</class>
+    <class kind="class">iipr::CSearchParamsComp</class>
     <class kind="class">iipr::CSelectableCalibrationSupplierComp</class>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
     <class kind="class">iipr::CTubeProjectionLinesProviderComp</class>
@@ -10405,6 +10415,26 @@
       <anchorfile>classiipr_1_1_c_search_params.html</anchorfile>
       <anchor>a0584125b6650dcc7e207d1ae4a0c824b</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CSearchParamsComp</name>
+    <filename>classiipr_1_1_c_search_params_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base>iipr::CSearchParams</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_search_params_comp.html</anchorfile>
+      <anchor>ac533743253f96ec72099b7b9546fd30a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ISearchConstraints *</type>
+      <name>GetSearchConstraints</name>
+      <anchorfile>classiipr_1_1_c_search_params_comp.html</anchorfile>
+      <anchor>a796bc7f6296a7450696cb48050978ad2</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15921,6 +15951,13 @@
       <anchor>a034c5fac994e1ac0f1b20fd05ab8541a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoProcessImage</name>
+      <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
+      <anchor>a54726e412ba194616c74023554a104d8</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, istd::IChangeable *outputPtr) const </arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>iqtcam::CFileAcquisitionComp::ParamsInfo</name>
@@ -16985,9 +17022,23 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>aa59fc0079d42002a462aee69a91541e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
       <anchor>a292de76a8651f5a98731df87c0d6c82a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a40e3de099ffff8e7f5700ec7e612f911</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

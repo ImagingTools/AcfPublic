@@ -123,12 +123,14 @@ bool CParallelogram::GetInvTransformed(
 	return false;
 }
 
+
 // reimplemented (istd::IChangeable)
 
 int CParallelogram::GetSupportedOperations() const
 {
 	return SO_COPY | SO_CLONE;
 }
+
 
 bool CParallelogram::CopyFrom(const IChangeable& object)
 {
@@ -146,6 +148,7 @@ bool CParallelogram::CopyFrom(const IChangeable& object)
 
 	return false;
 }
+
 
 istd::IChangeable* CParallelogram::CloneMe() const 
 {

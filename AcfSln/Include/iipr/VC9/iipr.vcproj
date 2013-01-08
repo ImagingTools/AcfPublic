@@ -342,6 +342,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CSearchParamsComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CSelectableCalibrationSupplierComp.cpp"
 				>
 			</File>
@@ -548,6 +552,10 @@
 			</File>
 			<File
 				RelativePath="..\CSearchParams.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSearchParamsComp.h"
 				>
 			</File>
 			<File

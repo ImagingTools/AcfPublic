@@ -168,12 +168,14 @@ bool CPosition2d::GetInvTransformed(
 	return true;
 }
 
+
 // reimplemented (istd::IChangeable)
 
 int CPosition2d::GetSupportedOperations() const
 {
 	return SO_COPY | SO_CLONE;
 }
+
 
 bool CPosition2d::CopyFrom(const IChangeable& object)
 {
@@ -191,6 +193,7 @@ bool CPosition2d::CopyFrom(const IChangeable& object)
 
 	return false;
 }
+
 
 istd::IChangeable* CPosition2d::CloneMe() const 
 {

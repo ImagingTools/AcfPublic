@@ -45,17 +45,18 @@ Inheritance diagram for i2d::ICalibration2d:</div>
  <div class="center">
   <img src="classi2d_1_1_i_calibration2d.png" usemap="#i2d::ICalibration2d_map" alt=""/>
   <map id="i2d::ICalibration2d_map" name="i2d::ICalibration2d_map">
-<area href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects." alt="i2d::ITransformation2d" shape="rect" coords="155,168,456,192"/>
-<area href="classimath_1_1_t_i_surject_function.html" alt="imath::TISurjectFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,112,301,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="311,112,612,136"/>
-<area href="classimath_1_1_t_i_math_function.html" alt="imath::TIMathFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="0,56,301,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="311,56,612,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,301,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="311,0,612,24"/>
+<area href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects." alt="i2d::ITransformation2d" shape="rect" coords="311,168,612,192"/>
+<area href="classimath_1_1_t_i_surject_function.html" alt="imath::TISurjectFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="155,112,456,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="466,112,767,136"/>
+<area href="classimath_1_1_t_i_math_function.html" alt="imath::TIMathFunction&lt; CVector2d, CVector2d &gt;" shape="rect" coords="155,56,456,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="466,56,767,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="155,0,456,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="466,0,767,24"/>
 <area href="classi2d_1_1_c_affine_transformation2d.html" title="Affine transformation for 2D spaces." alt="i2d::CAffineTransformation2d" shape="rect" coords="0,280,301,304"/>
-<area href="classi2d_1_1_c_none_calibration2d.html" title="Identity calibration, no transformation will be done." alt="i2d::CNoneCalibration2d" shape="rect" coords="311,280,612,304"/>
+<area href="classi2d_1_1_c_calibration2d_proxy_comp.html" title="Implementation of a proxy of ICalibration2d interface realized over ICalibrationProvider access..." alt="i2d::CCalibration2dProxyComp" shape="rect" coords="311,280,612,304"/>
+<area href="classi2d_1_1_c_none_calibration2d.html" title="Identity calibration, no transformation will be done." alt="i2d::CNoneCalibration2d" shape="rect" coords="622,280,923,304"/>
 <area href="classi2d_1_1_c_affine_transformation2d_comp.html" title="Attributable component for affine transformation." alt="i2d::CAffineTransformation2dComp" shape="rect" coords="0,336,301,360"/>
-<area href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration." alt="iview::CPerspectiveCalibration" shape="rect" coords="311,336,612,360"/>
+<area href="classiview_1_1_c_perspective_calibration.html" title="Perspective calibration." alt="iview::CPerspectiveCalibration" shape="rect" coords="622,336,923,360"/>
 </map>
  </div></div>
 
@@ -93,7 +94,7 @@ Public Member Functions</h2></td></tr>
 <p>Please note, that created object is owned by the caller and the caller must remove them. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new calibration object (owned by the caller) or NULL if creation was impossible. </dd></dl>
 
-<p>Implemented in <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#ab377e4a737dc25a9e4a5ecc2b0d0c1af">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a4ec327ba011d0e6d53ed84762f86b6ea">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#ab377e4a737dc25a9e4a5ecc2b0d0c1af">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a61be492c3f23a0ef862a16d5e3f9564c">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a4ec327ba011d0e6d53ed84762f86b6ea">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -114,7 +115,7 @@ Public Member Functions</h2></td></tr>
 <p>Get unit description of calibration input (transformation function argument). </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>unit description of function argument or <code>NULL</code>, if this information is unsupported. </dd></dl>
 
-<p>Implemented in <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#af9b5501a8db234628ecb55cabd85399f">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#aa462c631af8415202f6d3b05506a027f">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#af9b5501a8db234628ecb55cabd85399f">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a474e08f497aa445f36c17f6242db1d40">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#aa462c631af8415202f6d3b05506a027f">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>
@@ -135,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <p>Get unit description of calibration output (transformation function result). </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>unit description of function result or <code>NULL</code>, if this information is unsupported. </dd></dl>
 
-<p>Implemented in <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#aab4a2cc818943a5ad74dd3a98e71af5c">i2d::CAffineTransformation2d</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a474f3b0647cbfb673bb2d310314dd962">i2d::CNoneCalibration2d</a>.</p>
+<p>Implemented in <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#aab4a2cc818943a5ad74dd3a98e71af5c">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a82b046e9a80b47fe266ea361ba8a063a">i2d::CCalibration2dProxyComp</a>, and <a class="el" href="classi2d_1_1_c_none_calibration2d.html#a474f3b0647cbfb673bb2d310314dd962">i2d::CNoneCalibration2d</a>.</p>
 
 </div>
 </div>

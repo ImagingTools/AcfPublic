@@ -266,12 +266,14 @@ bool CQuadrangle::GetInvTransformed(
 	}
 }
 
+
 // reimplemented (istd::IChangeable)
 
 int CQuadrangle::GetSupportedOperations() const
 {
 	return SO_COPY | SO_CLONE;
 }
+
 
 bool CQuadrangle::CopyFrom(const IChangeable& object)
 {
@@ -291,6 +293,7 @@ bool CQuadrangle::CopyFrom(const IChangeable& object)
 	return false;
 }
 
+
 istd::IChangeable* CQuadrangle::CloneMe() const 
 {
 	istd::TDelPtr<CQuadrangle> clonePtr(new CQuadrangle);
@@ -301,6 +304,7 @@ istd::IChangeable* CQuadrangle::CloneMe() const
 
 	return NULL;
 }
+
 
 // reimplemented (iser::ISerializable)
 

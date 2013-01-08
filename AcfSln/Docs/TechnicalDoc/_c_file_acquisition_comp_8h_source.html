@@ -65,55 +65,61 @@
 <a name="l00042"></a>00042               I_ASSIGN(m_pathParamIdAttrPtr, <span class="stringliteral">&quot;DirParamId&quot;</span>, <span class="stringliteral">&quot;Id used to get directory parameter (ifile::IFileNameParam)&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;FileBitmapAcquisition&quot;</span>);
 <a name="l00043"></a>00043               I_ASSIGN(m_maxCachedDirectoriesAttrPtr, <span class="stringliteral">&quot;MaxCachedDirs&quot;</span>, <span class="stringliteral">&quot;Maximum number of cached directories&quot;</span>, <span class="keyword">true</span>, 10);
 <a name="l00044"></a>00044               I_ASSIGN(m_lastFileNameCompPtr, <span class="stringliteral">&quot;LastFileName&quot;</span>, <span class="stringliteral">&quot;Stores last processed file name here if set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;LastFileName&quot;</span>);
-<a name="l00045"></a>00045        I_END_COMPONENT;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047        <a class="code" href="classiqtcam_1_1_c_file_acquisition_comp.html#abef7d68d9023d1ebfbfac20631fca9b5">CFileAcquisitionComp</a>();
+<a name="l00045"></a>00045               I_ASSIGN(m_mirrorXParamIdAttrPtr, <span class="stringliteral">&quot;MirrorXParamId&quot;</span>, <span class="stringliteral">&quot;Id used to get Mirror By X parameter&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;MirrorXParamId&quot;</span>);
+<a name="l00046"></a>00046               I_ASSIGN(m_mirrorYParamIdAttrPtr, <span class="stringliteral">&quot;MirrorYParamId&quot;</span>, <span class="stringliteral">&quot;Id used to get Mirror By Y parameter&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;MirrorYParamId&quot;</span>);
+<a name="l00047"></a>00047        I_END_COMPONENT;
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (iproc::IProcessor)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtcam_1_1_c_file_acquisition_comp.html#a6d147dc90246a9a9bb3054474aa5e129" title="Do synchronized processing.">DoProcessing</a>(
-<a name="l00051"></a>00051                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00052"></a>00052                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
-<a name="l00053"></a>00053                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
-<a name="l00054"></a>00054                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>* progressManagerPtr = NULL);
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="comment">// reimplemented (icam::IBitmapAcquisition)</span>
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiqtcam_1_1_c_file_acquisition_comp.html#a034c5fac994e1ac0f1b20fd05ab8541a" title="Get size of acquired bitmap for specified parameters.">GetBitmapSize</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00060"></a><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html">00060</a>        <span class="keyword">struct </span><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html">ParamsInfo</a>
-<a name="l00061"></a>00061        {
-<a name="l00062"></a>00062               <a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a2417de269261f8f5e371116757a5357a">ParamsInfo</a>();
-<a name="l00063"></a>00063 
-<a name="l00064"></a><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#ac23ff89f244f108fe3aebc36fa32fc9c">00064</a>               QStringList <a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#ac23ff89f244f108fe3aebc36fa32fc9c">files</a>;
-<a name="l00065"></a><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a81b734452993b611d95dde263c55b1b5">00065</a>               QStringList::Iterator <a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a81b734452993b611d95dde263c55b1b5">filesIter</a>;
-<a name="l00066"></a><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a922346277292f8827b9817759720ebb7">00066</a>               quint32 <a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a922346277292f8827b9817759720ebb7">idStamp</a>;
-<a name="l00067"></a>00067        };
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">private</span>:
-<a name="l00070"></a>00070        <span class="keyword">typedef</span> QMap&lt;QString, ParamsInfo&gt; DirInfos;
-<a name="l00071"></a>00071        DirInfos m_dirInfos;
+<a name="l00049"></a>00049        <a class="code" href="classiqtcam_1_1_c_file_acquisition_comp.html#abef7d68d9023d1ebfbfac20631fca9b5">CFileAcquisitionComp</a>();
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="comment">// reimplemented (iproc::IProcessor)</span>
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtcam_1_1_c_file_acquisition_comp.html#a6d147dc90246a9a9bb3054474aa5e129" title="Do synchronized processing.">DoProcessing</a>(
+<a name="l00053"></a>00053                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00054"></a>00054                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* inputPtr,
+<a name="l00055"></a>00055                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr,
+<a name="l00056"></a>00056                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>* progressManagerPtr = NULL);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058        <span class="comment">// reimplemented (icam::IBitmapAcquisition)</span>
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiqtcam_1_1_c_file_acquisition_comp.html#a034c5fac994e1ac0f1b20fd05ab8541a" title="Get size of acquired bitmap for specified parameters.">GetBitmapSize</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr) <span class="keyword">const</span>;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="keyword">protected</span>:
+<a name="l00062"></a><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html">00062</a>        <span class="keyword">struct </span><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html">ParamsInfo</a>
+<a name="l00063"></a>00063        {
+<a name="l00064"></a>00064               <a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a2417de269261f8f5e371116757a5357a">ParamsInfo</a>();
+<a name="l00065"></a>00065 
+<a name="l00066"></a><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#ac23ff89f244f108fe3aebc36fa32fc9c">00066</a>               QStringList <a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#ac23ff89f244f108fe3aebc36fa32fc9c">files</a>;
+<a name="l00067"></a><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a81b734452993b611d95dde263c55b1b5">00067</a>               QStringList::Iterator <a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a81b734452993b611d95dde263c55b1b5">filesIter</a>;
+<a name="l00068"></a><a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a922346277292f8827b9817759720ebb7">00068</a>               quint32 <a class="code" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html#a922346277292f8827b9817759720ebb7">idStamp</a>;
+<a name="l00069"></a>00069        };
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_file_acquisition_comp.html#a54726e412ba194616c74023554a104d8">DoProcessImage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr) <span class="keyword">const</span>;
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073        quint32 m_lastIdStamp;
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_lastImageSize;
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_bitmapLoaderCompPtr);
-<a name="l00078"></a>00078        I_ATTR(QString, m_defaultDirAttrPtr);
-<a name="l00079"></a>00079        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_name_param.html">ifile::IFileNameParam</a>, m_defaultDirParamCompPtr);
+<a name="l00073"></a>00073 <span class="keyword">private</span>:
+<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_bitmapLoaderCompPtr);
+<a name="l00075"></a>00075        I_ATTR(QString, m_defaultDirAttrPtr);
+<a name="l00076"></a>00076        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_name_param.html">ifile::IFileNameParam</a>, m_defaultDirParamCompPtr);
+<a name="l00077"></a>00077        I_ATTR(<span class="keywordtype">int</span>, m_maxCachedDirectoriesAttrPtr);
+<a name="l00078"></a>00078        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_name_param.html">ifile::IFileNameParam</a>, m_lastFileNameCompPtr);
+<a name="l00079"></a>00079 
 <a name="l00080"></a>00080        I_ATTR(QByteArray, m_pathParamIdAttrPtr);
-<a name="l00081"></a>00081        I_ATTR(<span class="keywordtype">int</span>, m_maxCachedDirectoriesAttrPtr);
-<a name="l00082"></a>00082        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_name_param.html">ifile::IFileNameParam</a>, m_lastFileNameCompPtr);
+<a name="l00081"></a>00081        I_ATTR(QByteArray, m_mirrorXParamIdAttrPtr);
+<a name="l00082"></a>00082        I_ATTR(QByteArray, m_mirrorYParamIdAttrPtr);
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084        QMutex m_lock;
-<a name="l00085"></a>00085 };
+<a name="l00084"></a>00084        <span class="keyword">typedef</span> QMap&lt;QString, ParamsInfo&gt; DirInfos;
+<a name="l00085"></a>00085        DirInfos m_dirInfos;
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 } <span class="comment">// namespace iqtcam</span>
+<a name="l00087"></a>00087        quint32 m_lastIdStamp;
+<a name="l00088"></a>00088        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_lastImageSize;
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091 <span class="preprocessor">#endif // !iqtcam_CFileAcquisitionComp_included</span>
-<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00090"></a>00090        QMutex m_lock;
+<a name="l00091"></a>00091 };
+<a name="l00092"></a>00092 
 <a name="l00093"></a>00093 
+<a name="l00094"></a>00094 } <span class="comment">// namespace iqtcam</span>
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 <span class="preprocessor">#endif // !iqtcam_CFileAcquisitionComp_included</span>
+<a name="l00098"></a>00098 <span class="preprocessor"></span>
+<a name="l00099"></a>00099 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
