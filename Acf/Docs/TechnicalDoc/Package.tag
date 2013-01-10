@@ -3776,6 +3776,16 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
+    <name>CAffineTransformationParamsGui.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_affine_transformation_params_gui_8h</filename>
+    <includes id="_c_affine_transformation2d_shape_8h" name="CAffineTransformation2dShape.h" local="no" imported="no">iview/CAffineTransformation2dShape.h</includes>
+    <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="no" imported="no">i2d/CAffineTransformation2d.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="no" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <class kind="class">iqt2d::CAffineTransformationParamsGui</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAnnulusParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_annulus_params_gui_comp_8h</filename>
@@ -35497,6 +35507,7 @@
   <compound kind="namespace">
     <name>iqt2d</name>
     <filename>namespaceiqt2d.html</filename>
+    <class kind="class">iqt2d::CAffineTransformationParamsGui</class>
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
@@ -35533,6 +35544,53 @@
       <anchorfile>namespaceiqt2d.html</anchorfile>
       <anchor>aaa07639b224bf681c5aa50e41400f109</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CAffineTransformationParamsGui</name>
+    <filename>classiqt2d_1_1_c_affine_transformation_params_gui.html</filename>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CAffineTransformationParamsGui, iview::CAffineTransformation2dShape, i2d::CAffineTransformation2d &gt;</base>
+    <member kind="typedef">
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAffineTransformationParamsGui, iview::CAffineTransformation2dShape, i2d::CAffineTransformation2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>ac86bb1c9be88a4bd9a5ccd4165f43535</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a4bfe4601a1edca9bcec11c4b0d3bac25</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a0e6ca8db0247d25a62c2e6723c68bac0</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a92ba6b27bccdca1bdbbf174c0744c625</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>afc46ab7606df9a008b97658e680a62c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>ac582e9a26d1e24ed020b7493850496d8</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
