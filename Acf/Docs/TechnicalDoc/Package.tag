@@ -479,6 +479,7 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_t_data_node_polyline_8h</filename>
     <includes id="_c_data_node_polyline_base_8h" name="CDataNodePolylineBase.h" local="yes" imported="no">i2d/CDataNodePolylineBase.h</includes>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <class kind="class">i2d::TDataNodePolyline</class>
     <namespace>i2d</namespace>
   </compound>
@@ -5698,6 +5699,14 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>CAffineTransformation2dShape.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_affine_transformation2d_shape_8h</filename>
+    <includes id="_c_interactive_pin_shape_8h" name="CInteractivePinShape.h" local="yes" imported="no">CInteractivePinShape.h</includes>
+    <class kind="class">iview::CAffineTransformation2dShape</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAffiniteCalibrationShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_affinite_calibration_shape_8h</filename>
@@ -10791,6 +10800,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CTubeNode</name>
+      <anchorfile>classi2d_1_1_c_tube_node.html</anchorfile>
+      <anchor>abb8933456dba254f306eb8a4becb401c</anchor>
+      <arglist>(const CTubeNode &amp;node)</arglist>
+    </member>
+    <member kind="function">
       <type>const istd::CRange &amp;</type>
       <name>GetTubeRange</name>
       <anchorfile>classi2d_1_1_c_tube_node.html</anchorfile>
@@ -11513,13 +11529,13 @@
   <compound kind="class">
     <name>i2d::TDataNodePolyline</name>
     <filename>classi2d_1_1_t_data_node_polyline.html</filename>
-    <templarg></templarg>
+    <templarg>NodeData</templarg>
     <base>i2d::CDataNodePolylineBase</base>
     <member kind="typedef">
-      <type>CPolyline</type>
+      <type>CDataNodePolylineBase</type>
       <name>BaseClass</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a6b6ad9f09506a0de19e6222b4b3216f6</anchor>
+      <anchor>a88d2a57fb675f2b98a3e83b23bb403ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -11577,6 +11593,13 @@
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
       <anchor>a1df706697750c63cad83f66011448d15</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>af2d7b07fedab0ff5da1047ecba41d78c</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -49161,6 +49184,7 @@
   <compound kind="namespace">
     <name>iview</name>
     <filename>namespaceiview.html</filename>
+    <class kind="class">iview::CAffineTransformation2dShape</class>
     <class kind="class">iview::CAffiniteCalibrationShape</class>
     <class kind="class">iview::CCalibratedViewBase</class>
     <class kind="class">iview::CCalibrationShapeBase</class>
@@ -49289,6 +49313,115 @@
       <anchorfile>namespaceiview.html</anchorfile>
       <anchor>a480fdbd655b5cf0ba74515e2406c767b</anchor>
       <arglist>(iview::IColorSchema::TickerType tickerType1, iview::IColorSchema::TickerType tickerType2)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CAffineTransformation2dShape</name>
+    <filename>classiview_1_1_c_affine_transformation2d_shape.html</filename>
+    <base>iview::CInteractivePinShape</base>
+    <member kind="enumeration">
+      <name>ControlPoint</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a59d49fea53b8631bcb60298afe19c0a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NO_POINT</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a59d49fea53b8631bcb60298afe19c0a1a199ce3c2df82d17a1290656a8341f8cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POINT1</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a59d49fea53b8631bcb60298afe19c0a1afb7b1b620f9b5e12e5036e854f4e3eef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POINT2</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a59d49fea53b8631bcb60298afe19c0a1ab0469371de94cdac90f9eaeca50683b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POINT3</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a59d49fea53b8631bcb60298afe19c0a1ab5b30852c4c8f056387b983d3683dee1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POINT4</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a59d49fea53b8631bcb60298afe19c0a1a97ec1926f6e1fdc3355e404aa87faf41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POINT5</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a59d49fea53b8631bcb60298afe19c0a1aea31b3ad83ffc67cf2bc650e26eb3a59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALL_POINTS</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a59d49fea53b8631bcb60298afe19c0a1ab30ba1ba278bd5d240dfc9a6fb0666ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffineTransformation2dShape</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a717fcfbfbc1d5fd06db2e01fadae3349</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetActiveControlPoints</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a9b4d5b65f5b4e10923cc5747d28ba7bb</anchor>
+      <arglist>(ControlPoint points=ALL_POINTS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>aede6b54b8d9fb8ba00202e17f72bf7f7</anchor>
+      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseMove</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a7f2650324b16cdddfc8b7f3367d051a3</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a275e8545ddc92cd006b054f551aacdf9</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a94b0a1fa01d945e51f85c2aa04e3cb60</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>ab0ee5ddea72ec4393bf6c03b2d015de5</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>adc01a95fabfa1b7edb32b982a13b3ca3</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">

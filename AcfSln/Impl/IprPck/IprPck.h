@@ -70,6 +70,7 @@
 #include "iipr/CMultiLineProjectionSupplierComp.h"
 #include "iipr/CSelectableCalibrationSupplierComp.h"
 #include "iipr/CCheckerboardPatternGeneratorComp.h"
+#include "iipr/CImageFlipProcessorComp.h"
 //#include "iipr/CImageAffineTransformProcessorComp.h"
 
 
@@ -118,7 +119,7 @@ typedef icomp::TMakeComponentWrap<
 typedef icomp::TModelCompWrap<iipr::CRingPatternGeneratorParamsComp> RingPatternGeneratorParams;
 typedef iipr::CRgbToGrayProcessorComp RgbToGrayProcessor;
 typedef iipr::CImageBinarizeProcessorComp ImageBinarizeProcessor;
-//typedef iipr::CImageAffineTransformProcessorComp ImageAffineTransformProcessor;
+
 typedef icomp::TModelCompWrap<iipr::CBitmapProviderCacheComp> BitmapProviderCache;
 typedef icomp::TModelCompWrap<iipr::CMultiBitmapCacheComp> MultiBitmapProviderCacheComp;
 typedef icomp::TModelCompWrap<iipr::CSearchParamsComp> SearchParams;
@@ -145,6 +146,11 @@ typedef icomp::TModelCompWrap<
 			iipr::CSelectableCalibrationSupplierComp> SelectableCalibrationSupplier;
 
 typedef iipr::CCheckerboardPatternGeneratorComp CheckerboardPatternGenerator;
+
+typedef iipr::CImageFlipProcessorComp ImageFlipProcessor;
+
+//typedef iipr::CImageAffineTransformProcessorComp ImageAffineTransformProcessor;
+
 
 } // namespace IprPck
 

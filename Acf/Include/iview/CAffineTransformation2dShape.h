@@ -1,0 +1,72 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "CInteractivePinShape.h"
+
+
+namespace iview
+{
+
+
+/**
+	Interactive shape to visualize i2d::CAffineTransformation2d
+ */
+class CAffineTransformation2dShape: public CInteractivePinShape
+{
+public:
+	CAffineTransformation2dShape();
+
+
+	enum ControlPoint
+	{
+		NO_POINT = 0, POINT1 = 1, POINT2 = 2, POINT3 = 4,
+		POINT4 = 8, POINT5 = 16, ALL_POINTS = POINT1 | POINT2 | POINT3 | POINT4 | POINT5
+	};
+
+	/**
+		Set control points that can be moved by the user (OR'ed ControlPoints)
+	 */
+	void SetActiveControlPoints(ControlPoint points = ALL_POINTS);
+
+	// reimplemented (iview::IMouseActionObserver)
+	virtual bool OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag);
+	virtual bool OnMouseMove(istd::CIndex2d position);
+
+	// reimplemented (iview::IVisualizable)
+	virtual void Draw(QPainter& drawContext) const;
+
+	// reimplemented (imod::IObserver)
+	virtual bool OnAttached(imod::IModel* modelPtr);
+
+	// reimplemented (iview::ITouchable)
+	virtual TouchState IsTouched(istd::CIndex2d position) const;
+
+protected:
+	// reimplemented (iview::CShapeBase)
+	virtual i2d::CRect CalcBoundingBox() const;
+private:
+	int m_activeControlPoints;
+	ControlPoint m_currentPoint; ///< point pressed by mouse
+};
+
+}
+

@@ -974,6 +974,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CImageFlipProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_image_flip_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <class kind="class">iipr::CImageFlipProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CImageHistogramProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_histogram_processor_comp_8h</filename>
@@ -7676,6 +7684,7 @@
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
     <class kind="class">iipr::CImageBinarizeProcessorComp</class>
     <class kind="class">iipr::CImageCropProcessorComp</class>
+    <class kind="class">iipr::CImageFlipProcessorComp</class>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
     <class kind="class">iipr::CImageInterpolationParams</class>
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
@@ -9061,6 +9070,32 @@
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
       <anchor>aa84b7260ee22e1a4208a288536c8678f</anchor>
       <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageFlipProcessorComp</name>
+    <filename>classiipr_1_1_c_image_flip_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_flip_processor_comp.html</anchorfile>
+      <anchor>a1556b7ffb384e491c93208d1123f9da1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_flip_processor_comp.html</anchorfile>
+      <anchor>a4f6a60e7b53a5ca32423a0ff8d603e44</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ConvertImage</name>
+      <anchorfile>classiipr_1_1_c_image_flip_processor_comp.html</anchorfile>
+      <anchor>afb5633673002b742218f7782262ebf01</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, bool mirrorX, bool mirrorY) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15950,13 +15985,6 @@
       <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
       <anchor>a034c5fac994e1ac0f1b20fd05ab8541a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DoProcessImage</name>
-      <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
-      <anchor>a54726e412ba194616c74023554a104d8</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="struct">

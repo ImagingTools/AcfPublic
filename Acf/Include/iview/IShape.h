@@ -43,7 +43,7 @@ class IColorSchema;
 
 /**
 	Common interface for all display console shapes.
-	Shapes are a representants of model objects in display console.
+	Shapes are representants of model objects in display console.
 */
 class IShape:
 			virtual public imod::IObserver,
@@ -64,7 +64,7 @@ public:
 
 	/**	
 		Return bounding box in client window coordinates.
-		You can store this bounding box for optimisation,
+		You can store this bounding box for optimization,
 		because about every change of transformation you will be informed
 		by calling OnDisplayChange(int) method.
 	*/
