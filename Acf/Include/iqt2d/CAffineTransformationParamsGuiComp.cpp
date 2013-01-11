@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CAffineTransformationParamsGui.h"
+#include "iqt2d/CAffineTransformationParamsGuiComp.h"
 
 namespace iqt2d
 {
@@ -30,7 +30,7 @@ namespace iqt2d
 
 // reimplemented (imod::IModelEditor)
 
-void CAffineTransformationParamsGui::UpdateModel() const
+void CAffineTransformationParamsGuiComp::UpdateModel() const
 {
 	Q_ASSERT(IsGuiCreated());
 
@@ -52,7 +52,7 @@ void CAffineTransformationParamsGui::UpdateModel() const
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CAffineTransformationParamsGui::OnGuiModelAttached()
+void CAffineTransformationParamsGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
@@ -61,7 +61,7 @@ void CAffineTransformationParamsGui::OnGuiModelAttached()
 }
 
 
-void CAffineTransformationParamsGui::OnGuiModelDetached()
+void CAffineTransformationParamsGuiComp::OnGuiModelDetached()
 {
 	disconnect(TranslationSpinX, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	disconnect(TranslationSpinY, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));	
@@ -70,7 +70,7 @@ void CAffineTransformationParamsGui::OnGuiModelDetached()
 }
 
 
-void CAffineTransformationParamsGui::UpdateGui(int /*updateFlags*/)
+void CAffineTransformationParamsGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	I_ASSERT(IsGuiCreated());
 
@@ -88,7 +88,7 @@ void CAffineTransformationParamsGui::UpdateGui(int /*updateFlags*/)
 
 // protected slots
 
-void CAffineTransformationParamsGui::OnParamsChanged(double /*value*/)
+void CAffineTransformationParamsGuiComp::OnParamsChanged(double /*value*/)
 {
 	DoUpdateModel();
 }
