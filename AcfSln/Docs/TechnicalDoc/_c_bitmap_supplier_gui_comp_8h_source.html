@@ -66,54 +66,56 @@
 <a name="l00040"></a>00040        I_BEGIN_COMPONENT(<a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html">CBitmapSupplierGuiComp</a>);
 <a name="l00041"></a>00041               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>);
 <a name="l00042"></a>00042               I_ASSIGN(m_bitmapLoaderCompPtr, <span class="stringliteral">&quot;BitmapLoader&quot;</span>, <span class="stringliteral">&quot;Saves bitmap to file&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;BitmapLoader&quot;</span>);
-<a name="l00043"></a>00043        I_END_COMPONENT;
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045        <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#af6c71083a8dc0e40c727fb6a86f203e2">CBitmapSupplierGuiComp</a>();
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047        <span class="comment">// reimplemented (iipr::IBitmapProvider)</span>
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a7e2ecdae93c513ac98a8230b1ff06025" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00051"></a>00051        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a9b82dcb61bb1e63a97c070ba2fb34866">on_SnapImageButton_clicked</a>();
-<a name="l00052"></a>00052        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a56566f25be437675769a456a4bccd1e7">on_LiveImageButton_toggled</a>(<span class="keywordtype">bool</span> checked);
-<a name="l00053"></a>00053        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a1d5000ee4e690bcf3ad3e6f9821fd589">on_SaveImageButton_clicked</a>();
-<a name="l00054"></a>00054        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a36fa4884cd4a524d961262a7d40b6321">on_LoadParamsButton_clicked</a>();
-<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a62609bf9f1b449ee327a9916d67159dd">on_SaveParamsButton_clicked</a>();
-<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#affc4ca7daa0ee5876766e393af981885">OnTimerReady</a>();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">protected</span>:
-<a name="l00059"></a>00059        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a63d8908addcc55bf4ce82b3c2effb1b0">OnGuiCreated</a>();
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a2150109a96286521900211014d02910f">OnGuiHidden</a>();
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#aefb298cf05d5ed0e8db01486f27249b7">GetParamsWidget</a>() <span class="keyword">const</span>;
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ac18cf1f6b895addf037fcc93daacc910">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, Shapes&amp; result);
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a7187188354d8bf4cfdd4dd0681b901c9">OnGuiModelAttached</a>();
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ace6a629516d2430b02e4ef4dad4268b3">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a09679cc02dbb54b0470d77ac459f0fae">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="keyword">private</span>:
-<a name="l00077"></a>00077        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_bitmapLoaderCompPtr);
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iimg::CBitmap&gt;</a> m_bitmap;
+<a name="l00043"></a>00043               I_ASSIGN(m_snapIntervalAttrPtr, <span class="stringliteral">&quot;SnapInterval&quot;</span>, <span class="stringliteral">&quot;Snap interval in ms&quot;</span>, <span class="keyword">true</span>, 40);
+<a name="l00044"></a>00044        I_END_COMPONENT;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046        <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#af6c71083a8dc0e40c727fb6a86f203e2">CBitmapSupplierGuiComp</a>();
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048        <span class="comment">// reimplemented (iipr::IBitmapProvider)</span>
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a7e2ecdae93c513ac98a8230b1ff06025" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00052"></a>00052        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a9b82dcb61bb1e63a97c070ba2fb34866">on_SnapImageButton_clicked</a>();
+<a name="l00053"></a>00053        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a56566f25be437675769a456a4bccd1e7">on_LiveImageButton_toggled</a>(<span class="keywordtype">bool</span> checked);
+<a name="l00054"></a>00054        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a1d5000ee4e690bcf3ad3e6f9821fd589">on_SaveImageButton_clicked</a>();
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a36fa4884cd4a524d961262a7d40b6321">on_LoadParamsButton_clicked</a>();
+<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a62609bf9f1b449ee327a9916d67159dd">on_SaveParamsButton_clicked</a>();
+<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#affc4ca7daa0ee5876766e393af981885">OnTimerReady</a>();
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">protected</span>:
+<a name="l00060"></a>00060        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a63d8908addcc55bf4ce82b3c2effb1b0">OnGuiCreated</a>();
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a2150109a96286521900211014d02910f">OnGuiHidden</a>();
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#aefb298cf05d5ed0e8db01486f27249b7">GetParamsWidget</a>() <span class="keyword">const</span>;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="comment">// reimplemented (iqt2d::TViewExtenderCompBase)</span>
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ac18cf1f6b895addf037fcc93daacc910">CreateShapes</a>(<span class="keywordtype">int</span> sceneId, Shapes&amp; result);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a7187188354d8bf4cfdd4dd0681b901c9">OnGuiModelAttached</a>();
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#ace6a629516d2430b02e4ef4dad4268b3">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_bitmap_supplier_gui_comp.html#a09679cc02dbb54b0470d77ac459f0fae">AfterUpdate</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 <span class="keyword">private</span>:
+<a name="l00078"></a>00078        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_bitmapLoaderCompPtr);
+<a name="l00079"></a>00079        I_ATTR(<span class="keywordtype">int</span>, m_snapIntervalAttrPtr);
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081        QTimer m_timer;
-<a name="l00082"></a>00082 };
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085 } <span class="comment">// namespace iqtcam</span>
+<a name="l00081"></a>00081        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iimg::CBitmap&gt;</a> m_bitmap;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083        QTimer m_timer;
+<a name="l00084"></a>00084 };
+<a name="l00085"></a>00085 
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="preprocessor">#endif // !iqtcam_CBitmapSupplierGuiComp_included</span>
-<a name="l00089"></a>00089 <span class="preprocessor"></span>
-<a name="l00090"></a>00090 
+<a name="l00087"></a>00087 } <span class="comment">// namespace iqtcam</span>
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="preprocessor">#endif // !iqtcam_CBitmapSupplierGuiComp_included</span>
+<a name="l00091"></a>00091 <span class="preprocessor"></span>
+<a name="l00092"></a>00092 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
