@@ -49,7 +49,7 @@ public:
 	const i2d::CAffine2d& GetTransformation() const;
 
 	/**
-		Set the tranformation object
+		Set the transformation object
 	*/
 	void SetTransformation(const i2d::CAffine2d& transformation);
 

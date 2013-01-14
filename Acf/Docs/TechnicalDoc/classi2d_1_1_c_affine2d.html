@@ -39,7 +39,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="i2d::CAffine2d" -->
-<p>This class defines an affinite 2D transformation.  
+<p>This class defines an affine 2D transformation.  
  <a href="classi2d_1_1_c_affine2d.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>&gt;</code></p>
@@ -64,7 +64,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#ab7e5007dd130d75d0d3dae9ac26cc9be">CAffine2d</a> (const <a class="el" href="classi2d_1_1_c_matrix2d.html">CMatrix2d</a> &amp;deform, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation=<a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>(0.0, 0.0))</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transform using specified deformation matrix and translation.  <a href="#ab7e5007dd130d75d0d3dae9ac26cc9be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#afc220d44ee3f8a113575de52f72e69bc">CAffine2d</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transform with translation.  <a href="#afc220d44ee3f8a113575de52f72e69bc"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transform with translation only.  <a href="#afc220d44ee3f8a113575de52f72e69bc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#aad957b68a8b811d96dd875fd4190fdfe">GetTranslation</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get translation part of this affine transformation.  <a href="#aad957b68a8b811d96dd875fd4190fdfe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#ae6329811da4965b464f5410625fef7bc">SetTranslation</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;translation)</td></tr>
@@ -125,7 +125,7 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine2d.html#aa6cb457c8dd2f9f3d91f70736683bd07">GetIdentity</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>This class defines an affinite 2D transformation. </p>
+<div class="textblock"><p>This class defines an affine 2D transformation. </p>
 
 <p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00017">17</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -216,7 +216,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Constructs a transform with translation. </p>
+<p>Constructs a transform with translation only. </p>
 
 </div>
 </div>
@@ -353,7 +353,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Get combined transformation. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">transform</td><td>local transformation used on right side of transformation multiplication. </td></tr>
+    <tr><td class="paramname">transform</td><td>local transformation used on the right side of transformation multiplication. </td></tr>
   </table>
   </dd>
 </dl>
@@ -389,7 +389,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Get combined transformation. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">transform</td><td>local transformation used on right side of transformation multiplication. </td></tr>
+    <tr><td class="paramname">transform</td><td>local transformation used on the right side of transformation multiplication. </td></tr>
   </table>
   </dd>
 </dl>
@@ -413,7 +413,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get difference vector after this transformation. </p>
-<p>Please note, that the translation will be not concidered for this transformation. </p>
+<p>Please note that the translation will be not considered for this transformation. </p>
 
 <p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00271">271</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 
@@ -447,7 +447,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get vector after this transformation. </p>
-<p>Please note, that the translation will be not concidered for this transformation. </p>
+<p>Please note that the translation will be not considered for this transformation. </p>
 
 <p>Definition at line <a class="el" href="_c_affine2d_8h_source.html#l00281">281</a> of file <a class="el" href="_c_affine2d_8h_source.html">CAffine2d.h</a>.</p>
 

@@ -47,8 +47,8 @@
 <a name="l00025"></a><a class="code" href="classi2d_1_1_c_parallelogram.html">00025</a> <span class="keyword">class </span><a class="code" href="classi2d_1_1_c_parallelogram.html" title="This class defines parallelogram.">CParallelogram</a>: <span class="keyword">public</span> <a class="code" href="classi2d_1_1_c_object2d_base.html" title="Base class for 2D-objects implementing interface i2d::IObject2d.">CObject2dBase</a>
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; <a class="code" href="classi2d_1_1_c_parallelogram.html#a5148f92edd0232d823aef4a4e56faa40">GetTransform</a>() <span class="keyword">const</span>;
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_parallelogram.html#a9e3f1096c89d8049c7b3ac314b1abf85">SetTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; transform);
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; <a class="code" href="classi2d_1_1_c_parallelogram.html#a5148f92edd0232d823aef4a4e56faa40">GetTransform</a>() <span class="keyword">const</span>;
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_parallelogram.html#a9e3f1096c89d8049c7b3ac314b1abf85">SetTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; transform);
 <a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">i2d::CMatrix2d</a>&amp; <a class="code" href="classi2d_1_1_c_parallelogram.html#a72e174c32d2f6afdee4e1bce7379ff9d">GetDeformMatrix</a>() <span class="keyword">const</span>;
 <a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_parallelogram.html#aa71979c553fc26b5e1d233f742032081">SetDeformMatrix</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_matrix2d.html" title="2D matrix.">i2d::CMatrix2d</a>&amp; deform);
 <a name="l00032"></a>00032 
@@ -84,19 +84,19 @@
 <a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_parallelogram.html#a6cffb8f3bd3d584cb868d6899c499a7f" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="keyword">private</span>:
-<a name="l00065"></a>00065        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a> m_transform;
+<a name="l00065"></a>00065        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> m_transform;
 <a name="l00066"></a>00066 };
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069 <span class="comment">// inline methods</span>
 <a name="l00070"></a>00070 
-<a name="l00071"></a><a class="code" href="classi2d_1_1_c_parallelogram.html#a5148f92edd0232d823aef4a4e56faa40">00071</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; <a class="code" href="classi2d_1_1_c_parallelogram.html#a5148f92edd0232d823aef4a4e56faa40">CParallelogram::GetTransform</a>()<span class="keyword"> const</span>
+<a name="l00071"></a><a class="code" href="classi2d_1_1_c_parallelogram.html#a5148f92edd0232d823aef4a4e56faa40">00071</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; <a class="code" href="classi2d_1_1_c_parallelogram.html#a5148f92edd0232d823aef4a4e56faa40">CParallelogram::GetTransform</a>()<span class="keyword"> const</span>
 <a name="l00072"></a>00072 <span class="keyword"></span>{
 <a name="l00073"></a>00073        <span class="keywordflow">return</span> m_transform;
 <a name="l00074"></a>00074 }
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 
-<a name="l00077"></a><a class="code" href="classi2d_1_1_c_parallelogram.html#a9e3f1096c89d8049c7b3ac314b1abf85">00077</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_parallelogram.html#a9e3f1096c89d8049c7b3ac314b1abf85">CParallelogram::SetTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; transform)
+<a name="l00077"></a><a class="code" href="classi2d_1_1_c_parallelogram.html#a9e3f1096c89d8049c7b3ac314b1abf85">00077</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_parallelogram.html#a9e3f1096c89d8049c7b3ac314b1abf85">CParallelogram::SetTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; transform)
 <a name="l00078"></a>00078 {
 <a name="l00079"></a>00079        m_transform = transform;
 <a name="l00080"></a>00080 }

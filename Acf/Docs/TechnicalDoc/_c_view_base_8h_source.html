@@ -102,8 +102,8 @@
 <a name="l00116"></a>00116        <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">IInteractiveShape</a>* <a class="code" href="classiview_1_1_c_view_base.html#ad0bb83b68ad5bb3e82dda53963f97078" title="Get shape under mouse pointer.">GetMouseShapePtr</a>() <span class="keyword">const</span>;
 <a name="l00117"></a>00117 
 <a name="l00118"></a>00118        <span class="comment">// reimplemented (iview::ILogicalView)</span>
-<a name="l00119"></a>00119        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#add3d82d8cf7c1853f4e7652241edc035" title="Get logical units to view transformation.">GetLogToViewTransform</a>() <span class="keyword">const</span>;
-<a name="l00120"></a>00120        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a54de9e64c9f1f2b595abdd3e90f90b47" title="Set logical to view units transformation.">SetLogToViewTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; transform);
+<a name="l00119"></a>00119        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#add3d82d8cf7c1853f4e7652241edc035" title="Get logical units to view transformation.">GetLogToViewTransform</a>() <span class="keyword">const</span>;
+<a name="l00120"></a>00120        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a54de9e64c9f1f2b595abdd3e90f90b47" title="Set logical to view units transformation.">SetLogToViewTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; transform);
 <a name="l00121"></a>00121        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#adb1ada58be8cbbafae243e3bfd168bdc" title="Get a direct transformation from logical units to screen pixels.">GetLogToScreenTransform</a>() <span class="keyword">const</span>;
 <a name="l00122"></a>00122 
 <a name="l00123"></a>00123        <span class="comment">// reimplemented (iview::IShapeView)</span>
@@ -135,7 +135,7 @@
 <a name="l00149"></a>00149        <span class="keyword">virtual</span> QString <a class="code" href="classiview_1_1_c_view_base.html#a1c723fcc483c5eafe63d5c4eabb6b533" title="Get description to shape at specified position.">GetShapeDescriptionAt</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
 <a name="l00150"></a>00150 
 <a name="l00151"></a>00151        <span class="comment">// reimplemented (iview::IShapeView)</span>
-<a name="l00152"></a>00152        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a84a9c676cfa7cc63f3116beb14cf7613" title="Set a screen transformation.">SetTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; transform);
+<a name="l00152"></a>00152        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a84a9c676cfa7cc63f3116beb14cf7613" title="Set a screen transformation.">SetTransform</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; transform);
 <a name="l00153"></a>00153        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_view_base.html#a6697f00906ac60d30e88f29a8587932f" title="Update mouse pointer.">UpdateMousePointer</a>();
 <a name="l00154"></a>00154 
 <a name="l00155"></a>00155        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
@@ -226,7 +226,7 @@
 <a name="l00310"></a>00310        <span class="keywordtype">bool</span> m_isBackgroundBufferValid;
 <a name="l00311"></a>00311 
 <a name="l00312"></a>00312        <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a> m_transform;
-<a name="l00313"></a>00313        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a> m_logToViewTransform;
+<a name="l00313"></a>00313        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> m_logToViewTransform;
 <a name="l00314"></a>00314        <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a> m_logToScreenTransform;
 <a name="l00315"></a>00315 
 <a name="l00316"></a>00316        ViewMode m_viewMode;
@@ -314,7 +314,7 @@
 <a name="l00398"></a>00398 
 <a name="l00399"></a>00399 <span class="comment">// reimplemented (iview::ILogicalView)</span>
 <a name="l00400"></a>00400 
-<a name="l00401"></a><a class="code" href="classiview_1_1_c_view_base.html#add3d82d8cf7c1853f4e7652241edc035">00401</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affinite 2D transformation.">i2d::CAffine2d</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#add3d82d8cf7c1853f4e7652241edc035" title="Get logical units to view transformation.">CViewBase::GetLogToViewTransform</a>()<span class="keyword"> const</span>
+<a name="l00401"></a><a class="code" href="classiview_1_1_c_view_base.html#add3d82d8cf7c1853f4e7652241edc035">00401</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; <a class="code" href="classiview_1_1_c_view_base.html#add3d82d8cf7c1853f4e7652241edc035" title="Get logical units to view transformation.">CViewBase::GetLogToViewTransform</a>()<span class="keyword"> const</span>
 <a name="l00402"></a>00402 <span class="keyword"></span>{
 <a name="l00403"></a>00403        <span class="keywordflow">return</span> m_logToViewTransform;
 <a name="l00404"></a>00404 }
