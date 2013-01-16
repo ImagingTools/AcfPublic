@@ -39,7 +39,7 @@
 <div class="title">iview::CAffineTransformation2dShape Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::CAffineTransformation2dShape" --><!-- doxytag: inherits="iview::CInteractivePinShape" -->
+<!-- doxytag: class="iview::CAffineTransformation2dShape" --><!-- doxytag: inherits="iview::CInteractiveShapeBase" -->
 <p>Interactive shape to visualize <a class="el" href="classi2d_1_1_c_affine_transformation2d.html" title="Affine transformation for 2D spaces.">i2d::CAffineTransformation2d</a>.  
  <a href="classiview_1_1_c_affine_transformation2d_shape.html#details">More...</a></p>
 
@@ -50,7 +50,6 @@ Inheritance diagram for iview::CAffineTransformation2dShape:</div>
  <div class="center">
   <img src="classiview_1_1_c_affine_transformation2d_shape.png" usemap="#iview::CAffineTransformation2dShape_map" alt=""/>
   <map id="iview::CAffineTransformation2dShape_map" name="iview::CAffineTransformation2dShape_map">
-<area href="classiview_1_1_c_interactive_pin_shape.html" alt="iview::CInteractivePinShape" shape="rect" coords="1170,336,1394,360"/>
 <area href="classiview_1_1_c_interactive_shape_base.html" alt="iview::CInteractiveShapeBase" shape="rect" coords="1170,280,1394,304"/>
 <area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="234,224,458,248"/>
 <area href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user." alt="iview::IInteractiveShape" shape="rect" coords="1170,224,1394,248"/>
@@ -107,6 +106,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#adc01a95fabfa1b7edb32b982a13b3ca3">CalcBoundingBox</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#adc01a95fabfa1b7edb32b982a13b3ca3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#a3999fad8ccd57045a3ab4662be184769">BeginLogDrag</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;reference)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#a39790cf2daf93248488492a27e15d1b0">SetLogDragPosition</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interactive shape to visualize <a class="el" href="classi2d_1_1_c_affine_transformation2d.html" title="Affine transformation for 2D spaces.">i2d::CAffineTransformation2d</a>. </p>
@@ -164,6 +165,25 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a3999fad8ccd57045a3ab4662be184769"></a><!-- doxytag: member="iview::CAffineTransformation2dShape::BeginLogDrag" ref="a3999fad8ccd57045a3ab4662be184769" args="(const i2d::CVector2d &amp;reference)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iview::CAffineTransformation2dShape::BeginLogDrag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>reference</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a2fe6873ccd865367059e41372bbc2401">iview::CInteractiveShapeBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adc01a95fabfa1b7edb32b982a13b3ca3"></a><!-- doxytag: member="iview::CAffineTransformation2dShape::CalcBoundingBox" ref="adc01a95fabfa1b7edb32b982a13b3ca3" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +201,7 @@ Protected Member Functions</h2></td></tr>
 <p>Calculate bounding box. </p>
 <p>You have to implement this method in your shapes implementations. </p>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#acb7a581c90145a682e380eda5ea112a0">iview::CInteractivePinShape</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_shape_base.html#a778070a9321ab3a7525189254e1b611c">iview::CShapeBase</a>.</p>
 
 </div>
 </div>
@@ -202,7 +222,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Draw this shape using draw context. </p>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#af7c42ec6f2efce28f3a3e3b26fd8e6f6">iview::CInteractivePinShape</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_i_visualizable.html#a06eba0a783012c44824a2fa581d74c89">iview::IVisualizable</a>.</p>
 
 </div>
 </div>
@@ -225,7 +245,7 @@ Protected Member Functions</h2></td></tr>
 <p>When shape is touched, it return also pointer to this shape. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>touch state for the shape, or <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2ad3c721810a0dd0c07bc84248c5f1060b" title="Nothing is touched.">iview::IInteractiveShape::TS_NONE</a>, when nothing found. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#a1595249de651a09800d1dc458c6adb40">iview::CInteractivePinShape</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_shape_base.html#a0cb061fbcd24384c662466fa343f835f">iview::CShapeBase</a>.</p>
 
 </div>
 </div>
@@ -247,7 +267,7 @@ Protected Member Functions</h2></td></tr>
 <p>This call back function will be called, if an observable object is about to be attached. </p>
 <p>This function returns a <code>true</code>, if observable object is accepted by the implementation logic of the observer, otherwise the function returns a <code>false</code>. </p>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#ad947c98048ebfc64c62d2376e3361372">iview::CInteractivePinShape</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a0be9c087343bf120e46962a09e59a763">iview::CInteractiveShapeBase</a>.</p>
 
 </div>
 </div>
@@ -292,7 +312,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if this shape should get focus to catch all mouse movements. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#a940ef2156dc7f1bd966a2c19bdc15297">iview::CInteractivePinShape</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_shape_base.html#ab02414f2a5b43a44a3108ee35440b98a">iview::CInteractiveShapeBase</a>.</p>
 
 </div>
 </div>
@@ -321,7 +341,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if this shape should hold focus to catch longer all mouse movements. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#adf512240b29027ea8a6c0dd81fe78304">iview::CInteractivePinShape</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a4728bfaf72451ad1cc578e497e6e2c86">iview::CInteractiveShapeBase</a>.</p>
 
 </div>
 </div>
@@ -341,6 +361,25 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set control points that can be moved by the user (OR'ed ControlPoints) </p>
+
+</div>
+</div>
+<a class="anchor" id="a39790cf2daf93248488492a27e15d1b0"></a><!-- doxytag: member="iview::CAffineTransformation2dShape::SetLogDragPosition" ref="a39790cf2daf93248488492a27e15d1b0" args="(const i2d::CVector2d &amp;position)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iview::CAffineTransformation2dShape::SetLogDragPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a4c864f4da3d6217646889d0f2ea5786a">iview::CInteractiveShapeBase</a>.</p>
 
 </div>
 </div>

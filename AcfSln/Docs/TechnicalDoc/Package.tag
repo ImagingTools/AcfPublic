@@ -16245,6 +16245,13 @@
       <anchor>aa6aa2ce7527648fed4dae11c5428ce5b</anchor>
       <arglist>(const iimg::IBitmap *bitmapPtr)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetBackgroundColor</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a538999778a7a942416aeee5a13a7b885</anchor>
+      <arglist>(const QColor &amp;color)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Init</name>

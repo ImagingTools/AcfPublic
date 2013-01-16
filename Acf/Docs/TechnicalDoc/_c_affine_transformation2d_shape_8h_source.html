@@ -26,14 +26,14 @@
 <div class="title">Include/iview/CAffineTransformation2dShape.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_affine_transformation2d_shape_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="_c_interactive_pin_shape_8h.html">CInteractivePinShape.h</a>&quot;</span>
+<a href="_c_affine_transformation2d_shape_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="_c_interactive_shape_base_8h.html">CInteractiveShapeBase.h</a>&quot;</span>
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 <span class="keyword">namespace </span>iview
 <a name="l00005"></a>00005 {
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 
-<a name="l00011"></a><a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html">00011</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html" title="Interactive shape to visualize i2d::CAffineTransformation2d.">CAffineTransformation2dShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_pin_shape.html">CInteractivePinShape</a>
+<a name="l00011"></a><a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html">00011</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html" title="Interactive shape to visualize i2d::CAffineTransformation2d.">CAffineTransformation2dShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a>
 <a name="l00012"></a>00012 {
 <a name="l00013"></a>00013 <span class="keyword">public</span>:
 <a name="l00014"></a>00014        <a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html#a717fcfbfbc1d5fd06db2e01fadae3349">CAffineTransformation2dShape</a>();
@@ -63,13 +63,19 @@
 <a name="l00041"></a>00041 <span class="keyword">protected</span>:
 <a name="l00042"></a>00042        <span class="comment">// reimplemented (iview::CShapeBase)</span>
 <a name="l00043"></a>00043        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html#adc01a95fabfa1b7edb32b982a13b3ca3" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
-<a name="l00044"></a>00044 <span class="keyword">private</span>:
-<a name="l00045"></a>00045        <span class="keywordtype">int</span> m_activeControlPoints;
-<a name="l00046"></a>00046        <a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html#a59d49fea53b8631bcb60298afe19c0a1">ControlPoint</a> m_currentPoint; 
-<a name="l00047"></a>00047 };
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html#a3999fad8ccd57045a3ab4662be184769">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html#a39790cf2daf93248488492a27e15d1b0">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 }
-<a name="l00050"></a>00050 
+<a name="l00049"></a>00049 <span class="keyword">private</span>:
+<a name="l00050"></a>00050        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_referencePosition;
+<a name="l00051"></a>00051        <span class="keywordtype">int</span> m_activeControlPoints;
+<a name="l00052"></a>00052        <a class="code" href="classiview_1_1_c_affine_transformation2d_shape.html#a59d49fea53b8631bcb60298afe19c0a1">ControlPoint</a> m_currentPoint; 
+<a name="l00053"></a>00053 };
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 }
+<a name="l00056"></a>00056 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -89,9 +89,11 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_affine_transformation_params_gui_comp.html#aa38ddf4390168e9a988686a404dfdf33">UpdateModel</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates model from editor.  <a href="#aa38ddf4390168e9a988686a404dfdf33"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_affine_transformation_params_gui_comp.html#acc100b81499bb74c18962b0007c9c357">CreateShapes</a> (int sceneId, <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">Shapes</a> &amp;result)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_affine_transformation_params_gui_comp.html#a4164e2d671b0d3dcee11201e4fdea0b7">OnParamsChanged</a> (double value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_affine_transformation_params_gui_comp.html#ac68968e82b711cfec94e116dfe5d66ed">on_ResetButton_clicked</a> (bool=false)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_affine_transformation_params_gui_comp.html#ad88238f0ee084b9f0be4df3fb90b79dd">OnGuiModelAttached</a> ()</td></tr>
@@ -104,7 +106,7 @@ Protected Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Gui Editor for shape affine transformation parameters. </p>
 
-<p>Definition at line <a class="el" href="_c_affine_transformation_params_gui_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_affine_transformation_params_gui_comp_8h_source.html">CAffineTransformationParamsGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine_transformation_params_gui_comp_8h_source.html#l00018">18</a> of file <a class="el" href="_c_affine_transformation_params_gui_comp_8h_source.html">CAffineTransformationParamsGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a49f6d3368d6af493e08a3a343b74d902"></a><!-- doxytag: member="iqt2d::CAffineTransformationParamsGuiComp::BaseClass" ref="a49f6d3368d6af493e08a3a343b74d902" args="" -->
 <div class="memitem">
@@ -119,11 +121,57 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a152f7ad72e4d09bb6773146311b2f634">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAffineTransformationParamsGui, iview::CAffineTransformation2dShape, i2d::CAffineTransformation2d &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_affine_transformation_params_gui_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_affine_transformation_params_gui_comp_8h_source.html">CAffineTransformationParamsGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine_transformation_params_gui_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_affine_transformation_params_gui_comp_8h_source.html">CAffineTransformationParamsGuiComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="acc100b81499bb74c18962b0007c9c357"></a><!-- doxytag: member="iqt2d::CAffineTransformationParamsGuiComp::CreateShapes" ref="acc100b81499bb74c18962b0007c9c357" args="(int sceneId, Shapes &amp;result)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CAffineTransformationParamsGuiComp::CreateShapes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sceneId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a5db7151254ce104ef7708b2d555f0e6c">Shapes</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a983c22bfc8806ba26585fbcbe97bf392">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CAffineTransformationParamsGui, iview::CAffineTransformation2dShape, i2d::CAffineTransformation2d &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac68968e82b711cfec94e116dfe5d66ed"></a><!-- doxytag: member="iqt2d::CAffineTransformationParamsGuiComp::on_ResetButton_clicked" ref="ac68968e82b711cfec94e116dfe5d66ed" args="(bool=false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqt2d::CAffineTransformationParamsGuiComp::on_ResetButton_clicked </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"> = <code>false</code></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad88238f0ee084b9f0be4df3fb90b79dd"></a><!-- doxytag: member="iqt2d::CAffineTransformationParamsGuiComp::OnGuiModelAttached" ref="ad88238f0ee084b9f0be4df3fb90b79dd" args="()" -->
 <div class="memitem">
 <div class="memproto">

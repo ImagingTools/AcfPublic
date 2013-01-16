@@ -4788,6 +4788,15 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiParamsManagerGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_multi_params_manager_gui_comp_8h</filename>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
+    <includes id="_c_params_manager_gui_comp_base_8h" name="CParamsManagerGuiCompBase.h" local="yes" imported="no">iqtprm/CParamsManagerGuiCompBase.h</includes>
+    <class kind="class">iqtprm::CMultiParamsManagerGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CNameParamGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_name_param_gui_comp_8h</filename>
@@ -4813,10 +4822,17 @@
     <name>CParamsManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_params_manager_gui_comp_8h</filename>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_c_params_manager_gui_comp_base_8h" name="CParamsManagerGuiCompBase.h" local="yes" imported="no">iqtprm/CParamsManagerGuiCompBase.h</includes>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CParamsManagerGuiCompBase.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_params_manager_gui_comp_base_8h</filename>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtprm::CParamsManagerGuiCompBase</class>
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
@@ -5712,7 +5728,7 @@
     <name>CAffineTransformation2dShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_affine_transformation2d_shape_8h</filename>
-    <includes id="_c_interactive_pin_shape_8h" name="CInteractivePinShape.h" local="yes" imported="no">CInteractivePinShape.h</includes>
+    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">CInteractiveShapeBase.h</includes>
     <class kind="class">iview::CAffineTransformation2dShape</class>
     <namespace>iview</namespace>
   </compound>
@@ -35564,12 +35580,26 @@
       <anchor>aa38ddf4390168e9a988686a404dfdf33</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateShapes</name>
+      <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui_comp.html</anchorfile>
+      <anchor>acc100b81499bb74c18962b0007c9c357</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnParamsChanged</name>
       <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui_comp.html</anchorfile>
       <anchor>a4164e2d671b0d3dcee11201e4fdea0b7</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ResetButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_affine_transformation_params_gui_comp.html</anchorfile>
+      <anchor>ac68968e82b711cfec94e116dfe5d66ed</anchor>
+      <arglist>(bool=false)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -41022,9 +41052,11 @@
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CEnableableParamGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
+    <class kind="class">iqtprm::CMultiParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CNameParamGuiComp</class>
     <class kind="class">iqtprm::COptionsManagerGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
+    <class kind="class">iqtprm::CParamsManagerGuiCompBase</class>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
     <class kind="class">iqtprm::CSelectableParamsSetGuiComp</class>
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
@@ -41425,6 +41457,96 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtprm::CMultiParamsManagerGuiComp</name>
+    <filename>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</filename>
+    <base>iqtprm::CParamsManagerGuiCompBase</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
+    <member kind="typedef">
+      <type>CParamsManagerGuiCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a2f091d9204e46a154b67b2a869eb70b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a2732a325838684d3aba822cbc6afe71b</anchor>
+      <arglist>(m_paramsObserverCompPtr, m_paramsGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a8f4ad4fcc9d665313dc6fd3fafc8b180</anchor>
+      <arglist>(m_viewExtendersCompPtr, m_paramsGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a8c19dad0b321fca17cb5be5843872fc2</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>ab1aa0abda1937cd34d592af960edd70b</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual imod::IObserver *</type>
+      <name>GetObserverPtr</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a84f09c2ee09ea3c312edbaee34f34acf</anchor>
+      <arglist>(const iprm::IParamsSet *paramsSetPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iqtgui::IGuiObject *</type>
+      <name>GetEditorGuiPtr</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a5a2cbf2f7f55f5b2459a9573b231e935</anchor>
+      <arglist>(const iprm::IParamsSet *paramsSetPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateParamsView</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a9d1256397e53a5df05b55cfbbf92422c</anchor>
+      <arglist>(int selectedIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>aa6e24ceff53070b82a7c81b0b46be97c</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a678a55095f16486f5556cd6772ed4bb5</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a58192505c8fbafcf748e477b9230f9a1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>aec383c549596204952c3d24760f62ddb</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtprm::CNameParamGuiComp</name>
     <filename>classiqtprm_1_1_c_name_param_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CNameParamGuiComp, iprm::INameParam &gt;</base>
@@ -41607,125 +41729,27 @@
   <compound kind="class">
     <name>iqtprm::CParamsManagerGuiComp</name>
     <filename>classiqtprm_1_1_c_params_manager_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CParamsManagerGuiComp, iprm::IParamsManager &gt;</base>
+    <base>iqtprm::CParamsManagerGuiCompBase</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CParamsManagerGuiComp, iprm::IParamsManager &gt;</type>
+      <type>CParamsManagerGuiCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a1123b59387c401e129a22b538c44af71</anchor>
+      <anchor>a3d0e63ad26bc9843ff936a50fb2701c9</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CParamsManagerGuiComp</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual imod::IObserver *</type>
+      <name>GetObserverPtr</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a7326f307c91669a3248659ccfc536405</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AddButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>aa8355ba6c47a0a57305f3e5d81070413</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_RemoveButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a6158f9a035da14233ed20cc989ac1639</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_UpButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>ad3052fdfe77122a127d40cb013231026</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_DownButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a5c5e6622aa64892927e56ebffaef9087</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_ParamsTree_itemSelectionChanged</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a98d1077c1ca995a5b18e5b079d04687e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_ParamsTree_itemChanged</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>ac3beed82af5260391f35e33f56e9a19f</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAddMenuOptionClicked</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a9fe7b6c98305850e66dca518f428fc8b</anchor>
-      <arglist>(QAction *action)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateActions</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a4c23ef2bc086ab461f42f04e01a10bce</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateTree</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a5679be41827a445ec45e3ef09e82a00b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateParamsView</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a1238494b5a02af287ba2320fac1a2897</anchor>
-      <arglist>(int selectedIndex)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetSelectedIndex</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>aafe35f1cbc949ce62d190b32244fcf00</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsureParamsGuiDetached</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>aca88b4d6247e116eb64ebd98dd58ffc6</anchor>
-      <arglist>()</arglist>
+      <anchor>a30ba6e7055674fb36b56b72b430e7f24</anchor>
+      <arglist>(const iprm::IParamsSet *paramsSetPtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <type>virtual iqtgui::IGuiObject *</type>
+      <name>GetEditorGuiPtr</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a67cfc442740916d9066aebb76fed635e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>ab60f4eec6585d422f4d6a834de53e63b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
-      <anchor>a84a30d8ba21ccad5d68149892424dd95</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a50c4947d9942467f0c2a85df2fbc151e</anchor>
+      <arglist>(const iprm::IParamsSet *paramsSetPtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -41739,6 +41763,158 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp.html</anchorfile>
       <anchor>a169c3d22ab4fd905eaba95b02b04e6f8</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::CParamsManagerGuiCompBase</name>
+    <filename>classiqtprm_1_1_c_params_manager_gui_comp_base.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CParamsManagerGuiCompBase, iprm::IParamsManager &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CParamsManagerGuiCompBase, iprm::IParamsManager &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>acd265036ca5efac1498c2abe28d89e70</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CParamsManagerGuiCompBase</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ac6c19b8ea97872a572d9eceeaae52c0b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AddButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a2613b211be411ec714f296a225490b7d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>adbedcd3309e8c3a709b7c28c31614966</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_UpButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>aada0a511ed7615c108c3b81ec1f6e15e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_DownButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>aa1c78af4b78a23b042f8b4fa2adb173c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ParamsTree_itemSelectionChanged</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a7f42017773612794f69cf0dcc4c3a46b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ParamsTree_itemChanged</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a030a2fc1e392f663f22fffb50a691c28</anchor>
+      <arglist>(QTreeWidgetItem *item, int column)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAddMenuOptionClicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ae1bc21ccfeba6de184132795f986f3f5</anchor>
+      <arglist>(QAction *action)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual imod::IObserver *</type>
+      <name>GetObserverPtr</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ae3dacff6c0979e5af928e4d2d1cfbd63</anchor>
+      <arglist>(const iprm::IParamsSet *paramsSetPtr) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual iqtgui::IGuiObject *</type>
+      <name>GetEditorGuiPtr</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a48aea3c15835d174124d504885706140</anchor>
+      <arglist>(const iprm::IParamsSet *paramsSetPtr) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateActions</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a3a0990a3ff333c4de26ea2e9239fe842</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateTree</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a3e04182b67f3a39818475fd4ea97595a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateParamsView</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a890dc41a06105ba5a099683b58e8089d</anchor>
+      <arglist>(int selectedIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>GetSelectedIndex</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ae85566257846e366301d4bcb668ab8a1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureParamsGuiDetached</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a60385adb8ab76cedbecc04941e69b3f3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QByteArray</type>
+      <name>GetSelectedParamsSetTypeId</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ae48ad48124b09aba18aa49ae8a3284de</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>acfe252b4a1c19e94de6128919322f890</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a1eda5cda31d4f098ef91ca2e21ff8140</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a227424963db6b5b3de1fc85126d4ca79</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a6488e3212baef31550423fb2e6fedea4</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -49376,7 +49552,7 @@
   <compound kind="class">
     <name>iview::CAffineTransformation2dShape</name>
     <filename>classiview_1_1_c_affine_transformation2d_shape.html</filename>
-    <base>iview::CInteractivePinShape</base>
+    <base>iview::CInteractiveShapeBase</base>
     <member kind="enumeration">
       <name>ControlPoint</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
@@ -49480,6 +49656,20 @@
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
       <anchor>adc01a95fabfa1b7edb32b982a13b3ca3</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeginLogDrag</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a3999fad8ccd57045a3ab4662be184769</anchor>
+      <arglist>(const i2d::CVector2d &amp;reference)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLogDragPosition</name>
+      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
+      <anchor>a39790cf2daf93248488492a27e15d1b0</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
     </member>
   </compound>
   <compound kind="class">

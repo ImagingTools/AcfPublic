@@ -78,81 +78,85 @@
 <a name="l00052"></a>00052               I_ASSIGN_MULTI_0(m_viewExtendersCompPtr, <span class="stringliteral">&quot;ViewExtenders&quot;</span>, <span class="stringliteral">&quot;View extenders&quot;</span>, <span class="keyword">false</span>);
 <a name="l00053"></a>00053               I_ASSIGN_MULTI_0(m_viewLabelPrefixesAttrPtr, <span class="stringliteral">&quot;ViewLabelPrefixes&quot;</span>, <span class="stringliteral">&quot;Prefixes used to title the single bitmap view. If none present, information from InformationProviders will be used.&quot;</span>, <span class="keyword">false</span>);
 <a name="l00054"></a>00054               I_ASSIGN(m_showStatusLabelAttrPtr, <span class="stringliteral">&quot;ShowStatusLabel&quot;</span>, <span class="stringliteral">&quot;Makes status label visible or not&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00055"></a>00055        I_END_COMPONENT;
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="keyword">protected</span>:
-<a name="l00058"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a441339e1cc8e2dcc5646f96fbb498eb4">00058</a>        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a441339e1cc8e2dcc5646f96fbb498eb4">GeneralStatusModelId</a> = -1;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060        <span class="keyword">static</span> QIcon <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a311669bf62496f1500beb3b19cd317fe">GetCategoryIcon</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category);
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a431f628e50845b242958a5f58479ff00">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a3c7b1f8e4089b3fd891b6dae17879542">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags);
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#aef6d3e304d39d3c349d2c148eac89e15">OnGuiCreated</a>();
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#ae4020c58764bb40b076f3cc26887ce4c">OnComponentCreated</a>();
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a047e4437a9a8076032b95b34f2348ef7">OnComponentDestroyed</a>();
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 <span class="keyword">protected</span>:
-<a name="l00076"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">00076</a>        <span class="keyword">class </span><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>: <span class="keyword">public</span> QGroupBox, <span class="keyword">public</span> iqt2d::IViewProvider
-<a name="l00077"></a>00077        {
-<a name="l00078"></a>00078        <span class="keyword">public</span>:
-<a name="l00079"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae0c26957e8b402c87fe45f2d5feb4d8a">00079</a>               <span class="keyword">typedef</span> QGroupBox <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae0c26957e8b402c87fe45f2d5feb4d8a">BaseClass</a>;
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081               <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#af69523765eda8fb69ef76c09d140d7f2">CSingleView</a>(QWidget* parentPtr, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1, <span class="keyword">const</span> QString&amp; title = <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083               <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#aa6aa2ce7527648fed4dae11c5428ce5b">UpdateImage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* bitmapPtr);
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085               <span class="comment">// called once at initialization stage, at this moment the model should be connected already.</span>
-<a name="l00086"></a>00086               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a40dd81dd3ba8da577477f878558e4f1b">Init</a>(<span class="keywordtype">bool</span> hasStatusInfo);
-<a name="l00087"></a>00087               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a8d5bb4eb773cc5dd816dc38fa2f05ecd">SetInspectionResult</a>(<span class="keywordtype">int</span> result);
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089               <span class="comment">// reimplemented (iqt2d::IViewProvider)</span>
-<a name="l00090"></a>00090               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a2cef1a91cf1979caac91e6280b75066a">GetViewId</a>() <span class="keyword">const</span>;
-<a name="l00091"></a>00091               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_view.html">iview::IShapeView</a>* <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ab851849b056c6070e32edd42f703f7fb">GetView</a>() <span class="keyword">const</span>;
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093        <span class="keyword">protected</span>:
-<a name="l00094"></a>00094               <span class="comment">// called from Init() to add status labels etc. to the main widget layout (layoutPtr).</span>
-<a name="l00095"></a>00095               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7eef1348d57f3298841a6c55ee75bb5d">AddStatusItems</a>(QBoxLayout* layoutPtr);
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097        <span class="keyword">protected</span>:
-<a name="l00098"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae220075cf42c34402e5aa0aa4a62d202">00098</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_image_shape.html">iview::CImageShape</a> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae220075cf42c34402e5aa0aa4a62d202">m_backgroundShape</a>;
-<a name="l00099"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7a94fd23ad59ab1b869fe6013554f0fc">00099</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iimg::CBitmap&gt;</a> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7a94fd23ad59ab1b869fe6013554f0fc">m_backgroundModel</a>;
-<a name="l00100"></a>00100 
-<a name="l00101"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a3f6b272b07d69aef0dc5139cd3c98c18">00101</a>               <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_console_gui.html">iview::CConsoleGui</a> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a3f6b272b07d69aef0dc5139cd3c98c18">m_console</a>;
-<a name="l00102"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a2d190cee3256ca32888b1ddc295fb451">00102</a>               QLabel* <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a2d190cee3256ca32888b1ddc295fb451">m_statusLabel</a>;
-<a name="l00103"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a1730dff2f3690ff472b349476a984125">00103</a>               <span class="keywordtype">int</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a1730dff2f3690ff472b349476a984125">m_id</a>;
-<a name="l00104"></a>00104        };
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106        <span class="keyword">virtual</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>* <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#aa1aa2dda0d13beb838b97a722a2d8b2e">CreateView</a>(QWidget* parentPtr, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1, <span class="keyword">const</span> QString&amp; title = <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="keyword">private</span>:
-<a name="l00109"></a>00109        I_ATTR(<span class="keywordtype">int</span>, m_horizontalViewsAttrPtr);
-<a name="l00110"></a>00110        I_ATTR(<span class="keywordtype">int</span>, m_verticalViewsAttrPtr);
-<a name="l00111"></a>00111        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_generalInformationProviderCompPtr);
-<a name="l00112"></a>00112        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_generalInformationModelCompPtr);
-<a name="l00113"></a>00113        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_informationProvidersCompPtr);
-<a name="l00114"></a>00114        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_informationModelsCompPtr);
-<a name="l00115"></a>00115        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html">iqt2d::IViewExtender</a>, m_viewExtendersCompPtr);
-<a name="l00116"></a>00116        I_MULTIATTR(QString, m_viewLabelPrefixesAttrPtr);
-<a name="l00117"></a>00117        I_ATTR(<span class="keywordtype">bool</span>, m_showStatusLabelAttrPtr);
-<a name="l00118"></a>00118        
-<a name="l00119"></a>00119        <span class="keywordtype">int</span> m_rowCount;
-<a name="l00120"></a>00120        <span class="keywordtype">int</span> m_columnCount;
-<a name="l00121"></a>00121        <span class="keywordtype">int</span> m_viewCount;
-<a name="l00122"></a>00122        QList&lt;CSingleView*&gt; m_views;
-<a name="l00123"></a>00123 };
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 } <span class="comment">// namespace iqtcam</span>
-<a name="l00127"></a>00127 
+<a name="l00055"></a>00055               I_ASSIGN(m_viewBackgroundColorAttrPtr, <span class="stringliteral">&quot;BackgroundColor&quot;</span>, <span class="stringliteral">&quot;Background color of the console&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;black&quot;</span>);
+<a name="l00056"></a>00056        I_END_COMPONENT;
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 <span class="keyword">protected</span>:
+<a name="l00059"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a441339e1cc8e2dcc5646f96fbb498eb4">00059</a>        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a441339e1cc8e2dcc5646f96fbb498eb4">GeneralStatusModelId</a> = -1;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <span class="keyword">static</span> QIcon <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a311669bf62496f1500beb3b19cd317fe">GetCategoryIcon</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category);
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a431f628e50845b242958a5f58479ff00">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a3c7b1f8e4089b3fd891b6dae17879542">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags);
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#aef6d3e304d39d3c349d2c148eac89e15">OnGuiCreated</a>();
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#ae4020c58764bb40b076f3cc26887ce4c">OnComponentCreated</a>();
+<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#a047e4437a9a8076032b95b34f2348ef7">OnComponentDestroyed</a>();
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 <span class="keyword">protected</span>:
+<a name="l00077"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">00077</a>        <span class="keyword">class </span><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>: <span class="keyword">public</span> QGroupBox, <span class="keyword">public</span> iqt2d::IViewProvider
+<a name="l00078"></a>00078        {
+<a name="l00079"></a>00079        <span class="keyword">public</span>:
+<a name="l00080"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae0c26957e8b402c87fe45f2d5feb4d8a">00080</a>               <span class="keyword">typedef</span> QGroupBox <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae0c26957e8b402c87fe45f2d5feb4d8a">BaseClass</a>;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082               <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#af69523765eda8fb69ef76c09d140d7f2">CSingleView</a>(QWidget* parentPtr, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1, <span class="keyword">const</span> QString&amp; title = <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084               <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#aa6aa2ce7527648fed4dae11c5428ce5b">UpdateImage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* bitmapPtr);
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086               <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a538999778a7a942416aeee5a13a7b885">SetBackgroundColor</a>(<span class="keyword">const</span> QColor&amp; color);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088               <span class="comment">// called once at initialization stage, at this moment the model should be connected already.</span>
+<a name="l00089"></a>00089               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a40dd81dd3ba8da577477f878558e4f1b">Init</a>(<span class="keywordtype">bool</span> hasStatusInfo);
+<a name="l00090"></a>00090               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a8d5bb4eb773cc5dd816dc38fa2f05ecd">SetInspectionResult</a>(<span class="keywordtype">int</span> result);
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092               <span class="comment">// reimplemented (iqt2d::IViewProvider)</span>
+<a name="l00093"></a>00093               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a2cef1a91cf1979caac91e6280b75066a">GetViewId</a>() <span class="keyword">const</span>;
+<a name="l00094"></a>00094               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_view.html">iview::IShapeView</a>* <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ab851849b056c6070e32edd42f703f7fb">GetView</a>() <span class="keyword">const</span>;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <span class="keyword">protected</span>:
+<a name="l00097"></a>00097               <span class="comment">// called from Init() to add status labels etc. to the main widget layout (layoutPtr).</span>
+<a name="l00098"></a>00098               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7eef1348d57f3298841a6c55ee75bb5d">AddStatusItems</a>(QBoxLayout* layoutPtr);
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100        <span class="keyword">protected</span>:
+<a name="l00101"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae220075cf42c34402e5aa0aa4a62d202">00101</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_image_shape.html">iview::CImageShape</a> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae220075cf42c34402e5aa0aa4a62d202">m_backgroundShape</a>;
+<a name="l00102"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7a94fd23ad59ab1b869fe6013554f0fc">00102</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iimg::CBitmap&gt;</a> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7a94fd23ad59ab1b869fe6013554f0fc">m_backgroundModel</a>;
+<a name="l00103"></a>00103 
+<a name="l00104"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a3f6b272b07d69aef0dc5139cd3c98c18">00104</a>               <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiview_1_1_c_console_gui.html">iview::CConsoleGui</a> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a3f6b272b07d69aef0dc5139cd3c98c18">m_console</a>;
+<a name="l00105"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a2d190cee3256ca32888b1ddc295fb451">00105</a>               QLabel* <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a2d190cee3256ca32888b1ddc295fb451">m_statusLabel</a>;
+<a name="l00106"></a><a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a1730dff2f3690ff472b349476a984125">00106</a>               <span class="keywordtype">int</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a1730dff2f3690ff472b349476a984125">m_id</a>;
+<a name="l00107"></a>00107        };
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109        <span class="keyword">virtual</span> <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>* <a class="code" href="classiqtcam_1_1_c_multi_bitmap_view_comp.html#aa1aa2dda0d13beb838b97a722a2d8b2e">CreateView</a>(QWidget* parentPtr, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1, <span class="keyword">const</span> QString&amp; title = <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 <span class="keyword">private</span>:
+<a name="l00112"></a>00112        I_ATTR(<span class="keywordtype">int</span>, m_horizontalViewsAttrPtr);
+<a name="l00113"></a>00113        I_ATTR(<span class="keywordtype">int</span>, m_verticalViewsAttrPtr);
+<a name="l00114"></a>00114        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_generalInformationProviderCompPtr);
+<a name="l00115"></a>00115        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_generalInformationModelCompPtr);
+<a name="l00116"></a>00116        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_informationProvidersCompPtr);
+<a name="l00117"></a>00117        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_informationModelsCompPtr);
+<a name="l00118"></a>00118        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_extender.html">iqt2d::IViewExtender</a>, m_viewExtendersCompPtr);
+<a name="l00119"></a>00119        I_MULTIATTR(QString, m_viewLabelPrefixesAttrPtr);
+<a name="l00120"></a>00120        I_ATTR(<span class="keywordtype">bool</span>, m_showStatusLabelAttrPtr);
+<a name="l00121"></a>00121        I_ATTR(QByteArray, m_viewBackgroundColorAttrPtr);
+<a name="l00122"></a>00122        
+<a name="l00123"></a>00123        <span class="keywordtype">int</span> m_rowCount;
+<a name="l00124"></a>00124        <span class="keywordtype">int</span> m_columnCount;
+<a name="l00125"></a>00125        <span class="keywordtype">int</span> m_viewCount;
+<a name="l00126"></a>00126        QList&lt;CSingleView*&gt; m_views;
+<a name="l00127"></a>00127 };
 <a name="l00128"></a>00128 
-<a name="l00129"></a>00129 <span class="preprocessor">#endif // !iqtcam_CMultiBitmapViewComp_included</span>
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130 } <span class="comment">// namespace iqtcam</span>
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 <span class="preprocessor">#endif // !iqtcam_CMultiBitmapViewComp_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

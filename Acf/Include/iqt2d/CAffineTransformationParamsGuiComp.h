@@ -26,10 +26,8 @@
 // ACF includes
 #include <iview/CAffineTransformation2dShape.h>
 #include <i2d/CAffineTransformation2d.h>
-
 #include <iqt2d/TShapeParamsGuiCompBase.h>
-
-#include "iqt2d/Generated/ui_CAffineTransformationParamsGui.h"
+#include "Generated/ui_CAffineTransformationParamsGui.h"
 
 
 namespace iqt2d
@@ -45,17 +43,16 @@ class CAffineTransformationParamsGuiComp:
 						iview::CAffineTransformation2dShape,
 						i2d::CAffineTransformation2d>
 {
-	Q_OBJECT
-
 public:
 	typedef iqt2d::TShapeParamsGuiCompBase<
-					Ui::CAffineTransformationParamsGui,
-					iview::CAffineTransformation2dShape,
-					i2d::CAffineTransformation2d> BaseClass;
-	
+	Ui::CAffineTransformationParamsGui,
+	iview::CAffineTransformation2dShape,
+	i2d::CAffineTransformation2d> BaseClass;
 
 	// reimplemented (imod::IModelEditor)
 	virtual void UpdateModel() const;
+
+	virtual void CreateShapes(int sceneId, Shapes& result);
 
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
@@ -63,9 +60,11 @@ protected:
 	virtual void OnGuiModelDetached();
 	virtual void UpdateGui(int updateFlags = 0);
 
-	
-protected Q_SLOTS:
-	void OnParamsChanged(double value);	
+
+	Q_OBJECT
+	protected Q_SLOTS:
+	void OnParamsChanged(double value);
+	void on_ResetButton_clicked(bool = false);
 };
 
 

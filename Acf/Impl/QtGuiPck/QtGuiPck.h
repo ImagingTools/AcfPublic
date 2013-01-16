@@ -72,6 +72,7 @@
 #include "iqtprm/CComboParamsManagerGuiComp.h"
 #include "iqtprm/CEnableableParamGuiComp.h"
 #include "iqtprm/CButtonBasedSelectionParamGuiComp.h"
+#include "iqtprm/CMultiParamsManagerGuiComp.h"
 
 #include "iqtdoc/CMainWindowGuiComp.h"
 #include "iqtdoc/CSingleDocumentWorkspaceGuiComp.h"
@@ -132,6 +133,7 @@ typedef iqtprm::COptionsManagerGuiComp OptionsManagerGui;
 typedef iqtprm::CComboParamsManagerGuiComp ComboParamsManagerGui;
 typedef iqtprm::CEnableableParamGuiComp EnableableParamGui;
 typedef iqtprm::CButtonBasedSelectionParamGuiComp ButtonBasedSelectionEditor;
+typedef iqtprm::CMultiParamsManagerGuiComp MultiParamsManagerGui;
 
 typedef iqtdoc::CMainWindowGuiComp MainWindowGui;
 typedef icomp::TModelCompWrap<iqtdoc::CSingleDocumentWorkspaceGuiComp> SingleDocWorkspaceGui;
