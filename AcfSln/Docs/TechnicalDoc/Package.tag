@@ -4410,6 +4410,20 @@
       <anchor>a488d34a5d75a25fb60429bc1ed7463b8</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetShapeDescriptionAt</name>
+      <anchorfile>classiedgegui_1_1_c_edge_line_container_shape.html</anchorfile>
+      <anchor>a2952d11553fa1ce9542e52137bf9663e</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>iview::ITouchable::TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiedgegui_1_1_c_edge_line_container_shape.html</anchorfile>
+      <anchor>afb1a8b1c760f410fb036d26d77d7ecec</anchor>
+      <arglist>(istd::CIndex2d) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iedgegui::CEdgeLinesSupplierGuiComp</name>
