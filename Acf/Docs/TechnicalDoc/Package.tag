@@ -4831,6 +4831,7 @@
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_params_manager_gui_comp_base_8h</filename>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::CParamsManagerGuiCompBase</class>
     <namespace>iqtprm</namespace>

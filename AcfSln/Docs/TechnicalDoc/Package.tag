@@ -16323,17 +16323,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>QLabel *</type>
-      <name>m_statusLabel</name>
-      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
-      <anchor>a2d190cee3256ca32888b1ddc295fb451</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
       <type>int</type>
       <name>m_id</name>
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
       <anchor>a1730dff2f3690ff472b349476a984125</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_showStatus</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a5ce77d14f08c2ac6afb53361329dc89c</anchor>
       <arglist></arglist>
     </member>
   </compound>
