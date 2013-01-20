@@ -334,3 +334,4 @@ bool CPolygon::ApplyInverseTransform(
 
 } // namespace i2d
 
+

@@ -134,40 +134,43 @@
 <a name="l00115"></a>00115        <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_multi_params_manager_comp.html#aeb0f24a23abc405816eb74f9065efcdd" title="Ensure some parameter exist and has correct type.">EnsureParamExist</a>(<span class="keyword">const</span> QByteArray&amp; typeId, <span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name);
 <a name="l00116"></a>00116 
 <a name="l00117"></a>00117 <span class="keyword">private</span>:
-<a name="l00118"></a>00118        <span class="keyword">struct </span>ParamSet
-<a name="l00119"></a>00119        {
-<a name="l00120"></a>00120               <a class="code" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;IParamsSet&gt;</a> paramSetPtr;
-<a name="l00121"></a>00121               QString name;
-<a name="l00122"></a>00122               QByteArray typeId;
-<a name="l00123"></a>00123        };
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125        <span class="keywordtype">int</span> FindParamSetIndex(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129        ParamSets m_paramSets;
-<a name="l00130"></a>00130 
-<a name="l00131"></a>00131        <span class="keywordtype">int</span> m_selectedIndex;
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133        TypeInfoList m_typeInfoList;
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135 <span class="keyword">private</span>:
-<a name="l00136"></a>00136        I_MULTIREF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_fixedParamSetsCompPtr);
-<a name="l00137"></a>00137        I_MULTIATTR(QString, m_fixedSetNamesAttrPtr);
-<a name="l00138"></a>00138        I_ATTR(QString, m_defaultSetNameAttrPtr);
-<a name="l00139"></a>00139        I_MULTIFACT(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>, m_paramSetsFactoriesPtr);
-<a name="l00140"></a>00140        I_MULTIATTR(QString, m_factoryNameNameAttrPtr);
-<a name="l00141"></a>00141        I_MULTIATTR(QString, m_factoryDescriptionAttrPtr);
-<a name="l00142"></a>00142        I_ATTR(<span class="keywordtype">bool</span>, m_serializeSelectionAttrPtr);
-<a name="l00143"></a>00143 };
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146 } <span class="comment">// namespace iprm</span>
+<a name="l00118"></a>00118        <span class="keywordtype">void</span> EnsureParamsSetModelDetached(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>* paramsSetPtr) <span class="keyword">const</span>;
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 <span class="keyword">private</span>:
+<a name="l00121"></a>00121        <span class="keyword">struct </span>ParamSet
+<a name="l00122"></a>00122        {
+<a name="l00123"></a>00123               <a class="code" href="classistd_1_1_t_smart_ptr.html">istd::TSmartPtr&lt;IParamsSet&gt;</a> paramSetPtr;
+<a name="l00124"></a>00124               QString name;
+<a name="l00125"></a>00125               QByteArray typeId;
+<a name="l00126"></a>00126        };
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128        <span class="keywordtype">int</span> FindParamSetIndex(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130        <span class="keyword">typedef</span> QList&lt;ParamSet&gt; ParamSets;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132        ParamSets m_paramSets;
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134        <span class="keywordtype">int</span> m_selectedIndex;
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136        TypeInfoList m_typeInfoList;
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138 <span class="keyword">private</span>:
+<a name="l00139"></a>00139        I_MULTIREF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_fixedParamSetsCompPtr);
+<a name="l00140"></a>00140        I_MULTIATTR(QString, m_fixedSetNamesAttrPtr);
+<a name="l00141"></a>00141        I_ATTR(QString, m_defaultSetNameAttrPtr);
+<a name="l00142"></a>00142        I_MULTIFACT(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>, m_paramSetsFactoriesPtr);
+<a name="l00143"></a>00143        I_MULTIATTR(QString, m_factoryNameNameAttrPtr);
+<a name="l00144"></a>00144        I_MULTIATTR(QString, m_factoryDescriptionAttrPtr);
+<a name="l00145"></a>00145        I_ATTR(<span class="keywordtype">bool</span>, m_serializeSelectionAttrPtr);
+<a name="l00146"></a>00146 };
 <a name="l00147"></a>00147 
 <a name="l00148"></a>00148 
-<a name="l00149"></a>00149 <span class="preprocessor">#endif // !iprm_CMultiParamsManagerComp_included</span>
-<a name="l00150"></a>00150 <span class="preprocessor"></span>
+<a name="l00149"></a>00149 } <span class="comment">// namespace iprm</span>
+<a name="l00150"></a>00150 
 <a name="l00151"></a>00151 
+<a name="l00152"></a>00152 <span class="preprocessor">#endif // !iprm_CMultiParamsManagerComp_included</span>
+<a name="l00153"></a>00153 <span class="preprocessor"></span>
+<a name="l00154"></a>00154 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

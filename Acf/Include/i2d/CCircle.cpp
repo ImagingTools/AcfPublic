@@ -35,7 +35,7 @@
 
 
 namespace i2d
-{	
+{
 
 
 CCircle::CCircle()
@@ -244,4 +244,5 @@ bool CCircle::Serialize(iser::IArchive& archive)
 
 
 } // namespace i2d
+
 

@@ -166,4 +166,3 @@ CMatrix2d CMatrix2d::s_identity(1.0, 0.0, 0.0, 1.0);
 } // namespace i2d
 
 
-

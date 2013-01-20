@@ -120,3 +120,4 @@ inline void CParallelogram::SetDeformMatrix(const i2d::CMatrix2d& deform)
 
 #endif // !i2d_CParallelogram_included
 
+

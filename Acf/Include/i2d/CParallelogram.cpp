@@ -182,3 +182,4 @@ bool CParallelogram::Serialize(iser::IArchive& archive)
 
 } // namespace i2d
 
+

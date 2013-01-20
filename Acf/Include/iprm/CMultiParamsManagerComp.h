@@ -137,6 +137,9 @@ protected:
 	bool EnsureParamExist(const QByteArray& typeId, int index, const QString& name);
 
 private:
+	void EnsureParamsSetModelDetached(iprm::IParamsSet* paramsSetPtr) const;
+
+private:
 	struct ParamSet
 	{
 		istd::TSmartPtr<IParamsSet> paramSetPtr;

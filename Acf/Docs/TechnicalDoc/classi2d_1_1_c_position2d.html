@@ -102,6 +102,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#a92f14c245c32228d6c124d97c216974d">GetSupportedOperations</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a92f14c245c32228d6c124d97c216974d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#ae7db57e951923177343680407caa7477">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#ac954efb4f64c9cceef747c97fc7f82af">IsEqual</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare this object with another object.  <a href="#ac954efb4f64c9cceef747c97fc7f82af"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#af5981c97570606752879f95b57d377c1">CloneMe</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#af5981c97570606752879f95b57d377c1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#aba7e6284cea744314dac68cc90a2a27d">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
@@ -302,9 +304,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00066">66</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00067">67</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_position2d_8h_source.html#l00060">m_position</a>.</p>
+<p>References <a class="el" href="_c_position2d_8h_source.html#l00061">m_position</a>.</p>
 
 </div>
 </div>
@@ -400,9 +402,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00078">78</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00079">79</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_position2d_8h_source.html#l00072">Translate()</a>.</p>
+<p>References <a class="el" href="_c_position2d_8h_source.html#l00073">Translate()</a>.</p>
 
 </div>
 </div>
@@ -450,6 +452,34 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="classi2d_1_1_c_object2d_base.html#ae265e9ee5ad0fa90a7a32690ce12936b">i2d::CObject2dBase</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus.html#a994865c894bec6edfb431b5fc7792566">i2d::CAnnulus</a>, and <a class="el" href="classi2d_1_1_c_circle.html#af4ba43370e7e1756fbb925617939af69">i2d::CCircle</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac954efb4f64c9cceef747c97fc7f82af"></a><!-- doxytag: member="i2d::CPosition2d::IsEqual" ref="ac954efb4f64c9cceef747c97fc7f82af" args="(const istd::IChangeable &amp;object) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CPosition2d::IsEqual </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compare this object with another object. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>Object to be compared </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> if the objects are identical and <code>false</code> otherwise. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a1f340e515832d48750480eefe4d7b4b4">istd::IChangeable</a>.</p>
 
 </div>
 </div>
@@ -578,11 +608,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00072">72</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00073">73</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
 
-<p>References <a class="el" href="_c_position2d_8h_source.html#l00060">m_position</a>.</p>
+<p>References <a class="el" href="_c_position2d_8h_source.html#l00061">m_position</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_position2d_8h_source.html#l00078">GetTranslated()</a>.</p>
+<p>Referenced by <a class="el" href="_c_position2d_8h_source.html#l00079">GetTranslated()</a>.</p>
 
 </div>
 </div>
@@ -598,9 +628,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00060">60</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_position2d_8h_source.html#l00061">61</a> of file <a class="el" href="_c_position2d_8h_source.html">CPosition2d.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_position2d_8h_source.html#l00066">GetPosition()</a>, and <a class="el" href="_c_position2d_8h_source.html#l00072">Translate()</a>.</p>
+<p>Referenced by <a class="el" href="_c_position2d_8h_source.html#l00067">GetPosition()</a>, and <a class="el" href="_c_position2d_8h_source.html#l00073">Translate()</a>.</p>
 
 </div>
 </div>

@@ -30,7 +30,7 @@
 
 
 namespace i2d
-{	
+{
 
 
 /**
@@ -73,6 +73,7 @@ public:
 	//reimplemented istd::IChangeable
 	virtual int GetSupportedOperations() const;
 	virtual bool CopyFrom(const IChangeable& object);
+	virtual bool IsEqual(const istd::IChangeable& object) const;
 	virtual istd::IChangeable* CloneMe() const;
 
 	// reimplemented (iser::ISerializable)

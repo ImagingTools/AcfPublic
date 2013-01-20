@@ -24,7 +24,7 @@
 
 
 namespace i2d
-{		
+{
 
 
 // public methods

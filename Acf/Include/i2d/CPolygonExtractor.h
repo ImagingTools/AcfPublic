@@ -55,3 +55,4 @@ public:
 
 #endif // !i2d_CPolygonExtractor_included
 
+

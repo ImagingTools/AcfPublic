@@ -48,7 +48,7 @@ IObserver* CModelBase::GetObserverPtr(int index) const
 {
 	I_ASSERT(index >= 0 && index < int(m_observers.size()));
 
-	return m_observers.at(index);
+	return m_observers.at(index).observerPtr;
 }
 
 
@@ -59,15 +59,21 @@ bool CModelBase::AttachObserver(IObserver* observerPtr)
 	}
 
 	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
-		if (m_observers.at(observerIndex) == observerPtr){
+		if (m_observers.at(observerIndex).observerPtr == observerPtr){
 			qFatal("Observer is already connected to this model");
 
 			return false;
 		}
 	}
 
+	ObserverInfo observerInfo;
+	observerInfo.observerPtr = observerPtr;
+
 	if (observerPtr->OnAttached(this)){
-		m_observers.push_back(observerPtr);
+		observerInfo.connectionState = SF_CONNECTED;
+
+		m_observers.push_back(observerInfo);
+
 		return true;
 	}
 
@@ -78,15 +84,27 @@ bool CModelBase::AttachObserver(IObserver* observerPtr)
 void CModelBase::DetachObserver(IObserver* observerPtr)
 {
 	for (int detachIndex = 0; detachIndex < int(m_observers.size()); detachIndex++){
-		if (m_observers.at(detachIndex) == observerPtr){
+		ObserverInfo& observerInfo = m_observers[detachIndex];
+
+		if (observerInfo.observerPtr == observerPtr){
+			// Observer will be already detached:
+			if (observerInfo.connectionState == SF_DETACHING_STAGE){
+				return;
+			}
+			
+			observerInfo.connectionState = SF_DETACHING_STAGE;
+
 			observerPtr->OnDetached(this);
+			
 			break;
 		}
 	}
 
 	for (int eraseIndex = 0; eraseIndex < int(m_observers.size()); eraseIndex++){
-		if (m_observers.at(eraseIndex) == observerPtr){
+		ObserverInfo& observerInfo = m_observers[eraseIndex];
+		if (observerInfo.observerPtr == observerPtr){
 			m_observers.erase(m_observers.begin() + eraseIndex);
+			
 			return;
 		}
 	}
@@ -98,10 +116,14 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 void CModelBase::DetachAllObservers()
 {
 	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
-		imod::IObserver* observerPtr = m_observers.at(observerIndex);
-		I_ASSERT(observerPtr != NULL);
+		ObserverInfo& observerInfo = m_observers[observerIndex];
+
+		I_ASSERT(observerInfo.observerPtr != NULL);
+		I_ASSERT(observerInfo.connectionState != SF_DETACHING_STAGE);
+
+		observerInfo.connectionState = SF_DETACHING_STAGE;
 		
-		observerPtr->OnDetached(this);
+		observerInfo.observerPtr->OnDetached(this);
 	}
 
 	m_observers.clear();
@@ -111,10 +133,10 @@ void CModelBase::DetachAllObservers()
 bool CModelBase::IsAttached(const IObserver* observerPtr) const
 {
 	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
-		imod::IObserver* connectedObserverPtr = m_observers.at(observerIndex);
-		I_ASSERT(connectedObserverPtr != NULL);
+		const ObserverInfo& observerInfo = m_observers[observerIndex];
+		I_ASSERT(observerInfo.observerPtr != NULL);
 
-		if (connectedObserverPtr == observerPtr){
+		if ((observerInfo.observerPtr == observerPtr)){
 			return true;
 		}
 	}
@@ -128,10 +150,12 @@ bool CModelBase::IsAttached(const IObserver* observerPtr) const
 void CModelBase::NotifyBeforeUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
 	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
-		imod::IObserver* observerPtr = m_observers.at(observerIndex);
-		I_ASSERT(observerPtr != NULL);
+		ObserverInfo& observerInfo = m_observers[observerIndex];
+		I_ASSERT(observerInfo.observerPtr != NULL);
 
-		observerPtr->BeforeUpdate(this, updateFlags, updateParamsPtr);
+		if (observerInfo.connectionState != SF_DETACHING_STAGE){
+			observerInfo.observerPtr->BeforeUpdate(this, updateFlags, updateParamsPtr);
+		}
 	}
 }
 
@@ -139,10 +163,12 @@ void CModelBase::NotifyBeforeUpdate(int updateFlags, istd::IPolymorphic* updateP
 void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
 	for (int observerIndex = 0; observerIndex < int(m_observers.size()); observerIndex++){
-		imod::IObserver* observerPtr = m_observers.at(observerIndex);
-		I_ASSERT(observerPtr != NULL);
+		ObserverInfo& observerInfo = m_observers[observerIndex];
+		I_ASSERT(observerInfo.observerPtr != NULL);
 
-		observerPtr->AfterUpdate(this, updateFlags, updateParamsPtr);
+		if (observerInfo.connectionState != SF_DETACHING_STAGE){
+			observerInfo.observerPtr->AfterUpdate(this, updateFlags, updateParamsPtr);
+		}
 	}
 }
 

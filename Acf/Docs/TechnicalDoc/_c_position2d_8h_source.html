@@ -36,7 +36,7 @@
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="keyword">namespace </span>i2d
-<a name="l00011"></a>00011 {      
+<a name="l00011"></a>00011 {
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
 <a name="l00017"></a><a class="code" href="classi2d_1_1_c_position2d.html">00017</a> <span class="keyword">class </span><a class="code" href="classi2d_1_1_c_position2d.html" title="Definition of graphical point object.">CPosition2d</a>: <span class="keyword">public</span> <a class="code" href="classi2d_1_1_c_object2d_base.html" title="Base class for 2D-objects implementing interface i2d::IObject2d.">CObject2dBase</a>
@@ -76,45 +76,46 @@
 <a name="l00051"></a>00051        <span class="comment">//reimplemented istd::IChangeable</span>
 <a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classi2d_1_1_c_position2d.html#a92f14c245c32228d6c124d97c216974d" title="Get set of flags for supported operations.">GetSupportedOperations</a>() <span class="keyword">const</span>;
 <a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_position2d.html#ae7db57e951923177343680407caa7477">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classi2d_1_1_c_position2d.html#af5981c97570606752879f95b57d377c1" title="Make a copy of this object.">CloneMe</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_position2d.html#aba7e6284cea744314dac68cc90a2a27d" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00060"></a><a class="code" href="classi2d_1_1_c_position2d.html#ac52dc2bacd2db9e64c8f164987e29ba2">00060</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">CVector2d</a> <a class="code" href="classi2d_1_1_c_position2d.html#ac52dc2bacd2db9e64c8f164987e29ba2">m_position</a>;
-<a name="l00061"></a>00061 };
-<a name="l00062"></a>00062 
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_position2d.html#ac954efb4f64c9cceef747c97fc7f82af" title="Compare this object with another object.">IsEqual</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>) <span class="keyword">const</span>;
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classi2d_1_1_c_position2d.html#af5981c97570606752879f95b57d377c1" title="Make a copy of this object.">CloneMe</a>() <span class="keyword">const</span>;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_position2d.html#aba7e6284cea744314dac68cc90a2a27d" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 <span class="keyword">protected</span>:
+<a name="l00061"></a><a class="code" href="classi2d_1_1_c_position2d.html#ac52dc2bacd2db9e64c8f164987e29ba2">00061</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">CVector2d</a> <a class="code" href="classi2d_1_1_c_position2d.html#ac52dc2bacd2db9e64c8f164987e29ba2">m_position</a>;
+<a name="l00062"></a>00062 };
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="comment">// inline methods</span>
-<a name="l00065"></a>00065 
-<a name="l00066"></a><a class="code" href="classi2d_1_1_c_position2d.html#a2f74248c140f5372f740883e6c42d97f">00066</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">CVector2d</a>&amp; <a class="code" href="classi2d_1_1_c_position2d.html#a2f74248c140f5372f740883e6c42d97f">CPosition2d::GetPosition</a>()<span class="keyword"> const</span>
-<a name="l00067"></a>00067 <span class="keyword"></span>{
-<a name="l00068"></a>00068        <span class="keywordflow">return</span> <a class="code" href="classi2d_1_1_c_position2d.html#ac52dc2bacd2db9e64c8f164987e29ba2">m_position</a>;
-<a name="l00069"></a>00069 }
-<a name="l00070"></a>00070 
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="comment">// inline methods</span>
+<a name="l00066"></a>00066 
+<a name="l00067"></a><a class="code" href="classi2d_1_1_c_position2d.html#a2f74248c140f5372f740883e6c42d97f">00067</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">CVector2d</a>&amp; <a class="code" href="classi2d_1_1_c_position2d.html#a2f74248c140f5372f740883e6c42d97f">CPosition2d::GetPosition</a>()<span class="keyword"> const</span>
+<a name="l00068"></a>00068 <span class="keyword"></span>{
+<a name="l00069"></a>00069        <span class="keywordflow">return</span> <a class="code" href="classi2d_1_1_c_position2d.html#ac52dc2bacd2db9e64c8f164987e29ba2">m_position</a>;
+<a name="l00070"></a>00070 }
 <a name="l00071"></a>00071 
-<a name="l00072"></a><a class="code" href="classi2d_1_1_c_position2d.html#ad26757c891ce91d4a63efcf4b83ddb9c">00072</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_position2d.html#ad26757c891ce91d4a63efcf4b83ddb9c">CPosition2d::Translate</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; vector)
-<a name="l00073"></a>00073 {
-<a name="l00074"></a>00074        <a class="code" href="classi2d_1_1_c_position2d.html#ac52dc2bacd2db9e64c8f164987e29ba2">m_position</a> += vector;
-<a name="l00075"></a>00075 }
-<a name="l00076"></a>00076 
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="classi2d_1_1_c_position2d.html#ad26757c891ce91d4a63efcf4b83ddb9c">00073</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_position2d.html#ad26757c891ce91d4a63efcf4b83ddb9c">CPosition2d::Translate</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; vector)
+<a name="l00074"></a>00074 {
+<a name="l00075"></a>00075        <a class="code" href="classi2d_1_1_c_position2d.html#ac52dc2bacd2db9e64c8f164987e29ba2">m_position</a> += vector;
+<a name="l00076"></a>00076 }
 <a name="l00077"></a>00077 
-<a name="l00078"></a><a class="code" href="classi2d_1_1_c_position2d.html#a7da2c6cadd8274f507c7b4aa8948efc4">00078</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_position2d.html" title="Definition of graphical point object.">CPosition2d</a> <a class="code" href="classi2d_1_1_c_position2d.html#a7da2c6cadd8274f507c7b4aa8948efc4">CPosition2d::GetTranslated</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; vector)<span class="keyword"> const</span>
-<a name="l00079"></a>00079 <span class="keyword"></span>{
-<a name="l00080"></a>00080        <a class="code" href="classi2d_1_1_c_position2d.html" title="Definition of graphical point object.">CPosition2d</a> translatedPosition = *<span class="keyword">this</span>;
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082        translatedPosition.<a class="code" href="classi2d_1_1_c_position2d.html#ad26757c891ce91d4a63efcf4b83ddb9c">Translate</a>(vector);
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084        <span class="keywordflow">return</span> translatedPosition;
-<a name="l00085"></a>00085 }
-<a name="l00086"></a>00086 
+<a name="l00078"></a>00078 
+<a name="l00079"></a><a class="code" href="classi2d_1_1_c_position2d.html#a7da2c6cadd8274f507c7b4aa8948efc4">00079</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_position2d.html" title="Definition of graphical point object.">CPosition2d</a> <a class="code" href="classi2d_1_1_c_position2d.html#a7da2c6cadd8274f507c7b4aa8948efc4">CPosition2d::GetTranslated</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; vector)<span class="keyword"> const</span>
+<a name="l00080"></a>00080 <span class="keyword"></span>{
+<a name="l00081"></a>00081        <a class="code" href="classi2d_1_1_c_position2d.html" title="Definition of graphical point object.">CPosition2d</a> translatedPosition = *<span class="keyword">this</span>;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083        translatedPosition.<a class="code" href="classi2d_1_1_c_position2d.html#ad26757c891ce91d4a63efcf4b83ddb9c">Translate</a>(vector);
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085        <span class="keywordflow">return</span> translatedPosition;
+<a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088 } <span class="comment">// namespace i2d</span>
-<a name="l00089"></a>00089 
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 } <span class="comment">// namespace i2d</span>
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091 <span class="preprocessor">#endif // !i2d_CPosition2d_included</span>
-<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="preprocessor">#endif // !i2d_CPosition2d_included</span>
+<a name="l00093"></a>00093 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -29,6 +29,7 @@
 
 #include "i2d/CAffineTransformation2d.h"
 
+
 namespace i2d
 {
 

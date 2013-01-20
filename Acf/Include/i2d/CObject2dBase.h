@@ -80,3 +80,4 @@ private:
 
 #endif // !i2d_CObject2dBase_included
 
+

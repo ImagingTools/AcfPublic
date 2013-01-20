@@ -5729,7 +5729,7 @@
     <name>CAffineTransformation2dShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_affine_transformation2d_shape_8h</filename>
-    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">CInteractiveShapeBase.h</includes>
+    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">iview/CInteractiveShapeBase.h</includes>
     <class kind="class">iview::CAffineTransformation2dShape</class>
     <namespace>iview</namespace>
   </compound>
@@ -9423,6 +9423,13 @@
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>ae7db57e951923177343680407caa7477</anchor>
       <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>ac954efb4f64c9cceef747c97fc7f82af</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
@@ -44734,6 +44741,13 @@
       <anchor>a5756ad1cd2e4009fd7046c10968db6d6</anchor>
       <arglist>(const istd::IChangeable &amp;object)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
+      <anchor>af3d40308b3497f10d37d531ca9a509f2</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iser::TVersionInfoSerializer</name>
@@ -46189,6 +46203,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>SO_NONE</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>adfacdea73eb745825f6797b4b8986eaca371875050acf8f3dea149d3ba6c151db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>SO_OBSERVE</name>
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
       <anchor>adfacdea73eb745825f6797b4b8986eacae7e5b72c56dd6651b9f88da24c4bea5c</anchor>
@@ -46204,6 +46224,12 @@
       <name>SO_CLONE</name>
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
       <anchor>adfacdea73eb745825f6797b4b8986eacad37af295292d85fcadb9bb9872df7984</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SO_COMPARE</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>adfacdea73eb745825f6797b4b8986eacae2bbdae9e4076c92ac80a0009cebbfb9</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -46233,6 +46259,13 @@
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
       <anchor>a48106c79905f877b7bcca41755bbde49</anchor>
       <arglist>(const IChangeable &amp;object)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a1f340e515832d48750480eefe4d7b4b4</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IChangeable *</type>

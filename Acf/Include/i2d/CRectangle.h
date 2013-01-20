@@ -195,7 +195,7 @@ private:
 
 
 // inline methods
-	
+
 inline double CRectangle::GetLeft() const
 {
 	return m_horizontalRange.GetMinValue();
