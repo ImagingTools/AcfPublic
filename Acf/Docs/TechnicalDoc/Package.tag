@@ -52736,13 +52736,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>DrawOrientationMarker</name>
-      <anchorfile>classiview_1_1_c_interactive_polyline_shape.html</anchorfile>
-      <anchor>ab1bae399f3f0f3fe0574f3c26cc72f35</anchor>
-      <arglist>(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>DrawCurve</name>
       <anchorfile>classiview_1_1_c_interactive_polyline_shape.html</anchorfile>
       <anchor>a28275e2fcae5b6fb98b86e4d9892b400</anchor>
@@ -53101,6 +53094,13 @@
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
       <anchor>a7fc1ee9fb4324167074bb381ddecd05b</anchor>
       <arglist>(QPainter &amp;drawContext, istd::CIndex2d point, const QString &amp;text) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DrawOrientationMarker</name>
+      <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
+      <anchor>a192b54a37caa63f9f4a7ec8171868486</anchor>
+      <arglist>(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>

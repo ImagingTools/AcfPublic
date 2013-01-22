@@ -100,19 +100,23 @@
 <a name="l00078"></a>00078        I_ATTR(<span class="keywordtype">bool</span>, m_allowAddRemoveAttrPtr);
 <a name="l00079"></a>00079        I_ATTR(<span class="keywordtype">bool</span>, m_allowUpDownAttrPtr);
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_lastConnectedModelPtr;
-<a name="l00082"></a>00082        <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>* m_lastObserverPtr;
-<a name="l00083"></a>00083        QMenu m_startVariableMenus;
-<a name="l00084"></a>00084        QMap&lt;QByteArray, int&gt; m_factoryIconIndexMap;
-<a name="l00085"></a>00085 };
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 } <span class="comment">// namespace iqtprm</span>
-<a name="l00089"></a>00089 
+<a name="l00081"></a>00081        <span class="keyword">typedef</span> QMap&lt;int, QIcon&gt; StateIconsMap;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_lastConnectedModelPtr;
+<a name="l00084"></a>00084        <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>* m_lastObserverPtr;
+<a name="l00085"></a>00085        QMenu m_startVariableMenus;
+<a name="l00086"></a>00086        QMap&lt;QByteArray, int&gt; m_factoryIconIndexMap;
+<a name="l00087"></a>00087        StateIconsMap m_stateIconsMap;
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 };
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091 <span class="preprocessor">#endif // !iqtprm_CParamsManagerGuiCompBase_included</span>
-<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 } <span class="comment">// namespace iqtprm</span>
 <a name="l00093"></a>00093 
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="preprocessor">#endif // !iqtprm_CParamsManagerGuiCompBase_included</span>
+<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00097"></a>00097 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

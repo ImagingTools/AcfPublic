@@ -119,6 +119,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get actual edit mode.  <a href="#a5b662908ceb7c5f25c65dd7f6ceec0dd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_shape_base.html#a7fc1ee9fb4324167074bb381ddecd05b">DrawText</a> (QPainter &amp;drawContext, <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> point, const QString &amp;text) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text on a given position.  <a href="#a7fc1ee9fb4324167074bb381ddecd05b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_shape_base.html#a192b54a37caa63f9f4a7ec8171868486">DrawOrientationMarker</a> (QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const <a class="el" href="classi2d_1_1_c_line2d.html">i2d::CLine2d</a> &amp;segmentLine, double scale) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an orientation marker consisting of two triangles (black for outside and white for inside)  <a href="#a192b54a37caa63f9f4a7ec8171868486"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_shape_base.html#abc26858da9a056111d240d5312cb250c">GetDisplayChangesMask</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get display changes mask.  <a href="#abc26858da9a056111d240d5312cb250c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_interactive_shape_base.html#a2fe6873ccd865367059e41372bbc2401">BeginLogDrag</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;reference)=0</td></tr>
@@ -126,7 +128,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00018">18</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00021">21</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a2519be921b203b8d599a02ec2917c9e6"></a><!-- doxytag: member="iview::CInteractiveShapeBase::BaseClass" ref="a2519be921b203b8d599a02ec2917c9e6" args="" -->
 <div class="memitem">
@@ -141,7 +143,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#a6f4f7dec58fb4f81021b3f64a2dd175e">iview::CInteractivePolygonShape</a>, <a class="el" href="classiview_1_1_c_polygon_calibration_shape.html#a88876d9cbb6e33fae410278dfd0e6ae3">iview::CPolygonCalibrationShape</a>, <a class="el" href="classiview_1_1_c_affinite_calibration_shape.html#a253c72422c5214ed8a8031aaf2ab86ac">iview::CAffiniteCalibrationShape</a>, <a class="el" href="classiview_1_1_c_calibration_shape_base.html#aa7f7eec8f8e337ae87a2e4d8de8518e8">iview::CCalibrationShapeBase</a>, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#a4d6f4175e180f96fb78c4299e72c54b2">iview::CNoneCalibrationShape</a>, <a class="el" href="classiview_1_1_c_perspective_calibration_shape.html#a5d3c89099346571f9a69f9fc6e064aa2">iview::CPerspectiveCalibrationShape</a>, <a class="el" href="classiview_1_1_c_interactive_center_pin_shape.html#aafb69a4a493f6d59cbe0544d660cf34a">iview::CInteractiveCenterPinShape</a>, <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html#ac0a39f89a7ff0f43aa672a1334f40835">iview::CInteractivePolylineShape</a>, <a class="el" href="classiview_1_1_c_pin_calibration_shape.html#adcc1b91bee42acbbefa51008dd5e0d7c">iview::CPinCalibrationShape</a>, <a class="el" href="classiview_1_1_c_interactive_arrow_shape.html#ac28746ce8ea2286f5b82d885ce724663">iview::CInteractiveArrowShape</a>, <a class="el" href="classiview_1_1_c_interactive_line_shape.html#af8dc4ad1a84b693982ee03cbe48cc3b7">iview::CInteractiveLineShape</a>, <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#a24fca9c5f458a446e692412fd1a6dd15">iview::CInteractivePinShape</a>, <a class="el" href="classiview_1_1_c_interactive_rectangle_shape.html#a5d98bd3b5caf1e14c549b8a8396e45cb">iview::CInteractiveRectangleShape</a>, <a class="el" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html#af238c4be52379c70e94143d15f1991e6">iview::CInteractiveTransformableRectangleShape</a>, <a class="el" href="classiview_1_1_c_interactive_tube_polyline_shape.html#a786bf02b49ee0df617c19758e2590e3c">iview::CInteractiveTubePolylineShape</a>, <a class="el" href="classiview_1_1_c_transformable_rectangle_calibration_shape.html#a8701009a6e2f574280ca793d9445927f">iview::CTransformableRectangleCalibrationShape</a>, <a class="el" href="classiview_1_1_c_interactive_label_shape.html#aee7c08cd2e0947c29c22b79453d98cfe">iview::CInteractiveLabelShape</a>, <a class="el" href="classiview_1_1_c_interactive_parallelogram_shape.html#ad926737a50d88f560be477d0cbfe1012">iview::CInteractiveParallelogramShape</a>, <a class="el" href="classiview_1_1_c_interactive_spline_shape.html#a509f5ff17e46e097702d2c7ca3962834">iview::CInteractiveSplineShape</a>, <a class="el" href="classiview_1_1_c_polyline_calibration_shape.html#a7bbeb0f9c110ca6e6db43b97f87dc4f3">iview::CPolylineCalibrationShape</a>, <a class="el" href="classiview_1_1_c_interactive_annulus_segment_shape.html#a26aa1e2fa6c57a762857d5890623fd1e">iview::CInteractiveAnnulusSegmentShape</a>, <a class="el" href="classiview_1_1_c_interactive_annulus_shape.html#a11550ca40fc354447f6f3c06315a34a1">iview::CInteractiveAnnulusShape</a>, <a class="el" href="classiview_1_1_c_interactive_circle_shape.html#ae54a8ba10826df25c2072d6aeecc03d2">iview::CInteractiveCircleShape</a>, and <a class="el" href="classiview_1_1_c_oriented_circle_shape.html#a8e28021a2b14d8e7d397087bba5bfe3d">iview::COrientedCircleShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00024">24</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00027">27</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -218,7 +220,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_calibration_shape_base.html#a042578c75f8671f532707d6ef1639d44">iview::CCalibrationShapeBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00109">109</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00125">125</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a2fe6873ccd865367059e41372bbc2401">BeginLogDrag()</a>, <a class="el" href="_c_affine2d_8h_source.html#l00255">i2d::CAffine2d::GetApply()</a>, <a class="el" href="_c_affine2d_8h_source.html#l00316">i2d::CAffine2d::GetInverted()</a>, and <a class="el" href="_c_shape_control_8h_source.html#l00130">iview::CShapeControl::GetLogToViewTransform()</a>.</p>
 
@@ -241,7 +243,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html#a2dfeacaf16e8e8e072f066cb371be60b">iview::CInteractiveTransformableRectangleShape</a>, <a class="el" href="classiview_1_1_c_transformable_rectangle_calibration_shape.html#a8f2da7ec62a35d977c51d29494d6746f">iview::CTransformableRectangleCalibrationShape</a>, <a class="el" href="classiview_1_1_c_interactive_parallelogram_shape.html#a3852dc73498cff7513b3941bb32cf35c">iview::CInteractiveParallelogramShape</a>, <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#ab0befadd9cfef4ec2032f6c9de8d1222">iview::CInteractivePolygonShape</a>, <a class="el" href="classiview_1_1_c_polygon_calibration_shape.html#a7ecd5ba928886b3b8a09afbf573ed1a4">iview::CPolygonCalibrationShape</a>, <a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#a3999fad8ccd57045a3ab4662be184769">iview::CAffineTransformation2dShape</a>, <a class="el" href="classiview_1_1_c_interactive_arrow_shape.html#a1694031d1aaaba6ac521ad56abe5a543">iview::CInteractiveArrowShape</a>, <a class="el" href="classiview_1_1_c_interactive_line_shape.html#aa32af64884e7eb0e38fec2c140282e2f">iview::CInteractiveLineShape</a>, <a class="el" href="classiview_1_1_c_interactive_rectangle_shape.html#a5444f931dfd93ddfc408426d531cdee0">iview::CInteractiveRectangleShape</a>, <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#aa516bf308f6201c3b46aae9e490f5663">iview::CInteractivePinShape</a>, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#aa121b4e05b51323f36b578d4414debef">iview::CNoneCalibrationShape</a>, <a class="el" href="classiview_1_1_c_pin_calibration_shape.html#a3ef96080af6b3a0ec65306ca6508ef86">iview::CPinCalibrationShape</a>, and <a class="el" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#afeb22b718c7ed369f0c487286a119e04">iview::CInteractivePerspectiveCalibrationShape</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00109">BeginDrag()</a>.</p>
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00125">BeginDrag()</a>.</p>
 
 </div>
 </div>
@@ -258,6 +260,65 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a192b54a37caa63f9f4a7ec8171868486"></a><!-- doxytag: member="iview::CInteractiveShapeBase::DrawOrientationMarker" ref="a192b54a37caa63f9f4a7ec8171868486" args="(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iview::CInteractiveShapeBase::DrawOrientationMarker </td>
+          <td>(</td>
+          <td class="paramtype">QPainter &amp;&#160;</td>
+          <td class="paramname"><em>drawContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPen &amp;&#160;</td>
+          <td class="paramname"><em>rightPen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QBrush &amp;&#160;</td>
+          <td class="paramname"><em>rightBrush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPen &amp;&#160;</td>
+          <td class="paramname"><em>leftPen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QBrush &amp;&#160;</td>
+          <td class="paramname"><em>leftBrush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">i2d::CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>segmentLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Draw an orientation marker consisting of two triangles (black for outside and white for inside) </p>
 
 </div>
 </div>
@@ -314,7 +375,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_draggable.html#afd01a9080d8fa1b2484ae64f141230da">iview::IDraggable</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00125">125</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00141">141</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -355,7 +416,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_calibration_shape_base.html#a064fcb43846cddd9b7be21606e8ad87c">iview::CCalibrationShapeBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00159">159</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00175">175</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="iview_8h_source.html#l00046">iview::CF_EDIT_MODE</a>, and <a class="el" href="classiview_1_1_c_shape_base.html#ab6b72a34649abfbc775ddb6f1b9e37f5">iview::CShapeBase::GetDisplayChangesMask()</a>.</p>
 
@@ -380,7 +441,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get actual edit mode. </p>
 <p>Note, that display must be connected to use this method. </p>
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00145">145</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00161">161</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="_i_selectable_8h_source.html#l00048">iview::ISelectable::EM_NONE</a>, <a class="el" href="classiview_1_1_c_shape_base.html#a21240943eea6fd219ebc88bfa45dac52">iview::CShapeBase::GetDisplayPtr()</a>, <a class="el" href="classiview_1_1_i_selectable.html#ad32682c664cad8e7f178c42a4248d093">iview::ISelectable::GetEditMode()</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -403,7 +464,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get actual keys state. </p>
 <p>Note, that display must be connected to use this method. </p>
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00132">132</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00148">148</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_c_shape_base.html#a21240943eea6fd219ebc88bfa45dac52">iview::CShapeBase::GetDisplayPtr()</a>, <a class="el" href="classiview_1_1_i_selectable.html#a55a85abf3a5a3d49148c888bdd9d638b">iview::ISelectable::GetKeysState()</a>, and <a class="el" href="istd_8h_source.html#l00063">NULL</a>.</p>
 
@@ -429,7 +490,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#a1eec6b25fab53884a4baceb07e89543d">iview::CInteractivePolygonShape</a>, and <a class="el" href="classiview_1_1_c_polygon_calibration_shape.html#a1b97532ed0ab0761613e5e674fbf525f">iview::CPolygonCalibrationShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00103">103</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00119">119</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -447,7 +508,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00089">89</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00105">105</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -616,7 +677,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_calibration_shape_base.html#a3a76ace6573d5390c61f7eae6a4a68ef">iview::CCalibrationShapeBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00117">117</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00133">133</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 <p>References <a class="el" href="_c_affine2d_8h_source.html#l00255">i2d::CAffine2d::GetApply()</a>, <a class="el" href="_c_affine2d_8h_source.html#l00316">i2d::CAffine2d::GetInverted()</a>, <a class="el" href="_c_shape_control_8h_source.html#l00130">iview::CShapeControl::GetLogToViewTransform()</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a4c864f4da3d6217646889d0f2ea5786a">SetLogDragPosition()</a>.</p>
 
@@ -637,7 +698,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00095">95</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_interactive_shape_base_8h_source.html#l00111">111</a> of file <a class="el" href="_c_interactive_shape_base_8h_source.html">CInteractiveShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -658,7 +719,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classiview_1_1_c_interactive_transformable_rectangle_shape.html#a7d5be8ba8bc960f9cd8d37e2fccceec0">iview::CInteractiveTransformableRectangleShape</a>, <a class="el" href="classiview_1_1_c_transformable_rectangle_calibration_shape.html#a122ed12091ac3cc61ed6774aa62334d7">iview::CTransformableRectangleCalibrationShape</a>, <a class="el" href="classiview_1_1_c_interactive_parallelogram_shape.html#aaac6e4b5462d3ff19b2915729441da1a">iview::CInteractiveParallelogramShape</a>, <a class="el" href="classiview_1_1_c_interactive_polygon_shape.html#a5178eaaa39b66f9e53b982093e41223a">iview::CInteractivePolygonShape</a>, <a class="el" href="classiview_1_1_c_polygon_calibration_shape.html#a14e06e353af1cbe277b071efbbfc7573">iview::CPolygonCalibrationShape</a>, <a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#a39790cf2daf93248488492a27e15d1b0">iview::CAffineTransformation2dShape</a>, <a class="el" href="classiview_1_1_c_interactive_arrow_shape.html#aab9f773ec5f9dffe96f7b9d0bcb415fd">iview::CInteractiveArrowShape</a>, <a class="el" href="classiview_1_1_c_interactive_line_shape.html#a8ad0947db996971bdcbc645912aa08b8">iview::CInteractiveLineShape</a>, <a class="el" href="classiview_1_1_c_interactive_rectangle_shape.html#aa900b199e564972131370f75b269cde8">iview::CInteractiveRectangleShape</a>, <a class="el" href="classiview_1_1_c_interactive_pin_shape.html#a4ea1927af807d279bd6a976ec8774364">iview::CInteractivePinShape</a>, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#a3d4edd390cf662ce49ff79b6fbe901a5">iview::CNoneCalibrationShape</a>, <a class="el" href="classiview_1_1_c_pin_calibration_shape.html#a764b580f7bee49cb6c8dafd2feb29614">iview::CPinCalibrationShape</a>, and <a class="el" href="classiview_1_1_c_interactive_perspective_calibration_shape.html#a80db47cc953fba644ac117d13c641d60">iview::CInteractivePerspectiveCalibrationShape</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00117">SetDragPosition()</a>.</p>
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00133">SetDragPosition()</a>.</p>
 
 </div>
 </div>
