@@ -54,7 +54,7 @@ public:
 	enum ExactnessMode
 	{
 		/**
-			There is no preferencies, should be automatically selected.
+			There are no preferences, should be automatically selected.
 		*/
 		EM_NONE,
 		/**
@@ -66,7 +66,7 @@ public:
 		*/
 		EM_VISUAL,
 		/**
-			There is only important, that some result will be outputted.
+			It is only important to output some result.
 		*/
 		EM_ANY
 	};
@@ -117,11 +117,11 @@ public:
 	virtual int GetTransformationFlags() const = 0;
 
 	/**
-		Compute a shorteness distance in transformed coordinations.
+		Compute a shortness distance in transformed coordinations.
 		\param	origPos1	first position in original coordinates.
 		\param	origPos2	second position in original coordinates.
 		\param	result		object where result distance between positions in transformed coordinates will be stored.
-		\param	mode			controls needed transformation exactness.
+		\param	mode		controls needed transformation exactness.
 		\return				true, if calculation done correctly.
 	*/
 	virtual bool GetDistance(

@@ -67,7 +67,7 @@ public:
 
 	/**
 		Get reference to first line point.
-		Please avoid to use this function, becouse of eventuel update problems.
+		Please avoid to use this function because of possible update problems.
 	*/
 	CVector2d& GetPoint1Ref();
 
@@ -83,7 +83,7 @@ public:
 
 	/**
 		Get reference to second line point.
-		Please avoid to use this function, becouse of eventuel update problems.
+		Please avoid to use this function because of possible update problems.
 	*/
 	CVector2d& GetPoint2Ref();
 
@@ -107,7 +107,7 @@ public:
 	/**
 		Check if this line is parallel to another one.
 	*/
-	bool IsParalell(const CLine2d& line) const;
+	bool IsParallel(const CLine2d& line) const;
 
 	/**
 		Check if two lines intersect.
@@ -146,7 +146,7 @@ public:
 
 	/**
 		Get position of point using normed 'alpha' value.
-		Value 0 will be mapped to point 1 and value 1 wil be mapped to point 2.
+		Value 0 will be mapped to point 1 and value 1 will be mapped to point 2.
 	*/
 	CVector2d GetPositionFromAlpha(double alpha) const;
 

@@ -82,6 +82,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw this shape using draw context.  <a href="#a6b1fd7805d0a15791f5851ec431c010f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_oriented_circle_shape.html#af5aeee16cbf4c94778c02484d1348fa2">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#af5aeee16cbf4c94778c02484d1348fa2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_oriented_circle_shape.html#abf232b2dd8782a69d2016546e170eae6">CalcBoundingBox</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#abf232b2dd8782a69d2016546e170eae6"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -122,6 +124,27 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="abf232b2dd8782a69d2016546e170eae6"></a><!-- doxytag: member="iview::COrientedCircleShape::CalcBoundingBox" ref="abf232b2dd8782a69d2016546e170eae6" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> iview::COrientedCircleShape::CalcBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calculate bounding box. </p>
+<p>You have to implement this method in your shapes implementations. </p>
+
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_circle_shape.html#a866daeb8a59555406466a2968f035414">iview::CInteractiveCircleShape</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6b1fd7805d0a15791f5851ec431c010f"></a><!-- doxytag: member="iview::COrientedCircleShape::Draw" ref="a6b1fd7805d0a15791f5851ec431c010f" args="(QPainter &amp;drawContext) const " -->
 <div class="memitem">
 <div class="memproto">

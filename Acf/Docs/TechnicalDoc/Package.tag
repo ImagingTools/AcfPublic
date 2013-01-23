@@ -8016,9 +8016,9 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>IsParalell</name>
+      <name>IsParallel</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>ac34ffb2dc42652d1c6f5fe2ea7612e33</anchor>
+      <anchor>a430ddc612306319907ab790c2a0255c0</anchor>
       <arglist>(const CLine2d &amp;line) const </arglist>
     </member>
     <member kind="function">
@@ -9187,8 +9187,8 @@
       <type>static i2d::CPolyline</type>
       <name>CreatePolyline</name>
       <anchorfile>classi2d_1_1_c_polyline_extractor.html</anchorfile>
-      <anchor>a937da31c3ec786d3bfd350a1fe30c2ce</anchor>
-      <arglist>(const i2d::CCircle &amp;circle, int pointCount, bool clockwiseFlag=false)</arglist>
+      <anchor>a507c2fce3d550a4c09898b65afa38238</anchor>
+      <arglist>(const i2d::CCircle &amp;circle, int pointCount, bool clockwiseFlag=false, bool innerFlag=true)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39482,6 +39482,13 @@
       <anchor>acc4ebe610e35d3894f18c2f238f2d0c8</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>rangeChanged</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ab5067eccd80570da89631126ccf4e4b7</anchor>
+      <arglist>(int min, int max)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QTreeWidgetItem *</type>
       <name>CreateGuiItem</name>
@@ -49650,20 +49657,6 @@
       <arglist>(ControlPoint points=ALL_POINTS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseButton</name>
-      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>aede6b54b8d9fb8ba00202e17f72bf7f7</anchor>
-      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseMove</name>
-      <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a7f2650324b16cdddfc8b7f3367d051a3</anchor>
-      <arglist>(istd::CIndex2d position)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Draw</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
@@ -54003,6 +53996,13 @@
       <anchorfile>classiview_1_1_c_oriented_circle_shape.html</anchorfile>
       <anchor>af5aeee16cbf4c94778c02484d1348fa2</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_oriented_circle_shape.html</anchorfile>
+      <anchor>abf232b2dd8782a69d2016546e170eae6</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">

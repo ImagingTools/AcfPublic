@@ -92,7 +92,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_transformation2d.html#a68f590d710df7df8eda66f06a8273915">GetTransformationFlags</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of describing type of this transformation.  <a href="#a68f590d710df7df8eda66f06a8273915"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_transformation2d.html#ab81b43d90130362a22d788ebd4710d00">GetDistance</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;origPos1, const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;origPos2, double &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a shorteness distance in transformed coordinations.  <a href="#ab81b43d90130362a22d788ebd4710d00"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a shortness distance in transformed coordinations.  <a href="#ab81b43d90130362a22d788ebd4710d00"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_transformation2d.html#a66a97873ee8c42d3dac119032f8bb8d5">GetPositionAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;origPosition, <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get position after transformation.  <a href="#a66a97873ee8c42d3dac119032f8bb8d5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_i_transformation2d.html#a7821530bcc886a5920e632fe3c1a91ed">GetInvPositionAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;transfPosition, <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;result, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ExactnessMode</a> mode=EM_NONE) const =0</td></tr>
@@ -120,7 +120,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
 <tr><td valign="top"><em><a class="anchor" id="a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c"></a><!-- doxytag: member="EM_NONE" ref="a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c" args="" -->EM_NONE</em>&nbsp;</td><td>
-<p>There is no preferencies, should be automatically selected. </p>
+<p>There are no preferences, should be automatically selected. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a69ca1bcb67644ff4eff15cb4046176f8a6f82568fc6b21e661a313caad2733afb"></a><!-- doxytag: member="EM_EXACT" ref="a69ca1bcb67644ff4eff15cb4046176f8a6f82568fc6b21e661a313caad2733afb" args="" -->EM_EXACT</em>&nbsp;</td><td>
 <p>Only precise calculation should be done. </p>
@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <p>Only visual similarity of transformation is important. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a69ca1bcb67644ff4eff15cb4046176f8a7410048b2340b86c117fd4c82551b513"></a><!-- doxytag: member="EM_ANY" ref="a69ca1bcb67644ff4eff15cb4046176f8a7410048b2340b86c117fd4c82551b513" args="" -->EM_ANY</em>&nbsp;</td><td>
-<p>There is only important, that some result will be outputted. </p>
+<p>It is only important to output some result. </p>
 </td></tr>
 </table>
 </dd>
@@ -223,7 +223,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Compute a shorteness distance in transformed coordinations. </p>
+<p>Compute a shortness distance in transformed coordinations. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">origPos1</td><td>first position in original coordinates. </td></tr>

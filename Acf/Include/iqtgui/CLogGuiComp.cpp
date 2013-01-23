@@ -28,6 +28,7 @@
 #include <QtGui/QHeaderView>
 #include <QtGui/QToolBar>
 #include <QtGui/QPainter>
+#include <QtGui/QScrollBar>
 
 // ACF includes
 #include "iqtgui/CItemDelegate.h"
@@ -46,7 +47,8 @@ CLogGuiComp::CLogGuiComp()
 	m_clearAction(NULL),
 	m_exportAction(NULL),
 	m_currentMessageMode(MM_ALL),
-	m_statusCategory(istd::IInformationProvider::IC_NONE)
+	m_statusCategory(istd::IInformationProvider::IC_NONE),
+	m_maxScrollBarValue(0)
 {
 	qRegisterMetaType<QVariant>("QVariant");
 
@@ -228,6 +230,15 @@ void CLogGuiComp::OnGuiCreated()
 		toolBar->insertSeparator(m_exportAction);
 	}
 
+	QAbstractScrollArea *scrollArea = dynamic_cast<QAbstractScrollArea*>(LogView);
+	if(scrollArea != NULL){
+		QScrollBar *scrollBar = scrollArea->verticalScrollBar();
+		
+		if(scrollBar != NULL){
+			connect(scrollBar, SIGNAL(rangeChanged(int,int)), this, SLOT(rangeChanged(int,int)));
+		}
+	}
+
 	BaseClass::OnGuiCreated();
 }
 
@@ -381,6 +392,21 @@ void CLogGuiComp::OnExportAction()
 	if (objectPtr != NULL && m_fileLoaderCompPtr.IsValid()){
 		m_fileLoaderCompPtr->SaveToFile(*objectPtr);
 	}
+}
+
+void CLogGuiComp::rangeChanged(int /*min*/, int max)
+{
+	QAbstractScrollArea *scrollArea = dynamic_cast<QAbstractScrollArea*>(LogView);
+	if(scrollArea != NULL){
+		int position = scrollArea->verticalScrollBar()->value();
+		int change = max - m_maxScrollBarValue;
+
+		if(position != 0){
+			scrollArea->verticalScrollBar()->setValue(position + change);
+		}
+	}
+
+	m_maxScrollBarValue = max;
 }
 
 

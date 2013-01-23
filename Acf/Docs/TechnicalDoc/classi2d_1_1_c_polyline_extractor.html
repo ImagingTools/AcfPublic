@@ -47,14 +47,14 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classi2d_1_1_c_polyline.html">i2d::CPolyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polyline_extractor.html#a937da31c3ec786d3bfd350a1fe30c2ce">CreatePolyline</a> (const <a class="el" href="classi2d_1_1_c_circle.html">i2d::CCircle</a> &amp;circle, int pointCount, bool clockwiseFlag=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classi2d_1_1_c_polyline.html">i2d::CPolyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polyline_extractor.html#a507c2fce3d550a4c09898b65afa38238">CreatePolyline</a> (const <a class="el" href="classi2d_1_1_c_circle.html">i2d::CCircle</a> &amp;circle, int pointCount, bool clockwiseFlag=false, bool innerFlag=true)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Helper class for conversion of common geometrical primitives into a polyline. </p>
 
 <p>Definition at line <a class="el" href="_c_polyline_extractor_8h_source.html#l00018">18</a> of file <a class="el" href="_c_polyline_extractor_8h_source.html">CPolylineExtractor.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a937da31c3ec786d3bfd350a1fe30c2ce"></a><!-- doxytag: member="i2d::CPolylineExtractor::CreatePolyline" ref="a937da31c3ec786d3bfd350a1fe30c2ce" args="(const i2d::CCircle &amp;circle, int pointCount, bool clockwiseFlag=false)" -->
+<a class="anchor" id="a507c2fce3d550a4c09898b65afa38238"></a><!-- doxytag: member="i2d::CPolylineExtractor::CreatePolyline" ref="a507c2fce3d550a4c09898b65afa38238" args="(const i2d::CCircle &amp;circle, int pointCount, bool clockwiseFlag=false, bool innerFlag=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -74,7 +74,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>clockwiseFlag</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>clockwiseFlag</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>innerFlag</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -84,6 +90,13 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pointCount</td><td>Number of nodes to approximate the circle with a closed polyline. Minimum is 2 or 3. </td></tr>
+    <tr><td class="paramname">innerFlag</td><td>Generate polyline that is inner to the circle, so that its nodes lie on a circle, and edges are chords of arcs. In an outer polyline, edges are tangential to the circle and nodes lie around. The exact relation between inner and outer radius is cos(pi/pointCount). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
