@@ -68,6 +68,10 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqtgui_1_1_c_application_comp_base.html">CApplicationCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ad128044423e2b4c8f62a5252c864369f">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ad8a2d4c6c2b2320e73a43c6ceed07836">I_REGISTER_SUBELEMENT</a> (RuntimeStatus)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a871ea02cd646880d9157d599813c2930">I_REGISTER_SUBELEMENT_INTERFACE</a> (RuntimeStatus, <a class="el" href="classibase_1_1_i_runtime_status_provider.html">ibase::IRuntimeStatusProvider</a>, ExtractRuntimeStatus)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a2b8db1c860b980e31e57e896e20ec030">I_REGISTER_SUBELEMENT_INTERFACE</a> (RuntimeStatus, <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>, ExtractRuntimeStatus)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a32e5f55f912a98b560f64b93da49a8a8">I_REGISTER_SUBELEMENT_INTERFACE</a> (RuntimeStatus, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractRuntimeStatus)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#af1cac41b0945e458e9bf0c2ca242eac7">GetApplicationGui</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the main UI object of the application.  <a href="#af1cac41b0945e458e9bf0c2ca242eac7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ac5da37f7603e57c88e2827b86e98af5a">Execute</a> (int argc, char **argv)</td></tr>
@@ -79,7 +83,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Standard component for a Qt based GUI application. </p>
 <p>You have several attributes to control the appearance and decoration of the application window, you can define the splash screen and set some information about your application. </p>
 
-<p>Definition at line <a class="el" href="_c_gui_application_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_gui_application_comp_8h_source.html">CGuiApplicationComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gui_application_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_gui_application_comp_8h_source.html">CGuiApplicationComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ad128044423e2b4c8f62a5252c864369f"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::BaseClass" ref="ad128044423e2b4c8f62a5252c864369f" args="" -->
 <div class="memitem">
@@ -94,7 +98,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_application_comp_base.html#a79f597bef8787deed5eb451bf2ec76f0">iqtgui::CApplicationCompBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_gui_application_comp_8h_source.html#l00025">25</a> of file <a class="el" href="_c_gui_application_comp_8h_source.html">CGuiApplicationComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gui_application_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_gui_application_comp_8h_source.html">CGuiApplicationComp.h</a>.</p>
 
 </div>
 </div>
@@ -167,6 +171,122 @@ Public Member Functions</h2></td></tr>
 <p>Get information about the possible command line arguments of this application. </p>
 
 <p>Implements <a class="el" href="classibase_1_1_i_application.html#a59d3f8ea3ce9cb249cdfe8cdaaf83985">ibase::IApplication</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8a2d4c6c2b2320e73a43c6ceed07836"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::I_REGISTER_SUBELEMENT" ref="ad8a2d4c6c2b2320e73a43c6ceed07836" args="(RuntimeStatus)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CGuiApplicationComp::I_REGISTER_SUBELEMENT </td>
+          <td>(</td>
+          <td class="paramtype">RuntimeStatus&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a871ea02cd646880d9157d599813c2930"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="a871ea02cd646880d9157d599813c2930" args="(RuntimeStatus, ibase::IRuntimeStatusProvider, ExtractRuntimeStatus)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CGuiApplicationComp::I_REGISTER_SUBELEMENT_INTERFACE </td>
+          <td>(</td>
+          <td class="paramtype">RuntimeStatus&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classibase_1_1_i_runtime_status_provider.html">ibase::IRuntimeStatusProvider</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ExtractRuntimeStatus&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2b8db1c860b980e31e57e896e20ec030"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="a2b8db1c860b980e31e57e896e20ec030" args="(RuntimeStatus, imod::IModel, ExtractRuntimeStatus)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CGuiApplicationComp::I_REGISTER_SUBELEMENT_INTERFACE </td>
+          <td>(</td>
+          <td class="paramtype">RuntimeStatus&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ExtractRuntimeStatus&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a32e5f55f912a98b560f64b93da49a8a8"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::I_REGISTER_SUBELEMENT_INTERFACE" ref="a32e5f55f912a98b560f64b93da49a8a8" args="(RuntimeStatus, istd::IChangeable, ExtractRuntimeStatus)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CGuiApplicationComp::I_REGISTER_SUBELEMENT_INTERFACE </td>
+          <td>(</td>
+          <td class="paramtype">RuntimeStatus&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ExtractRuntimeStatus&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

@@ -914,6 +914,14 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>IRuntimeStatusProvider.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_i_runtime_status_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">ibase::IRuntimeStatusProvider</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>ITextDocument.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_i_text_document_8h</filename>
@@ -2634,8 +2642,8 @@
     <name>CRelativeFileNameParamComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_relative_file_name_param_comp_8h</filename>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">ifile/CFileNameParamComp.h</includes>
-    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
     <class kind="class">ifile::CRelativeFileNameParamComp</class>
     <namespace>ifile</namespace>
   </compound>
@@ -4330,6 +4338,8 @@
     <name>CGuiApplicationComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_gui_application_comp_8h</filename>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
+    <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="yes" imported="no">ibase/IRuntimeStatusProvider.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_i_gui_application_8h" name="IGuiApplication.h" local="yes" imported="no">iqtgui/IGuiApplication.h</includes>
     <includes id="_c_application_comp_base_8h" name="CApplicationCompBase.h" local="yes" imported="no">iqtgui/CApplicationCompBase.h</includes>
@@ -6613,6 +6623,10 @@
   <compound kind="class">
     <name>QObject</name>
     <filename>class_q_object.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>RuntimeStatus</name>
+    <filename>class_runtime_status.html</filename>
   </compound>
   <compound kind="class">
     <name>SelectionInfoImpl</name>
@@ -12078,6 +12092,7 @@
     <class kind="class">ibase::IObjectSnap</class>
     <class kind="class">ibase::IProgressManager</class>
     <class kind="class">ibase::IQtItemModelProvider</class>
+    <class kind="class">ibase::IRuntimeStatusProvider</class>
     <class kind="class">ibase::ITextDocument</class>
     <class kind="class">ibase::TCommandsProviderCompWrap</class>
     <class kind="class">ibase::TComposedFactoryComp</class>
@@ -12639,8 +12654,8 @@
       <type></type>
       <name>CMessage</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>adf7c2025d9211a8cd5fcbba8133946f7</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0)</arglist>
+      <anchor>a6048c1e17ab37f5030c16f79dab9e692</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -14205,6 +14220,48 @@
       <name>GetItemModel</name>
       <anchorfile>classibase_1_1_i_qt_item_model_provider.html</anchorfile>
       <anchor>a356dba9808b21c271f932969867f5978</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::IRuntimeStatusProvider</name>
+    <filename>classibase_1_1_i_runtime_status_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>RuntimeStatus</name>
+      <anchorfile>classibase_1_1_i_runtime_status_provider.html</anchorfile>
+      <anchor>a3a09e5f99ba954798e821059a58dda8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>RS_NONE</name>
+      <anchorfile>classibase_1_1_i_runtime_status_provider.html</anchorfile>
+      <anchor>a3a09e5f99ba954798e821059a58dda8ea31c628c89187cba15663b88ca9115ff9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>RS_STARTING</name>
+      <anchorfile>classibase_1_1_i_runtime_status_provider.html</anchorfile>
+      <anchor>a3a09e5f99ba954798e821059a58dda8ea93cfaf6de685dcef5c1c6e037959852e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>RS_RUNNING</name>
+      <anchorfile>classibase_1_1_i_runtime_status_provider.html</anchorfile>
+      <anchor>a3a09e5f99ba954798e821059a58dda8eac524fcf8df627e6f10c2dc19a1b9e5b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>RS_SHUTDOWN</name>
+      <anchorfile>classibase_1_1_i_runtime_status_provider.html</anchorfile>
+      <anchor>a3a09e5f99ba954798e821059a58dda8ea248757a03705209531be98596a03b1fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual RuntimeStatus</type>
+      <name>GetRuntimeStatus</name>
+      <anchorfile>classibase_1_1_i_runtime_status_provider.html</anchorfile>
+      <anchor>a1a13b840729386478cb1e1c1f877efaa</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -26737,12 +26794,20 @@
     <name>ifile::CRelativeFileNameParamComp</name>
     <filename>classifile_1_1_c_relative_file_name_param_comp.html</filename>
     <base>ifile::CFileNameParamComp</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="typedef">
       <type>ifile::CFileNameParamComp</type>
       <name>BaseClass</name>
       <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
       <anchor>ae0bc05b807c6b3e2c2d7daa6053e2181</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a3a335fd8efa00466f6c0d75713a9e288</anchor>
+      <arglist>(m_relativeToModelCompPtr, m_relativeToCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
@@ -26764,6 +26829,20 @@
       <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
       <anchor>a31db3271b593e7df6e578c8ed171d29b</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a946a504308522c3c3df474b877343720</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a5d4caa6adb4fa980a476cfe3b0bbe05f</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38753,6 +38832,34 @@
       <anchor>ad128044423e2b4c8f62a5252c864369f</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>ad8a2d4c6c2b2320e73a43c6ceed07836</anchor>
+      <arglist>(RuntimeStatus)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a871ea02cd646880d9157d599813c2930</anchor>
+      <arglist>(RuntimeStatus, ibase::IRuntimeStatusProvider, ExtractRuntimeStatus)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a2b8db1c860b980e31e57e896e20ec030</anchor>
+      <arglist>(RuntimeStatus, imod::IModel, ExtractRuntimeStatus)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a32e5f55f912a98b560f64b93da49a8a8</anchor>
+      <arglist>(RuntimeStatus, istd::IChangeable, ExtractRuntimeStatus)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iqtgui::IGuiObject *</type>
       <name>GetApplicationGui</name>
@@ -39345,8 +39452,8 @@
       <type>void</type>
       <name>EmitRemoveMessage</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>abaed084450faf40113f8897a6346bfde</anchor>
-      <arglist>(QVariant)</arglist>
+      <anchor>a972b9733325727ad807ec4f2de2a3ff1</anchor>
+      <arglist>(qint64)</arglist>
     </member>
     <member kind="signal">
       <type>void</type>
@@ -39451,8 +39558,8 @@
       <type>virtual void</type>
       <name>OnRemoveMessage</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>abfab01555ef6be6e1a3d119300302a26</anchor>
-      <arglist>(QVariant messageId)</arglist>
+      <anchor>a4678641d414473694adefb18896284dd</anchor>
+      <arglist>(qint64 messageTimeStamp)</arglist>
     </member>
     <member kind="slot" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -40972,6 +41079,13 @@
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>a71927e7a9688911c9b1071434e9f17d5</anchor>
       <arglist>(bool state)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>ae87c806f71e7d6f45aac777d8e5f5f25</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -28,96 +28,111 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iprop_CPropertiesManager_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_composed_factory_8h.html">istd/TComposedFactory.h</a>&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_single_factory_8h.html">istd/TSingleFactory.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_opt_pointer_vector_8h.html">istd/TOptPointerVector.h</a>&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_archive_8h.html">iser/IArchive.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_archive_tag_8h.html">iser/CArchiveTag.h</a>&quot;</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_t_property_8h.html">iprop/TProperty.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_multi_property_8h.html">iprop/TMultiProperty.h</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_properties_manager_8h.html">iprop/IPropertiesManager.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtGui/QStandardItemModel&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_composed_factory_8h.html">istd/TComposedFactory.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_single_factory_8h.html">istd/TSingleFactory.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_opt_pointer_vector_8h.html">istd/TOptPointerVector.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_archive_8h.html">iser/IArchive.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_archive_tag_8h.html">iser/CArchiveTag.h</a>&quot;</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>iprop
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021 
-<a name="l00025"></a><a class="code" href="classiprop_1_1_c_properties_manager.html">00025</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_c_properties_manager.html" title="Basic implementation of an property container.">CPropertiesManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>
-<a name="l00026"></a>00026 {
-<a name="l00027"></a>00027 <span class="keyword">public</span>:
-<a name="l00028"></a>00028        <span class="comment">/*</span>
-<a name="l00029"></a>00029 <span class="comment">              Internal property info item.</span>
-<a name="l00030"></a>00030 <span class="comment">       */</span>
-<a name="l00031"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html">00031</a>        <span class="keyword">struct </span><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html">PropertyInfo</a>
-<a name="l00032"></a>00032        {
-<a name="l00033"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#a7aed79eab1765b96bd4e3c1f8071c595">00033</a>               QByteArray <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#a7aed79eab1765b96bd4e3c1f8071c595">propertyId</a>;
-<a name="l00034"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#acea24de499d1c36adddb3c66b08496ff">00034</a>               QByteArray <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#acea24de499d1c36adddb3c66b08496ff">propertyDescription</a>;
-<a name="l00035"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#ae19b1e00a65be25fc0c01118f171a852">00035</a>               <span class="keywordtype">int</span> <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#ae19b1e00a65be25fc0c01118f171a852">propertyFlags</a>;
-<a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#a5d7811d3852065bf22c1f7af8e84952b">00037</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;iser::IObject&gt;</a> <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#a5d7811d3852065bf22c1f7af8e84952b">objectPtr</a>; 
-<a name="l00038"></a>00038        };
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040        <a class="code" href="classiprop_1_1_c_properties_manager.html#abacef93956d1f3745f38d1f6c24f76ff">CPropertiesManager</a>();
-<a name="l00041"></a>00041 
-<a name="l00045"></a>00045        <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html">PropertyInfo</a>* <a class="code" href="classiprop_1_1_c_properties_manager.html#aa51598cd17a9710d5efe77e37f033281" title="Get property info object for a given property ID.">GetPropertyInfo</a>(<span class="keyword">const</span> QByteArray&amp; propertyId) <span class="keyword">const</span>;
-<a name="l00046"></a>00046 
-<a name="l00050"></a>00050        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PropertyType&gt;
-<a name="l00051"></a>00051        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a3a5afd3f335fbe328c5f30d589826c04" title="Register a new property type.">RegisterPropertyType</a>();
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (iprop::IPropertiesManager)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#aebe25efc9cd0569b4e3372f90922dd9a" title="Remove all properties from the manager.">RemoveAllProperties</a>();
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a54515331a3cea646cad395502d1ff61c" title="Get number of properties.">GetPropertiesCount</a>() <span class="keyword">const</span>;
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_c_properties_manager.html#a6693a7edfd5a7c50b637be65af530546" title="Get property with the given index.">GetProperty</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprop_1_1_c_properties_manager.html#a5cc12c150297e64abe86c7a034d12178" title="Get the ID of the property with the given index propertyIndex.">GetPropertyId</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span>;
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> QString <a class="code" href="classiprop_1_1_c_properties_manager.html#aaccab62dc65f9fa24b66a7d7ffe75ddc" title="Get the description of the property with the given index propertyIndex.">GetPropertyDescription</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span>;
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a45a286ac7bcff84fd183c4bcb9efd297" title="Insert an property into the object.">InsertProperty</a>(
-<a name="l00060"></a>00060                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* objectPtr,
-<a name="l00061"></a>00061                             <span class="keyword">const</span> QByteArray&amp; propertyId,
-<a name="l00062"></a>00062                             <span class="keyword">const</span> QByteArray&amp; propertyDescription,
-<a name="l00063"></a>00063                             <span class="keywordtype">int</span> propertyFlags,
-<a name="l00064"></a>00064                             <span class="keywordtype">bool</span> releaseFlag);
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a34b0f875ef53c24aeb5e3524291cb2fb">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">protected</span>:
-<a name="l00070"></a>00070        <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a1eb5a3fcddc8a1978c2061dad52aee4f">ReadProperties</a>(
-<a name="l00071"></a>00071                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive,
-<a name="l00072"></a>00072                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertiesTag,
-<a name="l00073"></a>00073                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertyTag);
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#ab2ee6b37a6e929edf8a37a082c409aee">WriteProperties</a>(
-<a name="l00076"></a>00076                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive,
-<a name="l00077"></a>00077                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertiesTag,
-<a name="l00078"></a>00078                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertyTag) <span class="keyword">const</span>;
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_qt_item_model_provider_8h.html">ibase/IQtItemModelProvider.h</a>&quot;</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_t_property_8h.html">iprop/TProperty.h</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_t_multi_property_8h.html">iprop/TMultiProperty.h</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_i_properties_manager_8h.html">iprop/IPropertiesManager.h</a>&quot;</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="keyword">namespace </span>iprop
+<a name="l00025"></a>00025 {
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 
+<a name="l00031"></a><a class="code" href="classiprop_1_1_c_properties_manager.html">00031</a> <span class="keyword">class </span><a class="code" href="classiprop_1_1_c_properties_manager.html" title="Basic implementation of an property container.">CPropertiesManager</a>:
+<a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>,
+<a name="l00033"></a>00033                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IQtItemModelProvider
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035 <span class="keyword">public</span>:
+<a name="l00036"></a>00036        <span class="comment">/*</span>
+<a name="l00037"></a>00037 <span class="comment">              Internal property info item.</span>
+<a name="l00038"></a>00038 <span class="comment">       */</span>
+<a name="l00039"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html">00039</a>        <span class="keyword">struct </span><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html">PropertyInfo</a>
+<a name="l00040"></a>00040        {
+<a name="l00041"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#a7aed79eab1765b96bd4e3c1f8071c595">00041</a>               QByteArray <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#a7aed79eab1765b96bd4e3c1f8071c595">propertyId</a>;
+<a name="l00042"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#acea24de499d1c36adddb3c66b08496ff">00042</a>               QByteArray <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#acea24de499d1c36adddb3c66b08496ff">propertyDescription</a>;
+<a name="l00043"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#ae19b1e00a65be25fc0c01118f171a852">00043</a>               <span class="keywordtype">int</span> <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#ae19b1e00a65be25fc0c01118f171a852">propertyFlags</a>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#a5d7811d3852065bf22c1f7af8e84952b">00045</a>               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;iser::IObject&gt;</a> <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html#a5d7811d3852065bf22c1f7af8e84952b">objectPtr</a>; 
+<a name="l00046"></a>00046        };
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048        <a class="code" href="classiprop_1_1_c_properties_manager.html#abacef93956d1f3745f38d1f6c24f76ff">CPropertiesManager</a>();
+<a name="l00049"></a>00049 
+<a name="l00053"></a>00053        <a class="code" href="structiprop_1_1_c_properties_manager_1_1_property_info.html">PropertyInfo</a>* <a class="code" href="classiprop_1_1_c_properties_manager.html#aa51598cd17a9710d5efe77e37f033281" title="Get property info object for a given property ID.">GetPropertyInfo</a>(<span class="keyword">const</span> QByteArray&amp; propertyId) <span class="keyword">const</span>;
+<a name="l00054"></a>00054 
+<a name="l00058"></a>00058        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PropertyType&gt;
+<a name="l00059"></a>00059        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a3a5afd3f335fbe328c5f30d589826c04" title="Register a new property type.">RegisterPropertyType</a>();
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <span class="comment">// reimplemented (iprop::IPropertiesManager)</span>
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#aebe25efc9cd0569b4e3372f90922dd9a" title="Remove all properties from the manager.">RemoveAllProperties</a>();
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a54515331a3cea646cad395502d1ff61c" title="Get number of properties.">GetPropertiesCount</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_c_properties_manager.html#a6693a7edfd5a7c50b637be65af530546" title="Get property with the given index.">GetProperty</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span>;
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprop_1_1_c_properties_manager.html#a5cc12c150297e64abe86c7a034d12178" title="Get the ID of the property with the given index propertyIndex.">GetPropertyId</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span>;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> QString <a class="code" href="classiprop_1_1_c_properties_manager.html#aaccab62dc65f9fa24b66a7d7ffe75ddc" title="Get the description of the property with the given index propertyIndex.">GetPropertyDescription</a>(<span class="keywordtype">int</span> propertyIndex) <span class="keyword">const</span>;
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a45a286ac7bcff84fd183c4bcb9efd297" title="Insert an property into the object.">InsertProperty</a>(
+<a name="l00068"></a>00068                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* objectPtr,
+<a name="l00069"></a>00069                             <span class="keyword">const</span> QByteArray&amp; propertyId,
+<a name="l00070"></a>00070                             <span class="keyword">const</span> QByteArray&amp; propertyDescription,
+<a name="l00071"></a>00071                             <span class="keywordtype">int</span> propertyFlags,
+<a name="l00072"></a>00072                             <span class="keywordtype">bool</span> releaseFlag);
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        <span class="comment">// reimplemented (ibase::IQtItemModelProvider)</span>
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keyword">const</span> QAbstractItemModel* <a class="code" href="classiprop_1_1_c_properties_manager.html#a007fb7f273ca631aec6874baa726009a">GetItemModel</a>() <span class="keyword">const</span>;
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a34b0f875ef53c24aeb5e3524291cb2fb">Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="keyword">private</span>:
-<a name="l00081"></a>00081        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html">istd::TComposedFactory&lt;iser::IObject&gt;</a> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html">PropertyFactory</a>;
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;PropertyInfo&gt;</a> m_propertiesList;
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html">PropertyFactory</a> s_propertyFactory;
-<a name="l00086"></a>00086 };
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="comment">// public static methods</span>
+<a name="l00080"></a>00080 <span class="keyword">protected</span>:
+<a name="l00081"></a>00081        <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a1eb5a3fcddc8a1978c2061dad52aee4f">ReadProperties</a>(
+<a name="l00082"></a>00082                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive,
+<a name="l00083"></a>00083                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertiesTag,
+<a name="l00084"></a>00084                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertyTag);
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086        <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#ab2ee6b37a6e929edf8a37a082c409aee">WriteProperties</a>(
+<a name="l00087"></a>00087                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive,
+<a name="l00088"></a>00088                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertiesTag,
+<a name="l00089"></a>00089                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a>&amp; propertyTag) <span class="keyword">const</span>;
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PropertyImpl&gt;
-<a name="l00092"></a><a class="code" href="classiprop_1_1_c_properties_manager.html#a3a5afd3f335fbe328c5f30d589826c04">00092</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a3a5afd3f335fbe328c5f30d589826c04" title="Register a new property type.">CPropertiesManager::RegisterPropertyType</a>()
-<a name="l00093"></a>00093 {
-<a name="l00094"></a>00094        <span class="keywordflow">return</span> s_propertyFactory.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html#ac7983de55ffa7ee52fb802052f36fd03">RegisterFactory</a>(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_single_factory.html">istd::TSingleFactory&lt;iser::IObject, PropertyImpl&gt;</a>(PropertyImpl::GetTypeName()), <span class="keyword">true</span>);
-<a name="l00095"></a>00095 }
-<a name="l00096"></a>00096 
+<a name="l00091"></a>00091 <span class="keyword">private</span>:
+<a name="l00092"></a>00092        <a class="code" href="classiprop_1_1_c_properties_manager.html#abacef93956d1f3745f38d1f6c24f76ff">CPropertiesManager</a>(<span class="keyword">const</span> <a class="code" href="classiprop_1_1_c_properties_manager.html" title="Basic implementation of an property container.">CPropertiesManager</a>&amp;);
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html">istd::TComposedFactory&lt;iser::IObject&gt;</a> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html">PropertyFactory</a>;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;PropertyInfo&gt;</a> m_propertiesList;
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098 } <span class="comment">// namespace iprop</span>
+<a name="l00098"></a>00098        <span class="keyword">static</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html">PropertyFactory</a> s_propertyFactory;
 <a name="l00099"></a>00099 
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 <span class="preprocessor">#endif // !iprop_CPropertiesManager_included</span>
-<a name="l00102"></a>00102 <span class="preprocessor"></span>
+<a name="l00100"></a>00100        QStandardItemModel m_itemModel;
+<a name="l00101"></a>00101 };
+<a name="l00102"></a>00102 
 <a name="l00103"></a>00103 
+<a name="l00104"></a>00104 <span class="comment">// public static methods</span>
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PropertyImpl&gt;
+<a name="l00107"></a><a class="code" href="classiprop_1_1_c_properties_manager.html#a3a5afd3f335fbe328c5f30d589826c04">00107</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_c_properties_manager.html#a3a5afd3f335fbe328c5f30d589826c04" title="Register a new property type.">CPropertiesManager::RegisterPropertyType</a>()
+<a name="l00108"></a>00108 {
+<a name="l00109"></a>00109        <span class="keywordflow">return</span> s_propertyFactory.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html#ac7983de55ffa7ee52fb802052f36fd03">RegisterFactory</a>(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_single_factory.html">istd::TSingleFactory&lt;iser::IObject, PropertyImpl&gt;</a>(PropertyImpl::GetTypeName()), <span class="keyword">true</span>);
+<a name="l00110"></a>00110 }
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 } <span class="comment">// namespace iprop</span>
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="preprocessor">#endif // !iprop_CPropertiesManager_included</span>
+<a name="l00117"></a>00117 <span class="preprocessor"></span>
+<a name="l00118"></a>00118 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -86,7 +86,7 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a0000773a9b4c264f42ef828251ff3e85">EmitAddMessage</a> (const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *messagePtr, bool releaseFlag)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abaed084450faf40113f8897a6346bfde">EmitRemoveMessage</a> (QVariant)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a972b9733325727ad807ec4f2de2a3ff1">EmitRemoveMessage</a> (qint64)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a554f01e728935319a90639c77e6e9537">EmitReset</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -109,7 +109,7 @@ Protected Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#afce61325a081282c83132397a8704040">OnAddMessage</a> (const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *messagePtr, bool releaseFlag)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abfab01555ef6be6e1a3d119300302a26">OnRemoveMessage</a> (QVariant messageId)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a4678641d414473694adefb18896284dd">OnRemoveMessage</a> (qint64 messageTimeStamp)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a691f3484a4b4a29013125cb082fb905b">OnReset</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a47403ce2904f27d0a6ef3a1f193a7acf">OnMessageModeChanged</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#ad96063bc481cedd226e746a125a671a2">OnClearAction</a> ()</td></tr>
@@ -378,14 +378,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abaed084450faf40113f8897a6346bfde"></a><!-- doxytag: member="iqtgui::CLogGuiComp::EmitRemoveMessage" ref="abaed084450faf40113f8897a6346bfde" args="(QVariant)" -->
+<a class="anchor" id="a972b9733325727ad807ec4f2de2a3ff1"></a><!-- doxytag: member="iqtgui::CLogGuiComp::EmitRemoveMessage" ref="a972b9733325727ad807ec4f2de2a3ff1" args="(qint64)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iqtgui::CLogGuiComp::EmitRemoveMessage </td>
           <td>(</td>
-          <td class="paramtype">QVariant&#160;</td>
+          <td class="paramtype">qint64&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [signal]</code></td>
         </tr>
@@ -564,15 +564,15 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abfab01555ef6be6e1a3d119300302a26"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnRemoveMessage" ref="abfab01555ef6be6e1a3d119300302a26" args="(QVariant messageId)" -->
+<a class="anchor" id="a4678641d414473694adefb18896284dd"></a><!-- doxytag: member="iqtgui::CLogGuiComp::OnRemoveMessage" ref="a4678641d414473694adefb18896284dd" args="(qint64 messageTimeStamp)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iqtgui::CLogGuiComp::OnRemoveMessage </td>
           <td>(</td>
-          <td class="paramtype">QVariant&#160;</td>
-          <td class="paramname"><em>messageId</em></td><td>)</td>
+          <td class="paramtype">qint64&#160;</td>
+          <td class="paramname"><em>messageTimeStamp</em></td><td>)</td>
           <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>

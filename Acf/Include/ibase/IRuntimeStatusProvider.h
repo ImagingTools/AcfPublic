@@ -20,25 +20,56 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef ibase_IRuntimeStatusProvider_included
+#define ibase_IRuntimeStatusProvider_included
 
 
-namespace istd
+#include "istd/IChangeable.h"
+
+
+namespace ibase
+{		
+
+
+/**
+	Provider of the run-time status.
+*/
+class IRuntimeStatusProvider: virtual public istd::IChangeable
 {
+public:
+	enum RuntimeStatus
+	{
+		/**
+			No status
+		*/
+		RS_NONE,
 
+		/**
+			Process starting up.
+		*/
+		RS_STARTING,
 
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  2779,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+		/**
+			Process is running.
+		*/
+		RS_RUNNING,
+
+		/**
+			Process is in shutdown phase
+		*/
+		RS_SHUTDOWN
+	};
+
+	/**
+		Get the runtime status.
+	*/
+	virtual RuntimeStatus GetRuntimeStatus() const = 0;
 };
 
 
-} // namespace istd
+} // namespace ibase
 
 
-#endif // !istd_AcfVersion_included
+#endif // !ibase_IRuntimeStatusProvider_included
 
 

@@ -63,7 +63,7 @@ Inheritance diagram for ibase::CMessage:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#aafe338d5d93b99a4d95e5359bf4a237c">CMessage</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#adf7c2025d9211a8cd5fcbba8133946f7">CMessage</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category, int id, const QString &amp;text, const QString &amp;source, int flags=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a6048c1e17ab37f5030c16f79dab9e692">CMessage</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#ad2c8d0d032bd845dbb140cea70e3309b">SetCategory</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a94d850108fd32ace9f0571fdfa905a6d">SetText</a> (const QString &amp;text)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a107d513e8c5fd4efe193f2ef5c4f86e1">SetSource</a> (const QString &amp;source)</td></tr>
@@ -115,7 +115,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adf7c2025d9211a8cd5fcbba8133946f7"></a><!-- doxytag: member="ibase::CMessage::CMessage" ref="adf7c2025d9211a8cd5fcbba8133946f7" args="(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0)" -->
+<a class="anchor" id="a6048c1e17ab37f5030c16f79dab9e692"></a><!-- doxytag: member="ibase::CMessage::CMessage" ref="a6048c1e17ab37f5030c16f79dab9e692" args="(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -147,7 +147,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QDateTime *&#160;</td>
+          <td class="paramname"><em>timeStampPtr</em> = <code>NULL</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -223,9 +229,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00073">73</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00074">74</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00053">m_category</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00054">m_category</a>.</p>
 
 </div>
 </div>
@@ -248,9 +254,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a1bc354203a118ec6e2fde585d8b1f2af">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00085">85</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00086">86</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00055">m_text</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00056">m_text</a>.</p>
 
 </div>
 </div>
@@ -273,9 +279,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a12942cf75ec0a5dcbffeb002ac54694c">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00097">97</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00098">98</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00057">m_flags</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00058">m_flags</a>.</p>
 
 </div>
 </div>
@@ -298,9 +304,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#acc2814cc1acd8063451bd125031e55d5">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00079">79</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00080">80</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00054">m_id</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00055">m_id</a>.</p>
 
 </div>
 </div>
@@ -323,9 +329,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a5d9a8e363087d8a769b506e323bc8cf6">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00091">91</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00092">92</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00056">m_source</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00057">m_source</a>.</p>
 
 </div>
 </div>
@@ -348,9 +354,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a20f38eec5cd18588d78853cb0edc50c5">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00067">67</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00068">68</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00059">m_timeStamp</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00060">m_timeStamp</a>.</p>
 
 </div>
 </div>
@@ -440,9 +446,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00053">53</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00054">54</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00073">GetInformationCategory()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00074">GetInformationCategory()</a>.</p>
 
 </div>
 </div>
@@ -457,9 +463,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00057">57</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00058">58</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00097">GetInformationFlags()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00098">GetInformationFlags()</a>.</p>
 
 </div>
 </div>
@@ -474,9 +480,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00054">54</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00055">55</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00079">GetInformationId()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00080">GetInformationId()</a>.</p>
 
 </div>
 </div>
@@ -491,9 +497,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00056">56</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00057">57</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00091">GetInformationSource()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00092">GetInformationSource()</a>.</p>
 
 </div>
 </div>
@@ -508,9 +514,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00055">55</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00056">56</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00085">GetInformationDescription()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00086">GetInformationDescription()</a>.</p>
 
 </div>
 </div>
@@ -525,9 +531,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00059">59</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00060">60</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00067">GetInformationTimeStamp()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00068">GetInformationTimeStamp()</a>.</p>
 
 </div>
 </div>

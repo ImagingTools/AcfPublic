@@ -14946,6 +14946,7 @@
     <name>iprop::CPropertiesManager</name>
     <filename>classiprop_1_1_c_properties_manager.html</filename>
     <base virtualness="virtual">iprop::IPropertiesManager</base>
+    <base virtualness="virtual">ibase::IQtItemModelProvider</base>
     <class kind="struct">iprop::CPropertiesManager::PropertyInfo</class>
     <member kind="function">
       <type></type>
@@ -15002,6 +15003,13 @@
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
       <anchor>a45a286ac7bcff84fd183c4bcb9efd297</anchor>
       <arglist>(iser::IObject *objectPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, bool releaseFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QAbstractItemModel *</type>
+      <name>GetItemModel</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a007fb7f273ca631aec6874baa726009a</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

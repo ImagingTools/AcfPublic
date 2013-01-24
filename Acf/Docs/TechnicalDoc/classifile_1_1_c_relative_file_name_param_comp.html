@@ -38,7 +38,7 @@
 <div class="title">ifile::CRelativeFileNameParamComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ifile::CRelativeFileNameParamComp" --><!-- doxytag: inherits="ifile::CFileNameParamComp" -->
+<!-- doxytag: class="ifile::CRelativeFileNameParamComp" --><!-- doxytag: inherits="ifile::CFileNameParamComp,imod::CMultiModelBridgeBase" -->
 <p><code>#include &lt;<a class="el" href="_c_relative_file_name_param_comp_8h_source.html">CRelativeFileNameParamComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ifile::CRelativeFileNameParamComp:</div>
@@ -47,16 +47,21 @@ Inheritance diagram for ifile::CRelativeFileNameParamComp:</div>
   <img src="classifile_1_1_c_relative_file_name_param_comp.png" usemap="#ifile::CRelativeFileNameParamComp_map" alt=""/>
   <map id="ifile::CRelativeFileNameParamComp_map" name="ifile::CRelativeFileNameParamComp_map">
 <area href="classifile_1_1_c_file_name_param_comp.html" title="Basic implementation of interface ifile::IFileNameParam as component." alt="ifile::CFileNameParamComp" shape="rect" coords="196,224,578,248"/>
+<area href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan..." alt="imod::CMultiModelBridgeBase" shape="rect" coords="980,224,1362,248"/>
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,168,382,192"/>
 <area href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)" alt="ifile::IFileNameParam" shape="rect" coords="392,168,774,192"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="784,168,1166,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1176,168,1558,192"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,112,382,136"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="392,112,774,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="784,112,1166,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1176,112,1558,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,56,382,80"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="392,56,774,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="392,0,774,24"/>
-<area href="classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; ifile::CRelativeFileNameParamComp &gt;" shape="rect" coords="196,336,578,360"/>
-<area href="classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;" shape="rect" coords="196,392,578,416"/>
-<area href="classifile_1_1_c_generated_file_name_param_comp.html" title="Component for auto generated file path." alt="ifile::CGeneratedFileNameParamComp" shape="rect" coords="196,448,578,472"/>
+<area href="classibase_1_1_t_logger_wrap.html" alt="ibase::TLoggerWrap&lt; ifile::CRelativeFileNameParamComp &gt;" shape="rect" coords="588,336,970,360"/>
+<area href="classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;" shape="rect" coords="588,392,970,416"/>
+<area href="classifile_1_1_c_generated_file_name_param_comp.html" title="Component for auto generated file path." alt="ifile::CGeneratedFileNameParamComp" shape="rect" coords="588,448,970,472"/>
 </map>
  </div></div>
 
@@ -67,16 +72,19 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classifile_1_1_c_file_name_param_comp.html">ifile::CFileNameParamComp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_relative_file_name_param_comp.html#ae0bc05b807c6b3e2c2d7daa6053e2181">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_relative_file_name_param_comp.html#a3a335fd8efa00466f6c0d75713a9e288">I_ASSIGN_TO</a> (m_relativeToModelCompPtr, m_relativeToCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_relative_file_name_param_comp.html#af81764c97d1218d16dbd14a31ce9510e">GetPath</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path.  <a href="#af81764c97d1218d16dbd14a31ce9510e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_relative_file_name_param_comp.html#a19b054baae0c48d9405552525dfd33fb">SetPath</a> (const QString &amp;path)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set path.  <a href="#a19b054baae0c48d9405552525dfd33fb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_relative_file_name_param_comp.html#a31db3271b593e7df6e578c8ed171d29b">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a31db3271b593e7df6e578c8ed171d29b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_relative_file_name_param_comp.html#a946a504308522c3c3df474b877343720">OnComponentCreated</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_relative_file_name_param_comp.html#a5d4caa6adb4fa980a476cfe3b0bbe05f">OnComponentDestroyed</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_relative_file_name_param_comp_8h_source.html#l00014">14</a> of file <a class="el" href="_c_relative_file_name_param_comp_8h_source.html">CRelativeFileNameParamComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_relative_file_name_param_comp_8h_source.html#l00015">15</a> of file <a class="el" href="_c_relative_file_name_param_comp_8h_source.html">CRelativeFileNameParamComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ae0bc05b807c6b3e2c2d7daa6053e2181"></a><!-- doxytag: member="ifile::CRelativeFileNameParamComp::BaseClass" ref="ae0bc05b807c6b3e2c2d7daa6053e2181" args="" -->
 <div class="memitem">
@@ -93,7 +101,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;</a>, and <a class="el" href="classifile_1_1_c_generated_file_name_param_comp.html#aa73ed12d6405043d1a690f962796ad00">ifile::CGeneratedFileNameParamComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_relative_file_name_param_comp_8h_source.html#l00017">17</a> of file <a class="el" href="_c_relative_file_name_param_comp_8h_source.html">CRelativeFileNameParamComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_relative_file_name_param_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_relative_file_name_param_comp_8h_source.html">CRelativeFileNameParamComp.h</a>.</p>
 
 </div>
 </div>
@@ -115,6 +123,79 @@ Public Member Functions</h2></td></tr>
 <p>Get path. </p>
 
 <p>Reimplemented from <a class="el" href="classifile_1_1_c_file_name_param_comp.html#ace9355f63a67e573dbe2da501a9ed575">ifile::CFileNameParamComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a335fd8efa00466f6c0d75713a9e288"></a><!-- doxytag: member="ifile::CRelativeFileNameParamComp::I_ASSIGN_TO" ref="a3a335fd8efa00466f6c0d75713a9e288" args="(m_relativeToModelCompPtr, m_relativeToCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ifile::CRelativeFileNameParamComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_relativeToModelCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_relativeToCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a946a504308522c3c3df474b877343720"></a><!-- doxytag: member="ifile::CRelativeFileNameParamComp::OnComponentCreated" ref="a946a504308522c3c3df474b877343720" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ifile::CRelativeFileNameParamComp::OnComponentCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classifile_1_1_c_file_name_param_comp.html#a828fd0bec0cd35df995fd2f94cce35bb">ifile::CFileNameParamComp</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">ibase::TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;</a>, and <a class="el" href="classifile_1_1_c_generated_file_name_param_comp.html#a8f9b3aa23eae9f9e9daf92bbbf146a29">ifile::CGeneratedFileNameParamComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d4caa6adb4fa980a476cfe3b0bbe05f"></a><!-- doxytag: member="ifile::CRelativeFileNameParamComp::OnComponentDestroyed" ref="a5d4caa6adb4fa980a476cfe3b0bbe05f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ifile::CRelativeFileNameParamComp::OnComponentDestroyed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a007550438603368acd5133e97547d73f">icomp::CComponentBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classifile_1_1_c_generated_file_name_param_comp.html#a635f4eae828ce169c14678cd71759017">ifile::CGeneratedFileNameParamComp</a>.</p>
 
 </div>
 </div>
