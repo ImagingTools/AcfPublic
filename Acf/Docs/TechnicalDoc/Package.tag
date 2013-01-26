@@ -39589,13 +39589,6 @@
       <anchor>acc4ebe610e35d3894f18c2f238f2d0c8</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>rangeChanged</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ab5067eccd80570da89631126ccf4e4b7</anchor>
-      <arglist>(int min, int max)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QTreeWidgetItem *</type>
       <name>CreateGuiItem</name>

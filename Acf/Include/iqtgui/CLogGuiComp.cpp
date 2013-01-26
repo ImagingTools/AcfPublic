@@ -32,6 +32,7 @@
 
 // ACF includes
 #include "iqtgui/CItemDelegate.h"
+#include "iqtgui/CWidgetUpdateBlocker.h"
 
 
 namespace iqtgui
@@ -321,6 +322,8 @@ void CLogGuiComp::OnAddMessage(const istd::IInformationProvider* messagePtr, boo
 
 void CLogGuiComp::OnRemoveMessage(qint64 messageId)
 {
+	iqtgui::CWidgetUpdateBlocker widgetUpdateBlocker(LogView);
+
 	int itemsCount = LogView->topLevelItemCount();
 
 	for (int itemIndex = itemsCount - 1; itemIndex >= 0; itemIndex--){
@@ -328,7 +331,6 @@ void CLogGuiComp::OnRemoveMessage(qint64 messageId)
 		I_ASSERT(itemPtr != NULL);
 
 		qint64 itemTimeStamp = itemPtr->data(0, DR_MESSAGE_ID).toLongLong();
-
 		if (itemTimeStamp == messageId){
 			delete LogView->takeTopLevelItem(itemIndex);
 		}
@@ -392,21 +394,6 @@ void CLogGuiComp::OnExportAction()
 	if (objectPtr != NULL && m_fileLoaderCompPtr.IsValid()){
 		m_fileLoaderCompPtr->SaveToFile(*objectPtr);
 	}
-}
-
-void CLogGuiComp::rangeChanged(int /*min*/, int max)
-{
-	QAbstractScrollArea *scrollArea = dynamic_cast<QAbstractScrollArea*>(LogView);
-	if(scrollArea != NULL){
-		int position = scrollArea->verticalScrollBar()->value();
-		int change = max - m_maxScrollBarValue;
-
-		if(position != 0){
-			scrollArea->verticalScrollBar()->setValue(position + change);
-		}
-	}
-
-	m_maxScrollBarValue = max;
 }
 
 
