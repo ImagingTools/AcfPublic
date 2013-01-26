@@ -39547,6 +39547,12 @@
       <anchor>ae690e3b2dfa33b48acf1c7513d42ae14ac2a7717d903429e38286ff80005ec858</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>DR_IS_MESSAGE_REMOVED_FLAG</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ae690e3b2dfa33b48acf1c7513d42ae14a0c565d601eac74feee4b9077c52ad942</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="slot" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnAddMessage</name>
@@ -39587,6 +39593,13 @@
       <name>OnExportAction</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>acc4ebe610e35d3894f18c2f238f2d0c8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnRemoveMessagesTimer</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a0d54dabfbd90b0fdd8aff45f552b83fb</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
