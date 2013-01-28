@@ -75,7 +75,7 @@
 <a name="l00054"></a>00054 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
 <a name="l00055"></a><a class="code" href="classiser_1_1_t_copy_serialized_wrap.html#af3d40308b3497f10d37d531ca9a509f2">00055</a> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_t_copy_serialized_wrap.html#af3d40308b3497f10d37d531ca9a509f2">TCopySerializedWrap&lt;Base&gt;::IsEqual</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>)<span class="keyword"> const</span>
 <a name="l00056"></a>00056 <span class="keyword"></span>{
-<a name="l00057"></a>00057        <span class="keywordflow">if</span> ((GetSupportedOperations() &amp; SO_COMPARE) &amp;&amp; (<span class="keywordtype">object</span>.GetSupportedOperations() &amp; SO_COMPARE)){
+<a name="l00057"></a>00057        <span class="keywordflow">if</span> ((BaseClass::GetSupportedOperations() &amp; <a class="code" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eacae2bbdae9e4076c92ac80a0009cebbfb9" title="Comparsion with another object.">istd::IChangeable::SO_COMPARE</a>) &amp;&amp; (<span class="keywordtype">object</span>.GetSupportedOperations() &amp; <a class="code" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eacae2bbdae9e4076c92ac80a0009cebbfb9" title="Comparsion with another object.">istd::IChangeable::SO_COMPARE</a>)){
 <a name="l00058"></a>00058               <span class="keywordflow">return</span> BaseClass::IsEqual(<span class="keywordtype">object</span>);
 <a name="l00059"></a>00059        }
 <a name="l00060"></a>00060 
