@@ -66,6 +66,11 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 		if (compositePtr != NULL){
 			compositePtr->EndAutoInitBlock();
 		}
+
+		int standaloneComponentsCount = m_standAloneComponentsCompPtr.GetCount();
+		for (int i = 0; i < standaloneComponentsCount; i++){
+			m_standAloneComponentsCompPtr[i];
+		}
 	}
 
 	return true;

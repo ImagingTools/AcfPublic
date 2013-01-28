@@ -39602,6 +39602,20 @@
       <anchor>a0d54dabfbd90b0fdd8aff45f552b83fb</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FilterText_textChanged</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a508409760326f872536d9a9616d5af90</anchor>
+      <arglist>(const QString &amp;filterText)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FilterClearButton_clicked</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a83dccae885e40a5fdd9b5ddd6bdb8837</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QTreeWidgetItem *</type>
       <name>CreateGuiItem</name>
