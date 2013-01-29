@@ -39136,6 +39136,13 @@
       <anchor>a13d56ef292ce716dc37d149b09b6f1cb</anchor>
       <arglist>(QCloseEvent *eventPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>keyPressEvent</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
+      <anchor>a7c5e3c3e4d7676046ec7dcefe50e201c</anchor>
+      <arglist>(QKeyEvent *eventPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CHierarchicalCommand</name>
