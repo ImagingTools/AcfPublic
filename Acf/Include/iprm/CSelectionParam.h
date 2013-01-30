@@ -48,7 +48,7 @@ public:
 	/**
 		Set selection constraints for this selection object. 
 	*/
-	void SetSelectionConstraints(const ISelectionConstraints* constraintsPtr);
+	void SetSelectionConstraints(const IOptionsList* constraintsPtr);
 
 	/**
 		Set sub-selection for a given option index. 
@@ -66,7 +66,7 @@ public:
 	ISelectionParam* GetActiveSubselection() const;
 
 	// reimplemented (iprm::ISelectionParam)
-	virtual const ISelectionConstraints* GetSelectionConstraints() const;
+	virtual const IOptionsList* GetSelectionConstraints() const;
 	virtual int GetSelectedOptionIndex() const;
 	virtual bool SetSelectedOptionIndex(int index);
 	virtual ISelectionParam* GetSubselection(int index) const;
@@ -80,7 +80,7 @@ protected:
 private:
 	typedef QMap<int, iprm::ISelectionParam*> SubselectionMap;
 
-	const ISelectionConstraints* m_constraintsPtr;
+	const IOptionsList* m_constraintsPtr;
 
 	SubselectionMap m_subselectionMap;
 };

@@ -38,7 +38,7 @@
 <div class="title">ifileproc::CSelectableFileConverterComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ifileproc::CSelectableFileConverterComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::IFileConvertCopy,iprm::ISelectionParam,iprm::ISelectionConstraints" -->
+<!-- doxytag: class="ifileproc::CSelectableFileConverterComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::IFileConvertCopy,iprm::ISelectionParam,iprm::IOptionsList" -->
 <p><code>#include &lt;<a class="el" href="_c_selectable_file_converter_comp_8h_source.html">CSelectableFileConverterComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ifileproc::CSelectableFileConverterComp:</div>
@@ -49,7 +49,7 @@ Inheritance diagram for ifileproc::CSelectableFileConverterComp:</div>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,168,242,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html" alt="ibase::IFileConvertCopy" shape="rect" coords="252,168,494,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html" alt="iprm::ISelectionParam" shape="rect" coords="504,168,746,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html" alt="iprm::ISelectionConstraints" shape="rect" coords="756,168,998,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html" alt="iprm::IOptionsList" shape="rect" coords="756,168,998,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,112,242,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="252,112,494,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="504,112,746,136"/>
@@ -70,8 +70,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a1d9905cbfe4197675a106e933cd820bf">CSelectableFileConverterComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#af30b8b5e925b0e9b32743758a1625a16">ConvertFiles</a> (const QString &amp;inputPath, const QString &amp;outputPath, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-ISelectionConstraints *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a688d46d29cc3460586e5aed2dd1d1a68">GetSelectionConstraints</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const IOptionsList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#ab436ec7d4e00dd2791bc8040b78bef98">GetSelectionConstraints</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a04578647853ff5878755ef7c0e25ae28">GetSelectedOptionIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a4409552270a591d62d0ae16657cffe91">SetSelectedOptionIndex</a> (int index)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual ISelectionParam *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#af9524567f851f1a7b171aa5613c3b1c1">GetSubselection</a> (int index) const </td></tr>
@@ -79,7 +78,7 @@ ISelectionConstraints *&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#aa2678f7c50c21c4e36f6332604bd693e">OnComponentCreated</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a71468b1274cc1a04022ca52c7b7fdfed">GetConstraintsFlags</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a485a5ee873a98b67c9717f1558d0a563">GetOptionsFlags</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a099244e71c6a8ebdd79f05448a6c2845">GetOptionsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a2813c800728aec6e9ebf64bb2b0809e4">GetOptionName</a> (int index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a96a7a18fbaf204c76323dd8397dea22c">GetOptionDescription</a> (int index) const </td></tr>
@@ -158,24 +157,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a71468b1274cc1a04022ca52c7b7fdfed"></a><!-- doxytag: member="ifileproc::CSelectableFileConverterComp::GetConstraintsFlags" ref="a71468b1274cc1a04022ca52c7b7fdfed" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int ifileproc::CSelectableFileConverterComp::GetConstraintsFlags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3">iprm::ISelectionConstraints</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a96a7a18fbaf204c76323dd8397dea22c"></a><!-- doxytag: member="ifileproc::CSelectableFileConverterComp::GetOptionDescription" ref="a96a7a18fbaf204c76323dd8397dea22c" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +172,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#adf6d315fe048e3a617ea5f803845393b">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -210,7 +191,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -229,7 +210,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -247,7 +228,25 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#a37659b5d1cae689b3d715304a48ef929">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a485a5ee873a98b67c9717f1558d0a563"></a><!-- doxytag: member="ifileproc::CSelectableFileConverterComp::GetOptionsFlags" ref="a485a5ee873a98b67c9717f1558d0a563" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ifileproc::CSelectableFileConverterComp::GetOptionsFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#ab5b5157f0e5e6d68c30b772b8e3ecc2a">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -269,12 +268,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a688d46d29cc3460586e5aed2dd1d1a68"></a><!-- doxytag: member="ifileproc::CSelectableFileConverterComp::GetSelectionConstraints" ref="a688d46d29cc3460586e5aed2dd1d1a68" args="() const " -->
+<a class="anchor" id="ab436ec7d4e00dd2791bc8040b78bef98"></a><!-- doxytag: member="ifileproc::CSelectableFileConverterComp::GetSelectionConstraints" ref="ab436ec7d4e00dd2791bc8040b78bef98" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const ISelectionConstraints* ifileproc::CSelectableFileConverterComp::GetSelectionConstraints </td>
+          <td class="memname">virtual const IOptionsList* ifileproc::CSelectableFileConverterComp::GetSelectionConstraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -283,7 +282,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html#a663506bb922ab4ac3ebc0bd52d741ff7">iprm::ISelectionParam</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html#a98e64292e21cf3531e392b14ab0468f3">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div>
@@ -321,7 +320,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>

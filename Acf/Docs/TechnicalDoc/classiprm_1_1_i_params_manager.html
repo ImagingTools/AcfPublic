@@ -84,9 +84,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operation control flags of some paramter set or whole manager.  <a href="#a0508f9eee4a8527a026a69b39e6e0216"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#a5d210a6109d010b5bc4057db9b089f9c">GetParamsSetsCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed set.  <a href="#a5d210a6109d010b5bc4057db9b089f9c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#a228e9489fe89a24c9a929af76037f91b">GetParamsTypeConstraints</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selection contraints describing each supported type.  <a href="#a228e9489fe89a24c9a929af76037f91b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#a317b3fc4aabae0150a933602c3ba5af8">GetParamsTypeConstraints</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selection contraints describing each supported type.  <a href="#a317b3fc4aabae0150a933602c3ba5af8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#a234045bf4a452e12b08da92526fc5e24">InsertParamsSet</a> (int typeIndex=-1, int index=-1)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new parameters set at selected position.  <a href="#a234045bf4a452e12b08da92526fc5e24"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_params_manager.html#ac8e5810d12adbb2a28a2a6419caf27d8">RemoveParamsSet</a> (int index)=0</td></tr>
@@ -277,12 +276,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a228e9489fe89a24c9a929af76037f91b"></a><!-- doxytag: member="iprm::IParamsManager::GetParamsTypeConstraints" ref="a228e9489fe89a24c9a929af76037f91b" args="() const =0" -->
+<a class="anchor" id="a317b3fc4aabae0150a933602c3ba5af8"></a><!-- doxytag: member="iprm::IParamsManager::GetParamsTypeConstraints" ref="a317b3fc4aabae0150a933602c3ba5af8" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::IParamsManager::GetParamsTypeConstraints </td>
+          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a>* iprm::IParamsManager::GetParamsTypeConstraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -294,7 +293,7 @@ Public Member Functions</h2></td></tr>
 <p>Get selection contraints describing each supported type. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>NULL, if only one annonymed type is supported. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a7322358e5ccf4615d8f8b37f1f33921e">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a72e3eb93b8174a835f46150106379448">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aa0f06fc4da29b3735dfb66e4aa70f55a">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a3b268222e4db98bd3edbe8abc2864a8a">iprm::CParamsManagerComp</a>.</p>
 
 </div>
 </div>

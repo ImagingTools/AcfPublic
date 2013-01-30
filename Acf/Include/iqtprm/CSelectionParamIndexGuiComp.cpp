@@ -30,7 +30,7 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iprm/ISelectionConstraints.h"
+#include "iprm/IOptionsList.h"
 
 
 namespace iqtprm
@@ -66,7 +66,7 @@ void CSelectionParamIndexGuiComp::UpdateGui(int /*updateFlags*/)
 	const iprm::ISelectionParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		int maxCount = 10;
-		const iprm::ISelectionConstraints* constraintsPtr = objectPtr->GetSelectionConstraints();
+		const iprm::IOptionsList* constraintsPtr = objectPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
 			maxCount = constraintsPtr->GetOptionsCount() - 1;
 		}

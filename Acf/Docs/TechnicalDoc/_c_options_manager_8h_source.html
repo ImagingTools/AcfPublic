@@ -42,7 +42,7 @@
 <a name="l00014"></a>00014 {
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keyword">class </span>ISelectionConstraints;
+<a name="l00017"></a>00017 <span class="keyword">class </span>IOptionsList;
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
 <a name="l00023"></a><a class="code" href="classiprm_1_1_c_options_manager.html">00023</a> <span class="keyword">class </span><a class="code" href="classiprm_1_1_c_options_manager.html" title="Implementation of a simple options manager.">COptionsManager</a>:
@@ -52,10 +52,10 @@
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
 <a name="l00028"></a>00028        <a class="code" href="classiprm_1_1_c_options_manager.html#aa370632553269ba182ecc9f42aff85c6">COptionsManager</a>();
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_options_manager.html#aec4b29c819cac793d5e3bd9f331e0613">SetSlaveSelectionConstraints</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">iprm::ISelectionConstraints</a>* slaveSelectionConstraintsPtr);
+<a name="l00030"></a>00030        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_options_manager.html#a4f423984d3b0e3d2d53250ee1aace853">SetSlaveSelectionConstraints</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>* slaveSelectionConstraintsPtr);
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_options_manager.html#a08a6e4df03796965c35f8d18afa879c1" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
+<a name="l00032"></a>00032        <span class="comment">// reimplemented (iprm::IOptionsList)</span>
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_options_manager.html#a9a06084ec537c23025822cc1f1ee2aa5" title="Get constraints flags.">GetOptionsFlags</a>() <span class="keyword">const</span>;
 <a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_options_manager.html#a1d3694923197991e43ca131eec6e3c83" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_options_manager.html#a93f89113e07bf33a84cda252b4521042" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00036"></a>00036        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_options_manager.html#a03d5824c5ea99590a384c085003112ec" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
@@ -99,7 +99,7 @@
 <a name="l00074"></a>00074        Options m_options;
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 <span class="keyword">private</span>:
-<a name="l00077"></a>00077        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">iprm::ISelectionConstraints</a>* m_slaveSelectionConstraintsPtr;
+<a name="l00077"></a>00077        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>* m_slaveSelectionConstraintsPtr;
 <a name="l00078"></a>00078 };
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080 

@@ -38,7 +38,7 @@
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_commands_provider_8h.html">ibase/ICommandsProvider.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_selection_param_8h.html">iprm/ISelectionParam.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_selection_constraints_8h.html">iprm/ISelectionConstraints.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_options_list_8h.html">iprm/IOptionsList.h</a>&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_c_multi_document_manager_base_8h.html">idoc/CMultiDocumentManagerBase.h</a>&quot;</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_document_template_8h.html">idoc/IDocumentTemplate.h</a>&quot;</span>
@@ -79,7 +79,7 @@
 <a name="l00054"></a>00054               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#acdff88af57bd5bbf8c8e25b92fc386f4">I_REGISTER_SUBELEMENT_INTERFACE</a>(DocumentSelection, <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>, ExtractSelectionInfo);
 <a name="l00055"></a>00055               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#acdff88af57bd5bbf8c8e25b92fc386f4">I_REGISTER_SUBELEMENT_INTERFACE</a>(DocumentSelection, <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, ExtractSelectionInfo);
 <a name="l00056"></a>00056               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#acdff88af57bd5bbf8c8e25b92fc386f4">I_REGISTER_SUBELEMENT_INTERFACE</a>(DocumentSelection, <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>, ExtractSelectionInfo);
-<a name="l00057"></a>00057               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#acdff88af57bd5bbf8c8e25b92fc386f4">I_REGISTER_SUBELEMENT_INTERFACE</a>(DocumentSelection, <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">iprm::ISelectionConstraints</a>, ExtractSelectionInfo);
+<a name="l00057"></a>00057               <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#acdff88af57bd5bbf8c8e25b92fc386f4">I_REGISTER_SUBELEMENT_INTERFACE</a>(DocumentSelection, <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>, ExtractSelectionInfo);
 <a name="l00058"></a>00058               I_ASSIGN(m_documentTemplateCompPtr, <span class="stringliteral">&quot;DocumentTemplate&quot;</span>, <span class="stringliteral">&quot;Document template&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DocumentTemplate&quot;</span>);
 <a name="l00059"></a>00059               I_ASSIGN(m_showMaximizedAttrPtr, <span class="stringliteral">&quot;ShowViewMaximized&quot;</span>, <span class="stringliteral">&quot;At start shows the document view maximized&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
 <a name="l00060"></a>00060               I_ASSIGN(m_allowViewRepeatingAttrPtr, <span class="stringliteral">&quot;AllowViewRepeating&quot;</span>, <span class="stringliteral">&quot;If enabled, multiple views for the same document are allowed&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
@@ -154,7 +154,7 @@
 <a name="l00144"></a>00144        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aec1958a3296b7e9f0517c348dfb6ea72">OnWorkspaceModeChanged</a>();
 <a name="l00145"></a>00145 
 <a name="l00146"></a>00146 <span class="keyword">private</span>:
-<a name="l00147"></a>00147        <span class="keyword">class </span><a class="code" href="class_document_selection_info.html">DocumentSelectionInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::ISelectionParam, <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::ISelectionConstraints
+<a name="l00147"></a>00147        <span class="keyword">class </span><a class="code" href="class_document_selection_info.html">DocumentSelectionInfo</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::ISelectionParam, <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::IOptionsList
 <a name="l00148"></a>00148        {
 <a name="l00149"></a>00149        <span class="keyword">public</span>:
 <a name="l00150"></a>00150               <a class="code" href="class_document_selection_info.html">DocumentSelectionInfo</a>();
@@ -162,13 +162,13 @@
 <a name="l00152"></a>00152               <span class="keywordtype">void</span> SetParent(<a class="code" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html" title="This class is a Qt-based workspace implementation of a document manager.">CMultiDocumentWorkspaceGuiComp</a>&amp; parent);
 <a name="l00153"></a>00153 
 <a name="l00154"></a>00154               <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00155"></a>00155               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">iprm::ISelectionConstraints</a>* GetSelectionConstraints() <span class="keyword">const</span>;
+<a name="l00155"></a>00155               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>* GetSelectionConstraints() <span class="keyword">const</span>;
 <a name="l00156"></a>00156               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetSelectedOptionIndex() <span class="keyword">const</span>;
 <a name="l00157"></a>00157               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SetSelectedOptionIndex(<span class="keywordtype">int</span> index);
 <a name="l00158"></a>00158               <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">iprm::ISelectionParam</a>* GetSubselection(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00159"></a>00159 
-<a name="l00160"></a>00160               <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00161"></a>00161               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetConstraintsFlags() <span class="keyword">const</span>;
+<a name="l00160"></a>00160               <span class="comment">// reimplemented (iprm::IOptionsList)</span>
+<a name="l00161"></a>00161               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetOptionsFlags() <span class="keyword">const</span>;
 <a name="l00162"></a>00162               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetOptionsCount() <span class="keyword">const</span>;
 <a name="l00163"></a>00163               <span class="keyword">virtual</span> QString GetOptionName(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00164"></a>00164               <span class="keyword">virtual</span> QString GetOptionDescription(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;

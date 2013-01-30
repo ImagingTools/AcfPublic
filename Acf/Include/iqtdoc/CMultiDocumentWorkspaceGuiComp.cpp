@@ -650,7 +650,7 @@ void CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::SetParent(CMultiDocu
 
 // reimplemented (iprm::ISelectionParam)
 
-const iprm::ISelectionConstraints* CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::GetSelectionConstraints() const
+const iprm::IOptionsList* CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::GetSelectionConstraints() const
 {
 	return this;
 }
@@ -691,9 +691,9 @@ iprm::ISelectionParam* CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::Ge
 }
 
 
-// reimplemented (iprm::ISelectionConstraints)
+// reimplemented (iprm::IOptionsList)
 
-int CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::GetConstraintsFlags() const
+int CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::GetOptionsFlags() const
 {
 	return SCF_SUPPORT_UNIQUE_ID;
 }

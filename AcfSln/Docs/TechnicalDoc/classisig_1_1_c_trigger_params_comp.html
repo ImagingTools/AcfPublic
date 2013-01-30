@@ -38,7 +38,7 @@
 <div class="title">isig::CTriggerParamsComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="isig::CTriggerParamsComp" --><!-- doxytag: inherits="icomp::CComponentBase,isig::ITriggerParams,iprm::ISelectionParam,iprm::ISelectionConstraints" -->
+<!-- doxytag: class="isig::CTriggerParamsComp" --><!-- doxytag: inherits="icomp::CComponentBase,isig::ITriggerParams,iprm::ISelectionParam,iprm::IOptionsList" -->
 <p>Implementation of standard trigger parameters set.  
  <a href="classisig_1_1_c_trigger_params_comp.html#details">More...</a></p>
 
@@ -52,7 +52,7 @@ Inheritance diagram for isig::CTriggerParamsComp:</div>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,168,161,192"/>
 <area href="classisig_1_1_i_trigger_params.html" title="Interface for hardware trigger parameters." alt="isig::ITriggerParams" shape="rect" coords="171,168,332,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html" alt="iprm::ISelectionParam" shape="rect" coords="342,168,503,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html" alt="iprm::ISelectionConstraints" shape="rect" coords="513,168,674,192"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html" alt="iprm::IOptionsList" shape="rect" coords="513,168,674,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,112,161,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="171,112,332,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="342,112,503,136"/>
@@ -80,8 +80,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get trigger mode.  <a href="#a1ff71af657ff8b284c5d76979f14deee"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a670d41fc9ce3033bba4475114b27bb30">SetTriggerMode</a> (int triggerMode)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set trigger mode.  <a href="#a670d41fc9ce3033bba4475114b27bb30"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a419b028561f12b0d90a7009c6d111391">GetSelectionConstraints</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#af167771ef2b69a73bc93c098e24da419">GetSelectionConstraints</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a3a756a7e7b63b071836701cd9218ed79">GetSelectedOptionIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#af448b8ed00283d61b8b0085ec27f9042">SetSelectedOptionIndex</a> (int index)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a4a58786b10833aa65ddecd9bb897f250">GetSubselection</a> (int index) const </td></tr>
@@ -89,7 +88,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a8e715bbb6bbdd3a6cc1554bac9e911fa">InitializeSelectionList</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a09f6d348e4a5b9a46af826c641dd11f6">GetConstraintsFlags</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a80f843bf42742b600d92dc78008a3824">GetOptionsFlags</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a57cd3472f1992f6b7b3a5ee7d23b9076">GetOptionsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a65055364e45940000419eb3b78934af8">GetOptionName</a> (int index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_c_trigger_params_comp.html#a0e272a938f59922d8b211fc28c8b5643">GetOptionDescription</a> (int index) const </td></tr>
@@ -135,24 +134,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a09f6d348e4a5b9a46af826c641dd11f6"></a><!-- doxytag: member="isig::CTriggerParamsComp::GetConstraintsFlags" ref="a09f6d348e4a5b9a46af826c641dd11f6" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int isig::CTriggerParamsComp::GetConstraintsFlags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3">iprm::ISelectionConstraints</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a0e272a938f59922d8b211fc28c8b5643"></a><!-- doxytag: member="isig::CTriggerParamsComp::GetOptionDescription" ref="a0e272a938f59922d8b211fc28c8b5643" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +149,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#adf6d315fe048e3a617ea5f803845393b">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -187,7 +168,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -206,7 +187,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -224,7 +205,25 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#a37659b5d1cae689b3d715304a48ef929">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80f843bf42742b600d92dc78008a3824"></a><!-- doxytag: member="isig::CTriggerParamsComp::GetOptionsFlags" ref="a80f843bf42742b600d92dc78008a3824" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int isig::CTriggerParamsComp::GetOptionsFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#ab5b5157f0e5e6d68c30b772b8e3ecc2a">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -246,12 +245,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a419b028561f12b0d90a7009c6d111391"></a><!-- doxytag: member="isig::CTriggerParamsComp::GetSelectionConstraints" ref="a419b028561f12b0d90a7009c6d111391" args="() const " -->
+<a class="anchor" id="af167771ef2b69a73bc93c098e24da419"></a><!-- doxytag: member="isig::CTriggerParamsComp::GetSelectionConstraints" ref="af167771ef2b69a73bc93c098e24da419" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* isig::CTriggerParamsComp::GetSelectionConstraints </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>* isig::CTriggerParamsComp::GetSelectionConstraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -260,7 +259,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html#a663506bb922ab4ac3ebc0bd52d741ff7">iprm::ISelectionParam</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html#a98e64292e21cf3531e392b14ab0468f3">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div>
@@ -355,7 +354,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>

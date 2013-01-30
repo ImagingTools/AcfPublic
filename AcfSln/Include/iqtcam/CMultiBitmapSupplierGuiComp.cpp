@@ -205,7 +205,7 @@ void CMultiBitmapSupplierGuiComp::UpdateGui(int updateFlags)
 		return;
 	}
 
-	const iprm::ISelectionConstraints* selectionConstraintsPtr = providerPtr->GetBitmapSelectionContraints();
+	const iprm::IOptionsList* selectionConstraintsPtr = providerPtr->GetBitmapSelectionContraints();
 
 	int bitmapsCount = providerPtr->GetBitmapsCount();
 

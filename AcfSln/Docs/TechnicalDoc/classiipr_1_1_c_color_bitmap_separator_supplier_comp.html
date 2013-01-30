@@ -38,7 +38,7 @@
 <div class="title">iipr::CColorBitmapSeparatorSupplierComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CColorBitmapSeparatorSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;,iipr::IMultiBitmapProvider,iprm::ISelectionConstraints" -->
+<!-- doxytag: class="iipr::CColorBitmapSeparatorSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;,iipr::IMultiBitmapProvider,iprm::IOptionsList" -->
 <p>Supplier of bitmap's vector built on bitmap.  
  <a href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#details">More...</a></p>
 
@@ -51,7 +51,7 @@ Inheritance diagram for iipr::CColorBitmapSeparatorSupplierComp:</div>
   <map id="iipr::CColorBitmapSeparatorSupplierComp_map" name="iipr::CColorBitmapSeparatorSupplierComp_map">
 <area href="classiproc_1_1_t_supplier_comp_wrap.html" alt="iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;" shape="rect" coords="1396,224,1785,248"/>
 <area href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps." alt="iipr::IMultiBitmapProvider" shape="rect" coords="2394,224,2783,248"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html" alt="iprm::ISelectionConstraints" shape="rect" coords="2793,224,3182,248"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html" alt="iprm::IOptionsList" shape="rect" coords="2793,224,3182,248"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html" alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="399,168,788,192"/>
 <area href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model..." alt="iproc::ISupplier" shape="rect" coords="1197,168,1586,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1596,168,1985,192"/>
@@ -85,9 +85,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#aa09a9c1fd7c4dba7a4db96d04a459202">I_ASSIGN_TO</a> (m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a8154330a73be7f8d65f0ccd26dd8d48a">I_ASSIGN_TO</a> (m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ac3bb508790b32cd3d4bc216f81b6dfe6">GetBitmapSelectionContraints</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional information about bitmaps in form of section contraints.  <a href="#ac3bb508790b32cd3d4bc216f81b6dfe6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#af39996a3fc0667db67a9da2340cc8def">GetBitmapSelectionContraints</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional information about bitmaps in form of section contraints.  <a href="#af39996a3fc0667db67a9da2340cc8def"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#abb9fcd1011858fb991e00e8c276bc04b">GetBitmapsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of produced bitmaps.  <a href="#abb9fcd1011858fb991e00e8c276bc04b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a6c9a06dc1983c4716926ded9c6118571">GetBitmap</a> (int bitmapIndex) const </td></tr>
@@ -95,7 +94,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#adbeea9ccf7c93c398844005ead7e2ea6">EnsureBitmapCreated</a> (<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a> &amp;result) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ad80af70bad9caf68eab0d65de3feaf0a">GetConstraintsFlags</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a4927ebf3398e9685578ccb7f78beecec">GetOptionsFlags</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a0db7889559855c54fe44674b2785d305">GetOptionsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#a3f6649862bc81b5bea6b9e2b100f6ff9">GetOptionName</a> (int index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_color_bitmap_separator_supplier_comp.html#ad02605c7913eff9f86132ff779dc1366">GetOptionDescription</a> (int index) const </td></tr>
@@ -187,12 +186,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac3bb508790b32cd3d4bc216f81b6dfe6"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::GetBitmapSelectionContraints" ref="ac3bb508790b32cd3d4bc216f81b6dfe6" args="() const " -->
+<a class="anchor" id="af39996a3fc0667db67a9da2340cc8def"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::GetBitmapSelectionContraints" ref="af39996a3fc0667db67a9da2340cc8def" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html">iprm::ISelectionConstraints</a>* iipr::CColorBitmapSeparatorSupplierComp::GetBitmapSelectionContraints </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>* iipr::CColorBitmapSeparatorSupplierComp::GetBitmapSelectionContraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -204,25 +203,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get optional information about bitmaps in form of section contraints. </p>
 <p>It allows to get name and description of each bitmap channel. </p>
 
-<p>Implements <a class="el" href="classiipr_1_1_i_multi_bitmap_provider.html#af3113ea2b82fa05c0a8b13739b78d0c5">iipr::IMultiBitmapProvider</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad80af70bad9caf68eab0d65de3feaf0a"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::GetConstraintsFlags" ref="ad80af70bad9caf68eab0d65de3feaf0a" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int iipr::CColorBitmapSeparatorSupplierComp::GetConstraintsFlags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiipr_1_1_i_multi_bitmap_provider.html#a9c3ebe4704c12f317dce923001657a3f">iipr::IMultiBitmapProvider</a>.</p>
 
 </div>
 </div>
@@ -241,7 +222,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#adf6d315fe048e3a617ea5f803845393b">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -260,7 +241,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -279,7 +260,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -297,7 +278,25 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#a37659b5d1cae689b3d715304a48ef929">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4927ebf3398e9685578ccb7f78beecec"></a><!-- doxytag: member="iipr::CColorBitmapSeparatorSupplierComp::GetOptionsFlags" ref="a4927ebf3398e9685578ccb7f78beecec" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iipr::CColorBitmapSeparatorSupplierComp::GetOptionsFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#ab5b5157f0e5e6d68c30b772b8e3ecc2a">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -382,7 +381,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>

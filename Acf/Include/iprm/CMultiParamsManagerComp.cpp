@@ -72,7 +72,7 @@ int CMultiParamsManagerComp::GetParamsSetsCount() const
 }
 
 
-const ISelectionConstraints* CMultiParamsManagerComp::GetParamsTypeConstraints() const
+const IOptionsList* CMultiParamsManagerComp::GetParamsTypeConstraints() const
 {
 	return &m_typeInfoList;
 }
@@ -257,7 +257,7 @@ bool CMultiParamsManagerComp::SetParamsSetName(int index, const QString& name)
 
 // reimplemented (iprm::ISelectionParam)
 
-const ISelectionConstraints* CMultiParamsManagerComp::GetSelectionConstraints() const
+const IOptionsList* CMultiParamsManagerComp::GetSelectionConstraints() const
 {
 	return this;
 }
@@ -410,9 +410,9 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 }
 
 
-// reimplemented (iprm::ISelectionConstraints)
+// reimplemented (iprm::IOptionsList)
 
-int CMultiParamsManagerComp::GetConstraintsFlags() const
+int CMultiParamsManagerComp::GetOptionsFlags() const
 {
 	return SCF_NONE;
 }
@@ -619,9 +619,9 @@ void CMultiParamsManagerComp::EnsureParamsSetModelDetached(iprm::IParamsSet* par
 
 // public methods of embedded class TypeInfoList
 
-// reimplemented (iprm::ISelectionConstraints)
+// reimplemented (iprm::IOptionsList)
 
-int CMultiParamsManagerComp::TypeInfoList::GetConstraintsFlags() const
+int CMultiParamsManagerComp::TypeInfoList::GetOptionsFlags() const
 {
 	return SCF_SUPPORT_UNIQUE_ID;
 }

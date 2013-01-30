@@ -34,7 +34,7 @@
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_selection_constraints_8h.html">iprm/ISelectionConstraints.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_options_list_8h.html">iprm/IOptionsList.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="keyword">namespace </span>iprm
@@ -43,20 +43,20 @@
 <a name="l00015"></a>00015 
 <a name="l00019"></a><a class="code" href="classiprm_1_1_c_selection_constraints_comp.html">00019</a> <span class="keyword">class </span><a class="code" href="classiprm_1_1_c_selection_constraints_comp.html" title="Implementation of selection constraints.">CSelectionConstraintsComp</a>:
 <a name="l00020"></a>00020                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::<a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>
+<a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::<a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
 <a name="l00024"></a><a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a18681d0cbe06155c7954d645d753529e">00024</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a18681d0cbe06155c7954d645d753529e">BaseClass</a>;
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026        I_BEGIN_COMPONENT(<a class="code" href="classiprm_1_1_c_selection_constraints_comp.html" title="Implementation of selection constraints.">CSelectionConstraintsComp</a>);
 <a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>);
-<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">iprm::ISelectionConstraints</a>);
+<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>);
 <a name="l00029"></a>00029               I_ASSIGN_MULTI_0(m_optionNamesAttrPtr, <span class="stringliteral">&quot;OptionNames&quot;</span>, <span class="stringliteral">&quot;Names of selectable options&quot;</span>, <span class="keyword">true</span>);
 <a name="l00030"></a>00030               I_ASSIGN_MULTI_0(m_optionDescriptionsAttrPtr, <span class="stringliteral">&quot;OptionDescriptions&quot;</span>, <span class="stringliteral">&quot;Descriptions of selectable options&quot;</span>, <span class="keyword">true</span>);
 <a name="l00031"></a>00031        I_END_COMPONENT;
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a0a2897ab796f470021d92540d0bf6772" title="Get constraints flags.">GetConstraintsFlags</a>() <span class="keyword">const</span>;
+<a name="l00033"></a>00033        <span class="comment">// reimplemented (iprm::IOptionsList)</span>
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a006eb502dce459dc5cfa09e9aee08df9" title="Get constraints flags.">GetOptionsFlags</a>() <span class="keyword">const</span>;
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a9bad2d8c5ed6f399ca3b273212c5bcaa" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
 <a name="l00036"></a>00036        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#ab6547b5f709fba7adecd4cc5938b6dc5" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_selection_constraints_comp.html#a1ce1c66c5f844f9fcedd9f28cdd1bf0e" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;

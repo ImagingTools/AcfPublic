@@ -39,7 +39,7 @@
 <div class="title">iprm::CParamsManagerComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iprm::CParamsManagerComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::IParamsManager,iprm::ISelectionConstraints,imod::CMultiModelBridgeBase" -->
+<!-- doxytag: class="iprm::CParamsManagerComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::IParamsManager,iprm::IOptionsList,imod::CMultiModelBridgeBase" -->
 <p>Implementation of parameter manager.  
  <a href="classiprm_1_1_c_params_manager_comp.html#details">More...</a></p>
 
@@ -52,7 +52,7 @@ Inheritance diagram for iprm::CParamsManagerComp:</div>
   <map id="iprm::CParamsManagerComp_map" name="iprm::CParamsManagerComp_map">
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,224,180,248"/>
 <area href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set." alt="iprm::IParamsManager" shape="rect" coords="190,224,370,248"/>
-<area href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities." alt="iprm::ISelectionConstraints" shape="rect" coords="380,224,560,248"/>
+<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="380,224,560,248"/>
 <area href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan..." alt="imod::CMultiModelBridgeBase" shape="rect" coords="665,224,845,248"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,168,180,192"/>
 <area href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options." alt="iprm::ISelectionParam" shape="rect" coords="190,168,370,192"/>
@@ -82,9 +82,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operation control flags of some paramter set or whole manager.  <a href="#a6c6a8deb0948740fe4558d220a3c893c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#abc52794b2ed4df7cb6a872bd208ca638">GetParamsSetsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed set.  <a href="#abc52794b2ed4df7cb6a872bd208ca638"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a72e3eb93b8174a835f46150106379448">GetParamsTypeConstraints</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selection contraints describing each supported type.  <a href="#a72e3eb93b8174a835f46150106379448"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a3b268222e4db98bd3edbe8abc2864a8a">GetParamsTypeConstraints</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selection contraints describing each supported type.  <a href="#a3b268222e4db98bd3edbe8abc2864a8a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#ab82378415def08b5bcde877e10946668">InsertParamsSet</a> (int typeIndex=-1, int index=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert new parameters set at selected position.  <a href="#ab82378415def08b5bcde877e10946668"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a50f8d419f57ae6f5f06cee02da4f66e1">RemoveParamsSet</a> (int index)</td></tr>
@@ -97,9 +96,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified parameter set.  <a href="#add63f348396f6e97b119a84b9d5ea9e5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a25e7d50536b4d173e6263f3c96f16cda">SetParamsSetName</a> (int index, const QString &amp;name)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set name of specified parameter set.  <a href="#a25e7d50536b4d173e6263f3c96f16cda"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a016bc3ca5660823acc36f19f48a266c7">GetSelectionConstraints</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#a016bc3ca5660823acc36f19f48a266c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a5a466b071923f7873d93dfab35eec419">GetSelectionConstraints</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#a5a466b071923f7873d93dfab35eec419"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a4fd8b1b6be7963c766940994f118c77e">GetSelectedOptionIndex</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selected index.  <a href="#a4fd8b1b6be7963c766940994f118c77e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a24df36eb5ca0da6966a6f84977b61d25">SetSelectedOptionIndex</a> (int index)</td></tr>
@@ -108,8 +106,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#a4e9891005ac21c1c28d2f74a75e62a52"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a52ddd155230d8509ab8dd4a2b11e0f92">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a52ddd155230d8509ab8dd4a2b11e0f92"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a47f8c206a42387c2dab9d53d0f414902">GetConstraintsFlags</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a47f8c206a42387c2dab9d53d0f414902"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a52b8ffe289e490221bd0d42c376f4157">GetOptionsFlags</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a52b8ffe289e490221bd0d42c376f4157"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#ac0839252bfb7cdb764554ac7a3887847">GetOptionsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#ac0839252bfb7cdb764554ac7a3887847"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#aefd514c92e09c35941681d03ed36cc60">GetOptionName</a> (int index) const </td></tr>
@@ -163,27 +161,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a47f8c206a42387c2dab9d53d0f414902"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetConstraintsFlags" ref="a47f8c206a42387c2dab9d53d0f414902" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int iprm::CParamsManagerComp::GetConstraintsFlags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get constraints flags. </p>
-<p>The flags describes how the constraints object mantainance </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3">iprm::ISelectionConstraints</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a6c6a8deb0948740fe4558d220a3c893c"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetIndexOperationFlags" ref="a6c6a8deb0948740fe4558d220a3c893c" args="(int index=&#45;1) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +206,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get human readable description for a option with the index <code>index</code>. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#adf6d315fe048e3a617ea5f803845393b">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -250,9 +227,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get option ID. </p>
 <p>The option ID must be unique, if flag SCF_SUPPORT_UNIQUE_ID is set. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1b" title="Flags for control constraints behavior.">SelectionConstraintsFlags</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_options_list.html#a14593d38693c2bdbfe3988dbaaedfcfa" title="Flags for control constraints behavior.">OptionsFlags</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -273,7 +250,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get name of specified option. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -293,7 +270,28 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get number of managed options. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a37659b5d1cae689b3d715304a48ef929">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52b8ffe289e490221bd0d42c376f4157"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetOptionsFlags" ref="a52b8ffe289e490221bd0d42c376f4157" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iprm::CParamsManagerComp::GetOptionsFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get constraints flags. </p>
+<p>The flags describes how the constraints object mantainance </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab5b5157f0e5e6d68c30b772b8e3ecc2a">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -359,12 +357,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a72e3eb93b8174a835f46150106379448"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetParamsTypeConstraints" ref="a72e3eb93b8174a835f46150106379448" args="() const " -->
+<a class="anchor" id="a3b268222e4db98bd3edbe8abc2864a8a"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetParamsTypeConstraints" ref="a3b268222e4db98bd3edbe8abc2864a8a" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::CParamsManagerComp::GetParamsTypeConstraints </td>
+          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a>* iprm::CParamsManagerComp::GetParamsTypeConstraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -376,7 +374,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get selection contraints describing each supported type. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>NULL, if only one annonymed type is supported. </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a228e9489fe89a24c9a929af76037f91b">iprm::IParamsManager</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a317b3fc4aabae0150a933602c3ba5af8">iprm::IParamsManager</a>.</p>
 
 </div>
 </div>
@@ -400,12 +398,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a016bc3ca5660823acc36f19f48a266c7"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetSelectionConstraints" ref="a016bc3ca5660823acc36f19f48a266c7" args="() const " -->
+<a class="anchor" id="a5a466b071923f7873d93dfab35eec419"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetSelectionConstraints" ref="a5a466b071923f7873d93dfab35eec419" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::CParamsManagerComp::GetSelectionConstraints </td>
+          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a>* iprm::CParamsManagerComp::GetSelectionConstraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -417,7 +415,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get constraints of this parameter. </p>
 <p>Constraints describes some additional information about allowed parameter ranges and related informations. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a663506bb922ab4ac3ebc0bd52d741ff7">iprm::ISelectionParam</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a98e64292e21cf3531e392b14ab0468f3">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div>
@@ -500,7 +498,7 @@ Protected Member Functions</h2></td></tr>
 <p>Return <code>true</code> if the option is enabled and can be selected. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>SetOptionEnabled </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>

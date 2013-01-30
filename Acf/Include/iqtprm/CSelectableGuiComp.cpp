@@ -26,7 +26,7 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iprm/ISelectionConstraints.h"
+#include "iprm/IOptionsList.h"
 
 
 namespace iqtprm
@@ -41,7 +41,7 @@ void CSelectableGuiComp::OnGuiModelAttached()
 {
 	iprm::ISelectionParam* selectionPtr = GetObjectPtr();
 	if (selectionPtr != NULL && m_slaveGuisCompPtr.IsValid()){
-		const iprm::ISelectionConstraints* constraintsPtr = selectionPtr->GetSelectionConstraints();
+		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
 			int optionsCont = constraintsPtr->GetOptionsCount();
 

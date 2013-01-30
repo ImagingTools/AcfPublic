@@ -32,7 +32,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_selection_param_8h.html">iprm/ISelectionParam.h</a>&quot;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_selection_constraints_8h.html">iprm/ISelectionConstraints.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_options_list_8h.html">iprm/IOptionsList.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_convert_copy_8h.html">ibase/IFileConvertCopy.h</a>&quot;</span>
 <a name="l00012"></a>00012 
@@ -45,7 +45,7 @@
 <a name="l00019"></a>00019                      <span class="keyword">public</span> icomp::CComponentBase,
 <a name="l00020"></a>00020                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IFileConvertCopy,
 <a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::ISelectionParam,
-<a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">protected</span> iprm::ISelectionConstraints
+<a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">protected</span> iprm::IOptionsList
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
 <a name="l00025"></a><a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a6d19081c6d37afa0ee8516b8e7572c8a">00025</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a6d19081c6d37afa0ee8516b8e7572c8a">BaseClass</a>;
@@ -68,7 +68,7 @@
 <a name="l00042"></a>00042                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = NULL) <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> ISelectionConstraints* <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a688d46d29cc3460586e5aed2dd1d1a68">GetSelectionConstraints</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> IOptionsList* <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#ab436ec7d4e00dd2791bc8040b78bef98">GetSelectionConstraints</a>() <span class="keyword">const</span>;
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a04578647853ff5878755ef7c0e25ae28">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
 <a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a4409552270a591d62d0ae16657cffe91">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> ISelectionParam* <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#af9524567f851f1a7b171aa5613c3b1c1">GetSubselection</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
@@ -80,8 +80,8 @@
 <a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#aa2678f7c50c21c4e36f6332604bd693e">OnComponentCreated</a>();
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056 <span class="keyword">protected</span>:
-<a name="l00057"></a>00057        <span class="comment">// reimplemented (iprm::ISelectionConstraints)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a71468b1274cc1a04022ca52c7b7fdfed">GetConstraintsFlags</a>() <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (iprm::IOptionsList)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a485a5ee873a98b67c9717f1558d0a563">GetOptionsFlags</a>() <span class="keyword">const</span>;
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a099244e71c6a8ebdd79f05448a6c2845">GetOptionsCount</a>() <span class="keyword">const</span>;
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> QString <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a2813c800728aec6e9ebf64bb2b0809e4">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> QString <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a96a7a18fbaf204c76323dd8397dea22c">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;

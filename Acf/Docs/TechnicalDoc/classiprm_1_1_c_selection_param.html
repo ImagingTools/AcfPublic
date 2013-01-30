@@ -62,17 +62,16 @@ Inheritance diagram for iprm::CSelectionParam:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a682856613dedea8993eb43c39494dd28">CSelectionParam</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#ac61221fa183aa46fc798f165ac6f83bd">SetSelectionConstraints</a> (const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *constraintsPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set selection constraints for this selection object.  <a href="#ac61221fa183aa46fc798f165ac6f83bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a68fe7677019e17ec87a7cd9206b65855">SetSelectionConstraints</a> (const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a> *constraintsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set selection constraints for this selection object.  <a href="#a68fe7677019e17ec87a7cd9206b65855"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#aedd786e17d3d57b37a3a3e6e01c40f2f">SetSubselection</a> (int selectionIndex, <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *selectionPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sub-selection for a given option index.  <a href="#aedd786e17d3d57b37a3a3e6e01c40f2f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a25c45d6ac68349909993e7f2b7e08b23">SetSelectedOptionById</a> (const QByteArray &amp;selectedOptionId)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set selection index according to a given option ID.  <a href="#a25c45d6ac68349909993e7f2b7e08b23"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#aca40eeff3ae32951568150e8532f3f30">GetActiveSubselection</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get sub-selection for the currently selected option.  <a href="#aca40eeff3ae32951568150e8532f3f30"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a34b4ebde658bfe48886ecd737d5fb697">GetSelectionConstraints</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#a34b4ebde658bfe48886ecd737d5fb697"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#aa9d8bc9a5ccbc639e94e672d6f99e4ab">GetSelectionConstraints</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#aa9d8bc9a5ccbc639e94e672d6f99e4ab"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a83de7a8b64b9a62a5ca877cf8ef03833">GetSelectedOptionIndex</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selected index.  <a href="#a83de7a8b64b9a62a5ca877cf8ef03833"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selection_param.html#a15a4c0f6a678cbce6057640185ce12e2">SetSelectedOptionIndex</a> (int index)</td></tr>
@@ -145,12 +144,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a34b4ebde658bfe48886ecd737d5fb697"></a><!-- doxytag: member="iprm::CSelectionParam::GetSelectionConstraints" ref="a34b4ebde658bfe48886ecd737d5fb697" args="() const " -->
+<a class="anchor" id="aa9d8bc9a5ccbc639e94e672d6f99e4ab"></a><!-- doxytag: member="iprm::CSelectionParam::GetSelectionConstraints" ref="aa9d8bc9a5ccbc639e94e672d6f99e4ab" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a>* iprm::CSelectionParam::GetSelectionConstraints </td>
+          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a>* iprm::CSelectionParam::GetSelectionConstraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -162,7 +161,7 @@ Protected Attributes</h2></td></tr>
 <p>Get constraints of this parameter. </p>
 <p>Constraints describes some additional information about allowed parameter ranges and related informations. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a663506bb922ab4ac3ebc0bd52d741ff7">iprm::ISelectionParam</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a98e64292e21cf3531e392b14ab0468f3">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div>
@@ -254,14 +253,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac61221fa183aa46fc798f165ac6f83bd"></a><!-- doxytag: member="iprm::CSelectionParam::SetSelectionConstraints" ref="ac61221fa183aa46fc798f165ac6f83bd" args="(const ISelectionConstraints *constraintsPtr)" -->
+<a class="anchor" id="a68fe7677019e17ec87a7cd9206b65855"></a><!-- doxytag: member="iprm::CSelectionParam::SetSelectionConstraints" ref="a68fe7677019e17ec87a7cd9206b65855" args="(const IOptionsList *constraintsPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iprm::CSelectionParam::SetSelectionConstraints </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiprm_1_1_i_selection_constraints.html">ISelectionConstraints</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a> *&#160;</td>
           <td class="paramname"><em>constraintsPtr</em></td><td>)</td>
           <td></td>
         </tr>

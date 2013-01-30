@@ -48,7 +48,7 @@
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
 <a name="l00024"></a>00024        <a class="code" href="classiprm_1_1_c_selection_param.html#a682856613dedea8993eb43c39494dd28">CSelectionParam</a>();
 <a name="l00025"></a>00025 
-<a name="l00029"></a>00029        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_selection_param.html#ac61221fa183aa46fc798f165ac6f83bd" title="Set selection constraints for this selection object.">SetSelectionConstraints</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* constraintsPtr);
+<a name="l00029"></a>00029        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_selection_param.html#a68fe7677019e17ec87a7cd9206b65855" title="Set selection constraints for this selection object.">SetSelectionConstraints</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* constraintsPtr);
 <a name="l00030"></a>00030 
 <a name="l00034"></a>00034        <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_selection_param.html#aedd786e17d3d57b37a3a3e6e01c40f2f" title="Set sub-selection for a given option index.">SetSubselection</a>(<span class="keywordtype">int</span> selectionIndex, <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* selectionPtr);
 <a name="l00035"></a>00035 
@@ -57,7 +57,7 @@
 <a name="l00044"></a>00044        <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_c_selection_param.html#aca40eeff3ae32951568150e8532f3f30" title="Get sub-selection for the currently selected option.">GetActiveSubselection</a>() <span class="keyword">const</span>;
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* <a class="code" href="classiprm_1_1_c_selection_param.html#a34b4ebde658bfe48886ecd737d5fb697" title="Get constraints of this parameter.">GetSelectionConstraints</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* <a class="code" href="classiprm_1_1_c_selection_param.html#aa9d8bc9a5ccbc639e94e672d6f99e4ab" title="Get constraints of this parameter.">GetSelectionConstraints</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_selection_param.html#a83de7a8b64b9a62a5ca877cf8ef03833" title="Get selected index.">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_selection_param.html#a15a4c0f6a678cbce6057640185ce12e2" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_c_selection_param.html#acfc90335e62fb551c2b3db2b9daa67f7" title="Get subselection for specified option.">GetSubselection</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
@@ -71,7 +71,7 @@
 <a name="l00058"></a>00058 <span class="keyword">private</span>:
 <a name="l00059"></a>00059        <span class="keyword">typedef</span> QMap&lt;int, iprm::ISelectionParam*&gt; SubselectionMap;
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities.">ISelectionConstraints</a>* m_constraintsPtr;
+<a name="l00061"></a>00061        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* m_constraintsPtr;
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063        SubselectionMap m_subselectionMap;
 <a name="l00064"></a>00064 };

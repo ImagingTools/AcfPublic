@@ -31,7 +31,7 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-#include "iprm/ISelectionConstraints.h"
+#include "iprm/IOptionsList.h"
 #include "iproc/IProcessor.h"
 #include "iqt/CSignalBlocker.h"
 

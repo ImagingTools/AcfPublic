@@ -40,7 +40,7 @@
 <div class="title">icmpstr::CRegistryCodeSaverComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="icmpstr::CRegistryCodeSaverComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,iser::IFileLoader,iprm::ISelectionConstraints" -->
+<!-- doxytag: class="icmpstr::CRegistryCodeSaverComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,iser::IFileLoader,iprm::IOptionsList" -->
 <p>Save registry as C++ code (it generates C++ class with the same functionality) and/or dependencies list.  
  <a href="classicmpstr_1_1_c_registry_code_saver_comp.html#details">More...</a></p>
 
@@ -53,7 +53,7 @@ Inheritance diagram for icmpstr::CRegistryCodeSaverComp:</div>
   <map id="icmpstr::CRegistryCodeSaverComp_map" name="icmpstr::CRegistryCodeSaverComp_map">
 <area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="219,168,428,192"/>
 <area href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects." alt="iser::IFileLoader" shape="rect" coords="657,168,866,192"/>
-<area href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities." alt="iprm::ISelectionConstraints" shape="rect" coords="876,168,1085,192"/>
+<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="876,168,1085,192"/>
 <area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="219,112,428,136"/>
 <area href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="iser::IFileTypeInfo" shape="rect" coords="657,112,866,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="876,112,1085,136"/>
@@ -96,8 +96,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a1997c60869e666312180a55a83014a9a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ae7d93689f16987ec44a3e84f8de7d619">GetTypeDescription</a> (const QString *extensionPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#ae7d93689f16987ec44a3e84f8de7d619"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a9ccd573f189825feb307d41270801869">GetConstraintsFlags</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a9ccd573f189825feb307d41270801869"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a0a30e61637f09b229922f143937c1338">GetOptionsFlags</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a0a30e61637f09b229922f143937c1338"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a3d3b230d9af4ca181d3b35e7b7fc576d">GetOptionsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#a3d3b230d9af4ca181d3b35e7b7fc576d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#abeae54b72438d3f1e394e15177bbeeff">GetOptionName</a> (int index) const </td></tr>
@@ -433,27 +433,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9ccd573f189825feb307d41270801869"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetConstraintsFlags" ref="a9ccd573f189825feb307d41270801869" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int icmpstr::CRegistryCodeSaverComp::GetConstraintsFlags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get constraints flags. </p>
-<p>The flags describes how the constraints object mantainance </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3">iprm::ISelectionConstraints</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a1997c60869e666312180a55a83014a9a"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetFileExtensions" ref="a1997c60869e666312180a55a83014a9a" args="(QStringList &amp;result, int flags=&#45;1, bool doAppend=false) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -574,7 +553,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get human readable description for a option with the index <code>index</code>. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#adf6d315fe048e3a617ea5f803845393b">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -595,9 +574,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get option ID. </p>
 <p>The option ID must be unique, if flag SCF_SUPPORT_UNIQUE_ID is set. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1b" title="Flags for control constraints behavior.">SelectionConstraintsFlags</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_options_list.html#a14593d38693c2bdbfe3988dbaaedfcfa" title="Flags for control constraints behavior.">OptionsFlags</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -618,7 +597,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get name of specified option. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -638,7 +617,28 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get number of managed options. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a37659b5d1cae689b3d715304a48ef929">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a30e61637f09b229922f143937c1338"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetOptionsFlags" ref="a0a30e61637f09b229922f143937c1338" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int icmpstr::CRegistryCodeSaverComp::GetOptionsFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get constraints flags. </p>
+<p>The flags describes how the constraints object mantainance </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab5b5157f0e5e6d68c30b772b8e3ecc2a">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -804,7 +804,7 @@ Protected Member Functions</h2></td></tr>
 <p>Return <code>true</code> if the option is enabled and can be selected. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>SetOptionEnabled </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>

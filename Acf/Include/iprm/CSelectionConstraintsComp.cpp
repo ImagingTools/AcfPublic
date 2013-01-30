@@ -27,9 +27,9 @@ namespace iprm
 {
 
 
-// reimplemented (iprm::ISelectionConstraints)
+// reimplemented (iprm::IOptionsList)
 
-int CSelectionConstraintsComp::GetConstraintsFlags() const
+int CSelectionConstraintsComp::GetOptionsFlags() const
 {
 	return SCF_NONE;
 }

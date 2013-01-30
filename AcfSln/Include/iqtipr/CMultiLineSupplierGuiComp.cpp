@@ -116,7 +116,7 @@ CMultiLineSupplierGuiComp::LineSelection::LineSelection()
 
 // reimplemented (iprm::ISelectionParam)
 
-const iprm::ISelectionConstraints* CMultiLineSupplierGuiComp::LineSelection::GetSelectionConstraints() const
+const iprm::IOptionsList* CMultiLineSupplierGuiComp::LineSelection::GetSelectionConstraints() const
 {
 	return NULL;
 }

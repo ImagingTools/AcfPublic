@@ -440,7 +440,7 @@
     <filename>_i_multi_calibration_provider_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <class kind="class">i2d::IMultiCalibrationProvider</class>
     <namespace>i2d</namespace>
   </compound>
@@ -1411,7 +1411,7 @@
     <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">icmpstr::CRegistryCodeSaverComp</class>
@@ -3283,7 +3283,7 @@
     <filename>_c_manager_params_set_shadower_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
@@ -3299,7 +3299,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <class kind="class">iprm::CMultiParamsManagerComp</class>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfo</class>
@@ -3350,7 +3350,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <class kind="class">iprm::CParamsManagerComp</class>
     <namespace>iprm</namespace>
@@ -3375,7 +3375,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
@@ -3388,7 +3388,7 @@
     <filename>_c_selection_constraints_comp_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <class kind="class">iprm::CSelectionConstraintsComp</class>
     <namespace>iprm</namespace>
   </compound>
@@ -3406,7 +3406,7 @@
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_selection_param_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
     <class kind="class">iprm::CSelectionParamComp</class>
     <namespace>iprm</namespace>
@@ -3437,10 +3437,19 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>IOptionsList.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_i_options_list_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
+    <class kind="class">iprm::IOptionsList</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>IOptionsManager.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_i_options_manager_8h</filename>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <class kind="class">iprm::IOptionsManager</class>
     <namespace>iprm</namespace>
   </compound>
@@ -3469,15 +3478,6 @@
     <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
     <includes id="icomp_8h" name="icomp.h" local="yes" imported="no">icomp/icomp.h</includes>
-    <namespace>iprm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ISelectionConstraints.h</name>
-    <path>C:/Temp/Acf/Include/iprm/</path>
-    <filename>_i_selection_constraints_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
-    <class kind="class">iprm::ISelectionConstraints</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -3626,7 +3626,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">iqt::CTranslationManagerComp</class>
@@ -4122,7 +4122,7 @@
     <filename>_c_multi_document_workspace_gui_comp_8h</filename>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_selection_constraints_8h" name="ISelectionConstraints.h" local="yes" imported="no">iprm/ISelectionConstraints.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_c_multi_document_manager_base_8h" name="CMultiDocumentManagerBase.h" local="yes" imported="no">idoc/CMultiDocumentManagerBase.h</includes>
     <includes id="_i_document_template_8h" name="IDocumentTemplate.h" local="yes" imported="no">idoc/IDocumentTemplate.h</includes>
     <includes id="_i_settings_provider_8h" name="ISettingsProvider.h" local="yes" imported="no">iqt/ISettingsProvider.h</includes>
@@ -11174,10 +11174,10 @@
     <filename>classi2d_1_1_i_multi_calibration_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetCalibrationSelectionContraints</name>
       <anchorfile>classi2d_1_1_i_multi_calibration_provider.html</anchorfile>
-      <anchor>a7b9ca3457e586ac7acf831755318bcfb</anchor>
+      <anchor>aa7e8c0e27d71c5afecf579c3313cb4d2</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -18162,7 +18162,7 @@
     <filename>classicmpstr_1_1_c_registry_code_saver_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base>iser::IFileLoader</base>
-    <base>iprm::ISelectionConstraints</base>
+    <base>iprm::IOptionsList</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
@@ -18275,9 +18275,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a9ccd573f189825feb307d41270801869</anchor>
+      <anchor>a0a30e61637f09b229922f143937c1338</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -32524,10 +32524,10 @@
     <class kind="class">iprm::CVariableParamComp</class>
     <class kind="class">iprm::IEnableableParam</class>
     <class kind="class">iprm::INameParam</class>
+    <class kind="class">iprm::IOptionsList</class>
     <class kind="class">iprm::IOptionsManager</class>
     <class kind="class">iprm::IParamsManager</class>
     <class kind="class">iprm::IParamsSet</class>
-    <class kind="class">iprm::ISelectionConstraints</class>
     <class kind="class">iprm::ISelectionParam</class>
     <class kind="class">iprm::IVariableParam</class>
     <class kind="class">iprm::TParamsPtr</class>
@@ -32750,7 +32750,7 @@
     <filename>classiprm_1_1_c_multi_params_manager_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iprm::IParamsManager</base>
-    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfo</class>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfoList</class>
@@ -32783,10 +32783,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetParamsTypeConstraints</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a7322358e5ccf4615d8f8b37f1f33921e</anchor>
+      <anchor>aa0f06fc4da29b3735dfb66e4aa70f55a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -32832,10 +32832,10 @@
       <arglist>(int index, const QString &amp;name)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>af78a2a3d3d37f830cd8b75a06a1dac3d</anchor>
+      <anchor>a9c1fe1a044c8d5f1a327d4b6a87abd33</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -32868,9 +32868,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a8f2375db85a3144503e4f03d25301e78</anchor>
+      <anchor>a1cc53aa3d030d9a1665a06af3726a336</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -32965,12 +32965,12 @@
   <compound kind="struct">
     <name>iprm::CMultiParamsManagerComp::TypeInfoList</name>
     <filename>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</filename>
-    <base>iprm::ISelectionConstraints</base>
+    <base>iprm::IOptionsList</base>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
-      <anchor>aac071270871969573617f8ff4da17d86</anchor>
+      <anchor>a83a61f0a86174167a21a0629b7963872</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33120,14 +33120,14 @@
       <type>void</type>
       <name>SetSlaveSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
-      <anchor>aec4b29c819cac793d5e3bd9f331e0613</anchor>
-      <arglist>(const iprm::ISelectionConstraints *slaveSelectionConstraintsPtr)</arglist>
+      <anchor>a4f423984d3b0e3d2d53250ee1aace853</anchor>
+      <arglist>(const iprm::IOptionsList *slaveSelectionConstraintsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
-      <anchor>a08a6e4df03796965c35f8d18afa879c1</anchor>
+      <anchor>a9a06084ec537c23025822cc1f1ee2aa5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33226,7 +33226,7 @@
     <filename>classiprm_1_1_c_params_manager_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iprm::IParamsManager</base>
-    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -33264,10 +33264,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetParamsTypeConstraints</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a72e3eb93b8174a835f46150106379448</anchor>
+      <anchor>a3b268222e4db98bd3edbe8abc2864a8a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33313,10 +33313,10 @@
       <arglist>(int index, const QString &amp;name)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a016bc3ca5660823acc36f19f48a266c7</anchor>
+      <anchor>a5a466b071923f7873d93dfab35eec419</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33349,9 +33349,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a47f8c206a42387c2dab9d53d0f414902</anchor>
+      <anchor>a52b8ffe289e490221bd0d42c376f4157</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33555,7 +33555,7 @@
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <base virtualness="virtual">iprm::IParamsSet</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
-    <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -33599,10 +33599,10 @@
       <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a9102de3ef0cb0802961861b61f9372e1</anchor>
+      <anchor>af4c531af2f8f6fab7ff06ba15e0164bb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33642,9 +33642,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a71f9f165af9ac95360251444f38d8a1e</anchor>
+      <anchor>a6bd9ac1ea2c805f02a65cc72d23ad4e2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -33701,7 +33701,7 @@
     <name>iprm::CSelectionConstraintsComp</name>
     <filename>classiprm_1_1_c_selection_constraints_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -33711,9 +33711,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classiprm_1_1_c_selection_constraints_comp.html</anchorfile>
-      <anchor>a0a2897ab796f470021d92540d0bf6772</anchor>
+      <anchor>a006eb502dce459dc5cfa09e9aee08df9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33767,8 +33767,8 @@
       <type>void</type>
       <name>SetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>ac61221fa183aa46fc798f165ac6f83bd</anchor>
-      <arglist>(const ISelectionConstraints *constraintsPtr)</arglist>
+      <anchor>a68fe7677019e17ec87a7cd9206b65855</anchor>
+      <arglist>(const IOptionsList *constraintsPtr)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -33792,10 +33792,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>a34b4ebde658bfe48886ecd737d5fb697</anchor>
+      <anchor>aa9d8bc9a5ccbc639e94e672d6f99e4ab</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33969,9 +33969,98 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprm::IOptionsList</name>
+    <filename>classiprm_1_1_i_options_list.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a597320b572a3601e9af95dd172659683</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_OPTIONS_CHANGED</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a597320b572a3601e9af95dd172659683a4c89fb85eca387f9c8ac01fe1becda0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_OPTION_RENAMED</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a597320b572a3601e9af95dd172659683a98a6215ce21135e315b97671c075716b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>OptionsFlags</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a14593d38693c2bdbfe3988dbaaedfcfa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SCF_NONE</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a14593d38693c2bdbfe3988dbaaedfcfaa3e3057f42680ea885e9e6a5a6a310d15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SCF_SUPPORT_UNIQUE_ID</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a14593d38693c2bdbfe3988dbaaedfcfaac8010f58558ee43bd84c8ee41a13c064</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SCF_SUPPORT_DISABLED</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a14593d38693c2bdbfe3988dbaaedfcfaa607b1d4c000f3129c22f5822cc43f87f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>ab5b5157f0e5e6d68c30b772b8e3ecc2a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a37659b5d1cae689b3d715304a48ef929</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>ab30d9ae1759e0a1953751154f9983b3e</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>adf6d315fe048e3a617ea5f803845393b</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>aa7af53aa0f41e2b65bfd0128792d18d2</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a12fcebc0af408e94fc1bfbe2f15e7fa7</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprm::IOptionsManager</name>
     <filename>classiprm_1_1_i_options_manager.html</filename>
-    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
@@ -34098,10 +34187,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetParamsTypeConstraints</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a228e9489fe89a24c9a929af76037f91b</anchor>
+      <anchor>a317b3fc4aabae0150a933602c3ba5af8</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -34181,89 +34270,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iprm::ISelectionConstraints</name>
-    <filename>classiprm_1_1_i_selection_constraints.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a437f92296b248eb729438492dd5d5e1e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_OPTIONS_CHANGED</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a437f92296b248eb729438492dd5d5e1ea35fdf388649b1bf632621fac6649c135</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_OPTION_RENAMED</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a437f92296b248eb729438492dd5d5e1ea9252e2dd649825e860f655fc68b229f3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>SelectionConstraintsFlags</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>ada775de17f376a27c8c53fa2330ada1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SCF_NONE</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>ada775de17f376a27c8c53fa2330ada1bab7ff33e6d2167ba10ca394b8d61b3571</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SCF_SUPPORT_UNIQUE_ID</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>ada775de17f376a27c8c53fa2330ada1ba317e844d30b736eeb428b6daff17c6c5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a5eb4e50e233db8653ade1827f94611a3</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetOptionsCount</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a42cb35e4fde66357790cad29dcef9079</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetOptionName</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a9d21be275c1d2d889b964971d52ec6e0</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetOptionDescription</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a0a88f5abd55974d0fd943e9e338996bf</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QByteArray</type>
-      <name>GetOptionId</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a5498d1707cbd1845247a77edd24f9841</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsOptionEnabled</name>
-      <anchorfile>classiprm_1_1_i_selection_constraints.html</anchorfile>
-      <anchor>a5e04d9da7ae89ff970fcef5c01cd8f6a</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iprm::ISelectionParam</name>
     <filename>classiprm_1_1_i_selection_param.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -34286,10 +34292,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a663506bb922ab4ac3ebc0bd52d741ff7</anchor>
+      <anchor>a98e64292e21cf3531e392b14ab0468f3</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -35078,7 +35084,7 @@
     <filename>classiqt_1_1_c_translation_manager_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">iqt::ITranslationManager</base>
-    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -35158,9 +35164,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>ad00f524b280784078cf0afaa39c01bd2</anchor>
+      <anchor>a88db0944b2124460d6cd51e786c3e996</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -37648,8 +37654,8 @@
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a5d03eee5e6e70caf3a8592165302431d</anchor>
-      <arglist>(DocumentSelection, iprm::ISelectionConstraints, ExtractSelectionInfo)</arglist>
+      <anchor>a10a297edbea9920181c3451a0c31ef8f</anchor>
+      <arglist>(DocumentSelection, iprm::IOptionsList, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -40432,8 +40438,8 @@
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>aa8fc058d40cfaf205a04c20a089d7f3d</anchor>
-      <arglist>(TabModel, iprm::ISelectionConstraints, ExtractTabModel)</arglist>
+      <anchor>a70a141005a391dc8fca663ef79fdd55d</anchor>
+      <arglist>(TabModel, iprm::IOptionsList, ExtractTabModel)</arglist>
     </member>
     <member kind="function">
       <type></type>

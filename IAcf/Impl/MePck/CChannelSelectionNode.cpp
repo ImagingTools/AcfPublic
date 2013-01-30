@@ -72,7 +72,7 @@ void CChannelSelectionNode::ResetNodes()
 
 // reimplemented (iser::ISelectionParam)
 
-const iprm::ISelectionConstraints* CChannelSelectionNode::GetSelectionConstraints() const
+const iprm::IOptionsList* CChannelSelectionNode::GetSelectionConstraints() const
 {
 	return this;
 }
@@ -109,9 +109,9 @@ iprm::ISelectionParam* CChannelSelectionNode::GetSubselection(int /*index*/) con
 }
 
 	
-// reimplemented (iprm::ISelectionConstraints)
+// reimplemented (iprm::IOptionsList)
 
-int CChannelSelectionNode::GetConstraintsFlags() const
+int CChannelSelectionNode::GetOptionsFlags() const
 {
 	return SCF_NONE;
 }

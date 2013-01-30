@@ -29,7 +29,7 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 
-#include "iprm/ISelectionConstraints.h"
+#include "iprm/IOptionsList.h"
 #include "iprm/INameParam.h"
 
 
@@ -71,7 +71,7 @@ void COptionsManagerGuiComp::OnGuiModelAttached()
 
 	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObjectPtr());
 	if (selectionPtr != NULL){
-		const iprm::ISelectionConstraints* constraintsPtr = selectionPtr->GetSelectionConstraints();
+		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
 			const imod::IModel* constraintsModelPtr = dynamic_cast<const imod::IModel*>(constraintsPtr);
 			if (constraintsModelPtr != NULL){
@@ -253,7 +253,7 @@ void COptionsManagerGuiComp::OnEditingFinished()
 	bool addNewOption = true;
 	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObjectPtr());
 	if (selectionPtr != NULL){
-		const iprm::ISelectionConstraints* constraintsPtr = selectionPtr->GetSelectionConstraints();
+		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
 			int optionsCount = constraintsPtr->GetOptionsCount();
 
@@ -306,7 +306,7 @@ void COptionsManagerGuiComp::UpdateComboBox()
 	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObjectPtr());
 	if (selectionPtr != NULL){
 		int selectedIndex = selectionPtr->GetSelectedOptionIndex();
-		const iprm::ISelectionConstraints* constraintsPtr = selectionPtr->GetSelectionConstraints();
+		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
 			int optionsCount = constraintsPtr->GetOptionsCount();
 			for (int i = 0; i < optionsCount; ++i){
@@ -335,7 +335,7 @@ void COptionsManagerGuiComp::UpdateDescriptionFrame()
 	if (selectionPtr != NULL){
 		int selectedIndex = selectionPtr->GetSelectedOptionIndex();
 		
-		const iprm::ISelectionConstraints* constraintsPtr = selectionPtr->GetSelectionConstraints();
+		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL && selectedIndex >= 0){
 
 			QString optionDescription = constraintsPtr->GetOptionDescription(selectedIndex);

@@ -27,7 +27,7 @@
 // ACF includes
 #include "istd/IChangeable.h"
 #include "i2d/ICalibration2d.h"
-#include "iprm/ISelectionConstraints.h"
+#include "iprm/IOptionsList.h"
 
 
 namespace i2d
@@ -44,7 +44,7 @@ public:
 		Get optional information about calibration objects in form of section contraints.
 		It allows to get name and description of each calibration object.
 	*/
-	virtual const iprm::ISelectionConstraints* GetCalibrationSelectionContraints() const = 0;
+	virtual const iprm::IOptionsList* GetCalibrationSelectionContraints() const = 0;
 
 	/**
 		Get number of available calibrations.

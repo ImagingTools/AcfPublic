@@ -60,7 +60,7 @@ bool CSelectableFileConverterComp::ConvertFiles(
 
 // reimplemented (iprm::ISelectionParam)
 
-const iprm::ISelectionConstraints* CSelectableFileConverterComp::GetSelectionConstraints() const
+const iprm::IOptionsList* CSelectableFileConverterComp::GetSelectionConstraints() const
 {
 	return this;
 }
@@ -128,9 +128,9 @@ void CSelectableFileConverterComp::OnComponentCreated()
 
 // protected methods
 
-// reimplemented (iprm::ISelectionConstraints)
+// reimplemented (iprm::IOptionsList)
 
-int CSelectableFileConverterComp::GetConstraintsFlags() const
+int CSelectableFileConverterComp::GetOptionsFlags() const
 {
 	return SCF_NONE;
 }

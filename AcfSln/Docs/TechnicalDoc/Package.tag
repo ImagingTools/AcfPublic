@@ -3431,10 +3431,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetBitmapSelectionContraints</name>
       <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a1a12e90681c61ddd992c678dac43e141</anchor>
+      <anchor>ae914a27450db4f55fc74831476b998ac</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4893,7 +4893,7 @@
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ibase::IFileConvertCopy</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
-    <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -4916,10 +4916,10 @@
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ISelectionConstraints *</type>
+      <type>virtual const IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>a688d46d29cc3460586e5aed2dd1d1a68</anchor>
+      <anchor>ab436ec7d4e00dd2791bc8040b78bef98</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4959,9 +4959,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>a71468b1274cc1a04022ca52c7b7fdfed</anchor>
+      <anchor>a485a5ee873a98b67c9717f1558d0a563</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -6605,10 +6605,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>ae2439ce949dbe3e43a990ee9f7f14a93</anchor>
+      <anchor>abe681ea00d9902cc7829bf4136e87b5b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8382,7 +8382,7 @@
     <filename>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</base>
     <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
-    <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
@@ -8405,10 +8405,10 @@
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetBitmapSelectionContraints</name>
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>ac3bb508790b32cd3d4bc216f81b6dfe6</anchor>
+      <anchor>af39996a3fc0667db67a9da2340cc8def</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8434,9 +8434,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>ad80af70bad9caf68eab0d65de3feaf0a</anchor>
+      <anchor>a4927ebf3398e9685578ccb7f78beecec</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -9457,10 +9457,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetBitmapSelectionContraints</name>
       <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
-      <anchor>a5e21492e96811ce1d101fb5222321c66</anchor>
+      <anchor>ac6290733b32d85da2bce3ba013b56271</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9478,10 +9478,10 @@
       <arglist>(int bitmapIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetCalibrationSelectionContraints</name>
       <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
-      <anchor>a0daae8d5c32e97b3afa67a5aba129be3</anchor>
+      <anchor>aad6fdac527297d52070c99c45a42badd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -10141,10 +10141,10 @@
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetCalibrationSelectionContraints</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>afc5731e755dcc22ccbef0bad207a45cb</anchor>
+      <anchor>ae267c74a8b179b16d42faaebec82bfc6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11082,10 +11082,10 @@
     <filename>classiipr_1_1_i_multi_bitmap_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetBitmapSelectionContraints</name>
       <anchorfile>classiipr_1_1_i_multi_bitmap_provider.html</anchorfile>
-      <anchor>af3113ea2b82fa05c0a8b13739b78d0c5</anchor>
+      <anchor>a9c3ebe4704c12f317dce923001657a3f</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -13493,7 +13493,7 @@
     <filename>classiproc_1_1_c_iterative_processor_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
-    <base virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
@@ -13529,9 +13529,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
-      <anchor>aeac3d10f3aac8be90d52bdb1a9fc3fef</anchor>
+      <anchor>a79b1210744d1259bfe51f31ce33bb911</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18067,10 +18067,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_line_selection.html</anchorfile>
-      <anchor>a19b87fd9179a3c05ce94519df03aa5c4</anchor>
+      <anchor>a703eef9810d4d695bcbcaf26be7fa2eb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19794,7 +19794,7 @@
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::ITriggerParams</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
-    <base protection="protected" virtualness="virtual">iprm::ISelectionConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -19831,10 +19831,10 @@
       <arglist>(int triggerMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::ISelectionConstraints *</type>
+      <type>virtual const iprm::IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>a419b028561f12b0d90a7009c6d111391</anchor>
+      <anchor>af167771ef2b69a73bc93c098e24da419</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19874,9 +19874,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetConstraintsFlags</name>
+      <name>GetOptionsFlags</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
-      <anchor>a09f6d348e4a5b9a46af826c641dd11f6</anchor>
+      <anchor>a80f843bf42742b600d92dc78008a3824</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

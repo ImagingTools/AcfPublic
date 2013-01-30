@@ -39,7 +39,7 @@
 <div class="title">iprm::CMultiParamsManagerComp::TypeInfoList Struct Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iprm::CMultiParamsManagerComp::TypeInfoList" --><!-- doxytag: inherits="iprm::ISelectionConstraints" -->
+<!-- doxytag: class="iprm::CMultiParamsManagerComp::TypeInfoList" --><!-- doxytag: inherits="iprm::IOptionsList" -->
 <p><code>#include &lt;<a class="el" href="_c_multi_params_manager_comp_8h_source.html">CMultiParamsManagerComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iprm::CMultiParamsManagerComp::TypeInfoList:</div>
@@ -47,7 +47,7 @@ Inheritance diagram for iprm::CMultiParamsManagerComp::TypeInfoList:</div>
  <div class="center">
   <img src="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.png" usemap="#iprm::CMultiParamsManagerComp::TypeInfoList_map" alt=""/>
   <map id="iprm::CMultiParamsManagerComp::TypeInfoList_map" name="iprm::CMultiParamsManagerComp::TypeInfoList_map">
-<area href="classiprm_1_1_i_selection_constraints.html" title="Constraints of selection from set of possibilities." alt="iprm::ISelectionConstraints" shape="rect" coords="0,112,277,136"/>
+<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="0,112,277,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,277,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,277,24"/>
 </map>
@@ -57,8 +57,8 @@ Inheritance diagram for iprm::CMultiParamsManagerComp::TypeInfoList:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#aac071270871969573617f8ff4da17d86">GetConstraintsFlags</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#aac071270871969573617f8ff4da17d86"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a83a61f0a86174167a21a0629b7963872">GetOptionsFlags</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a83a61f0a86174167a21a0629b7963872"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#a5b87290233e34ecc121908ab4151d807">GetOptionsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#a5b87290233e34ecc121908ab4151d807"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html#ad98e53401cbae7893a9821a234d19cb7">GetOptionName</a> (int index) const </td></tr>
@@ -78,27 +78,6 @@ Public Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_multi_params_manager_comp_8h_source.html#l00090">90</a> of file <a class="el" href="_c_multi_params_manager_comp_8h_source.html">CMultiParamsManagerComp.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aac071270871969573617f8ff4da17d86"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::TypeInfoList::GetConstraintsFlags" ref="aac071270871969573617f8ff4da17d86" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int iprm::CMultiParamsManagerComp::TypeInfoList::GetConstraintsFlags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get constraints flags. </p>
-<p>The flags describes how the constraints object mantainance </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5eb4e50e233db8653ade1827f94611a3">iprm::ISelectionConstraints</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a2871c1e7ad9be8097275f0966ad04cea"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::TypeInfoList::GetOptionDescription" ref="a2871c1e7ad9be8097275f0966ad04cea" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -116,7 +95,7 @@ Public Attributes</h2></td></tr>
 
 <p>Get human readable description for a option with the index <code>index</code>. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a0a88f5abd55974d0fd943e9e338996bf">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#adf6d315fe048e3a617ea5f803845393b">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -137,9 +116,9 @@ Public Attributes</h2></td></tr>
 
 <p>Get option ID. </p>
 <p>The option ID must be unique, if flag SCF_SUPPORT_UNIQUE_ID is set. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_selection_constraints.html#ada775de17f376a27c8c53fa2330ada1b" title="Flags for control constraints behavior.">SelectionConstraintsFlags</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_options_list.html#a14593d38693c2bdbfe3988dbaaedfcfa" title="Flags for control constraints behavior.">OptionsFlags</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5498d1707cbd1845247a77edd24f9841">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -160,7 +139,7 @@ Public Attributes</h2></td></tr>
 
 <p>Get name of specified option. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a9d21be275c1d2d889b964971d52ec6e0">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -180,7 +159,28 @@ Public Attributes</h2></td></tr>
 
 <p>Get number of managed options. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a42cb35e4fde66357790cad29dcef9079">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a37659b5d1cae689b3d715304a48ef929">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83a61f0a86174167a21a0629b7963872"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::TypeInfoList::GetOptionsFlags" ref="a83a61f0a86174167a21a0629b7963872" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iprm::CMultiParamsManagerComp::TypeInfoList::GetOptionsFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get constraints flags. </p>
+<p>The flags describes how the constraints object mantainance </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab5b5157f0e5e6d68c30b772b8e3ecc2a">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ Public Attributes</h2></td></tr>
 <p>Return <code>true</code> if the option is enabled and can be selected. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>SetOptionEnabled </dd></dl>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_constraints.html#a5e04d9da7ae89ff970fcef5c01cd8f6a">iprm::ISelectionConstraints</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>

@@ -36,7 +36,7 @@ namespace iprm
 {
 
 
-class ISelectionConstraints;
+class IOptionsList;
 
 
 /**
@@ -59,7 +59,7 @@ public:
 		Get constraints of this parameter.
 		Constraints describes some additional information about allowed parameter ranges and related informations.
 	*/
-	virtual const ISelectionConstraints* GetSelectionConstraints() const = 0;
+	virtual const IOptionsList* GetSelectionConstraints() const = 0;
 
 	/**
 		Get selected index.

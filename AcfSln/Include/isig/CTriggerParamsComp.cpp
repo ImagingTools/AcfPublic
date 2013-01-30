@@ -65,7 +65,7 @@ void CTriggerParamsComp::SetTriggerMode(int triggerMode)
 
 // reimplemented (iprm::ISelectionParam)
 
-const iprm::ISelectionConstraints* CTriggerParamsComp::GetSelectionConstraints() const
+const iprm::IOptionsList* CTriggerParamsComp::GetSelectionConstraints() const
 {
 	return this;
 }
@@ -160,9 +160,9 @@ void CTriggerParamsComp::InitializeSelectionList()
 }
 
 
-// reimplemented (iprm::ISelectionConstraints)
+// reimplemented (iprm::IOptionsList)
 
-int CTriggerParamsComp::GetConstraintsFlags() const
+int CTriggerParamsComp::GetOptionsFlags() const
 {
 	return SCF_SUPPORT_UNIQUE_ID;
 }

@@ -110,7 +110,7 @@ iser::ISerializable* CSelectableParamsSetComp::GetEditableParameter(const QByteA
 
 // reimplemented (iprm::ISelectionParam)
 
-const ISelectionConstraints* CSelectableParamsSetComp::GetSelectionConstraints() const
+const IOptionsList* CSelectableParamsSetComp::GetSelectionConstraints() const
 {
 	return this;
 }
@@ -212,10 +212,17 @@ void CSelectableParamsSetComp::SetupCurrentParamsSetBridge()
 }
 
 
-// reimplemented (iprm::ISelectionConstraints)
+// reimplemented (iprm::IOptionsList)
 
-int CSelectableParamsSetComp::GetConstraintsFlags() const
+int CSelectableParamsSetComp::GetOptionsFlags() const
 {
+	if (m_paramsManagerCompPtr.IsValid()){
+		const iprm::IOptionsList* constraintsPtr = m_paramsManagerCompPtr->GetSelectionConstraints();
+		if (constraintsPtr != NULL){
+			return constraintsPtr->GetOptionsFlags();
+		}
+	}
+
 	return SCF_NONE;
 }
 
@@ -245,7 +252,7 @@ QString CSelectableParamsSetComp::GetOptionName(int index) const
 QString CSelectableParamsSetComp::GetOptionDescription(int index) const
 {
 	if (m_paramsManagerCompPtr.IsValid()){
-		const iprm::ISelectionConstraints* constraintsPtr = m_paramsManagerCompPtr->GetSelectionConstraints();
+		const iprm::IOptionsList* constraintsPtr = m_paramsManagerCompPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
 			return constraintsPtr->GetOptionDescription(index);
 		}
@@ -255,8 +262,15 @@ QString CSelectableParamsSetComp::GetOptionDescription(int index) const
 }
 
 
-QByteArray CSelectableParamsSetComp::GetOptionId(int /*index*/) const
+QByteArray CSelectableParamsSetComp::GetOptionId(int index) const
 {
+	if (m_paramsManagerCompPtr.IsValid()){
+		const iprm::IOptionsList* constraintsPtr = m_paramsManagerCompPtr->GetSelectionConstraints();
+		if (constraintsPtr != NULL){
+			return constraintsPtr->GetOptionId(index);
+		}
+	}
+
 	return QByteArray();
 }
 
@@ -264,7 +278,7 @@ QByteArray CSelectableParamsSetComp::GetOptionId(int /*index*/) const
 bool CSelectableParamsSetComp::IsOptionEnabled(int index) const
 {
 	if (m_paramsManagerCompPtr.IsValid()){
-		const iprm::ISelectionConstraints* constraintsPtr = m_paramsManagerCompPtr->GetSelectionConstraints();
+		const iprm::IOptionsList* constraintsPtr = m_paramsManagerCompPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
 			return constraintsPtr->IsOptionEnabled(index);
 		}

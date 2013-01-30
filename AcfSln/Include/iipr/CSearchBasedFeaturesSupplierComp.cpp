@@ -35,7 +35,7 @@ namespace iipr
 
 // reimplemented (i2d::IMultiCalibrationProvider)
 
-const iprm::ISelectionConstraints* CSearchBasedFeaturesSupplierComp::GetCalibrationSelectionContraints() const
+const iprm::IOptionsList* CSearchBasedFeaturesSupplierComp::GetCalibrationSelectionContraints() const
 {
 	return NULL;
 }
