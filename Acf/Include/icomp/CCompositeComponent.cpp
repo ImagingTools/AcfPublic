@@ -315,8 +315,6 @@ void CCompositeComponent::SetComponentContext(
 				m_autoInitComponentIds.insert(elementId);
 			}
 		}
-
-		EnsureAutoInitComponentsCreated();
 	}
 	else{
 		m_contextPtr = NULL;
