@@ -64,24 +64,18 @@
 <a name="l00036"></a>00036 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
 <a name="l00037"></a><a class="code" href="classicmpstr_1_1_c_component_accessor.html#af9ce41de3fc70729c6b30034fe05c527">00037</a> InterfaceType* <a class="code" href="classicmpstr_1_1_c_component_accessor.html#af9ce41de3fc70729c6b30034fe05c527">CComponentAccessor::GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; componentId)
 <a name="l00038"></a>00038 {
-<a name="l00039"></a>00039        InterfaceType* interfacePtr = m_mainComponent.<a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd">GetComponentInterface</a>&lt;InterfaceType&gt;(componentId);
+<a name="l00039"></a>00039        InterfaceType* interfacePtr = m_mainComponent.<a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd" title="Get interface implemented by this composite component.">GetComponentInterface</a>&lt;InterfaceType&gt;(componentId);
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041        <span class="keywordflow">if</span> ((interfacePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_isAutoInitBlocked){
-<a name="l00042"></a>00042               m_mainComponent.<a class="code" href="classicomp_1_1_c_composite_component.html#abe50437e753adc9f98909a1f1ec081ca" title="End of blocking of automatic component initialization.">EndAutoInitBlock</a>();
+<a name="l00041"></a>00041        <span class="keywordflow">return</span> interfacePtr;
+<a name="l00042"></a>00042 }
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044               m_isAutoInitBlocked = <span class="keyword">false</span>;
-<a name="l00045"></a>00045        }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 } <span class="comment">// namespace icmpstr</span>
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047        <span class="keywordflow">return</span> interfacePtr;
-<a name="l00048"></a>00048 }
-<a name="l00049"></a>00049 
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="preprocessor">#endif // !icmpstr_CComponentAccessor_included</span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span>
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 } <span class="comment">// namespace icmpstr</span>
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif // !icmpstr_CComponentAccessor_included</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span>
-<a name="l00056"></a>00056 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

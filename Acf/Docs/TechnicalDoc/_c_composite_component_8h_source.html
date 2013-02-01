@@ -58,11 +58,10 @@
 <a name="l00030"></a>00030        <a class="code" href="classicomp_1_1_c_composite_component.html#a92bd601da3c6fa131e04e15c013b6426">CCompositeComponent</a>();
 <a name="l00031"></a>00031        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_c_composite_component.html#ab19e8f237daf2f50e64988853e0abfd8">~CCompositeComponent</a>();
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
-<a name="l00034"></a>00034        InterfaceType* <a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd">GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; subId = <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00035"></a>00035 
-<a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_c_composite_component.html#a43d8529e9d8039274bcca00a050a033f" title="Begin of blocking of automatic component initialization.">BeginAutoInitBlock</a>();
-<a name="l00043"></a>00043        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_composite_component.html#abe50437e753adc9f98909a1f1ec081ca" title="End of blocking of automatic component initialization.">EndAutoInitBlock</a>();
+<a name="l00036"></a>00036        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
+<a name="l00037"></a>00037        InterfaceType* <a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd" title="Get interface implemented by this composite component.">GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; subId = <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00038"></a>00038 
+<a name="l00043"></a>00043        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_composite_component.html#a0ea25078c1e3ecced6a1b59cf44726c6" title="Make sure, all components with flag &#39;AutoInit&#39; are initialized.">EnsureAutoInitComponentsCreated</a>() <span class="keyword">const</span>;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        <span class="comment">// reimplemented (icomp::ICompositeComponent)</span>
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* <a class="code" href="classicomp_1_1_c_composite_component.html#ac4a448704257dddc5d76665995b98352" title="Get access to subcomponent using its ID.">GetSubcomponent</a>(<span class="keyword">const</span> QByteArray&amp; componentId) <span class="keyword">const</span>;
@@ -89,48 +88,46 @@
 <a name="l00075"></a>00075                             <a class="code" href="classistd_1_1_t_del_ptr.html">ComponentPtr</a>* subComponentPtr,
 <a name="l00076"></a>00076                             <span class="keywordtype">bool</span> isOwned) <span class="keyword">const</span>;
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078        <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_composite_component.html#a0ea25078c1e3ecced6a1b59cf44726c6">EnsureAutoInitComponentsCreated</a>() <span class="keyword">const</span>;
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="keyword">private</span>:
-<a name="l00081"></a>00081        <span class="keyword">struct </span>ComponentInfo
-<a name="l00082"></a>00082        {
-<a name="l00083"></a>00083               ComponentInfo(): isComponentInitialized(false), isContextInitialized(false){}
-<a name="l00087"></a>00087               <a class="code" href="classicomp_1_1_c_composite_component.html#aa5c6c9dca7147580502ae37c4f5bc7a8">ComponentPtr</a> componentPtr;
-<a name="l00092"></a>00092               <span class="keywordtype">bool</span> isComponentInitialized;
-<a name="l00096"></a>00096               <a class="code" href="classicomp_1_1_c_composite_component.html#a38db4f7ab34848f463b3fba51d54bb99">ContextPtr</a> contextPtr;
-<a name="l00101"></a>00101               <span class="keywordtype">bool</span> isContextInitialized;
-<a name="l00102"></a>00102        };
+<a name="l00078"></a>00078 <span class="keyword">private</span>:
+<a name="l00079"></a>00079        <span class="keyword">struct </span>ComponentInfo
+<a name="l00080"></a>00080        {
+<a name="l00081"></a>00081               ComponentInfo(): isComponentInitialized(false), isContextInitialized(false){}
+<a name="l00085"></a>00085               <a class="code" href="classicomp_1_1_c_composite_component.html#aa5c6c9dca7147580502ae37c4f5bc7a8">ComponentPtr</a> componentPtr;
+<a name="l00090"></a>00090               <span class="keywordtype">bool</span> isComponentInitialized;
+<a name="l00094"></a>00094               <a class="code" href="classicomp_1_1_c_composite_component.html#a38db4f7ab34848f463b3fba51d54bb99">ContextPtr</a> contextPtr;
+<a name="l00099"></a>00099               <span class="keywordtype">bool</span> isContextInitialized;
+<a name="l00100"></a>00100        };
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102        <span class="keyword">typedef</span> QMap&lt; QByteArray, ComponentInfo &gt; ComponentMap;
 <a name="l00103"></a>00103 
-<a name="l00104"></a>00104        <span class="keyword">typedef</span> QMap&lt; QByteArray, ComponentInfo &gt; ComponentMap;
+<a name="l00104"></a>00104        <span class="keyword">mutable</span> ComponentMap m_componentMap;
 <a name="l00105"></a>00105 
-<a name="l00106"></a>00106        <span class="keyword">mutable</span> ComponentMap m_componentMap;
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108        <span class="keyword">mutable</span> <a class="code" href="classicomp_1_1_i_registry.html#a63050c3d6b81fdbcf1e0296a04ec2c90">IRegistry::Ids</a> m_autoInitComponentIds;
-<a name="l00109"></a>00109        <span class="keywordtype">int</span> m_isAutoInitBlockCount;
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111        <span class="keyword">const</span> IComponentContext* m_contextPtr;
-<a name="l00112"></a>00112        <span class="keyword">const</span> ICompositeComponent* m_parentPtr;
-<a name="l00113"></a>00113        <span class="keywordtype">bool</span> m_isParentOwner;
-<a name="l00114"></a>00114 };
-<a name="l00115"></a>00115 
+<a name="l00106"></a>00106        <span class="keyword">const</span> IComponentContext* m_contextPtr;
+<a name="l00107"></a>00107        <span class="keyword">const</span> ICompositeComponent* m_parentPtr;
+<a name="l00108"></a>00108        <span class="keywordtype">bool</span> m_isParentOwner;
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_autoInitialized;
+<a name="l00111"></a>00111        <span class="keyword">mutable</span> <a class="code" href="classicomp_1_1_i_registry.html#a63050c3d6b81fdbcf1e0296a04ec2c90">IRegistry::Ids</a> m_autoInitComponentIds;
+<a name="l00112"></a>00112 };
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 <span class="comment">// inline methods</span>
 <a name="l00116"></a>00116 
-<a name="l00117"></a>00117 <span class="comment">// inline methods</span>
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
-<a name="l00120"></a><a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd">00120</a> <span class="keyword">inline</span> InterfaceType* <a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd">CCompositeComponent::GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; subId)
-<a name="l00121"></a>00121 {
-<a name="l00122"></a>00122        <span class="keyword">static</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a> info(<span class="keyword">typeid</span>(InterfaceType));
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>InterfaceType*<span class="keyword">&gt;</span>(<a class="code" href="classicomp_1_1_c_composite_component.html#af3ca584789d2b47cdd3306b31e79560a" title="Get access to specified component interface.">GetInterface</a>(info, subId));
-<a name="l00125"></a>00125 }
-<a name="l00126"></a>00126 
+<a name="l00117"></a>00117 <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
+<a name="l00118"></a><a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd">00118</a> <span class="keyword">inline</span> InterfaceType* <a class="code" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd" title="Get interface implemented by this composite component.">CCompositeComponent::GetComponentInterface</a>(<span class="keyword">const</span> QByteArray&amp; subId)
+<a name="l00119"></a>00119 {
+<a name="l00120"></a>00120        <span class="keyword">static</span> <a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a> info(<span class="keyword">typeid</span>(InterfaceType));
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>InterfaceType*<span class="keyword">&gt;</span>(<a class="code" href="classicomp_1_1_c_composite_component.html#af3ca584789d2b47cdd3306b31e79560a" title="Get access to specified component interface.">GetInterface</a>(info, subId));
+<a name="l00123"></a>00123 }
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126 } <span class="comment">// namespace icomp</span>
 <a name="l00127"></a>00127 
-<a name="l00128"></a>00128 } <span class="comment">// namespace icomp</span>
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130 
-<a name="l00131"></a>00131 <span class="preprocessor">#endif // !icomp_CCompositeComponent_included</span>
-<a name="l00132"></a>00132 <span class="preprocessor"></span>
-<a name="l00133"></a>00133 
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 <span class="preprocessor">#endif // !icomp_CCompositeComponent_included</span>
+<a name="l00130"></a>00130 <span class="preprocessor"></span>
+<a name="l00131"></a>00131 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

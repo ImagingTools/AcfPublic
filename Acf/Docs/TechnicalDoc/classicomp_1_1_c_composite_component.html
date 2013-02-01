@@ -63,10 +63,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#ab19e8f237daf2f50e64988853e0abfd8">~CCompositeComponent</a> ()</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class InterfaceType &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">InterfaceType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a70ea59c51a850a3b02118abdcba423fd">GetComponentInterface</a> (const QByteArray &amp;subId=&quot;&quot;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a43d8529e9d8039274bcca00a050a033f">BeginAutoInitBlock</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of blocking of automatic component initialization.  <a href="#a43d8529e9d8039274bcca00a050a033f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#abe50437e753adc9f98909a1f1ec081ca">EndAutoInitBlock</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">End of blocking of automatic component initialization.  <a href="#abe50437e753adc9f98909a1f1ec081ca"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get interface implemented by this composite component.  <a href="#a70ea59c51a850a3b02118abdcba423fd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a0ea25078c1e3ecced6a1b59cf44726c6">EnsureAutoInitComponentsCreated</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure, all components with flag 'AutoInit' are initialized.  <a href="#a0ea25078c1e3ecced6a1b59cf44726c6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#ac4a448704257dddc5d76665995b98352">GetSubcomponent</a> (const QByteArray &amp;componentId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to subcomponent using its ID.  <a href="#ac4a448704257dddc5d76665995b98352"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classicomp_1_1_i_component_context.html">IComponentContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a2185bdf00bead214a3892d4884edd647">GetSubcomponentContext</a> (const QByteArray &amp;componentId) const </td></tr>
@@ -93,7 +92,6 @@ Protected Types</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a3d528e931c8035196e32c81e486f6c15">CreateSubcomponentInfo</a> (const QByteArray &amp;componentId, <a class="el" href="classicomp_1_1_c_composite_component.html#a38db4f7ab34848f463b3fba51d54bb99">ContextPtr</a> &amp;subContextPtr, <a class="el" href="classicomp_1_1_c_composite_component.html#aa5c6c9dca7147580502ae37c4f5bc7a8">ComponentPtr</a> *subComponentPtr, bool isOwned) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create information objects and subcomponent.  <a href="#a3d528e931c8035196e32c81e486f6c15"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_composite_component.html#a0ea25078c1e3ecced6a1b59cf44726c6">EnsureAutoInitComponentsCreated</a> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -163,24 +161,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a43d8529e9d8039274bcca00a050a033f"></a><!-- doxytag: member="icomp::CCompositeComponent::BeginAutoInitBlock" ref="a43d8529e9d8039274bcca00a050a033f" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void icomp::CCompositeComponent::BeginAutoInitBlock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Begin of blocking of automatic component initialization. </p>
-
-</div>
-</div>
 <a class="anchor" id="a8d1b830697db6dff9ab9b8d045abdbe3"></a><!-- doxytag: member="icomp::CCompositeComponent::CreateSubcomponent" ref="a8d1b830697db6dff9ab9b8d045abdbe3" args="(const QByteArray &amp;componentId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -253,26 +233,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abe50437e753adc9f98909a1f1ec081ca"></a><!-- doxytag: member="icomp::CCompositeComponent::EndAutoInitBlock" ref="abe50437e753adc9f98909a1f1ec081ca" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool icomp::CCompositeComponent::EndAutoInitBlock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>End of blocking of automatic component initialization. </p>
-
-<p>Referenced by <a class="el" href="_c_component_accessor_8h_source.html#l00037">icmpstr::CComponentAccessor::GetComponentInterface()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a0ea25078c1e3ecced6a1b59cf44726c6"></a><!-- doxytag: member="icomp::CCompositeComponent::EnsureAutoInitComponentsCreated" ref="a0ea25078c1e3ecced6a1b59cf44726c6" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -281,11 +241,14 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool icomp::CCompositeComponent::EnsureAutoInitComponentsCreated </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [protected]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Make sure, all components with flag 'AutoInit' are initialized. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if there were components needed to be initialized. </dd></dl>
 
 </div>
 </div>
@@ -326,7 +289,9 @@ template&lt;class InterfaceType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00120">120</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
+<p>Get interface implemented by this composite component. </p>
+
+<p>Definition at line <a class="el" href="_c_composite_component_8h_source.html#l00118">118</a> of file <a class="el" href="_c_composite_component_8h_source.html">CCompositeComponent.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_c_composite_component.html#af3ca584789d2b47cdd3306b31e79560a">GetInterface()</a>.</p>
 
@@ -370,7 +335,7 @@ template&lt;class InterfaceType &gt; </div>
 
 <p>Implements <a class="el" href="classicomp_1_1_i_component.html#ac081336b0e23bf323972601368910213">icomp::IComponent</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_composite_component_8h_source.html#l00120">GetComponentInterface()</a>.</p>
+<p>Referenced by <a class="el" href="_c_composite_component_8h_source.html#l00118">GetComponentInterface()</a>.</p>
 
 </div>
 </div>

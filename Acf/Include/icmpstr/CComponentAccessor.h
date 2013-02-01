@@ -60,12 +60,6 @@ InterfaceType* CComponentAccessor::GetComponentInterface(const QByteArray& compo
 {
 	InterfaceType* interfacePtr = m_mainComponent.GetComponentInterface<InterfaceType>(componentId);
 
-	if ((interfacePtr != NULL) && m_isAutoInitBlocked){
-		m_mainComponent.EndAutoInitBlock();
-
-		m_isAutoInitBlocked = false;
-	}
-
 	return interfacePtr;
 }
 

@@ -21539,18 +21539,11 @@
       <arglist>(const QByteArray &amp;subId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>BeginAutoInitBlock</name>
-      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a43d8529e9d8039274bcca00a050a033f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
-      <name>EndAutoInitBlock</name>
+      <name>EnsureAutoInitComponentsCreated</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>abe50437e753adc9f98909a1f1ec081ca</anchor>
-      <arglist>()</arglist>
+      <anchor>a0ea25078c1e3ecced6a1b59cf44726c6</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
@@ -21628,13 +21621,6 @@
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
       <anchor>a3d528e931c8035196e32c81e486f6c15</anchor>
       <arglist>(const QByteArray &amp;componentId, ContextPtr &amp;subContextPtr, ComponentPtr *subComponentPtr, bool isOwned) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsureAutoInitComponentsCreated</name>
-      <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a0ea25078c1e3ecced6a1b59cf44726c6</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
