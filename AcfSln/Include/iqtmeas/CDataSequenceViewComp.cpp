@@ -50,7 +50,7 @@ CDataSequenceViewComp::CDataSequenceViewComp()
 
 void CDataSequenceViewComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	int channelsCount = 0;
 
@@ -258,7 +258,7 @@ void CDataSequenceViewComp::on_NextButton_clicked()
 CDataSequenceViewComp::DiagramWidget::DiagramWidget(QWidget* parentWidgetPtr, CDataSequenceViewComp* parentPtr)
 :	QWidget(parentWidgetPtr), m_parent(*parentPtr)
 {
-	I_ASSERT(parentPtr != NULL);
+	Q_ASSERT(parentPtr != NULL);
 }
 
 
@@ -268,7 +268,7 @@ CDataSequenceViewComp::DiagramWidget::DiagramWidget(QWidget* parentWidgetPtr, CD
 
 void CDataSequenceViewComp::DiagramWidget::paintEvent(QPaintEvent* /*event*/)
 {
-	I_ASSERT(m_parent.IsGuiCreated());
+	Q_ASSERT(m_parent.IsGuiCreated());
 
 	const imeas::IDataSequence* samplesPtr = m_parent.GetObjectPtr();
 	if (samplesPtr != NULL){
@@ -296,7 +296,7 @@ void CDataSequenceViewComp::DiagramWidget::paintEvent(QPaintEvent* /*event*/)
 
 		int selectedChannel = m_parent.ChannelSelectorCB->currentIndex() - 1;
 		if (selectedChannel >= 0){
-			I_ASSERT(selectedChannel < samplesPtr->GetChannelsCount());
+			Q_ASSERT(selectedChannel < samplesPtr->GetChannelsCount());
 
 			firstChannel = selectedChannel;
 			lastChannel = selectedChannel;

@@ -105,7 +105,7 @@
 <a name="l00077"></a><a class="code" href="classiview_1_1_c_interactive_view_layer.html#a4d12674a8d8234226bb96c1b29c2c6b8">00077</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_interactive_view_layer.html#a4d12674a8d8234226bb96c1b29c2c6b8" title="Get state of system keys.">CInteractiveViewLayer::GetKeysState</a>()<span class="keyword"> const</span>
 <a name="l00078"></a>00078 <span class="keyword"></span>{
 <a name="l00079"></a>00079        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">IShapeView</a>* viewPtr = <a class="code" href="classiview_1_1_c_view_layer.html#a02abb00a90a8c340b8d2a39f05a34c7f" title="Get parent view of this layer.">GetViewPtr</a>();
-<a name="l00080"></a>00080        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00080"></a>00080        Q_ASSERT(viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082        <span class="keywordflow">return</span> viewPtr-&gt;<a class="code" href="classiview_1_1_i_selectable.html#a55a85abf3a5a3d49148c888bdd9d638b" title="Get state of system keys.">GetKeysState</a>();
 <a name="l00083"></a>00083 }
@@ -114,7 +114,7 @@
 <a name="l00086"></a><a class="code" href="classiview_1_1_c_interactive_view_layer.html#ae09570be82c06111c937ee0ae57f1ffd">00086</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_interactive_view_layer.html#ae09570be82c06111c937ee0ae57f1ffd" title="Get actual edit mode.">CInteractiveViewLayer::GetEditMode</a>()<span class="keyword"> const</span>
 <a name="l00087"></a>00087 <span class="keyword"></span>{
 <a name="l00088"></a>00088        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">IShapeView</a>* viewPtr = <a class="code" href="classiview_1_1_c_view_layer.html#a02abb00a90a8c340b8d2a39f05a34c7f" title="Get parent view of this layer.">GetViewPtr</a>();
-<a name="l00089"></a>00089        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00089"></a>00089        Q_ASSERT(viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091        <span class="keywordflow">return</span> viewPtr-&gt;<a class="code" href="classiview_1_1_i_selectable.html#ad32682c664cad8e7f178c42a4248d093" title="Get actual edit mode.">GetEditMode</a>();
 <a name="l00092"></a>00092 }

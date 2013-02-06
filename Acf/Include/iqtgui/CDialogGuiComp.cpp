@@ -121,7 +121,7 @@ void CDialogGuiComp::SetInitialDialogSize(QDialog& dialog) const
 {
 	if (m_initialDialogSizeAttrPtr.IsValid()){
 		const QDesktopWidget* desktopPtr = QApplication::desktop();
-		I_ASSERT(desktopPtr != NULL);
+		Q_ASSERT(desktopPtr != NULL);
 
 		QRect screenRect = desktopPtr->screenGeometry();
 

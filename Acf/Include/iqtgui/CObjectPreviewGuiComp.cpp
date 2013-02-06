@@ -65,7 +65,7 @@ void CObjectPreviewGuiComp::OnGuiModelDetached()
 
 void CObjectPreviewGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	if (!m_fileLoaderCompPtr.IsValid()){
 		return;

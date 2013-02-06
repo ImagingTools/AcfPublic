@@ -53,7 +53,7 @@ CViewLayer::~CViewLayer()
 
 	if (m_viewPtr != NULL){
 		int layerIndex = m_viewPtr->GetLayerIndex(*this);
-		I_ASSERT(layerIndex >= 0);
+		Q_ASSERT(layerIndex >= 0);
 
 		m_viewPtr->RemoveLayer(layerIndex);
 	}
@@ -70,8 +70,8 @@ CViewLayer::Shapes CViewLayer::GetAllShapes() const
 
 void CViewLayer::OnConnectView(IShapeView* viewPtr)
 {
-	I_ASSERT(m_viewPtr == NULL);
-	I_ASSERT(viewPtr != NULL);
+	Q_ASSERT(m_viewPtr == NULL);
+	Q_ASSERT(viewPtr != NULL);
 
 	m_viewPtr = viewPtr;
 }
@@ -79,8 +79,8 @@ void CViewLayer::OnConnectView(IShapeView* viewPtr)
 
 void CViewLayer::OnDisconnectView(IShapeView* I_IF_DEBUG(viewPtr))
 {
-	I_ASSERT(m_viewPtr == viewPtr);
-	I_ASSERT(viewPtr != NULL);
+	Q_ASSERT(m_viewPtr == viewPtr);
+	Q_ASSERT(viewPtr != NULL);
 
 	m_viewPtr = NULL;
 }
@@ -104,7 +104,7 @@ bool CViewLayer::ConnectShape(IShape* shapePtr)
 	shapePtr->OnDisplayChange(CF_ALL);
 
 	i2d::CRect boundingBox = shapePtr->GetBoundingBox();
-	I_ASSERT(boundingBox.IsValid());
+	Q_ASSERT(boundingBox.IsValid());
 
 	m_shapes[shapePtr] = boundingBox;
 
@@ -185,7 +185,7 @@ IDisplay* CViewLayer::GetParentDisplayPtr() const
 
 const CScreenTransform& CViewLayer::GetTransform() const
 {
-	I_ASSERT(m_viewPtr != NULL);
+	Q_ASSERT(m_viewPtr != NULL);
 
 	return m_viewPtr->GetTransform();
 }
@@ -205,7 +205,7 @@ i2d::CRect CViewLayer::GetBoundingBox() const
 
 i2d::CRect CViewLayer::GetClientRect() const
 {
-	I_ASSERT(m_viewPtr != NULL);
+	Q_ASSERT(m_viewPtr != NULL);
 
 	return m_viewPtr->GetClientRect();
 }
@@ -213,7 +213,7 @@ i2d::CRect CViewLayer::GetClientRect() const
 
 const IColorSchema& CViewLayer::GetColorSchema() const
 {
-	I_ASSERT(m_viewPtr != NULL);
+	Q_ASSERT(m_viewPtr != NULL);
 
 	return m_viewPtr->GetColorSchema();
 }
@@ -221,10 +221,10 @@ const IColorSchema& CViewLayer::GetColorSchema() const
 
 void CViewLayer::OnAreaInvalidated(const i2d::CRect& prevArea, const i2d::CRect& newArea)
 {
-	I_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(prevArea));
+	Q_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(prevArea));
 
 	if (m_isBoundingBoxValid){
-		I_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(prevArea));
+		Q_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(prevArea));
 
 		if (prevArea.IsEmpty() || (
 						(m_boundingBox.GetLeft() < prevArea.GetLeft()) &&
@@ -236,7 +236,7 @@ void CViewLayer::OnAreaInvalidated(const i2d::CRect& prevArea, const i2d::CRect&
 		else{
 			m_isBoundingBoxValid = false;
 		}
-		I_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(newArea));
+		Q_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(newArea));
 	}
 
 	if (m_viewPtr != NULL){
@@ -249,10 +249,10 @@ void CViewLayer::OnAreaInvalidated(const i2d::CRect& prevArea, const i2d::CRect&
 
 void CViewLayer::OnChangeShape(IShape* shapePtr)
 {
-	I_ASSERT(shapePtr != NULL);
+	Q_ASSERT(shapePtr != NULL);
 
 	ShapeMap::iterator iter = m_shapes.find(shapePtr);
-	I_ASSERT(iter != m_shapes.end());
+	Q_ASSERT(iter != m_shapes.end());
 
 	OnChangeShapeElement(iter);
 }
@@ -260,7 +260,7 @@ void CViewLayer::OnChangeShape(IShape* shapePtr)
 
 bool CViewLayer::DisconnectShape(IShape* shapePtr)
 {
-	I_ASSERT(shapePtr != NULL);
+	Q_ASSERT(shapePtr != NULL);
 
 	ShapeMap::iterator iter = m_shapes.find(shapePtr);
 	if (iter != m_shapes.end()){
@@ -317,12 +317,12 @@ QString CViewLayer::GetShapeDescriptionAt(istd::CIndex2d position) const
 
 bool CViewLayer::OnChangeShapeElement(ShapeMap::Iterator elementIter)
 {
-	I_ASSERT(elementIter.key() != NULL);
-	I_ASSERT(GetBoundingBox().IsInside(elementIter.value()));
+	Q_ASSERT(elementIter.key() != NULL);
+	Q_ASSERT(GetBoundingBox().IsInside(elementIter.value()));
 
 	const i2d::CRect oldBoundingBox = elementIter.value();
 	const iview::IShape* shapePtr = elementIter.key();
-	I_ASSERT(shapePtr != NULL);
+	Q_ASSERT(shapePtr != NULL);
 
 	elementIter.value() = shapePtr->GetBoundingBox();
 

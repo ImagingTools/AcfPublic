@@ -68,7 +68,7 @@ bool CStateControllerCompBase::IsLeaveAllowed(bool /*isActionAllowed*/, const IS
 
 bool CStateControllerCompBase::TryEnterState(bool /*isActionAllowed*/, const IStateController* /*prevStatePtr*/)
 {
-	I_ASSERT(m_isStateEnabled);
+	Q_ASSERT(m_isStateEnabled);
 
 	if (IsEnterAllowed()){
 		if (!m_isStateActive){
@@ -85,7 +85,7 @@ bool CStateControllerCompBase::TryEnterState(bool /*isActionAllowed*/, const ISt
 
 bool CStateControllerCompBase::TryLeaveState(bool /*isActionAllowed*/, const IStateController* /*nextStatePtr*/)
 {
-	I_ASSERT(m_isStateEnabled);
+	Q_ASSERT(m_isStateEnabled);
 
 	if (IsLeaveAllowed()){
 		if (m_isStateActive){

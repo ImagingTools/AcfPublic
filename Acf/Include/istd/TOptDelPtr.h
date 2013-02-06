@@ -149,7 +149,7 @@ template <class Type, bool DelArray>
 inline TOptDelPtr<Type, DelArray>::TOptDelPtr(const TOptDelPtr<Type, DelArray>& I_IF_DEBUG(ptr))
 :	BaseClass(NULL)
 {
-	I_ASSERT(ptr.GetPtr() == NULL);
+	Q_ASSERT(ptr.GetPtr() == NULL);
 }
 
 
@@ -207,7 +207,7 @@ void TOptDelPtr<Type, DelArray>::TakeOver(TOptDelPtr& sourcePtr)
 template <class Type, bool DelArray>
 TOptDelPtr<Type, DelArray>& TOptDelPtr<Type, DelArray>::operator=(const TOptDelPtr& I_IF_DEBUG(ptr))
 {
-	I_ASSERT(ptr.GetPtr() == NULL);
+	Q_ASSERT(ptr.GetPtr() == NULL);
 
 	Reset();
 

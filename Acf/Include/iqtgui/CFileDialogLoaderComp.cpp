@@ -227,7 +227,7 @@ QString CFileDialogLoaderComp::GetFileName(const QString& filePath, bool isSavin
 		QString selectedFilter;
 		QString caption;
 
-		I_ASSERT(m_useNativeAttrPtr.IsValid());
+		Q_ASSERT(m_useNativeAttrPtr.IsValid());
 
 		bool useNativeDialogs = *m_useNativeAttrPtr;
 

@@ -477,8 +477,8 @@
 <a name="l00543"></a>00543 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Size, <span class="keyword">class</span> Element&gt;
 <a name="l00544"></a><a class="code" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">00544</a> <span class="keyword">const</span> Element&amp; <a class="code" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">TVector&lt;Size, Element&gt;::operator[]</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const</span>
 <a name="l00545"></a>00545 <span class="keyword"></span>{
-<a name="l00546"></a>00546        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(i &gt;= 0);
-<a name="l00547"></a>00547        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(i &lt; Size);
+<a name="l00546"></a>00546        Q_ASSERT(i &gt;= 0);
+<a name="l00547"></a>00547        Q_ASSERT(i &lt; Size);
 <a name="l00548"></a>00548 
 <a name="l00549"></a>00549        <span class="keywordflow">return</span> m_elements[i];
 <a name="l00550"></a>00550 }
@@ -487,8 +487,8 @@
 <a name="l00553"></a>00553 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Size, <span class="keyword">class</span> Element&gt;
 <a name="l00554"></a><a class="code" href="classimath_1_1_t_vector.html#a0c74cae6333c226cae85c52fa012c0c4">00554</a> Element&amp; <a class="code" href="classimath_1_1_t_vector.html#a251f63ce2a3f176f102839c1da5f9893">TVector&lt;Size, Element&gt;::operator[]</a>(<span class="keywordtype">int</span> i)
 <a name="l00555"></a>00555 {
-<a name="l00556"></a>00556        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(i &gt;= 0);
-<a name="l00557"></a>00557        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(i &lt; Size);
+<a name="l00556"></a>00556        Q_ASSERT(i &gt;= 0);
+<a name="l00557"></a>00557        Q_ASSERT(i &lt; Size);
 <a name="l00558"></a>00558 
 <a name="l00559"></a>00559        <span class="keywordflow">return</span> m_elements[i];
 <a name="l00560"></a>00560 }

@@ -102,13 +102,13 @@ void CProgressHistoryGuiComp::EndProgressSession(int sessionId)
 	}
 
 	SessionPtr& sessionPtr = foundIter.value();
-	I_ASSERT(sessionPtr.IsValid());
+	Q_ASSERT(sessionPtr.IsValid());
 
 	sessionPtr->curve.setPen(QPen(Qt::GlobalColor(Qt::cyan + sessionId), 0.5));
 
 	if (sessionPtr->isCancelable){
 		--m_cancelsCount;
-		I_ASSERT(m_cancelsCount >= 0);	// number of all cancelable sessions cannot be negative
+		Q_ASSERT(m_cancelsCount >= 0);	// number of all cancelable sessions cannot be negative
 	}
 
 	sessionPtr->curve.detach();
@@ -133,7 +133,7 @@ void CProgressHistoryGuiComp::OnProgress(int sessionId, double currentProgress)
 		sessionPtr->axisY.pop_back();
 	}
 
-	I_ASSERT(sessionPtr->axisY.size() <= m_axisXData.size());
+	Q_ASSERT(sessionPtr->axisY.size() <= m_axisXData.size());
 	sessionPtr->curve.setSamples(&m_axisXData[0], &sessionPtr->axisY[0], int(sessionPtr->axisY.size()));
 
 	if (m_plotPtr.IsValid()){
@@ -173,7 +173,7 @@ void CProgressHistoryGuiComp::UpdateState()
 	}
 	else if (sessionsCount == 1){
 		SessionPtr& sessionPtr = m_idToSessionMap.begin().value();
-		I_ASSERT(sessionPtr.IsValid());
+		Q_ASSERT(sessionPtr.IsValid());
 
 		DescriptionLabel->setText(sessionPtr->description);
 	}

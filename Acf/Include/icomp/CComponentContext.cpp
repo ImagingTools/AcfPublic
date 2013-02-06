@@ -42,8 +42,8 @@ CComponentContext::CComponentContext(
 	m_parentPtr(parentPtr),
 	m_contextId(contextId)
 {
-	I_ASSERT(elementPtr != NULL);
-	I_ASSERT(staticInfoPtr != NULL);
+	Q_ASSERT(elementPtr != NULL);
+	Q_ASSERT(staticInfoPtr != NULL);
 }
 
 
@@ -142,7 +142,7 @@ bool CComponentContext::CalcAttributeInfo(const QByteArray& attributeId, Attribu
 			int parentLevel = -1;
 
 			const iser::IObject* parentAttributePtr = m_parentPtr->GetAttribute(exportId, &parentLevel);
-			I_ASSERT((parentAttributePtr == NULL) || (parentLevel >= 0));	// if attribute is retured parent level must be set
+			Q_ASSERT((parentAttributePtr == NULL) || (parentLevel >= 0));	// if attribute is retured parent level must be set
 
 			if (parentAttributePtr != NULL){
 				result.definitionLevel = parentLevel + 1;

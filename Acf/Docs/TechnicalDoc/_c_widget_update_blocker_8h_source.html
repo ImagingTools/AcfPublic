@@ -51,7 +51,7 @@
 <a name="l00026"></a><a class="code" href="classiqtgui_1_1_c_widget_update_blocker.html#affa280a58d1c4da76754e4f46dc9094b">00026</a> <span class="keyword">inline</span> <a class="code" href="classiqtgui_1_1_c_widget_update_blocker.html#affa280a58d1c4da76754e4f46dc9094b">CWidgetUpdateBlocker::CWidgetUpdateBlocker</a>(QWidget* widgetPtr)
 <a name="l00027"></a>00027        :m_widgetPtr(widgetPtr)
 <a name="l00028"></a>00028 {
-<a name="l00029"></a>00029        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(widgetPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00029"></a>00029        Q_ASSERT(widgetPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        m_widgetPtr-&gt;setUpdatesEnabled(<span class="keyword">false</span>);
 <a name="l00032"></a>00032 }

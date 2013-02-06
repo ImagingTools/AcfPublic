@@ -59,8 +59,8 @@ void CSingleModelObserverBase::EnsureModelDetached()
 
 bool CSingleModelObserverBase::OnAttached(imod::IModel* modelPtr)
 {
-	I_ASSERT(modelPtr != NULL);
-	I_ASSERT(m_modelPtr == NULL);
+	Q_ASSERT(modelPtr != NULL);
+	Q_ASSERT(m_modelPtr == NULL);
 
 	BeforeUpdate(NULL, istd::IChangeable::CF_NO_UNDO, NULL);
 
@@ -74,8 +74,8 @@ bool CSingleModelObserverBase::OnAttached(imod::IModel* modelPtr)
 
 bool CSingleModelObserverBase::OnDetached(imod::IModel* modelPtr)
 {
-	I_ASSERT(modelPtr != NULL);
-	I_ASSERT(m_modelPtr == modelPtr);
+	Q_ASSERT(modelPtr != NULL);
+	Q_ASSERT(m_modelPtr == modelPtr);
 
 	if (m_modelPtr == modelPtr){		
 		m_modelPtr = NULL;
@@ -92,7 +92,7 @@ void CSingleModelObserverBase::BeforeUpdate(
 			int /*updateFlags*/,
 			istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	I_ASSERT(m_modelPtr == modelPtr);
+	Q_ASSERT(m_modelPtr == modelPtr);
 }
 
 
@@ -101,7 +101,7 @@ void CSingleModelObserverBase::AfterUpdate(
 			int updateFlags,
 			istd::IPolymorphic* updateParamsPtr)
 {
-	I_ASSERT(m_modelPtr == modelPtr);
+	Q_ASSERT(m_modelPtr == modelPtr);
 
 	OnUpdate(updateFlags, updateParamsPtr);
 }

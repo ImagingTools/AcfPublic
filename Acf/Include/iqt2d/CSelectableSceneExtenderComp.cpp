@@ -64,7 +64,7 @@ bool CSelectableSceneExtenderComp::OnDetached(imod::IModel* modelPtr)
 
 void CSelectableSceneExtenderComp::AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags)
 {
-	I_ASSERT(providerPtr != NULL);
+	Q_ASSERT(providerPtr != NULL);
 
 	m_connectedSceneFlags[providerPtr] = flags;
 
@@ -86,7 +86,7 @@ void CSelectableSceneExtenderComp::AddItemsToScene(iqt2d::IViewProvider* provide
 
 void CSelectableSceneExtenderComp::RemoveItemsFromScene(iqt2d::IViewProvider* providerPtr)
 {
-	I_ASSERT(providerPtr != NULL);
+	Q_ASSERT(providerPtr != NULL);
 
 	iprm::ISelectionParam* objectPtr = GetObjectPtr();
 	if (objectPtr == NULL){
@@ -127,7 +127,7 @@ void CSelectableSceneExtenderComp::AttachCurrent()
 						sceneIter != m_connectedSceneFlags.end();
 						++sceneIter){
 				iqt2d::IViewProvider* providerPtr = sceneIter.key();
-				I_ASSERT(providerPtr != NULL);
+				Q_ASSERT(providerPtr != NULL);
 
 				extenderPtr->AddItemsToScene(providerPtr, sceneIter.value());
 			}
@@ -145,7 +145,7 @@ void CSelectableSceneExtenderComp::DetachCurrent()
 						sceneIter != m_connectedSceneFlags.end();
 						++sceneIter){
 				iqt2d::IViewProvider* providerPtr = sceneIter.key();
-				I_ASSERT(providerPtr != NULL);
+				Q_ASSERT(providerPtr != NULL);
 
 				extenderPtr->RemoveItemsFromScene(providerPtr);
 			}

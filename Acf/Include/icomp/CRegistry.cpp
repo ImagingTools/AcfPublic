@@ -158,7 +158,7 @@ IRegistry* CRegistry::GetEmbeddedRegistry(const QByteArray& registryId) const
 {
 	EmbeddedRegistriesMap::ConstIterator iter = m_embeddedRegistriesMap.constFind(registryId);
 	if (iter != m_embeddedRegistriesMap.constEnd()){
-		I_ASSERT(iter.value().IsValid());
+		Q_ASSERT(iter.value().IsValid());
 
 		return iter.value().GetPtr();
 	}
@@ -233,8 +233,8 @@ void CRegistry::SetElementInterfaceExported(
 			const QByteArray& interfaceName,
 			bool state)
 {
-	I_ASSERT(!elementId.isEmpty());
-	I_ASSERT(!interfaceName.isEmpty());
+	Q_ASSERT(!elementId.isEmpty());
+	Q_ASSERT(!interfaceName.isEmpty());
 
 	if (state){
 		m_exportedInterfacesMap[interfaceName] = elementId;
@@ -633,7 +633,7 @@ bool CRegistry::SerializeEmbeddedRegistries(iser::IArchive& archive)
 					iter != m_embeddedRegistriesMap.end();
 					++iter){
 			RegistryPtr& registryPtr = iter.value();
-			I_ASSERT(registryPtr.IsValid());
+			Q_ASSERT(registryPtr.IsValid());
 
 			retVal = retVal && archive.BeginTag(registryTag);
 

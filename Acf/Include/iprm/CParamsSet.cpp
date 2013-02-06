@@ -104,7 +104,7 @@ IParamsSet::Ids CParamsSet::GetParamIds(bool editableOnly) const
 
 	for (int parameterIndex = 0; parameterIndex < m_params.GetCount(); parameterIndex++){
 		const ParameterInfo* parameterPtr = m_params.GetAt(parameterIndex);
-		I_ASSERT(parameterPtr != NULL);
+		Q_ASSERT(parameterPtr != NULL);
 
 		retVal.insert(parameterPtr->parameterId);
 
@@ -192,7 +192,7 @@ bool CParamsSet::Serialize(iser::IArchive& archive)
 
 		for (int parameterIndex = 0; parameterIndex < m_params.GetCount(); parameterIndex++){
 			ParameterInfo* parameterInfoPtr = m_params.GetAt(parameterIndex);
-			I_ASSERT(parameterInfoPtr != NULL);
+			Q_ASSERT(parameterInfoPtr != NULL);
 
 			retVal = retVal && archive.BeginTag(parameterTag);
 
@@ -200,7 +200,7 @@ bool CParamsSet::Serialize(iser::IArchive& archive)
 			retVal = retVal && archive.Process(parameterInfoPtr->parameterId);
 			retVal = retVal && archive.EndTag(parameterIdTag);
 
-			I_ASSERT(parameterInfoPtr->parameterPtr.IsValid());
+			Q_ASSERT(parameterInfoPtr->parameterPtr.IsValid());
 			retVal = retVal && archive.BeginTag(parameterValueTag);
 			retVal = retVal && parameterInfoPtr->parameterPtr->Serialize(archive);
 			retVal = retVal && archive.EndTag(parameterValueTag);
@@ -258,7 +258,7 @@ quint32 CParamsSet::GetMinimalVersion(int versionId) const
 	quint32 retVal = 0;
 	for (int parameterIndex = 0; parameterIndex < m_params.GetCount(); parameterIndex++){
 		const ParameterInfo* parameterInfoPtr = m_params.GetAt(parameterIndex);
-		I_ASSERT(parameterInfoPtr != NULL);
+		Q_ASSERT(parameterInfoPtr != NULL);
 
 		quint32 minimalVersion = parameterInfoPtr->parameterPtr->GetMinimalVersion(versionId);
 		if (minimalVersion > retVal){
@@ -283,7 +283,7 @@ bool CParamsSet::CopyFrom(const IChangeable& object)
 
 	for (int parameterIndex = 0; parameterIndex < inputParamsSetPtr->m_params.GetCount(); parameterIndex++){
 		const ParameterInfo* parameterInfoPtr = inputParamsSetPtr->m_params.GetAt(parameterIndex);
-		I_ASSERT(parameterInfoPtr != NULL);
+		Q_ASSERT(parameterInfoPtr != NULL);
 
 		istd::TDelPtr<iser::ISerializable> parameterCopyPtr;
 		
@@ -316,7 +316,7 @@ const CParamsSet::ParameterInfo* CParamsSet::FindParameterInfo(const QByteArray&
 {
 	for (int parameterIndex = 0; parameterIndex < m_params.GetCount(); parameterIndex++){
 		const ParameterInfo* parameterPtr = m_params.GetAt(parameterIndex);
-		I_ASSERT(parameterPtr != NULL);
+		Q_ASSERT(parameterPtr != NULL);
 
 		if (parameterPtr->parameterId == parameterId){
 			return parameterPtr;

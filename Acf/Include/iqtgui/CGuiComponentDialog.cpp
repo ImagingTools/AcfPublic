@@ -42,10 +42,10 @@ CGuiComponentDialog::CGuiComponentDialog(
 	m_guiObjectPtr(NULL)
 {
 	// GUI pointer must be valid:
-	I_ASSERT(guiObjectPtr != NULL);
+	Q_ASSERT(guiObjectPtr != NULL);
 
 	// GUI must not be created:
-	I_ASSERT(!guiObjectPtr->IsGuiCreated());
+	Q_ASSERT(!guiObjectPtr->IsGuiCreated());
 	if (!guiObjectPtr->IsGuiCreated()){
 		BaseClass::setModal(isModal);
 
@@ -58,7 +58,7 @@ CGuiComponentDialog::CGuiComponentDialog(
 				dialogLayout->addWidget(m_guiObjectPtr->GetWidget());
 
 				QWidget* slaveWidgetPtr = guiObjectPtr->GetWidget();
-				I_ASSERT(slaveWidgetPtr != NULL);
+				Q_ASSERT(slaveWidgetPtr != NULL);
 
 				BaseClass::resize(slaveWidgetPtr->sizeHint().expandedTo(BaseClass::sizeHint()));
 			}
@@ -82,7 +82,7 @@ CGuiComponentDialog::CGuiComponentDialog(
 CGuiComponentDialog::~CGuiComponentDialog()
 {
 	if (m_guiObjectPtr != NULL){
-		I_ASSERT(m_guiObjectPtr->IsGuiCreated());
+		Q_ASSERT(m_guiObjectPtr->IsGuiCreated());
 
 		if (m_guiObjectPtr->IsGuiCreated()){
 			m_guiObjectPtr->DestroyGui();

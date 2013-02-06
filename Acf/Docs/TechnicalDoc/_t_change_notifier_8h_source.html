@@ -137,7 +137,7 @@
 <a name="l00135"></a>00135 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;
 <a name="l00136"></a><a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">00136</a> <span class="keyword">inline</span> <span class="keyword">const</span> Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5" title="Method call operator returning slave &#39;changeable&#39; pointer.">TChangeNotifier&lt;Changeable&gt;::operator-&gt;</a>()<span class="keyword"> const</span>
 <a name="l00137"></a>00137 <span class="keyword"></span>{
-<a name="l00138"></a>00138        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(BaseClass::IsValid());
+<a name="l00138"></a>00138        Q_ASSERT(BaseClass::IsValid());
 <a name="l00139"></a>00139 
 <a name="l00140"></a>00140        <span class="keywordflow">return</span> BaseClass::GetPtr();
 <a name="l00141"></a>00141 }
@@ -146,7 +146,7 @@
 <a name="l00144"></a>00144 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;
 <a name="l00145"></a><a class="code" href="classistd_1_1_t_change_notifier.html#a9a9abe8f4fdfe595060a732abac79caf">00145</a> <span class="keyword">inline</span> Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5" title="Method call operator returning slave &#39;changeable&#39; pointer.">TChangeNotifier&lt;Changeable&gt;::operator-&gt;</a>()
 <a name="l00146"></a>00146 {
-<a name="l00147"></a>00147        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(BaseClass::IsValid());
+<a name="l00147"></a>00147        Q_ASSERT(BaseClass::IsValid());
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149        <span class="keywordflow">return</span> BaseClass::GetPtr();
 <a name="l00150"></a>00150 }
@@ -155,7 +155,7 @@
 <a name="l00153"></a>00153 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;
 <a name="l00154"></a><a class="code" href="classistd_1_1_t_change_notifier.html#a53f041d888a7f79f57dc4c9533495909">00154</a> <span class="keyword">inline</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a53f041d888a7f79f57dc4c9533495909" title="Access to slave &#39;changeable&#39; pointer.">TChangeNotifier&lt;Changeable&gt;::operator Changeable*</a>()<span class="keyword"> const</span>
 <a name="l00155"></a>00155 <span class="keyword"></span>{
-<a name="l00156"></a>00156        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(BaseClass::IsValid());
+<a name="l00156"></a>00156        Q_ASSERT(BaseClass::IsValid());
 <a name="l00157"></a>00157 
 <a name="l00158"></a>00158        <span class="keywordflow">return</span> BaseClass::GetPtr();
 <a name="l00159"></a>00159 }

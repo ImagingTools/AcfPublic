@@ -79,7 +79,7 @@
 <a name="l00054"></a>00054 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00055"></a><a class="code" href="classibase_1_1_t_container.html#ac95925eda2764ef0a0bc5ef523871642">00055</a> ItemClass&amp; <a class="code" href="classibase_1_1_t_container.html#a7790c9cbb969e063f68301eec854baae">TContainer&lt;ItemClass&gt;::GetAt</a>(<span class="keywordtype">int</span> index)
 <a name="l00056"></a>00056 {
-<a name="l00057"></a>00057        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classibase_1_1_t_container.html" title="Common implementation of an abstract container.">TContainer&lt;ItemClass&gt;::IsIndexValid</a>(index));
+<a name="l00057"></a>00057        Q_ASSERT(<a class="code" href="classibase_1_1_t_container.html" title="Common implementation of an abstract container.">TContainer&lt;ItemClass&gt;::IsIndexValid</a>(index));
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059        <span class="keywordflow">return</span> m_items[index];
 <a name="l00060"></a>00060 }
@@ -88,7 +88,7 @@
 <a name="l00063"></a>00063 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00064"></a><a class="code" href="classibase_1_1_t_container.html#a7790c9cbb969e063f68301eec854baae">00064</a> <span class="keyword">const</span> ItemClass&amp; <a class="code" href="classibase_1_1_t_container.html#a7790c9cbb969e063f68301eec854baae">TContainer&lt;ItemClass&gt;::GetAt</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
 <a name="l00065"></a>00065 <span class="keyword"></span>{
-<a name="l00066"></a>00066        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classibase_1_1_t_container.html" title="Common implementation of an abstract container.">TContainer&lt;ItemClass&gt;::IsIndexValid</a>(index));
+<a name="l00066"></a>00066        Q_ASSERT(<a class="code" href="classibase_1_1_t_container.html" title="Common implementation of an abstract container.">TContainer&lt;ItemClass&gt;::IsIndexValid</a>(index));
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068        <span class="keywordflow">return</span> m_items[index];
 <a name="l00069"></a>00069 }
@@ -155,8 +155,8 @@
 <a name="l00130"></a>00130 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ItemClass&gt;
 <a name="l00131"></a><a class="code" href="classibase_1_1_t_container.html#aca11536415c0702446e81344ee54c797">00131</a> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_t_container.html#aca11536415c0702446e81344ee54c797">TContainer&lt;ItemClass&gt;::RemoveAt</a>(<span class="keywordtype">int</span> index)
 <a name="l00132"></a>00132 {
-<a name="l00133"></a>00133        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00134"></a>00134        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_items.size()));
+<a name="l00133"></a>00133        Q_ASSERT(index &gt;= 0);
+<a name="l00134"></a>00134        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_items.size()));
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136        <span class="keywordflow">if</span> (index &lt; <span class="keywordtype">int</span>(m_items.size())){
 <a name="l00137"></a>00137               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> changePtr(<span class="keyword">this</span>, CF_MODEL | CF_ELEMENT_REMOVED);

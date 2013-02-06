@@ -78,7 +78,7 @@ CViewBase::~CViewBase()
 {
 	for (Layers::iterator iter = m_layers.begin(); iter != m_layers.end(); ++iter){
 		IViewLayer* layerPtr = *iter;
-		I_ASSERT(layerPtr != NULL);
+		Q_ASSERT(layerPtr != NULL);
 
 		layerPtr->OnDisconnectView(this);
 	}
@@ -215,7 +215,7 @@ void CViewBase::UpdateAllShapes(int changeFlag)
 
 	for (Layers::iterator iter = m_layers.begin(); iter != m_layers.end(); ++iter){
 		IViewLayer* layerPtr = *iter;
-		I_ASSERT(layerPtr != NULL);
+		Q_ASSERT(layerPtr != NULL);
 		layerPtr->UpdateAllShapes(changeFlag);
 	}
 
@@ -387,7 +387,7 @@ void CViewBase::RemoveLayer(int index)
 
 bool CViewBase::ConnectShape(IShape* shapePtr)
 {
-	I_ASSERT(shapePtr != NULL);
+	Q_ASSERT(shapePtr != NULL);
 
 	if (GetLayersCount() <= 0){
 		InsertDefaultLayers();
@@ -424,7 +424,7 @@ bool CViewBase::ConnectShape(IShape* shapePtr)
 		return false;
 	}
 
-	I_ASSERT(layerIndex < GetLayersCount());
+	Q_ASSERT(layerIndex < GetLayersCount());
 
 	IViewLayer& layer = GetLayer(layerIndex);
 
@@ -442,7 +442,7 @@ ISelectableLayer* CViewBase::GetFocusedLayerPtr() const
 
 void CViewBase::OnShapeFocused(IInteractiveShape* shapePtr, ISelectableLayer* layerPtr)
 {
-	I_ASSERT(layerPtr != NULL);
+	Q_ASSERT(layerPtr != NULL);
 
 	if (m_focusedLayerPtr != layerPtr){
 		m_focusedLayerPtr = layerPtr;
@@ -454,7 +454,7 @@ void CViewBase::OnShapeFocused(IInteractiveShape* shapePtr, ISelectableLayer* la
 
 void CViewBase::OnShapeDefocused(IInteractiveShape* shapePtr, ISelectableLayer* layerPtr)
 {
-	I_ASSERT(layerPtr != NULL);
+	Q_ASSERT(layerPtr != NULL);
 
 	if (m_focusedLayerPtr == layerPtr){
 		m_focusedLayerPtr = NULL;
@@ -564,7 +564,7 @@ void CViewBase::UpdateMousePointer()
 
 void CViewBase::OnLayerInvalidated(const IViewLayer& layer, const i2d::CRect& prevArea, const i2d::CRect& newArea)
 {
-	I_ASSERT(!m_layers.isEmpty());
+	Q_ASSERT(!m_layers.isEmpty());
 
 	m_isBoundingBoxValid = false;
 
@@ -611,7 +611,7 @@ void CViewBase::OnChangeShape(IShape* shapePtr)
 {
 	for (Layers::iterator iter = m_layers.begin(); iter != m_layers.end(); ++iter){
 		IViewLayer* layerPtr = *iter;
-		I_ASSERT(layerPtr != NULL);
+		Q_ASSERT(layerPtr != NULL);
 
 		if (layerPtr->IsShapeConnected(shapePtr)){
 			layerPtr->OnChangeShape(shapePtr);
@@ -624,7 +624,7 @@ bool CViewBase::DisconnectShape(IShape* shapePtr)
 {
 	for (Layers::iterator iter = m_layers.begin(); iter != m_layers.end(); ++iter){
 		IViewLayer* layerPtr = *iter;
-		I_ASSERT(layerPtr != NULL);
+		Q_ASSERT(layerPtr != NULL);
 
 		if (layerPtr->DisconnectShape(shapePtr)){
 			if (iter == m_layers.begin()){
@@ -682,7 +682,7 @@ void CViewBase::EndDrag()
 
 void CViewBase::SetDragPosition(const i2d::CVector2d& position)
 {
-	I_ASSERT(m_viewMode == VM_DRAG);
+	Q_ASSERT(m_viewMode == VM_DRAG);
 
 	for (Layers::iterator iter = m_layers.begin(); iter != m_layers.end(); ++iter){
 		ISelectableLayer* layerPtr = dynamic_cast<ISelectableLayer*>(*iter);
@@ -697,8 +697,8 @@ void CViewBase::SetDragPosition(const i2d::CVector2d& position)
 	
 void CViewBase::DrawLayers(QPainter& drawContext, int firstLayer, int lastLayer)
 {
-	I_ASSERT((firstLayer >= 0) && (firstLayer < GetLayersCount()));
-	I_ASSERT((lastLayer >= 0) && (lastLayer < GetLayersCount()));
+	Q_ASSERT((firstLayer >= 0) && (firstLayer < GetLayersCount()));
+	Q_ASSERT((lastLayer >= 0) && (lastLayer < GetLayersCount()));
 
 	bool drawFocused = false;
 
@@ -711,7 +711,7 @@ void CViewBase::DrawLayers(QPainter& drawContext, int firstLayer, int lastLayer)
 		}
 	}
 	if (drawFocused){
-		I_ASSERT(m_focusedLayerPtr != NULL);
+		Q_ASSERT(m_focusedLayerPtr != NULL);
 
 		m_focusedLayerPtr->DrawFocusedShape(drawContext);
 	}
@@ -728,7 +728,7 @@ void CViewBase::DisconnectAllShapes()
 {
 	for (Layers::iterator iter = m_layers.begin(); iter != m_layers.end(); ++iter){
 		IViewLayer* layerPtr = *iter;
-		I_ASSERT(layerPtr != NULL);
+		Q_ASSERT(layerPtr != NULL);
 
 		layerPtr->DisconnectAllShapes();
 	}
@@ -740,7 +740,7 @@ void CViewBase::InvalidateBackground()
 	SetBackgroundBufferValid(false);
 	if (!m_layers.isEmpty()){
 		IViewLayer* backgroundLayerPtr = m_layers[0];
-		I_ASSERT(backgroundLayerPtr != NULL);
+		Q_ASSERT(backgroundLayerPtr != NULL);
 
 		const i2d::CRect& clientRect = backgroundLayerPtr->GetBoundingBox();
 		OnAreaInvalidated(clientRect, i2d::CRect::GetEmpty());
@@ -760,7 +760,7 @@ i2d::CRect CViewBase::CalcBoundingBox() const
 
 	for (Layers::const_iterator iter = m_layers.begin(); iter != m_layers.end(); ++iter){
 		IViewLayer* layerPtr = *iter;
-		I_ASSERT(layerPtr != NULL);
+		Q_ASSERT(layerPtr != NULL);
 
 		boundingBox.Union(layerPtr->GetBoundingBox());
 	}
@@ -926,7 +926,7 @@ ISelectable::MousePointerMode CViewBase::CalcMousePointer(istd::CIndex2d positio
 					result = MPM_DEFAULT;
 					break;
 				}
-				I_ASSERT(shapePtr != NULL);
+				Q_ASSERT(shapePtr != NULL);
 
 				return result;
 			}

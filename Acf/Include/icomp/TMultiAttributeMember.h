@@ -124,10 +124,10 @@ int TMultiAttributeMemberBase<Attribute>::GetCount() const
 template <typename Attribute>
 const typename TMultiAttributeMemberBase<Attribute>::AttributeValueType& TMultiAttributeMemberBase<Attribute>::operator[](int index) const
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < GetCount());
-	I_ASSERT(m_attributePtr != NULL);	// operator* was called for invalid object, or no IsValid() check was called.
-	I_ASSERT(m_attributePtr->GetValuesCount() == GetCount());
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < GetCount());
+	Q_ASSERT(m_attributePtr != NULL);	// operator* was called for invalid object, or no IsValid() check was called.
+	Q_ASSERT(m_attributePtr->GetValuesCount() == GetCount());
 
 	return m_attributePtr->GetValueAt(index);
 }
@@ -141,7 +141,7 @@ bool TMultiAttributeMemberBase<Attribute>::InitInternal(
 			const IRealAttributeStaticInfo& staticInfo,
 			const IComponent** definitionComponentPtr)
 {
-	I_ASSERT(ownerPtr != NULL);
+	Q_ASSERT(ownerPtr != NULL);
 
 	const QByteArray& attributeId = staticInfo.GetAttributeId();
 	const IComponentContext* componentContextPtr = ownerPtr->GetComponentContext();
@@ -151,12 +151,12 @@ bool TMultiAttributeMemberBase<Attribute>::InitInternal(
 		m_attributePtr = dynamic_cast<const Attribute*>(attributePtr);
 
 		if (m_attributePtr != NULL){
-			I_ASSERT(definitionLevel >= 0);
+			Q_ASSERT(definitionLevel >= 0);
 
 			if (definitionComponentPtr != NULL){
 				while (definitionLevel > 0){
 					ownerPtr = ownerPtr->GetParentComponent();
-					I_ASSERT(ownerPtr != NULL);
+					Q_ASSERT(ownerPtr != NULL);
 
 					--definitionLevel;
 				}

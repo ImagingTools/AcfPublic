@@ -193,7 +193,7 @@
 <a name="l00168"></a>00168 
 <a name="l00169"></a><a class="code" href="classiview_1_1_c_console_gui.html#a349c91a50ed2ff5cb6709ed72606baec">00169</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>&amp; <a class="code" href="classiview_1_1_c_console_gui.html#a349c91a50ed2ff5cb6709ed72606baec" title="Get access to internal view implementation.">CConsoleGui::GetView</a>()<span class="keyword"> const</span>
 <a name="l00170"></a>00170 <span class="keyword"></span>{
-<a name="l00171"></a>00171        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classiview_1_1_c_console_gui.html#abf5a4a802825f2baf42d1fb57c83e0f9">m_viewPtr</a> != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00171"></a>00171        Q_ASSERT(<a class="code" href="classiview_1_1_c_console_gui.html#abf5a4a802825f2baf42d1fb57c83e0f9">m_viewPtr</a> != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00172"></a>00172 
 <a name="l00173"></a>00173        <span class="keywordflow">return</span> *<a class="code" href="classiview_1_1_c_console_gui.html#abf5a4a802825f2baf42d1fb57c83e0f9">m_viewPtr</a>;
 <a name="l00174"></a>00174 }
@@ -201,7 +201,7 @@
 <a name="l00176"></a>00176 
 <a name="l00177"></a><a class="code" href="classiview_1_1_c_console_gui.html#abfd35718f066ad2bb6c851e2b4254bf1">00177</a> <span class="keyword">inline</span> <a class="code" href="classiview_1_1_c_viewport.html">CViewport</a>&amp; <a class="code" href="classiview_1_1_c_console_gui.html#abfd35718f066ad2bb6c851e2b4254bf1" title="Get access to internal view implementation.">CConsoleGui::GetViewRef</a>()
 <a name="l00178"></a>00178 {
-<a name="l00179"></a>00179        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classiview_1_1_c_console_gui.html#abf5a4a802825f2baf42d1fb57c83e0f9">m_viewPtr</a> != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00179"></a>00179        Q_ASSERT(<a class="code" href="classiview_1_1_c_console_gui.html#abf5a4a802825f2baf42d1fb57c83e0f9">m_viewPtr</a> != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00180"></a>00180 
 <a name="l00181"></a>00181        <span class="keywordflow">return</span> *<a class="code" href="classiview_1_1_c_console_gui.html#abf5a4a802825f2baf42d1fb57c83e0f9">m_viewPtr</a>;
 <a name="l00182"></a>00182 }

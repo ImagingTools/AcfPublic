@@ -48,10 +48,10 @@ namespace iqtprm
 
 void CFileNameParamGuiComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	ifile::IFileNameParam* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	UpdateBlocker updateBlocker(const_cast<CFileNameParamGuiComp*>(this));
 
@@ -81,7 +81,7 @@ void CFileNameParamGuiComp::OnGuiModelAttached()
 
 void CFileNameParamGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	ifile::IFileNameParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
@@ -259,7 +259,7 @@ void CFileNameParamGuiComp::SetPathToEditor(const QString& path) const
 		return;
 	}
 
-	I_ASSERT(DirEdit->isEditable());
+	Q_ASSERT(DirEdit->isEditable());
 	
 	iqt::CSignalBlocker blocker(DirEdit);
 
@@ -267,7 +267,7 @@ void CFileNameParamGuiComp::SetPathToEditor(const QString& path) const
 
 	QString normalizedPath;
 	iqtgui::CExtLineEdit* lineEdit = dynamic_cast<iqtgui::CExtLineEdit*>(DirEdit->lineEdit());
-	I_ASSERT(lineEdit != NULL);
+	Q_ASSERT(lineEdit != NULL);
 
 	int pathType = objectPtr->GetPathType();
 	if (pathType == ifile::IFileNameParam::PT_URL){
@@ -297,7 +297,7 @@ void CFileNameParamGuiComp::MakeSelectionHint(const QString& text) const
 	}
 
 	ifile::IFileNameParam* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 	if (objectPtr != NULL){
 		if (objectPtr->GetPathType() == ifile::IFileNameParam::PT_URL){
 			return;

@@ -42,8 +42,8 @@ CCompositeComponentContext::CCompositeComponentContext(
 	m_registry(*registryPtr),
 	m_environmentManager(*environmentManagerPtr)
 {
-	I_ASSERT(registryPtr != NULL);
-	I_ASSERT(environmentManagerPtr != NULL);
+	Q_ASSERT(registryPtr != NULL);
+	Q_ASSERT(environmentManagerPtr != NULL);
 }
 
 

@@ -73,7 +73,7 @@ WidgetType* TGuiComponentBase<WidgetType>::GetQtWidget() const
 template <class WidgetType>
 QWidget* TGuiComponentBase<WidgetType>::InitWidgetToParent(QWidget* parentPtr)
 {
-	I_ASSERT(!IsGuiCreated());
+	Q_ASSERT(!IsGuiCreated());
 
 	WidgetType* widgetPtr = new WidgetType(parentPtr);
 

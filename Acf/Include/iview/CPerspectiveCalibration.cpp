@@ -422,7 +422,7 @@ bool CPerspectiveCalibration::CalcAxes2d(
 
 	imath::CVarMatrix coeff;
 	if (matrixA.GetSolvedLSP(matrixY, coeff)){
-		I_ASSERT(coeff.GetSizes().GetAt(0) == 4);
+		Q_ASSERT(coeff.GetSizes().GetAt(0) == 4);
 
 		i2d::CVector2d rotation(coeff[istd::CIndex2d(0, 0)], coeff[istd::CIndex2d(0, 1)]);
 		i2d::CVector2d shift(coeff[istd::CIndex2d(0, 2)], coeff[istd::CIndex2d(0, 3)]);
@@ -490,7 +490,7 @@ bool CPerspectiveCalibration::CalcRotationOY(
 
 	imath::CVarMatrix coeff;
 	if (matrixA.GetSolvedLSP(matrixY, coeff)){
-		I_ASSERT(coeff.GetSizes().GetAt(0) == 4);
+		Q_ASSERT(coeff.GetSizes().GetAt(0) == 4);
 
 		i2d::CVector2d rotation(coeff[istd::CIndex2d(0, 0)], coeff[istd::CIndex2d(0, 1)]);
 		i2d::CVector2d shift(coeff[istd::CIndex2d(0, 2)], coeff[istd::CIndex2d(0, 3)]);
@@ -569,7 +569,7 @@ bool CPerspectiveCalibration::CalcRotationOX(
 
 	imath::CVarMatrix coeff;
 	if (matrixA.GetSolvedLSP(matrixY, coeff)){
-		I_ASSERT(coeff.GetSizes().GetAt(0) == 4);
+		Q_ASSERT(coeff.GetSizes().GetAt(0) == 4);
 
 		i2d::CVector2d rotation(coeff[istd::CIndex2d(0, 0)], coeff[istd::CIndex2d(0, 1)]);
 		i2d::CVector2d shift(coeff[istd::CIndex2d(0, 2)], coeff[istd::CIndex2d(0, 3)]);
@@ -637,7 +637,7 @@ bool CPerspectiveCalibration::CalcAllAxes(
 
 	imath::CVarMatrix coeff;
 	if (matrixA.GetSolvedLSP(matrixY, coeff)){
-		I_ASSERT(coeff.GetSizes().GetAt(0) == 8);
+		Q_ASSERT(coeff.GetSizes().GetAt(0) == 8);
 
 		newAxisX.SetX(coeff.GetAt(istd::CIndex2d(0, 0)));
 		newAxisX.SetY(coeff.GetAt(istd::CIndex2d(0, 1)));

@@ -58,9 +58,9 @@ int CSingleDocumentManagerBase::GetDocumentsCount() const
 
 istd::IChangeable& CSingleDocumentManagerBase::GetDocumentFromIndex(int I_IF_DEBUG(index), DocumentInfo* documentInfoPtr) const
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < GetDocumentsCount());
-	I_ASSERT(m_documentPtr.IsValid());
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < GetDocumentsCount());
+	Q_ASSERT(m_documentPtr.IsValid());
 
 	if (documentInfoPtr != NULL){
 		documentInfoPtr->filePath = m_filePath;
@@ -74,8 +74,8 @@ istd::IChangeable& CSingleDocumentManagerBase::GetDocumentFromIndex(int I_IF_DEB
 
 int CSingleDocumentManagerBase::GetViewsCount(int I_IF_DEBUG(documentIndex)) const
 {
-	I_ASSERT(documentIndex >= 0);
-	I_ASSERT(documentIndex < GetDocumentsCount());
+	Q_ASSERT(documentIndex >= 0);
+	Q_ASSERT(documentIndex < GetDocumentsCount());
 
 	return m_viewPtr.IsValid()? 1: 0;
 }
@@ -83,9 +83,9 @@ int CSingleDocumentManagerBase::GetViewsCount(int I_IF_DEBUG(documentIndex)) con
 
 istd::IPolymorphic* CSingleDocumentManagerBase::GetViewFromIndex(int I_IF_DEBUG(documentIndex), int I_IF_DEBUG(viewIndex)) const
 {
-	I_ASSERT(documentIndex >= 0);
-	I_ASSERT(documentIndex < GetDocumentsCount());
-	I_ASSERT(viewIndex < GetViewsCount(documentIndex));
+	Q_ASSERT(documentIndex >= 0);
+	Q_ASSERT(documentIndex < GetDocumentsCount());
+	Q_ASSERT(viewIndex < GetViewsCount(documentIndex));
 
 	return m_viewPtr.GetPtr();
 }
@@ -313,7 +313,7 @@ bool CSingleDocumentManagerBase::OpenDocument(
 	}
 
 	if (filePath == m_filePath){
-		I_ASSERT(m_documentPtr.IsValid());
+		Q_ASSERT(m_documentPtr.IsValid());
 
 		if (viewTypeId != m_viewTypeId){
 			EnsureViewRemoved();
@@ -356,7 +356,7 @@ bool CSingleDocumentManagerBase::OpenDocument(
 		istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED | CF_MODEL);
 
 		if (NewDocument(documentTypeId, createView, viewTypeId)){
-			I_ASSERT(m_documentPtr.IsValid());
+			Q_ASSERT(m_documentPtr.IsValid());
 
 			istd::CChangeNotifier documentNotifier(m_documentPtr.GetPtr(), istd::IChangeable::CF_NO_UNDO);
 

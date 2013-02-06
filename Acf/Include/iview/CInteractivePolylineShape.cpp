@@ -46,7 +46,7 @@ CInteractivePolylineShape::CInteractivePolylineShape()
 
 bool CInteractivePolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	imod::IModel* modelPtr = GetModelPtr();
 	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(modelPtr);
@@ -183,7 +183,7 @@ bool CInteractivePolylineShape::OnMouseButton(istd::CIndex2d position, Qt::Mouse
 
 bool CInteractivePolylineShape::OnAttached(imod::IModel* modelPtr)
 {
-	I_ASSERT(dynamic_cast<i2d::CPolyline*>(modelPtr) != NULL);
+	Q_ASSERT(dynamic_cast<i2d::CPolyline*>(modelPtr) != NULL);
 
 	return BaseClass::OnAttached(modelPtr);
 }
@@ -200,7 +200,7 @@ namespace
 
 void CInteractivePolylineShape::DrawCurve(QPainter& drawContext) const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (polylinePtr != NULL){
@@ -277,7 +277,7 @@ void CInteractivePolylineShape::DrawArea(QPainter&) const
 
 void CInteractivePolylineShape::DrawSelectionElements(QPainter& drawContext) const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (polylinePtr != NULL){
@@ -348,7 +348,7 @@ void CInteractivePolylineShape::DrawSelectionElements(QPainter& drawContext) con
 
 bool CInteractivePolylineShape::IsCurveTouched(istd::CIndex2d position) const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (polylinePtr != NULL){
@@ -391,7 +391,7 @@ bool CInteractivePolylineShape::IsCurveTouched(istd::CIndex2d position) const
 
 ITouchable::TouchState CInteractivePolylineShape::IsTouched(istd::CIndex2d position) const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
 	if (polylinePtr != NULL){

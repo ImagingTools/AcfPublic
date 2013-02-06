@@ -58,7 +58,7 @@ const INumericConstraints* CSimpleNumericValue::GetNumericConstraints() const
 
 imath::CVarVector CSimpleNumericValue::GetComponentValue(ValueTypeId valueTypeId) const
 {
-	I_ASSERT(valueTypeId == VTI_AUTO);
+	Q_ASSERT(valueTypeId == VTI_AUTO);
 
 	if (valueTypeId != VTI_AUTO){
 		return imath::CVarVector();

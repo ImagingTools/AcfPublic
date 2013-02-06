@@ -137,8 +137,8 @@
 <a name="l00209"></a>00209 
 <a name="l00210"></a><a class="code" href="classistd_1_1_c_var_index.html#ada9136d489c8cdf5913e0d20a01f41ab">00210</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_c_var_index.html#ada9136d489c8cdf5913e0d20a01f41ab" title="Get element stored at specified index.">CVarIndex::GetAt</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
 <a name="l00211"></a>00211 <span class="keyword"></span>{
-<a name="l00212"></a>00212        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00213"></a>00213        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
+<a name="l00212"></a>00212        Q_ASSERT(index &gt;= 0);
+<a name="l00213"></a>00213        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
 <a name="l00214"></a>00214 
 <a name="l00215"></a>00215        <span class="keywordflow">return</span> m_elements[index];
 <a name="l00216"></a>00216 }
@@ -146,8 +146,8 @@
 <a name="l00218"></a>00218 
 <a name="l00219"></a><a class="code" href="classistd_1_1_c_var_index.html#a849cde61b7711bc3c1eed5db7bcab41e">00219</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_c_var_index.html#a849cde61b7711bc3c1eed5db7bcab41e" title="Set element at specified index.">CVarIndex::SetAt</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> value)
 <a name="l00220"></a>00220 {
-<a name="l00221"></a>00221        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00222"></a>00222        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
+<a name="l00221"></a>00221        Q_ASSERT(index &gt;= 0);
+<a name="l00222"></a>00222        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
 <a name="l00223"></a>00223 
 <a name="l00224"></a>00224        m_elements[index] = value;
 <a name="l00225"></a>00225 }
@@ -155,8 +155,8 @@
 <a name="l00227"></a>00227 
 <a name="l00228"></a><a class="code" href="classistd_1_1_c_var_index.html#a45a63a8dfe69835a965397ad0b3b2581">00228</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_c_var_index.html#a45a63a8dfe69835a965397ad0b3b2581" title="Increase single component at specified position.">CVarIndex::IncreaseAt</a>(<span class="keywordtype">int</span> index)
 <a name="l00229"></a>00229 {
-<a name="l00230"></a>00230        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00231"></a>00231        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
+<a name="l00230"></a>00230        Q_ASSERT(index &gt;= 0);
+<a name="l00231"></a>00231        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
 <a name="l00232"></a>00232 
 <a name="l00233"></a>00233        ++m_elements[index];
 <a name="l00234"></a>00234 
@@ -166,8 +166,8 @@
 <a name="l00238"></a>00238 
 <a name="l00239"></a><a class="code" href="classistd_1_1_c_var_index.html#acf3028a8594bd10a108283d6b35eaa53">00239</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_c_var_index.html#acf3028a8594bd10a108283d6b35eaa53" title="Decrease single component at specified position.">CVarIndex::DecreaseAt</a>(<span class="keywordtype">int</span> index)
 <a name="l00240"></a>00240 {
-<a name="l00241"></a>00241        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00242"></a>00242        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
+<a name="l00241"></a>00241        Q_ASSERT(index &gt;= 0);
+<a name="l00242"></a>00242        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
 <a name="l00243"></a>00243 
 <a name="l00244"></a>00244        --m_elements[index];
 <a name="l00245"></a>00245 
@@ -223,8 +223,8 @@
 <a name="l00295"></a>00295 
 <a name="l00296"></a><a class="code" href="classistd_1_1_c_var_index.html#aab7014da5bfaa9c3e504296b9ea0f68f">00296</a> <span class="keyword">inline</span> <span class="keywordtype">int</span>&amp; <a class="code" href="classistd_1_1_c_var_index.html#abf7f2e697b24e7d8e78f7826e940ae51" title="Get access to single index components.">CVarIndex::operator[]</a>(<span class="keywordtype">int</span> index)
 <a name="l00297"></a>00297 {
-<a name="l00298"></a>00298        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00299"></a>00299        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
+<a name="l00298"></a>00298        Q_ASSERT(index &gt;= 0);
+<a name="l00299"></a>00299        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_elements.size()));
 <a name="l00300"></a>00300 
 <a name="l00301"></a>00301        <span class="keywordflow">return</span> m_elements[index];
 <a name="l00302"></a>00302 }

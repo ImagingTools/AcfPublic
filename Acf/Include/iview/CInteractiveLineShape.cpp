@@ -62,7 +62,7 @@ void CInteractiveLineShape::InvalidateBoundingBox()
 
 ITouchable::TouchState CInteractiveLineShape::IsTouched(istd::CIndex2d position) const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	EnsurePointsAreValid();
 
@@ -94,7 +94,7 @@ ITouchable::TouchState CInteractiveLineShape::IsTouched(istd::CIndex2d position)
 
 void CInteractiveLineShape::Draw(QPainter& drawContext) const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	EnsurePointsAreValid();
 
@@ -124,7 +124,7 @@ void CInteractiveLineShape::Draw(QPainter& drawContext) const
 
 bool CInteractiveLineShape::OnAttached(imod::IModel* modelPtr)
 {
-	I_ASSERT(dynamic_cast<i2d::CLine2d*>(modelPtr) != NULL);
+	Q_ASSERT(dynamic_cast<i2d::CLine2d*>(modelPtr) != NULL);
 
 	return BaseClass::OnAttached(modelPtr);
 }
@@ -134,7 +134,7 @@ bool CInteractiveLineShape::OnAttached(imod::IModel* modelPtr)
 
 bool CInteractiveLineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton /*buttonType*/, bool downFlag)
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	const i2d::CLine2d* linePtr = dynamic_cast<const i2d::CLine2d*>(GetModelPtr());
 	if (linePtr != NULL){
@@ -179,7 +179,7 @@ bool CInteractiveLineShape::OnMouseMove(istd::CIndex2d position)
 
 	if (modelPtr != NULL){
 		i2d::CLine2d& line = *dynamic_cast<i2d::CLine2d*>(modelPtr);
-		I_ASSERT(&line != NULL);
+		Q_ASSERT(&line != NULL);
 
 		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		
@@ -231,7 +231,7 @@ void CInteractiveLineShape::ResetPoints() const
 
 i2d::CRect CInteractiveLineShape::CalcBoundingBox() const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	EnsurePointsAreValid();
 
@@ -266,7 +266,7 @@ void CInteractiveLineShape::SetLogDragPosition(const i2d::CVector2d& position)
 		imod::IModel* modelPtr = GetModelPtr();
 		if (modelPtr != NULL){
 			i2d::CLine2d& line = *dynamic_cast<i2d::CLine2d*>(modelPtr);
-			I_ASSERT(&line != NULL);
+			Q_ASSERT(&line != NULL);
 
 			BeginModelChanges();
 

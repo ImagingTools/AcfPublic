@@ -178,7 +178,7 @@
 <a name="l00207"></a>00207 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
 <a name="l00208"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#adfe110454554646cbcd871c4bfea7a47">00208</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">TCascadedMap&lt;Key, Value&gt;::KeyType</a>&amp; <a class="code" href="classistd_1_1_t_cascaded_map.html#adfe110454554646cbcd871c4bfea7a47" title="Get key value from local context at specified index.">TCascadedMap&lt;Key, Value&gt;::GetLocalKeyAt</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
 <a name="l00209"></a>00209 <span class="keyword"></span>{
-<a name="l00210"></a>00210        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_pairList.size()));
+<a name="l00210"></a>00210        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_pairList.size()));
 <a name="l00211"></a>00211 
 <a name="l00212"></a>00212        <span class="keywordflow">return</span> m_pairList[index].first;
 <a name="l00213"></a>00213 }
@@ -187,7 +187,7 @@
 <a name="l00216"></a>00216 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
 <a name="l00217"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#ac29d01d160e2c552cc19a47b94c4409e">00217</a> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#aeda34229d36e7d1beb6cd32261d378f8">TCascadedMap&lt;Key, Value&gt;::KeyType</a>&amp; <a class="code" href="classistd_1_1_t_cascaded_map.html#adfe110454554646cbcd871c4bfea7a47" title="Get key value from local context at specified index.">TCascadedMap&lt;Key, Value&gt;::GetLocalKeyAt</a>(<span class="keywordtype">int</span> index)
 <a name="l00218"></a>00218 {
-<a name="l00219"></a>00219        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_pairList.size()));
+<a name="l00219"></a>00219        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_pairList.size()));
 <a name="l00220"></a>00220 
 <a name="l00221"></a>00221        <span class="keywordflow">return</span> m_pairList[index].first;
 <a name="l00222"></a>00222 }
@@ -196,7 +196,7 @@
 <a name="l00225"></a>00225 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
 <a name="l00226"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#a6548e0dc24d8f54f0b9ad073edc2e673">00226</a> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>&amp; <a class="code" href="classistd_1_1_t_cascaded_map.html#ad46ae28d42da80bf8ac5423e57fb87c8" title="Get mapped value from local context at specified index.">TCascadedMap&lt;Key, Value&gt;::GetLocalValueAt</a>(<span class="keywordtype">int</span> index)
 <a name="l00227"></a>00227 {
-<a name="l00228"></a>00228        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_pairList.size()));
+<a name="l00228"></a>00228        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_pairList.size()));
 <a name="l00229"></a>00229 
 <a name="l00230"></a>00230        <span class="keywordflow">return</span> m_pairList[index].second;
 <a name="l00231"></a>00231 }
@@ -205,7 +205,7 @@
 <a name="l00234"></a>00234 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> Value&gt;
 <a name="l00235"></a><a class="code" href="classistd_1_1_t_cascaded_map.html#ad46ae28d42da80bf8ac5423e57fb87c8">00235</a> <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classistd_1_1_t_i_map.html#a742e58cf7328ea4514657f5e31d38bd8">TCascadedMap&lt;Key, Value&gt;::ValueType</a>&amp; <a class="code" href="classistd_1_1_t_cascaded_map.html#ad46ae28d42da80bf8ac5423e57fb87c8" title="Get mapped value from local context at specified index.">TCascadedMap&lt;Key, Value&gt;::GetLocalValueAt</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
 <a name="l00236"></a>00236 <span class="keyword"></span>{
-<a name="l00237"></a>00237        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; <span class="keywordtype">int</span>(m_pairList.size()));
+<a name="l00237"></a>00237        Q_ASSERT(index &lt; <span class="keywordtype">int</span>(m_pairList.size()));
 <a name="l00238"></a>00238 
 <a name="l00239"></a>00239        <span class="keywordflow">return</span> m_pairList[index].second;
 <a name="l00240"></a>00240 }
@@ -346,7 +346,7 @@
 <a name="l00375"></a>00375               <span class="keywordflow">return</span> GetLocalKeyAt(index);
 <a name="l00376"></a>00376        }
 <a name="l00377"></a>00377 
-<a name="l00378"></a>00378        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_parentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);     <span class="comment">// Index from outside this map!</span>
+<a name="l00378"></a>00378        Q_ASSERT(m_parentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);     <span class="comment">// Index from outside this map!</span>
 <a name="l00379"></a>00379 
 <a name="l00380"></a>00380        <span class="keywordflow">return</span> m_parentPtr-&gt;GetKeyAt(index - elementsCount);
 <a name="l00381"></a>00381 }
@@ -360,7 +360,7 @@
 <a name="l00389"></a>00389               <span class="keywordflow">return</span> GetLocalValueAt(index);
 <a name="l00390"></a>00390        }
 <a name="l00391"></a>00391 
-<a name="l00392"></a>00392        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_parentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);     <span class="comment">// Index from outside this map!</span>
+<a name="l00392"></a>00392        Q_ASSERT(m_parentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);     <span class="comment">// Index from outside this map!</span>
 <a name="l00393"></a>00393 
 <a name="l00394"></a>00394        <span class="keywordflow">return</span> m_parentPtr-&gt;GetValueAt(index - elementsCount);
 <a name="l00395"></a>00395 }

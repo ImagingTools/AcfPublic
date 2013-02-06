@@ -170,7 +170,7 @@
 <a name="l00243"></a>00243 
 <a name="l00244"></a><a class="code" href="classimath_1_1_c_var_vector.html#aca78a8571389dbfcb2dcb5c7c476fb0e">00244</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classimath_1_1_c_var_vector.html#aca78a8571389dbfcb2dcb5c7c476fb0e" title="Set number of elements.">CVarVector::SetElementsCount</a>(<span class="keywordtype">int</span> count, <span class="keywordtype">double</span> value)
 <a name="l00245"></a>00245 {
-<a name="l00246"></a>00246        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(count &gt;= 0);
+<a name="l00246"></a>00246        Q_ASSERT(count &gt;= 0);
 <a name="l00247"></a>00247 
 <a name="l00248"></a>00248        <span class="keywordtype">int</span> oldCount = m_elements.size();
 <a name="l00249"></a>00249 
@@ -241,7 +241,7 @@
 <a name="l00314"></a>00314 
 <a name="l00315"></a><a class="code" href="classimath_1_1_c_var_vector.html#acafdb13c9499d4f8548218bd24dcf3d3">00315</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_c_var_vector.html#acafdb13c9499d4f8548218bd24dcf3d3" title="Translate the point.">CVarVector::Translate</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_c_var_vector.html" title="Simple implementation of variable-size vector.">CVarVector</a>&amp; vector)
 <a name="l00316"></a>00316 {
-<a name="l00317"></a>00317        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
+<a name="l00317"></a>00317        Q_ASSERT(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
 <a name="l00318"></a>00318 
 <a name="l00319"></a>00319        <span class="keywordtype">int</span> elementsCount = <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>();
 <a name="l00320"></a>00320        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
@@ -264,7 +264,7 @@
 <a name="l00337"></a>00337 
 <a name="l00338"></a><a class="code" href="classimath_1_1_c_var_vector.html#a76a10f1f942ff6f8890c75175edd5dec">00338</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_c_var_vector.html#a76a10f1f942ff6f8890c75175edd5dec" title="Add second vector scaled by specified factor.">CVarVector::ScaledCumulate</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_c_var_vector.html" title="Simple implementation of variable-size vector.">CVarVector</a>&amp; vector, <span class="keywordtype">double</span> scale)
 <a name="l00339"></a>00339 {
-<a name="l00340"></a>00340        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
+<a name="l00340"></a>00340        Q_ASSERT(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
 <a name="l00341"></a>00341 
 <a name="l00342"></a>00342        <span class="keywordtype">int</span> elementsCount = <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>();
 <a name="l00343"></a>00343        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
@@ -281,7 +281,7 @@
 <a name="l00354"></a>00354 
 <a name="l00355"></a><a class="code" href="classimath_1_1_c_var_vector.html#a5952e244594041d8a67498d3ab0cf7ae">00355</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_var_vector.html#a5952e244594041d8a67498d3ab0cf7ae" title="Return dot product of two vectors.">CVarVector::GetDotProduct</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_c_var_vector.html" title="Simple implementation of variable-size vector.">CVarVector</a>&amp; vector)<span class="keyword"> const</span>
 <a name="l00356"></a>00356 <span class="keyword"></span>{
-<a name="l00357"></a>00357        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
+<a name="l00357"></a>00357        Q_ASSERT(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
 <a name="l00358"></a>00358 
 <a name="l00359"></a>00359        <span class="keywordtype">double</span> retVal = 0.0;
 <a name="l00360"></a>00360 
@@ -402,7 +402,7 @@
 <a name="l00475"></a>00475 
 <a name="l00476"></a><a class="code" href="classimath_1_1_c_var_vector.html#a4cd4c401325aad1dd2df262bb8472a9b">00476</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_c_var_vector.html" title="Simple implementation of variable-size vector.">CVarVector</a>&amp; <a class="code" href="classimath_1_1_c_var_vector.html#a4cd4c401325aad1dd2df262bb8472a9b">CVarVector::operator+=</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_c_var_vector.html" title="Simple implementation of variable-size vector.">CVarVector</a>&amp; vector)
 <a name="l00477"></a>00477 {
-<a name="l00478"></a>00478        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
+<a name="l00478"></a>00478        Q_ASSERT(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
 <a name="l00479"></a>00479 
 <a name="l00480"></a>00480        <span class="keywordtype">int</span> elementsCount = <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>();
 <a name="l00481"></a>00481        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
@@ -415,7 +415,7 @@
 <a name="l00488"></a>00488 
 <a name="l00489"></a><a class="code" href="classimath_1_1_c_var_vector.html#a3638a0843d77d5c31b1a72f773b6640e">00489</a> <span class="keyword">inline</span> <a class="code" href="classimath_1_1_c_var_vector.html" title="Simple implementation of variable-size vector.">CVarVector</a>&amp; <a class="code" href="classimath_1_1_c_var_vector.html#a3638a0843d77d5c31b1a72f773b6640e">CVarVector::operator-=</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_c_var_vector.html" title="Simple implementation of variable-size vector.">CVarVector</a>&amp; vector)
 <a name="l00490"></a>00490 {
-<a name="l00491"></a>00491        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
+<a name="l00491"></a>00491        Q_ASSERT(<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>() == vector.<a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
 <a name="l00492"></a>00492 
 <a name="l00493"></a>00493        <span class="keywordtype">int</span> elementsCount = <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>();
 <a name="l00494"></a>00494        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
@@ -513,8 +513,8 @@
 <a name="l00586"></a>00586 
 <a name="l00587"></a><a class="code" href="classimath_1_1_c_var_vector.html#af3bd30cf0ce9db44c6e1825a99c373e4">00587</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_var_vector.html#af3bd30cf0ce9db44c6e1825a99c373e4">CVarVector::operator[]</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const</span>
 <a name="l00588"></a>00588 <span class="keyword"></span>{
-<a name="l00589"></a>00589        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(i &gt;= 0);
-<a name="l00590"></a>00590        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(i &lt; <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
+<a name="l00589"></a>00589        Q_ASSERT(i &gt;= 0);
+<a name="l00590"></a>00590        Q_ASSERT(i &lt; <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
 <a name="l00591"></a>00591 
 <a name="l00592"></a>00592        <span class="keywordflow">return</span> m_elements[i];
 <a name="l00593"></a>00593 }
@@ -522,8 +522,8 @@
 <a name="l00595"></a>00595 
 <a name="l00596"></a><a class="code" href="classimath_1_1_c_var_vector.html#ae5fd0549b0857b263d024b893db55da5">00596</a> <span class="keyword">inline</span> <span class="keywordtype">double</span>&amp; <a class="code" href="classimath_1_1_c_var_vector.html#af3bd30cf0ce9db44c6e1825a99c373e4">CVarVector::operator[]</a>(<span class="keywordtype">int</span> i)
 <a name="l00597"></a>00597 {
-<a name="l00598"></a>00598        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(i &gt;= 0);
-<a name="l00599"></a>00599        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(i &lt; <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
+<a name="l00598"></a>00598        Q_ASSERT(i &gt;= 0);
+<a name="l00599"></a>00599        Q_ASSERT(i &lt; <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>());
 <a name="l00600"></a>00600 
 <a name="l00601"></a>00601        <span class="keywordflow">return</span> m_elements[i];
 <a name="l00602"></a>00602 }

@@ -37,7 +37,7 @@ namespace iqtprm
 
 void CMultiParamsManagerGuiComp::AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags)
 {
-	I_ASSERT(providerPtr != NULL);
+	Q_ASSERT(providerPtr != NULL);
 
 	m_connectedSceneFlags[providerPtr] = flags;
 
@@ -50,7 +50,7 @@ void CMultiParamsManagerGuiComp::AddItemsToScene(iqt2d::IViewProvider* providerP
 
 void CMultiParamsManagerGuiComp::RemoveItemsFromScene(iqt2d::IViewProvider* providerPtr)
 {
-	I_ASSERT(providerPtr != NULL);
+	Q_ASSERT(providerPtr != NULL);
 
 	iqt2d::IViewExtender* extenderPtr = GetCurrentViewExtenderPtr();
 	if (extenderPtr != NULL){
@@ -205,7 +205,7 @@ void CMultiParamsManagerGuiComp::OnGuiDestroyed()
 		QWidget* pagePtr = m_parameterEditorStack->widget(pageIndex);
 
 		WidgetGuiMap::iterator foundGuiIter = m_widgetToGuiMap.find(pagePtr);
-		I_ASSERT(foundGuiIter != m_widgetToGuiMap.end());
+		Q_ASSERT(foundGuiIter != m_widgetToGuiMap.end());
 		if (foundGuiIter != m_widgetToGuiMap.end()){
 			foundGuiIter.value()->DestroyGui();
 		}
@@ -241,7 +241,7 @@ void CMultiParamsManagerGuiComp::AttachCurrentExtender()
 					sceneIter != m_connectedSceneFlags.end();
 					++sceneIter){
 			iqt2d::IViewProvider* providerPtr = sceneIter.key();
-			I_ASSERT(providerPtr != NULL);
+			Q_ASSERT(providerPtr != NULL);
 
 			extenderPtr->AddItemsToScene(providerPtr, sceneIter.value());
 		}
@@ -257,7 +257,7 @@ void CMultiParamsManagerGuiComp::DetachCurrentExtender()
 					sceneIter != m_connectedSceneFlags.end();
 					++sceneIter){
 			iqt2d::IViewProvider* providerPtr = sceneIter.key();
-			I_ASSERT(providerPtr != NULL);
+			Q_ASSERT(providerPtr != NULL);
 
 			extenderPtr->RemoveItemsFromScene(providerPtr);
 		}

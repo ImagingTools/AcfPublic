@@ -38,10 +38,10 @@ namespace iqtsig
 
 void CPulseParamsGuiComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	isig::IPulseParams* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	if (DelayTimeSB->isVisible() && (DelayTimeSB->value() / 1000.0 != objectPtr->GetDelayTime())){
 		objectPtr->SetDelayTime(DelayTimeSB->value() / 1000.0);
@@ -63,9 +63,9 @@ void CPulseParamsGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 	const isig::IPulseParams* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	istd::CRange delayTimeRange(0, 0.1);
 	istd::CRange pulseTimeRange(0, 0.1);
@@ -112,7 +112,7 @@ void CPulseParamsGuiComp::OnGuiModelAttached()
 
 void CPulseParamsGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	const isig::IPulseParams* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){

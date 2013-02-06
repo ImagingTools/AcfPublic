@@ -54,7 +54,7 @@ CHotfolderTaskManagerComp::CHotfolderTaskManagerComp()
 
 ihotf::IHotfolderProcessingItem* CHotfolderTaskManagerComp::GetNextProcessingTask() const
 {
-	I_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
+	Q_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
 	if (!m_hotfolderProcessingInfoCompPtr.IsValid()){
 		return NULL;
 	}
@@ -62,7 +62,7 @@ ihotf::IHotfolderProcessingItem* CHotfolderTaskManagerComp::GetNextProcessingTas
 	int itemsCount = m_hotfolderProcessingInfoCompPtr->GetProcessingItemsCount();
 	for (int itemIndex = 0; itemIndex < itemsCount; itemIndex++){
 		ihotf::IHotfolderProcessingItem* processingItemPtr = m_hotfolderProcessingInfoCompPtr->GetProcessingItem(itemIndex);
-		I_ASSERT(processingItemPtr != NULL);
+		Q_ASSERT(processingItemPtr != NULL);
 
 		if (processingItemPtr->GetProcessingState() == iproc::IProcessor::TS_NONE){
 			if (m_fileNamingCompPtr.IsValid()){
@@ -118,8 +118,8 @@ void CHotfolderTaskManagerComp::OnFilesModifiedEvent(const ihotf::IFileSystemCha
 
 void CHotfolderTaskManagerComp::AddFilesToProcessingQueue(const QStringList& files)
 {
-	I_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
-	I_ASSERT(!files.isEmpty());
+	Q_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
+	Q_ASSERT(!files.isEmpty());
 
 	if (m_hotfolderProcessingInfoCompPtr.IsValid()){
 
@@ -134,8 +134,8 @@ void CHotfolderTaskManagerComp::AddFilesToProcessingQueue(const QStringList& fil
 
 void CHotfolderTaskManagerComp::RemoveFilesFromProcessingQueue(const QStringList& files)
 {
-	I_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
-	I_ASSERT(!files.isEmpty());
+	Q_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
+	Q_ASSERT(!files.isEmpty());
 
 	if (!m_hotfolderProcessingInfoCompPtr.IsValid()){
 		return;
@@ -156,8 +156,8 @@ void CHotfolderTaskManagerComp::RemoveFilesFromProcessingQueue(const QStringList
 
 void CHotfolderTaskManagerComp::RestartProcessingQueueFiles(const QStringList& files)
 {
-	I_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
-	I_ASSERT(!files.isEmpty());
+	Q_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
+	Q_ASSERT(!files.isEmpty());
 
 	if (!m_hotfolderProcessingInfoCompPtr.IsValid()){
 		return;
@@ -176,12 +176,12 @@ void CHotfolderTaskManagerComp::RestartProcessingQueueFiles(const QStringList& f
 
 void CHotfolderTaskManagerComp::OnComponentCreated()
 {
-	I_ASSERT(m_hotfolderSettingsModelCompPtr.IsValid());
+	Q_ASSERT(m_hotfolderSettingsModelCompPtr.IsValid());
 	if (m_hotfolderSettingsModelCompPtr.IsValid()){
 		m_hotfolderSettingsModelCompPtr->AttachObserver(&m_parametersObserver);
 	}
 
-	I_ASSERT(m_fileSystemChangeStorageModelCompPtr.IsValid());
+	Q_ASSERT(m_fileSystemChangeStorageModelCompPtr.IsValid());
 	if (m_fileSystemChangeStorageModelCompPtr.IsValid()){
 		m_fileSystemChangeStorageModelCompPtr->AttachObserver(&m_fileSystemChangeStorageObserver);
 	}
@@ -194,12 +194,12 @@ void CHotfolderTaskManagerComp::OnComponentCreated()
 
 void CHotfolderTaskManagerComp::OnComponentDestroyed()
 {
-	I_ASSERT(m_hotfolderSettingsModelCompPtr.IsValid());
+	Q_ASSERT(m_hotfolderSettingsModelCompPtr.IsValid());
 	if (m_hotfolderSettingsModelCompPtr.IsValid() && m_hotfolderSettingsModelCompPtr->IsAttached(&m_parametersObserver)){
 		m_hotfolderSettingsModelCompPtr->DetachObserver(&m_parametersObserver);
 	}
 
-	I_ASSERT(m_fileSystemChangeStorageModelCompPtr.IsValid());
+	Q_ASSERT(m_fileSystemChangeStorageModelCompPtr.IsValid());
 	if (m_fileSystemChangeStorageModelCompPtr.IsValid() && m_fileSystemChangeStorageModelCompPtr->IsAttached(&m_fileSystemChangeStorageObserver)){
 		m_fileSystemChangeStorageModelCompPtr->DetachObserver(&m_fileSystemChangeStorageObserver);
 	}
@@ -244,11 +244,11 @@ QStringList CHotfolderTaskManagerComp::GetInputDirectories() const
 		int inputDirectoriesCount = m_inputDirectoriesManagerCompPtr->GetParamsSetsCount();
 		for (int inputIndex = 0; inputIndex < inputDirectoriesCount; inputIndex++){
 			iprm::IParamsSet* inputDirectoryParamPtr = m_inputDirectoriesManagerCompPtr->GetParamsSet(inputIndex);
-			I_ASSERT(inputDirectoryParamPtr != NULL);
+			Q_ASSERT(inputDirectoryParamPtr != NULL);
 
 			const ifile::IFileNameParam* monitoringDirectoryPtr = dynamic_cast<const ifile::IFileNameParam*>(inputDirectoryParamPtr->GetParameter("DirectoryPath"));
-			I_ASSERT(monitoringDirectoryPtr != NULL);
-			I_ASSERT(monitoringDirectoryPtr->GetPathType() == ifile::IFileNameParam::PT_DIRECTORY);
+			Q_ASSERT(monitoringDirectoryPtr != NULL);
+			Q_ASSERT(monitoringDirectoryPtr->GetPathType() == ifile::IFileNameParam::PT_DIRECTORY);
 
 			inputDirectories.push_back(monitoringDirectoryPtr->GetPath());
 		}
@@ -264,11 +264,11 @@ const iprm::IParamsSet* CHotfolderTaskManagerComp::GetMonitoringParamsSet(const 
 		int inputDirectoriesCount = m_inputDirectoriesManagerCompPtr->GetParamsSetsCount();
 		for (int inputIndex = 0; inputIndex < inputDirectoriesCount; inputIndex++){
 			iprm::IParamsSet* inputDirectoryParamPtr = m_inputDirectoriesManagerCompPtr->GetParamsSet(inputIndex);
-			I_ASSERT(inputDirectoryParamPtr != NULL);
+			Q_ASSERT(inputDirectoryParamPtr != NULL);
 
 			const ifile::IFileNameParam* monitoringDirectoryPtr = dynamic_cast<const ifile::IFileNameParam*>(inputDirectoryParamPtr->GetParameter("DirectoryPath"));
-			I_ASSERT(monitoringDirectoryPtr != NULL);
-			I_ASSERT(monitoringDirectoryPtr->GetPathType() == ifile::IFileNameParam::PT_DIRECTORY);
+			Q_ASSERT(monitoringDirectoryPtr != NULL);
+			Q_ASSERT(monitoringDirectoryPtr->GetPathType() == ifile::IFileNameParam::PT_DIRECTORY);
 
 			if (monitoringDirectoryPtr->GetPath() == directoryPath){
 				return inputDirectoryParamPtr;
@@ -346,7 +346,7 @@ void CHotfolderTaskManagerComp::RemoveDirectoryMonitor(const QString& directoryP
 
 void CHotfolderTaskManagerComp::RemoveDirectoryItems(const QString& directoryPath)
 {
-	I_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
+	Q_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
 	if (!m_hotfolderProcessingInfoCompPtr.IsValid()){
 		return;
 	}
@@ -355,7 +355,7 @@ void CHotfolderTaskManagerComp::RemoveDirectoryItems(const QString& directoryPat
 	int itemsCount = m_hotfolderProcessingInfoCompPtr->GetProcessingItemsCount();
 	for (int itemIndex = 0; itemIndex < itemsCount; itemIndex++){
 		ihotf::IHotfolderProcessingItem* processingItemPtr = m_hotfolderProcessingInfoCompPtr->GetProcessingItem(itemIndex);
-		I_ASSERT(processingItemPtr != NULL);
+		Q_ASSERT(processingItemPtr != NULL);
 
 		QString filePath = processingItemPtr->GetInputFile();
 		QFileInfo fileInfo(filePath);
@@ -370,7 +370,7 @@ void CHotfolderTaskManagerComp::RemoveDirectoryItems(const QString& directoryPat
 
 ihotf::IHotfolderProcessingItem* CHotfolderTaskManagerComp::FindProcessingItem(const QString& fileName) const
 {
-	I_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
+	Q_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
 	if (!m_hotfolderProcessingInfoCompPtr.IsValid()){
 		return NULL;
 	}
@@ -378,7 +378,7 @@ ihotf::IHotfolderProcessingItem* CHotfolderTaskManagerComp::FindProcessingItem(c
 	int itemsCount = m_hotfolderProcessingInfoCompPtr->GetProcessingItemsCount();
 	for (int itemIndex = 0; itemIndex < itemsCount; itemIndex++){
 		ihotf::IHotfolderProcessingItem* processingItemPtr = m_hotfolderProcessingInfoCompPtr->GetProcessingItem(itemIndex);
-		I_ASSERT(processingItemPtr != NULL);
+		Q_ASSERT(processingItemPtr != NULL);
 
 		if (processingItemPtr->GetInputFile() == fileName){
 			return processingItemPtr;
@@ -391,7 +391,7 @@ ihotf::IHotfolderProcessingItem* CHotfolderTaskManagerComp::FindProcessingItem(c
 
 ihotf::IHotfolderProcessingItem* CHotfolderTaskManagerComp::GetItemFromId(const QByteArray& itemUuid) const
 {
-	I_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
+	Q_ASSERT(m_hotfolderProcessingInfoCompPtr.IsValid());
 	if (!m_hotfolderProcessingInfoCompPtr.IsValid()){
 		return NULL;
 	}
@@ -422,7 +422,7 @@ CHotfolderTaskManagerComp::FileSystemChangeStorageObserver::FileSystemChangeStor
 void CHotfolderTaskManagerComp::FileSystemChangeStorageObserver::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
 {
 	ihotf::IFileSystemChangeStorage* storagePtr = dynamic_cast<ihotf::IFileSystemChangeStorage*>(modelPtr);
-	I_ASSERT(storagePtr != NULL);
+	Q_ASSERT(storagePtr != NULL);
 	if (storagePtr == NULL){
 		m_parent.SendCriticalMessage(0, "File system changes storage is invalid", "Hotfolder manager");
 

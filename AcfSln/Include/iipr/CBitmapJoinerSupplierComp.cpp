@@ -68,7 +68,7 @@ int CBitmapJoinerSupplierComp::ProduceObject(ProductType& result) const
 		return WS_CRITICAL;
 	}
 	
-	I_ASSERT(result.second.IsValid());
+	Q_ASSERT(result.second.IsValid());
 
 	result.first = NULL;
 

@@ -46,13 +46,13 @@ CTextEditorComp::CTextEditorComp()
 
 void CTextEditorComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	QTextEdit* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	ibase::ITextDocument* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	objectPtr->SetText(textEditPtr->toPlainText());
 }
@@ -62,10 +62,10 @@ void CTextEditorComp::UpdateModel() const
 
 void CTextEditorComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	QTextEdit* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	ibase::ITextDocument* objectPtr = GetObjectPtr();
 
@@ -90,7 +90,7 @@ void CTextEditorComp::OnSelectionChanged()
 	bool isTextSelected = false;
 
 	QTextEdit* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	QTextCursor cursor = textEditPtr->textCursor();
 	isTextSelected = cursor.hasSelection();
@@ -109,7 +109,7 @@ void CTextEditorComp::OnTextChanged()
 void CTextEditorComp::OnToLowercase()
 {
 	QTextEdit* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	iqt::CSignalBlocker block(textEditPtr);
 
@@ -127,7 +127,7 @@ void CTextEditorComp::OnToLowercase()
 void CTextEditorComp::OnToUppercase()
 {
 	QTextEdit* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	iqt::CSignalBlocker block(textEditPtr);
 
@@ -149,7 +149,7 @@ void CTextEditorComp::OnGuiCreated()
 	BaseClass::OnGuiCreated();
 
 	QTextEdit* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	connect(textEditPtr, SIGNAL(textChanged()), this, SLOT(OnTextChanged()));
 	connect(textEditPtr, SIGNAL(selectionChanged()), this, SLOT(OnSelectionChanged()));

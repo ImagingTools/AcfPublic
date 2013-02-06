@@ -36,7 +36,7 @@
 void CAbGuiComp::UpdateModel() const
 {
 	IAb* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	istd::TChangeNotifier<IAb> changePtr(objectPtr);
 
@@ -51,7 +51,7 @@ void CAbGuiComp::UpdateModel() const
 
 void CAbGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	IAb* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
@@ -65,7 +65,7 @@ void CAbGuiComp::OnGuiModelAttached()
 {
 	// Set data model constraints to the editor of A:
 	IAb* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	const IAConstraints& constraints = objectPtr->GetAConstraints();
 	AValueSpinBox->setMinimum(constraints.GetARange().GetMinValue());

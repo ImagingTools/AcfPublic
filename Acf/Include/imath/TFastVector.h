@@ -67,7 +67,7 @@ public:
 	TFastVector(const imath::TVector<Size, Element>& vector)
 	:	m_elementsCount(Size)
 	{
-		I_ASSERT(Size <= MaxSize);
+		Q_ASSERT(Size <= MaxSize);
 
 		for (int i = 0; i < Size; ++i){
 			m_elements[i] = vector[i];
@@ -257,7 +257,7 @@ template <int MaxSize, class Element>
 inline TFastVector<MaxSize, Element>::TFastVector(const TFastVector<MaxSize, Element>& vector)
 :	m_elementsCount(vector.m_elementsCount)
 {
-	I_ASSERT(m_elementsCount <= MaxSize);
+	Q_ASSERT(m_elementsCount <= MaxSize);
 
 	std::memcpy(m_elements, vector.m_elements, sizeof(Element) * m_elementsCount);
 }
@@ -311,8 +311,8 @@ inline bool TFastVector<MaxSize, Element>::EnsureElementsCount(int count, const 
 template <int MaxSize, class Element>
 inline const Element& TFastVector<MaxSize, Element>::GetElement(int i) const
 {
-	I_ASSERT(i >= 0);
-	I_ASSERT(i < m_elementsCount);
+	Q_ASSERT(i >= 0);
+	Q_ASSERT(i < m_elementsCount);
 
 	return m_elements[i];
 }
@@ -321,8 +321,8 @@ inline const Element& TFastVector<MaxSize, Element>::GetElement(int i) const
 template <int MaxSize, class Element>
 inline Element& TFastVector<MaxSize, Element>::GetElementRef(int i)
 {
-	I_ASSERT(i >= 0);
-	I_ASSERT(i < m_elementsCount);
+	Q_ASSERT(i >= 0);
+	Q_ASSERT(i < m_elementsCount);
 
 	return m_elements[i];
 }
@@ -331,8 +331,8 @@ inline Element& TFastVector<MaxSize, Element>::GetElementRef(int i)
 template <int MaxSize, class Element>
 inline void TFastVector<MaxSize, Element>::SetElement(int i, const Element& value)
 {
-	I_ASSERT(i >= 0);
-	I_ASSERT(i < m_elementsCount);
+	Q_ASSERT(i >= 0);
+	Q_ASSERT(i < m_elementsCount);
 
 	m_elements[i] = value;
 }
@@ -558,7 +558,7 @@ template <int MaxSize, class Element>
 inline TFastVector<MaxSize, Element>& TFastVector<MaxSize, Element>::operator=(const TFastVector<MaxSize, Element>& vector)
 {
 	m_elementsCount = vector.m_elementsCount;
-	I_ASSERT(m_elementsCount < MaxSize);
+	Q_ASSERT(m_elementsCount < MaxSize);
 
 	for (int i = 0; i < m_elementsCount; ++i){
 		m_elements[i] = vector.m_elements[i];
@@ -700,8 +700,8 @@ inline TFastVector<MaxSize, Element> TFastVector<MaxSize, Element>::operator/(El
 template <int MaxSize, class Element>
 const Element& TFastVector<MaxSize, Element>::operator[](int i) const
 {
-	I_ASSERT(i >= 0);
-	I_ASSERT(i < m_elementsCount);
+	Q_ASSERT(i >= 0);
+	Q_ASSERT(i < m_elementsCount);
 
 	return m_elements[i];
 }
@@ -710,8 +710,8 @@ const Element& TFastVector<MaxSize, Element>::operator[](int i) const
 template <int MaxSize, class Element>
 Element& TFastVector<MaxSize, Element>::operator[](int i)
 {
-	I_ASSERT(i >= 0);
-	I_ASSERT(i < MaxSize);
+	Q_ASSERT(i >= 0);
+	Q_ASSERT(i < MaxSize);
 
 	return m_elements[i];
 }

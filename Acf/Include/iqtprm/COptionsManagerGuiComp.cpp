@@ -48,7 +48,7 @@ COptionsManagerGuiComp::COptionsManagerGuiComp()
 
 void COptionsManagerGuiComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	if (m_isEditingFlag){
 		return;
@@ -85,7 +85,7 @@ void COptionsManagerGuiComp::OnGuiModelAttached()
 		Selector->setEditable(true);
 
 		QLineEdit* editorPtr = Selector->lineEdit();
-		I_ASSERT(editorPtr != NULL);
+		Q_ASSERT(editorPtr != NULL);
 
 		connect(editorPtr, SIGNAL(editingFinished()), this, SLOT(OnEditingFinished()));
 		connect(editorPtr, SIGNAL(textEdited(const QString&)), this, SLOT(OnTextEdited(const QString&)));
@@ -106,7 +106,7 @@ void COptionsManagerGuiComp::OnGuiModelDetached()
 
 void COptionsManagerGuiComp::UpdateGui(int updateFlags)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	if ((updateFlags & (imod::IModelEditor::CF_INIT_EDITOR | iprm::IOptionsManager::CF_OPTION_ADDED | iprm::IOptionsManager::CF_OPTION_REMOVED | iprm::ISelectionParam::CF_SELECTION_CHANGED)) != 0)
 	{
@@ -135,7 +135,7 @@ void COptionsManagerGuiComp::OnGuiCreated()
 		}
 
 		QLayout* selectorLayoutPtr = NULL;
-		I_ASSERT(SelectionFrame->layout() == NULL);
+		Q_ASSERT(SelectionFrame->layout() == NULL);
 
 		if (labelPosition == LP_LEFT){
 			selectorLayoutPtr = new QHBoxLayout(SelectionFrame);
@@ -216,7 +216,7 @@ void COptionsManagerGuiComp::OnGuiRetranslate()
 
 void COptionsManagerGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	if (!IsUpdateBlocked()){
 		UpdateBlocker updateBlocker(this);

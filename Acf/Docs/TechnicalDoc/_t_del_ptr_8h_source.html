@@ -94,7 +94,7 @@
 <a name="l00116"></a>00116 <span class="keyword">inline</span> <a class="code" href="classistd_1_1_t_del_ptr.html#a896ce8c6bef0468cb803e1c701d39ad5" title="Construct and init this pointer.">TDelPtr&lt;Type, Accessor&gt;::TDelPtr</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">TDelPtr&lt;Type, Accessor&gt;</a>&amp; <a class="code" href="istd_8h.html#a0a13620120415a9017e5095986764a12">I_IF_DEBUG</a>(ptr))
 <a name="l00117"></a>00117 :      BaseClass(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)
 <a name="l00118"></a>00118 {
-<a name="l00119"></a>00119        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(ptr.GetPtr() == <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00119"></a>00119        Q_ASSERT(ptr.GetPtr() == <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00120"></a>00120 }
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122 
@@ -143,7 +143,7 @@
 <a name="l00165"></a>00165 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type, <span class="keyword">class</span> Accessor&gt;
 <a name="l00166"></a>00166 <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">TDelPtr&lt;Type, Accessor&gt;</a>&amp; <a class="code" href="classistd_1_1_t_del_ptr.html#a027e7984f7ca086ff3c3b1f247f43694" title="Assign operator.">TDelPtr&lt;Type, Accessor&gt;::operator=</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">TDelPtr</a>&amp; <a class="code" href="istd_8h.html#a0a13620120415a9017e5095986764a12">I_IF_DEBUG</a>(ptr))
 <a name="l00167"></a>00167 {
-<a name="l00168"></a>00168        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(ptr.GetPtr() == <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00168"></a>00168        Q_ASSERT(ptr.GetPtr() == <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00169"></a>00169 
 <a name="l00170"></a>00170        Reset();
 <a name="l00171"></a>00171 

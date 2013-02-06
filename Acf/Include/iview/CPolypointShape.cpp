@@ -68,14 +68,14 @@ void CPolypointShape::SetSmallTickersMode(bool state)
 
 void CPolypointShape::Draw(QPainter& drawContext) const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 	const imod::IModel* modelPtr = GetModelPtr();
 	if (modelPtr != NULL){
 		const i2d::CPolypoint& polypoint = *dynamic_cast<const i2d::CPolypoint*>(modelPtr);
-		I_ASSERT(&polypoint != NULL);
+		Q_ASSERT(&polypoint != NULL);
 
 		const IColorSchema& colorSchema = GetColorSchema();
 		const i2d::CRect& clientArea = GetClientRect();
@@ -102,7 +102,7 @@ void CPolypointShape::Draw(QPainter& drawContext) const
 
 bool CPolypointShape::OnAttached(imod::IModel* modelPtr)
 {
-	I_ASSERT(dynamic_cast<i2d::CPolypoint*>(modelPtr) != NULL);
+	Q_ASSERT(dynamic_cast<i2d::CPolypoint*>(modelPtr) != NULL);
 
 	return BaseClass::OnAttached(modelPtr);
 }
@@ -114,12 +114,12 @@ bool CPolypointShape::OnAttached(imod::IModel* modelPtr)
 
 i2d::CRect CPolypointShape::CalcBoundingBox() const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	const imod::IModel* modelPtr = GetModelPtr();
 	if (modelPtr != NULL){
 		const i2d::CPolypoint& polypoint = *dynamic_cast<const i2d::CPolypoint*>(modelPtr);
-		I_ASSERT(&polypoint != NULL);
+		Q_ASSERT(&polypoint != NULL);
 
 		const IColorSchema& colorSchema = GetColorSchema();
 		const QVector<i2d::CVector2d>& points = polypoint.GetPoints();

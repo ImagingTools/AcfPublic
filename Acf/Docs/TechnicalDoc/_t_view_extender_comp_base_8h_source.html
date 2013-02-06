@@ -116,7 +116,7 @@
 <a name="l00095"></a>00095 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
 <a name="l00096"></a><a class="code" href="classiqt2d_1_1_t_view_extender_comp_base.html#add9429fbb1e0cd102b57fb36df72415d">00096</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_view_extender_comp_base.html#add9429fbb1e0cd102b57fb36df72415d" title="Called when items should be added to specified scene.">TViewExtenderCompBase&lt;Base&gt;::AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags)
 <a name="l00097"></a>00097 {
-<a name="l00098"></a>00098        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(providerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00098"></a>00098        Q_ASSERT(providerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00099"></a>00099 
 <a name="l00100"></a>00100        <span class="keywordtype">int</span> viewId = providerPtr-&gt;<a class="code" href="classiqt2d_1_1_i_view_provider.html#aab7b7fe3c884776e4a6e8befd9c706bf" title="Get ID indentifing this view.">GetViewId</a>();
 <a name="l00101"></a>00101        <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* viewPtr = providerPtr-&gt;<a class="code" href="classiqt2d_1_1_i_view_provider.html#aed42332764dc5898f6efc543aded8d54" title="Called when items should be removed from specified view.">GetView</a>();
@@ -188,10 +188,10 @@
 <a name="l00167"></a>00167 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
 <a name="l00168"></a><a class="code" href="classiqt2d_1_1_t_view_extender_comp_base.html#abb815f430a25cc753ce2119345c97e99">00168</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_view_extender_comp_base.html#abb815f430a25cc753ce2119345c97e99" title="Called when items should be removed from specified scene.">TViewExtenderCompBase&lt;Base&gt;::RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* providerPtr)
 <a name="l00169"></a>00169 {
-<a name="l00170"></a>00170        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(providerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00170"></a>00170        Q_ASSERT(providerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00171"></a>00171 
 <a name="l00172"></a>00172        <span class="keywordflow">if</span> (m_isSlaveShown){
-<a name="l00173"></a>00173               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_slaveExtenderCompPtr.IsValid());
+<a name="l00173"></a>00173               Q_ASSERT(m_slaveExtenderCompPtr.IsValid());
 <a name="l00174"></a>00174 
 <a name="l00175"></a>00175               m_slaveExtenderCompPtr-&gt;RemoveItemsFromScene(providerPtr);
 <a name="l00176"></a>00176        }
@@ -267,10 +267,10 @@
 <a name="l00246"></a>00246 {
 <a name="l00247"></a>00247        <span class="keywordflow">for</span> (ShapesMap::iterator index = m_shapesMap.begin(); index != m_shapesMap.end(); index++){
 <a name="l00248"></a>00248               <a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>* viewProvderPtr = index.key();
-<a name="l00249"></a>00249               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(viewProvderPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00249"></a>00249               Q_ASSERT(viewProvderPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00250"></a>00250 
 <a name="l00251"></a>00251               <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* viewPtr = viewProvderPtr-&gt;<a class="code" href="classiqt2d_1_1_i_view_provider.html#aed42332764dc5898f6efc543aded8d54" title="Called when items should be removed from specified view.">GetView</a>();
-<a name="l00252"></a>00252               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00252"></a>00252               Q_ASSERT(viewPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00253"></a>00253 
 <a name="l00254"></a>00254               UpdateViewCalibration(viewPtr);
 <a name="l00255"></a>00255 

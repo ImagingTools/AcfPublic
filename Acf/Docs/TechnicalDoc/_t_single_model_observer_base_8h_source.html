@@ -113,7 +113,7 @@
 <a name="l00090"></a>00090 {
 <a name="l00091"></a>00091        <span class="keywordflow">if</span> (BaseClass::OnDetached(modelPtr)){
 <a name="l00092"></a>00092               <span class="comment">// If model was correctly attached m_objectPtr cannot be NULL. OnDetach returns true only if model was correctly attached.</span>
-<a name="l00093"></a>00093               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_objectPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00093"></a>00093               Q_ASSERT(m_objectPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095               m_objectPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
 <a name="l00096"></a>00096 

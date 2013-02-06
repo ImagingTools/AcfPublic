@@ -194,7 +194,7 @@ void TObjectShapeBase<GraphicsItemClass, ObjectClass>::mouseDoubleClickEvent(QGr
 template <class GraphicsItemClass, class ObjectClass>
 void TObjectShapeBase<GraphicsItemClass, ObjectClass>::AfterUpdate(imod::IModel* /*modelPtr*/, int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	I_ASSERT(!m_isShapeUpdateBlocked);
+	Q_ASSERT(!m_isShapeUpdateBlocked);
 
 	ObjectClass* objectPtr = BaseClass2::GetObjectPtr();
 	if (objectPtr != NULL){

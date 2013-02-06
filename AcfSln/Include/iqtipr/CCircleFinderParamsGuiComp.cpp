@@ -35,10 +35,10 @@ namespace iqtipr
 
 void CCircleFinderParamsGuiComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	iipr::ICircleFinderParams* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	objectPtr->SetOutlierEliminationEnabled(EnableOutliersElimination->isChecked());
 	objectPtr->SetMinOutlierDistance(MinOutliersDistance->value());
@@ -59,7 +59,7 @@ void CCircleFinderParamsGuiComp::UpdateModel() const
 
 void CCircleFinderParamsGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	iipr::ICircleFinderParams* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){

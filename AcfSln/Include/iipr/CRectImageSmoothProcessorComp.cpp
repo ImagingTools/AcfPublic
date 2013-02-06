@@ -108,7 +108,7 @@ bool CRectImageSmoothProcessorComp::ParamProcessImage(
 	}
 
 	int componentsCount = inputImage.GetComponentsCount();
-	I_ASSERT(inputImage.GetPixelBitsCount() == componentsCount * 8);
+	Q_ASSERT(inputImage.GetPixelBitsCount() == componentsCount * 8);
 
 	istd::CIndex2d imageSize = inputImage.GetImageSize();
 	if (imageSize.IsSizeEmpty()){
@@ -146,8 +146,8 @@ bool CRectImageSmoothProcessorComp::ParamProcessImage(
 		break;
 	}
 
-	I_ASSERT(kernelMaxWidth >= 1);
-	I_ASSERT(kernelMaxHeight >= 1);
+	Q_ASSERT(kernelMaxWidth >= 1);
+	Q_ASSERT(kernelMaxHeight >= 1);
 
 	istd::CIndex2d outputImageSize = imageSize;
 	if (*m_borderModeAttrPtr != BM_STRETCH_KERNEL){
@@ -175,7 +175,7 @@ bool CRectImageSmoothProcessorComp::ParamProcessImage(
 	}
 
 	if (kernelMaxWidth > 1){
-		I_ASSERT(firstPassOutputImagePtr != NULL);
+		Q_ASSERT(firstPassOutputImagePtr != NULL);
 
 
 		for (int componentIndex = 0; componentIndex < componentsCount; componentIndex++){
@@ -212,7 +212,7 @@ bool CRectImageSmoothProcessorComp::ParamProcessImage(
 
 					meanValue += inputLinePtr[componentIndex + componentsCount * headX++];
 
-					I_ASSERT(tailX < imageWidth);
+					Q_ASSERT(tailX < imageWidth);
 					meanValue -= inputLinePtr[componentIndex + componentsCount * tailX++];
 				}
 
@@ -222,7 +222,7 @@ bool CRectImageSmoothProcessorComp::ParamProcessImage(
 
 						outputPtr += componentsCount;
 
-						I_ASSERT(tailX < imageWidth);
+						Q_ASSERT(tailX < imageWidth);
 						meanValue -= inputLinePtr[componentIndex + componentsCount * tailX++];
 						kernelWidth--;
 
@@ -230,19 +230,19 @@ bool CRectImageSmoothProcessorComp::ParamProcessImage(
 							break;
 						}
 
-						I_ASSERT(tailX < imageWidth);
+						Q_ASSERT(tailX < imageWidth);
 						meanValue -= inputLinePtr[componentIndex + componentsCount * tailX++];
 						kernelWidth--;
 					}
 				}
 
-				I_ASSERT(outputPtr <= (quint8*)firstPassOutputImagePtr->GetLinePtr(y) + componentIndex + outputImageWidth * componentsCount);
+				Q_ASSERT(outputPtr <= (quint8*)firstPassOutputImagePtr->GetLinePtr(y) + componentIndex + outputImageWidth * componentsCount);
 			}
 		}
 	}
 
 	if (kernelMaxHeight > 1){
-		I_ASSERT(secondPassInputImagePtr != NULL);
+		Q_ASSERT(secondPassInputImagePtr != NULL);
 
 		int inputLinesDifference = secondPassInputImagePtr->GetLinesDifference();
 		int outputLinesDifference = outputImage.GetLinesDifference();

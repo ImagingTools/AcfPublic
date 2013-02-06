@@ -50,7 +50,7 @@ void CComboParamsManagerGuiComp::UpdateParamsView(int selectedIndex)
 
 	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL && (selectedIndex >= 0)){
-		I_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
+		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
 		if (m_paramsObserverCompPtr.IsValid()){
 			modelPtr = dynamic_cast<imod::IModel*>(objectPtr->GetParamsSet(selectedIndex));
@@ -63,7 +63,7 @@ void CComboParamsManagerGuiComp::UpdateParamsView(int selectedIndex)
 		bool paramsFrameVisible = false;
 
 		if (modelPtr != NULL){
-			I_ASSERT(!modelPtr->IsAttached(m_paramsObserverCompPtr.GetPtr()));
+			Q_ASSERT(!modelPtr->IsAttached(m_paramsObserverCompPtr.GetPtr()));
 				
 			if (modelPtr->AttachObserver(m_paramsObserverCompPtr.GetPtr())){
 				m_lastConnectedModelPtr = modelPtr;
@@ -125,7 +125,7 @@ void CComboParamsManagerGuiComp::OnGuiModelDetached()
 
 void CComboParamsManagerGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	int selectedIndex = -1;
 

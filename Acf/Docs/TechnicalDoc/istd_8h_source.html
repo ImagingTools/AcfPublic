@@ -57,28 +57,26 @@
 <a name="l00044"></a>00044 <span class="preprocessor"></span>
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 <span class="preprocessor">#define I_IF_DEBUG(instructions) instructions</span>
-<a name="l00047"></a>00047 <span class="preprocessor"></span><span class="preprocessor">#define I_ASSERT(condition) Q_ASSERT(condition)</span>
-<a name="l00048"></a>00048 <span class="preprocessor"></span><span class="preprocessor">#define I_CRITICAL() Q_ASSERT(false)</span>
-<a name="l00049"></a>00049 <span class="preprocessor"></span>
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#else // _DEBUG || DEBUG</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a><a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">00054</a> <span class="preprocessor">#define I_ASSERT(test)</span>
-<a name="l00055"></a><a class="code" href="istd_8h.html#a5952e0d7281d1ab784531120ea40c9c4">00055</a> <span class="preprocessor"></span><span class="preprocessor">#define I_CRITICAL()</span>
-<a name="l00056"></a><a class="code" href="istd_8h.html#a0a13620120415a9017e5095986764a12">00056</a> <span class="preprocessor"></span><span class="preprocessor">#define I_IF_DEBUG(instructions)</span>
-<a name="l00057"></a>00057 <span class="preprocessor"></span>
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="preprocessor">#endif // _DEBUG || DEBUG</span>
-<a name="l00060"></a>00060 <span class="preprocessor"></span>
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="preprocessor">#ifndef NULL</span>
-<a name="l00063"></a><a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">00063</a> <span class="preprocessor"></span><span class="preprocessor">#define NULL 0</span>
-<a name="l00064"></a>00064 <span class="preprocessor"></span><span class="preprocessor">#endif // !NULL</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span>
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="preprocessor">#endif // !istd_included</span>
-<a name="l00068"></a>00068 <span class="preprocessor"></span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span><span class="preprocessor">#define I_CRITICAL() Q_ASSERT(false)</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span>
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="preprocessor">#else // _DEBUG || DEBUG</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span>
+<a name="l00052"></a>00052 
+<a name="l00053"></a><a class="code" href="istd_8h.html#a5952e0d7281d1ab784531120ea40c9c4">00053</a> <span class="preprocessor">#define I_CRITICAL()</span>
+<a name="l00054"></a><a class="code" href="istd_8h.html#a0a13620120415a9017e5095986764a12">00054</a> <span class="preprocessor"></span><span class="preprocessor">#define I_IF_DEBUG(instructions)</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span>
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="preprocessor">#endif // _DEBUG || DEBUG</span>
+<a name="l00058"></a>00058 <span class="preprocessor"></span>
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 <span class="preprocessor">#ifndef NULL</span>
+<a name="l00061"></a><a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">00061</a> <span class="preprocessor"></span><span class="preprocessor">#define NULL 0</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span><span class="preprocessor">#endif // !NULL</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="preprocessor">#endif // !istd_included</span>
+<a name="l00066"></a>00066 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -51,11 +51,11 @@ COrientedCircleShape::COrientedCircleShape()
 
 void COrientedCircleShape::Draw(QPainter& drawContext) const
 {
-	I_ASSERT(IsDisplayConnected());
+	Q_ASSERT(IsDisplayConnected());
 
 	const imod::IModel* modelPtr = GetModelPtr();
 	const i2d::COrientedCircle& circle = *dynamic_cast<const i2d::COrientedCircle*>(modelPtr);
-	I_ASSERT(&circle != NULL);
+	Q_ASSERT(&circle != NULL);
 
 	const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
@@ -174,7 +174,7 @@ void COrientedCircleShape::Draw(QPainter& drawContext) const
 
 bool COrientedCircleShape::OnAttached(imod::IModel* modelPtr)
 {
-	I_ASSERT(dynamic_cast<i2d::COrientedCircle*>(modelPtr) != NULL);
+	Q_ASSERT(dynamic_cast<i2d::COrientedCircle*>(modelPtr) != NULL);
 
 	return BaseClass::OnAttached(modelPtr);
 }

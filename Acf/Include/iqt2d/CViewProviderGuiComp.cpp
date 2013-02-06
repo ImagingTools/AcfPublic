@@ -47,7 +47,7 @@ const ibase::IHierarchicalCommand* CViewProviderGuiComp::GetCommands() const
 
 int CViewProviderGuiComp::GetViewId() const
 {
-	I_ASSERT(m_viewIdAttrPtr.IsValid());
+	Q_ASSERT(m_viewIdAttrPtr.IsValid());
 
 	return *m_viewIdAttrPtr;
 }
@@ -73,7 +73,7 @@ void CViewProviderGuiComp::SetConsoleCalibration(const i2d::ICalibration2d* cali
 	}
 
 	iview::CConsoleGui* consolePtr = GetQtWidget();
-	I_ASSERT(consolePtr != NULL);
+	Q_ASSERT(consolePtr != NULL);
 
 	iview::CViewport& view = consolePtr->GetViewRef();
 
@@ -97,7 +97,7 @@ void CViewProviderGuiComp::OnGuiCreated()
 	BaseClass::OnGuiCreated();
 
 	iview::CConsoleGui* consolePtr = GetQtWidget();
-	I_ASSERT(consolePtr != NULL);
+	Q_ASSERT(consolePtr != NULL);
 
 	consolePtr->SetShapeStatusInfo(m_shapeStatusInfoCompPtr.GetPtr());
 

@@ -61,7 +61,7 @@ protected:
 template <class VersionInfo>
 bool TVersionInfoSerializer<VersionInfo>::ReadVersion(VersionInfo* versionInfoPtr, iser::IArchive& archive)
 {
-	I_ASSERT(!archive.IsStoring());
+	Q_ASSERT(!archive.IsStoring());
 	if (archive.IsStoring()){
 		return false;
 	}
@@ -115,7 +115,7 @@ bool TVersionInfoSerializer<VersionInfo>::ReadVersion(VersionInfo* versionInfoPt
 template <class VersionInfo>
 bool TVersionInfoSerializer<VersionInfo>::WriteVersion(const VersionInfo* versionInfoPtr, iser::IArchive& archive)
 {
-	I_ASSERT(archive.IsStoring());
+	Q_ASSERT(archive.IsStoring());
 	if (!archive.IsStoring()){
 		return false;
 	}
@@ -136,12 +136,12 @@ bool TVersionInfoSerializer<VersionInfo>::WriteVersion(const VersionInfo* versio
 				++iter){
 		retVal = retVal && archive.BeginTag(s_versionInfoTag);
 
-		I_ASSERT(versionInfoPtr != NULL);
+		Q_ASSERT(versionInfoPtr != NULL);
 
 		int id = *iter;
 		I_IF_DEBUG(
 			quint32 dummyVersion;
-			I_ASSERT(versionInfoPtr->GetVersionNumber(id, dummyVersion)) // // all known IDs must have its version.
+			Q_ASSERT(versionInfoPtr->GetVersionNumber(id, dummyVersion)) // // all known IDs must have its version.
 		);
 
 		retVal = retVal && archive.BeginTag(s_versionIdTag);

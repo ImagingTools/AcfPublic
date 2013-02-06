@@ -131,8 +131,8 @@
 <a name="l00113"></a>00113 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00114"></a><a class="code" href="classicomp_1_1_t_multi_attribute.html#a5840e42476ebb0a560bcdd1580b30b2d">00114</a> <span class="keyword">const</span> Value&amp; <a class="code" href="classicomp_1_1_t_multi_attribute.html#a5840e42476ebb0a560bcdd1580b30b2d">TMultiAttribute&lt;Value&gt;::GetValueAt</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
 <a name="l00115"></a>00115 <span class="keyword"></span>{
-<a name="l00116"></a>00116        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00117"></a>00117        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; GetValuesCount());
+<a name="l00116"></a>00116        Q_ASSERT(index &gt;= 0);
+<a name="l00117"></a>00117        Q_ASSERT(index &lt; GetValuesCount());
 <a name="l00118"></a>00118 
 <a name="l00119"></a>00119        <span class="keywordflow">return</span> m_values[index].value;
 <a name="l00120"></a>00120 }
@@ -141,8 +141,8 @@
 <a name="l00123"></a>00123 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00124"></a><a class="code" href="classicomp_1_1_t_multi_attribute.html#aa4cec5469b031988a151b864dd9fc9d9">00124</a> <span class="keywordtype">void</span> <a class="code" href="classicomp_1_1_t_multi_attribute.html#aa4cec5469b031988a151b864dd9fc9d9">TMultiAttribute&lt;Value&gt;::SetValueAt</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> Value&amp; value)
 <a name="l00125"></a>00125 {
-<a name="l00126"></a>00126        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00127"></a>00127        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; GetValuesCount());
+<a name="l00126"></a>00126        Q_ASSERT(index &gt;= 0);
+<a name="l00127"></a>00127        Q_ASSERT(index &lt; GetValuesCount());
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129        m_values[index].value = value;
 <a name="l00130"></a>00130 }

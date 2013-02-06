@@ -125,7 +125,7 @@ IComponent* TMultiFactoryMember<Interface>::CreateComponent(int index) const
 			QByteArray baseId;
 			QByteArray subId;
 			BaseClass2::SplitId(componentId, baseId, subId);
-			I_ASSERT(subId.isEmpty());	// explicit subelement ID are not implemented correctly
+			Q_ASSERT(subId.isEmpty());	// explicit subelement ID are not implemented correctly
 
 			return parentPtr->CreateSubcomponent(baseId);
 		}

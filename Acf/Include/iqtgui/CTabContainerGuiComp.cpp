@@ -37,7 +37,7 @@ namespace iqtgui
 void CTabContainerGuiComp::UpdateVisualElements()
 {
 	QTabWidget* widgetPtr = GetQtWidget();
-	I_ASSERT(widgetPtr != NULL);
+	Q_ASSERT(widgetPtr != NULL);
 
 	int visualProvidersCount = m_slaveWidgetsVisualCompPtr.GetCount();
 
@@ -45,12 +45,12 @@ void CTabContainerGuiComp::UpdateVisualElements()
 				iter != m_tabToGuiIndexMap.end();
 				++iter){
 		int tabIndex = iter.key();
-		I_ASSERT(tabIndex >= 0);
-		I_ASSERT(tabIndex < widgetPtr->count());
+		Q_ASSERT(tabIndex >= 0);
+		Q_ASSERT(tabIndex < widgetPtr->count());
 
 		int guiIndex = iter.value();
-		I_ASSERT(guiIndex >= 0);
-		I_ASSERT(guiIndex < m_slaveWidgetsCompPtr.GetCount());
+		Q_ASSERT(guiIndex >= 0);
+		Q_ASSERT(guiIndex < m_slaveWidgetsCompPtr.GetCount());
 
 		QIcon tabIcon;
 		QString toolTip;
@@ -75,10 +75,10 @@ void CTabContainerGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	QTabWidget* widgetPtr = GetQtWidget();
-	I_ASSERT(widgetPtr != NULL);
+	Q_ASSERT(widgetPtr != NULL);
 	if (widgetPtr == NULL){
 		return;
 	}
@@ -140,7 +140,7 @@ void CTabContainerGuiComp::OnGuiCreated()
 
 void CTabContainerGuiComp::OnGuiDestroyed()
 {
-	I_ASSERT(m_slaveWidgetsCompPtr.IsValid());
+	Q_ASSERT(m_slaveWidgetsCompPtr.IsValid());
 
 	m_tabToGuiIndexMap.clear();
 
@@ -190,7 +190,7 @@ CTabContainerGuiComp::TabModel::TabModel()
 
 void CTabContainerGuiComp::TabModel::SetParent(CTabContainerGuiComp* parentPtr)
 {
-	I_ASSERT(parentPtr != NULL);
+	Q_ASSERT(parentPtr != NULL);
 
 	m_parentPtr = parentPtr;
 
@@ -213,7 +213,7 @@ bool CTabContainerGuiComp::TabModel::SetSelectedOptionIndex(int index)
 	if (BaseClass::SetSelectedOptionIndex(index)){
 		if (m_parentPtr != NULL && m_parentPtr->IsGuiCreated()){
 			QTabWidget* tabWidgetPtr = m_parentPtr->GetQtWidget();
-			I_ASSERT(tabWidgetPtr != NULL);
+			Q_ASSERT(tabWidgetPtr != NULL);
 
 			tabWidgetPtr->setCurrentIndex(index);
 		}
@@ -239,7 +239,7 @@ void CTabContainerGuiComp::TabModel::SetOptionEnabled(int index, bool isEnabled)
 	
 	if (m_parentPtr != NULL && m_parentPtr->IsGuiCreated()){
 		QTabWidget* tabWidgetPtr = m_parentPtr->GetQtWidget();
-		I_ASSERT(tabWidgetPtr != NULL);
+		Q_ASSERT(tabWidgetPtr != NULL);
 
 		tabWidgetPtr->setTabEnabled(index, isEnabled);
 	}

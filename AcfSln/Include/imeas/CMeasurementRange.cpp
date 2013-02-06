@@ -88,7 +88,7 @@ double CMeasurementRange::GetUpperWarningLimit() const
 
 bool CMeasurementRange::IsOk(double value) const
 {
-	I_ASSERT(IsValid());
+	Q_ASSERT(IsValid());
 
 	return m_warningRange.Contains(value) && m_errorRange.Contains(value);
 }
@@ -96,7 +96,7 @@ bool CMeasurementRange::IsOk(double value) const
 
 bool CMeasurementRange::IsWarning(double value) const
 {
-	I_ASSERT(IsValid());
+	Q_ASSERT(IsValid());
 
 	return m_warningRange.Contains(value);
 }
@@ -104,7 +104,7 @@ bool CMeasurementRange::IsWarning(double value) const
 
 bool CMeasurementRange::IsError(double value) const
 {
-	I_ASSERT(IsValid());
+	Q_ASSERT(IsValid());
 
 	return (!IsOk(value) && !IsWarning(value));
 }

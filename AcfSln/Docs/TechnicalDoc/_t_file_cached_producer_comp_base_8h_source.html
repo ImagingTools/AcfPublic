@@ -102,7 +102,7 @@
 <a name="l00090"></a>00090               <span class="keyword">typename</span> KeyToFileNameMap::iterator foundIter = m_keyToFileNameMap.find(key);
 <a name="l00091"></a>00091               <span class="keywordflow">if</span> (foundIter != m_keyToFileNameMap.end()){
 <a name="l00092"></a>00092                      cacheFilePath = foundIter.value();
-<a name="l00093"></a>00093                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(!cacheFilePath.isEmpty());
+<a name="l00093"></a>00093                      Q_ASSERT(!cacheFilePath.isEmpty());
 <a name="l00094"></a>00094               }
 <a name="l00095"></a>00095               <span class="keywordflow">else</span>{
 <a name="l00096"></a>00096                      cacheFilePath = CalcCacheFilePath(key);
@@ -156,7 +156,7 @@
 <a name="l00144"></a>00144 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Key, <span class="keyword">class</span> CacheObject&gt;
 <a name="l00145"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#adfff54da7c6cd1d18fa1ff31327fa097">00145</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#adfff54da7c6cd1d18fa1ff31327fa097" title="End of accessing to cached element.">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::UnlockObject</a>(<span class="keyword">const</span> CacheObject* objectPtr)
 <a name="l00146"></a>00146 {
-<a name="l00147"></a>00147        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(objectPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00147"></a>00147        Q_ASSERT(objectPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00148"></a>00148 
 <a name="l00149"></a>00149        <span class="keyword">typename</span> OwnedObjects::iterator foundIter = m_ownedObjects.find(objectPtr);
 <a name="l00150"></a>00150        <span class="keywordflow">if</span> (foundIter != m_ownedObjects.end()){
@@ -196,7 +196,7 @@
 <a name="l00184"></a><a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a0b9bbf383285d893bcd31168a167a3f8">00184</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#a0b9bbf383285d893bcd31168a167a3f8" title="Removes cache files if there is too many of them.">TFileCachedProducerCompBase&lt;Key, CacheObject&gt;::CleanFileList</a>()
 <a name="l00185"></a>00185 {
 <a name="l00186"></a>00186        <span class="keywordtype">int</span> maxCachedFiles = GetMaxCachedFilesCount();
-<a name="l00187"></a>00187        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(maxCachedFiles &gt;= 0);
+<a name="l00187"></a>00187        Q_ASSERT(maxCachedFiles &gt;= 0);
 <a name="l00188"></a>00188 
 <a name="l00189"></a>00189        <span class="keywordflow">while</span> (<span class="keywordtype">int</span>(m_recentlyUsedKeys.size()) &gt; maxCachedFiles){
 <a name="l00190"></a>00190               <span class="keyword">const</span> QString&amp; key = m_recentlyUsedKeys.front();

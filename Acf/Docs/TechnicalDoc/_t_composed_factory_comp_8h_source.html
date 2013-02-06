@@ -72,7 +72,7 @@
 <a name="l00044"></a>00044        <span class="keywordtype">int</span> slaveFactoriesCount = m_slaveFactoriesCompPtr.GetCount();
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> factoryIndex = 0; factoryIndex &lt; slaveFactoriesCount; ++factoryIndex){
-<a name="l00047"></a>00047               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_slaveFactoriesCompPtr.IsValid(factoryIndex));       <span class="comment">// isObligatory was set to true</span>
+<a name="l00047"></a>00047               Q_ASSERT(m_slaveFactoriesCompPtr.IsValid(factoryIndex));       <span class="comment">// isObligatory was set to true</span>
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049               RegisterFactory(m_slaveFactoriesCompPtr[factoryIndex]);
 <a name="l00050"></a>00050        }

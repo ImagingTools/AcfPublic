@@ -353,10 +353,10 @@
 <a name="l00437"></a>00437               view-&gt;<a class="code" href="classiview_1_1_c_view_base.html#ab9d45fa723b732f05c5b5e16bcc64cf7" title="Insert default layers, when there is no one user layer.">InsertDefaultLayers</a>();
 <a name="l00438"></a>00438        }
 <a name="l00439"></a>00439 
-<a name="l00440"></a>00440        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>((index &gt;= 0) &amp;&amp; (index &lt; <span class="keywordtype">int</span>(m_layers.size())));
+<a name="l00440"></a>00440        Q_ASSERT((index &gt;= 0) &amp;&amp; (index &lt; <span class="keywordtype">int</span>(m_layers.size())));
 <a name="l00441"></a>00441 
 <a name="l00442"></a>00442        <a class="code" href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view.">IViewLayer</a>* layerPtr = m_layers[index];
-<a name="l00443"></a>00443        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(layerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00443"></a>00443        Q_ASSERT(layerPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00444"></a>00444 
 <a name="l00445"></a>00445        <span class="keywordflow">return</span> *layerPtr;
 <a name="l00446"></a>00446 }

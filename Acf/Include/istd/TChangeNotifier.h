@@ -157,7 +157,7 @@ inline void TChangeNotifier<Changeable>::Abort()
 template <class Changeable>
 inline const Changeable* TChangeNotifier<Changeable>::operator->() const
 {
-	I_ASSERT(BaseClass::IsValid());
+	Q_ASSERT(BaseClass::IsValid());
 
 	return BaseClass::GetPtr();
 }
@@ -166,7 +166,7 @@ inline const Changeable* TChangeNotifier<Changeable>::operator->() const
 template <class Changeable>
 inline Changeable* TChangeNotifier<Changeable>::operator->()
 {
-	I_ASSERT(BaseClass::IsValid());
+	Q_ASSERT(BaseClass::IsValid());
 
 	return BaseClass::GetPtr();
 }
@@ -175,7 +175,7 @@ inline Changeable* TChangeNotifier<Changeable>::operator->()
 template <class Changeable>
 inline TChangeNotifier<Changeable>::operator Changeable*() const
 {
-	I_ASSERT(BaseClass::IsValid());
+	Q_ASSERT(BaseClass::IsValid());
 
 	return BaseClass::GetPtr();
 }

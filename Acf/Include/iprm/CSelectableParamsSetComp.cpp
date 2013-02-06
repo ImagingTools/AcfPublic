@@ -54,7 +54,7 @@ IParamsSet::Ids CSelectableParamsSetComp::GetParamIds(bool editableOnly) const
 {
 	Ids retVal;
 
-	I_ASSERT(m_selectionIdAttrPtr.IsValid());
+	Q_ASSERT(m_selectionIdAttrPtr.IsValid());
 	retVal.insert(*m_selectionIdAttrPtr);
 
 	if (m_paramsManagerCompPtr.IsValid() && (m_selectedIndex >= 0) && (m_selectedIndex < m_paramsManagerCompPtr->GetParamsSetsCount())){
@@ -70,7 +70,7 @@ IParamsSet::Ids CSelectableParamsSetComp::GetParamIds(bool editableOnly) const
 
 const iser::ISerializable* CSelectableParamsSetComp::GetParameter(const QByteArray& id) const
 {
-	I_ASSERT(m_selectionIdAttrPtr.IsValid());
+	Q_ASSERT(m_selectionIdAttrPtr.IsValid());
 
 	const QByteArray& selectionId = *m_selectionIdAttrPtr;
 	if (id == selectionId){
@@ -90,7 +90,7 @@ const iser::ISerializable* CSelectableParamsSetComp::GetParameter(const QByteArr
 
 iser::ISerializable* CSelectableParamsSetComp::GetEditableParameter(const QByteArray& id)
 {
-	I_ASSERT(m_selectionIdAttrPtr.IsValid());
+	Q_ASSERT(m_selectionIdAttrPtr.IsValid());
 
 	const QByteArray& selectionId = *m_selectionIdAttrPtr;
 	if (id == selectionId){
@@ -133,7 +133,7 @@ bool CSelectableParamsSetComp::SetSelectedOptionIndex(int index)
 	}
 
 	if (index != m_selectedIndex){
-		I_ASSERT(m_paramsManagerCompPtr.IsValid());
+		Q_ASSERT(m_paramsManagerCompPtr.IsValid());
 
 		if (m_paramsManagerCompPtr->SetSelectedOptionIndex(index)){
 			istd::CChangeNotifier notifier(this, CF_SELECTION_CHANGED | CF_MODEL);
@@ -193,7 +193,7 @@ bool CSelectableParamsSetComp::Serialize(iser::IArchive& archive)
 
 void CSelectableParamsSetComp::SetupCurrentParamsSetBridge()
 {
-	I_ASSERT(m_paramsManagerCompPtr.IsValid());
+	Q_ASSERT(m_paramsManagerCompPtr.IsValid());
 
 	if ((m_selectedIndex >= 0) && (m_selectedIndex < m_paramsManagerCompPtr->GetParamsSetsCount())){
 		imod::IModel* paramsModelPtr = const_cast<imod::IModel*>(dynamic_cast<const imod::IModel*>((

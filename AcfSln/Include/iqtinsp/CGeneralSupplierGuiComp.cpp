@@ -73,7 +73,7 @@ void CGeneralSupplierGuiComp::on_SaveParamsButton_clicked()
 
 QWidget* CGeneralSupplierGuiComp::GetParamsWidget() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	return ParamsFrame;
 }
@@ -112,7 +112,7 @@ void CGeneralSupplierGuiComp::UpdateGui(int updateFlags)
 {
 	BaseClass::UpdateGui(updateFlags);
 
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	QString statusLabelText = tr("Unknown");
 

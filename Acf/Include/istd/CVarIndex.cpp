@@ -100,7 +100,7 @@ bool CVarIndex::IsInside(const CVarIndex& boundaries) const
 	}
 
 	for (int commonIndex = 0; commonIndex < dimensionsCount; ++commonIndex){
-		I_ASSERT(m_elements[commonIndex] >= 0);
+		Q_ASSERT(m_elements[commonIndex] >= 0);
 
 		if (m_elements[commonIndex] >= boundaries.m_elements[commonIndex]){
 			return false;
@@ -119,7 +119,7 @@ bool CVarIndex::IsInside(const CVarIndex& boundaries) const
 
 bool CVarIndex::Increase(const CVarIndex& boundaries)
 {
-	I_ASSERT(IsInside(boundaries));
+	Q_ASSERT(IsInside(boundaries));
 
 	int dimensionsCount = qMin(GetDimensionsCount(), boundaries.GetDimensionsCount());
 
@@ -140,7 +140,7 @@ bool CVarIndex::Increase(const CVarIndex& boundaries)
 
 bool CVarIndex::Decrease(const CVarIndex& boundaries)
 {
-	I_ASSERT(IsInside(boundaries));
+	Q_ASSERT(IsInside(boundaries));
 
 	int dimensionsCount = qMin(GetDimensionsCount(), boundaries.GetDimensionsCount());
 

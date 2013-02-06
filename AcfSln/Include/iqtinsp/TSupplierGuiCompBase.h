@@ -341,7 +341,7 @@ void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelAttached()
 	BaseClass::OnGuiModelAttached();
 
 	iproc::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
-	I_ASSERT(supplierPtr != NULL);	// model must be attached
+	Q_ASSERT(supplierPtr != NULL);	// model must be attached
 
 	iprm::IParamsSet* paramsPtr = const_cast<iprm::IParamsSet*>(supplierPtr->GetModelParametersSet());
 	imod::IModel* paramsModelPtr = dynamic_cast<imod::IModel*>(paramsPtr);
@@ -379,7 +379,7 @@ template <class UI, class WidgetType>
 void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelDetached()
 {
 	iproc::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
-	I_ASSERT(supplierPtr != NULL);	// model must be attached
+	Q_ASSERT(supplierPtr != NULL);	// model must be attached
 
 	iprm::IParamsSet* paramsPtr = const_cast<iprm::IParamsSet*>(supplierPtr->GetModelParametersSet());
 	imod::IModel* paramsModelPtr = dynamic_cast<imod::IModel*>(paramsPtr);
@@ -495,7 +495,7 @@ template <class UI, class WidgetType>
 TSupplierGuiCompBase<UI, WidgetType>::ParamsObserver::ParamsObserver(TSupplierGuiCompBase* parentPtr)
 	:m_parent(*parentPtr)
 {
-	I_ASSERT(parentPtr != NULL);
+	Q_ASSERT(parentPtr != NULL);
 }
 
 

@@ -68,7 +68,7 @@ void CSelectionParamGuiComp::OnGuiModelDetached()
 
 void CSelectionParamGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	UpdateSelectorLabel();
 
@@ -160,7 +160,7 @@ void CSelectionParamGuiComp::OnGuiRetranslate()
 
 void CSelectionParamGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	if (!IsUpdateBlocked() && IsModelAttached()){
 		UpdateBlocker updateBlocker(this);
@@ -174,7 +174,7 @@ void CSelectionParamGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/
 
 void CSelectionParamGuiComp::OnSelectionChanged(int /*index*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	if (!IsUpdateBlocked()){
 		UpdateBlocker updateBlocker(this);
@@ -209,10 +209,10 @@ void CSelectionParamGuiComp::OnRadioButtonSelectionChanged(bool isSelected)
 	}
 
 	QRadioButton* senderPtr = dynamic_cast<QRadioButton*>(sender());
-	I_ASSERT(senderPtr != NULL);
+	Q_ASSERT(senderPtr != NULL);
 
 	iprm::ISelectionParam* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 	if (objectPtr != NULL){
 		bool needUpdateGui = false;
 

@@ -35,10 +35,10 @@ namespace iqtipr
 
 void CCaliperParamsGuiComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	iipr::ICaliperParams* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	istd::CChangeNotifier notifier(NULL);
 
@@ -68,7 +68,7 @@ void CCaliperParamsGuiComp::UpdateModel() const
 
 void CCaliperParamsGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	iipr::ICaliperParams* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){

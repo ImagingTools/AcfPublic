@@ -74,7 +74,7 @@
 <a name="l00076"></a><a class="code" href="classistd_1_1_t_trans_ptr_1_1_ref_count_base.html#a2c807993381b564d3a03d036070fc8ff">00076</a>               <a class="code" href="classistd_1_1_t_trans_ptr_1_1_ref_count_base.html#a2c807993381b564d3a03d036070fc8ff">RefCountBase</a>(Type* pointer)
 <a name="l00077"></a>00077               :      <a class="code" href="classistd_1_1_t_pointer_base.html" title="Implementation of pointer wrapper.">BaseClass</a>(pointer)
 <a name="l00078"></a>00078               {
-<a name="l00079"></a>00079                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(pointer != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00079"></a>00079                      Q_ASSERT(pointer != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00080"></a>00080               }
 <a name="l00081"></a><a class="code" href="classistd_1_1_t_trans_ptr_1_1_ref_count_base.html#a94d5a0c8691756aaa72b0a231b51e3f4">00081</a>               <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_t_trans_ptr_1_1_ref_count_base.html#a94d5a0c8691756aaa72b0a231b51e3f4">~RefCountBase</a>(){}
 <a name="l00082"></a>00082 
@@ -176,8 +176,8 @@
 <a name="l00190"></a>00190 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;
 <a name="l00191"></a><a class="code" href="classistd_1_1_t_trans_ptr.html#a540626663a11b450c2a863ad957caf55">00191</a> <span class="keyword">inline</span> Type&amp; <a class="code" href="classistd_1_1_t_trans_ptr.html#a540626663a11b450c2a863ad957caf55">TTransPtr&lt;Type&gt;::operator*</a>()<span class="keyword"> const</span>
 <a name="l00192"></a>00192 <span class="keyword"></span>{
-<a name="l00193"></a>00193        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_counterPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00194"></a>00194        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_counterPtr-&gt;GetPtr() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00193"></a>00193        Q_ASSERT(m_counterPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00194"></a>00194        Q_ASSERT(m_counterPtr-&gt;GetPtr() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00195"></a>00195 
 <a name="l00196"></a>00196        <span class="keywordflow">return</span> *m_counterPtr-&gt;GetPtr();
 <a name="l00197"></a>00197 }
@@ -186,8 +186,8 @@
 <a name="l00200"></a>00200 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;
 <a name="l00201"></a><a class="code" href="classistd_1_1_t_trans_ptr.html#a476647d54d809c1ce339fe10d85b2184">00201</a> <span class="keyword">inline</span> Type* <a class="code" href="classistd_1_1_t_trans_ptr.html#a476647d54d809c1ce339fe10d85b2184">TTransPtr&lt;Type&gt;::operator-&gt;</a>()<span class="keyword"> const</span>
 <a name="l00202"></a>00202 <span class="keyword"></span>{
-<a name="l00203"></a>00203        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_counterPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00204"></a>00204        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_counterPtr-&gt;GetPtr() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00203"></a>00203        Q_ASSERT(m_counterPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00204"></a>00204        Q_ASSERT(m_counterPtr-&gt;GetPtr() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00205"></a>00205 
 <a name="l00206"></a>00206        <span class="keywordflow">return</span> m_counterPtr-&gt;GetPtr();
 <a name="l00207"></a>00207 }

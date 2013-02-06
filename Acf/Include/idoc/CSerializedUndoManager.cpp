@@ -76,7 +76,7 @@ bool CSerializedUndoManager::DoUndo()
 			}
 
 			const UndoArchivePtr& writeArchivePtr = m_undoList.back();
-			I_ASSERT(writeArchivePtr.IsValid());
+			Q_ASSERT(writeArchivePtr.IsValid());
 
 			iser::CMemoryReadArchive readArchive(*writeArchivePtr);
 
@@ -106,7 +106,7 @@ bool CSerializedUndoManager::DoRedo()
 			}
 
 			const UndoArchivePtr& writeArchivePtr = m_redoList.back();
-			I_ASSERT(writeArchivePtr.IsValid());
+			Q_ASSERT(writeArchivePtr.IsValid());
 
 			iser::CMemoryReadArchive readArchive(*writeArchivePtr);
 

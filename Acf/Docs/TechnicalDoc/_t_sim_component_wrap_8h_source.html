@@ -123,7 +123,7 @@
 <a name="l00104"></a>00104 <span class="keyword"></span>{
 <a name="l00105"></a>00105        FactoriesMap::ConstIterator iter = m_factoriesMap.constFind(componentId);
 <a name="l00106"></a>00106        <span class="keywordflow">if</span> (iter != m_factoriesMap.constEnd()){
-<a name="l00107"></a>00107               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(iter.value() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00107"></a>00107               Q_ASSERT(iter.value() != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00108"></a>00108 
 <a name="l00109"></a>00109               <span class="keywordflow">return</span> iter.value()-&gt;CreateInstance();
 <a name="l00110"></a>00110        }

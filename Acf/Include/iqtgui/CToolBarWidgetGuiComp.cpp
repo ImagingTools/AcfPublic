@@ -42,7 +42,7 @@ void CToolBarWidgetGuiComp::OnGuiCreated()
 	BaseClass::OnGuiCreated();
 
 	QToolBar* toolBarPtr = GetQtWidget();
-	I_ASSERT(toolBarPtr != NULL);
+	Q_ASSERT(toolBarPtr != NULL);
 	if (toolBarPtr == NULL){
 		return;
 	}
@@ -50,7 +50,7 @@ void CToolBarWidgetGuiComp::OnGuiCreated()
 	if (m_toolbarWidgetCompPtr.IsValid()){
 		iqtgui::IGuiObject* guiPtr = m_toolbarWidgetCompPtr.GetPtr();
 		if (guiPtr != NULL){
-			I_ASSERT(!guiPtr->IsGuiCreated());
+			Q_ASSERT(!guiPtr->IsGuiCreated());
 
 			if (guiPtr->CreateGui(NULL)){
 				toolBarPtr->addWidget(guiPtr->GetWidget());

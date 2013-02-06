@@ -56,8 +56,8 @@ int CUsersManagerComp::FindUserIndex(const QString& name) const
 
 const CUser& CUsersManagerComp::GetUser(int index) const
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < int(m_users.size()));
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < int(m_users.size()));
 
 	return m_users[index];
 }
@@ -65,8 +65,8 @@ const CUser& CUsersManagerComp::GetUser(int index) const
 
 CUser& CUsersManagerComp::GetUserRef(int index)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < int(m_users.size()));
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < int(m_users.size()));
 
 	return m_users[index];
 }
@@ -139,8 +139,8 @@ bool CUsersManagerComp::DeleteUser(const QString& userName)
 
 bool CUsersManagerComp::RenameUser(int userIndex, const QString& userName)
 {
-	I_ASSERT(userIndex >= 0);
-	I_ASSERT(userIndex < int(m_users.size()));
+	Q_ASSERT(userIndex >= 0);
+	Q_ASSERT(userIndex < int(m_users.size()));
 
 	//checking if the new user name does not exist a second time
 	if (FindUserIndex(userName) >= 0){
@@ -163,8 +163,8 @@ int CUsersManagerComp::GetUserGroupsCount() const
 
 const QString& CUsersManagerComp::GetUserGroupName(int groupIndex) const
 {
-	I_ASSERT(groupIndex >= 0);
-	I_ASSERT(groupIndex < int(m_userLevels.size()));
+	Q_ASSERT(groupIndex >= 0);
+	Q_ASSERT(groupIndex < int(m_userLevels.size()));
 
 	return m_userLevels[groupIndex];
 }

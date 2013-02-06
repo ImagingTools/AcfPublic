@@ -146,7 +146,7 @@ const Attribute* TAttributeMemberBase<Attribute>::GetAttributePtr() const
 template <typename Attribute>
 const typename TAttributeMemberBase<Attribute>::AttributeValueType& TAttributeMemberBase<Attribute>::GetOriginalValue() const
 {
-	I_ASSERT(m_attributePtr != NULL);	// GetOriginalValue() was called for invalid object, or no IsValid() check was called.
+	Q_ASSERT(m_attributePtr != NULL);	// GetOriginalValue() was called for invalid object, or no IsValid() check was called.
 
 	return m_attributePtr->GetValue();
 }
@@ -164,7 +164,7 @@ const Attribute* TAttributeMemberBase<Attribute>::operator->() const
 template <typename Attribute>
 const typename TAttributeMemberBase<Attribute>::AttributeValueType& TAttributeMemberBase<Attribute>::operator*() const
 {
-	I_ASSERT(m_attributePtr != NULL);	// operator* was called for invalid object, or no IsValid() check was called.
+	Q_ASSERT(m_attributePtr != NULL);	// operator* was called for invalid object, or no IsValid() check was called.
 
 	return m_attributePtr->GetValue();
 }
@@ -185,7 +185,7 @@ bool TAttributeMemberBase<Attribute>::InitInternal(
 			const IRealAttributeStaticInfo& staticInfo,
 			const IComponent** definitionComponentPtr)
 {
-	I_ASSERT(ownerPtr != NULL);
+	Q_ASSERT(ownerPtr != NULL);
 
 	m_isAssigned = true;
 
@@ -199,11 +199,11 @@ bool TAttributeMemberBase<Attribute>::InitInternal(
 				m_attributePtr = dynamic_cast<const Attribute*>(attributePtr);
 
 				if (m_attributePtr != NULL){
-					I_ASSERT(definitionLevel >= 0);
+					Q_ASSERT(definitionLevel >= 0);
 
 					while (definitionLevel > 0){
 						ownerPtr = ownerPtr->GetParentComponent();
-						I_ASSERT(ownerPtr != NULL);
+						Q_ASSERT(ownerPtr != NULL);
 
 						--definitionLevel;
 					}

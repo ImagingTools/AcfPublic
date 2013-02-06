@@ -89,8 +89,8 @@ void CManagerParamsSetShadowerComp::OnComponentDestroyed()
 
 void CManagerParamsSetShadowerComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
-	I_ASSERT(m_paramsManagerCompPtr.IsValid());
-	I_ASSERT(m_selectionParamCompPtr.IsValid());
+	Q_ASSERT(m_paramsManagerCompPtr.IsValid());
+	Q_ASSERT(m_selectionParamCompPtr.IsValid());
 
 	int index = m_selectionParamCompPtr->GetSelectedOptionIndex();
 	if ((index >= 0) && (index < m_paramsManagerCompPtr->GetParamsSetsCount())){
@@ -115,7 +115,7 @@ void CManagerParamsSetShadowerComp::OnUpdate(int /*updateFlags*/, istd::IPolymor
 CManagerParamsSetShadowerComp::CurrentParamsSetObserver::CurrentParamsSetObserver(CManagerParamsSetShadowerComp* parentPtr)
 :	m_parent(*parentPtr)
 {
-	I_ASSERT(parentPtr != NULL);
+	Q_ASSERT(parentPtr != NULL);
 }
 
 

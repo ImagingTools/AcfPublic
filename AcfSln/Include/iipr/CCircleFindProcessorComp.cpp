@@ -254,9 +254,9 @@ bool CCircleFindProcessorComp::CalculateCircle(
 
 	for (int i = 0; i < raysCount; ++i){
 		Ray& ray = rays[i];
-		I_ASSERT(!ray.points.isEmpty());
-		I_ASSERT(ray.usedIndex >= 0);
-		I_ASSERT(ray.usedIndex < int(ray.points.size()));
+		Q_ASSERT(!ray.points.isEmpty());
+		Q_ASSERT(ray.usedIndex >= 0);
+		Q_ASSERT(ray.usedIndex < int(ray.points.size()));
 
 		i2d::CVector2d point = ray.points[ray.usedIndex].position - center;
 
@@ -333,9 +333,9 @@ bool CCircleFindProcessorComp::CalculateAnnulus(const i2d::CVector2d& center, Ra
 
 	for (int i = 0; i < inRaysCount; ++i){
 		Ray& ray = inRays[i];
-		I_ASSERT(!ray.points.isEmpty());
-		I_ASSERT(ray.usedIndex >= 0);
-		I_ASSERT(ray.usedIndex < int(ray.points.size()));
+		Q_ASSERT(!ray.points.isEmpty());
+		Q_ASSERT(ray.usedIndex >= 0);
+		Q_ASSERT(ray.usedIndex < int(ray.points.size()));
 
 		i2d::CVector2d normPos = ray.points[ray.usedIndex].position - center;
 
@@ -351,9 +351,9 @@ bool CCircleFindProcessorComp::CalculateAnnulus(const i2d::CVector2d& center, Ra
 
 	for (int i = 0; i < outRaysCount; ++i){
 		Ray& ray = outRays[i];
-		I_ASSERT(!ray.points.isEmpty());
-		I_ASSERT(ray.usedIndex >= 0);
-		I_ASSERT(ray.usedIndex < int(ray.points.size()));
+		Q_ASSERT(!ray.points.isEmpty());
+		Q_ASSERT(ray.usedIndex >= 0);
+		Q_ASSERT(ray.usedIndex < int(ray.points.size()));
 
 		i2d::CVector2d normPos = ray.points[ray.usedIndex].position - center;
 
@@ -395,7 +395,7 @@ void CCircleFindProcessorComp::AddProjectionResultsToRays(
 			Rays& inRays,
 			Rays& outRays)
 {
-	I_ASSERT(m_featuresMapperCompPtr.IsValid());	// validíty of features mapper should be checked on the beginning
+	Q_ASSERT(m_featuresMapperCompPtr.IsValid());	// validíty of features mapper should be checked on the beginning
 
 	Ray inRay;
 	Ray outRay;

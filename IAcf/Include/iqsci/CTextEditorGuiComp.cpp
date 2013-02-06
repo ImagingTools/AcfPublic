@@ -31,13 +31,13 @@ namespace iqsci
 
 void CTextEditorGuiComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	ibase::ITextDocument* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	CTextEditor* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	objectPtr->SetText(textEditPtr->GetText());
 }
@@ -48,7 +48,7 @@ void CTextEditorGuiComp::UpdateModel() const
 void CTextEditorGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	CTextEditor* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	ibase::ITextDocument* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
@@ -60,7 +60,7 @@ void CTextEditorGuiComp::UpdateGui(int /*updateFlags*/)
 void CTextEditorGuiComp::OnGuiModelDetached()
 {
 	CTextEditor* textEditPtr = GetQtWidget();
-	I_ASSERT(textEditPtr != NULL);
+	Q_ASSERT(textEditPtr != NULL);
 
 	textEditPtr->SetText(QString());
 
@@ -74,7 +74,7 @@ const ibase::IHierarchicalCommand* CTextEditorGuiComp::GetCommands() const
 {
 	if (IsGuiCreated()){
 		CTextEditor* textEditPtr = GetQtWidget();
-		I_ASSERT(textEditPtr != NULL);
+		Q_ASSERT(textEditPtr != NULL);
 		
 		return textEditPtr->GetCommands();
 	}
@@ -92,7 +92,7 @@ void CTextEditorGuiComp::OnGuiCreated()
 	BaseClass::OnGuiCreated();
 
 	CTextEditor* textEditorPtr = GetQtWidget();
-	I_ASSERT(textEditorPtr != NULL);
+	Q_ASSERT(textEditorPtr != NULL);
 	if (textEditorPtr != NULL){
 		connect(textEditorPtr, SIGNAL(DataChanged()), this, SLOT(OnTextChanged()));
 
@@ -117,7 +117,7 @@ void CTextEditorGuiComp::OnGuiRetranslate()
 
 	if (IsGuiCreated()){
 		CTextEditor* textEditPtr = GetQtWidget();
-		I_ASSERT(textEditPtr != NULL);
+		Q_ASSERT(textEditPtr != NULL);
 	
 		textEditPtr->OnRetranslate();
 	}

@@ -134,7 +134,7 @@ int CScriptDataProcessorComp::DoProcessing(
 		}
 
 		if ((progressSessionId >= 0) && ((sampleIndex % 100) == 50)){
-			I_ASSERT(progressManagerPtr != NULL);
+			Q_ASSERT(progressManagerPtr != NULL);
 
 			if (progressManagerPtr->IsCanceled(progressSessionId)){
 				retVal = TS_CANCELED;
@@ -148,7 +148,7 @@ int CScriptDataProcessorComp::DoProcessing(
 
 end_iteration:
 	if (progressSessionId >= 0){
-		I_ASSERT(progressManagerPtr != NULL);
+		Q_ASSERT(progressManagerPtr != NULL);
 
 		progressManagerPtr->EndProgressSession(progressSessionId);
 	}

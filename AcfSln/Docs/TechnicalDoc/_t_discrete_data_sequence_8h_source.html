@@ -380,8 +380,8 @@
 <a name="l00354"></a>00354                      <span class="keywordtype">int</span> samplesCount = sequencePtr-&gt;<a class="code" href="classimeas_1_1_i_data_sequence.html#a727eed299c40e7dd09be42cfd635bb41" title="Get size of this raster sequence.">GetSamplesCount</a>();
 <a name="l00355"></a>00355                      <span class="keywordtype">int</span> channelsCount = sequencePtr-&gt;<a class="code" href="classimeas_1_1_i_data_sequence.html#ae1107b606ee457830ba7937b870a2c3b" title="Get number of channels.">GetChannelsCount</a>();
 <a name="l00356"></a>00356 
-<a name="l00357"></a>00357                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(samplesCount &gt;= 0);
-<a name="l00358"></a>00358                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(channelsCount &gt;= 0);
+<a name="l00357"></a>00357                      Q_ASSERT(samplesCount &gt;= 0);
+<a name="l00358"></a>00358                      Q_ASSERT(channelsCount &gt;= 0);
 <a name="l00359"></a>00359 
 <a name="l00360"></a>00360                      <span class="keywordflow">if</span> (!CreateSequence(samplesCount, channelsCount)){
 <a name="l00361"></a>00361                             <span class="keywordflow">return</span> <span class="keyword">false</span>;

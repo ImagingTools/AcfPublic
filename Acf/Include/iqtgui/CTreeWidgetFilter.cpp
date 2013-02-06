@@ -36,7 +36,7 @@ CTreeWidgetFilter::CTreeWidgetFilter(QTreeWidget* slavePtr)
 :	QObject(slavePtr),
 	m_slave(*slavePtr)
 {
-	I_ASSERT(slavePtr != NULL);
+	Q_ASSERT(slavePtr != NULL);
 
 	m_slave.viewport()->installEventFilter(this);
 }

@@ -106,10 +106,10 @@ void CMultiBitmapViewComp::UpdateGui(int updateFlags)
 
 	for (int index = 0; index < m_views.count() && index < m_viewExtendersCompPtr.GetCount(); index++){
 		iqt2d::IViewExtender* viewExtenderPtr = m_viewExtendersCompPtr[index];
-		I_ASSERT(viewExtenderPtr != NULL);
+		Q_ASSERT(viewExtenderPtr != NULL);
 
 		CSingleView* viewPtr = m_views.at(index);
-		I_ASSERT(viewPtr != NULL);
+		Q_ASSERT(viewPtr != NULL);
 
 		viewExtenderPtr->RemoveItemsFromScene(viewPtr);
 		viewExtenderPtr->AddItemsToScene(viewPtr, updateFlags);
@@ -163,7 +163,7 @@ void CMultiBitmapViewComp::OnGuiCreated()
 			bool hasStatusInfo = false;
 			if (viewIndex < m_informationModelsCompPtr.GetCount()){
 				imod::IModel* modelPtr = m_informationModelsCompPtr[viewIndex];
-				I_ASSERT(modelPtr != NULL);
+				Q_ASSERT(modelPtr != NULL);
 
 				if (RegisterModel(modelPtr, viewIndex)){
 					if (m_showStatusLabelAttrPtr.IsValid()){
@@ -230,9 +230,12 @@ CMultiBitmapViewComp::CSingleView::CSingleView(QWidget* parentPtr, int id, const
 
 void CMultiBitmapViewComp::CSingleView::SetBackgroundColor(const QColor& color)
 {
-	static iview::CColorSchema s_colorShema;
-	s_colorShema.SetBrush(iview::IColorSchema::SB_BACKGROUND, color);
-	m_console.GetViewRef().SetDefaultColorSchema(&s_colorShema);
+	iview::CColorSchema* colorShemaPtr = new iview::CColorSchema;
+	colorShemaPtr->Assign(m_console.GetViewRef().GetDefaultColorSchema());
+
+	colorShemaPtr->SetBrush(iview::IColorSchema::SB_BACKGROUND, color);
+
+	m_console.GetViewRef().SetDefaultColorSchema(colorShemaPtr, true);
 }
 
 
@@ -286,6 +289,28 @@ void CMultiBitmapViewComp::CSingleView::SetInspectionResult(int result)
 		return;
 	}
 
+	switch (result){
+		case istd::IInformationProvider::IC_NONE:
+			SetBackgroundColor(Qt::darkGray);
+			return;
+
+		case istd::IInformationProvider::IC_INFO:
+			SetBackgroundColor(Qt::darkGreen);
+			return;
+
+		case istd::IInformationProvider::IC_ERROR:
+		case istd::IInformationProvider::IC_CRITICAL:
+			SetBackgroundColor(Qt::darkRed);
+			return;
+
+		case istd::IInformationProvider::IC_WARNING:
+			SetBackgroundColor(Qt::darkYellow);
+			return;
+	}
+
+	SetBackgroundColor(Qt::darkGray);
+
+	/*
 	static QString s_defaultStyleSheet = 
 		"QGroupBox::title{"
 		"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.5, y2:1, stop:0 #d5eefc, stop:0.5 #d5eefc, stop:0.51 #b8e3f9, stop:1 #a5dbf7);"
@@ -331,6 +356,8 @@ void CMultiBitmapViewComp::CSingleView::SetInspectionResult(int result)
 	}
 
 	setStyleSheet(s_defaultStyleSheet);
+
+	*/
 }
 
 

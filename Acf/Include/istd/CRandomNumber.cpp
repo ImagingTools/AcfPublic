@@ -71,8 +71,8 @@ double CRandomNumber::GetNextUnitary() const
 		retVal += factor * 0.5 * ::rand() / maxRand;
 	}
 
-	I_ASSERT(retVal >= 0.0);
-	I_ASSERT(retVal <= 1.0);
+	Q_ASSERT(retVal >= 0.0);
+	Q_ASSERT(retVal <= 1.0);
 
 	return retVal;
 }

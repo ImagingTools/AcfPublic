@@ -118,7 +118,7 @@
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091        IdsToFlagsMap::iterator foundIter = groupMap.find(<span class="keywordtype">id</span>);
 <a name="l00092"></a>00092        <span class="keywordflow">if</span> (foundIter != groupMap.end()){
-<a name="l00093"></a>00093               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>((flags &amp; (AF_REFERENCE | AF_FACTORY)) == (foundIter.value() &amp; (AF_REFERENCE | AF_FACTORY)));    <span class="comment">// factory can be combined with factory only and reference with reference</span>
+<a name="l00093"></a>00093               Q_ASSERT((flags &amp; (AF_REFERENCE | AF_FACTORY)) == (foundIter.value() &amp; (AF_REFERENCE | AF_FACTORY)));    <span class="comment">// factory can be combined with factory only and reference with reference</span>
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095               foundIter.value() |= flags &amp; AF_OBLIGATORY;      <span class="comment">// is obligatory if once obligatory registred is</span>
 <a name="l00096"></a>00096               foundIter.value() &amp;= flags | ~AF_NULLABLE;       <span class="comment">// is nullable if always nullable registred is</span>

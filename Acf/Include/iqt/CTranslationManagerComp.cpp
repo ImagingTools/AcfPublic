@@ -119,8 +119,8 @@ int CTranslationManagerComp::GetCurrentLanguageIndex() const
 
 const QTranslator* CTranslationManagerComp::GetLanguageTranslator(int languageIndex) const
 {
-	I_ASSERT(languageIndex >= 0);
-	I_ASSERT(languageIndex < languageIndex);
+	Q_ASSERT(languageIndex >= 0);
+	Q_ASSERT(languageIndex < languageIndex);
 
 	return m_translatorsList.GetAt(languageIndex);
 }
@@ -187,7 +187,7 @@ int CTranslationManagerComp::GetOptionsCount() const
 
 QString CTranslationManagerComp::GetOptionName(int index) const
 {
-	I_ASSERT(index < GetOptionsCount());
+	Q_ASSERT(index < GetOptionsCount());
 
 	if (index >= 0 && m_languagesAttrPtr.IsValid()){
 		QString languageId = m_languagesAttrPtr[index];
@@ -235,7 +235,7 @@ void CTranslationManagerComp::LanguageSelectionObserver::OnUpdate(int updateFlag
 {
 	if ((updateFlags & iprm::ISelectionParam::CF_SELECTION_CHANGED) != 0){
 		iprm::ISelectionParam* objectPtr = GetObjectPtr();
-		I_ASSERT(objectPtr != NULL);
+		Q_ASSERT(objectPtr != NULL);
 		if (objectPtr != NULL){
 			int selectedIndex = objectPtr->GetSelectedOptionIndex();
 			if (selectedIndex >= 0){

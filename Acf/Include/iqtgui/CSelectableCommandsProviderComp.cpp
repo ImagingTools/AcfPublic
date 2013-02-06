@@ -80,7 +80,7 @@ void CSelectableCommandsProviderComp::OnComponentDestroyed()
 void CSelectableCommandsProviderComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
 	iprm::ISelectionParam* selectionPtr = GetObjectPtr();
-	I_ASSERT(selectionPtr != NULL);
+	Q_ASSERT(selectionPtr != NULL);
 
 	istd::CChangeNotifier changePtr(this, CF_COMMANDS | CF_MODEL);
 
@@ -138,7 +138,7 @@ void CSelectableCommandsProviderComp::OnUpdate(int /*updateFlags*/, istd::IPolym
 			int aoiCommandsCount = qMin(m_commandsList.GetChildsCount(), m_actionIconsProviderCompPtr->GetIconCount());
 			for (int commandIndex = 0; commandIndex < aoiCommandsCount; commandIndex++){
 				iqtgui::CHierarchicalCommand* commandPtr = dynamic_cast<iqtgui::CHierarchicalCommand*>(m_commandsList.GetChild(commandIndex));
-				I_ASSERT(commandPtr != NULL);
+				Q_ASSERT(commandPtr != NULL);
 
 				commandPtr->setIcon(m_actionIconsProviderCompPtr->GetIcon(commandIndex));
 			}
@@ -152,13 +152,13 @@ void CSelectableCommandsProviderComp::OnUpdate(int /*updateFlags*/, istd::IPolym
 void CSelectableCommandsProviderComp::OnCommandActivated()
 {
 	QAction* actionPtr = dynamic_cast<QAction*>(sender());
-	I_ASSERT(actionPtr != NULL);
+	Q_ASSERT(actionPtr != NULL);
 
 	iprm::ISelectionParam* selectionPtr = GetObjectPtr();
-	I_ASSERT(selectionPtr != NULL);
+	Q_ASSERT(selectionPtr != NULL);
 
 	int optionIndex = actionPtr->data().toInt();
-	I_ASSERT(optionIndex < selectionPtr->GetSelectionConstraints()->GetOptionsCount());
+	Q_ASSERT(optionIndex < selectionPtr->GetSelectionConstraints()->GetOptionsCount());
 
 	selectionPtr->SetSelectedOptionIndex(optionIndex);
 }

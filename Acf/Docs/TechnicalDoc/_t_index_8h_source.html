@@ -196,8 +196,8 @@
 <a name="l00262"></a>00262 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00263"></a><a class="code" href="classistd_1_1_t_index.html#ab7d544490bd2192fe624a8a02a63790e">00263</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_t_index.html#ab7d544490bd2192fe624a8a02a63790e" title="Get element stored at specified index.">TIndex&lt;Dimensions&gt;::GetAt</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
 <a name="l00264"></a>00264 <span class="keyword"></span>{
-<a name="l00265"></a>00265        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00266"></a>00266        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; Dimensions);
+<a name="l00265"></a>00265        Q_ASSERT(index &gt;= 0);
+<a name="l00266"></a>00266        Q_ASSERT(index &lt; Dimensions);
 <a name="l00267"></a>00267 
 <a name="l00268"></a>00268        <span class="keywordflow">return</span> m_elements[index];
 <a name="l00269"></a>00269 }
@@ -206,8 +206,8 @@
 <a name="l00272"></a>00272 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00273"></a><a class="code" href="classistd_1_1_t_index.html#a0a8975319f28416e4f5f7c6490ddcf6a">00273</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_index.html#a0a8975319f28416e4f5f7c6490ddcf6a" title="Set element at specified index.">TIndex&lt;Dimensions&gt;::SetAt</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> value)
 <a name="l00274"></a>00274 {
-<a name="l00275"></a>00275        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00276"></a>00276        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; Dimensions);
+<a name="l00275"></a>00275        Q_ASSERT(index &gt;= 0);
+<a name="l00276"></a>00276        Q_ASSERT(index &lt; Dimensions);
 <a name="l00277"></a>00277 
 <a name="l00278"></a>00278        m_elements[index] = value;
 <a name="l00279"></a>00279 }
@@ -216,8 +216,8 @@
 <a name="l00282"></a>00282 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00283"></a><a class="code" href="classistd_1_1_t_index.html#ae86d1513d493b231126b61779a83730b">00283</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_index.html#ae86d1513d493b231126b61779a83730b" title="Increase single component at specified position.">TIndex&lt;Dimensions&gt;::IncreaseAt</a>(<span class="keywordtype">int</span> index)
 <a name="l00284"></a>00284 {
-<a name="l00285"></a>00285        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00286"></a>00286        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; Dimensions);
+<a name="l00285"></a>00285        Q_ASSERT(index &gt;= 0);
+<a name="l00286"></a>00286        Q_ASSERT(index &lt; Dimensions);
 <a name="l00287"></a>00287 
 <a name="l00288"></a>00288        ++m_elements[index];
 <a name="l00289"></a>00289 
@@ -228,8 +228,8 @@
 <a name="l00294"></a>00294 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00295"></a><a class="code" href="classistd_1_1_t_index.html#aa4df515a5687622b7cf84fb0a969e24b">00295</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_index.html#aa4df515a5687622b7cf84fb0a969e24b" title="Decrease single component at specified position.">TIndex&lt;Dimensions&gt;::DecreaseAt</a>(<span class="keywordtype">int</span> index)
 <a name="l00296"></a>00296 {
-<a name="l00297"></a>00297        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00298"></a>00298        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; Dimensions);
+<a name="l00297"></a>00297        Q_ASSERT(index &gt;= 0);
+<a name="l00298"></a>00298        Q_ASSERT(index &lt; Dimensions);
 <a name="l00299"></a>00299 
 <a name="l00300"></a>00300        --m_elements[index];
 <a name="l00301"></a>00301 
@@ -261,8 +261,8 @@
 <a name="l00327"></a>00327 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00328"></a><a class="code" href="classistd_1_1_t_index.html#ae06db313a59627c04a16d11b9563d2de">00328</a> <span class="keyword">inline</span> <span class="keywordtype">int</span>&amp; <a class="code" href="classistd_1_1_t_index.html#aa7bb8efab113512f06b8805d54b7c501">TIndex&lt;Dimensions&gt;::operator[]</a>(<span class="keywordtype">int</span> index)
 <a name="l00329"></a>00329 {
-<a name="l00330"></a>00330        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0);
-<a name="l00331"></a>00331        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &lt; Dimensions);
+<a name="l00330"></a>00330        Q_ASSERT(index &gt;= 0);
+<a name="l00331"></a>00331        Q_ASSERT(index &lt; Dimensions);
 <a name="l00332"></a>00332 
 <a name="l00333"></a>00333        <span class="keywordflow">return</span> m_elements[index];
 <a name="l00334"></a>00334 }
@@ -291,7 +291,7 @@
 <a name="l00357"></a>00357 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00358"></a><a class="code" href="classistd_1_1_t_index.html#a779d1dfc6b70416bc20c0d59271ad97c">00358</a> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a> <a class="code" href="classistd_1_1_t_index.html#a779d1dfc6b70416bc20c0d59271ad97c">TIndex&lt;Dimensions&gt;::operator+</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a>&amp; index)<span class="keyword"> const</span>
 <a name="l00359"></a>00359 <span class="keyword"></span>{
-<a name="l00360"></a>00360        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(Dimensions &gt;= index.<a class="code" href="classistd_1_1_t_index.html#ae7ccb45617a6482c3f3e76c5567cfeeb" title="Get number of dimensions of this index.">GetDimensionsCount</a>());
+<a name="l00360"></a>00360        Q_ASSERT(Dimensions &gt;= index.<a class="code" href="classistd_1_1_t_index.html#ae7ccb45617a6482c3f3e76c5567cfeeb" title="Get number of dimensions of this index.">GetDimensionsCount</a>());
 <a name="l00361"></a>00361 
 <a name="l00362"></a>00362        <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a> retVal = *<span class="keyword">this</span>;
 <a name="l00363"></a>00363 
@@ -306,7 +306,7 @@
 <a name="l00372"></a>00372 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00373"></a><a class="code" href="classistd_1_1_t_index.html#a956bf91c6f4d8c70a4aebbe39613e588">00373</a> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a>&amp; <a class="code" href="classistd_1_1_t_index.html#a956bf91c6f4d8c70a4aebbe39613e588">TIndex&lt;Dimensions&gt;::operator+=</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a>&amp; index)
 <a name="l00374"></a>00374 {
-<a name="l00375"></a>00375        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(Dimensions &gt;= index.<a class="code" href="classistd_1_1_t_index.html#ae7ccb45617a6482c3f3e76c5567cfeeb" title="Get number of dimensions of this index.">GetDimensionsCount</a>());
+<a name="l00375"></a>00375        Q_ASSERT(Dimensions &gt;= index.<a class="code" href="classistd_1_1_t_index.html#ae7ccb45617a6482c3f3e76c5567cfeeb" title="Get number of dimensions of this index.">GetDimensionsCount</a>());
 <a name="l00376"></a>00376 
 <a name="l00377"></a>00377        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Dimensions; ++i){
 <a name="l00378"></a>00378               m_elements[i] += index[i];
@@ -319,7 +319,7 @@
 <a name="l00385"></a>00385 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00386"></a><a class="code" href="classistd_1_1_t_index.html#a46da906c7085fd5ca0b13fc5a5b34b77">00386</a> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a> <a class="code" href="classistd_1_1_t_index.html#a46da906c7085fd5ca0b13fc5a5b34b77">TIndex&lt;Dimensions&gt;::operator-</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a>&amp; index)<span class="keyword"> const</span>
 <a name="l00387"></a>00387 <span class="keyword"></span>{
-<a name="l00388"></a>00388        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(Dimensions &gt;= index.<a class="code" href="classistd_1_1_t_index.html#ae7ccb45617a6482c3f3e76c5567cfeeb" title="Get number of dimensions of this index.">GetDimensionsCount</a>());
+<a name="l00388"></a>00388        Q_ASSERT(Dimensions &gt;= index.<a class="code" href="classistd_1_1_t_index.html#ae7ccb45617a6482c3f3e76c5567cfeeb" title="Get number of dimensions of this index.">GetDimensionsCount</a>());
 <a name="l00389"></a>00389 
 <a name="l00390"></a>00390        <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a> retVal = *<span class="keyword">this</span>;
 <a name="l00391"></a>00391 
@@ -334,7 +334,7 @@
 <a name="l00400"></a>00400 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00401"></a><a class="code" href="classistd_1_1_t_index.html#a9f9a1007da61b22df660716e8ef3b550">00401</a> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a>&amp; <a class="code" href="classistd_1_1_t_index.html#a9f9a1007da61b22df660716e8ef3b550">TIndex&lt;Dimensions&gt;::operator-=</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a>&amp; index)
 <a name="l00402"></a>00402 {
-<a name="l00403"></a>00403        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(Dimensions &gt;= index.<a class="code" href="classistd_1_1_t_index.html#ae7ccb45617a6482c3f3e76c5567cfeeb" title="Get number of dimensions of this index.">GetDimensionsCount</a>());
+<a name="l00403"></a>00403        Q_ASSERT(Dimensions &gt;= index.<a class="code" href="classistd_1_1_t_index.html#ae7ccb45617a6482c3f3e76c5567cfeeb" title="Get number of dimensions of this index.">GetDimensionsCount</a>());
 <a name="l00404"></a>00404 
 <a name="l00405"></a>00405        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Dimensions; ++i){
 <a name="l00406"></a>00406               m_elements[i] -= index[i];
@@ -385,7 +385,7 @@
 <a name="l00451"></a><a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667">00451</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">TIndex&lt;Dimensions&gt;::IsInside</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex</a>&amp; boundaries)<span class="keyword"> const</span>
 <a name="l00452"></a>00452 <span class="keyword"></span>{
 <a name="l00453"></a>00453        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Dimensions; ++i){
-<a name="l00454"></a>00454               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_elements[i] &gt;= 0);
+<a name="l00454"></a>00454               Q_ASSERT(m_elements[i] &gt;= 0);
 <a name="l00455"></a>00455 
 <a name="l00456"></a>00456               <span class="keywordflow">if</span> (m_elements[i] &gt;= boundaries.m_elements[i]){
 <a name="l00457"></a>00457                      <span class="keywordflow">return</span> <span class="keyword">false</span>;
@@ -399,7 +399,7 @@
 <a name="l00465"></a>00465 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00466"></a><a class="code" href="classistd_1_1_t_index.html#a641fe68b1bf12a1748ec5cb041b40108">00466</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_index.html#a641fe68b1bf12a1748ec5cb041b40108" title="Increase this index inside the boundaries.">TIndex&lt;Dimensions&gt;::Increase</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex</a>&amp; boundaries)
 <a name="l00467"></a>00467 {
-<a name="l00468"></a>00468        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(IsInside(boundaries));
+<a name="l00468"></a>00468        Q_ASSERT(IsInside(boundaries));
 <a name="l00469"></a>00469 
 <a name="l00470"></a>00470        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Dimensions; ++i){
 <a name="l00471"></a>00471               <span class="keywordflow">if</span> (m_elements[i] &lt; boundaries.m_elements[i] - 1){
@@ -421,7 +421,7 @@
 <a name="l00487"></a>00487 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Dimensions&gt;
 <a name="l00488"></a><a class="code" href="classistd_1_1_t_index.html#ac6cf4c77f256db8ad8fc8f590ac25bd6">00488</a> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_index.html#ac6cf4c77f256db8ad8fc8f590ac25bd6" title="Decrese this index inside the boundaries.">TIndex&lt;Dimensions&gt;::Decrease</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex</a>&amp; boundaries)
 <a name="l00489"></a>00489 {
-<a name="l00490"></a>00490        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(IsInside(boundaries));
+<a name="l00490"></a>00490        Q_ASSERT(IsInside(boundaries));
 <a name="l00491"></a>00491 
 <a name="l00492"></a>00492        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Dimensions; ++i){
 <a name="l00493"></a>00493               <span class="keywordflow">if</span> (m_elements[i] &gt; 0){

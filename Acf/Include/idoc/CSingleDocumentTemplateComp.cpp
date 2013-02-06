@@ -63,7 +63,7 @@ istd::IPolymorphic* CSingleDocumentTemplateComp::CreateView(
 			istd::IChangeable* documentPtr,
 			const QByteArray& viewTypeId) const
 {
-	I_ASSERT(documentPtr != NULL);
+	Q_ASSERT(documentPtr != NULL);
 
 	imod::IModel* modelPtr = CompCastPtr<imod::IModel>(documentPtr);
 
@@ -123,7 +123,7 @@ void CSingleDocumentTemplateComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	I_ASSERT(m_documentTypeIdAttrPtr.IsValid());
+	Q_ASSERT(m_documentTypeIdAttrPtr.IsValid());
 	SetDocumentTypeId(*m_documentTypeIdAttrPtr);
 
 	if (m_documentTypeNameAttrPtr.IsValid()){
@@ -133,7 +133,7 @@ void CSingleDocumentTemplateComp::OnComponentCreated()
 		SetDocumentTypeName((*m_documentTypeIdAttrPtr));
 	}
 
-	I_ASSERT(m_defaultDirectoryAttrPtr.IsValid());
+	Q_ASSERT(m_defaultDirectoryAttrPtr.IsValid());
 	SetDefaultDirectory(*m_defaultDirectoryAttrPtr);
 
 	int featureFlags = 0;

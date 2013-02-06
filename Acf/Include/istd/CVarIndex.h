@@ -231,8 +231,8 @@ inline bool CVarIndex::SetDimensionsCount(int count)
 
 inline int CVarIndex::GetAt(int index) const
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < int(m_elements.size()));
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < int(m_elements.size()));
 
 	return m_elements[index];
 }
@@ -240,8 +240,8 @@ inline int CVarIndex::GetAt(int index) const
 
 inline void CVarIndex::SetAt(int index, int value)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < int(m_elements.size()));
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < int(m_elements.size()));
 
 	m_elements[index] = value;
 }
@@ -249,8 +249,8 @@ inline void CVarIndex::SetAt(int index, int value)
 
 inline bool CVarIndex::IncreaseAt(int index)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < int(m_elements.size()));
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < int(m_elements.size()));
 
 	++m_elements[index];
 
@@ -260,8 +260,8 @@ inline bool CVarIndex::IncreaseAt(int index)
 
 inline bool CVarIndex::DecreaseAt(int index)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < int(m_elements.size()));
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < int(m_elements.size()));
 
 	--m_elements[index];
 
@@ -317,8 +317,8 @@ inline int CVarIndex::operator[](int index) const
 
 inline int& CVarIndex::operator[](int index)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < int(m_elements.size()));
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < int(m_elements.size()));
 
 	return m_elements[index];
 }

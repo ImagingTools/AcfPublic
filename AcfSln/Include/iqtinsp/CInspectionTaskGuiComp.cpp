@@ -54,13 +54,13 @@ CInspectionTaskGuiComp::CInspectionTaskGuiComp()
 
 void CInspectionTaskGuiComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
+	Q_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
 
 	for (		EditorsList::const_iterator iter = m_editorsList.constBegin();
 				iter != m_editorsList.constEnd();
 				++iter){
 		const imod::IModelEditor* editorPtr = *iter;
-		I_ASSERT(editorPtr != NULL);
+		Q_ASSERT(editorPtr != NULL);
 		
 		editorPtr->UpdateModel();
 	}
@@ -69,7 +69,7 @@ void CInspectionTaskGuiComp::UpdateModel() const
 
 void CInspectionTaskGuiComp::UpdateEditor(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	if (AutoTestButton->isChecked()){
 		emit DoAutoTest();
@@ -88,7 +88,7 @@ bool CInspectionTaskGuiComp::OnAttached(imod::IModel* modelPtr)
 	}
 
 	iinsp::IInspectionTask* inspectionTaskPtr = GetObjectPtr();
-	I_ASSERT(inspectionTaskPtr != NULL);
+	Q_ASSERT(inspectionTaskPtr != NULL);
 
 	int subtasksCount = inspectionTaskPtr->GetSubtasksCount();
 	for (int i = 0; i < subtasksCount; ++i){
@@ -137,7 +137,7 @@ bool CInspectionTaskGuiComp::OnDetached(imod::IModel* modelPtr)
 	m_editorsList.clear();
 
 	iinsp::IInspectionTask* inspectionTaskPtr = GetObjectPtr();
-	I_ASSERT(inspectionTaskPtr != NULL);
+	Q_ASSERT(inspectionTaskPtr != NULL);
 
 	int subtasksCount = inspectionTaskPtr->GetSubtasksCount();
 	for (int i = 0; i < subtasksCount; ++i){
@@ -241,10 +241,10 @@ void CInspectionTaskGuiComp::UpdateVisualElements()
 				iter != m_tabToGuiIndexMap.constEnd();
 				++iter){
 		int tabIndex = iter.key();
-		I_ASSERT(tabIndex >= 0);
+		Q_ASSERT(tabIndex >= 0);
 
 		int guiIndex = iter.value();
-		I_ASSERT(guiIndex >= 0);
+		Q_ASSERT(guiIndex >= 0);
 
 		if (guiIndex >= m_editorVisualInfosCompPtr.GetCount()){
 			continue;
@@ -262,13 +262,13 @@ void CInspectionTaskGuiComp::UpdateVisualElements()
 		}
 
 		if (m_toolBoxPtr != NULL){
-			I_ASSERT(tabIndex < m_toolBoxPtr->count());
+			Q_ASSERT(tabIndex < m_toolBoxPtr->count());
 			m_toolBoxPtr->setItemIcon(tabIndex, tabIcon);
 			m_toolBoxPtr->setItemToolTip(tabIndex, toolTip);
 		}
 
 		if (m_tabWidgetPtr != NULL){
-			I_ASSERT(tabIndex < m_tabWidgetPtr->count());
+			Q_ASSERT(tabIndex < m_tabWidgetPtr->count());
 			m_tabWidgetPtr->setTabIcon(tabIndex, tabIcon);
 			m_tabWidgetPtr->setTabToolTip(tabIndex, toolTip);
 		}
@@ -452,11 +452,11 @@ void CInspectionTaskGuiComp::OnGuiDestroyed()
 				iter != m_stackIndexToTabMap.constEnd();
 				++iter){
 		int guiIndex = iter.value();
-		I_ASSERT(guiIndex >= 0);
-		I_ASSERT(guiIndex < m_previewGuisCompPtr.GetCount());
+		Q_ASSERT(guiIndex >= 0);
+		Q_ASSERT(guiIndex < m_previewGuisCompPtr.GetCount());
 
 		iqtgui::IGuiObject* guiPtr = m_previewGuisCompPtr[guiIndex];
-		I_ASSERT(guiPtr != NULL);
+		Q_ASSERT(guiPtr != NULL);
 
 		guiPtr->DestroyGui();
 	}

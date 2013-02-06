@@ -37,10 +37,10 @@ namespace iqt2d
 
 void CLine2dParamsGuiComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	i2d::CLine2d* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	istd::CChangeNotifier notifier(NULL);
 
@@ -97,7 +97,7 @@ void CLine2dParamsGuiComp::OnGuiModelDetached()
 
 void CLine2dParamsGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	i2d::CLine2d* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){

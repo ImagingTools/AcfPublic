@@ -125,10 +125,10 @@
 <a name="l00106"></a><a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a290f970f6953dfa5640e9af7c19321c0">00106</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_mem_cached_producer_comp.html#a290f970f6953dfa5640e9af7c19321c0" title="End of accessing to cached element.">TMemCachedProducerComp&lt;Key, CacheObject&gt;::UnlockObject</a>(<span class="keyword">const</span> CacheObject* objectPtr)
 <a name="l00107"></a>00107 {
 <a name="l00108"></a>00108        <span class="keyword">typename</span> ObjectToListMap::iterator foundIter = m_objectToListMap.find(objectPtr);
-<a name="l00109"></a>00109        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(foundIter != m_objectToListMap.end());  <span class="comment">// if locked is done correctly, this element must exist.</span>
+<a name="l00109"></a>00109        Q_ASSERT(foundIter != m_objectToListMap.end());  <span class="comment">// if locked is done correctly, this element must exist.</span>
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111        <span class="keyword">typename</span> CachedList::reverse_iterator objectIter = foundIter.value();
-<a name="l00112"></a>00112        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(objectIter != m_cachedList.rend());
+<a name="l00112"></a>00112        Q_ASSERT(objectIter != m_cachedList.rend());
 <a name="l00113"></a>00113 
 <a name="l00114"></a>00114        objectIter-&gt;lockedCount--;
 <a name="l00115"></a>00115 
@@ -146,10 +146,10 @@
 <a name="l00127"></a>00127        <span class="keyword">typename</span> CachedList::iterator iter = m_cachedList.begin();
 <a name="l00128"></a>00128        <span class="keywordflow">while</span> (              (<span class="keywordtype">int</span>(m_cachedList.size()) &gt; maxCachedObjects) &amp;&amp;
 <a name="l00129"></a>00129                             (iter != m_cachedList.end())){
-<a name="l00130"></a>00130               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_objectToListMap.find(iter-&gt;objectPtr) != m_objectToListMap.end());       <span class="comment">// object is present in objects map</span>
+<a name="l00130"></a>00130               Q_ASSERT(m_objectToListMap.find(iter-&gt;objectPtr) != m_objectToListMap.end());       <span class="comment">// object is present in objects map</span>
 <a name="l00131"></a>00131 
 <a name="l00132"></a>00132               <span class="keywordflow">if</span> (iter-&gt;lockedCount &lt;= 0){
-<a name="l00133"></a>00133                      <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_slaveCacheEngineCompPtr.IsValid());
+<a name="l00133"></a>00133                      Q_ASSERT(m_slaveCacheEngineCompPtr.IsValid());
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135                      m_slaveCacheEngineCompPtr-&gt;UnlockObject(iter-&gt;objectPtr);
 <a name="l00136"></a>00136 
@@ -161,7 +161,7 @@
 <a name="l00142"></a>00142               }
 <a name="l00143"></a>00143        }
 <a name="l00144"></a>00144 
-<a name="l00145"></a>00145        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_cachedList.size() == m_objectToListMap.size());     <span class="comment">// this both structures are coupled, the number of elements must be the same</span>
+<a name="l00145"></a>00145        Q_ASSERT(m_cachedList.size() == m_objectToListMap.size());     <span class="comment">// this both structures are coupled, the number of elements must be the same</span>
 <a name="l00146"></a>00146 }
 <a name="l00147"></a>00147 
 <a name="l00148"></a>00148 

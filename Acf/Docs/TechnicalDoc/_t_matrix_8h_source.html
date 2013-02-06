@@ -658,8 +658,8 @@
 <a name="l00767"></a>00767 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
 <a name="l00768"></a><a class="code" href="classimath_1_1_t_matrix.html#acbe04611eddc9ab71e058d2843d41b1d">00768</a> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_matrix.html#acbe04611eddc9ab71e058d2843d41b1d" title="Get single column as vector.">TMatrix&lt;Width, Height, Element&gt;::GetColumnVector</a>(<span class="keywordtype">int</span> columnIndex, <a class="code" href="classimath_1_1_t_vector.html" title="Implementation of fixed-size mathematical vector with specified type of elements.">TVector&lt;Height, Element&gt;</a>&amp; result)
 <a name="l00769"></a>00769 {
-<a name="l00770"></a>00770        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(columnIndex &lt; Width);
-<a name="l00771"></a>00771        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(columnIndex &gt;= 0);
+<a name="l00770"></a>00770        Q_ASSERT(columnIndex &lt; Width);
+<a name="l00771"></a>00771        Q_ASSERT(columnIndex &gt;= 0);
 <a name="l00772"></a>00772 
 <a name="l00773"></a>00773        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; Height; ++y){
 <a name="l00774"></a>00774               result[y] = m_elements[columnIndex][y];
@@ -670,8 +670,8 @@
 <a name="l00779"></a>00779 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
 <a name="l00780"></a><a class="code" href="classimath_1_1_t_matrix.html#ac616c810e8a41e7952aff5abc1877529">00780</a> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_matrix.html#ac616c810e8a41e7952aff5abc1877529" title="Set a single column vector to matrix.">TMatrix&lt;Width, Height, Element&gt;::SetColumnVector</a>(<span class="keywordtype">int</span> columnIndex, <span class="keyword">const</span> <a class="code" href="classimath_1_1_t_vector.html" title="Implementation of fixed-size mathematical vector with specified type of elements.">TVector&lt;Height, Element&gt;</a>&amp; columnVector)
 <a name="l00781"></a>00781 {
-<a name="l00782"></a>00782        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(columnIndex &lt; Width);
-<a name="l00783"></a>00783        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(columnIndex &gt;= 0);
+<a name="l00782"></a>00782        Q_ASSERT(columnIndex &lt; Width);
+<a name="l00783"></a>00783        Q_ASSERT(columnIndex &gt;= 0);
 <a name="l00784"></a>00784 
 <a name="l00785"></a>00785        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; Height; ++y){
 <a name="l00786"></a>00786               m_elements[columnIndex][y] = columnVector[y];
@@ -682,7 +682,7 @@
 <a name="l00791"></a>00791 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> W<span class="keywordtype">id</span>th, <span class="keywordtype">int</span> Height, <span class="keyword">typename</span> Element&gt;
 <a name="l00792"></a><a class="code" href="classimath_1_1_t_matrix.html#a69ad4ba83d0adf1b056b2b1b5b03d238">00792</a> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_matrix.html#a69ad4ba83d0adf1b056b2b1b5b03d238" title="Get single row as vector.">TMatrix&lt;Width, Height, Element&gt;::GetRowVector</a>(<span class="keywordtype">int</span> rowIndex, <a class="code" href="classimath_1_1_t_vector.html" title="Implementation of fixed-size mathematical vector with specified type of elements.">TVector&lt;Width, Element&gt;</a>&amp; result)
 <a name="l00793"></a>00793 {
-<a name="l00794"></a>00794        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rowIndex &lt; Height);
+<a name="l00794"></a>00794        Q_ASSERT(rowIndex &lt; Height);
 <a name="l00795"></a>00795 
 <a name="l00796"></a>00796        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; Width; ++x){
 <a name="l00797"></a>00797               result[rowIndex] = m_elements[x][rowIndex];

@@ -144,9 +144,9 @@
 <a name="l00148"></a>00148                      <span class="keywordtype">double</span> cumulationFactor,
 <a name="l00149"></a>00149                      Result&amp; result)<span class="keyword"> const</span>
 <a name="l00150"></a>00150 <span class="keyword"></span>{
-<a name="l00151"></a>00151        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &lt; BaseClass::GetDimensionsCount());
-<a name="l00152"></a>00152        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(sizes.GetDimensionsCount() == BaseClass::GetDimensionsCount());
-<a name="l00153"></a>00153        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index.GetDimensionsCount() == BaseClass::GetDimensionsCount());
+<a name="l00151"></a>00151        Q_ASSERT(dimension &lt; BaseClass::GetDimensionsCount());
+<a name="l00152"></a>00152        Q_ASSERT(sizes.GetDimensionsCount() == BaseClass::GetDimensionsCount());
+<a name="l00153"></a>00153        Q_ASSERT(index.GetDimensionsCount() == BaseClass::GetDimensionsCount());
 <a name="l00154"></a>00154 
 <a name="l00155"></a>00155        <span class="keywordflow">if</span> (dimension &lt; 0){
 <a name="l00156"></a>00156               result.ScaledCumulate(GetFulcrumDerivativeAtIndex(index, derivativeDegree), cumulationFactor);
@@ -161,10 +161,10 @@
 <a name="l00165"></a>00165                      <span class="keywordtype">double</span> firstPosition = BaseClass::GetLayerPosition(dimension, indexElement);
 <a name="l00166"></a>00166                      <span class="keywordtype">double</span> secondPosition = BaseClass::GetLayerPosition(dimension, indexElement + 1);
 <a name="l00167"></a>00167                      <span class="keywordtype">double</span> layersDistance = secondPosition - firstPosition;
-<a name="l00168"></a>00168                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(layersDistance &gt;= 0);
-<a name="l00169"></a>00169                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(argument[dimension] &gt;= firstPosition);
-<a name="l00170"></a>00170                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(argument[dimension] &lt;= secondPosition);
-<a name="l00171"></a>00171                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(derivativeDegree[dimension] == 0);
+<a name="l00168"></a>00168                      Q_ASSERT(layersDistance &gt;= 0);
+<a name="l00169"></a>00169                      Q_ASSERT(argument[dimension] &gt;= firstPosition);
+<a name="l00170"></a>00170                      Q_ASSERT(argument[dimension] &lt;= secondPosition);
+<a name="l00171"></a>00171                      Q_ASSERT(derivativeDegree[dimension] == 0);
 <a name="l00172"></a>00172 
 <a name="l00173"></a>00173                      <span class="keywordtype">bool</span> useDerivative = <span class="keyword">false</span>;
 <a name="l00174"></a>00174                      <span class="keywordflow">if</span> (derivativeDegree.IncreaseAt(dimension)){
@@ -237,7 +237,7 @@
 <a name="l00241"></a>00241               }
 <a name="l00242"></a>00242               <span class="keywordflow">else</span>{
 <a name="l00243"></a>00243                      <span class="comment">// element out of boundaries at this dimension</span>
-<a name="l00244"></a>00244                      <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(indexElement == sizes[dimension] - 1);
+<a name="l00244"></a>00244                      Q_ASSERT(indexElement == sizes[dimension] - 1);
 <a name="l00245"></a>00245 
 <a name="l00246"></a>00246                      CumulateRecursiveValueAt(
 <a name="l00247"></a>00247                                           argument,
@@ -251,7 +251,7 @@
 <a name="l00255"></a>00255        }
 <a name="l00256"></a>00256        <span class="keywordflow">else</span>{
 <a name="l00257"></a>00257               <span class="comment">// element out of boundaries at this dimension</span>
-<a name="l00258"></a>00258               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(indexElement == -1);
+<a name="l00258"></a>00258               Q_ASSERT(indexElement == -1);
 <a name="l00259"></a>00259 
 <a name="l00260"></a>00260               ++indexElement;
 <a name="l00261"></a>00261               CumulateRecursiveValueAt(

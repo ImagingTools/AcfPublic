@@ -284,8 +284,8 @@ inline void TIndex<Dimensions>::Clear()
 template <int Dimensions>
 inline int TIndex<Dimensions>::GetAt(int index) const
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < Dimensions);
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < Dimensions);
 
 	return m_elements[index];
 }
@@ -294,8 +294,8 @@ inline int TIndex<Dimensions>::GetAt(int index) const
 template <int Dimensions>
 inline void TIndex<Dimensions>::SetAt(int index, int value)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < Dimensions);
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < Dimensions);
 
 	m_elements[index] = value;
 }
@@ -304,8 +304,8 @@ inline void TIndex<Dimensions>::SetAt(int index, int value)
 template <int Dimensions>
 inline bool TIndex<Dimensions>::IncreaseAt(int index)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < Dimensions);
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < Dimensions);
 
 	++m_elements[index];
 
@@ -316,8 +316,8 @@ inline bool TIndex<Dimensions>::IncreaseAt(int index)
 template <int Dimensions>
 inline bool TIndex<Dimensions>::DecreaseAt(int index)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < Dimensions);
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < Dimensions);
 
 	--m_elements[index];
 
@@ -349,8 +349,8 @@ inline int TIndex<Dimensions>::operator[](int index) const
 template <int Dimensions>
 inline int& TIndex<Dimensions>::operator[](int index)
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < Dimensions);
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < Dimensions);
 
 	return m_elements[index];
 }
@@ -379,7 +379,7 @@ bool TIndex<Dimensions>::operator!=(const TIndex& index) const
 template <int Dimensions>
 TIndex<Dimensions> TIndex<Dimensions>::operator+(const TIndex<Dimensions>& index) const
 {
-	I_ASSERT(Dimensions >= index.GetDimensionsCount());
+	Q_ASSERT(Dimensions >= index.GetDimensionsCount());
 
 	TIndex<Dimensions> retVal = *this;
 
@@ -394,7 +394,7 @@ TIndex<Dimensions> TIndex<Dimensions>::operator+(const TIndex<Dimensions>& index
 template <int Dimensions>
 TIndex<Dimensions>& TIndex<Dimensions>::operator+=(const TIndex<Dimensions>& index)
 {
-	I_ASSERT(Dimensions >= index.GetDimensionsCount());
+	Q_ASSERT(Dimensions >= index.GetDimensionsCount());
 
 	for (int i = 0; i < Dimensions; ++i){
 		m_elements[i] += index[i];
@@ -407,7 +407,7 @@ TIndex<Dimensions>& TIndex<Dimensions>::operator+=(const TIndex<Dimensions>& ind
 template <int Dimensions>
 TIndex<Dimensions> TIndex<Dimensions>::operator-(const TIndex<Dimensions>& index) const
 {
-	I_ASSERT(Dimensions >= index.GetDimensionsCount());
+	Q_ASSERT(Dimensions >= index.GetDimensionsCount());
 
 	TIndex<Dimensions> retVal = *this;
 
@@ -422,7 +422,7 @@ TIndex<Dimensions> TIndex<Dimensions>::operator-(const TIndex<Dimensions>& index
 template <int Dimensions>
 TIndex<Dimensions>& TIndex<Dimensions>::operator-=(const TIndex<Dimensions>& index)
 {
-	I_ASSERT(Dimensions >= index.GetDimensionsCount());
+	Q_ASSERT(Dimensions >= index.GetDimensionsCount());
 
 	for (int i = 0; i < Dimensions; ++i){
 		m_elements[i] -= index[i];
@@ -473,7 +473,7 @@ template <int Dimensions>
 bool TIndex<Dimensions>::IsInside(const TIndex& boundaries) const
 {
 	for (int i = 0; i < Dimensions; ++i){
-		I_ASSERT(m_elements[i] >= 0);
+		Q_ASSERT(m_elements[i] >= 0);
 
 		if (m_elements[i] >= boundaries.m_elements[i]){
 			return false;
@@ -487,7 +487,7 @@ bool TIndex<Dimensions>::IsInside(const TIndex& boundaries) const
 template <int Dimensions>
 bool TIndex<Dimensions>::Increase(const TIndex& boundaries)
 {
-	I_ASSERT(IsInside(boundaries));
+	Q_ASSERT(IsInside(boundaries));
 
 	for (int i = 0; i < Dimensions; ++i){
 		if (m_elements[i] < boundaries.m_elements[i] - 1){
@@ -509,7 +509,7 @@ bool TIndex<Dimensions>::Increase(const TIndex& boundaries)
 template <int Dimensions>
 bool TIndex<Dimensions>::Decrease(const TIndex& boundaries)
 {
-	I_ASSERT(IsInside(boundaries));
+	Q_ASSERT(IsInside(boundaries));
 
 	for (int i = 0; i < Dimensions; ++i){
 		if (m_elements[i] > 0){

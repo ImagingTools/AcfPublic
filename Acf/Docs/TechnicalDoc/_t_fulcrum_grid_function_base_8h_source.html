@@ -136,8 +136,8 @@
 <a name="l00178"></a>00178 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Argument, <span class="keyword">class</span> Result, <span class="keyword">class</span> Fulcrums&gt;
 <a name="l00179"></a><a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a5bb7757568ac6d53d6c0f666459b6293">00179</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a5bb7757568ac6d53d6c0f666459b6293" title="Get number of fulcrum points used in this function.">TFulcrumGridFunctionBase&lt;Argument, Result, Fulcrums&gt;::GetLayersCount</a>(<span class="keywordtype">int</span> dimension)<span class="keyword"> const</span>
 <a name="l00180"></a>00180 <span class="keyword"></span>{
-<a name="l00181"></a>00181        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &gt;= 0);
-<a name="l00182"></a>00182        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &lt; <span class="keywordtype">int</span>(m_layers.size()));
+<a name="l00181"></a>00181        Q_ASSERT(dimension &gt;= 0);
+<a name="l00182"></a>00182        Q_ASSERT(dimension &lt; <span class="keywordtype">int</span>(m_layers.size()));
 <a name="l00183"></a>00183 
 <a name="l00184"></a>00184        <span class="keywordflow">return</span> m_layers[dimension].size();
 <a name="l00185"></a>00185 }
@@ -146,13 +146,13 @@
 <a name="l00188"></a>00188 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Argument, <span class="keyword">class</span> Result, <span class="keyword">class</span> Fulcrums&gt;
 <a name="l00189"></a><a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a34f46e8a300c25e3a74a1e379729e562">00189</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a34f46e8a300c25e3a74a1e379729e562" title="Get position of specified layer of fulcrums.">TFulcrumGridFunctionBase&lt;Argument, Result, Fulcrums&gt;::GetLayerPosition</a>(<span class="keywordtype">int</span> dimension, <span class="keywordtype">int</span> layerIndex)<span class="keyword"> const</span>
 <a name="l00190"></a>00190 <span class="keyword"></span>{
-<a name="l00191"></a>00191        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &gt;= 0);
-<a name="l00192"></a>00192        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &lt; <span class="keywordtype">int</span>(m_layers.size()));
+<a name="l00191"></a>00191        Q_ASSERT(dimension &gt;= 0);
+<a name="l00192"></a>00192        Q_ASSERT(dimension &lt; <span class="keywordtype">int</span>(m_layers.size()));
 <a name="l00193"></a>00193 
 <a name="l00194"></a>00194        <span class="keyword">const</span> LayerPositions&amp; positions = m_layers[dimension];
 <a name="l00195"></a>00195 
-<a name="l00196"></a>00196        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(layerIndex &gt;= 0);
-<a name="l00197"></a>00197        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(layerIndex &lt; <span class="keywordtype">int</span>(positions.size()));
+<a name="l00196"></a>00196        Q_ASSERT(layerIndex &gt;= 0);
+<a name="l00197"></a>00197        Q_ASSERT(layerIndex &lt; <span class="keywordtype">int</span>(positions.size()));
 <a name="l00198"></a>00198 
 <a name="l00199"></a>00199        <span class="keywordflow">return</span> positions[layerIndex];
 <a name="l00200"></a>00200 }
@@ -187,8 +187,8 @@
 <a name="l00229"></a>00229 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Argument, <span class="keyword">class</span> Result, <span class="keyword">class</span> Fulcrums&gt;
 <a name="l00230"></a><a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#aba0192158cf169f7af0b79819fc18c5d">00230</a> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#aba0192158cf169f7af0b79819fc18c5d" title="Set number of fulcrum layers at specified dimension.">TFulcrumGridFunctionBase&lt;Argument, Result, Fulcrums&gt;::SetLayersCount</a>(<span class="keywordtype">int</span> dimension, <span class="keywordtype">int</span> count)
 <a name="l00231"></a>00231 {
-<a name="l00232"></a>00232        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &gt;= 0);
-<a name="l00233"></a>00233        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &lt; <span class="keywordtype">int</span>(m_layers.size()));
+<a name="l00232"></a>00232        Q_ASSERT(dimension &gt;= 0);
+<a name="l00233"></a>00233        Q_ASSERT(dimension &lt; <span class="keywordtype">int</span>(m_layers.size()));
 <a name="l00234"></a>00234 
 <a name="l00235"></a>00235        m_layers[dimension].resize(count);
 <a name="l00236"></a>00236        m_fulcrums.SetSize(dimension, count);
@@ -198,13 +198,13 @@
 <a name="l00240"></a>00240 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Argument, <span class="keyword">class</span> Result, <span class="keyword">class</span> Fulcrums&gt;
 <a name="l00241"></a><a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#ae7daea94cbdf12b809a319ed8cb7ef03">00241</a> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#ae7daea94cbdf12b809a319ed8cb7ef03" title="Set position of specified layer of fulcrums.">TFulcrumGridFunctionBase&lt;Argument, Result, Fulcrums&gt;::SetLayerPosition</a>(<span class="keywordtype">int</span> dimension, <span class="keywordtype">int</span> layerIndex, <span class="keywordtype">double</span> position)
 <a name="l00242"></a>00242 {
-<a name="l00243"></a>00243        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &gt;= 0);
-<a name="l00244"></a>00244        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &lt; <span class="keywordtype">int</span>(m_layers.size()));
+<a name="l00243"></a>00243        Q_ASSERT(dimension &gt;= 0);
+<a name="l00244"></a>00244        Q_ASSERT(dimension &lt; <span class="keywordtype">int</span>(m_layers.size()));
 <a name="l00245"></a>00245 
 <a name="l00246"></a>00246        LayerPositions&amp; positions = m_layers[dimension];
 <a name="l00247"></a>00247 
-<a name="l00248"></a>00248        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(layerIndex &gt;= 0);
-<a name="l00249"></a>00249        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(layerIndex &lt; <span class="keywordtype">int</span>(positions.size()));
+<a name="l00248"></a>00248        Q_ASSERT(layerIndex &gt;= 0);
+<a name="l00249"></a>00249        Q_ASSERT(layerIndex &lt; <span class="keywordtype">int</span>(positions.size()));
 <a name="l00250"></a>00250 
 <a name="l00251"></a>00251        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>, CF_SORT_LAYERS | CF_MODEL);
 <a name="l00252"></a>00252 
@@ -216,15 +216,15 @@
 <a name="l00258"></a><a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#ac184a338d47df9fbb685f745426c744e">00258</a> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#ac184a338d47df9fbb685f745426c744e" title="Get position of node at specified grid index.">TFulcrumGridFunctionBase&lt;Argument, Result, Fulcrums&gt;::GetFulcrumPosition</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a022acfff6e2a99b1c8d4b2b1511ab6bf">FulcrumIndex</a>&amp; index, <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#af258eb86f07f9abc969d2b99556a31d0">ArgumentType</a>&amp; result)<span class="keyword"> const</span>
 <a name="l00259"></a>00259 <span class="keyword"></span>{
 <a name="l00260"></a>00260        <span class="keywordtype">int</span> layersCount = int(m_layers.size());
-<a name="l00261"></a>00261        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(layersCount &lt;= index.GetDimensionsCount());
+<a name="l00261"></a>00261        Q_ASSERT(layersCount &lt;= index.GetDimensionsCount());
 <a name="l00262"></a>00262 
 <a name="l00263"></a>00263        result.SetElementsCount(layersCount);
 <a name="l00264"></a>00264 
 <a name="l00265"></a>00265        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; layersCount; ++i){
 <a name="l00266"></a>00266               <span class="keyword">const</span> LayerPositions&amp; positions = m_layers[i];
 <a name="l00267"></a>00267 
-<a name="l00268"></a>00268               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index[i] &gt;= 0);
-<a name="l00269"></a>00269               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index[i] &lt; <span class="keywordtype">int</span>(positions.size()));
+<a name="l00268"></a>00268               Q_ASSERT(index[i] &gt;= 0);
+<a name="l00269"></a>00269               Q_ASSERT(index[i] &lt; <span class="keywordtype">int</span>(positions.size()));
 <a name="l00270"></a>00270 
 <a name="l00271"></a>00271               result[i] = positions[index[i]];
 <a name="l00272"></a>00272        }
@@ -251,8 +251,8 @@
 <a name="l00293"></a>00293 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Argument, <span class="keyword">class</span> Result, <span class="keyword">class</span> Fulcrums&gt;
 <a name="l00294"></a><a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a23a7646fbc7cb6362a2345bc9dd75e3d">00294</a> <span class="keywordtype">int</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a23a7646fbc7cb6362a2345bc9dd75e3d" title="Inserts single fulcrum layer.">TFulcrumGridFunctionBase&lt;Argument, Result, Fulcrums&gt;::InsertLayer</a>(<span class="keywordtype">int</span> dimension, <span class="keywordtype">double</span> position)
 <a name="l00295"></a>00295 {
-<a name="l00296"></a>00296        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &gt;= 0);
-<a name="l00297"></a>00297        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &lt; m_fulcrums.GetDimensionsCount());
+<a name="l00296"></a>00296        Q_ASSERT(dimension &gt;= 0);
+<a name="l00297"></a>00297        Q_ASSERT(dimension &lt; m_fulcrums.GetDimensionsCount());
 <a name="l00298"></a>00298 
 <a name="l00299"></a>00299        Fulcrums newFulcrums = m_fulcrums;
 <a name="l00300"></a>00300 
@@ -272,20 +272,20 @@
 <a name="l00314"></a>00314                      nextPosition = positions[layerIndex + 1];
 <a name="l00315"></a>00315               }
 <a name="l00316"></a>00316        }
-<a name="l00317"></a>00317        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(position &gt;= prevPosition);
-<a name="l00318"></a>00318        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(position &lt;= nextPosition);
+<a name="l00317"></a>00317        Q_ASSERT(position &gt;= prevPosition);
+<a name="l00318"></a>00318        Q_ASSERT(position &lt;= nextPosition);
 <a name="l00319"></a>00319 
 <a name="l00320"></a>00320        <span class="keywordtype">double</span> prevFactor = 0.5;
 <a name="l00321"></a>00321        <span class="keywordflow">if</span> (nextPosition - prevPosition &gt; <a class="code" href="istd_8h.html#a72b20680a1401ded1768261f3e776916">I_BIG_EPSILON</a>){
 <a name="l00322"></a>00322               prevFactor = (position - prevPosition) / (nextPosition - prevPosition);
 <a name="l00323"></a>00323 
-<a name="l00324"></a>00324               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(prevFactor &gt;= 0);
-<a name="l00325"></a>00325               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(prevFactor - <a class="code" href="istd_8h.html#a49340b5f40cbeb5e59fd8153798a2980" title="Some very small number.">I_EPSILON</a> &lt;= 1.0);
+<a name="l00324"></a>00324               Q_ASSERT(prevFactor &gt;= 0);
+<a name="l00325"></a>00325               Q_ASSERT(prevFactor - <a class="code" href="istd_8h.html#a49340b5f40cbeb5e59fd8153798a2980" title="Some very small number.">I_EPSILON</a> &lt;= 1.0);
 <a name="l00326"></a>00326        }
 <a name="l00327"></a>00327        <span class="keywordtype">double</span> nextFactor = 1 - prevFactor;
 <a name="l00328"></a>00328 
 <a name="l00329"></a>00329        <span class="keywordtype">int</span> oldLayersCount = int(positions.size());
-<a name="l00330"></a>00330        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(oldLayersCount == m_fulcrums.GetSize(dimension));
+<a name="l00330"></a>00330        Q_ASSERT(oldLayersCount == m_fulcrums.GetSize(dimension));
 <a name="l00331"></a>00331 
 <a name="l00332"></a>00332        <span class="keywordflow">for</span> (         <span class="keyword">typename</span> Fulcrums::Iterator destIter = newFulcrums.Begin();
 <a name="l00333"></a>00333                             destIter != newFulcrums.End();
@@ -322,9 +322,9 @@
 <a name="l00364"></a>00364 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Argument, <span class="keyword">class</span> Result, <span class="keyword">class</span> Fulcrums&gt;
 <a name="l00365"></a><a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#ab0c233030a8138ec441cbdfac25a6d6d">00365</a> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#ab0c233030a8138ec441cbdfac25a6d6d" title="Remove fulcrums at spacified layer.">TFulcrumGridFunctionBase&lt;Argument, Result, Fulcrums&gt;::RemoveLayer</a>(<span class="keywordtype">int</span> dimension, <span class="keywordtype">int</span> layerIndex)
 <a name="l00366"></a>00366 {
-<a name="l00367"></a>00367        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &gt;= 0);
-<a name="l00368"></a>00368        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &lt; GetDimensionsCount());
-<a name="l00369"></a>00369        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(m_fulcrums.GetSize(dimension) &gt; 0);
+<a name="l00367"></a>00367        Q_ASSERT(dimension &gt;= 0);
+<a name="l00368"></a>00368        Q_ASSERT(dimension &lt; GetDimensionsCount());
+<a name="l00369"></a>00369        Q_ASSERT(m_fulcrums.GetSize(dimension) &gt; 0);
 <a name="l00370"></a>00370 
 <a name="l00371"></a>00371        Fulcrums newFulcrums = m_fulcrums;
 <a name="l00372"></a>00372 
@@ -366,7 +366,7 @@
 <a name="l00408"></a>00408        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(isStoring? <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
 <a name="l00409"></a>00409 
 <a name="l00410"></a>00410        <span class="keywordtype">int</span> dimensionsCount = m_fulcrums.GetDimensionsCount();
-<a name="l00411"></a>00411        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimensionsCount == <span class="keywordtype">int</span>(m_layers.size()));
+<a name="l00411"></a>00411        Q_ASSERT(dimensionsCount == <span class="keywordtype">int</span>(m_layers.size()));
 <a name="l00412"></a>00412 
 <a name="l00413"></a>00413        retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e" title="Begin of archive tag containing set of subelements of the same type.">BeginMultiTag</a>(gridTag, positionsTag, dimensionsCount);
 <a name="l00414"></a>00414 
@@ -377,13 +377,13 @@
 <a name="l00419"></a>00419        }
 <a name="l00420"></a>00420 
 <a name="l00421"></a>00421        <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a183c87176819e97c4ca6fcc72792e2fa">FulcrumSizes</a> sizes = m_fulcrums.GetSizes();
-<a name="l00422"></a>00422        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(sizes.GetDimensionsCount() &gt;= dimensionsCount);
+<a name="l00422"></a>00422        Q_ASSERT(sizes.GetDimensionsCount() &gt;= dimensionsCount);
 <a name="l00423"></a>00423 
 <a name="l00424"></a>00424        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dimensionIndex = 0; dimensionIndex &lt; dimensionsCount; ++dimensionIndex){
 <a name="l00425"></a>00425               LayerPositions&amp; positions = m_layers[dimensionIndex];
 <a name="l00426"></a>00426 
 <a name="l00427"></a>00427               <span class="keywordtype">int</span>&amp; positionsCount = sizes[dimensionIndex];
-<a name="l00428"></a>00428               <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(positionsCount == <span class="keywordtype">int</span>(positions.size()));
+<a name="l00428"></a>00428               Q_ASSERT(positionsCount == <span class="keywordtype">int</span>(positions.size()));
 <a name="l00429"></a>00429 
 <a name="l00430"></a>00430               retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e" title="Begin of archive tag containing set of subelements of the same type.">BeginMultiTag</a>(positionsTag, positionTag, positionsCount);
 <a name="l00431"></a>00431 
@@ -442,8 +442,8 @@
 <a name="l00484"></a>00484 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Argument, <span class="keyword">class</span> Result, <span class="keyword">class</span> Fulcrums&gt;
 <a name="l00485"></a><a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a6e0948b0b7c4cde73cfda32b361492ad">00485</a> <span class="keywordtype">int</span> <a class="code" href="classimath_1_1_t_fulcrum_grid_function_base.html#a6e0948b0b7c4cde73cfda32b361492ad" title="Find layer index of specified value for specified dimension.">TFulcrumGridFunctionBase&lt;Argument, Result, Fulcrums&gt;::FindLayerIndex</a>(<span class="keywordtype">int</span> dimension, <span class="keywordtype">double</span> value)<span class="keyword"> const</span>
 <a name="l00486"></a>00486 <span class="keyword"></span>{
-<a name="l00487"></a>00487        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &gt;= 0);
-<a name="l00488"></a>00488        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(dimension &lt; GetDimensionsCount());
+<a name="l00487"></a>00487        Q_ASSERT(dimension &gt;= 0);
+<a name="l00488"></a>00488        Q_ASSERT(dimension &lt; GetDimensionsCount());
 <a name="l00489"></a>00489 
 <a name="l00490"></a>00490        EnsureCacheValid();
 <a name="l00491"></a>00491 

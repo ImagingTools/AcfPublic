@@ -82,7 +82,7 @@
 <a name="l00057"></a>00057 
 <a name="l00058"></a><a class="code" href="classimath_1_1_c_sampled_function2d.html#a0047a0dbbe167576a60fd922e2a5164b">00058</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classimath_1_1_c_sampled_function2d.html#a0047a0dbbe167576a60fd922e2a5164b">CSampledFunction2d::GetSampleValue</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; index)<span class="keyword"> const</span>
 <a name="l00059"></a>00059 <span class="keyword"></span>{
-<a name="l00060"></a>00060        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index.<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">IsInside</a>(m_samplesContainer.<a class="code" href="classistd_1_1_t_array.html#a04392b4ef9af90701e03c039e5fe0a09" title="Get list of all sizes.">GetSizes</a>()));
+<a name="l00060"></a>00060        Q_ASSERT(index.<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">IsInside</a>(m_samplesContainer.<a class="code" href="classistd_1_1_t_array.html#a04392b4ef9af90701e03c039e5fe0a09" title="Get list of all sizes.">GetSizes</a>()));
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062        <span class="keywordflow">return</span> m_samplesContainer.<a class="code" href="classistd_1_1_t_array.html#a6a4eb06ddd4e851b68274f672f43c44d" title="Get element stored at specified index.">GetAt</a>(index);
 <a name="l00063"></a>00063 }
@@ -90,7 +90,7 @@
 <a name="l00065"></a>00065 
 <a name="l00066"></a><a class="code" href="classimath_1_1_c_sampled_function2d.html#aeecca31dfc8a8154f2a47ccb8b539f39">00066</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classimath_1_1_c_sampled_function2d.html#aeecca31dfc8a8154f2a47ccb8b539f39">CSampledFunction2d::SetSampleValue</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; index, <span class="keywordtype">double</span> value)
 <a name="l00067"></a>00067 {
-<a name="l00068"></a>00068        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index.<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">IsInside</a>(m_samplesContainer.<a class="code" href="classistd_1_1_t_array.html#a04392b4ef9af90701e03c039e5fe0a09" title="Get list of all sizes.">GetSizes</a>()));
+<a name="l00068"></a>00068        Q_ASSERT(index.<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">IsInside</a>(m_samplesContainer.<a class="code" href="classistd_1_1_t_array.html#a04392b4ef9af90701e03c039e5fe0a09" title="Get list of all sizes.">GetSizes</a>()));
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070        m_samplesContainer.<a class="code" href="classistd_1_1_t_array.html#aad5883ffb9a0f01b278ae24ec40f6ff4" title="Set element at specified index.">SetAt</a>(index, value);
 <a name="l00071"></a>00071 }

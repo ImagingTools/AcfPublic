@@ -170,9 +170,9 @@ void TSplineGridFunctionBase<Argument, Result, Fulcrums, Degree>::CumulateRecurs
 			double cumulationFactor,
 			Result& result) const
 {
-	I_ASSERT(dimension < BaseClass::GetDimensionsCount());
-	I_ASSERT(sizes.GetDimensionsCount() == BaseClass::GetDimensionsCount());
-	I_ASSERT(index.GetDimensionsCount() == BaseClass::GetDimensionsCount());
+	Q_ASSERT(dimension < BaseClass::GetDimensionsCount());
+	Q_ASSERT(sizes.GetDimensionsCount() == BaseClass::GetDimensionsCount());
+	Q_ASSERT(index.GetDimensionsCount() == BaseClass::GetDimensionsCount());
 
 	if (dimension < 0){
 		result.ScaledCumulate(GetFulcrumDerivativeAtIndex(index, derivativeDegree), cumulationFactor);
@@ -187,10 +187,10 @@ void TSplineGridFunctionBase<Argument, Result, Fulcrums, Degree>::CumulateRecurs
 			double firstPosition = BaseClass::GetLayerPosition(dimension, indexElement);
 			double secondPosition = BaseClass::GetLayerPosition(dimension, indexElement + 1);
 			double layersDistance = secondPosition - firstPosition;
-			I_ASSERT(layersDistance >= 0);
-			I_ASSERT(argument[dimension] >= firstPosition);
-			I_ASSERT(argument[dimension] <= secondPosition);
-			I_ASSERT(derivativeDegree[dimension] == 0);
+			Q_ASSERT(layersDistance >= 0);
+			Q_ASSERT(argument[dimension] >= firstPosition);
+			Q_ASSERT(argument[dimension] <= secondPosition);
+			Q_ASSERT(derivativeDegree[dimension] == 0);
 
 			bool useDerivative = false;
 			if (derivativeDegree.IncreaseAt(dimension)){
@@ -263,7 +263,7 @@ void TSplineGridFunctionBase<Argument, Result, Fulcrums, Degree>::CumulateRecurs
 		}
 		else{
 			// element out of boundaries at this dimension
-			I_ASSERT(indexElement == sizes[dimension] - 1);
+			Q_ASSERT(indexElement == sizes[dimension] - 1);
 
 			CumulateRecursiveValueAt(
 						argument,
@@ -277,7 +277,7 @@ void TSplineGridFunctionBase<Argument, Result, Fulcrums, Degree>::CumulateRecurs
 	}
 	else{
 		// element out of boundaries at this dimension
-		I_ASSERT(indexElement == -1);
+		Q_ASSERT(indexElement == -1);
 
 		++indexElement;
 		CumulateRecursiveValueAt(

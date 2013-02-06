@@ -102,7 +102,7 @@ int CIterativeProcessorComp::DoProcessing(
 			}
 
 			if (progressSessionId >= 0){
-				I_ASSERT(progressManagerPtr != NULL);
+				Q_ASSERT(progressManagerPtr != NULL);
 				progressManagerPtr->OnProgress(progressSessionId, iterationIndex / double(iterationsCount - 1));
 
 				if (progressManagerPtr->IsCanceled(progressSessionId)){
@@ -113,7 +113,7 @@ int CIterativeProcessorComp::DoProcessing(
 	}
 
 	if (progressSessionId >= 0){
-		I_ASSERT(progressManagerPtr != NULL);
+		Q_ASSERT(progressManagerPtr != NULL);
 		progressManagerPtr->EndProgressSession(progressSessionId);
 	}
 
@@ -137,8 +137,8 @@ int CIterativeProcessorComp::GetOptionsCount() const
 
 QString CIterativeProcessorComp::GetOptionName(int index) const
 {
-	I_ASSERT(index >= 0);
-	I_ASSERT(index < int(m_iterationNames.size()));
+	Q_ASSERT(index >= 0);
+	Q_ASSERT(index < int(m_iterationNames.size()));
 
 	return m_iterationNames[index];
 }
@@ -169,7 +169,7 @@ int CIterativeProcessorComp::ProcessSlave(
 			const istd::IPolymorphic* inputPtr,
 			istd::IChangeable* outputPtr)
 {
-	I_ASSERT(m_slaveProcessorCompPtr.IsValid());
+	Q_ASSERT(m_slaveProcessorCompPtr.IsValid());
 
 	int retVal = TS_INVALID;
 

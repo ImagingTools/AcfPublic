@@ -328,7 +328,7 @@ void CVisualRegistryEditorComp::AddConnector(
 		return;
 	}
 
-	I_ASSERT(m_sceneProviderCompPtr.IsValid());
+	Q_ASSERT(m_sceneProviderCompPtr.IsValid());
 
 	QByteArray baseId;
 	QByteArray subId;
@@ -436,8 +436,8 @@ void CVisualRegistryEditorComp::ConnectReferences(const QByteArray& componentRol
 	for (iter = componentIds.begin(); iter != componentIds.end(); iter++){
 
 		const icomp::IRegistry::ElementInfo* elementInfoPtr = registryPtr->GetElementInfo(*iter);
-		I_ASSERT(elementInfoPtr != NULL);
-		I_ASSERT(elementInfoPtr->elementPtr.IsValid());
+		Q_ASSERT(elementInfoPtr != NULL);
+		Q_ASSERT(elementInfoPtr->elementPtr.IsValid());
 
 		const icomp::IComponentStaticInfo* compMetaInfoPtr = m_envManagerCompPtr->GetComponentMetaInfo(elementInfoPtr->address);
 		if (compMetaInfoPtr == NULL){
@@ -721,7 +721,7 @@ void CVisualRegistryEditorComp::OnComponentCreated()
 	BaseClass::OnComponentCreated();
 
 	if (m_sceneProviderCompPtr.IsValid()){
-		I_ASSERT(m_scenePtr == NULL);
+		Q_ASSERT(m_scenePtr == NULL);
 		m_scenePtr = m_sceneProviderCompPtr->GetScene();
 
 	}
@@ -1257,7 +1257,7 @@ void CVisualRegistryEditorComp::OnShowRegistryTopology()
 
 
 		const QDesktopWidget* desktopPtr = QApplication::desktop();
-		I_ASSERT(desktopPtr != NULL);
+		Q_ASSERT(desktopPtr != NULL);
 
 		QRect screenRect = desktopPtr->screenGeometry();
 
@@ -1390,7 +1390,7 @@ iser::CArchiveTag CVisualRegistryEditorComp::s_elementCenterTag("Center", "Cente
 CVisualRegistryEditorComp::EnvironmentObserver::EnvironmentObserver(CVisualRegistryEditorComp* parentPtr)
 :	m_parent(*parentPtr)
 {
-	I_ASSERT(parentPtr != NULL);
+	Q_ASSERT(parentPtr != NULL);
 }
 
 
@@ -1416,7 +1416,7 @@ void CVisualRegistryEditorComp::SelectionInfoImpl::SetParent(CVisualRegistryEdit
 
 icomp::IRegistry* CVisualRegistryEditorComp::SelectionInfoImpl::GetSelectedRegistry() const
 {
-	I_ASSERT(m_parentPtr != NULL);	// parent should be set before any subelement can be accessed
+	Q_ASSERT(m_parentPtr != NULL);	// parent should be set before any subelement can be accessed
 
 	return m_parentPtr->GetSelectedRegistry();
 }
@@ -1424,7 +1424,7 @@ icomp::IRegistry* CVisualRegistryEditorComp::SelectionInfoImpl::GetSelectedRegis
 
 IElementSelectionInfo::Elements CVisualRegistryEditorComp::SelectionInfoImpl::GetSelectedElements() const
 {
-	I_ASSERT(m_parentPtr != NULL);	// parent should be set before any subelement can be accessed
+	Q_ASSERT(m_parentPtr != NULL);	// parent should be set before any subelement can be accessed
 
 	IElementSelectionInfo::Elements retVal;
 

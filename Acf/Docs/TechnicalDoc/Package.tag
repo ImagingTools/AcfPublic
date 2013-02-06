@@ -5434,13 +5434,6 @@
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>I_ASSERT</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>ad105e5603d024b91c1ed8f3c09209022</anchor>
-      <arglist>(test)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
       <name>I_CRITICAL</name>
       <anchorfile>istd_8h.html</anchorfile>
       <anchor>a5952e0d7281d1ab784531120ea40c9c4</anchor>

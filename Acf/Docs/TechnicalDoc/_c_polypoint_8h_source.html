@@ -101,7 +101,7 @@
 <a name="l00076"></a>00076 
 <a name="l00077"></a><a class="code" href="classi2d_1_1_c_polypoint.html#a59ee3e8e958d6b6c3849aca05b4d99ee">00077</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; <a class="code" href="classi2d_1_1_c_polypoint.html#a59ee3e8e958d6b6c3849aca05b4d99ee">CPolypoint::GetPoint</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
 <a name="l00078"></a>00078 <span class="keyword"></span>{
-<a name="l00079"></a>00079        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(index &gt;= 0 &amp;&amp; index &lt; <span class="keywordtype">int</span>(m_points.size()));
+<a name="l00079"></a>00079        Q_ASSERT(index &gt;= 0 &amp;&amp; index &lt; <span class="keywordtype">int</span>(m_points.size()));
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081        <span class="keywordflow">return</span> m_points[index];
 <a name="l00082"></a>00082 }

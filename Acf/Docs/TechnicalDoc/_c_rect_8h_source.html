@@ -167,7 +167,7 @@
 <a name="l00206"></a>00206        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(left, right);
 <a name="l00207"></a>00207        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(top, bottom);
 <a name="l00208"></a>00208 
-<a name="l00209"></a>00209        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00209"></a>00209        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00210"></a>00210 }
 <a name="l00211"></a>00211 
 <a name="l00212"></a>00212 
@@ -176,7 +176,7 @@
 <a name="l00215"></a>00215        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>(), rightBottom.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
 <a name="l00216"></a>00216        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>(), rightBottom.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00217"></a>00217 
-<a name="l00218"></a>00218        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00218"></a>00218        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00219"></a>00219 }
 <a name="l00220"></a>00220 
 <a name="l00221"></a>00221 
@@ -185,7 +185,7 @@
 <a name="l00224"></a>00224        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>(), leftTop.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>() + size.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
 <a name="l00225"></a>00225        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>(), leftTop.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>() + size.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00226"></a>00226 
-<a name="l00227"></a>00227        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00227"></a>00227        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00228"></a>00228 }
 <a name="l00229"></a>00229 
 <a name="l00230"></a>00230 
@@ -194,7 +194,7 @@
 <a name="l00233"></a>00233        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(<span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a9db7eb11cf23e3a95d450f773be932be">GetLeft</a>()), <span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a94382d9c1463e7ca717488b6bfd16ef7">GetRight</a>()));
 <a name="l00234"></a>00234        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(<span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#ac99a58e3e256278be0a389e418b2e048">GetTop</a>()), <span class="keywordtype">int</span>(rect.<a class="code" href="classi2d_1_1_c_rectangle.html#a17dd2e85d83398d932c330033f28c784">GetBottom</a>()));
 <a name="l00235"></a>00235 
-<a name="l00236"></a>00236        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00236"></a>00236        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00237"></a>00237 }
 <a name="l00238"></a>00238 
 <a name="l00239"></a>00239 
@@ -203,7 +203,7 @@
 <a name="l00242"></a>00242        m_horizontalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(0, size.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
 <a name="l00243"></a>00243        m_verticalRange = <a class="code" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a>(0, size.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00244"></a>00244 
-<a name="l00245"></a>00245        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00245"></a>00245        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00246"></a>00246 }
 <a name="l00247"></a>00247 
 <a name="l00248"></a>00248 
@@ -404,7 +404,7 @@
 <a name="l00443"></a>00443 
 <a name="l00444"></a><a class="code" href="classi2d_1_1_c_rect.html#aab769ca930f2c1da6976bbbef6ff2339">00444</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_rect.html#aab769ca930f2c1da6976bbbef6ff2339" title="Check if specified point lies inside.">CRect::IsInside</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; point)<span class="keyword"> const</span>
 <a name="l00445"></a>00445 <span class="keyword"></span>{
-<a name="l00446"></a>00446        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00446"></a>00446        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00447"></a>00447 
 <a name="l00448"></a>00448        <span class="keywordflow">return</span> m_horizontalRange.<a class="code" href="classistd_1_1_t_range.html#a479b0c055a0e7453b9df7bf4a02c7ad5" title="Returns true, if value is in range between top and bottom.">Contains</a>(point.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>()) &amp;&amp; m_verticalRange.<a class="code" href="classistd_1_1_t_range.html#a479b0c055a0e7453b9df7bf4a02c7ad5" title="Returns true, if value is in range between top and bottom.">Contains</a>(point.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
 <a name="l00449"></a>00449 }
@@ -412,8 +412,8 @@
 <a name="l00451"></a>00451 
 <a name="l00452"></a><a class="code" href="classi2d_1_1_c_rect.html#a6287f9a20b5fb457d68d0864d6dad476">00452</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_rect.html#aab769ca930f2c1da6976bbbef6ff2339" title="Check if specified point lies inside.">CRect::IsInside</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect)<span class="keyword"> const</span>
 <a name="l00453"></a>00453 <span class="keyword"></span>{
-<a name="l00454"></a>00454        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00455"></a>00455        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00454"></a>00454        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00455"></a>00455        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00456"></a>00456 
 <a name="l00457"></a>00457        <span class="keywordflow">if</span> (rect.<a class="code" href="classi2d_1_1_c_rect.html#a18d6a0922c3fa40a70bac30d3bea35fb" title="Check if rectangle is empty.">IsEmpty</a>()){
 <a name="l00458"></a>00458               <span class="keywordflow">return</span> <span class="keyword">true</span>;
@@ -426,8 +426,8 @@
 <a name="l00465"></a>00465 
 <a name="l00466"></a><a class="code" href="classi2d_1_1_c_rect.html#a5f158ef186d3e653091bc5d1f1cd1d98">00466</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_c_rect.html#a5f158ef186d3e653091bc5d1f1cd1d98" title="Check if specified rectangle lies fully outside.">CRect::IsOutside</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect)<span class="keyword"> const</span>
 <a name="l00467"></a>00467 <span class="keyword"></span>{
-<a name="l00468"></a>00468        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00469"></a>00469        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00468"></a>00468        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00469"></a>00469        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00470"></a>00470 
 <a name="l00471"></a>00471        <span class="keywordflow">if</span> (rect.<a class="code" href="classi2d_1_1_c_rect.html#a18d6a0922c3fa40a70bac30d3bea35fb" title="Check if rectangle is empty.">IsEmpty</a>()){
 <a name="l00472"></a>00472               <span class="keywordflow">return</span> <span class="keyword">true</span>;
@@ -447,8 +447,8 @@
 <a name="l00486"></a>00486 
 <a name="l00487"></a><a class="code" href="classi2d_1_1_c_rect.html#a640e67a0ed8d71f8891fd37968f7446d">00487</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_rect.html#a640e67a0ed8d71f8891fd37968f7446d" title="Calculate union of this and second rectangle and stores result in this object.">CRect::Union</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect)
 <a name="l00488"></a>00488 {
-<a name="l00489"></a>00489        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00490"></a>00490        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00489"></a>00489        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00490"></a>00490        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00491"></a>00491 
 <a name="l00492"></a>00492        <span class="keywordflow">if</span> (<a class="code" href="classi2d_1_1_c_rect.html#a18d6a0922c3fa40a70bac30d3bea35fb" title="Check if rectangle is empty.">IsEmpty</a>()){
 <a name="l00493"></a>00493               *<span class="keyword">this</span> = rect;
@@ -462,8 +462,8 @@
 <a name="l00501"></a>00501 
 <a name="l00502"></a><a class="code" href="classi2d_1_1_c_rect.html#a18c3be0d711e4c0bcb8fcdd0d1593412">00502</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_rect.html#a18c3be0d711e4c0bcb8fcdd0d1593412" title="Get union of two rectangles.">CRect::GetUnion</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect, <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; result)<span class="keyword"> const</span>
 <a name="l00503"></a>00503 <span class="keyword"></span>{
-<a name="l00504"></a>00504        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00505"></a>00505        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00504"></a>00504        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00505"></a>00505        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00506"></a>00506 
 <a name="l00507"></a>00507        <span class="keywordflow">if</span> (<a class="code" href="classi2d_1_1_c_rect.html#a18d6a0922c3fa40a70bac30d3bea35fb" title="Check if rectangle is empty.">IsEmpty</a>()){
 <a name="l00508"></a>00508               result = rect;
@@ -482,8 +482,8 @@
 <a name="l00521"></a>00521 
 <a name="l00522"></a><a class="code" href="classi2d_1_1_c_rect.html#ab7d16f5feae1db5178caf3fcd59dd0a5">00522</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> <a class="code" href="classi2d_1_1_c_rect.html#a18c3be0d711e4c0bcb8fcdd0d1593412" title="Get union of two rectangles.">CRect::GetUnion</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect)<span class="keyword"> const</span>
 <a name="l00523"></a>00523 <span class="keyword"></span>{
-<a name="l00524"></a>00524        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00525"></a>00525        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00524"></a>00524        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00525"></a>00525        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00526"></a>00526 
 <a name="l00527"></a>00527        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> result;
 <a name="l00528"></a>00528 
@@ -495,7 +495,7 @@
 <a name="l00534"></a>00534 
 <a name="l00535"></a><a class="code" href="classi2d_1_1_c_rect.html#a342008c9fa1ef07c2765f0dcac43c833">00535</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_rect.html#a640e67a0ed8d71f8891fd37968f7446d" title="Calculate union of this and second rectangle and stores result in this object.">CRect::Union</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> point)
 <a name="l00536"></a>00536 {
-<a name="l00537"></a>00537        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00537"></a>00537        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00538"></a>00538 
 <a name="l00539"></a>00539        <span class="keywordtype">int</span> left = qMin(<a class="code" href="classi2d_1_1_c_rect.html#aebeef876b590b4a50d1bc60622a11a72">GetLeft</a>(), point.<a class="code" href="classistd_1_1_c_index2d.html#aeacf2ffca7847731b4edaefcd7a1cd3e">GetX</a>());
 <a name="l00540"></a>00540        <span class="keywordtype">int</span> top = qMin(<a class="code" href="classi2d_1_1_c_rect.html#aa6691d31dc11f456e1861df8df7aadff">GetTop</a>(), point.<a class="code" href="classistd_1_1_c_index2d.html#a406644ef2991eab1a25b68c87f3cbe49">GetY</a>());
@@ -509,7 +509,7 @@
 <a name="l00548"></a>00548 
 <a name="l00549"></a><a class="code" href="classi2d_1_1_c_rect.html#acb9e094275e6ab249377796d8b799301">00549</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> <a class="code" href="classi2d_1_1_c_rect.html#a18c3be0d711e4c0bcb8fcdd0d1593412" title="Get union of two rectangles.">CRect::GetUnion</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> point)<span class="keyword"> const</span>
 <a name="l00550"></a>00550 <span class="keyword"></span>{
-<a name="l00551"></a>00551        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00551"></a>00551        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00552"></a>00552 
 <a name="l00553"></a>00553        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> result = *<span class="keyword">this</span>;
 <a name="l00554"></a>00554 
@@ -521,8 +521,8 @@
 <a name="l00560"></a>00560 
 <a name="l00561"></a><a class="code" href="classi2d_1_1_c_rect.html#a371486083e12b517c888b6502f3bcfb3">00561</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_rect.html#a371486083e12b517c888b6502f3bcfb3" title="Expand rectangle using second rectangle.">CRect::Expand</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect)
 <a name="l00562"></a>00562 {
-<a name="l00563"></a>00563        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00564"></a>00564        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00563"></a>00563        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00564"></a>00564        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00565"></a>00565 
 <a name="l00566"></a>00566        m_horizontalRange.<a class="code" href="classistd_1_1_t_range.html#a8822cbd0ff2f7bc00c8c839148b8f9f8" title="Set this range to be expanded.">Expand</a>(rect.m_horizontalRange);
 <a name="l00567"></a>00567        m_verticalRange.<a class="code" href="classistd_1_1_t_range.html#a8822cbd0ff2f7bc00c8c839148b8f9f8" title="Set this range to be expanded.">Expand</a>(rect.m_verticalRange);
@@ -531,8 +531,8 @@
 <a name="l00570"></a>00570 
 <a name="l00571"></a><a class="code" href="classi2d_1_1_c_rect.html#a82a8dca2be915622d24235b27663c9a9">00571</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> <a class="code" href="classi2d_1_1_c_rect.html#a82a8dca2be915622d24235b27663c9a9" title="Get expanded rectangle.">CRect::GetExpanded</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect)<span class="keyword"> const</span>
 <a name="l00572"></a>00572 <span class="keyword"></span>{
-<a name="l00573"></a>00573        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00574"></a>00574        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00573"></a>00573        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00574"></a>00574        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00575"></a>00575 
 <a name="l00576"></a>00576        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> result = *<span class="keyword">this</span>;
 <a name="l00577"></a>00577 
@@ -544,8 +544,8 @@
 <a name="l00583"></a>00583 
 <a name="l00584"></a><a class="code" href="classi2d_1_1_c_rect.html#a51342bbd73c570ea9c9068149f1fa0ad">00584</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classi2d_1_1_c_rect.html#a51342bbd73c570ea9c9068149f1fa0ad" title="Calculate intersection of this and second rectangle and stores result in this object.">CRect::Intersection</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect)
 <a name="l00585"></a>00585 {
-<a name="l00586"></a>00586        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00587"></a>00587        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00586"></a>00586        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00587"></a>00587        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00588"></a>00588 
 <a name="l00589"></a>00589        m_horizontalRange.<a class="code" href="classistd_1_1_t_range.html#a8948ed1f42ebac5706cdf729d42ad8e4" title="Set this range to be intersection of two ranges.">Intersection</a>(rect.m_horizontalRange);
 <a name="l00590"></a>00590        m_verticalRange.<a class="code" href="classistd_1_1_t_range.html#a8948ed1f42ebac5706cdf729d42ad8e4" title="Set this range to be intersection of two ranges.">Intersection</a>(rect.m_verticalRange);
@@ -558,8 +558,8 @@
 <a name="l00597"></a>00597 
 <a name="l00598"></a><a class="code" href="classi2d_1_1_c_rect.html#a28c397da891e3d35ab5be48a375021d7">00598</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> <a class="code" href="classi2d_1_1_c_rect.html#a28c397da891e3d35ab5be48a375021d7" title="Get intersection of two rectangles.">CRect::GetIntersection</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a>&amp; rect)<span class="keyword"> const</span>
 <a name="l00599"></a>00599 <span class="keyword"></span>{
-<a name="l00600"></a>00600        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
-<a name="l00601"></a>00601        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00600"></a>00600        Q_ASSERT(rect.<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00601"></a>00601        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00602"></a>00602 
 <a name="l00603"></a>00603        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> result = *<span class="keyword">this</span>;
 <a name="l00604"></a>00604 
@@ -580,7 +580,7 @@
 <a name="l00619"></a>00619 
 <a name="l00620"></a><a class="code" href="classi2d_1_1_c_rect.html#aa72af924a18c07d5b0ae809ca5be90ab">00620</a> <span class="keyword">inline</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> <a class="code" href="classi2d_1_1_c_rect.html#aa72af924a18c07d5b0ae809ca5be90ab" title="Get moved rectangle.">CRect::GetTranslated</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> point)<span class="keyword"> const</span>
 <a name="l00621"></a>00621 <span class="keyword"></span>{
-<a name="l00622"></a>00622        <a class="code" href="istd_8h.html#ad105e5603d024b91c1ed8f3c09209022">I_ASSERT</a>(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
+<a name="l00622"></a>00622        Q_ASSERT(<a class="code" href="classi2d_1_1_c_rect.html#abb38e68265c8f95df79ffe4551b4197b" title="Check if rectangle is valid.">IsValid</a>());
 <a name="l00623"></a>00623 
 <a name="l00624"></a>00624        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">CRect</a> result = *<span class="keyword">this</span>;
 <a name="l00625"></a>00625 

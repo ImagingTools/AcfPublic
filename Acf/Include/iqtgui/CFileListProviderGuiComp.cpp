@@ -33,7 +33,7 @@ namespace iqtgui
 
 void CFileListProviderGuiComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	ifile::IFileListProvider* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){

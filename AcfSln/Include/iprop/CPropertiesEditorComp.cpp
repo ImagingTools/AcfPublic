@@ -41,7 +41,7 @@ namespace iprop
 
 void CPropertiesEditorComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	IPropertiesManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
@@ -95,7 +95,7 @@ void CPropertiesEditorComp::UpdatePropertyEditor(
 		PropertyTree->addTopLevelItem(propertyItemPtr);
 	}
 
-	I_ASSERT(propertyItemPtr != NULL);
+	Q_ASSERT(propertyItemPtr != NULL);
 
 	SetDataToEditor(objectProperty, *propertyItemPtr);
 }
@@ -114,7 +114,7 @@ QTreeWidgetItem* CPropertiesEditorComp::FindPropertyItem(const QString& property
 	while (*treeIter){
 		QTreeWidgetItem* propertyItemPtr = *treeIter;
 
-		I_ASSERT(propertyItemPtr != NULL);
+		Q_ASSERT(propertyItemPtr != NULL);
 
 		QString currentPropertyId = GetPropertyId(*propertyItemPtr);
 		if (propertyId == currentPropertyId){

@@ -148,7 +148,7 @@ void CBitmapSupplierGuiComp::OnGuiHidden()
 
 QWidget* CBitmapSupplierGuiComp::GetParamsWidget() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	return ParamsFrame;
 }
@@ -186,7 +186,7 @@ void CBitmapSupplierGuiComp::UpdateGui(int updateFlags)
 {
 	BaseClass::UpdateGui(updateFlags);
 
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	istd::CIndex2d bitmapSize = m_bitmap.GetImageSize();
 
@@ -221,7 +221,7 @@ void CBitmapSupplierGuiComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags
 				viewIter != views.end();
 				++viewIter){
 		iqt2d::IViewProvider* viewProviderPtr = *viewIter;
-		I_ASSERT(viewProviderPtr != NULL);
+		Q_ASSERT(viewProviderPtr != NULL);
 
 		iview::CViewBase* viewPtr = dynamic_cast<iview::CViewBase*>(viewProviderPtr->GetView());
 		if (viewPtr != NULL){

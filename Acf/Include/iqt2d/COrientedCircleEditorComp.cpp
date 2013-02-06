@@ -32,10 +32,10 @@ namespace iqt2d
 
 void COrientedCircleEditorComp::UpdateModel() const
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	i2d::COrientedCircle* objectPtr = GetObjectPtr();
-	I_ASSERT(objectPtr != NULL);
+	Q_ASSERT(objectPtr != NULL);
 
 	istd::CChangeNotifier notifier(NULL);
 
@@ -87,7 +87,7 @@ void COrientedCircleEditorComp::OnGuiModelDetached()
 
 void COrientedCircleEditorComp::UpdateGui(int /*updateFlags*/)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
 	i2d::COrientedCircle* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){

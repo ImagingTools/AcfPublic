@@ -160,7 +160,7 @@ void CVarMatrix::GetNegated(CVarMatrix& result)
 void CVarMatrix::GetAdded(const CVarMatrix& matrix, CVarMatrix& result) const
 {
 	istd::CIndex2d size = GetSizes();
-	I_ASSERT(size == matrix.GetSizes());	// only matrix with the same size can be substracted
+	Q_ASSERT(size == matrix.GetSizes());	// only matrix with the same size can be substracted
 
 	result.SetSizes(size);
 
@@ -176,7 +176,7 @@ void CVarMatrix::GetAdded(const CVarMatrix& matrix, CVarMatrix& result) const
 void CVarMatrix::GetSubstracted(const CVarMatrix& matrix, CVarMatrix& result) const
 {
 	istd::CIndex2d size = GetSizes();
-	I_ASSERT(size == matrix.GetSizes());	// only matrix with the same size can be substracted
+	Q_ASSERT(size == matrix.GetSizes());	// only matrix with the same size can be substracted
 
 	result.SetSizes(size);
 
@@ -193,7 +193,7 @@ void CVarMatrix::GetMultiplied(const CVarMatrix& matrix, CVarMatrix& result) con
 {
 	istd::CIndex2d matrixSize = matrix.GetSizes();
 	istd::CIndex2d size = GetSizes();
-	I_ASSERT(size[0] == matrixSize[1]);	// width of first matrix must be equal of second one height
+	Q_ASSERT(size[0] == matrixSize[1]);	// width of first matrix must be equal of second one height
 
 	result.SetSizes(istd::CIndex2d(matrixSize[0], size[1]));
 
@@ -285,7 +285,7 @@ bool CVarMatrix::GetTriangleDecomposed(
 {
 	istd::CIndex2d size = GetSizes();
 
-	I_ASSERT((matrix2Ptr == NULL) || (matrix2Ptr->GetSize(1) == size[1]));
+	Q_ASSERT((matrix2Ptr == NULL) || (matrix2Ptr->GetSize(1) == size[1]));
 
 	if (&result != this){
 		result = *this;
@@ -367,7 +367,7 @@ bool CVarMatrix::TransformR(int firstPartWidth)
 {
 	istd::CIndex2d size = GetSizes();
 
-	I_ASSERT(firstPartWidth < size.GetX());
+	Q_ASSERT(firstPartWidth < size.GetX());
 
 	// QR transformation using Householder's reflections.
 	for (int column = 0; column < firstPartWidth; column++){
@@ -436,8 +436,8 @@ bool CVarMatrix::GetSolvedTriangle(const CVarMatrix& vector, CVarMatrix& result,
 {
 	istd::CIndex2d size = GetSizes();
 
-	I_ASSERT(vector.GetSize(1) >= size[0]);
-	I_ASSERT(size[1] >= size[0]);
+	Q_ASSERT(vector.GetSize(1) >= size[0]);
+	Q_ASSERT(size[1] >= size[0]);
 
 	int columnsCount = vector.GetSize(0);
 	result.SetSizes(istd::CIndex2d(columnsCount, size[0]));
@@ -479,7 +479,7 @@ bool CVarMatrix::GetSolvedLSP(const CVarMatrix& vector, CVarMatrix& result, doub
 void CVarMatrix::GetColumnVector(int columnIndex, CVarVector& result)
 {
 	istd::CIndex2d size = GetSizes();
-	I_ASSERT(columnIndex < size[0]);
+	Q_ASSERT(columnIndex < size[0]);
 
 	result.SetElementsCount(size[1]);
 
@@ -494,7 +494,7 @@ void CVarMatrix::GetColumnVector(int columnIndex, CVarVector& result)
 void CVarMatrix::GetRowVector(int rowIndex, CVarVector& result)
 {
 	istd::CIndex2d size = GetSizes();
-	I_ASSERT(rowIndex < size[1]);
+	Q_ASSERT(rowIndex < size[1]);
 
 	result.SetElementsCount(size[0]);
 
@@ -554,10 +554,10 @@ bool CVarMatrix::Serialize(iser::IArchive& archive)
 */
 void CVarMatrix::SolveRobustLSP(CVarMatrix matrixA, CVarMatrix& matrixY, CVarMatrix& matrixX, double accuracy)
 {
-	I_ASSERT(accuracy > 0);
+	Q_ASSERT(accuracy > 0);
 
 	istd::CIndex2d size = matrixA.GetSizes();
-	I_ASSERT(size[1] == matrixY.GetSize(1));
+	Q_ASSERT(size[1] == matrixY.GetSize(1));
 
 	int columnsCount = size[0];
 	int matrixYColumnsCount = matrixY.GetSize(0);
@@ -594,7 +594,7 @@ void CVarMatrix::SolveRobustLSP(CVarMatrix matrixA, CVarMatrix& matrixY, CVarMat
 		if (maxNorm2 < accuracy){
 			break;
 		}
-		I_ASSERT(maxNormColumnIndex >= stepIndex);
+		Q_ASSERT(maxNormColumnIndex >= stepIndex);
 
 		int realColumnIndex = realColumnIndices[maxNormColumnIndex];
 		if (maxNormColumnIndex != stepIndex){
@@ -680,7 +680,7 @@ void CVarMatrix::SolveRobustLSP(CVarMatrix matrixA, CVarMatrix& matrixY, CVarMat
 	istd::CIndex2d resultIndex;
 	for (resultIndex[0] = 0; resultIndex[0] < matrixYColumnsCount; ++resultIndex[0]){
 		if (qAbs(restNorm2) >= accuracy){
-			I_ASSERT(stepIndex > 0);	// restNorm is positive only if it was calculated -> there are non-zero elemens
+			Q_ASSERT(stepIndex > 0);	// restNorm is positive only if it was calculated -> there are non-zero elemens
 
 			double valueY = matrixY.GetAt(istd::CIndex2d(resultIndex[0], stepIndex - 1));
 
@@ -704,7 +704,7 @@ void CVarMatrix::SolveRobustLSP(CVarMatrix matrixA, CVarMatrix& matrixY, CVarMat
 			resultIndex[1] = realColumnIndices[i];
 
 			double diagonalElement = matrixA.GetAt(istd::CIndex2d(resultIndex[1], i));
-			I_ASSERT(qAbs(diagonalElement) >= accuracy);	// was sorted previously and this condition was filled
+			Q_ASSERT(qAbs(diagonalElement) >= accuracy);	// was sorted previously and this condition was filled
 
 			double previousProduct = 0.0;
 			for (int columnIndex = size[0] - 1; columnIndex > i; columnIndex--){

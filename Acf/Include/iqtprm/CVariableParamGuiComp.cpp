@@ -65,7 +65,7 @@ bool CVariableParamGuiComp::OnDetached(imod::IModel* modelPtr)
 
 void CVariableParamGuiComp::AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags)
 {
-	I_ASSERT(providerPtr != NULL);
+	Q_ASSERT(providerPtr != NULL);
 
 	m_connectedSceneFlags[providerPtr] = flags;
 
@@ -80,7 +80,7 @@ void CVariableParamGuiComp::AddItemsToScene(iqt2d::IViewProvider* providerPtr, i
 
 void CVariableParamGuiComp::RemoveItemsFromScene(iqt2d::IViewProvider* providerPtr)
 {
-	I_ASSERT(providerPtr != NULL);
+	Q_ASSERT(providerPtr != NULL);
 
 	if ((m_currentTypeIndex >= 0) && (m_currentTypeIndex < m_extendersCompPtr.GetCount())){
 		iqt2d::IViewExtender* extenderPtr = m_extendersCompPtr[m_currentTypeIndex];
@@ -123,7 +123,7 @@ void CVariableParamGuiComp::AttachCurrentType()
 							sceneIter != m_connectedSceneFlags.end();
 							++sceneIter){
 					iqt2d::IViewProvider* providerPtr = sceneIter.key();
-					I_ASSERT(providerPtr != NULL);
+					Q_ASSERT(providerPtr != NULL);
 
 					extenderPtr->AddItemsToScene(providerPtr, sceneIter.value());
 					iview::IShapeView* viewPtr = providerPtr->GetView();
@@ -147,7 +147,7 @@ void CVariableParamGuiComp::DetachCurrentType()
 							sceneIter != m_connectedSceneFlags.end();
 							++sceneIter){
 					iqt2d::IViewProvider* providerPtr = sceneIter.key();
-					I_ASSERT(providerPtr != NULL);
+					Q_ASSERT(providerPtr != NULL);
 
 					extenderPtr->RemoveItemsFromScene(providerPtr);
 					iview::IShapeView* viewPtr = providerPtr->GetView();
@@ -184,9 +184,9 @@ void CVariableParamGuiComp::DetachCurrentType()
 
 void CVariableParamGuiComp::UpdateGui(int updateFlags)
 {
-	I_ASSERT(IsGuiCreated());
+	Q_ASSERT(IsGuiCreated());
 
-	I_ASSERT(m_currentTypeIndex < m_typeIdsAttrPtr.GetCount());
+	Q_ASSERT(m_currentTypeIndex < m_typeIdsAttrPtr.GetCount());
 
 	iprm::IVariableParam* variableParamPtr = GetObjectPtr();
 	if (variableParamPtr == NULL){

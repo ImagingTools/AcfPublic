@@ -146,7 +146,7 @@ int CMeilhausSimpleComp::WaitTaskFinished(int taskId, double timeoutTime, bool k
 		TasksList::iterator foundIter = m_activeTaskList.find(taskId);
 		if (foundIter != m_activeTaskList.end()){
 			CMeContext* contextPtr = foundIter.value();
-			I_ASSERT(contextPtr != NULL);
+			Q_ASSERT(contextPtr != NULL);
 
 			retVal = WaitSingleTaskFinished(*contextPtr, timeoutTime, killOnTimeout);
 			if (retVal != TS_WAIT){
@@ -164,7 +164,7 @@ int CMeilhausSimpleComp::WaitTaskFinished(int taskId, double timeoutTime, bool k
 		for (		TasksList::iterator iter = m_activeTaskList.begin();
 					iter != m_activeTaskList.end();){
 			CMeContext* contextPtr = iter.value();
-			I_ASSERT(contextPtr != NULL);
+			Q_ASSERT(contextPtr != NULL);
 
 			int taskState = WaitSingleTaskFinished(*contextPtr, localTimeout, killOnTimeout);
 			if (taskState != TS_OK){
@@ -197,7 +197,7 @@ void CMeilhausSimpleComp::CancelTask(int taskId)
 		TasksList::iterator foundIter = m_activeTaskList.find(taskId);
 		if (foundIter != m_activeTaskList.end()){
 			CMeContext* contextPtr = foundIter.value();
-			I_ASSERT(contextPtr != NULL);
+			Q_ASSERT(contextPtr != NULL);
 
 			delete contextPtr;
 
@@ -209,7 +209,7 @@ void CMeilhausSimpleComp::CancelTask(int taskId)
 					iter != m_activeTaskList.end();
 					++iter){
 			CMeContext* contextPtr = iter.value();
-			I_ASSERT(contextPtr != NULL);
+			Q_ASSERT(contextPtr != NULL);
 
 			delete contextPtr;
 		}
@@ -225,7 +225,7 @@ int CMeilhausSimpleComp::GetReadyTask()
 				iter != m_activeTaskList.end();
 				++iter){
 		CMeContext* contextPtr = iter.value();
-		I_ASSERT(contextPtr != NULL);
+		Q_ASSERT(contextPtr != NULL);
 
 		if (contextPtr->IsDone()){
 			return iter.key();
