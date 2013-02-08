@@ -1420,7 +1420,7 @@ void CAttributeEditorComp::CreateInterfacesTree(
 						++subIter){
 				const QByteArray& sublementId = *subIter;
 
-				QByteArray globalSublementId = icomp::CInterfaceManipBase::JoinId(elementId, sublementId);
+				QByteArray globalSublementId = istd::CIdManipBase::JoinId(elementId, sublementId);
 
 				QTreeWidgetItem* itemPtr = NULL;
 				if (parentItemPtr != NULL){
@@ -1543,7 +1543,7 @@ void CAttributeEditorComp::CreateExportedComponentsTree(
 					++subIter, ++itemIndex){
 			const QByteArray& sublementId = *subIter;
 
-			QByteArray globalSublementId = icomp::CInterfaceManipBase::JoinId(globalElementId, sublementId);
+			QByteArray globalSublementId = istd::CIdManipBase::JoinId(globalElementId, sublementId);
 
 			QStringList subExportedAliases = GetExportAliases(globalSublementId);
 			if (!subExportedAliases.isEmpty()){

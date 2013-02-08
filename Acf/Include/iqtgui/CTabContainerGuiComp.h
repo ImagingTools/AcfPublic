@@ -68,6 +68,7 @@ public:
 		I_ASSIGN(m_iconSizeAttrPtr, "IconSize", "Size for tab icons", false, 16);
 		I_ASSIGN(m_useTriangularTabsAttrPtr, "UseTriangularTabs", "Using triangular tab form", true, false);
 		I_ASSIGN(m_tabOrientationAttrPtr, "TabBarOrientation", "Orientation of the tab bar\n 0 - North\n 1 - South\n 2 - West\n 3 - East", true, 0);
+		I_ASSIGN(m_flatStyleAttrPtr, "FlatTabs", "Flat style of the tabs", true, false);
 	I_END_COMPONENT;
 
 protected:
@@ -130,6 +131,7 @@ private:
 	I_ATTR(int, m_iconSizeAttrPtr);
 	I_ATTR(bool, m_useTriangularTabsAttrPtr);
 	I_ATTR(int, m_tabOrientationAttrPtr);
+	I_ATTR(bool, m_flatStyleAttrPtr);
 
 	typedef QMap<int, int> TabToGuiIndexMap;
 	TabToGuiIndexMap m_tabToGuiIndexMap;

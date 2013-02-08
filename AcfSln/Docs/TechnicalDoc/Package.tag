@@ -16278,8 +16278,8 @@
       <type>virtual void</type>
       <name>Init</name>
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
-      <anchor>a40dd81dd3ba8da577477f878558e4f1b</anchor>
-      <arglist>(bool hasStatusInfo)</arglist>
+      <anchor>ac57617cc9d8980d3b2891960e14d42ad</anchor>
+      <arglist>(bool hasStatusLabel, bool hasStatusBackground)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -16339,9 +16339,16 @@
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
-      <name>m_showStatus</name>
+      <name>m_showStatusLabel</name>
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
-      <anchor>a5ce77d14f08c2ac6afb53361329dc89c</anchor>
+      <anchor>a26165b804c4cae704158af5bf165a50e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_showStatusBackground</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a43543101770cbeb99d71c7a19f52da6f</anchor>
       <arglist></arglist>
     </member>
   </compound>

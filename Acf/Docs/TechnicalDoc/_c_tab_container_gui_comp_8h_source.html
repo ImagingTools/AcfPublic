@@ -69,81 +69,83 @@
 <a name="l00046"></a>00046               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size for tab icons&quot;</span>, <span class="keyword">false</span>, 16);
 <a name="l00047"></a>00047               I_ASSIGN(m_useTriangularTabsAttrPtr, <span class="stringliteral">&quot;UseTriangularTabs&quot;</span>, <span class="stringliteral">&quot;Using triangular tab form&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00048"></a>00048               I_ASSIGN(m_tabOrientationAttrPtr, <span class="stringliteral">&quot;TabBarOrientation&quot;</span>, <span class="stringliteral">&quot;Orientation of the tab bar\n 0 - North\n 1 - South\n 2 - West\n 3 - East&quot;</span>, <span class="keyword">true</span>, 0);
-<a name="l00049"></a>00049        I_END_COMPONENT;
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="keyword">protected</span>:
-<a name="l00052"></a>00052        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ae7386e81babadd9ff8df98b8bd4b1fc7">UpdateVisualElements</a>();
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a339d7874c2db7d67e5fd6dad1bfdfaa5" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#aaac719be4d5f18d9624666b972f5dbde">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a0f56b344ce80382a39b3d988802462fe">OnComponentCreated</a>();
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keyword">private</span>:
-<a name="l00065"></a>00065        <span class="keyword">class </span>TabModel:
-<a name="l00066"></a>00066                             <span class="keyword">public</span> iprm::CSelectionParam,
-<a name="l00067"></a>00067                             <span class="keyword">public</span> iprm::COptionsManager
-<a name="l00068"></a>00068        {
-<a name="l00069"></a>00069        <span class="keyword">public</span>:
-<a name="l00070"></a>00070               <span class="keyword">typedef</span> <a class="code" href="classiprm_1_1_c_selection_param.html" title="Basic implementation of selection parameter.">iprm::CSelectionParam</a> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a90c8e4fbaec412fd71bfd82c9ce3eeb1">BaseClass</a>;
-<a name="l00071"></a>00071               <span class="keyword">typedef</span> <a class="code" href="classiprm_1_1_c_options_manager.html" title="Implementation of a simple options manager.">iprm::COptionsManager</a> BaseClass2;
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073               TabModel();
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075               <span class="keywordtype">void</span> SetParent(<a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page...">CTabContainerGuiComp</a>* parentPtr);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077               <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00078"></a>00078               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SetSelectedOptionIndex(<span class="keywordtype">int</span> index);
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080               <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00081"></a>00081               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Serialize(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083               <span class="comment">// reimplemented (iprm::IOptionsManager)</span>
-<a name="l00084"></a>00084               <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetOptionEnabled(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
-<a name="l00085"></a>00085               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> RemoveOption(<span class="keywordtype">int</span> index);
-<a name="l00086"></a>00086               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> InsertOption(
-<a name="l00087"></a>00087                                    QString&amp; optionName,
-<a name="l00088"></a>00088                                    <span class="keyword">const</span> QByteArray&amp; optionId,
-<a name="l00089"></a>00089                                    <span class="keyword">const</span> QString&amp; optionDescription = QString(), 
-<a name="l00090"></a>00090                                    <span class="keywordtype">int</span> index = -1);
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092        <span class="keyword">private</span>:
-<a name="l00093"></a>00093               <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page...">CTabContainerGuiComp</a>* m_parentPtr;
-<a name="l00094"></a>00094        };
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
-<a name="l00097"></a>00097        <span class="keyword">static</span> InterfaceType* ExtractTabModel(<a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page...">CTabContainerGuiComp</a>&amp; component)
-<a name="l00098"></a>00098        {
-<a name="l00099"></a>00099               <span class="keywordflow">return</span> &amp;component.m_tabModel;
-<a name="l00100"></a>00100        }
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="keyword">private</span>:
-<a name="l00103"></a>00103        I_MULTIREF(IGuiObject, m_slaveWidgetsCompPtr);
-<a name="l00104"></a>00104        I_MULTIREF(IVisualStatusProvider, m_slaveWidgetsVisualCompPtr);
-<a name="l00105"></a>00105        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_slaveWidgetsModelCompPtr);
-<a name="l00106"></a>00106        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_cornerGuiCompPtr);
-<a name="l00107"></a>00107        I_MULTIATTR(QString, m_tabNamesAttrPtr);
-<a name="l00108"></a>00108        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
-<a name="l00109"></a>00109        I_ATTR(<span class="keywordtype">bool</span>, m_useTriangularTabsAttrPtr);
-<a name="l00110"></a>00110        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112        <span class="keyword">typedef</span> QMap&lt;int, int&gt; TabToGuiIndexMap;
-<a name="l00113"></a>00113        TabToGuiIndexMap m_tabToGuiIndexMap;
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115        <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;TabModel&gt;</a> m_tabModel;
-<a name="l00116"></a>00116 };
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119 } <span class="comment">// namespace iqtgui</span>
+<a name="l00049"></a>00049               I_ASSIGN(m_flatStyleAttrPtr, <span class="stringliteral">&quot;FlatTabs&quot;</span>, <span class="stringliteral">&quot;Flat style of the tabs&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00050"></a>00050        I_END_COMPONENT;
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="keyword">protected</span>:
+<a name="l00053"></a>00053        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ae7386e81babadd9ff8df98b8bd4b1fc7">UpdateVisualElements</a>();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a339d7874c2db7d67e5fd6dad1bfdfaa5" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#aaac719be4d5f18d9624666b972f5dbde">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a0f56b344ce80382a39b3d988802462fe">OnComponentCreated</a>();
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="keyword">private</span>:
+<a name="l00066"></a>00066        <span class="keyword">class </span>TabModel:
+<a name="l00067"></a>00067                             <span class="keyword">public</span> iprm::CSelectionParam,
+<a name="l00068"></a>00068                             <span class="keyword">public</span> iprm::COptionsManager
+<a name="l00069"></a>00069        {
+<a name="l00070"></a>00070        <span class="keyword">public</span>:
+<a name="l00071"></a>00071               <span class="keyword">typedef</span> <a class="code" href="classiprm_1_1_c_selection_param.html" title="Basic implementation of selection parameter.">iprm::CSelectionParam</a> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a90c8e4fbaec412fd71bfd82c9ce3eeb1">BaseClass</a>;
+<a name="l00072"></a>00072               <span class="keyword">typedef</span> <a class="code" href="classiprm_1_1_c_options_manager.html" title="Implementation of a simple options manager.">iprm::COptionsManager</a> BaseClass2;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074               TabModel();
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076               <span class="keywordtype">void</span> SetParent(<a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page...">CTabContainerGuiComp</a>* parentPtr);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078               <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
+<a name="l00079"></a>00079               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SetSelectedOptionIndex(<span class="keywordtype">int</span> index);
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081               <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00082"></a>00082               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Serialize(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084               <span class="comment">// reimplemented (iprm::IOptionsManager)</span>
+<a name="l00085"></a>00085               <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetOptionEnabled(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
+<a name="l00086"></a>00086               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> RemoveOption(<span class="keywordtype">int</span> index);
+<a name="l00087"></a>00087               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> InsertOption(
+<a name="l00088"></a>00088                                    QString&amp; optionName,
+<a name="l00089"></a>00089                                    <span class="keyword">const</span> QByteArray&amp; optionId,
+<a name="l00090"></a>00090                                    <span class="keyword">const</span> QString&amp; optionDescription = QString(), 
+<a name="l00091"></a>00091                                    <span class="keywordtype">int</span> index = -1);
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093        <span class="keyword">private</span>:
+<a name="l00094"></a>00094               <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page...">CTabContainerGuiComp</a>* m_parentPtr;
+<a name="l00095"></a>00095        };
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
+<a name="l00098"></a>00098        <span class="keyword">static</span> InterfaceType* ExtractTabModel(<a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page...">CTabContainerGuiComp</a>&amp; component)
+<a name="l00099"></a>00099        {
+<a name="l00100"></a>00100               <span class="keywordflow">return</span> &amp;component.m_tabModel;
+<a name="l00101"></a>00101        }
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="keyword">private</span>:
+<a name="l00104"></a>00104        I_MULTIREF(IGuiObject, m_slaveWidgetsCompPtr);
+<a name="l00105"></a>00105        I_MULTIREF(IVisualStatusProvider, m_slaveWidgetsVisualCompPtr);
+<a name="l00106"></a>00106        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_slaveWidgetsModelCompPtr);
+<a name="l00107"></a>00107        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_cornerGuiCompPtr);
+<a name="l00108"></a>00108        I_MULTIATTR(QString, m_tabNamesAttrPtr);
+<a name="l00109"></a>00109        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
+<a name="l00110"></a>00110        I_ATTR(<span class="keywordtype">bool</span>, m_useTriangularTabsAttrPtr);
+<a name="l00111"></a>00111        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
+<a name="l00112"></a>00112        I_ATTR(<span class="keywordtype">bool</span>, m_flatStyleAttrPtr);
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114        <span class="keyword">typedef</span> QMap&lt;int, int&gt; TabToGuiIndexMap;
+<a name="l00115"></a>00115        TabToGuiIndexMap m_tabToGuiIndexMap;
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117        <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;TabModel&gt;</a> m_tabModel;
+<a name="l00118"></a>00118 };
+<a name="l00119"></a>00119 
 <a name="l00120"></a>00120 
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 <span class="preprocessor">#endif // !iqtgui_CTabContainerGuiComp_included</span>
-<a name="l00123"></a>00123 <span class="preprocessor"></span>
+<a name="l00121"></a>00121 } <span class="comment">// namespace iqtgui</span>
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="preprocessor">#endif // !iqtgui_CTabContainerGuiComp_included</span>
+<a name="l00125"></a>00125 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
