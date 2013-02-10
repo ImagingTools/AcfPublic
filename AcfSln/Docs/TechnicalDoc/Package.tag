@@ -867,6 +867,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CConvolutionKernel2dComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_convolution_kernel2d_comp_8h</filename>
+    <includes id="_c_convolution_kernel2d_8h" name="CConvolutionKernel2d.h" local="yes" imported="no">iipr/CConvolutionKernel2d.h</includes>
+    <class kind="class">iipr::CConvolutionKernel2dComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CConvolutionProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_convolution_processor_comp_8h</filename>
@@ -7688,6 +7696,7 @@
     <class kind="class">iipr::CCircleFindProcessorComp</class>
     <class kind="class">iipr::CColorBitmapSeparatorSupplierComp</class>
     <class kind="class">iipr::CConvolutionKernel2d</class>
+    <class kind="class">iipr::CConvolutionKernel2dComp</class>
     <class kind="class">iipr::CConvolutionProcessorComp</class>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
     <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
@@ -8556,6 +8565,33 @@
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
       <anchor>a7813c5bb06fa67f634ccca1ab468ef9a</anchor>
       <arglist>(int versionId) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CConvolutionKernel2dComp</name>
+    <filename>classiipr_1_1_c_convolution_kernel2d_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iipr::CConvolutionKernel2d</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d_comp.html</anchorfile>
+      <anchor>aeb6fd56ef72e0fc6cca9ffa561a210b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CConvolutionKernel2d</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d_comp.html</anchorfile>
+      <anchor>a39d4265c1db24655df0f5fcd00689311</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d_comp.html</anchorfile>
+      <anchor>ac03fc489a06c850b5d7f10022da2543d</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
