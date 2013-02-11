@@ -45,6 +45,7 @@
 #include "icmpstr/CPackagesLoaderComp.h"
 #include "icmpstr/CRegistriesManagerComp.h"
 #include "icmpstr/CRegistryCodeSaverComp.h"
+#include "icmpstr/CComponentPromotorDialogComp.h"
 
 
 /**
@@ -91,6 +92,7 @@ typedef icmpstr::CRegistryTreeViewComp RegistryTreeView;
 typedef icmpstr::CPackagesLoaderComp PackagesLoader;
 typedef icmpstr::CRegistriesManagerComp RegistriesManager;
 typedef icmpstr::CRegistryCodeSaverComp RegistryCodeSaver;
+typedef icmpstr::CComponentPromotorDialogComp ComponentPromotorDialog;
 
 
 } // namespace CompositorPck

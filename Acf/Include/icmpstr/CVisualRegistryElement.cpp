@@ -67,7 +67,7 @@ void CVisualRegistryElement::Initialize(
 			const icomp::CComponentAddress& address)
 {
 	m_registryPtr = parentPtr;
-	m_addess = address;
+	m_address = address;
 }
 
 

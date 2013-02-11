@@ -102,8 +102,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">GetRegistryConsistInfo</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#adbdcac0be0af8540390aa21ff4cbbdb7">TryOpenComponent</a> (const <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html">CVisualRegistryElement</a> &amp;registryElement)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to open the composite component's registry in a new window.  <a href="#adbdcac0be0af8540390aa21ff4cbbdb7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa7725fa94730cb9c04d5e59ba656e123">SetIgnoreChanges</a> (int ignoreUpdateFlags)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the flags that will be ignored by the update logic of the scene.  <a href="#aa7725fa94730cb9c04d5e59ba656e123"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#acc889733d4946c3b2bb9453703150bcf">SetAcceptedMimeTypes</a> (const QStringList &amp;mimeTypes)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set accepted mime types.  <a href="#acc889733d4946c3b2bb9453703150bcf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
@@ -113,8 +111,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of the possible mime IDs, which are accepted by the consumer.  <a href="#abd12be132c99494d0ef120818c896c92"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a26988087a87aba5b3f993877ea80f412">OnDropFinished</a> (const QMimeData &amp;mimeData, QEvent *eventPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification about drop action finish.  <a href="#a26988087a87aba5b3f993877ea80f412"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a0a6de143ba4be8064a6942bb95394463">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#a0a6de143ba4be8064a6942bb95394463"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak"/>
@@ -176,6 +172,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a52fd71ee948b05248d94a5a043839343">OnDropObject</a> (const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac86b77de39ddc462410c4ecb69ee1c58">UpdateScene</a> (int updateFlags)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a31a0816128118d47d543d9d51d80b7af">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a241d14550bf848be92bd5a7efcd73936">UpdateGui</a> (int updateFlags)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a241d14550bf848be92bd5a7efcd73936"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a323000d3138c35b7c48bbf8a015d6045">OnAttached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#a323000d3138c35b7c48bbf8a015d6045"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#af4d64289ff0173a223146e2a0a72445f">OnDetached</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
@@ -217,7 +215,7 @@ Friends</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00109">109</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00101">101</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
 
 </div>
 </div>
@@ -312,43 +310,6 @@ Friends</h2></td></tr>
 <p>Create instance of shape representing some element. </p>
 <p>The shape will be automatically connected to element using model/observer pattern. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="namespaceimod.html" title="This namespace containes basic implementation of Model/Observer design pattern This package is system...">imod</a>. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a0a6de143ba4be8064a6942bb95394463"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::AfterUpdate" ref="a0a6de143ba4be8064a6942bb95394463" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void icmpstr::CVisualRegistryEditorComp::AfterUpdate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
-          <td class="paramname"><em>modelPtr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>updateFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>This function will be called after update of the observer contents occures. </p>
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a92633a181178349247fbf491ee39b729">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CVisualRegistryEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -480,7 +441,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00305">305</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00298">298</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
 
 </div>
 </div>
@@ -498,7 +459,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00311">311</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00304">304</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
 
 </div>
 </div>
@@ -1226,25 +1187,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa7725fa94730cb9c04d5e59ba656e123"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::SetIgnoreChanges" ref="aa7725fa94730cb9c04d5e59ba656e123" args="(int ignoreUpdateFlags)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void icmpstr::CVisualRegistryEditorComp::SetIgnoreChanges </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ignoreUpdateFlags</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Specify the flags that will be ignored by the update logic of the scene. </p>
-
-</div>
-</div>
 <a class="anchor" id="a6f6d91ab8f40e133107f964fd960455b"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::ToEmbeddedComponent" ref="a6f6d91ab8f40e133107f964fd960455b" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -1371,6 +1313,27 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a241d14550bf848be92bd5a7efcd73936"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::UpdateGui" ref="a241d14550bf848be92bd5a7efcd73936" args="(int updateFlags)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void icmpstr::CVisualRegistryEditorComp::UpdateGui </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Do update of the model GUI. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a2a108ca09fa12c1102c340df331c8bfc">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CVisualRegistryEditorComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; icomp::IRegistry &gt; &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac86b77de39ddc462410c4ecb69ee1c58"></a><!-- doxytag: member="icmpstr::CVisualRegistryEditorComp::UpdateScene" ref="ac86b77de39ddc462410c4ecb69ee1c58" args="(int updateFlags)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1400,7 +1363,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00234">234</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_visual_registry_editor_comp_8h_source.html#l00229">229</a> of file <a class="el" href="_c_visual_registry_editor_comp_8h_source.html">CVisualRegistryEditorComp.h</a>.</p>
 
 </div>
 </div>

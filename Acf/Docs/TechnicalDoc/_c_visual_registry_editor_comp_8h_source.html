@@ -108,207 +108,203 @@
 <a name="l00080"></a>00080 
 <a name="l00085"></a>00085        <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#adbdcac0be0af8540390aa21ff4cbbdb7" title="Try to open the composite component&#39;s registry in a new window.">TryOpenComponent</a>(<span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_element.html">CVisualRegistryElement</a>&amp; registryElement);
 <a name="l00086"></a>00086 
-<a name="l00090"></a>00090        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa7725fa94730cb9c04d5e59ba656e123" title="Specify the flags that will be ignored by the update logic of the scene.">SetIgnoreChanges</a>(<span class="keywordtype">int</span> ignoreUpdateFlags);
-<a name="l00091"></a>00091 
-<a name="l00096"></a>00096        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#acc889733d4946c3b2bb9453703150bcf" title="Set accepted mime types.">SetAcceptedMimeTypes</a>(<span class="keyword">const</span> QStringList&amp; mimeTypes);
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
-<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">ibase::IHierarchicalCommand</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aabf294b438ec771c45ad197978174048" title="Get list of menu commands.">GetCommands</a>() <span class="keyword">const</span>;
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101        <span class="comment">// reimplemented (iqtgui::IDropConsumer)</span>
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> QStringList <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#abd12be132c99494d0ef120818c896c92" title="Get the list of the possible mime IDs, which are accepted by the consumer.">GetAcceptedMimeIds</a>() <span class="keyword">const</span>;
-<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a26988087a87aba5b3f993877ea80f412" title="Notification about drop action finish.">OnDropFinished</a>(<span class="keyword">const</span> QMimeData&amp; mimeData, QEvent* eventPtr);
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a0a6de143ba4be8064a6942bb95394463" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="keyword">protected</span>:
-<a name="l00109"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7">00109</a>        <span class="keyword">enum</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7">GroupId</a>
-<a name="l00110"></a>00110        {
-<a name="l00111"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a1db9f4469a5b86bf612026a67d2e0c06">00111</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a1db9f4469a5b86bf612026a67d2e0c06">GI_COMPONENT</a> = 0x5430,
-<a name="l00112"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a19b58792dc1b6b504b35c25a762c6d63">00112</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a19b58792dc1b6b504b35c25a762c6d63">GI_EMBEDDED_REGISTRY</a>,
-<a name="l00113"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a27da63bde2eb1d0247950e53258ce708">00113</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a27da63bde2eb1d0247950e53258ce708">GI_CODEGEN</a>,
-<a name="l00114"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a333f46c00846751c89c0429f428a437d">00114</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a333f46c00846751c89c0429f428a437d">GI_PREVIEW</a>,
-<a name="l00115"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a059bb57882415ccd6c208015f6113fa1">00115</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a059bb57882415ccd6c208015f6113fa1">GI_EDIT</a>,
-<a name="l00116"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a1d489f3ab152d5ed5d36be0cbb347422">00116</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a1d489f3ab152d5ed5d36be0cbb347422">GI_TOOLS</a>
-<a name="l00117"></a>00117        };
-<a name="l00118"></a>00118 
-<a name="l00119"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html">00119</a>        <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html">EnvironmentObserver</a>: <span class="keyword">public</span> imod::<a class="code" href="classimod_1_1_t_single_model_observer_base.html#a203370facc9a8df2ddbcff099afb9f20">TSingleModelObserverBase</a>&lt;icomp::IComponentEnvironmentManager&gt;
-<a name="l00120"></a>00120        {
-<a name="l00121"></a>00121        <span class="keyword">public</span>:
-<a name="l00122"></a>00122               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html#a47d0280e470f8ef8c6c54c47f99fb8d3">EnvironmentObserver</a>(<a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>* parentPtr);
+<a name="l00091"></a>00091        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#acc889733d4946c3b2bb9453703150bcf" title="Set accepted mime types.">SetAcceptedMimeTypes</a>(<span class="keyword">const</span> QStringList&amp; mimeTypes);
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
+<a name="l00094"></a>00094        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">ibase::IHierarchicalCommand</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aabf294b438ec771c45ad197978174048" title="Get list of menu commands.">GetCommands</a>() <span class="keyword">const</span>;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <span class="comment">// reimplemented (iqtgui::IDropConsumer)</span>
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> QStringList <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#abd12be132c99494d0ef120818c896c92" title="Get the list of the possible mime IDs, which are accepted by the consumer.">GetAcceptedMimeIds</a>() <span class="keyword">const</span>;
+<a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a26988087a87aba5b3f993877ea80f412" title="Notification about drop action finish.">OnDropFinished</a>(<span class="keyword">const</span> QMimeData&amp; mimeData, QEvent* eventPtr);
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 <span class="keyword">protected</span>:
+<a name="l00101"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7">00101</a>        <span class="keyword">enum</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7">GroupId</a>
+<a name="l00102"></a>00102        {
+<a name="l00103"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a1db9f4469a5b86bf612026a67d2e0c06">00103</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a1db9f4469a5b86bf612026a67d2e0c06">GI_COMPONENT</a> = 0x5430,
+<a name="l00104"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a19b58792dc1b6b504b35c25a762c6d63">00104</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a19b58792dc1b6b504b35c25a762c6d63">GI_EMBEDDED_REGISTRY</a>,
+<a name="l00105"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a27da63bde2eb1d0247950e53258ce708">00105</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a27da63bde2eb1d0247950e53258ce708">GI_CODEGEN</a>,
+<a name="l00106"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a333f46c00846751c89c0429f428a437d">00106</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a333f46c00846751c89c0429f428a437d">GI_PREVIEW</a>,
+<a name="l00107"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a059bb57882415ccd6c208015f6113fa1">00107</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a059bb57882415ccd6c208015f6113fa1">GI_EDIT</a>,
+<a name="l00108"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a1d489f3ab152d5ed5d36be0cbb347422">00108</a>               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a233b273076b25fa833a2a3b2123386d7a1d489f3ab152d5ed5d36be0cbb347422">GI_TOOLS</a>
+<a name="l00109"></a>00109        };
+<a name="l00110"></a>00110 
+<a name="l00111"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html">00111</a>        <span class="keyword">class </span><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html">EnvironmentObserver</a>: <span class="keyword">public</span> imod::<a class="code" href="classimod_1_1_t_single_model_observer_base.html#a203370facc9a8df2ddbcff099afb9f20">TSingleModelObserverBase</a>&lt;icomp::IComponentEnvironmentManager&gt;
+<a name="l00112"></a>00112        {
+<a name="l00113"></a>00113        <span class="keyword">public</span>:
+<a name="l00114"></a>00114               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html#a47d0280e470f8ef8c6c54c47f99fb8d3">EnvironmentObserver</a>(<a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>* parentPtr);
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116        <span class="keyword">protected</span>:
+<a name="l00117"></a>00117               <span class="comment">// reimplemented (imod::TSingleModelObserverBase)</span>
+<a name="l00118"></a>00118               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html#a35514abd8c7a95bc6a473a8d699b0301">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120        <span class="keyword">private</span>:
+<a name="l00121"></a>00121               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>&amp; m_parent;
+<a name="l00122"></a>00122        };
 <a name="l00123"></a>00123 
-<a name="l00124"></a>00124        <span class="keyword">protected</span>:
-<a name="l00125"></a>00125               <span class="comment">// reimplemented (imod::TSingleModelObserverBase)</span>
-<a name="l00126"></a>00126               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html#a35514abd8c7a95bc6a473a8d699b0301">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128        <span class="keyword">private</span>:
-<a name="l00129"></a>00129               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>&amp; m_parent;
-<a name="l00130"></a>00130        };
-<a name="l00131"></a>00131 
-<a name="l00135"></a>00135        <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8c5bb9b7d115ccb10684f5862cf35c72" title="Get root or embedded registry that is currently selected in the editor.">GetSelectedRegistry</a>() <span class="keyword">const</span>;
-<a name="l00136"></a>00136 
-<a name="l00142"></a>00142        QGraphicsItem* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a837c0b20aff3f9b4745138df7257f12d" title="Create instance of shape representing some element.">AddShapeToScene</a>(<a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* elementPtr) <span class="keyword">const</span>;
-<a name="l00143"></a>00143        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a835ff27bd9a00ee741cbb9b879087e9d">AddConnectorsToScene</a>();
-<a name="l00144"></a>00144        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a16a82854a377fa66427fa0872dd26cad">AddConnector</a>(
-<a name="l00145"></a>00145                             <a class="code" href="classicmpstr_1_1_c_registry_element_shape.html" title="Visualization of geometrical registry elements.">CRegistryElementShape</a>&amp; sourceShape,
-<a name="l00146"></a>00146                             <span class="keyword">const</span> QByteArray&amp; referenceComponentId,
-<a name="l00147"></a>00147                             <span class="keyword">const</span> QByteArray&amp; attributeId,
-<a name="l00148"></a>00148                             <span class="keywordtype">bool</span> isFactory = <span class="keyword">false</span>);
+<a name="l00127"></a>00127        <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8c5bb9b7d115ccb10684f5862cf35c72" title="Get root or embedded registry that is currently selected in the editor.">GetSelectedRegistry</a>() <span class="keyword">const</span>;
+<a name="l00128"></a>00128 
+<a name="l00134"></a>00134        QGraphicsItem* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a837c0b20aff3f9b4745138df7257f12d" title="Create instance of shape representing some element.">AddShapeToScene</a>(<a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* elementPtr) <span class="keyword">const</span>;
+<a name="l00135"></a>00135        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a835ff27bd9a00ee741cbb9b879087e9d">AddConnectorsToScene</a>();
+<a name="l00136"></a>00136        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a16a82854a377fa66427fa0872dd26cad">AddConnector</a>(
+<a name="l00137"></a>00137                             <a class="code" href="classicmpstr_1_1_c_registry_element_shape.html" title="Visualization of geometrical registry elements.">CRegistryElementShape</a>&amp; sourceShape,
+<a name="l00138"></a>00138                             <span class="keyword">const</span> QByteArray&amp; referenceComponentId,
+<a name="l00139"></a>00139                             <span class="keyword">const</span> QByteArray&amp; attributeId,
+<a name="l00140"></a>00140                             <span class="keywordtype">bool</span> isFactory = <span class="keyword">false</span>);
+<a name="l00141"></a>00141 
+<a name="l00145"></a>00145        <a class="code" href="classicomp_1_1_i_registry_element.html" title="Represents element of registry describing component parameters.">icomp::IRegistryElement</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a74e5e7ff66d60bdd61340ed72f16b96a" title="Used on drop/paste action.">TryCreateComponent</a>(
+<a name="l00146"></a>00146                             <span class="keyword">const</span> QByteArray&amp; elementId,
+<a name="l00147"></a>00147                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address,
+<a name="l00148"></a>00148                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
 <a name="l00149"></a>00149 
-<a name="l00153"></a>00153        <a class="code" href="classicomp_1_1_i_registry_element.html" title="Represents element of registry describing component parameters.">icomp::IRegistryElement</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a74e5e7ff66d60bdd61340ed72f16b96a" title="Used on drop/paste action.">TryCreateComponent</a>(
-<a name="l00154"></a>00154                             <span class="keyword">const</span> QByteArray&amp; elementId,
-<a name="l00155"></a>00155                             <span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address,
-<a name="l00156"></a>00156                             <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
-<a name="l00157"></a>00157 
-<a name="l00163"></a>00163        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac26961623ce7b332fdcb43e9d0f46db3" title="Used by TryCreateComponent() when an existing component is pasted (?) to update attributes referencin...">ConnectReferences</a>(<span class="keyword">const</span> QByteArray&amp; componentRole);
-<a name="l00164"></a>00164 
-<a name="l00168"></a>00168        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ad492494cb0e8fd2d5fd3a6a238fddef3" title="Update component selection and related menu actions.">UpdateComponentSelection</a>();
+<a name="l00155"></a>00155        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac26961623ce7b332fdcb43e9d0f46db3" title="Used by TryCreateComponent() when an existing component is pasted (?) to update attributes referencin...">ConnectReferences</a>(<span class="keyword">const</span> QByteArray&amp; componentRole);
+<a name="l00156"></a>00156 
+<a name="l00160"></a>00160        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ad492494cb0e8fd2d5fd3a6a238fddef3" title="Update component selection and related menu actions.">UpdateComponentSelection</a>();
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a20bd3646af0fa95386167d03aad9eb53">DoRetranslate</a>();
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a52fd71ee948b05248d94a5a043839343">OnDropObject</a>(<span class="keyword">const</span> QMimeData&amp; data, QGraphicsSceneDragDropEvent* eventPtr);
+<a name="l00165"></a>00165        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac86b77de39ddc462410c4ecb69ee1c58">UpdateScene</a>(<span class="keywordtype">int</span> updateFlags);
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00168"></a>00168        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a31a0816128118d47d543d9d51d80b7af">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00169"></a>00169 
-<a name="l00170"></a>00170        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a20bd3646af0fa95386167d03aad9eb53">DoRetranslate</a>();
-<a name="l00171"></a>00171 
-<a name="l00172"></a>00172        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a52fd71ee948b05248d94a5a043839343">OnDropObject</a>(<span class="keyword">const</span> QMimeData&amp; data, QGraphicsSceneDragDropEvent* eventPtr);
-<a name="l00173"></a>00173        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac86b77de39ddc462410c4ecb69ee1c58">UpdateScene</a>(<span class="keywordtype">int</span> updateFlags);
-<a name="l00174"></a>00174 
-<a name="l00175"></a>00175        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00176"></a>00176        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a31a0816128118d47d543d9d51d80b7af">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00177"></a>00177 
-<a name="l00178"></a>00178        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00179"></a>00179        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a323000d3138c35b7c48bbf8a015d6045" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
-<a name="l00180"></a>00180        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#af4d64289ff0173a223146e2a0a72445f" title="This call back function will be called, if an observable object is about to be detached.">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
-<a name="l00181"></a>00181 
-<a name="l00182"></a>00182        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00183"></a>00183        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8205212eeb4d97087b2ac4b2d47686b4">OnComponentCreated</a>();
-<a name="l00184"></a>00184        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ab5b47a8ef4c9e14d2fb82421a9f8036f">OnComponentDestroyed</a>();
-<a name="l00185"></a>00185 
-<a name="l00186"></a>00186 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00187"></a>00187        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac022b0f5d471e1ae544a91c12329b935">OnSelectionChanged</a>();
-<a name="l00188"></a>00188 
-<a name="l00189"></a>00189        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#abcba543c6e7e4887d1c83e356ef27d64">OnCutCommand</a>();
-<a name="l00190"></a>00190        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a306faa669843bcf718e176182db77bc0">OnCopyCommand</a>();
-<a name="l00191"></a>00191        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a93d4ebcf3887c28718a3aed8dee69b88">OnPasteCommand</a>();
-<a name="l00192"></a>00192        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a21c58c10627758b78f541d49f87ecda7">OnRemoveComponent</a>();
-<a name="l00193"></a>00193        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a07ed3d6ff9348728203d30fc3b132957">OnRenameComponent</a>();
-<a name="l00194"></a>00194        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a524211f2df03a3b38fd81c4f1646a736">NewEmbeddedComponent</a>();
-<a name="l00195"></a>00195        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a6f6d91ab8f40e133107f964fd960455b">ToEmbeddedComponent</a>();
-<a name="l00196"></a>00196        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a98c3cfdc9535a73b20cf2915522b10c0">RemoveEmbeddedComponent</a>();
-<a name="l00197"></a>00197        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a5c02f309036f42e0d7893f95908518e9">OnExportToCode</a>();
-<a name="l00198"></a>00198        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa4ab3adb657b1fadbfa749a59184060d">OnExecute</a>();
-<a name="l00199"></a>00199        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a97e103ece057f3f5eb35c19b9284528c">OnAbort</a>();
-<a name="l00200"></a>00200        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ad106963a0a84920649a64d259ee30102">OnExecutionTimerTick</a>();
-<a name="l00201"></a>00201        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a9a9a84c44284ce68694ea1bc75a8e4b8">OnShowRegistryTopology</a>();
-<a name="l00202"></a>00202 
-<a name="l00206"></a>00206        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a18fb3f5b3ae3c3b5ff5cdc29ebe9b107" title="Selects (checks) a button representing an embedded composition.">OnEmbeddedComponentButtonClicked</a>();
-<a name="l00210"></a>00210        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac403c35b20500aee8f27259268a45361" title="Clear and fill the embedded registry button box (used when the number of registry elements changes)...">UpdateEmbeddedRegistryButtons</a>();
-<a name="l00214"></a>00214        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ab5327d7dc79b59d59b989edda4ecd30e" title="Update the scene to display currently selected embedded composition.">UpdateEmbeddedRegistryView</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
-<a name="l00215"></a>00215 
-<a name="l00216"></a>00216        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00217"></a>00217        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa8b2750cb1c903b73899c16f7f90da56" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00218"></a>00218        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a3f08b370e1cbb44da13f8d1535401dce" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00219"></a>00219 
-<a name="l00220"></a>00220 <span class="keyword">private</span>:
-<a name="l00221"></a>00221        <span class="keyword">class </span>SelectionInfoImpl: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html" title="Interface containing all information about registry selected element.">IElementSelectionInfo</a>
-<a name="l00222"></a>00222        {
-<a name="l00223"></a>00223        <span class="keyword">public</span>:
-<a name="l00224"></a>00224               <span class="keywordtype">void</span> SetParent(<a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>* parentPtr);
-<a name="l00225"></a>00225 
-<a name="l00226"></a>00226               <span class="comment">// reimplemented (icmpstr::IElementSelectionInfo)</span>
-<a name="l00227"></a>00227               <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8c5bb9b7d115ccb10684f5862cf35c72" title="Get root or embedded registry that is currently selected in the editor.">GetSelectedRegistry</a>() <span class="keyword">const</span>;
-<a name="l00228"></a>00228               <span class="keyword">virtual</span> Elements GetSelectedElements() <span class="keyword">const</span>;
-<a name="l00229"></a>00229 
-<a name="l00230"></a>00230        <span class="keyword">private</span>:
-<a name="l00231"></a>00231               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>* m_parentPtr;
-<a name="l00232"></a>00232        };
-<a name="l00233"></a>00233 
-<a name="l00234"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a1ecffae37bd7adb0d052fdefe2de32db">00234</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classimod_1_1_t_model_wrap.html" title="This model wrapper provides a simple connection between a concrete istd::IChangeable implementation a...">imod::TModelWrap</a>&lt;SelectionInfoImpl&gt;;
-<a name="l00235"></a>00235 
-<a name="l00236"></a>00236        <span class="comment">// static template methods for subelement access</span>
-<a name="l00237"></a>00237        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
-<a name="l00238"></a>00238        <span class="keyword">static</span> InterfaceType* ExtractSelectionInfo(<a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>&amp; component)
-<a name="l00239"></a>00239        {
-<a name="l00240"></a>00240               <span class="keywordflow">return</span> &amp;component.m_selectionInfo;
-<a name="l00241"></a>00241        }
-<a name="l00242"></a>00242 
-<a name="l00243"></a>00243        I_REF(<a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>, m_registryCodeSaverCompPtr);
-<a name="l00244"></a>00244        I_REF(<a class="code" href="classicmpstr_1_1_i_registry_preview.html">IRegistryPreview</a>, m_registryPreviewCompPtr);
-<a name="l00245"></a>00245        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
-<a name="l00246"></a>00246        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_envManagerModelCompPtr);
-<a name="l00247"></a>00247        I_REF(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>, m_quickHelpViewerCompPtr);
-<a name="l00248"></a>00248        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
-<a name="l00249"></a>00249        I_REF(<a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>, m_consistencyInfoCompPtr);
-<a name="l00250"></a>00250        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_registryTopologyGuiCompPtr);
-<a name="l00251"></a>00251        I_REF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_registryObserverCompPtr);
-<a name="l00252"></a>00252        I_REF(<a class="code" href="classiqtgui_1_1_i_visual_status_provider.html" title="Extends standard information provider to provide additional visual informations.">iqtgui::IVisualStatusProvider</a>, m_registryValidationStatusCompPtr);
-<a name="l00253"></a>00253        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_registryValidationStatusModelCompPtr);
-<a name="l00254"></a>00254        I_REF(<a class="code" href="classicmpstr_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>, m_sceneProviderCompPtr);
-<a name="l00255"></a>00255        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_sceneProviderGuiCompPtr);
-<a name="l00256"></a>00256 
-<a name="l00257"></a>00257        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_registryCommand;
-<a name="l00258"></a>00258        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_editMenu;
-<a name="l00259"></a>00259        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_cutCommand;
-<a name="l00260"></a>00260        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_copyCommand;
-<a name="l00261"></a>00261        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_pasteCommand;
-<a name="l00262"></a>00262        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_removeComponentCommand;
-<a name="l00263"></a>00263        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_registryMenu;
-<a name="l00264"></a>00264        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_renameComponentCommand;
-<a name="l00265"></a>00265        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_newEmbeddedRegistryCommand;
-<a name="l00266"></a>00266        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_toEmbeddedRegistryCommand;
-<a name="l00267"></a>00267        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_removeEmbeddedRegistryCommand;
-<a name="l00268"></a>00268        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_exportToCodeCommand;
-<a name="l00269"></a>00269        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_executeRegistryCommand;
-<a name="l00270"></a>00270        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_abortRegistryCommand;
-<a name="l00271"></a>00271        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_showRegistryTopologyCommand;
+<a name="l00170"></a>00170        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00171"></a>00171        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a241d14550bf848be92bd5a7efcd73936" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags);
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00174"></a>00174        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a323000d3138c35b7c48bbf8a015d6045" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00175"></a>00175        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#af4d64289ff0173a223146e2a0a72445f" title="This call back function will be called, if an observable object is about to be detached.">OnDetached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00178"></a>00178        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8205212eeb4d97087b2ac4b2d47686b4">OnComponentCreated</a>();
+<a name="l00179"></a>00179        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ab5b47a8ef4c9e14d2fb82421a9f8036f">OnComponentDestroyed</a>();
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00182"></a>00182        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac022b0f5d471e1ae544a91c12329b935">OnSelectionChanged</a>();
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#abcba543c6e7e4887d1c83e356ef27d64">OnCutCommand</a>();
+<a name="l00185"></a>00185        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a306faa669843bcf718e176182db77bc0">OnCopyCommand</a>();
+<a name="l00186"></a>00186        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a93d4ebcf3887c28718a3aed8dee69b88">OnPasteCommand</a>();
+<a name="l00187"></a>00187        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a21c58c10627758b78f541d49f87ecda7">OnRemoveComponent</a>();
+<a name="l00188"></a>00188        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a07ed3d6ff9348728203d30fc3b132957">OnRenameComponent</a>();
+<a name="l00189"></a>00189        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a524211f2df03a3b38fd81c4f1646a736">NewEmbeddedComponent</a>();
+<a name="l00190"></a>00190        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a6f6d91ab8f40e133107f964fd960455b">ToEmbeddedComponent</a>();
+<a name="l00191"></a>00191        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a98c3cfdc9535a73b20cf2915522b10c0">RemoveEmbeddedComponent</a>();
+<a name="l00192"></a>00192        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a5c02f309036f42e0d7893f95908518e9">OnExportToCode</a>();
+<a name="l00193"></a>00193        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa4ab3adb657b1fadbfa749a59184060d">OnExecute</a>();
+<a name="l00194"></a>00194        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a97e103ece057f3f5eb35c19b9284528c">OnAbort</a>();
+<a name="l00195"></a>00195        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ad106963a0a84920649a64d259ee30102">OnExecutionTimerTick</a>();
+<a name="l00196"></a>00196        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a9a9a84c44284ce68694ea1bc75a8e4b8">OnShowRegistryTopology</a>();
+<a name="l00197"></a>00197 
+<a name="l00201"></a>00201        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a18fb3f5b3ae3c3b5ff5cdc29ebe9b107" title="Selects (checks) a button representing an embedded composition.">OnEmbeddedComponentButtonClicked</a>();
+<a name="l00205"></a>00205        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ac403c35b20500aee8f27259268a45361" title="Clear and fill the embedded registry button box (used when the number of registry elements changes)...">UpdateEmbeddedRegistryButtons</a>();
+<a name="l00209"></a>00209        <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#ab5327d7dc79b59d59b989edda4ecd30e" title="Update the scene to display currently selected embedded composition.">UpdateEmbeddedRegistryView</a>(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
+<a name="l00210"></a>00210 
+<a name="l00211"></a>00211        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00212"></a>00212        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa8b2750cb1c903b73899c16f7f90da56" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00213"></a>00213        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a3f08b370e1cbb44da13f8d1535401dce" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215 <span class="keyword">private</span>:
+<a name="l00216"></a>00216        <span class="keyword">class </span>SelectionInfoImpl: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classicmpstr_1_1_i_element_selection_info.html" title="Interface containing all information about registry selected element.">IElementSelectionInfo</a>
+<a name="l00217"></a>00217        {
+<a name="l00218"></a>00218        <span class="keyword">public</span>:
+<a name="l00219"></a>00219               <span class="keywordtype">void</span> SetParent(<a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>* parentPtr);
+<a name="l00220"></a>00220 
+<a name="l00221"></a>00221               <span class="comment">// reimplemented (icmpstr::IElementSelectionInfo)</span>
+<a name="l00222"></a>00222               <span class="keyword">virtual</span> <a class="code" href="classicomp_1_1_i_registry.html" title="Interface representing information stored in component registry.">icomp::IRegistry</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a8c5bb9b7d115ccb10684f5862cf35c72" title="Get root or embedded registry that is currently selected in the editor.">GetSelectedRegistry</a>() <span class="keyword">const</span>;
+<a name="l00223"></a>00223               <span class="keyword">virtual</span> Elements GetSelectedElements() <span class="keyword">const</span>;
+<a name="l00224"></a>00224 
+<a name="l00225"></a>00225        <span class="keyword">private</span>:
+<a name="l00226"></a>00226               <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>* m_parentPtr;
+<a name="l00227"></a>00227        };
+<a name="l00228"></a>00228 
+<a name="l00229"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#a1ecffae37bd7adb0d052fdefe2de32db">00229</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classimod_1_1_t_model_wrap.html" title="This model wrapper provides a simple connection between a concrete istd::IChangeable implementation a...">imod::TModelWrap</a>&lt;SelectionInfoImpl&gt;;
+<a name="l00230"></a>00230 
+<a name="l00231"></a>00231        <span class="comment">// static template methods for subelement access</span>
+<a name="l00232"></a>00232        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
+<a name="l00233"></a>00233        <span class="keyword">static</span> InterfaceType* ExtractSelectionInfo(<a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html">CVisualRegistryEditorComp</a>&amp; component)
+<a name="l00234"></a>00234        {
+<a name="l00235"></a>00235               <span class="keywordflow">return</span> &amp;component.m_selectionInfo;
+<a name="l00236"></a>00236        }
+<a name="l00237"></a>00237 
+<a name="l00238"></a>00238        I_REF(<a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>, m_registryCodeSaverCompPtr);
+<a name="l00239"></a>00239        I_REF(<a class="code" href="classicmpstr_1_1_i_registry_preview.html">IRegistryPreview</a>, m_registryPreviewCompPtr);
+<a name="l00240"></a>00240        I_REF(<a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>, m_envManagerCompPtr);
+<a name="l00241"></a>00241        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_envManagerModelCompPtr);
+<a name="l00242"></a>00242        I_REF(<a class="code" href="classidoc_1_1_i_help_viewer.html" title="Allow to show help document to specified object or text.">idoc::IHelpViewer</a>, m_quickHelpViewerCompPtr);
+<a name="l00243"></a>00243        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
+<a name="l00244"></a>00244        I_REF(<a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>, m_consistencyInfoCompPtr);
+<a name="l00245"></a>00245        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_registryTopologyGuiCompPtr);
+<a name="l00246"></a>00246        I_REF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_registryObserverCompPtr);
+<a name="l00247"></a>00247        I_REF(<a class="code" href="classiqtgui_1_1_i_visual_status_provider.html" title="Extends standard information provider to provide additional visual informations.">iqtgui::IVisualStatusProvider</a>, m_registryValidationStatusCompPtr);
+<a name="l00248"></a>00248        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_registryValidationStatusModelCompPtr);
+<a name="l00249"></a>00249        I_REF(<a class="code" href="classicmpstr_1_1_i_scene_provider.html" title="Interface for GUI objects managing scene.">ISceneProvider</a>, m_sceneProviderCompPtr);
+<a name="l00250"></a>00250        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_sceneProviderGuiCompPtr);
+<a name="l00251"></a>00251 
+<a name="l00252"></a>00252        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_rootMenuCommand;
+<a name="l00253"></a>00253        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_editMenu;
+<a name="l00254"></a>00254        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_cutCommand;
+<a name="l00255"></a>00255        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_copyCommand;
+<a name="l00256"></a>00256        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_pasteCommand;
+<a name="l00257"></a>00257        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_removeComponentCommand;
+<a name="l00258"></a>00258        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_registryMenu;
+<a name="l00259"></a>00259        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_renameComponentCommand;
+<a name="l00260"></a>00260        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_newEmbeddedRegistryCommand;
+<a name="l00261"></a>00261        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_toEmbeddedRegistryCommand;
+<a name="l00262"></a>00262        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_removeEmbeddedRegistryCommand;
+<a name="l00263"></a>00263        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_exportToCodeCommand;
+<a name="l00264"></a>00264        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_executeRegistryCommand;
+<a name="l00265"></a>00265        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_abortRegistryCommand;
+<a name="l00266"></a>00266        <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_showRegistryTopologyCommand;
+<a name="l00267"></a>00267 
+<a name="l00268"></a>00268        QTimer m_executionObserverTimer;
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270        QFont m_elementNameFont;
+<a name="l00271"></a>00271        QFont m_elementDetailFont;
 <a name="l00272"></a>00272 
-<a name="l00273"></a>00273        QTimer m_executionObserverTimer;
-<a name="l00274"></a>00274 
-<a name="l00275"></a>00275        QFont m_elementNameFont;
-<a name="l00276"></a>00276        QFont m_elementDetailFont;
+<a name="l00273"></a>00273        <span class="keyword">typedef</span> QSet&lt;QByteArray&gt; ElementIds;
+<a name="l00274"></a>00274        ElementIds m_selectedElementIds;
+<a name="l00275"></a>00275 
+<a name="l00276"></a>00276        EnvironmentObserver m_environmentObserver;
 <a name="l00277"></a>00277 
-<a name="l00278"></a>00278        <span class="keyword">typedef</span> QSet&lt;QByteArray&gt; ElementIds;
-<a name="l00279"></a>00279        ElementIds m_selectedElementIds;
-<a name="l00280"></a>00280 
-<a name="l00281"></a>00281        EnvironmentObserver m_environmentObserver;
-<a name="l00282"></a>00282 
-<a name="l00283"></a>00283        <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;SelectionInfoImpl&gt;</a> m_selectionInfo;
-<a name="l00284"></a>00284 
-<a name="l00285"></a>00285        QByteArray m_embeddedRegistryId;
-<a name="l00286"></a>00286        <span class="keywordtype">int</span> m_ignoreUpdateFlags;
-<a name="l00287"></a>00287        QGraphicsScene* m_scenePtr;
-<a name="l00288"></a>00288        <span class="keywordtype">bool</span> m_isUpdating;
-<a name="l00289"></a>00289        QStringList m_acceptedMimeTypes;
-<a name="l00290"></a>00290 
-<a name="l00291"></a>00291        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QToolButton&gt;</a> m_embeddedButtons;
-<a name="l00292"></a>00292        QSpacerItem* m_buttonSpacerPtr;
-<a name="l00293"></a>00293 
-<a name="l00294"></a>00294        <span class="comment">// static attributes</span>
-<a name="l00295"></a>00295        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementsListTag;
-<a name="l00296"></a>00296        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementTag;
-<a name="l00297"></a>00297        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementIdTag;
-<a name="l00298"></a>00298        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementAddressTag;
-<a name="l00299"></a>00299        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementCenterTag;
-<a name="l00300"></a>00300 };
-<a name="l00301"></a>00301 
+<a name="l00278"></a>00278        <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;SelectionInfoImpl&gt;</a> m_selectionInfo;
+<a name="l00279"></a>00279 
+<a name="l00280"></a>00280        QByteArray m_embeddedRegistryId;
+<a name="l00281"></a>00281        QGraphicsScene* m_scenePtr;
+<a name="l00282"></a>00282        QStringList m_acceptedMimeTypes;
+<a name="l00283"></a>00283 
+<a name="l00284"></a>00284        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;QToolButton&gt;</a> m_embeddedButtons;
+<a name="l00285"></a>00285        QSpacerItem* m_buttonSpacerPtr;
+<a name="l00286"></a>00286 
+<a name="l00287"></a>00287        <span class="comment">// static attributes</span>
+<a name="l00288"></a>00288        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementsListTag;
+<a name="l00289"></a>00289        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementTag;
+<a name="l00290"></a>00290        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementIdTag;
+<a name="l00291"></a>00291        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementAddressTag;
+<a name="l00292"></a>00292        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> s_elementCenterTag;
+<a name="l00293"></a>00293 };
+<a name="l00294"></a>00294 
+<a name="l00295"></a>00295 
+<a name="l00296"></a>00296 <span class="comment">// inline methods</span>
+<a name="l00297"></a>00297 
+<a name="l00298"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa98b336168a19656fae79d8f6433a6e2">00298</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa98b336168a19656fae79d8f6433a6e2">CVisualRegistryEditorComp::GetEnvironmentManager</a>()<span class="keyword"> const</span>
+<a name="l00299"></a>00299 <span class="keyword"></span>{
+<a name="l00300"></a>00300        <span class="keywordflow">return</span> m_envManagerCompPtr.GetPtr();
+<a name="l00301"></a>00301 }
 <a name="l00302"></a>00302 
-<a name="l00303"></a>00303 <span class="comment">// inline methods</span>
-<a name="l00304"></a>00304 
-<a name="l00305"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa98b336168a19656fae79d8f6433a6e2">00305</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_environment_manager.html">icomp::IComponentEnvironmentManager</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa98b336168a19656fae79d8f6433a6e2">CVisualRegistryEditorComp::GetEnvironmentManager</a>()<span class="keyword"> const</span>
-<a name="l00306"></a>00306 <span class="keyword"></span>{
-<a name="l00307"></a>00307        <span class="keywordflow">return</span> m_envManagerCompPtr.GetPtr();
-<a name="l00308"></a>00308 }
+<a name="l00303"></a>00303 
+<a name="l00304"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">00304</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">CVisualRegistryEditorComp::GetRegistryConsistInfo</a>()<span class="keyword"> const</span>
+<a name="l00305"></a>00305 <span class="keyword"></span>{
+<a name="l00306"></a>00306        <span class="keywordflow">return</span> m_consistencyInfoCompPtr.GetPtr();
+<a name="l00307"></a>00307 }
+<a name="l00308"></a>00308 
 <a name="l00309"></a>00309 
-<a name="l00310"></a>00310 
-<a name="l00311"></a><a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">00311</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classicmpstr_1_1_i_registry_consist_info.html">IRegistryConsistInfo</a>* <a class="code" href="classicmpstr_1_1_c_visual_registry_editor_comp.html#aa9b166d5fea6b091b999a710e732bd35">CVisualRegistryEditorComp::GetRegistryConsistInfo</a>()<span class="keyword"> const</span>
-<a name="l00312"></a>00312 <span class="keyword"></span>{
-<a name="l00313"></a>00313        <span class="keywordflow">return</span> m_consistencyInfoCompPtr.GetPtr();
-<a name="l00314"></a>00314 }
+<a name="l00310"></a>00310 } <span class="comment">// namespace icmpstr</span>
+<a name="l00311"></a>00311 
+<a name="l00312"></a>00312 
+<a name="l00313"></a>00313 <span class="preprocessor">#endif // !icmpstr_CVisualRegistryEditorComp_included</span>
+<a name="l00314"></a>00314 <span class="preprocessor"></span>
 <a name="l00315"></a>00315 
-<a name="l00316"></a>00316 
-<a name="l00317"></a>00317 } <span class="comment">// namespace icmpstr</span>
-<a name="l00318"></a>00318 
-<a name="l00319"></a>00319 
-<a name="l00320"></a>00320 <span class="preprocessor">#endif // !icmpstr_CVisualRegistryEditorComp_included</span>
-<a name="l00321"></a>00321 <span class="preprocessor"></span>
-<a name="l00322"></a>00322 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -1287,6 +1287,21 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
+    <name>CComponentPromotorDialogComp.h</name>
+    <path>C:/Temp/Acf/Include/icmpstr/</path>
+    <filename>_c_component_promotor_dialog_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_meta_info_manager_8h" name="IMetaInfoManager.h" local="yes" imported="no">icomp/IMetaInfoManager.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="yes" imported="no">ibase/TModelObserverCompWrap.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <class kind="class">icmpstr::CComponentPromotorDialogCompBase</class>
+    <class kind="class">icmpstr::CComponentPromotorDialogComp</class>
+    <namespace>icmpstr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CElementSelectionInfoManagerBase.h</name>
     <path>C:/Temp/Acf/Include/icmpstr/</path>
     <filename>_c_element_selection_info_manager_base_8h</filename>
@@ -4475,8 +4490,8 @@
     <filename>_c_selectable_commands_provider_comp_8h</filename>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <class kind="class">iqtgui::CSelectableCommandsProviderComp</class>
@@ -6592,6 +6607,10 @@
   <compound kind="class">
     <name>Base</name>
     <filename>class_base.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>CComponentPromotorDialogCompBase</name>
+    <filename>class_c_component_promotor_dialog_comp_base.html</filename>
   </compound>
   <compound kind="class">
     <name>CElementSelectionInfoManagerBase</name>
@@ -16584,6 +16603,8 @@
     <class kind="class">icmpstr::CComponentAccessor</class>
     <class kind="class">icmpstr::CComponentHelpFileProviderComp</class>
     <class kind="class">icmpstr::CComponentNoteEditorComp</class>
+    <class kind="class">icmpstr::CComponentPromotorDialogCompBase</class>
+    <class kind="class">icmpstr::CComponentPromotorDialogComp</class>
     <class kind="class">icmpstr::CElementSelectionInfoManagerBase</class>
     <class kind="class">icmpstr::CGraphicsConnectorItem</class>
     <class kind="class">icmpstr::CMultiAttributeDelegateWidget</class>
@@ -17180,6 +17201,149 @@
       <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
       <anchor>aeb2d73b45d65c9f9666746e44297cf79</anchor>
       <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CComponentPromotorDialogCompBase</name>
+    <filename>classicmpstr_1_1_c_component_promotor_dialog_comp_base.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CComponentPromotorDialogComp</name>
+    <filename>classicmpstr_1_1_c_component_promotor_dialog_comp.html</filename>
+    <base>TModelObserverCompWrap&lt; CComponentPromotorDialogCompBase &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; CComponentPromotorDialogCompBase &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a2e084c999f2a66fefe45a9452220fbb9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a895586751db455af5c2334efdc335d4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QDialog</type>
+      <name>BaseClass3</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a88309f5a1e055356fa92612ea01d3ed2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CComponentPromotorDialogComp</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a7798dec2cc665e2446d3feb9eaf795f5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a922592539adbef1b4100bb691afbd64c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="enumeration">
+      <name>GroupId</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>adbd5d01ec79756ee7949da2d46193b8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_COMPONENT</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>adbd5d01ec79756ee7949da2d46193b8dae63e8798886e3adcff68f133aba86dd5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_InterfacesPolicyCB_currentIndexChanged</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a4f639c06ed9ff62be2ba68480dbbb170</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AttributesPolicyCB_currentIndexChanged</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a49aee3ef6a075a54724585e08bcf059f</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SubcomponentsPolicyCB_currentIndexChanged</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>ae69909f7dcf07a4f28f2ba616fe4c034</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PackageNameCB_currentIndexChanged</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>acb6f9b3efa6a674be6e13ae09d178de9</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ComponentNameCB_currentIndexChanged</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>aa1bcd1fbdc5caaaf1197d76aa4b6735f</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnPromoteCommand</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a16be56238f36a699bbcb5e63465f18ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InsertElementToFilters</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a23495e811a03bed532a1feb6e447699e</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;elementName, const icomp::IRegistry::ElementInfo &amp;elementInfo)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CreatePackagesList</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a954e3fd8790c39502f3dff13b7b6853a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CreateComponentsList</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>ac7bf15751a039a3f25ac8fabed65c8ae</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CalcFilteredComponents</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a6b9b0b57f4036299b4991b6d7a3fa405</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoRetranslate</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a126db753c880e9920499a3d65cfa3270</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a4136f63962638b63db18fe7c73c1df9a</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19907,13 +20071,6 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>SetIgnoreChanges</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>aa7725fa94730cb9c04d5e59ba656e123</anchor>
-      <arglist>(int ignoreUpdateFlags)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
       <name>SetAcceptedMimeTypes</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>acc889733d4946c3b2bb9453703150bcf</anchor>
@@ -19939,13 +20096,6 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a26988087a87aba5b3f993877ea80f412</anchor>
       <arglist>(const QMimeData &amp;mimeData, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a0a6de143ba4be8064a6942bb95394463</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="variable">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</type>
@@ -20205,6 +20355,13 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a31a0816128118d47d543d9d51d80b7af</anchor>
       <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a241d14550bf848be92bd5a7efcd73936</anchor>
+      <arglist>(int updateFlags)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -40025,26 +40182,26 @@
       <anchor>a323289101bfd79ac81e51002d22fde27</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
-      <anchor>a5014c0ae887ad3dfa9efed9b1274a613</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
-      <anchor>a65132d1b9893599d5c2e7345ead2a837</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
       <anchor>abbb5767df179bf0c7439c08f00240f88</anchor>
       <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a5014c0ae887ad3dfa9efed9b1274a613</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
+      <anchor>a65132d1b9893599d5c2e7345ead2a837</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>iqtgui::CHierarchicalCommand</type>
