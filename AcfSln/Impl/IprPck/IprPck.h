@@ -71,6 +71,10 @@
 #include "iipr/CSelectableCalibrationSupplierComp.h"
 #include "iipr/CCheckerboardPatternGeneratorComp.h"
 #include "iipr/CImageFlipProcessorComp.h"
+#include "iipr/CColorPatternControllerComp.h"
+#include "iipr/CColorPatternComparatorComp.h"
+#include "iipr/CImageHistogramSupplierComp.h"
+
 //#include "iipr/CImageAffineTransformProcessorComp.h"
 
 
@@ -135,13 +139,13 @@ typedef icomp::TModelCompWrap<iipr::CTubeProjectionLinesProviderComp> TubeProjec
 typedef iipr::CMorphologicalProcessorComp MorphologicalProcessor;
 typedef icomp::TModelCompWrap<
 			iipr::CMultiLineProjectionSupplierComp> MultiLineProjectionSupplier;
-
 typedef icomp::TModelCompWrap<
 			iipr::CSelectableCalibrationSupplierComp> SelectableCalibrationSupplier;
-
 typedef iipr::CCheckerboardPatternGeneratorComp CheckerboardPatternGenerator;
-
 typedef iipr::CImageFlipProcessorComp ImageFlipProcessor;
+typedef icomp::TModelCompWrap<iipr::CColorPatternControllerComp> ColorPatternController;
+typedef icomp::TModelCompWrap<iipr::CColorPatternComparatorComp> ColorPatternComparator;
+typedef icomp::TModelCompWrap<iipr::CImageHistogramSupplierComp> ImageHistogramSupplier;
 
 //typedef iipr::CImageAffineTransformProcessorComp ImageAffineTransformProcessor;
 

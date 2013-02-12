@@ -59,14 +59,16 @@ Inheritance diagram for imeas::IDiscreteDataSequence:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#a99de39376809f55abf7457dac8b1ed78">CreateDiscrSequence</a> (int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence using external samples buffer.  <a href="#a99de39376809f55abf7457dac8b1ed78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#ae429d81e1e255d9d8e0e05c15afaf02f">CreateDiscreteSequence</a> (int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence using external samples buffer.  <a href="#ae429d81e1e255d9d8e0e05c15afaf02f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#ad51b3d4a6357d37c6834287fb787e4d3">CreateDiscreteSequenceWithInfo</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence with additional sequence info using external samples buffer.  <a href="#ad51b3d4a6357d37c6834287fb787e4d3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#af48314e6595db1b1e5e24172865e354a">GetSampleDepth</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of bits used to represent single sample.  <a href="#af48314e6595db1b1e5e24172865e354a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#a7cd2bacc9056c18b59ccb7691c57b95b">GetDiscrSample</a> (int position, int channel=0) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get discrete sample at specified position.  <a href="#a7cd2bacc9056c18b59ccb7691c57b95b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#acde7c99860839fec94a1707e348cb2c0">SetDiscrSample</a> (int position, int channel, quint32 sample)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set discrete sample at specified position.  <a href="#acde7c99860839fec94a1707e348cb2c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#a97a3b9ef24ec90ee3dd10d23a31d4a25">GetDiscreteSample</a> (int position, int channel=0) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get discrete sample at specified position.  <a href="#a97a3b9ef24ec90ee3dd10d23a31d4a25"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#abd74355d70acddb47bdf9bd24fc664b7">SetDiscreteSample</a> (int position, int channel, quint32 sample)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set discrete sample at specified position.  <a href="#abd74355d70acddb47bdf9bd24fc664b7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>General definition of sequence contains discrete sample values in regular time grid. </p>
@@ -74,12 +76,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_discrete_data_sequence_8h_source.html#l00016">16</a> of file <a class="el" href="_i_discrete_data_sequence_8h_source.html">IDiscreteDataSequence.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a99de39376809f55abf7457dac8b1ed78"></a><!-- doxytag: member="imeas::IDiscreteDataSequence::CreateDiscrSequence" ref="a99de39376809f55abf7457dac8b1ed78" args="(int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0" -->
+<a class="anchor" id="ae429d81e1e255d9d8e0e05c15afaf02f"></a><!-- doxytag: member="imeas::IDiscreteDataSequence::CreateDiscreteSequence" ref="ae429d81e1e255d9d8e0e05c15afaf02f" args="(int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool imeas::IDiscreteDataSequence::CreateDiscrSequence </td>
+          <td class="memname">virtual bool imeas::IDiscreteDataSequence::CreateDiscreteSequence </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>samplesCount</em>, </td>
@@ -144,16 +146,97 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if sample sequence was created correctly. </dd></dl>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a118cce5f7e33cb24765828018d37b707">imeas::TDiscreteDataSequence&lt; Element &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#ae12b0a1a16e0857b55f52da16f74827d">imeas::TDiscreteDataSequence&lt; Element &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7cd2bacc9056c18b59ccb7691c57b95b"></a><!-- doxytag: member="imeas::IDiscreteDataSequence::GetDiscrSample" ref="a7cd2bacc9056c18b59ccb7691c57b95b" args="(int position, int channel=0) const =0" -->
+<a class="anchor" id="ad51b3d4a6357d37c6834287fb787e4d3"></a><!-- doxytag: member="imeas::IDiscreteDataSequence::CreateDiscreteSequenceWithInfo" ref="ad51b3d4a6357d37c6834287fb787e4d3" args="(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual quint32 imeas::IDiscreteDataSequence::GetDiscrSample </td>
+          <td class="memname">virtual bool imeas::IDiscreteDataSequence::CreateDiscreteSequenceWithInfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>infoPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>samplesCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>dataPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>releaseFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sampleDiff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channelDiff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sampleDepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channelsCount</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Create container for sample sequence with additional sequence info using external samples buffer. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infoPtr</td><td>sequence info object. </td></tr>
+    <tr><td class="paramname">samplesCount</td><td>number of samples. </td></tr>
+    <tr><td class="paramname">dataPtr</td><td>pointer to external buffer. </td></tr>
+    <tr><td class="paramname">releaseFlag</td><td>if its true, external buffer will be managed (removed) by this object. </td></tr>
+    <tr><td class="paramname">sampleDiff</td><td>address difference between next and previos sample. If it equals 0, the value will be taken from number of samples, number of channels and <code>channelDiff</code>. </td></tr>
+    <tr><td class="paramname">channelDiff</td><td>address difference between next and previos sample. If it equals 0, the value will be calculated from number of bits per single sample. </td></tr>
+    <tr><td class="paramname">sampleDepth</td><td>number of bits used for representation of a single sample. </td></tr>
+    <tr><td class="paramname">channelsCount</td><td>number of channels. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if sample sequence was created correctly. </dd></dl>
+
+<p>Implemented in <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a28cdde74d8e5d11c1a97efd338ba4228">imeas::TDiscreteDataSequence&lt; Element &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a97a3b9ef24ec90ee3dd10d23a31d4a25"></a><!-- doxytag: member="imeas::IDiscreteDataSequence::GetDiscreteSample" ref="a97a3b9ef24ec90ee3dd10d23a31d4a25" args="(int position, int channel=0) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual quint32 imeas::IDiscreteDataSequence::GetDiscreteSample </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>position</em>, </td>
@@ -181,7 +264,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#ac1ccf33bc3806bc8070c84ad07cfef2e">imeas::TDiscreteDataSequence&lt; Element &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#afb2ff3ad63487939106df945cf392ae5">imeas::TDiscreteDataSequence&lt; Element &gt;</a>.</p>
 
 </div>
 </div>
@@ -205,12 +288,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acde7c99860839fec94a1707e348cb2c0"></a><!-- doxytag: member="imeas::IDiscreteDataSequence::SetDiscrSample" ref="acde7c99860839fec94a1707e348cb2c0" args="(int position, int channel, quint32 sample)=0" -->
+<a class="anchor" id="abd74355d70acddb47bdf9bd24fc664b7"></a><!-- doxytag: member="imeas::IDiscreteDataSequence::SetDiscreteSample" ref="abd74355d70acddb47bdf9bd24fc664b7" args="(int position, int channel, quint32 sample)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool imeas::IDiscreteDataSequence::SetDiscrSample </td>
+          <td class="memname">virtual bool imeas::IDiscreteDataSequence::SetDiscreteSample </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>position</em>, </td>
@@ -247,7 +330,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if sample was changed. </dd></dl>
 
-<p>Implemented in <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a561fb705e0c901e22b79f2fb07ac4de8">imeas::TDiscreteDataSequence&lt; Element &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a495240fdbdceca305e0d4ea15add09a5">imeas::TDiscreteDataSequence&lt; Element &gt;</a>.</p>
 
 </div>
 </div>

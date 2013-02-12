@@ -1165,6 +1165,14 @@
     <namespace>icmm</namespace>
   </compound>
   <compound kind="file">
+    <name>CRgbToHsvTranformation.h</name>
+    <path>C:/Temp/Acf/Include/icmm/</path>
+    <filename>_c_rgb_to_hsv_tranformation_8h</filename>
+    <includes id="_i_color_transformation_8h" name="IColorTransformation.h" local="yes" imported="no">icmm/IColorTransformation.h</includes>
+    <class kind="class">icmm::CRgbToHsvTranformation</class>
+    <namespace>icmm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CVarColor.h</name>
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>_c_var_color_8h</filename>
@@ -15028,6 +15036,7 @@
     <class kind="class">icmm::CLab</class>
     <class kind="class">icmm::CRgb</class>
     <class kind="class">icmm::CRgbToCmykTransformation</class>
+    <class kind="class">icmm::CRgbToHsvTranformation</class>
     <class kind="class">icmm::CVarColor</class>
     <class kind="class">icmm::IColorTransformation</class>
     <class kind="class">icmm::LinearGradientFunction</class>
@@ -15585,6 +15594,13 @@
       <arglist>(const CHsv &amp;color)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CHsv</name>
+      <anchorfile>classicmm_1_1_c_hsv.html</anchorfile>
+      <anchor>a4658cf3e7fb3accac72fecfce6ae2f14</anchor>
+      <arglist>(const imath::CVarVector &amp;vector)</arglist>
+    </member>
+    <member kind="function">
       <type>double</type>
       <name>GetHue</name>
       <anchorfile>classicmm_1_1_c_hsv.html</anchorfile>
@@ -15945,27 +15961,27 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>Red</name>
+      <name>CI_RED</name>
       <anchorfile>classicmm_1_1_c_rgb.html</anchorfile>
-      <anchor>a8611dddc3ffd2116303eaad92c4d3850a6777dfd252b2d498b6edb12325c77e3a</anchor>
+      <anchor>a8611dddc3ffd2116303eaad92c4d3850a2a42a8a96bc213905935bd26eb2c3be6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>Green</name>
+      <name>CI_GREEN</name>
       <anchorfile>classicmm_1_1_c_rgb.html</anchorfile>
-      <anchor>a8611dddc3ffd2116303eaad92c4d3850aa685310da1b6cbc82080d4851abc19ac</anchor>
+      <anchor>a8611dddc3ffd2116303eaad92c4d3850a5325e9e3cf019dfad0ab832a33d1fc00</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>Blue</name>
+      <name>CI_BLUE</name>
       <anchorfile>classicmm_1_1_c_rgb.html</anchorfile>
-      <anchor>a8611dddc3ffd2116303eaad92c4d3850a9e2ad8f8a15fb7c49f1e345b7ff36ba1</anchor>
+      <anchor>a8611dddc3ffd2116303eaad92c4d3850ae3a4efdafee88c4b8fe1c539e5ba48a0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>Last</name>
+      <name>CI_LAST</name>
       <anchorfile>classicmm_1_1_c_rgb.html</anchorfile>
-      <anchor>a8611dddc3ffd2116303eaad92c4d3850ae26199426ff21885aa2cc394bf01c6ea</anchor>
+      <anchor>a8611dddc3ffd2116303eaad92c4d3850a6700c749000e54318e7b1c0d069726ea</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -16146,6 +16162,25 @@
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_rgb_to_cmyk_transformation.html</anchorfile>
       <anchor>afbb65c06bb9072e05d91e5dc7adcab07</anchor>
+      <arglist>(const ArgumentType &amp;argument) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmm::CRgbToHsvTranformation</name>
+    <filename>classicmm_1_1_c_rgb_to_hsv_tranformation.html</filename>
+    <base>icmm::IColorTransformation</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classicmm_1_1_c_rgb_to_hsv_tranformation.html</anchorfile>
+      <anchor>a608b8d4e133bfcf5cde43d9e0e8e1417</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ResultType</type>
+      <name>GetValueAt</name>
+      <anchorfile>classicmm_1_1_c_rgb_to_hsv_tranformation.html</anchorfile>
+      <anchor>a1338d1715f58c9100582d2ab5873954a</anchor>
       <arglist>(const ArgumentType &amp;argument) const </arglist>
     </member>
   </compound>

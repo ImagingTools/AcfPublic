@@ -52,6 +52,7 @@ public:
 
 	CHsv(double h = 0.0, double s = 0.0, double v = 0.0);
 	CHsv(const CHsv& color);
+	CHsv(const imath::CVarVector& vector);
 
 	// access to component values
 	double GetHue() const;
@@ -96,6 +97,12 @@ inline CHsv::CHsv(double h, double s, double v)
 
 inline CHsv::CHsv(const CHsv& color)
 :	BaseClass(color)
+{
+}
+
+
+inline CHsv::CHsv(const imath::CVarVector& vector)
+:	BaseClass(vector)
 {
 }
 

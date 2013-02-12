@@ -859,6 +859,31 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CColorPatternComparatorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_color_pattern_comparator_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
+    <includes id="_i_data_sequence_statistics_processor_8h" name="IDataSequenceStatisticsProcessor.h" local="yes" imported="no">imeas/IDataSequenceStatisticsProcessor.h</includes>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
+    <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
+    <class kind="class">iipr::CColorPatternComparatorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CColorPatternControllerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_color_pattern_controller_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
+    <includes id="_t_discrete_data_sequence_8h" name="TDiscreteDataSequence.h" local="yes" imported="no">imeas/TDiscreteDataSequence.h</includes>
+    <includes id="_i_pattern_controller_8h" name="IPatternController.h" local="yes" imported="no">iipr/IPatternController.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <class kind="class">iipr::CColorPatternControllerComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CConvolutionKernel2d.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_convolution_kernel2d_8h</filename>
@@ -994,8 +1019,23 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_histogram_processor_comp_8h</filename>
     <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
+    <includes id="_c_data_sequence_info_base_8h" name="CDataSequenceInfoBase.h" local="yes" imported="no">imeas/CDataSequenceInfoBase.h</includes>
     <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
+    <class kind="class">iipr::CImageHistogramProcessorComp::HistogramChannelInfo</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CImageHistogramSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_image_histogram_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_t_discrete_data_sequence_8h" name="TDiscreteDataSequence.h" local="yes" imported="no">imeas/TDiscreteDataSequence.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iipr/IBitmapProvider.h</includes>
+    <class kind="class">iipr::CImageHistogramSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -1386,6 +1426,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>IPatternController.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_i_pattern_controller_8h</filename>
+    <class kind="class">iipr::IPatternController</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>IProjectionConstraints.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_projection_constraints_8h</filename>
@@ -1461,6 +1508,15 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CCrossCorrelationProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_cross_correlation_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <includes id="_i_data_sequence_correlation_processor_8h" name="IDataSequenceCorrelationProcessor.h" local="yes" imported="no">imeas/IDataSequenceCorrelationProcessor.h</includes>
+    <class kind="class">imeas::CCrossCorrelationProcessorComp</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDataSequenceInfoBase.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_info_base_8h</filename>
@@ -1498,6 +1554,7 @@
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_histogram_statistics_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <includes id="_i_data_sequence_statistics_processor_8h" name="IDataSequenceStatisticsProcessor.h" local="yes" imported="no">imeas/IDataSequenceStatisticsProcessor.h</includes>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <namespace>imeas</namespace>
   </compound>
@@ -1588,6 +1645,14 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>IDataSequenceCorrelationProcessor.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_i_data_sequence_correlation_processor_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">imeas::IDataSequenceCorrelationProcessor</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>IDataSequenceInfo.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_info_8h</filename>
@@ -1608,6 +1673,14 @@
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_statistics_8h</filename>
     <class kind="class">imeas::IDataSequenceStatistics</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IDataSequenceStatisticsProcessor.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_i_data_sequence_statistics_processor_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <class kind="class">imeas::IDataSequenceStatisticsProcessor</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -2272,6 +2345,16 @@
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CColorPatternComparatorGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_color_pattern_comparator_gui_comp_8h</filename>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <class kind="class">iqtipr::CColorPatternComparatorGuiComp</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CConvolution2dParamsGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_convolution2d_params_gui_comp_8h</filename>
@@ -2318,6 +2401,14 @@
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp::LineSelection</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp::CShape</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPatternTeachingControllerGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_pattern_teaching_controller_gui_comp_8h</filename>
+    <includes id="_i_pattern_controller_8h" name="IPatternController.h" local="yes" imported="no">iipr/IPatternController.h</includes>
+    <class kind="class">iqtipr::CPatternTeachingControllerGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
@@ -2670,6 +2761,14 @@
   <compound kind="class">
     <name>ICaliperProcessor</name>
     <filename>class_i_caliper_processor.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>IDataSequenceCorrelationProcessor</name>
+    <filename>class_i_data_sequence_correlation_processor.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>IDataSequenceStatisticsProcessor</name>
+    <filename>class_i_data_sequence_statistics_processor.html</filename>
   </compound>
   <compound kind="class">
     <name>IEdgeLinesProcessor</name>
@@ -7695,6 +7794,8 @@
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
     <class kind="class">iipr::CColorBitmapSeparatorSupplierComp</class>
+    <class kind="class">iipr::CColorPatternComparatorComp</class>
+    <class kind="class">iipr::CColorPatternControllerComp</class>
     <class kind="class">iipr::CConvolutionKernel2d</class>
     <class kind="class">iipr::CConvolutionKernel2dComp</class>
     <class kind="class">iipr::CConvolutionProcessorComp</class>
@@ -7709,6 +7810,7 @@
     <class kind="class">iipr::CImageCropProcessorComp</class>
     <class kind="class">iipr::CImageFlipProcessorComp</class>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
+    <class kind="class">iipr::CImageHistogramSupplierComp</class>
     <class kind="class">iipr::CImageInterpolationParams</class>
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
     <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
@@ -7750,6 +7852,7 @@
     <class kind="class">iipr::IImageToFeatureProcessor</class>
     <class kind="class">iipr::ILineProjectionProcessor</class>
     <class kind="class">iipr::IMultiBitmapProvider</class>
+    <class kind="class">iipr::IPatternController</class>
     <class kind="class">iipr::IProjectionConstraints</class>
     <class kind="class">iipr::IProjectionParams</class>
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
@@ -7893,6 +7996,13 @@
       <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
       <anchor>aff1a0e5cb99dae9f4eed448fb6ea6279</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>ReduceBitmapToRegion</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a30db61f931a5b937b50d179b0d4f43d1</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const i2d::IObject2d &amp;region, iimg::IBitmap &amp;outputBitmap)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -8496,6 +8606,190 @@
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
       <anchor>adcf275024a5a474346cc994f96543b31</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CColorPatternComparatorComp</name>
+    <filename>classiipr_1_1_c_color_pattern_comparator_comp.html</filename>
+    <base>TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</base>
+    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>aed98b3a5b0d9bf92f7598c78addcfc7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>afe877561ec1e373026339d1a1dd30842</anchor>
+      <arglist>(m_teachedPatternProviderModelCompPtr, m_teachedPatternProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>a6a4e19e97580d504a5c4aa680e24c170</anchor>
+      <arglist>(m_teachedPatternSupplierCompPtr, m_teachedPatternProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CColorPatternComparatorComp</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>a4adea046a6feea877c0e5dca211e690f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>ab6d54cc25c3c9ad5151b940e084e509c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::INumericValue &amp;</type>
+      <name>GetNumericValue</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>aac26f1127d33a5a7a72ddcbc42017c76</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QDateTime</type>
+      <name>GetInformationTimeStamp</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>a6b4fd1f91c0d91ac648f080470636fd9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual InformationCategory</type>
+      <name>GetInformationCategory</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>aeaa88baa30e00567fadfe9b4d01ee615</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationId</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>a3a941c6bfaa05f41d357faf03a12763f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationDescription</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>aa81c68e7f8f3ae773f5dd48e82e6cc28</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationSource</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>a423d289738ea7c5a9d5d65bb32e0b66e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationFlags</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>a52449a437a25b2075ee69f4871a1ee8b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>a382026f4071d76efed205cedd819593c</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>ab1223879f607f3d63e555e08b62c64fb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>a10fc506c8134e0ee37b4179469593a38</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CColorPatternControllerComp</name>
+    <filename>classiipr_1_1_c_color_pattern_controller_comp.html</filename>
+    <base virtualness="virtual">ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">iipr::IPatternController</base>
+    <base virtualness="virtual">iipr::IBitmapProvider</base>
+    <base virtualness="virtual">imeas::IDataSequenceProvider</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>a712aa784868f747f03db6a5c36141403</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TeachPattern</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>a69848acbc8900bc82becd015748b0011</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPattern</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>a2bb0b23a52cd57749f90a2b5ac89f072</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPatternValid</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>afdf96f44d658bdc318b3cd0569925762</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const iser::ISerializable *</type>
+      <name>GetPatternObject</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>a231063ea42bde508c276681a7b2d1d77</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>a421a8414b7b33753b200d27e44932aaf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>adba7e14e1af683e7cf9c435f356cad6d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>abb8a34464e463fc070a6080a6eb1d7ef</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
+      <anchor>a3cee56deee9bdc390147ae1e6728fa48</anchor>
+      <arglist>(const IChangeable &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9152,6 +9446,7 @@
     <name>iipr::CImageHistogramProcessorComp</name>
     <filename>classiipr_1_1_c_image_histogram_processor_comp.html</filename>
     <base>iipr::CImageRegionProcessorCompBase</base>
+    <class kind="class">iipr::CImageHistogramProcessorComp::HistogramChannelInfo</class>
     <member kind="typedef">
       <type>CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>
@@ -9165,6 +9460,94 @@
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
       <anchor>a6464fa31137bd56a0bc6352140211547</anchor>
       <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageHistogramProcessorComp::HistogramChannelInfo</name>
+    <filename>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</filename>
+    <base>imeas::CDataSequenceInfoBase</base>
+    <member kind="function">
+      <type></type>
+      <name>HistogramChannelInfo</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</anchorfile>
+      <anchor>abff40f83c3fbcf81ee130246ca53d3c6</anchor>
+      <arglist>(const QStringList &amp;channelNames)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</anchorfile>
+      <anchor>a8bebf6e136b717741a146fccdcdafd5d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</anchorfile>
+      <anchor>a741c069b48ac11e31a79e292d0f40dd3</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</anchorfile>
+      <anchor>ad30d749d8e11338c6decf19b32b53caf</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageHistogramSupplierComp</name>
+    <filename>classiipr_1_1_c_image_histogram_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</base>
+    <base virtualness="virtual">imeas::IDataSequenceProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
+      <anchor>a5d29ae93c9840b05558015b03965a692</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
+      <anchor>a2c2c185820cd74fe8194775012a97158</anchor>
+      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
+      <anchor>a73ffebc0679ed7b7096a23336459d63c</anchor>
+      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
+      <anchor>abb70c62e378cf6a328152f39be5360ae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
+      <anchor>a41d8389a3e2426b285f055480167d82a</anchor>
+      <arglist>(imeas::CSimpleSamplesSequence32 &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
+      <anchor>a4470a0bbab0c28136ab05e6a9715e5d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
+      <anchor>ab9ba65caee0274ca5ede18448d82a5e9</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11140,6 +11523,39 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::IPatternController</name>
+    <filename>classiipr_1_1_i_pattern_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>TeachPattern</name>
+      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
+      <anchor>ac69e01f6882e68f7b0e86e6557e7f5d1</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetPattern</name>
+      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
+      <anchor>a0de1437ad7a46cf876e2d5b0b5398cce</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsPatternValid</name>
+      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
+      <anchor>ada2a7d0e36e4a18b824ff4ead15d1114</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::ISerializable *</type>
+      <name>GetPatternObject</name>
+      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
+      <anchor>a3b316b91ccff2af05e674bd013735474</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::IProjectionConstraints</name>
     <filename>classiipr_1_1_i_projection_constraints.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -11522,6 +11938,7 @@
   <compound kind="namespace">
     <name>imeas</name>
     <filename>namespaceimeas.html</filename>
+    <class kind="class">imeas::CCrossCorrelationProcessorComp</class>
     <class kind="class">imeas::CDataSequenceInfoBase</class>
     <class kind="class">imeas::CDataSequenceStatistics</class>
     <class kind="class">imeas::CDataStatistics</class>
@@ -11537,9 +11954,11 @@
     <class kind="class">imeas::CSimpleNumericValueProvider</class>
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
     <class kind="class">imeas::IDataSequence</class>
+    <class kind="class">imeas::IDataSequenceCorrelationProcessor</class>
     <class kind="class">imeas::IDataSequenceInfo</class>
     <class kind="class">imeas::IDataSequenceProvider</class>
     <class kind="class">imeas::IDataSequenceStatistics</class>
+    <class kind="class">imeas::IDataSequenceStatisticsProcessor</class>
     <class kind="class">imeas::IDataStatistics</class>
     <class kind="class">imeas::IDiscreteDataSequence</class>
     <class kind="class">imeas::ILinearAdjustConstraints</class>
@@ -11577,6 +11996,39 @@
       <anchorfile>namespaceimeas.html</anchorfile>
       <anchor>a82b05a8e2ec7b09559314bcae7bdc4b8</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CCrossCorrelationProcessorComp</name>
+    <filename>classimeas_1_1_c_cross_correlation_processor_comp.html</filename>
+    <base>TSyncProcessorCompBase&lt; IDataSequenceCorrelationProcessor &gt;</base>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; IDataSequenceCorrelationProcessor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_cross_correlation_processor_comp.html</anchorfile>
+      <anchor>a71bf365d11361c6100b38ec05cda8696</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CalculateCorrelation</name>
+      <anchorfile>classimeas_1_1_c_cross_correlation_processor_comp.html</anchorfile>
+      <anchor>a2bf7567ca3dc3b27a330a9e896bea6cf</anchor>
+      <arglist>(const imeas::IDataSequence &amp;input1, const imeas::IDataSequence &amp;input2, imeas::IDataSequence &amp;correlation) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classimeas_1_1_c_cross_correlation_processor_comp.html</anchorfile>
+      <anchor>ae68926a9f0a220253ce635b6a5a9f5fc</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static double</type>
+      <name>GetSampleAverage</name>
+      <anchorfile>classimeas_1_1_c_cross_correlation_processor_comp.html</anchorfile>
+      <anchor>ae734547d0684a6e4f2b8f8f8a6194f34</anchor>
+      <arglist>(const imeas::IDataSequence &amp;input, int channelIndex)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11918,12 +12370,12 @@
   <compound kind="class">
     <name>imeas::CHistogramStatisticsProcessorComp</name>
     <filename>classimeas_1_1_c_histogram_statistics_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
+    <base>TSyncProcessorCompBase&lt; IDataSequenceStatisticsProcessor &gt;</base>
     <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
+      <type>iproc::TSyncProcessorCompBase&lt; IDataSequenceStatisticsProcessor &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classimeas_1_1_c_histogram_statistics_processor_comp.html</anchorfile>
-      <anchor>a5dfad5a0cbe509879e0acbc947c2eef7</anchor>
+      <anchor>afa724b1a6a21e7a3c5593e9d4757465d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11932,6 +12384,13 @@
       <anchorfile>classimeas_1_1_c_histogram_statistics_processor_comp.html</anchorfile>
       <anchor>a935266eb047b8f0179e07b1fb8ea4e99</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>CalculateDataStatistics</name>
+      <anchorfile>classimeas_1_1_c_histogram_statistics_processor_comp.html</anchorfile>
+      <anchor>a752c3cabf1d60be07e799c526c4172dd</anchor>
+      <arglist>(const imeas::IDataSequence &amp;dataSequence, imeas::IDataSequenceStatistics &amp;dataStatistics) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12686,6 +13145,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imeas::IDataSequenceCorrelationProcessor</name>
+    <filename>classimeas_1_1_i_data_sequence_correlation_processor.html</filename>
+    <base virtualness="virtual">iproc::IProcessor</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>CalculateCorrelation</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_correlation_processor.html</anchorfile>
+      <anchor>a49bc8ac2d376749088b04ae54fa026d8</anchor>
+      <arglist>(const imeas::IDataSequence &amp;input1, const imeas::IDataSequence &amp;input2, imeas::IDataSequence &amp;correlation) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::IDataSequenceInfo</name>
     <filename>classimeas_1_1_i_data_sequence_info.html</filename>
     <base virtualness="virtual">imeas::INumericConstraints</base>
@@ -12813,6 +13284,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imeas::IDataSequenceStatisticsProcessor</name>
+    <filename>classimeas_1_1_i_data_sequence_statistics_processor.html</filename>
+    <base virtualness="virtual">iproc::IProcessor</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>CalculateDataStatistics</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_statistics_processor.html</anchorfile>
+      <anchor>ae03f3d21c08ad8f224108b6b449b5ed9</anchor>
+      <arglist>(const imeas::IDataSequence &amp;dataSequence, imeas::IDataSequenceStatistics &amp;dataStatistics) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::IDataStatistics</name>
     <filename>classimeas_1_1_i_data_statistics.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -12858,10 +13341,17 @@
     <base virtualness="virtual">imeas::IDataSequence</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>CreateDiscrSequence</name>
+      <name>CreateDiscreteSequence</name>
       <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
-      <anchor>a99de39376809f55abf7457dac8b1ed78</anchor>
+      <anchor>ae429d81e1e255d9d8e0e05c15afaf02f</anchor>
       <arglist>(int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>CreateDiscreteSequenceWithInfo</name>
+      <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
+      <anchor>ad51b3d4a6357d37c6834287fb787e4d3</anchor>
+      <arglist>(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -12872,16 +13362,16 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual quint32</type>
-      <name>GetDiscrSample</name>
+      <name>GetDiscreteSample</name>
       <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
-      <anchor>a7cd2bacc9056c18b59ccb7691c57b95b</anchor>
+      <anchor>a97a3b9ef24ec90ee3dd10d23a31d4a25</anchor>
       <arglist>(int position, int channel=0) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>SetDiscrSample</name>
+      <name>SetDiscreteSample</name>
       <anchorfile>classimeas_1_1_i_discrete_data_sequence.html</anchorfile>
-      <anchor>acde7c99860839fec94a1707e348cb2c0</anchor>
+      <anchor>abd74355d70acddb47bdf9bd24fc664b7</anchor>
       <arglist>(int position, int channel, quint32 sample)=0</arglist>
     </member>
   </compound>
@@ -13147,10 +13637,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CreateDiscrSequence</name>
+      <name>CreateDiscreteSequence</name>
       <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
-      <anchor>a118cce5f7e33cb24765828018d37b707</anchor>
+      <anchor>ae12b0a1a16e0857b55f52da16f74827d</anchor>
       <arglist>(int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateDiscreteSequenceWithInfo</name>
+      <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
+      <anchor>a28cdde74d8e5d11c1a97efd338ba4228</anchor>
+      <arglist>(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -13161,16 +13658,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual quint32</type>
-      <name>GetDiscrSample</name>
+      <name>GetDiscreteSample</name>
       <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
-      <anchor>ac1ccf33bc3806bc8070c84ad07cfef2e</anchor>
+      <anchor>afb2ff3ad63487939106df945cf392ae5</anchor>
       <arglist>(int position, int channel=0) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>SetDiscrSample</name>
+      <name>SetDiscreteSample</name>
       <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
-      <anchor>a561fb705e0c901e22b79f2fb07ac4de8</anchor>
+      <anchor>a495240fdbdceca305e0d4ea15add09a5</anchor>
       <arglist>(int position, int channel, quint32 sample)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17556,11 +18053,13 @@
     <filename>namespaceiqtipr.html</filename>
     <class kind="class">iqtipr::CCaliperParamsGuiComp</class>
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
+    <class kind="class">iqtipr::CColorPatternComparatorGuiComp</class>
     <class kind="class">iqtipr::CConvolution2dParamsGuiComp</class>
     <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
+    <class kind="class">iqtipr::CPatternTeachingControllerGuiComp</class>
     <class kind="class">iqtipr::CProjectionShape</class>
     <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
     <class kind="class">iqtipr::CValueSupplierGuiComp</class>
@@ -17664,6 +18163,74 @@
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
       <anchor>ac7946e515605ac530c82aff1f6e0475d</anchor>
       <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CColorPatternComparatorGuiComp</name>
+    <filename>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</filename>
+    <base>TSupplierGuiCompBase&lt; Ui::CColorPatternComparatorGuiComp, istd::IInformationProvider &gt;</base>
+    <member kind="typedef">
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CColorPatternComparatorGuiComp, istd::IInformationProvider &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>adb9509cbf8c04b631712744e8d432f6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_TestButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a634185b56e783e70de8f2678260d5ec5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a64006342b4bc7069cfc19f6fd88790a6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a83c83976678ef0d77d8db3033057a3dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a30b5f958f7b7efa787b23430f26904b4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>ab2baac77053987c0c62df6328fe72981</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>acfdbda5d1b83beac73006a9d46291568</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>afc59122d3cb3a0fa490d45ee1be84d18</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetParamsWidget</name>
+      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>ae1643bddc11a0475c65ca7ea8cc99d40</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18150,6 +18717,39 @@
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_line_selection.html</anchorfile>
       <anchor>ab691a26fdd6eeb032ceae3322ef1383b</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CPatternTeachingControllerGuiComp</name>
+    <filename>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPatternTeachingControllerGuiComp, iipr::IPatternController &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPatternTeachingControllerGuiComp, iipr::IPatternController &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>aca3da95d0a414fba309aa54d7cfba5a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LearnButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a1e54c3f62c2a07f13b797dd8a8326f5c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a4f5464421cf5f6a38ac4fb8b727e10fa</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a7f73811ea800bcf38e55672c53c8be76</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -48,7 +48,7 @@ namespace iqwt
 
 
 /**
-	Component for visualization iof histogram data.
+	Component for visualization of histogram data.
 */
 class CHistogramViewComp:
 			public iqtgui::TDesignerGuiObserverCompBase<

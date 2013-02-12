@@ -24,8 +24,13 @@
 #define iipr_CImageHistogramProcessorComp_included
 
 
+// Qt includes
+#include <QtCore/QStringList>
+
+
 // ACF-Solutions includes
 #include "imeas/IDiscreteDataSequence.h"
+#include "imeas/CDataSequenceInfoBase.h"
 #include "iipr/CImageRegionProcessorCompBase.h"
 
 
@@ -45,6 +50,20 @@ public:
 	I_END_COMPONENT;
 
 protected:
+	class HistogramChannelInfo: public imeas::CDataSequenceInfoBase
+	{
+	public:
+		HistogramChannelInfo(const QStringList& channelNames);
+
+		// reimplemented (imeas::INumericConstraints)
+		virtual int GetNumericValuesCount() const;
+		virtual QString GetNumericValueName(int index) const;
+		virtual QString GetNumericValueDescription(int index) const;
+
+	private:
+		QStringList m_channelNames;
+	};
+
 	// reimplemented (CImageRegionProcessorCompBase)
 	virtual bool ProcessImageRegion(
 				const iimg::IBitmap& inputBitmap,

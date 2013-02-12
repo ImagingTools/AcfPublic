@@ -46,6 +46,7 @@
 <li><a class="el" href="classihotfgui_1_1_c_hotfolder_processing_comp.html">ihotfgui::CHotfolderProcessingComp</a></li>
 <li><a class="el" href="classihotfgui_1_1_c_hotfolder_task_manager_comp.html">ihotfgui::CHotfolderTaskManagerComp</a></li>
 <li><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html">iinsp::CInspectionTaskComp</a></li>
+<li><a class="el" href="classiipr_1_1_c_color_pattern_controller_comp.html">iipr::CColorPatternControllerComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html">iipr::CDelegatedBitmapSupplierComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_search_params_comp.html">iipr::CSearchParamsComp</a></li>
 <li><a class="el" href="classimeas_1_1_c_numeric_values_joiner_comp.html">imeas::CNumericValuesJoinerComp</a></li>
@@ -80,7 +81,6 @@
 </li>
 <li><a class="el" href="classiipr_1_1_c_rgb_to_gray_processor_comp.html">iipr::CRgbToGrayProcessorComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_ring_pattern_generator_comp.html">iipr::CRingPatternGeneratorComp</a></li>
-<li><a class="el" href="classimeas_1_1_c_histogram_statistics_processor_comp.html">imeas::CHistogramStatisticsProcessorComp</a></li>
 </ul>
 </li>
 <li><a class="el" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html">iprocgui::CDocumentProcessingManagerCompBase</a><ul>
@@ -108,6 +108,14 @@
 </li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</a><ul>
 <li><a class="el" href="classiipr_1_1_c_line_projection_supplier_comp.html">iipr::CLineProjectionSupplierComp</a></li>
+</ul>
+</li>
+<li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</a><ul>
+<li><a class="el" href="classiipr_1_1_c_color_pattern_comparator_comp.html">iipr::CColorPatternComparatorComp</a></li>
+</ul>
+</li>
+<li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</a><ul>
+<li><a class="el" href="classiipr_1_1_c_image_histogram_supplier_comp.html">iipr::CImageHistogramSupplierComp</a></li>
 </ul>
 </li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</a><ul>
@@ -153,6 +161,14 @@
 <li><a class="el" href="classiproc_1_1_t_sync_processor_comp_base.html">iproc::TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</a><ul>
 <li><a class="el" href="classiipr_1_1_c_processed_acquisition_comp.html">iipr::CProcessedAcquisitionComp</a></li>
 <li><a class="el" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html">iqtmm::CFrameSeqVideoControllerComp</a></li>
+</ul>
+</li>
+<li><a class="el" href="classiproc_1_1_t_sync_processor_comp_base.html">iproc::TSyncProcessorCompBase&lt; IDataSequenceCorrelationProcessor &gt;</a><ul>
+<li><a class="el" href="classimeas_1_1_c_cross_correlation_processor_comp.html">imeas::CCrossCorrelationProcessorComp</a></li>
+</ul>
+</li>
+<li><a class="el" href="classiproc_1_1_t_sync_processor_comp_base.html">iproc::TSyncProcessorCompBase&lt; IDataSequenceStatisticsProcessor &gt;</a><ul>
+<li><a class="el" href="classimeas_1_1_c_histogram_statistics_processor_comp.html">imeas::CHistogramStatisticsProcessorComp</a></li>
 </ul>
 </li>
 <li><a class="el" href="classiproc_1_1_t_sync_processor_comp_base.html">iproc::TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</a><ul>
@@ -243,6 +259,20 @@
 </li>
 </ul>
 </li>
+<li><a class="el" href="class_i_data_sequence_correlation_processor.html">IDataSequenceCorrelationProcessor</a><ul>
+<li><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html">iproc::TSyncProcessorWrap&lt; IDataSequenceCorrelationProcessor &gt;</a><ul>
+<li><a class="el" href="classiproc_1_1_t_sync_processor_comp_base.html">iproc::TSyncProcessorCompBase&lt; IDataSequenceCorrelationProcessor &gt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="el" href="class_i_data_sequence_statistics_processor.html">IDataSequenceStatisticsProcessor</a><ul>
+<li><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html">iproc::TSyncProcessorWrap&lt; IDataSequenceStatisticsProcessor &gt;</a><ul>
+<li><a class="el" href="classiproc_1_1_t_sync_processor_comp_base.html">iproc::TSyncProcessorCompBase&lt; IDataSequenceStatisticsProcessor &gt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="el" href="class_i_edge_lines_processor.html">IEdgeLinesProcessor</a><ul>
 <li><a class="el" href="classiproc_1_1_t_sync_processor_wrap.html">iproc::TSyncProcessorWrap&lt; IEdgeLinesProcessor &gt;</a><ul>
 <li><a class="el" href="classiproc_1_1_t_sync_processor_comp_base.html">iproc::TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</a></li>
@@ -309,6 +339,8 @@
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</a></li>
+<li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</a></li>
+<li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</a></li>
@@ -532,6 +564,8 @@
 <li><a class="el" href="classiipr_1_1_i_feature_to_feature_processor.html">iipr::IFeatureToFeatureProcessor</a></li>
 <li><a class="el" href="classiipr_1_1_i_image_to_feature_processor.html">iipr::IImageToFeatureProcessor</a></li>
 <li><a class="el" href="classiipr_1_1_i_line_projection_processor.html">iipr::ILineProjectionProcessor</a></li>
+<li><a class="el" href="classimeas_1_1_i_data_sequence_correlation_processor.html">imeas::IDataSequenceCorrelationProcessor</a></li>
+<li><a class="el" href="classimeas_1_1_i_data_sequence_statistics_processor.html">imeas::IDataSequenceStatisticsProcessor</a></li>
 <li><a class="el" href="classimeas_1_1_i_sample_acquisition.html">imeas::ISampleAcquisition</a></li>
 </ul>
 </li>
@@ -545,6 +579,13 @@
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</a><code> [external]</code></li>
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</a><code> [external]</code><ul>
 <li><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt; UI, WidgetType &gt;</a></li>
+</ul>
+</li>
+<li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CColorPatternComparatorGuiComp, iproc::ISupplier &gt; &gt;</a><code> [external]</code><ul>
+<li><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt; Ui::CColorPatternComparatorGuiComp, istd::IInformationProvider &gt;</a><ul>
+<li><a class="el" href="classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html">iqtipr::CColorPatternComparatorGuiComp</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CEdgeLinesSupplierGuiComp, iproc::ISupplier &gt; &gt;</a><code> [external]</code><ul>
@@ -689,6 +730,7 @@
 <li><a class="el" href="classiipr_1_1_c_selectable_calibration_supplier_comp.html">iipr::CSelectableCalibrationSupplierComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_tube_projection_lines_provider_comp.html">iipr::CTubeProjectionLinesProviderComp</a></li>
 <li><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt; UI, WidgetType &gt;</a></li>
+<li><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt; Ui::CColorPatternComparatorGuiComp, istd::IInformationProvider &gt;</a></li>
 <li><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierGuiComp &gt;</a></li>
 <li><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iproc::ISupplier &gt;</a></li>
 <li><a class="el" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp, imeas::IDataSequenceProvider &gt;</a></li>
@@ -744,6 +786,7 @@
 <li><a class="el" href="classicam_1_1_c_snap_bitmap_supplier_comp.html">icam::CSnapBitmapSupplierComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html">iipr::CBitmapJoinerSupplierComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_bitmap_provider_cache_comp.html">iipr::CBitmapProviderCacheComp</a></li>
+<li><a class="el" href="classiipr_1_1_c_color_pattern_controller_comp.html">iipr::CColorPatternControllerComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html">iipr::CDelegatedBitmapSupplierComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_difference_bitmap_supplier_comp.html">iipr::CDifferenceBitmapSupplierComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_processed_bitmap_supplier_comp.html">iipr::CProcessedBitmapSupplierComp</a></li>
@@ -761,6 +804,10 @@
 <li><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html">iipr::CMultiBitmapCacheComp</a></li>
 </ul>
 </li>
+<li><a class="el" href="classiipr_1_1_i_pattern_controller.html">iipr::IPatternController</a><ul>
+<li><a class="el" href="classiipr_1_1_c_color_pattern_controller_comp.html">iipr::CColorPatternControllerComp</a></li>
+</ul>
+</li>
 <li><a class="el" href="classiipr_1_1_i_search_constraints.html">iipr::ISearchConstraints</a></li>
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_t_i_sampled_function.html">imath::TISampledFunction&lt; ArgumentDimensions, ResultDimensions &gt;</a><code> [external]</code><ul>
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_sampled_function2d.html">imath::CSampledFunction2d</a><code> [external]</code><ul>
@@ -774,6 +821,8 @@
 </ul>
 </li>
 <li><a class="el" href="classimeas_1_1_i_data_sequence_provider.html">imeas::IDataSequenceProvider</a><ul>
+<li><a class="el" href="classiipr_1_1_c_color_pattern_controller_comp.html">iipr::CColorPatternControllerComp</a></li>
+<li><a class="el" href="classiipr_1_1_c_image_histogram_supplier_comp.html">iipr::CImageHistogramSupplierComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_line_projection_supplier_comp.html">iipr::CLineProjectionSupplierComp</a></li>
 </ul>
 </li>
@@ -792,6 +841,7 @@
 <li><a class="el" href="classimeas_1_1_c_numeric_params_comp.html">imeas::CNumericParamsComp</a></li>
 <li><a class="el" href="classimeas_1_1_i_data_sequence_info.html">imeas::IDataSequenceInfo</a><ul>
 <li><a class="el" href="classimeas_1_1_c_data_sequence_info_base.html">imeas::CDataSequenceInfoBase</a><ul>
+<li><a class="el" href="classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html">iipr::CImageHistogramProcessorComp::HistogramChannelInfo</a></li>
 <li><a class="el" href="classimeas_1_1_c_samples_info.html">imeas::CSamplesInfo</a></li>
 </ul>
 </li>
@@ -800,6 +850,7 @@
 </ul>
 </li>
 <li><a class="el" href="classimeas_1_1_i_numeric_value_provider.html">imeas::INumericValueProvider</a><ul>
+<li><a class="el" href="classiipr_1_1_c_color_pattern_comparator_comp.html">iipr::CColorPatternComparatorComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_edge_distances_supplier_comp.html">iipr::CEdgeDistancesSupplierComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_features_container.html">iipr::CFeaturesContainer</a></li>
 <li><a class="el" href="classiipr_1_1_c_multi_line_supplier_comp_base.html">iipr::CMultiLineSupplierCompBase</a></li>
@@ -835,6 +886,8 @@
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</a></li>
+<li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</a></li>
+<li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</a></li>
@@ -909,6 +962,7 @@
 <li><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html">iinsp::CInspectionTaskComp</a></li>
 </ul>
 </li>
+<li><a class="el" href="classiipr_1_1_c_color_pattern_controller_comp.html">iipr::CColorPatternControllerComp</a></li>
 <li><a class="el" href="classiipr_1_1_i_caliper_params.html">iipr::ICaliperParams</a><ul>
 <li><a class="el" href="classiipr_1_1_c_caliper_params.html">iipr::CCaliperParams</a><ul>
 <li><a class="el" href="classiipr_1_1_c_caliper_params_comp.html">iipr::CCaliperParamsComp</a></li>
@@ -1048,6 +1102,7 @@
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a><code> [external]</code><ul>
 <li><a class="el" href="classiinsp_1_1_c_information_provider_cache_comp.html">iinsp::CInformationProviderCacheComp</a></li>
 <li><a class="el" href="classiinsp_1_1_c_inspection_task_comp.html">iinsp::CInspectionTaskComp</a></li>
+<li><a class="el" href="classiipr_1_1_c_color_pattern_comparator_comp.html">iipr::CColorPatternComparatorComp</a></li>
 <li><a class="el" href="classiipr_1_1_c_search_based_features_supplier_comp.html">iipr::CSearchBasedFeaturesSupplierComp</a></li>
 </ul>
 </li>
@@ -1059,6 +1114,8 @@
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</a></li>
+<li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</a></li>
+<li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</a></li>
 <li><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</a></li>
@@ -1144,6 +1201,10 @@
 <li><a class="el" href="classiqtipr_1_1_c_circle_finder_params_gui_comp.html">iqtipr::CCircleFinderParamsGuiComp</a></li>
 </ul>
 </li>
+<li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CColorPatternComparatorGuiComp, iproc::ISupplier &gt;</a><code> [external]</code><ul>
+<li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CColorPatternComparatorGuiComp, iproc::ISupplier &gt; &gt;</a><code> [external]</code></li>
+</ul>
+</li>
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CConvolution2dParamsGuiComp, iipr::IConvolutionKernel2d &gt;</a><code> [external]</code><ul>
 <li><a class="el" href="classiqtipr_1_1_c_convolution2d_params_gui_comp.html">iqtipr::CConvolution2dParamsGuiComp</a></li>
 </ul>
@@ -1202,6 +1263,10 @@
 </li>
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CMultiLineSupplierGuiComp, iproc::ISupplier &gt;</a><code> [external]</code><ul>
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqt2d_1_1_t_view_extender_comp_base.html">iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CMultiLineSupplierGuiComp, iproc::ISupplier &gt; &gt;</a><code> [external]</code></li>
+</ul>
+</li>
+<li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPatternTeachingControllerGuiComp, iipr::IPatternController &gt;</a><code> [external]</code><ul>
+<li><a class="el" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html">iqtipr::CPatternTeachingControllerGuiComp</a></li>
 </ul>
 </li>
 <li><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPlaybackControllerGuiComp, imm::IVideoController &gt;</a><code> [external]</code><ul>

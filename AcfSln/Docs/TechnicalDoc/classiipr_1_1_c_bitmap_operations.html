@@ -61,6 +61,8 @@ Public Types</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of bitmap list.  <a href="#aff1a0e5cb99dae9f4eed448fb6ea6279"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_bitmap_operations.html#a30db61f931a5b937b50d179b0d4f43d1">ReduceBitmapToRegion</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;inputBitmap, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;region, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;outputBitmap)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Crop the bitmap to the bounding box of a given region.  <a href="#a30db61f931a5b937b50d179b0d4f43d1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_bitmap_operations.html#acdf7eff5caac20b8838c1a1015064278">JoinBitmaps</a> (const <a class="el" href="classiipr_1_1_c_bitmap_operations.html#aff1a0e5cb99dae9f4eed448fb6ea6279">BitmapList</a> &amp;bitmapList, <a class="el" href="classiipr_1_1_c_bitmap_operations.html#a0e4ef04c58a1d3aebfed0333e3969ff7">JoinMode</a> joinMode, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;outputBitmap, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html">istd::ILogger</a> *operationLogPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Join more bitmaps into a single one by placing of the input bitmaps into the output.  <a href="#acdf7eff5caac20b8838c1a1015064278"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_bitmap_operations.html#a046a2ea6bb4b7f21d59f87b14395792d">CombineBitmaps</a> (const <a class="el" href="classiipr_1_1_c_bitmap_operations.html#aff1a0e5cb99dae9f4eed448fb6ea6279">BitmapList</a> &amp;bitmapList, <a class="el" href="classiipr_1_1_c_bitmap_operations.html#a453d103ab8a538a89ec62cdbcef38dc6">CombineMode</a> combineMode, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;outputBitmap, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> *weghtsPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html">istd::ILogger</a> *operationLogPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
@@ -235,6 +237,41 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Join more bitmaps into a single one by placing of the input bitmaps into the output. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiipr_1_1_c_bitmap_operations.html#a0e4ef04c58a1d3aebfed0333e3969ff7" title="Processing mode for join of more bitmaps.">JoinMode</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a30db61f931a5b937b50d179b0d4f43d1"></a><!-- doxytag: member="iipr::CBitmapOperations::ReduceBitmapToRegion" ref="a30db61f931a5b937b50d179b0d4f43d1" args="(const iimg::IBitmap &amp;inputBitmap, const i2d::IObject2d &amp;region, iimg::IBitmap &amp;outputBitmap)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool iipr::CBitmapOperations::ReduceBitmapToRegion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>inputBitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>region</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>outputBitmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Crop the bitmap to the bounding box of a given region. </p>
 
 </div>
 </div>

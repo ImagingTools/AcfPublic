@@ -57,14 +57,16 @@ Inheritance diagram for imeas::TDiscreteDataSequence&lt; Element &gt;:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a802c1c1597e23d349527a32c1f34121d">TDiscreteDataSequence</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a118cce5f7e33cb24765828018d37b707">CreateDiscrSequence</a> (int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence using external samples buffer.  <a href="#a118cce5f7e33cb24765828018d37b707"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#ae12b0a1a16e0857b55f52da16f74827d">CreateDiscreteSequence</a> (int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence using external samples buffer.  <a href="#ae12b0a1a16e0857b55f52da16f74827d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a28cdde74d8e5d11c1a97efd338ba4228">CreateDiscreteSequenceWithInfo</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence with additional sequence info using external samples buffer.  <a href="#a28cdde74d8e5d11c1a97efd338ba4228"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a02d28d60964512418c70b92beadbcd62">GetSampleDepth</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of bits used to represent single sample.  <a href="#a02d28d60964512418c70b92beadbcd62"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#ac1ccf33bc3806bc8070c84ad07cfef2e">GetDiscrSample</a> (int position, int channel=0) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get discrete sample at specified position.  <a href="#ac1ccf33bc3806bc8070c84ad07cfef2e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a561fb705e0c901e22b79f2fb07ac4de8">SetDiscrSample</a> (int position, int channel, quint32 sample)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set discrete sample at specified position.  <a href="#a561fb705e0c901e22b79f2fb07ac4de8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#afb2ff3ad63487939106df945cf392ae5">GetDiscreteSample</a> (int position, int channel=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get discrete sample at specified position.  <a href="#afb2ff3ad63487939106df945cf392ae5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a495240fdbdceca305e0d4ea15add09a5">SetDiscreteSample</a> (int position, int channel, quint32 sample)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set discrete sample at specified position.  <a href="#a495240fdbdceca305e0d4ea15add09a5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a6ad4ba6126070b849f12bd46a2626786">CreateSequence</a> (int samplesCount, int channelsCount=1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for sample sequence with specified number of samples, channels and sample depth.  <a href="#a6ad4ba6126070b849f12bd46a2626786"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a4439c86ecdd285afcb568c6eb3449933">CreateSequenceWithInfo</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</td></tr>
@@ -109,7 +111,7 @@ template&lt;typename Element &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00078">78</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00088">88</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -133,20 +135,20 @@ template&lt;typename Element &gt; </div>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00320">320</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00347">347</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 <p>References <a class="el" href="classimeas_1_1_i_data_sequence.html#ae1107b606ee457830ba7937b870a2c3b">imeas::IDataSequence::GetChannelsCount()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>, <a class="el" href="classimeas_1_1_i_data_sequence.html#a267e07011ec9aa223952e06205046f1a">imeas::IDataSequence::GetSample()</a>, <a class="el" href="classimeas_1_1_i_data_sequence.html#a727eed299c40e7dd09be42cfd635bb41">imeas::IDataSequence::GetSamplesCount()</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a118cce5f7e33cb24765828018d37b707"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::CreateDiscrSequence" ref="a118cce5f7e33cb24765828018d37b707" args="(int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)" -->
+<a class="anchor" id="ae12b0a1a16e0857b55f52da16f74827d"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::CreateDiscreteSequence" ref="ae12b0a1a16e0857b55f52da16f74827d" args="(int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Element &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::CreateDiscrSequence </td>
+          <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::CreateDiscreteSequence </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>samplesCount</em>, </td>
@@ -211,9 +213,94 @@ template&lt;typename Element &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if sample sequence was created correctly. </dd></dl>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#a99de39376809f55abf7457dac8b1ed78">imeas::IDiscreteDataSequence</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#ae429d81e1e255d9d8e0e05c15afaf02f">imeas::IDiscreteDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00092">92</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00102">102</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28cdde74d8e5d11c1a97efd338ba4228"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::CreateDiscreteSequenceWithInfo" ref="a28cdde74d8e5d11c1a97efd338ba4228" args="(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount, void *dataPtr, bool releaseFlag, int sampleDiff, int channelDiff, int sampleDepth, int channelsCount=1)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Element &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::CreateDiscreteSequenceWithInfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_trans_ptr.html">istd::TTransPtr</a>&lt; const <a class="el" href="classimeas_1_1_i_data_sequence_info.html">IDataSequenceInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>infoPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>samplesCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>dataPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>releaseFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sampleDiff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channelDiff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sampleDepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channelsCount</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Create container for sample sequence with additional sequence info using external samples buffer. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infoPtr</td><td>sequence info object. </td></tr>
+    <tr><td class="paramname">samplesCount</td><td>number of samples. </td></tr>
+    <tr><td class="paramname">dataPtr</td><td>pointer to external buffer. </td></tr>
+    <tr><td class="paramname">releaseFlag</td><td>if its true, external buffer will be managed (removed) by this object. </td></tr>
+    <tr><td class="paramname">sampleDiff</td><td>address difference between next and previos sample. If it equals 0, the value will be taken from number of samples, number of channels and <code>channelDiff</code>. </td></tr>
+    <tr><td class="paramname">channelDiff</td><td>address difference between next and previos sample. If it equals 0, the value will be calculated from number of bits per single sample. </td></tr>
+    <tr><td class="paramname">sampleDepth</td><td>number of bits used for representation of a single sample. </td></tr>
+    <tr><td class="paramname">channelsCount</td><td>number of channels. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if sample sequence was created correctly. </dd></dl>
+
+<p>Implements <a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#ad51b3d4a6357d37c6834287fb787e4d3">imeas::IDiscreteDataSequence</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00128">128</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -256,7 +343,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a488f10d1c0ae0619cca612d177d7dc43">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00147">147</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00174">174</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 <p>References <a class="el" href="_i_data_sequence_info_8h_source.html#l00036">imeas::IDataSequenceInfo::SIF_CHANNELS_COUNT_FIXED</a>, and <a class="el" href="_i_data_sequence_info_8h_source.html#l00030">imeas::IDataSequenceInfo::SIF_SAMPLES_COUNT_FIXED</a>.</p>
 
@@ -307,7 +394,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a901e49a1803d67c0bce2fdbed259bcf2">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00188">188</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00215">215</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -331,18 +418,18 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#ae1107b606ee457830ba7937b870a2c3b">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00230">230</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00257">257</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac1ccf33bc3806bc8070c84ad07cfef2e"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::GetDiscrSample" ref="ac1ccf33bc3806bc8070c84ad07cfef2e" args="(int position, int channel=0) const " -->
+<a class="anchor" id="afb2ff3ad63487939106df945cf392ae5"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::GetDiscreteSample" ref="afb2ff3ad63487939106df945cf392ae5" args="(int position, int channel=0) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Element &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">quint32 <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::GetDiscrSample </td>
+          <td class="memname">quint32 <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::GetDiscreteSample </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>position</em>, </td>
@@ -370,9 +457,9 @@ template&lt;typename Element &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#a7cd2bacc9056c18b59ccb7691c57b95b">imeas::IDiscreteDataSequence</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#a97a3b9ef24ec90ee3dd10d23a31d4a25">imeas::IDiscreteDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00125">125</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00152">152</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -407,7 +494,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a267e07011ec9aa223952e06205046f1a">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00237">237</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00264">264</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -431,7 +518,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#af48314e6595db1b1e5e24172865e354a">imeas::IDiscreteDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00118">118</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00145">145</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -455,7 +542,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a727eed299c40e7dd09be42cfd635bb41">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00223">223</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00250">250</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -479,7 +566,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#ad7e156a46448191b4d7401ebe6e2b4fd">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00200">200</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00227">227</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +590,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a70e52dd81c7306616441d8c484ff78fa">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00207">207</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00234">234</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -528,7 +615,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a3babd25cddaaf2017fe8bcf2cb604269">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00214">214</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00241">241</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -551,20 +638,20 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00257">257</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00284">284</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">iser::IArchive::Process()</a>, and <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">istd::TChangeNotifier&lt; class &gt;::SetPtr()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a561fb705e0c901e22b79f2fb07ac4de8"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::SetDiscrSample" ref="a561fb705e0c901e22b79f2fb07ac4de8" args="(int position, int channel, quint32 sample)" -->
+<a class="anchor" id="a495240fdbdceca305e0d4ea15add09a5"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::SetDiscreteSample" ref="a495240fdbdceca305e0d4ea15add09a5" args="(int position, int channel, quint32 sample)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Element &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::SetDiscrSample </td>
+          <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::SetDiscreteSample </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>position</em>, </td>
@@ -601,9 +688,9 @@ template&lt;typename Element &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if sample was changed. </dd></dl>
 
-<p>Implements <a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#acde7c99860839fec94a1707e348cb2c0">imeas::IDiscreteDataSequence</a>.</p>
+<p>Implements <a class="el" href="classimeas_1_1_i_discrete_data_sequence.html#abd74355d70acddb47bdf9bd24fc664b7">imeas::IDiscreteDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00134">134</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00161">161</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>
@@ -644,7 +731,7 @@ template&lt;typename Element &gt; </div>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_data_sequence.html#a091824955ff868e6929214745620bc82">imeas::IDataSequence</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00246">246</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00273">273</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 
 </div>
 </div>

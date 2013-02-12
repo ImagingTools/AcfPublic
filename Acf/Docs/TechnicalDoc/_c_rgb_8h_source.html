@@ -46,10 +46,10 @@
 <a name="l00022"></a>00022 
 <a name="l00023"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850">00023</a>        <span class="keyword">enum</span> <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850">ComponentIndex</a>
 <a name="l00024"></a>00024        {
-<a name="l00025"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a6777dfd252b2d498b6edb12325c77e3a">00025</a>               <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a6777dfd252b2d498b6edb12325c77e3a">Red</a>,
-<a name="l00026"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850aa685310da1b6cbc82080d4851abc19ac">00026</a>               <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850aa685310da1b6cbc82080d4851abc19ac">Green</a>,
-<a name="l00027"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a9e2ad8f8a15fb7c49f1e345b7ff36ba1">00027</a>               <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a9e2ad8f8a15fb7c49f1e345b7ff36ba1">Blue</a>,
-<a name="l00028"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850ae26199426ff21885aa2cc394bf01c6ea">00028</a>               <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850ae26199426ff21885aa2cc394bf01c6ea">Last</a> = <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a9e2ad8f8a15fb7c49f1e345b7ff36ba1">Blue</a>
+<a name="l00025"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a2a42a8a96bc213905935bd26eb2c3be6">00025</a>               <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a2a42a8a96bc213905935bd26eb2c3be6">CI_RED</a>,
+<a name="l00026"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a5325e9e3cf019dfad0ab832a33d1fc00">00026</a>               <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a5325e9e3cf019dfad0ab832a33d1fc00">CI_GREEN</a>,
+<a name="l00027"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850ae3a4efdafee88c4b8fe1c539e5ba48a0">00027</a>               <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850ae3a4efdafee88c4b8fe1c539e5ba48a0">CI_BLUE</a>,
+<a name="l00028"></a><a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a6700c749000e54318e7b1c0d069726ea">00028</a>               <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a6700c749000e54318e7b1c0d069726ea">CI_LAST</a> = <a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850ae3a4efdafee88c4b8fe1c539e5ba48a0">CI_BLUE</a>
 <a name="l00029"></a>00029        };
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <a class="code" href="classicmm_1_1_c_rgb.html#a419e936ec9c6cb96e4b8cdc235e9348a">CRgb</a>(<span class="keywordtype">double</span> r = 0.0, <span class="keywordtype">double</span> g = 0.0, <span class="keywordtype">double</span> b = 0.0);
@@ -90,9 +90,9 @@
 <a name="l00066"></a>00066 
 <a name="l00067"></a><a class="code" href="classicmm_1_1_c_rgb.html#a419e936ec9c6cb96e4b8cdc235e9348a">00067</a> <span class="keyword">inline</span> <a class="code" href="classicmm_1_1_c_rgb.html#a419e936ec9c6cb96e4b8cdc235e9348a">CRgb::CRgb</a>(<span class="keywordtype">double</span> r, <span class="keywordtype">double</span> g, <span class="keywordtype">double</span> b)
 <a name="l00068"></a>00068 {
-<a name="l00069"></a>00069        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a6777dfd252b2d498b6edb12325c77e3a">Red</a>, r);
-<a name="l00070"></a>00070        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850aa685310da1b6cbc82080d4851abc19ac">Green</a>, g);
-<a name="l00071"></a>00071        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a9e2ad8f8a15fb7c49f1e345b7ff36ba1">Blue</a>, b);
+<a name="l00069"></a>00069        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a2a42a8a96bc213905935bd26eb2c3be6">CI_RED</a>, r);
+<a name="l00070"></a>00070        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a5325e9e3cf019dfad0ab832a33d1fc00">CI_GREEN</a>, g);
+<a name="l00071"></a>00071        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850ae3a4efdafee88c4b8fe1c539e5ba48a0">CI_BLUE</a>, b);
 <a name="l00072"></a>00072 }
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074 
@@ -106,37 +106,37 @@
 <a name="l00082"></a>00082 
 <a name="l00083"></a><a class="code" href="classicmm_1_1_c_rgb.html#acc7a16621f6e74f5a259a1fd46750b50">00083</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classicmm_1_1_c_rgb.html#acc7a16621f6e74f5a259a1fd46750b50">CRgb::GetRed</a>()<span class="keyword"> const</span>
 <a name="l00084"></a>00084 <span class="keyword"></span>{
-<a name="l00085"></a>00085        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f" title="Get element at specified i.">GetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a6777dfd252b2d498b6edb12325c77e3a">Red</a>);
+<a name="l00085"></a>00085        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f" title="Get element at specified i.">GetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a2a42a8a96bc213905935bd26eb2c3be6">CI_RED</a>);
 <a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088 
 <a name="l00089"></a><a class="code" href="classicmm_1_1_c_rgb.html#af7ac0f545bc5ff181529435e081bcbe3">00089</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classicmm_1_1_c_rgb.html#af7ac0f545bc5ff181529435e081bcbe3">CRgb::SetRed</a>(<span class="keywordtype">double</span> value)
 <a name="l00090"></a>00090 {
-<a name="l00091"></a>00091        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a6777dfd252b2d498b6edb12325c77e3a">Red</a>, value);
+<a name="l00091"></a>00091        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a2a42a8a96bc213905935bd26eb2c3be6">CI_RED</a>, value);
 <a name="l00092"></a>00092 }
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094 
 <a name="l00095"></a><a class="code" href="classicmm_1_1_c_rgb.html#a849b48d9a637a3ab2a92efa4670c9c21">00095</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classicmm_1_1_c_rgb.html#a849b48d9a637a3ab2a92efa4670c9c21">CRgb::GetGreen</a>()<span class="keyword"> const</span>
 <a name="l00096"></a>00096 <span class="keyword"></span>{
-<a name="l00097"></a>00097        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f" title="Get element at specified i.">GetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850aa685310da1b6cbc82080d4851abc19ac">Green</a>);
+<a name="l00097"></a>00097        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f" title="Get element at specified i.">GetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a5325e9e3cf019dfad0ab832a33d1fc00">CI_GREEN</a>);
 <a name="l00098"></a>00098 }
 <a name="l00099"></a>00099 
 <a name="l00100"></a>00100 
 <a name="l00101"></a><a class="code" href="classicmm_1_1_c_rgb.html#ab3d98fbe4e079867e355cdfac1b8a0d3">00101</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classicmm_1_1_c_rgb.html#ab3d98fbe4e079867e355cdfac1b8a0d3">CRgb::SetGreen</a>(<span class="keywordtype">double</span> value)
 <a name="l00102"></a>00102 {
-<a name="l00103"></a>00103        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850aa685310da1b6cbc82080d4851abc19ac">Green</a>, value);
+<a name="l00103"></a>00103        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a5325e9e3cf019dfad0ab832a33d1fc00">CI_GREEN</a>, value);
 <a name="l00104"></a>00104 }
 <a name="l00105"></a>00105 
 <a name="l00106"></a>00106 
 <a name="l00107"></a><a class="code" href="classicmm_1_1_c_rgb.html#adb9c8cd1f38e52646cbe4353210ee18e">00107</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="classicmm_1_1_c_rgb.html#adb9c8cd1f38e52646cbe4353210ee18e">CRgb::GetBlue</a>()<span class="keyword"> const</span>
 <a name="l00108"></a>00108 <span class="keyword"></span>{
-<a name="l00109"></a>00109        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f" title="Get element at specified i.">GetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a9e2ad8f8a15fb7c49f1e345b7ff36ba1">Blue</a>);
+<a name="l00109"></a>00109        <span class="keywordflow">return</span> <a class="code" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f" title="Get element at specified i.">GetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850ae3a4efdafee88c4b8fe1c539e5ba48a0">CI_BLUE</a>);
 <a name="l00110"></a>00110 }
 <a name="l00111"></a>00111 
 <a name="l00112"></a>00112 
 <a name="l00113"></a><a class="code" href="classicmm_1_1_c_rgb.html#a511e3160e1cb45cfe5ec680c2f62134e">00113</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classicmm_1_1_c_rgb.html#a511e3160e1cb45cfe5ec680c2f62134e">CRgb::SetBlue</a>(<span class="keywordtype">double</span> value)
 <a name="l00114"></a>00114 {
-<a name="l00115"></a>00115        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850a9e2ad8f8a15fb7c49f1e345b7ff36ba1">Blue</a>, value);
+<a name="l00115"></a>00115        <a class="code" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249" title="Set element at specified i.">SetElement</a>(<a class="code" href="classicmm_1_1_c_rgb.html#a8611dddc3ffd2116303eaad92c4d3850ae3a4efdafee88c4b8fe1c539e5ba48a0">CI_BLUE</a>, value);
 <a name="l00116"></a>00116 }
 <a name="l00117"></a>00117 
 <a name="l00118"></a>00118 
