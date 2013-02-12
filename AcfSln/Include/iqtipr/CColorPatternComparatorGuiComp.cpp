@@ -91,6 +91,8 @@ void CColorPatternComparatorGuiComp::UpdateGui(int updateFlags)
 			if (colorValuesCount == 2){
 				QTableWidgetItem* workingColorItem = new QTableWidgetItem(QString::number(colorValues[0]));
 				QTableWidgetItem* teachedColorItem = new QTableWidgetItem(QString::number(colorValues[1]));
+				workingColorItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+				teachedColorItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
 				ColorTable->setRowCount(1);
 				ColorTable->setItem(0, 0, workingColorItem);
@@ -107,6 +109,8 @@ void CColorPatternComparatorGuiComp::UpdateGui(int updateFlags)
 				for (int i = 0; i < 3; i++){
 					QTableWidgetItem* workingColorItem = new QTableWidgetItem(QString::number(colorValues[i]));
 					QTableWidgetItem* teachedColorItem = new QTableWidgetItem(QString::number(colorValues[i + 3]));
+					workingColorItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+					teachedColorItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
 					ColorTable->setItem(i, 0, workingColorItem);
 					ColorTable->setItem(i, 1, teachedColorItem);
