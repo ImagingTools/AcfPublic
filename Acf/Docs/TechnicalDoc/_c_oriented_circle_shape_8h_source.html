@@ -30,27 +30,27 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iview_COrientedCircleShape_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_interactive_circle_shape_8h.html">iview/CInteractiveCircleShape.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_circle_shape_8h.html">iview/CCircleShape.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="keyword">namespace </span>iview
 <a name="l00009"></a>00009 {
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a><a class="code" href="classiview_1_1_c_oriented_circle_shape.html">00012</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_oriented_circle_shape.html">COrientedCircleShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_circle_shape.html">CInteractiveCircleShape</a>
+<a name="l00012"></a><a class="code" href="classiview_1_1_c_oriented_circle_shape.html">00012</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_oriented_circle_shape.html">COrientedCircleShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_circle_shape.html">CCircleShape</a>
 <a name="l00013"></a>00013 {
 <a name="l00014"></a>00014 <span class="keyword">public</span>:
-<a name="l00015"></a><a class="code" href="classiview_1_1_c_oriented_circle_shape.html#a8e28021a2b14d8e7d397087bba5bfe3d">00015</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_circle_shape.html">CInteractiveCircleShape</a> <a class="code" href="classiview_1_1_c_oriented_circle_shape.html#a8e28021a2b14d8e7d397087bba5bfe3d">BaseClass</a>;
+<a name="l00015"></a><a class="code" href="classiview_1_1_c_oriented_circle_shape.html#ac5676ae14af66e8a1c0ba082e43020a2">00015</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_circle_shape.html">CCircleShape</a> <a class="code" href="classiview_1_1_c_oriented_circle_shape.html#ac5676ae14af66e8a1c0ba082e43020a2">BaseClass</a>;
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017        <a class="code" href="classiview_1_1_c_oriented_circle_shape.html#a4de10190a65585af130318abab51bb48">COrientedCircleShape</a>();
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019        <span class="comment">// reimplemented (iview::CInteractiveCircleShape)</span>
+<a name="l00019"></a>00019        <span class="comment">// reimplemented (iview::CCircleShape)</span>
 <a name="l00020"></a>00020        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_oriented_circle_shape.html#a6b1fd7805d0a15791f5851ec431c010f" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022        <span class="comment">// reimplemented (imod::IObserver)</span>
 <a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_oriented_circle_shape.html#af5aeee16cbf4c94778c02484d1348fa2" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
 <a name="l00024"></a>00024        
-<a name="l00025"></a>00025        <span class="comment">// reimplemented (iview::CInteractiveCircleShape)</span>
+<a name="l00025"></a>00025        <span class="comment">// reimplemented (iview::CCircleShape)</span>
 <a name="l00026"></a>00026        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_oriented_circle_shape.html#abf232b2dd8782a69d2016546e170eae6" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
 <a name="l00027"></a>00027 };
 <a name="l00028"></a>00028 

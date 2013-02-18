@@ -27,7 +27,7 @@
 // ACF includes
 #include "i2d/CAnnulusSegment.h"
 
-#include "iview/CInteractiveAnnulusSegmentShape.h"
+#include "iview/CAnnulusSegmentShape.h"
 
 #include "iqt2d/TShapeParamsGuiCompBase.h"
 #include "iqt2d/Generated/ui_CAnnulusSegmentParamsGuiComp.h"
@@ -40,7 +40,7 @@ namespace iqt2d
 class CAnnulusSegmentParamsGuiComp:
 			public iqt2d::TShapeParamsGuiCompBase<
 						Ui::CAnnulusSegmentParamsGuiComp,
-						iview::CInteractiveAnnulusSegmentShape,
+						iview::CAnnulusSegmentShape,
 						i2d::CAnnulusSegment>
 {
 	Q_OBJECT
@@ -48,7 +48,7 @@ class CAnnulusSegmentParamsGuiComp:
 public:
 	typedef iqt2d::TShapeParamsGuiCompBase<
 				Ui::CAnnulusSegmentParamsGuiComp,
-				iview::CInteractiveAnnulusSegmentShape,
+				iview::CAnnulusSegmentShape,
 				i2d::CAnnulusSegment> BaseClass;
 
 	I_BEGIN_COMPONENT(CAnnulusSegmentParamsGuiComp);

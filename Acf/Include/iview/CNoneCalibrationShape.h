@@ -24,7 +24,7 @@
 #define iview_CNoneCalibrationShape_included
 
 
-#include "iview/CCalibrationShapeBase.h"
+#include "iview/CShapeBase.h"
 
 
 namespace iview
@@ -37,10 +37,10 @@ namespace iview
 	Shape object for none calibration.
 	You need this shape to visualize grid without calibration on the shape view.
 */
-class CNoneCalibrationShape: public CCalibrationShapeBase
+class CNoneCalibrationShape: public CShapeBase
 {
 public:
-	typedef iview::CCalibrationShapeBase BaseClass;
+	typedef CShapeBase BaseClass;
 
 	// reimplemented (iview::IVisualizable)
 	virtual void Draw(QPainter& drawContext) const;

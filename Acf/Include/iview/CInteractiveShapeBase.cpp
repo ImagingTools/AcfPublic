@@ -158,6 +158,7 @@ void CInteractiveShapeBase::DrawText(QPainter& drawContext, istd::CIndex2d point
 	drawContext.drawText(textRect, Qt::AlignLeft | Qt::AlignBottom, text);
 }
 
+
 void CInteractiveShapeBase::DrawOrientationMarker(
 			QPainter& drawContext,
 			const QPen& rightPen,

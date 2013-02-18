@@ -39,7 +39,7 @@
 <div class="title">iqt2d::CPolylineParamsGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::CPolylineParamsGuiComp" --><!-- doxytag: inherits="TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;" -->
+<!-- doxytag: class="iqt2d::CPolylineParamsGuiComp" --><!-- doxytag: inherits="TPolygonBasedParamsGuiComp&lt; iview::CPolylineShape, i2d::CPolyline &gt;" -->
 <p><code>#include &lt;<a class="el" href="_c_polyline_params_gui_comp_8h_source.html">CPolylineParamsGuiComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt2d::CPolylineParamsGuiComp:</div>
@@ -47,8 +47,8 @@ Inheritance diagram for iqt2d::CPolylineParamsGuiComp:</div>
  <div class="center">
   <img src="classiqt2d_1_1_c_polyline_params_gui_comp.png" usemap="#iqt2d::CPolylineParamsGuiComp_map" alt=""/>
   <map id="iqt2d::CPolylineParamsGuiComp_map" name="iqt2d::CPolylineParamsGuiComp_map">
-<area href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html" alt="iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;" shape="rect" coords="3409,616,4373,640"/>
-<area href="classiqt2d_1_1_t_shape_params_gui_comp_base.html" alt="iqt2d::TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, iview::CInteractivePolylineShape, i2d::CPolyline &gt;" shape="rect" coords="3409,560,4373,584"/>
+<area href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html" alt="iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CPolylineShape, i2d::CPolyline &gt;" shape="rect" coords="3409,616,4373,640"/>
+<area href="classiqt2d_1_1_t_shape_params_gui_comp_base.html" alt="iqt2d::TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, iview::CPolylineShape, i2d::CPolyline &gt;" shape="rect" coords="3409,560,4373,584"/>
 <area href="classiqt2d_1_1_t_view_extender_comp_base.html" alt="iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui, i2d::CPolyline &gt; &gt;" shape="rect" coords="3409,504,4373,528"/>
 <area href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" alt="iqtgui::TDesignerGuiObserverCompBase&lt; Ui, i2d::CPolyline &gt;" shape="rect" coords="2922,448,3886,472"/>
 <area href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects." alt="iqt2d::IViewExtender" shape="rect" coords="3896,448,4860,472"/>
@@ -79,8 +79,8 @@ Inheritance diagram for iqt2d::CPolylineParamsGuiComp:</div>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html">TPolygonBasedParamsGuiComp</a><br class="typebreak"/>
-&lt; <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html">iview::CInteractivePolylineShape</a>, <br class="typebreak"/>
-<a class="el" href="classi2d_1_1_c_polyline.html">i2d::CPolyline</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#abc024ef6eedbbf24307907750f00ba1a">BaseClass</a></td></tr>
+&lt; <a class="el" href="classiview_1_1_c_polyline_shape.html">iview::CPolylineShape</a>, <br class="typebreak"/>
+<a class="el" href="classi2d_1_1_c_polyline.html">i2d::CPolyline</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#ae574ce37738881dcd73ce3ff3def1b4f">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#aa0f60d1baaf1b45244776aa04b94a00f">OnParamsChanged</a> ()</td></tr>
@@ -99,37 +99,36 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a5faec4dbebf465c38af818f4212e752a">OnToolsButtonMenuActionTriggered</a> (QAction *action)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
-<a class="el" href="classiview_1_1_c_interactive_polyline_shape.html">iview::CInteractivePolylineShape</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a4fa9cd1adb4adb95d831d5f04c24587c">CreateShape</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_c_polyline_shape.html">iview::CPolylineShape</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#ac95a446d024148e1ae635de626089ced">CreateShape</a> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_polyline_params_gui_comp_8h_source.html#l00017">17</a> of file <a class="el" href="_c_polyline_params_gui_comp_8h_source.html">CPolylineParamsGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="abc024ef6eedbbf24307907750f00ba1a"></a><!-- doxytag: member="iqt2d::CPolylineParamsGuiComp::BaseClass" ref="abc024ef6eedbbf24307907750f00ba1a" args="" -->
+<a class="anchor" id="ae574ce37738881dcd73ce3ff3def1b4f"></a><!-- doxytag: member="iqt2d::CPolylineParamsGuiComp::BaseClass" ref="ae574ce37738881dcd73ce3ff3def1b4f" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html">TPolygonBasedParamsGuiComp</a>&lt;<a class="el" href="classiview_1_1_c_interactive_polyline_shape.html">iview::CInteractivePolylineShape</a>, <a class="el" href="classi2d_1_1_c_polyline.html">i2d::CPolyline</a>&gt; <a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#abc024ef6eedbbf24307907750f00ba1a">iqt2d::CPolylineParamsGuiComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html">TPolygonBasedParamsGuiComp</a>&lt;<a class="el" href="classiview_1_1_c_polyline_shape.html">iview::CPolylineShape</a>, <a class="el" href="classi2d_1_1_c_polyline.html">i2d::CPolyline</a>&gt; <a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#ae574ce37738881dcd73ce3ff3def1b4f">iqt2d::CPolylineParamsGuiComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a51d350a1c29667e93f4e175024635864">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a51d350a1c29667e93f4e175024635864">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CPolylineShape, i2d::CPolyline &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_polyline_params_gui_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_polyline_params_gui_comp_8h_source.html">CPolylineParamsGuiComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a4fa9cd1adb4adb95d831d5f04c24587c"></a><!-- doxytag: member="iqt2d::CPolylineParamsGuiComp::CreateShape" ref="a4fa9cd1adb4adb95d831d5f04c24587c" args="() const " -->
+<a class="anchor" id="ac95a446d024148e1ae635de626089ced"></a><!-- doxytag: member="iqt2d::CPolylineParamsGuiComp::CreateShape" ref="ac95a446d024148e1ae635de626089ced" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiview_1_1_c_interactive_polyline_shape.html">iview::CInteractivePolylineShape</a>* iqt2d::CPolylineParamsGuiComp::CreateShape </td>
+          <td class="memname">virtual <a class="el" href="classiview_1_1_c_polyline_shape.html">iview::CPolylineShape</a>* iqt2d::CPolylineParamsGuiComp::CreateShape </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [protected, virtual]</code></td>
@@ -138,7 +137,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a96f1bc16bf5a7adf65ddb2304ed5c33e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_shape_params_gui_comp_base.html#a96f1bc16bf5a7adf65ddb2304ed5c33e">iqt2d::TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, iview::CPolylineShape, i2d::CPolyline &gt;</a>.</p>
 
 </div>
 </div>
@@ -255,7 +254,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called just after GUI is initialized. </p>
 
-<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a639829115b16468f337578e9eb36855b">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a639829115b16468f337578e9eb36855b">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CPolylineShape, i2d::CPolyline &gt;</a>.</p>
 
 </div>
 </div>
@@ -275,7 +274,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called when model is attached and GUI is created. </p>
 
-<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a30547f2127be843f4033f1392af6f5a9">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a30547f2127be843f4033f1392af6f5a9">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CPolylineShape, i2d::CPolyline &gt;</a>.</p>
 
 </div>
 </div>
@@ -295,7 +294,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Called when model is detached or GUI is destroyed. </p>
 
-<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#aacfff00b7914dc828ed70db3c8406731">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#aacfff00b7914dc828ed70db3c8406731">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CPolylineShape, i2d::CPolyline &gt;</a>.</p>
 
 </div>
 </div>
@@ -330,7 +329,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a449dd47e6f484eb6415de32521f31731">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CInteractivePolylineShape, i2d::CPolyline &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a449dd47e6f484eb6415de32521f31731">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CPolylineShape, i2d::CPolyline &gt;</a>.</p>
 
 </div>
 </div>

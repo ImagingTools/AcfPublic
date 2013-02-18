@@ -38,7 +38,7 @@
 <div class="title">iview::COrientedCircleShape Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::COrientedCircleShape" --><!-- doxytag: inherits="iview::CInteractiveCircleShape" -->
+<!-- doxytag: class="iview::COrientedCircleShape" --><!-- doxytag: inherits="iview::CCircleShape" -->
 <p><code>#include &lt;<a class="el" href="_c_oriented_circle_shape_8h_source.html">COrientedCircleShape.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iview::COrientedCircleShape:</div>
@@ -46,8 +46,8 @@ Inheritance diagram for iview::COrientedCircleShape:</div>
  <div class="center">
   <img src="classiview_1_1_c_oriented_circle_shape.png" usemap="#iview::COrientedCircleShape_map" alt=""/>
   <map id="iview::COrientedCircleShape_map" name="iview::COrientedCircleShape_map">
-<area href="classiview_1_1_c_interactive_circle_shape.html" alt="iview::CInteractiveCircleShape" shape="rect" coords="1075,392,1280,416"/>
-<area href="classiview_1_1_c_interactive_pin_shape.html" alt="iview::CInteractivePinShape" shape="rect" coords="1075,336,1280,360"/>
+<area href="classiview_1_1_c_circle_shape.html" alt="iview::CCircleShape" shape="rect" coords="1075,392,1280,416"/>
+<area href="classiview_1_1_c_pin_shape.html" alt="iview::CPinShape" shape="rect" coords="1075,336,1280,360"/>
 <area href="classiview_1_1_c_interactive_shape_base.html" alt="iview::CInteractiveShapeBase" shape="rect" coords="1075,280,1280,304"/>
 <area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="215,224,420,248"/>
 <area href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user." alt="iview::IInteractiveShape" shape="rect" coords="1075,224,1280,248"/>
@@ -74,7 +74,7 @@ Inheritance diagram for iview::COrientedCircleShape:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_c_interactive_circle_shape.html">CInteractiveCircleShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_oriented_circle_shape.html#a8e28021a2b14d8e7d397087bba5bfe3d">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_c_circle_shape.html">CCircleShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_oriented_circle_shape.html#ac5676ae14af66e8a1c0ba082e43020a2">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_oriented_circle_shape.html#a4de10190a65585af130318abab51bb48">COrientedCircleShape</a> ()</td></tr>
@@ -89,18 +89,18 @@ Public Member Functions</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_oriented_circle_shape_8h_source.html#l00012">12</a> of file <a class="el" href="_c_oriented_circle_shape_8h_source.html">COrientedCircleShape.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a8e28021a2b14d8e7d397087bba5bfe3d"></a><!-- doxytag: member="iview::COrientedCircleShape::BaseClass" ref="a8e28021a2b14d8e7d397087bba5bfe3d" args="" -->
+<a class="anchor" id="ac5676ae14af66e8a1c0ba082e43020a2"></a><!-- doxytag: member="iview::COrientedCircleShape::BaseClass" ref="ac5676ae14af66e8a1c0ba082e43020a2" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiview_1_1_c_interactive_circle_shape.html">CInteractiveCircleShape</a> <a class="el" href="classiview_1_1_c_oriented_circle_shape.html#a8e28021a2b14d8e7d397087bba5bfe3d">iview::COrientedCircleShape::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiview_1_1_c_circle_shape.html">CCircleShape</a> <a class="el" href="classiview_1_1_c_oriented_circle_shape.html#ac5676ae14af66e8a1c0ba082e43020a2">iview::COrientedCircleShape::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_circle_shape.html#ae54a8ba10826df25c2072d6aeecc03d2">iview::CInteractiveCircleShape</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_circle_shape.html#aa86a97f3f9992723d2c7a8f38a06672e">iview::CCircleShape</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_oriented_circle_shape_8h_source.html#l00015">15</a> of file <a class="el" href="_c_oriented_circle_shape_8h_source.html">COrientedCircleShape.h</a>.</p>
 
@@ -141,7 +141,7 @@ Public Member Functions</h2></td></tr>
 <p>Calculate bounding box. </p>
 <p>You have to implement this method in your shapes implementations. </p>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_circle_shape.html#a866daeb8a59555406466a2968f035414">iview::CInteractiveCircleShape</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_circle_shape.html#a2955d60ae4391b12207a5ca33a37c4f7">iview::CCircleShape</a>.</p>
 
 </div>
 </div>
@@ -162,7 +162,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Draw this shape using draw context. </p>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_circle_shape.html#a66a3d407af21be2f74deea5c9f566905">iview::CInteractiveCircleShape</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_circle_shape.html#ae7682391798cdab6a88cace714cab71d">iview::CCircleShape</a>.</p>
 
 </div>
 </div>
@@ -184,7 +184,7 @@ Public Member Functions</h2></td></tr>
 <p>This call back function will be called, if an observable object is about to be attached. </p>
 <p>This function returns a <code>true</code>, if observable object is accepted by the implementation logic of the observer, otherwise the function returns a <code>false</code>. </p>
 
-<p>Reimplemented from <a class="el" href="classiview_1_1_c_interactive_circle_shape.html#a0fceaeac89dddfe7417beb024b0b7318">iview::CInteractiveCircleShape</a>.</p>
+<p>Reimplemented from <a class="el" href="classiview_1_1_c_circle_shape.html#a4005b52a1284e09c2ee28aed7a32e25e">iview::CCircleShape</a>.</p>
 
 </div>
 </div>

@@ -84,45 +84,42 @@
 <a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_base.html#a06821a59e07db37d05cf2b0a45fcf6cc">OnUpdate</a>(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 <span class="keyword">protected</span>:
-<a name="l00065"></a>00065        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_shape_base.html#a15b9b85c11c48ba26ce7f978bfe344c8" title="Get screen position based on logical position.">GetScreenPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; logPosition, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* calibrationPtr) <span class="keyword">const</span>;
-<a name="l00069"></a>00069        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_shape_base.html#aa9f49134013b4d1147a65c875c26c0dd" title="Get logical position based on screen position.">GetLogPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; screenPosition, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_transformation2d.html" title="Common interface for all calibration objects.">i2d::ITransformation2d</a>* calibrationPtr) <span class="keyword">const</span>;
-<a name="l00070"></a>00070 
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_shape_base.html#ab6b72a34649abfbc775ddb6f1b9e37f5" title="Get display changes mask.">GetDisplayChangesMask</a>();
-<a name="l00076"></a>00076        
-<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_base.html#a5da5a9e5047c26a76c525d1342718fb0" title="Invalidate bounding box.">InvalidateBoundingBox</a>();
-<a name="l00084"></a>00084 
-<a name="l00088"></a>00088        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_shape_base.html#a7268bb7bd6db46d51c18e350a4e1012e" title="Check if display is connected.">IsDisplayConnected</a>() <span class="keyword">const</span>;
-<a name="l00089"></a>00089 
-<a name="l00094"></a>00094        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_schema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorSchema</a>&amp; <a class="code" href="classiview_1_1_c_shape_base.html#ac4df77d29b1db520bd12fdc0a66ac66b" title="Get color schema for this shape.">GetColorSchema</a>() <span class="keyword">const</span>;
-<a name="l00095"></a>00095        
-<a name="l00100"></a>00100        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_shape_base.html#a85e954977563ea841859f09003f56897" title="Get display client rectangle.">GetClientRect</a>() <span class="keyword">const</span>;
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_shape_base.html#a1e91a9e7cb5074b40a27d4678e7beaa4">IsBoundingBoxValid</a>() <span class="keyword">const</span>;
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_base.html#a86836e7fcb90041bb0bf73f5852b6bc3">DisconnectDisplay</a>();
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106        <span class="comment">// reimplemented (iview::CShapeControl)</span>
-<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a>&amp; <a class="code" href="classiview_1_1_c_shape_base.html#a7f025936c81f5cd5c5f6ffd483610f42" title="Get a transform from view units to screen units It can be called only when display is connected...">GetViewToScreenTransform</a>() <span class="keyword">const</span>;
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109        <span class="comment">// abstract methods</span>
-<a name="l00114"></a>00114 <span class="comment"></span>       <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_shape_base.html#a778070a9321ab3a7525189254e1b611c" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span> = 0;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_shape_base.html#ab6b72a34649abfbc775ddb6f1b9e37f5" title="Get display changes mask.">GetDisplayChangesMask</a>();
+<a name="l00067"></a>00067        
+<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_base.html#a5da5a9e5047c26a76c525d1342718fb0" title="Invalidate bounding box.">InvalidateBoundingBox</a>();
+<a name="l00075"></a>00075 
+<a name="l00079"></a>00079        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_shape_base.html#a7268bb7bd6db46d51c18e350a4e1012e" title="Check if display is connected.">IsDisplayConnected</a>() <span class="keyword">const</span>;
+<a name="l00080"></a>00080 
+<a name="l00085"></a>00085        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_schema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorSchema</a>&amp; <a class="code" href="classiview_1_1_c_shape_base.html#ac4df77d29b1db520bd12fdc0a66ac66b" title="Get color schema for this shape.">GetColorSchema</a>() <span class="keyword">const</span>;
+<a name="l00086"></a>00086        
+<a name="l00091"></a>00091        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_shape_base.html#a85e954977563ea841859f09003f56897" title="Get display client rectangle.">GetClientRect</a>() <span class="keyword">const</span>;
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_shape_base.html#a1e91a9e7cb5074b40a27d4678e7beaa4">IsBoundingBoxValid</a>() <span class="keyword">const</span>;
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_shape_base.html#a86836e7fcb90041bb0bf73f5852b6bc3">DisconnectDisplay</a>();
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097        <span class="comment">// reimplemented (iview::CShapeControl)</span>
+<a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a>&amp; <a class="code" href="classiview_1_1_c_shape_base.html#a7f025936c81f5cd5c5f6ffd483610f42" title="Get a transform from view units to screen units It can be called only when display is connected...">GetViewToScreenTransform</a>() <span class="keyword">const</span>;
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100        <span class="comment">// abstract methods</span>
+<a name="l00105"></a>00105 <span class="comment"></span>       <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_shape_base.html#a778070a9321ab3a7525189254e1b611c" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span> = 0;
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="keyword">private</span>:
+<a name="l00108"></a>00108        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_schema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorSchema</a>* m_userColorSchemaPtr;
+<a name="l00109"></a>00109        <a class="code" href="classiview_1_1_i_display.html">IDisplay</a>* m_displayPtr;
+<a name="l00110"></a>00110        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isBoundingBoxValid;
+<a name="l00111"></a>00111        <span class="keyword">mutable</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_boundingBox;
+<a name="l00112"></a>00112        <span class="keywordtype">int</span> m_layerType;
+<a name="l00113"></a>00113        <span class="keywordtype">bool</span> m_isVisible;
+<a name="l00114"></a>00114 };
 <a name="l00115"></a>00115 
-<a name="l00116"></a>00116 <span class="keyword">private</span>:
-<a name="l00117"></a>00117        <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_color_schema.html" title="Defines set of standard pens, brushes and simple management of unions.">IColorSchema</a>* m_userColorSchemaPtr;
-<a name="l00118"></a>00118        <a class="code" href="classiview_1_1_i_display.html">IDisplay</a>* m_displayPtr;
-<a name="l00119"></a>00119        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isBoundingBoxValid;
-<a name="l00120"></a>00120        <span class="keyword">mutable</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_boundingBox;
-<a name="l00121"></a>00121        <span class="keywordtype">int</span> m_layerType;
-<a name="l00122"></a>00122        <span class="keywordtype">bool</span> m_isVisible;
-<a name="l00123"></a>00123 };
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 } <span class="comment">// namespace iview</span>
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129 <span class="preprocessor">#endif // !iview_CShapeBase_included</span>
-<a name="l00130"></a>00130 <span class="preprocessor"></span>
-<a name="l00131"></a>00131 
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117 } <span class="comment">// namespace iview</span>
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 <span class="preprocessor">#endif // !iview_CShapeBase_included</span>
+<a name="l00121"></a>00121 <span class="preprocessor"></span>
+<a name="l00122"></a>00122 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

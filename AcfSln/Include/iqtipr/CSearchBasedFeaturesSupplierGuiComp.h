@@ -31,7 +31,7 @@
 #include "i2d/CCircle.h"
 #include "iqtgui/IGuiObject.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
-#include "iview/CInteractiveCircleShape.h"
+#include "iview/CCircleShape.h"
 
 // ACF-Solutions includes
 #include "iqtinsp/TSupplierGuiCompBase.h"
@@ -107,7 +107,7 @@ private:
 	struct VisualObject
 	{
 		istd::TDelPtr<PositionModel> model;
-		istd::TDelPtr<iview::CInteractiveCircleShape> shape;
+		istd::TDelPtr<iview::CCircleShape> shape;
 	};
 
 	typedef istd::TPointerVector<VisualObject> VisualObjects;
