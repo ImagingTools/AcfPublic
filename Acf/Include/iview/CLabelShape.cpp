@@ -62,11 +62,12 @@ bool CLabelShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton /*butto
 	const i2d::CLabel* labelPtr = dynamic_cast<const i2d::CLabel*>(GetModelPtr());
 	if (labelPtr != NULL){
 		if (downFlag){
+			const i2d::ICalibration2d* calibrationPtr = labelPtr->GetCalibration();
+
 			const IColorSchema& colorSchema = GetColorSchema();
 
-			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 			const i2d::CVector2d& cp = labelPtr->GetPosition();
-			istd::CIndex2d sp = transform.GetScreenPosition(cp);
+			istd::CIndex2d sp = GetScreenPosition(cp, calibrationPtr).ToIndex2d();
 			istd::CIndex2d offsetSp = sp + m_drawOffset;
 
 			const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_MOVE: IColorSchema::TT_INACTIVE);
@@ -83,7 +84,7 @@ bool CLabelShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton /*butto
 
 			if (IsEditablePosition() && tickerBox.IsInside(position - sp)){
 				m_editMode = EM_POSITION;
-				m_referencePosition = cp - transform.GetClientPosition(position);
+				m_referencePosition = cp - GetLogPosition(position, calibrationPtr);
 
 				BeginModelChanges();
 
@@ -108,12 +109,12 @@ bool CLabelShape::OnMouseMove(istd::CIndex2d position)
 		i2d::CLabel& label = *dynamic_cast<i2d::CLabel*>(modelPtr);
 		Q_ASSERT(&label != NULL);
 
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
+		const i2d::ICalibration2d* calibrationPtr = label.GetCalibration();
 
 		switch(m_editMode){
 		case EM_POSITION:
 			if (IsEditablePosition()){
-				label.SetPosition(m_referencePosition + transform.GetClientPosition(position));
+				label.SetPosition(m_referencePosition + GetLogPosition(position, calibrationPtr));
 			}
 			UpdateModelChanges();
 			break;
@@ -145,11 +146,11 @@ void CLabelShape::Draw(QPainter& drawContext) const
 
 	const i2d::CLabel* labelPtr = dynamic_cast<const i2d::CLabel*>(GetModelPtr());
 	if (labelPtr != NULL){
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
+		const i2d::ICalibration2d* calibrationPtr = labelPtr->GetCalibration();
 
 		const IColorSchema& colorSchema = GetColorSchema();
 
-		istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
+		istd::CIndex2d sp = GetScreenPosition(labelPtr->GetPosition(), calibrationPtr).ToIndex2d();
 		istd::CIndex2d offsetSp = sp + m_drawOffset;
 
 		i2d::CRect textBox;
@@ -236,9 +237,11 @@ ITouchable::TouchState CLabelShape::IsTouched(istd::CIndex2d position) const
 			}
 
 			if (IsSelected() && IsEditableOffset()){
-				const iview::CScreenTransform& transform = GetLogToScreenTransform();
+				const i2d::ICalibration2d* calibrationPtr = labelPtr->GetCalibration();
+
 				const IColorSchema& colorSchema = GetColorSchema();
-				istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
+				istd::CIndex2d sp = GetScreenPosition(labelPtr->GetPosition(), calibrationPtr).ToIndex2d();
+
 				istd::CIndex2d offsetSp = sp + m_drawOffset;
 
 				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_MOVE);
@@ -266,12 +269,12 @@ void CLabelShape::CalculateTextOriginSize(i2d::CRect& textBox) const
 	const IDisplay* displayPtr = GetDisplayPtr();
 	const i2d::CLabel* labelPtr = dynamic_cast<const i2d::CLabel*>(GetModelPtr());
 	if (IsDisplayConnected() && (displayPtr != NULL) && (labelPtr != NULL)){
+		const i2d::ICalibration2d* calibrationPtr = labelPtr->GetCalibration();
+
 		const IColorSchema& colorSchema = GetColorSchema();
 		const QFont& font = colorSchema.GetFont(iview::IColorSchema::SF_NORMAL);
 
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-
-		istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
+		istd::CIndex2d sp = GetScreenPosition(labelPtr->GetPosition(), calibrationPtr).ToIndex2d();
 
 		QFontMetrics metrics(font);
 		ibase::CSize textSize = iqt::GetCIndex2d(metrics.size(0, labelPtr->GetText()));
@@ -374,7 +377,7 @@ i2d::CRect CLabelShape::CalcBoundingBox() const
 
 	const i2d::CLabel* labelPtr = dynamic_cast<const i2d::CLabel*>(GetModelPtr());
 	if (labelPtr != NULL){
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
+		const i2d::ICalibration2d* calibrationPtr = labelPtr->GetCalibration();
 
 		i2d::CRect boundingBox = i2d::CRect::GetEmpty();
 
@@ -382,7 +385,7 @@ i2d::CRect CLabelShape::CalcBoundingBox() const
 		boundingBox.Expand(i2d::CRect(-3, -3, 3, 3));
 
 		const IColorSchema& colorSchema = GetColorSchema();
-		istd::CIndex2d sp = transform.GetScreenPosition(labelPtr->GetPosition());
+		istd::CIndex2d sp = GetScreenPosition(labelPtr->GetPosition(), calibrationPtr).ToIndex2d();
 		istd::CIndex2d offsetSp = sp + m_drawOffset;
 
 		if (IsPositionVisible()){

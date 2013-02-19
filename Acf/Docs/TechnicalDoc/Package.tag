@@ -50314,17 +50314,10 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>EnsurePointsAreValid</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>adff1d8c70e633ba27f90aec052584bd5</anchor>
-      <arglist>(const i2d::CLine2d &amp;line) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
       <name>CalcPoints</name>
       <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>ac7fc3320d02864fbc06c92aa966ceb8a</anchor>
-      <arglist>(const i2d::CLine2d &amp;line) const </arglist>
+      <anchor>af3fc335230657c6d8bc16071ef893236</anchor>
+      <arglist>(const i2d::CLine2d &amp;line, const i2d::ICalibration2d *calibrationPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
