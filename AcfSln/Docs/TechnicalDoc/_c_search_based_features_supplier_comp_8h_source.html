@@ -87,31 +87,32 @@
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 <span class="keyword">protected</span>:
 <a name="l00063"></a>00063        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a1bf97d94023638cbc9f83a50cd02bbb4">ProduceObject</a>(<a class="code" href="classiipr_1_1_c_features_container.html" title="Basic implementation of a features container.">CFeaturesContainer</a>&amp; result) <span class="keyword">const</span>;
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a45294bc7b659e636838c73d4651fff5c">OnComponentCreated</a>();
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a55c1329e598f40a216c8a1aed1a38a16">OnComponentDestroyed</a>();
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 <span class="keyword">private</span>:
-<a name="l00071"></a>00071        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
-<a name="l00072"></a>00072        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_bitmapSupplierCompPtr);
-<a name="l00073"></a>00073        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
-<a name="l00074"></a>00074        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_searchProcessorCompPtr);
-<a name="l00075"></a>00075        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_slaveInformationProviderCompPtr);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        <span class="keyword">typedef</span> QVector&lt;i2d::CAffineTransformation2d&gt; TransformationList;
-<a name="l00078"></a>00078        
-<a name="l00079"></a>00079        <span class="keyword">mutable</span> TransformationList m_transformationList;
-<a name="l00080"></a>00080 };
-<a name="l00081"></a>00081 
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_search_based_features_supplier_comp.html#af83fc1f7b6ef02890306bf15feb3df20" title="Called if the new work should be initialized.">InitializeWork</a>();
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a1bf97d94023638cbc9f83a50cd02bbb4">ProduceObject</a>(<a class="code" href="classiipr_1_1_c_features_container.html" title="Basic implementation of a features container.">CFeaturesContainer</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a45294bc7b659e636838c73d4651fff5c">OnComponentCreated</a>();
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_search_based_features_supplier_comp.html#a55c1329e598f40a216c8a1aed1a38a16">OnComponentDestroyed</a>();
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="keyword">private</span>:
+<a name="l00072"></a>00072        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
+<a name="l00073"></a>00073        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_bitmapSupplierCompPtr);
+<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
+<a name="l00075"></a>00075        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_searchProcessorCompPtr);
+<a name="l00076"></a>00076        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_slaveInformationProviderCompPtr);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        <span class="keyword">typedef</span> QVector&lt;i2d::CAffineTransformation2d&gt; TransformationList;
+<a name="l00079"></a>00079        
+<a name="l00080"></a>00080        <span class="keyword">mutable</span> TransformationList m_transformationList;
+<a name="l00081"></a>00081 };
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083 } <span class="comment">// namespace iipr</span>
-<a name="l00084"></a>00084 
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 } <span class="comment">// namespace iipr</span>
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="preprocessor">#endif // !iipr_CSearchBasedFeaturesSupplierComp_included</span>
-<a name="l00087"></a>00087 <span class="preprocessor"></span>
-<a name="l00088"></a>00088 
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#endif // !iipr_CSearchBasedFeaturesSupplierComp_included</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>
+<a name="l00089"></a>00089 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -10637,6 +10637,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>af83fc1f7b6ef02890306bf15feb3df20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
@@ -18822,15 +18829,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CT_X</name>
+      <name>CT_POSITION</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a987696d6998db2f2a611815f942cc9bea36c0c643764d95914ee38b8200e75c85</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CT_Y</name>
-      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a987696d6998db2f2a611815f942cc9beafbf97958e5aa79f45dac48b1cb6fe331</anchor>
+      <anchor>a987696d6998db2f2a611815f942cc9bea013d7f8ef61e2a2137788a37e13da714</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -18840,15 +18841,15 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CT_X_SCALE</name>
+      <name>CT_SCALE</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a987696d6998db2f2a611815f942cc9beadccca87addafbea160f4f03f05bf5d72</anchor>
+      <anchor>a987696d6998db2f2a611815f942cc9bea2fb054ab6e9ea7a9bc933e0dfcd72b24</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CT_Y_SCALE</name>
+      <name>CT_LAST</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a987696d6998db2f2a611815f942cc9beac3295ff54c48b6972bacb151bae0e599</anchor>
+      <anchor>a987696d6998db2f2a611815f942cc9bea65c85a9695b949cd34884e8fff7c39b5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">

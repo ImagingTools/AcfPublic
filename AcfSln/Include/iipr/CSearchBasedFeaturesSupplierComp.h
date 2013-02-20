@@ -83,6 +83,7 @@ public:
 
 protected:
 	// reimplemented (iproc::TSupplierCompWrap)
+	virtual bool InitializeWork();
 	virtual int ProduceObject(CFeaturesContainer& result) const;
 
 	// reimplemented (icomp::CComponentBase)
