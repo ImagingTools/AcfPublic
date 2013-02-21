@@ -969,6 +969,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CFastGaussianProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_fast_gaussian_processor_comp_8h</filename>
+    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
+    <class kind="class">iipr::CFastGaussianProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFeaturesContainer.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_features_container_8h</filename>
@@ -7804,6 +7812,7 @@
     <class kind="class">iipr::CEdgeDistanceProcessorComp</class>
     <class kind="class">iipr::CEdgeDistancesSupplierComp</class>
     <class kind="class">iipr::CExtremumCaliperProcessorComp</class>
+    <class kind="class">iipr::CFastGaussianProcessorComp</class>
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
     <class kind="class">iipr::CImageBinarizeProcessorComp</class>
@@ -9308,6 +9317,43 @@
       <anchorfile>classiipr_1_1_c_extremum_caliper_processor_comp.html</anchorfile>
       <anchor>ab0a494edf0cb0492e547ba87f014051d</anchor>
       <arglist>(const imeas::INumericValue &amp;feature, const iprm::IParamsSet *paramsPtr, double &amp;result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CFastGaussianProcessorComp</name>
+    <filename>classiipr_1_1_c_fast_gaussian_processor_comp.html</filename>
+    <base>iipr::CImageProcessorCompBase</base>
+    <member kind="enumeration">
+      <name>KernelTypes</name>
+      <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
+      <anchor>a8a4510b231c73b22030a5fa021772936</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>KT_3x3</name>
+      <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
+      <anchor>a8a4510b231c73b22030a5fa021772936a87db3fe91e4cd562bed66961e35ebe0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>KT_3x3_OPTIMIZED</name>
+      <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
+      <anchor>a8a4510b231c73b22030a5fa021772936ab8ec6ee1bc26c9623d15f88b60937048</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iipr::CImageProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
+      <anchor>aca4496ed0d98b4fbbe4c35341e527d15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImage</name>
+      <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
+      <anchor>ab370ee0008d6fc9a7a0c76f82f3d1289</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
