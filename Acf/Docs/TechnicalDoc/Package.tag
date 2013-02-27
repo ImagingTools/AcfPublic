@@ -31879,6 +31879,13 @@
     <name>imod::CModelBase</name>
     <filename>classimod_1_1_c_model_base.html</filename>
     <base virtualness="virtual">imod::IModel</base>
+    <member kind="typedef">
+      <type>QSet&lt; IObserver * &gt;</type>
+      <name>Observers</name>
+      <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
+      <anchor>a9e1c38a1d3f1ce56550b87a44e71c877</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CModelBase</name>
@@ -31901,11 +31908,11 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual IObserver *</type>
-      <name>GetObserverPtr</name>
+      <type>virtual Observers</type>
+      <name>GetObservers</name>
       <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
-      <anchor>ab085612391be108f29db0c9fd2cb6b79</anchor>
-      <arglist>(int index) const </arglist>
+      <anchor>a74dbad33d18eef93e89d3749e6bfc333</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32563,6 +32570,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(ModelInterface *objectPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

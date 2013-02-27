@@ -32,6 +32,7 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
@@ -61,14 +62,17 @@ Inheritance diagram for imod::CModelBase:</div>
 
 <p><a href="classimod_1_1_c_model_base-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; <a class="el" href="classimod_1_1_i_observer.html">IObserver</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_model_base.html#a9e1c38a1d3f1ce56550b87a44e71c877">Observers</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_model_base.html#a5869326154d263431daca5464d37cfa2">CModelBase</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_model_base.html#a641c18766cd23744b2d92ab557c050a9">~CModelBase</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_model_base.html#a57fb64be85eeda6aefee83af701c7e28">GetObserverCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns count of connected observers.  <a href="#a57fb64be85eeda6aefee83af701c7e28"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classimod_1_1_i_observer.html">IObserver</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_model_base.html#ab085612391be108f29db0c9fd2cb6b79">GetObserverPtr</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to a given observer.  <a href="#ab085612391be108f29db0c9fd2cb6b79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classimod_1_1_c_model_base.html#a9e1c38a1d3f1ce56550b87a44e71c877">Observers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_model_base.html#a74dbad33d18eef93e89d3749e6bfc333">GetObservers</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns set of all observers.  <a href="#a74dbad33d18eef93e89d3749e6bfc333"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_model_base.html#a828e9b08fb20fa4938433b501ac9e8f3">AttachObserver</a> (<a class="el" href="classimod_1_1_i_observer.html">imod::IObserver</a> *observerPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches model object to observer <code>observerPtr</code>.  <a href="#a828e9b08fb20fa4938433b501ac9e8f3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_model_base.html#abb8f4b17c26e01d27f6191ac4e610ac2">DetachObserver</a> (<a class="el" href="classimod_1_1_i_observer.html">imod::IObserver</a> *observerPtr)</td></tr>
@@ -88,7 +92,23 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Basic implementation of a model. </p>
 
 <p>Definition at line <a class="el" href="_c_model_base_8h_source.html#l00023">23</a> of file <a class="el" href="_c_model_base_8h_source.html">CModelBase.h</a>.</p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a9e1c38a1d3f1ce56550b87a44e71c877"></a><!-- doxytag: member="imod::CModelBase::Observers" ref="a9e1c38a1d3f1ce56550b87a44e71c877" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QSet&lt;<a class="el" href="classimod_1_1_i_observer.html">IObserver</a>*&gt; <a class="el" href="classimod_1_1_c_model_base.html#a9e1c38a1d3f1ce56550b87a44e71c877">imod::CModelBase::Observers</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_model_base_8h_source.html#l00026">26</a> of file <a class="el" href="_c_model_base_8h_source.html">CModelBase.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5869326154d263431daca5464d37cfa2"></a><!-- doxytag: member="imod::CModelBase::CModelBase" ref="a5869326154d263431daca5464d37cfa2" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -204,22 +224,21 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab085612391be108f29db0c9fd2cb6b79"></a><!-- doxytag: member="imod::CModelBase::GetObserverPtr" ref="ab085612391be108f29db0c9fd2cb6b79" args="(int index) const " -->
+<a class="anchor" id="a74dbad33d18eef93e89d3749e6bfc333"></a><!-- doxytag: member="imod::CModelBase::GetObservers" ref="a74dbad33d18eef93e89d3749e6bfc333" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classimod_1_1_i_observer.html">IObserver</a>* imod::CModelBase::GetObserverPtr </td>
+          <td class="memname">virtual <a class="el" href="classimod_1_1_c_model_base.html#a9e1c38a1d3f1ce56550b87a44e71c877">Observers</a> imod::CModelBase::GetObservers </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Returns pointer to a given observer. </p>
+<p>Returns set of all observers. </p>
 
 </div>
 </div>
