@@ -377,7 +377,7 @@
 <a name="l00414"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a8959e2a6c596b8b3918c21f1db91ad59">00414</a> <span class="keyword">const</span> Element&amp; <a class="code" href="_t_reference_member_8h.html#af5f8b726e9dc6362a2d7f4aa7a395281">TArray&lt;Element, Dimensions&gt;::Iterator::operator*</a>()<span class="keyword"> const</span>
 <a name="l00415"></a>00415 <span class="keyword"></span>{
 <a name="l00416"></a>00416        Q_ASSERT(m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00417"></a>00417        Q_ASSERT(IsInside(m_arrayPtr-&gt;GetSizes()));
+<a name="l00417"></a>00417        Q_ASSERT(BaseClass::IsInside(m_arrayPtr-&gt;GetSizes()));
 <a name="l00418"></a>00418 
 <a name="l00419"></a>00419        <span class="keywordflow">return</span> m_arrayPtr-&gt;GetAt(*<span class="keyword">this</span>);
 <a name="l00420"></a>00420 }
@@ -387,7 +387,7 @@
 <a name="l00424"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a5ddb059755aba47445e482fc447edca9">00424</a> Element&amp; <a class="code" href="_t_reference_member_8h.html#af5f8b726e9dc6362a2d7f4aa7a395281">TArray&lt;Element, Dimensions&gt;::Iterator::operator*</a>()
 <a name="l00425"></a>00425 {
 <a name="l00426"></a>00426        Q_ASSERT(m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00427"></a>00427        Q_ASSERT(IsInside(m_arrayPtr-&gt;GetSizes()));
+<a name="l00427"></a>00427        Q_ASSERT(BaseClass::IsInside(m_arrayPtr-&gt;GetSizes()));
 <a name="l00428"></a>00428 
 <a name="l00429"></a>00429        <span class="keywordflow">return</span> m_arrayPtr-&gt;operator[](*this);
 <a name="l00430"></a>00430 }
@@ -397,7 +397,7 @@
 <a name="l00434"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a44ffc6fead54e0eac40bec275da992c4">00434</a> <span class="keyword">const</span> Element* <a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray&lt;Element, Dimensions&gt;::Iterator::operator-&gt;</a>()<span class="keyword"> const</span>
 <a name="l00435"></a>00435 <span class="keyword"></span>{
 <a name="l00436"></a>00436        Q_ASSERT(m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00437"></a>00437        Q_ASSERT(IsInside(m_arrayPtr-&gt;GetSizes()));
+<a name="l00437"></a>00437        Q_ASSERT(BaseClass::IsInside(m_arrayPtr-&gt;GetSizes()));
 <a name="l00438"></a>00438 
 <a name="l00439"></a>00439        <span class="keywordflow">return</span> &amp;m_arrayPtr-&gt;GetAt(*<span class="keyword">this</span>);
 <a name="l00440"></a>00440 }
@@ -407,7 +407,7 @@
 <a name="l00444"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a4c6d4ab58836d5213180f3f127d43303">00444</a> Element* <a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray&lt;Element, Dimensions&gt;::Iterator::operator-&gt;</a>()
 <a name="l00445"></a>00445 {
 <a name="l00446"></a>00446        Q_ASSERT(m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00447"></a>00447        Q_ASSERT(IsInside(m_arrayPtr-&gt;GetSizes()));
+<a name="l00447"></a>00447        Q_ASSERT(BaseClass::IsInside(m_arrayPtr-&gt;GetSizes()));
 <a name="l00448"></a>00448 
 <a name="l00449"></a>00449        <span class="keywordflow">return</span> &amp;m_arrayPtr-&gt;operator[](*this);
 <a name="l00450"></a>00450 }

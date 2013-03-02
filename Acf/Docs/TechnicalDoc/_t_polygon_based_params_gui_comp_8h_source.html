@@ -138,7 +138,7 @@
 <a name="l00131"></a>00131 <span class="keyword">template</span> &lt;<span class="keyword">class</span> PolygonBasedShape, <span class="keyword">class</span> PolygonBasedModel&gt;
 <a name="l00132"></a><a class="code" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a4ad33e128116c9c72a6f4a4a129f5000">00132</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a4ad33e128116c9c72a6f4a4a129f5000" title="Updates model from editor.">TPolygonBasedParamsGuiComp&lt;PolygonBasedShape, PolygonBasedModel&gt;::UpdateModel</a>()<span class="keyword"> const</span>
 <a name="l00133"></a>00133 <span class="keyword"></span>{
-<a name="l00134"></a>00134        Q_ASSERT(IsGuiCreated());
+<a name="l00134"></a>00134        Q_ASSERT(BaseClass::IsGuiCreated());
 <a name="l00135"></a>00135 
 <a name="l00136"></a>00136        <a class="code" href="classi2d_1_1_c_polygon.html" title="Definition of the data model for a polygon.">i2d::CPolygon</a>* objectPtr = GetObjectPtr();
 <a name="l00137"></a>00137        Q_ASSERT(objectPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
@@ -272,7 +272,7 @@
 <a name="l00265"></a>00265 <span class="keyword">template</span> &lt;<span class="keyword">class</span> PolygonBasedShape, <span class="keyword">class</span> PolygonBasedModel&gt;
 <a name="l00266"></a><a class="code" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#ac8f25845a2a5a53cfada7fe79e7e8965">00266</a> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#ac8f25845a2a5a53cfada7fe79e7e8965" title="Do update of the model GUI.">TPolygonBasedParamsGuiComp&lt;PolygonBasedShape, PolygonBasedModel&gt;::UpdateGui</a>(<span class="keywordtype">int</span> <span class="comment">/*updateFlags*/</span>)
 <a name="l00267"></a>00267 {
-<a name="l00268"></a>00268        Q_ASSERT(IsGuiCreated());
+<a name="l00268"></a>00268        Q_ASSERT(BaseClass::IsGuiCreated());
 <a name="l00269"></a>00269 
 <a name="l00270"></a>00270        <a class="code" href="classi2d_1_1_c_polygon.html" title="Definition of the data model for a polygon.">i2d::CPolygon</a>* objectPtr = GetObjectPtr();
 <a name="l00271"></a>00271        <span class="keywordflow">if</span> (objectPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){

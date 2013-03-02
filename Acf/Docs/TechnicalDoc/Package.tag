@@ -5437,17 +5437,17 @@
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>I_CRITICAL</name>
-      <anchorfile>istd_8h.html</anchorfile>
-      <anchor>a5952e0d7281d1ab784531120ea40c9c4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
       <name>I_IF_DEBUG</name>
       <anchorfile>istd_8h.html</anchorfile>
       <anchor>a0a13620120415a9017e5095986764a12</anchor>
       <arglist>(instructions)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_CRITICAL</name>
+      <anchorfile>istd_8h.html</anchorfile>
+      <anchor>a5952e0d7281d1ab784531120ea40c9c4</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="define">
       <type>#define</type>
@@ -45534,11 +45534,11 @@
       <anchor>a924d9bb08360887919f2660f71d4764a</anchor>
       <arglist>(istd::IChangeable *slavePtr, int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
       <name>~CEventBasedNotifier</name>
       <anchorfile>classistd_1_1_c_event_based_notifier.html</anchorfile>
-      <anchor>aef3600f43d692094b892147dfd54e13a</anchor>
+      <anchor>a5bcaef5388dc370a7fbef0ffc12fbf00</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

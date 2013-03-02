@@ -95,7 +95,7 @@ protected:
 		// reimplemented (RefCountBase)
 		virtual void OnAttached()
 		{
-			Q_ASSERT(IsValid());
+			Q_ASSERT(BaseClass::IsValid());
 			Q_ASSERT(m_count > 0);
 
 			++m_count;
@@ -103,7 +103,7 @@ protected:
 
 		virtual void OnDetached()
 		{
-			Q_ASSERT(IsValid());
+			Q_ASSERT(BaseClass::IsValid());
 			Q_ASSERT(m_count > 0);
 
 			if (--m_count <= 0){

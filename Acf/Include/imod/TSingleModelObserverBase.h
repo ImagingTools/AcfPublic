@@ -24,6 +24,9 @@
 #define imod_TSingleModelObserverBase_included
 
 
+// STL includes
+#include <typeinfo>
+
 // Qt includes
 #include <QtCore/QString>
 

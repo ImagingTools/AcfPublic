@@ -87,7 +87,7 @@
 <a name="l00073"></a>00073               <span class="comment">// reimplemented (RefCountBase)</span>
 <a name="l00074"></a><a class="code" href="classistd_1_1_t_smart_ptr_1_1_ref_counter.html#aa7e37e15232345a6d51373706bfb51ac">00074</a>               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_smart_ptr_1_1_ref_counter.html#aa7e37e15232345a6d51373706bfb51ac" title="Called if new pointer is attached to this internal handler.">OnAttached</a>()
 <a name="l00075"></a>00075               {
-<a name="l00076"></a>00076                      Q_ASSERT(<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf" title="Check if internal pointer not NULL.">IsValid</a>());
+<a name="l00076"></a>00076                      Q_ASSERT(<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf" title="Check if internal pointer not NULL.">BaseClass::IsValid</a>());
 <a name="l00077"></a>00077                      Q_ASSERT(m_count &gt; 0);
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079                      ++m_count;
@@ -95,7 +95,7 @@
 <a name="l00081"></a>00081 
 <a name="l00082"></a><a class="code" href="classistd_1_1_t_smart_ptr_1_1_ref_counter.html#a9cdc9f0d0c07d6338f9a8763490eab10">00082</a>               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_smart_ptr_1_1_ref_counter.html#a9cdc9f0d0c07d6338f9a8763490eab10" title="Called if pointer is detached from this internal handler.">OnDetached</a>()
 <a name="l00083"></a>00083               {
-<a name="l00084"></a>00084                      Q_ASSERT(<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf" title="Check if internal pointer not NULL.">IsValid</a>());
+<a name="l00084"></a>00084                      Q_ASSERT(<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf" title="Check if internal pointer not NULL.">BaseClass::IsValid</a>());
 <a name="l00085"></a>00085                      Q_ASSERT(m_count &gt; 0);
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087                      <span class="keywordflow">if</span> (--m_count &lt;= 0){
