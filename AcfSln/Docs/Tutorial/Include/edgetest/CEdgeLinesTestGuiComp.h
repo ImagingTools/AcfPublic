@@ -31,7 +31,7 @@
 #include "iqtgui/TDesignerGuiCompBase.h" 
 #include "iqt2d/TViewExtenderCompBase.h"
 #include "iqt2d/IViewExtender.h"
-#include "iedge/CEdgeLine.h"
+#include "iedge/CEdgeLineContainer.h"
 
 #include "Generated/ui_CEdgeLinesTestGuiComp.h" 
  
@@ -76,7 +76,7 @@ protected:
 private:
 	I_REF(IGuiObject, m_aboutDialogPtr); 
 
-	imod::TModelWrap<iedge::CEdgeLine::Container> m_model;
+	imod::TModelWrap<iedge::CEdgeLineContainer> m_model;
 };
 
 

@@ -63,8 +63,8 @@
 <a name="l00040"></a>00040        I_ASSIGN(m_bitmapCompFact, <span class="stringliteral">&quot;BitmapFactory&quot;</span>, <span class="stringliteral">&quot;Use to create bitmap object&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapFactory&quot;</span>);
 <a name="l00041"></a>00041        I_ASSIGN(m_bitmapAcquisitionCompPtr, <span class="stringliteral">&quot;BitmapAcquisition&quot;</span>, <span class="stringliteral">&quot;Bitmap acquisition object for image snap&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapAcquisition&quot;</span>);
 <a name="l00042"></a>00042        I_ASSIGN(m_calibrationCompPtr, <span class="stringliteral">&quot;Calibration&quot;</span>, <span class="stringliteral">&quot;Optional calibration object&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Calibration&quot;</span>);
-<a name="l00043"></a>00043        I_ASSIGN(m_scaleParamIdAttrPtr, <span class="stringliteral">&quot;ScaleParamId&quot;</span>, <span class="stringliteral">&quot;Resolution parameter ID&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ScaleParamId&quot;</span>);
-<a name="l00044"></a>00044        I_ASSIGN(m_defaultScaleValuePtr, <span class="stringliteral">&quot;DefaultScaleParam&quot;</span>, <span class="stringliteral">&quot;Default resolution&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DefaultScaleParam&quot;</span>);
+<a name="l00043"></a>00043        I_ASSIGN(m_scaleParamIdAttrPtr, <span class="stringliteral">&quot;ScaleParamId&quot;</span>, <span class="stringliteral">&quot;ID ´of resolution parameter in parameter set (type imeas::INumericValue, unit: pixel/mm)&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ScaleParamId&quot;</span>);
+<a name="l00044"></a>00044        I_ASSIGN(m_defaultScaleValueCompPtr, <span class="stringliteral">&quot;DefaultScaleParam&quot;</span>, <span class="stringliteral">&quot;Default resolution in pixel/mm&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DefaultScaleParam&quot;</span>);
 <a name="l00045"></a>00045        <a class="code" href="classicam_1_1_c_snap_bitmap_supplier_comp.html#aaee9c247a6db7b9333ba3e16b9ab16c0">I_REGISTER_SUBELEMENT</a>(ScaleConstraints);
 <a name="l00046"></a>00046        I_END_COMPONENT;
 <a name="l00047"></a>00047 
@@ -85,7 +85,7 @@
 <a name="l00062"></a>00062        I_REF(<a class="code" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">IBitmapAcquisition</a>, m_bitmapAcquisitionCompPtr);
 <a name="l00063"></a>00063        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>, m_calibrationCompPtr);
 <a name="l00064"></a>00064        I_ATTR(QByteArray, m_scaleParamIdAttrPtr);
-<a name="l00065"></a>00065        I_REF(<a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>, m_defaultScaleValuePtr);
+<a name="l00065"></a>00065        I_REF(<a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>, m_defaultScaleValueCompPtr);
 <a name="l00066"></a>00066 };
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 

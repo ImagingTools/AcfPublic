@@ -37,7 +37,7 @@
 <div class="title">iimg::IRasterImage Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iimg::IRasterImage" --><!-- doxytag: inherits="iser::ISerializable" -->
+<!-- doxytag: class="iimg::IRasterImage" --><!-- doxytag: inherits="i2d::IObject2d" -->
 <p>General definition of image contains pixels in regular grid.  
  <a href="classiimg_1_1_i_raster_image.html#details">More...</a></p>
 
@@ -48,18 +48,22 @@ Inheritance diagram for iimg::IRasterImage:</div>
  <div class="center">
   <img src="classiimg_1_1_i_raster_image.png" usemap="#iimg::IRasterImage_map" alt=""/>
   <map id="iimg::IRasterImage_map" name="iimg::IRasterImage_map">
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="180,112,531,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="180,56,531,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="180,0,531,24"/>
-<area href="classiimg_1_1_c_scanline_mask.html" title="Representation of a 2D-region as container of bitmap line scans." alt="iimg::CScanlineMask" shape="rect" coords="0,224,351,248"/>
-<area href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap." alt="iimg::IBitmap" shape="rect" coords="361,224,712,248"/>
-<area href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods." alt="iimg::CBitmapBase" shape="rect" coords="361,280,712,304"/>
-<area href="classiimg_1_1_c_bitmap.html" title="Bitmap implementation based on Qt QImage." alt="iimg::CBitmap" shape="rect" coords="180,336,531,360"/>
-<area href="classiimg_1_1_c_general_bitmap.html" title="Standard device- and platform-independent bitmap definition." alt="iimg::CGeneralBitmap" shape="rect" coords="541,336,892,360"/>
-<area href="classiimg_1_1_c_bitmap_surface.html" title="Union of a bitmap objects and its samples represented as a 2D sampled function." alt="iimg::CBitmapSurface" shape="rect" coords="180,392,531,416"/>
-<area href="classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;" shape="rect" coords="541,392,892,416"/>
-<area href="classistd_1_1_t_cached_update_manager_wrap.html" alt="istd::TCachedUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;" shape="rect" coords="541,448,892,472"/>
-<area href="classiimg_1_1_c_reflected_bitmap_base.html" title="Implementation of bitmap storing internal additionaly QImage object reflecting state of main bitmap a..." alt="iimg::CReflectedBitmapBase" shape="rect" coords="541,504,892,528"/>
+<area href="classi2d_1_1_i_object2d.html" title="Common interface for describing the 2D-objects." alt="i2d::IObject2d" shape="rect" coords="180,168,531,192"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="0,112,351,136"/>
+<area href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration." alt="i2d::ICalibrationProvider" shape="rect" coords="361,112,712,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,351,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="361,56,712,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,351,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="361,0,712,24"/>
+<area href="classiimg_1_1_c_scanline_mask.html" title="Representation of a 2D-region as container of bitmap line scans." alt="iimg::CScanlineMask" shape="rect" coords="0,280,351,304"/>
+<area href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap." alt="iimg::IBitmap" shape="rect" coords="361,280,712,304"/>
+<area href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods." alt="iimg::CBitmapBase" shape="rect" coords="361,336,712,360"/>
+<area href="classiimg_1_1_c_bitmap.html" title="Bitmap implementation based on Qt QImage." alt="iimg::CBitmap" shape="rect" coords="180,392,531,416"/>
+<area href="classiimg_1_1_c_general_bitmap.html" title="Standard device- and platform-independent bitmap definition." alt="iimg::CGeneralBitmap" shape="rect" coords="541,392,892,416"/>
+<area href="classiimg_1_1_c_bitmap_surface.html" title="Union of a bitmap objects and its samples represented as a 2D sampled function." alt="iimg::CBitmapSurface" shape="rect" coords="180,448,531,472"/>
+<area href="classistd_1_1_t_update_manager_wrap.html" alt="istd::TUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;" shape="rect" coords="541,448,892,472"/>
+<area href="classistd_1_1_t_cached_update_manager_wrap.html" alt="istd::TCachedUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;" shape="rect" coords="541,504,892,528"/>
+<area href="classiimg_1_1_c_reflected_bitmap_base.html" title="Implementation of bitmap storing internal additionaly QImage object reflecting state of main bitmap a..." alt="iimg::CReflectedBitmapBase" shape="rect" coords="541,560,892,584"/>
 </map>
  </div></div>
 
@@ -84,7 +88,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>General definition of image contains pixels in regular grid. </p>
 <p>All pixels are using the same number of color components. </p>
 
-<p>Definition at line <a class="el" href="_i_raster_image_8h_source.html#l00020">20</a> of file <a class="el" href="_i_raster_image_8h_source.html">IRasterImage.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_raster_image_8h_source.html#l00019">19</a> of file <a class="el" href="_i_raster_image_8h_source.html">IRasterImage.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a71afdbfe4b148d26d4f41d7a555521b0"></a><!-- doxytag: member="iimg::IRasterImage::GetColorAt" ref="a71afdbfe4b148d26d4f41d7a555521b0" args="(const istd::CIndex2d &amp;position) const =0" -->
 <div class="memitem">

@@ -61,7 +61,7 @@ public:
 	virtual bool DoContourExtraction(
 				const iprm::IParamsSet* paramsPtr,
 				const iimg::IBitmap& bitmap,
-				CEdgeLine::Container& result) const;
+				CEdgeLineContainer& result) const;
 
 	// reimplemented (iproc::IProcessor)
 	virtual int DoProcessing(
@@ -117,7 +117,7 @@ private:
 
 		void ExtractLines(
 					double weightScale,
-					CEdgeLine::Container& result,
+					CEdgeLineContainer& result,
 					bool keepSingletons);
 
 		ExtNode* AddElementToList();

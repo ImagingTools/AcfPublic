@@ -117,7 +117,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculates position of all components.  <a href="#a2099267391ddea5f463ec06acb30d8d3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#a81739f98a77b72a9a7b8265e4395fee4">UpdateCommands</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate menu commands.  <a href="#a81739f98a77b72a9a7b8265e4395fee4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#a85b84d18b840cebd1744a6ff2e01f31b">UpdateCursorInfo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;pixelPos, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logicalPos, const QString &amp;infoText)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#a7ed88a2113f5748c164d2248ac373f76">UpdateCursorInfo</a> (const QString &amp;infoText)=0</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_base.html#a093c5a4411f7a19c7bb14c5b50d8687b">OnSelectChange</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> &amp;shape, bool state)=0</td></tr>
@@ -943,38 +943,22 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a85b84d18b840cebd1744a6ff2e01f31b"></a><!-- doxytag: member="iview::CConsoleBase::UpdateCursorInfo" ref="a85b84d18b840cebd1744a6ff2e01f31b" args="(const i2d::CVector2d &amp;pixelPos, const i2d::CVector2d &amp;logicalPos, const QString &amp;infoText)=0" -->
+<a class="anchor" id="a7ed88a2113f5748c164d2248ac373f76"></a><!-- doxytag: member="iview::CConsoleBase::UpdateCursorInfo" ref="a7ed88a2113f5748c164d2248ac373f76" args="(const QString &amp;infoText)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iview::CConsoleBase::UpdateCursorInfo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>pixelPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>logicalPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>infoText</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [pure virtual]</code></td>
+          <td class="paramname"><em>infoText</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_console_gui.html#a0b3f091a8637911aba40254d69d7898e">iview::CConsoleGui</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_console_gui.html#a78b7def6786ef9b66441c955a61decb6">iview::CConsoleGui</a>.</p>
 
 </div>
 </div>
@@ -1030,7 +1014,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_console_base_8h_source.html#l00178">178</a> of file <a class="el" href="_c_console_base_8h_source.html">CConsoleBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_console_base_8h_source.html#l00179">179</a> of file <a class="el" href="_c_console_base_8h_source.html">CConsoleBase.h</a>.</p>
 
 </div>
 </div>

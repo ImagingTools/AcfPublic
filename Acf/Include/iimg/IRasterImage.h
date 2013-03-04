@@ -24,10 +24,9 @@
 #define iimg_IRasterImage_included
 
 
+// ACF includes
 #include "istd/CIndex2d.h"
-
-#include "iser/ISerializable.h"
-
+#include "i2d/IObject2d.h"
 #include "icmm/CVarColor.h"
 
 
@@ -39,7 +38,7 @@ namespace iimg
 	General definition of image contains pixels in regular grid.
 	All pixels are using the same number of color components.
 */
-class IRasterImage: virtual public iser::ISerializable
+class IRasterImage: virtual public i2d::IObject2d
 {
 public:
 	/**

@@ -39,7 +39,7 @@
 
 #include "Generated/ui_CEdgeLinesSupplierGuiComp.h"
 
-#include "iedge/CEdgeLine.h"
+#include "iedge/CEdgeLineContainer.h"
 
 
 
@@ -90,7 +90,7 @@ private:
 	I_REF(iview::IColorSchema, m_contoursColorSchemaCompPtr);
 	I_REF(iqtgui::IGuiObject, m_intermediateResultsGuiCompPtr);
 
-	imod::TModelWrap<iedge::CEdgeLine::Container> m_foundModel;
+	imod::TModelWrap<iedge::CEdgeLineContainer> m_foundModel;
 
 	iview::CColorSchema m_edgesColorSchema;
 };

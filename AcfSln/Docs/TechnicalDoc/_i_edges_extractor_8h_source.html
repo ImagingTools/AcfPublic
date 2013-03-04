@@ -33,7 +33,7 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_edge_line_8h.html">iedge/CEdgeLine.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_edge_line_container_8h.html">iedge/CEdgeLineContainer.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="keyword">namespace </span>iedge
@@ -43,10 +43,10 @@
 <a name="l00020"></a><a class="code" href="classiedge_1_1_i_edges_extractor.html">00020</a> <span class="keyword">class </span><a class="code" href="classiedge_1_1_i_edges_extractor.html" title="Interface for edge lines extraction from the image.">IEdgesExtractor</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::IProcessor
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_i_edges_extractor.html#aa91985aa78580c14809a30825e044a63" title="Do extraction of set of edge lines found on the image.">DoContourExtraction</a>(
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_i_edges_extractor.html#afed70f69d48ce3539b6b6dc49becd4da" title="Do extraction of set of edge lines found on the image.">DoContourExtraction</a>(
 <a name="l00030"></a>00030                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
 <a name="l00031"></a>00031                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; bitmap,
-<a name="l00032"></a>00032                             <a class="code" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a>&amp; result) <span class="keyword">const</span> = 0;
+<a name="l00032"></a>00032                             <a class="code" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a>&amp; result) <span class="keyword">const</span> = 0;
 <a name="l00033"></a>00033 };
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 

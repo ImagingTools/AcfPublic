@@ -48,9 +48,10 @@ Inheritance diagram for iview::IDraggable:</div>
  <div class="center">
   <img src="classiview_1_1_i_draggable.png" usemap="#iview::IDraggable_map" alt=""/>
   <map id="iview::IDraggable_map" name="iview::IDraggable_map">
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="272,0,534,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="544,0,806,24"/>
 <area href="classiview_1_1_c_interactive_shape_base.html" alt="iview::CInteractiveShapeBase" shape="rect" coords="0,112,262,136"/>
 <area href="classiview_1_1_c_view_base.html" alt="iview::CViewBase" shape="rect" coords="544,112,806,136"/>
+<area href="classiview_1_1_i_selectable_layer.html" alt="iview::ISelectableLayer" shape="rect" coords="816,112,1078,136"/>
 <area href="classiview_1_1_c_affine_transformation2d_shape.html" title="Interactive shape to visualize i2d::CAffineTransformation2d." alt="iview::CAffineTransformation2dShape" shape="rect" coords="272,168,534,192"/>
 <area href="classiview_1_1_c_arrow_shape.html" alt="iview::CArrowShape" shape="rect" coords="272,224,534,248"/>
 <area href="classiview_1_1_c_line_shape.html" alt="iview::CLineShape" shape="rect" coords="272,280,534,304"/>
@@ -60,6 +61,7 @@ Inheritance diagram for iview::IDraggable:</div>
 <area href="classiview_1_1_c_rectangle_shape.html" title="Interactive shape object for iview::CSearchArea." alt="iview::CRectangleShape" shape="rect" coords="272,504,534,528"/>
 <area href="classiview_1_1_c_transformable_rectangle_shape.html" alt="iview::CTransformableRectangleShape" shape="rect" coords="272,560,534,584"/>
 <area href="classiview_1_1_c_calibrated_view_base.html" title="Abstract base class for all calibrated view." alt="iview::CCalibratedViewBase" shape="rect" coords="544,168,806,192"/>
+<area href="classiview_1_1_c_interactive_view_layer.html" alt="iview::CInteractiveViewLayer" shape="rect" coords="816,168,1078,192"/>
 </map>
  </div></div>
 
@@ -67,10 +69,10 @@ Inheritance diagram for iview::IDraggable:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_draggable.html#a57ee395e27886786285a285bcca4eb0d">BeginDrag</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;reference)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before dragging is begin.  <a href="#a57ee395e27886786285a285bcca4eb0d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_draggable.html#a310b1c333bc4c20bd22fc98db3046819">SetDragPosition</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new drag position.  <a href="#a310b1c333bc4c20bd22fc98db3046819"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_draggable.html#afb96b90eab903a8f879bdf47ad46895d">BeginDrag</a> (const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;reference)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before dragging is begin.  <a href="#afb96b90eab903a8f879bdf47ad46895d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_draggable.html#a4099f367e0ac4bfd5b284ad35eaf4e3c">SetDragPosition</a> (const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new drag position.  <a href="#a4099f367e0ac4bfd5b284ad35eaf4e3c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_draggable.html#afd01a9080d8fa1b2484ae64f141230da">EndDrag</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after dragging.  <a href="#afd01a9080d8fa1b2484ae64f141230da"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_draggable.html#afdf8d70420c42b9a3b54347e0c759163">IsDraggable</a> () const =0</td></tr>
@@ -81,14 +83,14 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_i_draggable_8h_source.html#l00017">17</a> of file <a class="el" href="_i_draggable_8h_source.html">IDraggable.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a57ee395e27886786285a285bcca4eb0d"></a><!-- doxytag: member="iview::IDraggable::BeginDrag" ref="a57ee395e27886786285a285bcca4eb0d" args="(const i2d::CVector2d &amp;reference)=0" -->
+<a class="anchor" id="afb96b90eab903a8f879bdf47ad46895d"></a><!-- doxytag: member="iview::IDraggable::BeginDrag" ref="afb96b90eab903a8f879bdf47ad46895d" args="(const istd::CIndex2d &amp;reference)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iview::IDraggable::BeginDrag </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
           <td class="paramname"><em>reference</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -99,7 +101,7 @@ Public Member Functions</h2></td></tr>
 <p>Called before dragging is begin. </p>
 <p>It set also reference value for dragging position. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a89ab7f09650da330d6fab6c3e444dc5d">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#abb6d01bddf0e329e9b4fbea17267ec29">iview::CInteractiveShapeBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a5d94168060c755e0f840f0f8d0dcfffc">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a8c9e2a0c50b75ab551f23163e2e505c4">iview::CInteractiveViewLayer</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#ac108c43963e1a8e95eb6338b796d5c4d">iview::CInteractiveShapeBase</a>.</p>
 
 </div>
 </div>
@@ -119,7 +121,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Called after dragging. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#af3a0d859b99db7fd5c6cc94ce86dbb35">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a46b5b4c90c9d5e025b92a450313a3de5">iview::CInteractiveShapeBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#af3a0d859b99db7fd5c6cc94ce86dbb35">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a0973f091b6a54d968dec1b1c5687cd80">iview::CInteractiveViewLayer</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a46b5b4c90c9d5e025b92a450313a3de5">iview::CInteractiveShapeBase</a>.</p>
 
 </div>
 </div>
@@ -139,18 +141,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Check if drag is enabled. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a99e181d380c191e51cfd4fc26592b104">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_polygon_shape.html#ab25a735061a2f34aacf21c495125123d">iview::CPolygonShape</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a1938f41bb140d38bfcb633d3d4bec7e3">iview::CInteractiveShapeBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a99e181d380c191e51cfd4fc26592b104">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a684422cf5758a6324dc66dec892dab76">iview::CInteractiveViewLayer</a>, <a class="el" href="classiview_1_1_c_polygon_shape.html#ab25a735061a2f34aacf21c495125123d">iview::CPolygonShape</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a1938f41bb140d38bfcb633d3d4bec7e3">iview::CInteractiveShapeBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a310b1c333bc4c20bd22fc98db3046819"></a><!-- doxytag: member="iview::IDraggable::SetDragPosition" ref="a310b1c333bc4c20bd22fc98db3046819" args="(const i2d::CVector2d &amp;position)=0" -->
+<a class="anchor" id="a4099f367e0ac4bfd5b284ad35eaf4e3c"></a><!-- doxytag: member="iview::IDraggable::SetDragPosition" ref="a4099f367e0ac4bfd5b284ad35eaf4e3c" args="(const istd::CIndex2d &amp;position)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iview::IDraggable::SetDragPosition </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
           <td class="paramname"><em>position</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -159,9 +161,9 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set new drag position. </p>
-<p>It must be enclosed using <a class="el" href="classiview_1_1_i_draggable.html#a57ee395e27886786285a285bcca4eb0d" title="Called before dragging is begin.">BeginDrag()</a> and <a class="el" href="classiview_1_1_i_draggable.html#afd01a9080d8fa1b2484ae64f141230da" title="Called after dragging.">EndDrag()</a> methods. </p>
+<p>It must be enclosed using <a class="el" href="classiview_1_1_i_draggable.html#afb96b90eab903a8f879bdf47ad46895d" title="Called before dragging is begin.">BeginDrag()</a> and <a class="el" href="classiview_1_1_i_draggable.html#afd01a9080d8fa1b2484ae64f141230da" title="Called after dragging.">EndDrag()</a> methods. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#aa04eef514e5e6428c7b59580af66ad80">iview::CViewBase</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#ac278056fcca35507369f7a8b3a06fc4e">iview::CInteractiveShapeBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a5522f524c92b0cc5bcd915ea1be4b3f1">iview::CViewBase</a>, <a class="el" href="classiview_1_1_c_interactive_view_layer.html#ad7b62d362bf202d5519693cb40b924d9">iview::CInteractiveViewLayer</a>, and <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a963e0fa45b2b8ef6dbb6e5846b780ee5">iview::CInteractiveShapeBase</a>.</p>
 
 </div>
 </div>

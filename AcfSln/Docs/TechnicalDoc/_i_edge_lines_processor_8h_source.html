@@ -32,7 +32,7 @@
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_edge_line_8h.html">iedge/CEdgeLine.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_edge_line_container_8h.html">iedge/CEdgeLineContainer.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="keyword">namespace </span>iedge
@@ -42,10 +42,10 @@
 <a name="l00019"></a><a class="code" href="classiedge_1_1_i_edge_lines_processor.html">00019</a> <span class="keyword">class </span><a class="code" href="classiedge_1_1_i_edge_lines_processor.html" title="Interface for edge lines processing.">IEdgeLinesProcessor</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::IProcessor
 <a name="l00020"></a>00020 {
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_i_edge_lines_processor.html#aa1baf6e5cf7b9af9037ddc127eadff27" title="Process set of edge lines to another set of edge lines.">DoLinesProcessing</a>(
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_i_edge_lines_processor.html#ac4a8dc983110056bba0fe5c6f0912368" title="Process set of edge lines to another set of edge lines.">DoLinesProcessing</a>(
 <a name="l00029"></a>00029                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
-<a name="l00030"></a>00030                             <span class="keyword">const</span> <a class="code" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a>&amp; edgeLines,
-<a name="l00031"></a>00031                             <a class="code" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a>&amp; result) <span class="keyword">const</span> = 0;
+<a name="l00030"></a>00030                             <span class="keyword">const</span> <a class="code" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a>&amp; edgeLines,
+<a name="l00031"></a>00031                             <a class="code" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a>&amp; result) <span class="keyword">const</span> = 0;
 <a name="l00032"></a>00032 };
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 

@@ -73,8 +73,8 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edges_reductor_comp.html#a90bd9850025ff6076defa45b202be65a">GetReducedLine</a> (const <a class="el" href="classiedge_1_1_c_edge_line.html">CEdgeLine</a> &amp;edgeLine, double positionTolerance, double weightTolerance, <a class="el" href="classiedge_1_1_c_edge_line.html">CEdgeLine</a> &amp;result) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edges_reductor_comp.html#afa6ce1a7cb8e4b639edf26774f0b386d">GetReducedLines</a> (const <a class="el" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a> &amp;edgeLines, double positionTolerance, double weightTolerance, <a class="el" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a> &amp;result) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edges_reductor_comp.html#a3ae33ebda48591e3c9b0a59578a96b43">DoLinesProcessing</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="el" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a> &amp;edgeLines, <a class="el" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a> &amp;result) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edges_reductor_comp.html#af174170eaebb70cc5352f944dd8f4616">GetReducedLines</a> (const <a class="el" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a> &amp;edgeLines, double positionTolerance, double weightTolerance, <a class="el" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a> &amp;result) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edges_reductor_comp.html#a938281fbc45f550cd4c3752300cdcec8">DoLinesProcessing</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="el" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a> &amp;edgeLines, <a class="el" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edges_reductor_comp.html#a0ca558e1bdc5c75739b430be78186368">DoProcessing</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *progressManagerPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edges_reductor_comp.html#a2bf913706ffc0e2ef2cc24b96630aa36">GetNumericValuesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of expected numeric values.  <a href="#a2bf913706ffc0e2ef2cc24b96630aa36"></a><br/></td></tr>
@@ -129,7 +129,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a3ae33ebda48591e3c9b0a59578a96b43"></a><!-- doxytag: member="iedge::CEdgesReductorComp::DoLinesProcessing" ref="a3ae33ebda48591e3c9b0a59578a96b43" args="(const iprm::IParamsSet *paramsPtr, const CEdgeLine::Container &amp;edgeLines, CEdgeLine::Container &amp;result) const " -->
+<a class="anchor" id="a938281fbc45f550cd4c3752300cdcec8"></a><!-- doxytag: member="iedge::CEdgesReductorComp::DoLinesProcessing" ref="a938281fbc45f550cd4c3752300cdcec8" args="(const iprm::IParamsSet *paramsPtr, const CEdgeLineContainer &amp;edgeLines, CEdgeLineContainer &amp;result) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -142,13 +142,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a> &amp;&#160;</td>
           <td class="paramname"><em>edgeLines</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -341,14 +341,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afa6ce1a7cb8e4b639edf26774f0b386d"></a><!-- doxytag: member="iedge::CEdgesReductorComp::GetReducedLines" ref="afa6ce1a7cb8e4b639edf26774f0b386d" args="(const CEdgeLine::Container &amp;edgeLines, double positionTolerance, double weightTolerance, CEdgeLine::Container &amp;result) const " -->
+<a class="anchor" id="af174170eaebb70cc5352f944dd8f4616"></a><!-- doxytag: member="iedge::CEdgesReductorComp::GetReducedLines" ref="af174170eaebb70cc5352f944dd8f4616" args="(const CEdgeLineContainer &amp;edgeLines, double positionTolerance, double weightTolerance, CEdgeLineContainer &amp;result) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iedge::CEdgesReductorComp::GetReducedLines </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a> &amp;&#160;</td>
           <td class="paramname"><em>edgeLines</em>, </td>
         </tr>
         <tr>
@@ -366,7 +366,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>

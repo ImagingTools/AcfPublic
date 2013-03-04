@@ -30,37 +30,48 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iimg_CBitmapBase_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_8h.html">iimg/IBitmap.h</a>&quot;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="keyword">namespace </span>iimg
-<a name="l00009"></a>00009 {
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 
-<a name="l00015"></a><a class="code" href="classiimg_1_1_c_bitmap_base.html">00015</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods.">CBitmapBase</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">IBitmap</a>
-<a name="l00016"></a>00016 {
-<a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a>00018        <span class="comment">// reimplemented (iimg::IBitmap)</span>
-<a name="l00019"></a>00019        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a80d3335e447acb7db3bae57ed63eaec1" title="Create and copy bitmap region to the bitmap.">CopyBitmapRegion</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>&amp; sourceBitmap, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; area);
-<a name="l00020"></a>00020        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a57f2fed723bc07352cdc3567e3f763db" title="Number of bytes per single line.">GetLineBytesCount</a>() <span class="keyword">const</span>;
-<a name="l00021"></a>00021        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a2a38cb65e14b67f91ebc125aaa7c29c4" title="Get number of bits per single pixel component.">GetComponentBitsCount</a>(<span class="keywordtype">int</span> componentIndex = 0) <span class="keyword">const</span>;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023        <span class="comment">// reimplemented (iimg::IRasterImage)</span>
-<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a2b6a3d4cf80e1d637414adb2eb5ca6fe" title="Return true if this image is empty.">IsEmpty</a>() <span class="keyword">const</span>;
-<a name="l00025"></a>00025        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a0e25e29f34c7a5343b96f10a2c1c6ec3" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span>;
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#ac47983774b8e640dbd49a41ef735d4ad" title="Set color at specified pixel.">SetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a>&amp; color);
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a136e4c19f5859a78d3866ac80095d022" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00030"></a>00030 };
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 } <span class="comment">// namespace iimg</span>
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="preprocessor">#endif // !iimg_CBitmapBase_included</span>
-<a name="l00037"></a>00037 <span class="preprocessor"></span>
+<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_object2d_base_8h.html">i2d/CObject2dBase.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_8h.html">iimg/IBitmap.h</a>&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="keyword">namespace </span>iimg
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 
+<a name="l00017"></a><a class="code" href="classiimg_1_1_c_bitmap_base.html">00017</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_c_bitmap_base.html" title="Base implementation of some iimg::IBitmap methods.">CBitmapBase</a>:
+<a name="l00018"></a>00018                      <span class="keyword">public</span> i2d::CObject2dBase,
+<a name="l00019"></a>00019                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">IBitmap</a>
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021 <span class="keyword">public</span>:
+<a name="l00022"></a><a class="code" href="classiimg_1_1_c_bitmap_base.html#a6faf1fa0bbe546bae239452558d71e43">00022</a>        <span class="keyword">typedef</span> <a class="code" href="classi2d_1_1_c_object2d_base.html" title="Base class for 2D-objects implementing interface i2d::IObject2d.">i2d::CObject2dBase</a> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a6faf1fa0bbe546bae239452558d71e43">BaseClass</a>;
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024        <span class="comment">// reimplemented (i2d::IObject2d)</span>
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a90569d41e6d449b75a23b080140fb680" title="Returns center of this 2D-object.">GetCenter</a>() <span class="keyword">const</span>;
+<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a94fac9e77676bd2b7d92ef346759f56a" title="Move object to position position.">MoveCenterTo</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
+<a name="l00027"></a>00027        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a> <a class="code" href="classiimg_1_1_c_bitmap_base.html#af8932a7b875eace60c763c21756ef68a" title="Get bounding box of this shape.">GetBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029        <span class="comment">// reimplemented (iimg::IBitmap)</span>
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a80d3335e447acb7db3bae57ed63eaec1" title="Create and copy bitmap region to the bitmap.">CopyBitmapRegion</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>&amp; sourceBitmap, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; area);
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a57f2fed723bc07352cdc3567e3f763db" title="Number of bytes per single line.">GetLineBytesCount</a>() <span class="keyword">const</span>;
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a2a38cb65e14b67f91ebc125aaa7c29c4" title="Get number of bits per single pixel component.">GetComponentBitsCount</a>(<span class="keywordtype">int</span> componentIndex = 0) <span class="keyword">const</span>;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034        <span class="comment">// reimplemented (iimg::IRasterImage)</span>
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a2b6a3d4cf80e1d637414adb2eb5ca6fe" title="Return true if this image is empty.">IsEmpty</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a0e25e29f34c7a5343b96f10a2c1c6ec3" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#ac47983774b8e640dbd49a41ef735d4ad" title="Set color at specified pixel.">SetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a>&amp; color);
 <a name="l00038"></a>00038 
+<a name="l00039"></a>00039        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_base.html#a136e4c19f5859a78d3866ac80095d022" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00041"></a>00041 };
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 } <span class="comment">// namespace iimg</span>
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="preprocessor">#endif // !iimg_CBitmapBase_included</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span>
+<a name="l00049"></a>00049 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

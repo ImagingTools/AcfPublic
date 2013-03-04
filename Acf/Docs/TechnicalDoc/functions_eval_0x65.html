@@ -78,6 +78,12 @@
 <li>EM_ADD
 : <a class="el" href="classiview_1_1_i_selectable.html#a8a9ed4ad58e6ba0cef652c6fc989c474ab28e972f7b7ff09ad42aef191f263c2f">iview::ISelectable</a>
 </li>
+<li>EM_ANGLE1
+: <a class="el" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055a4bb83383dad5b952e811f6d9076f163d">iview::CAnnulusSegmentShape</a>
+</li>
+<li>EM_ANGLE2
+: <a class="el" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055aca85aada95c38a2e117c047b37649105">iview::CAnnulusSegmentShape</a>
+</li>
 <li>EM_ANY
 : <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8a7410048b2340b86c117fd4c82551b513">i2d::ITransformation2d</a>
 </li>
@@ -87,22 +93,33 @@
 <li>EM_EXACT
 : <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8a6f82568fc6b21e661a313caad2733afb">i2d::ITransformation2d</a>
 </li>
+<li>EM_INNER_RADIUS
+: <a class="el" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917feab0bbea191870d4bab3242e79ee926d2b">iview::CAnnulusShape</a>
+</li>
 <li>EM_MOVE
 : <a class="el" href="classiview_1_1_i_selectable.html#a8a9ed4ad58e6ba0cef652c6fc989c474a546687dfc74e30d0cbe60172c8255bc6">iview::ISelectable</a>
 </li>
 <li>EM_NONE
-: <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d</a>
+: <a class="el" href="classiview_1_1_i_selectable.html#a8a9ed4ad58e6ba0cef652c6fc989c474a8732c0676fde1e4d11f53d049d427f6b">iview::ISelectable</a>
+, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8ab98a1769d15d3e77466124452b3cb91c">i2d::ITransformation2d</a>
+, <a class="el" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917feaf607d61c5d66207375be4840acb897a5">iview::CAnnulusShape</a>
+, <a class="el" href="classiview_1_1_c_circle_shape.html#a7a2c517103a91acdb5d9564dc69e905fa5a36c76026b2a9f35489a104a8604fad">iview::CCircleShape</a>
 , <a class="el" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6a294dba05e9c80af15da60fa4a853f0ee">iview::CLabelShape</a>
-, <a class="el" href="classiview_1_1_i_selectable.html#a8a9ed4ad58e6ba0cef652c6fc989c474a8732c0676fde1e4d11f53d049d427f6b">iview::ISelectable</a>
 </li>
 <li>EM_OFFSET
 : <a class="el" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aa839cdfd87f59d50e64a4d5857f9ef5d">iview::CLabelShape</a>
+</li>
+<li>EM_OUTER_RADIUS
+: <a class="el" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fea4ca0dce95fe4b995049579724cfea94f">iview::CAnnulusShape</a>
 </li>
 <li>EM_OWN_SHAPES_INDIRECT
 : <a class="el" href="classiqt2d_1_1_t_view_extender_comp_base.html#aaf6d6a099bfcc800c2f8b66baa3724bba414d3aa9f7d9b4e360055e8535d4a31c">iqt2d::TViewExtenderCompBase&lt; Base &gt;</a>
 </li>
 <li>EM_POSITION
 : <a class="el" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aaddaa51a8c922ae27d755dc7d01e5517">iview::CLabelShape</a>
+</li>
+<li>EM_RADIUS
+: <a class="el" href="classiview_1_1_c_circle_shape.html#a7a2c517103a91acdb5d9564dc69e905fa67ded13853fac8be62cdb841c16ee2d6">iview::CCircleShape</a>
 </li>
 <li>EM_REMOVE
 : <a class="el" href="classiview_1_1_i_selectable.html#a8a9ed4ad58e6ba0cef652c6fc989c474a17b07a61e3064898ec158e8276b5153c">iview::ISelectable</a>
@@ -135,9 +152,9 @@
 : <a class="el" href="classiview_1_1_c_rectangle_shape.html#a4e0c454c20a409d3c64c847c562e516ba89f945d7df2dcfd7c2b2faee8e2e5d54">iview::CRectangleShape</a>
 </li>
 <li>EN_LAST
-: <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#a53bbf5fa067e762ff647224bb49f9d82afe4bddfaa3f791ff0f00ff90a0704719">iview::CTransformableRectangleShape</a>
-, <a class="el" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a38803cd4831c820ce99a4d476f6b1c70">iview::CParallelogramShape</a>
+: <a class="el" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a38803cd4831c820ce99a4d476f6b1c70">iview::CParallelogramShape</a>
 , <a class="el" href="classiview_1_1_c_rectangle_shape.html#a4e0c454c20a409d3c64c847c562e516ba666c0b7995b7552990fb5bbb52b697e4">iview::CRectangleShape</a>
+, <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#a53bbf5fa067e762ff647224bb49f9d82afe4bddfaa3f791ff0f00ff90a0704719">iview::CTransformableRectangleShape</a>
 </li>
 <li>EN_MIDDLE12
 : <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#a53bbf5fa067e762ff647224bb49f9d82aeb4a3c2b7da7b9c8a3527be7e402c335">iview::CTransformableRectangleShape</a>

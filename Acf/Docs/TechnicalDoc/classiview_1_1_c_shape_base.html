@@ -39,7 +39,7 @@
 <div class="title">iview::CShapeBase Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::CShapeBase" --><!-- doxytag: inherits="imod::CSingleModelObserverBase,iview::CShapeControl,iview::IShape" -->
+<!-- doxytag: class="iview::CShapeBase" --><!-- doxytag: inherits="imod::CSingleModelObserverBase,iview::IShape" -->
 <p><code>#include &lt;<a class="el" href="_c_shape_base_8h_source.html">CShapeBase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iview::CShapeBase:</div>
@@ -48,18 +48,15 @@ Inheritance diagram for iview::CShapeBase:</div>
   <img src="classiview_1_1_c_shape_base.png" usemap="#iview::CShapeBase_map" alt=""/>
   <map id="iview::CShapeBase_map" name="iview::CShapeBase_map">
 <area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="450,112,890,136"/>
-<area href="classiview_1_1_c_shape_control.html" alt="iview::CShapeControl" shape="rect" coords="900,112,1340,136"/>
-<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="1800,112,2240,136"/>
+<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="1350,112,1790,136"/>
 <area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="450,56,890,80"/>
-<area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="900,56,1340,80"/>
-<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="1350,56,1790,80"/>
-<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="1800,56,2240,80"/>
-<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="2250,56,2690,80"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="900,56,1340,80"/>
+<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="1350,56,1790,80"/>
+<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="1800,56,2240,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="450,0,890,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="900,0,1340,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1350,0,1790,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1800,0,2240,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="2250,0,2690,24"/>
 <area href="classiview_1_1_c_image_shape.html" alt="iview::CImageShape" shape="rect" coords="0,224,440,248"/>
 <area href="classiview_1_1_c_interactive_shape_base.html" alt="iview::CInteractiveShapeBase" shape="rect" coords="450,224,890,248"/>
 <area href="classiview_1_1_c_none_calibration_shape.html" title="Shape object for none calibration." alt="iview::CNoneCalibrationShape" shape="rect" coords="1350,224,1790,248"/>
@@ -82,9 +79,13 @@ Inheritance diagram for iview::CShapeBase:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiview_1_1_c_shape_control.html">CShapeControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a56edc83c7900608da3b36f106cf1a481">BaseClass2</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0b">ShapeTransformMode</a> { <a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0ba5c8ac1a5adf9a964dd704aa67374ba33">STM_VIEW</a>, 
+<a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0ba568eafbda4574795ef0de174e35e64f7">STM_SHAPE</a>, 
+<a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0babd28a5cd4c30afb9ee647622a1984f47">STM_COMBINE</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe how shape tranformation is interpreted.  <a href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0b">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classimod_1_1_c_single_model_observer_base.html">imod::CSingleModelObserverBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#aad6ad9e659d043b7e292b95f174083c5">BaseClass3</a></td></tr>
+<a class="el" href="classimod_1_1_c_single_model_observer_base.html">imod::CSingleModelObserverBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a77621991558269b980a4b48598ec9a83">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a854995ba6bd786e666688d27d88e34e7">CShapeBase</a> ()</td></tr>
@@ -94,9 +95,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this shape visible.  <a href="#a395f84884da10c1461167cc9182bbbd5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#ae3fe6e71efedb1e491b2aac41e9f1854">AssignToLayer</a> (int layerType)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a0c22c7bac5b7d9b6db603eb20f9bc02b">Invalidate</a> (int changeFlags=0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Force this shape to repaint by next image update.  <a href="#a0c22c7bac5b7d9b6db603eb20f9bc02b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a21240943eea6fd219ebc88bfa45dac52">GetDisplayPtr</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to display object.  <a href="#a21240943eea6fd219ebc88bfa45dac52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#af51f1e3fc3573a23494493d1c5e4b9a1">GetDisplayPtr</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to currently connected display.  <a href="#af51f1e3fc3573a23494493d1c5e4b9a1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0b">ShapeTransformMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a1c735abc8f77f81a375a3892dfbdb4a9">GetTransformMode</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get shape transformation mode.  <a href="#a1c735abc8f77f81a375a3892dfbdb4a9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#aaf5ae959c18b30fd5fe5c984e5a19437">SetTransformMode</a> (<a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0b">ShapeTransformMode</a> mode)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shape transformation mode.  <a href="#aaf5ae959c18b30fd5fe5c984e5a19437"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#adb4d7ffd55ba1002170f5fdd04093923">GetLayerType</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get layer type of this shape object.  <a href="#adb4d7ffd55ba1002170f5fdd04093923"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a0eed87baa57a0afd2f92a2c0aa68d2d4">GetBoundingBox</a> () const </td></tr>
@@ -126,6 +130,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a06821a59e07db37d05cf2b0a45fcf6cc">OnUpdate</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a497c8da174468f19348d19e782cf5644">GetScreenPosition</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logPosition) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get screen position based on logical position.  <a href="#a497c8da174468f19348d19e782cf5644"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a18ae2fd2b1f0fcfbc4ac53b0074d9576">GetLogPosition</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;screenPosition) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get logical position based on screen position.  <a href="#a18ae2fd2b1f0fcfbc4ac53b0074d9576"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#ab6b72a34649abfbc775ddb6f1b9e37f5">GetDisplayChangesMask</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get display changes mask.  <a href="#ab6b72a34649abfbc775ddb6f1b9e37f5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a5da5a9e5047c26a76c525d1342718fb0">InvalidateBoundingBox</a> ()</td></tr>
@@ -140,41 +148,58 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a86836e7fcb90041bb0bf73f5852b6bc3">DisconnectDisplay</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="classiview_1_1_c_screen_transform.html">iview::CScreenTransform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a7f025936c81f5cd5c5f6ffd483610f42">GetViewToScreenTransform</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a transform from view units to screen units It can be called only when display is connected.  <a href="#a7f025936c81f5cd5c5f6ffd483610f42"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_shape_base.html#a778070a9321ab3a7525189254e1b611c">CalcBoundingBox</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box.  <a href="#a778070a9321ab3a7525189254e1b611c"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_shape_base_8h_source.html#l00015">15</a> of file <a class="el" href="_c_shape_base_8h_source.html">CShapeBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_shape_base_8h_source.html#l00016">16</a> of file <a class="el" href="_c_shape_base_8h_source.html">CShapeBase.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a56edc83c7900608da3b36f106cf1a481"></a><!-- doxytag: member="iview::CShapeBase::BaseClass2" ref="a56edc83c7900608da3b36f106cf1a481" args="" -->
+<a class="anchor" id="a77621991558269b980a4b48598ec9a83"></a><!-- doxytag: member="iview::CShapeBase::BaseClass" ref="a77621991558269b980a4b48598ec9a83" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiview_1_1_c_shape_control.html">CShapeControl</a> <a class="el" href="classiview_1_1_c_shape_base.html#a56edc83c7900608da3b36f106cf1a481">iview::CShapeBase::BaseClass2</a></td>
+          <td class="memname">typedef <a class="el" href="classimod_1_1_c_single_model_observer_base.html">imod::CSingleModelObserverBase</a> <a class="el" href="classiview_1_1_c_shape_base.html#a77621991558269b980a4b48598ec9a83">iview::CShapeBase::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_shape_base_8h_source.html#l00022">22</a> of file <a class="el" href="_c_shape_base_8h_source.html">CShapeBase.h</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqt2d_1_1_c_image_view_comp.html#ae889bd9ccb05821fe4267f5f75711dce">iqt2d::CImageViewComp</a>, <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a2519be921b203b8d599a02ec2917c9e6">iview::CInteractiveShapeBase</a>, <a class="el" href="classiview_1_1_c_image_shape.html#abf404c7385429d2ad708d53682bd52d4">iview::CImageShape</a>, <a class="el" href="classiview_1_1_c_polygon_shape.html#ae70d03286d38908a1f763f0511d0e3d3">iview::CPolygonShape</a>, <a class="el" href="classiview_1_1_c_affinite_calibration_shape.html#a253c72422c5214ed8a8031aaf2ab86ac">iview::CAffiniteCalibrationShape</a>, <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#afa3fcab514bf33fbdb6ec2f83eb8f075">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</a>, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#aabd7c7e97ac67f2b20d674ae348773ab">iview::CNoneCalibrationShape</a>, <a class="el" href="classiview_1_1_c_perspective_calibration_shape.html#a5d3c89099346571f9a69f9fc6e064aa2">iview::CPerspectiveCalibrationShape</a>, <a class="el" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a436e895c8664c39a3ed83af5b6598097">iview::CPerspectiveCalibrationBoundsShape</a>, <a class="el" href="classiview_1_1_c_center_pin_shape.html#a2e30c3cab2422307ada5a544219b7287">iview::CCenterPinShape</a>, <a class="el" href="classiview_1_1_c_polyline_shape.html#a4fc044670c52139194c6ab7f6e3607cf">iview::CPolylineShape</a>, <a class="el" href="classiview_1_1_c_arrow_shape.html#a595a3393854068601044446af6c61a92">iview::CArrowShape</a>, <a class="el" href="classiview_1_1_c_line_shape.html#a1893f64d04f7d615148566c7d96cb6d7">iview::CLineShape</a>, <a class="el" href="classiview_1_1_c_parallelogram_shape.html#a8eef9d77266c68d7c07405fbf9a857ce">iview::CParallelogramShape</a>, <a class="el" href="classiview_1_1_c_pin_shape.html#a28949f93f64bd2a1ba8aff946f7035bf">iview::CPinShape</a>, <a class="el" href="classiview_1_1_c_rectangle_shape.html#a090d70a74ddfddc10ae466f992b68973">iview::CRectangleShape</a>, <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#aa5a187e986ff04383e8f2600665b1264">iview::CTransformableRectangleShape</a>, <a class="el" href="classiview_1_1_c_tube_polyline_shape.html#a48544efe679deb05e8ef96bcc5f2c984">iview::CTubePolylineShape</a>, <a class="el" href="classiview_1_1_c_label_shape.html#a3888de5591efc98b73fe2479a134a6f1">iview::CLabelShape</a>, <a class="el" href="classiview_1_1_c_spline_shape.html#af07698382acb721b5ea00412fb4e3a0c">iview::CSplineShape</a>, <a class="el" href="classiview_1_1_c_annulus_segment_shape.html#a98889787b30018050b4822b07dbd8697">iview::CAnnulusSegmentShape</a>, <a class="el" href="classiview_1_1_c_annulus_shape.html#a86ea5d247e687be2cf00a2aae5e6a2df">iview::CAnnulusShape</a>, <a class="el" href="classiview_1_1_c_circle_shape.html#aa86a97f3f9992723d2c7a8f38a06672e">iview::CCircleShape</a>, <a class="el" href="classiview_1_1_c_oriented_circle_shape.html#ac5676ae14af66e8a1c0ba082e43020a2">iview::COrientedCircleShape</a>, and <a class="el" href="classiview_1_1_c_polypoint_shape.html#aa9680c0d326ccc283b544715940b3993">iview::CPolypointShape</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_shape_base_8h_source.html#l00021">21</a> of file <a class="el" href="_c_shape_base_8h_source.html">CShapeBase.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aad6ad9e659d043b7e292b95f174083c5"></a><!-- doxytag: member="iview::CShapeBase::BaseClass3" ref="aad6ad9e659d043b7e292b95f174083c5" args="" -->
+<hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="ad71985507eed51c78a94d52931c06d0b"></a><!-- doxytag: member="iview::CShapeBase::ShapeTransformMode" ref="ad71985507eed51c78a94d52931c06d0b" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classimod_1_1_c_single_model_observer_base.html">imod::CSingleModelObserverBase</a> <a class="el" href="classiview_1_1_c_shape_base.html#aad6ad9e659d043b7e292b95f174083c5">iview::CShapeBase::BaseClass3</a></td>
+          <td class="memname">enum <a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0b">iview::CShapeBase::ShapeTransformMode</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_shape_base_8h_source.html#l00023">23</a> of file <a class="el" href="_c_shape_base_8h_source.html">CShapeBase.h</a>.</p>
+<p>Describe how shape tranformation is interpreted. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ad71985507eed51c78a94d52931c06d0ba5c8ac1a5adf9a964dd704aa67374ba33"></a><!-- doxytag: member="STM_VIEW" ref="ad71985507eed51c78a94d52931c06d0ba5c8ac1a5adf9a964dd704aa67374ba33" args="" -->STM_VIEW</em>&nbsp;</td><td>
+<p>Shape transformation will be ignored, view transformation will be used. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad71985507eed51c78a94d52931c06d0ba568eafbda4574795ef0de174e35e64f7"></a><!-- doxytag: member="STM_SHAPE" ref="ad71985507eed51c78a94d52931c06d0ba568eafbda4574795ef0de174e35e64f7" args="" -->STM_SHAPE</em>&nbsp;</td><td>
+<p>View transformation will be ignored, shape transformation will be used. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad71985507eed51c78a94d52931c06d0babd28a5cd4c30afb9ee647622a1984f47"></a><!-- doxytag: member="STM_COMBINE" ref="ad71985507eed51c78a94d52931c06d0babd28a5cd4c30afb9ee647622a1984f47" args="" -->STM_COMBINE</em>&nbsp;</td><td>
+<p>Both transformation will be used, shape transformation will be used as local transformation. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_c_shape_base_8h_source.html#l00026">26</a> of file <a class="el" href="_c_shape_base_8h_source.html">CShapeBase.h</a>.</p>
 
 </div>
 </div>
@@ -244,7 +269,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="_t_view_extender_comp_base_8h_source.html#l00096">iqt2d::TViewExtenderCompBase&lt; Base &gt;::AddItemsToScene()</a>.</p>
+<p>Referenced by <a class="el" href="_t_view_extender_comp_base_8h_source.html#l00086">iqt2d::TViewExtenderCompBase&lt; Base &gt;::AddItemsToScene()</a>.</p>
 
 </div>
 </div>
@@ -265,7 +290,7 @@ Protected Member Functions</h2></td></tr>
 <p>Calculate bounding box. </p>
 <p>You have to implement this method in your shapes implementations. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#a0ac391750eda92fad36d4047ce0fe08a">iview::CTransformableRectangleShape</a>, <a class="el" href="classiview_1_1_c_parallelogram_shape.html#af039343dbb1fbb9f943066529e8ec442">iview::CParallelogramShape</a>, <a class="el" href="classiview_1_1_c_polygon_shape.html#a12324a4038012353874cdf28eeb2733b">iview::CPolygonShape</a>, <a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#adc01a95fabfa1b7edb32b982a13b3ca3">iview::CAffineTransformation2dShape</a>, <a class="el" href="classiview_1_1_c_label_shape.html#a93aac48158c3d07948e54805ee9e0ff2">iview::CLabelShape</a>, <a class="el" href="classiview_1_1_c_annulus_shape.html#a9f4953d50d58039e4a806ef2712ab582">iview::CAnnulusShape</a>, <a class="el" href="classiview_1_1_c_tube_polyline_shape.html#a49f63c7d5f8699558b74c3549b805dfd">iview::CTubePolylineShape</a>, <a class="el" href="classiview_1_1_c_rectangle_shape.html#a1199f790a399bb105e04eb72cd7058d8">iview::CRectangleShape</a>, <a class="el" href="classiview_1_1_c_line_shape.html#ac3e58bd00694b915b8200e6065baacbc">iview::CLineShape</a>, <a class="el" href="classiview_1_1_c_arrow_shape.html#abebfd3583af044a576aa4a37958c9407">iview::CArrowShape</a>, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#a2645caefa06f23809fc18d932319c9d5">iview::CNoneCalibrationShape</a>, <a class="el" href="classiview_1_1_c_polyline_shape.html#a8f1501b07a945579bf129a4ab730eb4d">iview::CPolylineShape</a>, <a class="el" href="classiview_1_1_c_circle_shape.html#a2955d60ae4391b12207a5ca33a37c4f7">iview::CCircleShape</a>, <a class="el" href="classiview_1_1_c_pin_shape.html#a4a64f268c56f059a7f68c85976fd62e6">iview::CPinShape</a>, <a class="el" href="classiview_1_1_c_image_shape.html#a392b530c420606d5ccf85ce0fdd61140">iview::CImageShape</a>, <a class="el" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a4caed41505e3b7025cd64234b3128daa">iview::CPerspectiveCalibrationBoundsShape</a>, <a class="el" href="classiview_1_1_c_center_pin_shape.html#aa4950e57de117dc0e495b7685edc40d9">iview::CCenterPinShape</a>, <a class="el" href="classiview_1_1_c_spline_shape.html#a483c8dc8fea4d30cc488e72182ec3de8">iview::CSplineShape</a>, <a class="el" href="classiview_1_1_c_polypoint_shape.html#a736fecf391b099c2a0db85af62dfe29b">iview::CPolypointShape</a>, and <a class="el" href="classiview_1_1_c_oriented_circle_shape.html#abf232b2dd8782a69d2016546e170eae6">iview::COrientedCircleShape</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#a0ac391750eda92fad36d4047ce0fe08a">iview::CTransformableRectangleShape</a>, <a class="el" href="classiview_1_1_c_parallelogram_shape.html#af039343dbb1fbb9f943066529e8ec442">iview::CParallelogramShape</a>, <a class="el" href="classiview_1_1_c_polygon_shape.html#a12324a4038012353874cdf28eeb2733b">iview::CPolygonShape</a>, <a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#adc01a95fabfa1b7edb32b982a13b3ca3">iview::CAffineTransformation2dShape</a>, <a class="el" href="classiview_1_1_c_label_shape.html#a93aac48158c3d07948e54805ee9e0ff2">iview::CLabelShape</a>, <a class="el" href="classiview_1_1_c_polyline_shape.html#a8f1501b07a945579bf129a4ab730eb4d">iview::CPolylineShape</a>, <a class="el" href="classiview_1_1_c_annulus_shape.html#a9f4953d50d58039e4a806ef2712ab582">iview::CAnnulusShape</a>, <a class="el" href="classiview_1_1_c_tube_polyline_shape.html#a49f63c7d5f8699558b74c3549b805dfd">iview::CTubePolylineShape</a>, <a class="el" href="classiview_1_1_c_rectangle_shape.html#a1199f790a399bb105e04eb72cd7058d8">iview::CRectangleShape</a>, <a class="el" href="classiview_1_1_c_line_shape.html#ac3e58bd00694b915b8200e6065baacbc">iview::CLineShape</a>, <a class="el" href="classiview_1_1_c_arrow_shape.html#abebfd3583af044a576aa4a37958c9407">iview::CArrowShape</a>, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#a2645caefa06f23809fc18d932319c9d5">iview::CNoneCalibrationShape</a>, <a class="el" href="classiview_1_1_c_circle_shape.html#a2955d60ae4391b12207a5ca33a37c4f7">iview::CCircleShape</a>, <a class="el" href="classiview_1_1_c_pin_shape.html#a4a64f268c56f059a7f68c85976fd62e6">iview::CPinShape</a>, <a class="el" href="classiview_1_1_c_image_shape.html#a392b530c420606d5ccf85ce0fdd61140">iview::CImageShape</a>, <a class="el" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a4caed41505e3b7025cd64234b3128daa">iview::CPerspectiveCalibrationBoundsShape</a>, <a class="el" href="classiview_1_1_c_center_pin_shape.html#aa4950e57de117dc0e495b7685edc40d9">iview::CCenterPinShape</a>, <a class="el" href="classiview_1_1_c_polypoint_shape.html#a736fecf391b099c2a0db85af62dfe29b">iview::CPolypointShape</a>, <a class="el" href="classiview_1_1_c_spline_shape.html#a483c8dc8fea4d30cc488e72182ec3de8">iview::CSplineShape</a>, and <a class="el" href="classiview_1_1_c_oriented_circle_shape.html#abf232b2dd8782a69d2016546e170eae6">iview::COrientedCircleShape</a>.</p>
 
 </div>
 </div>
@@ -365,29 +390,27 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_shape_base.html#abc26858da9a056111d240d5312cb250c">iview::CInteractiveShapeBase</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00175">iview::CInteractiveShapeBase::GetDisplayChangesMask()</a>.</p>
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00158">iview::CInteractiveShapeBase::GetDisplayChangesMask()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a21240943eea6fd219ebc88bfa45dac52"></a><!-- doxytag: member="iview::CShapeBase::GetDisplayPtr" ref="a21240943eea6fd219ebc88bfa45dac52" args="() const " -->
+<a class="anchor" id="af51f1e3fc3573a23494493d1c5e4b9a1"></a><!-- doxytag: member="iview::CShapeBase::GetDisplayPtr" ref="af51f1e3fc3573a23494493d1c5e4b9a1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a>* iview::CShapeBase::GetDisplayPtr </td>
+          <td class="memname"><a class="el" href="classiview_1_1_i_display.html">iview::IDisplay</a>* iview::CShapeBase::GetDisplayPtr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get access to display object. </p>
+<p>Get access to currently connected display. </p>
 
-<p>Implements <a class="el" href="classiview_1_1_c_shape_control.html#a109fc4869688f9610fa5824aa5726790">iview::CShapeControl</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00161">iview::CInteractiveShapeBase::GetEditMode()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00148">iview::CInteractiveShapeBase::GetKeysState()</a>.</p>
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00144">iview::CInteractiveShapeBase::GetEditMode()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00131">iview::CInteractiveShapeBase::GetKeysState()</a>.</p>
 
 </div>
 </div>
@@ -412,6 +435,46 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a18ae2fd2b1f0fcfbc4ac53b0074d9576"></a><!-- doxytag: member="iview::CShapeBase::GetLogPosition" ref="a18ae2fd2b1f0fcfbc4ac53b0074d9576" args="(const i2d::CVector2d &amp;screenPosition) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> iview::CShapeBase::GetLogPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>screenPosition</em></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get logical position based on screen position. </p>
+
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00112">iview::CInteractiveShapeBase::BeginDrag()</a>, and <a class="el" href="_c_interactive_shape_base_8h_source.html#l00118">iview::CInteractiveShapeBase::SetDragPosition()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a497c8da174468f19348d19e782cf5644"></a><!-- doxytag: member="iview::CShapeBase::GetScreenPosition" ref="a497c8da174468f19348d19e782cf5644" args="(const i2d::CVector2d &amp;logPosition) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> iview::CShapeBase::GetScreenPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>logPosition</em></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get screen position based on logical position. </p>
+
+</div>
+</div>
 <a class="anchor" id="aa1354f4d1cdd543352e477f77c579a62"></a><!-- doxytag: member="iview::CShapeBase::GetShapeDescriptionAt" ref="aa1354f4d1cdd543352e477f77c579a62" args="(istd::CIndex2d position) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -432,6 +495,25 @@ Protected Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="classiview_1_1_i_touchable.html#a70f50995dcf4952202df6140acf4ebdf">iview::ITouchable</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_image_shape.html#a6d14dff770ec1cadd30f3c0fb112c045">iview::CImageShape</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c735abc8f77f81a375a3892dfbdb4a9"></a><!-- doxytag: member="iview::CShapeBase::GetTransformMode" ref="a1c735abc8f77f81a375a3892dfbdb4a9" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0b">ShapeTransformMode</a> iview::CShapeBase::GetTransformMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get shape transformation mode. </p>
+<p>This mode describes which transformation will be used to display shape. </p>
 
 </div>
 </div>
@@ -469,11 +551,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get a transform from view units to screen units It can be called only when display is connected. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_c_shape_base.html#a7268bb7bd6db46d51c18e350a4e1012e" title="Check if display is connected.">IsDisplayConnected()</a>. </dd></dl>
-
-<p>Implements <a class="el" href="classiview_1_1_c_shape_control.html#a999a782bb08c639dbfb380bf54500671">iview::CShapeControl</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a0c22c7bac5b7d9b6db603eb20f9bc02b"></a><!-- doxytag: member="iview::CShapeBase::Invalidate" ref="a0c22c7bac5b7d9b6db603eb20f9bc02b" args="(int changeFlags=0)" -->
@@ -491,13 +568,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Force this shape to repaint by next image update. </p>
-
-<p>Implements <a class="el" href="classiview_1_1_c_shape_control.html#a42dc8044cdcbd22f4bb3d07f9803f288">iview::CShapeControl</a>.</p>
-
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_perspective_calibration_shape.html#ab0419a5f3f67685d96991a817d3e8204">iview::CPerspectiveCalibrationShape</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_tube_polyline_shape_8h_source.html#l00085">iview::CTubePolylineShape::SetOrientationVisible()</a>.</p>
+<p>Referenced by <a class="el" href="_c_tube_polyline_shape_8h_source.html#l00086">iview::CTubePolylineShape::SetOrientationVisible()</a>.</p>
 
 </div>
 </div>
@@ -516,7 +589,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Invalidate bounding box. </p>
-<p>You can overload this method to provide validation of your internal attributes, because this method is called from <a class="el" href="classiview_1_1_c_shape_base.html#a0c22c7bac5b7d9b6db603eb20f9bc02b" title="Force this shape to repaint by next image update.">Invalidate(int)</a> and <a class="el" href="classiview_1_1_c_shape_base.html#acc654271c3049a3d129bf99c4ae1ecd0" title="It informs about changes in display.">OnDisplayChange(int)</a> methods. Please don't forget base method call in your implementations. </p>
+<p>You can overload this method to provide validation of your internal attributes, because this method is called from <a class="el" href="classiview_1_1_c_shape_base.html#a0c22c7bac5b7d9b6db603eb20f9bc02b">Invalidate(int)</a> and <a class="el" href="classiview_1_1_c_shape_base.html#acc654271c3049a3d129bf99c4ae1ecd0" title="It informs about changes in display.">OnDisplayChange(int)</a> methods. Please don't forget base method call in your implementations. </p>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_parallelogram_shape.html#aab51cdea7244afe110649185bda9d8f8">iview::CParallelogramShape</a>, <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#a6749c782ab0fcf06261d0430d86417fc">iview::CTransformableRectangleShape</a>, <a class="el" href="classiview_1_1_c_arrow_shape.html#a8346fa58949974134d35e8e9bc7b2433">iview::CArrowShape</a>, <a class="el" href="classiview_1_1_c_line_shape.html#ad42f5760b97d30284b61044374f4c2a9">iview::CLineShape</a>, and <a class="el" href="classiview_1_1_c_rectangle_shape.html#a95182a297c62f99a2ac2fce7c9c2a036">iview::CRectangleShape</a>.</p>
 
@@ -775,6 +848,26 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">imod::CSingleModelObserverBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf5ae959c18b30fd5fe5c984e5a19437"></a><!-- doxytag: member="iview::CShapeBase::SetTransformMode" ref="aaf5ae959c18b30fd5fe5c984e5a19437" args="(ShapeTransformMode mode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iview::CShapeBase::SetTransformMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiview_1_1_c_shape_base.html#ad71985507eed51c78a94d52931c06d0b">ShapeTransformMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set shape transformation mode. </p>
+<p>This mode describes which transformation will be used to display shape. </p>
 
 </div>
 </div>

@@ -24,7 +24,7 @@
 #define iview_IVisualCalibrationInfo_included
 
 
-#include "i2d/ICalibrationProvider.h"
+#include "istd/IChangeable.h"
 
 
 namespace iview
@@ -34,7 +34,7 @@ namespace iview
 /**
 	Common interface for all objects which allow access to calibration info.
 */
-class IVisualCalibrationInfo: virtual public i2d::ICalibrationProvider
+class IVisualCalibrationInfo: virtual public istd::IChangeable
 {
 public:
 	/**

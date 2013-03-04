@@ -33,11 +33,15 @@ namespace iedge
 {
 
 
+/**
+	Description of single node of the edge.
+	Node has position and weight.
+*/
 class CEdgeNode: virtual public iser::ISerializable
 {
 public:
 	CEdgeNode();
-	CEdgeNode(const i2d::CVector2d& position, const i2d::CVector2d& derivative, double weight);
+	CEdgeNode(const i2d::CVector2d& position, double weight);
 
 	/**
 		Get position of node.
@@ -47,14 +51,6 @@ public:
 		Set position of node.
 	*/
 	void SetPosition(const i2d::CVector2d& position);
-	/**
-		Get direction (derivative) of node gradient.
-	*/
-	const i2d::CVector2d& GetDerivative() const;
-	/**
-		Set direction (derivative) of node gradient.
-	*/
-	void SetDerivative(const i2d::CVector2d& derivative);
 	/**
 		Get node weight.
 		This value should be normalized (range [0, 1]).
@@ -70,10 +66,11 @@ public:
 	virtual bool Serialize(iser::IArchive& archive);
 
 private:
-	i2d::CVector2d m_position;
-	/**	Derivative vector.
+	/**
+		Position of edge node.
 	*/
-	i2d::CVector2d m_derivative;
+	i2d::CVector2d m_position;
+
 	/**	Weight value of this point.
 	*/
 	double m_weight;
@@ -91,18 +88,6 @@ inline const i2d::CVector2d& CEdgeNode::GetPosition() const
 inline void CEdgeNode::SetPosition(const i2d::CVector2d& position)
 {
 	m_position = position;
-}
-
-
-inline const i2d::CVector2d& CEdgeNode::GetDerivative() const
-{
-	return m_derivative;
-}
-
-
-inline void CEdgeNode::SetDerivative(const i2d::CVector2d& derivative)
-{
-	m_derivative = derivative;
 }
 
 

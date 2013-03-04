@@ -76,23 +76,27 @@
 <a name="l00048"></a>00048 
 <a name="l00049"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a9133212725d96b3d5f6e8228bf734fcc">00049</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#a9133212725d96b3d5f6e8228bf734fcc">m_isCenterVisible</a>;
 <a name="l00050"></a>00050 
-<a name="l00051"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a98bf82d3d3392067a5429bbdd5e949bc">00051</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#a98bf82d3d3392067a5429bbdd5e949bc">m_editRadiusMode</a>;
-<a name="l00052"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a1c22bdb0a010eff5a08674dad72b5d74">00052</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#a1c22bdb0a010eff5a08674dad72b5d74">m_isEditableRadius</a>;
+<a name="l00051"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a1c22bdb0a010eff5a08674dad72b5d74">00051</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#a1c22bdb0a010eff5a08674dad72b5d74">m_isEditableRadius</a>;
+<a name="l00052"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#ae789f0b627ac37efb9c269e4d7ba234b">00052</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#ae789f0b627ac37efb9c269e4d7ba234b">m_isEditableRadius2</a>;
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <span class="comment">// true when the outer radius is being edited</span>
-<a name="l00055"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a47e6da001830187ad161c32800f9f084">00055</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#a47e6da001830187ad161c32800f9f084">m_editRadius2Mode</a>;
-<a name="l00056"></a>00056        <span class="comment">// true when the outer radius is editable</span>
-<a name="l00057"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#ae789f0b627ac37efb9c269e4d7ba234b">00057</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#ae789f0b627ac37efb9c269e4d7ba234b">m_isEditableRadius2</a>;
-<a name="l00058"></a>00058 };
-<a name="l00059"></a>00059 
+<a name="l00054"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fe">00054</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fe">EditMode</a>
+<a name="l00055"></a>00055        {
+<a name="l00056"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917feaf607d61c5d66207375be4840acb897a5">00056</a>               <a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917feaf607d61c5d66207375be4840acb897a5">EM_NONE</a>,
+<a name="l00057"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917feab0bbea191870d4bab3242e79ee926d2b">00057</a>               <a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917feab0bbea191870d4bab3242e79ee926d2b">EM_INNER_RADIUS</a>,
+<a name="l00058"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fea4ca0dce95fe4b995049579724cfea94f">00058</a>               <a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fea4ca0dce95fe4b995049579724cfea94f">EM_OUTER_RADIUS</a>
+<a name="l00059"></a>00059        };
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 } <span class="comment">// namespace iview</span>
-<a name="l00062"></a>00062 
+<a name="l00061"></a><a class="code" href="classiview_1_1_c_annulus_shape.html#a1d389f61ea8d439b43b91ecb5bfb95e6">00061</a>        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_annulus_shape.html#a1d389f61ea8d439b43b91ecb5bfb95e6">m_editMode</a>;
+<a name="l00062"></a>00062 };
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif // !iview_CAnnulusShape_included</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 } <span class="comment">// namespace iview</span>
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="preprocessor">#endif // !iview_CAnnulusShape_included</span>
+<a name="l00069"></a>00069 <span class="preprocessor"></span>
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

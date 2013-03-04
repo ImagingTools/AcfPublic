@@ -1,0 +1,81 @@
+/********************************************************************************
+**
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
+**
+********************************************************************************/
+
+
+#ifndef iedge_CEdgeLineContainer_included
+#define iedge_CEdgeLineContainer_included
+
+
+// ACF includes
+#include "ibase/TSerializableContainer.h"
+#include "i2d/CObject2dBase.h"
+
+// ACF-Solutions includes
+#include "iedge/CEdgeLine.h"
+
+
+namespace iedge
+{
+
+
+class CEdgeLineContainer:
+			public i2d::CObject2dBase,
+			public ibase::TSerializableContainer<CEdgeLine>
+{
+public:
+	typedef i2d::CObject2dBase BaseClass;
+	typedef ibase::TSerializableContainer<CEdgeLine> BaseClass2;
+
+	// reimplemented (i2d::IObject2d)
+	virtual i2d::CVector2d GetCenter() const;
+	virtual void MoveCenterTo(const i2d::CVector2d& position);
+	virtual i2d::CRectangle GetBoundingBox() const;
+	virtual bool Transform(
+				const i2d::ITransformation2d& transformation,
+				i2d::ITransformation2d::ExactnessMode mode = i2d::ITransformation2d::EM_NONE,
+				double* errorFactorPtr = NULL);
+	virtual bool InvTransform(
+				const i2d::ITransformation2d& transformation,
+				i2d::ITransformation2d::ExactnessMode mode = i2d::ITransformation2d::EM_NONE,
+				double* errorFactorPtr = NULL);
+	virtual bool GetTransformed(
+				const i2d::ITransformation2d& transformation,
+				i2d::IObject2d& result,
+				i2d::ITransformation2d::ExactnessMode mode = i2d::ITransformation2d::EM_NONE,
+				double* errorFactorPtr = NULL) const;
+	virtual bool GetInvTransformed(
+				const i2d::ITransformation2d& transformation,
+				i2d::IObject2d& result,
+				i2d::ITransformation2d::ExactnessMode mode = i2d::ITransformation2d::EM_NONE,
+				double* errorFactorPtr = NULL) const;
+
+protected:
+	// reimplemented (ibase::TSerializableContainer)
+	virtual bool SerializeItem(CEdgeLine& item, iser::IArchive& archive);
+};
+
+
+} // namespace iedge
+
+
+#endif // !iedge_CEdgeLineContainer_included
+
+

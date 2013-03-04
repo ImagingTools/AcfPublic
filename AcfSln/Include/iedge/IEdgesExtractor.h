@@ -29,7 +29,7 @@
 #include "iproc/IProcessor.h"
 
 // ACF-Solutions includes
-#include "iedge/CEdgeLine.h"
+#include "iedge/CEdgeLineContainer.h"
 
 
 namespace iedge
@@ -51,7 +51,7 @@ public:
 	virtual bool DoContourExtraction(
 				const iprm::IParamsSet* paramsPtr,
 				const iimg::IBitmap& bitmap,
-				CEdgeLine::Container& result) const = 0;
+				CEdgeLineContainer& result) const = 0;
 };
 
 

@@ -30,212 +30,213 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iview_CParallelogramShape_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_parallelogram_8h.html">i2d/CParallelogram.h</a>&quot;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_interactive_shape_base_8h.html">iview/CInteractiveShapeBase.h</a>&quot;</span>
-<a name="l00008"></a>00008 
+<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_parallelogram_8h.html">i2d/CParallelogram.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_vector2d_8h.html">i2d/CVector2d.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_interactive_shape_base_8h.html">iview/CInteractiveShapeBase.h</a>&quot;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">namespace </span>iview
-<a name="l00011"></a>00011 {
-<a name="l00012"></a>00012 
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">namespace </span>iview
+<a name="l00012"></a>00012 {
 <a name="l00013"></a>00013 
-<a name="l00014"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html">00014</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_parallelogram_shape.html">CParallelogramShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a>
-<a name="l00015"></a>00015 {
-<a name="l00016"></a>00016 <span class="keyword">public</span>:
-<a name="l00017"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8eef9d77266c68d7c07405fbf9a857ce">00017</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8eef9d77266c68d7c07405fbf9a857ce">BaseClass</a>;
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019        <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aae9620dc34b05395984b6d7fe96593b1">CParallelogramShape</a>();
-<a name="l00020"></a>00020 
-<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a15bb9a7f4b989b9990943fb78cab5e46" title="Check, if rotation is editable.">IsEditableRotation</a>();
-<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#af12562b7b7f453937462ff75e9ac0dc0">SetEditableRotation</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00026"></a>00026        
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#abe30d12e007b65c6878c8830acf370c2" title="Check, if width is editable.">IsEditableWidth</a>();
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a11eda8d60e715308613f152c8fae32f7">SetEditableWidth</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00032"></a>00032        
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae9dec41b9eccfce9c417a0f208b2dea2" title="Check, if size is editable.">IsEditableHeight</a>();
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aa81b776c6046b2d334cffc0c8124be72">SetEditableHeight</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00038"></a>00038        
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae8c8e21e3e4cc477808ae1d9eec63193" title="Check, if internal angle is editable.">IsEditableAngle</a>();
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a63a1897eca41dc7035ccfa4303269b21">SetEditableAngle</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00044"></a>00044        
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ad9b77aad57e6dd368221f6adfd847b2f" title="Check, if both axis will be scaled proportional.">IsProportionalScaled</a>() <span class="keyword">const</span>;
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a41529b5f5b43e74323f572859d1249bc">SetProportionalScaled</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00050"></a>00050 
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a6e9911136491311b4ed582b46b0f492d" title="Check, if it is forced to keep length of both axes equal.">AreAxesEqual</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a9e23e9e21a66baa4c8de8ee1b960126f">SetAxesEqual</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00056"></a>00056 
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a5194a0b7fa8d8aab6e677c0e562a9db6" title="Check, if it is forced to keep both axes orthogonal.">AreAxesOrthogonal</a>() <span class="keyword">const</span>;
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8167ef4b696d73b953e611e0bd1722bc">SetAxesOrthogonal</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aab51cdea7244afe110649185bda9d8f8" title="Invalidate bounding box.">InvalidateBoundingBox</a>();
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="comment">// reimplemented (iview::IInteractiveShape)</span>
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a4cccc5ce62351b934ae0142a810d44d0" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (iview::IShape)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3b7e563995bbdc901ce5736aeafbacfe" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a212ed746475c36a427276f0e66500782" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#afd80967a96994cb52183f3efaf442f38" title="It is called, when mouse button is pushed down or up on this object.">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
-<a name="l00077"></a>00077        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a0debc4363fe2001e59db000315bcad48" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="keyword">protected</span>:
-<a name="l00080"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450">00080</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450">EditNode</a>
-<a name="l00081"></a>00081        {
-<a name="l00082"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a9108f25f27186e1c398211a8e8510212">00082</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a9108f25f27186e1c398211a8e8510212">EN_NONE</a> = -1,
-<a name="l00083"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450aae8ba8cd429be2498f2fbc1928f98cfa">00083</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450aae8ba8cd429be2498f2fbc1928f98cfa">EN_NODE11</a> = 0,
-<a name="l00084"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450aeb09497c0f37baecc02f5c3897041f58">00084</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450aeb09497c0f37baecc02f5c3897041f58">EN_NODE12</a> = 1,
-<a name="l00085"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a560a1717e28e0ed49d4203c04674d7d9">00085</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a560a1717e28e0ed49d4203c04674d7d9">EN_NODE22</a> = 2,
-<a name="l00086"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a4e3bb0427761016f5666a8f0df745e91">00086</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a4e3bb0427761016f5666a8f0df745e91">EN_NODE21</a> = 3,
-<a name="l00087"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a38803cd4831c820ce99a4d476f6b1c70">00087</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a38803cd4831c820ce99a4d476f6b1c70">EN_LAST</a> = <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a4e3bb0427761016f5666a8f0df745e91">EN_NODE21</a>
-<a name="l00088"></a>00088        };
-<a name="l00089"></a>00089 
-<a name="l00090"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#af7bf28618b595b3c43f28e2ac0451b40">00090</a>        <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450">EditNode</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#af7bf28618b595b3c43f28e2ac0451b40">m_editNode</a>;
-<a name="l00091"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a76c527f833c0d2958b9961ef55118c78">00091</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a76c527f833c0d2958b9961ef55118c78">m_referencePosition</a>;
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a7af7902022eab590ea262a7eebca8017">CalcNodes</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; parallTransform) <span class="keyword">const</span>;
-<a name="l00094"></a>00094        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a521f3eee6a338a8d51a4e31cae4094fb">ResetNodes</a>() <span class="keyword">const</span>;
-<a name="l00095"></a>00095        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a64b4ff71bba0e9eefb51373a20949faa">AreNodesValid</a>() <span class="keyword">const</span>;
-<a name="l00096"></a>00096        <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>* <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8cf2680a3dd8f78b503c651fae8b80d6">GetNodes</a>() <span class="keyword">const</span>;
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ac1967691aaa525b3631d53aa0dcce559">EnsureValidNodes</a>() <span class="keyword">const</span>;
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a05311ddadc6d42b2a2776c88ccf04232">IsTickerTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a1a739aa721cf868b8ee5e59d38c125d4">IsFigureTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a4052b66ece9a7b02aa09b064acc99766">DrawTickers</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae6bb0e6e9ad958b9cfede62712332157">DrawFigure</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105        <span class="comment">// reimplemented (iview::CShapeBase)</span>
-<a name="l00106"></a>00106        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#af039343dbb1fbb9f943066529e8ec442" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00109"></a>00109        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a63111d7234a70d3d569778cc95418a81">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
-<a name="l00110"></a>00110        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aee4107a84919e111fa5f016255c73014">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112 <span class="keyword">private</span>:
-<a name="l00113"></a>00113        <span class="keywordtype">bool</span> m_isEditableRotation;
-<a name="l00114"></a>00114        <span class="keywordtype">bool</span> m_isEditableWidth;
-<a name="l00115"></a>00115        <span class="keywordtype">bool</span> m_isEditableHeight;
-<a name="l00116"></a>00116        <span class="keywordtype">bool</span> m_isEditableAngle;
-<a name="l00117"></a>00117        <span class="keywordtype">bool</span> m_isProportionalScaled;
-<a name="l00118"></a>00118        <span class="keywordtype">bool</span> m_areAxesEqual;
-<a name="l00119"></a>00119        <span class="keywordtype">bool</span> m_areAxesOrthogonal;
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_nodes[<a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a38803cd4831c820ce99a4d476f6b1c70">EN_LAST</a> + 1];
-<a name="l00122"></a>00122        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_areNodesValid;
-<a name="l00123"></a>00123 };
-<a name="l00124"></a>00124 
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html">00015</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_parallelogram_shape.html">CParallelogramShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a>
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017 <span class="keyword">public</span>:
+<a name="l00018"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8eef9d77266c68d7c07405fbf9a857ce">00018</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8eef9d77266c68d7c07405fbf9a857ce">BaseClass</a>;
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020        <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aae9620dc34b05395984b6d7fe96593b1">CParallelogramShape</a>();
+<a name="l00021"></a>00021 
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a15bb9a7f4b989b9990943fb78cab5e46" title="Check, if rotation is editable.">IsEditableRotation</a>();
+<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#af12562b7b7f453937462ff75e9ac0dc0">SetEditableRotation</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00027"></a>00027        
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#abe30d12e007b65c6878c8830acf370c2" title="Check, if width is editable.">IsEditableWidth</a>();
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a11eda8d60e715308613f152c8fae32f7">SetEditableWidth</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00033"></a>00033        
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae9dec41b9eccfce9c417a0f208b2dea2" title="Check, if size is editable.">IsEditableHeight</a>();
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aa81b776c6046b2d334cffc0c8124be72">SetEditableHeight</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00039"></a>00039        
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae8c8e21e3e4cc477808ae1d9eec63193" title="Check, if internal angle is editable.">IsEditableAngle</a>();
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a63a1897eca41dc7035ccfa4303269b21">SetEditableAngle</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00045"></a>00045        
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ad9b77aad57e6dd368221f6adfd847b2f" title="Check, if both axis will be scaled proportional.">IsProportionalScaled</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a41529b5f5b43e74323f572859d1249bc">SetProportionalScaled</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00051"></a>00051 
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a6e9911136491311b4ed582b46b0f492d" title="Check, if it is forced to keep length of both axes equal.">AreAxesEqual</a>() <span class="keyword">const</span>;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a9e23e9e21a66baa4c8de8ee1b960126f">SetAxesEqual</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00057"></a>00057 
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a5194a0b7fa8d8aab6e677c0e562a9db6" title="Check, if it is forced to keep both axes orthogonal.">AreAxesOrthogonal</a>() <span class="keyword">const</span>;
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8167ef4b696d73b953e611e0bd1722bc">SetAxesOrthogonal</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aab51cdea7244afe110649185bda9d8f8" title="Invalidate bounding box.">InvalidateBoundingBox</a>();
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <span class="comment">// reimplemented (iview::IInteractiveShape)</span>
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a4cccc5ce62351b934ae0142a810d44d0" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        <span class="comment">// reimplemented (iview::IShape)</span>
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3b7e563995bbdc901ce5736aeafbacfe" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a212ed746475c36a427276f0e66500782" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#afd80967a96994cb52183f3efaf442f38" title="It is called, when mouse button is pushed down or up on this object.">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a0debc4363fe2001e59db000315bcad48" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="keyword">protected</span>:
+<a name="l00081"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450">00081</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450">EditNode</a>
+<a name="l00082"></a>00082        {
+<a name="l00083"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a9108f25f27186e1c398211a8e8510212">00083</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a9108f25f27186e1c398211a8e8510212">EN_NONE</a> = -1,
+<a name="l00084"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450aae8ba8cd429be2498f2fbc1928f98cfa">00084</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450aae8ba8cd429be2498f2fbc1928f98cfa">EN_NODE11</a> = 0,
+<a name="l00085"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450aeb09497c0f37baecc02f5c3897041f58">00085</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450aeb09497c0f37baecc02f5c3897041f58">EN_NODE12</a> = 1,
+<a name="l00086"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a560a1717e28e0ed49d4203c04674d7d9">00086</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a560a1717e28e0ed49d4203c04674d7d9">EN_NODE22</a> = 2,
+<a name="l00087"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a4e3bb0427761016f5666a8f0df745e91">00087</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a4e3bb0427761016f5666a8f0df745e91">EN_NODE21</a> = 3,
+<a name="l00088"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a38803cd4831c820ce99a4d476f6b1c70">00088</a>               <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a38803cd4831c820ce99a4d476f6b1c70">EN_LAST</a> = <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a4e3bb0427761016f5666a8f0df745e91">EN_NODE21</a>
+<a name="l00089"></a>00089        };
+<a name="l00090"></a>00090 
+<a name="l00091"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#af7bf28618b595b3c43f28e2ac0451b40">00091</a>        <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450">EditNode</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#af7bf28618b595b3c43f28e2ac0451b40">m_editNode</a>;
+<a name="l00092"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a76c527f833c0d2958b9961ef55118c78">00092</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a76c527f833c0d2958b9961ef55118c78">m_referencePosition</a>;
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a7af7902022eab590ea262a7eebca8017">CalcNodes</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; parallTransform) <span class="keyword">const</span>;
+<a name="l00095"></a>00095        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a521f3eee6a338a8d51a4e31cae4094fb">ResetNodes</a>() <span class="keyword">const</span>;
+<a name="l00096"></a>00096        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a64b4ff71bba0e9eefb51373a20949faa">AreNodesValid</a>() <span class="keyword">const</span>;
+<a name="l00097"></a>00097        <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a29dd942ce48b07fef3324890b064e3b6">GetNodes</a>() <span class="keyword">const</span>;
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ac1967691aaa525b3631d53aa0dcce559">EnsureValidNodes</a>() <span class="keyword">const</span>;
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a05311ddadc6d42b2a2776c88ccf04232">IsTickerTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a1a739aa721cf868b8ee5e59d38c125d4">IsFigureTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a4052b66ece9a7b02aa09b064acc99766">DrawTickers</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00104"></a>00104        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae6bb0e6e9ad958b9cfede62712332157">DrawFigure</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#af039343dbb1fbb9f943066529e8ec442" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00110"></a>00110        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a63111d7234a70d3d569778cc95418a81">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
+<a name="l00111"></a>00111        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aee4107a84919e111fa5f016255c73014">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 <span class="keyword">private</span>:
+<a name="l00114"></a>00114        <span class="keywordtype">bool</span> m_isEditableRotation;
+<a name="l00115"></a>00115        <span class="keywordtype">bool</span> m_isEditableWidth;
+<a name="l00116"></a>00116        <span class="keywordtype">bool</span> m_isEditableHeight;
+<a name="l00117"></a>00117        <span class="keywordtype">bool</span> m_isEditableAngle;
+<a name="l00118"></a>00118        <span class="keywordtype">bool</span> m_isProportionalScaled;
+<a name="l00119"></a>00119        <span class="keywordtype">bool</span> m_areAxesEqual;
+<a name="l00120"></a>00120        <span class="keywordtype">bool</span> m_areAxesOrthogonal;
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122        <span class="keyword">mutable</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_nodes[<a class="code" href="classiview_1_1_c_parallelogram_shape.html#a3035d73450b5bdc6195a0e33021ad450a38803cd4831c820ce99a4d476f6b1c70">EN_LAST</a> + 1];
+<a name="l00123"></a>00123        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_areNodesValid;
+<a name="l00124"></a>00124 };
 <a name="l00125"></a>00125 
-<a name="l00126"></a>00126 <span class="comment">// inline methods</span>
-<a name="l00127"></a>00127 
-<a name="l00128"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a15bb9a7f4b989b9990943fb78cab5e46">00128</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a15bb9a7f4b989b9990943fb78cab5e46" title="Check, if rotation is editable.">CParallelogramShape::IsEditableRotation</a>()
-<a name="l00129"></a>00129 {
-<a name="l00130"></a>00130        <span class="keywordflow">return</span> m_isEditableRotation;
-<a name="l00131"></a>00131 }
-<a name="l00132"></a>00132 
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 <span class="comment">// inline methods</span>
+<a name="l00128"></a>00128 
+<a name="l00129"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a15bb9a7f4b989b9990943fb78cab5e46">00129</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a15bb9a7f4b989b9990943fb78cab5e46" title="Check, if rotation is editable.">CParallelogramShape::IsEditableRotation</a>()
+<a name="l00130"></a>00130 {
+<a name="l00131"></a>00131        <span class="keywordflow">return</span> m_isEditableRotation;
+<a name="l00132"></a>00132 }
 <a name="l00133"></a>00133 
-<a name="l00134"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#af12562b7b7f453937462ff75e9ac0dc0">00134</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#af12562b7b7f453937462ff75e9ac0dc0">CParallelogramShape::SetEditableRotation</a>(<span class="keywordtype">bool</span> state)
-<a name="l00135"></a>00135 {
-<a name="l00136"></a>00136        m_isEditableRotation = state;
-<a name="l00137"></a>00137 }
-<a name="l00138"></a>00138 
+<a name="l00134"></a>00134 
+<a name="l00135"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#af12562b7b7f453937462ff75e9ac0dc0">00135</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#af12562b7b7f453937462ff75e9ac0dc0">CParallelogramShape::SetEditableRotation</a>(<span class="keywordtype">bool</span> state)
+<a name="l00136"></a>00136 {
+<a name="l00137"></a>00137        m_isEditableRotation = state;
+<a name="l00138"></a>00138 }
 <a name="l00139"></a>00139 
-<a name="l00140"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#abe30d12e007b65c6878c8830acf370c2">00140</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#abe30d12e007b65c6878c8830acf370c2" title="Check, if width is editable.">CParallelogramShape::IsEditableWidth</a>()
-<a name="l00141"></a>00141 {
-<a name="l00142"></a>00142        <span class="keywordflow">return</span> m_isEditableWidth;
-<a name="l00143"></a>00143 }
-<a name="l00144"></a>00144 
+<a name="l00140"></a>00140 
+<a name="l00141"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#abe30d12e007b65c6878c8830acf370c2">00141</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#abe30d12e007b65c6878c8830acf370c2" title="Check, if width is editable.">CParallelogramShape::IsEditableWidth</a>()
+<a name="l00142"></a>00142 {
+<a name="l00143"></a>00143        <span class="keywordflow">return</span> m_isEditableWidth;
+<a name="l00144"></a>00144 }
 <a name="l00145"></a>00145 
-<a name="l00146"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a11eda8d60e715308613f152c8fae32f7">00146</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a11eda8d60e715308613f152c8fae32f7">CParallelogramShape::SetEditableWidth</a>(<span class="keywordtype">bool</span> state)
-<a name="l00147"></a>00147 {
-<a name="l00148"></a>00148        m_isEditableWidth = state;
-<a name="l00149"></a>00149 }
-<a name="l00150"></a>00150 
+<a name="l00146"></a>00146 
+<a name="l00147"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a11eda8d60e715308613f152c8fae32f7">00147</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a11eda8d60e715308613f152c8fae32f7">CParallelogramShape::SetEditableWidth</a>(<span class="keywordtype">bool</span> state)
+<a name="l00148"></a>00148 {
+<a name="l00149"></a>00149        m_isEditableWidth = state;
+<a name="l00150"></a>00150 }
 <a name="l00151"></a>00151 
-<a name="l00152"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae9dec41b9eccfce9c417a0f208b2dea2">00152</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae9dec41b9eccfce9c417a0f208b2dea2" title="Check, if size is editable.">CParallelogramShape::IsEditableHeight</a>()
-<a name="l00153"></a>00153 {
-<a name="l00154"></a>00154        <span class="keywordflow">return</span> m_isEditableHeight;
-<a name="l00155"></a>00155 }
-<a name="l00156"></a>00156 
+<a name="l00152"></a>00152 
+<a name="l00153"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae9dec41b9eccfce9c417a0f208b2dea2">00153</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae9dec41b9eccfce9c417a0f208b2dea2" title="Check, if size is editable.">CParallelogramShape::IsEditableHeight</a>()
+<a name="l00154"></a>00154 {
+<a name="l00155"></a>00155        <span class="keywordflow">return</span> m_isEditableHeight;
+<a name="l00156"></a>00156 }
 <a name="l00157"></a>00157 
-<a name="l00158"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#aa81b776c6046b2d334cffc0c8124be72">00158</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aa81b776c6046b2d334cffc0c8124be72">CParallelogramShape::SetEditableHeight</a>(<span class="keywordtype">bool</span> state)
-<a name="l00159"></a>00159 {
-<a name="l00160"></a>00160        m_isEditableHeight = state;
-<a name="l00161"></a>00161 }
-<a name="l00162"></a>00162 
+<a name="l00158"></a>00158 
+<a name="l00159"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#aa81b776c6046b2d334cffc0c8124be72">00159</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#aa81b776c6046b2d334cffc0c8124be72">CParallelogramShape::SetEditableHeight</a>(<span class="keywordtype">bool</span> state)
+<a name="l00160"></a>00160 {
+<a name="l00161"></a>00161        m_isEditableHeight = state;
+<a name="l00162"></a>00162 }
 <a name="l00163"></a>00163 
-<a name="l00164"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae8c8e21e3e4cc477808ae1d9eec63193">00164</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae8c8e21e3e4cc477808ae1d9eec63193" title="Check, if internal angle is editable.">CParallelogramShape::IsEditableAngle</a>()
-<a name="l00165"></a>00165 {
-<a name="l00166"></a>00166        <span class="keywordflow">return</span> m_isEditableAngle;
-<a name="l00167"></a>00167 }
-<a name="l00168"></a>00168 
+<a name="l00164"></a>00164 
+<a name="l00165"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae8c8e21e3e4cc477808ae1d9eec63193">00165</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ae8c8e21e3e4cc477808ae1d9eec63193" title="Check, if internal angle is editable.">CParallelogramShape::IsEditableAngle</a>()
+<a name="l00166"></a>00166 {
+<a name="l00167"></a>00167        <span class="keywordflow">return</span> m_isEditableAngle;
+<a name="l00168"></a>00168 }
 <a name="l00169"></a>00169 
-<a name="l00170"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a63a1897eca41dc7035ccfa4303269b21">00170</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a63a1897eca41dc7035ccfa4303269b21">CParallelogramShape::SetEditableAngle</a>(<span class="keywordtype">bool</span> state)
-<a name="l00171"></a>00171 {
-<a name="l00172"></a>00172        m_isEditableAngle = state;
-<a name="l00173"></a>00173 }
-<a name="l00174"></a>00174 
+<a name="l00170"></a>00170 
+<a name="l00171"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a63a1897eca41dc7035ccfa4303269b21">00171</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a63a1897eca41dc7035ccfa4303269b21">CParallelogramShape::SetEditableAngle</a>(<span class="keywordtype">bool</span> state)
+<a name="l00172"></a>00172 {
+<a name="l00173"></a>00173        m_isEditableAngle = state;
+<a name="l00174"></a>00174 }
 <a name="l00175"></a>00175 
-<a name="l00176"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#ad9b77aad57e6dd368221f6adfd847b2f">00176</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ad9b77aad57e6dd368221f6adfd847b2f" title="Check, if both axis will be scaled proportional.">CParallelogramShape::IsProportionalScaled</a>()<span class="keyword"> const</span>
-<a name="l00177"></a>00177 <span class="keyword"></span>{
-<a name="l00178"></a>00178        <span class="keywordflow">return</span> m_isProportionalScaled;
-<a name="l00179"></a>00179 }
-<a name="l00180"></a>00180 
+<a name="l00176"></a>00176 
+<a name="l00177"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#ad9b77aad57e6dd368221f6adfd847b2f">00177</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#ad9b77aad57e6dd368221f6adfd847b2f" title="Check, if both axis will be scaled proportional.">CParallelogramShape::IsProportionalScaled</a>()<span class="keyword"> const</span>
+<a name="l00178"></a>00178 <span class="keyword"></span>{
+<a name="l00179"></a>00179        <span class="keywordflow">return</span> m_isProportionalScaled;
+<a name="l00180"></a>00180 }
 <a name="l00181"></a>00181 
-<a name="l00182"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a41529b5f5b43e74323f572859d1249bc">00182</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a41529b5f5b43e74323f572859d1249bc">CParallelogramShape::SetProportionalScaled</a>(<span class="keywordtype">bool</span> state)
-<a name="l00183"></a>00183 {
-<a name="l00184"></a>00184        m_isProportionalScaled = state;
-<a name="l00185"></a>00185 }
-<a name="l00186"></a>00186 
+<a name="l00182"></a>00182 
+<a name="l00183"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a41529b5f5b43e74323f572859d1249bc">00183</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a41529b5f5b43e74323f572859d1249bc">CParallelogramShape::SetProportionalScaled</a>(<span class="keywordtype">bool</span> state)
+<a name="l00184"></a>00184 {
+<a name="l00185"></a>00185        m_isProportionalScaled = state;
+<a name="l00186"></a>00186 }
 <a name="l00187"></a>00187 
-<a name="l00188"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a6e9911136491311b4ed582b46b0f492d">00188</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a6e9911136491311b4ed582b46b0f492d" title="Check, if it is forced to keep length of both axes equal.">CParallelogramShape::AreAxesEqual</a>()<span class="keyword"> const</span>
-<a name="l00189"></a>00189 <span class="keyword"></span>{
-<a name="l00190"></a>00190        <span class="keywordflow">return</span> m_areAxesEqual;
-<a name="l00191"></a>00191 }
-<a name="l00192"></a>00192 
+<a name="l00188"></a>00188 
+<a name="l00189"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a6e9911136491311b4ed582b46b0f492d">00189</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a6e9911136491311b4ed582b46b0f492d" title="Check, if it is forced to keep length of both axes equal.">CParallelogramShape::AreAxesEqual</a>()<span class="keyword"> const</span>
+<a name="l00190"></a>00190 <span class="keyword"></span>{
+<a name="l00191"></a>00191        <span class="keywordflow">return</span> m_areAxesEqual;
+<a name="l00192"></a>00192 }
 <a name="l00193"></a>00193 
-<a name="l00194"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a9e23e9e21a66baa4c8de8ee1b960126f">00194</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a9e23e9e21a66baa4c8de8ee1b960126f">CParallelogramShape::SetAxesEqual</a>(<span class="keywordtype">bool</span> state)
-<a name="l00195"></a>00195 {
-<a name="l00196"></a>00196        m_areAxesEqual = state;
-<a name="l00197"></a>00197 }
-<a name="l00198"></a>00198 
+<a name="l00194"></a>00194 
+<a name="l00195"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a9e23e9e21a66baa4c8de8ee1b960126f">00195</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a9e23e9e21a66baa4c8de8ee1b960126f">CParallelogramShape::SetAxesEqual</a>(<span class="keywordtype">bool</span> state)
+<a name="l00196"></a>00196 {
+<a name="l00197"></a>00197        m_areAxesEqual = state;
+<a name="l00198"></a>00198 }
 <a name="l00199"></a>00199 
-<a name="l00200"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a5194a0b7fa8d8aab6e677c0e562a9db6">00200</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a5194a0b7fa8d8aab6e677c0e562a9db6" title="Check, if it is forced to keep both axes orthogonal.">CParallelogramShape::AreAxesOrthogonal</a>()<span class="keyword"> const</span>
-<a name="l00201"></a>00201 <span class="keyword"></span>{
-<a name="l00202"></a>00202        <span class="keywordflow">return</span> m_areAxesOrthogonal;
-<a name="l00203"></a>00203 }
-<a name="l00204"></a>00204 
+<a name="l00200"></a>00200 
+<a name="l00201"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a5194a0b7fa8d8aab6e677c0e562a9db6">00201</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a5194a0b7fa8d8aab6e677c0e562a9db6" title="Check, if it is forced to keep both axes orthogonal.">CParallelogramShape::AreAxesOrthogonal</a>()<span class="keyword"> const</span>
+<a name="l00202"></a>00202 <span class="keyword"></span>{
+<a name="l00203"></a>00203        <span class="keywordflow">return</span> m_areAxesOrthogonal;
+<a name="l00204"></a>00204 }
 <a name="l00205"></a>00205 
-<a name="l00206"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8167ef4b696d73b953e611e0bd1722bc">00206</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8167ef4b696d73b953e611e0bd1722bc">CParallelogramShape::SetAxesOrthogonal</a>(<span class="keywordtype">bool</span> state)
-<a name="l00207"></a>00207 {
-<a name="l00208"></a>00208        m_areAxesOrthogonal = state;
-<a name="l00209"></a>00209 }
-<a name="l00210"></a>00210 
+<a name="l00206"></a>00206 
+<a name="l00207"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8167ef4b696d73b953e611e0bd1722bc">00207</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8167ef4b696d73b953e611e0bd1722bc">CParallelogramShape::SetAxesOrthogonal</a>(<span class="keywordtype">bool</span> state)
+<a name="l00208"></a>00208 {
+<a name="l00209"></a>00209        m_areAxesOrthogonal = state;
+<a name="l00210"></a>00210 }
 <a name="l00211"></a>00211 
-<a name="l00212"></a>00212 <span class="comment">// protected methods</span>
-<a name="l00213"></a>00213 
-<a name="l00214"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a64b4ff71bba0e9eefb51373a20949faa">00214</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a64b4ff71bba0e9eefb51373a20949faa">CParallelogramShape::AreNodesValid</a>()<span class="keyword"> const</span>
-<a name="l00215"></a>00215 <span class="keyword"></span>{
-<a name="l00216"></a>00216        <span class="keywordflow">return</span> m_areNodesValid;
-<a name="l00217"></a>00217 }
-<a name="l00218"></a>00218 
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213 <span class="comment">// protected methods</span>
+<a name="l00214"></a>00214 
+<a name="l00215"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a64b4ff71bba0e9eefb51373a20949faa">00215</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a64b4ff71bba0e9eefb51373a20949faa">CParallelogramShape::AreNodesValid</a>()<span class="keyword"> const</span>
+<a name="l00216"></a>00216 <span class="keyword"></span>{
+<a name="l00217"></a>00217        <span class="keywordflow">return</span> m_areNodesValid;
+<a name="l00218"></a>00218 }
 <a name="l00219"></a>00219 
-<a name="l00220"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8cf2680a3dd8f78b503c651fae8b80d6">00220</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>* <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a8cf2680a3dd8f78b503c651fae8b80d6">CParallelogramShape::GetNodes</a>()<span class="keyword"> const</span>
-<a name="l00221"></a>00221 <span class="keyword"></span>{
-<a name="l00222"></a>00222        <span class="keywordflow">return</span> m_nodes;
-<a name="l00223"></a>00223 }
-<a name="l00224"></a>00224 
+<a name="l00220"></a>00220 
+<a name="l00221"></a><a class="code" href="classiview_1_1_c_parallelogram_shape.html#a29dd942ce48b07fef3324890b064e3b6">00221</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>* <a class="code" href="classiview_1_1_c_parallelogram_shape.html#a29dd942ce48b07fef3324890b064e3b6">CParallelogramShape::GetNodes</a>()<span class="keyword"> const</span>
+<a name="l00222"></a>00222 <span class="keyword"></span>{
+<a name="l00223"></a>00223        <span class="keywordflow">return</span> m_nodes;
+<a name="l00224"></a>00224 }
 <a name="l00225"></a>00225 
-<a name="l00226"></a>00226 } <span class="comment">// namespace iview</span>
-<a name="l00227"></a>00227 
+<a name="l00226"></a>00226 
+<a name="l00227"></a>00227 } <span class="comment">// namespace iview</span>
 <a name="l00228"></a>00228 
-<a name="l00229"></a>00229 <span class="preprocessor">#endif // !iview_CParallelogramShape_included</span>
-<a name="l00230"></a>00230 <span class="preprocessor"></span>
-<a name="l00231"></a>00231 
+<a name="l00229"></a>00229 
+<a name="l00230"></a>00230 <span class="preprocessor">#endif // !iview_CParallelogramShape_included</span>
+<a name="l00231"></a>00231 <span class="preprocessor"></span>
+<a name="l00232"></a>00232 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

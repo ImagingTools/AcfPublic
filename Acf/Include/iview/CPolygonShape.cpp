@@ -60,7 +60,6 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 	if (polygonPtr != NULL){
 		if (downFlag){
 			const IColorSchema& colorSchema = GetColorSchema();
-			const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 			int nodesCount = polygonPtr->GetNodesCount();
 			int editMode = GetEditMode();
@@ -78,10 +77,10 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& cp = polygonPtr->GetNode(i);
-						istd::CIndex2d sp = transform.GetScreenPosition(cp);
+						istd::CIndex2d sp = GetScreenPosition(cp).ToIndex2d();
 
 						if (tickerBox.IsInside(sp - position)){
-							m_referencePosition = cp - transform.GetClientPosition(position);
+							m_referencePosition = cp - GetLogPosition(position);
 							m_referenceIndex = i;
 
 							BeginModelChanges();
@@ -96,7 +95,7 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 				{
 					i2d::CVector2d cpLast;
 					cpLast = GetSegmentMiddle(nodesCount - 1);
-					istd::CIndex2d spLast = transform.GetScreenPosition(cpLast);
+					istd::CIndex2d spLast = GetScreenPosition(cpLast).ToIndex2d();
 
 					const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_INSERT);
 
@@ -106,7 +105,7 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 						istd::CChangeNotifier notifier(polygonPtr);
 
 						if (polygonPtr->InsertNode(cpLast)){
-							m_referencePosition = cpLast - transform.GetClientPosition(position);
+							m_referencePosition = cpLast - GetLogPosition(position);
 							m_referenceIndex = nodesCount;
 
 							UpdateModelChanges();
@@ -115,14 +114,14 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 					}
 					for (int i = nodesCount - 2; i >= 0; --i){
 						i2d::CVector2d middle = GetSegmentMiddle(i);
-						istd::CIndex2d sp = transform.GetScreenPosition(middle);
+						istd::CIndex2d sp = GetScreenPosition(middle).ToIndex2d();
 						if (tickerBox.IsInside(position - sp)){
 							BeginModelChanges();
 
 							istd::CChangeNotifier notifier(polygonPtr);
 
 							if (polygonPtr->InsertNode(i + 1, middle)){
-								m_referencePosition = middle - transform.GetClientPosition(position);
+								m_referencePosition = middle - GetLogPosition(position);
 								m_referenceIndex = i + 1;
 
 								UpdateModelChanges();
@@ -139,7 +138,7 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 
 					for (int i = nodesCount - 1; i >= 0; --i){
 						const i2d::CVector2d& cp = polygonPtr->GetNode(i);
-						istd::CIndex2d sp = transform.GetScreenPosition(cp);
+						istd::CIndex2d sp = GetScreenPosition(cp).ToIndex2d();
 						if (tickerBox.IsInside(position - sp)){
 							BeginModelChanges();
 
@@ -173,16 +172,14 @@ bool CPolygonShape::OnMouseMove(istd::CIndex2d position)
 			istd::TChangeNotifier<i2d::CPolygon> polygonPtr(dynamic_cast<i2d::CPolygon*>(modelPtr));
 			Q_ASSERT(polygonPtr.IsValid());
 
-			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-			polygonPtr->SetNode(m_referenceIndex, m_referencePosition + transform.GetClientPosition(position));
+			polygonPtr->SetNode(m_referenceIndex, m_referencePosition + GetLogPosition(position));
 
 			UpdateModelChanges();
 
 			return true;
 		}
 		else if (editMode == ISelectable::EM_NONE){
-			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-			i2d::CVector2d cp = transform.GetClientPosition(position);
+			i2d::CVector2d cp = GetLogPosition(position);
 
 			EnsureValidNodes();
 			i2d::CAffine2d moveTransform = CalcMoveTransform(cp, m_castTransform);
@@ -214,7 +211,6 @@ void CPolygonShape::Draw(QPainter& drawContext) const
 	if (IsDisplayConnected() && (polygonPtr != NULL)){
 		int nodesCount = polygonPtr->GetNodesCount();
 		if (nodesCount > 0){
-			const iview::CScreenTransform transform = GetLogToScreenTransform();
 			const IColorSchema& colorSchema = GetColorSchema();
 
 			istd::CIndex2d sp;
@@ -232,7 +228,7 @@ void CPolygonShape::Draw(QPainter& drawContext) const
 			}
 			else{
 				if (m_isFirstVisible && (nodesCount > 0)){
-					sp = transform.GetScreenPosition(polygonPtr->GetNode(0));
+					sp = GetScreenPosition(polygonPtr->GetNode(0)).ToIndex2d();
 					colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_INACTIVE);
 				}
 			}
@@ -261,7 +257,6 @@ ITouchable::TouchState CPolygonShape::IsTouched(istd::CIndex2d position) const
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (IsDisplayConnected() && (polygonPtr != NULL)){
 		const IColorSchema& colorSchema = GetColorSchema();
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 		int nodesCount = polygonPtr->GetNodesCount();
 
@@ -286,7 +281,7 @@ ITouchable::TouchState CPolygonShape::IsTouched(istd::CIndex2d position) const
 			{
 				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_MOVE: IColorSchema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
-					istd::CIndex2d sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
+					istd::CIndex2d sp = GetScreenPosition(polygonPtr->GetNode(i)).ToIndex2d();
 					if (tickerBox.IsInside(position - sp)){
 						return TS_TICKER;
 					}
@@ -298,7 +293,7 @@ ITouchable::TouchState CPolygonShape::IsTouched(istd::CIndex2d position) const
 			{
 				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_DELETE: IColorSchema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
-					istd::CIndex2d sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
+					istd::CIndex2d sp = GetScreenPosition(polygonPtr->GetNode(i)).ToIndex2d();
 					if (tickerBox.IsInside(position - sp)){
 						return TS_TICKER;
 					}
@@ -310,7 +305,7 @@ ITouchable::TouchState CPolygonShape::IsTouched(istd::CIndex2d position) const
 			{
 				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_INSERT: IColorSchema::TT_INACTIVE);
 				for (int i = 0; i < nodesCount; i++){
-					istd::CIndex2d sp = transform.GetScreenPosition(GetSegmentMiddle(i));
+					istd::CIndex2d sp = GetScreenPosition(GetSegmentMiddle(i)).ToIndex2d();
 					if (tickerBox.IsInside(position - sp)){
 						return TS_TICKER;
 					}
@@ -390,14 +385,12 @@ void CPolygonShape::DrawCurve(QPainter& drawContext) const
 			drawContext.setPen(colorSchema.GetPen(IColorSchema::SP_NORMAL));
 		}
 
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-
 		int nodesCount = polygon.GetNodesCount();
 		if (nodesCount > 0){
-			QPoint point1 = iqt::GetQPoint(transform.GetScreenPosition(polygon.GetNode(nodesCount - 1)));
+			QPointF point1 = GetScreenPosition(polygon.GetNode(nodesCount - 1));
 
 			for (int i = 0; i < nodesCount; i++){
-				QPoint point2 = iqt::GetQPoint(transform.GetScreenPosition(polygon.GetNode(i)));
+				QPointF point2 = GetScreenPosition(polygon.GetNode(i));
 
 				drawContext.drawLine(point1, point2);
 
@@ -416,7 +409,6 @@ void CPolygonShape::DrawArea(QPainter& drawContext) const
 
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (polygonPtr != NULL){
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const IColorSchema& colorSchema = GetColorSchema();
 
 		int nodesCount = polygonPtr->GetNodesCount();
@@ -427,7 +419,7 @@ void CPolygonShape::DrawArea(QPainter& drawContext) const
 			}
 
 			for (int i = 0; i < m_screenPoints.size(); i++){
-				m_screenPoints[i] = iqt::GetQPoint(transform.GetScreenPosition(polygonPtr->GetNode(i)));
+				m_screenPoints[i] = GetScreenPosition(polygonPtr->GetNode(i));
 			}
 
 			if (IsSelected()){
@@ -453,7 +445,6 @@ void CPolygonShape::DrawSelectionElements(QPainter& drawContext) const
 
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (polygonPtr != NULL){
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const IColorSchema& colorSchema = GetColorSchema();
 
 		int nodesCount = polygonPtr->GetNodesCount();
@@ -470,7 +461,7 @@ void CPolygonShape::DrawSelectionElements(QPainter& drawContext) const
 
 		case ISelectable::EM_MOVE:
 			for (i = 0; i < nodesCount; i++){
-				sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
+				sp = GetScreenPosition(polygonPtr->GetNode(i)).ToIndex2d();
 
 				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_MOVE);
 			}
@@ -479,7 +470,7 @@ void CPolygonShape::DrawSelectionElements(QPainter& drawContext) const
 		case ISelectable::EM_REMOVE:
 			if (nodesCount > 2){
 				for (i = 0; i < nodesCount; i++){
-					sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
+					sp = GetScreenPosition(polygonPtr->GetNode(i)).ToIndex2d();
 
 					colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_DELETE);
 				}
@@ -488,7 +479,7 @@ void CPolygonShape::DrawSelectionElements(QPainter& drawContext) const
 
 		case ISelectable::EM_ADD:
 			for (i = 0; i < nodesCount; i++){
-				sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
+				sp = GetScreenPosition(polygonPtr->GetNode(i)).ToIndex2d();
 
 				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_SELECTED_INACTIVE);
 			}
@@ -497,7 +488,7 @@ void CPolygonShape::DrawSelectionElements(QPainter& drawContext) const
 
 		if ((nodesCount > 0) && (editMode == ISelectable::EM_ADD)){
 			for (int i = 0; i < nodesCount; i++){
-				sp = transform.GetScreenPosition(GetSegmentMiddle(i));
+				sp = GetScreenPosition(GetSegmentMiddle(i)).ToIndex2d();
 
 				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_INSERT);
 			}
@@ -518,16 +509,15 @@ bool CPolygonShape::IsCurveTouched(istd::CIndex2d position) const
 		}
 
 		const IColorSchema& colorSchema = GetColorSchema();
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		double logicalLineWidth = colorSchema.GetLogicalLineWidth();
 
 		i2d::CLine2d segmentLine;
-		segmentLine.SetPoint2(transform.GetScreenPosition(polygonPtr->GetNode(nodesCount - 1)));
+		segmentLine.SetPoint2(GetScreenPosition(polygonPtr->GetNode(nodesCount - 1)));
 
 		i2d::CVector2d screenPosition(position);
 
 		for (int i = 0; i < nodesCount; i++){
-			segmentLine.PushEndPoint(transform.GetScreenPosition(polygonPtr->GetNode(i)));
+			segmentLine.PushEndPoint(GetScreenPosition(polygonPtr->GetNode(i)));
 
 			if (segmentLine.GetDistance(screenPosition) < logicalLineWidth){
 				return true;
@@ -553,7 +543,6 @@ void CPolygonShape::EnsureValidNodes() const
 			i2d::CVector2d axisY = axisX.GetOrthogonal();
 
 			int nodesCount = polygon.GetNodesCount();
-			const iview::CScreenTransform& logToViewTransform = GetLogToScreenTransform();
 			if (nodesCount > 0){
 				const i2d::CVector2d& firstNode = polygon.GetNode(0);
 
@@ -583,9 +572,8 @@ void CPolygonShape::EnsureValidNodes() const
 				m_castTransform = i2d::CAffine2d(
 								i2d::CMatrix2d(axisX * delta.GetX(), axisY * delta.GetY()),
 								axisX * minPosition.GetX() + axisY * minPosition.GetY());
-				i2d::CAffine2d composedTransform = logToViewTransform.GetApply(m_castTransform);
 
-				CalcNodes(composedTransform);
+				CalcNodes(m_castTransform);
 
 				return;
 			}
@@ -643,16 +631,15 @@ i2d::CRect CPolygonShape::CalcBoundingBox() const
 
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(GetModelPtr());
 	if (polygonPtr != NULL){
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 		const IColorSchema& colorSchema = GetColorSchema();
 
 		int nodesCount = polygonPtr->GetNodesCount();
 
 		if (nodesCount > 0){
-			istd::CIndex2d sp = transform.GetScreenPosition(polygonPtr->GetNode(0));
+			istd::CIndex2d sp = GetScreenPosition(polygonPtr->GetNode(0)).ToIndex2d();
 			i2d::CRect boundingBox(sp, sp);
 			for (int i = 1; i < nodesCount; i++){
-				sp = transform.GetScreenPosition(polygonPtr->GetNode(i));
+				sp = GetScreenPosition(polygonPtr->GetNode(i)).ToIndex2d();
 				boundingBox.Union(sp);
 			}
 
@@ -676,7 +663,7 @@ i2d::CRect CPolygonShape::CalcBoundingBox() const
 					break;
 
 				default:
-					return BaseClass::CalcBoundingBox();
+					return boundingBox.GetUnion(BaseClass::CalcBoundingBox());
 				}
 			}
 			else{

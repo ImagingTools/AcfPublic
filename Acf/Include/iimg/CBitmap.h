@@ -43,8 +43,7 @@ namespace iimg
 class CBitmap:
 			public iimg::CBitmapBase,
 			virtual public IQImageProvider,
-			virtual public ibase::IObjectSnap,
-			virtual public i2d::ICalibrationProvider
+			virtual public ibase::IObjectSnap
 {
 public:
 	typedef iimg::CBitmapBase BaseClass;
@@ -64,9 +63,6 @@ public:
 				const istd::IChangeable& data,
 				iimg::IBitmap& objectSnap,
 				const istd::CIndex2d& size) const;
-
-	// reimplemented (i2d::ICalibrationProvider)
-	virtual const i2d::ICalibration2d* GetCalibration() const;
 
 	// reimplemented (iimg::IBitmap)
 	virtual bool IsFormatSupported(PixelFormat pixelFormat) const;
@@ -96,13 +92,8 @@ protected:
 	bool SetQImage(const QImage& image);
 
 private:
-	void EnsureLogTransformCalculated() const;
-
-private:
 	istd::TOptDelPtr<quint8, true> m_externalBuffer;
 	QImage m_image;
-
-	mutable i2d::CAffineTransformation2d m_logTransform;
 };
 
 

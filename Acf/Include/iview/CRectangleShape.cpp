@@ -65,10 +65,9 @@ ITouchable::TouchState CRectangleShape::IsTouched(istd::CIndex2d position) const
 	const i2d::CRectangle* rectanglePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
 	if (rectanglePtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
 
 		if (!m_arePointsValid){
-			CalcPoints(*rectanglePtr, transform);
+			CalcPoints(*rectanglePtr);
 		}
 
 		if (IsSelected()){
@@ -82,7 +81,7 @@ ITouchable::TouchState CRectangleShape::IsTouched(istd::CIndex2d position) const
 			}
 		}
 
-		i2d::CVector2d cp = transform.GetClientPosition(position);
+		i2d::CVector2d cp = GetLogPosition(position);
 
 		double proportions = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
 
@@ -124,9 +123,7 @@ void CRectangleShape::Draw(QPainter& drawContext) const
 	if (framePtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 		if (!m_arePointsValid){
-			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-
-			CalcPoints(*framePtr, transform);
+			CalcPoints(*framePtr);
 		}
 
 		if (IsSelected()){
@@ -175,10 +172,8 @@ bool CRectangleShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton /*b
 	if (framePtr != NULL){
 		if (downFlag){
 			const IColorSchema& colorSchema = GetColorSchema();
-			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-
 			if (!m_arePointsValid){
-				CalcPoints(*framePtr, transform);
+				CalcPoints(*framePtr);
 			}
 
 			const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_MOVE);
@@ -200,7 +195,7 @@ bool CRectangleShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton /*b
 
 				return false;
 			}
-			m_referencePosition = transform.GetClientPosition(position);
+			m_referencePosition = GetLogPosition(position);
 
 			BeginModelChanges();
 
@@ -221,9 +216,7 @@ bool CRectangleShape::OnMouseMove(istd::CIndex2d position)
 		i2d::CRectangle& modelArea = *dynamic_cast<i2d::CRectangle*>(modelPtr);
 		Q_ASSERT(&modelArea != NULL);
 
-		const iview::CScreenTransform& transform = GetLogToScreenTransform();
-
-		i2d::CVector2d cp = transform.GetClientPosition(position);
+		i2d::CVector2d cp = GetLogPosition(position);
 
 		i2d::CVector2d newPos;
 		i2d::CVector2d deltaTranslate = cp - m_referencePosition;
@@ -296,13 +289,12 @@ bool CRectangleShape::OnMouseMove(istd::CIndex2d position)
 
 // protected methods
 
-void CRectangleShape::CalcPoints(const i2d::CRectangle& rectangle, const iview::CScreenTransform& transform) const
+void CRectangleShape::CalcPoints(const i2d::CRectangle& rectangle) const
 {
-
-	m_corners[0][0] = transform.GetScreenPosition(rectangle.GetLeftTop());
-	m_corners[0][1] = transform.GetScreenPosition(rectangle.GetRightTop());
-	m_corners[1][0] = transform.GetScreenPosition(rectangle.GetLeftBottom());
-	m_corners[1][1] = transform.GetScreenPosition(rectangle.GetRightBottom());
+	m_corners[0][0] = GetScreenPosition(rectangle.GetLeftTop()).ToIndex2d();
+	m_corners[0][1] = GetScreenPosition(rectangle.GetRightTop()).ToIndex2d();
+	m_corners[1][0] = GetScreenPosition(rectangle.GetLeftBottom()).ToIndex2d();
+	m_corners[1][1] = GetScreenPosition(rectangle.GetRightBottom()).ToIndex2d();
 
 	m_arePointsValid = true;
 }
@@ -343,9 +335,7 @@ i2d::CRect CRectangleShape::CalcBoundingBox() const
 	if (framePtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 		if (!m_arePointsValid){
-			const iview::CScreenTransform& transform = GetLogToScreenTransform();
-
-			CalcPoints(*framePtr, transform);
+			CalcPoints(*framePtr);
 		}
 
 		i2d::CRect boundingBox(m_corners[0][0], m_corners[0][0]);

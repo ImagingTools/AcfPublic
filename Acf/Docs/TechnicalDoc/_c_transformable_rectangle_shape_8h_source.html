@@ -113,121 +113,114 @@
 <a name="l00097"></a>00097        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a51a4c2722cec9182f0d346c193c3b5b5">CalcNodes</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; parallTransform) <span class="keyword">const</span>;
 <a name="l00098"></a>00098        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#aee437324e34a2f38e4ea568dcc47aac0">ResetNodes</a>() <span class="keyword">const</span>;
 <a name="l00099"></a>00099        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a9216321cceea3cfe0d49f2b07d274b5f">AreNodesValid</a>() <span class="keyword">const</span>;
-<a name="l00100"></a>00100        <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>* <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#acb386856ff41b34dd8da7957f1be35fe">GetNodes</a>() <span class="keyword">const</span>;
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a485e9d8a5b144776db72b496ee445cbe">EnsureValidNodes</a>() <span class="keyword">const</span>;
-<a name="l00103"></a>00103        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ac41aa0b71472b2f6869bc9e41791e3d3">CalcMoveTransform</a>(<a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> position, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; transform);
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a7fdf097a6cde3b1604a74d58339a73ef">IsTickerTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a7398f264476da6bac5c47cb05e1ded8c">IsFigureTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a0df7a3d2e11758c6ab9bc85581df1689">DrawTickers</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00108"></a>00108        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a0a0fa784a9259988408b985f00625ebd">DrawFigure</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a39db38758ff024214d8749da27e6a820">IsParallTouched</a>(
-<a name="l00111"></a>00111                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; parallTransform,
-<a name="l00112"></a>00112                                    <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00113"></a>00113        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a97a0b35a38b3ef13817f94d565271079">CalcScaleTransform</a>(
-<a name="l00114"></a>00114                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center,
-<a name="l00115"></a>00115                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; isPos,
-<a name="l00116"></a>00116                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; shouldPos);
-<a name="l00117"></a>00117        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a25050e8d4892dba2e7ffc14e42879a2b">CalcSizeTransform</a>(
-<a name="l00118"></a>00118                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center,
-<a name="l00119"></a>00119                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; isPos,
-<a name="l00120"></a>00120                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; shouldPos);
-<a name="l00121"></a>00121        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#aae4a48a9a79c710d2ddc7af1c0dde8fa">CalcRotatedTransform</a>(
-<a name="l00122"></a>00122                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center,
-<a name="l00123"></a>00123                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; isPos,
-<a name="l00124"></a>00124                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; shouldPos);
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00127"></a>00127        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ad9a8aae68a801486d8df5bb7c71a4e1a">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
-<a name="l00128"></a>00128        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a61ff8ea30dcba073b521784a70c3aae1">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130        <span class="comment">// reimplemented (iview::CShapeBase)</span>
-<a name="l00131"></a>00131        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a0ac391750eda92fad36d4047ce0fe08a" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133 <span class="keyword">private</span>:
-<a name="l00134"></a>00134        <span class="keywordtype">bool</span> m_isEditableRotation;
-<a name="l00135"></a>00135        <span class="keywordtype">bool</span> m_isEditableWidth;
-<a name="l00136"></a>00136        <span class="keywordtype">bool</span> m_isEditableHeight;
-<a name="l00137"></a>00137        <span class="keywordtype">bool</span> m_isProportionalScaled;
-<a name="l00138"></a>00138 
-<a name="l00139"></a>00139        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_nodes[<a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a53bbf5fa067e762ff647224bb49f9d82afe4bddfaa3f791ff0f00ff90a0704719">EN_LAST</a> + 1];
-<a name="l00140"></a>00140        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_areNodesValid;
-<a name="l00141"></a>00141 };
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a485e9d8a5b144776db72b496ee445cbe">EnsureValidNodes</a>() <span class="keyword">const</span>;
+<a name="l00102"></a>00102        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ac41aa0b71472b2f6869bc9e41791e3d3">CalcMoveTransform</a>(<a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> position, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; transform);
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a7fdf097a6cde3b1604a74d58339a73ef">IsTickerTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a7398f264476da6bac5c47cb05e1ded8c">IsFigureTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a0df7a3d2e11758c6ab9bc85581df1689">DrawTickers</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00107"></a>00107        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a0a0fa784a9259988408b985f00625ebd">DrawFigure</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a39db38758ff024214d8749da27e6a820">IsParallTouched</a>(
+<a name="l00110"></a>00110                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a>&amp; parallTransform,
+<a name="l00111"></a>00111                                    <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00112"></a>00112        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a97a0b35a38b3ef13817f94d565271079">CalcScaleTransform</a>(
+<a name="l00113"></a>00113                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center,
+<a name="l00114"></a>00114                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; isPos,
+<a name="l00115"></a>00115                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; shouldPos);
+<a name="l00116"></a>00116        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a25050e8d4892dba2e7ffc14e42879a2b">CalcSizeTransform</a>(
+<a name="l00117"></a>00117                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center,
+<a name="l00118"></a>00118                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; isPos,
+<a name="l00119"></a>00119                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; shouldPos);
+<a name="l00120"></a>00120        <a class="code" href="classi2d_1_1_c_affine2d.html" title="This class defines an affine 2D transformation.">i2d::CAffine2d</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#aae4a48a9a79c710d2ddc7af1c0dde8fa">CalcRotatedTransform</a>(
+<a name="l00121"></a>00121                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center,
+<a name="l00122"></a>00122                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; isPos,
+<a name="l00123"></a>00123                                    <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; shouldPos);
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00126"></a>00126        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ad9a8aae68a801486d8df5bb7c71a4e1a">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
+<a name="l00127"></a>00127        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a61ff8ea30dcba073b521784a70c3aae1">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00130"></a>00130        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a0ac391750eda92fad36d4047ce0fe08a" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132 <span class="keyword">private</span>:
+<a name="l00133"></a>00133        <span class="keywordtype">bool</span> m_isEditableRotation;
+<a name="l00134"></a>00134        <span class="keywordtype">bool</span> m_isEditableWidth;
+<a name="l00135"></a>00135        <span class="keywordtype">bool</span> m_isEditableHeight;
+<a name="l00136"></a>00136        <span class="keywordtype">bool</span> m_isProportionalScaled;
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138        <span class="keyword">mutable</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> m_screenNodes[<a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a53bbf5fa067e762ff647224bb49f9d82afe4bddfaa3f791ff0f00ff90a0704719">EN_LAST</a> + 1];
+<a name="l00139"></a>00139        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_areNodesValid;
+<a name="l00140"></a>00140 };
+<a name="l00141"></a>00141 
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144 <span class="comment">// inline methods</span>
-<a name="l00145"></a>00145 
-<a name="l00146"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ad2c54d970bf2fdaab97e020106d6437e">00146</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ad2c54d970bf2fdaab97e020106d6437e" title="Check, if rotation is editable.">CTransformableRectangleShape::IsEditableRotation</a>()
-<a name="l00147"></a>00147 {
-<a name="l00148"></a>00148        <span class="keywordflow">return</span> m_isEditableRotation;
-<a name="l00149"></a>00149 }
+<a name="l00143"></a>00143 <span class="comment">// inline methods</span>
+<a name="l00144"></a>00144 
+<a name="l00145"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ad2c54d970bf2fdaab97e020106d6437e">00145</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ad2c54d970bf2fdaab97e020106d6437e" title="Check, if rotation is editable.">CTransformableRectangleShape::IsEditableRotation</a>()
+<a name="l00146"></a>00146 {
+<a name="l00147"></a>00147        <span class="keywordflow">return</span> m_isEditableRotation;
+<a name="l00148"></a>00148 }
+<a name="l00149"></a>00149 
 <a name="l00150"></a>00150 
-<a name="l00151"></a>00151 
-<a name="l00152"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ab20dda20e02b5cdd6b7b783e9834de4f">00152</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ab20dda20e02b5cdd6b7b783e9834de4f">CTransformableRectangleShape::SetEditableRotation</a>(<span class="keywordtype">bool</span> state)
-<a name="l00153"></a>00153 {
-<a name="l00154"></a>00154        m_isEditableRotation = state;
-<a name="l00155"></a>00155 }
+<a name="l00151"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ab20dda20e02b5cdd6b7b783e9834de4f">00151</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ab20dda20e02b5cdd6b7b783e9834de4f">CTransformableRectangleShape::SetEditableRotation</a>(<span class="keywordtype">bool</span> state)
+<a name="l00152"></a>00152 {
+<a name="l00153"></a>00153        m_isEditableRotation = state;
+<a name="l00154"></a>00154 }
+<a name="l00155"></a>00155 
 <a name="l00156"></a>00156 
-<a name="l00157"></a>00157 
-<a name="l00158"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ac871ce6d0c675ef509af61c824217dda">00158</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ac871ce6d0c675ef509af61c824217dda" title="Check, if width is editable.">CTransformableRectangleShape::IsEditableWidth</a>()
-<a name="l00159"></a>00159 {
-<a name="l00160"></a>00160        <span class="keywordflow">return</span> m_isEditableWidth;
-<a name="l00161"></a>00161 }
+<a name="l00157"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ac871ce6d0c675ef509af61c824217dda">00157</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#ac871ce6d0c675ef509af61c824217dda" title="Check, if width is editable.">CTransformableRectangleShape::IsEditableWidth</a>()
+<a name="l00158"></a>00158 {
+<a name="l00159"></a>00159        <span class="keywordflow">return</span> m_isEditableWidth;
+<a name="l00160"></a>00160 }
+<a name="l00161"></a>00161 
 <a name="l00162"></a>00162 
-<a name="l00163"></a>00163 
-<a name="l00164"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a415ec65f012d20c19971961807a39135">00164</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a415ec65f012d20c19971961807a39135">CTransformableRectangleShape::SetEditableWidth</a>(<span class="keywordtype">bool</span> state)
-<a name="l00165"></a>00165 {
-<a name="l00166"></a>00166        m_isEditableWidth = state;
-<a name="l00167"></a>00167 }
+<a name="l00163"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a415ec65f012d20c19971961807a39135">00163</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a415ec65f012d20c19971961807a39135">CTransformableRectangleShape::SetEditableWidth</a>(<span class="keywordtype">bool</span> state)
+<a name="l00164"></a>00164 {
+<a name="l00165"></a>00165        m_isEditableWidth = state;
+<a name="l00166"></a>00166 }
+<a name="l00167"></a>00167 
 <a name="l00168"></a>00168 
-<a name="l00169"></a>00169 
-<a name="l00170"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a48ae47756b54f85056c5c15ff2ff811f">00170</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a48ae47756b54f85056c5c15ff2ff811f" title="Check, if height is editable.">CTransformableRectangleShape::IsEditableHeight</a>()
-<a name="l00171"></a>00171 {
-<a name="l00172"></a>00172        <span class="keywordflow">return</span> m_isEditableHeight;
-<a name="l00173"></a>00173 }
+<a name="l00169"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a48ae47756b54f85056c5c15ff2ff811f">00169</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a48ae47756b54f85056c5c15ff2ff811f" title="Check, if height is editable.">CTransformableRectangleShape::IsEditableHeight</a>()
+<a name="l00170"></a>00170 {
+<a name="l00171"></a>00171        <span class="keywordflow">return</span> m_isEditableHeight;
+<a name="l00172"></a>00172 }
+<a name="l00173"></a>00173 
 <a name="l00174"></a>00174 
-<a name="l00175"></a>00175 
-<a name="l00176"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#aa15c8bea66ea3fb27c34cb88f8657a71">00176</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#aa15c8bea66ea3fb27c34cb88f8657a71">CTransformableRectangleShape::SetEditableHeight</a>(<span class="keywordtype">bool</span> state)
-<a name="l00177"></a>00177 {
-<a name="l00178"></a>00178        m_isEditableHeight = state;
-<a name="l00179"></a>00179 }
+<a name="l00175"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#aa15c8bea66ea3fb27c34cb88f8657a71">00175</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#aa15c8bea66ea3fb27c34cb88f8657a71">CTransformableRectangleShape::SetEditableHeight</a>(<span class="keywordtype">bool</span> state)
+<a name="l00176"></a>00176 {
+<a name="l00177"></a>00177        m_isEditableHeight = state;
+<a name="l00178"></a>00178 }
+<a name="l00179"></a>00179 
 <a name="l00180"></a>00180 
-<a name="l00181"></a>00181 
-<a name="l00182"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a8dd95c596d09407c5bda24b6b2824471">00182</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a8dd95c596d09407c5bda24b6b2824471" title="Check, if both axis will be scaled proportional.">CTransformableRectangleShape::IsProportionalScaled</a>()<span class="keyword"> const</span>
-<a name="l00183"></a>00183 <span class="keyword"></span>{
-<a name="l00184"></a>00184        <span class="keywordflow">return</span> m_isProportionalScaled;
-<a name="l00185"></a>00185 }
+<a name="l00181"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a8dd95c596d09407c5bda24b6b2824471">00181</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a8dd95c596d09407c5bda24b6b2824471" title="Check, if both axis will be scaled proportional.">CTransformableRectangleShape::IsProportionalScaled</a>()<span class="keyword"> const</span>
+<a name="l00182"></a>00182 <span class="keyword"></span>{
+<a name="l00183"></a>00183        <span class="keywordflow">return</span> m_isProportionalScaled;
+<a name="l00184"></a>00184 }
+<a name="l00185"></a>00185 
 <a name="l00186"></a>00186 
-<a name="l00187"></a>00187 
-<a name="l00188"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a7a71bc801dd49f8f0cf8e8242fe50864">00188</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a7a71bc801dd49f8f0cf8e8242fe50864">CTransformableRectangleShape::SetProportionalScaled</a>(<span class="keywordtype">bool</span> state)
-<a name="l00189"></a>00189 {
-<a name="l00190"></a>00190        m_isProportionalScaled = state;
-<a name="l00191"></a>00191 }
+<a name="l00187"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a7a71bc801dd49f8f0cf8e8242fe50864">00187</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a7a71bc801dd49f8f0cf8e8242fe50864">CTransformableRectangleShape::SetProportionalScaled</a>(<span class="keywordtype">bool</span> state)
+<a name="l00188"></a>00188 {
+<a name="l00189"></a>00189        m_isProportionalScaled = state;
+<a name="l00190"></a>00190 }
+<a name="l00191"></a>00191 
 <a name="l00192"></a>00192 
-<a name="l00193"></a>00193 
-<a name="l00194"></a>00194 <span class="comment">// protected methods</span>
-<a name="l00195"></a>00195 
-<a name="l00196"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a9216321cceea3cfe0d49f2b07d274b5f">00196</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a9216321cceea3cfe0d49f2b07d274b5f">CTransformableRectangleShape::AreNodesValid</a>()<span class="keyword"> const</span>
-<a name="l00197"></a>00197 <span class="keyword"></span>{
-<a name="l00198"></a>00198        <span class="keywordflow">return</span> m_areNodesValid;
-<a name="l00199"></a>00199 }
+<a name="l00193"></a>00193 <span class="comment">// protected methods</span>
+<a name="l00194"></a>00194 
+<a name="l00195"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a9216321cceea3cfe0d49f2b07d274b5f">00195</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#a9216321cceea3cfe0d49f2b07d274b5f">CTransformableRectangleShape::AreNodesValid</a>()<span class="keyword"> const</span>
+<a name="l00196"></a>00196 <span class="keyword"></span>{
+<a name="l00197"></a>00197        <span class="keywordflow">return</span> m_areNodesValid;
+<a name="l00198"></a>00198 }
+<a name="l00199"></a>00199 
 <a name="l00200"></a>00200 
-<a name="l00201"></a>00201 
-<a name="l00202"></a><a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#acb386856ff41b34dd8da7957f1be35fe">00202</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>* <a class="code" href="classiview_1_1_c_transformable_rectangle_shape.html#acb386856ff41b34dd8da7957f1be35fe">CTransformableRectangleShape::GetNodes</a>()<span class="keyword"> const</span>
-<a name="l00203"></a>00203 <span class="keyword"></span>{
-<a name="l00204"></a>00204        <span class="keywordflow">return</span> m_nodes;
-<a name="l00205"></a>00205 }
+<a name="l00201"></a>00201 } <span class="comment">// namespace iview</span>
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203 
+<a name="l00204"></a>00204 <span class="preprocessor">#endif // !iview_CInteractiveTransformableRectangle_included</span>
+<a name="l00205"></a>00205 <span class="preprocessor"></span>
 <a name="l00206"></a>00206 
 <a name="l00207"></a>00207 
-<a name="l00208"></a>00208 } <span class="comment">// namespace iview</span>
-<a name="l00209"></a>00209 
-<a name="l00210"></a>00210 
-<a name="l00211"></a>00211 <span class="preprocessor">#endif // !iview_CInteractiveTransformableRectangle_included</span>
-<a name="l00212"></a>00212 <span class="preprocessor"></span>
-<a name="l00213"></a>00213 
-<a name="l00214"></a>00214 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

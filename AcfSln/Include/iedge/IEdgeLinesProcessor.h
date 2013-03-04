@@ -28,7 +28,7 @@
 #include "iproc/IProcessor.h"
 
 // ACF-Solutions includes
-#include "iedge/CEdgeLine.h"
+#include "iedge/CEdgeLineContainer.h"
 
 
 namespace iedge
@@ -49,8 +49,8 @@ public:
 	*/
 	virtual bool DoLinesProcessing(
 				const iprm::IParamsSet* paramsPtr,
-				const CEdgeLine::Container& edgeLines,
-				CEdgeLine::Container& result) const = 0;
+				const CEdgeLineContainer& edgeLines,
+				CEdgeLineContainer& result) const = 0;
 };
 
 

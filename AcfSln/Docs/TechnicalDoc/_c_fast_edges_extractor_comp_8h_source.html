@@ -62,10 +62,10 @@
 <a name="l00036"></a>00036        I_END_COMPONENT;
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        <span class="comment">//     reimplemented (iedge::IEdgesExtractor)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_c_fast_edges_extractor_comp.html#aaa7f0066fe1284365eaa05ea846f5280">DoContourExtraction</a>(
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_c_fast_edges_extractor_comp.html#ac09edc6812f11b62f396cb3b52873351">DoContourExtraction</a>(
 <a name="l00040"></a>00040                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
 <a name="l00041"></a>00041                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; bitmap,
-<a name="l00042"></a>00042                             <a class="code" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00042"></a>00042                             <a class="code" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iproc::IProcessor)</span>
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_fast_edges_extractor_comp.html#a7bb77ac6c8fa671c552b3a75a004e6cd">DoProcessing</a>(
@@ -121,7 +121,7 @@
 <a name="l00095"></a>00095 
 <a name="l00096"></a>00096               <span class="keywordtype">void</span> ExtractLines(
 <a name="l00097"></a>00097                                    <span class="keywordtype">double</span> weightScale,
-<a name="l00098"></a>00098                                    CEdgeLine::Container&amp; result,
+<a name="l00098"></a>00098                                    CEdgeLineContainer&amp; result,
 <a name="l00099"></a>00099                                    <span class="keywordtype">bool</span> keepSingletons);
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101               ExtNode* AddElementToList();

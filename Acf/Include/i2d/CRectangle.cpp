@@ -43,13 +43,6 @@ CRectangle::CRectangle()
 }
 
 
-CRectangle::CRectangle(const CRectangle& ref)
-:	m_horizontalRange(ref.m_horizontalRange),
-	m_verticalRange(ref.m_verticalRange)
-{
-}
-
-
 CRectangle::CRectangle(double left, double top, double width, double height)
 :	m_horizontalRange(left, left + width),
 	m_verticalRange(top, top + height)
@@ -416,27 +409,6 @@ void CRectangle::Expand(const CRectangle& rect)
 }
 
 
-const CRectangle& CRectangle::operator=(const CRectangle& rect)
-{
-	m_horizontalRange = rect.m_horizontalRange;
-	m_verticalRange = rect.m_verticalRange;
-
-	return *this;
-}
-
-
-bool CRectangle::operator==(const CRectangle& rect) const
-{
-	return ((m_horizontalRange == rect.m_horizontalRange) && (m_verticalRange == rect.m_verticalRange));
-}
-	
-
-bool CRectangle::operator!=(const CRectangle& rect) const
-{
-	return !operator==(rect);
-}
-
-
 CVector2d CRectangle::GetNearestPointTo(const CVector2d& point) const
 {
 	return CVector2d(m_horizontalRange.GetNearestInside(point.GetX()), m_verticalRange.GetNearestInside(point.GetY()));
@@ -459,6 +431,28 @@ void CRectangle::Translate(const i2d::CVector2d& delta)
 	m_verticalRange.SetMinValue(m_verticalRange.GetMinValue() + delta.GetY());
 	m_horizontalRange.SetMaxValue(m_horizontalRange.GetMaxValue() + delta.GetX());
 	m_verticalRange.SetMaxValue(m_verticalRange.GetMaxValue() + delta.GetY());
+}
+
+
+bool CRectangle::operator==(const CRectangle& rect) const
+{
+	return ((m_horizontalRange == rect.m_horizontalRange) && (m_verticalRange == rect.m_verticalRange));
+}
+
+
+bool CRectangle::operator!=(const CRectangle& rect) const
+{
+	return !operator==(rect);
+}
+
+
+CRectangle::operator QRectF() const
+{
+	return QRectF(
+				m_horizontalRange.GetMinValue(),
+				m_verticalRange.GetMinValue(),
+				m_horizontalRange.GetMinValue(),
+				m_verticalRange.GetMinValue());
 }
 
 
@@ -658,6 +652,11 @@ bool CRectangle::Serialize(iser::IArchive& archive)
 	
 	return retVal;
 }
+
+
+// static atributes
+
+CRectangle CRectangle::s_empty(0, 0, 0, 0);
 
 
 } // namespace i2d

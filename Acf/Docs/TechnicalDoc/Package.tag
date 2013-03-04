@@ -2705,6 +2705,7 @@
     <name>CBitmapBase.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_bitmap_base_8h</filename>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <class kind="class">iimg::CBitmapBase</class>
     <namespace>iimg</namespace>
@@ -2754,6 +2755,7 @@
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_scanline_mask_8h</filename>
     <includes id="_t_ranges_8h" name="TRanges.h" local="yes" imported="no">istd/TRanges.h</includes>
+    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
@@ -2767,8 +2769,8 @@
     <name>IBitmap.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_i_bitmap_8h</filename>
-    <includes id="_i_raster_image_8h" name="IRasterImage.h" local="yes" imported="no">iimg/IRasterImage.h</includes>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_i_raster_image_8h" name="IRasterImage.h" local="yes" imported="no">iimg/IRasterImage.h</includes>
     <class kind="class">iimg::IBitmap</class>
     <namespace>iimg</namespace>
   </compound>
@@ -2793,7 +2795,7 @@
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_i_raster_image_8h</filename>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
     <includes id="_c_var_color_8h" name="CVarColor.h" local="yes" imported="no">icmm/CVarColor.h</includes>
     <class kind="class">iimg::IRasterImage</class>
     <namespace>iimg</namespace>
@@ -4028,7 +4030,6 @@
     <filename>_t_shape_params_gui_comp_base_8h</filename>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_i_color_schema_8h" name="IColorSchema.h" local="yes" imported="no">iview/IColorSchema.h</includes>
-    <includes id="_c_shape_control_8h" name="CShapeControl.h" local="yes" imported="no">iview/CShapeControl.h</includes>
     <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="yes" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
@@ -4039,9 +4040,7 @@
     <filename>_t_view_extender_comp_base_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
-    <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
     <includes id="_i_shape_view_8h" name="IShapeView.h" local="yes" imported="no">iview/IShapeView.h</includes>
-    <includes id="_i_logical_view_8h" name="ILogicalView.h" local="yes" imported="no">iview/ILogicalView.h</includes>
     <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
     <includes id="_c_calibrated_view_base_8h" name="CCalibratedViewBase.h" local="yes" imported="no">iview/CCalibratedViewBase.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
@@ -5936,6 +5935,7 @@
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_parallelogram_shape_8h</filename>
     <includes id="_c_parallelogram_8h" name="CParallelogram.h" local="yes" imported="no">i2d/CParallelogram.h</includes>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">iview/CInteractiveShapeBase.h</includes>
     <class kind="class">iview::CParallelogramShape</class>
     <namespace>iview</namespace>
@@ -6022,20 +6022,12 @@
     <name>CShapeBase.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_shape_base_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_i_shape_8h" name="IShape.h" local="yes" imported="no">iview/IShape.h</includes>
-    <includes id="_c_shape_control_8h" name="CShapeControl.h" local="yes" imported="no">iview/CShapeControl.h</includes>
-    <class kind="class">iview::CShapeBase</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CShapeControl.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_shape_control_8h</filename>
-    <includes id="_c_screen_transform_8h" name="CScreenTransform.h" local="yes" imported="no">iview/CScreenTransform.h</includes>
-    <includes id="_i_logical_coords_8h" name="ILogicalCoords.h" local="yes" imported="no">iview/ILogicalCoords.h</includes>
     <includes id="_i_display_8h" name="IDisplay.h" local="yes" imported="no">iview/IDisplay.h</includes>
-    <class kind="class">iview::CShapeControl</class>
+    <includes id="_c_screen_transform_8h" name="CScreenTransform.h" local="yes" imported="no">iview/CScreenTransform.h</includes>
+    <class kind="class">iview::CShapeBase</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -6070,6 +6062,7 @@
     <name>CSplineShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_spline_shape_8h</filename>
+    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <includes id="_c_polyline_shape_8h" name="CPolylineShape.h" local="yes" imported="no">iview/CPolylineShape.h</includes>
     <class kind="class">iview::CSplineShape</class>
     <namespace>iview</namespace>
@@ -6096,7 +6089,6 @@
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_view_base_8h</filename>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <includes id="_i_logical_view_8h" name="ILogicalView.h" local="yes" imported="no">iview/ILogicalView.h</includes>
     <includes id="_i_draggable_8h" name="IDraggable.h" local="yes" imported="no">iview/IDraggable.h</includes>
     <includes id="_i_mouse_action_observer_8h" name="IMouseActionObserver.h" local="yes" imported="no">iview/IMouseActionObserver.h</includes>
     <includes id="_c_screen_transform_8h" name="CScreenTransform.h" local="yes" imported="no">iview/CScreenTransform.h</includes>
@@ -6173,24 +6165,6 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>ILogicalCoords.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_i_logical_coords_8h</filename>
-    <includes id="_c_screen_transform_8h" name="CScreenTransform.h" local="yes" imported="no">iview/CScreenTransform.h</includes>
-    <includes id="iview_8h" name="iview.h" local="yes" imported="no">iview/iview.h</includes>
-    <class kind="class">iview::ILogicalCoords</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ILogicalView.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_i_logical_view_8h</filename>
-    <includes id="_i_shape_view_8h" name="IShapeView.h" local="yes" imported="no">iview/IShapeView.h</includes>
-    <includes id="_i_logical_coords_8h" name="ILogicalCoords.h" local="yes" imported="no">iview/ILogicalCoords.h</includes>
-    <class kind="class">iview::ILogicalView</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
     <name>IMouseActionObserver.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_i_mouse_action_observer_8h</filename>
@@ -6224,6 +6198,7 @@
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <includes id="_i_view_layer_8h" name="IViewLayer.h" local="yes" imported="no">iview/IViewLayer.h</includes>
     <includes id="_i_selectable_8h" name="ISelectable.h" local="yes" imported="no">iview/ISelectable.h</includes>
+    <includes id="_i_draggable_8h" name="IDraggable.h" local="yes" imported="no">iview/IDraggable.h</includes>
     <includes id="_i_mouse_action_observer_8h" name="IMouseActionObserver.h" local="yes" imported="no">iview/IMouseActionObserver.h</includes>
     <class kind="class">iview::ISelectableLayer</class>
     <namespace>iview</namespace>
@@ -6380,7 +6355,7 @@
     <name>IVisualCalibrationInfo.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_i_visual_calibration_info_8h</filename>
-    <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <class kind="class">iview::IVisualCalibrationInfo</class>
     <namespace>iview</namespace>
   </compound>
@@ -7892,20 +7867,6 @@
       <arglist>(double x1, double y1, double x2, double y2)</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>CLine2d</name>
-      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a59a6282e33a2438d5e2e81a77e3e11fd</anchor>
-      <arglist>(const CLine2d &amp;line)</arglist>
-    </member>
-    <member kind="function">
-      <type>CLine2d</type>
-      <name>operator=</name>
-      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a5d1ac2e23ebe4fc18992b600da9d9e0d</anchor>
-      <arglist>(const CLine2d &amp;line)</arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
@@ -8932,13 +8893,6 @@
       <anchor>a72c2492397c3e1b6c2c3b3bc702e9d7d</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function">
-      <type>const CPolygon &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a9e1dde0d9fb0012232676d84aabea088</anchor>
-      <arglist>(const CPolygon &amp;polygon)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
@@ -9433,22 +9387,8 @@
       <type></type>
       <name>CQuadrangle</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a1c0f131983fe5748b38ed99ce3520cf2</anchor>
-      <arglist>(const CQuadrangle &amp;quadrangle)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CQuadrangle</name>
-      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
       <anchor>ab59cb8bc7fa6219423a3c79dae62f9dc</anchor>
       <arglist>(const CLine2d &amp;firstDiagonal, const CLine2d &amp;secondDiagonal)</arglist>
-    </member>
-    <member kind="function">
-      <type>CQuadrangle &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a43c2dab7b910d64b94f279a080733c0a</anchor>
-      <arglist>(const CQuadrangle &amp;quadrangle)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -10021,13 +9961,6 @@
       <type></type>
       <name>CRectangle</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>aa7fdfba18c4304309b3d63208d0569a1</anchor>
-      <arglist>(const CRectangle &amp;rect)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRectangle</name>
-      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>a7e46666d40508de1104aead029bfcffe</anchor>
       <arglist>(double left, double top, double width, double height)</arglist>
     </member>
@@ -10361,27 +10294,6 @@
       <arglist>(const CRectangle &amp;rect)</arglist>
     </member>
     <member kind="function">
-      <type>const CRectangle &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a77c8d95e5e40d55a272de1064a8cccf0</anchor>
-      <arglist>(const CRectangle &amp;rect)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a518a24b3992a7ba6f29512efdcdc3bf7</anchor>
-      <arglist>(const CRectangle &amp;rect) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>ae54cffcf49308977162c85f361ebf928</anchor>
-      <arglist>(const CRectangle &amp;rect) const </arglist>
-    </member>
-    <member kind="function">
       <type>CVector2d</type>
       <name>GetNearestPointTo</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
@@ -10401,6 +10313,27 @@
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>a96d8c38ce6c89bb40c0794d9a964e40d</anchor>
       <arglist>(const i2d::CVector2d &amp;delta) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a518a24b3992a7ba6f29512efdcdc3bf7</anchor>
+      <arglist>(const CRectangle &amp;rect) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>ae54cffcf49308977162c85f361ebf928</anchor>
+      <arglist>(const CRectangle &amp;rect) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator QRectF</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a47107e983b7df8da0de265df07a37a2b</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
@@ -10478,6 +10411,13 @@
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>aaa9e66e407475792d749c755f0523a12</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const i2d::CRectangle &amp;</type>
+      <name>CRectangle::GetEmpty</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a22a22e2c293c13e79c623832c82fbdc6</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14349,6 +14289,13 @@
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>a0c41d14c6ccd399b328e11b79fb1aec3</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TContainer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>ae0647082bc6789b802aa4e966201f56a</anchor>
+      <arglist>(const TContainer &amp;container)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -27093,7 +27040,6 @@
     <base>iimg::CBitmapBase</base>
     <base virtualness="virtual">iimg::IQImageProvider</base>
     <base virtualness="virtual">ibase::IObjectSnap</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iimg::CBitmapBase</type>
       <name>BaseClass</name>
@@ -27149,13 +27095,6 @@
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
       <anchor>a0b2cbd4e7b7baa9c70a9f170a57b6b84</anchor>
       <arglist>(const istd::IChangeable &amp;data, iimg::IBitmap &amp;objectSnap, const istd::CIndex2d &amp;size) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
-      <anchor>a31fc742d5bf7b4390de6557be32fa521</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -27294,7 +27233,36 @@
   <compound kind="class">
     <name>iimg::CBitmapBase</name>
     <filename>classiimg_1_1_c_bitmap_base.html</filename>
+    <base>i2d::CObject2dBase</base>
     <base virtualness="virtual">iimg::IBitmap</base>
+    <member kind="typedef">
+      <type>i2d::CObject2dBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a6faf1fa0bbe546bae239452558d71e43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetCenter</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a90569d41e6d449b75a23b080140fb680</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>MoveCenterTo</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a94fac9e77676bd2b7d92ef346759f56a</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>af8932a7b875eace60c763c21756ef68a</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyBitmapRegion</name>
@@ -27653,6 +27621,7 @@
   <compound kind="class">
     <name>iimg::CScanlineMask</name>
     <filename>classiimg_1_1_c_scanline_mask.html</filename>
+    <base>i2d::CObject2dBase</base>
     <base virtualness="virtual">iimg::IRasterImage</base>
     <member kind="function">
       <type></type>
@@ -27666,13 +27635,6 @@
       <name>IsBitmapRegionEmpty</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
       <anchor>af40fc8ca1a2b22774651f2965cea1e65</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CRect</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a53251b81d28ef339b4fada68ccf971be</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -27786,6 +27748,27 @@
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
       <anchor>ae562e226db109611d02b22d924ecac0a</anchor>
       <arglist>(int dx, int dy)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetCenter</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a028471f6ace53c1486e2f9a919b1069a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>MoveCenterTo</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a9fb46049250392645c39ec75b49a6613</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>acf7c24f93f752ebf4fd3357d5a595478</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -28009,7 +27992,7 @@
   <compound kind="class">
     <name>iimg::IRasterImage</name>
     <filename>classiimg_1_1_i_raster_image.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">i2d::IObject2d</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsEmpty</name>
@@ -35984,20 +35967,12 @@
     <name>iqt2d::CImageViewComp</name>
     <filename>classiqt2d_1_1_c_image_view_comp.html</filename>
     <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
       <anchor>ae889bd9ccb05821fe4267f5f75711dce</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>ac4599083e8721a54103c8ccf65b50fe3</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -36633,6 +36608,7 @@
     <base>TGuiComponentBase&lt; iview::CConsoleGui &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base virtualness="virtual">iqt2d::IViewProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <name>BackgroundMode</name>
@@ -36706,12 +36682,12 @@
       <anchor>adc78fdfd1b381f0da35436a3257afa52</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetConsoleCalibration</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>a7e1b29a55d7461a499adaf5868293b6e</anchor>
-      <arglist>(const i2d::ICalibration2d *calibrationPtr)</arglist>
+      <anchor>a7392266a33732ac24bf066fb477874d4</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -37158,13 +37134,6 @@
       <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
       <anchor>a800b8a361c62f39966dd5bbb024618fd</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateViewCalibration</name>
-      <anchorfile>classiqt2d_1_1_t_view_extender_comp_base.html</anchorfile>
-      <anchor>ad0478b93314add9de3954248b1fccc49</anchor>
-      <arglist>(iview::IShapeView *viewPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -49736,7 +49705,6 @@
     <class kind="class">iview::CRectangleShape</class>
     <class kind="class">iview::CScreenTransform</class>
     <class kind="class">iview::CShapeBase</class>
-    <class kind="class">iview::CShapeControl</class>
     <class kind="class">iview::CShapeInfoGuiComp</class>
     <class kind="class">iview::CShapeStatusInfoComp</class>
     <class kind="class">iview::CSimpleShapeFactoryComp</class>
@@ -49750,8 +49718,6 @@
     <class kind="class">iview::IDisplay</class>
     <class kind="class">iview::IDraggable</class>
     <class kind="class">iview::IInteractiveShape</class>
-    <class kind="class">iview::ILogicalCoords</class>
-    <class kind="class">iview::ILogicalView</class>
     <class kind="class">iview::IMouseActionObserver</class>
     <class kind="class">iview::IRuler</class>
     <class kind="class">iview::ISelectable</class>
@@ -49937,10 +49903,10 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>ToScreen</name>
+      <name>GetScreenPoints</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>ab15e505c2ab121b9843570fdb2ee9b88</anchor>
-      <arglist>(const ControlPoints &amp;points, ControlPoints &amp;result, const i2d::ITransformation2d *calibrationPtr) const </arglist>
+      <anchor>a9616d8494dc61cee45bb355c83e350fe</anchor>
+      <arglist>(const ControlPoints &amp;points, ControlPoints &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CRect</type>
@@ -50064,6 +50030,24 @@
       <anchor>a64134b136b405a2b4dffa1cc081261aa</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
+    <member kind="enumeration">
+      <name>EditMode</name>
+      <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
+      <anchor>af01feddb5ae50be893daae5fca015055</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_ANGLE1</name>
+      <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
+      <anchor>af01feddb5ae50be893daae5fca015055a4bb83383dad5b952e811f6d9076f163d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_ANGLE2</name>
+      <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
+      <anchor>af01feddb5ae50be893daae5fca015055aca85aada95c38a2e117c047b37649105</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawArea</name>
@@ -50076,27 +50060,6 @@
       <name>m_editableAngle</name>
       <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
       <anchor>a5f7d5e72ba8790abdc8161580d330e42</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_editRadius2Mode</name>
-      <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>a5173bd50b47bdefbaa7df930278ccb64</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_editAngle1Mode</name>
-      <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>a39e2b63557087cddd0ce55b83a733acc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_editAngle2Mode</name>
-      <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>aaa64be7818752f91b1462aca096320c6</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -50209,6 +50172,30 @@
       <anchor>a511ba0fb54843f112dd0544e9361f885</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
+    <member kind="enumeration">
+      <name>EditMode</name>
+      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
+      <anchor>a55de96991604c07cd846004dc43917fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_NONE</name>
+      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
+      <anchor>a55de96991604c07cd846004dc43917feaf607d61c5d66207375be4840acb897a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_INNER_RADIUS</name>
+      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
+      <anchor>a55de96991604c07cd846004dc43917feab0bbea191870d4bab3242e79ee926d2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_OUTER_RADIUS</name>
+      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
+      <anchor>a55de96991604c07cd846004dc43917fea4ca0dce95fe4b995049579724cfea94f</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawAnnulus</name>
@@ -50232,13 +50219,6 @@
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
-      <name>m_editRadiusMode</name>
-      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>a98bf82d3d3392067a5429bbdd5e949bc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
       <name>m_isEditableRadius</name>
       <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
       <anchor>a1c22bdb0a010eff5a08674dad72b5d74</anchor>
@@ -50246,16 +50226,16 @@
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
-      <name>m_editRadius2Mode</name>
-      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>a47e6da001830187ad161c32800f9f084</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
       <name>m_isEditableRadius2</name>
       <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
       <anchor>ae789f0b627ac37efb9c269e4d7ba234b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_editMode</name>
+      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
+      <anchor>a1d389f61ea8d439b43b91ecb5bfb95e6</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -50330,8 +50310,8 @@
       <type>void</type>
       <name>CalcPoints</name>
       <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>af3fc335230657c6d8bc16071ef893236</anchor>
-      <arglist>(const i2d::CLine2d &amp;line, const i2d::ICalibration2d *calibrationPtr) const </arglist>
+      <anchor>ac7fc3320d02864fbc06c92aa966ceb8a</anchor>
+      <arglist>(const i2d::CLine2d &amp;line) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -50433,9 +50413,9 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>SetCalibrationPtr</name>
+      <name>SetDisplayCalibration</name>
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
-      <anchor>abae2cf3c73f5b0ac1d857c7e054d417e</anchor>
+      <anchor>a51375dae00621788c55b2f08db236633</anchor>
       <arglist>(const i2d::ICalibration2d *calibrationPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -50763,6 +50743,24 @@
       <anchor>a7c7d777fcac88036c28a203ebe3d0f44</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
+    <member kind="enumeration">
+      <name>EditMode</name>
+      <anchorfile>classiview_1_1_c_circle_shape.html</anchorfile>
+      <anchor>a7a2c517103a91acdb5d9564dc69e905f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_NONE</name>
+      <anchorfile>classiview_1_1_c_circle_shape.html</anchorfile>
+      <anchor>a7a2c517103a91acdb5d9564dc69e905fa5a36c76026b2a9f35489a104a8604fad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EM_RADIUS</name>
+      <anchorfile>classiview_1_1_c_circle_shape.html</anchorfile>
+      <anchor>a7a2c517103a91acdb5d9564dc69e905fa67ded13853fac8be62cdb841c16ee2d6</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CRect</type>
       <name>CalcBoundingBox</name>
@@ -50785,10 +50783,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_editRadiusMode</name>
+      <type>int</type>
+      <name>m_editMode</name>
       <anchorfile>classiview_1_1_c_circle_shape.html</anchorfile>
-      <anchor>aa6ff227ff4115e62d92e0c4e353f05b0</anchor>
+      <anchor>ac1efdd5b2fa4eec6766bcca603560a87</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -51278,8 +51276,8 @@
       <type>virtual void</type>
       <name>UpdateCursorInfo</name>
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>a85b84d18b840cebd1744a6ff2e01f31b</anchor>
-      <arglist>(const i2d::CVector2d &amp;pixelPos, const i2d::CVector2d &amp;logicalPos, const QString &amp;infoText)=0</arglist>
+      <anchor>a7ed88a2113f5748c164d2248ac373f76</anchor>
+      <arglist>(const QString &amp;infoText)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -51507,6 +51505,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateCursorInfo</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a78b7def6786ef9b66441c955a61decb6</anchor>
+      <arglist>(const QString &amp;infoText)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
@@ -51542,11 +51547,25 @@
       <arglist>(bool isFullScreen)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateCursorInfo</name>
+      <type>virtual bool</type>
+      <name>OnWheelEvent</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a0b3f091a8637911aba40254d69d7898e</anchor>
-      <arglist>(const i2d::CVector2d &amp;pixelPos, const i2d::CVector2d &amp;logicalPos, const QString &amp;infoText)</arglist>
+      <anchor>a0c534dc441835e6d7b1f347d7cb22102</anchor>
+      <arglist>(QWheelEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseDoubleClickEvent</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>ab4e616b3df38134184dfd1688670b445</anchor>
+      <arglist>(QEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnKeyReleaseEvent</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>ad686389fcd038311f1826e83743b21a7</anchor>
+      <arglist>(QKeyEvent *eventPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -51596,27 +51615,6 @@
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a40493b9b08232ae94350dd9eaeed6a59</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnWheelEvent</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a0c534dc441835e6d7b1f347d7cb22102</anchor>
-      <arglist>(QWheelEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseDoubleClickEvent</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ab4e616b3df38134184dfd1688670b445</anchor>
-      <arglist>(QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnKeyReleaseEvent</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ad686389fcd038311f1826e83743b21a7</anchor>
-      <arglist>(QKeyEvent *eventPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -51974,15 +51972,15 @@
       <type>virtual void</type>
       <name>BeginDrag</name>
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>abb6d01bddf0e329e9b4fbea17267ec29</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+      <anchor>ac108c43963e1a8e95eb6338b796d5c4d</anchor>
+      <arglist>(const istd::CIndex2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDragPosition</name>
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>ac278056fcca35507369f7a8b3a06fc4e</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+      <anchor>a963e0fa45b2b8ef6dbb6e5846b780ee5</anchor>
+      <arglist>(const istd::CIndex2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -52046,13 +52044,6 @@
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
       <anchor>a7fc1ee9fb4324167074bb381ddecd05b</anchor>
       <arglist>(QPainter &amp;drawContext, istd::CIndex2d point, const QString &amp;text) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DrawOrientationMarker</name>
-      <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>a192b54a37caa63f9f4a7ec8171868486</anchor>
-      <arglist>(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -52136,27 +52127,6 @@
       <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
       <anchor>a714a911ca57cdbcc5a4cdc7133d3c767</anchor>
       <arglist>(QPainter &amp;drawContext)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeginDrag</name>
-      <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
-      <anchor>a5608508363a9ea81c84df0e39c380054</anchor>
-      <arglist>(const i2d::CVector2d &amp;reference)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetDragPosition</name>
-      <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
-      <anchor>a0f0e878b9d6871ae18d6a07a0f049421</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EndDrag</name>
-      <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
-      <anchor>a0973f091b6a54d968dec1b1c5687cd80</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -52304,6 +52274,34 @@
       <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
       <anchor>a1797236cea8c3e8e1bb35992c3471c1a</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeginDrag</name>
+      <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
+      <anchor>a8c9e2a0c50b75ab551f23163e2e505c4</anchor>
+      <arglist>(const istd::CIndex2d &amp;reference)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDragPosition</name>
+      <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
+      <anchor>ad7b62d362bf202d5519693cb40b924d9</anchor>
+      <arglist>(const istd::CIndex2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EndDrag</name>
+      <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
+      <anchor>a0973f091b6a54d968dec1b1c5687cd80</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsDraggable</name>
+      <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
+      <anchor>a684422cf5758a6324dc66dec892dab76</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>ShapeMap</type>
@@ -52998,10 +52996,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>const istd::CIndex2d *</type>
+      <type>const i2d::CVector2d *</type>
       <name>GetNodes</name>
       <anchorfile>classiview_1_1_c_parallelogram_shape.html</anchorfile>
-      <anchor>a8cf2680a3dd8f78b503c651fae8b80d6</anchor>
+      <anchor>a29dd942ce48b07fef3324890b064e3b6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -53688,10 +53686,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>QPolygon</type>
+      <type>QPolygonF</type>
       <name>m_screenPoints</name>
       <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
-      <anchor>a388000cb9533e794479bffc1e0b8c02d</anchor>
+      <anchor>a3f5fb2e0d6cebe55e536075d4b071664</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -53747,6 +53745,13 @@
       <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
       <anchor>ae3f0a722591852bfc4587eee75ce0585</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>DrawOrientationMarker</name>
+      <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
+      <anchor>a2f5ee8ce32c72e587869b8c1452d10e5</anchor>
+      <arglist>(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -53957,8 +53962,8 @@
       <type>void</type>
       <name>CalcPoints</name>
       <anchorfile>classiview_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>a684dc8733a7522b74bbac0d1b56ca52d</anchor>
-      <arglist>(const i2d::CRectangle &amp;rectangle, const iview::CScreenTransform &amp;transform) const </arglist>
+      <anchor>a88ed9885d3afba6909ff5c46e57b5602</anchor>
+      <arglist>(const i2d::CRectangle &amp;rectangle) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -54131,20 +54136,36 @@
     <name>iview::CShapeBase</name>
     <filename>classiview_1_1_c_shape_base.html</filename>
     <base>imod::CSingleModelObserverBase</base>
-    <base>iview::CShapeControl</base>
     <base virtualness="virtual">iview::IShape</base>
-    <member kind="typedef">
-      <type>CShapeControl</type>
-      <name>BaseClass2</name>
+    <member kind="enumeration">
+      <name>ShapeTransformMode</name>
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
-      <anchor>a56edc83c7900608da3b36f106cf1a481</anchor>
+      <anchor>ad71985507eed51c78a94d52931c06d0b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STM_VIEW</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>ad71985507eed51c78a94d52931c06d0ba5c8ac1a5adf9a964dd704aa67374ba33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STM_SHAPE</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>ad71985507eed51c78a94d52931c06d0ba568eafbda4574795ef0de174e35e64f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STM_COMBINE</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>ad71985507eed51c78a94d52931c06d0babd28a5cd4c30afb9ee647622a1984f47</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>imod::CSingleModelObserverBase</type>
-      <name>BaseClass3</name>
+      <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
-      <anchor>aad6ad9e659d043b7e292b95f174083c5</anchor>
+      <anchor>a77621991558269b980a4b48598ec9a83</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -54189,12 +54210,26 @@
       <anchor>a0c22c7bac5b7d9b6db603eb20f9bc02b</anchor>
       <arglist>(int changeFlags=0)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iview::IDisplay *</type>
+    <member kind="function">
+      <type>iview::IDisplay *</type>
       <name>GetDisplayPtr</name>
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
-      <anchor>a21240943eea6fd219ebc88bfa45dac52</anchor>
+      <anchor>af51f1e3fc3573a23494493d1c5e4b9a1</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>ShapeTransformMode</type>
+      <name>GetTransformMode</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>a1c735abc8f77f81a375a3892dfbdb4a9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTransformMode</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>aaf5ae959c18b30fd5fe5c984e5a19437</anchor>
+      <arglist>(ShapeTransformMode mode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -54294,6 +54329,20 @@
       <anchor>a06821a59e07db37d05cf2b0a45fcf6cc</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>GetScreenPosition</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>a497c8da174468f19348d19e782cf5644</anchor>
+      <arglist>(const i2d::CVector2d &amp;logPosition) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>GetLogPosition</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>a18ae2fd2b1f0fcfbc4ac53b0074d9576</anchor>
+      <arglist>(const i2d::CVector2d &amp;screenPosition) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>GetDisplayChangesMask</name>
@@ -54359,147 +54408,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::CShapeControl</name>
-    <filename>classiview_1_1_c_shape_control.html</filename>
-    <base>iview::ILogicalCoords</base>
-    <member kind="enumeration">
-      <name>ShapeTransformMode</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a720ccfe28a23efcf1755dc7f85f1b0b3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>STM_VIEW</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a720ccfe28a23efcf1755dc7f85f1b0b3a9308d3198fb1996d1b68c3eac00858f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>STM_SHAPE</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a720ccfe28a23efcf1755dc7f85f1b0b3ae16eaf72e89d379f7cd1e98fad98d24e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>STM_COMBINE</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a720ccfe28a23efcf1755dc7f85f1b0b3a5f2a744d11e99badfc1f804a54b6a48e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CShapeControl</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>af6fa80eb47934433af0b587102c13082</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CShapeControl</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a02c53f2d8fe429b506cb6c83dac0069f</anchor>
-      <arglist>(const CShapeControl &amp;shapeControl)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::CAffine2d &amp;</type>
-      <name>GetShapeTransform</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a0093a86d7484125f02f823274ae10877</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetShapeTransform</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>aa92e4bf4920ef98184166b6b3ff464ad</anchor>
-      <arglist>(const i2d::CAffine2d &amp;transform)</arglist>
-    </member>
-    <member kind="function">
-      <type>ShapeTransformMode</type>
-      <name>GetTransformMode</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a9be52189cccf3b232395b548f188feed</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetTransformMode</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>ab5045ed45f87f4f5d3327b39f27af01a</anchor>
-      <arglist>(ShapeTransformMode mode)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::CAffine2d &amp;</type>
-      <name>GetLogToViewTransform</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a8dbc1b86e9c2d106beed5bee28f854b8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iview::CScreenTransform &amp;</type>
-      <name>GetLogToScreenTransform</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>ab6a08db5015093801f399b9727b88164</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>GetScreenPosition</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a01b2402bb9a161fd40d6d43741cf77d9</anchor>
-      <arglist>(const i2d::CVector2d &amp;logPosition, const i2d::ITransformation2d *calibrationPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>GetLogPosition</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>af3d677bec9ea3e8c9e505cd65bd1f4dc</anchor>
-      <arglist>(const i2d::CVector2d &amp;screenPosition, const i2d::ITransformation2d *calibrationPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>InvalidateTransforms</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>aa324c41d640ca196f3bc893ef30c414f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>AreTransformsValid</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>ad2bfc35169994ed45bbb5604e4e8d68f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CalcTransforms</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a6de52dcc660871315e1b97bb56fbe9fa</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual const iview::CScreenTransform &amp;</type>
-      <name>GetViewToScreenTransform</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a999a782bb08c639dbfb380bf54500671</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>Invalidate</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a42dc8044cdcbd22f4bb3d07f9803f288</anchor>
-      <arglist>(int changeFlags=0)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual IDisplay *</type>
-      <name>GetDisplayPtr</name>
-      <anchorfile>classiview_1_1_c_shape_control.html</anchorfile>
-      <anchor>a109fc4869688f9610fa5824aa5726790</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iview::CShapeInfoGuiComp</name>
     <filename>classiview_1_1_c_shape_info_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CShapeInfoGuiComp, IShapeStatusInfo &gt;</base>
@@ -54507,7 +54415,7 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CShapeInfoGuiComp, IShapeStatusInfo &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_shape_info_gui_comp.html</anchorfile>
-      <anchor>a0076085b747a181a2b39419cb05a14fb</anchor>
+      <anchor>ad69aa434653c5b187956308f260dd3ee</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -54629,8 +54537,8 @@
       <type>virtual void</type>
       <name>DrawPolyBezier</name>
       <anchorfile>classiview_1_1_c_spline_shape.html</anchorfile>
-      <anchor>afe42caeb77d75cc932a592ec015540f3</anchor>
-      <arglist>(QPainter &amp;drawContext, const istd::CIndex2d *pointsPtr, int pointsCount) const </arglist>
+      <anchor>afc8f025474cdd6e6cf548820e4278f71</anchor>
+      <arglist>(QPainter &amp;drawContext, const i2d::CVector2d *pointsPtr, int pointsCount) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
@@ -54948,13 +54856,6 @@
       <anchor>a9216321cceea3cfe0d49f2b07d274b5f</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>const istd::CIndex2d *</type>
-      <name>GetNodes</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>acb386856ff41b34dd8da7957f1be35fe</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureValidNodes</name>
@@ -55153,7 +55054,7 @@
   <compound kind="class">
     <name>iview::CViewBase</name>
     <filename>classiview_1_1_c_view_base.html</filename>
-    <base virtualness="virtual">iview::ILogicalView</base>
+    <base virtualness="virtual">iview::IShapeView</base>
     <base virtualness="virtual">iview::IDraggable</base>
     <base protection="protected">iview::IMouseActionObserver</base>
     <member kind="enumeration">
@@ -55208,13 +55109,6 @@
       <name>ZM_FIT_V</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
       <anchor>a51746c32939cf2ec0705d1eb68be8f39a444a15a8374d5c65a04b983190e82c68</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ILogicalView</type>
-      <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a7d3a213b664c5429667550ac508f7c51</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -55320,27 +55214,6 @@
       <name>GetMouseShapePtr</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
       <anchor>ad0bb83b68ad5bb3e82dda53963f97078</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::CAffine2d &amp;</type>
-      <name>GetLogToViewTransform</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>add3d82d8cf7c1853f4e7652241edc035</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogToViewTransform</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a54de9e64c9f1f2b595abdd3e90f90b47</anchor>
-      <arglist>(const i2d::CAffine2d &amp;transform)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iview::CScreenTransform &amp;</type>
-      <name>GetLogToScreenTransform</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>adb1ada58be8cbbafae243e3bfd168bdc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -55470,6 +55343,20 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnShapeFocused</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>a81c4c6fc18ca11a57bf4fec4fda414a1</anchor>
+      <arglist>(IInteractiveShape *)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnShapeDefocused</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>aadea8185180adc333c47de717ce6dbd8</anchor>
+      <arglist>(IInteractiveShape *)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual TouchState</type>
       <name>IsTouched</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
@@ -55578,15 +55465,15 @@
       <type>virtual void</type>
       <name>BeginDrag</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a89ab7f09650da330d6fab6c3e444dc5d</anchor>
-      <arglist>(const i2d::CVector2d &amp;reference)</arglist>
+      <anchor>a5d94168060c755e0f840f0f8d0dcfffc</anchor>
+      <arglist>(const istd::CIndex2d &amp;reference)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDragPosition</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>aa04eef514e5e6428c7b59580af66ad80</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+      <anchor>a5522f524c92b0cc5bcd915ea1be4b3f1</anchor>
+      <arglist>(const istd::CIndex2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -55650,13 +55537,6 @@
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
       <anchor>a351cb6efa1960a11e75493bfcc5e874a</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CalcInternalTransforms</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>adabe2679a3c1e4487fd04eeac227ccc7</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -56693,15 +56573,15 @@
       <type>virtual void</type>
       <name>BeginDrag</name>
       <anchorfile>classiview_1_1_i_draggable.html</anchorfile>
-      <anchor>a57ee395e27886786285a285bcca4eb0d</anchor>
-      <arglist>(const i2d::CVector2d &amp;reference)=0</arglist>
+      <anchor>afb96b90eab903a8f879bdf47ad46895d</anchor>
+      <arglist>(const istd::CIndex2d &amp;reference)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetDragPosition</name>
       <anchorfile>classiview_1_1_i_draggable.html</anchorfile>
-      <anchor>a310b1c333bc4c20bd22fc98db3046819</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)=0</arglist>
+      <anchor>a4099f367e0ac4bfd5b284ad35eaf4e3c</anchor>
+      <arglist>(const istd::CIndex2d &amp;position)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -56736,38 +56616,6 @@
       <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
       <anchor>a069a38f4b619109d9e6153825b61c411</anchor>
       <arglist>(bool selectFlag=true)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::ILogicalCoords</name>
-    <filename>classiview_1_1_i_logical_coords.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const i2d::CAffine2d &amp;</type>
-      <name>GetLogToViewTransform</name>
-      <anchorfile>classiview_1_1_i_logical_coords.html</anchorfile>
-      <anchor>aa006f99bfc36a4fbd243b23b2cee8d99</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iview::CScreenTransform &amp;</type>
-      <name>GetLogToScreenTransform</name>
-      <anchorfile>classiview_1_1_i_logical_coords.html</anchorfile>
-      <anchor>a3abf36b9525cca99c6168a362bd54b82</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::ILogicalView</name>
-    <filename>classiview_1_1_i_logical_view.html</filename>
-    <base>iview::IShapeView</base>
-    <base>iview::ILogicalCoords</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetLogToViewTransform</name>
-      <anchorfile>classiview_1_1_i_logical_view.html</anchorfile>
-      <anchor>a0e35e556c2e855e8dd0a2019f8b43003</anchor>
-      <arglist>(const i2d::CAffine2d &amp;transform)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -57033,6 +56881,7 @@
     <filename>classiview_1_1_i_selectable_layer.html</filename>
     <base virtualness="virtual">iview::IViewLayer</base>
     <base virtualness="virtual">iview::ISelectable</base>
+    <base virtualness="virtual">iview::IDraggable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>ConnectInteractiveShape</name>
@@ -57053,27 +56902,6 @@
       <anchorfile>classiview_1_1_i_selectable_layer.html</anchorfile>
       <anchor>ad8983ee27015b0c3b61811b9ab730430</anchor>
       <arglist>(QPainter &amp;drawContext)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>BeginDrag</name>
-      <anchorfile>classiview_1_1_i_selectable_layer.html</anchorfile>
-      <anchor>a30f98db2f8cf9c7c878b96460f72c5e5</anchor>
-      <arglist>(const i2d::CVector2d &amp;reference)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetDragPosition</name>
-      <anchorfile>classiview_1_1_i_selectable_layer.html</anchorfile>
-      <anchor>ae11b62f1b7da416c92b19aa901ad7771</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>EndDrag</name>
-      <anchorfile>classiview_1_1_i_selectable_layer.html</anchorfile>
-      <anchor>aee562b68193f1e1c4c7bd3608662e853</anchor>
-      <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -57193,34 +57021,6 @@
     <name>iview::IShapeStatusInfo</name>
     <filename>classiview_1_1_i_shape_status_info.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual i2d::CVector2d</type>
-      <name>GetLogicalPosition</name>
-      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
-      <anchor>ad33acbbc505a30906e02e22c9073ebff</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetLogicalPosition</name>
-      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
-      <anchor>ab5e777786890600b0e4e9bca2d0c7c36</anchor>
-      <arglist>(const i2d::CVector2d &amp;logicalPosition)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual i2d::CVector2d</type>
-      <name>GetPixelPosition</name>
-      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
-      <anchor>a723a20e9584d38c9df303869a19bccce</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetPixelPosition</name>
-      <anchorfile>classiview_1_1_i_shape_status_info.html</anchorfile>
-      <anchor>a944259e1c30a131b5854d866c7f46d38</anchor>
-      <arglist>(const i2d::CVector2d &amp;pixelPosition)=0</arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetInfoText</name>
@@ -57366,20 +57166,6 @@
       <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
       <anchor>aa9c92248a4a0bce37929e9364af548d7</anchor>
       <arglist>(const IViewLayer &amp;layer, const i2d::CRect &amp;prevArea, const i2d::CRect &amp;newArea)=0</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnShapeFocused</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a3e61f1e93c37166330d125e28980ac01</anchor>
-      <arglist>(IInteractiveShape *)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnShapeDefocused</name>
-      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>aa289ce25d63c67d4a6ebec3438e94a78</anchor>
-      <arglist>(IInteractiveShape *)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -57603,7 +57389,7 @@
   <compound kind="class">
     <name>iview::IVisualCalibrationInfo</name>
     <filename>classiview_1_1_i_visual_calibration_info.html</filename>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetMinGridDistance</name>

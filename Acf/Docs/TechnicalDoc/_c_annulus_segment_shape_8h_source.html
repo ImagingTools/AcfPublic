@@ -72,23 +72,25 @@
 <a name="l00044"></a>00044 
 <a name="l00045"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">00045</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">m_editableAngle</a>;
 <a name="l00046"></a>00046 
-<a name="l00047"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5173bd50b47bdefbaa7df930278ccb64">00047</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5173bd50b47bdefbaa7df930278ccb64">m_editRadius2Mode</a>;
-<a name="l00048"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a39e2b63557087cddd0ce55b83a733acc">00048</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a39e2b63557087cddd0ce55b83a733acc">m_editAngle1Mode</a>;
-<a name="l00049"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#aaa64be7818752f91b1462aca096320c6">00049</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#aaa64be7818752f91b1462aca096320c6">m_editAngle2Mode</a>;
-<a name="l00050"></a>00050 };
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a3fa0a3c94c26cb3894abd2e30a9c38e0">00053</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a3fa0a3c94c26cb3894abd2e30a9c38e0">CAnnulusSegmentShape::IsEditableAngles</a>()<span class="keyword"> const</span>
-<a name="l00054"></a>00054 <span class="keyword"></span>{
-<a name="l00055"></a>00055        <span class="keywordflow">return</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">m_editableAngle</a>;
-<a name="l00056"></a>00056 }
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 } <span class="comment">// namespace iview</span>
+<a name="l00047"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055">00047</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055">EditMode</a>
+<a name="l00048"></a>00048        {
+<a name="l00049"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055a4bb83383dad5b952e811f6d9076f163d">00049</a>               <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055a4bb83383dad5b952e811f6d9076f163d">EM_ANGLE1</a> = <a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fea4ca0dce95fe4b995049579724cfea94f">EM_OUTER_RADIUS</a> + 1,
+<a name="l00050"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055aca85aada95c38a2e117c047b37649105">00050</a>               <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055aca85aada95c38a2e117c047b37649105">EM_ANGLE2</a>
+<a name="l00051"></a>00051        };
+<a name="l00052"></a>00052 };
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 
+<a name="l00055"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a3fa0a3c94c26cb3894abd2e30a9c38e0">00055</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a3fa0a3c94c26cb3894abd2e30a9c38e0">CAnnulusSegmentShape::IsEditableAngles</a>()<span class="keyword"> const</span>
+<a name="l00056"></a>00056 <span class="keyword"></span>{
+<a name="l00057"></a>00057        <span class="keywordflow">return</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">m_editableAngle</a>;
+<a name="l00058"></a>00058 }
+<a name="l00059"></a>00059 
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="preprocessor">#endif // !iview_CAnnulusSegmentShape_included</span>
-<a name="l00063"></a>00063 <span class="preprocessor"></span>
+<a name="l00061"></a>00061 } <span class="comment">// namespace iview</span>
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif // !iview_CAnnulusSegmentShape_included</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -34,6 +34,7 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iview::CPolylineShape Class Reference</div>  </div>
@@ -47,29 +48,27 @@ Inheritance diagram for iview::CPolylineShape:</div>
  <div class="center">
   <img src="classiview_1_1_c_polyline_shape.png" usemap="#iview::CPolylineShape_map" alt=""/>
   <map id="iview::CPolylineShape_map" name="iview::CPolylineShape_map">
-<area href="classiview_1_1_c_polygon_shape.html" alt="iview::CPolygonShape" shape="rect" coords="1195,392,1424,416"/>
-<area href="classiview_1_1_c_transformable_rectangle_shape.html" alt="iview::CTransformableRectangleShape" shape="rect" coords="1195,336,1424,360"/>
-<area href="classiview_1_1_c_interactive_shape_base.html" alt="iview::CInteractiveShapeBase" shape="rect" coords="1195,280,1424,304"/>
-<area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="239,224,468,248"/>
-<area href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user." alt="iview::IInteractiveShape" shape="rect" coords="1195,224,1424,248"/>
-<area href="classiview_1_1_i_draggable.html" title="Common interface for all, you can drag." alt="iview::IDraggable" shape="rect" coords="1673,224,1902,248"/>
+<area href="classiview_1_1_c_polygon_shape.html" alt="iview::CPolygonShape" shape="rect" coords="956,392,1185,416"/>
+<area href="classiview_1_1_c_transformable_rectangle_shape.html" alt="iview::CTransformableRectangleShape" shape="rect" coords="956,336,1185,360"/>
+<area href="classiview_1_1_c_interactive_shape_base.html" alt="iview::CInteractiveShapeBase" shape="rect" coords="956,280,1185,304"/>
+<area href="classiview_1_1_c_shape_base.html" alt="iview::CShapeBase" shape="rect" coords="119,224,348,248"/>
+<area href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user." alt="iview::IInteractiveShape" shape="rect" coords="956,224,1185,248"/>
+<area href="classiview_1_1_i_draggable.html" title="Common interface for all, you can drag." alt="iview::IDraggable" shape="rect" coords="1434,224,1663,248"/>
 <area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="0,168,229,192"/>
-<area href="classiview_1_1_c_shape_control.html" alt="iview::CShapeControl" shape="rect" coords="239,168,468,192"/>
-<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="478,168,707,192"/>
-<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="956,168,1185,192"/>
-<area href="classiview_1_1_i_mouse_action_observer.html" title="Common interface for all shapes which are mouse events receiver." alt="iview::IMouseActionObserver" shape="rect" coords="1434,168,1663,192"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1673,168,1902,192"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1434,112,1663,136"/>
-<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="1195,112,1424,136"/>
-<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="1195,56,1424,80"/>
-<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="1195,0,1424,24"/>
-<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="717,112,946,136"/>
-<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="717,56,946,80"/>
-<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="717,0,946,24"/>
-<area href="classiview_1_1_i_logical_coords.html" alt="iview::ILogicalCoords" shape="rect" coords="239,112,468,136"/>
+<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="239,168,468,192"/>
+<area href="classiview_1_1_i_shape.html" title="Common interface for all display console shapes." alt="iview::IShape" shape="rect" coords="717,168,946,192"/>
+<area href="classiview_1_1_i_mouse_action_observer.html" title="Common interface for all shapes which are mouse events receiver." alt="iview::IMouseActionObserver" shape="rect" coords="1195,168,1424,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1434,168,1663,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1195,112,1424,136"/>
+<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="956,112,1185,136"/>
+<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="956,56,1185,80"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="956,0,1185,24"/>
+<area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="478,112,707,136"/>
+<area href="classiview_1_1_i_visualizable.html" alt="iview::IVisualizable" shape="rect" coords="478,56,707,80"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="478,0,707,24"/>
 <area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="0,112,229,136"/>
-<area href="classiview_1_1_c_spline_shape.html" alt="iview::CSplineShape" shape="rect" coords="1075,504,1304,528"/>
-<area href="classiview_1_1_c_tube_polyline_shape.html" title="Graphical representation of tube region." alt="iview::CTubePolylineShape" shape="rect" coords="1314,504,1543,528"/>
+<area href="classiview_1_1_c_spline_shape.html" alt="iview::CSplineShape" shape="rect" coords="836,504,1065,528"/>
+<area href="classiview_1_1_c_tube_polyline_shape.html" title="Graphical representation of tube region." alt="iview::CTubePolylineShape" shape="rect" coords="1075,504,1304,528"/>
 </map>
  </div></div>
 
@@ -89,6 +88,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This call back function will be called, if an observable object is about to be attached.  <a href="#a23c487f25d969a117fa1a047fae0073f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2">TouchState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polyline_shape.html#ae3f0a722591852bfc4587eee75ce0585">IsTouched</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if any shape is touched.  <a href="#ae3f0a722591852bfc4587eee75ce0585"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polyline_shape.html#a2f5ee8ce32c72e587869b8c1452d10e5">DrawOrientationMarker</a> (QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const <a class="el" href="classi2d_1_1_c_line2d.html">i2d::CLine2d</a> &amp;segmentLine, double scale)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an orientation marker consisting of two triangles (black for outside and white for inside)  <a href="#a2f5ee8ce32c72e587869b8c1452d10e5"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_polyline_shape.html#a27f99351813755d890294f8cf273d2d9">DrawCurve</a> (QPainter &amp;drawContext) const </td></tr>
@@ -202,6 +205,65 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2f5ee8ce32c72e587869b8c1452d10e5"></a><!-- doxytag: member="iview::CPolylineShape::DrawOrientationMarker" ref="a2f5ee8ce32c72e587869b8c1452d10e5" args="(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void iview::CPolylineShape::DrawOrientationMarker </td>
+          <td>(</td>
+          <td class="paramtype">QPainter &amp;&#160;</td>
+          <td class="paramname"><em>drawContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPen &amp;&#160;</td>
+          <td class="paramname"><em>rightPen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QBrush &amp;&#160;</td>
+          <td class="paramname"><em>rightBrush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPen &amp;&#160;</td>
+          <td class="paramname"><em>leftPen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QBrush &amp;&#160;</td>
+          <td class="paramname"><em>leftBrush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">i2d::CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>segmentLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Draw an orientation marker consisting of two triangles (black for outside and white for inside) </p>
+
+</div>
+</div>
 <a class="anchor" id="aaa1cbbf84dc349d005836bbd6ead1235"></a><!-- doxytag: member="iview::CPolylineShape::DrawSelectionElements" ref="aaa1cbbf84dc349d005836bbd6ead1235" args="(QPainter &amp;drawContext) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +322,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_tube_polyline_shape.html#ae131700f34e031a7d00ab8e7a1b09f70">iview::CTubePolylineShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_polyline_shape_8h_source.html#l00050">50</a> of file <a class="el" href="_c_polyline_shape_8h_source.html">CPolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polyline_shape_8h_source.html#l00064">64</a> of file <a class="el" href="_c_polyline_shape_8h_source.html">CPolylineShape.h</a>.</p>
 
 </div>
 </div>
@@ -377,7 +439,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_tube_polyline_shape.html#a28412d9ef3aa2a2c913b31ff11af5e0b">iview::CTubePolylineShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_polyline_shape_8h_source.html#l00056">56</a> of file <a class="el" href="_c_polyline_shape_8h_source.html">CPolylineShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polyline_shape_8h_source.html#l00070">70</a> of file <a class="el" href="_c_polyline_shape_8h_source.html">CPolylineShape.h</a>.</p>
 
 </div>
 </div>

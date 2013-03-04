@@ -95,10 +95,10 @@ void CEdgesReductorComp::GetReducedLine(
 
 
 void CEdgesReductorComp::GetReducedLines(
-			const CEdgeLine::Container& edgeLines,
+			const CEdgeLineContainer& edgeLines,
 			double positionTolerance,
 			double weightTolerance,
-			CEdgeLine::Container& result) const
+			CEdgeLineContainer& result) const
 {
 	result.Reset();
 
@@ -117,8 +117,8 @@ void CEdgesReductorComp::GetReducedLines(
 
 bool CEdgesReductorComp::DoLinesProcessing(
 			const iprm::IParamsSet* paramsPtr,
-			const CEdgeLine::Container& edgeLines,
-			CEdgeLine::Container& result) const
+			const CEdgeLineContainer& edgeLines,
+			CEdgeLineContainer& result) const
 {
 	imath::CVarVector toleranceValues;
 	if ((paramsPtr != NULL) && m_toleranceParamsIdAttrPtr.IsValid()){
@@ -160,8 +160,8 @@ int CEdgesReductorComp::DoProcessing(
 		return TS_OK;
 	}
 
-	const CEdgeLine::Container* edgeLinesPtr = dynamic_cast<const CEdgeLine::Container*>(inputPtr);
-	CEdgeLine::Container* containerPtr = dynamic_cast<CEdgeLine::Container*>(outputPtr);
+	const CEdgeLineContainer* edgeLinesPtr = dynamic_cast<const CEdgeLineContainer*>(inputPtr);
+	CEdgeLineContainer* containerPtr = dynamic_cast<CEdgeLineContainer*>(outputPtr);
 
 	if (		(edgeLinesPtr == NULL) ||
 				(containerPtr == NULL)){

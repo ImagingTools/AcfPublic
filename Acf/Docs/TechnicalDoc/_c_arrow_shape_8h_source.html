@@ -65,7 +65,7 @@
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 <span class="keyword">protected</span>:
 <a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_arrow_shape.html#abea20e9b809001a381702e9b348f15c2">EnsurePointsAreValid</a>() <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_arrow_shape.html#af3fc335230657c6d8bc16071ef893236">CalcPoints</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>&amp; line, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* calibrationPtr) <span class="keyword">const</span>;
+<a name="l00040"></a>00040        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_arrow_shape.html#ac7fc3320d02864fbc06c92aa966ceb8a">CalcPoints</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>&amp; line) <span class="keyword">const</span>;
 <a name="l00041"></a>00041        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_arrow_shape.html#aad012a1c2c5c6f190195930aa3d41dc9">ResetPoints</a>() <span class="keyword">const</span>;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043        <span class="comment">// reimplemented (iview::CShapeBase)</span>
@@ -98,24 +98,22 @@
 <a name="l00070"></a>00070        <span class="keywordflow">if</span> (!<a class="code" href="classiview_1_1_c_arrow_shape.html#a45f28c838db5055cdd075aac07a1d01b">m_arePointsValid</a>){
 <a name="l00071"></a>00071               <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>* linePtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classi2d_1_1_c_line2d.html" title="Definition of a line in 2D-space.">i2d::CLine2d</a>*<span class="keyword">&gt;</span>(<a class="code" href="classimod_1_1_c_single_model_observer_base.html#aa829b5502a451e194324e36688d2352b" title="Get access to observed model.">GetModelPtr</a>());
 <a name="l00072"></a>00072               <span class="keywordflow">if</span> (linePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00073"></a>00073                      <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* calibrationPtr = linePtr-&gt;<a class="code" href="classi2d_1_1_c_object2d_base.html#a7c9398ad12709b1d17bbd82ff8c10776" title="Get access to transformation object, which transforms a local logical coordinate system to global one...">GetCalibration</a>();
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075                      <a class="code" href="classiview_1_1_c_arrow_shape.html#af3fc335230657c6d8bc16071ef893236">CalcPoints</a>(*linePtr, calibrationPtr);
-<a name="l00076"></a>00076               }
-<a name="l00077"></a>00077               <span class="keywordflow">else</span>{
-<a name="l00078"></a>00078                      <a class="code" href="classiview_1_1_c_arrow_shape.html#aad012a1c2c5c6f190195930aa3d41dc9">ResetPoints</a>();
-<a name="l00079"></a>00079               }
-<a name="l00080"></a>00080               <a class="code" href="classiview_1_1_c_arrow_shape.html#a45f28c838db5055cdd075aac07a1d01b">m_arePointsValid</a> = <span class="keyword">true</span>;
-<a name="l00081"></a>00081        }
-<a name="l00082"></a>00082 }
-<a name="l00083"></a>00083 
+<a name="l00073"></a>00073                      <a class="code" href="classiview_1_1_c_arrow_shape.html#ac7fc3320d02864fbc06c92aa966ceb8a">CalcPoints</a>(*linePtr);
+<a name="l00074"></a>00074               }
+<a name="l00075"></a>00075               <span class="keywordflow">else</span>{
+<a name="l00076"></a>00076                      <a class="code" href="classiview_1_1_c_arrow_shape.html#aad012a1c2c5c6f190195930aa3d41dc9">ResetPoints</a>();
+<a name="l00077"></a>00077               }
+<a name="l00078"></a>00078               <a class="code" href="classiview_1_1_c_arrow_shape.html#a45f28c838db5055cdd075aac07a1d01b">m_arePointsValid</a> = <span class="keyword">true</span>;
+<a name="l00079"></a>00079        }
+<a name="l00080"></a>00080 }
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 } <span class="comment">// namespace iview</span>
 <a name="l00084"></a>00084 
-<a name="l00085"></a>00085 } <span class="comment">// namespace iview</span>
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="preprocessor">#endif // !iview_CArrowShape_included</span>
-<a name="l00089"></a>00089 <span class="preprocessor"></span>
-<a name="l00090"></a>00090 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="preprocessor">#endif // !iview_CArrowShape_included</span>
+<a name="l00087"></a>00087 <span class="preprocessor"></span>
+<a name="l00088"></a>00088 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

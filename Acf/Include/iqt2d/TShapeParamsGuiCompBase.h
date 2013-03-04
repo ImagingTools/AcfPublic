@@ -27,7 +27,6 @@
 // ACF includes
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 #include "iview/IColorSchema.h"
-#include "iview/CShapeControl.h"
 #include "iqt2d/TViewExtenderCompBase.h"
 
 

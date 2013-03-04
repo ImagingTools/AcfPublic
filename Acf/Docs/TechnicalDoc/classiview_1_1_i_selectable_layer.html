@@ -37,7 +37,7 @@
 <div class="title">iview::ISelectableLayer Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iview::ISelectableLayer" --><!-- doxytag: inherits="iview::IViewLayer,iview::ISelectable" -->
+<!-- doxytag: class="iview::ISelectableLayer" --><!-- doxytag: inherits="iview::IViewLayer,iview::ISelectable,iview::IDraggable" -->
 <p><code>#include &lt;<a class="el" href="_i_selectable_layer_8h_source.html">ISelectableLayer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iview::ISelectableLayer:</div>
@@ -47,14 +47,16 @@ Inheritance diagram for iview::ISelectableLayer:</div>
   <map id="iview::ISelectableLayer_map" name="iview::ISelectableLayer_map">
 <area href="classiview_1_1_i_view_layer.html" title="Interface for a logical layer in the console view." alt="iview::IViewLayer" shape="rect" coords="93,168,269,192"/>
 <area href="classiview_1_1_i_selectable.html" alt="iview::ISelectable" shape="rect" coords="372,168,548,192"/>
+<area href="classiview_1_1_i_draggable.html" title="Common interface for all, you can drag." alt="iview::IDraggable" shape="rect" coords="558,168,734,192"/>
 <area href="classiview_1_1_i_display.html" alt="iview::IDisplay" shape="rect" coords="0,112,176,136"/>
 <area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="186,112,362,136"/>
 <area href="classiview_1_1_i_touchable.html" title="This interface describes all untransparent GUI objects, which can be touched." alt="iview::ITouchable" shape="rect" coords="372,112,548,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="558,112,734,136"/>
 <area href="classiview_1_1_i_shape_observer.html" title="Common interface for all objects informed about shapes state changes." alt="iview::IShapeObserver" shape="rect" coords="0,56,176,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="186,56,362,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="372,56,548,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,176,24"/>
-<area href="classiview_1_1_c_interactive_view_layer.html" alt="iview::CInteractiveViewLayer" shape="rect" coords="232,280,408,304"/>
+<area href="classiview_1_1_c_interactive_view_layer.html" alt="iview::CInteractiveViewLayer" shape="rect" coords="372,280,548,304"/>
 </map>
  </div></div>
 
@@ -68,12 +70,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of unselected shapes.  <a href="#a68bb9ff7183c0c22798756644cff26c9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_selectable_layer.html#ad8983ee27015b0c3b61811b9ab730430">DrawFocusedShape</a> (QPainter &amp;drawContext)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw only focused shape.  <a href="#ad8983ee27015b0c3b61811b9ab730430"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_selectable_layer.html#a30f98db2f8cf9c7c878b96460f72c5e5">BeginDrag</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;reference)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set reference position for dragging for all selected shapes.  <a href="#a30f98db2f8cf9c7c878b96460f72c5e5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_selectable_layer.html#ae11b62f1b7da416c92b19aa901ad7771">SetDragPosition</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set dragging position for all selected shapes.  <a href="#ae11b62f1b7da416c92b19aa901ad7771"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_selectable_layer.html#aee562b68193f1e1c4c7bd3608662e853">EndDrag</a> ()=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after dragging process.  <a href="#aee562b68193f1e1c4c7bd3608662e853"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_selectable_layer.html#a5da69e03c8aa4d622af894eb3aa1df3a">OnMouseButton</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, bool downFlag)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called, when mouse button was pushed down or up.  <a href="#a5da69e03c8aa4d622af894eb3aa1df3a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_selectable_layer.html#a968108d2ee8c0d43d2b89a88ea4ac90b">OnFocusedMouseButton</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, bool downFlag)=0</td></tr>
@@ -87,29 +83,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_i_selectable_layer_8h_source.html#l00024">24</a> of file <a class="el" href="_i_selectable_layer_8h_source.html">ISelectableLayer.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_selectable_layer_8h_source.html#l00025">25</a> of file <a class="el" href="_i_selectable_layer_8h_source.html">ISelectableLayer.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a30f98db2f8cf9c7c878b96460f72c5e5"></a><!-- doxytag: member="iview::ISelectableLayer::BeginDrag" ref="a30f98db2f8cf9c7c878b96460f72c5e5" args="(const i2d::CVector2d &amp;reference)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iview::ISelectableLayer::BeginDrag </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>reference</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set reference position for dragging for all selected shapes. </p>
-
-<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a5608508363a9ea81c84df0e39c380054">iview::CInteractiveViewLayer</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ad3521375a2da2446bbfc4df680e51547"></a><!-- doxytag: member="iview::ISelectableLayer::ConnectInteractiveShape" ref="ad3521375a2da2446bbfc4df680e51547" args="(IInteractiveShape *shapePtr)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -149,26 +124,6 @@ Public Member Functions</h2></td></tr>
 <p>Draw only focused shape. </p>
 
 <p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a714a911ca57cdbcc5a4cdc7133d3c767">iview::CInteractiveViewLayer</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aee562b68193f1e1c4c7bd3608662e853"></a><!-- doxytag: member="iview::ISelectableLayer::EndDrag" ref="aee562b68193f1e1c4c7bd3608662e853" args="()=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iview::ISelectableLayer::EndDrag </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Called after dragging process. </p>
-
-<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a0973f091b6a54d968dec1b1c5687cd80">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>
@@ -229,7 +184,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a433f6b6d22c9e6f828fbbd418aaf31b6">iview::CInteractiveViewLayer</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_selectable_layer_8h_source.html#l00094">IsTouched()</a>.</p>
+<p>Referenced by <a class="el" href="_i_selectable_layer_8h_source.html#l00081">IsTouched()</a>.</p>
 
 </div>
 </div>
@@ -256,7 +211,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a1bcac8b4c991f32e59f378e7f9e64eb7">iview::CInteractiveViewLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_selectable_layer_8h_source.html#l00094">94</a> of file <a class="el" href="_i_selectable_layer_8h_source.html">ISelectableLayer.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_selectable_layer_8h_source.html#l00081">81</a> of file <a class="el" href="_i_selectable_layer_8h_source.html">ISelectableLayer.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_i_selectable_layer.html#a37e7b38a678b42c6598a85ce30706b45">IsTouched()</a>, and <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -357,27 +312,6 @@ Public Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if this event was consumed. </dd></dl>
 
 <p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a4349d27996cdbb6b7147e12f43fc9e03">iview::CInteractiveViewLayer</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae11b62f1b7da416c92b19aa901ad7771"></a><!-- doxytag: member="iview::ISelectableLayer::SetDragPosition" ref="ae11b62f1b7da416c92b19aa901ad7771" args="(const i2d::CVector2d &amp;position)=0" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iview::ISelectableLayer::SetDragPosition </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>position</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set dragging position for all selected shapes. </p>
-
-<p>Implemented in <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a0f0e878b9d6871ae18d6a07a0f049421">iview::CInteractiveViewLayer</a>.</p>
 
 </div>
 </div>

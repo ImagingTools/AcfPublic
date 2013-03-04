@@ -33,7 +33,7 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_comp_wrap_8h.html">iproc/TSupplierCompWrap.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_i_edge_lines_provider_8h.html">iedge/IEdgeLinesProvider.h</a>&quot;</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_edge_lines_processor_8h.html">iedge/IEdgeLinesProcessor.h</a>&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_edge_line_8h.html">iedge/CEdgeLine.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_edge_line_container_8h.html">iedge/CEdgeLineContainer.h</a>&quot;</span>
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="keyword">namespace </span>iedge
@@ -41,11 +41,11 @@
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
 <a name="l00017"></a><a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html">00017</a> <span class="keyword">class </span><a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html">CProcessedEdgeLinesSupplierComp</a>:
-<a name="l00018"></a>00018                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt;CEdgeLine::Container&gt;,
+<a name="l00018"></a>00018                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt;CEdgeLineContainer&gt;,
 <a name="l00019"></a>00019                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiedge_1_1_i_edge_lines_provider.html">IEdgeLinesProvider</a>
 <a name="l00020"></a>00020 {
 <a name="l00021"></a>00021 <span class="keyword">public</span>:
-<a name="l00022"></a><a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#aef022821ac87debda03eb9c11cd66ff7">00022</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt;CEdgeLine::Container&gt;</a> <a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#aef022821ac87debda03eb9c11cd66ff7">BaseClass</a>;
+<a name="l00022"></a><a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#a5fc34147894b2d3fefa7341a671fe0e1">00022</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt;CEdgeLineContainer&gt;</a> <a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#a5fc34147894b2d3fefa7341a671fe0e1">BaseClass</a>;
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024        I_BEGIN_COMPONENT(<a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html">CProcessedEdgeLinesSupplierComp</a>);
 <a name="l00025"></a>00025               I_REGISTER_INTERFACE(<a class="code" href="classiedge_1_1_i_edge_lines_provider.html">IEdgeLinesProvider</a>);
@@ -56,11 +56,11 @@
 <a name="l00030"></a>00030        I_END_COMPONENT;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        <span class="comment">// reimplemented (iedge::IEdgeLinesProvider)</span>
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a>* <a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#aadb4a2305929d9b83cee29b3f64fa6d2" title="Provide access to container of endges.">GetEdgesContainer</a>() <span class="keyword">const</span>;
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a>* <a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#a4458d6f182b2fe6ee804474c07f34f9a" title="Provide access to container of endges.">GetEdgesContainer</a>() <span class="keyword">const</span>;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 <span class="keyword">protected</span>:
 <a name="l00036"></a>00036        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#ae77466273e39a966fe797e8075fd4579">ProduceObject</a>(<a class="code" href="classiedge_1_1_c_edge_line_1_1_container.html">CEdgeLine::Container</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#a34c4e69753f5995a229c12449aa66e96">ProduceObject</a>(<a class="code" href="classiedge_1_1_c_edge_line_container.html">CEdgeLineContainer</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedge_1_1_c_processed_edge_lines_supplier_comp.html#ae2d25a11298ed0aaf041933f63bc8270">OnComponentCreated</a>();

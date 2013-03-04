@@ -30,40 +30,39 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iimg_IRasterImage_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_index2d_8h.html">istd/CIndex2d.h</a>&quot;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_var_color_8h.html">icmm/CVarColor.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_index2d_8h.html">istd/CIndex2d.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_object2d_8h.html">i2d/IObject2d.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_var_color_8h.html">icmm/CVarColor.h</a>&quot;</span>
+<a name="l00009"></a>00009 
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">namespace </span>iimg
-<a name="l00013"></a>00013 {
+<a name="l00011"></a>00011 <span class="keyword">namespace </span>iimg
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 
-<a name="l00020"></a><a class="code" href="classiimg_1_1_i_raster_image.html">00020</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_i_raster_image.html" title="General definition of image contains pixels in regular grid.">IRasterImage</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
-<a name="l00021"></a>00021 {
-<a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_raster_image.html#ac57c404390f62fa0182cefbc7c395467" title="Return true if this image is empty.">IsEmpty</a>() <span class="keyword">const</span> = 0;
-<a name="l00027"></a>00027 
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_i_raster_image.html#afb0344fb0cb7bd07836b1a59cc9243a3" title="Reset this image.">ResetImage</a>() = 0;
-<a name="l00033"></a>00033 
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01" title="Get size of this raster image.">GetImageSize</a>() <span class="keyword">const</span> = 0;
-<a name="l00038"></a>00038 
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_raster_image.html#a4a784fb8ff21098450892345638c0f68" title="Get number of color components.">GetComponentsCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00043"></a>00043 
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a> <a class="code" href="classiimg_1_1_i_raster_image.html#a71afdbfe4b148d26d4f41d7a555521b0" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span> = 0;
-<a name="l00049"></a>00049 
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_raster_image.html#acdd19b40a08db5a6dc3610ee397276f1" title="Set color at specified pixel.">SetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a>&amp; color) = 0;
-<a name="l00057"></a>00057 };
+<a name="l00019"></a><a class="code" href="classiimg_1_1_i_raster_image.html">00019</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_i_raster_image.html" title="General definition of image contains pixels in regular grid.">IRasterImage</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::IObject2d
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021 <span class="keyword">public</span>:
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_raster_image.html#ac57c404390f62fa0182cefbc7c395467" title="Return true if this image is empty.">IsEmpty</a>() <span class="keyword">const</span> = 0;
+<a name="l00026"></a>00026 
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_i_raster_image.html#afb0344fb0cb7bd07836b1a59cc9243a3" title="Reset this image.">ResetImage</a>() = 0;
+<a name="l00032"></a>00032 
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiimg_1_1_i_raster_image.html#aa85b38b917a050808e72ee497c2c0f01" title="Get size of this raster image.">GetImageSize</a>() <span class="keyword">const</span> = 0;
+<a name="l00037"></a>00037 
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_i_raster_image.html#a4a784fb8ff21098450892345638c0f68" title="Get number of color components.">GetComponentsCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00042"></a>00042 
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a> <a class="code" href="classiimg_1_1_i_raster_image.html#a71afdbfe4b148d26d4f41d7a555521b0" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span> = 0;
+<a name="l00048"></a>00048 
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_i_raster_image.html#acdd19b40a08db5a6dc3610ee397276f1" title="Set color at specified pixel.">SetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a>&amp; color) = 0;
+<a name="l00056"></a>00056 };
+<a name="l00057"></a>00057 
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 } <span class="comment">// namespace iimg</span>
+<a name="l00059"></a>00059 } <span class="comment">// namespace iimg</span>
+<a name="l00060"></a>00060 
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="preprocessor">#endif // !iimg_IRasterImage_included</span>
-<a name="l00064"></a>00064 <span class="preprocessor"></span>
-<a name="l00065"></a>00065 
+<a name="l00062"></a>00062 <span class="preprocessor">#endif // !iimg_IRasterImage_included</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

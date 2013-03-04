@@ -99,6 +99,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal view implementation.  <a href="#a349c91a50ed2ff5cb6709ed72606baec"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_c_viewport.html">CViewport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#abfd35718f066ad2bb6c851e2b4254bf1">GetViewRef</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal view implementation.  <a href="#abfd35718f066ad2bb6c851e2b4254bf1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a78b7def6786ef9b66441c955a61decb6">UpdateCursorInfo</a> (const QString &amp;infoText)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ae1e1ba50dbac1497c193cc2b48023417">GetCommands</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#ae1e1ba50dbac1497c193cc2b48023417"></a><br/></td></tr>
@@ -108,7 +109,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#af1d787905207f1c2243074aff63d06de">UpdateScrollbarsValues</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a25513c912a9558abdb0ffa4731225ec9">IsFullScreenMode</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a500fdff5123071a74315fd1a7976d83c">SetFullScreenMode</a> (bool isFullScreen)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0b3f091a8637911aba40254d69d7898e">UpdateCursorInfo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;pixelPos, const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;logicalPos, const QString &amp;infoText)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0c534dc441835e6d7b1f347d7cb22102">OnWheelEvent</a> (QWheelEvent *eventPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ab4e616b3df38134184dfd1688670b445">OnMouseDoubleClickEvent</a> (QEvent *eventPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ad686389fcd038311f1826e83743b21a7">OnKeyReleaseEvent</a> (QKeyEvent *eventPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a75c16cbc934985f8b3d01c70f2828ac9">UpdateEditModeButtons</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update state of edit mode buttons.  <a href="#a75c16cbc934985f8b3d01c70f2828ac9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a1d94bc193c34b382af2171ac8293b65f">UpdateButtonsState</a> ()</td></tr>
@@ -120,9 +123,6 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ae5450db91849b321fc53c4a403ff42be">OnSelectChange</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> &amp;shape, bool state)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0839ca484be604ce6ef73fcde794875a">OnMouseButton</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, Qt::MouseButton buttonType, bool state, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *shapePtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a40493b9b08232ae94350dd9eaeed6a59">OnBoundingBoxChanged</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a0c534dc441835e6d7b1f347d7cb22102">OnWheelEvent</a> (QWheelEvent *eventPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ab4e616b3df38134184dfd1688670b445">OnMouseDoubleClickEvent</a> (QEvent *eventPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#ad686389fcd038311f1826e83743b21a7">OnKeyReleaseEvent</a> (QKeyEvent *eventPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a44267df68b56bd67b9f9e39074b9f136">keyReleaseEvent</a> (QKeyEvent *event)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_console_gui.html#a32282ec797e6ee0d41899770265943bd">eventFilter</a> (<a class="el" href="class_q_object.html">QObject</a> *sourcePtr, QEvent *eventPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -927,38 +927,22 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0b3f091a8637911aba40254d69d7898e"></a><!-- doxytag: member="iview::CConsoleGui::UpdateCursorInfo" ref="a0b3f091a8637911aba40254d69d7898e" args="(const i2d::CVector2d &amp;pixelPos, const i2d::CVector2d &amp;logicalPos, const QString &amp;infoText)" -->
+<a class="anchor" id="a78b7def6786ef9b66441c955a61decb6"></a><!-- doxytag: member="iview::CConsoleGui::UpdateCursorInfo" ref="a78b7def6786ef9b66441c955a61decb6" args="(const QString &amp;infoText)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void iview::CConsoleGui::UpdateCursorInfo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>pixelPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>logicalPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>infoText</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, virtual]</code></td>
+          <td class="paramname"><em>infoText</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a85b84d18b840cebd1744a6ff2e01f31b">iview::CConsoleBase</a>.</p>
+<p>Implements <a class="el" href="classiview_1_1_c_console_base.html#a7ed88a2113f5748c164d2248ac373f76">iview::CConsoleBase</a>.</p>
 
 </div>
 </div>
