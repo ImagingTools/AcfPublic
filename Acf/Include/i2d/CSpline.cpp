@@ -70,14 +70,13 @@ int CSpline::GetSupportedOperations() const
 }
 
 
-bool CSpline::CopyFrom(const IChangeable& object)
+bool CSpline::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 {
 	const CSpline* splinePtr = dynamic_cast<const CSpline*>(&object);
 
 	if (splinePtr != NULL){	
-
 		istd::CChangeNotifier notifier(this);		
-		
+
 		BaseClass::CopyFrom(object);
 		
 		int sourceSegmentCount = splinePtr->GetSegmentCount();
@@ -92,11 +91,11 @@ bool CSpline::CopyFrom(const IChangeable& object)
 }
 
 
-istd::IChangeable* CSpline::CloneMe() const 
+istd::IChangeable* CSpline::CloneMe(CompatibilityMode mode) const 
 {
 	istd::TDelPtr<CSpline> clonePtr(new CSpline);
 
-	if (clonePtr->CopyFrom(*this)){
+	if (clonePtr->CopyFrom(*this, mode)){
 		return clonePtr.PopPtr();
 	}
 

@@ -105,10 +105,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a9ec8f0febcd856716fcb16492204c094">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;argument) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a75b334351ed65d769049fb2451e3d06d">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a75b334351ed65d769049fb2451e3d06d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a22554b26ec0600fd6cb045993e6cbbde">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#a22554b26ec0600fd6cb045993e6cbbde"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a12507865e9d64df47e6974b9c8650658">CloneMe</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a12507865e9d64df47e6974b9c8650658"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a60acaed5eecce2e4ec38ee1d81b4bdd8">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#a60acaed5eecce2e4ec38ee1d81b4bdd8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a3c9948feacb694c7d267b06baf189f65">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a3c9948feacb694c7d267b06baf189f65"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_affine2d.html">CAffine2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a4f4aa4d0c69401e30ac3691e9d72cc35">m_transformation</a></td></tr>
@@ -152,14 +152,15 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a12507865e9d64df47e6974b9c8650658"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CloneMe" ref="a12507865e9d64df47e6974b9c8650658" args="() const " -->
+<a class="anchor" id="a3c9948feacb694c7d267b06baf189f65"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CloneMe" ref="a3c9948feacb694c7d267b06baf189f65" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CAffineTransformation2d::CloneMe </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
@@ -169,11 +170,11 @@ Protected Attributes</h2></td></tr>
 <p>Make a copy of this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#aca17d0aedcec31b0ae88d233033622bc">istd::IChangeable</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a22554b26ec0600fd6cb045993e6cbbde"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CopyFrom" ref="a22554b26ec0600fd6cb045993e6cbbde" args="(const istd::IChangeable &amp;object)" -->
+<a class="anchor" id="a60acaed5eecce2e4ec38ee1d81b4bdd8"></a><!-- doxytag: member="i2d::CAffineTransformation2d::CopyFrom" ref="a60acaed5eecce2e4ec38ee1d81b4bdd8" args="(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -181,8 +182,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">virtual bool i2d::CAffineTransformation2d::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -191,7 +202,7 @@ Protected Attributes</h2></td></tr>
 <p>Copy this object from another one. </p>
 <p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a> do nothing. </p>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a990a1273f2c61e12717594aa672d5462">istd::IChangeable</a>.</p>
 
 </div>
 </div>

@@ -61,7 +61,7 @@
 <a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a1df706697750c63cad83f66011448d15" title="Remove a node at specified index.">RemoveNode</a>(<span class="keywordtype">int</span> index);
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045        <span class="comment">// reimplemented istd::IChangeable</span>
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#af2d7b07fedab0ff5da1047ecba41d78c">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>);
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a7f9ae310ba69af5674ffe2af74c106c4">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af" title="External references are simple ignored.">CM_WITHOUT_REFS</a>);
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 <span class="keyword">protected</span>:
 <a name="l00049"></a>00049        <span class="comment">// reimplemented (i2d::CPolygon)</span>
@@ -160,7 +160,7 @@
 <a name="l00142"></a>00142 <span class="comment">// reimplemented istd::IChangeable</span>
 <a name="l00143"></a>00143 
 <a name="l00144"></a>00144 <span class="keyword">template</span>&lt;<span class="keyword">class</span> NodeData&gt;
-<a name="l00145"></a><a class="code" href="classi2d_1_1_t_data_node_polyline.html#af2d7b07fedab0ff5da1047ecba41d78c">00145</a> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#af2d7b07fedab0ff5da1047ecba41d78c">TDataNodePolyline&lt;NodeData&gt;::CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>)
+<a name="l00145"></a><a class="code" href="classi2d_1_1_t_data_node_polyline.html#a7f9ae310ba69af5674ffe2af74c106c4">00145</a> <span class="keywordtype">bool</span> <a class="code" href="classi2d_1_1_t_data_node_polyline.html#a7f9ae310ba69af5674ffe2af74c106c4">TDataNodePolyline&lt;NodeData&gt;::CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode)
 <a name="l00146"></a>00146 {
 <a name="l00147"></a>00147        Clear();
 <a name="l00148"></a>00148 
@@ -169,14 +169,14 @@
 <a name="l00151"></a>00151        <span class="keywordflow">if</span> (polygonPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){           
 <a name="l00152"></a>00152               <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>);
 <a name="l00153"></a>00153 
-<a name="l00154"></a>00154               SetCalibration(polygonPtr-&gt;<a class="code" href="classi2d_1_1_c_object2d_base.html#a7c9398ad12709b1d17bbd82ff8c10776" title="Get access to transformation object, which transforms a local logical coordinate system to global one...">GetCalibration</a>());
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156               <span class="keywordtype">int</span> sourceNodesCount = polygonPtr-&gt;<a class="code" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07" title="Return size of node table.">GetNodesCount</a>();
-<a name="l00157"></a>00157               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nodesIndex = 0; nodesIndex &lt; sourceNodesCount; nodesIndex++){              
-<a name="l00158"></a>00158                      InsertNode(polygonPtr-&gt;<a class="code" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d" title="Return node at specified index.">GetNode</a>(nodesIndex));
-<a name="l00159"></a>00159 
-<a name="l00160"></a>00160                      m_nodesData[nodesIndex] = polygonPtr-&gt;m_nodesData[nodesIndex];
-<a name="l00161"></a>00161               }
+<a name="l00154"></a>00154               <span class="keywordtype">int</span> sourceNodesCount = polygonPtr-&gt;<a class="code" href="classi2d_1_1_c_polygon.html#a0e9474de5b18f742068ac948bc517d07" title="Return size of node table.">GetNodesCount</a>();
+<a name="l00155"></a>00155               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nodesIndex = 0; nodesIndex &lt; sourceNodesCount; nodesIndex++){              
+<a name="l00156"></a>00156                      InsertNode(polygonPtr-&gt;<a class="code" href="classi2d_1_1_c_polygon.html#a717767fd1adf1b08bfa185ee666a572d" title="Return node at specified index.">GetNode</a>(nodesIndex));
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158                      m_nodesData[nodesIndex] = polygonPtr-&gt;m_nodesData[nodesIndex];
+<a name="l00159"></a>00159               }
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161               <a class="code" href="classi2d_1_1_c_object2d_base.html#a6c871718d770f05d6d67177967f621ff" title="Copy this object from another one.">CObject2dBase::CopyFrom</a>(<span class="keywordtype">object</span>, mode);
 <a name="l00162"></a>00162 
 <a name="l00163"></a>00163               <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00164"></a>00164        }      

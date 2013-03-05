@@ -101,11 +101,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#a9895f587143a792562037e83b3364288"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#a92f14c245c32228d6c124d97c216974d">GetSupportedOperations</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a92f14c245c32228d6c124d97c216974d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#ae7db57e951923177343680407caa7477">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#ae272706676cf4206aeef888f3ff898d0">CopyFrom</a> (const IChangeable &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#ac954efb4f64c9cceef747c97fc7f82af">IsEqual</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare this object with another object.  <a href="#ac954efb4f64c9cceef747c97fc7f82af"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#af5981c97570606752879f95b57d377c1">CloneMe</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#af5981c97570606752879f95b57d377c1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#a6bd001f163d333a7d3d0bfa7eac5d3ee">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a6bd001f163d333a7d3d0bfa7eac5d3ee"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_position2d.html#aba7e6284cea744314dac68cc90a2a27d">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#aba7e6284cea744314dac68cc90a2a27d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -151,14 +151,15 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af5981c97570606752879f95b57d377c1"></a><!-- doxytag: member="i2d::CPosition2d::CloneMe" ref="af5981c97570606752879f95b57d377c1" args="() const " -->
+<a class="anchor" id="a6bd001f163d333a7d3d0bfa7eac5d3ee"></a><!-- doxytag: member="i2d::CPosition2d::CloneMe" ref="a6bd001f163d333a7d3d0bfa7eac5d3ee" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CPosition2d::CloneMe </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
@@ -168,13 +169,13 @@ Protected Attributes</h2></td></tr>
 <p>Make a copy of this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#aca17d0aedcec31b0ae88d233033622bc">istd::IChangeable</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus.html#aa7397227866e674c77682e8ceee1b00b">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_circle.html#a31b04208e4f751d8b5d536ab7309ccf8">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_annulus_segment.html#a66c67d9537267de63824cc75dc25c247">i2d::CAnnulusSegment</a>, and <a class="el" href="classi2d_1_1_c_oriented_circle.html#a71b986a6ac890ac1722af2ee98116daa">i2d::COrientedCircle</a>.</p>
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus.html#ac5eef045f364f087eedd7236f54034cb">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_circle.html#abc57f7333051577a82fbe51aba4acd82">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_annulus_segment.html#a0b1bd8b0b43711e837f2edc50b4f82ab">i2d::CAnnulusSegment</a>, and <a class="el" href="classi2d_1_1_c_oriented_circle.html#a626e6add9aacef287e7ee61eca76cbde">i2d::COrientedCircle</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae7db57e951923177343680407caa7477"></a><!-- doxytag: member="i2d::CPosition2d::CopyFrom" ref="ae7db57e951923177343680407caa7477" args="(const IChangeable &amp;object)" -->
+<a class="anchor" id="ae272706676cf4206aeef888f3ff898d0"></a><!-- doxytag: member="i2d::CPosition2d::CopyFrom" ref="ae272706676cf4206aeef888f3ff898d0" args="(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -182,14 +183,24 @@ Protected Attributes</h2></td></tr>
           <td class="memname">virtual bool i2d::CPosition2d::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const IChangeable &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus.html#a5d4d8fe5fd9ec8066664db96b1771933">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_circle.html#a9f8fc1bf403742d9ead22d8539b566b5">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_annulus_segment.html#a6d80095a517cdd125ad4ea7393311614">i2d::CAnnulusSegment</a>, and <a class="el" href="classi2d_1_1_c_oriented_circle.html#aca2f62da632e69cc2037090b044a29fe">i2d::COrientedCircle</a>.</p>
+<p>Reimplemented in <a class="el" href="classi2d_1_1_c_annulus.html#accbe0dcee91355db378d5efa91675464">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_circle.html#a4a264c2053d9e2e1e9307e7e55ea1fec">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_annulus_segment.html#aec8ed214f621cfc921a46d02ac214d77">i2d::CAnnulusSegment</a>, and <a class="el" href="classi2d_1_1_c_oriented_circle.html#ad44db0c100a85dbff95a3e8a07a5b12d">i2d::COrientedCircle</a>.</p>
 
 </div>
 </div>
@@ -274,6 +285,7 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Calulate inverse transformation of the object into second one. </p>
+<p>Please note, that this operation transforms logical coordinates, it means that the calibration will be ignored. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
@@ -371,6 +383,7 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Calulate transformation of the object into second one. </p>
+<p>Please note, that this operation transforms logical coordinates, it means that the calibration will be ignored. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
@@ -440,6 +453,7 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Do inverse transformation of this object. </p>
+<p>Please note, that this operation transforms logical coordinates, it means that the calibration will be ignored. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
@@ -578,6 +592,7 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Transform this object using some transformation. </p>
+<p>Please note, that this operation transforms logical coordinates, it means that the calibration will be ignored. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>

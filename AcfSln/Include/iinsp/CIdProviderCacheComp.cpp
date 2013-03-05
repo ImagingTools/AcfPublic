@@ -43,7 +43,7 @@ quint32 CIdProviderCacheComp::GetCurrentId() const
 
 // reimplemented (istd::IChangeable)
 
-bool CIdProviderCacheComp::CopyFrom(const IChangeable& object)
+bool CIdProviderCacheComp::CopyFrom(const IChangeable& object, CompatibilityMode /*mode*/)
 {
 	const IIdProvider* providerPtr = dynamic_cast<const IIdProvider*>(&object);
 	if (providerPtr != NULL){

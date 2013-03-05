@@ -73,7 +73,7 @@ int CInformationProviderCacheComp::GetInformationFlags() const
 
 // reimplemented (istd::IChangeable)
 
-bool CInformationProviderCacheComp::CopyFrom(const IChangeable& object)
+bool CInformationProviderCacheComp::CopyFrom(const IChangeable& object, CompatibilityMode /*mode*/)
 {
 	const istd::IInformationProvider* providerPtr = dynamic_cast<const IInformationProvider*>(&object);
 	if (providerPtr != NULL){

@@ -311,7 +311,7 @@ int CGeneralDataSequence::GetSupportedOperations() const
 }
 
 
-bool CGeneralDataSequence::CopyFrom(const istd::IChangeable& object)
+bool CGeneralDataSequence::CopyFrom(const istd::IChangeable& object, CompatibilityMode /*mode*/)
 {
 	const IDataSequence* sequencePtr = dynamic_cast<const IDataSequence*>(&object);
 	if (sequencePtr != NULL){
@@ -349,11 +349,11 @@ bool CGeneralDataSequence::CopyFrom(const istd::IChangeable& object)
 }
 
 
-istd::IChangeable* CGeneralDataSequence::CloneMe() const
+istd::IChangeable* CGeneralDataSequence::CloneMe(CompatibilityMode mode) const
 {
 	istd::TDelPtr<CGeneralDataSequence> clonePtr(new CGeneralDataSequence);
 
-	if (clonePtr->CopyFrom(*this)){
+	if (clonePtr->CopyFrom(*this, mode)){
 		return clonePtr.PopPtr();
 	}
 

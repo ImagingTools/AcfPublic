@@ -53,7 +53,7 @@
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// pseudo-reimplemented (istd::IChangeable)</span>
 <a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimod_1_1_t_model_wrap.html#ad966302f81af1f39e6fba986afff28bd">GetSupportedOperations</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classimod_1_1_t_model_wrap.html#a36d89699e63fa35fa0a1b4f7de2c071a">CloneMe</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classimod_1_1_t_model_wrap.html#a13b4683118869c290d1545f18b6197f0">CloneMe</a>(<a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">istd::IChangeable::CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af" title="External references are simple ignored.">istd::IChangeable::CM_WITHOUT_REFS</a>) <span class="keyword">const</span>;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keyword">protected</span>:
 <a name="l00038"></a>00038        <span class="comment">// pseudo-reimplemented (istd::IChangeable)</span>
@@ -88,11 +88,11 @@
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Base&gt;
-<a name="l00070"></a><a class="code" href="classimod_1_1_t_model_wrap.html#a36d89699e63fa35fa0a1b4f7de2c071a">00070</a> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classimod_1_1_t_model_wrap.html#a36d89699e63fa35fa0a1b4f7de2c071a">TModelWrap&lt;Base&gt;::CloneMe</a>()<span class="keyword"> const</span>
+<a name="l00070"></a><a class="code" href="classimod_1_1_t_model_wrap.html#a13b4683118869c290d1545f18b6197f0">00070</a> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classimod_1_1_t_model_wrap.html#a13b4683118869c290d1545f18b6197f0">TModelWrap&lt;Base&gt;::CloneMe</a>(<a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">istd::IChangeable::CompatibilityMode</a> mode)<span class="keyword"> const</span>
 <a name="l00071"></a>00071 <span class="keyword"></span>{
 <a name="l00072"></a>00072        <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt; TModelWrap&lt;Base&gt;</a> &gt; clonePtr(<span class="keyword">new</span> <a class="code" href="classimod_1_1_t_model_wrap.html" title="This model wrapper provides a simple connection between a concrete istd::IChangeable implementation a...">TModelWrap&lt;Base&gt;</a>());
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="keywordflow">if</span> (clonePtr-&gt;CopyFrom(*<span class="keyword">this</span>)){
+<a name="l00074"></a>00074        <span class="keywordflow">if</span> (clonePtr-&gt;CopyFrom(*<span class="keyword">this</span>, mode)){
 <a name="l00075"></a>00075               <span class="keywordflow">return</span> clonePtr.<a class="code" href="classistd_1_1_t_del_ptr.html#a699e9ff86495a4b8e5f22cbdc285c2cf" title="Reset internal pointer value without deleting instance and return previos value.">PopPtr</a>();
 <a name="l00076"></a>00076        }
 <a name="l00077"></a>00077 

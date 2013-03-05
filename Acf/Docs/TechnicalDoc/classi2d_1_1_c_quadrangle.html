@@ -91,9 +91,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calulate inverse transformation of the object into second one.  <a href="#af714f0d925b79a6ee2b54c33dfc7f8c1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_quadrangle.html#a87d55a1c7acbed3b3ba8812e4f7745ca">GetSupportedOperations</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a87d55a1c7acbed3b3ba8812e4f7745ca"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_quadrangle.html#a2faf2a46df8fb9cea47f7c42b229493d">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_quadrangle.html#a1db13e694665f31192a411a4e805b44b">CloneMe</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a1db13e694665f31192a411a4e805b44b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_quadrangle.html#a9ff4895de3f656fbfab3e396ace2eaa7">CopyFrom</a> (const IChangeable &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_quadrangle.html#adea52bba69fa9c5ea3e76a049e980ce5">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#adea52bba69fa9c5ea3e76a049e980ce5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_quadrangle.html#ab981eef410d88440f031d7cf28cc5283">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#ab981eef410d88440f031d7cf28cc5283"></a><br/></td></tr>
 </table>
@@ -146,14 +146,15 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a1db13e694665f31192a411a4e805b44b"></a><!-- doxytag: member="i2d::CQuadrangle::CloneMe" ref="a1db13e694665f31192a411a4e805b44b" args="() const " -->
+<a class="anchor" id="adea52bba69fa9c5ea3e76a049e980ce5"></a><!-- doxytag: member="i2d::CQuadrangle::CloneMe" ref="adea52bba69fa9c5ea3e76a049e980ce5" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CQuadrangle::CloneMe </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
@@ -163,11 +164,11 @@ Public Member Functions</h2></td></tr>
 <p>Make a copy of this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#aca17d0aedcec31b0ae88d233033622bc">istd::IChangeable</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2faf2a46df8fb9cea47f7c42b229493d"></a><!-- doxytag: member="i2d::CQuadrangle::CopyFrom" ref="a2faf2a46df8fb9cea47f7c42b229493d" args="(const IChangeable &amp;object)" -->
+<a class="anchor" id="a9ff4895de3f656fbfab3e396ace2eaa7"></a><!-- doxytag: member="i2d::CQuadrangle::CopyFrom" ref="a9ff4895de3f656fbfab3e396ace2eaa7" args="(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -175,8 +176,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool i2d::CQuadrangle::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const IChangeable &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -279,6 +290,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Calulate inverse transformation of the object into second one. </p>
+<p>Please note, that this operation transforms logical coordinates, it means that the calibration will be ignored. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
@@ -368,6 +380,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Calulate transformation of the object into second one. </p>
+<p>Please note, that this operation transforms logical coordinates, it means that the calibration will be ignored. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
@@ -414,6 +427,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Do inverse transformation of this object. </p>
+<p>Please note, that this operation transforms logical coordinates, it means that the calibration will be ignored. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>
@@ -603,6 +617,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Transform this object using some transformation. </p>
+<p>Please note, that this operation transforms logical coordinates, it means that the calibration will be ignored. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>controls needed transformation exactness. </td></tr>

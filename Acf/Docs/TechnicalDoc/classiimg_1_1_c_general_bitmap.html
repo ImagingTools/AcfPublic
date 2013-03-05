@@ -104,10 +104,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of color components.  <a href="#a5c2825a554bcb3538c237c0fbda73040"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#ad51b27c6848f363b8d84053bae680d71">GetSupportedOperations</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#ad51b27c6848f363b8d84053bae680d71"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#a52c18c8f676bcabcea624a15af954be9">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#a52c18c8f676bcabcea624a15af954be9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#ade42ef6e55148285ebacd0535d192b36">CloneMe</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#ade42ef6e55148285ebacd0535d192b36"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#ade736643c98955ef44175848afb407f0">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#ade736643c98955ef44175848afb407f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#a569fc8271b73c9581c1f8b1ed2f9bc2e">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a569fc8271b73c9581c1f8b1ed2f9bc2e"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_general_bitmap.html#a5238bfcf4852d271b9b2f0a2686d01e8">CreateBitmap</a> (const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;size, int pixelBitsCount, int componentsCount, <a class="el" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e">PixelFormat</a> pixelFormat)</td></tr>
@@ -137,14 +137,15 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ade42ef6e55148285ebacd0535d192b36"></a><!-- doxytag: member="iimg::CGeneralBitmap::CloneMe" ref="ade42ef6e55148285ebacd0535d192b36" args="() const " -->
+<a class="anchor" id="a569fc8271b73c9581c1f8b1ed2f9bc2e"></a><!-- doxytag: member="iimg::CGeneralBitmap::CloneMe" ref="a569fc8271b73c9581c1f8b1ed2f9bc2e" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* iimg::CGeneralBitmap::CloneMe </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
@@ -154,11 +155,11 @@ Protected Member Functions</h2></td></tr>
 <p>Make a copy of this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#aca17d0aedcec31b0ae88d233033622bc">istd::IChangeable</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a52c18c8f676bcabcea624a15af954be9"></a><!-- doxytag: member="iimg::CGeneralBitmap::CopyFrom" ref="a52c18c8f676bcabcea624a15af954be9" args="(const istd::IChangeable &amp;object)" -->
+<a class="anchor" id="ade736643c98955ef44175848afb407f0"></a><!-- doxytag: member="iimg::CGeneralBitmap::CopyFrom" ref="ade736643c98955ef44175848afb407f0" args="(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -166,8 +167,18 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual bool iimg::CGeneralBitmap::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -176,7 +187,7 @@ Protected Member Functions</h2></td></tr>
 <p>Copy this object from another one. </p>
 <p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a> do nothing. </p>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_object2d_base.html#a6c871718d770f05d6d67177967f621ff">i2d::CObject2dBase</a>.</p>
 
 </div>
 </div>

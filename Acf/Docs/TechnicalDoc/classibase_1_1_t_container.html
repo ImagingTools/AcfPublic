@@ -83,6 +83,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_container.html#ab2fb65b570efb9bcefc394c5854dfe5c">IsEmpty</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <code>true</code> if container is empty, otherwise a <code>false</code>.  <a href="#ab2fb65b570efb9bcefc394c5854dfe5c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_container.html#a7557997a798717cbe52b7f4e51dc21b6">IsIndexValid</a> (int index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_container.html#ae2f7a06383d81e89017e46915ae40b0a">CopyFrom</a> (const IChangeable &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QList&lt; ItemClass &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_t_container.html#ac7750c3f39765264f9ce3a0bfd546ddd">Items</a></td></tr>
@@ -111,7 +112,7 @@ template&lt;typename ItemClass&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00050">50</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00053">53</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -146,6 +147,39 @@ template&lt;typename ItemClass&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ae2f7a06383d81e89017e46915ae40b0a"></a><!-- doxytag: member="ibase::TContainer::CopyFrom" ref="ae2f7a06383d81e89017e46915ae40b0a" args="(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ItemClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classibase_1_1_t_container.html">ibase::TContainer</a>&lt; ItemClass &gt;::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00193">193</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+
+<p>References <a class="el" href="_t_container_8h_source.html#l00055">ibase::TContainer&lt; ItemClass &gt;::m_items</a>, and <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7790c9cbb969e063f68301eec854baae"></a><!-- doxytag: member="ibase::TContainer::GetAt" ref="a7790c9cbb969e063f68301eec854baae" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +197,7 @@ template&lt;typename ItemClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00066">66</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00069">69</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -184,7 +218,7 @@ template&lt;typename ItemClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00057">57</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00060">60</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -208,7 +242,7 @@ template&lt;typename ItemClass &gt; </div>
 
 <p>Implements <a class="el" href="classistd_1_1_i_container_info.html#a5c4c7db51d103927e798eb8b4497d88f">istd::IContainerInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00167">167</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00170">170</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -239,7 +273,7 @@ template&lt;typename ItemClass&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00097">97</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00100">100</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -263,7 +297,7 @@ template&lt;typename ItemClass &gt; </div>
 
 <p>Implements <a class="el" href="classistd_1_1_i_container_info.html#a24265aa13e5d2ee3c5e14004dd25932d">istd::IContainerInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00174">174</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00177">177</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -286,7 +320,7 @@ template&lt;typename ItemClass &gt; </div>
 
 <p>Implements <a class="el" href="classistd_1_1_i_container_info.html#a901b3dfe9c01e9681e4042f2aa4a9ff2">istd::IContainerInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00181">181</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00184">184</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -307,9 +341,9 @@ template&lt;typename ItemClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00156">156</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00159">159</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
-<p>References <a class="el" href="_t_container_8h_source.html#l00052">ibase::TContainer&lt; ItemClass &gt;::m_items</a>.</p>
+<p>References <a class="el" href="_t_container_8h_source.html#l00055">ibase::TContainer&lt; ItemClass &gt;::m_items</a>.</p>
 
 </div>
 </div>
@@ -329,7 +363,7 @@ template&lt;typename ItemClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00115">115</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00118">118</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -349,7 +383,7 @@ template&lt;typename ItemClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00124">124</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00127">127</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -370,7 +404,7 @@ template&lt;typename ItemClass&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00075">75</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00078">78</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +425,7 @@ template&lt;typename ItemClass&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00086">86</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00089">89</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -412,7 +446,7 @@ template&lt;typename ItemClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00133">133</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00136">136</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -432,7 +466,7 @@ template&lt;typename ItemClass &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00147">147</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00150">150</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
 </div>
 </div>
@@ -450,9 +484,9 @@ template&lt;typename ItemClass&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00052">52</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_container_8h_source.html#l00055">55</a> of file <a class="el" href="_t_container_8h_source.html">TContainer.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_container_8h_source.html#l00156">ibase::TContainer&lt; ItemClass &gt;::operator=()</a>.</p>
+<p>Referenced by <a class="el" href="_t_container_8h_source.html#l00193">ibase::TContainer&lt; ItemClass &gt;::CopyFrom()</a>, and <a class="el" href="_t_container_8h_source.html#l00159">ibase::TContainer&lt; ItemClass &gt;::operator=()</a>.</p>
 
 </div>
 </div>

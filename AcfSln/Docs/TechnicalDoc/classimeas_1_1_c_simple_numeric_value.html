@@ -78,7 +78,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_simple_numeric_value.html#a0bc635bfc29198638308d81786abe212">SetValues</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> &amp;values)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set list of numeric values.  <a href="#a0bc635bfc29198638308d81786abe212"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_simple_numeric_value.html#aa341d29fce408c873157321b379a0e91">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_simple_numeric_value.html#ac1a315484e757dd8cea383b545de7fc4">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_simple_numeric_value.html#a833755f3d5d6f4a241be958b3ea3e011">CopyFrom</a> (const IChangeable &amp;object, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_simple_numeric_value.html#a98fa43cc574e0e7bf15178d0b23f1e74">m_values</a></td></tr>
@@ -88,7 +88,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_simple_numeric_value_8h_source.html#l00019">19</a> of file <a class="el" href="_c_simple_numeric_value_8h_source.html">CSimpleNumericValue.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac1a315484e757dd8cea383b545de7fc4"></a><!-- doxytag: member="imeas::CSimpleNumericValue::CopyFrom" ref="ac1a315484e757dd8cea383b545de7fc4" args="(const IChangeable &amp;object)" -->
+<a class="anchor" id="a833755f3d5d6f4a241be958b3ea3e011"></a><!-- doxytag: member="imeas::CSimpleNumericValue::CopyFrom" ref="a833755f3d5d6f4a241be958b3ea3e011" args="(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -96,14 +96,24 @@ Protected Attributes</h2></td></tr>
           <td class="memname">virtual bool imeas::CSimpleNumericValue::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const IChangeable &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#aa9680ecc36f8a70e1b30549eefb61e46">iipr::TWeightedFeatureWrap&lt; BaseObject &gt;</a>, <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#aa9680ecc36f8a70e1b30549eefb61e46">iipr::TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</a>, and <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#aa9680ecc36f8a70e1b30549eefb61e46">iipr::TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a2f7d73d6be98b5525682b99193099171">iipr::TWeightedFeatureWrap&lt; BaseObject &gt;</a>, <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a2f7d73d6be98b5525682b99193099171">iipr::TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</a>, and <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a2f7d73d6be98b5525682b99193099171">iipr::TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</a>.</p>
 
 </div>
 </div>

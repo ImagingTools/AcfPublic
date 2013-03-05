@@ -84,8 +84,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#abb7d4257a9425546d21f23e39a3741dd">GetChildsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a1cb6747206bcf8cab703d7f6c3f05282">IHierarchicalMessageContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#aacb0d3680b600054a53c7f2ebc469993">GetChild</a> (int index) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#aff1fe19bfb61760bff60c3a66a5e20ae">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#aff1fe19bfb61760bff60c3a66a5e20ae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#a4b925226bd0c30420ad0208b48249fde">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#a4b925226bd0c30420ad0208b48249fde"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Basic implementation of a message container. </p>
@@ -163,7 +163,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aff1fe19bfb61760bff60c3a66a5e20ae"></a><!-- doxytag: member="ibase::CMessageContainer::CopyFrom" ref="aff1fe19bfb61760bff60c3a66a5e20ae" args="(const istd::IChangeable &amp;object)" -->
+<a class="anchor" id="a4b925226bd0c30420ad0208b48249fde"></a><!-- doxytag: member="ibase::CMessageContainer::CopyFrom" ref="a4b925226bd0c30420ad0208b48249fde" args="(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -171,8 +171,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool ibase::CMessageContainer::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -181,7 +191,7 @@ Public Member Functions</h2></td></tr>
 <p>Copy this object from another one. </p>
 <p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a> do nothing. </p>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a990a1273f2c61e12717594aa672d5462">istd::IChangeable</a>.</p>
 
 </div>
 </div>

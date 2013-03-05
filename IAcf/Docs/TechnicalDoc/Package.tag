@@ -1943,8 +1943,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>a31d3a7fc182e65b3f47faae63d663f87</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>ac323ea798793f78083506c3876dbd74c</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -1981,8 +1981,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiwin_1_1_c_time_stamp_cache_comp.html</anchorfile>
-      <anchor>a8f6b3cbaa60448fa0d24e3d9b1b4051f</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>aaf8edaf4eb8bba5c78fe35fd723e846d</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">

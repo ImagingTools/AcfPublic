@@ -81,10 +81,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of the information.  <a href="#a5d5e0d8843a8ca9fbc8ded421df1c164"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a2cfd9251b94e5f9a6fd5b4bfd281bb19">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a2cfd9251b94e5f9a6fd5b4bfd281bb19"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#ae2caf86fbb1f6c94ac737c5aeb38ea6a">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#ae2caf86fbb1f6c94ac737c5aeb38ea6a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a662550bb43d0c6ede26b78d6bf7ed778">CloneMe</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a662550bb43d0c6ede26b78d6bf7ed778"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a1da2f3a27d05f88c436eb702e37befc9">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#a1da2f3a27d05f88c436eb702e37befc9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a2f74b5dd4403808400883b24fa60b164">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a2f74b5dd4403808400883b24fa60b164"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message.html#a873e5360d1660b9ef75032b51798f5d3">m_category</a></td></tr>
@@ -167,14 +167,15 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a662550bb43d0c6ede26b78d6bf7ed778"></a><!-- doxytag: member="ibase::CMessage::CloneMe" ref="a662550bb43d0c6ede26b78d6bf7ed778" args="() const " -->
+<a class="anchor" id="a2f74b5dd4403808400883b24fa60b164"></a><!-- doxytag: member="ibase::CMessage::CloneMe" ref="a2f74b5dd4403808400883b24fa60b164" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* ibase::CMessage::CloneMe </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
@@ -184,11 +185,11 @@ Protected Attributes</h2></td></tr>
 <p>Make a copy of this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#af240df11c10ed6c8db9516c667cb2b04">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#aca17d0aedcec31b0ae88d233033622bc">istd::IChangeable</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae2caf86fbb1f6c94ac737c5aeb38ea6a"></a><!-- doxytag: member="ibase::CMessage::CopyFrom" ref="ae2caf86fbb1f6c94ac737c5aeb38ea6a" args="(const istd::IChangeable &amp;object)" -->
+<a class="anchor" id="a1da2f3a27d05f88c436eb702e37befc9"></a><!-- doxytag: member="ibase::CMessage::CopyFrom" ref="a1da2f3a27d05f88c436eb702e37befc9" args="(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -196,8 +197,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">virtual bool ibase::CMessage::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -206,7 +217,7 @@ Protected Attributes</h2></td></tr>
 <p>Copy this object from another one. </p>
 <p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a> do nothing. </p>
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#a990a1273f2c61e12717594aa672d5462">istd::IChangeable</a>.</p>
 
 </div>
 </div>

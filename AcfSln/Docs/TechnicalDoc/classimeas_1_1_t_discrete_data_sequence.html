@@ -86,7 +86,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a302b6302a403e5eeeb6b106e6b179971">SetSample</a> (int index, int channel, double value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sample value at specified index.  <a href="#a302b6302a403e5eeeb6b106e6b179971"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#adf51600624d3a9994897ad990db2d5bd">Serialize</a> (<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#ac9533ba8a082f7795675a2455ebb863f">CopyFrom</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_t_discrete_data_sequence.html#a263bc6f83841516c121dd465b337e6e9">CopyFrom</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object, <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Element&gt;<br/>
@@ -116,7 +116,7 @@ template&lt;typename Element &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac9533ba8a082f7795675a2455ebb863f"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::CopyFrom" ref="ac9533ba8a082f7795675a2455ebb863f" args="(const istd::IChangeable &amp;object)" -->
+<a class="anchor" id="a263bc6f83841516c121dd465b337e6e9"></a><!-- doxytag: member="imeas::TDiscreteDataSequence::CopyFrom" ref="a263bc6f83841516c121dd465b337e6e9" args="(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -126,14 +126,24 @@ template&lt;typename Element &gt; </div>
           <td class="memname">bool <a class="el" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::TDiscreteDataSequence</a>&lt; Element &gt;::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a48106c79905f877b7bcca41755bbde49">istd::IChangeable</a>.</p>
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a990a1273f2c61e12717594aa672d5462">istd::IChangeable</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_discrete_data_sequence_8h_source.html#l00347">347</a> of file <a class="el" href="_t_discrete_data_sequence_8h_source.html">TDiscreteDataSequence.h</a>.</p>
 

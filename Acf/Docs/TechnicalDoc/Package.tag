@@ -7059,15 +7059,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a22554b26ec0600fd6cb045993e6cbbde</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>a60acaed5eecce2e4ec38ee1d81b4bdd8</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a12507865e9d64df47e6974b9c8650658</anchor>
-      <arglist>() const </arglist>
+      <anchor>a3c9948feacb694c7d267b06baf189f65</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>CAffine2d</type>
@@ -7238,15 +7238,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a5d4d8fe5fd9ec8066664db96b1771933</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>accbe0dcee91355db378d5efa91675464</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>aa7397227866e674c77682e8ceee1b00b</anchor>
-      <arglist>() const </arglist>
+      <anchor>ac5eef045f364f087eedd7236f54034cb</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -7360,15 +7360,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>a6d80095a517cdd125ad4ea7393311614</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>aec8ed214f621cfc921a46d02ac214d77</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>a66c67d9537267de63824cc75dc25c247</anchor>
-      <arglist>() const </arglist>
+      <anchor>a0b1bd8b0b43711e837f2edc50b4f82ab</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -7629,15 +7629,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a9f8fc1bf403742d9ead22d8539b566b5</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a4a264c2053d9e2e1e9307e7e55ea1fec</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a31b04208e4f751d8b5d536ab7309ccf8</anchor>
-      <arglist>() const </arglist>
+      <anchor>abc57f7333051577a82fbe51aba4acd82</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8192,15 +8192,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>aed2f5d4e79d9a622e9f7ad9103ac1fcb</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a97593a5952ccb1cc4d478bc91cc15bfe</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a8debdb1e27d3185fbad49dae5ce5d69b</anchor>
-      <arglist>() const </arglist>
+      <anchor>a838ff36e94875672ef45934e1914cdc8</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8607,6 +8607,13 @@
       <anchor>a9a571c33f3ade5aae6fc7539a7c7fdcc</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a6c871718d770f05d6d67177967f621ff</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::COrientedCircle</name>
@@ -8672,15 +8679,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>aca2f62da632e69cc2037090b044a29fe</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>ad44db0c100a85dbff95a3e8a07a5b12d</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>a71b986a6ac890ac1722af2ee98116daa</anchor>
-      <arglist>() const </arglist>
+      <anchor>a626e6add9aacef287e7ee61eca76cbde</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8801,15 +8808,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a145e9e13b37a85b18071c64a2fcf200a</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>afe1253858f2bb19455e953176c682f4c</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a47d70394f1684e7b03285027367d57e3</anchor>
-      <arglist>() const </arglist>
+      <anchor>a1675026761ed80a2fbaab5f757e8b5b3</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8953,15 +8960,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a7e776b2bd69538f538f4ea53a43b1679</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>aab373d069a4e8854c26831897ea6adae</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>ac58fdced2e6ffb74d153b261c6ef2ada</anchor>
-      <arglist>() const </arglist>
+      <anchor>acd7a8230afdef605df6e5af2b3087942</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -9061,15 +9068,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
-      <anchor>ae5a87b5663f89c08921a31a199916626</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>abc6434bd57dca0f9cc2daa8596a7bbc0</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
-      <anchor>aa45eb45f242f01229f2dd4d04502dd14</anchor>
-      <arglist>() const </arglist>
+      <anchor>a7857fdab9bc3805daaee664939a8b3b8</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9197,15 +9204,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a77be36ebbde1613444892771d8cf83b8</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a4f70f2cc264c033ee6bb5d0c3394c188</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a3a6d401b38d3d2cb14ed84e06b19106d</anchor>
-      <arglist>() const </arglist>
+      <anchor>abe756bd10ce843d244c44c1b28ff0e67</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -9321,8 +9328,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>ae7db57e951923177343680407caa7477</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>ae272706676cf4206aeef888f3ff898d0</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -9335,8 +9342,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>af5981c97570606752879f95b57d377c1</anchor>
-      <arglist>() const </arglist>
+      <anchor>a6bd001f163d333a7d3d0bfa7eac5d3ee</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -9506,15 +9513,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a2faf2a46df8fb9cea47f7c42b229493d</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a9ff4895de3f656fbfab3e396ace2eaa7</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a1db13e694665f31192a411a4e805b44b</anchor>
-      <arglist>() const </arglist>
+      <anchor>adea52bba69fa9c5ea3e76a049e980ce5</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -10395,15 +10402,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>acefb352208f1ec14bfc2d3a2dfb256ed</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a5c958721afe169631e3075ff89c9e777</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a08c6bb896e268924df434797d17a49c0</anchor>
-      <arglist>() const </arglist>
+      <anchor>a47acd20c0d15a18c4e68159b2bec777d</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -10489,15 +10496,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
-      <anchor>a9a75080adfe2880c690b34e0a40d510c</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>ac89e21d739778453ee1acf40f82180ff</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
-      <anchor>aee2d0776940e4a0943189aaec5df45f9</anchor>
-      <arglist>() const </arglist>
+      <anchor>aff4d063109249f9c98e64b481a40375c</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -10655,15 +10662,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
-      <anchor>acb5a217e7a7186d33208f38e1686b088</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a2476d62307a21cf56962ad18df1bfc27</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
-      <anchor>ae18fc8338a76e69317389b95b4581ade</anchor>
-      <arglist>() const </arglist>
+      <anchor>a0ddb620da9b2139299568e0a49730a6b</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11518,8 +11525,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>af2d7b07fedab0ff5da1047ecba41d78c</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a7f9ae310ba69af5674ffe2af74c106c4</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -12603,15 +12610,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>ae2caf86fbb1f6c94ac737c5aeb38ea6a</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>a1da2f3a27d05f88c436eb702e37befc9</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a662550bb43d0c6ede26b78d6bf7ed778</anchor>
-      <arglist>() const </arglist>
+      <anchor>a2f74b5dd4403808400883b24fa60b164</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::IInformationProvider::InformationCategory</type>
@@ -12756,8 +12763,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>aff1fe19bfb61760bff60c3a66a5e20ae</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>a4b925226bd0c30420ad0208b48249fde</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14317,6 +14324,13 @@
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>a7557997a798717cbe52b7f4e51dc21b6</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>ae2f7a06383d81e89017e46915ae40b0a</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QList&lt; ItemClass &gt;</type>
@@ -24079,8 +24093,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classicomp_1_1_t_component_clone_wrap.html</anchorfile>
-      <anchor>aafe97db567f032f4983b5c3d5a2b9cf8</anchor>
-      <arglist>() const </arglist>
+      <anchor>a649d2c92ab2ef38fdd621b66c61bbe0c</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27198,15 +27212,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
-      <anchor>a10241aff9cbe3664092264333f0f31ba</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>a88de0962374314b86b1dc0a2933aaf71</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
-      <anchor>adc8f1378e18bd1b9aedef8e604f0b05e</anchor>
-      <arglist>() const </arglist>
+      <anchor>a91a94521afcd443d1fafab6fcc7c7a02</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QImage::Format</type>
@@ -27540,15 +27554,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a52c18c8f676bcabcea624a15af954be9</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>ade736643c98955ef44175848afb407f0</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>ade42ef6e55148285ebacd0535d192b36</anchor>
-      <arglist>() const </arglist>
+      <anchor>a569fc8271b73c9581c1f8b1ed2f9bc2e</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -32469,8 +32483,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a36d89699e63fa35fa0a1b4f7de2c071a</anchor>
-      <arglist>() const </arglist>
+      <anchor>a13b4683118869c290d1545f18b6197f0</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -32678,8 +32692,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
-      <anchor>a61a61ca85a703cf0cb1f8c3de3aab712</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a4272e33fd4c4b4a1b570289eb4d04d77</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>iprm::IParamsSet *</type>
@@ -33592,8 +33606,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
-      <anchor>a42e2ab00999fe061d3e718d07ed165d1</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a7fcdd8dac35a1a3b7aad3775dd2139fe</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const ParameterInfo *</type>
@@ -43640,8 +43654,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiser_1_1_c_reader_version_info.html</anchorfile>
-      <anchor>a41b41790e6a058a84ec19b4762bfdfea</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>a75589f441c950aba0819bf70394a1def</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -44958,8 +44972,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>a5756ad1cd2e4009fd7046c10968db6d6</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>a7fce9d82f4807652d3860b012ad08985</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -46452,6 +46466,36 @@
       <anchor>adfacdea73eb745825f6797b4b8986eacae2bbdae9e4076c92ac80a0009cebbfb9</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>CompatibilityMode</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a4e78e759485a497c072bd70566f495de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CM_STRICT</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a4e78e759485a497c072bd70566f495deaac3f5b048d839815d6c86b1b33bf347e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CM_WITHOUT_REFS</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CM_WITH_REFS</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a4e78e759485a497c072bd70566f495dea8cbe20128076552104a7974851d67981</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CM_CONVERT</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a4e78e759485a497c072bd70566f495dead6e2681eae74556408f9afd806f217e1</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
@@ -46477,8 +46521,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a48106c79905f877b7bcca41755bbde49</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a990a1273f2c61e12717594aa672d5462</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -46491,8 +46535,8 @@
       <type>virtual IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>af240df11c10ed6c8db9516c667cb2b04</anchor>
-      <arglist>() const </arglist>
+      <anchor>aca17d0aedcec31b0ae88d233033622bc</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

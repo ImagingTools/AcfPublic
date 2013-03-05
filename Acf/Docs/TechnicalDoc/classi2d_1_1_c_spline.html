@@ -76,9 +76,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a segment at the end of spline segment table.  <a href="#a10a1074c20027daa44dc0d4a849a50a5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#a3d965097a12e35cb0dfd437126970136">GetSupportedOperations</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a3d965097a12e35cb0dfd437126970136"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#a9a75080adfe2880c690b34e0a40d510c">CopyFrom</a> (const IChangeable &amp;object)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#aee2d0776940e4a0943189aaec5df45f9">CloneMe</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#aee2d0776940e4a0943189aaec5df45f9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#ac89e21d739778453ee1acf40f82180ff">CopyFrom</a> (const IChangeable &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#aff4d063109249f9c98e64b481a40375c">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#aff4d063109249f9c98e64b481a40375c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_spline.html#ad124d826016fef5f441975b0908d839e">CalcAllSegments</a> () const </td></tr>
@@ -138,14 +138,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aee2d0776940e4a0943189aaec5df45f9"></a><!-- doxytag: member="i2d::CSpline::CloneMe" ref="aee2d0776940e4a0943189aaec5df45f9" args="() const " -->
+<a class="anchor" id="aff4d063109249f9c98e64b481a40375c"></a><!-- doxytag: member="i2d::CSpline::CloneMe" ref="aff4d063109249f9c98e64b481a40375c" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CSpline::CloneMe </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
@@ -155,11 +156,11 @@ Protected Member Functions</h2></td></tr>
 <p>Make a copy of this object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polyline.html#aa45eb45f242f01229f2dd4d04502dd14">i2d::CPolyline</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polyline.html#a7857fdab9bc3805daaee664939a8b3b8">i2d::CPolyline</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9a75080adfe2880c690b34e0a40d510c"></a><!-- doxytag: member="i2d::CSpline::CopyFrom" ref="a9a75080adfe2880c690b34e0a40d510c" args="(const IChangeable &amp;object)" -->
+<a class="anchor" id="ac89e21d739778453ee1acf40f82180ff"></a><!-- doxytag: member="i2d::CSpline::CopyFrom" ref="ac89e21d739778453ee1acf40f82180ff" args="(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -167,14 +168,24 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual bool i2d::CSpline::CopyFrom </td>
           <td>(</td>
           <td class="paramtype">const IChangeable &amp;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polyline.html#ae5a87b5663f89c08921a31a199916626">i2d::CPolyline</a>.</p>
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_polyline.html#abc6434bd57dca0f9cc2daa8596a7bbc0">i2d::CPolyline</a>.</p>
 
 </div>
 </div>

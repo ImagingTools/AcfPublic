@@ -138,7 +138,7 @@ bool CMessage::Serialize(iser::IArchive& archive)
 
 // reimplemented (istd::IChangeable)
 
-bool CMessage::CopyFrom(const istd::IChangeable& object)
+bool CMessage::CopyFrom(const istd::IChangeable& object, CompatibilityMode /*mode*/)
 {
 	const CMessage* sourcePtr = dynamic_cast<const CMessage*>(&object);
 	if (sourcePtr){
@@ -156,7 +156,7 @@ bool CMessage::CopyFrom(const istd::IChangeable& object)
 }
 
 
-istd::IChangeable* CMessage::CloneMe() const
+istd::IChangeable* CMessage::CloneMe(CompatibilityMode mode) const
 {
 	return new CMessage(
 			m_category,

@@ -58,65 +58,66 @@
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        <span class="comment">// reimplemented to resolve inheritance ambiguity introduced in #119</span>
 <a name="l00037"></a>00037        <span class="comment">// todo consider using &#39;using&#39; directive</span>
-<a name="l00038"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#aa9680ecc36f8a70e1b30549eefb61e46">00038</a>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#aa9680ecc36f8a70e1b30549eefb61e46">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>){
-<a name="l00039"></a>00039               <span class="keywordflow">return</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#aa9680ecc36f8a70e1b30549eefb61e46">BaseObject::CopyFrom</a>(<span class="keywordtype">object</span>);
-<a name="l00040"></a>00040        }
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="keyword">protected</span>:
-<a name="l00043"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a48120fa2978f81cf33d685fddc69bab9">00043</a>        <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a48120fa2978f81cf33d685fddc69bab9">m_weight</a>;
-<a name="l00044"></a>00044 };
-<a name="l00045"></a>00045 
+<a name="l00038"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a2f7d73d6be98b5525682b99193099171">00038</a>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a2f7d73d6be98b5525682b99193099171">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode)
+<a name="l00039"></a>00039        {
+<a name="l00040"></a>00040               <span class="keywordflow">return</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a2f7d73d6be98b5525682b99193099171">BaseObject::CopyFrom</a>(<span class="keywordtype">object</span>, mode);
+<a name="l00041"></a>00041        }
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="keyword">protected</span>:
+<a name="l00044"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a48120fa2978f81cf33d685fddc69bab9">00044</a>        <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a48120fa2978f81cf33d685fddc69bab9">m_weight</a>;
+<a name="l00045"></a>00045 };
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="comment">// public methods</span>
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
-<a name="l00050"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a5b9c8031e18165d0b5c85f7838814a84">00050</a> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a5b9c8031e18165d0b5c85f7838814a84">TWeightedFeatureWrap&lt;BaseObject&gt;::TWeightedFeatureWrap</a>(<span class="keywordtype">double</span> weight)
-<a name="l00051"></a>00051        :m_weight(weight)
-<a name="l00052"></a>00052 {
-<a name="l00053"></a>00053 }
-<a name="l00054"></a>00054 
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="comment">// public methods</span>
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
+<a name="l00051"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a5b9c8031e18165d0b5c85f7838814a84">00051</a> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a5b9c8031e18165d0b5c85f7838814a84">TWeightedFeatureWrap&lt;BaseObject&gt;::TWeightedFeatureWrap</a>(<span class="keywordtype">double</span> weight)
+<a name="l00052"></a>00052        :m_weight(weight)
+<a name="l00053"></a>00053 {
+<a name="l00054"></a>00054 }
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
-<a name="l00057"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a670784cb0eb876758dd5b47eaa40395f">00057</a> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a670784cb0eb876758dd5b47eaa40395f">TWeightedFeatureWrap&lt;BaseObject&gt;::GetWeight</a>()<span class="keyword"> const</span>
-<a name="l00058"></a>00058 <span class="keyword"></span>{
-<a name="l00059"></a>00059        <span class="keywordflow">return</span> m_weight;
-<a name="l00060"></a>00060 }
-<a name="l00061"></a>00061 
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
+<a name="l00058"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a670784cb0eb876758dd5b47eaa40395f">00058</a> <span class="keywordtype">double</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a670784cb0eb876758dd5b47eaa40395f">TWeightedFeatureWrap&lt;BaseObject&gt;::GetWeight</a>()<span class="keyword"> const</span>
+<a name="l00059"></a>00059 <span class="keyword"></span>{
+<a name="l00060"></a>00060        <span class="keywordflow">return</span> m_weight;
+<a name="l00061"></a>00061 }
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
-<a name="l00064"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#aef12a2739f789cde29f56b01944cda48">00064</a> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#aef12a2739f789cde29f56b01944cda48">TWeightedFeatureWrap&lt;BaseObject&gt;::SetWeight</a>(<span class="keywordtype">double</span> weight)
-<a name="l00065"></a>00065 {
-<a name="l00066"></a>00066        m_weight = weight;
-<a name="l00067"></a>00067 }
-<a name="l00068"></a>00068 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
+<a name="l00065"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#aef12a2739f789cde29f56b01944cda48">00065</a> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#aef12a2739f789cde29f56b01944cda48">TWeightedFeatureWrap&lt;BaseObject&gt;::SetWeight</a>(<span class="keywordtype">double</span> weight)
+<a name="l00066"></a>00066 {
+<a name="l00067"></a>00067        m_weight = weight;
+<a name="l00068"></a>00068 }
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070 <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
-<a name="l00073"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">00073</a> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">TWeightedFeatureWrap&lt;BaseObject&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
-<a name="l00074"></a>00074 {
-<a name="l00075"></a>00075        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> notifier(archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">IsStoring</a>()? <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        retVal = retVal &amp;&amp; BaseClass::Serialize(archive);
-<a name="l00080"></a>00080        retVal = retVal &amp;&amp; BaseClass2::Serialize(archive);
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> weightTag(<span class="stringliteral">&quot;Weight&quot;</span>, <span class="stringliteral">&quot;Weight&quot;</span>);
-<a name="l00083"></a>00083        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(weightTag);
-<a name="l00084"></a>00084        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(m_weight);
-<a name="l00085"></a>00085        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(weightTag);
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087        <span class="keywordflow">return</span> retVal;
-<a name="l00088"></a>00088 }
-<a name="l00089"></a>00089 
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseObject&gt;
+<a name="l00074"></a><a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">00074</a> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">TWeightedFeatureWrap&lt;BaseObject&gt;::Serialize</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive)
+<a name="l00075"></a>00075 {
+<a name="l00076"></a>00076        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_change_notifier.html">istd::CChangeNotifier</a> notifier(archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">IsStoring</a>()? <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>: <span class="keyword">this</span>);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078        <span class="keywordtype">bool</span> retVal = <span class="keyword">true</span>;
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080        retVal = retVal &amp;&amp; BaseClass::Serialize(archive);
+<a name="l00081"></a>00081        retVal = retVal &amp;&amp; BaseClass2::Serialize(archive);
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083        <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> weightTag(<span class="stringliteral">&quot;Weight&quot;</span>, <span class="stringliteral">&quot;Weight&quot;</span>);
+<a name="l00084"></a>00084        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">BeginTag</a>(weightTag);
+<a name="l00085"></a>00085        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a1492a46ee89601614ca7999d1210d575">Process</a>(m_weight);
+<a name="l00086"></a>00086        retVal = retVal &amp;&amp; archive.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">EndTag</a>(weightTag);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088        <span class="keywordflow">return</span> retVal;
+<a name="l00089"></a>00089 }
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091 } <span class="comment">// namespace iipr</span>
-<a name="l00092"></a>00092 
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 } <span class="comment">// namespace iipr</span>
 <a name="l00093"></a>00093 
-<a name="l00094"></a>00094 <span class="preprocessor">#endif // !iipr_TFeatureWrap_included</span>
-<a name="l00095"></a>00095 <span class="preprocessor"></span>
-<a name="l00096"></a>00096 
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="preprocessor">#endif // !iipr_TFeatureWrap_included</span>
+<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00097"></a>00097 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

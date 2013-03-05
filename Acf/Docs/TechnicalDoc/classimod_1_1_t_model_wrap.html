@@ -73,7 +73,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_wrap.html#ab262dec8a0bea381e8459278e3752c0e">SetBaseObject</a> (const <a class="el" href="class_base.html">Base</a> &amp;baseObject)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_wrap.html#ad966302f81af1f39e6fba986afff28bd">GetSupportedOperations</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_wrap.html#a36d89699e63fa35fa0a1b4f7de2c071a">CloneMe</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_wrap.html#a13b4683118869c290d1545f18b6197f0">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">istd::IChangeable::CompatibilityMode</a> mode=istd::IChangeable::CM_WITHOUT_REFS) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_model_wrap.html#ab0a814285ae59f414c9877b42f862586">OnBeginChanges</a> (int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr)</td></tr>
@@ -126,7 +126,7 @@ template&lt;class Base&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a36d89699e63fa35fa0a1b4f7de2c071a"></a><!-- doxytag: member="imod::TModelWrap::CloneMe" ref="a36d89699e63fa35fa0a1b4f7de2c071a" args="() const " -->
+<a class="anchor" id="a13b4683118869c290d1545f18b6197f0"></a><!-- doxytag: member="imod::TModelWrap::CloneMe" ref="a13b4683118869c290d1545f18b6197f0" args="(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -135,14 +135,15 @@ template&lt;class Base &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> * <a class="el" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::CloneMe </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">istd::IChangeable::CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>istd::IChangeable::CM_WITHOUT_REFS</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classicomp_1_1_t_component_clone_wrap.html#aafe97db567f032f4983b5c3d5a2b9cf8">icomp::TComponentCloneWrap&lt; imod::TModelWrap&lt; Base &gt; &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classicomp_1_1_t_component_clone_wrap.html#a649d2c92ab2ef38fdd621b66c61bbe0c">icomp::TComponentCloneWrap&lt; imod::TModelWrap&lt; Base &gt; &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_t_model_wrap_8h_source.html#l00070">70</a> of file <a class="el" href="_t_model_wrap_8h_source.html">TModelWrap.h</a>.</p>
 

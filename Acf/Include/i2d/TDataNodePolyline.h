@@ -65,7 +65,7 @@ public:
 	virtual bool RemoveNode(int index);
 
 	// reimplemented istd::IChangeable
-	virtual bool CopyFrom(const IChangeable& object);
+	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
 
 protected:
 	// reimplemented (i2d::CPolygon)
@@ -164,7 +164,7 @@ bool TDataNodePolyline<NodeData>::RemoveNode(int index)
 // reimplemented istd::IChangeable
 
 template<class NodeData>
-bool TDataNodePolyline<NodeData>::CopyFrom(const IChangeable& object)
+bool TDataNodePolyline<NodeData>::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 {
 	Clear();
 
@@ -173,14 +173,14 @@ bool TDataNodePolyline<NodeData>::CopyFrom(const IChangeable& object)
 	if (polygonPtr != NULL){		
 		istd::CChangeNotifier notifier(this);
 
-		SetCalibration(polygonPtr->GetCalibration());
-
 		int sourceNodesCount = polygonPtr->GetNodesCount();
 		for (int nodesIndex = 0; nodesIndex < sourceNodesCount; nodesIndex++){		
 			InsertNode(polygonPtr->GetNode(nodesIndex));
 
 			m_nodesData[nodesIndex] = polygonPtr->m_nodesData[nodesIndex];
 		}
+
+		CObject2dBase::CopyFrom(object, mode);
 
 		return true;
 	}	

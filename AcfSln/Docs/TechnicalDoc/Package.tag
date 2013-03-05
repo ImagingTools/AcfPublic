@@ -4133,20 +4133,20 @@
   <compound kind="class">
     <name>iedge::CEdgeLineContainer</name>
     <filename>classiedge_1_1_c_edge_line_container.html</filename>
-    <base>i2d::CObject2dBase</base>
     <base>TSerializableContainer&lt; CEdgeLine &gt;</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="typedef">
-      <type>i2d::CObject2dBase</type>
+      <type>ibase::TSerializableContainer&lt; CEdgeLine &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
-      <anchor>aea6efad7fafe35548a1c15e026df4d3b</anchor>
+      <anchor>a8c3a57e718166975b61b3129319c7ae2</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TSerializableContainer&lt; CEdgeLine &gt;</type>
+      <type>i2d::CObject2dBase</type>
       <name>BaseClass2</name>
       <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
-      <anchor>ab0741463be6a1a3c8a2ff247aa7c50c5</anchor>
+      <anchor>ae5c0cbc4967b1bdadc40ddb4599d50e1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4197,6 +4197,13 @@
       <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
       <anchor>aeeca92c7e531dd3085723a624a969dfa</anchor>
       <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
+      <anchor>ada6c7e57bcc042b51047970fdbd2a839</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -7463,8 +7470,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiinsp_1_1_c_id_provider_cache_comp.html</anchorfile>
-      <anchor>afd786803a5b0a0373185d7988f622c8f</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>ab04e89c9c42c305809594a36b9e150dc</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7532,8 +7539,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiinsp_1_1_c_information_provider_cache_comp.html</anchorfile>
-      <anchor>a4786f3d6dc527e62dea6eca1988f2cb8</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>ada657f45df5c50a4296da4ca552b3012</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8116,8 +8123,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
-      <anchor>ae08fa5fe7907083af20162a90ec343f0</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>aa5b3aef85624cb3f666328f1a9c3942d</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8854,8 +8861,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
-      <anchor>a3cee56deee9bdc390147ae1e6728fa48</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>ab344b8dde436bfbbfdd97dc9f82a90df</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10024,8 +10031,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
-      <anchor>a5a9b3e28451dd73d780f51d82958ce7b</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a1f0a40aaa274daf6e6c227f6635296dc</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12034,8 +12041,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>aa9680ecc36f8a70e1b30549eefb61e46</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a2f7d73d6be98b5525682b99193099171</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
@@ -12466,15 +12473,15 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a69367b08243df66471eccff9a050693b</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>ae08bffd4dc726916ba7343b3c913fb3b</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a0a4a53ba14c9e9b7915f3c3eb6223ee1</anchor>
-      <arglist>() const </arglist>
+      <anchor>a1e9f4d49b833f768e4da5a5ca17da30f</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13076,8 +13083,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>ac1a315484e757dd8cea383b545de7fc4</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a833755f3d5d6f4a241be958b3ea3e011</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>imath::CVarVector</type>
@@ -13116,8 +13123,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
-      <anchor>a4590c17a50beeacb53bc3c2ae5a5361e</anchor>
-      <arglist>(const IChangeable &amp;object)</arglist>
+      <anchor>a8a0db455ee070428b77547dca93df8b9</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13854,8 +13861,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
-      <anchor>ac9533ba8a082f7795675a2455ebb863f</anchor>
-      <arglist>(const istd::IChangeable &amp;object)</arglist>
+      <anchor>a263bc6f83841516c121dd465b337e6e9</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
