@@ -40,6 +40,9 @@ class IRegistry;
 class CComponentAddress;
 
 
+/**
+	Allow access to registries defined by composed components.
+*/
 class IRegistriesManager: virtual public istd::IChangeable
 {
 public:

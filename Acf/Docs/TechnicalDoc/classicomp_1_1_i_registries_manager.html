@@ -38,6 +38,9 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="icomp::IRegistriesManager" --><!-- doxytag: inherits="istd::IChangeable" -->
+<p>Allow access to registries defined by composed components.  
+ <a href="classicomp_1_1_i_registries_manager.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_i_registries_manager_8h_source.html">IRegistriesManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for icomp::IRegistriesManager:</div>
@@ -50,8 +53,9 @@ Inheritance diagram for icomp::IRegistriesManager:</div>
 <area href="classicmpstr_1_1_c_registries_manager_comp.html" title="Loads component packages from dynamic link libraries." alt="icmpstr::CRegistriesManagerComp" shape="rect" coords="0,168,238,192"/>
 <area href="classicomp_1_1_i_component_environment_manager.html" alt="icomp::IComponentEnvironmentManager" shape="rect" coords="248,168,486,192"/>
 <area href="classicomp_1_1_c_environment_manager_base.html" alt="icomp::CEnvironmentManagerBase" shape="rect" coords="248,224,486,248"/>
-<area href="classicmpstr_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries." alt="icmpstr::CPackagesLoaderComp" shape="rect" coords="248,280,486,304"/>
-<area href="classicmpstr_1_1_c_packages_loader_ext_comp.html" alt="icmpstr::CPackagesLoaderExtComp" shape="rect" coords="248,336,486,360"/>
+<area href="classicmpstr_1_1_c_packages_loader_comp.html" title="Loads component packages from dynamic link libraries." alt="icmpstr::CPackagesLoaderComp" shape="rect" coords="124,280,362,304"/>
+<area href="classicomp_1_1_c_cached_environment_manager.html" title="Provide environment manager using stored registries." alt="icomp::CCachedEnvironmentManager" shape="rect" coords="372,280,610,304"/>
+<area href="classicmpstr_1_1_c_packages_loader_ext_comp.html" alt="icmpstr::CPackagesLoaderExtComp" shape="rect" coords="124,336,362,360"/>
 </map>
  </div></div>
 
@@ -63,8 +67,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored registry.  <a href="#a8d9985f4754e8477260134808fd0ab13"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_i_registries_manager_8h_source.html#l00021">21</a> of file <a class="el" href="_i_registries_manager_8h_source.html">IRegistriesManager.h</a>.</p>
+<div class="textblock"><p>Allow access to registries defined by composed components. </p>
+
+<p>Definition at line <a class="el" href="_i_registries_manager_8h_source.html#l00024">24</a> of file <a class="el" href="_i_registries_manager_8h_source.html">IRegistriesManager.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a8d9985f4754e8477260134808fd0ab13"></a><!-- doxytag: member="icomp::IRegistriesManager::GetRegistry" ref="a8d9985f4754e8477260134808fd0ab13" args="(const CComponentAddress &amp;address, const IRegistry *contextRegistryPtr=NULL) const =0" -->
 <div class="memitem">
@@ -100,7 +105,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>registry object or NULL if specified composite component is not registered. </dd></dl>
 
-<p>Implemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_comp.html#a47d9943a0478849faa05b5876a61253a">icmpstr::CPackagesLoaderComp</a>, <a class="el" href="classicmpstr_1_1_c_registries_manager_comp.html#aca47d2b921676e9d6cf7fcf99ed86ae6">icmpstr::CRegistriesManagerComp</a>, and <a class="el" href="classicomp_1_1_c_environment_manager_base.html#abebdc4e9c6cd773c84c5afbffa712e46">icomp::CEnvironmentManagerBase</a>.</p>
+<p>Implemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_comp.html#a47d9943a0478849faa05b5876a61253a">icmpstr::CPackagesLoaderComp</a>, <a class="el" href="classicmpstr_1_1_c_registries_manager_comp.html#aca47d2b921676e9d6cf7fcf99ed86ae6">icmpstr::CRegistriesManagerComp</a>, <a class="el" href="classicomp_1_1_c_cached_environment_manager.html#a13d2f085e7b02add13e5eb923c51248b">icomp::CCachedEnvironmentManager</a>, and <a class="el" href="classicomp_1_1_c_environment_manager_base.html#abebdc4e9c6cd773c84c5afbffa712e46">icomp::CEnvironmentManagerBase</a>.</p>
 
 </div>
 </div>

@@ -128,6 +128,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a3c03ee65f446a3e1d0c72b081fc6a841">WriteAttribute</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ae9c434e5b90316a5f41af4099e3692db">WriteRegistryClassDeclaration</a> (const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a111fbd7bedb6095782fe8cd174f2f6da">WriteRegistryClassBody</a> (const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a16468df240b41a21acc1c4bd69137ea4">WriteDeserializingCode</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;object, QTextStream &amp;stream) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write code deserializing some object from data buffer.  <a href="#a16468df240b41a21acc1c4bd69137ea4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#afcaaefef2d06cd8f8eac78709b173fb8">GetAttributeValue</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab1610dbe2bda35ce9a93f8813bc28f7f">GetMultiAttributeValue</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ac2263f3a8c992a353b4fc23f346ea870">NextLine</a> (QTextStream &amp;stream) const </td></tr>
@@ -141,6 +143,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some wide string as C++ string literal.  <a href="#af446365e00cfbe02412232fffcd484eb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab129bfdd18d14b157655be55f9c2aff7">GetIdValueLiteral</a> (const QByteArray &amp;text) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get some string as C++ string literal.  <a href="#ab129bfdd18d14b157655be55f9c2aff7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ad9d0be3431ec2a84a53ca14f20a39cc2">GetValidIdentifier</a> (const QByteArray &amp;identifier) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get valid C++ identifier (used for variable names) from arbitrary string.  <a href="#ad9d0be3431ec2a84a53ca14f20a39cc2"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Save registry as C++ code (it generates C++ class with the same functionality) and/or dependencies list. </p>
@@ -158,7 +162,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00090">90</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00091">91</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -190,7 +194,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00091">91</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00092">92</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -701,6 +705,25 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad9d0be3431ec2a84a53ca14f20a39cc2"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetValidIdentifier" ref="ad9d0be3431ec2a84a53ca14f20a39cc2" args="(const QByteArray &amp;identifier) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray icmpstr::CRegistryCodeSaverComp::GetValidIdentifier </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>identifier</em></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get valid C++ identifier (used for variable names) from arbitrary string. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8116dad3fa76ffbd7899d510a0b7b036"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::I_ASSIGN_TO" ref="a8116dad3fa76ffbd7899d510a0b7b036" args="(m_extPackagesManagerCompPtr, m_packagesManagerCompPtr, false)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1064,6 +1087,35 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a16468df240b41a21acc1c4bd69137ea4"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::WriteDeserializingCode" ref="a16468df240b41a21acc1c4bd69137ea4" args="(const iser::ISerializable &amp;object, QTextStream &amp;stream) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool icmpstr::CRegistryCodeSaverComp::WriteDeserializingCode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Write code deserializing some object from data buffer. </p>
 
 </div>
 </div>

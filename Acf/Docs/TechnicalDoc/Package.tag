@@ -1670,6 +1670,18 @@
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
+    <name>CCachedEnvironmentManager.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_c_cached_environment_manager_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
+    <includes id="_c_registry_8h" name="CRegistry.h" local="yes" imported="no">icomp/CRegistry.h</includes>
+    <includes id="_c_composite_package_static_info_8h" name="CCompositePackageStaticInfo.h" local="yes" imported="no">icomp/CCompositePackageStaticInfo.h</includes>
+    <includes id="_c_environment_manager_base_8h" name="CEnvironmentManagerBase.h" local="yes" imported="no">icomp/CEnvironmentManagerBase.h</includes>
+    <class kind="class">icomp::CCachedEnvironmentManager</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComponentAddress.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_component_address_8h</filename>
@@ -18480,6 +18492,13 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
+      <name>WriteDeserializingCode</name>
+      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a16468df240b41a21acc1c4bd69137ea4</anchor>
+      <arglist>(const iser::ISerializable &amp;object, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
       <name>GetAttributeValue</name>
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>afcaaefef2d06cd8f8eac78709b173fb8</anchor>
@@ -18533,6 +18552,13 @@
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>ab129bfdd18d14b157655be55f9c2aff7</anchor>
       <arglist>(const QByteArray &amp;text) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QByteArray</type>
+      <name>GetValidIdentifier</name>
+      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ad9d0be3431ec2a84a53ca14f20a39cc2</anchor>
+      <arglist>(const QByteArray &amp;identifier) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20997,6 +21023,7 @@
     <name>icomp</name>
     <filename>namespaceicomp.html</filename>
     <class kind="class">icomp::CBaseComponentStaticInfo</class>
+    <class kind="class">icomp::CCachedEnvironmentManager</class>
     <class kind="class">icomp::CComponentAddress</class>
     <class kind="class">icomp::CComponentBase</class>
     <class kind="class">icomp::CComponentContext</class>
@@ -21217,6 +21244,47 @@
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
       <anchor>a10ae26844c9f939b7ea229bfd99acbb7</anchor>
       <arglist>(int metaGroupId) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::CCachedEnvironmentManager</name>
+    <filename>classicomp_1_1_c_cached_environment_manager.html</filename>
+    <base>icomp::CEnvironmentManagerBase</base>
+    <base>iser::ISerializable</base>
+    <member kind="typedef">
+      <type>CEnvironmentManagerBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomp_1_1_c_cached_environment_manager.html</anchorfile>
+      <anchor>a0dd4fe1a2e3a30d17560aead7e655c44</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AddComposedComponent</name>
+      <anchorfile>classicomp_1_1_c_cached_environment_manager.html</anchorfile>
+      <anchor>a3ad9a7bac8bb8e342e525e0407fd9709</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry &amp;registry)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InitializeStaticInfo</name>
+      <anchorfile>classicomp_1_1_c_cached_environment_manager.html</anchorfile>
+      <anchor>aa3fcd28e47bdadd95b5a82992f4e1af7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const icomp::IRegistry *</type>
+      <name>GetRegistry</name>
+      <anchorfile>classicomp_1_1_c_cached_environment_manager.html</anchorfile>
+      <anchor>a13d2f085e7b02add13e5eb923c51248b</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicomp_1_1_c_cached_environment_manager.html</anchorfile>
+      <anchor>a88dea90c3aca8dcc127af7075c6254d1</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">

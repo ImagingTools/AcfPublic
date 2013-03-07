@@ -57,6 +57,7 @@ static void ShowUsage()
 	std::cout << "\t-depends [on|off]        - enables/disables qmake dependendency output, default is 'off'" << std::endl;
 	std::cout << "\t-dependsPath path        - base path for dependencies, if not specified working directory will be taken" << std::endl;
 	std::cout << "\t-v                       - enable verbose mode" << std::endl;
+	std::cout << "\t-no_binary               - disable generating of binary coded registries" << std::endl;
 }
 
 
@@ -74,6 +75,7 @@ int main(int argc, char *argv[])
 	bool verboseEnabled = false;
 	bool sourcesEnabled = true;
 	bool dependenciesEnabled = false;
+	bool useBinaryCode = true;
 	QString baseDependsPath;
 
 	QString inputFilePath = argv[1];
@@ -110,6 +112,9 @@ int main(int argc, char *argv[])
 				else if ((option == "o") || (option == "output")){
 					outputFilePath = QString::fromLocal8Bit(argv[index + 1]);
 					++index;
+				}
+				else if (option == "no_binary"){
+					useBinaryCode = false;
 				}
 			}
 		}
@@ -164,6 +169,7 @@ int main(int argc, char *argv[])
 	codeSaverComp.SetRef("PackagesManager", &registriesManagerComp);
 	codeSaverComp.SetRef("RegistriesManager", &registriesManagerComp);
 	codeSaverComp.SetIntAttr("WorkingMode", (sourcesEnabled? 1: 0) + (dependenciesEnabled? 2: 0));
+	codeSaverComp.SetBoolAttr("UseBinaryCode", useBinaryCode);
 	codeSaverComp.SetRef("BaseDependenciesPath", &dependsBasePathComp);
 	codeSaverComp.InitComponent();
 
