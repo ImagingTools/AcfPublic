@@ -13258,6 +13258,20 @@
       <arglist>(const istd::CIndex2d &amp;index)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CSize</name>
+      <anchorfile>classibase_1_1_c_size.html</anchorfile>
+      <anchor>a0f72847d6c34f7567954da446f69d809</anchor>
+      <arglist>(const QPoint &amp;point)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSize</name>
+      <anchorfile>classibase_1_1_c_size.html</anchorfile>
+      <anchor>a727a20ab236b8054660525aacf2f53c9</anchor>
+      <arglist>(const QSize &amp;size)</arglist>
+    </member>
+    <member kind="function">
       <type>CSize</type>
       <name>operator+</name>
       <anchorfile>classibase_1_1_c_size.html</anchorfile>
@@ -46029,6 +46043,13 @@
       <type></type>
       <name>CIndex2d</name>
       <anchorfile>classistd_1_1_c_index2d.html</anchorfile>
+      <anchor>a4bc08a0f3993c36e65e87580f093bf9f</anchor>
+      <arglist>(const QPoint &amp;point)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CIndex2d</name>
+      <anchorfile>classistd_1_1_c_index2d.html</anchorfile>
       <anchor>a799af3e59da834d453edd540785cf733</anchor>
       <arglist>(const QSize &amp;size)</arglist>
     </member>
@@ -46087,6 +46108,13 @@
       <anchorfile>classistd_1_1_c_index2d.html</anchorfile>
       <anchor>abadd9b1f4a234f24e3b86422aba5f040</anchor>
       <arglist>(const CIndex2d &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator QSize</name>
+      <anchorfile>classistd_1_1_c_index2d.html</anchorfile>
+      <anchor>a2261d61157ceaa729601034bf0e75216</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>CIndex2d &amp;</type>

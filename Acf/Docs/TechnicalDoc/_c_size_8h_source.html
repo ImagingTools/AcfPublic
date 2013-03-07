@@ -47,24 +47,26 @@
 <a name="l00024"></a>00024        <a class="code" href="classibase_1_1_c_size.html#a10e70a102647d431393a5ca1df84d861">CSize</a>();
 <a name="l00025"></a>00025        <a class="code" href="classibase_1_1_c_size.html#a10e70a102647d431393a5ca1df84d861">CSize</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);
 <a name="l00026"></a>00026        <a class="code" href="classibase_1_1_c_size.html#a10e70a102647d431393a5ca1df84d861">CSize</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; index);
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028        <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a> <a class="code" href="classibase_1_1_c_size.html#a4123947aea26611a930d249ccf62bec8">operator+</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; size);
-<a name="l00029"></a>00029        <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a> <a class="code" href="classibase_1_1_c_size.html#a24b0231f56c6ffe7750e49cb865e1806">operator-</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; size);
-<a name="l00030"></a>00030        <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; <a class="code" href="classibase_1_1_c_size.html#a135eabdcf8e38610d64db7c65574e2c7">operator+=</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; size);
-<a name="l00031"></a>00031        <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; <a class="code" href="classibase_1_1_c_size.html#a29c1bc51adf7ad3e67bdd1f4c200149d">operator-=</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; size);
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_size.html#a10ec9b352a2de75460fb4339878d92bc">IsNull</a>() <span class="keyword">const</span>;
-<a name="l00034"></a>00034        
-<a name="l00035"></a>00035        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_size.html#a626cb0e12674baa84c7faf5a00f7ce76">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00036"></a>00036 };
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 } <span class="comment">// namespace ibase</span>
+<a name="l00027"></a>00027        <a class="code" href="classibase_1_1_c_size.html#a10e70a102647d431393a5ca1df84d861">CSize</a>(<span class="keyword">const</span> QPoint&amp; point);
+<a name="l00028"></a>00028        <a class="code" href="classibase_1_1_c_size.html#a10e70a102647d431393a5ca1df84d861">CSize</a>(<span class="keyword">const</span> QSize&amp; size);
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030        <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a> <a class="code" href="classibase_1_1_c_size.html#a4123947aea26611a930d249ccf62bec8">operator+</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; size);
+<a name="l00031"></a>00031        <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a> <a class="code" href="classibase_1_1_c_size.html#a24b0231f56c6ffe7750e49cb865e1806">operator-</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; size);
+<a name="l00032"></a>00032        <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; <a class="code" href="classibase_1_1_c_size.html#a135eabdcf8e38610d64db7c65574e2c7">operator+=</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; size);
+<a name="l00033"></a>00033        <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; <a class="code" href="classibase_1_1_c_size.html#a29c1bc51adf7ad3e67bdd1f4c200149d">operator-=</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_size.html" title="Definition of simple 2D size based on integer values.">CSize</a>&amp; size);
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_size.html#a10ec9b352a2de75460fb4339878d92bc">IsNull</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036        
+<a name="l00037"></a>00037        <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_size.html#a626cb0e12674baa84c7faf5a00f7ce76">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00038"></a>00038 };
+<a name="l00039"></a>00039 
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="preprocessor">#endif // !ibase_CSize_included</span>
-<a name="l00043"></a>00043 <span class="preprocessor"></span>
-<a name="l00044"></a>00044 
+<a name="l00041"></a>00041 } <span class="comment">// namespace ibase</span>
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="preprocessor">#endif // !ibase_CSize_included</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span>
+<a name="l00046"></a>00046 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

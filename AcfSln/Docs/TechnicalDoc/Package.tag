@@ -10849,6 +10849,13 @@
       <anchor>a3736d0349b7ce9cebda91144f73b2e96</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>abc6ebec8006530ed5b3b176c1829a9ee</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CSearchParams</name>
