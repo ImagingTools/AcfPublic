@@ -12048,7 +12048,7 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a2f7d73d6be98b5525682b99193099171</anchor>
+      <anchor>af46630f53b557371604ee44bc032bd8b</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode)</arglist>
     </member>
     <member kind="variable" protection="protected">
