@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/CEventBasedNotifier.h"
+#include "istd/TChangeNotifier.h"
 #include "istd/TDelPtr.h"
 
 #include "iser/IArchive.h"
@@ -38,8 +38,7 @@ namespace ibase
 CMessageContainer::CMessageContainer()
 :	m_slaveConsumerPtr(NULL),
 	m_maxMessagesCount(-1),
-	m_worstCategory(-1),
-	m_lock(QMutex::Recursive)
+	m_worstCategory(-1)
 {
 }
 
@@ -48,16 +47,13 @@ CMessageContainer::CMessageContainer(const CMessageContainer& container)
 :	m_messages(container.m_messages),
 	m_slaveConsumerPtr(NULL),
 	m_maxMessagesCount(container.m_maxMessagesCount),
-	m_worstCategory(container.m_worstCategory),
-	m_lock(QMutex::Recursive)
+	m_worstCategory(container.m_worstCategory)
 {
 }
 
 
 void CMessageContainer::AddChildContainer(IHierarchicalMessageContainer* childContainerPtr)
 {
-	QMutexLocker lock(&m_lock);
-
 	Q_ASSERT(childContainerPtr != NULL);
 
 	m_childContainers.push_back(childContainerPtr);
@@ -66,8 +62,6 @@ void CMessageContainer::AddChildContainer(IHierarchicalMessageContainer* childCo
 
 void CMessageContainer::SetSlaveConsumer(ibase::IMessageConsumer* consumerPtr)
 {
-	QMutexLocker lock(&m_lock);
-
 	m_slaveConsumerPtr = consumerPtr;
 }
 
@@ -75,8 +69,6 @@ void CMessageContainer::SetSlaveConsumer(ibase::IMessageConsumer* consumerPtr)
 void CMessageContainer::SetMaxMessageCount(int maxMessageCount)
 {
 	Q_ASSERT(m_maxMessagesCount != 0);
-
-	QMutexLocker lock(&m_lock);
 
 	m_maxMessagesCount = maxMessageCount;
 }
@@ -86,8 +78,6 @@ void CMessageContainer::SetMaxMessageCount(int maxMessageCount)
 
 bool CMessageContainer::Serialize(iser::IArchive& archive)
 {
-	QMutexLocker lock(&m_lock);
-
 	static iser::CArchiveTag messagesTag("Messages", "List of messages");
 	static iser::CArchiveTag messageTag("Message", "Message");
 
@@ -127,8 +117,6 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 
 int CMessageContainer::GetWorstCategory() const
 {
-	QMutexLocker lock(&m_lock);
-
 	int worstCategory = m_worstCategory;
 	int childCount = GetChildsCount();
 
@@ -163,22 +151,12 @@ int CMessageContainer::GetWorstCategory() const
 
 IMessageContainer::Messages CMessageContainer::GetMessages() const
 {
-	QMutexLocker lock(&m_lock);
-
 	IMessageContainer::Messages messages;
 
 	for (		MessageList::ConstIterator iter = m_messages.constBegin();
 				iter != m_messages.constEnd();
-				++iter){
-		
-		istd::TDelPtr<istd::IInformationProvider> messagePtr;
-
-		messagePtr.SetCastedOrRemove<istd::IChangeable>((*iter)->CloneMe(istd::IChangeable::CM_CONVERT));		
-		if (messagePtr.IsValid()){
-			IMessageConsumer::MessagePtr messageCopyPtr(messagePtr.PopPtr());
-	
-			messages.push_back(messageCopyPtr);
-		}
+				++iter){	
+		messages.push_back(*iter);
 	}
 
 	int childsCount = GetChildsCount();
@@ -206,8 +184,6 @@ bool CMessageContainer::IsMessageSupported(
 
 void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePtr)
 {
-	QMutexLocker lock(&m_lock);
-
 	Q_ASSERT(messagePtr.IsValid());
 
 	if (m_maxMessagesCount == 0){
@@ -215,10 +191,7 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 	}
 
 	{
-		istd::CEventBasedNotifier changePtr(
-					this,
-					CF_MODEL | CF_MESSAGE_ADDED,
-					const_cast<istd::IInformationProvider*>(messagePtr.GetPtr()));
+		istd::CChangeNotifier changePtr(this, CF_MODEL | CF_MESSAGE_ADDED, const_cast<istd::IInformationProvider*>(messagePtr.GetPtr()));
 
 		m_messages.push_front(messagePtr);
 
@@ -233,10 +206,7 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 			Q_ASSERT(!m_messages.isEmpty());
 			const IMessageConsumer::MessagePtr& messageToRemovePtr = m_messages.back();
 
-			istd::CEventBasedNotifier changePtr(
-						this,
-						CF_MODEL | CF_MESSAGE_REMOVED,
-						const_cast<istd::IInformationProvider*>(messageToRemovePtr.GetPtr()));
+			istd::CChangeNotifier changePtr(this, CF_MODEL | CF_MESSAGE_REMOVED, const_cast<istd::IInformationProvider*>(messageToRemovePtr.GetPtr()));
 
 			int removeCategory = messageToRemovePtr->GetInformationCategory();
 			if (removeCategory >= m_worstCategory){
@@ -255,9 +225,8 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 
 void CMessageContainer::ClearMessages()
 {
-	QMutexLocker lock(&m_lock);
 	if (!m_messages.isEmpty()){
-		istd::CEventBasedNotifier changePtr(this, CF_MODEL | CF_RESET);
+		istd::CChangeNotifier changePtr(this, CF_MODEL | CF_RESET);
 		
 		m_messages.clear();
 
@@ -287,10 +256,9 @@ IHierarchicalMessageContainer* CMessageContainer::GetChild(int index) const
 
 bool CMessageContainer::CopyFrom(const istd::IChangeable& object, CompatibilityMode mode)
 {
-	QMutexLocker lock(&m_lock);
-
 	m_messages.clear();
-	istd::CEventBasedNotifier changePtr(this, CF_MODEL | CF_RESET | CF_MESSAGE_ADDED);
+
+	istd::CChangeNotifier changePtr(this, CF_MODEL | CF_RESET | CF_MESSAGE_ADDED);
 
 	const CMessageContainer* sourcePtr = dynamic_cast<const CMessageContainer*>(&object);
 	if (sourcePtr != NULL){

@@ -126,6 +126,7 @@
 , <a class="el" href="classibase_1_1_c_stream_log_comp_base.html#a919237d2ce02c9d1ff77635d74f34880">ibase::CStreamLogCompBase</a>
 , <a class="el" href="classibase_1_1_i_message_consumer.html#a00ab2d3aa60b88bf13a8c4ac687273cb">ibase::IMessageConsumer</a>
 , <a class="el" href="classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html#aff2fb5b7f38432d593e83ae1ac25730f">icmpstr::CRegistryPropEditorComp::TextLog</a>
+, <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#a8938af6f0fea58d669f248c36c94f59e">iqtgui::CLogGuiComp</a>
 </li>
 <li>AddPackage()
 : <a class="el" href="classicomp_1_1_c_xpc_model.html#a499bee807f34cfe3b91a9271330e735b">icomp::CXpcModel</a>
@@ -188,12 +189,12 @@
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a1ef26478c8b5b803e9d4f91678bb9a17">icmpstr::CAttributeEditorComp</a>
 </li>
 <li>AfterUpdate()
-: <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ad466317234597651d04fdd782d4c073c">imod::CMultiModelBridgeBase</a>
+: <a class="el" href="classidoc_1_1_c_serialized_undo_manager.html#a9d377b2fe7370184f1e761f414fddb7d">idoc::CSerializedUndoManager</a>
+, <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ad466317234597651d04fdd782d4c073c">imod::CMultiModelBridgeBase</a>
 , <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a52d553e4c021cd3022ca5beac156df1f">imod::CMultiModelObserverBase</a>
 , <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a3bca1011478d03c5a4f99f6d158c9191">imod::CSingleModelObserverBase</a>
 , <a class="el" href="classimod_1_1_i_observer.html#a2f57274e2bf0f5c40042fb86dbc957b3">imod::IObserver</a>
 , <a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#afc1343881214d55283f6cf7471fb17bc">iqt2d::CSelectableSceneExtenderComp</a>
-, <a class="el" href="classiqtgui_1_1_c_log_gui_comp.html#abdb9cdbe1c6f0e14ba5be543000a1c64">iqtgui::CLogGuiComp</a>
 , <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a92633a181178349247fbf491ee39b729">iqtgui::TGuiObserverWrap&lt; Gui, Observer &gt;</a>
 , <a class="el" href="classiqtprm_1_1_c_multi_params_manager_gui_comp.html#a678a55095f16486f5556cd6772ed4bb5">iqtprm::CMultiParamsManagerGuiComp</a>
 , <a class="el" href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html#a8a943978a19001474d6c1d1de6714e55">iqtprm::CSelectableParamsSetGuiComp</a>
@@ -202,7 +203,6 @@
 , <a class="el" href="classicmpstr_1_1_c_registry_tree_view_comp.html#a66f86e419648241c45b4bd15aaa58a9e">icmpstr::CRegistryTreeViewComp</a>
 , <a class="el" href="classicmpstr_1_1_t_object_shape_base.html#aa38243f1b9a880253096d0fb4d64ee62">icmpstr::TObjectShapeBase&lt; GraphicsItemClass, ObjectClass &gt;</a>
 , <a class="el" href="classidoc_1_1_c_selected_doc_model_binder_comp.html#ad5e708d6e137dae73b069a158d59729f">idoc::CSelectedDocModelBinderComp</a>
-, <a class="el" href="classidoc_1_1_c_serialized_undo_manager.html#a9d377b2fe7370184f1e761f414fddb7d">idoc::CSerializedUndoManager</a>
 </li>
 <li>AppendAddresses()
 : <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#acabf5bd1c5357556225030d077ee9366">icmpstr::CRegistryCodeSaverComp</a>
@@ -298,7 +298,6 @@
 </li>
 <li>CalcBoundingBox()
 : <a class="el" href="classiview_1_1_c_parallelogram_shape.html#af039343dbb1fbb9f943066529e8ec442">iview::CParallelogramShape</a>
-, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#a2645caefa06f23809fc18d932319c9d5">iview::CNoneCalibrationShape</a>
 , <a class="el" href="classiview_1_1_c_circle_shape.html#a2955d60ae4391b12207a5ca33a37c4f7">iview::CCircleShape</a>
 , <a class="el" href="classiview_1_1_c_polypoint_shape.html#a736fecf391b099c2a0db85af62dfe29b">iview::CPolypointShape</a>
 , <a class="el" href="classiview_1_1_c_viewport.html#a3c9a3a14226cf60734b2fd88c0d5c82d">iview::CViewport</a>
@@ -308,18 +307,19 @@
 , <a class="el" href="classiview_1_1_c_spline_shape.html#a483c8dc8fea4d30cc488e72182ec3de8">iview::CSplineShape</a>
 , <a class="el" href="classiview_1_1_c_label_shape.html#a93aac48158c3d07948e54805ee9e0ff2">iview::CLabelShape</a>
 , <a class="el" href="classiview_1_1_c_line_shape.html#ac3e58bd00694b915b8200e6065baacbc">iview::CLineShape</a>
-, <a class="el" href="classiview_1_1_c_tube_polyline_shape.html#a49f63c7d5f8699558b74c3549b805dfd">iview::CTubePolylineShape</a>
+, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#a2645caefa06f23809fc18d932319c9d5">iview::CNoneCalibrationShape</a>
 , <a class="el" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a4caed41505e3b7025cd64234b3128daa">iview::CPerspectiveCalibrationBoundsShape</a>
 , <a class="el" href="classiview_1_1_c_pin_shape.html#a4a64f268c56f059a7f68c85976fd62e6">iview::CPinShape</a>
 , <a class="el" href="classiview_1_1_c_center_pin_shape.html#aa4950e57de117dc0e495b7685edc40d9">iview::CCenterPinShape</a>
 , <a class="el" href="classiview_1_1_c_oriented_circle_shape.html#abf232b2dd8782a69d2016546e170eae6">iview::COrientedCircleShape</a>
 , <a class="el" href="classiview_1_1_c_polyline_shape.html#a8f1501b07a945579bf129a4ab730eb4d">iview::CPolylineShape</a>
 , <a class="el" href="classiview_1_1_c_rectangle_shape.html#a1199f790a399bb105e04eb72cd7058d8">iview::CRectangleShape</a>
-, <a class="el" href="classiview_1_1_c_interactive_view_layer.html#accb63e6313c55ffaa5638d134fce1b51">iview::CInteractiveViewLayer</a>
 , <a class="el" href="classiview_1_1_c_polygon_shape.html#a12324a4038012353874cdf28eeb2733b">iview::CPolygonShape</a>
-, <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#a0ac391750eda92fad36d4047ce0fe08a">iview::CTransformableRectangleShape</a>
+, <a class="el" href="classiview_1_1_c_interactive_view_layer.html#accb63e6313c55ffaa5638d134fce1b51">iview::CInteractiveViewLayer</a>
+, <a class="el" href="classiview_1_1_c_tube_polyline_shape.html#a49f63c7d5f8699558b74c3549b805dfd">iview::CTubePolylineShape</a>
 , <a class="el" href="classiview_1_1_c_view_layer.html#a039fae3102f4f70204a944109c468c56">iview::CViewLayer</a>
 , <a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#adc01a95fabfa1b7edb32b982a13b3ca3">iview::CAffineTransformation2dShape</a>
+, <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#a0ac391750eda92fad36d4047ce0fe08a">iview::CTransformableRectangleShape</a>
 , <a class="el" href="classiview_1_1_c_arrow_shape.html#abebfd3583af044a576aa4a37958c9407">iview::CArrowShape</a>
 , <a class="el" href="classiview_1_1_c_image_shape.html#a392b530c420606d5ccf85ce0fdd61140">iview::CImageShape</a>
 </li>
@@ -389,14 +389,14 @@
 : <a class="el" href="classiview_1_1_c_label_shape.html#a32bf3af87d248986855b9e878a18ce70">iview::CLabelShape</a>
 </li>
 <li>CanBeMoved()
-: <a class="el" href="classiview_1_1_c_view_base.html#ab1175185e129ddc7d602150497dee219">iview::CViewBase</a>
-, <a class="el" href="classiview_1_1_c_viewport.html#a2a59fec2ddd71d298bf0c17cf3f9da33">iview::CViewport</a>
+: <a class="el" href="classiview_1_1_c_viewport.html#a2a59fec2ddd71d298bf0c17cf3f9da33">iview::CViewport</a>
+, <a class="el" href="classiview_1_1_c_view_base.html#ab1175185e129ddc7d602150497dee219">iview::CViewBase</a>
 </li>
 <li>CAnnulus()
 : <a class="el" href="classi2d_1_1_c_annulus.html#a3011c60f14817a6eadb17fdcab657e80">i2d::CAnnulus</a>
 </li>
 <li>CAnnulusSegment()
-: <a class="el" href="classi2d_1_1_c_annulus_segment.html#ab16b3c1a5c2e87e48eca35c70b149d8f">i2d::CAnnulusSegment</a>
+: <a class="el" href="classi2d_1_1_c_annulus_segment.html#ab689973bda99b3aa72e8fbca5539441a">i2d::CAnnulusSegment</a>
 </li>
 <li>CAnnulusSegmentShape()
 : <a class="el" href="classiview_1_1_c_annulus_segment_shape.html#a83ef41ae07bdff7828e8ee302139dc7f">iview::CAnnulusSegmentShape</a>
@@ -421,8 +421,8 @@
 , <a class="el" href="classistd_1_1_t_trans_ptr.html#ac934238a4fee37066d7c0bb4f5fcad11">istd::TTransPtr&lt; Type &gt;</a>
 </li>
 <li>CastFromModel()
-: <a class="el" href="classimod_1_1_t_single_model_observer_base.html#a5715370ed94fe45f1ff07aa542d042af">imod::TSingleModelObserverBase&lt; ModelInterface &gt;</a>
-, <a class="el" href="classidoc_1_1_c_serialized_undo_manager.html#ac5aeda935d03cb3a11c65f5b14c0d07b">idoc::CSerializedUndoManager</a>
+: <a class="el" href="classidoc_1_1_c_serialized_undo_manager.html#ac5aeda935d03cb3a11c65f5b14c0d07b">idoc::CSerializedUndoManager</a>
+, <a class="el" href="classimod_1_1_t_single_model_observer_base.html#a5715370ed94fe45f1ff07aa542d042af">imod::TSingleModelObserverBase&lt; ModelInterface &gt;</a>
 </li>
 <li>CAttributeEditorComp()
 : <a class="el" href="classicmpstr_1_1_c_attribute_editor_comp.html#a7080437833d523b1baad9011458c7a35">icmpstr::CAttributeEditorComp</a>
@@ -435,10 +435,10 @@
 , <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a51d576768e7a35762b01667bf2b4f5c8">istd::TOptDelPtr&lt; Type, DelArray &gt;</a>
 </li>
 <li>TArray()
-: <a class="el" href="classistd_1_1_t_array.html#a0e31092bc584bffa1705ec1097bdd7ff">istd::TArray&lt; Element, Dimensions &gt;</a>
+: <a class="el" href="classistd_1_1_t_array.html#a7f2eac18d74434004752426130aeb4b5">istd::TArray&lt; Element, Dimensions &gt;</a>
 </li>
 <li>TAttribute()
-: <a class="el" href="classicomp_1_1_t_attribute.html#af5ca1d0124e7a5fe224a167fddbd9b58">icomp::TAttribute&lt; Value &gt;</a>
+: <a class="el" href="classicomp_1_1_t_attribute.html#a64236ba5805d57fdf07dc22b090bfc1b">icomp::TAttribute&lt; Value &gt;</a>
 </li>
 <li>TAttributeMemberBase()
 : <a class="el" href="classicomp_1_1_t_attribute_member_base.html#ad526b8faee3a62a9e7a9dd5717f1f939">icomp::TAttributeMemberBase&lt; Attribute &gt;</a>

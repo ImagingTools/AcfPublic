@@ -4434,7 +4434,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_log_gui_comp_8h</filename>
     <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ibase/IMessageContainer.h</includes>
+    <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ibase/CMessageContainer.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ibase/CMessage.h</includes>
     <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
@@ -39608,34 +39608,28 @@
   <compound kind="class">
     <name>iqtgui::CLogGuiComp</name>
     <filename>classiqtgui_1_1_c_log_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;</base>
+    <base>TDesignerGuiCompBase&lt; Ui::CLogGuiComp &gt;</base>
+    <base>ibase::CMessageContainer</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CLogGuiComp, ibase::IMessageContainer &gt;</type>
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CLogGuiComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a170a3bad5f9f8d70e49f082e854430f0</anchor>
+      <anchor>a8c89242334146eb7dd72603bcf2a505c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CMessageContainer</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a01db4d4a25edc91d00be4da602453081</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
       <type>void</type>
       <name>EmitAddMessage</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a0000773a9b4c264f42ef828251ff3e85</anchor>
-      <arglist>(const istd::IInformationProvider *messagePtr, bool releaseFlag)</arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>EmitRemoveMessage</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a972b9733325727ad807ec4f2de2a3ff1</anchor>
-      <arglist>(qint64)</arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>EmitReset</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a554f01e728935319a90639c77e6e9537</anchor>
-      <arglist>()</arglist>
+      <anchor>af03f27e43483d802fe9b859eb8e67ce4</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -39722,32 +39716,12 @@
       <anchor>ae690e3b2dfa33b48acf1c7513d42ae14ac2a7717d903429e38286ff80005ec858</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>DR_IS_MESSAGE_REMOVED_FLAG</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ae690e3b2dfa33b48acf1c7513d42ae14a0c565d601eac74feee4b9077c52ad942</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="slot" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnAddMessage</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>afce61325a081282c83132397a8704040</anchor>
-      <arglist>(const istd::IInformationProvider *messagePtr, bool releaseFlag)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnRemoveMessage</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a4678641d414473694adefb18896284dd</anchor>
-      <arglist>(qint64 messageTimeStamp)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnReset</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a691f3484a4b4a29013125cb082fb905b</anchor>
-      <arglist>()</arglist>
+      <anchor>ae556232d71c38bc5eaef0bca7a59ca39</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="slot" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -39813,11 +39787,18 @@
       <arglist>(int category) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>aeed1e50c8be9461a77121f946c7ecd49</anchor>
-      <arglist>()</arglist>
+      <anchor>a372291a17581ea2b9f675783f3deabbe</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a8938af6f0fea58d669f248c36c94f59e</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -39828,17 +39809,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>BeforeUpdate</name>
+      <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ada1e10d11a41bb9192e0c5db7070ee40</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a272cf86b036e7a4411d2a809f950dd59</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>AfterUpdate</name>
+      <name>OnComponentCreated</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>abdb9cdbe1c6f0e14ba5be543000a1c64</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a7f8ed97803c69fe3de8863b25881b922</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction *</type>
