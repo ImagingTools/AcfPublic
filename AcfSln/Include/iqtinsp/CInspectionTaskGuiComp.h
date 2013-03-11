@@ -36,7 +36,7 @@
 #include "imod/CMultiModelObserverBase.h"
 #include "imod/CMultiModelDispatcherBase.h"
 #include "iser/IFileLoader.h"
-#include "ibase/IMessageContainer.h"
+#include "ibase/CMessageContainer.h"
 #include "iview/IShape.h"
 #include "iview/IShapeFactory.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
@@ -113,16 +113,6 @@ protected:
 	// reimplemented (imod::CMultiModelDispatcherBase)
 	virtual void OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr);
 
-private:
-	void AddTaskMessagesToLog(const ibase::IMessageContainer& messageContainer, int taskIndex);
-	void UpdateTaskMessages();
-	void DoUpdateEditor(int taskIndex);
-	void ActivateTaskShapes(int taskIndex);
-	static QIcon GetCategoryIcon(istd::IInformationProvider::InformationCategory category);
-
-Q_SIGNALS:
-	void DoAutoTest();
-
 protected Q_SLOTS:
 	void OnEditorChanged(int index);
 	void OnAutoTest();
@@ -132,6 +122,18 @@ protected Q_SLOTS:
 	void on_SaveParamsButton_clicked();
 	void on_MessageList_itemSelectionChanged();
 	void on_MessageList_itemDoubleClicked(QTreeWidgetItem* item, int column);
+
+Q_SIGNALS:
+	void DoAutoTest();
+
+private:
+	void AddTaskMessagesToLog(const ibase::IMessageContainer& messageContainer, int taskIndex);
+	void UpdateTaskMessages();
+	void DoUpdateEditor(int taskIndex);
+	void ActivateTaskShapes(int taskIndex);
+
+	// static methods
+	static QIcon GetCategoryIcon(istd::IInformationProvider::InformationCategory category);
 
 private:
 	I_MULTIREF(imod::IModelEditor, m_editorsCompPtr);
@@ -162,7 +164,7 @@ private:
 	GuiMap m_stackIndexToTabMap;	// map stack index (for preview GUI) to GUI index (for editors)
 	GuiMap m_tabToGuiIndexMap;		// map tab index to editor index
 
-	typedef QMap<int, ibase::IMessageContainer::Messages> ResultMessagesMap;
+	typedef QMap<int, ibase::CMessageContainer> ResultMessagesMap;
 	ResultMessagesMap m_resultMessagesMap;
 
 	typedef QMap<int, istd::TPointerVector<iview::IShape> > ResultShapesMap;	// Map GUI index to list of result shapes

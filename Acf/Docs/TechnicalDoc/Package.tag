@@ -12687,6 +12687,13 @@
       <anchor>a658b006be1bea0c2311ba3975f281542</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CMessageContainer</name>
+      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
+      <anchor>aa731eb26127757684ed44e12fa58c3dd</anchor>
+      <arglist>(const CMessageContainer &amp;container)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddChildContainer</name>
@@ -12707,13 +12714,6 @@
       <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
       <anchor>afddbd67f0c5a6d30ce8bf1aa62eabc20</anchor>
       <arglist>(int maxMessageCount=-1)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetMaxLiveTime</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>ac5865d36dcc37244079be586a373d5b0</anchor>
-      <arglist>(int maxLiveTime=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

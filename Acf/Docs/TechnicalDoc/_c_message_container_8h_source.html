@@ -52,61 +52,59 @@
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a>00029        <a class="code" href="classibase_1_1_c_message_container.html#a658b006be1bea0c2311ba3975f281542">CMessageContainer</a>();
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#aa331e77e82c301148a24880866fca9d7">AddChildContainer</a>(<a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">IHierarchicalMessageContainer</a>* childContainerPtr);
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#ac96787fcd2d4df915eab139c29164be7">SetSlaveConsumer</a>(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* consumerPtr);
-<a name="l00034"></a>00034 
-<a name="l00041"></a>00041        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#afddbd67f0c5a6d30ce8bf1aa62eabc20" title="Set maximal number of messages in the container.">SetMaxMessageCount</a>(<span class="keywordtype">int</span> maxMessageCount = -1);
-<a name="l00042"></a>00042 
-<a name="l00048"></a>00048        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#ac5865d36dcc37244079be586a373d5b0" title="Set maximum time difference between the oldest and newest message.">SetMaxLiveTime</a>(<span class="keywordtype">int</span> maxLiveTime = -1);
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_message_container.html#a12a98d2ca094f56627dbf710ee400f9c">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (ibase::IMessageContainer)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message_container.html#ae34fbf54ba367e9f9abecef200e724ae">GetWorstCategory</a>() <span class="keyword">const</span>;
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> Messages <a class="code" href="classibase_1_1_c_message_container.html#ac065525da072c3f81abf399f0c1e296a">GetMessages</a>() <span class="keyword">const</span>;
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#a4ba0c59b1a99bfd7ca60e7b1ade8388c">ClearMessages</a>();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="comment">// reimplemented (ibase::IMessageConsumer)</span>
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_message_container.html#aa472c99668e61bd4ce172e307ad79245" title="Check if some messge is supported.">IsMessageSupported</a>(
-<a name="l00060"></a>00060                             <span class="keywordtype">int</span> messageCategory = -1,
-<a name="l00061"></a>00061                             <span class="keywordtype">int</span> messageId = -1,
-<a name="l00062"></a>00062                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>* messagePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#aef7e1cdf35dc9f443eafc1ac650ad09f" title="Adds a message item to the container.">AddMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">IMessageConsumer::MessagePtr</a>&amp; messagePtr);
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="comment">// reimplemented (ibase::IHierarchicalMessageContainer)</span>
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message_container.html#abb7d4257a9425546d21f23e39a3741dd">GetChildsCount</a>() <span class="keyword">const</span>;
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">IHierarchicalMessageContainer</a>* <a class="code" href="classibase_1_1_c_message_container.html#aacb0d3680b600054a53c7f2ebc469993">GetChild</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_message_container.html#a4b925226bd0c30420ad0208b48249fde" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af" title="External references are simple ignored.">CM_WITHOUT_REFS</a>);
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 <span class="keyword">private</span>:
-<a name="l00073"></a>00073        <span class="keyword">typedef</span> QList&lt;IMessageConsumer::MessagePtr&gt; MessageList;
-<a name="l00074"></a>00074        MessageList m_messages;
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076        <span class="keyword">typedef</span> QVector&lt;IHierarchicalMessageContainer*&gt; Childs;
-<a name="l00077"></a>00077        Childs m_childContainers;
+<a name="l00030"></a>00030        <a class="code" href="classibase_1_1_c_message_container.html#a658b006be1bea0c2311ba3975f281542">CMessageContainer</a>(<span class="keyword">const</span> <a class="code" href="classibase_1_1_c_message_container.html" title="Basic implementation of a message container.">CMessageContainer</a>&amp; container);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#aa331e77e82c301148a24880866fca9d7">AddChildContainer</a>(<a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">IHierarchicalMessageContainer</a>* childContainerPtr);
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#ac96787fcd2d4df915eab139c29164be7">SetSlaveConsumer</a>(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* consumerPtr);
+<a name="l00035"></a>00035 
+<a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#afddbd67f0c5a6d30ce8bf1aa62eabc20" title="Set maximal number of messages in the container.">SetMaxMessageCount</a>(<span class="keywordtype">int</span> maxMessageCount = -1);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_message_container.html#a12a98d2ca094f56627dbf710ee400f9c">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (ibase::IMessageContainer)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message_container.html#ae34fbf54ba367e9f9abecef200e724ae">GetWorstCategory</a>() <span class="keyword">const</span>;
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> Messages <a class="code" href="classibase_1_1_c_message_container.html#ac065525da072c3f81abf399f0c1e296a">GetMessages</a>() <span class="keyword">const</span>;
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#a4ba0c59b1a99bfd7ca60e7b1ade8388c">ClearMessages</a>();
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (ibase::IMessageConsumer)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_message_container.html#aa472c99668e61bd4ce172e307ad79245" title="Check if some messge is supported.">IsMessageSupported</a>(
+<a name="l00054"></a>00054                             <span class="keywordtype">int</span> messageCategory = -1,
+<a name="l00055"></a>00055                             <span class="keywordtype">int</span> messageId = -1,
+<a name="l00056"></a>00056                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>* messagePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_message_container.html#aef7e1cdf35dc9f443eafc1ac650ad09f" title="Adds a message item to the container.">AddMessage</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_smart_ptr.html" title="Implementation of a smart pointer.">IMessageConsumer::MessagePtr</a>&amp; messagePtr);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059        <span class="comment">// reimplemented (ibase::IHierarchicalMessageContainer)</span>
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_message_container.html#abb7d4257a9425546d21f23e39a3741dd">GetChildsCount</a>() <span class="keyword">const</span>;
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">IHierarchicalMessageContainer</a>* <a class="code" href="classibase_1_1_c_message_container.html#aacb0d3680b600054a53c7f2ebc469993">GetChild</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_message_container.html#a4b925226bd0c30420ad0208b48249fde" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af" title="External references are simple ignored.">CM_WITHOUT_REFS</a>);
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">private</span>:
+<a name="l00067"></a>00067        <span class="keyword">typedef</span> QList&lt;IMessageConsumer::MessagePtr&gt; MessageList;
+<a name="l00068"></a>00068        MessageList m_messages;
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        <span class="keyword">typedef</span> QVector&lt;IHierarchicalMessageContainer*&gt; Childs;
+<a name="l00071"></a>00071        Childs m_childContainers;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073        <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* m_slaveConsumerPtr;
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075        <span class="keywordtype">int</span> m_maxMessagesCount;
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077        <span class="keywordtype">int</span> m_worstCategory;
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ibase::IMessageConsumer</a>* m_slaveConsumerPtr;
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081        <span class="keywordtype">int</span> m_maxMessagesCount;
-<a name="l00082"></a>00082        <span class="keywordtype">int</span> m_maxLiveTime;
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084        <span class="keywordtype">int</span> m_worstCategory;
+<a name="l00079"></a>00079        <span class="keyword">mutable</span> QMutex m_lock;
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 } <span class="comment">// namespace ibase</span>
+<a name="l00084"></a>00084 
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086        <span class="keyword">mutable</span> QMutex m_lock;
-<a name="l00087"></a>00087 };
+<a name="l00086"></a>00086 <span class="preprocessor">#endif // !ibase_CMessageContainer_included</span>
+<a name="l00087"></a>00087 <span class="preprocessor"></span>
 <a name="l00088"></a>00088 
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 } <span class="comment">// namespace ibase</span>
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093 <span class="preprocessor">#endif // !ibase_CMessageContainer_included</span>
-<a name="l00094"></a>00094 <span class="preprocessor"></span>
-<a name="l00095"></a>00095 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

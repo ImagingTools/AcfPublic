@@ -67,12 +67,11 @@ Inheritance diagram for ibase::CMessageContainer:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#a658b006be1bea0c2311ba3975f281542">CMessageContainer</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#aa731eb26127757684ed44e12fa58c3dd">CMessageContainer</a> (const <a class="el" href="classibase_1_1_c_message_container.html">CMessageContainer</a> &amp;container)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#aa331e77e82c301148a24880866fca9d7">AddChildContainer</a> (<a class="el" href="namespaceibase.html#a1cb6747206bcf8cab703d7f6c3f05282">IHierarchicalMessageContainer</a> *childContainerPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#ac96787fcd2d4df915eab139c29164be7">SetSlaveConsumer</a> (<a class="el" href="classibase_1_1_i_message_consumer.html">ibase::IMessageConsumer</a> *consumerPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#afddbd67f0c5a6d30ce8bf1aa62eabc20">SetMaxMessageCount</a> (int maxMessageCount=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximal number of messages in the container.  <a href="#afddbd67f0c5a6d30ce8bf1aa62eabc20"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#ac5865d36dcc37244079be586a373d5b0">SetMaxLiveTime</a> (int maxLiveTime=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum time difference between the oldest and newest message.  <a href="#ac5865d36dcc37244079be586a373d5b0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#a12a98d2ca094f56627dbf710ee400f9c">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#ae34fbf54ba367e9f9abecef200e724ae">GetWorstCategory</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual Messages&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_message_container.html#ac065525da072c3f81abf399f0c1e296a">GetMessages</a> () const </td></tr>
@@ -100,6 +99,23 @@ Public Member Functions</h2></td></tr>
           <td class="memname">ibase::CMessageContainer::CMessageContainer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa731eb26127757684ed44e12fa58c3dd"></a><!-- doxytag: member="ibase::CMessageContainer::CMessageContainer" ref="aa731eb26127757684ed44e12fa58c3dd" args="(const CMessageContainer &amp;container)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ibase::CMessageContainer::CMessageContainer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classibase_1_1_c_message_container.html">CMessageContainer</a> &amp;&#160;</td>
+          <td class="paramname"><em>container</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -329,32 +345,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac5865d36dcc37244079be586a373d5b0"></a><!-- doxytag: member="ibase::CMessageContainer::SetMaxLiveTime" ref="ac5865d36dcc37244079be586a373d5b0" args="(int maxLiveTime=&#45;1)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ibase::CMessageContainer::SetMaxLiveTime </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxLiveTime</em> = <code>-1</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set maximum time difference between the oldest and newest message. </p>
-<p>If calculated value is grated then this threshold, the oldest message will be removed if a new message will be added. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">maxLiveTime</td><td>maximal time difference in seconds </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

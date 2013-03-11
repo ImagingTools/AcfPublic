@@ -3954,19 +3954,19 @@
     <name>iedge::CEdgeLine</name>
     <filename>classiedge_1_1_c_edge_line.html</filename>
     <base>i2d::CObject2dBase</base>
+    <member kind="typedef">
+      <type>i2d::CObject2dBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a6795df450410c7add664b4fa40bccf1f</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CEdgeLine</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
       <anchor>ad8e793d1b9b5ff879b90073a5ad6a1c6</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CEdgeLine</name>
-      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>ace47351abb0e8d56dfc3beb12d2f9598</anchor>
-      <arglist>(const CEdgeLine &amp;iedge)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -4148,6 +4148,13 @@
       <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
       <anchor>ae5c0cbc4967b1bdadc40ddb4599d50e1</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCalibration</name>
+      <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
+      <anchor>a4143a7cb53add0f0da9322c8aac72c23</anchor>
+      <arglist>(const i2d::ICalibration2d *calibrationPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
