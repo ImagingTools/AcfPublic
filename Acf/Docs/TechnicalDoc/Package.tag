@@ -24191,8 +24191,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classicomp_1_1_t_component_clone_wrap.html</anchorfile>
-      <anchor>a649d2c92ab2ef38fdd621b66c61bbe0c</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+      <anchor>a94d844e97e8e90aff21916a8e7af1e03</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=BaseClass::CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45083,8 +45083,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>a7fce9d82f4807652d3860b012ad08985</anchor>
-      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>aa367df7912c41ac6e13b1a1b53b4bc2a</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=BaseClass::CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
