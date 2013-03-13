@@ -20,38 +20,50 @@
 ********************************************************************************/
 
 
-#ifndef TutorialPck_included
-#define TutorialPck_included
+#ifndef imath_CSplineSegmentFunction_included
+#define imath_CSplineSegmentFunction_included
 
 
-#include "icomp/TModelCompWrap.h"
-
-#include "DocView/CTextEditorComp.h"
-
-#include "ModelObserver/CAbComp.h"
-#include "ModelObserver/CAbGuiComp.h"
-
-#include "itutacf/CInterpolationTestComp.h"
-
-
-/**
-	Base system-undependent general package.
-*/
-namespace TutorialPck
+namespace imath
 {
 
 
-typedef CTextEditorComp TextEditor;
+/**
+	Helper class for calculation of splines of 3rd degree.
+*/
+class CSplineSegmentFunction
+{
+public:
+	// static methods
+	/**
+		Get kernel of value normalized to range [0, 1].
+	*/
+	static double GetValueKernelAt(double alpha);
+	/**
+		Get kernel of derivative normalized to range [0, 1].
+	*/
+	static double GetDerivativeKernelAt(double alpha);
+};
 
-typedef icomp::TModelCompWrap<CAbComp> AB;
-typedef CAbGuiComp AbGui;
 
-typedef itutacf::CInterpolationTestComp InterpolationTest;
+// static protected inline methods
+
+inline double CSplineSegmentFunction::GetValueKernelAt(double alpha)
+{
+	return (2 * alpha - 3) * alpha * alpha + 1;
+}
 
 
-} // namespace TutorialPck
+inline double CSplineSegmentFunction::GetDerivativeKernelAt(double alpha)
+{
+	double beta = 1 - alpha;
+	return alpha * beta * beta;
+}
 
 
-#endif // !TutorialPck_included
+} // namespace imath
+
+
+#endif // !imath_CSplineSegmentFunction_included
 
 

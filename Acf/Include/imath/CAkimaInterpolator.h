@@ -20,38 +20,45 @@
 ********************************************************************************/
 
 
-#ifndef TutorialPck_included
-#define TutorialPck_included
+#ifndef imath_CAkimaInterpolator_included
+#define imath_CAkimaInterpolator_included
 
 
-#include "icomp/TModelCompWrap.h"
+// Qt includes
+#include <QtCOre/QMap>
 
-#include "DocView/CTextEditorComp.h"
-
-#include "ModelObserver/CAbComp.h"
-#include "ModelObserver/CAbGuiComp.h"
-
-#include "itutacf/CInterpolationTestComp.h"
+// ACF includes
+#include "imath/TIMathFunction.h"
 
 
-/**
-	Base system-undependent general package.
-*/
-namespace TutorialPck
+namespace imath
 {
 
 
-typedef CTextEditorComp TextEditor;
+class CAkimaInterpolator: public virtual IDoubleFunction
+{
+public:
+	void SetNodes(double* positions, double* values, int nodesCount);
 
-typedef icomp::TModelCompWrap<CAbComp> AB;
-typedef CAbGuiComp AbGui;
+	// reimplemented (imath::TIMathFunction<double, double>)
+	virtual bool GetValueAt(const double& argument, double& result) const;
+	virtual double GetValueAt(const double& argument) const;
 
-typedef itutacf::CInterpolationTestComp InterpolationTest;
+private:
+	struct Node
+	{
+		double value;
+		double derivative;
+	};
+	typedef QMap<double, Node> Nodes;
+
+	Nodes m_nodes;
+};
 
 
-} // namespace TutorialPck
+} // namespace imath
 
 
-#endif // !TutorialPck_included
+#endif // !imath_CAkimaInterpolator_included
 
 

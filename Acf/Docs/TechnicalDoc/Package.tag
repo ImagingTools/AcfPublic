@@ -2849,6 +2849,14 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>CAkimaInterpolator.h</name>
+    <path>C:/Temp/Acf/Include/imath/</path>
+    <filename>_c_akima_interpolator_8h</filename>
+    <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="yes" imported="no">imath/TIMathFunction.h</includes>
+    <class kind="class">imath::CAkimaInterpolator</class>
+    <namespace>imath</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComplexDoubleManip.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_c_complex_double_manip_8h</filename>
@@ -2898,6 +2906,13 @@
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
     <includes id="_t_i_sampled_function_8h" name="TISampledFunction.h" local="yes" imported="no">imath/TISampledFunction.h</includes>
     <class kind="class">imath::CSampledFunction2d</class>
+    <namespace>imath</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSplineSegmentFunction.h</name>
+    <path>C:/Temp/Acf/Include/imath/</path>
+    <filename>_c_spline_segment_function_8h</filename>
+    <class kind="class">imath::CSplineSegmentFunction</class>
     <namespace>imath</namespace>
   </compound>
   <compound kind="file">
@@ -3103,6 +3118,7 @@
     <includes id="_t_array_8h" name="TArray.h" local="yes" imported="no">istd/TArray.h</includes>
     <includes id="_t_vector_8h" name="TVector.h" local="yes" imported="no">imath/TVector.h</includes>
     <includes id="_t_fulcrum_grid_function_base_8h" name="TFulcrumGridFunctionBase.h" local="yes" imported="no">imath/TFulcrumGridFunctionBase.h</includes>
+    <includes id="_c_spline_segment_function_8h" name="CSplineSegmentFunction.h" local="yes" imported="no">imath/CSplineSegmentFunction.h</includes>
     <class kind="class">imath::TSplineGridFunctionBase</class>
     <namespace>imath</namespace>
   </compound>
@@ -28247,12 +28263,14 @@
   <compound kind="namespace">
     <name>imath</name>
     <filename>namespaceimath.html</filename>
+    <class kind="class">imath::CAkimaInterpolator</class>
     <class kind="class">imath::CComplexDoubleManip</class>
     <class kind="class">imath::CDouble</class>
     <class kind="class">imath::CDoubleManip</class>
     <class kind="class">imath::CFixedPointManip</class>
     <class kind="class">imath::CGeneralUnitInfo</class>
     <class kind="class">imath::CSampledFunction2d</class>
+    <class kind="class">imath::CSplineSegmentFunction</class>
     <class kind="class">imath::CVarMatrix</class>
     <class kind="class">imath::CVarVector</class>
     <class kind="class">imath::IDoubleManip</class>
@@ -28337,6 +28355,32 @@
       <anchorfile>namespaceimath.html</anchorfile>
       <anchor>ab961fb89e71138ce57596d2181b12a6e</anchor>
       <arglist>(double value, const imath::TMatrix&lt; Width, Height, Element &gt; &amp;matrix)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imath::CAkimaInterpolator</name>
+    <filename>classimath_1_1_c_akima_interpolator.html</filename>
+    <base virtualness="virtual">imath::TIMathFunction</base>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNodes</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>ab572fff75ec34102a22ef3560424990f</anchor>
+      <arglist>(double *positions, double *values, int nodesCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>a80957d3d73e5c866fa8b6abe3887cb78</anchor>
+      <arglist>(const double &amp;argument, double &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>ae77e8c3b80a1fe3196392c411d469d14</anchor>
+      <arglist>(const double &amp;argument) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29110,6 +29154,24 @@
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
       <anchor>a2d1fb8d4344a6879203979603bf897f2</anchor>
       <arglist>(const ArgumentType &amp;argument) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imath::CSplineSegmentFunction</name>
+    <filename>classimath_1_1_c_spline_segment_function.html</filename>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>GetValueKernelAt</name>
+      <anchorfile>classimath_1_1_c_spline_segment_function.html</anchorfile>
+      <anchor>a75ca44aa04f0c5cd8bc250f5678a1a06</anchor>
+      <arglist>(double alpha)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>GetDerivativeKernelAt</name>
+      <anchorfile>classimath_1_1_c_spline_segment_function.html</anchorfile>
+      <anchor>a96945d0e3eb497f583e34defc9d15297</anchor>
+      <arglist>(double alpha)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31237,20 +31299,6 @@
       <anchorfile>classimath_1_1_t_spline_grid_function_base.html</anchorfile>
       <anchor>a3a60b1872a304883a0866f80d9f621ea</anchor>
       <arglist>(const DerivativeDegreeType &amp;degree) const =0</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static double</type>
-      <name>GetValueKernelAt</name>
-      <anchorfile>classimath_1_1_t_spline_grid_function_base.html</anchorfile>
-      <anchor>af41f765cfcba7e5499866e9750622152</anchor>
-      <arglist>(double alpha)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static double</type>
-      <name>GetDerivativeKernelAt</name>
-      <anchorfile>classimath_1_1_t_spline_grid_function_base.html</anchorfile>
-      <anchor>acd2fce4c4fe35918d8cde03f88accbd0</anchor>
-      <arglist>(double alpha)</arglist>
     </member>
   </compound>
   <compound kind="class">
