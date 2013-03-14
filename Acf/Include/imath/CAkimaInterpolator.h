@@ -35,6 +35,9 @@ namespace imath
 {
 
 
+/**
+	1D interpolation using Akima method.
+*/
 class CAkimaInterpolator: public virtual IDoubleFunction
 {
 public:
