@@ -42181,6 +42181,20 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>on_ParamsComboBox_currentIndexChanged</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a8f190a20002d0ac4cef268b52c979aa8</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ParamsComboBox_editTextChanged</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a123096e4937953c7acc8bb5baee12f43</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>OnAddMenuOptionClicked</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
       <anchor>ae1bc21ccfeba6de184132795f986f3f5</anchor>
@@ -42212,6 +42226,13 @@
       <name>UpdateTree</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
       <anchor>a3e04182b67f3a39818475fd4ea97595a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateComboBox</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ac65be6f556ebe89a7bf487a106e65672</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

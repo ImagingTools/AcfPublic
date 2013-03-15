@@ -53,6 +53,7 @@ public:
 	I_BEGIN_BASE_COMPONENT(CParamsManagerGuiCompBase);
 		I_ASSIGN(m_allowAddRemoveAttrPtr, "AllowAddRemove", "If it is false, 'Add' and 'Remove' buttons will be always hidden", true, true);
 		I_ASSIGN(m_allowUpDownAttrPtr, "AllowUpDown", "If it is false, 'Up' and 'Down' buttons will be always hidden", true, true);
+		I_ASSIGN(m_comboBoxViewAttrPtr, "CompactView", "Shows parameters list as a combo box", true, false);
 		I_ASSIGN(m_iconProviderCompPtr, "IconProvider", "Icons for drop-down types menu", false, "IconProvider");
 	I_END_COMPONENT;
 
@@ -65,6 +66,8 @@ protected Q_SLOTS:
 	void on_DownButton_clicked();
 	void on_ParamsTree_itemSelectionChanged();
 	void on_ParamsTree_itemChanged(QTreeWidgetItem* item, int column);
+	void on_ParamsComboBox_currentIndexChanged(int index);
+	void on_ParamsComboBox_editTextChanged(const QString& text);
 	void OnAddMenuOptionClicked(QAction* action);
 
 protected:
@@ -82,6 +85,7 @@ protected:
 
 	void UpdateActions();
 	void UpdateTree();
+	void UpdateComboBox();
 	virtual void UpdateParamsView(int selectedIndex);
 	int GetSelectedIndex() const;
 	void EnsureParamsGuiDetached();
@@ -99,6 +103,7 @@ private:
 	I_REF(iqtgui::IIconProvider, m_iconProviderCompPtr);
 	I_ATTR(bool, m_allowAddRemoveAttrPtr);
 	I_ATTR(bool, m_allowUpDownAttrPtr);
+	I_ATTR(bool, m_comboBoxViewAttrPtr);
 
 	typedef QMap<int, QIcon> StateIconsMap;
 
@@ -107,7 +112,6 @@ private:
 	QMenu m_startVariableMenus;
 	QMap<QByteArray, int> m_factoryIconIndexMap;
 	StateIconsMap m_stateIconsMap;
-
 };
 
 
