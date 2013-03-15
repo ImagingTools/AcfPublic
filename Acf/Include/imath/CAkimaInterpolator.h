@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QtCOre/QMap>
+#include <QtCore/QMap>
 
 // ACF includes
 #include "imath/TIMathFunction.h"

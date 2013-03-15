@@ -65,50 +65,53 @@
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (iprm::IOptionsManager)</span>
 <a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_options_manager.html#ac4eca4e6a15b6f6288f3ba3ca106dd80" title="Enables a given option.">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager.html#a74834c67f53702d61b78a3e9856fbcfd" title="Remove an option at the given index.">RemoveOption</a>(<span class="keywordtype">int</span> index);
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager.html#a9b7ed625eb0a4af45e6fe19eb1cd5f5f" title="Insert an option with the at the given option name and ID.">InsertOption</a>(
-<a name="l00044"></a>00044                                    QString&amp; optionName,
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager.html#af3c3be26edc3e50b69aa70460a1f5d99" title="Insert an option at some position.">InsertOption</a>(
+<a name="l00044"></a>00044                                    <span class="keyword">const</span> QString&amp; optionName,
 <a name="l00045"></a>00045                                    <span class="keyword">const</span> QByteArray&amp; optionId,
 <a name="l00046"></a>00046                                    <span class="keyword">const</span> QString&amp; optionDescription = QString(), 
 <a name="l00047"></a>00047                                    <span class="keywordtype">int</span> index = - 1);
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager.html#a99b6c32efe101e940b4452e4a0fea984" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager.html#accc1b58474783757b77502e17107728a" title="Swap two options.">SwapOptions</a>(<span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2);
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager.html#acd8592c3d1a27a1675d7fafe5a2fc0fc" title="Set a new name for the option at the given index optionIndex.">SetOptionName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; optionName);
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager.html#ac4039b6e25ef5c1f0da5a22068c567b2" title="Set a new description for the option at the given index optionIndex.">SetOptionDescription</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; optionDescription);
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">private</span>:
-<a name="l00053"></a>00053        <span class="keyword">struct </span>OptionInfo
-<a name="l00054"></a>00054        {
-<a name="l00055"></a>00055               OptionInfo()
-<a name="l00056"></a>00056               {
-<a name="l00057"></a>00057               }
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059               OptionInfo(<span class="keyword">const</span> QString&amp; optionName, QByteArray optionId, <span class="keyword">const</span> QString&amp; optionDescription)
-<a name="l00060"></a>00060                      :optionName(optionName),
-<a name="l00061"></a>00061                      optionId(optionId),
-<a name="l00062"></a>00062                      optionDescription(optionDescription)
-<a name="l00063"></a>00063               {
-<a name="l00064"></a>00064               }
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066               QString optionName;
-<a name="l00067"></a>00067               QByteArray optionId;
-<a name="l00068"></a>00068               QString optionDescription;
-<a name="l00069"></a>00069               <span class="keywordtype">bool</span> isEnabled;
-<a name="l00070"></a>00070        };
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072        <span class="keyword">typedef</span> QVector&lt;OptionInfo&gt; Options;
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074        Options m_options;
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="keyword">private</span>:
-<a name="l00077"></a>00077        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>* m_slaveSelectionConstraintsPtr;
-<a name="l00078"></a>00078 };
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 } <span class="comment">// namespace iprm</span>
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_options_manager.html#a99b6c32efe101e940b4452e4a0fea984" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="keyword">private</span>:
+<a name="l00056"></a>00056        <span class="keyword">struct </span>OptionInfo
+<a name="l00057"></a>00057        {
+<a name="l00058"></a>00058               OptionInfo()
+<a name="l00059"></a>00059               {
+<a name="l00060"></a>00060               }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062               OptionInfo(<span class="keyword">const</span> QString&amp; optionName, QByteArray optionId, <span class="keyword">const</span> QString&amp; optionDescription)
+<a name="l00063"></a>00063                      :optionName(optionName),
+<a name="l00064"></a>00064                      optionId(optionId),
+<a name="l00065"></a>00065                      optionDescription(optionDescription)
+<a name="l00066"></a>00066               {
+<a name="l00067"></a>00067               }
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069               QString optionName;
+<a name="l00070"></a>00070               QByteArray optionId;
+<a name="l00071"></a>00071               QString optionDescription;
+<a name="l00072"></a>00072               <span class="keywordtype">bool</span> isEnabled;
+<a name="l00073"></a>00073        };
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075        <span class="keyword">typedef</span> QVector&lt;OptionInfo&gt; Options;
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077        Options m_options;
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <span class="keyword">private</span>:
+<a name="l00080"></a>00080        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>* m_slaveSelectionConstraintsPtr;
+<a name="l00081"></a>00081 };
 <a name="l00082"></a>00082 
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="preprocessor">#endif // !iprm_COptionsManager_included</span>
-<a name="l00085"></a>00085 <span class="preprocessor"></span>
+<a name="l00084"></a>00084 } <span class="comment">// namespace iprm</span>
+<a name="l00085"></a>00085 
 <a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#endif // !iprm_COptionsManager_included</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>
+<a name="l00089"></a>00089 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

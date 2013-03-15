@@ -421,6 +421,9 @@ int CParamsManagerGuiCompBase::GetSelectedIndex() const
 
 	if (*m_comboBoxViewAttrPtr){
 		int index = ParamsComboBox->currentIndex();
+		if (index < 0){
+			return -1;
+		}
 
 		retVal = ParamsComboBox->itemData(index).toInt();
 

@@ -71,8 +71,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a given option.  <a href="#abd4585a3b03792f011f6b798945b102e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#a460843f2069a96f01fb981836a5a1c16">RemoveOption</a> (int index)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an option at the given index.  <a href="#a460843f2069a96f01fb981836a5a1c16"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#ac86b1bb9a30fc6474e82322d4b52ade4">InsertOption</a> (QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an option with the at the given option name and ID.  <a href="#ac86b1bb9a30fc6474e82322d4b52ade4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#a0c8b8953003b617667a4dd25fe292b76">InsertOption</a> (const QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an option at some position.  <a href="#a0c8b8953003b617667a4dd25fe292b76"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#a762509d17f1542671b9d8ec522349fa3">SwapOptions</a> (int index1, int index2)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two options.  <a href="#a762509d17f1542671b9d8ec522349fa3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#a484c2d27f32ad0eb2adff423832cb78a">SetOptionName</a> (int optionIndex, const QString &amp;optionName)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new name for the option at the given index <code>optionIndex</code>.  <a href="#a484c2d27f32ad0eb2adff423832cb78a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_i_options_manager.html#a2564f4a7e2576aefc8bd56575eb05554">SetOptionDescription</a> (int optionIndex, const QString &amp;optionDescription)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new description for the option at the given index <code>optionIndex</code>.  <a href="#a2564f4a7e2576aefc8bd56575eb05554"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for the management of the dynamic selection constraints. </p>
@@ -107,14 +113,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac86b1bb9a30fc6474e82322d4b52ade4"></a><!-- doxytag: member="iprm::IOptionsManager::InsertOption" ref="ac86b1bb9a30fc6474e82322d4b52ade4" args="(QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=&#45;1)=0" -->
+<a class="anchor" id="a0c8b8953003b617667a4dd25fe292b76"></a><!-- doxytag: member="iprm::IOptionsManager::InsertOption" ref="a0c8b8953003b617667a4dd25fe292b76" args="(const QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=&#45;1)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iprm::IOptionsManager::InsertOption </td>
           <td>(</td>
-          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>optionName</em>, </td>
         </tr>
         <tr>
@@ -144,10 +150,18 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Insert an option with the at the given option name and ID. </p>
-<p>Returns <code>true</code> if the operation was successull. </p>
+<p>Insert an option at some position. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">optionName</td><td>Name of the option </td></tr>
+    <tr><td class="paramname">optionId</td><td>ID of the option, according to data model constraints needs to be unique </td></tr>
+    <tr><td class="paramname">optionDescription</td><td>Description of the option </td></tr>
+    <tr><td class="paramname">index</td><td>Position in the list, where the new option will be inserted. Negative value means that the option will be added to the end of the list. Returns <code>true</code> if the operation was successful. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#a9b7ed625eb0a4af45e6fe19eb1cd5f5f">iprm::COptionsManager</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#af3c3be26edc3e50b69aa70460a1f5d99">iprm::COptionsManager</a>.</p>
 
 </div>
 </div>
@@ -167,9 +181,40 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Remove an option at the given index. </p>
-<p>Returns <code>true</code> if the operation was successull. </p>
+<p>Returns <code>true</code> if the operation was successful. </p>
 
 <p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#a74834c67f53702d61b78a3e9856fbcfd">iprm::COptionsManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2564f4a7e2576aefc8bd56575eb05554"></a><!-- doxytag: member="iprm::IOptionsManager::SetOptionDescription" ref="a2564f4a7e2576aefc8bd56575eb05554" args="(int optionIndex, const QString &amp;optionDescription)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::IOptionsManager::SetOptionDescription </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>optionIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>optionDescription</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set a new description for the option at the given index <code>optionIndex</code>. </p>
+
+<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#ac4039b6e25ef5c1f0da5a22068c567b2">iprm::COptionsManager</a>.</p>
 
 </div>
 </div>
@@ -203,6 +248,68 @@ Public Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd>GetOptionEnabled </dd></dl>
 
 <p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#ac4eca4e6a15b6f6288f3ba3ca106dd80">iprm::COptionsManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a484c2d27f32ad0eb2adff423832cb78a"></a><!-- doxytag: member="iprm::IOptionsManager::SetOptionName" ref="a484c2d27f32ad0eb2adff423832cb78a" args="(int optionIndex, const QString &amp;optionName)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::IOptionsManager::SetOptionName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>optionIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>optionName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set a new name for the option at the given index <code>optionIndex</code>. </p>
+
+<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#acd8592c3d1a27a1675d7fafe5a2fc0fc">iprm::COptionsManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a762509d17f1542671b9d8ec522349fa3"></a><!-- doxytag: member="iprm::IOptionsManager::SwapOptions" ref="a762509d17f1542671b9d8ec522349fa3" args="(int index1, int index2)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::IOptionsManager::SwapOptions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Swap two options. </p>
+
+<p>Implemented in <a class="el" href="classiprm_1_1_c_options_manager.html#accc1b58474783757b77502e17107728a">iprm::COptionsManager</a>.</p>
 
 </div>
 </div>

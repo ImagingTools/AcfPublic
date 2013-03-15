@@ -48,7 +48,7 @@ namespace imeas
 class CNumericConstraintsComp:
 			public icomp::CComponentBase,
 			virtual public INumericConstraints,
-			virtual protected imath::IUnitInfo,
+			virtual public imath::IUnitInfo,
 			protected imath::CDoubleManip
 {
 public:
@@ -56,6 +56,7 @@ public:
 
 	I_BEGIN_COMPONENT(CNumericConstraintsComp);
 		I_REGISTER_INTERFACE(INumericConstraints);
+		I_REGISTER_INTERFACE(imath::IUnitInfo);
 		I_ASSIGN(m_dimensionsCountAttrPtr, "ValuesCount", "Default number of numeric values", true, 1);
 		I_ASSIGN_MULTI_0(m_namesAttrPtr, "ValueName", "Name of each single value", true);
 		I_ASSIGN_MULTI_0(m_descriptionsAttrPtr, "ValueDescriptions", "Description of each single value", true);

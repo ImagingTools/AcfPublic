@@ -26,7 +26,7 @@
 
 // Qt includes
 #include <QtCore/QString>
-#include <QtCore/QDateTime.h>
+#include <QtCore/QDateTime>
 
 // ACF includes
 #include "iser/ISerializable.h"

@@ -30,7 +30,7 @@
 
 #include "imath/IUnitInfo.h"
 
-#include "generated/ui_CNumericValueWidget.h"
+#include "Generated/ui_CNumericValueWidget.h"
 
 
 namespace iqtmeas

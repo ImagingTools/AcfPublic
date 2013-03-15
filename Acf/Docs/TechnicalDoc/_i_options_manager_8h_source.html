@@ -51,20 +51,26 @@
 <a name="l00030"></a>00030 
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#a460843f2069a96f01fb981836a5a1c16" title="Remove an option at the given index.">RemoveOption</a>(<span class="keywordtype">int</span> index) = 0;
 <a name="l00036"></a>00036 
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#ac86b1bb9a30fc6474e82322d4b52ade4" title="Insert an option with the at the given option name and ID.">InsertOption</a>(
-<a name="l00042"></a>00042                             QString&amp; optionName,
-<a name="l00043"></a>00043                             <span class="keyword">const</span> QByteArray&amp; optionId,
-<a name="l00044"></a>00044                             <span class="keyword">const</span> QString&amp; optionDescription = QString(),
-<a name="l00045"></a>00045                             <span class="keywordtype">int</span> index = -1) = 0;
-<a name="l00046"></a>00046 };
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 } <span class="comment">// namespace iprm</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#a0c8b8953003b617667a4dd25fe292b76" title="Insert an option at some position.">InsertOption</a>(
+<a name="l00046"></a>00046                             <span class="keyword">const</span> QString&amp; optionName,
+<a name="l00047"></a>00047                             <span class="keyword">const</span> QByteArray&amp; optionId,
+<a name="l00048"></a>00048                             <span class="keyword">const</span> QString&amp; optionDescription = QString(),
+<a name="l00049"></a>00049                             <span class="keywordtype">int</span> index = -1) = 0;
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iprm_IOptionsManager_included</span>
-<a name="l00053"></a>00053 <span class="preprocessor"></span>
-<a name="l00054"></a>00054 
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#a762509d17f1542671b9d8ec522349fa3" title="Swap two options.">SwapOptions</a>(<span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2) = 0;
+<a name="l00055"></a>00055 
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#a484c2d27f32ad0eb2adff423832cb78a" title="Set a new name for the option at the given index optionIndex.">SetOptionName</a>(<span class="keywordtype">int</span> optionIndex, <span class="keyword">const</span> QString&amp; optionName) = 0;
+<a name="l00060"></a>00060 
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_i_options_manager.html#a2564f4a7e2576aefc8bd56575eb05554" title="Set a new description for the option at the given index optionIndex.">SetOptionDescription</a>(<span class="keywordtype">int</span> optionIndex, <span class="keyword">const</span> QString&amp; optionDescription) = 0;
+<a name="l00065"></a>00065 };
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 } <span class="comment">// namespace iprm</span>
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#endif // !iprm_IOptionsManager_included</span>
+<a name="l00072"></a>00072 <span class="preprocessor"></span>
+<a name="l00073"></a>00073 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

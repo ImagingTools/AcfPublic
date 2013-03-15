@@ -65,21 +65,24 @@
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 <span class="keyword">protected</span>:
 <a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#af657c1a9526ceb8463a33fcc76a7ff55" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a4ee5eff9d9eeef96a486e74ab6356309" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a8bbb81c90f47a6afe08bbf3271207089" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00045"></a>00045        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a0aeddf557421141376255b3e37a379b6">OnParamsChanged</a>(<span class="keywordtype">double</span> value);
-<a name="l00046"></a>00046 };
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 } <span class="comment">// namespace iqt2d</span>
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a8bbb81c90f47a6afe08bbf3271207089" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#ac41012fbfb60892cae62b4404794896b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a661d549556b2774fba45c20ba5acdd9b" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a365ac067b9e8b264d5223a17e2a2b0e0" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00048"></a>00048        <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#a0aeddf557421141376255b3e37a379b6">OnParamsChanged</a>(<span class="keywordtype">double</span> value);
+<a name="l00049"></a>00049 };
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iqt2d_CQuadrangleParamsGuiComp_included</span>
-<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00052"></a>00052 } <span class="comment">// namespace iqt2d</span>
+<a name="l00053"></a>00053 
 <a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iqt2d_CQuadrangleParamsGuiComp_included</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>
+<a name="l00057"></a>00057 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

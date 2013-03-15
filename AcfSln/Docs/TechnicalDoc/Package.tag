@@ -12772,7 +12772,7 @@
     <filename>classimeas_1_1_c_numeric_constraints_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
+    <base virtualness="virtual">imath::IUnitInfo</base>
     <base protection="protected">imath::CDoubleManip</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>

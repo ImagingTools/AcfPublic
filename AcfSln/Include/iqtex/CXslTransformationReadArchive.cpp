@@ -23,6 +23,9 @@
 #include "iqtex/CXslTransformationReadArchive.h"
 
 
+// STL includes
+#include <cstring>
+
 // Qt includes
 #include <QtCore/QObject>
 #include <QtCore/QFile>

@@ -91,12 +91,14 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a55f85e6bfb1d1febeb5a8a4151b619a2">OnParamsChanged</a> (double value)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a2d70a6c4987519a7100186ba8ea5eff8">OnGuiModelAttached</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#a2d70a6c4987519a7100186ba8ea5eff8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a48fb4fde3b242e415c08b6fc8119cd9f">OnGuiModelDetached</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#a48fb4fde3b242e415c08b6fc8119cd9f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a4d31720672516f003690bf36e7de4c48">UpdateGui</a> (int updateFlags=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a4d31720672516f003690bf36e7de4c48"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a7270bb772e1e5107eb9186311cc7fa3c">OnGuiCreated</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a7270bb772e1e5107eb9186311cc7fa3c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a7c9da1becddb3b3c8766aad15cd5db20">OnGuiDestroyed</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#a7c9da1becddb3b3c8766aad15cd5db20"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a28205a3aa9889c2fb5cd041c17f25d89">OnGuiRetranslate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from widget event filter when GUI should be retranslated.  <a href="#a28205a3aa9889c2fb5cd041c17f25d89"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -120,12 +122,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a2d70a6c4987519a7100186ba8ea5eff8"></a><!-- doxytag: member="iqt2d::CCircleParamsGuiComp::OnGuiModelAttached" ref="a2d70a6c4987519a7100186ba8ea5eff8" args="()" -->
+<a class="anchor" id="a7270bb772e1e5107eb9186311cc7fa3c"></a><!-- doxytag: member="iqt2d::CCircleParamsGuiComp::OnGuiCreated" ref="a7270bb772e1e5107eb9186311cc7fa3c" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt2d::CCircleParamsGuiComp::OnGuiModelAttached </td>
+          <td class="memname">virtual void iqt2d::CCircleParamsGuiComp::OnGuiCreated </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
@@ -134,18 +136,18 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Called when model is attached and GUI is created. </p>
+<p>Called just after GUI is initialized. </p>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a171dcddc85378f81d53c29c8367f7364">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CCircle &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ac57a710831aca6724b034983717d1a12">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CCircle &gt; &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a48fb4fde3b242e415c08b6fc8119cd9f"></a><!-- doxytag: member="iqt2d::CCircleParamsGuiComp::OnGuiModelDetached" ref="a48fb4fde3b242e415c08b6fc8119cd9f" args="()" -->
+<a class="anchor" id="a7c9da1becddb3b3c8766aad15cd5db20"></a><!-- doxytag: member="iqt2d::CCircleParamsGuiComp::OnGuiDestroyed" ref="a7c9da1becddb3b3c8766aad15cd5db20" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqt2d::CCircleParamsGuiComp::OnGuiModelDetached </td>
+          <td class="memname">virtual void iqt2d::CCircleParamsGuiComp::OnGuiDestroyed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
@@ -154,9 +156,29 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Called when model is detached or GUI is destroyed. </p>
+<p>Called just before GUI is released. </p>
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#afc147af79bf4d1551e4a41800c1461d0">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CCircle &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a21ea58f03167fc90ff7bccb51d1a2ead">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CCircle &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28205a3aa9889c2fb5cd041c17f25d89"></a><!-- doxytag: member="iqt2d::CCircleParamsGuiComp::OnGuiRetranslate" ref="a28205a3aa9889c2fb5cd041c17f25d89" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CCircleParamsGuiComp::OnGuiRetranslate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called from widget event filter when GUI should be retranslated. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a45eba5a0c0a00d4a3a7e671dd8e4afc4">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui, QWidget &gt;, imod::TSingleModelObserverBase&lt; i2d::CCircle &gt; &gt;</a>.</p>
 
 </div>
 </div>
