@@ -2461,6 +2461,15 @@
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CDataSequenceSupplierResultsViewComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
+    <filename>_c_data_sequence_supplier_results_view_comp_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
+    <class kind="class">iqtmeas::CDataSequenceSupplierResultsViewComp</class>
+    <namespace>iqtmeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDataSequenceViewComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_data_sequence_view_comp_8h</filename>
@@ -9615,13 +9624,13 @@
   <compound kind="class">
     <name>iipr::CImageHistogramSupplierComp</name>
     <filename>classiipr_1_1_c_image_histogram_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</base>
+    <base>TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; &gt;</base>
     <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
-      <anchor>a5d29ae93c9840b05558015b03965a692</anchor>
+      <anchor>a636643990fb25f17f94961bc30ed145e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -9649,8 +9658,8 @@
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
-      <anchor>a41d8389a3e2426b285f055480167d82a</anchor>
-      <arglist>(imeas::CSimpleSamplesSequence32 &amp;result) const </arglist>
+      <anchor>a401ba1436c8936d3839f261bad872196</anchor>
+      <arglist>(imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -19174,10 +19183,51 @@
   <compound kind="namespace">
     <name>iqtmeas</name>
     <filename>namespaceiqtmeas.html</filename>
+    <class kind="class">iqtmeas::CDataSequenceSupplierResultsViewComp</class>
     <class kind="class">iqtmeas::CDataSequenceViewComp</class>
     <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
     <class kind="class">iqtmeas::CNumericParamsGuiComp</class>
     <class kind="class">iqtmeas::CNumericValueWidget</class>
+  </compound>
+  <compound kind="class">
+    <name>iqtmeas::CDataSequenceSupplierResultsViewComp</name>
+    <filename>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::IDataSequenceProvider &gt; &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::IDataSequenceProvider &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</anchorfile>
+      <anchor>a3fc4db6f3ad7950122bdba0a543f29ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</anchorfile>
+      <anchor>a84a443ddce15fb9ffed0affb679a5911</anchor>
+      <arglist>(m_resultsObserverCompPtr, m_resultsGuiCompPtr, true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</anchorfile>
+      <anchor>a10647e2ffd293d065388415297d0c157</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</anchorfile>
+      <anchor>a0260354f55082c4668d47523f8ffdd20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</anchorfile>
+      <anchor>a5e3020a0798128c2a35c3060b81f5c04</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtmeas::CDataSequenceViewComp</name>

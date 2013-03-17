@@ -42,7 +42,6 @@
 #include "iqtipr/CPatternTeachingControllerGuiComp.h"
 
 
-
 /**
 	Standard package of Qt related implementations for image processing.
 */

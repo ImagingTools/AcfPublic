@@ -32,10 +32,11 @@
 #include "iqtmeas/CDataSequenceViewComp.h"
 #include "iqtmeas/CDataStatisticsGuiComp.h"
 #include "iqtmeas/CNumericParamsGuiComp.h"
+#include "iqtmeas/CDataSequenceSupplierResultsViewComp.h"
 
 
 /**
-	System-undependent package for sampling, measurement acquisition and related thema.
+	System-independent package for sampling, measurement acquisition and related thema.
 */
 namespace QtMeasPck
 {
@@ -44,6 +45,7 @@ namespace QtMeasPck
 typedef iqtmeas::CDataSequenceViewComp DataSequenceView;
 typedef iqtmeas::CDataStatisticsGuiComp DataStatisticsGui;
 typedef iqtmeas::CNumericParamsGuiComp NumericParamsGui;
+typedef iqtmeas::CDataSequenceSupplierResultsViewComp DataSequenceSupplierResultsView;
 
 
 } // namespace QtMeasPck

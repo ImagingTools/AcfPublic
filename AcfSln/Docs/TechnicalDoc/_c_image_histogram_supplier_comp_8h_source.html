@@ -49,11 +49,11 @@
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 
 <a name="l00025"></a><a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html">00025</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html">CImageHistogramSupplierComp</a>:
-<a name="l00026"></a>00026                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt;imeas::CSimpleSamplesSequence32&gt;,
+<a name="l00026"></a>00026                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; imod::TModelWrap&lt;imeas::CSimpleSamplesSequence32&gt; &gt;,
 <a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">public</span> imeas::IDataSequenceProvider
 <a name="l00028"></a>00028 {
 <a name="l00029"></a>00029 <span class="keyword">public</span>:
-<a name="l00030"></a><a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html#a5d29ae93c9840b05558015b03965a692">00030</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt;imeas::CSimpleSamplesSequence32&gt;</a> <a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html#a5d29ae93c9840b05558015b03965a692">BaseClass</a>;
+<a name="l00030"></a><a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html#a636643990fb25f17f94961bc30ed145e">00030</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">iproc::TSupplierCompWrap&lt; imod::TModelWrap&lt;imeas::CSimpleSamplesSequence32&gt;</a> &gt; <a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html#a636643990fb25f17f94961bc30ed145e">BaseClass</a>;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html">CImageHistogramSupplierComp</a>);
 <a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_data_sequence_provider.html" title="Simple data sequence provider.">imeas::IDataSequenceProvider</a>);
@@ -68,7 +68,7 @@
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 <span class="keyword">protected</span>:
 <a name="l00044"></a>00044        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html#a41d8389a3e2426b285f055480167d82a" title="Produce single object.">ProduceObject</a>(<a class="code" href="classimeas_1_1_t_discrete_data_sequence.html">imeas::CSimpleSamplesSequence32</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html#a401ba1436c8936d3839f261bad872196" title="Produce single object.">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;imeas::CSimpleSamplesSequence32&gt;</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_image_histogram_supplier_comp.html#a4470a0bbab0c28136ab05e6a9715e5d5">OnComponentCreated</a>();
