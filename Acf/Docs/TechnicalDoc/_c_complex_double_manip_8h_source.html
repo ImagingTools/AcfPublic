@@ -30,12 +30,12 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define imath_CComplexDoubleManip_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// STD includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;math.h&gt;</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_t_range_8h.html">istd/TRange.h</a>&quot;</span>
-<a name="l00010"></a>00010 
+<a name="l00005"></a>00005 <span class="comment">// STL includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;limits&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cmath&gt;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_t_range_8h.html">istd/TRange.h</a>&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_fixed_point_manip_8h.html">imath/CFixedPointManip.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
@@ -108,7 +108,7 @@
 <a name="l00080"></a>00080 {
 <a name="l00081"></a>00081        m_scaleFactor = value;
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083        m_scaledPrecision = <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a602f3900dcbfdcab750fee3e95cbffbb" title="Get number of digits after point.">GetPrecision</a>() - int(::log10(m_scaleFactor));
+<a name="l00083"></a>00083        m_scaledPrecision = <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a602f3900dcbfdcab750fee3e95cbffbb" title="Get number of digits after point.">GetPrecision</a>() - int(std::log10(m_scaleFactor));
 <a name="l00084"></a>00084 }
 <a name="l00085"></a>00085 
 <a name="l00086"></a>00086 
@@ -130,7 +130,7 @@
 <a name="l00102"></a>00102 {
 <a name="l00103"></a>00103        <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a93c4e43e25b5c2e621d874017877197a" title="Set fixed point precision.">BaseClass::SetPrecision</a>(precision);
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105        m_scaledPrecision = <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a602f3900dcbfdcab750fee3e95cbffbb" title="Get number of digits after point.">GetPrecision</a>() - int(::log10(m_scaleFactor));
+<a name="l00105"></a>00105        m_scaledPrecision = <a class="code" href="classimath_1_1_c_fixed_point_manip.html#a602f3900dcbfdcab750fee3e95cbffbb" title="Get number of digits after point.">GetPrecision</a>() - int(std::log10(m_scaleFactor));
 <a name="l00106"></a>00106 }
 <a name="l00107"></a>00107 
 <a name="l00108"></a>00108 

@@ -24,12 +24,12 @@
 #define imath_CComplexDoubleManip_included
 
 
-// STD includes
-#include <math.h>
+// STL includes
+#include <limits>
+#include <cmath>
 
 // ACF includes
 #include "istd/TRange.h"
-
 #include "imath/CFixedPointManip.h"
 
 
@@ -102,7 +102,7 @@ inline void CComplexDoubleManip::SetScaleFactor(double value)
 {
 	m_scaleFactor = value;
 
-	m_scaledPrecision = GetPrecision() - int(::log10(m_scaleFactor));
+	m_scaledPrecision = GetPrecision() - int(std::log10(m_scaleFactor));
 }
 
 
@@ -124,7 +124,7 @@ inline void CComplexDoubleManip::SetPrecision(int precision)
 {
 	BaseClass::SetPrecision(precision);
 
-	m_scaledPrecision = GetPrecision() - int(::log10(m_scaleFactor));
+	m_scaledPrecision = GetPrecision() - int(std::log10(m_scaleFactor));
 }
 
 
