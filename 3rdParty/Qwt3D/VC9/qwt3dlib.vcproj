@@ -15,7 +15,7 @@
 	</Platforms>
 	<ToolFiles>
 		<ToolFile
-			RelativePath="..\..\..\Development\ACF\Config\VC9\QtUIForm.rules"
+			RelativePath="..\..\..\Acf\Config\VC9\QtUIForm.rules"
 		/>
 	</ToolFiles>
 	<Configurations>
